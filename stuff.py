@@ -66,25 +66,35 @@ def build_govuk_url(transaction_slug, authority_slug):
 
 fields = ['govuk_url', 'govuk_title', 'snac', 'lgsl', 'lgil_override', 'interaction_found', 'interaction_lgil_used', 'interaction_url_used']
 
+
+def generate_output():
+    rows = []
+    for local_transaction in govuk_local_transactions_data:
+        for snac, authority_slug in authorities_snac_to_slug.items():
+            interaction = preferred_interaction(snac, local_transaction['LGSL'], local_transaction['LGIL'])
+            row = {
+                'govuk_url': build_govuk_url(local_transaction['slug'], authority_slug),
+                'govuk_title': local_transaction['title'],
+                'snac': snac,
+                'lgsl': local_transaction['LGSL'],
+                'lgil_override': local_transaction['LGIL'],
+                'interaction_found': bool(interaction),
+                'interaction_lgil_used': interaction['LGIL'] if interaction else '',
+                'interaction_url_used': interaction['Service URL'] if interaction else '',
+            }
+            rows.append(row)
+
+    rows.sort(key=lambda row: row['govuk_url'])
+    return rows
+
+
 def write_output():
     with open('urls-used-for-local-transactions.csv', 'w', encoding='utf8') as output:
         writer = DictWriter(output, fields)
         writer.writeheader()
+        rows = generate_output()
+        writer.writerows(rows)
 
-        for local_transaction in govuk_local_transactions_data:
-            for snac, authority_slug in authorities_snac_to_slug.items():
-                interaction = preferred_interaction(snac, local_transaction['LGSL'], local_transaction['LGIL'])
-                row = {
-                    'govuk_url': build_govuk_url(local_transaction['slug'], authority_slug),
-                    'govuk_title': local_transaction['title'],
-                    'snac': snac,
-                    'lgsl': local_transaction['LGSL'],
-                    'lgil_override': local_transaction['LGIL'],
-                    'interaction_found': bool(interaction),
-                    'interaction_lgil_used': interaction['LGIL'] if interaction else '',
-                    'interaction_url_used': interaction['Service URL'] if interaction else '',
-                }
-                writer.writerow(row)
 
 if __name__ == '__main__':
     write_output()
