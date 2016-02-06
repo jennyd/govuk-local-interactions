@@ -31,9 +31,11 @@ with open('govuk-local-transactions-updated.csv', 'r', encoding='ascii') as f:
 transaction_slugs = [row['slug'] for row in govuk_local_transactions_data]
 
 
-# authorities.json from frontend - this defines which LAs we support
+# This is based on authorities.json from frontend, with tiers added by
+# update_authorities_json.py - this file defines which LAs we support and what
+# their slugs are.
 
-with open('authorities.json') as f:
+with open('authorities-with-tiers.json') as f:
     authorities = json.load(f)
 authorities_snac_to_slug = {details['ons']: slug for slug, details in authorities.items()}
 
