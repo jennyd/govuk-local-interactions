@@ -18,11 +18,14 @@ for row in ldg_data:
         ldg_data_by_snac[row['SNAC']].append(row)
 
 
-# This is from https://docs.google.com/spreadsheets/d/15khIbspxUl8gpOi0KVleu6Xohikz8MDCa9ANAywE5vs/edit#gid=0 but updated to include current LGIL overrides for the local transactions which had duplicate lgsl-lgil codes in the spreadsheet (the data there is from last summer, and we fixed them after finding this)
-# $ file govuk-local-transactions.csv
-# govuk-local-transactions.csv: ASCII text, with CRLF line terminators
+# This is the output of update_local_transactions_csv.py. That script filters
+# out content which is no longer a local transaction, so the list is shorter
+# than govuk-local-transactions.csv.
+#
+# $ file govuk-local-transactions-with-tiers.csv
+# govuk-local-transactions-with-tiers.csv: ASCII text, with CRLF line terminators
 
-with open('govuk-local-transactions.csv', 'r', encoding='ascii') as f:
+with open('govuk-local-transactions-updated.csv', 'r', encoding='ascii') as f:
     govuk_local_transactions_csv = DictReader(f)
     govuk_local_transactions_data = [row for row in govuk_local_transactions_csv]
 transaction_slugs = [row['slug'] for row in govuk_local_transactions_data]
