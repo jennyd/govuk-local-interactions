@@ -37,7 +37,6 @@ transaction_slugs = [row['slug'] for row in govuk_local_transactions_data]
 
 with open('authorities-with-tiers.json') as f:
     authorities = json.load(f)
-authorities_snac_to_slug = {details['ons']: slug for slug, details in authorities.items()}
 
 
 def find_interaction_by_lgil(interactions, lgil_code):
@@ -70,7 +69,13 @@ fields = ['govuk_url', 'govuk_title', 'snac', 'lgsl', 'lgil_override', 'interact
 def generate_output():
     rows = []
     for local_transaction in govuk_local_transactions_data:
-        for snac, authority_slug in authorities_snac_to_slug.items():
+        for authority_slug, authority_details in authorities.items():
+            # If the authority's tier isn't one of the local transaction's tiers,
+            # this permutation shouldn't ever be shown to users, so ignore it:
+            if local_transaction[authority_details['tier']] != 'True':
+                continue
+
+            snac = authority_details['ons']
             interaction = preferred_interaction(snac, local_transaction['LGSL'], local_transaction['LGIL'])
             row = {
                 'govuk_url': build_govuk_url(local_transaction['slug'], authority_slug),
