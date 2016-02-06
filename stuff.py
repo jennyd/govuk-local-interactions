@@ -45,6 +45,11 @@ def find_interaction_by_lgil(interactions, lgil_code):
         return interactions_for_lgil[0]
 
 def preferred_interaction(snac, lgsl_code, lgil_code=None):
+    """This method follows the behaviour of LocalAuthority.preferred_interaction_for
+    in govuk_content_models:
+
+    https://github.com/alphagov/govuk_content_models/blob/42ca1e7704e48973eadb715e777143b985bd9332/app/models/local_authority.rb#L42-L54
+    """
     la_data = ldg_data_by_snac[snac]
     interactions = [row for row in la_data if row['LGSL'] == lgsl_code]
     chosen_interaction = None
