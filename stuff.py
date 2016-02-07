@@ -14,6 +14,7 @@ with open('local_authority_service_details.csv', 'r', encoding='iso-8859-1') as 
     ldg_data = [row for row in ldg_csv]
 ldg_data_by_snac = defaultdict(list)
 for row in ldg_data:
+    row['Service URL'] = row['Service URL'].strip()
     if row['SNAC'] and (row['Service URL'].upper() != 'X'):
         ldg_data_by_snac[row['SNAC']].append(row)
 
