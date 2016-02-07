@@ -1,0 +1,675 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Report a fault online - Staffordshire County Council
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link href="ReportItStyles.css" type="text/css" rel="stylesheet" /><link href="//www.staffordshire.gov.uk/SiteElements/Styles/100-main.css" rel="stylesheet" type="text/css" media="screen" /><link href="//www.staffordshire.gov.uk/SiteElements/Styles/800-Print.css" rel="stylesheet" type="text/css" media="print" /><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" /><meta name="viewport" content="width=device-width, initial-scale=1" /></head>
+<body id="bdymain">
+    <script language="javascript" type="text/javascript">
+
+
+        // disables the button specified and sets its style to a disabled "look".
+        function disableButtonOnClick(oButton, sButtonText, sCssClass) {
+            // set button to disabled so you can't click on it.    
+            oButton.disabled = true;
+            // change the text of the button.    
+            oButton.value = sButtonText;
+            // IE uses className for the css property.    
+            oButton.setAttribute('className', sCssClass);
+            // Firefox, Safari use class for the css property.  (doesn't hurt to do both).
+            oButton.setAttribute('class', sCssClass);
+        }
+    </script>
+    <div id="pagecontainer">
+        
+
+<script src="scripts/jquery-1.11.1.min.js" type="text/javascript"></script>  
+
+<script type="text/javascript">
+
+
+   function getCookieInitial(name) {
+            var dc = document.cookie;
+            var prefix = name + "=";
+            var begin = dc.indexOf("; " + prefix);
+            if (begin == -1) {
+                begin = dc.indexOf(prefix);
+                if (begin !== 0) return "notset";
+            }
+            else {
+                begin += 2;
+            }
+            var end = document.cookie.indexOf(";", begin);
+            if (end == -1) {
+                end = dc.length;
+            }
+            return unescape(dc.substring(begin + prefix.length, end));
+        }
+
+   var checkmenuinitial = getCookieInitial("menustate");
+   if (checkmenuinitial == "open") {
+      $('html').addClass('slidemenusub');
+   }
+   else {
+      $('html').addClass('slidemenu');
+   }
+
+
+function wheresmynearest()
+{
+var postcode = document.getElementById("txtPCMM").value;
+window.location = "http://www.staffordshire.gov.uk/apps/findmynearest/start.aspx?Postcode="+postcode+"";
+}
+
+function sitesearch()
+{
+var keywords = document.getElementById("txtSiteSearchTextBox").value;
+window.location = "http://www.staffordshire.gov.uk/Search.aspx?search_keywords="+keywords+"";
+}
+
+</script>
+<!-- start of Page header -->
+
+      <div class="sys_siteheader">
+        <a id="backtop" name="backtop"></a> 
+        <div class="sys_skipnav">
+          <a href="#top" accesskey="S">Skip navigation</a><span style="display:none">|</span>
+        </div>
+        <div class="sys_tophead">
+          <div class="sys_logo-r1">
+            <a href="http://www.staffordshire.gov.uk/Homepage.aspx" title="Navigate to: Staffordshire County Council Home Page" class="sys_0 sys_t487"><img src="http://www.staffordshire.gov.uk/SiteElements/Images/scc-logo-1.png" width="230" height="55" alt="Navigate to: Staffordshire County Council Home Page" /></a><span style="display:none">|</span>
+          </div>
+          <div class="sys_logo-r2">
+            <a href="http://www.staffordshire.gov.uk/Homepage.aspx" title="Navigate to: Staffordshire County Council Home Page" class="sys_0 sys_t487"><img src="http://www.staffordshire.gov.uk/SiteElements/Images/scc-logo-2a.png" width="83" height="90" alt="Navigate to: Staffordshire County Council Home Page" /></a><span style="display:none">|</span>
+          </div>
+          <div class="sys_head-r1">
+            <p>
+              <a href="http://www.staffordshire.gov.uk/Customer-Alerts/Customer-Alerts.aspx" class="sys_0 sys_t258850">Sign up for alerts</a><span style="display:none">|</span>
+            </p>
+            <p>
+              <a href="http://www.staffordshire.gov.uk/AtoZ.aspx" title="A to Z" class="sys_0 sys_t143">A-Z of services</a><span style="display:none">|</span>
+            </p>
+          </div>
+        </div>
+        <div class="sys_burgerbar">
+          <div class="fa sys_search-box2">
+            <div class="sys_search-query-control">
+	<input name="txtSiteSearchTextBox" type="text" value="Search" id="txtSiteSearchTextBox" class="sys_searchbox" onclick="if(this.value == 'Search'){this.value=''};" onblur="this.value=!this.value?'Search':this.value;" onkeydown="if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13)) {sitesearch();return false;}} else {return true};" /><input type="submit" name="btnSiteSearchButton" value="&#xf002;" id="btnSiteSearchButton" title="Search" class="sys_button sys_search-button" onclick="sitesearch();"  />
+</div>
+          </div>
+          <div id="menutoggle">
+            <h1 class="sys_menutoggletext">
+              <a href="#" title="Main Menu">Main Menu <span class="fa">&#61641;</span></a> <span style="display:none">|</span>
+            </h1>
+            <span class="sys_menutoggletextsmall"><a href="#" title="Main Menu"><span class="fa">&#61641;</span></a> <span style="display:none">|</span></span>
+          </div>
+        </div>
+        <div id="menudetail">
+          <div class="sys_menuitem">
+            <h2>
+              <a href="http://www.staffordshire.gov.uk/education/home.aspx" title="Education" class="sys_0 sys_t254">Education &amp; children</a><span style="display:none">|</span>
+            </h2>
+            <ul class="sys_simpleListMenu">
+	<li class="sys_first"><a title="Go to Term dates from here" class="sys_16" href="http://www.staffordshire.gov.uk/education/schoolsandcolleges/Termdates/home.aspx">Term dates</a></li><li><a title="Go to school admissions from here" class="sys_16" href="http://www.staffordshire.gov.uk/education/schoolsandcolleges/admissions/admissions.aspx">school admissions</a></li><li><a title="Go to school closures from here" class="sys_16" href="http://www.staffordshire.gov.uk/education/schoolsandcolleges/emergencyclosures/schoolclosurelist/schoolclosurelist.aspx">school closures</a></li><li><a title="Go to catchment area from here" class="sys_16" href="http://www.staffordshire.gov.uk/education/schoolsandcolleges/catchment/Catchment-Area.aspx">catchment area</a></li><li><a title="Go to free childcare from here" class="sys_16" href="http://www.staffordshire.gov.uk/education/childcare/families/EarlyEducation/earlyeducation.aspx">free childcare</a></li><li><a title="Go to free school meals from here" class="sys_16" href="http://www.staffordshire.gov.uk/education/educationalawardsbenefits/FreeSchoolMeals/home.aspx">free school meals</a></li><li class="sys_last"><a title="Go to &amp; more... from here" class="sys_16" href="http://www.staffordshire.gov.uk/education/home.aspx">&amp; more...</a></li>
+</ul>
+          </div>
+          <div class="sys_menuitem">
+            <h2>
+              <a href="http://www.staffordshire.gov.uk/transport/home.aspx" title="Transport" class="sys_0 sys_t254">Roads &amp; transport</a><span style="display:none">|</span>
+            </h2>
+            <ul class="sys_simpleListMenu">
+	<li class="sys_first"><a title="Go to Bus passes from here" class="sys_16" href="http://www.staffordshire.gov.uk/transport/publictransport/buses/buspass/Nationalbuspass.aspx">Bus passes</a></li><li><a title="Go to report a fault from here" class="sys_16" href="http://apps.staffordshire.gov.uk/reportfault/">report a fault</a></li><li><a title="Go to blue badges from here" class="sys_16" href="http://www.staffordshire.gov.uk/health/care/physicaldisabilities/transportfordisabled/home.aspx">blue badges</a></li><li><a title="Go to cycling from here" class="sys_16" href="http://www.staffordshire.gov.uk/transport/greentravel/cycling/Cycling.aspx">cycling</a></li><li><a title="Go to road works from here" class="sys_16" href="http://www.staffordshire.gov.uk/transport/staffshighways/roadworks/home.aspx">road works</a></li><li><a title="Go to bus journeys from here" class="sys_16" href="http://www.staffordshire.gov.uk/transport/publictransport/buses/Plan-your-journey/Plan.aspx">bus journeys</a></li><li class="sys_last"><a title="Go to &amp; more... from here" class="sys_16" href="http://www.staffordshire.gov.uk/transport/home.aspx">&amp; more...</a></li>
+</ul>
+          </div>
+          <div class="sys_menuitem">
+            <h2>
+              <a href="http://www.staffordshire.gov.uk/leisure/home.aspx" title="Leisure and Culture" class="sys_0 sys_t254">Leisure</a><span style="display:none">|</span>
+            </h2>
+            <ul class="sys_simpleListMenu">
+	<li class="sys_first"><a title="Go to Libraries from here" class="sys_16" href="http://www.staffordshire.gov.uk/leisure/librariesnew/libraries.aspx">Libraries</a></li><li><a title="Go to family &amp; local history from here" class="sys_16" href="http://www.staffordshire.gov.uk/leisure/archives/homepage.aspx">family &amp; local history</a></li><li><a title="Go to courses &amp; events from here" class="sys_16" href="http://apps.staffordshire.gov.uk/EventsCalendar/">courses &amp; events</a></li><li><a title="Go to museums from here" class="sys_16" href="http://www.staffordshire.gov.uk/leisure/museums/Museums.aspx">museums</a></li><li><a title="Go to art galleries from here" class="sys_16" href="http://www.staffordshire.gov.uk/leisure/museumandgalleries/home.aspx">art galleries</a></li><li class="sys_last"><a title="Go to &amp; more... from here" class="sys_16" href="http://www.staffordshire.gov.uk/leisure/home.aspx">&amp; more...</a></li>
+</ul>
+          </div>
+          <div class="sys_menuitem">
+            <h2>
+              <a href="http://www.staffordshire.gov.uk/community/home.aspx" title="Community" class="sys_0 sys_t254">Community</a><span style="display:none">|</span>
+            </h2>
+            <ul class="sys_simpleListMenu">
+	<li class="sys_first"><a title="Go to Birth, death &amp; marriage from here" class="sys_16" href="http://www.staffordshire.gov.uk/community/lifeevents/homepage.aspx">Birth, death &amp; marriage</a></li><li><a title="Go to copy certificates from here" class="sys_16" href="http://www.staffordshire.gov.uk/community/lifeevents/certificates/certificates.aspx">copy certificates</a></li><li><a title="Go to volunteering from here" class="sys_16" href="http://www.staffordshire.gov.uk/community/Volunteer/VolunteerStaffordshire.aspx">volunteering</a></li><li><a title="Go to consumer advice &amp; protection from here" class="sys_16" href="http://www.staffordshire.gov.uk/community/consumeradviceandprotection/consumer-advice-and-protection.aspx">consumer advice &amp; protection</a></li><li class="sys_last"><a title="Go to &amp; more... from here" class="sys_16" href="http://www.staffordshire.gov.uk/community/home.aspx">&amp; more...</a></li>
+</ul>
+          </div>
+          <div class="sys_menuitem sys_menuitemclear">
+            <h2>
+              <a href="http://www.staffordshire.gov.uk/environment/home.aspx" title="Environment" class="sys_0 sys_t254">Environment</a><span style="display:none">|</span>
+            </h2>
+            <ul class="sys_simpleListMenu">
+	<li class="sys_first"><a title="Go to Tips/recycling centres from here" class="sys_16" href="http://www.staffordshire.gov.uk/environment/rubbishwasteandrecycling/recyclingcentres/RecyclingCentres.aspx">Tips/recycling centres</a></li><li><a title="Go to planning from here" class="sys_16" href="http://www.staffordshire.gov.uk/environment/planning/homepage.aspx">planning</a></li><li><a title="Go to parks &amp; picnic areas from here" class="sys_16" href="http://www.staffordshire.gov.uk/environment/eLand/Countryside/OpenSpaces/Parks-Picnic-Areas.aspx">parks &amp; picnic areas</a></li><li><a title="Go to footpaths &amp; bridleways from here" class="sys_16" href="http://www.staffordshire.gov.uk/environment/eLand/RightsofWay/home.aspx">footpaths &amp; bridleways</a></li><li><a title="Go to walks from here" class="sys_16" href="http://www.staffordshire.gov.uk/environment/eLand/RightsofWay/PromotedRoutes/home.aspx">walks</a></li><li class="sys_last"><a title="Go to &amp; more... from here" class="sys_16" href="http://www.staffordshire.gov.uk/environment/home.aspx">&amp; more...</a></li>
+</ul>
+          </div>
+          <div class="sys_menuitem">
+            <h2>
+              <a href="http://www.staffordshire.gov.uk/business/home.aspx" title="Business" class="sys_0 sys_t254">Business</a><span style="display:none">|</span>
+            </h2>
+            <ul class="sys_simpleListMenu">
+	<li class="sys_first"><a title="Go to Tender opportunities from here" class="sys_16" href="http://www.staffordshire.gov.uk/business/procurement/tenders/home.aspx">Tender opportunities</a></li><li><a title="Go to trading standards from here" class="sys_16" href="http://www.staffordshire.gov.uk/business/tradingstandards/home.aspx">trading standards</a></li><li><a title="Go to farms from here" class="sys_16" href="http://www.staffordshire.gov.uk/business/Land-and-Premises/farms/home.aspx">farms</a></li><li><a title="Go to getting finance from here" class="sys_16" href="http://www.staffordshire.gov.uk/business/Gettingtherightfinance/home.aspx">getting finance</a></li><li><a title="Go to land &amp; premises from here" class="sys_16" href="http://www.staffordshire.gov.uk/business/Land-and-Premises/land-and-premises.aspx">land &amp; premises</a></li><li class="sys_last"><a title="Go to &amp; more... from here" class="sys_16" href="http://www.staffordshire.gov.uk/business/home.aspx">&amp; more...</a></li>
+</ul>
+          </div>
+          <div class="sys_menuitem">
+            <h2>
+              <a href="http://www.staffordshire.gov.uk/yourcouncil/home.aspx" title="Your Council" class="sys_0 sys_t254">Your Council</a><span style="display:none">|</span>
+            </h2>
+            <ul class="sys_simpleListMenu">
+	<li class="sys_first"><a title="Go to Jobs from here" class="sys_16" href="http://www.staffordshire.gov.uk/jobs/jobs.aspx">Jobs</a></li><li><a title="Go to council tax from here" class="sys_16" href="http://www.staffordshire.gov.uk/yourcouncil/counciltaxandfinance/home.aspx">council tax</a></li><li><a title="Go to elections from here" class="sys_16" href="http://www.staffordshire.gov.uk/yourcouncil/elections/introduction.aspx">elections</a></li><li><a title="Go to county councillors from here" class="sys_16" href="http://www.staffordshire.gov.uk/yourcouncil/who/who.aspx">county councillors</a></li><li><a title="Go to consultation &amp; feedback from here" class="sys_16" href="http://www.staffordshire.gov.uk/yourcouncil/consultationandfeedback/consultation-and-feedback.aspx">consultation &amp; feedback</a></li><li><a title="Go to online payments from here" class="sys_16" href="http://www.staffordshire.gov.uk/yourcouncil/onlinepayments/home.aspx">online payments</a></li><li class="sys_last"><a title="Go to &amp; more... from here" class="sys_16" href="http://www.staffordshire.gov.uk/yourcouncil/home.aspx">&amp; more...</a></li>
+</ul>
+          </div>
+          <div class="sys_menuitem">
+            <h2>
+              <a href="http://www.staffordshire.gov.uk/health/home.aspx" title="Social Care and Health" class="sys_0 sys_t254">Social care &amp; health</a><span style="display:none">|</span>
+            </h2>
+            <ul class="sys_simpleListMenu">
+	<li class="sys_first"><a title="Go to Social services offices from here" class="sys_16" href="http://www.staffordshire.gov.uk/health/socialservicesareaoffices/home.aspx">Social services offices</a></li><li><a title="Go to child protection from here" class="sys_16" href="http://www.staffordshire.gov.uk/health/childrenandfamilycare/childprotection/ChildProtection.aspx">child protection</a></li><li><a title="Go to adoption &amp; fostering from here" class="sys_16" href="http://www.staffordshire.gov.uk/health/childrenandfamilycare/adoptionandfostering/home.aspx">adoption &amp; fostering</a></li><li><a title="Go to help for older people from here" class="sys_16" href="http://www.staffordshire.gov.uk/health/care/olderpeople/olderpeople.aspx">help for older people</a></li><li><a title="Go to carer support from here" class="sys_16" href="http://www.staffordshire.gov.uk/health/carers/home.aspx">carer support</a></li><li><a title="Go to public health from here" class="sys_16" href="http://www.staffordshire.gov.uk/health/PublicHealth/PublicHealthandWellbeing.aspx">public health</a></li><li class="sys_last"><a title="Go to &amp; more... from here" class="sys_16" href="http://www.staffordshire.gov.uk/health/home.aspx">&amp; more...</a></li>
+</ul>
+          </div>
+          <div class="sys_menitemclose">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+      <div class="MobMenu">
+        
+        <h1 id="mcmenu" class="sys_menu-select">
+          <a href="#" title="Current menu">Current menu <span class="fa fa-bars">&nbsp;</span></a>
+        </h1>
+        <div id="toggle1" style="display: none;">
+          <div id="ParentMobDiv" class="sys_left-menu-root"><a id="Header1_MobParentLink" title="Go to Roads and Highways from here" href="http://www.staffordshire.gov.uk/transport/staffshighways"><span class='fa-stack fa-lg'><em class='fa fa-circle fa-stack-2x'></em><em class='fa fa-level-up fa-stack-1x fa-lg fa-inverse'></em></span></a></div><div class="sys_left-menu-current"><a id="Header1_MobCurrentLink" title="Go to Report a Fault Online from here" href="/WEB/ReportFault">Report a Fault Online</a></div></div></div><div id="pagebody">
+ 
+        
+<!-- NOINDEX -->
+<!-- BREADCRUMB -->
+<div id="breadcrumb">
+	<a href='http://www.staffordshire.gov.uk/' title='Go to Homepage from here' class='sys_0'>Homepage</a> &#62; <a href='http://www.staffordshire.gov.uk/transport' title='Go to Transport & Highways from here' class='sys_0'>Transport & Highways</a> &#62; <a href='http://www.staffordshire.gov.uk/transport/staffshighways' title='Go to Roads and Highways from here' class='sys_0'>Roads and Highways</a> &#62; Report a Fault Online
+</div>
+<!-- /NOINDEX -->
+<!-- /BREADCRUMB -->
+        
+<!-- NOINDEX -->
+<!-- LEFT NAVIGATION -->
+<div id="leftnav">
+	<div id="Leftnavigation1_BasketHolder"></div>
+	<div id="ParentFolderDiv" class="sys_left-menu-root"><a id="Leftnavigation1_ParentFolderLink" title="Go to Roads and Highways from here" href="http://www.staffordshire.gov.uk/transport/staffshighways">Roads and Highways</a></div>
+	<div id="CurrentFolderDiv" class="sys_left-menu-current"><a id="Leftnavigation1_CurrentFolderLink" title="Go to Report a Fault Online from here" href="/WEB/ReportFault">Report a Fault Online</a>
+	</div>
+</div>
+<!-- /NOINDEX -->
+<!-- /LEFT NAVIGATION -->
+
+        <div id="fullcontent">
+            <div class="formholder">
+                <a name="top"></a>
+                <form method="post" action="./" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTMyNDgwNjUzMQ9kFgICAw9kFgICBw9kFhoCMw8WAh4HVmlzaWJsZWhkAjUPZBYEAgEPFgIeBFRleHQFXVJlcG9ydCBhIEZhdWx0IE9ubGluZTxici8+PHNwYW4gY2xhc3M9InN0ZXBzbWFsbHRleHQiPlBsZWFzZSBzZWxlY3QgYW4gb3B0aW9uIHRvIGJlZ2luPC9zcGFuPmQCAw8WAh8BBRRTdW1tYXJ5IGFwcGVhcnMgaGVyZWQCOw8WAh8AZ2QCPQ8WAh8AaGQCPw8WAh8AaBYGAgEPFgIfAGgWAgIBDxBkZBYAZAIDD2QWBAIBDxYCHwEFAzFhLmQCAw8QZGQWAGQCBQ9kFgQCAQ8WAh8BBQMxYi5kAgUPEGRkFgBkAkEPFgIfAGhkAkMPFgIfAGgWCAIBDxYCHwBoFgICBQ9kFgICAQ8PZBYCHglvbmtleWRvd24FqwFpZihldmVudC53aGljaCB8fCBldmVudC5rZXlDb2RlKXtpZiAoKGV2ZW50LndoaWNoID09IDEzKSB8fCAoZXZlbnQua2V5Q29kZSA9PSAxMykpIHtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYnRuQ2hlY2tBZGRyZXNzJykuY2xpY2soKTtyZXR1cm4gZmFsc2U7fX0gZWxzZSB7cmV0dXJuIHRydWV9OyBkAgMPZBYCAgMPFgIfAGhkAgcPZBYCAgEPEGRkFgBkAgkPZBYEAgMPZBYCAgUPEGRkFgBkAgUPFgIfAGgWBAIDD2QWAgIBDw9kFgIfAgWqAWlmKGV2ZW50LndoaWNoIHx8IGV2ZW50LmtleUNvZGUpe2lmICgoZXZlbnQud2hpY2ggPT0gMTMpIHx8IChldmVudC5rZXlDb2RlID09IDEzKSkge2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdidG5Nb3ZlUG9pbnRlcicpLmNsaWNrKCk7cmV0dXJuIGZhbHNlO319IGVsc2Uge3JldHVybiB0cnVlfTsgZAIFD2QWAgIBDxBkZBYAZAJFDxYCHwBoFgQCAw9kFgYCAw8QZA8WH2YCAQICAgMCBAIFAgYCBwIIAgkCCgILAgwCDQIOAg8CEAIRAhICEwIUAhUCFgIXAhgCGQIaAhsCHAIdAh4WHxAFAzFzdAUBMWcQBQMybmQFATJnEAUDM3JkBQEzZxAFAzR0aAUBNGcQBQM1dGgFATVnEAUDNnRoBQE2ZxAFAzd0aAUBN2cQBQM4dGgFAThnEAUDOXRoBQE5ZxAFBDEwdGgFAjEwZxAFBDExdGgFAjExZxAFBDEydGgFAjEyZxAFBDEzdGgFAjEzZxAFBDE0dGgFAjE0ZxAFBDE1dGgFAjE1ZxAFBDE2dGgFAjE2ZxAFBDE3dGgFAjE3ZxAFBDE4dGgFAjE4ZxAFBDE5dGgFAjE5ZxAFBDIwdGgFAjIwZxAFBDIxc3QFAjIxZxAFBDIybmQFAjIyZxAFBDIzcmQFAjIzZxAFBDI0dGgFAjI0ZxAFBDI1dGgFAjI1ZxAFBDI2dGgFAjI2ZxAFBDI3dGgFAjI3ZxAFBDI4dGgFAjI4ZxAFBDI5dGgFAjI5ZxAFBDMwdGgFAjMwZxAFBDMxc3QFAjMxZxYBAgZkAgUPEGQPFgxmAgECAgIDAgQCBQIGAgcCCAIJAgoCCxYMEAUHSmFudWFyeQUBMWcQBQhGZWJydWFyeQUBMmcQBQVNYXJjaAUBM2cQBQVBcHJpbAUBNGcQBQNNYXkFATVnEAUESnVuZQUBNmcQBQRKdWx5BQE3ZxAFBkF1Z3VzdAUBOGcQBQlTZXB0ZW1iZXIFATlnEAUHT2N0b2JlcgUCMTBnEAUITm92ZW1iZXIFAjExZxAFCERlY2VtYmVyBQIxMmcWAQIBZAIHDxBkDxYGZgIBAgICAwIEAgUWBhAFBDIwMTYFBDIwMTZnEAUEMjAxNQUEMjAxNWcQBQQyMDE0BQQyMDE0ZxAFBDIwMTMFBDIwMTNnEAUEMjAxMgUEMjAxMmcQBQQyMDExBQQyMDExZxYBZmQCBQ8QZGQWAWZkAkcPFgIfAGgWAgIBD2QWBAIFD2QWBAIBDxYCHwIFrAFpZihldmVudC53aGljaCB8fCBldmVudC5rZXlDb2RlKXtpZiAoKGV2ZW50LndoaWNoID09IDEzKSB8fCAoZXZlbnQua2V5Q29kZSA9PSAxMykpIHtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgiYnRuQWRkQXR0YWNobWVudCIpLmNsaWNrKCk7cmV0dXJuIGZhbHNlO319IGVsc2Uge3JldHVybiB0cnVlfTsgZAIFDw8WAh4NT25DbGllbnRDbGljawVfZGlzYWJsZUJ1dHRvbk9uQ2xpY2sodGhpcywgJ1VwbG9hZGluZy4uJywnZGlzYWJsZWRfYnV0dG9uJyk7X19kb1Bvc3RCYWNrKCdidG5BZGRBdHRhY2htZW50JywnJylkZAIHDxYCHwBoZAJJDxYCHwBoZAJLDxYCHwBoZAJND2QWAgIBDxYCHwEFHFF1ZXN0aW9uIDFiIHdpbGwgYXBwZWFyIGhlcmVkAk8PZBYIAgEPDxYEHwMFLUhpZGVDb250cm9scygpO19fZG9Qb3N0QmFjaygnYnRuUHJldmlvdXMnLCcnKR8AaGRkAgMPDxYCHwMFKUhpZGVDb250cm9scygpO19fZG9Qb3N0QmFjaygnYnRuTmV4dCcsJycpZGQCBQ8PFgQfAwUrSGlkZUNvbnRyb2xzKCk7X19kb1Bvc3RCYWNrKCdidG5TdWJtaXQnLCcnKR8AaGRkAgcPDxYCHwBoZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgQFC3JiT3B0aW9uTmV3BQtyYk9wdGlvbk5ldwUNcmJPcHRpb25DaGVjawUNcmJPcHRpb25DaGVja2PV5daL6pLdBqirNHpA+shSySd+" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E9359333" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAB6YLBwRgGG3WWhmUQwdV5BmTnUcfbNF1bkKWRB88dGspBEzPX8bL5C4ghYxo4WD7fleRxIIjv10SsVAZMSNDSnMfD/UAsUrSldh/+vaJZZ7fDOUeW7r5eVtZbuqn0k/3M5AbeLkVBFMedN9BrhDc1hJxrptvTHSGYwG0jiDADMOMoHmyCOvEhYoQL3JvxyzHxMRaI4PgRpxmaKXkSsI5Gwo+dCR7NTHGe9Cd7p5njQqolBmNlyokcjbN90M9r25Vrqg1+zcl6LMKbxMEPheGSbSwoX2Cc/hy8gOKMGSD5oM7frIzwa6uIbJV1ixuafD/CvWvy8O/KzjiNFqBn375GBEdb9PyMQcP+zyMxZ9skQ8GqfcAKIq9C2aJTBEiyeUPHw88FAU6aEnPUuZJn3c3grAqGUFjAtMxv8EzMNhG8GMZWoq+h+/msnJ3mS1F2HAT/w7y4v+obd2fO2ffXikr3ddvoOSldTmfc1iqsH6/RcJoQxSQmXd+U5Ari92XZdqNHFyaDePCa91ux61prtnAOYe/F6eCmx1+EvvAjrBdUJU4muGed17QCv7+Vy4LCTtnQ9mQbzYlG0JHLHqPQ4EG4X7qw4Oea/l968N5SU439nGhoFjpILoFgeQqvXWA+7aEDQuYOj4TAifoTVXc0b2YGsX7jna+w==" />
+                <div class="mainareadisplay">
+                    <input name="hdnStep" type="hidden" id="hdnStep" value="0" />
+                    <input name="hdnX" type="hidden" id="hdnX" value="0" />
+                    <input name="hdnY" type="hidden" id="hdnY" value="0" />
+                    <input name="hdnXLat" type="hidden" id="hdnXLat" value="52.805696114" />
+                    <input name="hdnYLat" type="hidden" id="hdnYLat" value="-2.1146304" />
+                    <input name="hdnFaultLat" type="hidden" id="hdnFaultLat" value="0" />
+                    <input name="hdnFaultLong" type="hidden" id="hdnFaultLong" value="0" />
+                    <input name="hdnUSRN" type="hidden" id="hdnUSRN" value="0" />
+                    <input name="hdnAddressX" type="hidden" id="hdnAddressX" value="0" />
+                    <input name="hdnAddressY" type="hidden" id="hdnAddressY" value="0" />
+                    <input name="hdnAddressUSRN" type="hidden" id="hdnAddressUSRN" value="0" />
+                    <input name="hdnXCentreLat" type="hidden" id="hdnXCentreLat" value="52.805696114" />
+                    <input name="hdnYCentreLat" type="hidden" id="hdnYCentreLat" value="-2.1146304" />
+                    <input name="hdnNeedLocation" type="hidden" id="hdnNeedLocation" />
+                    <input name="hdnNeedSupplementalSub" type="hidden" id="hdnNeedSupplementalSub" />
+                    <input name="hdnNeedSupplementalIssue" type="hidden" id="hdnNeedSupplementalIssue" />
+                    <input name="hdnManualLocation" type="hidden" id="hdnManualLocation" value="0" />
+                    <input name="hdnSaveCode" type="hidden" id="hdnSaveCode" value="fcec4c26-23ab-4de7-bb85-3821c1abd543" />
+                    <input name="hdnPhoto" type="hidden" id="hdnPhoto" />
+                    <input name="hdnJava" type="hidden" id="hdnJava" value="0" />
+                    <input name="hdnMapPass" type="hidden" id="hdnMapPass" value="0" />
+                    <input name="hdnAddCode" type="hidden" id="hdnAddCode" />
+                    <input name="hdnExistingCallList" type="hidden" id="hdnExistingCallList" />
+                    <input name="hdnExistingCallToAdd" type="hidden" id="hdnExistingCallToAdd" value="0" />
+                    <input name="hdnExternalRef" type="hidden" id="hdnExternalRef" />
+                    
+                    <div id="divSelectionHeader">
+                        <h1 class="hidden">
+                            Report a Fault</h1>
+                        <div class="stepholder">
+                            Report a Fault Online<br/><span class="stepsmalltext">Please select an option to begin</span>
+                        </div>
+                        <div class="selectionholder">
+                            Summary appears here
+                        </div>
+                        <div id="divRequiredField" class="requiredfielddisplay">
+                            Items marked with <span class="redtext">*</span> must be completed
+                        </div>
+                    </div>
+                    <div>
+                        &nbsp;
+                        &nbsp;
+                        <div id="divOptions">
+                            <div class="padbottom">
+                                What would you like to do?<span class="redtext">*</span>
+                            </div>
+                            <div class="indent">
+                                <div class="blockarea">
+                                    <span class="checkboxtext"><input id="rbOptionNew" type="radio" name="rgOption" value="rbOptionNew" /><label for="rbOptionNew">Report a new fault</label></span>
+                                </div>
+                                <div class="padboth questionheader">
+                                    OR
+                                </div>
+                                <div class="blockarea">
+                                    <span class="checkboxtext"><input id="rbOptionCheck" type="radio" name="rgOption" value="rbOptionCheck" /><label for="rbOptionCheck">Check on the status of an existing report</label></span>
+                                </div>
+                                <div class="blockarea ">
+                                    <span class="indentmore">
+                                        <label for="txtExistingCall">
+                                            Enter Reference Number:</label>
+                                        <input name="txtExistingCall" type="text" id="txtExistingCall" class="textblock" />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div id="divQuestion1cCover" class="questioncover" style="display: none;">
+                            Question 1b will appear here</div>
+                        <div id="divControlBox" class="controlbox" style="display: block;">
+                            <hr />
+                            
+                            <input type="submit" name="btnNext" value="Next" onclick="HideControls();__doPostBack(&#39;btnNext&#39;,&#39;&#39;);" id="btnNext" class="controlbutton" />
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+<script type="text/javascript">
+//<![CDATA[
+location.hash = '#top';//]]>
+</script>
+</form>
+            </div>
+        </div>
+                    <!-- WebMetric snippet starts here --><!-- WebMetric snippet starts here -->
+            
+<div class="sys_govmetric-app"><div id="pagetools"><div id="govmetric_container">
+<div id="govmetric_snippet">
+        <h3 style="font-family: Verdana,Arial,Helvetica,sans-serif;font-size:8pt;font-weight: normal;color:black;" id="gm_snippet_title">
+                    How do you rate your experience with this website today?
+        </h3>
+	<a 
+		href="//websurveys.govmetric.com/theme/gm/1219?Q_RATINGID=3"
+		target="_blank" 
+		class="gm_sidebar_anchor" 
+		title="rate your experience with this website as good" 
+		rel="nofollow">
+		<img src="//wsstatic.govmetric.com/imgs/smileys/small/contrast/good.png" alt="rate your experience with this website as good" />
+	</a>
+	<a 
+		href="//websurveys.govmetric.com/theme/gm/1219?Q_RATINGID=2"
+		target="_blank" 
+		class="gm_sidebar_anchor" 
+		title="rate your experience with this website as average" 
+		rel="nofollow">
+		<img src="//wsstatic.govmetric.com/imgs/smileys/small/contrast/average.png" alt="rate your experience with this website as average" />
+	</a>
+	<a 
+		href="//websurveys.govmetric.com/theme/gm/1219?Q_RATINGID=4"
+		target="_blank" 
+		class="gm_sidebar_anchor" 
+		title="rate your experience with this website as poor" 
+		rel="nofollow">
+		<img src="//wsstatic.govmetric.com/imgs/smileys/small/contrast/poor.png" alt="rate your experience with this website as poor" />
+	</a>
+</div>
+<link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+<script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+<script type="text/javascript" src="//hitcounter.govmetric.com/1220"></script>
+ </div>
+</div>
+</div>
+
+              <!-- WebMetric snippet ends here --><!-- WebMetric snippet ends here -->
+</div>
+<!-- FOOTER -->
+<!-- NOINDEX -->
+
+
+
+  <script type="text/javascript">
+	<!--
+        $("#menutoggle").click(function () {
+            $("#toggle1").slideUp(0);
+            $("#menudetail").slideToggle(400, function () {
+                //completed detail here
+                if ($("#menudetail").is(':hidden')) {
+                    document.cookie = "menustate=closed";
+                }
+                else {
+                    document.cookie = "menustate=closed";
+                }
+            });
+        });
+
+	$("#mcmenu").click(function () {
+            $("#menudetail").slideUp(0);
+            $("#toggle1").slideToggle(400, function () {
+                //completed detail here
+            });
+        });
+
+        function getCookie(name) {
+            var dc = document.cookie;
+            var prefix = name + "=";
+            var begin = dc.indexOf("; " + prefix);
+            if (begin == -1) {
+                begin = dc.indexOf(prefix);
+                if (begin !== 0) return "notset";
+            }
+            else {
+                begin += 2;
+            }
+            var end = document.cookie.indexOf(";", begin);
+            if (end == -1) {
+                end = dc.length;
+            }
+            return unescape(dc.substring(begin + prefix.length, end));
+        }
+
+        function checkmenu() {
+            var checkmenustate = getCookie("menustate");
+            if (checkmenustate == "closed") {
+                $("#menudetail").slideUp(0);
+            }
+            else {
+                var windowwidth = $(window).width();
+                if (windowwidth < 600 || checkmenustate == "notset") {
+                    $("#menudetail").slideUp(0);
+                }
+                else {
+                    $("#menudetail").slideDown(0);
+                }
+            }
+        }
+
+        $(document).ready(checkmenu);
+
+	function openList0() {
+	    var list = document.getElementById("toggle0");
+
+	    if (list.style.display == "none"){
+        	list.style.display = "block";
+	    }else{
+	        list.style.display = "none";
+	    }
+	}
+
+
+	function openList1() {
+	    var list = document.getElementById("toggle1");
+
+	    if (list.style.display == "none"){
+        	$("#toggle1").slideDown(400);
+	        $("#menudetail").slideUp(0);
+	    }else{
+	        $("#toggle1").slideUp(400);
+ 	   }
+	}
+	//-->
+</script>   
+
+
+      <div class="sys_pagebacktop">
+        <span class="fa fa-3x"><a href="#backtop" title="Back To Top">&#61467;</a><span style="display:none">|</span></span>
+      </div>
+      <div class="sys_pagefooter">
+        <div class="sys_footer-sm">
+          <h1 class="sys_displaynone">
+            Additional Links
+          </h1>
+          <h2 class="sys_displaynone">
+            Social Media Links
+          </h2>
+          <a href="http://twitter.com/StaffordshireCC/"><span class="sys_foot-txt">Twitter</span> <span class="fa-stack fa-lg"><em class="fa fa-circle fa-stack-2x">&nbsp;</em> <em class="fa fa-twitter fa-stack-1x fa-inverse">&nbsp;</em></span></a> <span style="display:none">|</span><a href="http://www.facebook.com/yourstaffordshire"><span class="sys_foot-txt">Facebook</span> <span class="fa-stack fa-lg"><em class="fa fa-circle fa-stack-2x">&nbsp;</em> <em class="fa fa-facebook fa-stack-1x fa-inverse">&nbsp;</em></span></a> <span style="display:none">|</span><a href="http://www.youtube.com/user/StaffsCC"><span class="sys_foot-txt">Youtube</span> <span class="fa-stack fa-lg"><em class="fa fa-circle fa-stack-2x">&nbsp;</em> <em class="fa fa-youtube fa-stack-1x fa-inverse">&nbsp;</em></span></a> <span style="display:none">|</span><a href="http://www.flickr.com/photos/staffordshirecc/"><span class="sys_foot-txt">Flickr</span> <span class="fa-stack fa-lg"><em class="fa fa-circle fa-stack-2x">&nbsp;</em> <em class="fa fa-flickr fa-stack-1x fa-inverse">&nbsp;</em></span></a> <span style="display:none">|</span>
+        </div>
+        <div class="sys_footer-links">
+          <h2 class="sys_displaynone">
+            Quick Links
+          </h2>
+          <a href="http://www.mystaffordshireextra.org.uk/" title="My Staffordshire Extra">My Staffordshire Extra</a><span style="display:none">|</span>|<a href="http://www.staffordshire.gov.uk/terms.aspx" title="Terms and Conditions" class="sys_0 sys_t143">Terms</a><span style="display:none">|</span>|<a href="http://www.staffordshire.gov.uk/accessibility.aspx" title="Accessibility Statement" class="sys_0 sys_t143">Accessibility</a><span style="display:none">|</span>|<a href="http://www.staffordshire.gov.uk/contactus.aspx" title="Contact Us" class="sys_0 sys_t143">Contact us</a><span style="display:none">|</span>
+        </div>
+      </div>
+<script type="text/javascript" src="//www.staffordshire.gov.uk/SiteElements/Scripts/images-responsive.js">
+</script><noscript><p>Browser does not support script.</p></noscript>
+    </div>
+    <script src="//maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        var latitude;
+        var longitude;
+        var latitudecentre;
+        var longitudecentre;
+        var map;
+        var marker;
+        var geocoder;
+
+        function GeoLoc() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(GetLocation, LocationError, { maximumAge: 30000, timeout: 10000, enableHighAccuracy: true });
+             }
+            else {
+                GetMap();
+            }
+
+        }
+
+        function GetLocation(position) {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+            document.getElementById('hdnXLat').value = latitude;
+            document.getElementById('hdnYLat').value = longitude;
+            document.getElementById('hdnXCentreLat').value = latitude;
+            document.getElementById('hdnYCentreLat').value = longitude;
+            GetMap();
+        }
+
+        function LocationError() {
+            latitude = 52.805696114;
+        }
+
+        function GetMap() {
+            latitude = document.getElementById('hdnXLat').value;
+            longitude = document.getElementById('hdnYLat').value;
+            var latlng = new google.maps.LatLng(latitude, longitude);
+            latitudecentre = document.getElementById('hdnXCentreLat').value;
+            longitudecentre = document.getElementById('hdnYCentreLat').value;
+            var latlngcentre = new google.maps.LatLng(latitudecentre, longitudecentre);
+
+            var thediv = document.getElementById('locationinfo');
+            thediv.innerHTML = 'Your longitude is :' +
+            longitude + ' and your latitide is ' + latitude + '';
+            var myOptions = {
+                center: latlngcentre,
+                zoom: 17,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+
+            marker = new google.maps.Marker({ position: latlng, map: map });
+
+            document.getElementById('hdnXLat').value = latitude;
+            document.getElementById('hdnYLat').value = longitude;
+
+            google.maps.event.addListener(map, 'click', function (event) { placeMarker(event.latLng); });
+            google.maps.event.addListener(map, 'center_changed', function (event) { getMapCenter(); });
+
+        }
+
+        function placeMarker(location) {
+            marker.setMap(null);
+            marker = new google.maps.Marker({ position: location, map: map });
+            map.setCenter(location);
+            document.getElementById('hdnXLat').value = location.lat();
+            document.getElementById('hdnYLat').value = location.lng();
+            document.getElementById('hdnXCentreLat').value = location.lat();
+            document.getElementById('hdnYCentreLat').value = location.lng();
+            /*geocoder = new google.maps.Geocoder();
+            if (geocoder) {
+            geocoder.geocode({ 'latLng': location }, function (results, status) {
+
+            if (status == google.maps.GeocoderStatus.OK) {
+            if (results[0]) {
+            address = results[0].formatted_address;
+            alert(address);
+            }
+            }
+
+            });
+            }*/
+
+        }
+
+        function AddFaultPoint(lat, lng, desc, iconlink) {
+            var stoplatlng = new google.maps.LatLng(lat, lng);
+            var marker = new google.maps.Marker({ position: stoplatlng, map: map, icon: iconlink });
+            var popup = new google.maps.InfoWindow({ content: desc, maxWidth: 600 });
+            google.maps.event.addListener(marker, "click", function () {
+                if (currentpopup != null) {
+                    currentpopup.close();
+                    currentpopup = null;
+                }
+                popup.open(map, marker);
+                markerlatlong = marker.getPosition();
+                /*document.getElementById("lstBusStop").SelectedValue = 3037640;
+                __doPostBack("lstBusStop", "");*/
+                currentpopup = popup;
+            });
+            google.maps.event.addListener(popup, "closeclick", function () {
+                map.panTo(markerlatlong);
+                currentpopup = null;
+            });
+        }
+
+        function AddPoints() {
+            var str = document.getElementById('hdnExistingCallList').value;
+            var res = str.split(",");
+            var index;
+            marker.setMap(null);
+            google.maps.event.clearListeners(map, 'click');
+
+            for (index = 0; index < res.length; index = index + 4) {
+                /*alert(res[index] + '..' + res[index + 1] + '..' + res[index + 2]);*/
+                AddFaultPoint(res[index + 2], res[index + 3], res[index + 1], "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=" + res[index] + "|FFFFFF|000000");
+
+
+            }
+            map.setZoom(19);
+        }
+
+        function getMapCenter() {
+            var latlngcentreset = map.getCenter();
+            document.getElementById('hdnXCentreLat').value = latlngcentreset.lat();
+            document.getElementById('hdnYCentreLat').value = latlngcentreset.lng();
+        }
+
+    </script>
+    <script type="text/javascript">
+
+        function HideButtonBar() {
+            document.getElementById('divControlBox').style.display = 'none';
+            if (document.getElementById("divQuestion1bCover")) {
+                document.getElementById('divQuestion1bCover').style.display = 'block';
+            }
+
+            document.getElementById('divQuestion1cCover').style.display = 'block';
+            document.getElementById('hdnJava').value = '1';
+
+        }
+
+        function ShowMapSelection() {
+            if (document.getElementById("divMapSelect")) {
+                document.getElementById('divMapSelect').style.display = 'block';
+            }
+        }
+
+        function ShowMapRefine() {
+            document.getElementById('hdnJava').value = '1';
+            if (document.getElementById("divMapRefine")) {
+                document.getElementById('divMapRefine').style.display = 'block';
+            }
+            if (document.getElementById("divMapRefineForce")) {
+                document.getElementById('divMapRefineForce').style.display = 'block';
+            }
+        }
+         
+    </script>
+    <script type="text/javascript">
+        function HideControls() {
+
+            if (document.getElementById("btnSubmit")) {
+                var obj = document.getElementById("btnSubmit");
+                obj.disabled = true;
+                obj.value = "Please wait...";
+            }
+
+            if (document.getElementById("btnNext")) {
+                var obj = document.getElementById("btnNext");
+                obj.disabled = true;
+                obj.value = "Please wait...";
+            }
+
+            if (document.getElementById("btnPrevious")) {
+                var objb = document.getElementById("btnPrevious");
+                objb.disabled = true;
+            }
+            if (document.getElementById("btnAddAttachment")) {
+                var objc = document.getElementById("btnAddAttachment");
+                objc.disabled = true;
+            }
+            if (document.getElementById("attPhoto")) {
+                var objd = document.getElementById("attPhoto");
+                objd.disabled = true;
+            }
+
+            if (document.getElementById("divPhotoArea")) {
+                document.getElementById('divPhotoArea').style.display = 'none';
+            }
+
+            if (document.getElementById("divWait")) {
+                document.getElementById('divWait').style.display = 'block';
+            }
+
+
+
+        }
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-26779907-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,727 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en-GB">
+  <!-- wfe:2 -->
+  <head>
+    <title>Have your say - How we make decisions - City of London</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="description" content="Here in the City of London we welcome contact with our residents, workers, students, businesses, community groups and others as we believe this helps us make better decisions. This includes consultations, surveys, polling and residents' meetings." />
+    <meta name="keywords" content="Community and living,Community advice,Support groups,Voluntary organisations,Community support groups and organisations,Community economic development,Co-operative development,Transport and streets,Environment and planning,Education and learning,Resident meetings,Consultation and engagement" />
+    <link rel="Stylesheet" type="text/css" href="/_layouts/CityOfLondon.SharePoint/css/screen.css" media="screen" />
+    <link rel="Stylesheet" type="text/css" href="/_layouts/CityOfLondon.SharePoint/css/print.css" media="print" />
+    <link rel="shortcut icon" type="image/x-icon" href="/_layouts/CityOfLondon.SharePoint/images/favicon.ico" />
+    <script type="text/javascript" src="/_layouts/CityOfLondon.SharePoint/javascript/jquery-1.6.2.min.js"></script>
+    <!--[if IE 8]><link rel="Stylesheet" type="text/css" href="/_layouts/CityOfLondon.SharePoint/css/fixes-ie8.css" media="screen" /><script type="text/javascript">/*<![CDATA[*/ var _IEver=8; /*]]>*/</script><![endif]-->
+    <script type="text/javascript" src="/_layouts/CityOfLondon.SharePoint/javascript/browser.js"></script>
+    <script type="text/javascript" src="/_layouts/CityOfLondon.SharePoint/javascript/concertina.js"></script>
+    <link rel="Stylesheet" type="text/css" href="/_layouts/CityOfLondon.SharePoint/css/col.css" />
+    <script type="text/javascript" src="/_layouts/CityOfLondon.SharePoint/javascript/RatingsWebPart.js"></script>
+  </head>
+  <body id="ctl00_colBody" class="no-js generic-one-column-page cluster-about">
+    <form name="aspnetForm" method="post" action="have-your-say.aspx" id="aspnetForm">
+      <input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+      <input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+      <input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+      <input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+      <input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+      <input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+      <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+      <input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xB5357BE3A3B8A7CCF20B1667A8ADBFAEA1604CCBA7099CACDA75E1F3FD34C95CB42A168A7689646E2459809F56F78B370CE45A496535B23321A18FC53FE3DC55,07 Feb 2016 13:40:29 -0000" />
+      <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+      <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
+      <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+      <input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+      <input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+      <input type="hidden" name="_wpSelected" id="_wpSelected" value="" />
+      <input type="hidden" name="_wzSelected" id="_wzSelected" value="" />
+      <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+      <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+      <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
+      <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTIzNDM1NzgzMGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgUFSWN0bDAwJHNwV2ViUGFydE1hbmFnZXIkZ181YWU3OWUxMF9jNThhXzQ1NjdfODE3MV8yNjlmOWFjNzUzZTIkY3RsMDAkc3RhcjEFSWN0bDAwJHNwV2ViUGFydE1hbmFnZXIkZ181YWU3OWUxMF9jNThhXzQ1NjdfODE3MV8yNjlmOWFjNzUzZTIkY3RsMDAkc3RhcjIFSWN0bDAwJHNwV2ViUGFydE1hbmFnZXIkZ181YWU3OWUxMF9jNThhXzQ1NjdfODE3MV8yNjlmOWFjNzUzZTIkY3RsMDAkc3RhcjMFSWN0bDAwJHNwV2ViUGFydE1hbmFnZXIkZ181YWU3OWUxMF9jNThhXzQ1NjdfODE3MV8yNjlmOWFjNzUzZTIkY3RsMDAkc3RhcjQFSWN0bDAwJHNwV2ViUGFydE1hbmFnZXIkZ181YWU3OWUxMF9jNThhXzQ1NjdfODE3MV8yNjlmOWFjNzUzZTIkY3RsMDAkc3RhcjVOQxdZ+Egs3vKhQVzgT5yqVaJ2Tg==" />
+      <script type="text/javascript">
+//<![CDATA[
+var _spWebPartComponents = new Object();//]]></script>
+      <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="84C94772" />
+      <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDwLnibKEBgK0t5mlCwKB+8CACQKA+8CACQL/+sCACQKG+8CACQKF+8CACQKCsb3wAQLMvrvpCwLFl5apCwKJh7zJCwLT/8uIBALgstrODQL13uXCDAK4n5ChCqopE3jcNzajiYiFSZkaP4SVL61j" />
+      <div id="s4-workspace" class="s4-nosetwidth">
+        <!-- Top of page access links -->
+        <a href="#maincontent" class="access-text">Skip to main content</a>
+        <a id="PAGETOP" class="hide">&nbsp;</a>
+        <!-- START BANNER -->
+        <div class="container-banner cluster-bar">
+          <div class="container-banner-elements noindex">
+            <div class="banner-logo noindex">
+              <strong>
+                <a href="/Pages/default.aspx" class="logo-col">
+                  <img class="logo" src="/_layouts/CityOfLondon.SharePoint/images/interface/logo-city-of-london.png" alt="City of London logo" width="84" height="116" />
+                </a>
+              </strong>
+            </div>
+            <dl class="nav-utilities">
+              <dt>
+                <strong>Utilities menu</strong>
+              </dt>
+              <dd class="border-left-right">
+                <a href="/report-pay-apply/Pages/report-pay-apply.aspx" class="icon-do-it-online">Report, Pay, Apply</a>
+              </dd>
+              <dd class="border-left margin-left">
+                <a href="/search/Pages/a-to-z.aspx">A-Z</a>
+              </dd>
+              <dd>
+                <a href="/_layouts/col/shop.aspx">Shop</a>
+              </dd>
+              <dd class="utility-basket">
+                <a class="icon-basket" href="/_layouts/col/basket.aspx">Basket</a>
+              </dd>
+              <dd>
+                <a href="/events/Pages/default.aspx">Events</a>
+              </dd>
+              <dd>
+                <a href="/jobs/Pages/default.aspx">Jobs</a>
+              </dd>
+              <dd>
+                <a href="http://news.cityoflondon.gov.uk/">Media</a>
+              </dd>
+              <dd class="border-right margin-right">
+                <a href="/contact-us/Pages/default.aspx">Contact us</a>
+              </dd>
+              <dd class="border-left-right utility-my-col">
+                <a href="/_layouts/col/my-dashboard.aspx" id="ctl00_cphBanner_colspucBanner_myCityTopMenu_loginRegisterHref">
+                  <span class="text-my-city">My City&nbsp;</span>Login/Register</a>
+              </dd>
+            </dl>
+            <dl class="nav-primary">
+              <dt class="access-text">
+                <strong>Main menu</strong>
+              </dt>
+              <dd class="nav-primary-about">
+                <a href="/about-the-city/Pages/default.aspx">
+                  <strong>About the City</strong>
+                  <span class="access-text"> - </span>
+                  <span>Who we are, what we do</span>
+                </a>
+              </dd>
+              <dd class="nav-primary-services">
+                <a href="/services/Pages/default.aspx">
+                  <strong>Services</strong>
+                  <span class="access-text"> - </span>
+                  <span>Local and national</span>
+                </a>
+              </dd>
+              <dd class="nav-primary-business">
+                <a href="/business/Pages/default.aspx">
+                  <strong>Business</strong>
+                  <span class="access-text"> - </span>
+                  <span>Local, national and global</span>
+                </a>
+              </dd>
+              <dd class="nav-primary-things">
+                <a href="/things-to-do/Pages/default.aspx">
+                  <strong>Things to do</strong>
+                  <span class="access-text"> - </span>
+                  <span>Culture, green spaces and leisure</span>
+                </a>
+              </dd>
+            </dl>
+            <div class="container-find-it noindex">
+              <fieldset>
+                <legend>
+                  <label for="find-it-textfield" title="Search the entire City of London website.">Find it!</label>
+                </legend>
+                <input type="text" name="find-it-textfield" id="find-it-textfield" maxlength="50" class="find-it-textfield" />
+                <input type="submit" name="ctl00$cphBanner$colspucBanner$cmdSearchSubmit" value="Go" id="ctl00_cphBanner_colspucBanner_cmdSearchSubmit" class="find-it-button" />
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <!-- END BANNER -->
+        <div class="container-backdrop" style="background-image:url('/about-the-city/PublishingImages/backdrop-image.jpg');background-repeat:no-repeat;background-position:center">&nbsp;</div>
+        <div class="backdrop-mask">&nbsp;</div>
+        <!-- START PAGE CONTENT -->
+        <div id="s4-bodyContainer" class="container-content">
+          <!-- Left navigation bar -->
+          <div class="container-column-left">
+            <div class="container-nav-secondary noindex">
+              <!-- Secondary navigation -->
+              <dl class="nav-secondary">
+                <dt class="access-text mobile">
+                  <strong>You are in the section</strong>
+                </dt>
+                <dd>
+                  <a href="/about-the-city/Pages/default.aspx" class="cluster">About the City</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/how-we-make-decisions/Pages/default.aspx" class="section">How we make decisions</a>
+                </dd>
+                <dt class="access-text mobile">
+                  <strong>In this section</strong>
+                </dt>
+                <dd>
+                  <a href="/about-the-city/how-we-make-decisions/Pages/key-members.aspx" class="first">Key councillors</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/how-we-make-decisions/Pages/key-officers.aspx">Key City officers</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/how-we-make-decisions/Pages/corporate-plans.aspx">Corporate plans</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/how-we-make-decisions/Pages/corporate-governance.aspx">Corporate governance</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/how-we-make-decisions/Pages/have-your-say.aspx" class="selected">Have your say</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/how-we-make-decisions/Pages/emergency-planning.aspx">Emergency planning</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/how-we-make-decisions/access-to-information/Pages/default.aspx">Access to Information</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/how-we-make-decisions/budgets-and-spending/Pages/default.aspx">Budgets and spending</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/how-we-make-decisions/police-authority/Pages/default.aspx">Police Authority</a>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <!-- Main content -->
+          <hr class="hide" />
+          <a id="maincontent">&nbsp;</a>
+          <div class="container-column-right">
+            <div class="header-page-content">
+              <h1>Have your say</h1>
+              <div id="ctl00_spWebPartManager_g_f5401879_755f_4d55_9cec_ded82da4968e">
+                <dl class="share">
+                  <dt>
+        Share
+    </dt>
+                  <dd>
+                    <a class="twitter" href="https://twitter.com/intent/tweet?url=http%3a%2f%2fwww.cityoflondon.gov.uk%2fabout-the-city%2fhow-we-make-decisions%2fPages%2fhave-your-say.aspx&amp;via=cityoflondon" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;">
+                      <strong class="access-text">Share this page on twitter</strong>
+                    </a>
+                  </dd>
+                  <dd>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.cityoflondon.gov.uk%2fabout-the-city%2fhow-we-make-decisions%2fPages%2fhave-your-say.aspx&amp;t=City+of+London+-+How+we+make+decisions+-+Have+your+say" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;">
+                      <strong class="access-text">Share this page on facebook</strong>
+                    </a>
+                  </dd>
+                  <dd>
+                    <a class="email" href="mailto:?subject=Interesting%20link%20from%20the%20City%20of%20London%20website&amp;body=I%20thought%20you%20may%20find%20this%20link%20from%20the%20City%20of%20London%20website%20interesting%3a%0d%0a%0d%0aCity%20of%20London%20-%20How%20we%20make%20decisions%20-%20Have%20your%20say%3a%20%0d%0ahttp%3a%2f%2fwww.cityoflondon.gov.uk%2fabout-the-city%2fhow-we-make-decisions%2fPages%2fhave-your-say.aspx">
+                      <strong class="access-text">Share this page via email</strong>
+                    </a>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="container-padding">
+              <div class="container-image-large"></div>
+              <div class="left-column">
+                <h2>Contact us</h2>
+                <p>To find out more about our consultation and engagement activities, how you can get involved and have your say, call us on 020 7332 1275 or email <a href="mailto:consultation@cityoflondon.gov.uk" target="_blank">consultation@cityoflondon.gov.uk</a></p>
+                <div class="container-social-media">
+                  <dl class="social-media">
+                    <dt>Join us on social media</dt>
+                    <dd>
+                      <a class="sm-facebook" href="https://www.facebook.com/CityofLondonCorp" target="_blank">
+                        <span class="access-text">Like us on Facebook</span>
+                      </a>
+                    </dd>
+                    <dd>
+                      <a class="sm-twitter" href="https://twitter.com/cityoflondon" target="_blank">
+                        <span class="access-text">Follow us on Twitter</span>
+                      </a>
+                    </dd>
+                  </dl>
+                </div>
+                <h2>City Residents' Meetings</h2>
+                <p>The annual City-wide Residents’ Meeting was held in the Old Library at Guildhall on Monday 6 July 2015. The meetings offered residents the chance to he​ar from, and ask questions to, elected Members and senior officers from the City Corporation and the <a href="http://www.cityoflondon.police.uk/Pages/default.aspx" target="_blank">City of London Police​</a>. This year we included talks on air pollution and crime and safety. </p>
+                <p>
+                  <a href="/about-the-city/how-we-make-decisions/Documents/city-wide-residents-meeting-2015.pdf" target="_blank">The meeting presentations (1MB)</a> are now available as are <a href="/about-the-city/how-we-make-decisions/Documents/notes-of-city-wide-residents-meeting.pdf" target="_blank">minutes (142 KB)</a> from the meeting. The latter includes details from the question and answer session from both sessions. </p>
+                <h2>City stakeholder survey</h2>
+                <p>Every three years the City Corporation commissions four separate surveys with residents, workers, businesses and senior executives. Along with existing feedback methods, the results from this polling help us shape our future priorities and demonstrate how we listen to our different audiences.</p>
+                <p>These surveys aim to discover satisfaction levels with the City as a place to live, work and do business. They also test satisfaction with the City Corporation and its services, tracking satisfaction levels over time and enabling comparison with London local authorities.</p>
+                <div class="container-concertina">
+                  <h2>
+                    <a class="on">Key findings 2013 summary</a>
+                  </h2>
+                  <div class="concertina-content">
+                    <h3>Attitudes to the City of London</h3>
+                    <ul>
+                      <li>Satisfaction with the City of London as a place to live/work/run a business remains high, with over nine out of ten satisfied with the local area across all four audiences.</li>
+                      <li>Traffic congestion and public transport/commuting are seen as key priorities by both businesses and workers to improve the City of London as a place to work and do business.</li>
+                    </ul>
+                    <h3 class="colElement-Heading3">Attitudes to the City Corporation</h3>
+                    <ul>
+                      <li>Audiences are satisfied with the way the City Corporation runs things with resident satisfaction at 87%, senior executives 85%, workers 75% and businesses 69%. No significant shifts in satisfaction since the previous survey in 2009.</li>
+                      <li>The perception of ‘value for money’ (this is a new question) follows a similar trend: residents 73%, senior executives 61%, workers 49% and businesses 40%. </li>
+                      <li>Familiarity with the City Corporation is highest amongst residents 67%, senior executives 51%, workers 36% and businesses 29%. The business figure shows a slight fall from the 39% measured in 2009.</li>
+                      <li>One explanation could be the increased number of new businesses in the City, and the correlation between familiarity with the City Corporation and the number of years a business has been established here. Among businesses that have been in the City for less than 5 years, only 12% felt that they knew the City Corporation very well whereas 44% felt they did not know it at all.</li>
+                      <li>When asked whether the City Corporation’s role in promoting the City and representing its interests at home and abroad should be increased, decreased or remain the same: 59% of senior executives and 61% of businesses felt it should be increased, 39% of senior executives and 31% of businesses felt it should remain the same. No senior executives and only 1% of businesses felt it should be decreased. 87% of senior executives felt that the role of the Lord Mayor was very relevant or fairly relevant.</li>
+                    </ul>
+                    <h3>Satisfaction with City Corporation and non-City Corporation services</h3>
+                    <h4>2013 satisfaction compared to 2009</h4>
+                    <table summary="Summarise table content">
+                      <caption>Residents</caption>
+                      <tbody>
+                        <tr>
+                          <th scope="col">2013 satisfaction</th>
+                          <th scope="col">Increase / Decrease</th>
+                        </tr>
+                        <tr>
+                          <td>London Underground 89%</td>
+                          <td>+10%</td>
+                        </tr>
+                        <tr>
+                          <td>Train services 85%</td>
+                          <td>+11%</td>
+                        </tr>
+                        <tr>
+                          <td>Archives 19%</td>
+                          <td>-15%</td>
+                        </tr>
+                        <tr>
+                          <td>Libraries 69%</td>
+                          <td>-11%</td>
+                        </tr>
+                        <tr>
+                          <td>Environmental health 54%</td>
+                          <td>-10%</td>
+                        </tr>
+                        <tr>
+                          <td>Adult Education 28%</td>
+                          <td>-10%</td>
+                        </tr>
+                        <tr>
+                          <td>Consumer protection/trading standards 24%</td>
+                          <td>-10%</td>
+                        </tr>
+                        <tr>
+                          <td>Youth Activities 16%</td>
+                          <td>-10%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table summary="Summarise table content">
+                      <caption>Businesses</caption>
+                      <tbody>
+                        <tr>
+                          <th scope="col">2013 satisfaction</th>
+                          <th scope="col">Increase / Decrease</th>
+                        </tr>
+                        <tr>
+                          <td>London Underground 87%</td>
+                          <td>+21%</td>
+                        </tr>
+                        <tr>
+                          <td>Recycling 57%</td>
+                          <td>+11%</td>
+                        </tr>
+                        <tr>
+                          <td>Shopping facilities 85%</td>
+                          <td>+7%</td>
+                        </tr>
+                        <tr>
+                          <td>Libraries 34%</td>
+                          <td>-12%</td>
+                        </tr>
+                        <tr>
+                          <td>Open Spaces 70%</td>
+                          <td>-7%</td>
+                        </tr>
+                        <tr>
+                          <td>Adult education 26%</td>
+                          <td>-7%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table summary="Summarise table content">
+                      <caption>Workers </caption>
+                      <tbody>
+                        <tr>
+                          <th scope="col">2013 satisfaction</th>
+                          <th scope="col">Increase / Decrease</th>
+                        </tr>
+                        <tr>
+                          <td>Shopping facilities 83%</td>
+                          <td>+9%</td>
+                        </tr>
+                        <tr>
+                          <td>Museum of London 65%</td>
+                          <td>+8%</td>
+                        </tr>
+                        <tr>
+                          <td>Open Spaces 62%</td>
+                          <td>-8%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table summary="Summarise table content">
+                      <caption>Senior executives </caption>
+                      <tbody>
+                        <tr>
+                          <th scope="col">2013 satisfaction</th>
+                          <th scope="col">Increase</th>
+                        </tr>
+                        <tr>
+                          <td>London Underground 76%</td>
+                          <td>+26%</td>
+                        </tr>
+                        <tr>
+                          <td>Barbican Centre 68%</td>
+                          <td>+19%</td>
+                        </tr>
+                        <tr>
+                          <td>Shopping Facilities 79%</td>
+                          <td>+13%</td>
+                        </tr>
+                        <tr>
+                          <td>Other support for the Arts 79%</td>
+                          <td>+13%</td>
+                        </tr>
+                        <tr>
+                          <td>Train services 68%</td>
+                          <td>+12%</td>
+                        </tr>
+                        <tr>
+                          <td>Bars and restaurants 95%</td>
+                          <td>+8%</td>
+                        </tr>
+                        <tr>
+                          <td>Consumer protection/trading standards 24%</td>
+                          <td>-10%</td>
+                        </tr>
+                        <tr>
+                          <td>Youth Activities 16%</td>
+                          <td>-10%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <ul>
+                      <li>Public conveniences had a negative satisfaction rating: -14% for workers and -12% for businesses. This question was not asked in 2009.</li>
+                      <li>Additional analysis was performed by postcode to see if there was a geographical explanation for the falls in satisfaction. Although the result was not conclusive, the pollsters point out that the figures are still very good when compared to similar results from London local authorities.</li>
+                    </ul>
+                    <h3>Communication Channels</h3>
+                    <table summary="Summarise table content">
+                      <caption>Current method to learn about City of London activities</caption>
+                      <tbody>
+                        <tr>
+                          <th scope="col">Residents</th>
+                          <th scope="col">Workers</th>
+                          <th scope="col">Businesses</th>
+                        </tr>
+                        <tr>
+                          <td>Citiview 47%</td>
+                          <td>Mailshots 40%</td>
+                          <td>Cityresident 27%</td>
+                        </tr>
+                        <tr>
+                          <td>Metro 23%</td>
+                          <td>Experience of working in the City 23%</td>
+                          <td>Evening Standard 19%</td>
+                        </tr>
+                        <tr>
+                          <td>Mailshots 18%</td>
+                          <td>Website 16%</td>
+                          <td>Emails 10%</td>
+                        </tr>
+                        <tr>
+                          <td>Website 21%</td>
+                          <td>n/a</td>
+                          <td>n/a</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p>*These figures are broadly similar to those observed in 2009.</p>
+                    <table summary="Summarise table content">
+                      <caption>Preferred method to learn about City of London activities</caption>
+                      <tbody>
+                        <tr>
+                          <th scope="col">Resident</th>
+                          <th scope="col">Workers</th>
+                          <th scope="col">Businesses</th>
+                          <th scope="col">Senior executives</th>
+                        </tr>
+                        <tr>
+                          <td>Mailshots 34%</td>
+                          <td>Metro 30%</td>
+                          <td>Emails 45%</td>
+                          <td>Emails 52%</td>
+                        </tr>
+                        <tr>
+                          <td>Cityview 28%</td>
+                          <td>Emails 19%</td>
+                          <td>Website 22%</td>
+                          <td>Website 28%</td>
+                        </tr>
+                        <tr>
+                          <td>Emails 21%</td>
+                          <td>Evening Standard 18%</td>
+                          <td>Mailshots 18%</td>
+                          <td>Newspapers 21%</td>
+                        </tr>
+                        <tr>
+                          <td>Website 19%</td>
+                          <td>n/a</td>
+                          <td>n/a</td>
+                          <td>n/a</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      <strong>*</strong>The proportion preferring email has increased for all audiences since 2009.</p>
+                    <h3>City Competitiveness</h3>
+                    <ul>
+                      <li>New York remains the main competitive challenge to the City of London: 41% of senior executives consider it ‘a great challenge’. Asian markets are also starting to be seen as a competitive challenge, with many senior executives expecting their firms to conduct more business in the next five years, in particular with Hong Kong (27%) and Singapore (37%).</li>
+                      <li>Regulation is the main issue executives feel may jeopardise the City’s long term status as a leading global financial centre, with 72% mentioning European regulation (an increase of 21% from 2009) and 65% mentioning UK regulation. Taxation is also seen as a concern by nearly half (46%), but less so than in 2009 (down 14%).</li>
+                      <li>There has been a significant rise in the number of senior executives who feel that immigration controls/visa issues could jeopardise the City’s long term status – up 9% to 13%. </li>
+                    </ul>
+                    <h3>Policy issues</h3>
+                    <ul>
+                      <li>In response to the question ‘If Britain was to vote to leave the EU, what impact would that have on your business here in the City of London?’ 69% of senior executives feel that it would have a negative impact on their business. Only 9% feels the impact would be positive, 14% no impact and 8% did not know. </li>
+                      <li>23% of senior executives are satisfied with current arrangements for businesses visitor visas for non-EU citizens, compared to 47% who are dissatisfied. 23% were neutral and 7% did not know. </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div id="ctl00_spWebPartManager_g_5ae79e10_c58a_4567_8171_269f9ac753e2">
+                <div id="ctl00_spWebPartManager_g_5ae79e10_c58a_4567_8171_269f9ac753e2_ctl00_rating" class="container-rating">
+                  <input type="image" name="ctl00$spWebPartManager$g_5ae79e10_c58a_4567_8171_269f9ac753e2$ctl00$star1" id="ctl00_spWebPartManager_g_5ae79e10_c58a_4567_8171_269f9ac753e2_ctl00_star1" title="Rate this page 1 out of 5" src="/_layouts/CityOfLondon.SharePoint/images/interface/rating-on.png" alt="1 out of 5" border="0" />
+                  <span class="hide"> | </span>
+                  <input type="image" name="ctl00$spWebPartManager$g_5ae79e10_c58a_4567_8171_269f9ac753e2$ctl00$star2" id="ctl00_spWebPartManager_g_5ae79e10_c58a_4567_8171_269f9ac753e2_ctl00_star2" title="Rate this page 2 out of 5" src="/_layouts/CityOfLondon.SharePoint/images/interface/rating-on.png" alt="2 out of 5" border="0" />
+                  <span class="hide"> | </span>
+                  <input type="image" name="ctl00$spWebPartManager$g_5ae79e10_c58a_4567_8171_269f9ac753e2$ctl00$star3" id="ctl00_spWebPartManager_g_5ae79e10_c58a_4567_8171_269f9ac753e2_ctl00_star3" title="Rate this page 3 out of 5" src="/_layouts/CityOfLondon.SharePoint/images/interface/rating-on.png" alt="3 out of 5" border="0" />
+                  <span class="hide"> | </span>
+                  <input type="image" name="ctl00$spWebPartManager$g_5ae79e10_c58a_4567_8171_269f9ac753e2$ctl00$star4" id="ctl00_spWebPartManager_g_5ae79e10_c58a_4567_8171_269f9ac753e2_ctl00_star4" title="Rate this page 4 out of 5" src="/_layouts/CityOfLondon.SharePoint/images/interface/rating-on.png" alt="4 out of 5" border="0" />
+                  <span class="hide"> | </span>
+                  <input type="image" name="ctl00$spWebPartManager$g_5ae79e10_c58a_4567_8171_269f9ac753e2$ctl00$star5" id="ctl00_spWebPartManager_g_5ae79e10_c58a_4567_8171_269f9ac753e2_ctl00_star5" title="Rate this page 5 out of 5" src="/_layouts/CityOfLondon.SharePoint/images/interface/rating-off.png" alt="5 out of 5" border="0" />
+                  <span class="total-rating">
+        Currently rated <span class="current-rating">4</span> out of 5 (<span class="votes-number">1</span> votes)
+    </span>
+                </div>
+                <div id="pageId">
+                  <input type="hidden" name="ctl00$spWebPartManager$g_5ae79e10_c58a_4567_8171_269f9ac753e2$ctl00$PageId" id="ctl00_spWebPartManager_g_5ae79e10_c58a_4567_8171_269f9ac753e2_ctl00_PageId" value="4e8d03e9-db86-4787-adf4-15b327c68610" />
+                </div>
+                <div id="serviceUrl">
+                  <input type="hidden" name="ctl00$spWebPartManager$g_5ae79e10_c58a_4567_8171_269f9ac753e2$ctl00$ServiceUrl" id="ctl00_spWebPartManager_g_5ae79e10_c58a_4567_8171_269f9ac753e2_ctl00_ServiceUrl" value="http://www.cityoflondon.gov.uk" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-sub-content"></div>
+          <!-- Peripheral content -->
+        </div>
+        <!-- /container-content -->
+        <!-- Secondary content -->
+        <div class="container-bar-explore-the-site">
+          <div class="container-explore-the-site noindex">
+            <h2>Explore the site</h2>
+            <ul class="explore-the-site">
+              <li>
+                <a href="/about-the-city/about-us/Pages/default.aspx">
+                  <img src="/about-the-city/PublishingImages/explore-this-site-1.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">About us</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/how-we-make-decisions/Pages/default.aspx">
+                  <img src="/about-the-city/about-us/PublishingImages/explore.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">How we make decisions</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/the-lord-mayor/Pages/default.aspx">
+                  <img src="/about-the-city/the-lord-mayor/PublishingImages/jeffrey-evans-130x86.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">Lord Mayor Alderman the Lord Mountevans</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/about-us/Pages/key-facts.aspx">
+                  <img src="/about-the-city/about-us/PublishingImages/key-stats-small.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">Key facts</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/the-lord-mayor/mansion-house/Pages/default.aspx">
+                  <img src="/about-the-city/PublishingImages/explore-this-site-5.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">Mansion House</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/elections-and-wards/Pages/default.aspx">
+                  <img src="/about-the-city/elections-and-wards/PublishingImages/ballot-box-ets.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">Voting and elections</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/about-us/Pages/how-to-find-us.aspx">
+                  <img src="/about-the-city/PublishingImages/explore-this-site-7.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">How to find us</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END PAGE CONTENT -->
+        <hr class="hide" />
+        <!-- START FOOTER -->
+        <div class="container-footer-breadcrumb">
+          <div class="container-breadcrumb noindex">
+            <dl class="breadcrumb">
+              <dt>
+        You are here:
+      </dt>
+              <dd>
+                <a href="/Pages/default.aspx">Home</a> &gt; </dd>
+              <dd>
+                <a href="/about-the-city/Pages/default.aspx">About the City</a> &gt; </dd>
+              <dd>
+                <a href="/about-the-city/how-we-make-decisions/Pages/default.aspx">How we make decisions</a>
+              </dd>
+              <dd> &gt; Have your say</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="container-footer-services-contact">
+          <div class="container-services-contact">
+            <div class="container-services noindex">
+              <dl class="services">
+                <dt>Services and contacts</dt>
+                <dd>
+                  <a href="http://email.cityoflondon.gov.uk/linkapp/cmasubs.aspx?LinkID=pageid986790jkkzhq@f@f@n9qh@z@f@n9qh@f@f" class="icon-eshot">Sign up for eShot</a>
+                </dd>
+                <dd>
+                  <a href="http://www.facebook.com/CityofLondonCorp" class="icon-facebook">Like us on Facebook</a>
+                </dd>
+                <dd>
+                  <a href="/about-our-website/Pages/mobile.aspx" class="icon-mobile">Mobile</a>
+                </dd>
+                <dd>
+                  <a href="/report-pay-apply/Pages/report-pay-apply.aspx" class="icon-online">Report, Pay, Apply</a>
+                </dd>
+                <dd>
+                  <a href="https://twitter.com/#!/cityoflondon" class="icon-twitter">Follow us on Twitter</a>
+                </dd>
+                <dd>
+                  <a href="/maps/Pages/default.aspx" class="icon-maps">Maps</a>
+                </dd>
+                <dd>
+                  <a href="/contact-us/Pages/default.aspx" class="icon-contact">Contact us</a>
+                </dd>
+                <dd>
+                  <a href="https://www.youtube.com/user/CityofLondonvideos/videos" class="icon-you-tube">Watch on YouTube</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/about-us/Pages/social-media.aspx" class="icon-social">Social media</a>
+                </dd>
+              </dl>
+            </div>
+            <div class="container-contact noindex">
+              <dl class="contact border-box">
+                <dt>Get in touch</dt>
+                <dd>
+                  <span class="access-text">Address: </span>City of London, Guildhall, PO Box 270, London, EC2P 2EJ</dd>
+                <dd>
+                  <span class="access-text">Telephone: </span>
+                  <strong>020 7606 3030</strong>
+                </dd>
+                <dd>
+                  <span class="access-text">Email: </span>
+                  <a href="mailto:pro@cityoflondon.gov.uk">pro@cityoflondon.gov.uk</a>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="container-footer-global-links">
+          <div class="container-global-links noindex">
+            <strong>&copy; City of London 2016</strong>
+            <dl class="global-links">
+              <dt>Global links</dt>
+              <dd>
+                <a href="/about-our-website/Pages/accessibility.aspx">Accessibility</a>
+              </dd>
+              <dd>
+                <a href="/about-our-website/Pages/legal-notices.aspx">Legal notices</a>
+              </dd>
+              <dd>
+                <a href="/about-our-website/Pages/legal-notices.aspx#privacy">Privacy statement</a>
+              </dd>
+              <dd>
+                <a href="/about-our-website/Pages/legal-notices.aspx#socialmedia">Social media policy</a>
+              </dd>
+              <dd>
+                <a href="/about-our-website/Pages/Cookies.aspx">Cookie policy</a>
+              </dd>
+              <dd>
+                <a href="/about-our-website/sitemap.aspx">Sitemap</a>
+              </dd>
+            </dl>
+            <fieldset class="our-other-sites">
+              <legend class="access-text">
+                <label for="ctl00_cphFooter_colspucFooter_ddlOtherSites" id="ctl00_cphFooter_colspucFooter_lblOtherSites">Select one of our other sites:</label>
+              </legend>
+              <select name="ctl00$cphFooter$colspucFooter$ddlOtherSites" id="ctl00_cphFooter_colspucFooter_ddlOtherSites">
+                <option value="">Our other sites</option>
+                <option value="http://www.barbican.org.uk/">Barbican</option>
+                <option value="http://www.citybridgetrust.org.uk/">City Bridge Trust</option>
+                <option value="http://www.cityoflondon.police.uk/">City of London Police</option>
+                <option value="http://www.towerbridge.org.uk/">Tower Bridge Exhibition</option>
+              </select>
+              <input type="submit" name="ctl00$cphFooter$colspucFooter$cmdOtherSites" value="Go" id="ctl00_cphFooter_colspucFooter_cmdOtherSites" />
+            </fieldset>
+            <div class="access-text mobile">
+              <a href="#PAGETOP">Back to top</a>
+            </div>
+          </div>
+        </div>
+        <!-- END FOOTER -->
+        <!-- START COOKIE BANNER -->
+        <div class="container-floating-notifications">
+          <div class="container-notifications noindex">
+            <h2 class="access-text">Notifications</h2>
+            <ul>
+              <li>The City of London website uses cookies. For details on how we use cookies <a href="/about-our-website/Pages/cookies.aspx">please read our policy on cookies</a>. <a id="btnHideCookieBanner" href="#">Hide this banner</a> (this requires a cookie).</li>
+            </ul>
+          </div>
+        </div>
+        <!-- END COOKIE BANNER -->
+      </div>
+      <!-- /s4-nosetwidth colPageWrapper -->
+    </form>
+    <script type="text/javascript">/*<![CDATA[*/
+// survey
+var surveyPanel = document.getElementById("ColSiteSurvey");
+var surveyCookie = getCookie('CoLSurveyClose');
+if (surveyCookie != null && surveyPanel != undefined) { surveyPanel.style.display = "none"; }
+function hideSurvey() { setCookie('CoLSurveyClose', 'true', 1); surveyPanel.style.display = "none"; }
+function changeMargin() { surveyPanel.style.marginRight != "-5px" ? surveyPanel.style.marginRight = "-5px" : surveyPanel.style.marginRight = "-250px"; }
+// analytics
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m.nextSibling) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-21582611-1');
+ga('send', 'pageview');
+var aLinks = document.getElementsByTagName("A");
+for (c=0; c<=aLinks.length; c++) {
+    if (aLinks[c] && aLinks[c].attributes["href"] && aLinks[c].attributes["href"].value.indexOf(".pdf") != -1) {
+        addListener(aLinks[c], "click", function(e) {
+            ga('send', 'event', 'PDF', 'Download', getNearestAnchor(e.target ? e.target : e.srcElement).attributes["href"].value, {'nonInteraction': 1});
+        });
+    }
+    if (aLinks[c] && aLinks[c].attributes["href"] && aLinks[c].attributes["href"].value.indexOf(".xls") != -1) {
+        addListener(aLinks[c], "click", function(e) {
+            ga('send', 'event', 'XLS', 'Download', getNearestAnchor(e.target ? e.target : e.srcElement).attributes["href"].value, {'nonInteraction': 1});
+        });
+    }
+}
+// utilities
+function getNearestAnchor(element) { while (element.tagName != "A") { element = element.parentElement; } return element; }
+function addListener(element, type, callback) { if (element.addEventListener) element.addEventListener(type, callback); else if (element.attachEvent) element.attachEvent('on' + type, callback); }
+function getCookie(name){var nameEQ=name+"=";var ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1,c.length);if(c.indexOf(nameEQ)==0)return c.substring(nameEQ.length,c.length);}return null; }
+function setCookie(name,value,days){if(days){var date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));var expires="; expires="+date.toGMTString();}else var expires="";document.cookie=name+"="+value+expires+"; path=/"; }
+/*]]>*/</script>
+  </body>
+</html>
+<!-- Rendered using cache profile:Public Internet (Purely Anonymous) at: 2016-02-07T13:40:30 -->

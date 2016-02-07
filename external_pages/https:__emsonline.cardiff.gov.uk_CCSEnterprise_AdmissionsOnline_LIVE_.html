@@ -1,0 +1,186 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB"> 
+<head id="ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/jquery.validate.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/jquery.corner.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/MicrosoftMvcValidation.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/MicrosoftMvcAjax.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/site.js" type="text/javascript"></script>
+
+    <title>
+	
+Welcome To Admissions and Transfers
+
+</title>
+    <link href="/CCSEnterprise_Admissionsonline_LIVE/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link title="Smaller" href="/CCSEnterprise_Admissionsonline_LIVE/Content/Smaller.css" type="text/css" rel="Alternate stylesheet" />
+    <link title="Standard" href="/CCSEnterprise_Admissionsonline_LIVE/Content/Standard.css" type="text/css" rel="Alternate stylesheet" />
+    <link title="Larger" href="/CCSEnterprise_Admissionsonline_LIVE/Content/Larger.css" type="text/css" rel="Alternate stylesheet" />
+    <link title="Largest" href=" /CCSEnterprise_Admissionsonline_LIVE/Content/Largest.css" type="text/css"  rel="Alternate stylesheet"/> 
+    <style type="text/css"> .jsonly { display: none } </style>
+</head>
+
+<body  style="background-color:#FFFFFF">
+    <input id="sessionFont" name="FontSize" type="hidden" value="Smaller" />
+    <input id="SetFontSizeUrl" name="SetFontSizeUrl" type="hidden" value="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/SetFontSize" />
+    <input id="sessionCulture" name="Culture" type="hidden" value="en-GB" />
+    
+    <div id="mainContainer">
+    <ul id="shortcuts" style="z-index:-1">
+	<li><a href="#mainContentDiv">Skip to Content</a></li>
+    </ul>
+    <div id="showOnlyWhenJsEnabled" class="jsonly">
+    <div id="divProcessScreen" class="hiddenForProcess" >
+        <table border='0' style="height:100%; width:100%;" >
+          <tr align="center" valign="middle">
+            <td style="font-size:300%; font-weight:bold;  opacity: 1; filter: alpha(opacity=100);">Please Wait...<img alt="Banner" src="/CCSEnterprise_Admissionsonline_LIVE/Content/Images/PleaseWait.png" /> </td>
+        </tr>
+        </table>
+    </div>
+    </div>
+       <script type="text/javascript">
+           document.getElementById('showOnlyWhenJsEnabled').className = "";
+    </script>
+
+        <div id="header" style="padding:3pt; border-bottom: 2px solid rgb(92, 135, 178);">
+            <div id="title">
+                <img class="banner" height="88" alt="Banner" src="/CCSEnterprise_Admissionsonline_LIVE/Content/Images/banner.png" />                
+            </div>
+
+    <div id="global_links"  style="float:right;margin-top:-90px">
+
+    <div id="culture">
+        [
+            <a href="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/SetCulture/cy-GB" title="Switch to the Welsh language version of this website">Newid i Gymraeg</a>
+             
+        ]
+    </div>    
+                 
+ 
+
+
+
+<div id="fsize">
+    <ul id="mycontrol">
+        <li></li>
+    </ul>
+</div> 
+
+<span id="main_help">
+    <a href="/CCSEnterprise_Admissionsonline_LIVE/NetHelp/default.htm" title="Select to show Help in a new window" target="_blank"><img alt="Select to show Help in a new window" src="/CCSEnterprise_Admissionsonline_LIVE/Content/Images/MainHelp.png" /></a>
+</span>
+         
+    </div>             
+            
+
+        </div>
+        <div id="contentHeader">
+        
+                <div id="welcomMessage">
+                    
+	<h1 class="welcome_message" style="margin:1%">Welcome to School Admissions Online</h1> 
+    
+                </div>
+           
+        
+
+
+
+        </div>
+        <div id="mainContentDiv">
+            
+            <div class="tabcontent" id="mainContent">
+                 
+
+<div id="co4" style="margin-left:0;">
+
+        <div class="login_form">
+        <form action="/CCSEnterprise_Admissionsonline_LIVE/Account.mvc/RegisterWelcome" id="form0" method="post">
+                <h2 class="SubHeadingSmall">I am new to this service.</h2>
+                <span style="float:left;margin-top:5px;">Help me register.</span> 
+                <input type="submit" name="button" value="Register" style="float:right"/>
+            </form><script type="text/javascript">
+//<![CDATA[
+if (!window.mvcClientValidationMetadata) { window.mvcClientValidationMetadata = []; }
+window.mvcClientValidationMetadata.push({"Fields":[],"FormId":"form0","ReplaceValidationSummary":false});
+//]]>
+</script>
+            <div style="float:left; width:100%;">           
+                <h2 class="SubHeadingSmall" style="border-top:solid 1px #99f;margin-top:5%; padding-top: 5%;">I am already registered and want to log in.</h2>
+                               
+
+                                
+                <form action="/CCSEnterprise_Admissionsonline_LIVE/Account.mvc" id="form1" method="post">        
+                <span style="float:left"><label for="Username">Email Address</label></span>
+                <br />
+                <input autocomplete="off" id="Username" name="Username" style="width:230px" title="Enter your Email Address" type="text" value="" />
+                <span class="field-validation-valid" id="Username_validationMessage"></span>
+
+                <br />
+                
+                <span style="float:left"><label for="Password">Password</label></span>
+                <br />
+                <input autocomplete="off" id="Password" name="Password" title="Enter your Password" type="password" />
+                <span class="field-validation-valid" id="Password_validationMessage"></span>
+                <div >
+                    <a href="/CCSEnterprise_Admissionsonline_LIVE/Account.mvc/ForgotPassword" style="float:left; margin-top:5px;">Forgotten your password?</a>
+                    <input type="submit" name="button" value="Login" style="float:right"/>
+                </div>
+                </form><script type="text/javascript">
+//<![CDATA[
+if (!window.mvcClientValidationMetadata) { window.mvcClientValidationMetadata = []; }
+window.mvcClientValidationMetadata.push({"Fields":[{"FieldName":"Username","ReplaceValidationMessageContents":true,"ValidationMessageId":"Username_validationMessage","ValidationRules":[{"ErrorMessage":"You must specify Email Address.","ValidationParameters":{},"ValidationType":"required"}]},{"FieldName":"Password","ReplaceValidationMessageContents":true,"ValidationMessageId":"Password_validationMessage","ValidationRules":[{"ErrorMessage":"You must specify Password.","ValidationParameters":{},"ValidationType":"required"}]}],"FormId":"form1","ReplaceValidationSummary":false});
+//]]>
+</script>
+
+            </div>
+            <div style="float:left; width:100%;">
+                <div>
+                    <h2 class="SubHeadingSmall" style="border-top:solid 1px #99f;margin-top:5%; padding-top: 5%;">Before you begin...you will need:</h2>
+                        <ul>
+                            <li>Any information you have been given about applying for a school place</li>
+                            <li>Your child’s full address (including postcode)</li>
+                            <li>Your child’s date of birth</li>
+                            <li>Approx 15-20 minutes to complete the application (but you can save and come back to it later)</li>
+                            <li>For security, the website will timeout if you login and do not use it</li>
+                            <li>Do not use the Browser's Back button; use the Back button on each page</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+
+  <div class="login_help" >
+        <p><span style="font-style: Normal;font-weight: bold;color: #000000;;">Welcome to Cardiff Council's Online Admissions System</span></p><p><span style="font-style: Normal;font-weight: bold;color: #000000;;">Cardiff School Admissions 2016/2017</span></p><p><a href="https://www.cardiff.gov.uk/ENG/resident/Schools-and-learning/Schools/Applying-for-a-school-place/Documents/Admission%20to%20schools%20guide.pdf" target="_blank"><span style="font-style: Normal;font-weight: normal;color: #0000FF;text-decoration: underline;;">Admission to Schools Booklet 2016/2017</span></a><span style="font-style: Normal;font-weight: normal;color: #0000FF;text-decoration: underline;;"></span></p><p><span style="font-style: Normal;font-weight: normal;;">The Online Admissions System accepts applications for places in Community Primary Schools and Community Secondary Schools for </span><span style="font-style: Normal;font-weight: bold;;">September 2016.</span><span style="font-style: Normal;font-weight: normal;;"> The closing date for applications is </span></p><p><span style="font-style: Normal;font-weight: bold;;">Monday 30 November 2015 - Transfer to Secondary Education 2016</span></p><p><span style="font-style: Normal;font-weight: bold;;">Monday 11 January 2016 - Admission to Primary Education 2016</span></p><p><span style="font-style: Normal;font-weight: normal;color: #000000;;">For a list of schools in Cardiff please follow </span><a href="http://www.cardiff.gov.uk/ENG/resident/Schools-and-learning/Schools/Cardiff-schools/Pages/default.aspx" target="_blank"><span style="font-style: Normal;font-weight: normal;color: #0000FF;text-decoration: underline;;">this link</span></a><span style="font-style: Normal;font-weight: normal;;"></span></p><p><span style="font-style: Normal;font-weight: normal;color: #000000;;">If you would like to make an application in Welsh, please use </span><span style="font-style: Normal;font-weight: normal;color: #00B0F0;;">Newid i Gymraeg</span><span style="font-style: Normal;font-weight: normal;color: #4F81BD;;"> </span><span style="font-style: Normal;font-weight: normal;color: #000000;;">(see link above). </span></p><p><span style="font-style: Normal;font-weight: normal;color: #000000;background-color: #D8D6CB;;">Please note that Roman Catholic schools, Church in Wales schools and Whitchurch High School (Foundation School) have separate admission arrangements and application forms to other LA schools. Please </span><a href="http://www.cardiff.gov.uk/ENG/resident/Schools-and-learning/Schools/Cardiff-schools/Pages/default.aspx" target="_blank"><span style="font-style: Normal;font-weight: normal;color: #0000FF;text-decoration: underline;;">contact the school directly</span></a><span style="font-style: Normal;font-weight: normal;color: #000000;background-color: #D8D8D8;;"> f</span><span style="font-style: Normal;font-weight: normal;color: #000000;background-color: #D8D6CB;;">or more information on how to apply for a place.</span><span style="font-style: Normal;font-weight: normal;;"><br></br></span><span style="font-style: Normal;font-weight: normal;color: #000000;background-color: #D8D6CB;;">Applications for a place in schools outside of Cardiff County should be made directly to the Local Authority concerned. </span></p><p><span style="font-style: Normal;font-weight: bold;color: #000000;;">How to apply?</span><span style="font-style: Normal;font-weight: normal;;"><br></br></span><span style="font-style: Normal;font-weight: normal;color: #000000;;">Before you begin parents/guardians are required to register. Once your registration is complete, you will be able to proceed with your online application, detailing </span><span style="font-style: Normal;font-weight: bold;color: #000000;;">up to 3</span><span style="font-style: Normal;font-weight: normal;color: #000000;;"> Community School preferences. Your application can be viewed and amended at any time up until the closing date of:</span></p><p><span style="font-style: Normal;font-weight: bold;;">Monday 30 November 2015 - Transfer to Secondary Education 2016</span></p><p><span style="font-style: Normal;font-weight: bold;;">Monday 11 January 2016 - Admission to Primary Education 2016</span></p><p><span style="font-style: Normal;font-weight: normal;color: #000000;;">For guidance on how to register on this site or if you experience any difficulties whilst making your application on line, please Contact Us (see link below). </span><span style="font-style: Normal;font-weight: normal;;"><br></br></span><span style="font-style: Normal;font-weight: bold;color: #000000;;">Why Apply Online?</span><span style="font-style: Normal;font-weight: normal;;"><br></br></span><span style="font-style: Normal;font-weight: normal;color: #000000;;">Please read the information below which explains the benefits of applying online for school places. </span></p><ul><li><p><span style="font-style: Normal;font-weight: normal;color: #000000;;">It is quick and easy </span></p></li><li><p><span style="font-style: Normal;font-weight: normal;color: #000000;;">You can apply from home 24 hours a day, 7 days a week</span></p></li><li><p><span style="font-style: Normal;font-weight: normal;color: #000000;;">There is no risk your application will be lost in the post</span></p></li><li><p><span style="font-style: Normal;font-weight: normal;color: #000000;;">You will receive an email confirming receipt that your application has been submitted and received by the Authority</span></p></li><li><p><span style="font-style: Normal;font-weight: normal;color: #000000;;">The system is secure and has a series of security features that will prevent others from seeing your information</span></p></li><li><p><span style="font-style: Normal;font-weight: normal;color: #000000;;">You will be able to view your offer on your online account on the published offer day </span></p></li></ul><p><span style="font-style: Normal;font-weight: bold;color: #000000;;">      Tuesday 1 March 2016 - Transfer to Secondary Education 2016 AT 4PM</span></p><p><span style="font-style: Normal;font-weight: bold;color: #000000;;">        Monday 18 April 2016</span><span style="font-style: Normal;font-weight: bold;color: #000000;text-decoration: underline;;"> - Admission to Primary Education 2016 AT 4PM</span></p><p><span style="font-style: Normal;font-weight: bold;color: #000000;;"> </span></p><ul><li><p><span style="font-style: Normal;font-weight: normal;color: #000000;;">Sending Supporting Documentary Evidence </span><a href="https://atupload.cardiff.gov.uk/SupportingDocuments.aspx?language=english" target="_blank"><span style="font-style: Normal;font-weight: normal;color: #0000FF;text-decoration: underline;;">UPLOAD HERE</span></a><span style="font-style: Normal;font-weight: normal;;"></span></p></li></ul>
+        
+  </div>        
+  
+</div>
+        
+
+            </div>
+            <div>
+                
+            </div>
+        </div>
+        <div id="footer">
+        
+            <a href="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/ContactUs" target="_blank" title="Click here to open a new window with advice on how you can Contact Us">Contact us</a>  <span class="pipe">|</span>
+            <a href="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/DataProtection" target="_blank" title="Click here to open a new window to see our Data Protection Statement">Data Protection Statement</a>  <span class="pipe">|</span>
+             
+              
+                <a href="https://www.cardiff.gov.uk/Schooladmissions" target="_blank" title="Click here to open a new window for a Blank Application Form that you can print, fill in and post to us">Blank Application Forms</a>  <span class="pipe">|</span>
+                
+             
+                <a href="https://www.cardiff.gov.uk/Schooladmissions" target="_blank" title="Click here to open a new window to see Education Website">Education Websites</a>  <span class="pipe">|</span>
+            <a href="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/TermsAndConditions" target="_blank" title="Click here to open a new window to see our Terms and Conditions">Terms &amp; Conditions</a>  <span class="pipe">|</span>
+
+            <a href="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/PrivacyPolicy" target="_blank" title="Click here to open a new window to see our Privacy Policy">Privacy Policy</a>
+            
+       </div>
+    </div>
+</body>
+</html>

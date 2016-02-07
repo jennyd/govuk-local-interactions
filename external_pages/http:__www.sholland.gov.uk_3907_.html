@@ -1,0 +1,873 @@
+
+
+	
+	
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" >
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb">
+		<head><title>
+	South Holland District Council - Electoral Registration
+</title>
+				<base href="http://www.sholland.gov.uk/" />
+
+				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<meta http-equiv="Content-Style-Type" content="text/css" />
+				<meta http-equiv="Content-Script-Type" content="text/javascript" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=yes" /> 
+				<meta name="google-translate-customization" content="d0b7f52d05f0a7af-d3471631b91e1be5-g9a910f3a97064468-14" />
+				<meta  name="generator" content="GOSS iCM - Intelligent Content Management" />
+<meta  name="DC.format.medium" content="html/text" />
+<meta  name="DC.date.created" content="2015-12-11T14:49:22+00:00" scheme="W3CDTF" />
+<meta  name="DC.date.issued" content="2015-12-11T13:19:04+00:00" scheme="W3CDTF" />
+<meta  name="DC.date.modified" content="2015-12-16T15:40:32+00:00" scheme="W3CDTF" />
+<meta  name="DC.date.disposal.review" content="2114-12-11T13:19:04+00:00" scheme="W3CDTF" />
+<meta  name="eGMS.accessibility" content="double-a" scheme="eGMS.WCAG20" />
+<meta  name="DC.title" content="Electoral Registration" />
+<meta  name="DC.description" content="The Electoral Register is the list of everyone in the District who is entitled to vote. It is usually published every year on 1st December and is also updated monthly." />
+<meta  name="description" content="The Electoral Register is the list of everyone in the District who is entitled to vote. It is usually published every year on 1st December and is also updated monthly." />
+<meta  name="DC.identifier" content="http://www.sholland.gov.uk/article/3907/Electoral-Registration" scheme="DCTERMS.URI" />
+<meta  name="DC.language" content="EN" scheme="ISO 639-3/T" />
+<meta  name="DC.rights.copyright" content="Copyright 2016 South Holland District Council" />
+<meta  name="DC.type" content="standard" scheme="eGMS.TES" />
+<meta  name="DC.Audience" content="" />
+<meta  name="DC.Subject" content="Electoral registration" scheme="eGMS.IPSV" />
+<meta  name="DC.Subject" content="European Union" scheme="eGMS.IPSV" />
+<meta  name="DC.Subject" content="International organisations" scheme="eGMS.IPSV" />
+<meta  name="DC.contributor" content="1350" />
+<meta  name="DC.creator" content="1350" />
+<meta  name="DC.publisher" content="1350" />
+<meta  name="eGMS.subject.keyword" content="Electoral registration, Electoral register, Electoral roll, Register of electors, Registering to vote, Enrolment (elections), Electoral registers, Electors (registration), European Union, EU (European Union), European Community, European communities, European Economic Community, EEC (European Economic Community), International organisations, International institutions, Western European Union, Council of Europe, WEU (Western European Union)" />
+<meta  name="keywords" content="Electoral registration, Electoral register, Electoral roll, Register of electors, Registering to vote, Enrolment (elections), Electoral registers, Electors (registration), European Union, EU (European Union), European Community, European communities, European Economic Community, EEC (European Economic Community), International organisations, International institutions, Western European Union, Council of Europe, WEU (Western European Union)" />
+
+				
+				
+				
+                <script src="./southholland/scripts/jquery/jquery-1.11.0.min.js" type="text/javascript"></script>
+                <script src="./southholland/scripts/jquery/jquery-ui-1.10.4.min.js" type="text/javascript"></script>
+				<script src="./southholland/scripts/jquery/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>                
+				<script src="./southholland/scripts/json.js" type="text/javascript"></script>
+				<script src="./southholland/scripts/jquery/json-rpc.js" type="text/javascript"></script>
+				<script src="./southholland/scripts/menu.js" type="text/javascript"></script>
+				<script src="./southholland/scripts/search.js" type="text/javascript"></script>
+				<script src="./southholland/scripts/analytics.js" type="text/javascript"></script>
+				<script src="./southholland/scripts/slideNavigation.js" type="text/javascript"></script>
+				
+						<script type="text/javascript" src="./southholland/scripts/javascripts.js"></script>
+					
+				
+
+				
+				<link href="./southholland/css/editor.css" rel="stylesheet" type="text/css" media="all" />
+<link href="./southholland/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="./southholland/css/colours.css" rel="stylesheet" type="text/css" media="all" />
+<link href="./southholland/css/styleprint.css" rel="stylesheet" type="text/css" media="print" />
+
+ <!--[if IE 8]> 
+<link href="./southholland/css/iefallback.css" rel="stylesheet" type="text/css" media="all" /><![endif]-->
+
+ <!--[if IE 7]> 
+<link href="./southholland/css/ie7.css" rel="stylesheet" type="text/css" media="all" /><![endif]-->
+
+				
+				<!--[if IE 9]><link rel="stylesheet" type="text/css" href="./toptasks/css/ie9.css" /><![endif]-->				<link media="screen and (max-width: 1000px)" href="./southholland/css/mobile.css" type="text/css" rel="stylesheet" />
+                <link rel="stylesheet" href="./southholland/template/home/css/featuremenu.css" type="text/css" />
+				
+			
+			
+			
+				<script type="text/javascript">
+					var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-55549631-1']);
+					_gaq.push(['_setDomainName', 'www.sholland.gov.uk']);
+					_gaq.push(['_setAllowHash', false]);
+					
+							_gaq.push(['_setCustomVar', 1, 'L1', 'Your Council', 3]);
+						
+							_gaq.push(['_setCustomVar', 2, 'L2', 'Elections and Voting', 3]);
+						
+							_gaq.push(['_setCustomVar', 3, 'L3', 'Registration and Voting', 3]);
+						
+					_gaq.push(['_trackPageview']);
+
+					(function() {
+						var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					})();
+				</script>
+			
+	</head>
+
+		
+			<body onload="pageLoaded();" class="active-tab active-tab0 active-tab0-last">
+		
+			<div id="pagewrapper">
+				
+
+
+		<div id="toputilnav">
+			<ul>
+				<li class="even first skipnavigation">
+					<a accesskey="s" href="http://www.sholland.gov.uk/article/3907/Electoral-Registration#centrecolumn">Skip Navigation</a>
+				</li>
+				<li class="odd">
+					<a href="http://www.sholland.gov.uk/home" title="South Holland">Home</a>
+				</li>
+				<li class="odd">
+					<a title="listen to this page being read out loud" id="ContentPrefixPreFormControl__ctl0_dixeritLink" href="http://spoxy4.insipio.com/generator/en/www.sholland.gov.uk/3907">Listen</a>
+				</li>				
+	
+		
+				<li class="even">
+					<a href="http://www.sholland.gov.uk/search">Search</a>
+				</li>
+			
+	
+		
+				<li class="odd last">
+					<a href="http://www.sholland.gov.uk/article/6/Login">Login</a>
+				</li>
+			
+	
+			</ul>
+		</div>
+	
+
+
+				
+						<div id="topbanner">
+					
+					<div id="toplogo">
+						
+						
+							<a href="http://www.sholland.gov.uk/home" title="Home" >
+								
+										<img id="headerlogo" alt="Link to homepage" src="./southholland/images/toplogo.jpg" />
+										<img id="headerlogomob" alt="Link to homepage" src="./southholland/images/toplogomob.jpg" />
+									
+							</a>
+						
+					</div>
+                    
+	<div id="toplevelsearch">
+		<form action="search" method="get" onsubmit="return searchpagevalidate(this.q.value, 'Search');">
+			<span id="mobiletitle">South Holland DC</span>
+			<span id="mobilesearchbtn"><button id="showsearchbtn"><img src="./southholland/images/custom/showsearch.png" title="Show Search" alt="Show Search" /></button></span>
+			<fieldset>
+				<legend>Search site</legend>
+				<label for="q">Search</label>
+				<input type="text" name="q" id="q" class="searchkeyword" value="Search" onfocus="focustextfield(this,'Search')" onblur="blurtextfield(this,'Search')" />
+				<input type="submit" name="go" id="go" value="Go" title="Search for entered keyword" class="btntext" />
+				
+			</fieldset>
+		</form>
+	</div>
+
+<script type="text/javascript">var SEARCH_URL = '/ajax.ashx';  var SEARCH_COLLECTIONS = 'Article';</script>
+				</div>
+                
+				<div id="toplevel">					
+					
+
+	
+	<div id="toplevelnav">
+	
+			<ul>
+		
+			<li class="tab0 tab0-first">
+				<a href="http://www.sholland.gov.uk/article/3440/Home">Home</a>
+			</li>
+		
+			<li class="tab1 tab1">
+				<a href="http://www.sholland.gov.uk/article/3318/Resident">Resident</a>
+			</li>
+		
+			<li class="tab2 tab2">
+				<a href="http://www.sholland.gov.uk/business">Business</a>
+			</li>
+		
+			<li class="tab3 tab3">
+				<a href="http://www.sholland.gov.uk/leisure" title="Visiting &amp; Leisure">Visiting &amp; Leisure</a>
+			</li>
+		
+			<li class="active-tab active-tab0 active-tab0-last">
+				<a href="http://www.sholland.gov.uk/council">Your Council</a>
+			</li>
+		
+			</ul>
+		
+	</div>
+
+				</div>
+				
+
+		<div id="secondlevel" class="active-tab active-tab0 active-tab0-last">
+			<ul class="nav">
+	
+		<li class="nav item0 ">
+			
+					<a href="http://www.sholland.gov.uk/news" title="News &amp; Notices">News &amp; Notices</a>
+				
+			
+					<ul class="menu">
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3975/Smoke-free-sign-winners-announced">Smoke free sign winners announced</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3979/Crackdown-on-illegal-alcohol-launched">Crackdown on illegal alcohol launched</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3982/Entries-open-for-Open-Arts-2016">Entries open for Open Arts 2016</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3991/Garden-waste-pilot-scheme-launched">Garden waste pilot scheme launched</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/4014/Have-your-say-on-our-Local-Plan">Have your say on our Local Plan</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/4048/Businesses-invited-to-meet-the-buyer">Businesses invited to meet the buyer</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/4064/Warning-over-green-rogue-traders">Warning over green rogue traders</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/4065/Affordable-homes-near-completion">Affordable homes near completion</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/4094/Renowned-orchestra-coming-to-Spalding">Renowned orchestra coming to Spalding</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3980/News-Archive">News Archive</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/4149/New-pavilion-gets-green-light">New pavilion gets green light</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/4150/New-look-website-launches">New look website launches</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/4152/Make-sure-youre-registered-to-vote">Make sure you're registered to vote</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/4158/Food-safety-courses-for-businesses">Food safety courses for businesses</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/4159/Silver-Tazza-comes-home">Silver Tazza comes home</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/4167/A-vital-ingredient-for-Valentines-Day">A vital ingredient for Valentine's Day</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/4168/Historic-manuscript-goes-on-display">Historic manuscript goes on display</a>
+					</li>
+				
+					<li class="odd last">
+						<a href="http://www.sholland.gov.uk/article/4169/Pride-Officer-is-reducing-litter">Pride Officer is reducing litter</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item1 ">
+			
+					<a href="http://www.sholland.gov.uk/article/3387/Elections--Voting" class="onpath" title="Elections &amp; Voting">Elections &amp; Voting</a>
+				
+			
+					<ul class="menu">
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3915/Elections">Elections</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3916/Reviews-and-Referenda">Reviews and Referenda</a>
+					</li>
+				
+					<li class="even last">
+						<a href="http://www.sholland.gov.uk/article/3917/Registration-and-Voting">Registration and Voting</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item2 ">
+			
+					<a href="http://www.sholland.gov.uk/article/3381/Budgets-Spending--Performance" title="Budgets, Spending &amp; Performance">Budgets, Spending &amp; Performance</a>
+				
+			
+					<ul class="menu">
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/4019/Transparency">Transparency</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3522/Plans-Policies-and-Strategies">Plans, Policies and Strategies</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3523/Financial-Statements">Financial Statements</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3524/Audit-of-2014-15-Financial-Statements">Audit of 2014-15 Financial Statements</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3525/Social-Housing-Asset-Value">Social Housing Asset Value</a>
+					</li>
+				
+					<li class="odd last">
+						<a href="http://www.sholland.gov.uk/article/3662/Performance-Information">Performance Information</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item3 ">
+			
+					<a href="http://www.sholland.gov.uk/article/3386/Council-and-Democracy">Council and Democracy</a>
+				
+			
+					<ul class="menu">
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3913/Your-Councillors">Your Councillors</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3582/Petitions">Petitions</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3668/Standards-and-Code-of-Conduct">Standards and Code of Conduct</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3788/Information-Governance">Information Governance</a>
+					</li>
+				
+					<li class="even last">
+						<a href="http://www.sholland.gov.uk/article/3914/Decision-Making-and-Decision-Scrutiny">Decision Making and Decision Scrutiny</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item4 ">
+			
+					<a href="http://www.sholland.gov.uk/jobs" title="Jobs &amp; Careers">Jobs &amp; Careers</a>
+				
+			
+					<ul class="menu">
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3393/Current-Vacancies">Current Vacancies</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3392/Careers-Advice">Careers Advice</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3394/Work-Experience">Work Experience</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3978/Equal-Opportunities">Equal Opportunities</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3976/Working-for-South-Holland-District-Council">Working for South Holland District Council</a>
+					</li>
+				
+					<li class="odd last">
+						<a href="http://www.sholland.gov.uk/article/3977/Apprenticeships">Apprenticeships</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item5 ">
+			
+					<a href="http://www.sholland.gov.uk/contact">Contact the Council</a>
+				
+			
+					<ul class="menu">
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3383/Customer-Care-Charter">Customer Care Charter </a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3432/Payments-and-Account-Balances">Payments and Account Balances</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3984/Bem-vindo">Bem-vindo</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3985/Laipni-ldzam">Laipni lūdzam</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3986/Sveiki">Sveiki</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3987/Vtejte" title="Vítejte">V&#237;tejte</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3988/Witamy">Witamy</a>
+					</li>
+				
+					<li class="odd last">
+						<a href="http://www.sholland.gov.uk/article/3989/-">Добро пожаловать</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item6 last">
+			
+					<span class="more">More...</span>
+				
+			
+					<ul class="menu">
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/article/3385/Council-structure">Council structure</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.sholland.gov.uk/article/3389/Corporate-Strategies-Plans--Policies" title="Corporate Strategies, Plans &amp; Policies">Corporate Strategies, Plans &amp; Policies</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.sholland.gov.uk/Feedback">Feedback</a>
+					</li>
+				
+					<li class="odd last">
+						<a href="http://www.sholland.gov.uk/article/3388/Local-Information--Statistics" title="Local Information &amp; Statistics">Local Information &amp; Statistics</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+			</ul>
+		</div>
+	
+
+                
+                
+				
+
+	
+	
+			<div id="breadcrumb">
+				<ol>
+					<li>
+					    You are here:&nbsp;
+					</li>
+		
+					<li>
+						<a href="http://www.sholland.gov.uk/council">Your Council</a>
+				    </li>
+				    
+				        <li class="separator">&bull;</li>
+				    
+		
+					<li>
+						<a href="http://www.sholland.gov.uk/article/3387/Elections--Voting" title="Elections &amp; Voting">Elections &amp; Voting</a>
+				    </li>
+				    
+				        <li class="separator">&bull;</li>
+				    
+		
+					<li>
+						<a href="http://www.sholland.gov.uk/article/3917/Registration-and-Voting">Registration and Voting</a>
+				    </li>
+				    
+				        <li class="separator">&bull;</li>
+				    
+		
+					<li>
+						<span>Electoral Registration</span>
+				    </li>
+				    
+		
+				</ol>
+			</div>
+		
+
+
+				<div id="maincolumnwrapper">
+					
+						<div id="leftcolumnmobile" class="expand">&raquo;</div>
+						<div id="leftcolumn">
+							
+
+
+	
+			
+			
+					<ul id="leftnavigation">
+				
+				
+				
+				
+					
+							<li class="slice3 level1">
+								<div><a href="http://www.sholland.gov.uk/council" class="parent">Your Council</a></div>
+							</li>
+						
+					
+				
+				
+					
+							<li class="slice2 level2">
+								<div><a href="http://www.sholland.gov.uk/article/3387/Elections--Voting" class="parent" title="Elections &amp; Voting">Elections &amp; Voting</a></div>
+							</li>
+						
+					
+				
+				
+					
+							<li class="slice1 level3">
+								<div><a href="http://www.sholland.gov.uk/article/3917/Registration-and-Voting" class="parent">Registration and Voting</a></div>
+							</li>
+						
+					
+				
+				
+					
+							
+							
+									
+											<li class="selected">
+												<div><span>Electoral Registration</span></div>
+											</li>
+											
+											
+										
+								
+									
+											<li class="sibling">
+												<div><a href="http://www.sholland.gov.uk/article/3918/Postal-and-Proxy-Voting" class="sibling">Postal and Proxy Voting</a></div>
+											</li>
+										
+								
+									
+											<li class="sibling">
+												<div><a href="http://www.sholland.gov.uk/article/3912/Polling-Stations" class="sibling">Polling Stations</a></div>
+											</li>
+										
+								
+									
+											<li class="sibling">
+												<div><a href="http://www.sholland.gov.uk/article/3906/Voting-In-Person" class="sibling">Voting In Person</a></div>
+											</li>
+										
+								
+						
+					
+				
+					</ul>
+				
+		
+
+
+							
+
+	
+
+						</div>
+					
+					<div id="contentwrap">
+	
+						
+							<div id="contentfullwidth">
+						
+						<div id="centrecolumn">
+						
+						
+								
+								
+									
+								
+								
+								
+								
+
+
+
+
+
+<div id="headingtext">
+    
+    <h1>Electoral Registration</h1>
+</div>
+								
+								
+								
+									
+								
+							
+						
+						
+
+	
+	
+
+		
+			<div id="introtext">
+				<p>The Electoral Register is the list of everyone in the District who is entitled to vote. It is usually published every year on 1st December and is also updated monthly.</p>
+			</div>
+		
+
+		
+		
+			<div id="bodytext">
+				
+				<p><strong>How we provide this service </strong></p><p><strong>Annual Registration </strong></p><p>Between 22 July 2015 and 30 November 2015 the annual canvass took place when a Household Enquiry form was delivered to every property in the District, which had to be filled in and returned. It was then collated and other relevant forms sent to publish the final register on 1 December 2015.</p><p><strong>The way we all register to vote has changed </strong></p><p>The registration system changed in June 2014. The new system is called 'Individual Electoral Registration'. How is the new system different?&nbsp;</p><ul><li>You can now register online at&nbsp;<a class=" inlinelink id3245" href="https://www.gov.uk/register-to-vote" title="Register-to-Vote online">Register to Vote online Government Link</a>&nbsp; </li><li>Everyone is responsible for registering themselves. Under the old system the 'head of every household' could register everyone who lived at their address.&nbsp; </li><li>You need to provide a few more details to register - including your national insurance number and date of birth. This makes the electoral register more secure. </li></ul><p><strong>How do I register under the new system? </strong></p><ol><li>Go to&nbsp;<a class=" inlinelink id3245" href="https://www.gov.uk/register-to-vote" title="Register-to-Vote online">Register to Vote Government Website</a>&nbsp; </li><li>Fill in your name, address, date of birth and a few other details. You'll also need your national insurance number, which can be found on your national insurance card, or in official paperwork such as payslips, or letters about benefits or tax credits.&nbsp; </li><li>Look out for a confirmation to say you're registered. </li></ol><p><strong>About the register </strong></p><p>There are two versions of the register - the electoral register and the open register. Your details will appear on the full version of the register, but you can choose to exclude details from the open register by choosing to 'opt out'. The electoral register is used for elections, preventing and detecting crime and checking applications for credit. The open register is available for general sale and can be used for commercial activities such as marketing. </p><p><strong>Who can apply? </strong></p><p>To be included in the Register of Electors a person must: </p><ul><li>Be resident at an address in the District on the date of application; and&nbsp; </li><li>Be 18 years of age or over during the period when the register is in force; and&nbsp; </li><li>Be a British, other Commonwealth, Irish Citizen or a citizen of another member state of the European Union. Citizens of European Union Member States (other than British and Irish) will be registered to vote at local elections. However, they may additionally make a separate application to register to vote at European Parliamentary elections </li></ul><p><img src="http://www.sholland.gov.uk/images/media/pdficon.gif" style="border: none; vertical-align: middle;" alt="pdf icon" title="" />&nbsp;<a class="inlinemedia id4284 typepdf" href="http://www.sholland.gov.uk/CHttpHandler.ashx?id=4284&amp;p=0" title="List of Eligible Countries">List of Eligible Countries [22kb]</a>&nbsp; </p><p><strong>How much will it cost? </strong></p><p>The full version of the Electoral Register and list of overseas electors is only available for sale to credit reference agencies and government departments who can only use it for purposes specified in law. The open version of the Register, which omits the names of any electors who have requested to be excluded from this version, is available for general sale and can be used for any purpose. </p><p><strong>The cost of purchasing electoral register information is as follows: </strong></p><p><strong>For data format</strong> - flat rate of &pound;20 plus &pound;1.50 for each 1000 entries (or remaining part of 1000 entries) </p><p><strong>For printed format</strong> - flat rate of &pound;10 plus &pound;5 for each 1000 entries (or remaining part of 1000 entries) </p><p><strong>Links to forms, leaflets and websites providing more information </strong></p><p><a class=" inlinelink id3245" href="https://www.gov.uk/register-to-vote" title="Register-to-Vote online">Register to Vote Government Online</a>&nbsp;<br /><a class=" inlinelink id3243" href="http://www.electoralcommission.org.uk/" title="Electoral Commission Website">Electoral Commission website</a>&nbsp;&nbsp;</p>
+			</div>
+		
+		
+		
+	
+
+						
+							
+									<div id="related">
+								
+
+
+
+
+	
+			
+			
+			
+		
+
+
+
+	
+			
+			
+		
+
+
+
+	
+			
+			
+					<div class="container">
+						<h2>Related Links</h2>
+						<ul>
+				
+							<li class="even first">
+								<span class="square">&#9632;</span>
+								<a rel="external" href="https://www.gov.uk/register-to-vote">Register-to-Vote online</a>
+							</li>
+				
+							<li class="odd last">
+								<span class="square">&#9632;</span>
+								<a rel="external" href="http://www.electoralcommission.org.uk/">Electoral Commission Website</a>
+							</li>
+				
+						</ul>
+		            </div>
+				
+		
+
+
+
+			
+			
+					<div class="container documents">
+						<h2>Related Documents</h2>
+					    <ul>
+				
+					        <li class="even first last">
+						        
+
+<img src="http://www.sholland.gov.uk/images/media/pdficon.gif" alt="" />
+<div class="mediatext">
+	<a class="media" href="http://www.sholland.gov.uk/CHttpHandler.ashx?id=4284&amp;p=0" rel="external">List of Eligible Countries [22kb]</a>
+	[<a href="http://www.sholland.gov.uk/article/6/Login?articleaction=subscribe&amp;contenttype=media&amp;contentid=4284&amp;returnarticleid=3907" class="subscribe" title="Subscribe to List of Eligible Countries">subscribe</a>]
+</div>
+
+					        </li>
+				
+						</ul>
+					</div>
+				
+
+
+	
+		
+	
+	
+		
+		
+	
+
+
+	
+			
+			
+			
+		
+
+
+	
+			
+			
+		
+
+
+										</div>
+								
+						
+						
+
+	
+
+						</div>
+					</div>
+				</div>
+				
+
+
+	
+		<div id="contentlinks">
+			<ul>
+				<li id="emailpage" class="even first">
+				</li>
+				<li class="print">
+					<script type="text/javascript">
+						/* <![CDATA[ */
+					    document.write('<span class="padding">&#9632;&nbsp; <a href="#" title="Print this page">Print this page</a></span>');
+						/* ]]> */
+					</script>
+				</li>
+				
+					
+						<li class="subscribe padding">
+							&#9632;&nbsp; <a href="http://www.sholland.gov.uk/article/6/Login?articleaction=subscribe&amp;contenttype=article&amp;contentid=3907&amp;returnarticleid=3907" class="subscribe" title="Subscribe to Electoral Registration">Subscribe to this page</a>
+						</li>
+					
+				
+				<li class="addthis padding">
+					<!--  AddThis Button BEGIN  -->					<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4bfc0153695eecdb" title="Share this page">
+						<img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/>
+					</a>
+					<script type="text/javascript">
+						var addthis_config = {
+							data_ga_property: 'UA-55549631-1',
+							data_track_clickback: true
+						};
+					</script>
+					<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4bfc0153695eecdb">
+					</script>
+					<!--  AddThis Button END  -->				</li>
+				<li>
+					<div id="google_translate_element"></div>
+					<script type="text/javascript">
+						function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-8261481-2'}, 'google_translate_element');}
+					</script>
+					<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				</li>
+			</ul>
+		</div>
+	
+
+				</div>
+
+				
+					<div id="footer" class="active-tab active-tab0 active-tab0-last">
+						
+
+
+		<div id="bottomutilnav">
+			<ul>
+	
+				<li class="even first">
+					<a href="http://www.sholland.gov.uk/article/4147/Feedback">Feedback</a>
+				</li>
+	
+				<li class="odd">
+					<a href="http://www.sholland.gov.uk/article/1551/Terms--Conditions" title="Terms &amp; Conditions">Terms &amp; Conditions</a>
+				</li>
+	
+				<li class="even">
+					<a href="http://www.sholland.gov.uk/article/3449/A-to-Z">A to Z</a>
+				</li>
+	
+				<li class="odd last">
+					<a href="http://www.sholland.gov.uk/sitemap">Site map</a>
+				</li>
+	
+			</ul>
+		</div>
+	
+						
+						
+						
+						
+							<p id="copyright">
+								&copy; 2016 South Holland District Council Priory Road, Spalding, Lincolnshire, PE11 2XE<br /><strong>Telephone:</strong> 01775 761161 | <strong>Fax:</strong> 01775 761253							</p>
+						
+					</div>
+					<div id="powered">
+						<a rel="external" title="Web content management by GOSS iCM" href="http://www.gossinteractive.com">Powered by GOSS iCM</a>
+					</div>
+				
+	
+				<script type="text/javascript" src="./iCMRender.2.16.0.9102/iCMRender.Resources.Javascript.iCM.js.axd"></script><noscript><div></div></noscript><script type="text/javascript">
+//<![CDATA[
+
+MagicSearchRPC = function() {
+  return {
+GetSearchResults: function(avalue, acollections, aokcallback, afailcallback, atarget) {
+    iCM.MakePostRPCCall({"method": "toptasks_com$gossinteractive$community$toptasks$MagicSearch_GetSearchResults", "id": "null", "version": "1.1", "url": "ajax.ashx", "params": {"value": avalue,"collections": acollections}},aokcallback, afailcallback, atarget  );
+}
+  }
+}();
+
+iCM.RPC.MagicSearch = MagicSearchRPC;
+
+//]]>
+</script>
+			</div>
+		</body>
+	</html>
