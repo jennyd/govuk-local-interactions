@@ -43,6 +43,14 @@ def get_html_filename(url):
 
 
 def handle_response(url, resp):
+    html_filename = get_html_filename(url)
+    if len(html_filename) >= 8:
+        try:
+            with open(os.path.join(RESULTS_DIRECTORY, html_filename), 'w') as f:
+                f.write(resp.text)
+        except OSError as e:
+            handle_failure(url, e)
+
     print(resp.status_code)
     with open(STATUS_CODES_FILE, 'a') as f:
         writer = DictWriter(f, STATUS_CODES_FIELDS)
@@ -52,14 +60,6 @@ def handle_response(url, resp):
             'url': url
         }
         writer.writerow(row)
-
-    html_filename = get_html_filename(url)
-    if len(html_filename) >= 8:
-        try:
-            with open(os.path.join(RESULTS_DIRECTORY, html_filename), 'w') as f:
-                f.write(resp.text)
-        except OSError as e:
-            handle_failure(url, e)
 
 
 def handle_failure(url, exception):
