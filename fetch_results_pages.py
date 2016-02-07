@@ -21,8 +21,25 @@ with open('urls-used-for-local-transactions.csv', 'r', encoding='utf8') as f:
 all_urls = list({row['interaction_url_used'] for row in all_results} - {''})
 
 
+def truncate_long_url(url):
+    """Truncate URLs which are too long to be used as filenames.
+
+    This tries to truncate in a way which preserves the meaningful-to-humans
+    bits of URLs, but doesn't do that well for your.burnley.gov.uk because its
+    useful bit is a query param in the middle of the URL, whereas most others
+    are at the start of the path or the end of the query string.
+
+    We could do this better by parsing the URLs and trying to work out which
+    query params are useful.
+    """
+    if len(url) > 200:
+        return url[:150] + url[-50:]
+    else:
+        return url
+
+
 def get_html_filename(url):
-    return (url.replace('/', '_') + '.html')
+    return (truncate_long_url(url).replace('/', '_') + '.html')
 
 
 def handle_response(url, resp):
