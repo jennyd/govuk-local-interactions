@@ -1,0 +1,178 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<title>Civil Parking Enforcement</title>
+<style type="text/css">
+}
+.tfvHighlight {
+	FONT-WEIGHT: bold; COLOR: red
+}
+.tfvNormal {
+	FONT-WEIGHT: normal; COLOR: black
+}
+</style>
+<script language="JavaScript" src="calendar1.js"></script>
+<script language="JavaScript" src="validator.js"></script>
+
+</head>
+
+<body>
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<style>
+	a, A:link, a:visited, a:active
+		{color: #0000aa; text-decoration: none; font-family: Tahoma, Verdana; font-size: 11px}
+	A:hover
+		{color: #ff0000; text-decoration: none; font-family: Tahoma, Verdana; font-size: 11px}
+	p, tr, td, ul, li
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 12px}
+	th
+		{background: #DBEAF5; color: #000000;}
+	.header1, h1
+		{color: #ffffff; background: #4682B4; font-weight: bold; font-family: Tahoma, Verdana; font-size: 13px; margin: 0px; padding-left: 2px; height: 21px}
+	.header2, h2
+		{color: #000000; background: #DBEAF5; font-weight: bold; font-family: Tahoma, Verdana; font-size: 12px;}
+	.intd
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 11px; padding-left: 15px;}
+	.wcell
+		{background: #FFFFFF; vertical-align: top}
+	.ctrl
+		{font-family: Tahoma, Verdana, sans-serif; font-size: 12px;}
+	.calc
+		{font-family: Tahoma, Verdana, sans-serif; font-size: 12px; width: 100%;}	
+	.btnform
+		{border: 3px; font-family: tahoma, verdana; font-size: 12px; background-color: #DBEAF5; width: 100%; height:18px; text-align: center; cursor: hand;}
+	.btn
+		{background-color: #DBEAF5; padding: 0px; width: 100%;}
+	textarea, select,input
+		{font: 9px Verdana, arial, helvetica, sans-serif; background-color: #DBEAF5;}
+
+	/* classes for validator */
+	.tfvHighlight
+		{font-weight: bold; color: red;}
+	.tfvNormal
+		{font-weight: normal;	color: black;}
+</style>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<p align="center">&nbsp;</p>
+
+
+<p align="center"><b><font face="Arial" size="3">Civil Parking Enforcement</font></b></p>
+<form method="POST" action="payment.asp" name="parkingfinepcn"  onsubmit="return v.exec()" >
+
+   <table border="1" width="95%">
+       <tr>
+        <td width="20%" id="ticket"><font size="3" face="Arial">Ticket No.</font></td>
+        <td width="80%" id="tictype" colspan="2" ><font size="3" face="Arial">Please enter the ticket reference e.g. MX12345678:&nbsp; 
+        <font size="3" face="Arial"><input type="text" name="ticketno" size="20" onPaste="return false;"/>   
+      </font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20%" id="ticamt">
+		<font size="3" face="Arial">Amount on Ticket</td>
+        <td width="80%" colspan="2">
+		&pound;50.00&nbsp; <input type="radio" name="ticamt" value="50"/>
+		&nbsp;&nbsp;&pound;70.00 <input type="radio" name="ticamt" value="70"/></font>
+        </td>
+      </tr>
+      <tr>
+        <td width="20%" id="ticdate"><font size="3" face="Arial">Issue Date    
+		<a href="javascript:cal1.popup();"><img src="img/cal.gif" width="16" height="16" border="0" alt="Click Here to select the start date"></a>
+		</font>
+		</td>
+        <td width="80%" colspan="2"><font size="3" face="Arial"><input type="text" name="issuedate" size="20" readonly>
+		Please click on Calendar to select date</font></td>
+      </tr>
+      <tr>
+        <td width="100%" id="ticdate" colspan="3"><font size="3" face="Arial"><b>If
+          payment is made within 14 days the standard charge will be reduced by
+          50%</b></font></td>
+      </tr>
+      <tr>
+        <td width="100%" id="ticdate" colspan="3" style="border-style: solid; border-color: #FF0000"><font size="3" face="Arial"><b>If
+          payment is not made within 28 days a notice to the vehicle owner will
+          be issued.&nbsp;&nbsp;</b></font></td>
+      </tr>
+      <tr>
+        <td width="100%" id="ticdate" colspan="3" style="border-style: solid; border-color: #FF0000"><font size="3" face="Arial"><b> If payment is still not made a Charge Certificate
+          will be issued increasing the amount due by 50%</b></font></td>
+      </tr>
+      <tr>
+        <td width="40%" colspan="2" id="charge"><font size="3" face="Arial">Has this <b>Non
+          payment</b> Charge Certificate been issued</font>
+          <p><font size="3" face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+        </td>
+        <td width="60%"><font size="3" face="Arial">
+		Yes<input type="radio" name="charge" value="Yes"/>&nbsp;
+         No<input type="radio" name="charge" value="No"/>&nbsp;&nbsp;</font></td>
+      </tr>
+      <tr>
+        <td width="20%" id="carreg"><font size="3" face="Arial">Car Registration</font></td>
+        <td width="80%" colspan="2"><font size="3" face="Arial"><input type="text" name="carreg" size="20" onPaste="return false;"/></font></td>
+      </tr>
+      <tr>
+        <td width="20%" id="email"><font size="3" face="Arial">Email Address</font></td>
+        <td width="80%" colspan="2"><font size="3" face="Arial"><input type="text" name="email" size="60" onPaste="return false;"/></font></td>
+      </tr>
+	  <tr>
+      <td colspan="2">Human Check:<script type="text/javascript">var RecaptchaOptions = { theme : 'white', tabindex : 0};</script><script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6Leteb4SAAAAAHdCrU_murdeEMwADeWXKBRiO4Ng"></script><noscript><iframe src="http://api.recaptcha.net/noscript?k=6Leteb4SAAAAAHdCrU_murdeEMwADeWXKBRiO4Ng" frameborder="1"></iframe><br><textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea><input type="hidden" name="recaptcha_response_field" value="manual_challenge"></noscript></td>
+     </tr>
+	 <tr>
+   <td width="20%">&nbsp;</td>
+        <td width="80%" colspan="2"><font size="3" face="Arial"><input type="submit" value="Submit" name="B3" class="btn"></font></td>
+      </tr>
+  
+  </table>
+
+</form>
+
+<script language="JavaScript">
+<!-- // create calendar object(s) just after form tag closed
+				 // specify form element as the only parameter (document.forms['formname'].elements['inputname']);
+				 // note: you can have as many calendar objects as you need for your application
+				var cal1 = new calendar1(document.forms['parkingfinepcn'].elements['issuedate']);
+				cal1.year_scroll = true;
+				cal1.time_comp = false;
+//-->
+
+</script>
+   <script>
+// form fields description structure
+var a_fields = {
+	'ticketno':{'l':'Ticket No','r':true,'f':'parkingfine','t':'ticket'},
+    'ticamt':{'l':'Amount on Ticket','r':true,'t':'ticamt'},
+	'issuedate':{'l':'Issue Date','r':true,'t':'ticdate'},
+	'charge':{'l':'Has this Non payment Charge Certificate been issued','r':true,'t':'charge'},
+	'email':{'l':'Email Address','r':true,'f':'email','t':'email'},
+	'carreg':{'l':'Car Registration','r':true,'f':'alphanum','t':'carreg'},
+},
+
+o_config = {
+	'to_disable' : ['Submit', 'Reset'],
+	'alert' : 1
+}
+
+// validator constructor call
+var v = new validator('parkingfinepcn', a_fields, o_config);
+
+   </script>
+
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+
+<script language="JavaScript"><!--
+    function cancelEnter(e) {
+        if (document.getElementById("passwordTB")) {
+            if (e.keyCode == 13) {
+                document.getElementById("passwordTB").focus();
+                e.returnValue = false;
+            }
+        }
+    }
+
+////////////////
+// AJAX stuff //
+////////////////
+
+var path = window.location.pathname.replace(/login.aspx/gi, "login.asmx/");
+
+function PostBack()
+{
+  clearTimeout(window.timerQuery);
+	clearTimeout(window.timerUpdate);
+	document.forms[0].submit();
+}
+
+function GetXMLHttpRequest()
+{
+	if (window.XMLHttpRequest) {
+		var req = new XMLHttpRequest();
+		try {
+		  req.readyState = 0;
+		 } catch (ex) {}
+		req.onreadystatechange = null;
+		return req;
+	} else {
+		if (window.XMLHttpRequestProgID) {
+			return new ActiveXObject(window.XMLHttpRequestProgID);
+		} else {
+			var progIDs = ["Msxml2.XMLHTTP.5.0", "Msxml2.XMLHTTP.4.0", "MSXML2.XMLHTTP.3.0", "MSXML2.XMLHTTP", "Microsoft.XMLHTTP"];
+			for (var i = 0; i < progIDs.length; ++i) {
+				var progID = progIDs[i];
+				try {
+					var x = new ActiveXObject(progID);
+					window.XMLHttpRequestProgID = progID;
+					return x;
+				} catch (e) {}
+			}
+		}
+	}
+	return null;
+}
+
+function GetResult(x, responseNode)
+{
+	var result = { "value": null, "error": "Error" };
+	var response = x.responseXML;
+  
+	if(response == null) {
+		return result;
+	}
+		
+	var nodeList;
+
+	if(x.responseXML.getElementsByTagNameNS)
+	{
+//	Non-IE:
+		nodeList = x.responseXML.getElementsByTagNameNS("http://www.lorensbergs.com/loginservices/", responseNode);
+	}
+	else
+	{
+//	IE:
+		x.responseXML.setProperty("SelectionNamespaces", "xmlns:temp='http://www.lorensbergs.com/loginservices/'");
+		nodeList = x.responseXML.selectNodes("//temp:" + responseNode);
+	}
+	
+	if(nodeList.length > 0)
+	{
+		if(nodeList[0].childNodes.length > 0)
+		{
+			result.value = nodeList[0].childNodes[0].nodeValue;
+		}
+		
+		result.error = null;
+	}
+
+	return result;
+}
+
+function DataReceived(x, callback, response)
+{
+  var result = GetResult(x, response);
+
+	// Kill object.
+	x = null;
+
+	if(result.error != null)
+	{
+		DisableControls(false);
+		PostBack();
+		return;
+	}
+
+	if(callback != null)
+		callback(result);
+}
+
+function InvokeMethod(method, parameters, response, callback, async)
+{
+  try
+	{
+		var x = GetXMLHttpRequest();
+		if (!x)
+			// No XMLHttpRequest object.
+		    return false;
+
+		x.open("POST", path + method, async);
+		x.overrideMimeType("text/html; charset=ISO-8859-1");
+		x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=utf-8");
+
+		if(async)
+		{
+		  x.onreadystatechange = function() {
+				if (x.readyState != 4) {
+					return;
+				}
+				DataReceived(x, callback, response);
+			}
+		}
+
+		x.send(parameters);
+		if(!async) {
+		  DataReceived(x, callback, response);
+		}
+		return true;
+	}
+	catch(e)
+	{
+	  return false;
+	}
+}
+
+function QueryLogin()
+{
+	InvokeMethod("QueryLogin", "strLoginId=" + window.LoginId, "int", QueryLoginDone, true);
+}
+
+function QueryLoginDone(result)
+{
+	var value = parseInt(result.value);
+
+	// If value < 0 then an error occured, do ordinary postback to log in.
+	if(value < 0)
+		window.LoginId = "";
+
+	var o = document.getElementById("queuePosDiv");
+
+	// If value <= 0 then we have been served, do ordinary postback to log in.
+	if(value <= 0)
+	{
+		DisableControls(false);
+		document.getElementById("LoginId").value = window.LoginId;
+		PostBack();
+		o.innerHTML = "...";
+		return;
+	}
+
+	o.innerHTML = value < 1 ? 1 : value;
+	window.timerQuery = window.setTimeout("QueryLogin()", 500);
+}
+
+function BeginLoginDone(result)
+{
+	window.LoginId = result.value;
+}
+
+function BeginLogin()
+{
+	// Disable all controls
+	DisableControls(true);
+ 
+	// Remove error message
+	var o = document.getElementById("errorLabel");
+	o.innerHTML = "";
+
+	var username = document.getElementById("usernameTB").value;
+	var o = document.getElementById("passwordTB");
+	var password = o == null ? "" : o.value;
+
+	var date = new Date();
+	window.timeBeginLogin = date.getTime();
+
+	var o = document.getElementById("queuePosDiv");
+	o.innerHTML = "-";
+
+	if(!InvokeMethod("BeginLogin", "username=" + username + "&password=" + password, "string", BeginLoginDone, false))
+	{
+		// Method call failed, do an ordinary post-back.
+		DisableControls(false);
+		PostBack();
+		return false;
+	}
+	
+	//Make first query, following will be started by UpdateTimer()
+	QueryLogin();
+	
+	//Don't start update timer until beginlogin has been called once
+	UpdateTimer();
+	
+	return false;
+}
+
+function UpdateTimer()
+{
+	// Update wait time.
+	var date = new Date();
+	var time = (date.getTime() - window.timeBeginLogin) / 1000;
+
+	if(time > 2)
+	{
+		o = document.getElementById("timeWaitDiv");
+		var min = Math.floor(time / 60);
+		var sec = Math.floor(time - min * 60);
+
+		o.innerHTML = min + ":" + (sec < 10 ? "0" + sec : sec);
+
+		// Show login progress
+		var o = document.getElementById("loginDiv");
+		o.style.visibility = "visible";
+	}
+
+	window.timerUpdate = window.setTimeout("UpdateTimer()", 1000);
+}
+
+function FNull()
+{}
+
+function AbortLogin()
+{
+	InvokeMethod("ReleaseLogin", "strLoginId=" + window.LoginId, "anyType", FNull, true);
+	clearTimeout(window.timerQuery);
+	clearTimeout(window.timerUpdate);
+	DisableControls(false);
+
+	var o = document.getElementById("loginDiv");
+	o.style.visibility = "hidden";
+}
+
+function DisableControls(disable)
+{
+	var o = document.getElementById("loginBtn");
+	o.disabled = disable;
+}
+
+//--></script>
+
+<html>
+  <head>
+    <title>netloan reservation system</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">      
+    <link rel="SHORTCUT ICON" href="images/internetcafe.ico">
+  </head>
+  <body class="webback" background="images/bg.gif" style="background-repeat:repeat-x" topmargin="0" marginheight="0" bottommargin="10" leftmargin="10" rightmargin="10">
+    <script language="JavaScript"><!--
+      NLConst_BGColor_dark = 'silver'; 
+      NLConst_BGColor_lightdark = '#f1f1f1';
+      NLConst_BGColor_light = '';
+    //--></script>
+    <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="1" class="bordercell">
+      <tr valign="top">
+          <td>
+            <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="basecell">
+              <tr> 
+                <td height="15" colspan="3" width="100%">
+                
+
+<style type="text/css"> .m		{z-index:1;border-bottom:1px solid #000000; cursor:default; background-color: #F1F1F1;} .m1 tr	{cursor:default} .m2	{z-index:1;position:absolute; cursor:default; visibility:hidden} .m2 tr	{cursor:default} .m3    {z-index:1;border:1px solid #000000; background-color: #F1F1F1;} .m4    {z-index:1;cursor: pointer; cursor: hand;} .m4 td {cursor: pointer; cursor: hand;} .acckeybutton {font-size : 0pt; width:0px; height:0px; color:#F1F1F1; background:#F1F1F1; border-bottom:#F1F1F1 2px solid; border-left:#F1F1F1 2px solid; border-right:#F1F1F1 2px solid; border-top:#F1F1F1 2px solid;} </style><table width="100%" class="m" cellspacing="0" cellpadding="0"><tr valign="top"><td clock="true" width="65" background="images/mb.gif"><table cellspacing="0" cellpadding="2"><tr><td><div name="time" id="time">&nbsp;</div></td></tr></table></td><td background="images/mb.gif"><div id="tbl0" height="100%" class="m1"><table height="100%" cellspacing="0" cellpadding="2"><tr valign="top"></tr></table></div></td><td background="images/mb.gif"></td></tr></table><script><!--
+var bgCol="#F1F1F1";var txtCol="#000000";var bgHoCol="#FFD695";var txtHoCol="#000000";
+ var timeDiff = 0;  function showTime(){   var serverNow = new Date( Date.parse(new Date)+timeDiff );   var string = "&nbsp;"+         withZero(serverNow.getHours())+":"+         withZero(serverNow.getMinutes())+         "&nbsp;";   var theTime;	 if (document.getElementById)		theTime = document.getElementById("time");	 else 	    theTime = document.all("time");   if (theTime != null && theTime.innerHTML && string != theTime.innerHTML) {     theTime.innerHTML=string;   } } function withZero(inValue){   if(inValue > 9)	return ""+inValue;     return "0"+inValue; } function startTime(){   timeDiff = Date.parse(new Date(2016,2,7,0,54,25)) - Date.parse(new Date);   showTime();   setInterval("showTime()",2000); } window.onload = function(){init();setTimeout("startTime()",10);};
+//-->
+</script>
+<script src="JavaScript/NL_Menu.js" ></script>
+
+
+                </td>
+              </tr>
+              <tr>
+                <td height="20" width="15"><img src="images/pixel.gif" height="20"></td>
+                <td height="20" width="100%"><img src="images/pixel.gif" height="20"></td>
+                <td height="20" width="15"><img src="images/pixel.gif" height="20"></td>
+              </tr> 
+	<form name="theForm" method="post" action="login.aspx?ReturnUrl=%2fnetloan%2fdefault.aspx" id="theForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyMTY0OTI3NjcPZBYCAgcPZBYIAgEPFCsAAmQFBUxvZ2luFghmDxUBB0NhcmQgTm9kAgMPZBYCZg8VAQdQaW5jb2RlZAIFDw8WAh4EVGV4dAUFTG9naW4WAh4HT25DbGljawUUcmV0dXJuIEJlZ2luTG9naW4oKTtkAgcPFgQeBXZhbHVlBQZDYW5jZWweB1Zpc2libGVoZAIEDxQrAAJkBQxJbnN0cnVjdGlvbnMWAgIBDw8WAh8ABYgBV2VsY29tZSB0byB0aGUgU3dpbmRvbiBMaWJyYXJpZXMgY29tcHV0ZXIgYm9va2luZyBzeXN0ZW0uIFBsZWFzZSBlbnRlciB5b3VyIGxpYnJhcnkgbWVtYmVyc2hpcCBjYXJkIG51bWJlciBhbmQgcGluY29kZSB0aGVuIGNsaWNrIExvZ2luLmRkAgUPDxYCHwAFb0lmIHlvdSBhcmUgYW4gYWRtaW5pc3RyYXRvciBvciBtZW1iZXIgb2Ygc3RhZmYsIHBsZWFzZSBjbGljayA8YSBocmVmPSJsb2dpbi5hc3B4P2FkbWluPXRydWUiPmhlcmU8L2E+IHRvIGxvZ2luLmRkAgYPDxYCHwAFaElmIHlvdSBhcmUgbm90IGFuIGFkbWluaXN0cmF0b3Igb3IgbWVtYmVyIG9mIHN0YWZmLCBwbGVhc2UgY2xpY2sgPGEgaHJlZj0ibG9naW4uYXNweCI+aGVyZTwvYT4gdG8gbG9naW4uZGRkXtbFFI5u6dobzYV1kraonjDfNd8=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0562D3AB" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgL0u/u0AgKpwKq/CAKL9aCCDQLZpaCZAwKJqZnmBAKJmq+9BdETwx5VMNEzmcCkagraHl6Ny/cF" />
+  <tr>
+    <td>&nbsp;</td>
+    <td valign="top">
+      <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="basecell">
+        <tr>
+          <td valign="top" nowrap>
+			<span class="header">netloan</span><input type="text" style="display: none; visibility: hidden;" /><br><br>
+            <!-- start leftframe -->
+            <table border="0" cellspacing="0" cellpadding="0" class="innercell" ><tr><td width="8" background="images/framebevel.gif"><img src="images/pixel.gif"></td><td class="headercell"  background="images/framebevel.gif" style="background-repeat:repeat-x" nowrap width="100%">&nbsp;Login&nbsp;</td><td><img src="images/BorderTR.gif"></td></tr><tr><td width="8" background="images/BorderL.gif" style="background-repeat:repeat-y"><img src="images/pixel.gif" width="8"></td><td><table width="100%" border="0" cellspacing="0" cellpadding="2">
+<tr><td ><img src="images/pixel.gif" height="1"></td></tr>
+              <tr><td nowrap>
+                  &nbsp;Card No:<br>&nbsp;
+                  <input name="usernameTB" type="text" id="usernameTB" onkeypress="cancelEnter(event);" />&nbsp;
+              </td></tr>
+              <tr><td nowrap><div id="pwdPanel">
+	&nbsp;Pincode:
+                  <br>&nbsp; <input name="passwordTB" type="password" id="passwordTB" />&nbsp;
+                  
+</div>
+              </td></tr>
+              <tr><td><img src="images/pixel.gif" height="2"></td></tr>
+              <tr><td nowrap>
+                  &nbsp;<input type="submit" name="loginBtn" value="Login" onclick="return BeginLogin();" language="javascript" id="loginBtn" />
+                  &nbsp;
+                  <input name="ShowScriptWarning" type="hidden" id="ShowScriptWarning" value="true" />
+                  <input name="LoginId" type="hidden" id="LoginId" />
+              </td></tr>
+            <tr><td ><img src="images/pixel.gif" height="1"></td></tr></table></td><td width="12" background="images/BorderR.gif" style="background-repeat:repeat-y"><img src="images/pixel.gif" width="12"></td></tr><tr height="12"><td height="12" background="images/BorderBL.gif"><img src="images/pixel.gif" width="8" height="12"></td><td height="12" background="images/BorderB.gif" style="background-repeat:repeat-x"><img src="images/pixel.gif" height="12"></td><td height="12" background="images/BorderBR.gif"><img src="images/pixel.gif" height="12"></td></tr></table>
+            <script language=javascript><!--
+				document.getElementById("usernameTB").focus();
+				document.getElementById("ShowScriptWarning").value="false";
+            //-->
+            </script>
+
+            &nbsp;<br><table><tr><td><span id="errorLabel"><font color="Red"></font></span></td></tr></table>
+            <br>
+            
+            <!-- end leftframe -->
+          </td>
+          <td width="10">
+            <img src="images/pixel.gif" width="10">
+          </td>
+          <td background="images/checkerboard.gif" width="1">
+            <img src="images/pixel.gif" width="1" height="100%">
+          </td>
+          <td width="10"><img src="images/pixel.gif" width="10"></td>
+          <td valign="top" width="100%">
+
+            <!-- start rightframe -->
+            <span class="header">Welcome</span><br><br>
+            <table border="0" cellspacing="0" cellpadding="0" class="innercell"  width="100%"><tr><td width="8" background="images/framebevel.gif"><img src="images/pixel.gif"></td><td class="headercell"  background="images/framebevel.gif" style="background-repeat:repeat-x" nowrap width="100%">&nbsp;Instructions&nbsp;</td><td><img src="images/BorderTR.gif"></td></tr><tr><td width="8" background="images/BorderL.gif" style="background-repeat:repeat-y"><img src="images/pixel.gif" width="8"></td><td><table width="100%" border="0" cellspacing="0" cellpadding="2">
+
+              <tr>
+                <td>
+                  <table border="0" cellpadding="4" width="100%">
+                    <tr>
+                      <td>
+                        <span id="instructionsLabel">Welcome to the Swindon Libraries computer booking system. Please enter your library membership card number and pincode then click Login.</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+             </table></td><td width="12" background="images/BorderR.gif" style="background-repeat:repeat-y"><img src="images/pixel.gif" width="12"></td></tr><tr height="12"><td height="12" background="images/BorderBL.gif"><img src="images/pixel.gif" width="8" height="12"></td><td height="12" background="images/BorderB.gif" style="background-repeat:repeat-x"><img src="images/pixel.gif" height="12"></td><td height="12" background="images/BorderBR.gif"><img src="images/pixel.gif" height="12"></td></tr></table>
+             <br>
+             
+             <br><br>
+             <div id="loginDiv" align="center" class="loginqueue" style="visibility:hidden">
+				        <div id="timeWaitDiv">0:00</div>
+				        <br>
+				        <b>You have been placed in a login queue, your current position is</b>
+				        <br><br>
+				        <div id="queuePosDiv">-</div>
+				        <br>
+				        <input type="button" value='Abort' onclick="javascript:AbortLogin()" />
+             </div>            
+            <!-- end rightframe -->
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+ </form>
+ 
+							<tr> 
+                <td height="15" colspan="3">
+                  <img src="images/pixel.gif" width="15" height="15">
+                </td>
+              </tr>
+              <tr> 
+                <td width="15" height="15" align="left" valign="bottom">
+                  <img src="images/pixel.gif" width="15" height="15">
+                </td>
+                <td align="center">
+                  
+                  &copy; 2001-2008 Lorensbergs Communication
+                  
+                  
+                </td>
+                <td width="15" height="15" align="right" valign="bottom">
+                  <img src="images/pixel.gif" width="15" height="15">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>        
+    </table>
+  </body>
+</html>

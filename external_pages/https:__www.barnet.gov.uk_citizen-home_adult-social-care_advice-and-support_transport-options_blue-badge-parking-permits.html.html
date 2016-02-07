@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js">
+<head>
+<meta charset="utf-8" />
+
+  
+  
+  
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <meta name="keywords" content="Blue Badge parking permits" />
+    
+    <meta name="dcterms.available" content="2015-03-04T14:24:02Z" />
+    <meta name="dc.type" content="Content Page" />
+  
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="google-translate-customization" content="c891ed76c3b0235-832d37a42e0942b1-gafa62815664b2abd-11" />
+<title>Blue Badge parking permits - barnet.gov.uk</title>
+
+<!--
+TODO: shortcut icon needs setting. Don't re-enable with href="#" as it causes another GET request to be triggered by Chrome.
+<link rel="shortcut icon" type="image/ico" href="#" />
+-->
+
+<link rel="stylesheet" href="/docroot/css/leaflet.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/docroot/css/chosen.min.css" />
+<link rel="stylesheet" href="/docroot/css/jquery.mCustomScrollbar.min.css" />
+
+
+<link rel="stylesheet" href="/docroot/css/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="/docroot/js/jquery-1.11.0.min.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="/docroot/js/jquery-ui.js"></script>
+<script src="/docroot/js/date-picker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/styles.css" media="screen, print" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.date.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.time.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/print.css" media="print" />
+
+
+<script src="/docroot/js/plugins/rem.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+  <script src="/docroot/js/plugins/nwmatcher-1.2.5.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/selectivizr.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/docroot/css/ie8.css" />
+<![endif]-->
+
+<!--[if ! lte IE 6]><!-->
+
+
+<!-- #TODO CBSCH-261 Fixing Foundation Javascript error -->
+<style type="text/css">
+meta.foundation-data-attribute-namespace {
+    font-family: false;
+}
+</style>
+
+<script src="/docroot/js/leaflet.js"></script>
+<script src="/docroot/js/leaflet.markercluster-src.js"></script>
+<script src="/docroot/js/leaflet.markercluster.js"></script>
+
+<script src="/docroot/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/init-behaviour.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.placeholder.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.accordion.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.tab.js" type="text/javascript"></script>
+
+<script src="/docroot/js/scroll.js" type="text/javascript"></script>
+
+<script src="/docroot/js/classie.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery-truncate/jquery.truncate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/modernizr.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/fastclick.js" type="text/javascript"></script>
+
+<script src="/docroot/js/iframeResizer.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.reveal.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/additional-methods.min.js" type="text/javascript"></script>
+
+<script src="https://www.browsealoud.com/plus/scripts/ba.js" type="text/javascript"></script>
+
+<script src="/docroot/js/browse-aloud.js" type="text/javascript"></script>
+
+
+<!--<![endif]-->
+<script>
+    /*<![CDATA[*/
+    (function (BCP) {
+        BCP.registerAjaxUrl = '/citizen-home/register/content/column1/singleton.html';
+        BCP.loginAjaxUrl = '/citizen-home/login/content/column1/singleton.html';
+    })(BCP);
+    /*]]>*/
+</script>
+
+<!-- Clickjacking prevention for legacy browsers that don't support X-Frame-Options header -->
+  
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+  
+
+<script>
+
+    /*<![CDATA[*/
+    jQuery(document).ready(function() {
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        var TP_GA = {
+            gaTrackerId : 'UA-60148629-1',
+            auth : false,
+            authDimensionName : 'dimension1'
+        }
+
+        ga('create', TP_GA.gaTrackerId, 'auto');
+        ga('set', 'forceSSL', true);
+
+        if (TP_GA.authDimensionName != '') {
+            ga('set', TP_GA.authDimensionName, TP_GA.auth.toString());
+        }
+
+        ga('send', 'pageview');
+    });
+    /*]]>*/
+</script>
+  
+ 
+
+</head>
+<body id="citizen-content-pg" class="nav-col">
+      
+    <div class="header">
+        <header>
+            <div id="skiptocontent">
+                <a href="#contentskip">Skip to content</a>
+            </div>
+             <span class="barnet-logo column small-3">
+                <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                    Barnet</a>
+                <img class="print-only" src="/docroot/img/barnet-logo-green.png" />
+            </span> 
+             <form class="global-search search-controls service-search large-6 large-offset-1 column" method="GET" action="/citizen-home/search.html">
+                <div class="global-search-input">
+                    <input type="search" name="keywords" title="main-search" />
+                </div>
+                <div class="global-search-submit">
+                    <button type="submit" class="button expand">Search</button>
+                </div>
+            </form> 
+              
+            <div class="user-section">
+                 <div id="129fae96-207a-4482-963b-0578a901db3b">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/branding/user/singleton';
+        var target = '#' + '129fae96-207a-4482-963b-0578a901db3b';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                                {
+                                    pageLanguage : 'en',
+                                    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+                                },
+                                'google_translate_element');
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+            </div>
+              
+            <div class="mobile-nav">
+                <i class="iconfontello-search"></i>
+                <i class="iconfontello-menu"></i>
+            </div>
+        </header>
+    </div>
+      
+      
+      
+    
+      
+      
+      
+    <div class="content">
+        
+              
+<nav id="nav" class="side-nav side-nav-off medium-4 large-3 column">
+    <!-- TODO: Why do we need a LI wrapping the nav? This means our level has to start at 2! -->
+    <ul class="nav-level-1" style="display: block">
+        <li class="open">
+              
+            <ul class="nav-level-2" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/adult-social-care.html">
+                        <i></i>
+                        <span class="menu-item">Adult social care</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/adult-social-care/advice-and-support.html">
+                        <i></i>
+                        <span class="menu-item">Advice and support</span>
+                    </a>
+                      
+            <ul class="nav-level-4" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/adult-social-care/advice-and-support/transport-options.html">
+                        <i></i>
+                        <span class="menu-item">Transport options</span>
+                    </a>
+                      
+            <ul class="nav-level-5" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/advice-and-support/transport-options/freedom-pass-for-older-and-disabled-people.html">
+                        <i></i>
+                        <span class="menu-item">Freedom Pass for older and disabled people</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li class="open active">
+                    <a href="/citizen-home/adult-social-care/advice-and-support/transport-options/blue-badge-parking-permits.html">
+                        <i></i>
+                        <span class="menu-item">Blue Badge parking permits</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+        </li>
+    </ul>
+</nav>
+  
+            <div class="large-9 medium-8 small-12 column main-content">
+                 <nav id="breadcrumb-nav">
+        <div id="breadcrumb" class="breadcrumb-panel">
+            <ul class="breadcrumbs">
+                  
+                
+                <li>
+                    <a href="/citizen-home.html">Home</a>
+                </li>
+                 
+                  
+                <li class="service-nav">
+                    <select onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="Our services">Our services</option>
+                        <option value="/citizen-home/business.html">Business Support in Barnet</option>
+                        <option value="/citizen-home/environmental-health.html">Environmental Health and Trading Standards</option>
+                        <option value="/citizen-home/libraries.html">Libraries</option>
+                        <option value="/citizen-home/regeneration.html">Regeneration</option>
+                        <option value="/citizen-home/public-health.html">Public Health </option>
+                        <option value="/citizen-home/adult-social-care.html">Adult social care</option>
+                        <option value="/citizen-home/council-and-democracy.html">Council and democracy</option>
+                        <option value="/citizen-home/housing-and-community.html">Housing and community</option>
+                        <option value="/citizen-home/schools-and-education.html">Schools and education</option>
+                        <option value="/citizen-home/parks-sport-and-leisure.html">Parks, sport and leisure</option>
+                        <option value="/citizen-home/council-tax-and-benefits.html">Council Tax and Benefits</option>
+                        <option value="/citizen-home/parking-roads-and-pavements.html">Parking, roads and pavements</option>
+                        <option value="/citizen-home/rubbish-waste-and-recycling.html">Rubbish, waste and recycling</option>
+                        <option value="/citizen-home/children-young-people-and-families.html">Children, young people and families</option>
+                        <option value="/citizen-home/births-deaths-marriages-and-nationality.html">Births, deaths, marriages and nationality</option>
+                        <option value="/citizen-home/planning-conservation-and-building-control.html">Planning, Conservation and Building Control</option>
+                        <option value="/citizen-home/news.html">News and features</option>
+                        <option value="/citizen-home/directories.html">Directories</option>
+                        <option value="/citizen-home/events.html">Events List</option>
+                        <option value="/citizen-home/pledgebank.html">Pledges</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="/citizen-home/adult-social-care.html">Adult social care</a>
+                </li>
+                 
+                  
+                
+                <li>
+                    <a href="/citizen-home/adult-social-care/advice-and-support.html">Advice and support</a>
+                </li>
+                 
+                  
+                
+                <li>
+                    <a href="/citizen-home/adult-social-care/advice-and-support/transport-options.html">Transport options</a>
+                </li>
+                 
+                  
+                
+                
+                  
+            </ul>
+        </div>
+    </nav> 
+                  
+                <span class="skip-anchor" id="contentskip"></span>
+                 <main id="main" role="main">
+                    
+                  
+                <div id="intro" class="content-page-intro">
+
+                      
+                    <div class="small-12 columns left flush-left">
+                    
+                        <h1>Blue Badge parking permits</h1>
+                          
+                        <ul>
+                            <li>
+                                
+                                    <small>Adult social care</small>
+                                
+                            </li>
+                        </ul>
+                        
+                       
+                          
+                          
+                       
+                    </div>
+
+                    
+                    
+                    
+                    
+                      
+                     
+                </div>
+                  
+                 
+            <div class="row">
+                 
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <h4><strong>Blue Badge scheme</strong></h4>
+
+<p>The Blue Badge scheme helps disabled people with severe mobility problems to access goods and services by allowing them to park close to their destination.</p>
+
+<p>The Blue Badge can be used in any vehicle in which the holder is travelling. The holder doesn&rsquo;t have to be the driver. &nbsp;</p>
+
+<p>Blue Badges are issued only to people with permanent and substantial disabilities which affect mobility.</p>
+
+<p>You could be prosecuted and fined up to &pound;1,000 and / or have the badge withdrawn if you misuse your badge or allow someone else to misuse it. &nbsp;</p>
+
+<p>Expired badges must be returned to the London Borough of Barnet. This also applies to badges which were issued to a person who has since died. &nbsp;</p>
+
+<p>Read&nbsp;<a href="https://www.gov.uk/government/publications/the-blue-badge-scheme-rights-and-responsibilities-for-organisations-that-have-blue-badges">The Blue Badge Scheme: rights and responsibilities in England</a>&nbsp;for more information on your rights and responsibilities, and how to use your Blue Badge.&nbsp;</p>
+
+<h4><strong>Qualifying for a Blue Badge&nbsp;</strong></h4>
+
+<p>You automatically qualify for a Blue Badge if one of the following applies:&nbsp;&nbsp;</p>
+
+<ul>
+	<li>you receive the higher rate of the mobility component of the Disability Living Allowance (DLA)</li>
+	<li>you receive the mobility component of Personal Independence Payment (PIP) because &nbsp;you&nbsp;meet a descriptor from the &#39;moving around&#39; activity with a score of 8 or more points, in &nbsp;which case the expiry date of the badge will be linked to the end date of the benefit if this is less than 3 years</li>
+	<li>you&rsquo;re registered blind&nbsp;</li>
+	<li>you receive a War Pensioners&#39; Mobility Supplement (WPMS)</li>
+	<li>you&rsquo;ve been awarded a lump sum benefit at&nbsp;<a href="https://www.gov.uk/government/publications/the-review-of-the-armed-forces-compensation-scheme">tariffs 1 to 8 of the Armed Forces Compensation Scheme</a> and are certified as having a permanent and substantial disability which causes the inability to walk or very considerable difficulty in walking&nbsp;&nbsp;</li>
+</ul>
+
+<p>You may be eligible for a Blue Badge if one of the following applies:&nbsp;&nbsp;</p>
+
+<ul>
+	<li>you drive a vehicle regularly, have a severe disability in both arms and are unable to operate, or have considerable difficulty in operating, all or some types of parking meter</li>
+	<li>you have a permanent and substantial disability that causes inability to walk or very considerable difficulty in walking</li>
+</ul>
+
+<p>You&rsquo;ll be invited for assessment by an independent mobility assessor such as an occupational therapist to confirm if you&rsquo;re eligible for a Blue Badge.&nbsp;&nbsp;</p>
+
+<h4><strong>Children&rsquo;s Blue Badges</strong></h4>
+
+<p>A child will automatically qualify for a Blue Badge without further assessment if they&rsquo;re aged 2 years&nbsp;or over and: &nbsp;</p>
+
+<ul>
+	<li>receive disability living allowance (DLA) at the higher rate of the mobility component</li>
+	<li>are registered as blind (severely sight impaired)&nbsp;</li>
+</ul>
+
+<p>Children aged 3 and under may be eligible for a Blue Badge following further assessment if one, or both, of the following apply:&nbsp;&nbsp;</p>
+
+<ul>
+	<li>they must always be accompanied by bulky medical equipment which cannot be carried with the child without difficulty&nbsp;</li>
+	<li>they must be near a vehicle at all times, so that if necessary they can be treated for their condition in the vehicle, or be driven to a place where they can be treated</li>
+</ul>
+
+<h4><strong>Organisation Badges</strong></h4>
+
+<p>A Badge may be issued to organisations that care for and transport disabled people who meet the eligibility criteria for a Blue Badge.&nbsp;</p>
+
+<p>If few people in the organisation are eligible for a Badge then it would be more appropriate for those persons to apply for their own Badges.</p>
+
+<p>Organisation Badges will only be issued to an organisation which both:&nbsp;</p>
+
+<ul>
+	<li>cares for and transports disabled persons who meet one or more of the eligibility criteria for an individual Badge</li>
+	<li>has a clear need for an organisation Badge rather than using personal Badges of the people it&#39;s transporting</li>
+</ul>
+
+<p>In all circumstances, Badges will be supplied to organisations or departments (for example, a social services department) rather than to individual staff members.&nbsp;</p>
+
+<p>An organisation&rsquo;s employees must only use the Badge to transport disabled people in their care who meet 1 or more of the Badge&rsquo;s eligibility criteria.</p>
+
+<p>If employees use the Badge for parking concessions when there are no passengers in the vehicle who are eligible for a Badge, they&rsquo;ll face a fine of up to &pound;1,000.</p>
+
+<h4><strong>Apply for a Blue Badge&nbsp;</strong></h4>
+
+<p>You can either:</p>
+
+<ul>
+	<li><a href="https://www.gov.uk/apply-blue-badge">apply online</a></li>
+	<li>
+	<p>phone the&nbsp;Assisted Travel team&nbsp;on&nbsp;020 8359 4131 and ask for an application form</p>
+	</li>
+</ul>
+
+<p>If your application is successful you must post the Assisted Travel team:</p>
+
+<ul>
+	<li>proof of identity, eg passport, driving licence or National Identity Card&nbsp;</li>
+	<li>a passport sized photograph with your name on the reverse</li>
+</ul>
+
+<p>Your address details will be validated by the Assisted Travel team, providing you&rsquo;ve consented to the council checking any information already held by its departments, eg Housing Benefit and Council Tax. &nbsp;</p>
+
+<p>You&rsquo;re responsible for applying to renew your badge. Please allow up to&nbsp;8 weeks&nbsp;for us to process your renewal application. &nbsp;</p>
+
+<h4><strong>Blue Badge costs</strong></h4>
+
+<p>Please allow a week for your identity and address documents to be processed.</p>
+
+<p>You&rsquo;ll be charged a&nbsp;&pound;10.00 administration fee if your application is successful. You must pay this before the Badge is issued.</p>
+
+<p>Your Blue Badge will be ordered after we&rsquo;ve taken your payment. All Blue Badges are administrated centrally, outside of the London Borough of Barnet. Please allow up to&nbsp;10 days&nbsp;from the date of payment for your badge to arrive.&nbsp;</p>
+
+<h4><strong>Parking concessions&nbsp;</strong></h4>
+
+<ul>
+	<li>park for up to 3 hours on a yellow line waiting restriction (single or double - the restriction is the same, but double lines apply 24-hours a day) - the accompanying clock must be displayed and the correct time of arrival set</li>
+	<li>park for unlimited periods at Pay-by-Phone parking places, unless signage specifies a maximum stay</li>
+	<li>park at disabled badge holder parking places, either for an unlimited time or for the time shown on nearby signs</li>
+</ul>
+
+<h4><strong>How to use the Badge and clock&nbsp;</strong></h4>
+
+<p>The Badge and clock must be displayed for the concessions to apply. Disability parking concessions don&rsquo;t apply simply because of the vehicle excise duty (tax disc) classification, or because the driver is a badge holder.</p>
+
+<p>If the badge and clock are not displayed a vehicle may be issued with a penalty charge notice. &nbsp;</p>
+
+<h4><strong>Designated Disabled parking bays for residents&nbsp;</strong></h4>
+
+<p>Barnet blue badge holders can apply for a &#39;designated disabled badge holder only&#39; parking place to be provided close to their home if it&rsquo;s difficult for them to park there.<br />
+<br />
+You can only apply if you&rsquo;re a Barnet resident and one of the following applies:</p>
+
+<ul>
+	<li>you&rsquo;re a London Borough of Barnet Blue Badge holder and the vehicle owner</li>
+	<li>you keep and use a vehicle at the same address as the badge holder, and the badge holder relies on you to assist them as a passenger of their vehicle</li>
+</ul>
+
+<p>We&rsquo;ll need to see written medical evidence that the badge holder has considerable difficulty in walking.&nbsp;</p>
+
+<p>We&rsquo;ll only consider providing a designated disabled parking place where there is proven difficulty in parking, and no suitable alternative off-street parking is available.</p>
+
+<ul>
+	<li><a href="/dam/jcr:db84a093-9fa5-4006-ba3f-5661be1ab803/tony.harding_23-10-2015_12-30-20.pdf">Apply for a designated disabled parking bay</a>.</li>
+</ul>
+
+<h4><strong>Lost, stolen or replacement Blue Badges</strong></h4>
+
+<p>All replacement badges cost &pound;10.00.</p>
+
+<p>If you lose your badge or it&rsquo;s stolen you should:</p>
+
+<p>1) report it to the police, who&#39;ll give you crime or lost property reference number</p>
+
+<p>2) contact us for a replacement form</p>
+
+<p>3) produce your photo for your replacement badge with your crime or lost property reference number to one of the Council&#39;s Customer Access Points at Burn Oak Library or Barnet House. These documents must<br />
+be presented in person.&nbsp;</p>
+
+<h4><strong>Misuse of Blue Badges</strong></h4>
+
+<p>Contact the Assisted Travel Team if you believe that a Blue Badge is being misused. Please include the date, time, location, vehicle registration and Badge Number.&nbsp;</p>
+
+</div>
+<section class="contacts-widget widget">
+                    <h2>Contacts</h2>
+                      
+                    <div class="contacts-widget-wrapper clearfix">
+                          
+                        <div>
+                            <ul class="contact-info">
+                                <li class="text-strong">Assisted Travel Team</li>
+                                <li>North London Business Park (NLBP), Oakleigh Road South, London N11 1NP</li>
+                                <li>&nbsp;</li>
+                                
+                                <li>
+                                    <span class="text-strong">Tel: </span>
+                                    <span>020 8359 4131</span>
+                                </li>
+                                <li>
+                                    <span class="text-strong">FAX: </span>
+                                    <span>020 8359 4156</span>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="hours">
+                            <ul>
+                                <li class="text-strong">Opening hours</li>
+                                <li>Enquiries: <a href="/citizen-home/adult-social-care/forms/Assisted-travel-general-enquiries">Contact us online</a></li>
+                            </ul>
+                        </div>
+                          
+                    </div>
+                    
+                    
+                      
+                </section><section class="links-widget widget">
+            <h2>What do you want to do next?</h2>
+            <div>
+                <ul class="links-list">
+                      
+                    <li>
+                         
+                    
+                     
+                    </li> 
+                    <li>
+                         
+                    <a class="button" href="http://www.direct.gov.uk/en/DisabledPeople/MotoringAndTransport/Bluebadgescheme/DG_181208" rel="external">Blue Badge application</a>
+                     
+                    </li>
+                    
+                    
+                    
+                    
+                      
+                </ul>
+            </div>
+        </section> 
+            </div>
+         
+                </main> 
+                
+                 <div class="row">
+                    <div class="panel">
+                          
+                <section class="gm_sidebar row">
+                    <div class="gm-container">
+                        <div class="rate-page">
+                            <i class="iconfontello-thumbs-up"></i>
+                            <p>Rate this page</p>
+                        </div>
+                        <div class="rating-options">
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=3" target="_blank" title="rate this page as GOOD" rel="nofollow">
+                                <img src="/docroot/img/govmetric/smiling.png" alt="green smiley (good)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=2" target="_blank" title="rate this page as AVERAGE" rel="nofollow">
+                                <img src="/docroot/img/govmetric/indifferent.png" alt="orange smiley (average)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=4" target="_blank" title="rate this page as POOR" rel="nofollow">
+                                <img src="/docroot/img/govmetric/sad.png" alt="red smiley (poor)" />
+                            </a>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+                    <script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+                    <script type="text/javascript" src="//hitcounter.govmetric.com/982"></script>
+                </section>
+                  
+                    </div>
+                </div> 
+                
+            </div>
+        
+        
+          
+    </div>
+      
+      
+    <footer>
+          
+          
+        <nav class="footer-nav clearfix row">
+            <ul class="footer-links left">
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html" class="internal-link">Contact us</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/copyright.html" class="internal-link">Copyright</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/privacy.html" class="internal-link">Privacy notice</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" class="internal-link">Accessibility</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Disclaimer.html" class="internal-link">Disclaimer</a>
+                            
+                            
+                            
+                             </li>
+                
+                
+                
+                
+                
+                
+            </ul>
+            <ul class="social-icons right">
+                <li><a href="https://www.gov.uk/"><img height="18" width="90" src="/docroot/img/gov-uk-logo.png" alt="gov uk logo" /></a></li>
+                <li><a href="https://www.flickr.com/photos/barnetcouncil"><i class="flaticon-flickr"></i></a></li>
+                <li><a href="https://twitter.com/barnetcouncil"><i class="flaticon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/BarnetCouncil"><i class="flaticon-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/user/Barnetcouncil1"><i class="flaticon-youtube"></i></a></li>
+                <li class="browse-aloud-icon"><a id="show-browsealoud" title="Listen with BrowseAloud"><img src="/docroot/img/browse-aloud-logo.png" alt="Listen with BrowseAloud" /></a></li>
+            </ul>
+        </nav>
+        <div class="site-footer">
+            <div class="row">
+                <span class="barnet-logo right">
+                    <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                        Barnet</a>
+                </span>
+            </div>
+        </div>
+          
+    </footer>
+      
+    <script src="/docroot/js/plugins/retina.min.js" type="text/javascript"></script>
+    <script src="/docroot/js/plugins/chosen.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery("#ordering-download-form select").chosen();
+    jQuery(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+</body>
+</html>

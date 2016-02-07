@@ -1,0 +1,539 @@
+
+    <!DOCTYPE html>
+    <html lang="en-GB">
+        <head>
+	
+            <title>Eastleigh Borough Council</title>
+            <meta name="Copyright" content="Copyright 2014 Eastleigh Borough Council" />
+            <meta name="Author"    content="Eastleigh Borough Council - CSICT Development Team" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta charset="UTF-8" />
+            <meta name="description" content='Wheeled Bin Garden Waste Collection'>
+            <meta name="keywords" content='Wheeled Bin Garden Waste Collection'>
+            <meta name="author" content="Eastleigh Borough Council">
+
+                <!-- Styles -->
+            <link href="/css/master.less.css"    rel="stylesheet" type="text/css" />
+            		    <style type="text/css">
+    	    #wrapper {background: #BCB;}
+
+    	     @media( min-width: 1061px)
+    	     {
+    	         #wrapper 
+    	         {
+					background: #eaebec;
+    	            background: linear-gradient( rgba(200, 200, 200, 0.8), rgba(200, 200, 200, 0.8) ),url('/media/63541/Hamble-Marina.jpg');
+    	            background-size: cover;
+    	         }
+    	     }
+    	</style>
+      
+
+			<!--Start of Google Analytics-->
+            <script type="text/javascript">
+                !function (e, a, t, n, c, o, s) { e.GoogleAnalyticsObject = c, e[c] = e[c] || function () { (e[c].q = e[c].q || []).push(arguments) }, e[c].l = 1 * new Date, o = a.createElement(t), s = a.getElementsByTagName(t)[0], o.async = 1, o.src = n, s.parentNode.insertBefore(o, s) } (window, document, "script", "//www.google-analytics.com/analytics.js", "ga"), ga("create", "UA-20264814-1", "auto"), ga("send", "pageview");
+            </script>
+			
+			<script>
+			/**
+			* Function that tracks a click on an outbound link in Google Analytics.
+			* This function takes a valid URL string as an argument, and uses that URL string
+			* as the event label.
+			*/
+			var trackOutboundLink = function(url) {
+			   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+				 function () {
+				 document.location = url;
+				 }
+			   });
+			}
+			</script> 
+            <!--End of Google Analytics-->
+
+            <script type="text/javascript" src="/Scripts/jquery-1.11.0.min.js"></script>
+            <script async src="/Scripts/less-1.3.3.min.js" type="text/javascript"></script>
+        </head>
+
+        <body>
+    
+            <form method="post" action="/waste,-recycling-environment/waste-and-recycling/about-your-bins/garden-waste-collection.aspx" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWAmYPZBYCZg9kFgJmD2QWAgIHEGRkFgICCQ9kFgJmD2QWAmYPZBYKAgEPDxYCHgRUZXh0ZWRkAgMPDxYEHgtOYXZpZ2F0ZVVybAU2aHR0cHM6Ly9teS5lYXN0bGVpZ2guZ292LnVrL215LWFjY291bnQvbXktZGV0YWlscy5hc3B4HgdWaXNpYmxlaGRkAgUPDxYCHwEFOmh0dHBzOi8vbXkuZWFzdGxlaWdoLmdvdi51ay9NZW1iZXItUmVnaXN0cmF0aW9uL2xvZ2luLmFzcHhkZAIHDw8WAh8CaGRkAgkPDxYCHwEFNGh0dHBzOi8vbXkuZWFzdGxlaWdoLmdvdi51ay9NZW1iZXItUmVnaXN0cmF0aW9uLmFzcHhkZGTTCAP/MRhNf2H52r0wSOKvhQeutw==" />
+</div>
+
+                <div id="header" class="body">
+                    <h1>
+                        <a href="/">
+                            <img src="/media/core/eastleigh-logo.gif" alt="Eastleigh Borough Council" />
+                        </a>
+                    </h1>
+                    
+        <ul class="toolbar">
+
+				<li class=""><a href="/tools/cookies.aspx">Cookies</a></li>
+				<li class=""><a href="/tools/accessibility.aspx">Accessibility</a></li>
+				<li class=""><a href="/tools/contact-us.aspx">Contact Us</a></li>
+				<li class=""><a href="/tools/site-map.aspx">Site Map</a></li>
+				<li class=""><a href="/tools/a-to-z.aspx">A to Z</a></li>
+				<li class="last"><a href="/tools/help.aspx">Help</a></li>
+		</ul>
+
+
+                    <script type="text/javascript">
+    function doSearch() { var a = $("#searchstring").val(); return "" != a && (window.location = "/tools/search.aspx?searchtext=" + a), !1 }
+</script>
+
+<div id="search">
+    <label for="searchstring" class="hidden">site search</label>
+    <input type="text" id="searchstring" name="searchstring" class="formField" placeholder="Search..." title="Search" maxlength="50" autocomplete="Off" />
+    
+    <label for="searchBtn" class="hidden">search</label>       
+    <button type="button" class="searchBtn" id="searchBtn" name="searchBtn" onclick="doSearch();"></button>
+    
+    <div id="searchresults" class="search-results mecontent">
+    </div>
+</div>
+           
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+        var content = $('#searchstring').val();
+        $('#searchstring').keyup(function (e) {
+
+            if ($('#searchstring').val() != content) {
+                content = $('#searchstring').val();
+                $.ajax({
+                    type: "POST",
+                    url: "/searchresults",
+                    data: "searchstring=" + content,
+                    success: function(msg){
+                        $('#searchresults').html(msg);
+                    }
+                });
+            }
+
+            if (e.keyCode == 13) {
+                var searchText = $("#searchstring").val();
+                //alert(searchText);
+
+                window.location = "https://www.eastleigh.gov.uk/tools/search.aspx?searchtext=" + searchText;
+                //window.location.replace("/tools/search.aspx?searchtext=" + searchText);
+            }
+        });
+    });
+
+</script>
+
+                </div>
+
+                <dl class="breadcrumbs clearFix">
+                    <dt class="hidden">You are here</dt>
+                    <dd class="body">
+
+                        
+
+<ul class="breadcrumb">
+	
+	        <li class="normalpagelink"><a href="/">Home</a></li>
+	        <li class="normalpagelink"><a href="/waste,-recycling-environment.aspx">Waste, Recycling &amp; Environment</a></li>
+	        <li class="normalpagelink"><a href="/waste,-recycling-environment/waste-and-recycling.aspx">Waste and Recycling</a></li>
+	        <li class="normalpagelink"><a href="/waste,-recycling-environment/waste-and-recycling/about-your-bins.aspx">About Your Bins</a></li>
+	    <li class="active">Garden Waste Collection</li>
+    
+</ul>
+                        <div class="logindetails">
+                            <div id="ContentPlaceHolderDefault_UserDetails_5_divLoginDetails">
+    <span id="ContentPlaceHolderDefault_UserDetails_5_lblUserInfo"></span>
+    
+    
+    <a id="ContentPlaceHolderDefault_UserDetails_5_HypLogon" class="linkbutton" href="https://my.eastleigh.gov.uk/Member-Registration/login.aspx">Log In</a>
+    |
+    
+    <a id="ContentPlaceHolderDefault_UserDetails_5_HypRegister" class="linkbutton" href="https://my.eastleigh.gov.uk/Member-Registration.aspx">Create Account</a>
+</div> 
+                        </div>
+                    </dd>
+                </dl>
+
+                <div id="wrapper">
+        
+                    
+        <div id="content" class="body clearFix">
+            <div id="leftCol">
+				
+
+<div class="box MainMenu widget">
+    <a id="MainMenuHeader" class="MenuHead widget-head" href="#">
+        <h2>
+            Main Menu
+            <span></span>
+        </h2>
+    </a>
+    
+
+
+    <div class="box-content widget-content">
+
+
+		<nav id="MainMenu" class="nodisplay"> 
+                <ul>
+            <li class="level-2"> <!--id="My Eastleigh"-->
+                <a href="https://my.eastleigh.gov.uk/">My Eastleigh</a>
+            </li>
+            <li class="level-2"> <!--id="The Council"-->
+                <a href="/the-council.aspx">The Council</a>
+            </li>
+            <li class="level-2"> <!--id="Planning &amp; Building"-->
+                <a href="/planning-building.aspx">Planning &amp; Building</a>
+            </li>
+            <li class="level-2"> <!--id="Council Tax, Benefits &amp; Business Rates"-->
+                <a href="/council-tax,-benefits-business-rates.aspx">Council Tax, Benefits &amp; Business Rates</a>
+            </li>
+            <li class="level-2"> <!--id="Housing"-->
+                <a href="/housing.aspx">Housing</a>
+            </li>
+            <li class="level-2"> <!--id="Waste, Recycling &amp; Environment"-->
+                <a href="/waste,-recycling-environment.aspx">Waste, Recycling &amp; Environment</a>
+            </li>
+            <li class="level-2"> <!--id="Energy &amp; Climate Change"-->
+                <a href="/energy-climate-change.aspx">Energy &amp; Climate Change</a>
+            </li>
+            <li class="level-2"> <!--id="Parking, Travel &amp; Roads"-->
+                <a href="/parking,-travel-roads.aspx">Parking, Travel &amp; Roads</a>
+            </li>
+            <li class="level-2"> <!--id="Sport, Countryside, Parks &amp; Culture"-->
+                <a href="/sport,-countryside,-parks-culture.aspx">Sport, Countryside, Parks &amp; Culture</a>
+            </li>
+            <li class="level-2"> <!--id="Licensing"-->
+                <a href="/licensing.aspx">Licensing</a>
+            </li>
+            <li class="level-2"> <!--id="Business"-->
+                <a href="/business.aspx">Business</a>
+            </li>
+            <li class="level-2"> <!--id="Our Community"-->
+                <a href="/our-community.aspx">Our Community</a>
+            </li>
+    </ul>
+
+        </nav>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        $(function () { var n = $("#MainMenuHeader"), e = $("#MainMenu"); $(n).on("click", function (n) { n.preventDefault(), e.slideToggle() }) });
+    </script>
+
+
+
+
+				
+
+
+
+
+
+<div class="box sectionNav widget">
+    <div class="box-content">
+        
+        <a id="SectionMenuHead" class="MenuHead widget-head" href="#">
+            <h2>
+                Waste and Recycling
+                <span></span>
+            </h2>
+        </a>
+
+            <nav id="sectionNav">
+                <ul>
+
+                        <li  class="parent">
+                                <a href="/waste,-recycling-environment/waste-and-recycling/collections-and-services.aspx">Waste Collections and Services</a>
+                        </li>
+                        <li  class="parent">
+                                <a class="parent" href="/waste,-recycling-environment/waste-and-recycling/about-your-bins.aspx">About Your Bins</a>
+                                    <ul>
+                                        
+                                            <li>
+
+                                                <a class="" href="/waste,-recycling-environment/waste-and-recycling/about-your-bins/green-recycling-bin.aspx">Green Recycling Bin</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/waste,-recycling-environment/waste-and-recycling/about-your-bins/black-household-waste-bin.aspx">Black Household Waste Bin</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/waste,-recycling-environment/waste-and-recycling/about-your-bins/brown-food-waste-bin.aspx">Brown Food Waste Bin</a>
+                                            </li>
+                                            <li>
+
+                                                <a class=" active" href="/waste,-recycling-environment/waste-and-recycling/about-your-bins/garden-waste-collection.aspx">Garden Waste Collection</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/waste,-recycling-environment/waste-and-recycling/about-your-bins/glass-and-battery-collection.aspx">Glass and Battery Collection</a>
+                                            </li>
+                                    </ul>
+                        </li>
+                        <li  class="parent">
+                                <a href="/waste,-recycling-environment/waste-and-recycling/more-information.aspx">More Information</a>
+                        </li>
+                        <li  class="">
+                                <a href="/waste,-recycling-environment/waste-and-recycling/useful-links.aspx">Useful Links</a>
+                        </li>
+                        <li  class="">
+                                <a href="/waste,-recycling-environment/waste-and-recycling/business-waste-and-recycling.aspx">Business Waste and Recycling</a>
+                        </li>
+                        <li  class="">
+                                <a href="/waste,-recycling-environment/waste-and-recycling/healthcare-waste.aspx">Healthcare Waste</a>
+                        </li>
+    
+                </ul>
+            </nav>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () { var e = $("#SectionMenuHead"), n = $("#sectionNav"); $(e).on("click", function (e) { e.preventDefault(), n.slideToggle() }) });
+</script>
+			</div>
+
+	        <div id="main" class="clearfix" >
+                <div class="main-head">
+                    <h2>
+                        Wheeled Bin Garden Waste Collection
+
+                    </h2>
+                    <div class="whoson">
+    <!-- Embedded WhosOn: Insert the script below at the point on your page where you want the Click To Chat link to appear -->
+        <script type='text/javascript' src='https://chat.eastleigh.gov.uk:443/include.js?domain=my.eastleigh.gov.uk'></script>
+        <script type='text/javascript' >
+        if (sWOTrackPage) sWOTrackPage();
+    </script>
+    <!-- End of embedded WhosOn -->
+</div>
+
+                </div>
+				<div class="main-intro">
+                    <p>
+                        
+                    </p>
+                </div>
+                
+                    
+				
+					<div id="main-content" class="clearFix">
+					    <p class="modifiedDate">
+					        Page last updated at 30 December 2015 at 10:14
+                        </p>
+						<h2>Join The Council’s Garden Waste Collection Service </h2>
+<p>Join with thousands of borough residents and benefit from a fortnightly collection of your garden waste from your kerbside. </p>
+<p>This recycling service provides a great value for money collection of your garden waste every fortnight direct from your kerbside.  There is also a money back guarantee as part of the Councils ‘buy it and try it’ offer if, after 6 weeks, you aren’t completely satisfied with the new service.</p>
+<p><strong>Some of the key benefits</strong></p>
+<ul>
+<li>Save petrol and time with fewer journeys to your local recycling centre</li>
+<li>It is easy to recycle your garden waste, simply fill up your brown lidded green bin and place it out for collection on your collection day and we will do the rest</li>
+<li>Avoid unwanted 'creepy crawlies' in your vehicle</li>
+</ul>
+<p> </p>
+<h3>Want to join the new service?</h3>
+<p>Follow one of the links below and renew your subscription or sign up as a new customer today.</p>
+<ul>
+<li><a href="https://my.eastleigh.gov.uk/apply/garden-waste-service.aspx" title="Garden Waste Service"> Join, renew or buy an additional bin </a></li>
+<li><a href="#DD" title="DD link">Sign up by Direct Debit</a></li>
+<li><a href="https://my.eastleigh.gov.uk/apply/garden-waste-discount-confirmation.aspx" title="Garden Waste Discount Confirmation"> Confirm your benefit reduction online</a> </li>
+</ul>
+<p><strong>How does the service work?</strong></p>
+<p>When you subscribe to the service you will receive a 240 litre wheeled bin and a welcome pack telling you how the service works and your collection dates for the year.</p>
+<p>Your garden waste will be collected, on a fortnightly basis, with the exception of the Christmas/New Year period.</p>
+<p>Simply put your garden waste in your bin and leave it by the kerbside by 6.30am, every fortnight, on your specified collection day.</p>
+<p><strong>What can go in your garden waste bin?</strong></p>
+<table border="0" summary="What can and can not be recycled in the garden waste collection service">
+<tbody>
+<tr>
+<td><img width="252" height="225" src="/media/35626/doputinbin.jpg" alt="Doputinbin"/> </td>
+<td><img width="250" height="223" src="/media/35625/Donts-box_m.jpg" alt="Donts Box M"/> </td>
+</tr>
+</tbody>
+</table>
+<p>Your collected garden waste is taken for composting and turned in to a soil-conditioner called Pro-Grow which you can buy at your local <a href="#" title="Household Waste Recycling Centres (tip)">Household Waste Recycling Centre</a>.</p>
+<p><strong>‘Buy it’ and ‘try it’</strong></p>
+<p>Not sure if the service will work for you? Why not join and try it out!</p>
+<p>If you have used the collection for six weeks (3 collections from the start of your subscription) and are not fully satisfied with the service we will refund the full amount.</p>
+<p><strong>What will it cost?</strong></p>
+<p>The costs shown below are an annual fee from 1st April 2016 to March 31st 2017.</p>
+<p>As a special offer, if you subscribe now we will aim to deliver your bin within 10 working days and then give you <strong>free collections </strong>up until 1st April 2016.</p>
+<table border="1" class="ImmTS_Default" summary="w" style="width: 630px; height: 73px;">
+<tbody>
+<tr align="center">
+<td style="width: 25%;">
+<p> </p>
+</td>
+<td><strong>Standard Price</strong></td>
+<td style="width: 60%;"><strong>Price for customers in receipt of Council Tax Support or Housing Benefit</strong></td>
+</tr>
+<tr>
+<td>First Bin</td>
+<td align="center">£34.00</td>
+<td align="center">£24.50</td>
+</tr>
+<tr>
+<td>Each Additional Bin<strong> </strong></td>
+<td align="center">£29.00</td>
+<td align="center">£21.50</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p>Reductions are available for people who require more than one bin or are in receipt of Housing or Council Tax benefit (proof of your benefit will need to be provided when paying for the service).</p>
+<p>The price from October 2016 - March 2017:</p>
+<table border="1" style="width: 632px; height: 73px;">
+<tbody>
+<tr>
+<td style="width: 25%;"> </td>
+<td align="center"><strong>Standard Price</strong></td>
+<td align="center" valign="middle"><strong>Price for customers in receipt of Council Tax Support or Housing Benefit</strong></td>
+</tr>
+<tr>
+<td>First Bin</td>
+<td align="center">£23.50</td>
+<td align="center" valign="middle">£21.50</td>
+</tr>
+<tr>
+<td>Each additional bin</td>
+<td align="center">£19.50</td>
+<td align="center" valign="middle">£18.50</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<p><strong><a name="DD"></a>Direct Debit</strong></p>
+<p>If you are a new or existing customer and would like to pay by <strong>Direct Debit</strong>, <a href="/media/36213/GardenWasteDDform2015.pdf" target="_blank" title="Direct Debit application form">download the Direct Debit form (pdf)</a>. then complete the form and return it to us at the following address:<br /> Garden Waste Service, Direct Services Hedge End Depot Botley Road Hedge End Southampton SO30 2RA. Please ensure you return your direct debit form to us by post as we are unable to receive faxed or emailed copies.</p>
+<p>If you choose to pay by Direct Debit you will receive a £2.00 discount for your first year of subscription (this will be £1.00 if paying the October to March Price). This discount applies only to customers who have not previously paid for the service by Direct Debit. The Direct Debit discount only applies to those paying the full standard price in the first year of subscription by Direct Debit method of payment.</p>
+<p><strong>Any questions you may have regarding the new service, please complete the <a href="https://my.eastleigh.gov.uk/have-your-say/enquiries-or-feedback.aspx" title="Enquiries or Feedback">online form.</a></strong></p>
+<ul>
+<li><strong><a href="/media/36210/GardenWasteTandCs2015v2.doc" target="_blank" title="TCs 2015v2">Terms and Conditions</a> (word doc)</strong></li>
+<li><strong><a href="/media/36207/GardenWasteServiceFAQs2015.doc" title="FAQs 2015">Frequently Asked Questions</a> (word doc)</strong> </li>
+</ul>
+<p> </p>
+                    </div>
+				
+
+                
+                <div id="main-footer">
+                    <p>
+                        
+                    </p>
+                    
+                </div>
+            </div>
+	    </div>
+        
+	
+                </div>
+
+                <div id="footer">
+                    <div class="body">
+                        <address>
+                            <strong>Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh, SO50 9YN.</strong><br />
+                            Telephone: 023 8068 8068, Fax: 023 8064 3952, Text: 07797 877001
+                        </address>
+
+                        
+        <ul class="toolbar">
+
+				<li class=""><a href="/legal/use-of-cookies.aspx">Use of Cookies</a></li>
+				<li class=""><a href="/legal/legal-disclaimer.aspx">Legal Disclaimer</a></li>
+				<li class=""><a href="/legal/site-feedback.aspx">Site Feedback</a></li>
+				<li class=""><a href="/legal/privacy-statement.aspx">Privacy Statement</a></li>
+				<li class="last"><a href="/legal/social-media-policy.aspx">Social Media Policy</a></li>
+		</ul>
+
+
+
+                        <p class="smallprint">
+                            &copy; Copyright 2014 Eastleigh Borough Council. Designed and developed by Merchant Marketing Group
+                        </p>
+                        <a href="https://www.gov.uk/" class="externalLink directGov">
+                            <img src="/media/core/govuk.png"  alt="Link to Gov.Uk - public services all in one place" />
+                        </a>
+                    </div>
+                </div>
+                <!-- end #footer -->
+                
+                
+
+
+<div class="sitemap"> 
+        <div class="buttonstrip GreenAndBlacks">
+        <ul class="body">
+            <li>
+                <a href="https://www.eastleigh.gov.uk">
+<img src="/media/1776/home.png" alt="Home" height="25px" width="25px" />
+
+                    <span>Home</span>
+                </a>
+            </li>
+
+
+                <li id="button_1">
+                    <a href="https://my.eastleigh.gov.uk/pay.aspx">
+
+                        <img src="/media/1760/pay.png" alt="Pay" height="25" width="25" />
+                        <span>Pay</span>
+                    </a>
+                </li>
+                <li id="button_2">
+                    <a href="https://my.eastleigh.gov.uk/report.aspx">
+
+                        <img src="/media/1769/report.png" alt="Report" height="25" width="25" />
+                        <span>Report</span>
+                    </a>
+                </li>
+                <li id="button_3">
+                    <a href="https://my.eastleigh.gov.uk/apply.aspx">
+
+                        <img src="/media/1772/apply.png" alt="Apply" height="25" width="25" />
+                        <span>Apply</span>
+                    </a>
+                </li>
+                <li id="button_4">
+                    <a href="https://my.eastleigh.gov.uk/book.aspx">
+
+                        <img src="/media/1773/book.png" alt="Book" height="25" width="25" />
+                        <span>Book</span>
+                    </a>
+                </li>
+                <li id="button_5">
+                    <a href="https://my.eastleigh.gov.uk/find-out.aspx">
+
+                        <img src="/media/1774/find.png" alt="Find Out" height="25" width="25" />
+                        <span>Find Out</span>
+                    </a>
+                </li>
+                <li id="button_6">
+                    <a href="https://my.eastleigh.gov.uk/have-your-say.aspx">
+
+                        <img src="/media/1770/say.png" alt="Have your say" height="25" width="25" />
+                        <span>Have your say</span>
+                    </a>
+                </li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                <script async src="/Scripts/EBC.js" type="text/javascript"></script>
+            
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div></form>
+        </body>
+
+    </html>

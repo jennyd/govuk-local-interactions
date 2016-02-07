@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+
+<head>
+<!-- *** StyleAndScript.inc *** -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Parking - Maidstone Borough Council</title>
+        <!-- noindex-->
+        <!-- JS -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/misc-mbc.js"></script>
+		
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="Style/reset.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="Style/text.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="Style/styles.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="Style/mbc.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="Style/responsivembc.css" media="screen" />
+		
+		<link rel="stylesheet" href="style/main.css" type="text/css">
+		
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-41162204-1']);
+			_gaq.push(['_setDomainName', 'maidstone.gov.uk']);
+			_gaq.push(['_trackPageview']);
+
+			(function () {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+</script>
+<!-- *** /StyleAndScript.inc *** -->
+</head>
+<body onload="javascript:document.frmPCN.txtVRM.focus();">
+<!-- ***** Header.inc ***** -->
+ <div id="content_frame">
+            <div id="header">
+                <div id="logo_frame">
+                    <a href="http://www.maidstone.gov.uk"><img src="Images/Bespoke/mbclogo.png" alt="Maidstone Borough"></a>
+                </div>
+                <div id="tabs_search_frame">
+                    <div id="header_text">
+                        <a href="http://www.maidstone.gov.uk">maidstone.gov.uk</a>
+                    </div>
+                    <div class="clear"></div>
+                    <div id="search_form_frame">
+                        <form method="get" action="http://www.maidstone.gov.uk/search">
+                            <label for="query"></label>
+                            <input id="query" class="searchinput" type="text" accesskey="q" value="" name="queries_search_query">
+                            <input class="searchsubmit" type="submit" value="">
+                            <div class="clear"></div>
+                        </form>
+                    </div>
+                    <!-- end #search_form_frame -->
+                    <div id="user_type_tabs_frame">
+                        <ul>
+                            <li id="tab_gold">
+                                <a href="http://www.maidstone.gov.uk/residents">Residents</a>
+                            </li>
+                            <li id="tab_blue">
+                                <a href="http://www.maidstone.gov.uk/business">Business</a>
+                            </li>
+                            <li id="tab_green">
+                                <a href="http://www.maidstone.gov.uk/council">Council</a>
+                            </li>
+                            <li id="tab_red">
+                                <a href="http://www.maidstone.gov.uk/visitors">Visitors</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end #user_type_tabs_frame -->
+                    <div class="clear"></div>
+                </div>
+                <!-- end #tabs_search_frame -->
+                <div class="clear"></div>
+            </div>
+            <!-- end #header -->
+            <!--  mobile menu - added by DS 29/05/2014 -->
+            <div id="mobmenu">
+                <div id="menuButton"><img src="Images/Bespoke/mobbutton.jpg" alt="" id="navIcon"> <span class="menuText"></span></div>
+            </div>
+            <div id="mobileMenuTop" class="mobileMenu">
+
+            </div>
+            <!--  end mobile nav top - added by DS 29/05/2014 -->
+            <!--  mobile nav left - added by DS 29/05/2014 -->
+            <div id="mobileMenuLeft" class="mobileMenu">
+                <div id="left_sidebar_calendar">
+                    <!-- INSERT LEFT NAV -->
+                </div>
+            </div>
+            <!--  end mobile nav left - added by DS 29/05/2014 -->
+            <div id="main_content" class="">
+                <div class="clear"></div>
+				<div class="PGC">
+<!-- ***** /Header.inc ***** -->
+
+<h1>Penalty Charge Notice Details</h1>
+<p>
+You can use this site to pay for a Penalty Charge Notice (PCN), to find out more information about the contravention,
+or to appeal.
+</p>
+<br />
+<p style="font-weight:bold;">
+Please note that parking ticket information is not available online until 24 hours after notice issue.
+</p>
+<br />
+<form name="frmPCN" method="post" action="TicketDetails.asp">
+
+<p class="searchField">
+	<span class="searchLabel">Vehicle Registration Number</span>
+	<input type="text" value="" name="txtVRM" id="txtVRM">
+</p>
+<p class="searchField">
+	<span class="searchLabel">Penalty Charge Notice (PCN)</span>
+	<input type="text" value="" name="txtPCN" id="txtPCN">
+</p>
+<input type="image" src="Images/Search.gif" alt="Search button">
+
+<!-- ***** Footer.inc ***** -->
+</div>
+<div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div id="footer">
+                <a href="http://www.maidstone.gov.uk/find-and-contact-us">Find &amp; Contact Us</a> <span class="link_right_arrow_white">&nbsp;&nbsp;&nbsp;</span>
+            </div>
+            <ul id="mobile">Toggle: <li class="mobilecss"><a href="#mobile" onclick="setActiveStyleSheet(&#39;responsive&#39;); return false;" title="Mobile">Mobile Site</a></li> <li class="desktopcss"><a href="#desktop" onclick="setActiveStyleSheet(&#39;normal&#39;); return false;" title="Desktop">Desktop Site</a></li> </ul>
+            <!-- end #footer -->
+        </div>
+        <!-- end #content_frame -->
+        <script type="text/javascript">
+            $("#mobile").insertAfter("#footer");
+
+            var windowWidth = window.innerWidth;
+            /* make 'more' toggle */
+            if (windowWidth < 1024) {
+                $("a.more").replaceWith("<span id='mobileMore'>More</span>");
+
+                $("#mobileMore").click(function () {
+                    if ($(".mirror").is(":hidden")) {
+                        $(".mirror").show("slow");
+                    }
+                    else {
+                        $(".mirror").slideUp();
+                    }
+                });
+
+                $("#mobmenu").click(function () {
+                    if ($("#left_sidebar_nav ul").is(":hidden")) {
+                        $("#left_sidebar_nav ul").show("slow");
+                    }
+                    else {
+                        //$( "#left_sidebar_nav ul" ).slideUp();
+                        $("#left_sidebar_nav ul").hide();
+                    }
+                });
+
+                if (windowWidth > 799) {
+                    $("#mobmenu").insertBefore("#left_sidebar_title");
+                    /* hide menu button where not needed */
+                    if ($("#left_sidebar").length == 0) {
+                        $("#mobmenu").css("display", "none");
+                    }
+                    $(".menuText").text("Menu");
+                }
+            }
+
+            /* insert search bar after the menu button and make 'more' toggle - added by DS */
+            if (windowWidth < 800) {
+                $("#search_form_frame").insertAfter("#menuButton");
+                $(".mirror").insertAfter("#main_nav");
+
+                /* initialise mobile menu button - added by JH modified by DS */
+                $(".menuText").text("Menu");
+                $("#menuButton").click(function () {
+                    if ($(".mobileMenu").is(":hidden")) {
+                        $(".mobileMenu").show("slow");
+                    }
+                    else {
+                        //$( ".mobileMenu" ).slideUp();
+                        $(".mobileMenu").hide();
+                    }
+                });
+            }
+        </script>
+<!-- ***** /Footer.inc ***** -->
+</body>
+</html>

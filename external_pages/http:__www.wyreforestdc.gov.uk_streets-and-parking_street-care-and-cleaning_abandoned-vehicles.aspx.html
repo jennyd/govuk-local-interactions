@@ -1,0 +1,618 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <title>Abandoned Vehicles</title>
+	
+    <!-- Stylesheets -->
+	<link href="/css/wfdc/WFDC_bootstrap.css" rel="stylesheet" />
+    <link href="/css/wfdc/font-awesome.css" rel="stylesheet"> 
+    <link href="/css/wfdc/icomoon.css" rel="stylesheet"> 
+    <link href="/css/wfdc/wfdc.css" rel="stylesheet" type="text/css"  />
+	<link href="/css/wfdc/accordion.css" rel="stylesheet" type="text/css"  />	 
+	 <link rel='stylesheet' media='screen and (max-device-width: 480px)' href='/css/wfdc/mobile.css' />
+	
+	
+
+      <!-- Favicons -->
+       <link type="image/x-icon" rel="icon" href="/wfdc_favicons/favicon.ico"/>
+      <link rel="apple-touch-icon" sizes="57x57" href="/wfdc_favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/wfdc_favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/wfdc_favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/wfdc_favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/wfdc_favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/wfdc_favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/wfdc_favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/wfdc_favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/wfdc_favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/wfdc_favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/wfdc_favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/wfdc_favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/wfdc_favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/wfdc_favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#005236">
+<meta name="msapplication-TileImage" content="/wfdc_favicons/mstile-144x144.png">
+<meta name="theme-color" content="#005236">
+   
+    
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+    <!--[if lt IE 8]><link rel="stylesheet" href="/css/font-awesome-ie7.css?v=4"><![endif]-->
+ 
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js" type="text/javascript"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.22/jquery-ui.js"></script>   
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js" type="text/javascript"></script>    
+	<script src="http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.validate.unobtrusive.min.js" type="text/javascript"></script> 	
+
+       
+
+
+    
+	
+	
+	
+
+    <meta name="DC.coverage" content="Wyre Forest" />
+	<meta name="DC.creator" content="Wyre Forest District Council" />
+	<meta name="DC.identifier" scheme="URI" content="http://www.wyreforestdc.gov.uk/" />
+	<meta name="DC.language" scheme="ISO639-2" content="eng" />
+	<meta name="DC.publisher" content="Wyre Forest District Council" />
+	<meta name="DC.subject" content="", altText: "Subject" />
+	<meta name="DC.title" content="Abandoned Vehicles", altText: "Wyre Forest District Council" />
+	<meta name="eGMS.accessibility" scheme="WCAG" content="Double-A" />
+	<meta name="eGMS.subject.category" scheme="GCL" content="" />
+	<meta name="language" content="en" />
+	<meta name="keywords" content="Abandoned Vehicles", altText: "Keywords")"" />
+	<meta name="description" content="Abandoned Vehicles", altText: "Description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="W0CXPPgndxheenN6n_xnV-cVRr18kUXXZOyU-Oj4Lu4" />
+		
+</head>
+	<body >
+	  <div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+ <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+
+	  
+<header>
+
+		<div class="container darkgrey">
+			
+      <div class="row">
+				<div class="span8 darkgrey topmargin10">
+				  <a href="/"><img src="/img/wfdc/logo.png" alt="WFDC logo"></a>
+				</div>
+				<div class="span4 darkgrey topmargin20">
+					<div class="hidden-print">
+					<form class="form-wrapper cf" action="/search" method="GET">
+ 						<input type="text" placeholder="Search" name="q" />
+	 					<button type="submit" value="Search">Go </button>
+					</form>
+					</div>		 
+				</div>
+				
+				</div>
+			
+
+	
+    
+    <div id="atoz">
+						
+      <div class="row">
+                       
+         <div class="span12 darkgrey pull-right bordertop hidden-xs"> 
+               <p class="atoz"> A-Z of Services &nbsp; &nbsp; &nbsp;  
+	
+
+
+    
+	<a class="whitetext" href="/a-z.aspx?letter=A">A</a>
+	<a class="whitetext" href="/a-z.aspx?letter=B">B</a>
+	<a class="whitetext" href="/a-z.aspx?letter=C">C</a>
+	<a class="whitetext" href="/a-z.aspx?letter=D">D</a>
+	<a class="whitetext" href="/a-z.aspx?letter=E">E</a>
+	<a class="whitetext" href="/a-z.aspx?letter=F">F</a>
+	<a class="whitetext" href="/a-z.aspx?letter=G">G</a>
+	<a class="whitetext" href="/a-z.aspx?letter=H">H</a>
+	<a class="whitetext" href="/a-z.aspx?letter=I">I</a>
+	<a class="whitetext" href="/a-z.aspx?letter=J">J</a>
+	<a class="whitetext" href="/a-z.aspx?letter=K">K</a>
+	<a class="whitetext" href="/a-z.aspx?letter=L">L</a>
+	<a class="whitetext" href="/a-z.aspx?letter=M">M</a>
+	<a class="whitetext" href="/a-z.aspx?letter=N">N</a>
+	<a class="whitetext" href="/a-z.aspx?letter=O">O</a>
+	<a class="whitetext" href="/a-z.aspx?letter=P">P</a>
+	<a class="whitetext" href="/a-z.aspx?letter=Q">Q</a>
+	<a class="whitetext" href="/a-z.aspx?letter=R">R</a>
+	<a class="whitetext" href="/a-z.aspx?letter=S">S</a>
+	<a class="whitetext" href="/a-z.aspx?letter=T">T</a>
+	<a class="whitetext" href="/a-z.aspx?letter=U">U</a>
+	<a class="whitetext" href="/a-z.aspx?letter=V">V</a>
+	<a class="whitetext" href="/a-z.aspx?letter=W">W</a>
+	<a class="whitetext" href="/a-z.aspx?letter=X">X</a>
+	<a class="whitetext" href="/a-z.aspx?letter=Y">Y</a>
+	<a class="whitetext" href="/a-z.aspx?letter=Z">Z</a>
+ </p>
+            </div>
+                  </div>
+                </div>
+             </div>
+        
+  </header>
+	
+  	
+
+	
+<div class="container">
+	
+
+
+  <div class="container hidden-xs">
+      <div class="row-fluid">
+        <div class="span12">
+
+			<div>
+        <img class="banner" src="/media/198293/BrintonWildFlowersCloseUp.JPG" alt="banner image"/>
+
+                  
+                               
+               
+  			</div>
+		</div>
+	</div>
+</div>	  
+
+  	
+
+ <ul class="breadcrumb">
+        
+            <li><a href="/wfdc_homepage.aspx"></a> > </li>
+            <li><a href="/">Wyre Forest District Council Home</a> > </li>
+            <li><a href="/streets-and-parking.aspx">Streets and Parking </a> > </li>
+            <li><a href="/streets-and-parking/street-care-and-cleaning.aspx">Street Care and Cleaning</a> > </li>
+
+        
+        <li class="active">Abandoned Vehicles</li>
+</ul>
+
+	
+
+ <div class="container leftmargin20">
+    <div class="row">
+      <div class="span12">
+<h1>Abandoned Vehicles</h1>
+	  </div>
+	<div class="row">	  
+	 <div class="span12">
+
+</div></div>
+		  </div></div>
+<div class="container leftmargin20">
+    <div class="row">
+      <div class="span6">
+<p>Abandoned vehicles are an environmental hazard, represent a danger to the public (especially children), create a magnet for crime and blight our communities.</p>
+<p>Abandoned vehicles create problems not only for councils but also for the police and the fire service.</p>
+<p>Burnt out vehicles are also carcinogenic and hazardous to health.<br /><br />Many vehicles which are reported as abandoned to us may be:</p>
+<ul>
+<li>Untaxed</li>
+<li>Unregistered</li>
+<li>Stolen, or</li>
+<li>Involved with crime</li>
+</ul>
+<p>To identify an abandoned vehicle check for the following things:</p>
+<ul>
+<li>Are the windows broken?</li>
+<li>Is the vehicle damaged in any way i.e. dented side panels?</li>
+<li>Has the vehicle been in the same place for a long period of time?</li>
+<li>Does the vehicle have flat tyres?</li>
+</ul>
+<h2>How do I report an abandoned vehicle?</h2>
+<ul>
+<li>Take as many details of the vehicle as possible:- registration, make/model, condition of the vehicle and how long it’s been there</li>
+<li>Make sure the vehicle is in fact abandoned!</li>
+<li>Call us on 01562 732928 or report it online<a href="http://feedback.wyreforestdc.gov.uk/cus/servlet/ep.app?ut=X&amp;st=wfdc&amp;type=18590&amp;auth=10004&amp;srvId=28034"><br /></a></li>
+<li>When giving the officer the vehicles details make sure you have the exact location, to help us find the vehicle quickly.</li>
+</ul>
+<p> </p>
+<h2>What happens next?</h2>
+<ul>
+<li>Our enforcement officer will inspect the vehicle, and assess its condition.</li>
+<li>If the vehicle is abandoned it will be removed and held for safe-keeping until the registered owner is contacted.</li>
+<li>However if the vehicle is roadworthy our Enforcement Officer will affix a 24 hour notice on the vehicle.</li>
+<li>Once we have the registered owners details the officer will send a letter to give the owner 7 days notice to reclaim the vehicle. The charges for this are also included on the letter.</li>
+</ul>
+<p> </p>
+<h2>Charges</h2>
+<p>Abandoning a vehicle within the Wyre Forest area now carries a £200.00 Fixed Penalty Notice.</p>
+<p>If a vehicle is not abandoned but has no up-to-date tax we will remove the vehicle to a pound for safe keeping for seven days. The owner will be contacted by the authority. If nothing is heard within the seven day waiting time the vehicle will be destroyed under the Refuse Amenity Act 1978.</p>
+		   </div>
+      <div class="span6">
+
+                      
+   <script type="text/javascript">
+       var contourDateFormat = "dd/mm/yy";
+    </script> 
+    <script src="/umbraco/plugins/umbracocontour/scripts/frontend/contourform.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var contourFieldValues17fc09ab937c4e64875a5a4f620ff3f6;
+        
+        (function ($) {
+            $(function () {
+ 
+                $("#contour_form_AbandonedVehicles .contourPage input").change(function() {
+                    PopulateFieldValues17fc09ab937c4e64875a5a4f620ff3f6();
+                    CheckRules17fc09ab937c4e64875a5a4f620ff3f6();
+                });
+        
+                $("#contour_form_AbandonedVehicles .contourPage select").change(function () {
+                    PopulateFieldValues17fc09ab937c4e64875a5a4f620ff3f6();
+                    CheckRules17fc09ab937c4e64875a5a4f620ff3f6();
+                });
+        
+                PopulateFieldValues17fc09ab937c4e64875a5a4f620ff3f6();
+                CheckRules17fc09ab937c4e64875a5a4f620ff3f6();               
+            });
+            
+        } (jQuery));    
+
+        function PopulateFieldValues17fc09ab937c4e64875a5a4f620ff3f6()
+        {
+            //fill field values
+            //contourFieldValues = new Array();
+            PopulateRecordValues17fc09ab937c4e64875a5a4f620ff3f6();
+
+            $("#contour_form_AbandonedVehicles .contourPage select").each(function() {
+                contourFieldValues17fc09ab937c4e64875a5a4f620ff3f6[$(this).attr("id")] = $("option[value='" + $(this).val() + "']", $(this)).text();
+            });
+    
+            $("#contour_form_AbandonedVehicles .contourPage input").each(function() {
+
+	    
+	    
+                if($(this).attr('type') == "text"){
+                    contourFieldValues17fc09ab937c4e64875a5a4f620ff3f6[$(this).attr("id")] = $(this).val();
+                }
+
+                if($(this).attr('type') == "radio"){
+                    if($(this).is(':checked'))
+                    {
+                        contourFieldValues17fc09ab937c4e64875a5a4f620ff3f6[$(this).attr("name")] = $(this).val();
+                    }
+                }
+
+                if($(this).attr('type') == "checkbox"){
+
+                    if($(this).attr('id') != $(this).attr('name'))
+                    {
+                        if($(this).is(':checked'))
+                        {
+                            if(contourFieldValues17fc09ab937c4e64875a5a4f620ff3f6[$(this).attr("name")] == null)
+                            {
+                                contourFieldValues17fc09ab937c4e64875a5a4f620ff3f6[$(this).attr("name")] = $(this).val();
+                            }
+                            else
+                            {
+                                contourFieldValues17fc09ab937c4e64875a5a4f620ff3f6[$(this).attr("name")] += "," + $(this).val();
+                            }
+                        }
+                    } else {
+
+                        contourFieldValues17fc09ab937c4e64875a5a4f620ff3f6[$(this).attr("name")] = $(this).is(':checked').toString();
+                    }
+                }
+
+            });    
+        }        
+
+        function PopulateRecordValues17fc09ab937c4e64875a5a4f620ff3f6() {
+            contourFieldValues17fc09ab937c4e64875a5a4f620ff3f6 = new Array();
+            
+        }
+
+        function CheckRules17fc09ab937c4e64875a5a4f620ff3f6() {
+            
+            
+        }
+    </script>        <link rel="stylesheet" type="text/css" href="/umbraco/plugins/umbracocontour/css/jquery-ui-1.8.18.custom.css" />
+        <link rel="stylesheet" type="text/css" href="/umbraco/plugins/umbracocontour/css/defaultform.css" />
+    <div id="contour_form_AbandonedVehicles" class="contour abandonedvehicles">
+<form action="" enctype="multipart/form-data" method="post"><input name="__RequestVerificationToken" type="hidden" value="WA_RtZWKmXg1lmwsmU8mqRbzSlK5SACrOd6g50cHpc2Iu10SBPNUAOLap70h3J2AFC0Ghe5gdXHttN9AGctIVZ3JW4vnxtpsKGnd5idXO_GQP_oFGTiNQuHg22r9LPRnXSxj1T8A4H_2n9_ESZlO5dM5Man_r3AzhSRef7P-Kag1" /><input data-val="true" data-val-required="The FormId field is required." id="FormId" name="FormId" type="hidden" value="17fc09ab-937c-4e64-875a-5a4f620ff3f6" />            <input type="hidden" name="FormStep" id="FormStep" value="1"/>
+            <input type="hidden" name="RecordId" id="RecordId"/>
+            <input type="hidden" name="PreviousClicked" id="PreviousClicked" value=""/>
+            <div class="contourPage">
+                <h4 class="contourPageName">Report an Abandoned Vehicle</h4>
+                                    <fieldset class="contourFieldSet">
+                            <legend>Please give us as much detail as possible. You do not have to provide your contact details but it would be useful in case we have a query.</legend>
+                                                    <div class="contourField name textfield" >
+<label for="de9483d3-5544-4d76-871b-620849ace7fd" class="fieldLabel">Name </label>                                <div><input type="text" name="de9483d3-5544-4d76-871b-620849ace7fd" id="de9483d3-5544-4d76-871b-620849ace7fd" class="text" value="" maxlength="500"
+
+
+
+/>
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="de9483d3-5544-4d76-871b-620849ace7fd" data-valmsg-replace="true"></span></div>
+                            </div>
+                            <div class="contourField contactdetailsemailorphone textfield alternating" >
+<label for="d20818b1-38a6-47e5-bce0-36c74d59f2d5" class="fieldLabel">Contact details (email or phone) </label>                                <div><input type="text" name="d20818b1-38a6-47e5-bce0-36c74d59f2d5" id="d20818b1-38a6-47e5-bce0-36c74d59f2d5" class="text" value="" maxlength="500"
+
+
+
+/>
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="d20818b1-38a6-47e5-bce0-36c74d59f2d5" data-valmsg-replace="true"></span></div>
+                            </div>
+                            <div class="contourField locationofabandonedvehiclepleasegivenearestaddressorasmuchdetailaspossible textarea mandatory" >
+<label for="dec5ce9f-2f39-4a58-bd5e-37e8d6f8859a" class="fieldLabel">Location of abandoned vehicle. Please give nearest address or as much detail as possible <span class="contourIndicator">*</span></label>                                <div><textarea name="dec5ce9f-2f39-4a58-bd5e-37e8d6f8859a" id="dec5ce9f-2f39-4a58-bd5e-37e8d6f8859a" rows="2" cols="20"
+data-val="true"
+ data-val-required="Location of abandoned vehicle. Please give nearest address or as much detail as possible is mandatory"
+
+></textarea>
+
+
+<span class="field-validation-valid" data-valmsg-for="dec5ce9f-2f39-4a58-bd5e-37e8d6f8859a" data-valmsg-replace="true"></span></div>
+                            </div>
+                            <div class="contourField registrationnumberofabandonedvehicle textfield mandatory alternating" >
+<label for="69f1727d-da0b-4da4-a5ca-9f6409300876" class="fieldLabel">Registration number of abandoned vehicle <span class="contourIndicator">*</span></label>                                <div><input type="text" name="69f1727d-da0b-4da4-a5ca-9f6409300876" id="69f1727d-da0b-4da4-a5ca-9f6409300876" class="text" value="" maxlength="500"
+data-val="true"
+ data-val-required="Registration number of abandoned vehicle is mandatory"
+
+/>
+
+
+
+
+<span class="field-validation-valid" data-valmsg-for="69f1727d-da0b-4da4-a5ca-9f6409300876" data-valmsg-replace="true"></span></div>
+                            </div>
+                            <div class="contourField anyotherinformationyouhaveincludingmakemodelcolourhowlongithasbeentherewhyyouthinkitisabandonedetc textarea" >
+<label for="5e21afc5-82b2-4294-b499-38cce725ccfc" class="fieldLabel">Any other information you have including make, model, colour, how long it has been there, why you think it is abandoned etc </label>                                <div><textarea name="5e21afc5-82b2-4294-b499-38cce725ccfc" id="5e21afc5-82b2-4294-b499-38cce725ccfc" rows="2" cols="20"
+
+
+
+></textarea>
+
+
+<span class="field-validation-valid" data-valmsg-for="5e21afc5-82b2-4294-b499-38cce725ccfc" data-valmsg-replace="true"></span></div>
+                            </div>
+                    </fieldset>
+                <div style="display:none">
+                    <input type="text" id="HoneyPot"/>
+                </div>
+            </div>
+            <div class="contourNavigation">
+                                    <input type="submit" value="Submit"/>
+            </div>                        
+</form>    </div>
+
+
+		   </div>		  
+	</div>
+		  </div>
+<div class="container leftmargin20">
+    <div class="row">
+      <div class="span12">		  
+	
+ <div class="container leftmargin20">
+    <div class="row">
+      <div class="span12">
+                   <h2>You may be interested in..</h2>
+               </div> 
+            </div>
+        </div>
+ <div class="container leftmargin20">
+    <div class="row">
+      <div class="span12">
+            <p>Find out more about <a href="https://www.gov.uk/scrapped-and-written-off-vehicles/scrapping-your-vehicle">scrapping your vehicle</a></p>
+        </div>
+    </div>
+</div>
+
+		    </div>
+	</div>
+		  </div>
+	
+
+ <div class="container">
+      <div class="hidden-sm hidden-xs hidden-print"> 
+     <hr />
+ <div class="row">
+   
+<div class="span8">
+Page last updated 01 October 2014 
+    </div>
+<div class="span3 pull-right">
+<h2>How helpful was this page?</h2>
+    </div>
+</div>
+
+ <div class="row">
+<div class="span9">
+<div class="pageoptions"> 
+  <div class="menu">
+
+     
+<ul>
+ 
+ <li><a href="#" onclick="window.print();return false"><i class="fa fa-print fa-2x limegreentext "></i>  Print this page</a></li>
+   
+<li><a href="#"><i class="fa fa-share fa-2x limegreentext "></i>  Share this page<!--[if gte IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+	<ul>
+  
+ <li> <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=http://www.wyreforestdc.gov.uk//streets-and-parking/street-care-and-cleaning/abandoned-vehicles.aspx"><i class="fa fa-facebook-square fa-2x limegreentext"> </i>Facebook</a></li>
+ 
+  <li><a href="https://twitter.com/intent/tweet?url=http://www.wyreforestdc.gov.uk//streets-and-parking/street-care-and-cleaning/abandoned-vehicles.aspx"  data-count="none" target="_blank"><i class="fa fa-twitter fa-2x limegreentext"> </i>Twitter</a> </li>
+
+	</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+
+
+</ul>
+ </div>
+</div>
+</div>
+ <div class="span3 pull-right">
+<span class="rating">
+<a class="star"  title="Excellent" href="/WFDC_ExcellentFeedback.aspx?title=/streets-and-parking/street-care-and-cleaning/abandoned-vehicles.aspx"></a>
+<a class="star" title="Good" href="/WFDC_GoodFeedback.aspx?title=/streets-and-parking/street-care-and-cleaning/abandoned-vehicles.aspx"></a>
+<a class="star" title="Ok but needs improvement" href="/WFDC_OkFeedback.aspx?title=/streets-and-parking/street-care-and-cleaning/abandoned-vehicles.aspx"></a>
+<a class="star" title="Poor" href="/WFDC_PoorFeedback.aspx?title=/streets-and-parking/street-care-and-cleaning/abandoned-vehicles.aspx"></a>
+</span>
+</div>
+ </div>
+</div>
+  </div>  
+</div>	  
+	
+
+
+  <!--section footer-->
+   
+            
+          
+                
+        </div>
+           </div>
+
+     <div class="container">    
+    
+     <div id="subfooter"> 
+      <div class="row">
+        <div class="span9 limegreen">
+        
+                
+            <p class="leftmargin20"> Wyre Forest District Council</p>
+          
+        </div>   <!--/span 9-->
+        <div class="span3 limegreen alignright">
+         <p><a href="/the-council/contact-us/directions-to-our-offices.aspx">Directions</a> | <a href="/the-council/contact-us.aspx">Contact Us</a> </p>
+        
+        
+        </div>
+      </div>  <!--/row-->
+      
+         </div> <!-- /subfooter --> 
+ 
+        <div id="footer">
+      <div class="row">
+       
+         
+         
+          
+                    <div class="span7 ">
+                 <p class="leftmargin20">
+                  <a href="/5512.aspx">Website accessibility and support</a> | <a href="/5824.aspx">Sitemap</a> | <a href="/5513.aspx">Disclaimer</a> | <a href="/2503.aspx">Cookies</a> | <a href="/2488.aspx">Jobs</a>     </p>
+                </div>  
+         
+               <div class="span5 alignright">
+                <p><a href="/5570.aspx">Subscribe to WyredIn</a> &nbsp; &nbsp; &nbsp;  
+              
+                <a href="http://www.facebook.com/wyreforest"><i class="fa fa-facebook-square fa-2x limegreentext verticalalignmiddle "></i></a>
+                <a href="http://www.twitter.com/wyreforestdc">  <i class="fa fa-twitter-square fa-2x limegreentext verticalalignmiddle"></i></a>
+                     </p>
+                    
+                 </div>
+             
+      
+      </div>
+          
+     
+   
+    
+      <!--End section footer-->
+  
+
+    <script>
+		var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', 'UA-12369725-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();		
+	</script>
+				
+			
+	 <script src="/scripts/js/wfdc/cookieControl-6.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript">//<![CDATA[
+      cookieControl({
+          t: {
+              title: '<p class="cookieok_intro">We use cookies to help make this website better. To find out more about cookies read our further information on <a href="http://www.wyreforestdc.gov.uk/the-council/transparency-and-freedom-of-information/data-protection/cookies.aspx">Privacy and Cookies</a></p>',
+              intro: '',
+              full:'<p>By using our site you accept the terms of our <a href="http://www.wyreforestdc.gov.uk/the-council/transparency-and-freedom-of-information/data-protection/cookies.aspx">Privacy Policy</a>.</p>'
+          },
+          position:CookieControl.POS_LEFT,
+          style:CookieControl.STYLE_TRIANGLE,
+          theme:CookieControl.THEME_LIGHT, // light or dark
+          startOpen:true,
+          autoHide:7000,
+          subdomains:true,
+          protectedCookies: [], // list the cookies you do not want deleted, for example ['analytics', 'twitter']
+          apiKey: 'df866682288b5833870fff900d7e9a6d5e9be70a',
+          product: CookieControl.PROD_FREE,
+          consentModel: CookieControl.MODEL_INFO,
+          onAccept:function(){ccAddAnalytics()},
+          onReady:function(){},
+          onCookiesAllowed:function(){ccAddAnalytics()},
+          onCookiesNotAllowed:function(){}
+          });
+    
+          function ccAddAnalytics() {
+            jQuery.getScript("http://www.google-analytics.com/ga.js", function() {
+              var GATracker = _gat._createTracker('');
+              GATracker._trackPageview();
+            });
+          }
+       //]]>
+    </script>			
+		<script>
+							
+	$('[placeholder]').focus(function() {
+var input = $(this);
+if (input.val() == input.attr('placeholder')) {
+input.val('');
+input.removeClass('placeholder');
+}
+}).blur(function() {
+var input = $(this);
+if (input.val() == '' || input.val() == input.attr('placeholder')) {
+input.addClass('placeholder');
+input.val(input.attr('placeholder'));
+}
+}).blur().parents('form').submit(function() {
+$(this).find('[placeholder]').each(function() {
+var input = $(this);
+if (input.val() == input.attr('placeholder')) {
+input.val('');
+}
+})
+});				
+					
+</script>	
+ <script src="/scripts/js/wfdc/bootstrap.js"></script>
+			
+    
+
+   		
+
+
+  </body>
+</html>	

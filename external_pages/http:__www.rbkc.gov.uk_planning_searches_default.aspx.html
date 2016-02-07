@@ -1,0 +1,478 @@
+<!-- getParams.paramsList =  --><!-- recordQueryString =  -->
+
+<!DOCTYPE html>
+<html class="" lang="en">
+<head id="Template_Head1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>Planning Search</title>
+    <!-- Define a viewport to mobile devices to use - telling the browser to assume that the page is as wide as the device (width=device-width) and setting the initial page zoom level to be 1 (initial-scale=1.0) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add normalize.css which enables browsers to render all elements more consistently and in line with modern standards as it only targets particular styles that need normalizing -->
+    <!-- Include the site stylesheet -->
+
+    <script src="/js/refresh/modernizr.custom.03949.js" type="text/javascript"></script>
+
+    <!--  <link href="../../templates/default/css/system/refresh/normalize.css" rel="stylesheet" media="all" />-->
+    <!-- <link href="../../templates/default/css/system/refresh/global.css" rel="stylesheet" media="all" /> -->
+    <link rel="stylesheet" type="text/css" href="../../templates/default/css/system/refresh/customfonts.css" />
+    <link href="../../templates/default/css/system/refresh/globalServiceMenu.css" rel="stylesheet"
+        media="all" />
+    <link href="../../templates/default/css/system/refresh/refresh.css" rel="stylesheet"
+        media="all" />
+    <link type="text/css" rel="stylesheet" href="css/responsive-tabs.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/tablescroll.css" />
+    
+    <link type="text/css" rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.min.css" />
+
+    <script type="text/javascript">        document.documentElement.className = "has-js"</script>
+
+    <!--[if lt IE 9]>
+<script src="/js/refresh/html5_shiv.js" type="text/javascript"></script>
+       
+<![endif]-->
+
+    <script type="text/javascript" src="/js/refresh/pdf.js"></script>
+
+    <script type="text/javascript" src="/js/sitestat-loading1.js"></script>
+
+    <meta name="keywords" content="planning Search" />
+    <meta name="description" content="planning Search" />
+
+</head>
+<!--[if IE 7]>         <body class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <body class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<body>
+    <!--<![endif]-->
+    <div class="outerWrapper">
+        <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
+        <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
+        <div class="headerGlobal" role="banner">
+            <div class="innerPadded">
+                <a class="logo" href="http://www.rbkc.gov.uk" alt="The Royal Borough of Kensington and Chelsea">
+                    The Royal Borough of Kensington and Chelsea </a>
+                <div class="menu">
+                    <ul>
+                        <li class="menu-link"><a href="#" title="Services">Services</a></li>
+                        <li><a href="https://www.rbkc.gov.uk/myrbkc/login.aspx" title="MyRBKC">MyRBKC</a></li>
+                        <li><a href="https://www.rbkc.gov.uk/councilanddemocracy.aspx" title="Council">Council</a></li>
+                        <li><a href="https://www.rbkc.gov.uk/leisureandlibraries/popularlocalmaps.aspx" title="Maps">
+                            Maps</a></li>
+                    </ul>
+                </div>
+                <!--end menu -->
+                <!--end navMain -->
+                <div class="search">
+                    <a href="#"></a>
+                </div>
+                <!--end search -->
+                <div class="search_full">
+                    <form action="/planning-search" method="post" id="google-appliance-block-form" accept-charset="UTF-8">
+                    <label for="edit-search-keys" class="rm">
+                        Enter search text:</label>
+                    <input id="edit-search-keys" name="search_keys" placeholder="Enter search terms..."
+                        onfocus="clearField(this)" type="text" />
+                    <input type="hidden" name="form_build_id" value="form-planningsearch" />
+                    <input type="hidden" name="form_id" value="google_appliance_block_form" />
+                    <input name="submit" class="submit" value="Search" type="submit" id="edit-submit" />
+                    </form>
+                </div>
+                <!-- end search_full -->
+            </div>
+            <!-- end innerPadded -->
+        </div>
+        <!-- end headerGlobal -->
+        <!-- New search and menu -->
+        <div class="search-expand hide">
+            <div class="search_full">
+                <form action="/planning-search" method="post" id="Form1" accept-charset="UTF-8">
+                <label for="edit-search-keys" class="rm">
+                    Enter search text:</label>
+                <input id="Text1" name="search_keys" placeholder="Enter search terms..." onfocus="clearField(this)"
+                    type="text" />
+                <input type="hidden" name="form_build_id" value="form-planningsearch" />
+                <input type="hidden" name="form_id" value="google_appliance_block_form" />
+                <input name="submit" class="submit" value="Search" type="submit" id="Submit1" />
+                </form>
+            </div>
+        </div>
+        <!-- </form> -->
+        <!-- end search-expand -->
+        <div class="serviceMenu hide">
+            <ul class="serviceMenu-mobile innerNoPadding">
+                <li><a href="https://www.rbkc.gov.uk/services.aspx" title="Services">Services</a></li>
+                <li><a href="https://www.rbkc.gov.uk/councilanddemocracy.aspx" title="Council">Council</a></li>
+                <li><a href="https://www.rbkc.gov.uk/leisureandlibraries/popularlocalmaps.aspx" title="Maps">
+                    Maps</a></li>
+                <li><a href="https://www.rbkc.gov.uk/myrbkc/login.aspx" title="MyRBKC">MyRBKC</a></li>
+            </ul>
+            <div class="serviceMenu-desktop innerPadded">
+                <ul>
+                    <li><a href="https://www.rbkc.gov.uk/environmentandtransport/parking.aspx" title="Parking, transport and streets">
+                        Parking, transport and streets</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/environmentandtransport/domesticrecyclingandrubbish.aspx"
+                        title="Bins and recycling">Bins and recycling</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/planningandbuildingcontrol.aspx" title="Planning">
+                        Planning</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/leisureandlibraries/libraries.aspx" title="Libraries">
+                        Libraries</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/councilanddemocracy/counciltax.aspx" title="Council tax">
+                        Council tax</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/communityandlocallife/registrarsservices.aspx"
+                        title="Births, deaths and marriages">Births, deaths and marriages</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://www.rbkc.gov.uk/educationandlearning.aspx" title="Children and education">
+                        Children and education</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/leisureandlibraries.aspx" title="Leisure and culture">
+                        Leisure and culture</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/leisureandlibraries/parksandgardens.aspx" title="Parks and ecology">
+                        Parks and ecology</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/housing.aspx" title="Housing">Housing</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/jobs.aspx" title="Jobs">Jobs</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/healthandsocialcare.aspx" title="Health and social care">
+                        Health and social care</a></li>
+                </ul>
+                <ul>
+                    <li><a href="https://www.rbkc.gov.uk/environmentandtransport/licensing.aspx" title="Licensing">
+                        Licensing</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/businessandenterprise.aspx" title="Business and enterprise">
+                        Business and enterprise</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/environmentandtransport.aspx" title="Environment">
+                        Environment</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/adviceandbenefits.aspx" title="Jobs">Advice and
+                        benefits</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/communityandlocallife.aspx" title="Community and local life">
+                        Community and local life</a></li>
+                    <li><a href="https://www.rbkc.gov.uk/newsroom.aspx" title="Newsroom">Newsroom</a></li>
+                </ul>
+                <div class="serviceMenu-close">
+                    <p>
+                        <a>Close menu</a></p>
+                </div>
+            </div>
+            <!-- end serviceMenu-desktop -->
+        </div>
+        <!-- end serviceMenu -->
+        <!-- end new search and menu -->
+        <!-- If you want to use an element as a wrapper, i.e. for styling only, then <div> is still the element to use -->
+        <div class="backgroundRibbon">
+            <div class="innerNoPadding breadcrumb">
+                <ol>
+                    <!--KR Developer note - set HideHiddenPages to true once live-->
+                    <li><a href="/default.aspx" title="Home page">Home page</a></li>
+                    <li><strong><a href="/planningandbuildingcontrol.aspx" title="Planning and Building Control">
+                        Planning and Building Control</a> </strong></li>
+                    <li>Planning search</li>
+                </ol>
+            </div>
+            <!-- end innerNoPadding breadcrumb-->
+            <main role="main">
+             <!-- The <section> element can be used to enclose content that comes under a related heading.
+    NOTE: The <section> element can contain <article> elements and vice versa, if you think the content warrants it. -->
+    <!--<section>-->
+    
+    	<div class="innerNoPadding">
+			   <h1>Planning search</h1>
+		</div>
+				
+				<!-- The <main> element is used to enclose the main content, i.e. that which contains the central topic of a document -->
+                <!-- ARIA: the landmark role "main" is added here as it contains the main content of the document, and it is recommended to add it to the
+                <main> element until user agents implement the required role mapping. -->
+				
+				<div class="content">
+                       <!--  floated left.  Uncleared float defines bottom of ribbon graphic -->
+                       <div class="content-inner innerPadded">
+                       <!-- unfloated, centered div added for stability - stops any non-floated elements being sucked into the ribbon background -->
+
+	
+				
+				<div class="row">
+                    <div class="col12">
+        	
+		                  <p>
+							Use the form below to search for current or determined planning applications and notifications.</p>
+						<form name="frmPropertySearch" method="post" action="default.aspx#tabs" id="frmPropertySearch" class="rbkc-form">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0MDI3MDAxODNkZO64xfBuxhwpgbThirjbK/pg3R/Z" />
+
+						<!--asp:Content ID="psContent" ContentPlaceHolderID="psContent" runat="Serve"-->
+
+						
+						
+					
+						<input name="adv" type="hidden" id="adv" value="0" />
+						<div id="advBlurbDiv"></div>
+						<p class="clearer" />
+						<div id="tabs"><br /></div>
+						<div id="simpleSearch">
+							<div class="PanelTop">
+							</div>
+							<h2>Simple search</h2>
+							<p>
+								<label for="simple">
+									Search:
+								</label>
+								<input name="simple" type="text" id="simple" placeholder="(eg 'Campden Hill Road' or 'pp/12/01234' or 'basement')" />
+							</p>
+	
+							<input type="hidden" name="simpleBatch" id="simpleBatch" value="20" />
+
+							<p class="submit">
+								<input type="submit" name="simSubmit" value="Search" id="simSubmit" />
+								<input type="submit" name="simReset" value="Reset" id="simReset" title="Reset the form and the results" />&nbsp;<a href="default.aspx?adv=1#advancedSearch">Advanced
+										search</a>
+							</p>
+
+						</div>
+						<div id="simpleBlurbDiv"><h2>Please note:</h2><ul><li>Documents may take up to seven working days from receipt to appear with an associated application</li><li>You can view currently submitted planning applications as a list, <a href="https://www.rbkc.gov.uk/planning/scripts/weeklyform.asp">searchable by date</a>.</li><li>You can view several sources of historical application information<li><a href="https://www.rbkc.gov.uk/planning/searches/cardarchive/cardarchiveform.asp">planning history of individual properties from 1948-2009</a> provides a brief record of the life of a property in that period. It only lists what applications have been received on a given property and when.</li><li><a href="https://www.rbkc.gov.uk/planning/planningarchiveviewer/search.aspx?SubCategoryID=29">Microfiche 1948-1996</a> provides scans of original documentation pertaining to planning applications received over that period</li><li><a href="https://www.rbkc.gov.uk/planning/planningarchiveviewer/search.aspx?SubCategoryID=17">Statutory Register (Decision Notices Only) 1948-1999</a> provides a scanned copy of the original decision notice issued in</li><li><a href="https://www.rbkc.gov.uk/planning/planningarchiveviewer/search.aspx?SubCategoryID=47">Consent Of Adverts</a> record set a person can find a copy of the original application, any internal documentation relating to the application and a decision</a>.</li></ul><h2>If commenting on an application</h2><ul><li>Please note that comments made on applications will be published on our website.  We remove email addresses, telephone numbers and signatures before publishing online, but the author of comments and their postal address are published.</li><li>We no longer accept objections or comments by fax.</li><li>Objections received by post or email are no longer acknowledged and notification of decisions are not issued. However, objectors and supporters are notified if an application is to be presented at a Planning Committee.</li><li>Please note that applications with prefixes ACV, CA, CLD, CON, NMA, OB and NOT are not subject to statutory consultation. However you may make a comment if you wish using our online form.</li></ul></div>
+						
+						
+						<!--/asp:Content-->
+						</form>
+						</div>
+	
+			
+		</div><!-- end row -->
+			                       </div>
+      <!-- end content-inner innerPadded -->
+                    </div>
+    <!-- end content  -->
+
+
+
+    <!-- ARIA: the landmark role "navigation" is added here as the element contains page navigation -->
+
+    <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
+    <!-- <article id="introduction"> -->
+
+
+
+</main>
+        </div>
+        <!-- end backgroundRibbon -->
+        <!-- NEW -->
+        <div class="footerGlobal" role="contentinfo">
+            <div class="innerPadded footer-contents">
+                <p class="address">
+                    Town Hall, Hornton Street, W8 7NX</p>
+                <p>
+                    <span class="contactphone">Call on <a href="tel://020-7361-3000">020 7361 3000</a></span><span><a
+                        href="https://www.eforms.rbkc.gov.uk/default.aspx/RenderForm/?F.Name=FoXT6rvnp4J">Email
+                        us</a></span></p>
+                <ul>
+                    <li><a href="/footerlinks/commentonthispage.aspx" title="Comment on this page">Comment
+                        on this page</a></li>
+                    <li><a href="/footerlinks/contactus.aspx" title="Contact us">Contact us</a></li>
+                    <li><a href="/footerlinks/privacy.aspx" title="Privacy">Cookies and your privacy</a></li>
+                    <li><a href="/footerlinks/termsofuse.aspx" title="Terms of use">Terms of use</a></li>
+                </ul>
+                <p class="socialMedia">
+                    <a href="https://uk.sitestat.com/rbkc/rbkc/s?Twitter&ns_type=clickout" class="socialMedia-Twitter"
+                        title="Twitter">Twitter</a> <a href="https://uk.sitestat.com/rbkc/rbkc/s?Facebook&ns_type=clickout"
+                            class="socialMedia-Facebook" title="Facebook">Facebook</a> <a href="https://uk.sitestat.com/rbkc/rbkc/s?Youtube&ns_type=clickout"
+                                class="socialMedia-YouTube" title="YouTube">YouTube</a>
+                </p>
+                <!-- Copyright information can be contained within the <small> element. The <time> element is used here to indicate that the '2013' is a date -->
+                <p>
+                    &copy;
+                    <time>1998-2016</time>
+                    The Royal Borough of Kensington and Chelsea</p>
+            </div>
+        </div>
+        <!-- end footerGlobal -->
+        <!-- Begin Sitestat4 code -->
+
+        <script type="text/javascript">
+<!--
+            function sitestat(ns_l) {
+                ns_l += '&amp;ns__t=' + (new Date()).getTime(); ns_pixelUrl = ns_l;
+                ns_0 = document.referrer;
+                ns_0 = (ns_0.lastIndexOf('/') == ns_0.length - 1) ? ns_0.substring(ns_0.lastIndexOf('/'), 0) : ns_0;
+                if (ns_0.length > 0) ns_l += '&amp;ns_referrer=' + escape(ns_0);
+                if (document.images) { ns_1 = new Image(); ns_1.src = ns_l; } else
+                    document.write('<img src="' + ns_l + '" width="1" height="1" alt="" />');
+            }
+            sitestat("https://uk.sitestat.com/rbkc/rbkc/s?planning-building-control.search.default");
+//-->
+        </script>
+
+        <noscript>
+            <div>
+                <img src="https://uk.sitestat.com/rbkc/rbkc/s?planning-building-control.search.default"
+                    width="1" height="1" alt="" /></div>
+        </noscript>
+        <!-- End Sitestat4 code -->
+        <!-- Begin Sitestat4 Technical code -->
+
+        <script type="text/javascript" src="/sitestat.js"></script>
+
+        <noscript>
+            <div>
+                &nbsp;</div>
+        </noscript>
+        <!-- End Sitestat4 Technical code -->
+        <!-- Begin Sitestat4 Loadingtime2 code -->
+
+        <script type="text/javascript">            ns_loadingtime2 = (new Date()).getTime();</script>
+
+        <noscript>
+            <div>
+                &nbsp;</div>
+        </noscript>
+
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+        
+        <!-- Responsive Tabs JS -->
+
+        <script src="js/jquery.responsiveTabs.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                //alert('tabs works');
+                $('#horizontalTab').responsiveTabs({
+                    rotate: false,
+                    startCollapsed: 'accordion',
+                    collapsible: true,
+                    setHash: true,
+                    active: 0
+                    //,
+                    //disabled: [3, 4]
+                });
+
+                $('#start-rotation').on('click', function() {
+                    $('#horizontalTab').responsiveTabs('active');
+                });
+                $('#stop-rotation').on('click', function() {
+                    $('#horizontalTab').responsiveTabs('stopRotation');
+                });
+                $('#start-rotation').on('click', function() {
+                    $('#horizontalTab').responsiveTabs('active');
+                });
+                $('.select-tab').on('click', function() {
+                    $('#horizontalTab').responsiveTabs('activate', $(this).val());
+                });
+                
+                // -- Reg date picker -- //
+                //alert('datepicker works');
+                $( "#regDateFrom" ).datepicker({
+                    changeMonth: true, changeYear: true, dateFormat: "dd/mm/yy", maxDate: 0, showButtonPanel: true,
+                    onClose: function( selectedDate ) {
+                        $( "#regDateTo" ).datepicker( "option", "minDate", selectedDate );}/*
+                        if($("#regDateTo").val() == "") {
+                            $( "#regDateTo" ).datepicker( "setDate", selectedDate + "+28D" );
+                        }                
+                    }*/
+                });       
+                $( "#regDateTo" ).datepicker({
+                    changeMonth: true, changeYear: true, dateFormat: "dd/mm/yy", maxDate: 0, showButtonPanel: true,
+                    onClose: function( selectedDate ) {
+                        $( "#regDateFrom" ).datepicker( "option", "maxDate", selectedDate );}/*
+                        if($("#regDateFrom").val() == "") {
+                            $( "#regDateFrom" ).datepicker( "setDate", selectedDate );
+                        }                
+                    }*/                 
+                });
+                
+                // -- Decision date picker -- //
+                $( "#decDateFrom" ).datepicker({
+                    changeMonth: true, changeYear: true, dateFormat: "dd/mm/yy", maxDate: 0, showButtonPanel: true,
+                    onClose: function( selectedDate ) {
+                        $( "#decDateTo" ).datepicker( "option", "minDate", selectedDate );}/*
+                        if($("#decDateTo").val() == "") {
+                            $( "#decDateTo" ).datepicker( "setDate", selectedDate + "+28D" );
+                        }                
+                    }*/
+                });       
+                $( "#decDateTo" ).datepicker({
+                    changeMonth: true, changeYear: true, dateFormat: "dd/mm/yy", maxDate: 0, showButtonPanel: true,
+                    onClose: function( selectedDate ) {
+                        $( "#decDateFrom" ).datepicker( "option", "maxDate", selectedDate );}/*
+                        if($("#decDateFrom").val() == "") {
+                            $( "#decDateFrom" ).datepicker( "setDate", selectedDate );
+                        }                
+                    }*/
+                });
+
+                // -- Appeal reg date picker -- //
+                $( "#appealRecDateFrom" ).datepicker({
+                    changeMonth: true, changeYear: true, dateFormat: "dd/mm/yy", maxDate: 0, showButtonPanel: true,
+                    onClose: function( selectedDate ) {
+                        $( "#appealRecDateTo" ).datepicker( "option", "minDate", selectedDate );}/*
+                        if($("#appealRecDateTo").val() == "") {
+                            $( "#appealRecDateTo" ).datepicker( "setDate", selectedDate + "+28D" );
+                        }                
+                    }*/
+                });       
+                $( "#appealRecDateTo" ).datepicker({
+                    changeMonth: true, changeYear: true, dateFormat: "dd/mm/yy", maxDate: 0, showButtonPanel: true,
+                    onClose: function( selectedDate ) {
+                        $( "#appealRecDateFrom" ).datepicker( "option", "maxDate", selectedDate );}/*
+                        if($("#appealRecDateFrom").val() == "") {
+                            $( "#appealRecDateFrom" ).datepicker( "setDate", selectedDate );
+                        }                
+                    }*/                 
+                });
+
+                // -- Appeal decision date picker -- //
+                $( "#appealDecDateFrom" ).datepicker({
+                    changeMonth: true, changeYear: true, dateFormat: "dd/mm/yy", maxDate: 0, showButtonPanel: true,
+                    onClose: function( selectedDate ) {
+                        $( "#appealDecDateTo" ).datepicker( "option", "minDate", selectedDate );}/*
+                        if($("#appealDecDateTo").val() == "") {
+                            $( "#appealDecDateTo" ).datepicker( "setDate", selectedDate + "+28D" );
+                        }                
+                    }*/
+                });       
+                $( "#appealDecDateTo" ).datepicker({
+                    changeMonth: true, changeYear: true, dateFormat: "dd/mm/yy", maxDate: 0, showButtonPanel: true,
+                    onClose: function( selectedDate ) {
+                        $( "#appealDecDateFrom" ).datepicker( "option", "maxDate", selectedDate );}/*
+                        if($("#appealDecDateFrom").val() == "") {
+                            $( "#appealDecDateFrom" ).datepicker( "setDate", selectedDate );
+                        }                
+                    }*/                 
+                });
+            });
+            
+        </script>
+
+        <!-- End Sitestat4 Loadingtime2 code -->
+
+        <script src="/js/refresh/menu.js" type="text/javascript"></script>
+
+        <script src="/js/refresh//pdf_accordion.js" type="text/javascript"></script>
+
+        <script src="/js/refresh//show_hide_RHC_12_03_14.js" type="text/javascript"></script>
+
+        <script src="/js/refresh/childParent.js" type="text/javascript"></script>
+
+    </div>
+    <!-- end outerWrapper -->
+    <!-- WebMetric snippet starts here --
+    <div class="gm_sidebar gm_sidebar_cnr" style="line-height: initial">
+        <a href="https://websurveys.govmetric.com/theme/gm/1611" target="_blank" class="gm_sidebar_anchor"
+            title="please rate this page" rel="nofollow">
+            <img src="https://wsstatic.govmetric.com/imgs/triggers/cnr_rate.png" alt="rating button">
+        </a>
+    </div>
+    <link rel="stylesheet" type="text/css" href="https://wsstatic.govmetric.com/css/client/gm_sidebar_cnr.css" />
+
+    <script type="text/javascript" src="https://wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+
+    <noscript>
+        <div>
+            Browser does not support script.</div>
+    </noscript>
+
+    <script type="text/javascript" src="https://hitcounter.govmetric.com/1612"></script>
+
+    <noscript>
+        <div>
+            Browser does not support script.</div>
+    </noscript>
+    !-- WebMetric snippet ends here -->
+</body>
+</html>

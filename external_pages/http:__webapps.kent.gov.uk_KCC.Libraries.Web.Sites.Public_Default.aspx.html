@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html>
+    <head id="ctl00_Head1"><title>
+	Find your library
+</title><link rel="shortcut icon" href="http://webapps.kent.gov.uk/static/favicon.ico" type="image/vnd.microsoft.icon" /><meta charset="UTF-8" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta name="description" content="Kent County Council library search" />
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Stylesheet -->    
+        <link href="/css/ictApps.css" rel="stylesheet" type="text/css" /><link href="/css/system/mappingNew.css" rel="stylesheet" type="text/css" /><link href="/css/system/mappingSmall.css" rel="stylesheet" type="text/css" /><link href="Styles/LibrariesPublic.css" rel="stylesheet" type="text/css" />
+        <!-- IE7/8 support -->
+        <!--[if lt IE 9]>
+            <script src="/js/respond.min.js" type="text/javascript"></script>
+        <![endif]-->
+        <!-- JS -->    
+        <script src="/js/jquery.min.js" type="text/javascript"></script>
+        <!-- Modernizr -->
+        <script src="/js/custom.modernizr.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="Page">
+            <header>
+	<div>
+
+		<div class="row">
+			<div class="skip-link">
+				<a href="#main" title="Skip to page content">Skip to content</a>
+			</div>
+			 <a href="http://www.kent.gov.uk" class="logo">
+				Kent County Council
+			</a>
+		</div>
+
+		<div class="nav-bar">
+			<div class="row">
+				<div class="search">
+					<form action="//www.kent.gov.uk/search" method="get">
+						<input type="hidden" value="results" name="mode">
+						<label for="queries_keyword_query">Search</label>
+						<input type="text" onblur="if (this.value == '') { this.value=''; }" onfocus="if (this.value == '') { this.value = ''; }" id="queries_keyword_query" class="sq-form-field" size="5" value="" name="queries_keyword_query" placeholder="Search kent.gov.uk...">
+						<input type="submit" value="Search" title="Search">
+					</form>
+				</div>
+			</div>
+			
+			<!-- Nav menu -->
+			<div class="row">
+				<a class="open-nav" href="#"><span class="icon icon-navigation"></span> Menu</a>
+			</div>
+			
+			 <nav class="nav">
+				<div class="row">
+					<div class="large-12 column">
+						<p class="navtitle">Services and information</p>
+						 <ul>
+							<li><span><a href="http://www.kent.gov.uk/education-and-children">Education and children</a></span>
+							<p>Includes <a href="http://www.kent.gov.uk/education-and-children/schools/school-places">school places</a>, <a href="http://www.kent.gov.uk/education-and-children/schools/term-dates">term dates</a>, <a href="http://www.kent.gov.uk/education-and-children/schools/school-places/kent-test">Kent Test</a>, <a href="http://www.kent.gov.uk/education-and-children/schools/free-school-meals">free school meals</a>, <a href="http://www.kent.gov.uk/education-and-children/college-sixth-form-and-training">college and sixth form</a></p></li>
+							<li><span><a href="http://www.kent.gov.uk/leisure-and-community">Leisure and community</a></span>
+							<p>Includes <a href="http://www.kent.gov.uk/leisure-and-community/libraries">libraries</a>, <a href="http://www.kent.gov.uk/leisure-and-community/parks-and-outdoor-activities">parks and outdoor activities</a>, <a href="http://www.kent.gov.uk/leisure-and-community/history-and-heritage">history and heritage</a>, <a href="http://www.kent.gov.uk/leisure-and-community/arts">arts</a>, <a href="http://www.kent.gov.uk/leisure-and-community/community-grants-and-funding">community grants</a>, <a href="http://www.kent.gov.uk/leisure-and-community/volunteering">volunteering</a></p></li>
+							<li><span><a href="http://www.kent.gov.uk/roads-and-travel">Roads and travel</a></span>
+							<p>Includes <a href="http://www.kent.gov.uk/roads-and-travel/travelling-around-kent/bus-travel/bus-passes">bus passes</a>, <a href="http://www.kent.gov.uk/roads-and-travel/report-a-problem">report a problem</a>, <a href="http://www.kent.gov.uk/roads-and-travel/travelling-around-kent/parking/disabled-parking-blue-badge">disabled parking - Blue Badge</a>, <a href="http://www.kent.gov.uk/roads-and-travel/travelling-around-kent">travelling around Kent</a>, <a href="http://www.kent.gov.uk/roads-and-travel/road-safety">road safety</a></p></li>
+							<li><span><a href="http://www.kent.gov.uk/jobs">Jobs</a></span>
+							<p>Includes <a href="http://www.kent.gov.uk/jobs/jobs-at-kent-county-council">jobs at Kent County Council</a>, <a href="http://www.kent.gov.uk/jobs/careers-with-us/careers-in-childrens-social-care">children's social work</a>, <a href="http://www.kent.gov.uk/jobs/starting-your-career/apprenticeships">apprenticeships</a>, <a href="http://www.kent.gov.uk/jobs/starting-your-career/kent-graduate-programme">Kent Graduate Programme</a></p></li>
+							<li><span><a href="http://www.kent.gov.uk/social-care-and-health">Social care and health</a></span>
+							<p>Includes <a href="http://www.kent.gov.uk/education-and-children/protecting-children/report-abuse">report abuse</a>, <a href="http://www.kent.gov.uk/education-and-children/adoption-and-fostering">adoption and fostering</a>, <a href="http://www.kent.gov.uk/social-care-and-health/finding-a-new-home/residential-care-homes">residential care</a>, <a href="http://www.kent.gov.uk/social-care-and-health/disability">disability support</a>, <a href="http://www.kent.gov.uk/education-and-children/special-educational-needs/becoming-an-adult/how-to-get-help">community care assessments</a>, <a href="http://www.kent.gov.uk/social-care-and-health/health/our-public-health-responsibilities">public health</a></p></li>
+							<li><span><a href="http://www.kent.gov.uk/waste-planning-and-land">Waste, planning and land</a></span>
+							<p>Includes <a href="http://www.kent.gov.uk/waste-planning-and-land/rubbish-and-recycling">rubbish and recycling</a>, <a href="http://www.kent.gov.uk/waste-planning-and-land/planning-applications">planning applications</a>, <a href="http://www.kent.gov.uk/waste-planning-and-land/village-greens">village greens</a>, <a href="http://www.kent.gov.uk/waste-planning-and-land/public-rights-of-way">public rights of way</a>, <a href="http://www.kent.gov.uk/waste-planning-and-land/flooding-and-drainage">flooding and drainage</a></p></li>
+							<li><span><a href="http://www.kent.gov.uk/business">Business</a></span>
+							<p>Includes <a href="http://www.kent.gov.uk/business/business-loans-and-funding">loans and funding</a>, <a href="http://www.kent.gov.uk/waste-planning-and-land/rubbish-and-recycling/business-and-commercial-waste">business waste</a>, <a href="http://www.kent.gov.uk/business/trading-standards">trading standards</a></p></li>
+							<li><span><a href="http://www.kent.gov.uk/births-ceremonies-and-deaths">Births, ceremonies and deaths</a></span>
+							<p>Includes <a href="http://www.kent.gov.uk/births-ceremonies-and-deaths/Births">births</a>, <a href="http://www.kent.gov.uk/births-ceremonies-and-deaths/deaths">deaths</a>, <a href="http://www.kent.gov.uk/births-ceremonies-and-deaths/weddings-and-civil-partnerships">weddings and civil partnerships</a>, <a href="http://www.kent.gov.uk/births-ceremonies-and-deaths/other-ceremonies/citizenship-ceremony">citizenship ceremonies</a></p>                                         </li>
+							<li><span><a href="http://www.kent.gov.uk/about-the-council">About the council</a></span>
+							<p>Includes <a href="http://www.kent.gov.uk/about-the-council/finance-and-budget/2014-15-budget">budget</a>, <a href="http://www.kent.gov.uk/about-the-council/have-your-say/consultations">consultations</a>, <a href="http://www.kent.gov.uk/about-the-council/how-the-council-works/committees-and-meetings">council meetings</a>, <a href="https://democracy.kent.gov.uk/mgMemberIndex.aspx?bcr=1">county councillors</a>, <a href="http://www.kent.gov.uk/about-the-council/contact-us/complaints-and-feedback">complaints and feedback</a>, <a href="http://www.kent.gov.uk/about-the-council/contact-us/gateway">gateways</a>, <a href="http://www.kent.gov.uk/about-the-council/have-your-say/petitions">petitions</a></p></li>
+						</ul>
+						
+
+					</div>
+				</div>
+			</nav>
+			<!-- End nav menu -->
+		</div>
+
+		<div id="breadcrumb-container">
+		</div>
+
+	</div>
+</header><form name="aspnetForm" method="post" action="Default.aspx" id="aspnetForm" class="row">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTExOTA4NjgwMjQPZBYCZg9kFgICBA9kFgQCAQ8WAh4EVGV4dAURRmluZCB5b3VyIGxpYnJhcnlkAggPZBYQAgMPEGQPFg1mAgECAgIDAgQCBQIGAgcCCAIJAgoCCwIMFg0QBQ1BbGwgZGlzdHJpY3RzBQEwZxAFB0FzaGZvcmQFATFnEAUKQ2FudGVyYnVyeQUBMmcQBQhEYXJ0Zm9yZAUBM2cQBQxEb3ZlciAvIERlYWwFATRnEAUJR3JhdmVzZW5kBQE1ZxAFCU1haWRzdG9uZQUBNmcQBQlTZXZlbm9ha3MFATdnEAUHU2hlcHdheQUBOGcQBQVTd2FsZQUBOWcQBQZUaGFuZXQFAjEwZxAFCVRvbmJyaWRnZQUCMTFnEAUPVHVuYnJpZGdlIFdlbGxzBQIxMmdkZAIHDxBkDxYIZgIBAgICAwIEAgUCBgIHFggQBQdBbnkgZGF5BQEwZxAFBlN1bmRheQUBMWcQBQZNb25kYXkFATJnEAUHVHVlc2RheQUBM2cQBQlXZWRuZXNkYXkFATRnEAUIVGh1cnNkYXkFATVnEAUGRnJpZGF5BQE2ZxAFCFNhdHVyZGF5BQE3Z2RkAgsPEGQPFmVmAgECAgIDAgQCBQIGAgcCCAIJAgoCCwIMAg0CDgIPAhACEQISAhMCFAIVAhYCFwIYAhkCGgIbAhwCHQIeAh8CIAIhAiICIwIkAiUCJgInAigCKQIqAisCLAItAi4CLwIwAjECMgIzAjQCNQI2AjcCOAI5AjoCOwI8Aj0CPgI/AkACQQJCAkMCRAJFAkYCRwJIAkkCSgJLAkwCTQJOAk8CUAJRAlICUwJUAlUCVgJXAlgCWQJaAlsCXAJdAl4CXwJgAmECYgJjAmQWZRAFDUFsbCBsaWJyYXJpZXMFATBnEAURQWxsaW5ndG9uIExpYnJhcnkFAzEzNGcQBQtBc2ggTGlicmFyeQUCMjZnEAUTQXNoZW4gRHJpdmUgTGlicmFyeQUCMTVnEAUPQXNoZm9yZCBMaWJyYXJ5BQExZxAFEEF5bGVzaGFtIExpYnJhcnkFAjI3ZxAFEEJlYXJzdGVkIExpYnJhcnkFAjU0ZxAFE0JpcmNoaW5ndG9uIExpYnJhcnkFAjgyZxAFEkJvY2toYW5nZXIgTGlicmFyeQUBMmcQBRVCb3JvdWdoIEdyZWVuIExpYnJhcnkFAjkxZxAFHEJvdWdodG9uLXVuZGVyLUJsZWFuIExpYnJhcnkFAjc1ZxAFE0Jyb2Fkc3RhaXJzIExpYnJhcnkFAjgzZxAFEkNhbnRlcmJ1cnkgTGlicmFyeQUBOGcQBQ9DaGFyaW5nIExpYnJhcnkFATNnEAUQQ2hlcml0b24gTGlicmFyeQUCMzNnEAUUQ2xpZnRvbnZpbGxlIExpYnJhcnkFAjg0ZxAFE0NvbGRoYXJib3VyIExpYnJhcnkFAjQyZxAFEENveGhlYXRoIExpYnJhcnkFAjU1ZxAFEUNyYW5icm9vayBMaWJyYXJ5BQMxMDBnEAUQRGFydGZvcmQgTGlicmFyeQUCMTRnEAUQRGFzaHdvb2QgTGlicmFyeQUCNDNnEAUMRGVhbCBMaWJyYXJ5BQIyOGcQBQ1Eb3ZlciBMaWJyYXJ5BQIyM2cQBRRFYXN0IFBlY2toYW0gTGlicmFyeQUCOTJnEAUSRWRlbmJyaWRnZSBMaWJyYXJ5BQI2M2cQBRFGYXZlcnNoYW0gTGlicmFyeQUCNzZnEAURRmxlZXRkb3duIExpYnJhcnkFAjE2ZxAFEkZvbGtlc3RvbmUgTGlicmFyeQUCMzJnEAURR3JhdmVzZW5kIExpYnJhcnkFAjQxZxAFEkdyZWVuaGl0aGUgTGlicmFyeQUCMTdnEAUOSGFkbG93IExpYnJhcnkFAjkzZxAFD0hhcnRsZXkgTGlicmFyeQUCNjRnEAURSGF3a2h1cnN0IExpYnJhcnkFAzEwMWcQBRBIZWFkY29ybiBMaWJyYXJ5BQI1NmcQBRFIZXJuZSBCYXkgTGlicmFyeQUCMTBnEAUOSGlnaGFtIExpYnJhcnkFAjQ0ZxAFFUhpbGRlbmJvcm91Z2ggTGlicmFyeQUCOTRnEAUSSGl2ZSBIb3VzZSBMaWJyYXJ5BQI0NWcQBQ1IeXRoZSBMaWJyYXJ5BQIzNWcQBQ9LZW1zaW5nIExpYnJhcnkFAjY1ZxAFH0tlbnQgSGlzdG9yeSBhbmQgTGlicmFyeSBDZW50cmUFAzI3NWcQBRNLaW5nJ3MgRmFybSBMaWJyYXJ5BQI0NmcQBRFMYXJrZmllbGQgTGlicmFyeQUCOTVnEAUOTGVuaGFtIExpYnJhcnkFATRnEAURTG9uZ2ZpZWxkIExpYnJhcnkFAjE4ZxAFDEx5ZGQgTGlicmFyeQUCMzZnEAUPTHltaW5nZSBMaWJyYXJ5BQIzN2cQBRJNYWRnaW5mb3JkIExpYnJhcnkFAjU3ZxAFEU1haWRzdG9uZSBMaWJyYXJ5BQMyNzRnEAUOTWFyZGVuIExpYnJhcnkFAjU4ZxAFD01hcmdhdGUgTGlicmFyeQUCODFnEAUVTWFybGluZyBDcm9zcyBMaWJyYXJ5BQI0N2cQBQ9NZW9waGFtIExpYnJhcnkFAjQ4ZxAFGk1pbnN0ZXItaW4tU2hlcHBleSBMaWJyYXJ5BQI3N2cQBRlNaW5zdGVyLWluLVRoYW5ldCBMaWJyYXJ5BQMxMjVnEAUVTmV3IEFzaCBHcmVlbiBMaWJyYXJ5BQI2NmcQBRJOZXcgUm9tbmV5IExpYnJhcnkFAjM4ZxAFEU5ld2luZ3RvbiBMaWJyYXJ5BQI4NmcQBQ5PdGZvcmQgTGlicmFyeQUCNjdnEAUUUGFkZG9jayBXb29kIExpYnJhcnkFAzEwM2cQBQ9QZW1idXJ5IExpYnJhcnkFAzEwNGcQBRRRdWVlbmJvcm91Z2ggTGlicmFyeQUCNzhnEAUQUmFtc2dhdGUgTGlicmFyeQUCODdnEAURUml2ZXJoZWFkIExpYnJhcnkFAjY4ZxAFFlJpdmVydmlldyBQYXJrIExpYnJhcnkFAjQ5ZxAFEFJ1c3RoYWxsIExpYnJhcnkFAzEwNWcQBRBTYW5kZ2F0ZSBMaWJyYXJ5BQIzOWcQBRBTYW5kd2ljaCBMaWJyYXJ5BQIzMGcQBQxTZWFsIExpYnJhcnkFAjcwZxAFEVNldmVub2FrcyBMaWJyYXJ5BQI2MmcQBRFTaGVlcm5lc3MgTGlicmFyeQUCNzlnEAUPU2hlcHdheSBMaWJyYXJ5BQI1OWcQBRBTaGVyd29vZCBMaWJyYXJ5BQMxMDZnEAUSU2hvd2ZpZWxkcyBMaWJyYXJ5BQMxMDdnEAUVU2l0dGluZ2JvdXJuZSBMaWJyYXJ5BQI3NGcQBRBTbm9kbGFuZCBMaWJyYXJ5BQI5NmcQBRRTb3V0aGJvcm91Z2ggTGlicmFyeQUDMTA4ZxAFIFN0LiBNYXJnYXJldCdzLWF0LUNsaWZmZSBMaWJyYXJ5BQIyOWcQBRBTdGFuaG9wZSBMaWJyYXJ5BQE1ZxAFE1N0YXBsZWh1cnN0IExpYnJhcnkFAjYwZxAFDlN0dXJyeSBMaWJyYXJ5BQIxMWcQBRlTdW1tZXJob3VzZSBEcml2ZSBMaWJyYXJ5BQIxOWcQBRZTdXR0b24tYXQtSG9uZSBMaWJyYXJ5BQIyMGcQBRNTd2FsZWNsaWZmZSBMaWJyYXJ5BQIxMmcQBRNTd2FuIFZhbGxleSBMaWJyYXJ5BQMxMzFnEAUPU3dhbmxleSBMaWJyYXJ5BQI3MWcQBRNUZW1wbGUgSGlsbCBMaWJyYXJ5BQIyMmcQBRFUZW50ZXJkZW4gTGlicmFyeQUBNmcQBQ9UZXluaGFtIExpYnJhcnkFAjgwZxAFEVRvbmJyaWRnZSBMaWJyYXJ5BQI4OWcQBRdUb25icmlkZ2UgTm9ydGggTGlicmFyeQUCOTdnEAUXVHVuYnJpZGdlIFdlbGxzIExpYnJhcnkFAjk5ZxAFDFZpZ28gTGlicmFyeQUCNTBnEAUWV2VzdCBLaW5nc2Rvd24gTGlicmFyeQUCNzJnEAUUV2VzdCBNYWxsaW5nIExpYnJhcnkFAjk4ZxAFEVdlc3RlcmhhbSBMaWJyYXJ5BQI3M2cQBRBXZXN0Z2F0ZSBMaWJyYXJ5BQI4OGcQBRJXaGl0c3RhYmxlIExpYnJhcnkFAjEzZxAFE1dvb2QgQXZlbnVlIExpYnJhcnkFAjQwZxAFC1d5ZSBMaWJyYXJ5BQE3ZxAFD1lhbGRpbmcgTGlicmFyeQUCNjFnZGQCFQ8PFgIeFFZhbGlkYXRpb25FeHByZXNzaW9uBS9eW0EtWmEtel17MSwyfVswLTldezEsMn1bIF1bMC05XXsxfVtBLVphLXpdezJ9JGRkAhkPDxYCHgdWaXNpYmxlaGRkAhsPDxYCHwAFrANGaW5kIGRldGFpbHMgb2YgdGhlIGxvY2F0aW9uLCBvcGVuaW5nIHRpbWVzIGFuZCBmYWNpbGl0aWVzIGZvciBvdXIgc3RhdGljIGxpYnJhcmllcyBhbmQgYXJjaGl2ZSBjZW50cmUuIAo8YnIgLyA+CjxiciAvPiAKPGI+Rm9yIHRoZSBsYXRlc3QgaW5mb3JtYXRpb24gYWJvdXQgdGVtcG9yYXJ5IGNsb3N1cmVzIGFuZCBzZXJ2aWNlIGRpc3J1cHRpb25zIGdvIHRvIG91cgoJPGEgaHJlZj0iaHR0cDovL3d3dy5mYWNlYm9vay5jb20vS2VudExpYnJhcmllc0FyY2hpdmVzIj4gRmFjZWJvb2sgcGFnZTwvYT4gb3IgdG8KCTxhIGhyZWY9Imh0dHA6Ly93d3cua2VudGNsb3N1cmVzLmNvLnVrL21hc3Rlci5waHAiPktlbnQgQ2xvc3VyZXM8L2E+PGJyPjxicj48L2I+CjwvZm9udD4KPGJyIC8+Cgo8Yj4gPGZvbnQgY29sb3IgPXJlZD48YnI+PC9iPgoKPC9mb250PmRkAh0PDxYKHgZIZWlnaHQbAAAAAACAU0ABAAAAHgVXaWR0aBsAAAAAAMBiQAEAAAAeB1Rvb2xUaXAFDk1vYmlsZSBsaWJyYXJ5HghJbWFnZVVybAUuUHJvbW9JbWFnZS5hc3B4P2xpZD0wJmFpZD0wJnR5cGU9TW9iaWxlcyBJbnRybx4EXyFTQgKAA2RkAh8PFgIfAAWBAlVzZSBvdXIgPGEgaHJlZj0iaHR0cDovL3dlYmFwcHMua2VudC5nb3YudWsvS0NDLk1vYmlsZUxpYnJhcnkuV2ViLlNpdGVzLlB1YmxpYy9UaW1ldGFibGVTZWFyY2guYXNweCI+c2VhcmNoIGZhY2lsaXR5PC9hPiB0byBmaW5kIG91dCB3aGVyZSBhbmQgd2hlbiBvdXIgbW9iaWxlIGxpYnJhcmllcyBzdG9wIG9yIGNhbGwgMDMwMDAgNDEgMzEgMzEgZm9yIG1vcmUgaW5mb3JtYXRpb24uPGJyPjxicj4KPGI+PGZvbnQgY29sb3I9cmVkPjwvYj48L2ZvbnQ+ZGSiK3yejaWZ/DS6Kbe90YktyA7JvQ==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F753C41B" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWfgKulPPTBALTu97eBgLMu97eBgLNu97eBgLOu97eBgLPu97eBgLIu97eBgLJu97eBgLKu97eBgLbu97eBgLUu97eBgLMu57dBgLMu5LdBgLMu5bdBgLC/9TYDwLd/9TYDwLc/9TYDwLf/9TYDwLe/9TYDwLZ/9TYDwLY/9TYDwLb/9TYDwKmlvDfDAKjqqK/BAK4lojcDAK5lozcDAK5lvDfDAK4lpTcDAK9loDcDAKulrjcDAK4lvDfDAKhlrzcDAK/lozcDAKuloTcDAKulvDfDAK7lvDfDAK7loTcDAKuloDcDAK6lrjcDAK9lozcDAKf19eLCwK5loDcDAK6loTcDAK4ltDfDAK4loTcDAKhlrjcDAK8loTcDAK/lojcDAK5lojcDAK7lrjcDAK6lrzcDAK5lpTcDAKhloTcDAK8loDcDALy7vH+BQK9lojcDAK5lrDcDAK6loDcDAKhloDcDAK6lozcDAK7lozcDAK8lozcDAKZxdyVDgK6lojcDAKhlozcDAK6lvDfDAK5ltDfDAK7lojcDAK7lpTcDAK9lpTcDAKiqrK/BAK9ltDfDAKulrzcDAK6lpTcDAK6ltDfDAK/lpTcDAKGxcCVDgK8lojcDAK7ltDfDAKulojcDAK8lpTcDALMkLzICQKjqt6+BAK/ltDfDAKulpTcDAK8ltDfDAK6ltzfDAKGxfiVDgK7ltzfDAK7lrDcDAK/lrDcDAK8lrjcDAK/ltzfDAK9ltzfDAL93JqICALQ94T/AgK/loDcDAKhlojcDALnncShCgK4ltzfDAK9lvDfDAK8lrDcDAK5lrzcDAK5ltzfDAK4lrDcDAK5lrjcDALy7sX+BQK/lrzcDAK4lrjcDAK8lvDfDAKulrDcDAKultzfDAKhlpTcDAKhltzfDAK9lrDcDAK/lrjcDAKhltDfDAK/loTcDAKultDfDAK5loTcDAK6lrDcDAK/lvDfDAK8lrzcDAKSybUpAr3p+IMPAsKkkOACTvGUQdc4wpuEvZ6GQjtTMUQPcBY=" />
+                <a id="menu"></a>
+                <h1>
+                    Find your library
+                </h1>
+                <div id="Left" class="inapp-sidebar medium-3 columns">
+                    <div id="LeftNav">
+                        <ul>
+  <li>
+    <a href="http://www.kent.gov.uk/">Home Page</a>
+  </li>
+  <li>
+    <a href="http://www.kent.gov.uk/leisure-and-community">Leisure and community</a>
+  </li>
+  <li>
+    <a href="http://www.kent.gov.uk/leisure-and-community/libraries">Libraries</a>
+  </li>
+  <li>
+    <a href="Default.aspx">Find your library</a>
+  </li>
+  
+</ul>
+
+                    </div>
+                </div>
+                <div id="NoRightContentContainer" class="medium-9 columns">               
+                    <div id="MainContainer">
+                        <!-- !!skipLink!! -->
+                        <div id="MainContentArea">
+                            <div class="MainContent">
+                                <div id="main">
+                                    
+    <h2>Kent libraries</h2>
+    <div class="formelements2colcontainer">
+        <div class="medium-8 columns right">
+            <div class="LibrariesHiddenNav">
+                <a id="main"></a>
+                <a href="#Library-Search">Library Search</a>
+                <a id="Library-Search"></a>
+            </div>
+            <h3>Library search by</h3>
+            <div class="formelements2colcontainer">
+                <div class="medium-4 columns left">
+                    <label for="ctl00__mainContent_uxDistrictDropDownList" id="ctl00__mainContent_uxDistrictLabel">District</label>
+                </div>
+                <div class="medium-8 columns right">
+	                <select name="ctl00$_mainContent$uxDistrictDropDownList" id="ctl00__mainContent_uxDistrictDropDownList" class="input-100">
+	<option value="0">All districts</option>
+	<option value="1">Ashford</option>
+	<option value="2">Canterbury</option>
+	<option value="3">Dartford</option>
+	<option value="4">Dover / Deal</option>
+	<option value="5">Gravesend</option>
+	<option value="6">Maidstone</option>
+	<option value="7">Sevenoaks</option>
+	<option value="8">Shepway</option>
+	<option value="9">Swale</option>
+	<option value="10">Thanet</option>
+	<option value="11">Tonbridge</option>
+	<option value="12">Tunbridge Wells</option>
+
+</select>
+                </div>
+            </div>
+            <div class="ClearBoth"></div>
+            <div class="formelements2colcontainer">
+                <div class="medium-4 columns left">
+                    <label for="ctl00__mainContent_uxDayDropDownList" id="ctl00__mainContent_uxDayLabel">and/or day</label>
+                </div>
+                <div class="medium-8 columns right">
+	                <select name="ctl00$_mainContent$uxDayDropDownList" id="ctl00__mainContent_uxDayDropDownList" class="input-100">
+	<option value="0">Any day</option>
+	<option value="1">Sunday</option>
+	<option value="2">Monday</option>
+	<option value="3">Tuesday</option>
+	<option value="4">Wednesday</option>
+	<option value="5">Thursday</option>
+	<option value="6">Friday</option>
+	<option value="7">Saturday</option>
+
+</select>
+                </div>
+            </div>
+            <div class="ClearBoth"></div>
+            <div class="formelements2colcontainer">
+                <div class="medium-4 columns left">
+                    <label for="ctl00__mainContent_uxBranchDropDownList" id="ctl00__mainContent_uxBranchLabel">or Library</label>
+                </div>
+                <div class="medium-8 columns right">
+	                <select name="ctl00$_mainContent$uxBranchDropDownList" id="ctl00__mainContent_uxBranchDropDownList" class="input-100">
+	<option value="0">All libraries</option>
+	<option value="134">Allington Library</option>
+	<option value="26">Ash Library</option>
+	<option value="15">Ashen Drive Library</option>
+	<option value="1">Ashford Library</option>
+	<option value="27">Aylesham Library</option>
+	<option value="54">Bearsted Library</option>
+	<option value="82">Birchington Library</option>
+	<option value="2">Bockhanger Library</option>
+	<option value="91">Borough Green Library</option>
+	<option value="75">Boughton-under-Blean Library</option>
+	<option value="83">Broadstairs Library</option>
+	<option value="8">Canterbury Library</option>
+	<option value="3">Charing Library</option>
+	<option value="33">Cheriton Library</option>
+	<option value="84">Cliftonville Library</option>
+	<option value="42">Coldharbour Library</option>
+	<option value="55">Coxheath Library</option>
+	<option value="100">Cranbrook Library</option>
+	<option value="14">Dartford Library</option>
+	<option value="43">Dashwood Library</option>
+	<option value="28">Deal Library</option>
+	<option value="23">Dover Library</option>
+	<option value="92">East Peckham Library</option>
+	<option value="63">Edenbridge Library</option>
+	<option value="76">Faversham Library</option>
+	<option value="16">Fleetdown Library</option>
+	<option value="32">Folkestone Library</option>
+	<option value="41">Gravesend Library</option>
+	<option value="17">Greenhithe Library</option>
+	<option value="93">Hadlow Library</option>
+	<option value="64">Hartley Library</option>
+	<option value="101">Hawkhurst Library</option>
+	<option value="56">Headcorn Library</option>
+	<option value="10">Herne Bay Library</option>
+	<option value="44">Higham Library</option>
+	<option value="94">Hildenborough Library</option>
+	<option value="45">Hive House Library</option>
+	<option value="35">Hythe Library</option>
+	<option value="65">Kemsing Library</option>
+	<option value="275">Kent History and Library Centre</option>
+	<option value="46">King's Farm Library</option>
+	<option value="95">Larkfield Library</option>
+	<option value="4">Lenham Library</option>
+	<option value="18">Longfield Library</option>
+	<option value="36">Lydd Library</option>
+	<option value="37">Lyminge Library</option>
+	<option value="57">Madginford Library</option>
+	<option value="274">Maidstone Library</option>
+	<option value="58">Marden Library</option>
+	<option value="81">Margate Library</option>
+	<option value="47">Marling Cross Library</option>
+	<option value="48">Meopham Library</option>
+	<option value="77">Minster-in-Sheppey Library</option>
+	<option value="125">Minster-in-Thanet Library</option>
+	<option value="66">New Ash Green Library</option>
+	<option value="38">New Romney Library</option>
+	<option value="86">Newington Library</option>
+	<option value="67">Otford Library</option>
+	<option value="103">Paddock Wood Library</option>
+	<option value="104">Pembury Library</option>
+	<option value="78">Queenborough Library</option>
+	<option value="87">Ramsgate Library</option>
+	<option value="68">Riverhead Library</option>
+	<option value="49">Riverview Park Library</option>
+	<option value="105">Rusthall Library</option>
+	<option value="39">Sandgate Library</option>
+	<option value="30">Sandwich Library</option>
+	<option value="70">Seal Library</option>
+	<option value="62">Sevenoaks Library</option>
+	<option value="79">Sheerness Library</option>
+	<option value="59">Shepway Library</option>
+	<option value="106">Sherwood Library</option>
+	<option value="107">Showfields Library</option>
+	<option value="74">Sittingbourne Library</option>
+	<option value="96">Snodland Library</option>
+	<option value="108">Southborough Library</option>
+	<option value="29">St. Margaret's-at-Cliffe Library</option>
+	<option value="5">Stanhope Library</option>
+	<option value="60">Staplehurst Library</option>
+	<option value="11">Sturry Library</option>
+	<option value="19">Summerhouse Drive Library</option>
+	<option value="20">Sutton-at-Hone Library</option>
+	<option value="12">Swalecliffe Library</option>
+	<option value="131">Swan Valley Library</option>
+	<option value="71">Swanley Library</option>
+	<option value="22">Temple Hill Library</option>
+	<option value="6">Tenterden Library</option>
+	<option value="80">Teynham Library</option>
+	<option value="89">Tonbridge Library</option>
+	<option value="97">Tonbridge North Library</option>
+	<option value="99">Tunbridge Wells Library</option>
+	<option value="50">Vigo Library</option>
+	<option value="72">West Kingsdown Library</option>
+	<option value="98">West Malling Library</option>
+	<option value="73">Westerham Library</option>
+	<option value="88">Westgate Library</option>
+	<option value="13">Whitstable Library</option>
+	<option value="40">Wood Avenue Library</option>
+	<option value="7">Wye Library</option>
+	<option value="61">Yalding Library</option>
+
+</select>
+                </div>
+            </div>
+            <div class="ClearBoth"></div>
+            <div>
+                <p>
+	                <input type="submit" name="ctl00$_mainContent$uxLibrarySearchButton" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$_mainContent$uxLibrarySearchButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00__mainContent_uxLibrarySearchButton" class="uxPrim86Button" />
+                </p>
+            </div>
+            <div class="ClearBoth"></div>
+            <h3>Your nearest library</h3>
+            				
+            <div class="formelements2colcontainer">
+                <div class="medium-4 columns left">
+                    <label for="ctl00__mainContent_uxBranchDropDownList" id="ctl00__mainContent_uxPostcodeLabel">Your postcode</label>
+                </div>
+                <div class="medium-8 columns right">
+		            <input name="ctl00$_mainContent$uxPostcodeTextBox" type="text" maxlength="8" id="ctl00__mainContent_uxPostcodeTextBox" class="uppercasetext" />
+		        </div>
+                
+            </div>
+            <div class="ClearBoth"></div>
+            <div>
+                <p class="left">
+	            <input type="submit" name="ctl00$_mainContent$uxPostcodeSearchButton" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$_mainContent$uxPostcodeSearchButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00__mainContent_uxPostcodeSearchButton" class="uxPrim86Button" />
+                </p>
+	        </div>
+        </div>
+        <div class="medium-4 columns left">
+            <p>
+		        
+            </p>
+		    <p>
+		        <span id="ctl00__mainContent_uxLibraryPromoTextLabel">Find details of the location, opening times and facilities for our static libraries and archive centre. 
+<br / >
+<br /> 
+<b>For the latest information about temporary closures and service disruptions go to our
+	<a href="http://www.facebook.com/KentLibrariesArchives"> Facebook page</a> or to
+	<a href="http://www.kentclosures.co.uk/master.php">Kent Closures</a><br><br></b>
+</font>
+<br />
+
+<b> <font color =red><br></b>
+
+</font></span>
+		    </p>
+        </div>
+    </div>
+    <div class="ClearBoth"></div>
+    <p>
+        <hr />
+    </p>
+    <h2>Mobile libraries</h2>
+    <div class="formelements2colcontainer">
+        <div class="medium-3 columns left">
+            <p>
+		        <img id="ctl00__mainContent_uxMobileImage" title="Mobile library" src="PromoImage.aspx?lid=0&amp;aid=0&amp;type=Mobiles Intro" height="78" width="150" border="0" />
+            </p>
+        </div>
+        <div class="medium-6 columns right">
+            <div>
+                Use our <a href="http://webapps.kent.gov.uk/KCC.MobileLibrary.Web.Sites.Public/TimetableSearch.aspx">search facility</a> to find out where and when our mobile libraries stop or call 03000 41 31 31 for more information.<br><br>
+<b><font color=red></b></font>
+            </div>
+        </div>
+    </div>
+    <div class="ClearBoth"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+            <!-- START Footer -->
+    <!-- !!skipLink!! -->
+    <footer id="footer">
+      <div>
+           
+          <a href="#" class="icon icon-top back-to-top" title="Back to top">Back to top</a>
+          <div class="row">
+              <div class="small-12 medium-7 columns">
+                  <ul class="footer-nav">
+                      <li><a href="http://www.kent.gov.uk/aboutthissite">About this website</a></li>
+                      <li><a href="http://www.kent.gov.uk/contactus">Contact us</a></li>
+                  </ul>
+              </div>
+              <div class="small-12 medium-4 columns right copy">
+                      <div class="icon icon-logo-full icon-logo-full-dims"></div>
+                      <p>&copy; Kent County Council</p>
+              </div>
+          </div>
+ 
+          <div class="social">
+              <div class="row">
+              </div>
+          </div>
+      </div>
+    </footer>
+    <!-- END Footer -->
+
+        <!-- Javascript -->
+        <script src="/js/vendor.min.js" type="text/javascript"></script>
+        <script src="/js/main.min.js" type="text/javascript"></script>
+        <!--[if lt IE 9]>
+        <script src="/js/rem.js"></script> 
+        <![endif]-->
+    </body>
+</html>

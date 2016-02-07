@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js">
+<head>
+<meta charset="utf-8" />
+
+  
+  
+  
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <meta name="keywords" content="Household waste and recycling bins" />
+    
+    <meta name="dcterms.available" content="2015-02-19T17:04:21Z" />
+    <meta name="dc.type" content="Content Page" />
+  
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="google-translate-customization" content="c891ed76c3b0235-832d37a42e0942b1-gafa62815664b2abd-11" />
+<title>Household waste and recycling bins - barnet.gov.uk</title>
+
+<!--
+TODO: shortcut icon needs setting. Don't re-enable with href="#" as it causes another GET request to be triggered by Chrome.
+<link rel="shortcut icon" type="image/ico" href="#" />
+-->
+
+<link rel="stylesheet" href="/docroot/css/leaflet.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/docroot/css/chosen.min.css" />
+<link rel="stylesheet" href="/docroot/css/jquery.mCustomScrollbar.min.css" />
+
+
+<link rel="stylesheet" href="/docroot/css/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="/docroot/js/jquery-1.11.0.min.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="/docroot/js/jquery-ui.js"></script>
+<script src="/docroot/js/date-picker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/styles.css" media="screen, print" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.date.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.time.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/print.css" media="print" />
+
+
+<script src="/docroot/js/plugins/rem.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+  <script src="/docroot/js/plugins/nwmatcher-1.2.5.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/selectivizr.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/docroot/css/ie8.css" />
+<![endif]-->
+
+<!--[if ! lte IE 6]><!-->
+
+
+<!-- #TODO CBSCH-261 Fixing Foundation Javascript error -->
+<style type="text/css">
+meta.foundation-data-attribute-namespace {
+    font-family: false;
+}
+</style>
+
+<script src="/docroot/js/leaflet.js"></script>
+<script src="/docroot/js/leaflet.markercluster-src.js"></script>
+<script src="/docroot/js/leaflet.markercluster.js"></script>
+
+<script src="/docroot/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/init-behaviour.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.placeholder.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.accordion.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.tab.js" type="text/javascript"></script>
+
+<script src="/docroot/js/scroll.js" type="text/javascript"></script>
+
+<script src="/docroot/js/classie.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery-truncate/jquery.truncate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/modernizr.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/fastclick.js" type="text/javascript"></script>
+
+<script src="/docroot/js/iframeResizer.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.reveal.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/additional-methods.min.js" type="text/javascript"></script>
+
+<script src="https://www.browsealoud.com/plus/scripts/ba.js" type="text/javascript"></script>
+
+<script src="/docroot/js/browse-aloud.js" type="text/javascript"></script>
+
+
+<!--<![endif]-->
+<script>
+    /*<![CDATA[*/
+    (function (BCP) {
+        BCP.registerAjaxUrl = '/citizen-home/register/content/column1/singleton.html';
+        BCP.loginAjaxUrl = '/citizen-home/login/content/column1/singleton.html';
+    })(BCP);
+    /*]]>*/
+</script>
+
+<!-- Clickjacking prevention for legacy browsers that don't support X-Frame-Options header -->
+  
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+  
+
+<script>
+
+    /*<![CDATA[*/
+    jQuery(document).ready(function() {
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        var TP_GA = {
+            gaTrackerId : 'UA-60148629-1',
+            auth : false,
+            authDimensionName : 'dimension1'
+        }
+
+        ga('create', TP_GA.gaTrackerId, 'auto');
+        ga('set', 'forceSSL', true);
+
+        if (TP_GA.authDimensionName != '') {
+            ga('set', TP_GA.authDimensionName, TP_GA.auth.toString());
+        }
+
+        ga('send', 'pageview');
+    });
+    /*]]>*/
+</script>
+  
+ 
+
+</head>
+<body id="citizen-content-pg" class="nav-col">
+      
+    <div class="header">
+        <header>
+            <div id="skiptocontent">
+                <a href="#contentskip">Skip to content</a>
+            </div>
+             <span class="barnet-logo column small-3">
+                <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                    Barnet</a>
+                <img class="print-only" src="/docroot/img/barnet-logo-green.png" />
+            </span> 
+             <form class="global-search search-controls service-search large-6 large-offset-1 column" method="GET" action="/citizen-home/search.html">
+                <div class="global-search-input">
+                    <input type="search" name="keywords" title="main-search" />
+                </div>
+                <div class="global-search-submit">
+                    <button type="submit" class="button expand">Search</button>
+                </div>
+            </form> 
+              
+            <div class="user-section">
+                 <div id="129fae96-207a-4482-963b-0578a901db3b">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/branding/user/singleton';
+        var target = '#' + '129fae96-207a-4482-963b-0578a901db3b';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                                {
+                                    pageLanguage : 'en',
+                                    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+                                },
+                                'google_translate_element');
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+            </div>
+              
+            <div class="mobile-nav">
+                <i class="iconfontello-search"></i>
+                <i class="iconfontello-menu"></i>
+            </div>
+        </header>
+    </div>
+      
+      
+      
+    
+      
+      
+      
+    <div class="content">
+        
+              
+<nav id="nav" class="side-nav side-nav-off medium-4 large-3 column">
+    <!-- TODO: Why do we need a LI wrapping the nav? This means our level has to start at 2! -->
+    <ul class="nav-level-1" style="display: block">
+        <li class="open">
+              
+            <ul class="nav-level-2" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/rubbish-waste-and-recycling.html">
+                        <i></i>
+                        <span class="menu-item">Rubbish, waste and recycling</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/rubbish-waste-and-recycling/household-recycling-and-waste.html">
+                        <i></i>
+                        <span class="menu-item">Household recycling and waste</span>
+                    </a>
+                      
+            <ul class="nav-level-4" style="display: block">
+                  
+                <li class="open active">
+                    <a href="/citizen-home/rubbish-waste-and-recycling/household-recycling-and-waste/household-waste-and-recycling-bin-collections.html">
+                        <i></i>
+                        <span class="menu-item">Household waste and recycling bins</span>
+                    </a>
+                      
+            <ul class="nav-level-5" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling/household-recycling-and-waste/household-waste-and-recycling-bin-collections/compostable-liners.html">
+                        <i></i>
+                        <span class="menu-item">Compostable liners</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+        </li>
+    </ul>
+</nav>
+  
+            <div class="large-9 medium-8 small-12 column main-content">
+                 <nav id="breadcrumb-nav">
+        <div id="breadcrumb" class="breadcrumb-panel">
+            <ul class="breadcrumbs">
+                  
+                
+                <li>
+                    <a href="/citizen-home.html">Home</a>
+                </li>
+                 
+                  
+                <li class="service-nav">
+                    <select onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="Our services">Our services</option>
+                        <option value="/citizen-home/business.html">Business Support in Barnet</option>
+                        <option value="/citizen-home/environmental-health.html">Environmental Health and Trading Standards</option>
+                        <option value="/citizen-home/libraries.html">Libraries</option>
+                        <option value="/citizen-home/regeneration.html">Regeneration</option>
+                        <option value="/citizen-home/public-health.html">Public Health </option>
+                        <option value="/citizen-home/adult-social-care.html">Adult social care</option>
+                        <option value="/citizen-home/council-and-democracy.html">Council and democracy</option>
+                        <option value="/citizen-home/housing-and-community.html">Housing and community</option>
+                        <option value="/citizen-home/schools-and-education.html">Schools and education</option>
+                        <option value="/citizen-home/parks-sport-and-leisure.html">Parks, sport and leisure</option>
+                        <option value="/citizen-home/council-tax-and-benefits.html">Council Tax and Benefits</option>
+                        <option value="/citizen-home/parking-roads-and-pavements.html">Parking, roads and pavements</option>
+                        <option value="/citizen-home/rubbish-waste-and-recycling.html">Rubbish, waste and recycling</option>
+                        <option value="/citizen-home/children-young-people-and-families.html">Children, young people and families</option>
+                        <option value="/citizen-home/births-deaths-marriages-and-nationality.html">Births, deaths, marriages and nationality</option>
+                        <option value="/citizen-home/planning-conservation-and-building-control.html">Planning, Conservation and Building Control</option>
+                        <option value="/citizen-home/news.html">News and features</option>
+                        <option value="/citizen-home/directories.html">Directories</option>
+                        <option value="/citizen-home/events.html">Events List</option>
+                        <option value="/citizen-home/pledgebank.html">Pledges</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling.html">Rubbish, waste and recycling</a>
+                </li>
+                 
+                  
+                
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling/household-recycling-and-waste.html">Household recycling and waste</a>
+                </li>
+                 
+                  
+                
+                
+                  
+            </ul>
+        </div>
+    </nav> 
+                  
+                <span class="skip-anchor" id="contentskip"></span>
+                 <main id="main" role="main">
+                    
+                  
+                <div id="intro" class="content-page-intro">
+
+                      
+                    <div class="small-6 columns left flush-left">
+                    
+                        <h1>Household waste and recycling bins</h1>
+                          
+                        <ul>
+                            <li>
+                                
+                                    <small>Rubbish, waste and recycling</small>
+                                
+                            </li>
+                        </ul>
+                        
+                       
+                          
+                          
+                       
+                    </div>
+
+                    <div class="small-6 columns right featured-image">
+                        <img src="/dam/jcr:7d263133-12ff-48a2-b900-9bd0b054e3dd/008464_14_October_W3__Carousel_Small_1.2015-02-26-11-43-19.jpg" alt="bins october 14" />
+                        <p class="content-image-description"></p>
+                    </div>
+                    
+                    
+                    
+                      
+                     
+                </div>
+                  
+                 
+            <div class="row">
+                 
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <h2>Your waste and recycling bins</h2>
+
+<p>Depending on the kind of property you live in, you will have a different selection of bins. This page is for residents who live in houses, converted flats in houses and small blocks of flats with five or less properties.</p>
+
+<p>Find out more information on recycling <u><a href="/citizen-home/rubbish-waste-and-recycling/household-recycling-and-waste/flats-waste-and-recycling-bin-collections.html">if you live in a flat block with 6 or more properties</a></u>.</p>
+
+<h3>Blue bin&nbsp;for mixed recycling</h3>
+
+<p>Your&nbsp;240 litre blue bin is for&nbsp;mixed recycling and is collected <strong>weekly</strong>. You do not need to sort the items.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>Mixed recycling:</strong></p>
+
+			<ul>
+				<li>cardboard</li>
+				<li>cartons</li>
+				<li>food tins and drinks cans</li>
+				<li>household plastic packaging</li>
+				<li>mixed glass, bottles and jars</li>
+				<li>mixed paper, including loose shredded paper</li>
+			</ul>
+			</td>
+			<td><img alt="" src="/dam/jcr:1f5d0e8d-0c86-4764-be36-d7312a02db1d/Blue%20bin%20icon.jpg" style="height:198px; width:198px" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>What you <strong>shouldn&#39;t</strong> put in your blue bin</h3>
+
+<ul>
+	<li><strong>batteries</strong>: please place household batteries in a clear bag on top of the lid of your blue recycling bin on your collection day</li>
+	<li><strong>textiles</strong>: please do not place clothes and textiles in your blue recycling bin. Textiles can be taken to the <a href="https://www.barnet.gov.uk/citizen-home/rubbish-waste-and-recycling/recycling-sites-in-barnet/civic-amenity-and-recycling-centre.html">Summers Lane Reuse and Recycling Centre</a>, charity shops or <a href="/citizen-home/rubbish-waste-and-recycling/reduce-and-reuse-for-barnet/clothing-and-textiles.html" title="Textile Banks">textile recycling banks</a>. If you cannot recycle your textiles in any of these ways please contact us using the details below.</li>
+	<li><strong>electrical items</strong>: You should not place electrical items in your blue bin. These items can be recycled at the <a href="https://www.barnet.gov.uk/citizen-home/rubbish-waste-and-recycling/recycling-sites-in-barnet/civic-amenity-and-recycling-centre.html">Summers Lane Reuse and Recycling Centre</a>. Small electrical items can also be recycled at various <a href="/citizen-home/rubbish-waste-and-recycling/reduce-and-reuse-for-barnet/electrical.html" title="Electrical recycling banks">electrical recycling banks</a> across the borough or you can arrange a free collection by contacting ReStore Community Projects on 020 3142 8506.</li>
+	<li><strong>clinical waste</strong>: please do not put any clinical waste items such as syringes, needles or other sharp items in your recycling bin as these are extremely dangerous in the manual processing of materials. These items cannot be recycled. If you need to arrange a <a href="https://www.barnet.gov.uk/citizen-home/rubbish-waste-and-recycling/household-recycling-and-waste/clinical-waste.html">clinical waste collection</a> please click <a href="https://www.barnet.gov.uk/citizen-home/rubbish-waste-and-recycling/household-recycling-and-waste/clinical-waste.html">here</a>.</li>
+	<li><strong>wood</strong>: please do not place this in your blue bin. Wood can be recycled at the <a href="https://www.barnet.gov.uk/citizen-home/rubbish-waste-and-recycling/recycling-sites-in-barnet/civic-amenity-and-recycling-centre.html">Summers Lane Reuse and Recycling Centre</a><a href="/citizen-home/rubbish-waste-and-recycling/household-recycling-and-waste/civic-amenity-and-recycling-centre.html" title="Civic Amenity and Recycling Centre">.</a></li>
+	<li><strong>food waste</strong>: please place food waste in your <strong>brown bin</strong> for recycling</li>
+	<li><strong>nappies, polystyrene and crisp packets</strong>: these items cannot be recycled and should not be placed in your blue bin. Please dispose of these in your refuse bin.</li>
+</ul>
+
+<p>Download an&nbsp;<a href="/dam/jcr:16b885ed-bfdb-4385-95e3-1cb67649374f/A-Z%20List%20of%20What%20You%20Can%20Recycle.pdf" title="download A to Z list">A-Z list of what can be recycled and where</a>. If an item is not listed, unfortunately it cannot be recycled.<br />
+<br />
+<strong>Additional Blue Bin</strong><br />
+If you need an additional blue recycling bin you can request one&nbsp;free of charge&nbsp;by using the <a href="https://www.barnet.gov.uk/citizen-home/rubbish-waste-and-recycling/forms/New--damaged-and-additional-bins.html">bin order form </a>or by contacting our Street Based services team using the contact details below.</p>
+
+<p><strong>Clear Sack Recycling Service </strong><br />
+If you cannot physically accommodate a blue bin on your property, we will provide a clear sack recycling service. We will deliver batches of recycling sacks two times a year and you can put the same items in your sack as in a blue bin. If you are unsure if this applies to you or need to order more sacks please contact our Street Based services team using the contact details below.</p>
+
+<h3>Brown bins&nbsp;for food waste</h3>
+
+<p>You&nbsp;have a 7 litre food waste caddy for your kitchen and a 23 litre food waste bin.&nbsp;Your&nbsp;caddy is for you to collect&nbsp;unwanted&nbsp;food and leftovers in your kitchen. You can empty this into your larger food waste bin that is kept outside. The brown bin has&nbsp;a lockable lid.</p>
+
+<p>We will collect your brown food waste bin <strong>weekly.</strong></p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>All</strong> cooked and uncooked food, including:</p>
+
+			<ul>
+				<li>bread,&nbsp;pasta, and rice</li>
+				<li>dairy</li>
+				<li>fish</li>
+				<li>fruit and veg</li>
+				<li>meat and bones</li>
+				<li>tea and coffee grounds</li>
+			</ul>
+			</td>
+			<td><img alt="" src="/dam/jcr:74d63228-3a33-49a3-aba6-27718559d033/Brown%20bin%20icon.jpg" style="height:220px; width:220px" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>Closing and locking your brown bin</h3>
+
+<ol>
+	<li>empty kitchen caddy: take bag from caddy and tie it up</li>
+	<li>open outdoor food waste bin by moving handle to rear of the bin</li>
+	<li>put tied bag in</li>
+	<li>close and lock food waste bin by closing lid and pulling handle to upright position</li>
+</ol>
+
+<p>Compostable liners<br />
+Compostable liners are widely available at most supermarkets, many hardware stores, and through online suppliers. We can only accept liners with the seedling logo, as these will break down during the composting process.&nbsp; Here are some of our recommended suppliers:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td>
+			<ul>
+				<li><a href="http://www.alina.co.uk/barnet">Alina for Barnet</a></li>
+				<li><a href="http://www.caddylinersdirect.co.uk/">Caddy Liners Direct</a></li>
+				<li><a href="http://www.gardeningdelights.com/">Gardening Delights</a></li>
+				<li><a href="http://www.all-green.co.uk/">All Green</a></li>
+			</ul>
+			</td>
+			<td><img alt="" src="/dam/jcr:dbd425fb-af56-4f16-9ddf-d0160d789690/Compostable_logo.jpg" style="height:140px; width:140px" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<p><strong>If you do not wish to use liners you can place your food waste loose into your brown bin for collection.</strong></p>
+
+<h3>Brown&nbsp;bin collections during&nbsp;warm weather</h3>
+
+<p><em>Follow these tips to minimise any problems while using the food waste recycling collection service during&nbsp;warm weather:</em></p>
+
+<ul>
+	<li>Place any food waste to be recycled immediately into your food waste caddy in your kitchen and empty this daily into your external brown food waste bin.</li>
+	<li>Clear out all food that requires recycling from your fridge the night before collection day</li>
+	<li>Try to keep the food waste bin out of direct sunshine in really hot weather</li>
+	<li>Keep the bin lid locked at all times by placing the handle in the upright position</li>
+	<li>If you are using compostable liners, please note that we can only accept liners with the seedling logo</li>
+	<li>Some essential oils, such as citronella and tea tree oil are natural insect repellents. Try smearing your bin lid with one of these oils if flies are a problem but please do not use if you are pregnant</li>
+	<li>If your food waste caddy or bin needs cleaning, you can rinse it with soap and water or a mild disinfectant.</li>
+</ul>
+
+<h3>Green&nbsp;bin for garden waste</h3>
+
+<p>Barnet offer an optional service for&nbsp;garden waste. If you are signed up to this service, you will be provided a&nbsp;green wheeled bin which should only be used for&nbsp;garden waste.&nbsp;Your green bin is collected <strong>fortnightly</strong>.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td>
+			<p>Garden waste, including:</p>
+
+			<ul>
+				<li>grass cuttings</li>
+				<li>hedge trimmings and tree prunings</li>
+				<li>branches up to 20cm in diameter (8&quot;) and under 60cm (24&quot;) in length</li>
+				<li>flowers leaves and weeds</li>
+			</ul>
+			</td>
+			<td><img alt="" src="/dam/jcr:4abe45df-4ce2-481d-ae43-8549414c2e3e/Green_recycling_bin.jpg" style="height:174px; width:174px" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>The majority of the organic waste collected in Barnet is garden waste. Collecting garden waste with food waste together is costly as it has to be collected weekly and processed in an indoor facility due to food waste treatment.</p>
+
+<p>For many residents with a green bin they will have a Saturday collection. You can check your green bin collection day using our <a href="/citizen-home/rubbish-waste-and-recycling/household-recycling-and-waste/collections-for-postcode.html">postcode lookup</a>.</p>
+
+<h3>Black bin for general&nbsp;waste</h3>
+
+<p>All items you cannot recycle should go in your black refuse bin. Your black bin is collected <strong>weekly</strong>.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:100%">
+	<tbody>
+		<tr>
+			<td>
+			<ul>
+				<li>Un-recyclable rubbish</li>
+				<li>Plastic film / wrapping</li>
+				<li>Polystyrene</li>
+				<li>Nappies and pet waste</li>
+			</ul>
+			</td>
+			<td><img alt="" src="/dam/jcr:7cc241b6-cad3-4a03-9d4c-c31b7256e485/Black_refuse.jpg" style="height:164px; width:164px" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Please note that energy saving light bulbs contain small amounts of mercury and must be treated as hazardous waste. These should not be put in your blue or black bins&nbsp;but should be taken to the <a href="https://www.barnet.gov.uk/citizen-home/rubbish-waste-and-recycling/recycling-sites-in-barnet/civic-amenity-and-recycling-centre.html">Summers Lane Reuse and Recycling Centre</a> for safe disposal.</p>
+
+<h3>Green&nbsp;bin collections during cold weather</h3>
+
+<p>During very cold weather the contents of green bins can become frozen and stuck inside the bin &ndash; preventing the contents from being fully emptied by your collection crew. For health and safety reasons, crews cannot manually remove any items which are stuck in the bins. We will empty the contents on your next scheduled collection. Where possible, the council will endeavour to provide an interim collection of those bins that could not be fully emptied.</p>
+
+<p>If you would like to request an interim collection due to frozen contents in your bin please contact the Street Based services team&nbsp;(telephone: 020 8359 4600, email&nbsp;<a href="mailto:sbs@barnet.gov.uk">sbs@barnet.gov.uk</a>).</p>
+
+</div>
+<section class="contacts-widget widget">
+                    <h2>Contacts</h2>
+                      
+                    <div class="contacts-widget-wrapper clearfix">
+                          
+                        <div>
+                            <ul class="contact-info">
+                                <li class="text-strong">Street Based services</li>
+                                <li>Building 9, Mill Hill Depot, Bittacy Hill, London NW7 1BL</li>
+                                <li>&nbsp;</li>
+                                
+                                <li>
+                                    <span class="text-strong">Tel: </span>
+                                    <span>020 8359 4600</span>
+                                </li>
+                                <li>
+                                    <span class="text-strong">FAX: </span>
+                                    <span>0870 889 7459</span>
+                                </li>
+                                <li>
+                                    <span class="text-strong">Email: </span>
+                                    <span>sbs@barnet.gov.uk</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                          
+                    </div>
+                    
+                    
+                      
+                </section><section class="links-widget widget">
+            <h2>What do you want to do next?</h2>
+            <div>
+                <ul class="links-list">
+                      
+                    <li>
+                         
+                    <a class="button" href="/citizen-home/rubbish-waste-and-recycling/forms/Apply-for-an-assisted-waste-collection.html">Assisted waste collection</a>
+                     
+                    </li> 
+                    <li>
+                         
+                    <a class="button" href="/citizen-home/rubbish-waste-and-recycling/forms/New--damaged-and-additional-bins.html">Order new, additional or replacement bins</a>
+                     
+                    </li> 
+                    <li>
+                         
+                    <a class="button" href="https://www.barnet.gov.uk/citizen-home/register.html" rel="external">Register for Myaccount to see your Waste and Recycling information</a>
+                     
+                    </li>
+                    
+                    
+                    
+                    
+                      
+                </ul>
+            </div>
+        </section> 
+    <section class="documents-widget widget">
+        <h2>Download documents</h2>
+        <div class="documents-widget-wrapper clearfix">
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:1a0082b2-fee0-4c78-95b8-b6968bb682a7/009113_Recycling%20A5%20Booklet_Nov2015.pdf">Waste &amp; Recycling Service Leaflet</a>
+                <span>1.23 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:16b885ed-bfdb-4385-95e3-1cb67649374f/A-Z%20List%20of%20What%20You%20Can%20Recycle.pdf">A-Z List of What You Can Recycle</a>
+                <span>0.49 MB</span>
+                  
+
+                  
+            </div>
+
+              
+        </div>
+    </section>
+      
+            </div>
+         
+                </main> 
+                
+                 <div class="row">
+                    <div class="panel">
+                          
+                <section class="gm_sidebar row">
+                    <div class="gm-container">
+                        <div class="rate-page">
+                            <i class="iconfontello-thumbs-up"></i>
+                            <p>Rate this page</p>
+                        </div>
+                        <div class="rating-options">
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=3" target="_blank" title="rate this page as GOOD" rel="nofollow">
+                                <img src="/docroot/img/govmetric/smiling.png" alt="green smiley (good)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=2" target="_blank" title="rate this page as AVERAGE" rel="nofollow">
+                                <img src="/docroot/img/govmetric/indifferent.png" alt="orange smiley (average)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=4" target="_blank" title="rate this page as POOR" rel="nofollow">
+                                <img src="/docroot/img/govmetric/sad.png" alt="red smiley (poor)" />
+                            </a>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+                    <script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+                    <script type="text/javascript" src="//hitcounter.govmetric.com/982"></script>
+                </section>
+                  
+                    </div>
+                </div> 
+                
+            </div>
+        
+        
+          
+    </div>
+      
+      
+    <footer>
+          
+          
+        <nav class="footer-nav clearfix row">
+            <ul class="footer-links left">
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html" class="internal-link">Contact us</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/copyright.html" class="internal-link">Copyright</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/privacy.html" class="internal-link">Privacy notice</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" class="internal-link">Accessibility</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Disclaimer.html" class="internal-link">Disclaimer</a>
+                            
+                            
+                            
+                             </li>
+                
+                
+                
+                
+                
+                
+            </ul>
+            <ul class="social-icons right">
+                <li><a href="https://www.gov.uk/"><img height="18" width="90" src="/docroot/img/gov-uk-logo.png" alt="gov uk logo" /></a></li>
+                <li><a href="https://www.flickr.com/photos/barnetcouncil"><i class="flaticon-flickr"></i></a></li>
+                <li><a href="https://twitter.com/barnetcouncil"><i class="flaticon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/BarnetCouncil"><i class="flaticon-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/user/Barnetcouncil1"><i class="flaticon-youtube"></i></a></li>
+                <li class="browse-aloud-icon"><a id="show-browsealoud" title="Listen with BrowseAloud"><img src="/docroot/img/browse-aloud-logo.png" alt="Listen with BrowseAloud" /></a></li>
+            </ul>
+        </nav>
+        <div class="site-footer">
+            <div class="row">
+                <span class="barnet-logo right">
+                    <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                        Barnet</a>
+                </span>
+            </div>
+        </div>
+          
+    </footer>
+      
+    <script src="/docroot/js/plugins/retina.min.js" type="text/javascript"></script>
+    <script src="/docroot/js/plugins/chosen.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery("#ordering-download-form select").chosen();
+    jQuery(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+</body>
+</html>

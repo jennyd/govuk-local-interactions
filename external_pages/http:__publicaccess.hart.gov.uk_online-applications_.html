@@ -1,0 +1,534 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	
+	<!-- #BeginEditable "doctitle" -->
+<title>Simple Search</title>
+<!-- #EndEditable -->
+    <!-- #BeginEditable "metatags" --><!-- #EndEditable -->
+	
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<!-- Customer metatags -->
+	<meta content="Businesses" about="/businesses" property="dc:title" />
+	
+	<link rel="shortcut icon" href="http://publicaccess.hart.gov.uk/online-applications-skin/images/hart/favicon.ico" type="image/x-icon" />
+	
+    <link rel="stylesheet" href="http://publicaccess.hart.gov.uk/online-applications-skin/styles/screen.css" type="text/css" media="screen,projection" />
+    <link rel="stylesheet" href="http://publicaccess.hart.gov.uk/online-applications-skin/styles/theme1.css" type="text/css"/>
+	
+    <link rel="stylesheet" href="http://publicaccess.hart.gov.uk/online-applications-skin/styles/print.css" type="text/css" media="print" />
+	
+	<script type="text/javascript" src="http://publicaccess.hart.gov.uk/online-applications-skin/scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="http://publicaccess.hart.gov.uk/online-applications-skin/scripts/jquery.toolbar.idox.min.js"></script>
+    <script type="text/javascript" src="http://publicaccess.hart.gov.uk/online-applications-skin/scripts/common.js"></script>
+    
+	<!-- Customer Analytics Script -->
+	<script>var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-11661901-2"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();</script>
+	
+    <script type="text/javascript">
+	$('html').addClass('js');
+    </script>
+    
+    <!-- #BeginEditable "mobile" --><!-- #EndEditable -->
+    <!-- #BeginEditable "head" --><!-- #EndEditable -->
+    <!-- #BeginEditable "webapp" -->
+        <script type="text/javascript">
+            $(document).ready( function() {
+                onSearchTypeChange();
+                $("input[name='searchType']").click(function() {
+                    onSearchTypeChange();
+                });
+            });
+
+            function onSearchTypeChange() {
+                if ($("input[name='searchType']:checked").val() == 'Application') {
+                    $(".row1.status").removeClass("hide");
+                } else {
+                    $(".row1.status").addClass("hide");
+                }
+            }
+        </script>
+    <!-- #EndEditable -->
+	
+	
+</head>
+<body>
+
+    <!-- IDOX PA START -->
+    <div id="idox">
+        <div id="pa">
+			<div id="header">
+				<div class="container">
+					<a href="http://www.hart.gov.uk/" title="Hart District Council home page"><div id="logo"></div></a>
+					<div id="headertitle"><ul class="menu"><li class="menu__item is-leaf menu__item is-leaf first leaf menu-355"><a href="http://www.hart.gov.uk/contact-us" title="" class="menu__link menu__link">Contact us </a></li><li class="menu__item is-leaf menu__item is-leaf last leaf menu-354"><a href="http://www.hart.gov.uk/feedback" title="" class="menu__link menu__link">Feedback</a></li></ul></div>
+                    <div id="block-tb-megamenu-main-menu"> <!-- Custom main nav menu -->
+                        <ul class="tb-megamenu-nav">
+                            <li data-id="316" class="tb-megamenu-item">
+                                <a href="http://www.hart.gov.uk/home">Home</a>
+                            </li>
+                            <li data-id="320" class="tb-megamenu-item">
+                                <a href="http://www.hart.gov.uk/services">My Services</a>
+                            </li>
+                            <li data-id="319" class="tb-megamenu-item active">
+                                <a href="http://www.hart.gov.uk/residents">Residents</a>
+                            </li>
+                            <li data-id="318" class="tb-megamenu-item">
+                                <a href="http://www.hart.gov.uk/businesses">Businesses</a>
+                            </li>
+                            <li data-id="317" class="tb-megamenu-item">
+                                <a href="http://www.hart.gov.uk/visiting">Visiting</a>
+                            </li>
+                            <li data-id="1371" class="tb-megamenu-item">
+                                <a href="http://www.hart.gov.uk/the-council">The Council</a>
+                            </li>
+                        </ul>
+                    </div>
+					<div class="clear"></div>
+				</div>	
+			</div>
+			<div id="breadcrumbs" class="container">
+				<ul>
+					<li><a href="http://www.hart.gov.uk/">Home</a></li>
+					<li><a href="http://www.hart.gov.uk/residents">Residents</a></li><li><a href="http://www.hart.gov.uk/planning-residents" title="Planning for residents">Planning for residents</a></li><li>Public Access</li>
+				</ul>
+			</div>
+            <div class="container">
+       			<div id="toolbar" class="nojs">
+                    <ul>	
+                       <li id="search" class="main"><span>Search</span>
+   							<ul>	
+								<!-- #BeginLibraryItem "/Library/searchModulesNavItems.lbi" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            <li id="planLinks">
+                <a href="/online-applications/search.do?action=simple&amp;searchType=Application" >
+                    <span>Planning</span>
+                </a>
+                <ul>
+                    <li id="planBasicSearch">
+                        <a href="/online-applications/search.do?action=simple&amp;searchType=Application">
+                            Simple Search
+                        </a>
+                    </li>
+
+                    <li id="planAdvancedSearch">
+                        <a href="/online-applications/search.do?action=advanced&amp;searchType=Application">
+                            Advanced
+                        </a>
+                    </li>
+                    <li id="planListSearch">
+                        <a href="/online-applications/search.do?action=weeklyList&amp;searchType=Application">
+                            Weekly/Monthly Lists
+                        </a>
+                    </li>
+                    <li id="planPropertySearch">
+                        <a href="/online-applications/search.do?action=property&amp;type=custom">
+                            Property Search
+                        </a>
+                    </li>
+					
+                    
+                        <li id="planMapsearch">
+                            <a href="/online-applications/spatialDisplay.do?action=display&amp;searchType=Application">
+                                Map Search
+                            </a>
+                        </li>
+                    
+					
+                </ul>
+            </li>
+        
+
+        
+            <li id="bcLinks">
+                <a href="/online-applications/search.do?action=simple&amp;searchType=BuildingControl">
+                    <span>Building Control</span>
+                </a>
+                <ul>
+                    <li id="bcBasicSearch">
+                        <a href="/online-applications/search.do?action=simple&amp;searchType=BuildingControl">
+                            Simple Search
+                        </a>
+                    </li>
+                    <li id="bcAdvancedSearch">
+                        <a href="/online-applications/search.do?action=advanced&amp;searchType=BuildingControl">
+                            Advanced
+                        </a>
+                    </li>
+                    <li id="bcListSearch">
+                        <a href="/online-applications/search.do?action=weeklyList&amp;searchType=BuildingControl">
+                            Weekly/Monthly Lists
+                        </a>
+                    </li>
+                    <li id="bcPropertySearch">
+                        <a href="/online-applications/search.do?action=property&amp;type=custom">
+                            Property Search
+                        </a>
+                    </li>
+
+                    
+                        <li id="bcMapsearch">
+                            <a href="/online-applications/spatialDisplay.do?action=display&amp;searchType=BuildingControl">
+                                Map Search
+                            </a>
+                        </li>
+                    
+					
+                </ul>
+            </li>
+        
+
+        
+
+        
+            <li id="liLinks">
+                <a href="/online-applications/search.do?action=simple&amp;searchType=LicencingApplication">
+                    <span>Licensing</span>
+                </a>
+
+                <ul>
+                    <li id="liBasicSearch">
+                        <a href="/online-applications/search.do?action=simple&amp;searchType=LicencingApplication">
+                            Simple Search
+                        </a>
+                    </li>
+                    <li id="liAdvancedSearch">
+                        <a href="/online-applications/search.do?action=advanced&amp;searchType=LicencingApplication">
+                            Advanced
+                        </a>
+                    </li>
+                    <li id="liPropertySearch">
+                        <a href="/online-applications/search.do?action=property&amp;type=custom">
+                            Property Search
+                        </a>
+                    </li>
+
+                    
+                        <li id="liMapsearch">
+                            <a href="/online-applications/spatialDisplay.do?action=display&amp;searchType=LicencingApplication">
+                                Map Search
+                            </a>
+                        </li>
+                    
+                </ul>
+            </li>
+        <!-- #EndLibraryItem -->
+                        	</ul>
+						</li>
+                        <!-- #BeginEditable "applicationForms" -->
+
+
+
+
+
+   
+<!-- #EndEditable -->   				
+                        <li id="myprofile" class="main"><span>My Profile</span>
+                            <ul>
+                              <!-- #BeginLibraryItem "/Library/consulteeInTrayNavItem.lbi" -->
+
+
+
+
+
+
+    <!-- #EndLibraryItem -->
+                                <li><a href="http://publicaccess.hart.gov.uk/online-applications/registered/displayUserDetails.do">Profile Details</a></li>
+                                <li><a href="http://publicaccess.hart.gov.uk/online-applications/registered/savedSearch.do?action=display">Saved Searches</a></li>
+                                <li><a href="http://publicaccess.hart.gov.uk/online-applications/registered/userAdmin.do?action=showNotifiedApplications">Notified Applications</a></li>
+                                <li><a href="http://publicaccess.hart.gov.uk/online-applications/registered/trackedApplication.do?action=display">Tracked Applications</a></li>
+                                <!-- #BeginEditable "formSubmissions" -->
+
+
+
+
+
+
+
+
+<!-- #EndEditable -->    	
+                            </ul>
+                        </li>
+                        <li id="loginLink" class="main"><!-- #BeginEditable "loginlogout" -->
+
+
+
+
+
+
+
+
+
+
+	<a href="/online-applications/registered/userAdmin.do">Login</a>
+<!-- #EndEditable --></li>
+                        <!-- #BeginEditable "register" -->
+
+
+
+
+
+
+
+
+   
+
+
+	<li id="register">
+        <a href="/online-applications/registrationWizard.do?action=start">Register</a>
+	</li>
+
+<!-- #EndEditable -->
+                    </ul>
+    			</div>
+
+    			<!-- #BeginEditable "headlinenews" -->
+    
+<!-- #EndEditable -->
+                 
+                <div id="pageheading">
+                    <h2><strong>Planning</strong> &raquo; <!-- #BeginEditable "pageheading" -->Simple Search <!-- #EndEditable --></h2>
+                    <!-- #BeginEditable "helplink" --><!-- #EndEditable -->
+                </div>
+                
+                <!-- START WAM CONTENT -->
+                <div class="content">
+                    <!-- #BeginEditable "errormsg" -->
+  
+    
+    
+
+    
+    
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "pagehead" -->
+    <p>
+    
+    
+        Search for Planning Applications and Appeals by keyword, application reference, postcode or by a single line of an address.
+    
+    </p>
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "tabs" -->
+    
+        
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<ul class="tabs">
+
+    
+    <li>
+        <a href="/online-applications/search.do?action=simple" class="active"><span>Simple</span></a>
+    </li>
+
+    
+    <li>
+        <a href="/online-applications/search.do?action=advanced" class=""><span> Advanced</span></a>
+        
+    </li>
+
+    
+        
+        <li>
+            <a href="/online-applications/search.do?action=weeklyList" class=""><span>Weekly / Monthly Lists</span></a>
+            
+        </li>
+    
+
+    
+    <li>
+        <a href="/online-applications/search.do?action=property&amp;type=custom" class=""><span> Property</span></a>
+        
+    </li>
+
+    
+    
+        <li>
+            
+            <a href="/online-applications/spatialDisplay.do?action=display&amp;searchType=Application" class=""><span>Map</span></a>
+        </li>
+    
+
+</ul>
+
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "tabsubnav" --><!-- #EndEditable -->
+                    <!-- #BeginEditable "pagebody" -->
+
+<div class="tabcontainer toplevel" id="simpleSearch">
+
+    <form name="searchCriteriaForm" method="post" action="/online-applications/simpleSearchResults.do?action=firstPage" id="simpleSearchForm">
+
+    <div class="row1">
+        <span id="searchfor">
+            Search for:
+        </span>
+
+        
+        
+            <label for="Application">
+                <input type="radio" name="searchType" value="Application" checked="checked" id="Application" />
+                Applications
+                
+                
+            </label>
+        
+            <label for="Appeal">
+                <input type="radio" name="searchType" value="Appeal" id="Appeal" />
+                Appeals
+                
+                
+            </label>
+        
+            <label for="Enforcement">
+                <input type="radio" name="searchType" value="Enforcement" id="Enforcement" />
+                Enforcements
+                
+                
+            </label>
+        
+    </div>
+    <div class="row1 status">
+        <label for="searchTypeStatus">
+            Status:
+        </label>
+        <select name="searchCriteria.caseStatus" id="searchTypeStatus"><option value="All">All</option>
+            <option value="Current">Current</option>
+            <option value="Decided">Decided</option></select>
+    </div>
+
+    
+    <div class="row2">
+        <label for="simpleSearchString">
+                Enter a <strong>keyword</strong>, <strong>reference number</strong>, <strong>postcode</strong> or <strong>single line of an address</strong>.
+        </label>
+    </div>
+    
+
+    <div class="row3">
+
+        
+        <span class="fieldhelp">
+            
+                <a href="http://publicaccess.hart.gov.uk/online-applications-skin/help/fieldhelp/simpleSearchString.htm" target="_blank" rel="external">
+                    <img src="http://publicaccess.hart.gov.uk/online-applications-skin/images/help.gif" alt="Help with Simple Search (opens in a new window)" title="Help with Simple Search (opens in a new window)" width="16" height="16" class="helpicon" />
+                </a>
+            
+            
+        </span>
+        
+        <input type="text" name="searchCriteria.simpleSearchString" maxlength="255" value="" onblur="javascript:this.value=this.value.replace(/^\s+|\s+$/g,'')" onfocus="javascript:this.value=this.value.replace(/^\s+|\s+$/g,'')" class="text" id="simpleSearchString" />
+
+        <input type="hidden" name="searchCriteria.simpleSearch" value="true" />
+        <input type="submit" value="Search" class="button primary" />
+
+    </div>
+
+    </form>
+</div>
+
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "pagefoot" -->
+                    <p><span class="heading3">When Commenting on Applications</span></p>
+                    <p>The system will time out after 60 minutes.  Please ensure that you have entered your comments within this time period.</p>
+                    <p><span class="heading3">Copyright Notice</span></p>
+                    <p>Plans, drawings and material submitted to the Council are protected by the Copyright Acts (Section 47, 1988 Act). Unless that Act provides a relevant exception to copyright, the copy must not be copied without the prior permission of the copyright owner. You may only use material which is downloaded and/or printed for consultation purposes, to compare current applications with previous schemes and to check whether developments have been completed in accordance with approved plans. Further copies must not be made without the prior permission of the copyright owner.</p>
+                    <!-- #EndEditable -->
+                </div>
+                <!-- END WAM CONTENT -->
+                
+                <p id="poweredBy">
+                    <a target="_blank" href="http://www.idoxgroup.com/">
+                        <img alt="an idox solution (opens in a new window)" title="Go to the Idox website (opens in a new window)" src="http://publicaccess.hart.gov.uk/online-applications-skin/images/idox.gif"/>
+                    </a>
+                </p>
+            </div>	
+			<div id="footer">
+				<div class="container">
+					<div id="footercontent"><p><strong>&copy;</strong>  &nbsp;<a href="http://www.hart.gov.uk/disclaimer" title="More information on the Disclaimer">Hart District Council</a></p></div>
+					<div id="links">
+						<ul>
+							<li><a href="http://www.hart.gov.uk/disclaimer" title="">Disclaimer</a></li>
+							<li><a href="http://www.hart.gov.uk/freedom-of-information" title="">Freedom of Information</a></li>
+							<li><a href="http://www.hart.gov.uk/privacy" title="">Privacy</a></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>	
+			</div>
+        </div>    
+    </div>  
+    <!-- IDOX PA END -->           
+	
+</body>
+</html>
+

@@ -1,0 +1,127 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<title>Dangerous Fouling</title>
+<style>
+	a, A:link, a:visited, a:active
+		{color: #0000aa; text-decoration: none; font-family: Tahoma, Verdana; font-size: 11px}
+	A:hover
+		{color: #ff0000; text-decoration: none; font-family: Tahoma, Verdana; font-size: 11px}
+	p, tr, td, ul, li
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 12px}
+	th
+		{background: #DBEAF5; color: #000000;}
+	.header1, h1
+		{color: #ffffff; background: #4682B4; font-weight: bold; font-family: Tahoma, Verdana; font-size: 13px; margin: 0px; padding-left: 2px; height: 21px}
+	.header2, h2
+		{color: #000000; background: #DBEAF5; font-weight: bold; font-family: Tahoma, Verdana; font-size: 12px;}
+	.intd
+		{color: #000000; font-family: Tahoma, Verdana; font-size: 11px; padding-left: 15px;}
+	.wcell
+		{background: #FFFFFF; vertical-align: top}
+	.ctrl
+		{font-family: Tahoma, Verdana, sans-serif; font-size: 12px; width: 100%;}
+	.btnform
+		{border: 0px; font-family: tahoma, verdana; font-size: 12px; background-color: #DBEAF5; width: 100%; height:18px; text-align: center; cursor: hand;}
+	.btn
+		{background-color: #DBEAF5; padding: 0px;}
+	textarea, select,input
+		{font: 9px Verdana, arial, helvetica, sans-serif; background-color: #DBEAF5;}
+
+	/* classes for validator */
+	.tfvHighlight
+		{font-weight: bold; color: red;}
+	.tfvNormal
+		{font-weight: normal;	color: black;}
+</style>
+<script language="JavaScript" src="calendar1.js"></script>
+<script language="JavaScript" src="validator.js"></script>
+</head>
+<body>
+
+<p class="MsoNormal" align="center"><font size="4"><b>Use this form to report a
+dog fouling incidents to Mid Devon District Council.<o:p>&nbsp; &nbsp;</b></o:p>
+</font></p>
+<p class="MsoNormal" align="center"><b>All contact details will be treated
+confidentially, anonymous reports will be investigated but if insufficient
+details are left and there is no means of contact, the call maybe abandoned.</b></p>
+<form method="POST" action="dogfouling.asp" name="dogfouling" onsubmit="return v.exec()">
+ <table border="1" width="872">
+    <tr>
+ <td align="right" valign="top">Human Check:</td>
+      <td><script type="text/javascript">var RecaptchaOptions = { theme : 'white', tabindex : 0};</script><script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6Leteb4SAAAAAHdCrU_murdeEMwADeWXKBRiO4Ng"></script><noscript><iframe src="http://api.recaptcha.net/noscript?k=6Leteb4SAAAAAHdCrU_murdeEMwADeWXKBRiO4Ng" frameborder="1"></iframe><br><textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea><input type="hidden" name="recaptcha_response_field" value="manual_challenge"></noscript>
+     </td>
+<td width="500" height="23" colspan="7"><b style="mso-bidi-font-weight:normal"><font color="blue"><b>A Captcha is used to tell whether a human being or a computer program is completing a form. Captchas are used to prevent abuse from "bots" or automated programs that are written to generate spam.<br><br>
+
+Please enter the two words shown in the text box provided. If you don't understand the current set of words you can click on the refresh icon to request a different set. 
+<br><br>
+Alternatively, if you press the speaker icon you can hear what to type in an audio sample.</b></font></td>
+</tr>
+      <td width="59" height="23" id="title">Title</td>
+      <td width="78" height="23"><input type="text" name="Title" size="20" onPaste="return false;"></td>
+      <td width="111" height="23" id="firstname">First Name</td>
+      <td width="122" height="23"><input type="text" name="txtFirstName" size="28" onPaste="return false;"></td>
+      <td width="100" height="23" align="right" id="surname">Surname</td>
+      <td width="362" height="23" colspan="3"><input type="text" name="txtSurname" size="45" onPaste="return false;"></td>
+    </tr>
+    <tr>
+      <td width="59" height="22" id="address">Address</td>
+      <td width="732" height="22" colspan="7"><input type="text" name="txtAdd1" size="120" onPaste="return false;"></td>
+    </tr>
+    <tr>
+      <td width="59" height="23" id="postcode">Postcode</td>
+      <td width="323" height="23" colspan="3"><input type="text" name="txtPostcode" size="20" onPaste="return false;"></td>
+      <td width="100" height="23" align="right" id="Homet">Home Telephone
+      </td>
+      <td width="90" height="23"><input type="text" name="txtTelNoHome" size="20" onPaste="return false;"></td>
+      <td width="65" height="23" align="right" id="Workt">Work Telephone
+      </td>
+      <td width="195" height="23"><input type="text" name="txtTelNoWork" size="20" onPaste="return false;"></td>
+    </tr>
+    <tr>
+      <td width="59" height="23" id="email">Email</td>
+      <td width="732" height="23" colspan="7"><input type="text" name="txtEmailAdd" size="85" onPaste="return false;"></td>
+    </tr>
+    <tr>
+      <td width="388" height="23" colspan="4" id="witness"><b style="mso-bidi-font-weight: normal">Did
+        you witness the event?</b>
+      <td width="403" height="23" colspan="4">&nbsp;Yes <input type="radio" value="Witnessed" name="radWitnessed">&nbsp;
+        No <input type="radio" name="radWitnessed" value="Not witnessed"></td></td>
+    </tr>
+    <tr>
+      <td width="797" height="23" colspan="8">
+        <p class="MsoNormal"><input type="submit" value="Continue" name="B2"></td>
+    </tr>
+    </table>
+	</form>
+
+<script language="JavaScript">
+// form fields description structure
+var a_fields = {
+'Title':{'l':'Title','r':true,'f':'alpha','t':'title'},
+'txtFirstName':{'l':'First Name','r':true,'f':'alpha','t':'firstname'},
+'txtSurname':{'l':'Surname','r':true,'f':'alpha','t':'surname'},
+'txtAdd1':{'l':'Address','r':true,'f':'alphanum','t':'address'},
+'txtPostcode':{'l':'Postcode','r':true,'f':'alphanum','t':'postcode'},
+'txtEmailAdd':{'l':'Email','r':true,'f':'email','t':'email'},
+'txtTelNoHome':{'l':'Home Telephone','f':true,'f':'phone','t':'Homet'},
+'txtTelNoWork':{'l':'Work Telephone','f':true,'f':'phone','t':'Workt'},
+'radWitnessed':{'l':'Did you witness the event','r':true,'t':'witness'}
+},
+
+o_config = {
+	'to_disable' : ['Submit', 'Reset'],
+	'alert' : 1
+}
+
+// validator constructor call
+var v = new validator('dogfouling', a_fields, o_config);
+
+</script>
+    
+
+</body>
+</html>
+

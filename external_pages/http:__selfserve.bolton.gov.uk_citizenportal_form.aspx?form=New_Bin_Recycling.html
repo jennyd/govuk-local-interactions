@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 ieA" lang="en"> </html><![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 ieA" lang="en"> </html><![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 ieA" lang="en"> </html><![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> </html><![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head><meta charset="utf-8" />
+<!-- www.phpied.com/conditional-comments-block-downloads/ -->
+<!--[if IE]><![endif]-->
+<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<![endif]-->
+
+
+<meta name="Description" content="Bolton Council - services for residents of Bolton" />
+<meta name="keywords" content="Bolton Council, Bins, streets, roads, benefits, libraries, services, Bolton, Council" />
+<meta name="author" content="Bolton Council" />
+
+
+<!-- Template Stylesheets --> 
+<link type="text/css" rel="stylesheet" href="PageTemplates/BoltonWebSkin/app_ldlthemes/css/bp-style.css" />
+<link type="text/css" rel="stylesheet" href="PageTemplates/BoltonWebSkin/app_ldlthemes/css/960.css" media="screen" />
+	
+<!-- Bolton.Gov Stylesheets -->
+<link type="text/css" rel="stylesheet" href="PageTemplates/BoltonWebSkin/app_ldlthemes/css/global-theme.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="PageTemplates/BoltonWebSkin/app_ldlthemes/css/print.css" media="print" />
+
+<!--Styles specific to this brand building on the core 960 styles specified in the Core960.master-->
+<link rel="stylesheet" type="text/css" href="PageTemplates/BoltonWebSkin/app_ldlthemes/css/citizen.css" media="screen" />
+
+<!--Styles specific to this layout building on the core 960 styles specified in the Core960.master-->
+<!-- Should there be any page specific styles not dealt with by different page layouts and the existing stylesheets ? if not we can ditch the content place holder -->
+ 
+
+<script src="PageTemplates/BoltonWebSkin/app_ldlthemes/scripts/modernizr-1.5.min.js"></script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+
+<!-- JQUERY -->
+<script type="text/javascript" src="PageTemplates/BoltonWebSkin/app_ldlthemes/scripts/jquery-1.7.1.min.js"></script>
+
+<!-- Cufon for the Bolton font -->
+<script type="text/javascript" src="PageTemplates/BoltonWebSkin/app_ldlthemes/scripts/cufon-yui.js"></script>
+<script type="text/javascript" src="PageTemplates/BoltonWebSkin/app_ldlthemes/scripts/Bolton_400.font.js"></script>
+
+	<script type="text/javascript">
+		Cufon.replace('h1, .eform_content_legend, #topbar, .landing h3 a'); 		
+		Cufon.replace('h2', { fontFamily: 'Bolton', hover:true });
+	</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	
+	<title>Bolton Council - New Bin Recycling</title>
+
+
+<link rel="stylesheet" href="css/selfservice.css" type="text/css" />
+<!--[if IE 6]>
+<link rel="stylesheet" href="css/selfservice_ie6.css" type="text/css" />
+<![endif]-->
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
+<link rel="stylesheet" href="css/datepicker.css" type="text/css" />
+<script type="text/javascript" src="javascript/jquery/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="javascript/jquery/jquery.tools.min.js"></script>
+<script type="text/javascript" src="javascript/jquery/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="javascript/swfupload.js"></script>
+<script type="text/javascript" src="javascript/selfservice.js"></script>
+<link rel="stylesheet" href="bolton/styles/LCPStyles.css" type="text/css" />
+<script type="text/javascript" src="javascript/newbinrecycling.js" ></script>
+
+</head>
+
+<body>
+<div id="outer" class="container_12">
+
+<!--Site Header-->
+	   <div style="background-color: #efefef; height: 179px;">
+        <header>
+ <!-- -->
+		    <div class="grid_12">
+		        <div class="tools">
+		          <ul class="clean smallnav">
+					<li><a href="#page_Content">Skip to content</a></li>
+		            <li><a href="http://www.bolton.gov.uk/website/pages/Websiteaccessibility.aspx">Accessibility</a></li>
+					<li><a href="#" onClick="function getProtocol(){return window.location.href.indexOf('https')==0?'https':'http';}(function(){if(navigator.userAgent.indexOf('MSIE')!=-1&&getProtocol()=='https'){alert('You are viewing a secure website. We do not currently support BrowseAloud services on secure sites.');}else{document.getElementsByTagName('body')[0].appendChild(document.createElement('script')).src=getProtocol()+'://babm.texthelp.com/Bookmarklet.ashx?l=uk';}})();">Listen to our website</a>
+                        </li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=A">A to Z of services</a></li>
+					<li><a href="http://www.bolton.gov.uk/contactus/Pages/Contactus.aspx">Contact us</a></li>
+					<li class="cookie-information"><a href="http://www.bolton.gov.uk/home/Pages/Copyrightdisclaimerandprivacy.aspx#cookies">We use cookies on this website</a></li>
+		          </ul>
+	      	</div>
+			</div>
+
+            
+          <div class="grid_4">
+            <a href="http://www.bolton.gov.uk/" class="dotgovlogo" title="bolton.gov.uk"></a>
+            </div>
+            
+            <div class="grid_8">
+            <!-- Search -->
+			    
+			<div class="headersearch" id="searchbox">
+		    </div>
+
+	      	<!-- Search -->
+            </div>            
+            
+	      	<div class="clear"></div>
+            
+	      	<div class="container_12" id="topbar">
+		      	<!-- Inter-Site Nav -->
+	      	
+		      	<nav class="grid_12" id="interSiteNav">
+				    <ul>
+					    <li class="selected"><a class="tab-citizen" href="http://www.bolton.gov.uk/home/Pages/default.aspx" title="Resident section">Resident</a></li>
+					    <li><a class="tab-business" href="http://www.bolton.gov.uk/website/Pages/Business.aspx" title="Business section">Business</a></li>
+					    <li><a class="tab-council" href="http://www.bolton.gov.uk/website/Pages/Aboutthecouncil.aspx" title="Council section">About the council</a></li>
+						<li><a class="tab-visitor" href="http://www.bolton.gov.uk/visitors">Visitors</a></li>
+				    </ul>
+		      </nav>
+	      	</div>
+            
+	      	<!-- Menu -->
+	      	<div class="clear"></div>
+	      	<div class="container_12 citizenMenu" id="menucontainer">
+	      	
+<nav id="menu" class="grid_12">	      		
+	      			
+<ul id="topnav">
+  <li> <a href="http://www.bolton.gov.uk/website/Pages/Benefitsandcounciltax.aspx" class="top"><span class="links">Benefits and <br /> council tax</span></a>
+  </li>
+  
+  <li> <a href="http://www.bolton.gov.uk/website/Pages/Binsandenvironmentalhealth.aspx" class="top"><span class="link">Bins and<br />environmental health</span></a>
+  </li>
+  
+  <li> <a href="http://www.bolton.gov.uk/website/Pages/Birthsmarriagesanddeaths.aspx" class="top"><span class="link">Births, marriages<br />and deaths</span></a>
+  </li>
+  
+  <li> <a href="http://www.bolton.gov.uk/website/Pages/Carehealthandadvice.aspx" class="top"><span class="link">Care, health<br />and advice</span></a>
+  </li>
+  
+  <li> <a href="http://www.bolton.gov.uk/website/Pages/Housingandcommunity.aspx" class="top"><span class="link">Housing and<br />community</span></a>
+  </li>
+  
+  <li> <a href="http://www.bolton.gov.uk/website/Pages/Jobsandtraining.aspx" class="top"><span class="link">Jobs and<br />training</span></a>
+  </li>
+  
+  <li> <a href="http://www.bolton.gov.uk/website/Pages/Librariesandleisure.aspx" class="top"><span class="links">Libraries<br />and leisure</span></a>
+  </li>
+  
+  <li><a href="http://www.bolton.gov.uk/website/Pages/Planning.aspx" class="top"><span class="link">Planning</span></a>
+  </li>
+  
+  <li> <a href="http://www.bolton.gov.uk/website/Pages/Schoolsandchildren.aspx" class="top"><span class="link">Schools and<br />children</span></a>
+  </li>
+ 
+ <li> <a href="http://www.bolton.gov.uk/website/Pages/Streetsparkingandtravel.aspx" class="top"><span class="link">Streets, parking<br />and travel</span></a>
+  </li>
+</ul>	      		
+
+</nav>
+</div>
+		</header></div>
+  <div class="lftcorner"></div>
+			
+            <div class="clear"></div>
+
+
+<div class="clear"></div>
+<div class="brandHeader Header">
+
+
+<div class="grid_12">
+<div class="clear"></div>
+
+<!-- Use this div for alerts -->
+<!-- <div class="ui-state-highlight serviceAlert ">
+<h2>Customer notice about online payments</h2>
+<p>Our online and telephone payments system will be unavailable on 
+Tuesday 2nd October from 3pm to 6.30pm due to essential maintenance 
+work. We apologise for any inconvenience this may cause.</p>
+</div> -->
+
+</div>
+<div class="clear"></div>
+
+<!-- Leave this in for accessibility -->
+<div class="clear" id="page_Content"></div>
+
+
+
+
+
+<!-- Main Column - Content Holder -->
+<div class="grid_12">
+
+<!-- Add content from here -->
+        
+        
+    
+    <form name="eform_form" method="post" action="form.aspx?form=New_Bin_Recycling" id="eform_form">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2NzE3MjEzODEPZBYCAgIPZBYCAgEPZBYCZg8PFgQeEEVmb3JtU2Vzc2lvbkdVSUQFWDFRVDM4ZVEvYUpPRklhL2M2ZHJCYlloMWdmVWtCVFBTMWxXdHptblVmeWU3L0hiRzhJWTRiMnBUc3NVdWRXeUVWbGV4bENtayt1alVBZXh0bVlPc3pnPT0eD0Vmb3JtQnJlYWRjcnVtYgUmT3JkZXJfYV9uZXdfcmVjeWNsaW5nX2Jpbl9vcl9jb250YWluZXJkFgICAw9kFgpmD2QWAgIBD2QWFAIDD2QWAgIBDxYCHgRUZXh0BTZDb21wbGV0ZSB0aGlzIGZvcm0gdG8gb3JkZXIgYSBuZXcgcmVjeWNsaW5nIGNvbnRhaW5lci5kAgYPZBYCAgEPFgIfAgUsVGhlcmUgaXMgbm8gY2hhcmdlIGZvciByZWN5Y2xpbmcgY29udGFpbmVycy5kAgkPZBYCAgEPFgIfAgVoT25jZSB5b3UgaGF2ZSBzdWJtaXR0ZWQgeW91ciByZXF1ZXN0LCB3ZSBhaW0gdG8gZGVsaXZlciB5b3VyIG5ldyBjb250YWluZXIgd2l0aGluIHRoZSBuZXh0IDIgLSA0IHdlZWtzLiBkAgwPZBYCAgEPFgIfAgUuQWxsIGZpZWxkcyBtYXJrZWQgd2l0aCAqIGFyZSBtYW5kYXRvcnkgZmllbGRzLmQCDw9kFgICAQ8WAh8CBYoBPGRpdj5QbGVhc2UgRE8gTk9UIHVzZSB5b3VyIGJyb3dzZXIgbmF2aWdhdGlvbiBidXR0b25zLiBVc2UgdGhlIGJ1dHRvbnMgb24gdGhlIApwYWdlIGluc3RlYWQgYXMgdGhlIGZvcm0gbWF5IG5vdCBwcm9jZXNzIGNvbXBsZXRlbHkuPC9kaXY+ZAIUD2QWAgIBDxYCHwIFgwk8aDI+KiBXaGljaCByZWN5Y2xpbmcgY29udGFpbmVyIHdvdWxkIHlvdSBsaWtlIHRvIG9yZGVyPzwvaDI+PGRpdiBpZD0icG9zdGNvZGUtbGluZSI+PHAgc3R5bGU9Im1hcmdpbi1ib3R0b206MTBweCI+RW50ZXIgeW91ciBwb3N0Y29kZSB0byBjaGVjayB3aGljaCBiaW5zIHlvdSBjYW4gb3JkZXIuPC9wPjxpbnB1dCBjbGFzcz0icG9zdGNvZGUiIGlkPSJ0eHRQb3N0Y29kZSIgc3R5bGU9Im1hcmdpbjowcHggNXB4IDAgMCIgdHlwZT0idGV4dCIgLz48YnV0dG9uIGNsYXNzPSJncmVlbmJ1dHRvbiIgaWQ9ImJ0blN1Ym1pdFBvc3Rjb2RlIiB0eXBlPSJzdWJtaXQiPkdvPC9idXR0b24+PC9kaXY+PGRpdiBpZD0iYWRkcmVzcy1saW5lIiBzdHlsZT0iZGlzcGxheTogbm9uZTsiPjxwIHN0eWxlPSJtYXJnaW4tYm90dG9tOjEwcHgiPjxiPlBpY2sgeW91ciBhZGRyZXNzIGZyb20gdGhlIGxpc3QgYmVsb3csIG9yIDxhIGNsYXNzPSJzZWFyY2gtYWdhaW4iIGhyZWY9IiMiPnNlYXJjaCBhZ2FpbjwvYT48L2I+PC9wPjxzZWxlY3QgY2xhc3M9ImFkZHJlc3NlcyIgaWQ9ImRkbFJlc3VsdHMiIHN0eWxlPSJtYXJnaW46MHB4IDVweCAwIDAiPjxvcHRpb24gLz48L3NlbGVjdD48YnV0dG9uIGNsYXNzPSJncmVlbmJ1dHRvbiIgaWQ9ImJ0blN1Ym1pdFVQUk4iIHR5cGU9InN1Ym1pdCI+R288L2J1dHRvbj48L2Rpdj48ZGl2IGlkPSJhdXRvbG9hZC1saW5lIiBzdHlsZT0iZGlzcGxheTogbm9uZTsiPgogICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgQ29udGFpbmVyIHR5cGVzIGF2YWlsYWJsZSBmb3IgPHNwYW4gaWQ9ImFkZHJlc3MiPjogPC9zcGFuPjxhIGNsYXNzPSJzZWFyY2gtYWdhaW4iIGhyZWY9IiMiPiBTZWFyY2ggZm9yIGFub3RoZXIgcHJvcGVydHk8L2E+PC9kaXY+PHNwYW4gY2xhc3M9ImxvYWRpbmciIHN0eWxlPSJkaXNwbGF5OiBub25lOyI+PGltZyBhbHQ9IiIgc3JjPSJodHRwOi8vd3d3LmJvbHRvbi5nb3YudWsvU3R5bGUlMjBMaWJyYXJ5L0JvbHRvbi93ZWJzaXRlL2ltZ3MvYWpheGxvYWRpbmcyLmdpZiIgLz48L3NwYW4+PGRpdiBjbGFzcz0iYmluLXJlc3VsdHMiIGlkPSJyZXN1bHRzIiBzdHlsZT0ibWFyZ2luOjIwcHggNXB4IDEwcHggNXB4Ij48c3BhbiBzdHlsZT0iZGlzcGxheTpub25lOyI+Ljwvc3Bhbj48L2Rpdj5kAhkPZBYCZg8PFgIfAgU+PGVtIHRpdGxlPSJSZXF1aXJlZCBGaWVsZCI+KiA8L2VtPlJlY3ljbGluZyBjb250YWluZXIgcmVxdWlyZWRkZAIcD2QWAmYPDxYCHwIFSDxlbSB0aXRsZT0iUmVxdWlyZWQgRmllbGQiPiogPC9lbT5XaGF0IHNpemUgb2YgY29udGFpbmVyIGRvIHlvdSByZXF1aXJlP2RkAh8PZBYCZg8PFgIfAgUxPGVtIHRpdGxlPSJSZXF1aXJlZCBGaWVsZCI+KiA8L2VtPkNhc2UgRXZlbnQgQ29kZWRkAiIPZBYCZg8PFgIfAgUEVVBSTmRkAgEPDxYCHgdWaXNpYmxlaGQWAgIBD2QWEAIDD2QWAgIBDxYCHwIFoQE8ZGl2IGNsYXNzPSJoaWdobGlnaHRUZXh0Ij5UaGUgbW9yZSBpbmZvcm1hdGlvbiB5b3UgY2FuIHByb3ZpZGUsIHRoZSBlYXNpZXIgaXQgd2lsbCBiZSBmb3IgdXMgdG8gCnJlc3BvbmQgb3IgY29udGFjdCB5b3UgYWdhaW4gaWYgd2UgbmVlZCBtb3JlIGluZm9ybWF0aW9uLjwvZGl2PmQCBg9kFgICAQ8WAh8CBb4DVGhlIGluZm9ybWF0aW9uIHlvdSBwcm92aWRlIG9uIHRoaXMgZm9ybSBpcyBrZXB0IHNlY3VyZS4gSXQgd2lsbCBiZSB1c2VkIHRvIHByb2Nlc3Mgb3IgdmVyaWZ5IHlvdXIgYXBwbGljYXRpb24uIFdlIHdpbGwgYWxzbyB1c2UgdGhpcyBpbmZvcm1hdGlvbiB0byBtb25pdG9yIG91ciBwZXJmb3JtYW5jZSBhbmQgaW1wcm92ZSBjb3VuY2lsIHNlcnZpY2VzIHRvIHlvdS4gSWYgeW91IGRvIG5vdCB3YW50IHVzIHRvIHVzZSB5b3VyIGluZm9ybWF0aW9uIGluIHRoaXMgd2F5IHBsZWFzZSB3cml0ZSB0byB1cy4gVGhlIGluZm9ybWF0aW9uIHdpbGwgb25seSBiZSBwYXNzZWQgdG8gYSB0aGlyZCBwYXJ0eSBpZiB0aGV5IGFyZSBwcm92aWRpbmcgYSBzZXJ2aWNlIHRvIHlvdSBvbiBiZWhhbGYgb2YgQm9sdG9uIENvdW5jaWwgb3IgaWYgd2UgYXJlIHJlcXVpcmVkIHRvIGRvIHNvIGJ5IGxhdy5kAgkPZBYEZg8PFgIfAgUnPGVtIHRpdGxlPSJSZXF1aXJlZCBGaWVsZCI+KiA8L2VtPlRpdGxlZGQCAg8QZGQUKwEAZAIMD2QWAmYPDxYCHwIFKjxlbSB0aXRsZT0iUmVxdWlyZWQgRmllbGQiPiogPC9lbT5Gb3JlbmFtZWRkAg8PZBYCZg8PFgIfAgUpPGVtIHRpdGxlPSJSZXF1aXJlZCBGaWVsZCI+KiA8L2VtPlN1cm5hbWVkZAISD2QWAmYPZBYCAgkPZBYCAgMPEGRkFgBkAhUPZBYCZg8PFgIfAgV2PGVtIHRpdGxlPSJSZXF1aXJlZCBGaWVsZCI+KiA8L2VtPlRlbGVwaG9uZSBOdW1iZXIgKHByb3ZpZGUgdGhlIGFyZWEgY29kZSBhbmQgbGVhdmUgbm8gc3BhY2VzIGZvciBleGFtcGxlIDAxMjA0MzMzMzMzKWRkAhgPZBYCZg8PFgIfAgUNRW1haWwgYWRkcmVzc2RkAgIPDxYCHwNoZBYCAgEPZBYGAgMPZBYEZg8PFgIfAgVMPGVtIHRpdGxlPSJSZXF1aXJlZCBGaWVsZCI+KiA8L2VtPldoeSBkbyB5b3UgbmVlZCBhIG5ldyByZWN5Y2xpbmcgY29udGFpbmVyP2RkAgIPEGRkFCsBAGQCBg9kFgRmDw8WAh8CBU48ZW0gdGl0bGU9IlJlcXVpcmVkIEZpZWxkIj4qIDwvZW0+V2hlcmUgYXJlIHlvdXIgYmlucyBub3JtYWxseSBjb2xsZWN0ZWQgZnJvbT9kZAICDxBkZBQrAQBkAgkPZBYCAgEPFgIfAgVCVGhpcyB3aWxsIGJlIHdoZXJlIHlvdXIgbmV3IHJlY3ljbGluZyBjb250YWluZXIgd2lsbCBiZSBkZWxpdmVyZWQuZAIDDw8WAh8DaGQWAgIBD2QWCgICD2QWAgIBDxYCHwIFJlRoYW5rIHlvdSBmb3Igc3VibWl0dGluZyB5b3VyIHJlcXVlc3QuZAIFD2QWAgIBDxYCHwIFH1lvdXIgY2FzZSByZWZlcmVuY2UgbnVtYmVyIGlzIC5kAggPZBYCAgEPFgIfAgVQV2Ugd2lsbCBhaW0gdG8gZGVsaXZlciB5b3VyIG5ldyByZWN5Y2xpbmcgY29udGFpbmVyIHdpdGhpbiB0aGUgbmV4dCAyIC0gNCB3ZWVrcy5kAgsPZBYCAgEPFgIfAgWqAUlmIHlvdSBoYXZlIG5vdCByZWNlaXZlZCB5b3VyIG5ldyBjb250YWluZXIgd2l0aGluIHRoZSBzdGF0ZWQgdGltZXNjYWxlLCBwbGVhc2UgZW1haWwgPGEgaHJlZj0ibWFpbHRvOndhc3RlYW5kcmVjeWNsaW5nQGJvbHRvbi5nb3YudWsiPndhc3RlYW5kcmVjeWNsaW5nQGJvbHRvbi5nb3YudWs8L2E+ZAIOD2QWAgIIDxYCHwIFbzxhIGhyZWY9Imh0dHA6Ly93d3cuYm9sdG9uLmdvdi51ay9ob21lL1BhZ2VzL2RlZmF1bHQuYXNweCIgY2xhc3M9ImVmb3JtX2xpbmsiIHRpdGxlPSIiID5SZXR1cm4gdG8gaG9tZSBwYWdlPC9hPmQCBA8PFgIfA2hkFgICAQ9kFhYCAg9kFgICAQ8WAh8CBUM8Yj5DYXNlIFJlZmVyZW5jZTo8L2I+PGZvbnQgY29sb3I9IkJyb3duIiAvPiA8Zm9udCBjb2xvcj0iQmxhY2siIC8+ZAIFD2QWAgIBDxYCHwIFOjxiPlRpdGxlOjwvYj48Zm9udCBjb2xvcj0iQnJvd24iIC8+IDxmb250IGNvbG9yPSJCbGFjayIgLz5kAggPZBYCAgEPFgIfAgU9PGI+Rm9yZW5hbWU6PC9iPjxmb250IGNvbG9yPSJCcm93biIgLz4gPGZvbnQgY29sb3I9IkJsYWNrIiAvPmQCCw9kFgICAQ8WAh8CBTw8Yj5TdXJuYW1lOjwvYj48Zm9udCBjb2xvcj0iQnJvd24iIC8+IDxmb250IGNvbG9yPSJCbGFjayIgLz5kAg4PZBYCAgEPFgIfAgU8PGI+QWRkcmVzczo8L2I+PGZvbnQgY29sb3I9IkJyb3duIiAvPiA8Zm9udCBjb2xvcj0iQmxhY2siIC8+ZAIRD2QWAgIBDxYCHwIFPDxiPlRlbC4gTm86PC9iPjxmb250IGNvbG9yPSJCcm93biIgLz4gPGZvbnQgY29sb3I9IkJsYWNrIiAvPmQCFA9kFgICAQ8WAh8CBTo8Yj5FbWFpbDo8L2I+PGZvbnQgY29sb3I9IkJyb3duIiAvPiA8Zm9udCBjb2xvcj0iQmxhY2siIC8+ZAIZD2QWAgIBDxYCHwIFRzxiPkJpbi9Db250YWluZXIgVHlwZTo8L2I+PGZvbnQgY29sb3I9IkJyb3duIiAvPiA8Zm9udCBjb2xvcj0iQmxhY2siIC8+ZAIcD2QWAgIBDxYCHwIFPTxiPkJpbiBTaXplOjwvYj48Zm9udCBjb2xvcj0iQnJvd24iIC8+IDxmb250IGNvbG9yPSJCbGFjayIgLz5kAh8PZBYCAgEPFgIfAgVHPGI+UmVhc29uIEZvciBSZXF1ZXN0OjwvYj48Zm9udCBjb2xvcj0iQnJvd24iIC8+IDxmb250IGNvbG9yPSJCbGFjayIgLz5kAiIPZBYCAgEPFgIfAgVQPGI+UHJlZmVycmVkIERlbGl2ZXJ5IExvY2F0aW9uOjwvYj48Zm9udCBjb2xvcj0iQnJvd24iIC8+IDxmb250IGNvbG9yPSJCbGFjayIgLz5kGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBT9FZm9ybSRPcmRlcl9hX25ld19yZWN5Y2xpbmdfYmluX29yX2NvbnRhaW5lciROYXZpZ2F0ZU5leHRCdXR0b26M+j1oECNhS4ZB6CRu5k6LnoStiw==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A49C5294" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgKJ7aC+DQKl1MfcAwKOp9SeDwLMz9zyCQK+jMzlAgKUmuzsBEpBiA+mqx/q9A7WmkqhgnucphEh" />
+        
+        
+
+<div id="eform_page">
+    <h1>
+        New Bin Recycling
+    </h1>
+    
+    
+
+<fieldset id='Order_a_new_recycling_bin_or_container' class='eform_content '>
+    <legend class="eform_content_legend">Order a new recycling bin or container</legend>
+    
+    <div id="EformProgressScale" class="eform_progress">
+   <span class="eform_progress_description">Overall form progress: </span>
+   <span class="eform_progress_bar_start"></span>
+   <span class="eform_progress_bar_outer">
+   <span class="eform_progress_bar_inner" style="width:33%">33% Complete</span>
+</span>
+</div>
+<ol class='eform_group'>
+<li class='eform_line'>
+<span class="eform_text">Complete this form to order a new recycling container.</span></li><li class='eform_line'>
+<span class="eform_text">There is no charge for recycling containers.</span></li><li class='eform_line'>
+<span class="eform_text">Once you have submitted your request, we aim to deliver your new container within the next 2 - 4 weeks. </span></li><li class='eform_line'>
+<span class="eform_text">All fields marked with * are mandatory fields.</span></li><li class='eform_line'>
+<span class="eform_text"><div>Please DO NOT use your browser navigation buttons. Use the buttons on the 
+page instead as the form may not process completely.</div></span></li></ol>
+<ol class='eform_group'>
+<li class='eform_line'>
+<span class="eform_text"><h2>* Which recycling container would you like to order?</h2><div id="postcode-line"><p style="margin-bottom:10px">Enter your postcode to check which bins you can order.</p><input class="postcode" id="txtPostcode" style="margin:0px 5px 0 0" type="text" /><button class="greenbutton" id="btnSubmitPostcode" type="submit">Go</button></div><div id="address-line" style="display: none;"><p style="margin-bottom:10px"><b>Pick your address from the list below, or <a class="search-again" href="#">search again</a></b></p><select class="addresses" id="ddlResults" style="margin:0px 5px 0 0"><option /></select><button class="greenbutton" id="btnSubmitUPRN" type="submit">Go</button></div><div id="autoload-line" style="display: none;">
+                 
+                Container types available for <span id="address">: </span><a class="search-again" href="#"> Search for another property</a></div><span class="loading" style="display: none;"><img alt="" src="http://www.bolton.gov.uk/Style%20Library/Bolton/website/imgs/ajaxloading2.gif" /></span><div class="bin-results" id="results" style="margin:20px 5px 10px 5px"><span style="display:none;">.</span></div></span></li></ol>
+<ol class='eform_group Hidden'>
+<li class='eform_line'><label for="Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype" id="Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype_Label" class="eform_textbox_label"><em title="Required Field">* </em>Recycling container required</label>
+<input name="Eform$Order_a_new_recycling_bin_or_container$TextField_D_cbobintype$D_cbobintype" type="text" maxlength="30" size="30" id="Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype" class="eform_textbox" autocomplete="off" />
+
+</li><li class='eform_line'><label for="Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobinsize_D_cbobinsize" id="Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobinsize_D_cbobinsize_Label" class="eform_textbox_label"><em title="Required Field">* </em>What size of container do you require?</label>
+<input name="Eform$Order_a_new_recycling_bin_or_container$TextField_D_cbobinsize$D_cbobinsize" type="text" maxlength="30" size="30" id="Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobinsize_D_cbobinsize" class="eform_textbox" autocomplete="off" />
+
+</li><li class='eform_line'><label for="Eform_Order_a_new_recycling_bin_or_container_TextField_CaseEventCode_CaseEventCode" id="Eform_Order_a_new_recycling_bin_or_container_TextField_CaseEventCode_CaseEventCode_Label" class="eform_textbox_label"><em title="Required Field">* </em>Case Event Code</label>
+<input name="Eform$Order_a_new_recycling_bin_or_container$TextField_CaseEventCode$CaseEventCode" type="text" maxlength="10" size="10" id="Eform_Order_a_new_recycling_bin_or_container_TextField_CaseEventCode_CaseEventCode" class="eform_textbox" autocomplete="off" />
+
+</li><li class='eform_line'><label for="Eform_Order_a_new_recycling_bin_or_container_TextField_txtUPRN_txtUPRN" id="Eform_Order_a_new_recycling_bin_or_container_TextField_txtUPRN_txtUPRN_Label" class="eform_textbox_label">UPRN</label>
+<input name="Eform$Order_a_new_recycling_bin_or_container$TextField_txtUPRN$txtUPRN" type="text" maxlength="100" size="100" id="Eform_Order_a_new_recycling_bin_or_container_TextField_txtUPRN_txtUPRN" class="eform_textbox" autocomplete="off" />
+
+</li></ol>
+
+</fieldset>
+<fieldset class="eform_navigation">
+    <legend>Form Navigation</legend>
+    <ol><li><input type="image" name="Eform$Order_a_new_recycling_bin_or_container$NavigateNextButton" id="Eform_Order_a_new_recycling_bin_or_container_NavigateNextButton" accesskey="n" title="Go to next page" class="eform_button eform_next_button" src="Images/EformButtons/NextButton.gif" alt="Go to next page" border="0" /></li></ol>
+</fieldset>
+
+    
+</div>
+
+    </form>
+    
+
+
+<!-- This is the closing div for content -->
+</div>
+
+
+<!-- Leave this line -->
+<div class="clear"></div>
+
+<!-- Footer -->
+<div class="clear"></div>
+<div class="grid_12" id="site_info">
+<div class="box">
+<!-- home layout -->
+
+
+</div>
+</div>
+<div class="clear"></div>
+
+<div class="clear"></div>
+  <footer class="container_12" id="sectionFooter"><h4>a to z of services</h4>
+
+<nav id="atoz">
+				<ul class="clean" id="az">
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=A">A</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=B">B</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=C">C</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=D">D</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=E">E</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=F">F</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=G">G</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=H">H</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=I">I</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=J">J</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=K">K</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=L">L</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=M">M</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=N">N</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=O">O</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=P">P</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=Q">Q</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=R">R</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=S">S</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=T">T</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=U">U</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=V">V</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=W">W</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=X">X</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=Y">Y</a></li>
+					<li><a href="http://www.bolton.gov.uk/home/pages/atoz.aspx?l=Z">Z</a></li>
+				</ul>
+			</nav>
+
+	    </footer>
+	   	<footer class="container_12" id="siteFooter">
+        <div class="lftcornerBottom"></div>
+	    <div class="grid_3">
+		<nav id="siteFooterNav">
+			<ul class="sitFooterNav">
+				<li><a href="http://www.bolton.gov.uk/home/Pages/Copyrightdisclaimerandprivacy.aspx">privacy and terms</a></li>
+				<li><a href="http://www.bolton.gov.uk/contactus/Pages/Contactus.aspx">contact</a></li>
+				<li><a href="http://www.bolton.gov.uk/website/news">news</a></li>
+			</ul>
+		</nav>
+		</div>
+		<div class="grid_9">
+
+
+
+		<ul class="ftr-img-links">
+<li><a href="http://www.bolton.gov.uk/website/pages/Translatingandinterpretingservices.aspx" class="ftr-translate">translations</a></li>
+<li><a href="https://public.govdelivery.com/accounts/UKBOLTON/subscriber/new" title="GovDelivery - opens in a new window" target="_blank" class="ftr-govdelivery">sign up for alerts</a></li>
+<li><a href="http://www.bolton.gov.uk/website/Documents/SocialMedia/twitter.html" title="Twitter" class="ftr-twitter">twitter</a></li>
+<li><a href="http://www.bolton.gov.uk/website/Documents/SocialMedia/facebook.html" title="Facebook" class="ftr-facebook">facebook</a></li>
+<li><a href="http://www.bolton.gov.uk/website/Documents/SocialMedia/flickr.html" title="Flickr" class="ftr-flckr">flickr</a></li>
+<li><a href="http://feeds.feedburner.com/boltoncouncilnews" title="RSS feeds - opens in a new window" target="_blank" class="ftr-feeds">feeds</a></li>
+</ul>			
+		
+		</div>		
+	    </footer>
+
+
+</div><!-- // end outer -->
+
+<!--[if lt IE 7]>
+<script type="text/javascript" src="PageTemplates/BoltonWebSkin/app_ldlthemes/scripts/dd_belatedpng.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.lccicon32');
+DD_belatedPNG.fix('.lccicon48');
+DD_belatedPNG.fix('.lccicon16');
+DD_belatedPNG.fix('#atoz li a:hover');
+DD_belatedPNG.fix('#azindex li a:hover');
+DD_belatedPNG.fix('#azindex li a.current');
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+//Eform enable rules
+SelfService.Validation.addRule('Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype', 'Burgundy Bin', 'Eform_Order_a_new_recycling_bin_or_container_TextField_CaseEventCode_CaseEventCode', '2001472');
+SelfService.Validation.addRule('Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype', 'Beige Bin', 'Eform_Order_a_new_recycling_bin_or_container_TextField_CaseEventCode_CaseEventCode', '2001472');
+SelfService.Validation.addRule('Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype', 'Green Bin', 'Eform_Order_a_new_recycling_bin_or_container_TextField_CaseEventCode_CaseEventCode', '2001470');
+SelfService.Validation.addRule('Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype', 'Kitchen Caddy', 'Eform_Order_a_new_recycling_bin_or_container_TextField_CaseEventCode_CaseEventCode', '2001470');
+SelfService.Validation.addRule('Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype', 'Food Container', 'Eform_Order_a_new_recycling_bin_or_container_TextField_CaseEventCode_CaseEventCode', '2001470');
+SelfService.Validation.addRule('Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype', 'Burgundy Bin', 'Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobinsize_D_cbobinsize', '240L');
+SelfService.Validation.addRule('Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype', 'Beige Bin', 'Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobinsize_D_cbobinsize', '240L');
+SelfService.Validation.addRule('Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype', 'Green Bin', 'Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobinsize_D_cbobinsize', '240L');
+SelfService.Validation.addRule('Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype', 'Kitchen Caddy', 'Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobinsize_D_cbobinsize', 'Standard');
+SelfService.Validation.addRule('Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobintype_D_cbobintype', 'Food Container', 'Eform_Order_a_new_recycling_bin_or_container_TextField_D_cbobinsize_D_cbobinsize', 'Standard');
+</script>
+</body>
+
+</html>
+
+

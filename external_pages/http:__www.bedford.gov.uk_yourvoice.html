@@ -1,0 +1,645 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	
+        Search Bedford Borough Consultations
+    
+</title>
+
+ 
+ <script src="Scripts/jquery-1.3.2.js" type="text/javascript"></script>
+
+     <script type="text/javascript">
+
+         $(document).ready
+        (
+            function() 
+            {                
+                //Remove the tables that hold the datapagers for the datagrid. This executes once on page load. We do this as there is some css that
+                //is applied which we don't want to be displayed as the datagrid is not displayed on page load.
+                var tbls = $("#ctl00_ContentPlaceHolder1_tblConsultationsDataPagerTop,#ctl00_ContentPlaceHolder1_tblConsultationsDataPagerBottom");
+                tbls.remove();
+            }
+        );
+
+        
+        function pageLoad(sender, args) 
+        {
+            //we are using an update panel so it is partially loaded
+            if (args.get_isPartialLoad())
+            {//chk we where we are displaying the application and swop out the css class as appropriate
+                var displayonIntranet = "0";
+            //    var sel = $(".mInternetGrid");
+                
+//                sel.each(function(i) {
+
+//                var tr = $("tr>td",this);
+
+//                tr.css("border", "solid 5px Red");
+//                });
+                if (displayonIntranet == true) 
+                {
+                    var elements = $(".mInternetGrid");
+                    elements.removeClass('mInternetGrid').addClass('mGrid');
+                }
+            } 
+        }
+
+    </script>
+
+<script type="text/javascript">
+
+
+    var _gaq = _gaq || [];
+
+    _gaq.push(['_setAccount', 'UA-17643716-1']);
+
+    _gaq.push(['_trackPageview']);
+
+
+
+    (function() {
+
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+    })();
+
+ 
+
+</script>
+
+<script type="text/javascript">
+    //<![CDATA[
+    function checkFields() {
+        var docFrm = document.forms[0];
+        var len = docFrm.elements.length;
+        var box;
+        var bFieldComplete = false;
+        var str;
+        for (i = 0; i < len; i++) {
+            box = docFrm.elements[i];
+
+            switch (box.type) {
+                case 'text':
+                    str = box.value.replace(/^\s*|\s*$/g, ''); //trim the whitespace
+                    if (str) {
+                        return true;
+                    }
+                    break;
+
+                case 'select-one':
+                    str = box.options[box.selectedIndex].value.replace(/^\s*|\s*$/g, ''); //trim the whitespace
+                    if (box.id === "ctl00_ContentPlaceHolder1_ddlPreviousYears")
+                        break; //ignore this control
+                    if (str) {
+                        return true;
+                    }
+                    break;
+            }
+
+        }
+
+        alert('Please complete at least one entry in the Advanced Search criteria');
+        return false;
+    } //]]>
+</script>
+
+
+
+    <link href="/WebResource.axd?d=z6HlU47Kke8lpm4vuci45nRM1eVbfOO65eJg9g_m3g6rB6StxyHZWLJkRsNW5GyE8p0qMMrE9G7HPCuZrAEdKl81pGcjU2Fa4Vkchh1I3Jw1&amp;t=634086706947172500" type="text/css" rel="stylesheet" /><link rel="stylesheet" type="text/css" href="http://www.bedford.gov.uk/templates/default/style/styleHSHome.css" />
+    
+
+	<!--[if lte IE 6]>
+
+		<link rel="stylesheet" href="http://www.bedford.gov.uk/templates/default/style/ie_6_only.css" type="text/css" />
+
+	<![endif]-->
+
+	
+
+	<!--[if gte IE 7]>
+
+		<link rel="stylesheet" href="http://www.bedford.gov.uk/templates/default/style/ie_7_only.css" type="text/css" />
+
+	<![endif]-->
+
+	
+
+	<script type="text/javascript">
+
+		var agt=navigator.userAgent.toLowerCase();
+
+		if (agt.indexOf("safari") != -1 && agt.indexOf("chrome") == -1) {
+		    document.write('<link rel="stylesheet" href="http://www.bedford.gov.uk/templates/default/style/safari.css" type="text/css" />');
+
+			}
+
+	</script>
+
+
+<link rel="stylesheet" type="text/css" href="Styles/print.css" media="print" /><link rel="stylesheet" type="text/css" href="Styles/gridview.css" />
+
+
+
+
+	<!--[if IE]>
+
+		<script src="/js/IEHoverCSS.js" type="text/javascript"></script>
+
+
+
+	<![endif]-->    
+</head>
+<body>
+
+<div id="mostOuter">
+
+
+
+<div id="everything">
+
+
+
+<div id="commonHeader">
+
+
+
+		<a name="top"></a>
+
+
+
+		<h1>Welcome to Bedford Borough Council</h1>
+
+
+
+		<div id="logo">
+
+			<a href="http://www.bedford.gov.uk/default.aspx?page=0">
+
+				<img src="http://www.bedford.gov.uk//templates/default/images/logo.gif" alt="Bedford Borough Council"/>
+
+			</a>
+
+		</div>
+
+		
+
+		<div id="toolsMenu">
+
+			<div id="search">
+
+				<div id="searchBox">
+
+	                
+	                
+	                
+	                
+
+                </div>
+
+				<a class="advSearch" href="http://www.bedford.gov.uk/system_pages/search_menu/advanced_search.aspx" title="Advanced Search">Advanced Search</a> 
+
+		    </div>
+
+			<div id="links">
+
+				<a href="http://www.bedford.gov.uk/system_pages/top_menu/site_map.aspx" title="Site Map">Site Map</a> 
+                | <a href="http://www.bedford.gov.uk/system_pages/top_menu/contact_us.aspx" title="Contact Us">Contact Us</a> 
+                | <a href="http://www.bedford.gov.uk/system_pages/top_menu/help.aspx" title="Help">Help</a> 
+				
+
+			</div>
+
+			
+
+		</div>
+
+		
+
+		
+
+	</div>
+
+
+
+
+<!-- BEGIN A-Z -->
+
+<div class='box'>
+
+<div class='boxtop'>&nbsp;</div>
+
+<div class="sys_header_row3">
+
+          <div class="sys_header_row3_text">
+
+            Our Services A - Z :
+
+          </div>
+
+          <div class="sys_header_row3_alphasearch">
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with A" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=A">A</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with B" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=B">B</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with C" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=C">C</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with D" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=D">D</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with E" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=E">E</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with F" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=F">F</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with G" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=G">G</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with H" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=H">H</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with I" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=I">I</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with J" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=J">J</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with K" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=K">K</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with L" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=L">L</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with M" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=M">M</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with N" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=N">N</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with O" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=O">O</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with P" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=P">P</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with Q" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=Q">Q</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with R" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=R">R</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with S" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=S">S</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with T" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=T">T</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with U" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=U">U</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with V" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=V">V</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with W" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=W">W</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with X" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=X">X</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with Y" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=Y">Y</a></span></span>
+
+<span class="sys_CellStyle"><span class="sys_UnselectedStyle"><a title="View pages beginning with Z" href="http://search.bedfordshire.gov.uk/scripts/select.exe?TBDB=bbc_taxonomy&amp;TEMPLATE=semaphore_azMain&amp;AZ=Z">Z</a></span></span>
+
+
+
+          </div>
+
+          
+
+        </div>
+
+	<div class='boxbottom'>&nbsp;</div>
+
+	</div>
+
+
+<!-- tag below is for the underline below header -->
+
+<div id="AtoZclear">&nbsp;</div> 
+
+<!-- End Hide underline below header -->
+
+<!-- END A-Z -->
+
+
+    <form name="aspnetForm" method="post" action="search.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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AgECAgIDAgQCBQIGAgcCCAIJAgoCCwIMAg0CDgIPAhACEQISFhIQBQpBZHVsdCBDYXJlBQNBRENnEAUQQXJ0cyBhbmQgTGVpc3VyZQUDQVJMZxAFF0NoaWxkcmVuICYgWW91bmcgUGVvcGxlBQNDSFlnEAUQQ29tbXVuaXR5IFNhZmV0eQUDQ09NZxAFFEVjb25vbWljIERldmVsb3BtZW50BQJFRGcQBQdFY29ub215BQNFQ09nEAUJRWR1Y2F0aW9uBQNFRFVnEAUWRXF1YWxpdHkgYW5kIERpdmVyc2l0eQUDRVFEZxAFB0ZpbmFuY2UFA0ZJTmcQBQdIb3VzaW5nBQNIT1VnEAUJTGljZW5zaW5nBQNMSUNnEAUHUGFya2luZwUDUEtHZxAFFVBhcmtzIGFuZCBPcGVuIFNwYWNlcwUDUEFSZxAFDFBhcnRuZXJzaGlwcwUDUFBTZxAFCFBsYW5uaW5nBQNQTEFnEAUJUmVjeWNsaW5nBQNSRUNnEAUPVGhlIEVudmlyb25tZW50BQNFTlZnEAUJVHJhbnNwb3J0BQNUUFNnZGQCGw8PZDwrAAYAZAIdDw9kFgIeB29uY2xpY2sFHWlmICghY2hlY2tGaWVsZHMoKSkge3JldHVybn07ZAIZD2QWAmYPZBYIAgcPD2Q8KwAGAGQCCQ9kFgJmD2QWAmYPZBYCAgEPFCsAAmRkZAILDxQrAAIPFgQfAmceC18hSXRlbUNvdW50Av////8PZGRkAg0PZBYCZg9kFgJmD2QWAgIBDxQrAAJkZGQYAwUpY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRkcENvbnN1bHRhdGlvbnMPPCsABAEDZmQFKWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkbHZDb25zdWx0YXRpb25zD2dkBSxjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGRwQ29uc3VsdGF0aW9uc1RvcA88KwAEAQNmZFWZ0yKeNOnYz1pfvOsNIJqx6A6n" />
+
+
+<script src="/ComWeb/ScriptResource.axd?d=AT16ZP2HJ04q-fytvc5iZaApKOkcFb2iUi75q9HpcQghwEjRTbfRBlfu9TrYS_sP4OIFMcbqEUX_9dTFfXMoB9l-KpMXtDPlQV1zzXCJM_uu_DCtGKEE51Crap221OKo5Qt0iOrEzmilEZoVZS1PLGllNJN5YCkaI3CSQJi7DJ0Zcybs0&amp;t=2e364ed0" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ComWeb/ScriptResource.axd?d=Rm6xqECxfHykFY-uT9DB9IgaAT6iDp_DrBrb4oNudvlsQ8YazsTYERbpBiWKsprDD2r39VwCcIxIqNoslt6d8sr6CWtZXZtqjPkyqIPKnpTA_LpJMXBdevL4hLq7pjpYc0VLA3ZedwQ4kOg0_OUQ0cW-P4U1&amp;t=ffffffffdb311083" type="text/javascript"></script>
+<script src="/ComWeb/ScriptResource.axd?d=hDDx4DGYvD7jq11K7-nYx3CgaPIvMvoxL0n5vtkvgCiFzqe2H4iJ-fnkdJnt3iv-G40W9Byk_JGLQmF8v4cZOJCOu4o_1eKrHqNxvbjyzhCvd0t_3t52bKARyG1l1MRPIibRwoOUxLBvYbumLj6Vx7WJHmY1&amp;t=ffffffffdb311083" type="text/javascript"></script>
+<script src="/ComWeb/ScriptResource.axd?d=oZh0BvwUQyEzzoyUxt_00aGZRuNgiaf8U1hjnsD7TCd0YydqVOtg0tiB-VU0FSnv1QcWKxcUTb9w_vV6X-g7pcbIf7u8ExeIFqFLhWDnNC_I7u6CD7cnp-6eRNuiUbdnpJ02zKuxm8hHsdfMWxW89_YHLvs1&amp;t=ffffffffdb311083" type="text/javascript"></script>
+<script src="/ComWeb/ScriptResource.axd?d=q623s7FPjkuW-dtMR8QwA89M0VfEjJk5az-CU72iMHN5koUAoaDvlK4ye_qUQZKxTCwb8hnOD4KbIucOBNB1qRALHJ9PlljJgysozqXMFmfnD1V0qS3AEBRMzdpoty42BHZ1KzPg9c2kWgQgVWgPsVXPTuQ1&amp;t=ffffffffdb311083" type="text/javascript"></script>
+<script src="/ComWeb/ScriptResource.axd?d=6hprUuBBsZZEv5gDlHJ_vlRsg_O1IC0RRr3pbJrlhTGFSfbPEbbZ5nYRBPp6gX6Q0kEupBH0RBLGJZD_1EnK-05EMhmVQZT9D1CVo7gHEdqz5vOPO73NA1EFiekDAQsao-c6TxvWIIBwXriUSAWnukLP_Zy5CqN4CPkR4bAlIGIzVEYG0&amp;t=ffffffffdb311083" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7792ED2F" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWLALX+LS3BALcy8WTBQLTpO/9CQL05ZyWCAKf3K6PDwKf3JLSBAKf3Ib1DQKf3OqYBQKf3N6jAgKf3MLGCwKf3LZqAoSzqbAPAsrWm5gMAtzTr4sLAv6zo/UHAuOat7ACAtfFgPMNAtbFlPMNAquJibMMAonBoZoBAq6TwLEFAsG3ooULApD7+MUJAtrclJ4NAoDV0ccBAsf1qNsIAsCG+a8JAuzOssQCAoGzju4BArC4xZoJAoaUt64DAquuuvELApSnz/EEArOUo64DAoXV5ccBAo3y9LAIAvrRwu4CAuGqo5gHAu/rvbEFArPV1ccBAq3tzdsFAu2qo5gHAve684YCArzs8sAGDEGNWRvfuRojjuWxd4VmywvYkm0=" />
+    <div id="main">
+    <div id="crumbtrail">
+     <p><strong>You are here:</strong> <a href="http://www.bedford.gov.uk">Home&nbsp;Page</a> &gt;
+        Bedford&nbsp;Borough&nbsp;Consultation&nbsp;Database
+        </p>
+        <br />
+    </div>
+    </div>
+        
+    
+   <div id="Print" >
+   <div style="font-size:1.2em;line-height:1.5em;">
+   
+        <br />
+    <table border="0" cellpadding="0" cellspacing="4" width="100%">
+        <tr>
+             <td colspan="1" align="left" style="width:250px"> 
+                    
+                        <img id="ctl00_ContentPlaceHolder1_Image2" src="images/borough-word-cloud_RGB.JPG" alt="Bedford Borough Word Cloud Image" border="0" />
+                                       
+            </td>
+            <td  align="left"> 
+                    
+                        <img id="ctl00_ContentPlaceHolder1_imYourVoiceYourViews" src="images/yourVoiceyourViews.jpg" alt="Your Voice, Your Views Image" border="0" />
+                                       
+            </td>
+            
+           
+            
+        </tr>
+        <tr>
+            <td colspan="4"> 
+                    
+                    
+                   Welcome to the Your Voice, Your Views database. The database holds information 
+                        about consultation activities undertaken by Bedford Borough Council and our partners. The 
+                        database helps to co-ordinate consultations, and enables us to communicate 
+                        outcomes of the consultations.
+            </td>
+            
+        </tr>
+        <tr>
+            <td colspan="4">
+                The database allows you to search for consultation projects based on previous, 
+                    current and future projects. An advanced search function is also available which 
+                    allows you to search for consultations based on a range of criteria.                 
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="4">
+                
+                If you have any questions or comments about the Your Voice, Your Views database please
+                <a id="ctl00_ContentPlaceHolder1_HyperLink2" href="mailto:andrew.maslen@bedford.gov.uk">contact us</a>.
+            </td>
+        </tr>
+    </table>
+            
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;" >
+        
+        <tr >
+           
+            <td align="center" valign="top"> 
+                 
+                     
+                
+                 <div id="PreviousConsultations">Previous Consultations
+                 <select name="ctl00$ContentPlaceHolder1$ddlPreviousYears" id="ctl00_ContentPlaceHolder1_ddlPreviousYears" class="selectElement" onchange="javascript:if (this.options[this.selectedIndex].value ===''){return};">
+	<option selected="selected" value=""></option>
+	<option value="1">All Years</option>
+	<option value="2009">2009</option>
+	<option value="2010">2010</option>
+	<option value="2011">2011</option>
+	<option value="2012">2012</option>
+	<option value="2013">2013</option>
+	<option value="2014">2014</option>
+	<option value="2015">2015</option>
+	<option value="2016">2016</option>
+
+</select>
+                 </div>
+                 
+      
+            </td>
+            <td align="center" valign="middle" > 
+                <input type="button" name="ctl00$ContentPlaceHolder1$btnCurrentConsultations" value="Current Consultations" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnCurrentConsultations&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="ctl00_ContentPlaceHolder1_btnCurrentConsultations" class="button" />
+            </td>
+            <td align="center" valign="middle"> 
+                <input type="button" name="ctl00$ContentPlaceHolder1$btnFutureConsultations" value="Future Consultations" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnFutureConsultations&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="ctl00_ContentPlaceHolder1_btnFutureConsultations" class="button" />
+            </td>
+        </tr>
+       
+    </table> 
+            
+            
+            
+       <input type="hidden" name="ctl00$ContentPlaceHolder1$CollapsiblePanelExtender1_ClientState" id="ctl00_ContentPlaceHolder1_CollapsiblePanelExtender1_ClientState" />
+       <img id="ctl00_ContentPlaceHolder1_Image1" src="images/expand_blue.jpg" height="16" border="0" />&nbsp;&nbsp;<span id="ctl00_ContentPlaceHolder1_Label3">Display Advanced Search</span>
+      <table width="100%">
+      <tr>
+      <td align="center">
+      <div id="ctl00_ContentPlaceHolder1_AdvancedSearchPanel" class="collapsePanel" style="">
+	
+      
+      <table  border="0" cellpadding="0" cellspacing="10" id="tblAdvancedTable">
+            <tr>
+                
+                
+                
+                
+               <td ><p><span id="ctl00_ContentPlaceHolder1_Label9">Respondent Group:</span></p></td>
+               <td > <select name="ctl00$ContentPlaceHolder1$ddlRespondentGroup" id="ctl00_ContentPlaceHolder1_ddlRespondentGroup">
+		<option value=""></option>
+		<option value="ALL">All members of the community</option>
+		<option value="BUS">Businesses</option>
+		<option value="CPS">Citizens Panel Survey</option>
+		<option value="EMP">Employees</option>
+		<option value="OLD">Older People</option>
+		<option value="PUB">Public</option>
+		<option value="SCH">Schools</option>
+		<option value="SVU">Service Users</option>
+
+	</select>
+                       
+                       
+                       
+               </td>
+               
+            </tr>
+            <tr>
+                
+                
+                
+                
+                <td align="right"><p><span id="ctl00_ContentPlaceHolder1_Label10">Area of Interest:</span></p></td>
+                <td ><select name="ctl00$ContentPlaceHolder1$ddlAreaOfInterest" id="ctl00_ContentPlaceHolder1_ddlAreaOfInterest">
+		<option value=""></option>
+		<option value="ADC">Adult Care</option>
+		<option value="ARL">Arts and Leisure</option>
+		<option value="CHY">Children &amp; Young People</option>
+		<option value="COM">Community Safety</option>
+		<option value="ED">Economic Development</option>
+		<option value="ECO">Economy</option>
+		<option value="EDU">Education</option>
+		<option value="EQD">Equality and Diversity</option>
+		<option value="FIN">Finance</option>
+		<option value="HOU">Housing</option>
+		<option value="LIC">Licensing</option>
+		<option value="PKG">Parking</option>
+		<option value="PAR">Parks and Open Spaces</option>
+		<option value="PPS">Partnerships</option>
+		<option value="PLA">Planning</option>
+		<option value="REC">Recycling</option>
+		<option value="ENV">The Environment</option>
+		<option value="TPS">Transport</option>
+
+	</select>
+                                          
+                </td>
+            </tr>
+            <tr>
+               
+                <td colspan="6" align="center">
+                    <input type="button" name="ctl00$ContentPlaceHolder1$btnSearch" value="Search" onclick="if (!checkFields()) {return};WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="ctl00_ContentPlaceHolder1_btnSearch" class="button" />&nbsp;
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnReset" value="Reset" id="ctl00_ContentPlaceHolder1_btnReset" class="button" />
+                   
+                </td>
+               
+            </tr>
+                        
+     </table>
+     
+     
+</div>
+     </td>
+     </tr>
+     </table>
+    
+        <a id="Top"></a>       
+        
+        <table border="0" cellpadding="0" cellspacing="4">
+        <tr>
+        
+        <td>
+        
+            <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
+	
+                <div style="text-align:center;">
+                   
+                    
+                
+                    
+                </div>
+               
+                
+                    
+                    
+                    
+                    <table id="ctl00_ContentPlaceHolder1_tblConsultationsDataPagerTop" class="mInternetGrid" style="margin: 0px 0 0px 0;">
+		<tr>
+			<td class="pgr">
+                                        <span id="ctl00_ContentPlaceHolder1_dpConsultationsTop"></span>
+                                    </td>
+		</tr>
+	</table>
+	
+                     
+                    
+                    
+                    <table id="ctl00_ContentPlaceHolder1_tblConsultationsDataPagerBottom" class="mInternetGrid" style="margin: 0px 0 0px 0;">
+		<tr>
+			<td class="pgr">
+                                        <span id="ctl00_ContentPlaceHolder1_dpConsultations"></span>
+                                    </td>
+		</tr>
+	</table>
+	
+                   
+                    
+                
+</div>
+             
+              
+                    <br />
+          
+              
+        </td>
+        </tr>
+        <tr> <td></td></tr>
+        </table>
+               
+        <a href="#Top">Back To Top</a>
+        
+    </div>
+    </div>
+
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ctl00_ContentPlaceHolder1_CollapsiblePanelExtender1_ClientState","CollapseControlID":"ctl00_ContentPlaceHolder1_Image1","Collapsed":true,"CollapsedImage":"images/expand_blue.jpg","CollapsedText":"Display Advanced Search","ExpandControlID":"ctl00_ContentPlaceHolder1_Image1","ExpandedImage":"images/collapse_blue.jpg","ExpandedText":"Hide Advanced Search","ImageControlID":"ctl00_ContentPlaceHolder1_Image1","SuppressPostBack":true,"TextLabelID":"ctl00_ContentPlaceHolder1_Label3","id":"ctl00_ContentPlaceHolder1_CollapsiblePanelExtender1"}, null, null, $get("ctl00_ContentPlaceHolder1_AdvancedSearchPanel"));
+});
+//]]>
+</script>
+</form>
+    
+
+    <div class="clear"></div>
+
+		
+
+	<div id="footer">
+
+
+
+		<div id="directGov">
+
+			<a href="http://www.direct.gov.uk"><img src="http://www.bedford.gov.uk/templates/default/images/directgov.gif" alt="Direct Gov"/></a>
+
+		</div>
+
+
+
+		<div id="browseAloud">
+
+			<a href="http://www.browsealoud.com/downloads.asp?dl=bl"><img src="http://www.bedford.gov.uk/templates/default/images/browsealoud.gif" alt="Download BrowseAloud Software"/></a>
+
+		</div>
+
+
+
+		<div id="footerLinks">
+
+			<a href="http://www.bedford.gov.uk/system_pages/footer_menu/legal_disclaimer.aspx" title="Legal Disclaimer">Legal Disclaimer</a> 
+ | <a href="http://www.bedford.gov.uk/system_pages/footer_menu/privacy_policy.aspx" title="Privacy Policy">Privacy Policy</a> 
+ | <a href="http://www.bedford.gov.uk/system_pages/footer_menu/accessibility_statement.aspx" title="Accessibility Statement">Accessibility Statement</a> 
+ | <a href="http://www.bedford.gov.uk/system_pages/footer_menu/statistics.aspx" title="Statistics">Statistics</a> 
+
+
+		</div>
+
+
+
+		<div id="copyright" style="color:#000000; text-align:center;">
+
+			<p>Copyright &copy; <span id="Template_dateLabel">2011</span> Bedford Borough Council - all other trademarks are acknowledged as belonging to their respective owners. All rights reserved.</p>
+
+		</div>
+
+
+
+	</div>
+
+
+
+</div>
+
+</div>
+
+    
+</body>
+</html>

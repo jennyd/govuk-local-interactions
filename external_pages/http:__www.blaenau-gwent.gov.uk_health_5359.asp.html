@@ -1,0 +1,605 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- PageID 5359 - published by Open Text Web Solutions 10 - 10.0.1.51 - 29448 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="Title" content="Blaenau Gwent County Borough Council - Social Services" />
+    <meta name="Description" content="Blaenau Gwent County Borough Council" />
+    <meta name="Author" content="Blaenau Gwent County Borough Council" />
+    <meta name="DC.Title" content="Blaenau Gwent County Borough Council: - Social Services" />
+    <meta name="DC.Coverage" content="Blaenau Gwent, South Wales, UK" lang="ENG" xml:lang="ENG" />
+    <meta name="DC.Identifier" scheme="URI" content="/health/5359.asp" />
+    <meta name="DC.Date.Created" scheme="W3CDTF" content="06/11/2006" />
+    <meta name="DC.Date.Issued" scheme="W3CDTF" content="03/02/2016 07:56:58" />
+    <meta name="DC.Date.Modified" scheme="W3CDTF" content="11 July 2008" />
+    <meta name="DC.Format" content="text/html" />
+    <meta name="DC.Creator" content="Blaenau Gwent County Borough Council: Lee McDonald" />
+    <meta name="DC.publisher" content="Blaenau Gwent County Borough Council, Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB, Tel (01495) 350555, http://www.blaenau-gwent.gov.uk" />
+    <meta name="DC.Contributor" content="OD" />
+    <meta name="DC.Language" scheme="ISO 639-2" content="ENG" />
+    <meta name="DC.Subject" scheme="IPSV" content="" />
+    <meta name="DC.Rights" content="http://www.blaenau-gwent.gov.uk/copyright" />
+    <meta name="eGMS.accessibility" content="Double-A" scheme="WCAG" />
+    <meta name="eGMS.subject.category.identifier" scheme="LNGL" content="" />
+    <meta name="eGMS.subject.category" scheme="IPSV" content="" />
+    <meta name="keywords" content="social services, adult services, children services, complaints, direct payments, see my file" />
+    <title>
+      Blaenau Gwent County Borough Council - Social Services
+    </title>
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" src="/scripts/jquery-1.3.2.min.js">
+</script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image1 .desc").show(); //Show Banner
+            $(".main_image1 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb1 ul li:first").addClass('active');
+            $(".image_thumb1 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image1").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image1 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image1 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image1 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb1 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse1").click(function () {
+                $(".main_image1 .block").slideToggle();
+                $("a.collapse1").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image2 .desc").show(); //Show Banner
+            $(".main_image2 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb2 ul li:first").addClass('active');
+            $(".image_thumb2 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image2").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image2 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image2 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image2 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb2 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse2").click(function () {
+                $(".main_image2 .block").slideToggle();
+                $("a.collapse2").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        function f(n) {
+            document.getElementById('body').style.fontSize = n
+        }
+    //]]>
+    </script><!-- IE6 STYLE OVERRIDES --><!--[if lte IE 6]>
+        <link href="" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- IE7 STYLE OVERRIDES -->
+    <!--[if IE 7]>
+           <link href=""  rel="stylesheet" type="text/css" />
+    <![endif]-->
+  </head>
+  <body id="body">
+    <a name="Top" id="Top"></a> <!-- HEADER -->
+     <!-- ************************************** -->
+     <!-- HEADER  (grey bar, white bar, red bar) -->
+     <!-- ************************************** -->
+    <div id="header">
+      <!-- HEADER TOP BAR( grey ) -->
+      <div id="header-toplinks-outer">
+        <div id="header-toplinks-inner">
+          <!-- SEARCH BOX -->
+          <div id="header-search">
+            
+              <form name="kbs" method="get" action="http://search3.openobjects.com/kb5/gwent/search/en/results.page" id="kbs">
+                <input name="qt" class="searchbox" type="text" maxlength="50" value="Search" onfocus="this.value=''" id="query" /> <input class="searchbutton" type="submit" value="" />
+              </form>
+            </form>
+          </div><!-- TOP HEADER LINKS -->
+          <div id="header-toplinks">
+            <ul>
+              <li class="first">
+                 <a href="/CYM/health/5359.asp" title="Cymraeg" accesskey="l">Cymraeg</a> 
+              </li>
+              <li>
+                <a href="/council/69.asp" title="Accessibility" accesskey="a">Accessibility</a>
+              </li>
+              <li>
+                <a href="/help.asp" title="Help" accesskey="h">Help</a>
+              </li>
+              <li>
+                <a href="/ContactUs.asp" title="Contact Us" accesskey="c">Contact Us</a>
+              </li>
+              <li>
+                <a href="/council/1838.asp" title="News Centre" accesskey="m">News Centre</a>
+              </li>
+              <li>
+                <a href="http://www.blaenau-gwent.gov.uk/19002.asp" title="Cookies" accesskey="v">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- HEADER COUNCIL LOGO ( tag line set in css )-->
+      <div id="header-mast-outer">
+        <!-- Begin Logo -->
+        <div id="logo">
+          <a href="/index.asp"><img src="/images/logo.jpg" alt="Blaenau Gwent County Borough Council - Cyngor Bwrdeisdref Sirol Blaenau Gwent" /></a>
+        </div><!-- End Logo --><!-- Begin Hour -->
+        <div id="hour-ENG"></div><!-- End Hour -->
+        <!-- Begin Tagline -->
+        <div id="tagline"></div><!-- End Tagline -->
+      </div><!-- HEADER BOTTOM BAR ( red ) -->
+      <div id="header-bottomlinks-outer">
+        <div id="header-bottomlinks-inner">
+          <!-- LINKS LIST -->
+          <div id="header-bottomlinks">
+            <ul>
+              <li class="first">
+                <a href="/index.asp" title="Home" accesskey="h">Home</a>
+              </li>
+              <li>
+                <a href="/jobs/262.asp" title="Jobs" accesskey="j">Jobs</a>
+              </li>
+              <li>
+                <a href="/onlineServices/forms.asp" title="Online Forms" accesskey="o">Online Forms</a>
+              </li>
+              <li>
+                <a href="/faqs/faq.asp" title="FAQ's" accesskey="5">FAQ's</a>
+              </li>
+              <li>
+                <a href="/sitemap.asp" title="Sitemap" accesskey="3">Sitemap</a>
+              </li>
+              <li>
+                <a href="/A-Z.asp" title="A-Z" accesskey="z">A-Z</a>
+              </li>
+              <li>
+                <a href="/news/2487.asp" title="News" accesskey="n">News</a>
+              </li>
+              <li>
+                <a href="/whatsOn/6775.asp" title="What's On" accesskey="w">What's On</a>
+              </li>
+            </ul>
+          </div><!-- TEXT SIZE CHOOSER -->
+          <div id="header-textsize">
+            <span>Enlarge Screen Text Here:</span> <span class="small-text"><a href="javascript:f('0.6em');">A</a></span> <span class="medium-text"><a href="javascript:f('0.8em');">A</a></span> <span class="large-text"><a href="javascript:f('1.2em');">A</a></span>
+          </div><!-- CLEAR DIV ( alloew red background to extend with text size ) -->
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div><!-- SPACER ( few pixels light blue spacer ) -->
+    <div id="header-spacer"></div><!-- // HEADER -->
+    <!-- PAGE CONTENT -->
+    <div id="main-content-body-outer">
+      <div id="main-content-valley">
+        <!-- MAIN PAGE CONTENT - WHITE BOX -->
+        <div class="white-box-top"></div>
+        <div class="white-box-body body-content">
+          <div style="text-align: center; height: 100px; position: relative; left: 13%;">
+            <script type="text/javascript">
+//<![CDATA[
+            document.write('\x3Cscript type="text/javascript" src="//can.capacitygrid.com/code/blaenaugwentcbc/leaderboard/public">\x3C/script>');
+            //]]>
+            </script>
+          </div>
+          <div id="left-column">
+            <!-- Begin Online Services -->
+            <div id="online-services">
+              <span>What would you like to do?</span> <a href="/onlineServices/15981.asp" id="payforit" name="payforit">Pay for it</a> <a href="/onlineServices/15980.asp" id="reportit" name="reportit">Report it</a> <a href="/onlineServices/15979.asp" id="requestit" name="requestit">Request it</a> <a href="/onlineServices/15978.asp" id="sayit" name="sayit">Say It</a> <a href="/onlineServices/15982.asp" id="findit" name="findit">Find It</a>
+            </div><!-- LEFT NAVIGATION -->
+            <div class="side-box-container no-border">
+              <h2 class="red-heading">
+                Browse by Service:
+              </h2>
+              <ul class="navigation-list">
+                
+                <li class="level-0">
+                  <a href="/index.asp">Home</a>
+                </li>
+                <li class="level-1 up">
+                  <a href="/health.asp" title="Health &amp; Social Care">Health &amp; Social Care</a>
+                </li>
+                <li class="level-2">
+                  <a href="/health/5359.asp" title="Social Services">Social Services</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/health/5384.asp" title="How can I see my File?">How can I see my File?</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/health/5386.asp" title="Information Leaflets">Information Leaflets</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/health/14251.asp" title="Social Services Annual Report">Social Services Annual Report</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/health/14958.asp" title="SSIA">SSIA</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/health/5387.asp" title="Compliments, Complaints &amp; Comments (Social Services)">Compliments, Complaints &amp; Comments (Social Services)</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/health/22845.asp" title="Social Services &amp; Well-being Act 2014">Social Services &amp; Well-being Act 2014</a>
+                </li>
+              </ul>
+            </div><!-- // LEFT NAVIGATION -->
+          </div><!-- CONTENT MIDDLE COLUMN -->
+          
+            <div id="three-column-middle">
+              
+              <h1 class="green-heading" style="display: ;">
+                Social Services
+              </h1>
+              <div class="no-border page-content">
+                <p>
+                  <img style="MARGIN-LEFT: 5px" hspace="5" align="right" src="/images/Images_People/Social_Services.jpg" width="113" height="160" />Social Services in Blaenau Gwent support those people who need Social Care, including those in need of protection, to develop their abilities to live as independent and fulfilled lives as possible.<br />
+                  <br />
+                  <strong>Who do Social Services support?<br /></strong>Blaenau Gwent Social Services support:<br />
+                </p>
+                <ul>
+                  <li>Children and young people under 18 and their families.
+                  </li>
+                  <li>Young people who the Council has looked after.
+                  </li>
+                  <li>Adults and Older People with physical disabilities, learning disabilities, mental health or drug or alcohol related problems.
+                  </li>
+                  <li>Carers, that is family and friends who look after others.
+                  </li>
+                </ul>
+                <p>
+                  <strong>What support is provided?<br /></strong>Children Services involve a wide range of provisions and legislative requirements which are designated both to promote the welfare of all children in need and their families and to protect children from harm.
+                </p>
+                <p>
+                  Adult Services provide a very wide range of help for broad groupings of people with many support and care needs.&nbsp; Information leaflets are&nbsp;available; click&nbsp;<a href="/health/5386.asp">here</a> to view the complete range.<br />
+                  <strong><br />
+                  Who do you contact for help from Social Services?</strong><br />
+                  The Council call centre, C2BG, provides the first point of contact for people who wish to ask for help for themselves or, with their permission, for a relative or friend.&nbsp; Contact with C2BG can be made in person by attending one of the outreach sessions, or by phone, letter, fax or e-mail.&nbsp; These methods are also the first point of contact with Social Services by other agencies, such as health, education, police and housing.<br />
+                  <br />
+                  <strong>What information do Social Services need?</strong><br />
+                  When you get in touch with C2BG you will be asked some questions about the circumstances that led to your contact and to find out if Social Services may be able to help.<br />
+                  <br />
+                  Some basic information will be needed including your name, address and contact details and if the referral is being made on behalf of somebody else that person&rsquo;s details will also be required.&nbsp; Anonymous referrals can be taken however C2BG may require additional information to process the referral.<br />
+                  <br />
+                  The permission of the person being referred must have been obtained before a referral is made.&nbsp; Social Services rarely accept referrals without such permission, and if permission has not been obtained, an explanation must be given.<br />
+                  <br />
+                  <strong>What Happens Next?</strong><br />
+                  C2BG will decide whether to pass the information you have provided to specialist staff in Social Services; or they may redirect you to another agency or organisation; or they might send out information; or if possible they may deal with the query on the spot.<br />
+                  <br />
+                  If your information is passed on to specialist staff in Social Services they will undertake an assessment, this will tell us what your needs are, and if you are eligible for services.&nbsp; It gives information about how your needs can best be met.<br />
+                  <br />
+                  Social Services only provide support to vulnerable people with particular social care needs who are eligible for that support.&nbsp; Social Services use &lsquo;eligibility criteria&rsquo; to decide in a fair way who should be given priority for support and help.<br />
+                  <br />
+                  <strong>What can I do if things go wrong?<br /></strong>If you are unhappy about any of our services, or about the way you have been treated, you have the right to complain.&nbsp; If you wish, you may have someone with you to speak on your behalf or to support you.<br />
+                  <br />
+                  Further details of how to use the complaints procedure can be found in the Social Services complaints leaflet, or by contacting the Complaints Officer based at the Headquarters office.
+                </p>
+                <div class="Top" style="display:">
+                  <a href="/health/5359.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" width="8" height="8" alt="Return to top of page" /></a>
+                  <div style="clear:both;"></div>
+                </div>
+              </div>
+              <div class="box-container text-box">
+                <h1 class="green-heading">
+                  Contact Information
+                </h1>
+                <p>
+                  For further information please contact
+                </p>
+                <p>
+                  <strong>Dedicated&nbsp;Referral Team:</strong><br />
+                  C2BG<br />
+                  Civic Centre<br />
+                  Ebbw Vale<br />
+                  Gwent, NP23 6XB
+                </p>
+                <p>
+                  Tel: (01495) 315700<br />
+                  Fax: (01495) 353350<br />
+                  Minicom: (01495) 355959
+                </p>
+                <p>
+                  For information enquiries:
+                </p>
+                <p>
+                  Email : <a href='mailto:&#105;&#110;&#102;&#111;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#111;&#118;&#46;&#117;&#107;'>&#105;&#110;&#102;&#111;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#111;&#118;&#46;&#117;&#107;</a>
+                </p><br />
+                <br />
+                <p>
+                  For referrals:
+                </p>
+                <p>
+                  Email : <a href='mailto:&#68;&#117;&#116;&#121;&#84;&#101;&#97;&#109;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#99;&#115;&#120;&#46;&#103;&#111;&#118;&#46;&#117;&#107;'>&#68;&#117;&#116;&#121;&#84;&#101;&#97;&#109;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#99;&#115;&#120;&#46;&#103;&#111;&#118;&#46;&#117;&#107;</a>
+                </p><br />
+                <br />
+                <strong>Headquarters:<br /></strong>Social Services Directorate<br />
+                Anvil Court<br />
+                Church Street<br />
+                Abertillery<br />
+                NP13 1DB
+                <p>
+                  Tel: (01495) 354680<br />
+                  Fax: (01495) 355285<br />
+                </p>
+              </div>
+              <div style="clear: both;"></div>
+              <div class="Top" style="display:">
+                <a href="/health/5359.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div><script language="JavaScript" type="text/javascript">
+//<![CDATA[
+              var win = null;
+              function newWindow(mypage,myname,w,h,features) {
+              var winl = (screen.width-w)/2;
+              var wint = (screen.height-h)/2;
+              if (winl < 0) winl = 0;
+              if (wint < 0) wint = 0;
+              var settings = 'height=' + h + ',';
+              settings += 'width=' + w + ',';
+              settings += 'top=' + wint + ',';
+              settings += 'left=' + winl + ',';
+              settings += features;
+              win = window.open(mypage,myname,settings);
+              win.window.focus();
+              }
+              //]]>
+              </script>
+              <div class="box-container related-documents">
+                <h1 class="green-heading">
+                  Related Documents
+                </h1>
+                <ul>
+                  <li class="genericbox_onlineforms_title">- 219.50kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">- 1706.12kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">- 2478.00kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">- 1327.50kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">- 768.50kb<br />
+                  </li>
+                </ul>
+              </div>
+              <div class="Top" style="display:">
+                <a href="/health/5359.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div><!-- // CONTENT MIDDLE COLUMN -->
+              
+            </div><!-- RIGHT COLUMN -->
+            <div id="right-column">
+              <span class="hide"><a name="rightcol" id="rightcol">Right Content Area</a></span> <!-- RELATED PAGES -->
+              <div class="side-box-container">
+                <h2 class="red-heading">
+                  Related Pages
+                </h2>
+                <ul class="related-links">
+                  
+                  <li>
+                    <a href="/health/18611.asp" title="Family &amp; Parental Support">Family &amp; Parental Support</a>
+                  </li>
+                  <li>
+                    <a href="/health/4139.asp" title="Disabled People - Parking Permits - Blue Badge">Disabled People - Parking Permits - Blue Badge</a>
+                  </li>
+                  <li>
+                    <a href="/health/5386.asp" title="Information Leaflets">Information Leaflets</a>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div><!-- // RELATED PAGES --><!-- RELATED SITES -->
+              <div class="side-box-container">
+                <h2 class="red-heading">
+                  Related Sites
+                </h2>
+                <ul class="related-links">
+                  <li>
+                    <a href="http://www.actionforchildren.org.uk/" title="">Action for Children</a>
+                  </li>
+                  <li>
+                    <a href="http://www.actiononhearingloss.org.uk/" title="">Action on Hearing Loss</a>
+                  </li>
+                  <li>
+                    <a href="http://www.ageuk.org.uk/cymru/gwent/" title="">Age Cymru Gwent</a>
+                  </li>
+                  <li>
+                    <a href="http://www.alzheimers.org.uk/" title="">Alzheimer's Society</a>
+                  </li>
+                  <li>
+                    <a href="http://www.wales.nhs.uk/sitesplus/866//" title="">Aneurin Bevan Health Board</a>
+                  </li>
+                  <li>
+                    <a href="http://www.barnardos.org.uk/" title="">Barnardo's</a>
+                  </li>
+                  <li>
+                    <a href="http://www.blaenaugwentcareandrepair.co.uk/" title="">Blaenau Gwent Care &amp; Repair</a>
+                  </li>
+                  <li>
+                    <a href="http://www.bgdas.co.uk/" title="">Blaenau Gwent Domestic Abuse Services</a>
+                  </li>
+                  <li>
+                    <a href="http://wales.gov.uk/topics/transport/integrated/bluebadgescheme/?lang=en" title="">Blue Badge Scheme</a>
+                  </li>
+                  <li>
+                    <a href="http://www.carers.org/" title="">Carers Trust</a>
+                  </li>
+                  <li>
+                    <a href="http://cartrefi.org/" title="">Cartrefi Cymru</a>
+                  </li>
+                  <li>
+                    <a href="http://www.coleggwent.ac.uk/" title="">Coleg Gwent</a>
+                  </li>
+                  <li>
+                    <a href="http://www.wales.nhs.uk/sitesplus/867/page/72988" title="">Continuing NHS Healthcare</a>
+                  </li>
+                  <li>
+                    <a href="http://wales.gov.uk/cssiwsubsite/newcssiw/?lang=en" title="">CSSIW</a>
+                  </li>
+                  <li>
+                    <a href="http://esgyn.org.uk/" title="">Esgyn</a>
+                  </li>
+                  <li>
+                    <a href="http://www.gavowales.org.uk/" title="">GAVO</a>
+                  </li>
+                  <li>
+                    <a href="http://www.gwentfrailty.org.uk/" title="">Gwent Frailty Programme</a>
+                  </li>
+                  <li>
+                    <a href="http://www.hospiceofthevalleys.com/en/home.htm" title="">Hospice of the Valleys</a>
+                  </li>
+                  <li>
+                    <a href="http://www.learningdisabilitywales.org.uk/diary.php" title="">Learning Disability Wales</a>
+                  </li>
+                  <li>
+                    <a href="http://www.mencap.org.uk/" title="">Mencap</a>
+                  </li>
+                  <li>
+                    <a href="http://www.mind.org.uk/" title="">Mind</a>
+                  </li>
+                  <li>
+                    <a href="http://www.nhsdirect.nhs.uk/" title="">NHS DIrect</a>
+                  </li>
+                  <li>
+                    <a href="http://www.rnib.org.uk/Pages/Home.aspx" title="">RNIB</a>
+                  </li>
+                  <li>
+                    <a href="http://www.ssiacymru.org.uk" title="">Social Services Improvement Agency</a>
+                  </li>
+                  <li>
+                    <a href="http://www.stroke.org.uk/" title="">Stroke Association</a>
+                  </li>
+                  <li>
+                    <a href="http://www.wcva.org.uk/" title="">Wales Council for Voluntary Action</a>
+                  </li>
+                  <li>
+                    <a href="http://new.wales.gov.uk/?lang=en" title="">Welsh Government</a>
+                  </li>
+                  <li>
+                    <a href="http://www.workinglinks.co.uk/" title="">Working Links</a>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div><!-- // RELATED SITES -->
+              <!-- UTILITY LINKS RIGHT -->
+              <div class="side-box-container">
+                <form name="PageFeedback" method="post" action="/5431.asp" target="_self" id="PageFeedback">
+                  <input type="hidden" name="PageID" value="5359" /> <input type="hidden" name="Headline" value="Social Services" /> <input type="hidden" name="PageURL" value="/health/5359.asp" />
+                  <ul class="utility-list">
+                    <li class="printer-friendly">
+                      <a href="JavaScript:window.print()">Print friendly<br />
+                      version</a>
+                    </li>
+                    <li class="page-feedback">
+                      <a href="JavaScript:document.PageFeedback.submit();">Feedback<br />
+                      on this page</a>
+                    </li>
+                  </ul>
+                </form>
+                <div class="clear"></div>
+              </div><!-- //UTILITY LINKS RIGHT -->
+              
+            </div><!-- //RIGHT COLUMN --><!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div><!-- FOOTER -->
+          <!-- PAGE FOOTER - WHITE BOX -->
+          <div class="white-box-top"></div>
+          <div class="white-box-body footer-content">
+            <!-- start of footer content -->
+            <a href="/about/5639.asp"><img src="/images/find-us.jpg" alt="Find Us" /></a> <a href="/council/5413.asp"><img src="/images/service-buddy.jpg" alt="Children's Complaints Service" /></a> <a href="/5515.asp"></a> <!-- <a href="http://www.direct.gov.uk"></a> -->
+             <a href="https://www.gov.uk/"></a> <!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div>
+          <div id="footer-contact">
+            <address>
+              Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB Tel: 01495 311556 E-mail:&nbsp;<a href="mailto:info@blaenau-gwent.gov.uk">info@blaenau-gwent.gov.uk</a>
+            </address>
+          </div><!--RDExecute=ASP-->
+          <script type="text/javascript">
+//<![CDATA[
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-17447558-1', 'blaenau-gwent.gov.uk');
+          ga('require', 'displayfeatures'); 
+          ga('send', 'pageview');
+          //]]>
+          </script> <script type="text/javascript">
+//<![CDATA[
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-17447558-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+          //]]>
+          </script> <!-- // FOOTER -->
+        </div>
+      </div><!-- iBar Code -->
+      <script type="text/javascript">
+//<![CDATA[
+      document.write('\x3Cscript type="text/javascript" src="//can.capacitygrid.com/code/blaenaugwentcbc/ibar/public">\x3C/script>');
+      //]]>
+      </script> 
+    </div>
+  </body>
+</html>

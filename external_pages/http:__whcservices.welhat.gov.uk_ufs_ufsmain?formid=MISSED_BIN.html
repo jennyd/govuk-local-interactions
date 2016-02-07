@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang='EN'>
+<head>
+<title>UFS check of browser attributes</title>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="0">
+</head>
+<body>
+<form method='POST' action='BrowserCheck' name='jscheck'>
+<input type='hidden' name='JSOK' value='false'>
+<input type='hidden' name='CSSOK' value='false'>
+<input type='hidden' name='formid' value='MISSED_BIN'>
+<script type='text/javascript'>
+if (document.getElementById && document.createElement) { document.jscheck.CSSOK.value='true' }; if (document.cookie.indexOf('ufsCookieTest')!=-1) {document.jscheck.JSOK.value='true';document.jscheck.submit();}else {document.write('<font face="Arial, Helvetica, sans-serif" size="3"><p>This web page requires cookies to be enabled in your Web Browser. <p>Please enable cookies, backspace to the previous page and try again.</font>');}
+</script>
+<noscript>
+<div style="font-family: Arial, Helvetica, sans-serif; font-size: 20px">System has detected that Javascript is not enabled. Please click here to continue.
+<input type='submit' name='SubButton' value='OK'>
+</div>
+</noscript>
+</form>
+</body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!--following line prevents IE7/8 from giving ActiveX warnings-->
+<!-- saved from url=(0014)about:internet -->
+
+<!-- HTML5 Boilerplate -->
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]>	<html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]>	<html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> 		<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta  name="description" content="The Bedford Borough Council and Central Bedfordshire Council Virtual Library">
+	<meta name="keywords" content="Bedfordshire,Bedford,Libraries,Library,Virtual Library">
+	<meta name="author" content="Bedford Borough Council and Central Bedfordshire Council">
+	<meta http-equiv="cleartype" content="on">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<!-- Responsive and mobile friendly stuff -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<!-- get the path vars -->
+
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="/webingres/bedfordshire/vlib/0.css/styles.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/webingres/bedfordshire/vlib/0.css/vlibStdBeds.css" media="all">
+
+	<!--[if !IE | gt IE 7]><!-->
+		<link rel="stylesheet" href="/webingres/bedfordshire/vlib/0.css/new_nav.css" >
+	<!--<![endif]-->
+	<!--[if IE 7]> 
+		<link rel="stylesheet" type="text/css" href="/webingres/bedfordshire/vlib/0.css/ie7.css">
+	<![endif]-->
+
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript">
+		window.open    = function(){};
+		window.print   = function(){};
+		// Support hover state for mobile.
+		if (false) {
+			window.ontouchstart = function(){};
+		}
+	</script>
+
+	<!-- most  JavaScript at the bottom, except for Modernizr which enables HTML5 elements and feature detects -->
+	<script type="text/javascript" src="/webingres/bedfordshire/vlib/0.js/modernizr-2.5.3-min.js"></script>
+	
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+	<script type="text/javascript">window.jQuery || document.write('<script src="/webingres/bedfordshire/vlib/0.js/jquery-1.7.2.min.js"><\/script>')</script>
+	<script src="/webingres/bedfordshire/vlib/0.js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/webingres/bedfordshire/vlib/0.js/jquery.cookiecuttr.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () { 
+$.cookieCuttr( 
+{cookieAnalyticsMessage: 'We use cookies, to track visits to our website and for our screen reader, we store no personal details.',
+cookieAcceptButtonText: 'CONTINUE'}
+);
+});
+<!-- Google Analytics -->
+ {
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-48770463-1', 'culturalservices.net');
+ga('send', 'pageview');
+}
+</script>
+
+<script type="text/javascript" src="/webingres/bedfordshire/vlib/0.js/responsivegridsystem.js"></script>
+<script type="text/javascript" src="/webingres/bedfordshire/vlib/0.js/nav.js"></script>
+
+<!--test for IE7 & close up the nav if so-->
+<!--[if lte IE 7]>
+	<script type="text/javascript" src="/webingres/bedfordshire/vlib/0.js/nav_ie7.js"></script>
+<![endif]-->
+<!--listen function script-->
+<script type="text/javascript" src="http://f1.eu.readspeaker.com/script/6514/ReadSpeaker.js?pids=embhl" ></script>
+
+
+
+
+<title>Online Registration - About Your Library - Virtual Library</title>
+
+<script type="text/javascript">
+<!--
+//<![CDATA[
+function daysbetween(birth)
+{
+	var nowDate = new Date();
+	var b = birth.split("/");
+	var yr = 16 + new Number(b[2]);
+	var mo = new Number(b[1]) - 1;
+	var adultDate = new Date(yr,mo,b[0]);
+	var diff = nowDate - adultDate;
+	if(diff < 0)
+		return("child");
+	else
+		return("adult");
+}
+function toggle_choices(opt1,opt2)
+{
+	obj1=eval("document.getElementById('"+opt1+"')");
+	obj2=eval("document.getElementById('"+opt2+"')");
+	if(obj1.checked)
+		obj2.checked = false;
+	else
+		obj2.checked = true;
+}
+//]]>
+-->
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="headcontainer">
+		<header>
+			<div>
+				<img id="Image-Maps" class="hdrimg" src="/webingres/bedfordshire/vlib/0.images/bbc_cbc_logo.png" usemap="#Image-Maps" width="187" alt="" title="">
+				<map id="_Image-Maps" name="Image-Maps">
+					<area shape="rect" coords="0,0,87,110" href="http://www.bedford.gov.uk/" alt="Bedford Borough Council logo" title="Bedford Borough Council logo"   >
+					<area shape="rect" coords="89,0,200,110" href="http://www.centralbedfordshire.gov.uk/" alt="Central Bedfordshire Council logo" title="Central Bedfordshire Council logo" >
+				</map>
+			</div>
+		<h1><a href="/cgi-bin/vlib.sh">The Virtual Library</a></h1>
+
+		<!--[if !IE | gt IE 7]><!-->
+			<a href="#menu" class="menu-link"><img src="/webingres/bedfordshire/vlib/0.images/nav_icon2.gif" height="30px" alt="Menu" title="Menu"></a>
+		<!--<![endif]-->
+		<!--[if IE 7]>
+			<a href="#menu" class="menu-link"><img src="/webingres/bedfordshire/vlib/0.images/nav_menu.gif" height="30px" alt="Menu" title="Menu"></a>
+		<![endif]-->
+
+		<nav id="menu" class="menu nav" role="navigation">
+			<ul class="level-1">
+				<li class="has-subnav search"><a>Search, Request<br>&amp; Renew</a>
+					<ul class="level-2">
+						<li><a href="https://beds-arena.culturalservices.net/web/arena/">Search and Request</a></li>
+						<li><a href="https://beds-arena.culturalservices.net/web/arena/">Renew and Your Account</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav about"><a>About Your<br>Library</a>
+					<ul class="level-2">
+						<li><a href="/webingres/bedfordshire/vlib/0.beds_libraries/your_library_card_faq.htm">Your Library</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.beds_libraries/faq.htm">FAQ</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.beds_libraries/it_in_libraries.htm">IT in Libraries</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.beds_libraries/mobile_libraries.htm">Mobile Library</a></li>
+						<li><a href="/cgi-bin/sls.sh">Schools Library Service</a></li>
+						<li><a href="/cgi-bin/vlib.sh?enqtype=REGISTER">Join the Library</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.menus/whats_on_menu.htm">What's On</a></li>		
+					</ul>
+				</li>
+				<li class="has-subnav books"><a>Books, Music<br>&amp; Film</a>
+					<ul class="level-2">
+						<li><a href="/webingres/bedfordshire/vlib/0.books_reading/books.htm">Books</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.books_reading/films_music.htm">Films and Music</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.books_reading/eaudio.htm">E-Audio</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.books_reading/ebooks_emagazines.htm">E-Books and E-Magazines</a></li>
+						<li><a href="/cgi-bin/vlib.sh?enqtype=ENQUIRE&amp;enqpara1=adult&amp;qtype=ldg">Ask us a Question</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav child"><a>Children &amp;<br> Teen</a>
+					<ul class="level-2">
+						<li><a href="/webingres/bedfordshire/vlib/0.children_teenagers/6andunders.htm">Under 6</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.children_teenagers/whats_in_the_library_for_me.htm">Children's Pages</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.teen/home.htm">Teen Turf</a></li>
+						<li><a href="/cgi-bin/vlib.sh?enqtype=ENQUIRE&amp;enqpara1=youth">Ask us a Question</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav info"><a>Information &amp;<br> E-Resources</a>
+					<ul class="level-2">
+						<li><a href="/webingres/bedfordshire/vlib/0.information_reference/a_z.htm">A-Z How to Find Information</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.beds_libraries/online_resources.htm">E-Resources</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.gateway/subject.htm">WebLinks</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.information_reference/enquiry_service.htm">Ask us a Question</a></li>
+					</ul>
+				</li>
+				<li class="has-subnav local"><a>Local &amp; Family <br>History</a>
+					<ul class="level-2">
+						<li><a href="/webingres/bedfordshire/vlib/0.local_studies/local_studies_a_z.htm">A-Z Local and Family History</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.local_studies/local_studies_by_library.htm">What's at your Library</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.digitised_resources/places.htm">Local Places</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.digitised_resources/people.htm">Local People</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.digitised_resources/subjects.htm">Local Subjects</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.local_studies/ancestrylibed.htm">Ancestry</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.local_studies/enquiry_service.htm">Ask us a Question</a></li>
+					</ul>
+				</li>
+				<li class="jobs"><a href="/webingres/bedfordshire/vlib/0.jobs/jobs_careers_skills_home.htm">Jobs, Careers<br>&amp; Skills</a></li>
+				<li class="has-subnav localinfo"><a>Local<br>Information</a>
+					<ul class="level-2">
+						<li><a href="/webingres/bedfordshire/vlib/0.local_information/information_by_place.htm">Your Town, Your Village</a></li>
+						<li><a href="/cgi-bin/infopoint.sh">Local Information Database</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.whats_on/events_database.htm">Community Events</a></li>
+						<li><a href="/webingres/bedfordshire/vlib/0.local_information/round_world.htm">Round the World in Bedford</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		</header>
+		<!--close headcontainer div-->
+	</div>
+	<div id="frefind_div">
+	<!--freefind-->
+	<form class="pico" id="pico" action="http://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+		<a href="http://www.pinterest.com/bedslibraries/"><img src="/webingres/bedfordshire/vlib/0.images/pinterest.gif" alt="Follow us on Pinterest" title="Follow us on Pinterest"></a>
+		<a href="http://twitter.com/bedslibraries/"><img src="/webingres/bedfordshire/vlib/0.images/twitter.gif" alt="Follow us on Twitter" title="Follow us on Twitter"></a>
+		<a href="http://www.facebook.com/BedfordshireLibraries"><img src="/webingres/bedfordshire/vlib/0.images/facebook.gif" alt="Contact us on Facebook" title="Contact us on Facebook"></a>
+		<a href="/cgi-bin/vlib.sh"> <img src="/webingres/bedfordshire/vlib/0.images/home.png" alt="Home Page" title="Home Page" ></a>
+		<a href="/webingres/bedfordshire/vlib/0.menus/whats_on_menu.htm"><img src="/webingres/bedfordshire/vlib/0.images/calendar.gif" alt="What's On" title="What's On"></a>
+		<a href="/cgi-bin/vlib.sh?enqtype=CONTACT"> <img src="/webingres/bedfordshire/vlib/0.images/contact.png" alt="Contact Us" title="Contact Us" class="contact" ></a>
+		<input type="hidden" name="si" value="45959293">
+		<input type="hidden" name="pid" value="r">
+		<input type="hidden" name="n" value="0">
+		<input type="hidden" name="nsb" value="1">
+		<input type="hidden" name="oq" value="<!--cleanquery-->">
+		<input type="hidden" name="_charset_" value="">
+		<input type="hidden" name="bcd" value="&#247;">
+		<input type="text" name="query" size="10" value="">
+		<input type="image" src="/webingres/bedfordshire/vlib/0.images/sitesearch.gif" alt="Search" title="Search" id="sitesearch">
+		<!--<input type="submit" value="search">-->
+		<a style="margin-right:0.5em" href="http://www.freefind.com/searchtipspop2.html" target=searchtips
+		onclick="somewin=window.open('http://www.freefind.com/searchtipspop2.html', searchtips','resizable=yes,scrollbars=yes,width=508,height=508')">Help</a>
+	</form>
+	<!--end of freefind-->
+
+		<!--listen button -->
+		<div id="readspeaker_button1" class="rs_skip rsbtn rs_preserve floatleft">
+		    <a class="rsbtn_play" accesskey="L" title="Listen to this page using ReadSpeaker" 
+		    href="http://app.eu.readspeaker.com/cgi-bin/rsent?customerid=6514&lang=en_uk&readid=maincontent&url=">
+			<span class="rsbtn_left rsimg rspart"><span class="rsbtn_text"><span>Listen</span></span></span>
+    			<span class="rsbtn_right rsimg rsplay rspart"></span></a>
+		<!--end of listen button div -->
+		</div>
+	<!--end of freefind div -->
+	</div>
+	<section id="maincontentcontainer">
+		<div id="maincontent">
+			<div class="section group">
+				<div class="col span_2_of_2 article ">
+					<div class="singlecol">
+<div class="ctr"><h1>Joining the Library</h1><h2>Online Registration</h2></div>
+
+<p><strong><a href="/cgi-bin/vlib.sh?enqtype=REGISTER&amp;enqpara1=youth">
+Under 16? Click here!</a></strong></p>
+<p>To join Bedford Borough and Central Bedfordshire Libraries complete the form
+below, and click the &quot;Join the Library&quot; button. We
+will give you your Library Card Number and PIN straight away so that you can
+use our online services immediately.</p>
+<p>Please be aware that if you live outside Bedford Borough and Central Bedfordshire 
+and are unable to visit one of our libraries to collect a library card you will not be able
+to access The Times Digital Archive due to licence agreement restrictions.</p>
+<p>To use the full services offered by the library please bring 
+<a href="/webingres/bedfordshire/vlib/0.beds_libraries/joining_library_proof_id.htm">
+one form of identification</a> to prove your name and address, e.g. driving 
+licence, utility bill, to the library you selected. If you are under 16 you 
+should bring proof of your parent's or guardian's name and address.</p> 
+
+<p><a href="/webingres/bedfordshire/vlib/0.beds_libraries/joining_library.htm">Find out more about 
+joining the library.</a></p>
+<p class="ctr"><strong>Do not use this form if you are already<br>a member of
+Bedford Borough or Central Bedfordshire Libraries.</strong></p>
+<p>The red asterisk <span class="reqd">*</span> means information must be 
+typed in.</p>
+
+<form method="post" name="online_reg" onsubmit="return(do_submit(this));"
+action="/cgi-bin/vlib_search.cgi">
+<input type="hidden" name="enqtype" value="REGISTER" />
+<input type="hidden" name="enqpara1" value="update" />
+<input type="hidden" name="authority" value="1" />
+<input type="hidden" name="from" value="vlib" />
+<input type="hidden" name="session_no" value="15957175" />
+<input type="hidden" name="db" value="live" />
+<input type="hidden" name="script" value="/cgi-bin/vlib.sh" />
+<input type="hidden" name="rureal" value="" />
+<table width="100%" class="bdr" style="table-layout:fixed">
+<col valign="top" width="50%" /><col width="50%" />
+
+<tr><td colspan="2" id="instruct" style="color:black;font-size:90%;padding:14px">
+This information is being collected by Bedford Borough and Central Bedfordshire Councils and will
+be used in the provision of a Library Service. It will not be used for any
+other purpose or disclosed to any other agency.</td></tr>
+
+<tr><td id="title_cap"><label for="title">Title:</label></td>
+<td>
+<select name="borr_title" id="title" size="1" tabindex="100">
+<option value="">- please select -</option>
+<option value="Dame"> Dame </option>
+<option value="Dr"> Dr </option>
+<option value="Lady"> Lady</option>
+<option value="Lord"> Lord</option>
+<option value="Miss"> Miss</option>
+<option value="Mr"> Mr</option>
+<option value="Mrs"> Mrs</option>
+<option value="Ms"> Ms</option>
+<option value="Mstr"> Mstr</option>
+<option value="Prof"> Prof</option>
+<option value="Rev"> Rev</option>
+<option value="Sir"> Sir</option>
+<option value="Sist"> Sist</option>
+</select>
+</td></tr>
+<tr><td id="forename_cap"><label for="forename">First name(s): <span class="reqd">*</span></label></td>
+<td><input name="forename" type="text" id="forename" size="32" maxlength="30"
+tabindex="100" /></td></tr>
+<tr><td id="surname_cap"><label for="surname">Last/family name: <span class="reqd">*</span></label></td>
+<td><input name="surname" type="text" id="surname" size="38" maxlength="40" 
+tabindex="100" /></td></tr>
+<tr><td id="address1_cap"><label for="add1">Address line 1: <span class="reqd">*</span></label></td>
+<td><input name="address1" type="text" id="add1" size="38" maxlength="40" 
+tabindex="100" /></td></tr>
+<tr><td id="address2_cap"><label for="add2">Address line 2: <span class="reqd">*</span></label></td>
+<td><input name="address2" id="add2" type="text" size="38" maxlength="40" 
+tabindex="100" /></td></tr>
+<tr><td id="address3_cap"><label for="add3">Address line 3:</label></td>
+<td><input name="address3" id="add3" type="text" size="38" maxlength="40" 
+tabindex="100" /></td></tr>
+<tr><td id="postcode_cap"><label for="pcode">Postcode: <span class="reqd">*</span></label></td>
+<td><input name="postcode" id="pcode" type="text" size="10" maxlength="10" 
+tabindex="100" /></td></tr>
+<tr><td id="tel_cap"><label for="tel">Telephone No:</label></td>
+<td><input name="phone" id="tel" type="text" size="16" maxlength="16"
+tabindex="100" /></td></tr>
+<tr><td id="email_cap"><label for="email">E-mail address:</label></td>
+<td><input name="email" id="email" type="text" size="38" maxlength="60" 
+tabindex="100" /></td></tr>
+<tr><td id="dob_cap"><label for="dob">Date of Birth: <span class="reqd">*</span></label></td>
+<td><input name="dob" id="dob" type="text" size="12" maxlength="10" 
+value="dd/mm/yyyy" tabindex="100" onfocus="select()" /></td></tr>
+<tr><td id="sex_cap"><label for="sex">Male/Female: <span class="reqd">*</span></label></td>
+<td><select name="sex" id="sex" size="1" tabindex="100">
+<option value="0"> - please select -</option>
+<option value="2">Female</option>
+<option value="1">Male</option>
+</select></td></tr>
+<tr><td id="member_type_cap"><label for="which">Which type of membership do you want? <span class="reqd">*</span></label></td>
+<td><input name="member_full" id="member_full" type="checkbox" class="chkbox"
+onclick="toggle_choices('member_full','member_online');" tabindex="100" />Full
+<input name="member_online" id="member_online" type="checkbox" class="chkbox"
+onclick="toggle_choices('member_online','member_full')" tabindex="100" />Online<br>
+<small><a href="/webingres/bedfordshire/vlib/0.beds_libraries/full_library_member.htm" target="info"
+title="About Full Membership - opens in a second window">
+Full membership</a> allows you to borrow items, use 
+computers in the library and use the Virtual Library<br>
+<a href="/webingres/bedfordshire/vlib/0.beds_libraries/virtual_member.htm" target="info"
+title="About Online Membership - opens in a second window">Online 
+membership</a> allows you to use 
+selected Virtual Library facilities via the Internet only.</small>
+</td></tr>
+<tr><td id="library_cap"><label for="p_branch">Which library will you collect your
+library card from: <span class="reqd">*</span></label></td>
+<td valign="top">
+<select name="pickup_branch" id="p_branch" size="1" tabindex="100">
+<option value="0">- please select - </option>
+<option value="50"> Ampthill Library</option>
+<option value="52"> Barton Library</option>
+<option value="10"> Bedford Central Library</option>
+<option value="30"> Biggleswade Library</option>
+<option value="53"> Bromham Library</option>
+<option value="20"> Dunstable Library</option>
+<option value="210"> Flitwick Library</option>
+<option value="61"> Houghton Regis Library</option>
+<option value="62"> Kempston Library</option>
+<option value="21"> Leighton Buzzard Library</option>
+<option value="75"> Potton Library</option>
+<option value="33"> Putnoe Library</option>
+<option value="77"> Sandy Library</option>
+<option value="40"> Shefford Library</option>
+<option value="79"> Stotfold Library</option>
+<option value="80"> Toddington Library</option>
+<option value="56"> Wootton Library</option>
+</select><br />
+<small>Only Full Members need to collect a card.</small>
+</td></tr>
+<tr><td id="library_info" colspan="2">
+<ul>
+<li>The library card is issued to the person named above, they
+are responsible for any items borrowed from Bedford Borough and Central Bedfordshire Libraries.</li>
+<li>If the library card is lost please report it immediately.</li>
+<li>Please inform us of any change to your name or address.</li>
+</ul>
+</td></tr>
+<tr><td colspan="2">
+<input type="checkbox" name="byelaws" checked="checked" class="chkbox" />
+I wish to join the library and agree to abide by the Regulations and Byelaws. <span class="reqd">*</span>
+<br><small>
+<a href="/webingres/bedfordshire/vlib/0.beds_libraries/regulations_byelaws.htm" target="new">
+Click here to view the Regulations and Byelaws in a separate window</a></small>
+</td></tr>
+</table>
+<div style="float:right; margin:0.5em;">
+	<input type="submit" name="submit" value="Send" id="submit" />
+	<input type="reset" name="reset" value="Clear" id="reset" />
+</div>
+</form>
+					<!--end singlecol -->
+					</div>
+				<!--centering content in col -->
+				</div>
+			<!--close section & group -->
+			</div>
+		<!--close maincontent -->
+		</div>
+	<!--close section -->
+	</section>
+	<div id="footercontainer">
+		<footer>
+		  <div class="section group">
+			<div class="col span_3_of_6">
+				<p>The Virtual Library a shared service hosted by Bedford Borough Council</p>
+			</div>
+			<div class="col span_1_of_6">
+				<ul>
+					<li><a href="http://virtual-library.culturalservices.net/cgi-bin/vlib.sh?enqtype=PIN">Request a PIN</a></li>
+					<li><a href="http://virtual-library.culturalservices.net/cgi-bin/vlib.sh?enqtype=CONTACT">Contact Us</a></li>
+					<li><a href="http://virtual-library.culturalservices.net/cgi-bin/vlib.sh?enqtype=REGISTER">Join Online</a></li>
+				</ul>
+			</div>
+			<div class="col span_1_of_6">
+				<ul>
+					<li><a href="/webingres/bedfordshire/vlib/0.beds_libraries/online_resources.htm">E-Resources</a></li>
+					<li><a href="/webingres/bedfordshire/vlib/0.menus/whats_on_menu.htm">What's On</a></li>
+					<li><a href="http://vpoint.culturalservices.net/bedford">Request &amp; Renew </a></li>
+				</ul>
+			</div>
+			<div class="col span_1_of_6">
+				<ul>
+					<li><a href="/webingres/bedfordshire/vlib/0.beds_libraries/disclaimer.htm">Disclaimer</a></li>
+				</ul>
+			</div>
+
+		  <!--close section and group -->
+		  </div>
+		</footer>
+	<!--end of footercontainer div -->
+	</div>
+<!--close wrapper div -->
+</div>
+
+	<!-- JavaScript at the bottom for fast page loading -->
+
+	<!--[if (lt IE 9) & (!IEMobile)]>
+	<script src="/webingres/bedfordshire/vlib/0.js/selectivizr-min.js"></script>
+	<![endif]-->
+
+</body>
+</html>
+<script type="text/javascript">
+<!--
+//<![CDATA[
+function init_case(oStr)
+{
+	var outStr = new String();
+	var oArr = oStr.split(" ");
+	for(n=0;n<oArr.length;n++)
+	{
+		var oCap = oArr[n].substr(0,1);
+		var oRest = oArr[n].substr(1);
+		outStr += oCap.toUpperCase() +oRest.toLowerCase()+" ";
+	}
+	return outStr;
+}
+
+function validate_dob(oDate)
+{
+	var oArr = oDate.split("/");
+	if(oArr.length == 1)
+	{
+		oArr = oDate.split(".");
+	}
+	if(oArr.length < 3)
+		return false;
+	if(oArr[0] < "01" || oArr[0] > "31")
+		return false;
+	if(oArr[1] < "01" || oArr[1] > "12")
+		return false;
+	if("09 04 06 11".indexOf(oArr[1]) > -1 && oArr[0] > "30")
+		return false; // wrong days
+	else
+	{
+		if(oArr[1] == "02" && oArr[0]>"29")
+			return false; // wrong days
+	}
+	if(oArr[2] < "1890" || oArr[2] > "2020")
+		return false;
+	return true;
+}
+
+function validate_email(email)
+{
+	var invalidChars=" /:,;|";
+	var validEmail = true;
+	for(i=0;i<invalidChars.length;i++)
+	{
+		badChar = invalidChars.charAt(i);
+		if(email.indexOf(badChar,0) > -1)
+			validEmail = false;
+	}
+	atPos = email.indexOf("@",1);
+	if(atPos == -1)
+		validEmail = false;
+	if(email.indexOf("@",atPos+1)> -1)
+		validEmail = false;
+	periodPos = email.indexOf(".",atPos);
+	if(periodPos == -1)
+		validEmail = false;
+	if(periodPos+3 > email.length)
+		validEmail = false;
+	if(validEmail == false)
+	{
+		alert("Sorry. Your email address is not valid.\nPlease retype it.");
+		return false;
+	}
+    return true;
+}
+
+function do_submit(theForm)
+{
+	if(theForm.forename.value.length < 1)
+	{
+		alert("Please enter your first name");
+		return false;
+	}
+	else
+		theForm.forename.value = init_case(theForm.forename.value);
+	if(theForm.surname.value.length < 1)
+	{
+		alert("Please enter surname");
+		return false;
+	}
+	else
+		theForm.surname.value = init_case(theForm.surname.value);
+	if(theForm.address1.value.length < 1)
+	{
+		alert("Please enter first line of address");
+		return false;
+	}
+	else
+		theForm.address1.value = init_case(theForm.address1.value);
+	if(theForm.address2.value.length < 1)
+	{
+		alert("Please enter second line of address");
+		return false;
+	}
+	else
+		theForm.address2.value = init_case(theForm.address2.value);
+	if(theForm.address3.value.length >0)
+		theForm.address3.value = init_case(theForm.address3.value);
+	if(theForm.postcode.value.length < 5 || theForm.postcode.value.indexOf(" ")<2 )
+	{
+		if(theForm.member_online.checked != true)
+		{
+			alert("Please enter your postcode, including the space between the two parts of the postcode,\neg: MK42 9AP, not MK459AP");
+			return false;
+		}
+	}
+	else
+		theForm.postcode.value = theForm.postcode.value.toUpperCase();
+	if(theForm.dob.value == '00/00/0000' || theForm.dob.value.length <8)
+	{
+		alert('Please enter your date of birth.');
+		return false;
+	}
+	else
+	{
+		var datechk = validate_dob(theForm.dob.value);
+		if(datechk == false)
+		{
+			alert('Sorry. The date of birth you have given is not a valid date.\n Please retype in the format dd/mm/yyyy, eg: 01/05/1972 for 1st May 72');
+			return false;
+		}
+		// check for under 16
+		if(daysbetween(theForm.dob.value) == "child")
+		{
+			alert("As you are under 16, you need to use another form. \nWhen you click OK your information will be copied to the new form.");
+			var qstr="&forename="+escape(theForm.forename.value)+"&surname="+escape(theForm.surname.value)+"&address1="+escape(theForm.address1.value)+"&address2="+escape(theForm.address2.value)+"&address3="+escape(theForm.address3.value)+"&postcode="+escape(theForm.postcode.value)+"&dob="+escape(theForm.dob.value)+"&email="+escape(theForm.email.value)+"&phone="+escape(theForm.phone.value)+"&sex="+escape(theForm.sex.value);
+			if(theForm.member_online.checked == true)
+				qstr+="&member=online";
+			if(theForm.member_full.checked == true)			
+				qstr+="&member=full";
+			window.location="/cgi-bin/vlib.sh?enqtype=REGISTER&enqpara1=youth"+qstr;
+			return false;
+		}
+	}
+	if(theForm.sex.selectedIndex == 0)
+	{
+		alert('Please select Male or Female from the drop-down box.');
+		return false;
+	}
+	if(theForm.member_full.checked==false && theForm.member_online.checked==false)
+	{
+		alert('Please select the type of membership you want.\nChoose FULL if you want to borrow books, CDs, DVDs etc, or you want to use the computers in one of the libraries.\nChoose ONLINE if you just want to use the Virtual Library Facilities from home.');
+		return false;
+	}
+	if(theForm.member_full.checked==true && theForm.pickup_branch.selectedIndex==0)
+	{
+		alert('To join as a FULL member you need to go to a library, show some proof of ID and collect a LIbrary Card.\n\nPlease choose the library from the drop-down box where you want to collect your card.');
+		return false;
+	}
+	if(theForm.byelaws.checked == false)
+	{
+		alert('Sorry! You must indicate that you agree to abide by the Regulations and Byelaws by ticking the box at the bottom of the form.');
+		return false;
+	}
+	if(theForm.email.value.length > 0)
+	{
+		var emailchk = validate_email(theForm.email.value);
+		if(emailchk == false)
+			return false;
+	}
+	return true;
+}
+//]]>
+-->
+</script>
+</body>
+</html>

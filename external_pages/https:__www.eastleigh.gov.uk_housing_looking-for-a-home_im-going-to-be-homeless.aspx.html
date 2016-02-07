@@ -1,0 +1,468 @@
+
+    <!DOCTYPE html>
+    <html lang="en-GB">
+        <head>
+	
+            <title>Eastleigh Borough Council</title>
+            <meta name="Copyright" content="Copyright 2014 Eastleigh Borough Council" />
+            <meta name="Author"    content="Eastleigh Borough Council - CSICT Development Team" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta charset="UTF-8" />
+            <meta name="description" content=''>
+            <meta name="keywords" content=''>
+            <meta name="author" content="Eastleigh Borough Council">
+
+                <!-- Styles -->
+            <link href="/css/master.less.css"    rel="stylesheet" type="text/css" />
+            		    <style type="text/css">
+    	    #wrapper {background: #BCB;}
+
+    	     @media( min-width: 1061px)
+    	     {
+    	         #wrapper 
+    	         {
+					background: #eaebec;
+    	            background: linear-gradient( rgba(200, 200, 200, 0.8), rgba(200, 200, 200, 0.8) ),url('/media/63544/Netley-Abbey.jpg');
+    	            background-size: cover;
+    	         }
+    	     }
+    	</style>
+      
+
+			<!--Start of Google Analytics-->
+            <script type="text/javascript">
+                !function (e, a, t, n, c, o, s) { e.GoogleAnalyticsObject = c, e[c] = e[c] || function () { (e[c].q = e[c].q || []).push(arguments) }, e[c].l = 1 * new Date, o = a.createElement(t), s = a.getElementsByTagName(t)[0], o.async = 1, o.src = n, s.parentNode.insertBefore(o, s) } (window, document, "script", "//www.google-analytics.com/analytics.js", "ga"), ga("create", "UA-20264814-1", "auto"), ga("send", "pageview");
+            </script>
+			
+			<script>
+			/**
+			* Function that tracks a click on an outbound link in Google Analytics.
+			* This function takes a valid URL string as an argument, and uses that URL string
+			* as the event label.
+			*/
+			var trackOutboundLink = function(url) {
+			   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+				 function () {
+				 document.location = url;
+				 }
+			   });
+			}
+			</script> 
+            <!--End of Google Analytics-->
+
+            <script type="text/javascript" src="/Scripts/jquery-1.11.0.min.js"></script>
+            <script async src="/Scripts/less-1.3.3.min.js" type="text/javascript"></script>
+        </head>
+
+        <body>
+    
+            <form method="post" action="/housing/looking-for-a-home/im-going-to-be-homeless.aspx" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWAmYPZBYCZg9kFgJmD2QWAgIHEGRkFgICCQ9kFgJmD2QWAmYPZBYKAgEPDxYCHgRUZXh0ZWRkAgMPDxYEHgtOYXZpZ2F0ZVVybAU2aHR0cHM6Ly9teS5lYXN0bGVpZ2guZ292LnVrL215LWFjY291bnQvbXktZGV0YWlscy5hc3B4HgdWaXNpYmxlaGRkAgUPDxYCHwEFOmh0dHBzOi8vbXkuZWFzdGxlaWdoLmdvdi51ay9NZW1iZXItUmVnaXN0cmF0aW9uL2xvZ2luLmFzcHhkZAIHDw8WAh8CaGRkAgkPDxYCHwEFNGh0dHBzOi8vbXkuZWFzdGxlaWdoLmdvdi51ay9NZW1iZXItUmVnaXN0cmF0aW9uLmFzcHhkZGTTCAP/MRhNf2H52r0wSOKvhQeutw==" />
+</div>
+
+                <div id="header" class="body">
+                    <h1>
+                        <a href="/">
+                            <img src="/media/core/eastleigh-logo.gif" alt="Eastleigh Borough Council" />
+                        </a>
+                    </h1>
+                    
+        <ul class="toolbar">
+
+				<li class=""><a href="/tools/cookies.aspx">Cookies</a></li>
+				<li class=""><a href="/tools/accessibility.aspx">Accessibility</a></li>
+				<li class=""><a href="/tools/contact-us.aspx">Contact Us</a></li>
+				<li class=""><a href="/tools/site-map.aspx">Site Map</a></li>
+				<li class=""><a href="/tools/a-to-z.aspx">A to Z</a></li>
+				<li class="last"><a href="/tools/help.aspx">Help</a></li>
+		</ul>
+
+
+                    <script type="text/javascript">
+    function doSearch() { var a = $("#searchstring").val(); return "" != a && (window.location = "/tools/search.aspx?searchtext=" + a), !1 }
+</script>
+
+<div id="search">
+    <label for="searchstring" class="hidden">site search</label>
+    <input type="text" id="searchstring" name="searchstring" class="formField" placeholder="Search..." title="Search" maxlength="50" autocomplete="Off" />
+    
+    <label for="searchBtn" class="hidden">search</label>       
+    <button type="button" class="searchBtn" id="searchBtn" name="searchBtn" onclick="doSearch();"></button>
+    
+    <div id="searchresults" class="search-results mecontent">
+    </div>
+</div>
+           
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+        var content = $('#searchstring').val();
+        $('#searchstring').keyup(function (e) {
+
+            if ($('#searchstring').val() != content) {
+                content = $('#searchstring').val();
+                $.ajax({
+                    type: "POST",
+                    url: "/searchresults",
+                    data: "searchstring=" + content,
+                    success: function(msg){
+                        $('#searchresults').html(msg);
+                    }
+                });
+            }
+
+            if (e.keyCode == 13) {
+                var searchText = $("#searchstring").val();
+                //alert(searchText);
+
+                window.location = "https://www.eastleigh.gov.uk/tools/search.aspx?searchtext=" + searchText;
+                //window.location.replace("/tools/search.aspx?searchtext=" + searchText);
+            }
+        });
+    });
+
+</script>
+
+                </div>
+
+                <dl class="breadcrumbs clearFix">
+                    <dt class="hidden">You are here</dt>
+                    <dd class="body">
+
+                        
+
+<ul class="breadcrumb">
+	
+	        <li class="normalpagelink"><a href="/">Home</a></li>
+	        <li class="normalpagelink"><a href="/housing.aspx">Housing</a></li>
+	        <li class="normalpagelink"><a href="/housing/looking-for-a-home.aspx">Looking for a home?</a></li>
+	    <li class="active">I&#39;m going to be homeless</li>
+    
+</ul>
+                        <div class="logindetails">
+                            <div id="ContentPlaceHolderDefault_UserDetails_5_divLoginDetails">
+    <span id="ContentPlaceHolderDefault_UserDetails_5_lblUserInfo"></span>
+    
+    
+    <a id="ContentPlaceHolderDefault_UserDetails_5_HypLogon" class="linkbutton" href="https://my.eastleigh.gov.uk/Member-Registration/login.aspx">Log In</a>
+    |
+    
+    <a id="ContentPlaceHolderDefault_UserDetails_5_HypRegister" class="linkbutton" href="https://my.eastleigh.gov.uk/Member-Registration.aspx">Create Account</a>
+</div> 
+                        </div>
+                    </dd>
+                </dl>
+
+                <div id="wrapper">
+        
+                    
+        <div id="content" class="body clearFix">
+            <div id="leftCol">
+				
+
+<div class="box MainMenu widget">
+    <a id="MainMenuHeader" class="MenuHead widget-head" href="#">
+        <h2>
+            Main Menu
+            <span></span>
+        </h2>
+    </a>
+    
+
+
+    <div class="box-content widget-content">
+
+
+		<nav id="MainMenu" class="nodisplay"> 
+                <ul>
+            <li class="level-2"> <!--id="My Eastleigh"-->
+                <a href="https://my.eastleigh.gov.uk/">My Eastleigh</a>
+            </li>
+            <li class="level-2"> <!--id="The Council"-->
+                <a href="/the-council.aspx">The Council</a>
+            </li>
+            <li class="level-2"> <!--id="Planning &amp; Building"-->
+                <a href="/planning-building.aspx">Planning &amp; Building</a>
+            </li>
+            <li class="level-2"> <!--id="Council Tax, Benefits &amp; Business Rates"-->
+                <a href="/council-tax,-benefits-business-rates.aspx">Council Tax, Benefits &amp; Business Rates</a>
+            </li>
+            <li class="level-2"> <!--id="Housing"-->
+                <a href="/housing.aspx">Housing</a>
+            </li>
+            <li class="level-2"> <!--id="Waste, Recycling &amp; Environment"-->
+                <a href="/waste,-recycling-environment.aspx">Waste, Recycling &amp; Environment</a>
+            </li>
+            <li class="level-2"> <!--id="Energy &amp; Climate Change"-->
+                <a href="/energy-climate-change.aspx">Energy &amp; Climate Change</a>
+            </li>
+            <li class="level-2"> <!--id="Parking, Travel &amp; Roads"-->
+                <a href="/parking,-travel-roads.aspx">Parking, Travel &amp; Roads</a>
+            </li>
+            <li class="level-2"> <!--id="Sport, Countryside, Parks &amp; Culture"-->
+                <a href="/sport,-countryside,-parks-culture.aspx">Sport, Countryside, Parks &amp; Culture</a>
+            </li>
+            <li class="level-2"> <!--id="Licensing"-->
+                <a href="/licensing.aspx">Licensing</a>
+            </li>
+            <li class="level-2"> <!--id="Business"-->
+                <a href="/business.aspx">Business</a>
+            </li>
+            <li class="level-2"> <!--id="Our Community"-->
+                <a href="/our-community.aspx">Our Community</a>
+            </li>
+    </ul>
+
+        </nav>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        $(function () { var n = $("#MainMenuHeader"), e = $("#MainMenu"); $(n).on("click", function (n) { n.preventDefault(), e.slideToggle() }) });
+    </script>
+
+
+
+
+				
+
+
+
+
+
+<div class="box sectionNav widget">
+    <div class="box-content">
+        
+        <a id="SectionMenuHead" class="MenuHead widget-head" href="#">
+            <h2>
+                Housing
+                <span></span>
+            </h2>
+        </a>
+
+            <nav id="sectionNav">
+                <ul>
+
+                        <li  class="parent">
+                                <a class="parent" href="/housing/looking-for-a-home.aspx">Looking for a home?</a>
+                                    <ul>
+                                        
+                                            <li>
+
+                                                <a class="" href="/housing/looking-for-a-home/housing-options.aspx">Housing Options</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/housing/looking-for-a-home/what-is-a-housing-association.aspx">What is a Housing Association?</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/housing/looking-for-a-home/homechoice-applying-for-a-home.aspx">Homechoice - Applying for a home</a>
+                                            </li>
+                                            <li>
+
+                                                <a class=" active" href="/housing/looking-for-a-home/im-going-to-be-homeless.aspx">I&#39;m going to be homeless</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/housing/looking-for-a-home/i-need-to-find-a-place-to-rent.aspx">I need to find a place to rent</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/housing/looking-for-a-home/completed-affordable-housing.aspx">Completed Affordable Housing</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/housing/looking-for-a-home/new-affordable-housing.aspx">New Affordable Housing</a>
+                                            </li>
+                                    </ul>
+                        </li>
+                        <li  class="parent">
+                                <a href="/housing/do-you-own-your-home.aspx">Do you own your home?</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/housing/are-you-renting.aspx">Are you renting?</a>
+                        </li>
+                        <li  class="">
+                                <a href="/housing/our-strategies,-policies-and-documents.aspx">Our Strategies, Policies and Documents</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/housing/are-you-a-landlord.aspx">Are you a Landlord?</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/housing/other-support.aspx">Other Support</a>
+                        </li>
+    
+                </ul>
+            </nav>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () { var e = $("#SectionMenuHead"), n = $("#sectionNav"); $(e).on("click", function (e) { e.preventDefault(), n.slideToggle() }) });
+</script>
+			</div>
+
+	        <div id="main" class="clearfix" >
+                <div class="main-head">
+                    <h2>
+                        I'm going to be homeless
+
+                    </h2>
+                    <div class="whoson">
+    <!-- Embedded WhosOn: Insert the script below at the point on your page where you want the Click To Chat link to appear -->
+        <script type='text/javascript' src='https://chat.eastleigh.gov.uk:443/include.js?domain=my.eastleigh.gov.uk'></script>
+        <script type='text/javascript' >
+        if (sWOTrackPage) sWOTrackPage();
+    </script>
+    <!-- End of embedded WhosOn -->
+</div>
+
+                </div>
+				<div class="main-intro">
+                    <p>
+                        
+                    </p>
+                </div>
+                
+                    
+				
+					<div id="main-content" class="clearFix">
+					    <p class="modifiedDate">
+					        Page last updated at 23 July 2015 at 11:32
+                        </p>
+						<h2 class="ImmTextAlign_Left">Homelessness </h2>
+<p class="ImmTextAlign_Left">If you are homeless, or think you might become homeless in the future, tell us as soon as you can. Please contact our Housing Advice team for advice on 023 8068 8165.  We'll ask you about what is worrying you and give some advice to you straight away. We may also offer you an appointment to make a homelessness application or, if you are homeless, you will be seen straight away.</p>
+<p><strong>What do we mean by 'homeless'?<br /></strong>You're homeless if you don't have a home that you can legally occupy. But we are just as committed to helping anyone who is 'threatened with homelessness' having been served with notice to leave, in financial difficulties or any other reason.<br /> We don't want you to wait to lose the roof over your head before you come to us.You may also be homeless if you have a home, but can't live there because you've been evicted illegally from it or it is unreasonable for you to stay in your present home. This could be due to domestic violence or threats of violence against you or a member of your family.</p>
+<p><strong>Our Priority is Prevention<br /></strong>Our aim is to help prevent you becoming homeless. We can offer help such as debt counselling, negotiations with landlords and advice on alternative accommodation to keep a roof over your head. Please contact us as soon as your landlord, bank or building society threatens repossession action. Our <a href="/media/42471/HS-01-0509-Homelessness-Web.pdf" target="_blank" title="Homelessnessleaflet">Homelessness &amp; Homelessness Prevention Explained</a> leaflet gives more information.</p>
+<p><strong>We Can't help Everybody<br /></strong>If you lose your home because of anti-social behaviour or because you knowingly broke the rules, such as not paying the rent or mortgage, you may be considered to be intentionally homeless. In such a situation if we cannot prevent the loss of your home, we will offer you advice about other housing options that maybe available to you. If you make a homelessness application and are unhappy with the decision, you can request a review of your case.</p>
+<p><strong>Temporary Accommodation<br /></strong>In some cases we will need to provide you with temporary accommodation.  This could be bed and breakfast or hostel accommodation. We try not to have to - we would much prefer to help find you a place to rent - but this is not always possible.</p>
+<p><strong>Our Preventing Homelessness Strategy 2013-18<br /></strong>Every Council is expected to produce a strategy setting out what it will do to reduce the level of homelessness and help those who become homeless. Our strategy is to understand the causes locally, to provide good quality housing options advice and assistance and undertake proactive homelessness prevention work, to generate as many homes as we can, to help the most vulnerable move into suitable housing, to provide access to good quality private rented accommodation, meet national targets and provide value for money. For further information, please see our <a href="/media/42468/Preventing-Homelessness-strategy-2013-18.pdf" target="_blank">Preventing Homelessness Strategy 2013-18.</a></p>
+<p><strong>Need more information? Free Housing Advice<br /></strong></p>
+<p>Visit us at Housing Services, Eastleigh House, Upper Market St, Eastleigh SO50 9YN (8.30 - 5.00pm Mondays to Fridays) </p>
+<p>No appointment is necessary. However, we can offer you one to stop you having to wait too long. We'd also suggest that you avoid Monday mornings when our reception is busiest. An appointment to fully discuss your housing options may last up to an hour depending on the advice required.</p>
+<p>Call us on 023 80688165 (day times) and 02380 688000 (out of hours emergencies only)<br /> Email <a href="mailto:housing@eastleigh.gov.uk">housing@eastleigh.gov.uk</a> - please include a daytime telephone number and any relevant information regarding your current circumstances for us to understand your situation.</p>
+<p>To obtain copies of any of the leaflets mentioned above contact the Housing Advice team on 023 8068 8165 or e-mail us  <a href="mailto:housing@eastleigh.gov.uk">housing@eastleigh.gov.uk</a></p>
+                    </div>
+				
+
+                
+                <div id="main-footer">
+                    <p>
+                        
+                    </p>
+                    
+                </div>
+            </div>
+	    </div>
+        
+	
+                </div>
+
+                <div id="footer">
+                    <div class="body">
+                        <address>
+                            <strong>Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh, SO50 9YN.</strong><br />
+                            Telephone: 023 8068 8068, Fax: 023 8064 3952, Text: 07797 877001
+                        </address>
+
+                        
+        <ul class="toolbar">
+
+				<li class=""><a href="/legal/use-of-cookies.aspx">Use of Cookies</a></li>
+				<li class=""><a href="/legal/legal-disclaimer.aspx">Legal Disclaimer</a></li>
+				<li class=""><a href="/legal/site-feedback.aspx">Site Feedback</a></li>
+				<li class=""><a href="/legal/privacy-statement.aspx">Privacy Statement</a></li>
+				<li class="last"><a href="/legal/social-media-policy.aspx">Social Media Policy</a></li>
+		</ul>
+
+
+
+                        <p class="smallprint">
+                            &copy; Copyright 2014 Eastleigh Borough Council. Designed and developed by Merchant Marketing Group
+                        </p>
+                        <a href="https://www.gov.uk/" class="externalLink directGov">
+                            <img src="/media/core/govuk.png"  alt="Link to Gov.Uk - public services all in one place" />
+                        </a>
+                    </div>
+                </div>
+                <!-- end #footer -->
+                
+                
+
+
+<div class="sitemap"> 
+        <div class="buttonstrip GreenAndBlacks">
+        <ul class="body">
+            <li>
+                <a href="https://www.eastleigh.gov.uk">
+<img src="/media/1776/home.png" alt="Home" height="25px" width="25px" />
+
+                    <span>Home</span>
+                </a>
+            </li>
+
+
+                <li id="button_1">
+                    <a href="https://my.eastleigh.gov.uk/pay.aspx">
+
+                        <img src="/media/1760/pay.png" alt="Pay" height="25" width="25" />
+                        <span>Pay</span>
+                    </a>
+                </li>
+                <li id="button_2">
+                    <a href="https://my.eastleigh.gov.uk/report.aspx">
+
+                        <img src="/media/1769/report.png" alt="Report" height="25" width="25" />
+                        <span>Report</span>
+                    </a>
+                </li>
+                <li id="button_3">
+                    <a href="https://my.eastleigh.gov.uk/apply.aspx">
+
+                        <img src="/media/1772/apply.png" alt="Apply" height="25" width="25" />
+                        <span>Apply</span>
+                    </a>
+                </li>
+                <li id="button_4">
+                    <a href="https://my.eastleigh.gov.uk/book.aspx">
+
+                        <img src="/media/1773/book.png" alt="Book" height="25" width="25" />
+                        <span>Book</span>
+                    </a>
+                </li>
+                <li id="button_5">
+                    <a href="https://my.eastleigh.gov.uk/find-out.aspx">
+
+                        <img src="/media/1774/find.png" alt="Find Out" height="25" width="25" />
+                        <span>Find Out</span>
+                    </a>
+                </li>
+                <li id="button_6">
+                    <a href="https://my.eastleigh.gov.uk/have-your-say.aspx">
+
+                        <img src="/media/1770/say.png" alt="Have your say" height="25" width="25" />
+                        <span>Have your say</span>
+                    </a>
+                </li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                <script async src="/Scripts/EBC.js" type="text/javascript"></script>
+            
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div></form>
+        </body>
+
+    </html>

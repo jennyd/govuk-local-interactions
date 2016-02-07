@@ -1,0 +1,475 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- PageID 116 - published by Open Text Web Solutions 10 - 10.0.1.51 - 29448 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="Title" content="Blaenau Gwent County Borough Council - Community Safety" />
+    <meta name="Description" content="Blaenau Gwent County Borough Council" />
+    <meta name="Author" content="Blaenau Gwent County Borough Council" />
+    <meta name="DC.Title" content="Blaenau Gwent County Borough Council: - Community Safety" />
+    <meta name="DC.Coverage" content="Blaenau Gwent, South Wales, UK" lang="ENG" xml:lang="ENG" />
+    <meta name="DC.Identifier" scheme="URI" content="/community/116.asp" />
+    <meta name="DC.Date.Created" scheme="W3CDTF" content="10/08/2006" />
+    <meta name="DC.Date.Issued" scheme="W3CDTF" content="19/03/2015 14:04:24" />
+    <meta name="DC.Date.Modified" scheme="W3CDTF" content="01 November 2012" />
+    <meta name="DC.Format" content="text/html" />
+    <meta name="DC.Creator" content="Blaenau Gwent County Borough Council: Sally Williams" />
+    <meta name="DC.publisher" content="Blaenau Gwent County Borough Council, Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB, Tel (01495) 350555, http://www.blaenau-gwent.gov.uk" />
+    <meta name="DC.Contributor" content="Governance" />
+    <meta name="DC.Language" scheme="ISO 639-2" content="ENG" />
+    <meta name="DC.Subject" scheme="IPSV" content="" />
+    <meta name="DC.Rights" content="http://www.blaenau-gwent.gov.uk/copyright" />
+    <meta name="eGMS.accessibility" content="Double-A" scheme="WCAG" />
+    <meta name="eGMS.subject.category.identifier" scheme="LNGL" content="" />
+    <meta name="eGMS.subject.category" scheme="IPSV" content="" />
+    <meta name="keywords" content="" />
+    <title>
+      Blaenau Gwent County Borough Council - Community Safety
+    </title>
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" src="/scripts/jquery-1.3.2.min.js">
+</script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image1 .desc").show(); //Show Banner
+            $(".main_image1 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb1 ul li:first").addClass('active');
+            $(".image_thumb1 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image1").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image1 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image1 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image1 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb1 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse1").click(function () {
+                $(".main_image1 .block").slideToggle();
+                $("a.collapse1").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image2 .desc").show(); //Show Banner
+            $(".main_image2 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb2 ul li:first").addClass('active');
+            $(".image_thumb2 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image2").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image2 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image2 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image2 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb2 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse2").click(function () {
+                $(".main_image2 .block").slideToggle();
+                $("a.collapse2").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        function f(n) {
+            document.getElementById('body').style.fontSize = n
+        }
+    //]]>
+    </script><!-- IE6 STYLE OVERRIDES --><!--[if lte IE 6]>
+        <link href="" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- IE7 STYLE OVERRIDES -->
+    <!--[if IE 7]>
+           <link href=""  rel="stylesheet" type="text/css" />
+    <![endif]-->
+  </head>
+  <body id="body">
+    <a name="Top" id="Top"></a> <!-- HEADER -->
+     <!-- ************************************** -->
+     <!-- HEADER  (grey bar, white bar, red bar) -->
+     <!-- ************************************** -->
+    <div id="header">
+      <!-- HEADER TOP BAR( grey ) -->
+      <div id="header-toplinks-outer">
+        <div id="header-toplinks-inner">
+          <!-- SEARCH BOX -->
+          <div id="header-search">
+            
+              <form name="kbs" method="get" action="http://search3.openobjects.com/kb5/gwent/search/en/results.page" id="kbs">
+                <input name="qt" class="searchbox" type="text" maxlength="50" value="Search" onfocus="this.value=''" id="query" /> <input class="searchbutton" type="submit" value="" />
+              </form>
+            </form>
+          </div><!-- TOP HEADER LINKS -->
+          <div id="header-toplinks">
+            <ul>
+              <li class="first">
+                 <a href="/CYM/community/116.asp" title="Cymraeg" accesskey="l">Cymraeg</a> 
+              </li>
+              <li>
+                <a href="/council/69.asp" title="Accessibility" accesskey="a">Accessibility</a>
+              </li>
+              <li>
+                <a href="/help.asp" title="Help" accesskey="h">Help</a>
+              </li>
+              <li>
+                <a href="/ContactUs.asp" title="Contact Us" accesskey="c">Contact Us</a>
+              </li>
+              <li>
+                <a href="/council/1838.asp" title="News Centre" accesskey="m">News Centre</a>
+              </li>
+              <li>
+                <a href="http://www.blaenau-gwent.gov.uk/19002.asp" title="Cookies" accesskey="v">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- HEADER COUNCIL LOGO ( tag line set in css )-->
+      <div id="header-mast-outer">
+        <!-- Begin Logo -->
+        <div id="logo">
+          <a href="/index.asp"><img src="/images/logo.jpg" alt="Blaenau Gwent County Borough Council - Cyngor Bwrdeisdref Sirol Blaenau Gwent" /></a>
+        </div><!-- End Logo --><!-- Begin Hour -->
+        <div id="hour-ENG"></div><!-- End Hour -->
+        <!-- Begin Tagline -->
+        <div id="tagline"></div><!-- End Tagline -->
+      </div><!-- HEADER BOTTOM BAR ( red ) -->
+      <div id="header-bottomlinks-outer">
+        <div id="header-bottomlinks-inner">
+          <!-- LINKS LIST -->
+          <div id="header-bottomlinks">
+            <ul>
+              <li class="first">
+                <a href="/index.asp" title="Home" accesskey="h">Home</a>
+              </li>
+              <li>
+                <a href="/jobs/262.asp" title="Jobs" accesskey="j">Jobs</a>
+              </li>
+              <li>
+                <a href="/onlineServices/forms.asp" title="Online Forms" accesskey="o">Online Forms</a>
+              </li>
+              <li>
+                <a href="/faqs/faq.asp" title="FAQ's" accesskey="5">FAQ's</a>
+              </li>
+              <li>
+                <a href="/sitemap.asp" title="Sitemap" accesskey="3">Sitemap</a>
+              </li>
+              <li>
+                <a href="/A-Z.asp" title="A-Z" accesskey="z">A-Z</a>
+              </li>
+              <li>
+                <a href="/news/2487.asp" title="News" accesskey="n">News</a>
+              </li>
+              <li>
+                <a href="/whatsOn/6775.asp" title="What's On" accesskey="w">What's On</a>
+              </li>
+            </ul>
+          </div><!-- TEXT SIZE CHOOSER -->
+          <div id="header-textsize">
+            <span>Enlarge Screen Text Here:</span> <span class="small-text"><a href="javascript:f('0.6em');">A</a></span> <span class="medium-text"><a href="javascript:f('0.8em');">A</a></span> <span class="large-text"><a href="javascript:f('1.2em');">A</a></span>
+          </div><!-- CLEAR DIV ( alloew red background to extend with text size ) -->
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div><!-- SPACER ( few pixels light blue spacer ) -->
+    <div id="header-spacer"></div><!-- // HEADER -->
+    <!-- PAGE CONTENT -->
+    <div id="main-content-body-outer">
+      <div id="main-content-valley">
+        <!-- MAIN PAGE CONTENT - WHITE BOX -->
+        <div class="white-box-top"></div>
+        <div class="white-box-body body-content">
+          <div style="text-align: center; height: 100px; position: relative; left: 13%;">
+            <script type="text/javascript">
+//<![CDATA[
+            document.write('\x3Cscript type="text/javascript" src="//can.capacitygrid.com/code/blaenaugwentcbc/leaderboard/public">\x3C/script>');
+            //]]>
+            </script>
+          </div>
+          <div id="left-column">
+            <!-- Begin Online Services -->
+            <div id="online-services">
+              <span>What would you like to do?</span> <a href="/onlineServices/15981.asp" id="payforit" name="payforit">Pay for it</a> <a href="/onlineServices/15980.asp" id="reportit" name="reportit">Report it</a> <a href="/onlineServices/15979.asp" id="requestit" name="requestit">Request it</a> <a href="/onlineServices/15978.asp" id="sayit" name="sayit">Say It</a> <a href="/onlineServices/15982.asp" id="findit" name="findit">Find It</a>
+            </div><!-- LEFT NAVIGATION -->
+            <div class="side-box-container no-border">
+              <h2 class="red-heading">
+                Browse by Service:
+              </h2>
+              <ul class="navigation-list">
+                
+                <li class="level-0">
+                  <a href="/index.asp">Home</a>
+                </li>
+                <li class="level-1 up">
+                  <a href="/community.asp" title="Community &amp; Living">Community &amp; Living</a>
+                </li>
+                <li class="level-2">
+                  <a href="/community/116.asp" title="Community Safety">Community Safety</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/community/7115.asp" title="Anti-Social Behaviour">Anti-Social Behaviour</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/community/19387.asp" title="Crime">Crime</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/community/19508.asp" title="Community Cohesian">Community Cohesian</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/community/19392.asp" title="Community Safety News">Community Safety News</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/community/22322.asp" title="Community Trigger">Community Trigger</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/community/1456.asp" title="Closed Circuit Television - CCTV">Closed Circuit Television - CCTV</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/community/19507.asp" title="Domestic Abuse">Domestic Abuse</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/community/21743.asp" title="Hate Crime">Hate Crime</a>
+                </li>
+                <li class="level-3 down">
+                  <a href="/community/19388.asp" title="Substance Misuse">Substance Misuse</a>
+                </li>
+              </ul>
+            </div><!-- // LEFT NAVIGATION -->
+          </div><!-- CONTENT MIDDLE COLUMN -->
+          
+            <div id="three-column-middle">
+              
+              <h1 class="green-heading" style="display: ;">
+                Community Safety
+              </h1>
+              <div class="no-border page-content">
+                <p>
+                  <strong>The Safer Blaenau Gwent Community Safety Partnership</strong>
+                </p>
+                <p>
+                  <em>Who are we?</em>
+                </p>
+                <p>
+                  Safer Blaenau Gwent is the Community Safety Partnership that operates within the County Borough working to protect, support and empower people to feel safe and be safe in their homes and communities.
+                </p>
+                <p>
+                  The Crime and Disorder Act 1998 and its related legislation identified a number of &lsquo;responsible authorities&rsquo; that have a duty to work together to tackle community safety issues.
+                </p>
+                <p>
+                  <strong>Local Authority</strong>&nbsp; - Chief Executive<br />
+                  <strong>Local Authority Elected Member Executive Member</strong>&nbsp; -&nbsp;Crime and Disorder and Safer Communities<br />
+                  <strong>Heddlu Gwent Police -</strong> &nbsp;Local Policing Unit Commander<br />
+                  <strong>Gwent Police Authority -</strong> &nbsp;Elected Representative<br />
+                  <strong>Aneurin Bevan Health Board -</strong> &nbsp;Health Representative<br />
+                  <strong>Wales Probation Trust</strong>&nbsp; - Chief Officer<br />
+                  <strong>South Wales Fire and Rescue Authority -</strong> Elected Representative
+                </p>
+                <p>
+                  The key role of the Partnership is to listen to residents and understand the kinds of problems Blaenau Gwent is experiencing; decide which of these are the most important to deal with; and then decide what action to take collectively, adding value to the day-to-day work undertaken by individual agencies and organisations.<br />
+                </p>
+                <p>
+                  The following sections identify the priority areas that the Partnership will focus its resources on:
+                </p>
+                <ul>
+                  <li>
+                    <a title="Anti-Social Behaviour " href="/community/7115.asp">Anti-Social Behaviour</a>
+                  </li>
+                  <li>
+                    <a title="Crime" href="/community/19387.asp">Crime</a><br />
+                    &bull;&nbsp;Domestic Abuse<br />
+                    &bull;&nbsp;Hate Crime<br />
+                    &bull;&nbsp;Preventing Extremism&nbsp;
+                  </li>
+                  <li>
+                    <a title="Substance Misuse" href="/community/19388.asp">Substance Misuse</a><br />
+                  </li>
+                </ul>
+                <div class="Top" style="display: none;">
+                  <a href="/community/116.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" width="8" height="8" alt="Return to top of page" /></a>
+                  <div style="clear:both;"></div>
+                </div>
+              </div><script language="JavaScript" type="text/javascript">
+//<![CDATA[
+              var win = null;
+              function newWindow(mypage,myname,w,h,features) {
+              var winl = (screen.width-w)/2;
+              var wint = (screen.height-h)/2;
+              if (winl < 0) winl = 0;
+              if (wint < 0) wint = 0;
+              var settings = 'height=' + h + ',';
+              settings += 'width=' + w + ',';
+              settings += 'top=' + wint + ',';
+              settings += 'left=' + winl + ',';
+              settings += features;
+              win = window.open(mypage,myname,settings);
+              win.window.focus();
+              }
+              //]]>
+              </script>
+              <div class="box-container related-documents">
+                <h1 class="green-heading">
+                  Related Documents
+                </h1>
+                <ul>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Documents_Governance/CommSafetPlan20112014.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to CommSafetPlan20112014.pdf">Community Safety Plan 2011-2014</a> - <img src="/documents/Documents_Governance/CommSafetPlan20112014_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />393.89kb<br />
+                  </li>
+                </ul>
+              </div>
+              <div class="Top" style="display: none;">
+                <a href="/community/116.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div><!-- // CONTENT MIDDLE COLUMN -->
+              
+            </div><!-- RIGHT COLUMN -->
+            <div id="right-column">
+              <span class="hide"><a name="rightcol" id="rightcol">Right Content Area</a></span> <!-- Right Column Panel -->
+              <div class="side-box-container">
+                <h2 class="red-heading">
+                  Useful Links
+                </h2>
+                <p align="center">
+                  <img src="/images/Images_Logos/BGCBC_Logo.jpg" width="113" height="92" />
+                </p>
+                <p align="center">
+                  <a title="Gwent Police" href="http://corporate.gwent.police.uk/informationpoint/eleaflets/101/"><img src="/images/Images_Logos/gwentPolice.jpg" width="100" height="92" /></a>
+                </p>
+                <p align="center">
+                  <a title="Gwent Police Authority" href="http://www.gwentpa.police.uk/"><img src="/images/Images_Logos/GPA.JPG" width="91" height="107" /></a>
+                </p>
+                <p>
+                  <a title="Aneurin Bevan Health Board" href="http://www.wales.nhs.uk/sitesplus/866/home"><img src="/images/Images_Logos/ANHB.jpg" width="137" height="46" /></a>
+                </p>
+                <p>
+                  <a title="South Wales Fire &amp; Rescue Service" href="http://www.southwales-fire.gov.uk/English/home/Pages/homepage.aspx"><img src="/images/Images_Logos/swfrs.JPG" width="138" height="64" /></a>
+                </p>
+                <p>
+                  <a title="Wales Probation Trust" href="http://www.walesprobationtrust.gov.uk/"><img src="/images/Images_Logos/gwent_probation_website.jpg" width="139" height="59" /></a>
+                </p>
+                <p>
+                  <a title="Gwent Association of Voluntary Organisations" href="http://www.gavowales.org.uk/"><img src="/images/Images_Logos/gavo.JPG" width="138" height="46" /></a>
+                </p>
+                <div class="clear"></div>
+              </div><!-- // Right Column Panel -->
+              <!-- UTILITY LINKS RIGHT -->
+              <div class="side-box-container">
+                <form name="PageFeedback" method="post" action="/5431.asp" target="_self" id="PageFeedback">
+                  <input type="hidden" name="PageID" value="116" /> <input type="hidden" name="Headline" value="Community Safety" /> <input type="hidden" name="PageURL" value="/community/116.asp" />
+                  <ul class="utility-list">
+                    <li class="printer-friendly">
+                      <a href="JavaScript:window.print()">Print friendly<br />
+                      version</a>
+                    </li>
+                    <li class="page-feedback">
+                      <a href="JavaScript:document.PageFeedback.submit();">Feedback<br />
+                      on this page</a>
+                    </li>
+                  </ul>
+                </form>
+                <div class="clear"></div>
+              </div><!-- //UTILITY LINKS RIGHT -->
+              
+            </div><!-- //RIGHT COLUMN --><!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div><!-- FOOTER -->
+          <!-- PAGE FOOTER - WHITE BOX -->
+          <div class="white-box-top"></div>
+          <div class="white-box-body footer-content">
+            <!-- start of footer content -->
+            <a href="/about/5639.asp"><img src="/images/find-us.jpg" alt="Find Us" /></a> <a href="/council/5413.asp"><img src="/images/service-buddy.jpg" alt="Children's Complaints Service" /></a> <a href="/leisure/3865.asp"><img src="/images/Life.jpg" alt="life. Membership" /></a> <a href="/5515.asp"><img src="/images/connect-to-bg.jpg" alt="C2BG" /></a> <!-- <a href="http://www.direct.gov.uk"><img src="/images/directgov.jpg" alt="Direct Gov" /></a> -->
+             <a href="https://www.gov.uk/"><img src="/images/directgov.jpg" alt="GOV UK" /></a> <!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div>
+          <div id="footer-contact">
+            <address>
+              Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB Tel: 01495 311556 E-mail:&nbsp;<a href="mailto:info@blaenau-gwent.gov.uk">info@blaenau-gwent.gov.uk</a>
+            </address>
+          </div><!--RDExecute=ASP-->
+          <script type="text/javascript">
+//<![CDATA[
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-17447558-1', 'blaenau-gwent.gov.uk');
+          ga('require', 'displayfeatures'); 
+          ga('send', 'pageview');
+          //]]>
+          </script> <script type="text/javascript">
+//<![CDATA[
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-17447558-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+          //]]>
+          </script> <!-- // FOOTER -->
+        </div>
+      </div><!-- iBar Code -->
+      <script type="text/javascript">
+//<![CDATA[
+      document.write('\x3Cscript type="text/javascript" src="//can.capacitygrid.com/code/blaenaugwentcbc/ibar/public">\x3C/script>');
+      //]]>
+      </script> 
+    </div>
+  </body>
+</html>

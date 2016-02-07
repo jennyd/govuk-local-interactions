@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head id="ctl00_Head1"><title>
+	Lighting up Blackpool : Home
+</title>
+        <!--meta http-equiv="Page-Enter" content="blendTrans(Duration=0)">
+        <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)"-->   <!--commented out temporarily-->
+        <!--[if gte IE 6]>
+            <link id="ctl00_ie" rel="stylesheet" href="App_Themes/IE/Common/AddressList.css" type="text/css" /><link id="ctl00_ie2" rel="stylesheet" href="App_Themes/IE/Common/FaultDetails.css" type="text/css" /><link id="ctl00_ie3" rel="stylesheet" href="App_Themes/IE/Common/FaultHistory.css" type="text/css" /><link id="ctl00_ie4" rel="stylesheet" href="App_Themes/IE/Common/AgentDetails.css" type="text/css" />
+      <![endif]-->  
+  
+    <link href="App_Themes/Common/Address.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/AddressList.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/AgentDetails.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Ajax.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Authorisation.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/BulletList.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Calender.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Capcha.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Comments.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Common.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/ContactDetails.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Fault.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/FaultDetails.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/FaultHistory.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/FaultList.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Map.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Master.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Search.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/SearchFault.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Summary.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Template.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Common/Wizard.css" type="text/css" rel="stylesheet" /></head>
+    <script type="text/javascript">
+
+        function autoFitToView(ctrl) {
+            try {
+                var ct = 0;
+                var vw = 0;
+                var sb = 0;
+
+                if (ctrl != null)
+                    ct = ctrl.offsetHeight;
+
+                var vw = $get('divVw');
+                if (vw != null)
+                    vw = vw.offsetHeight;
+
+                var lhs = $get('divLhs');
+                if (lhs != null)
+                    sb = lhs.offsetHeight;
+
+                var rhs = $get('ctl00_divInfo');
+                if (rhs != null)
+                    if (rhs.offsetHeight > sb)
+                    sb = rhs.offsetHeight;
+
+                if (sb > 0 && vw > sb)
+                    ctrl.style.height = sb - (vw - ct) + 'px';
+            }
+            catch (e) {
+            }
+        }
+        //beginning of code to fix the error of "_pendingcallbacks[...] async isnull or not an Object"
+        var GlvDelayedNextPageNo;
+
+        function WebForm_CallbackComplete_SyncFixed() {
+            // the var statement ensure the variable is not global
+            for (var i = 0; i < __pendingCallbacks.length; i++) {
+                callbackObject = __pendingCallbacks[i];
+                if (callbackObject && callbackObject.xmlRequest &&
+			(callbackObject.xmlRequest.readyState == 4)) {
+                    // SyncFixed: line move below // WebForm_ExecuteCallback(callbackObject);
+                    if (!__pendingCallbacks[i].async) {
+                        __synchronousCallBackIndex = -1;
+                    }
+                    __pendingCallbacks[i] = null;
+                    var callbackFrameID = "__CALLBACKFRAME" + i;
+                    var xmlRequestFrame = document.getElementById(callbackFrameID);
+                    if (xmlRequestFrame) {
+                        xmlRequestFrame.parentNode.removeChild(xmlRequestFrame);
+                    }
+                    // SyncFixed: the following statement has been moved down from above;
+                    WebForm_ExecuteCallback(callbackObject);
+                }
+            }
+        }
+
+        var OnloadWithoutSyncFixed = window.onload;
+
+        window.onload = function Onload() {
+            if (typeof (WebForm_CallbackComplete) == "function") {
+                // Set the fixed version
+                WebForm_CallbackComplete = WebForm_CallbackComplete_SyncFixed;
+                // CallTheOriginal OnLoad
+                if (OnloadWithoutSyncFixed != null) OnloadWithoutSyncFixed();
+            }
+        }
+        //end of code to fix the error of "_pendingcallbacks[...] async isnull or not an Object"
+    </script>    
+    <body id="ctl00_body">
+        <form name="aspnetForm" method="post" action="Template.aspx?function=Home&amp;menuIndex=0" id="aspnetForm">
+<input type="hidden" name="ctl00_ToolkitScriptManager1_HiddenField" id="ctl00_ToolkitScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTYyMjg4NjYxNQ9kFgJmD2QWAgIBD2QWAgIBD2QWDAIFD2QWAmYPZBYCAgEPZBYCZg9kFgICAQ88KwAJAQAPFggeDVNlbGVjdGVkSW5kZXhmHg1FZGl0SXRlbUluZGV4Zh4IRGF0YUtleXMWAB4LXyFJdGVtQ291bnQCCGQWEGYPZBYEAgEPDxYCHgRUZXh0BQRIb21lZGQCAw8WAh8DAv////8PZAIBD2QWBAIBDw8WAh8EBQZGYXVsdHNkZAIDDw8WAh4HVmlzaWJsZWhkZAICD2QWBAIBDw8WAh8FaGRkAgMPDxYEHwQFDlNjaGVkdWxlZCBXb3JrHgtOYXZpZ2F0ZVVybAU3fi9TY2hlZHVsZWRXb3JrLmFzcHg/ZnVuY3Rpb249U2NoZWR1bGVkV29yayZtZW51SW5kZXg9MmRkAgMPZBYEAgEPDxYCHwQFEUN1c3RvbWVyIEZlZWRiYWNrZGQCAw8PFgIfBWhkZAIED2QWBAIBDw8WAh8EBQlOZXdzIERlc2tkZAIDDw8WAh8FaGRkAgUPZBYEAgEPDxYCHwVoZGQCAw8PFgQfBAUERkFRcx8GBSV+L0ZBUXMuYXNweD9mdW5jdGlvbj1GQVFzJm1lbnVJbmRleD01ZGQCBg9kFgQCAQ8PFgIfBWhkZAIDDw8WBB8EBQxPdXIgUGFydG5lcnMfBgUwfi9UZW1wbGF0ZS5hc3B4P2Z1bmN0aW9uPVBhcnRuZXJMaW5rJm1lbnVJbmRleD02ZGQCBw9kFgQCAQ8PFgIfBWhkZAIDDw8WBB8EBQpDb250YWN0IFVzHwYFLn4vVGVtcGxhdGUuYXNweD9mdW5jdGlvbj1Db250YWN0VXMmbWVudUluZGV4PTdkZAIHD2QWAmYPZBYCAgEPFgIfAwICFgQCAQ9kFgICAQ8PFgQfBgUjfi9UZW1wbGF0ZS5hc3B4P2Z1bmN0aW9uPVF1aWNrTGluazIfBAUSTGlnaHRpbmcgU3RhbmRhcmRzZGQCAg9kFgICAQ8PFgQfBgUjfi9UZW1wbGF0ZS5hc3B4P2Z1bmN0aW9uPVF1aWNrTGluazMfBAUQQ3VzdG9tZXIgQ2hhcnRlcmRkAgsPZBYCAgEPZBYCZg8WAh8FaGQCDw8WAh4Fc3R5bGUFT2JhY2tncm91bmQtaW1hZ2U6dXJsKEFwcF9UaGVtZXMvQ29tbW9uL0ltYWdlcy9QYWdlcy9TQUZFVFklMjBOSUdIVCUyMDMtODYuanBnKTtkAhEPZBYEAgEPDxYCHwQFC0xpZ2h0aW5nIHVwZGQCAw8PFgIfBAUJQmxhY2twb29sZGQCEw9kFgJmD2QWAgIBDxYCHwMCAhYEAgEPZBYCAgEPDxYEHwYFMn4vVGVtcGxhdGUuYXNweD9mdW5jdGlvbj1Qcml2YWN5UG9saWN5Jm1lbnVJbmRleD0wHwQFDlByaXZhY3kgUG9saWN5ZGQCAg9kFgICAQ8PFgQfBgU3fi9UZW1wbGF0ZS5hc3B4P2Z1bmN0aW9uPVRlcm1zQW5kQ29uZGl0aW9ucyZtZW51SW5kZXg9MB8EBRJUZXJtcyAmIENvbmRpdGlvbnNkZGQ9aLjFra782P3lgRIm3dGaAlzkAg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+function startBusyBox(sender, args)
+{
+    var bb = $get('eonBusyBox').style;
+    var pc = $get('progressContainer');
+    if (bb) {
+        /*@cc_on
+            /*@if (@_win32 && @_jscript_version <= 5.6)
+                bb.height = window.document.documentElement.clientHeight;
+            /*@end
+        @*/
+        if (bb.display == 'block') return;
+        bb.cursor = 'wait';
+        bb.display = 'block';
+        if (pc) pc.style.display = 'block';
+    }
+}
+
+function endBusyBox(sender, args) 
+{
+    var bb = $get('eonBusyBox').style;
+    var pc = $get('progressContainer');
+    if (bb) {
+        bb.cursor = 'auto';
+        bb.display = 'none';
+        if (pc) pc.style.display = 'none';
+    }
+}
+//]]>
+</script>
+
+<script src="/Blackpool/ScriptResource.axd?d=bsHYHPfWRceRI5uNUQl_Ob-5FJay0shlXvduOKDV9H3q7CTC63QfIrfrWTamjqOQXDXimSWdqHbBgiKsc-KoP0RzMXPyFclPWLjCGZ9VypA1&amp;t=ffffffff88a89e74" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgLu+c6eCAKb/KmbBgKd/KmbBgKg/KmbBgLKgqKEAgKowcrEDX9GZaSvLnJtJl7M2ZbqKlcGk3fe" />
+            
+            
+            <!-- Progress indicator -->
+            <span id="ctl00_bb"><div id="eonBusyBox" style="position:absolute; left:0px; top:0px; height:99.9%; width:99.9%; filter:alpha(opacity=0.0); -moz-opacity:0.0; background-color:#FFFFFF; cursor:auto; display:none;"></div></span>
+            
+            <div id="divMain" class="main">          
+                <!-- Navigation -->                                        
+                <div id="divLhs" class="lhs">
+                    <!-- Menu -->
+                    <div id="menuCtn">
+                       <div id="ctl00_mb_pnlMb">
+	
+    <div id="ctl00_mb_upMb">
+		
+            <table id="ctl00_mb_dl" class="menu" cellspacing="0" border="0">
+			<tr>
+				<td class="menuEditItem">
+                    <span id="ctl00_mb_dl_ctl00_lbl" class="menuEditItemTitle">Home</span>
+                    
+                </td>
+			</tr><tr>
+				<td class="menuItem">
+                    <a id="ctl00_mb_dl_ctl01_lb" href="javascript:__doPostBack('ctl00$mb$dl$ctl01$lb','')">Faults</a>
+                    
+                </td>
+			</tr><tr>
+				<td class="menuItem">
+                    
+                    <a id="ctl00_mb_dl_ctl02_hl" href="ScheduledWork.aspx?function=ScheduledWork&amp;menuIndex=2">Scheduled Work</a>
+                </td>
+			</tr><tr>
+				<td class="menuItem">
+                    <a id="ctl00_mb_dl_ctl03_lb" href="javascript:__doPostBack('ctl00$mb$dl$ctl03$lb','')">Customer Feedback</a>
+                    
+                </td>
+			</tr><tr>
+				<td class="menuItem">
+                    <a id="ctl00_mb_dl_ctl04_lb" href="javascript:__doPostBack('ctl00$mb$dl$ctl04$lb','')">News Desk</a>
+                    
+                </td>
+			</tr><tr>
+				<td class="menuItem">
+                    
+                    <a id="ctl00_mb_dl_ctl05_hl" href="FAQs.aspx?function=FAQs&amp;menuIndex=5">FAQs</a>
+                </td>
+			</tr><tr>
+				<td class="menuItem">
+                    
+                    <a id="ctl00_mb_dl_ctl06_hl" href="Template.aspx?function=PartnerLink&amp;menuIndex=6">Our Partners</a>
+                </td>
+			</tr><tr>
+				<td class="menuItem">
+                    
+                    <a id="ctl00_mb_dl_ctl07_hl" href="Template.aspx?function=ContactUs&amp;menuIndex=7">Contact Us</a>
+                </td>
+			</tr>
+		</table>
+        
+	</div>
+
+</div>
+
+ 
+                   </div>
+                   
+                    <!-- Quick links -->
+                    <div id="quickLnkCtn">
+                        <div id="quickLnkCtnTitle">Quick Links</div>
+                        <div id="ctl00_lb_pnlIb">
+	
+    
+            <ul class="linkBar">
+         
+            <li><a id="ctl00_lb_dl_ctl01_hl" href="Template.aspx?function=QuickLink2"><b>Lighting Standards</b></a></li>
+        
+            <li><a id="ctl00_lb_dl_ctl02_hl" href="Template.aspx?function=QuickLink3"><b>Customer Charter</b></a></li>
+        
+            </ul>
+                 
+
+</div>
+                        
+                    </div>                                                
+                </div>
+                                
+                <!-- Viewer -->
+                <div id="divVw" class="viewer">                    
+                    <div id="pgCtnTitle">
+                        <span id="ctl00_lblPgTtl">Welcome to the Blackpool PFI Lighting and Traffic Signals Portal </span>
+                    </div>
+                                        
+                    <div id="content">
+                        
+    
+<table id="ctl00_vw_template_dl" cellspacing="0" border="0">
+	<tr>
+		<td>
+        <span id="ctl00_vw_template_dl_ctl00_stic"><div class="template">
+			<div class="paragraph">
+				<span class="text">Efficient and well-maintained lighting reduces the risk of night-time accidents, improves public safety and conserves energy on a continuous basis.<br /><br /></span>
+			</div>
+		</div></span>
+    </td>
+	</tr><tr>
+		<td>
+        <span id="ctl00_vw_template_dl_ctl01_stic"><div class="template">
+			<span class="header">About Community Lighting Partnership</span><div class="paragraph">
+				<span class="text">Equitix and Pell Frischmann have united to create the Community Lighting Partnership (CLP) to deliver street lighting and traffic signals maintenance services to Blackpool Council.<br /><br />We believe that your community is worth investing in. We work closely with local communities at every stage of our process, enabling us to deliver the most effective, reliable and environmentally sound street lighting solutions. <br /><br /></span>
+			</div>
+		</div></span>
+    </td>
+	</tr><tr>
+		<td>
+        <span id="ctl00_vw_template_dl_ctl02_stic"><div class="template">
+			<span class="header">About E.ON UK</span><div class="paragraph">
+				<span class="text">CLP has awarded the maintenance work to E.ON UK which involves the renewal and ongoing maintenance of life-expired road lighting, illuminated traffic signs and traffic signals equipment on the roads and streets of Blackpool.The contract covers some 22,000 pieces of apparatus over the contract period. <br /><br />As well as monitoring street lighting and illuminated signs on a continuous basis, we also rely on  <a href='http://www.clp.uk.com/Blackpool/ReportFault.aspx?Function=ReportFault&MenuIndex=1' target='_blank'>light failure and damage reports</a>  received from residents, pedestrians and other road users.<br /><br />For more information on the scope and standards of service you can expect from us, please see our  <a href='http://www.clp.uk.com/Blackpool/Template.aspx?Function=QuickLink3' target='_blank'>Customer Care Charter</a> <br /><br /></span>
+			</div>
+		</div></span>
+    </td>
+	</tr>
+</table>
+
+
+ 
+                    </div>                    
+
+                    <span id="ctl00_lblLastUpd" class="lastUpdated">Last Updated: 07/07/2011 16:09</span>            
+                </div>
+                
+                <!-- Info -->
+                <div id="ctl00_divInfo" class="rhs" style="background-image:url(App_Themes/Common/Images/Pages/SAFETY%20NIGHT%203-86.jpg);">
+                    <div id="imgSiteCtn">     
+                        <img id="ctl00_imgSt" src="App_Themes/Common/Images/Site/CLP.PNG" align="right" border="0" /><br clear="all" />                                       
+                    </div>                        
+                    <div id="headline">Delivering public lighting professionally</div>
+                </div>
+
+                <div class="rhs2">
+                    <img src="App_Themes/Common/Images/clpEx.gif" />
+                </div>
+
+                <div class="clr">
+                </div>
+            </div>       
+
+            <!-- Title -->  
+            
+ <div class="title">
+    <span id="ctl00_ucTitle_txtUpper" class="upper">Lighting up</span>
+    <span id="ctl00_ucTitle_txtLower" class="lower">Blackpool</span>
+</div>
+                        
+
+            <!-- Footer -->
+            <div class="footer">   
+                <div id="copyright">© E.ON UK plc 2009</div>
+                <div id="terms"><div id="ctl00_lb_TCPP_pnlIb">
+	
+    
+            <ul class="linkBar">
+         
+            <li><a id="ctl00_lb_TCPP_dl_ctl01_hl" href="Template.aspx?function=PrivacyPolicy&amp;menuIndex=0"><b>Privacy Policy</b></a></li>
+        
+            <li><a id="ctl00_lb_TCPP_dl_ctl02_hl" href="Template.aspx?function=TermsAndConditions&amp;menuIndex=0"><b>Terms & Conditions</b></a></li>
+        
+            </ul>
+                 
+
+</div>
+</div><!--Terms & Conditions | Privacy Policy-->
+                <div class="clr"></div>
+            </div>       
+            
+            <div id="ctl00_ucViewer_upVw">
+	
+        <input name="ctl00$ucViewer$hidDisabled" type="hidden" id="ctl00_ucViewer_hidDisabled" value="true" />
+        <input name="ctl00$ucViewer$hidExpanded" type="hidden" id="ctl00_ucViewer_hidExpanded" />
+    
+</div>                                    
+        
+
+<script type="text/javascript">
+//<![CDATA[
+try
+{
+    var mgr = Sys.WebForms.PageRequestManager.getInstance();
+    if (mgr != null)
+    {
+        mgr.add_endRequest(function(sender, args) {
+            var disabled = $get('ctl00_ucViewer_hidDisabled');
+            if (disabled != null && disabled.value=='false') {
+                var expanded = $get('ctl00_ucViewer_hidExpanded');
+                var main = $get('divMain');
+                if (expanded != null && main != null) {
+                    if (expanded.value=='true')
+                    {
+                        main.className='main mainEx'
+                    }
+                    else
+                    {
+                        if (main.className != 'main')
+                            main.className = 'main';
+                    }
+                }
+                //$get('ctl00_ucViewer_hidExpanded').value = '';
+                //alert($get('ctl00_ucViewer_hidExpanded').value);
+            }
+        });
+    }
+}
+catch (e)
+{
+}
+
+try
+{
+    var mgr = Sys.WebForms.PageRequestManager.getInstance();
+    if (mgr != null)
+    {
+        mgr.add_initializeRequest(startBusyBox);
+        mgr.add_endRequest(endBusyBox);
+    }
+}
+catch (e)
+{
+}
+
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+        <script type="text/javascript">
+
+            Sys.Browser.WebKit = {};
+
+            if (navigator.userAgent.indexOf('WebKit/') > -1) {
+
+                Sys.Browser.agent = Sys.Browser.WebKit;
+
+                Sys.Browser.version = parseFloat(navigator.userAgent.match(/WebKit\/(\d+(\.\d+)?)/)[1]);
+
+                Sys.Browser.name = 'WebKit';
+
+            }
+
+        </script>
+    </body>
+</html>

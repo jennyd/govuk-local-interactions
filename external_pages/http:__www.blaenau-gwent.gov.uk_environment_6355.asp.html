@@ -1,0 +1,940 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- PageID 6355 - published by Open Text Web Solutions 10 - 10.0.1.51 - 29448 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="Title" content="Blaenau Gwent County Borough Council - Severe Weather" />
+    <meta name="Description" content="Blaenau Gwent County Borough Council" />
+    <meta name="Author" content="Blaenau Gwent County Borough Council" />
+    <meta name="DC.Title" content="Blaenau Gwent County Borough Council: - Severe Weather" />
+    <meta name="DC.Coverage" content="Blaenau Gwent, South Wales, UK" lang="ENG" xml:lang="ENG" />
+    <meta name="DC.Identifier" scheme="URI" content="/environment/6355.asp" />
+    <meta name="DC.Date.Created" scheme="W3CDTF" content="30/11/2006" />
+    <meta name="DC.Date.Issued" scheme="W3CDTF" content="11/03/2014 12:49:03" />
+    <meta name="DC.Date.Modified" scheme="W3CDTF" content="30 November 2006" />
+    <meta name="DC.Format" content="text/html" />
+    <meta name="DC.Creator" content="Blaenau Gwent County Borough Council:" />
+    <meta name="DC.publisher" content="Blaenau Gwent County Borough Council, Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB, Tel (01495) 350555, http://www.blaenau-gwent.gov.uk" />
+    <meta name="DC.Contributor" content="" />
+    <meta name="DC.Language" scheme="ISO 639-2" content="ENG" />
+    <meta name="DC.Subject" scheme="IPSV" content="" />
+    <meta name="DC.Rights" content="http://www.blaenau-gwent.gov.uk/copyright" />
+    <meta name="eGMS.accessibility" content="Double-A" scheme="WCAG" />
+    <meta name="eGMS.subject.category.identifier" scheme="LNGL" content="" />
+    <meta name="eGMS.subject.category" scheme="IPSV" content="" />
+    <meta name="keywords" content="" />
+    <title>
+      Blaenau Gwent County Borough Council - Severe Weather
+    </title>
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" src="/scripts/jquery-1.3.2.min.js">
+</script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image1 .desc").show(); //Show Banner
+            $(".main_image1 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb1 ul li:first").addClass('active');
+            $(".image_thumb1 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image1").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image1 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image1 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image1 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb1 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse1").click(function () {
+                $(".main_image1 .block").slideToggle();
+                $("a.collapse1").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image2 .desc").show(); //Show Banner
+            $(".main_image2 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb2 ul li:first").addClass('active');
+            $(".image_thumb2 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image2").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image2 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image2 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image2 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb2 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse2").click(function () {
+                $(".main_image2 .block").slideToggle();
+                $("a.collapse2").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        function f(n) {
+            document.getElementById('body').style.fontSize = n
+        }
+    //]]>
+    </script><!-- IE6 STYLE OVERRIDES --><!--[if lte IE 6]>
+        <link href="" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- IE7 STYLE OVERRIDES -->
+    <!--[if IE 7]>
+           <link href=""  rel="stylesheet" type="text/css" />
+    <![endif]-->
+  </head>
+  <body id="body">
+    <a name="Top" id="Top"></a> <!-- HEADER -->
+     <!-- ************************************** -->
+     <!-- HEADER  (grey bar, white bar, red bar) -->
+     <!-- ************************************** -->
+    <div id="header">
+      <!-- HEADER TOP BAR( grey ) -->
+      <div id="header-toplinks-outer">
+        <div id="header-toplinks-inner">
+          <!-- SEARCH BOX -->
+          <div id="header-search">
+            
+              <form name="kbs" method="get" action="http://search3.openobjects.com/kb5/gwent/search/en/results.page" id="kbs">
+                <input name="qt" class="searchbox" type="text" maxlength="50" value="Search" onfocus="this.value=''" id="query" /> <input class="searchbutton" type="submit" value="" />
+              </form>
+            </form>
+          </div><!-- TOP HEADER LINKS -->
+          <div id="header-toplinks">
+            <ul>
+              <li class="first">
+                 <a href="/CYM/environment/6355.asp" title="Cymraeg" accesskey="l">Cymraeg</a> 
+              </li>
+              <li>
+                <a href="/council/69.asp" title="Accessibility" accesskey="a">Accessibility</a>
+              </li>
+              <li>
+                <a href="/help.asp" title="Help" accesskey="h">Help</a>
+              </li>
+              <li>
+                <a href="/ContactUs.asp" title="Contact Us" accesskey="c">Contact Us</a>
+              </li>
+              <li>
+                <a href="/council/1838.asp" title="News Centre" accesskey="m">News Centre</a>
+              </li>
+              <li>
+                <a href="http://www.blaenau-gwent.gov.uk/19002.asp" title="Cookies" accesskey="v">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- HEADER COUNCIL LOGO ( tag line set in css )-->
+      <div id="header-mast-outer">
+        <!-- Begin Logo -->
+        <div id="logo">
+          <a href="/index.asp"><img src="/images/logo.jpg" alt="Blaenau Gwent County Borough Council - Cyngor Bwrdeisdref Sirol Blaenau Gwent" /></a>
+        </div><!-- End Logo --><!-- Begin Hour -->
+        <div id="hour-ENG"></div><!-- End Hour -->
+        <!-- Begin Tagline -->
+        <div id="tagline"></div><!-- End Tagline -->
+      </div><!-- HEADER BOTTOM BAR ( red ) -->
+      <div id="header-bottomlinks-outer">
+        <div id="header-bottomlinks-inner">
+          <!-- LINKS LIST -->
+          <div id="header-bottomlinks">
+            <ul>
+              <li class="first">
+                <a href="/index.asp" title="Home" accesskey="h">Home</a>
+              </li>
+              <li>
+                <a href="/jobs/262.asp" title="Jobs" accesskey="j">Jobs</a>
+              </li>
+              <li>
+                <a href="/onlineServices/forms.asp" title="Online Forms" accesskey="o">Online Forms</a>
+              </li>
+              <li>
+                <a href="/faqs/faq.asp" title="FAQ's" accesskey="5">FAQ's</a>
+              </li>
+              <li>
+                <a href="/sitemap.asp" title="Sitemap" accesskey="3">Sitemap</a>
+              </li>
+              <li>
+                <a href="/A-Z.asp" title="A-Z" accesskey="z">A-Z</a>
+              </li>
+              <li>
+                <a href="/news/2487.asp" title="News" accesskey="n">News</a>
+              </li>
+              <li>
+                <a href="/whatsOn/6775.asp" title="What's On" accesskey="w">What's On</a>
+              </li>
+            </ul>
+          </div><!-- TEXT SIZE CHOOSER -->
+          <div id="header-textsize">
+            <span>Enlarge Screen Text Here:</span> <span class="small-text"><a href="javascript:f('0.6em');">A</a></span> <span class="medium-text"><a href="javascript:f('0.8em');">A</a></span> <span class="large-text"><a href="javascript:f('1.2em');">A</a></span>
+          </div><!-- CLEAR DIV ( alloew red background to extend with text size ) -->
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div><!-- SPACER ( few pixels light blue spacer ) -->
+    <div id="header-spacer"></div><!-- // HEADER -->
+    <!-- PAGE CONTENT -->
+    <div id="main-content-body-outer">
+      <div id="main-content-valley">
+        <!-- MAIN PAGE CONTENT - WHITE BOX -->
+        <div class="white-box-top"></div>
+        <div class="white-box-body body-content">
+          <div id="left-column">
+            <!-- Begin Online Services -->
+            <div id="online-services">
+              <span>What would you like to do?</span> <a href="/onlineServices/15981.asp" id="payforit" name="payforit">Pay for it</a> <a href="/onlineServices/15980.asp" id="reportit" name="reportit">Report it</a> <a href="/onlineServices/15979.asp" id="requestit" name="requestit">Request it</a> <a href="/onlineServices/15978.asp" id="sayit" name="sayit">Say It</a> <a href="/onlineServices/15982.asp" id="findit" name="findit">Find It</a>
+            </div><!-- LEFT NAVIGATION -->
+            <div class="side-box-container no-border">
+              <h2 class="red-heading">
+                Browse by Service:
+              </h2>
+              <ul class="navigation-list">
+                
+                <li class="level-0">
+                  <a href="/index.asp">Home</a>
+                </li>
+                <li class="level-0 up">
+                  <a href="/environment.asp" title="Environment &amp; Planning">Environment &amp; Planning</a>
+                </li>
+                <li class="level-2">
+                  <a href="/environment/200.asp" title="Emergencies">Emergencies</a>
+                </li>
+                <li class="level-3 up">
+                  <a href="/environment/6352.asp" title="Emergency Planning">Emergency Planning</a>
+                </li>
+                <li class="level-3">
+                  <a href="/environment/6355.asp" title="Severe Weather">Severe Weather</a>
+                </li>
+              </ul>
+            </div><!-- // LEFT NAVIGATION -->
+          </div><!-- CONTENT MIDDLE COLUMN -->
+          
+            <div id="three-column-middle">
+              
+              <h1 class="green-heading" style="display: ;">
+                Severe Weather
+              </h1>
+              <div class="no-border page-content">
+                <p>
+                  <img src="/images/Images_Transport/Car_In_Flood.jpg" alt="image" />
+                </p>
+                <p>
+                  <strong>Severe Weather</strong>
+                </p>
+                <p>
+                  Severe weather such as gales, floods, snowfall and extremes of temperatures can cause damage to homes and businesses, put lives at risk and can disrupt transportation and local services.
+                </p>
+                <p>
+                  Blaenau Gwent County Borough Council plays an important part in assessing the risks associated with severe weather and the co-ordinated response needed in the recovery from any severe weather event.
+                </p>
+                <p>
+                  For information on weather warnings and severe weather visit the Met Office website. (see link opposite)
+                </p>
+                <p>
+                  <strong>Transportation &amp; Roads</strong>
+                </p>
+                <p>
+                  During severe weather roads can become blocked and public transportation can be limited.&nbsp; Blaenau Gwent County Borough Council co-ordinates the clearing of roads in the borough and tries to keep the primary routes open as a priority.&nbsp; Residential and minor roads may remain unclear so care is advised if travelling during severe weather. (see link opposite and related document)
+                </p>
+                <p>
+                  Advice on any road closures or restrictions to public transport will be broadcast on your local radio stations and you may be advised to leave your car at home.
+                </p>
+                <p>
+                  To find out more information on road conditions or closures:-
+                </p>
+                <p>
+                  AA Road Watch - Tel:- 09006 88 84322 or visit <a title="AA Road Watch" href="http://www.theaa.com/travelwatch/roadwatch.jsp">AA Roadwatch<br /></a>Traffic Wales Information - Tel:- 0845 602 6020 or visit <a title="Traffic Wales" href="http://www.traffic-wales.com/">Traffic Wales</a>
+                </p>
+                <p>
+                  <strong>School Closures</strong>
+                </p>
+                <p>
+                  It may sometimes be necessary to close schools during periods of freezing weather or snowfall.
+                </p>
+                <p>
+                  Please check with the local media to find out whether your child's school will be closed or alternatively, updates will be provided on this website.
+                </p>
+                <p>
+                  <strong>Power Failures<br /></strong>Periods of severe weather can affect the supply of electricity or other services.
+                </p>
+                <p>
+                  Report utility failures using the following numbers:-
+                </p>
+                <p>
+                  National Gas Emergency Service&nbsp;- &nbsp;&nbsp;0800 111 999<br />
+                  Dwr Cymru Welsh Water Supplies&nbsp;- &nbsp;0800 052 0130<br />
+                  Swalec - &nbsp;&nbsp;&nbsp;0800 052 0400<br />
+                  British Telecom - &nbsp;&nbsp;0800 800 151
+                </p>
+                <p>
+                  <br />
+                  <strong>Flooding</strong>
+                </p>
+                <p>
+                  How to Prepare For and Deal With Flooding.
+                </p>
+                <p>
+                  Flooding in Blaenau Gwent can be caused by:-&nbsp;<br />
+                  &nbsp;<br />
+                </p>
+                <ul>
+                  <li>prolonged heavy rainfall raising river levels
+                  </li>
+                  <li>blocked culverts and drains
+                  </li>
+                  <li>sudden downpours, leading to flash flooding and surface water build up.
+                  </li>
+                </ul>
+                <p>
+                  Blaenau Gwent County Borough Council understands the impact flooding can have on the community and business premises and tries to ensure that effective arrangements are in place to co-ordinate resources in both preventing flooding and responding to requests from the community.
+                </p>
+                <p>
+                  Make Sure You Are Prepared.
+                </p>
+                <p>
+                  Flooding can happen very quickly and unexpectedly so the time to think about what you would do in the event of flooding is now.&nbsp; Don't leave it until you are already flooded.&nbsp; The better prepared you are, the easier you will find it to cope with the effects of flooding.<br />
+                  &nbsp;<br />
+                </p>
+                <ul>
+                  <li>Find out the likelihood of flooding in your area.&nbsp; Visit the Environment Agency website for more information. (see link opposite)
+                  </li>
+                  <li>Check your insurance documents are up to date and that you are adequately covered in the event of a flood.
+                  </li>
+                  <li>Try and store valuables household documents and other sentimental items in a high cupboard or upstairs.
+                  </li>
+                  <li>Make sure you know where and how to turn off your gas, electric and water supplies.
+                  </li>
+                  <li>Consider purchasing sand bags, or flood boards, to direct water away from your property if flooding is a high risk.
+                  </li>
+                </ul>
+                <p>
+                  Flood Warnings.
+                </p>
+                <p>
+                  Check for flood warnings in your area by: -&nbsp;<br />
+                  &nbsp;<br />
+                </p>
+                <ul>
+                  <li>Tuning into local radio and TV.
+                  </li>
+                  <li>Contact the <a title="Floodline" href="http://www.environment-agency.gov.uk/homeandleisure/floods/31618.aspx">Floodline</a> number on 0845 988 1188.
+                  </li>
+                  <li>Visit the Environment Agency website. (see link opposite)
+                  </li>
+                </ul>
+                <p>
+                  If flooding is imminent: -&nbsp;<br />
+                  &nbsp;<br />
+                </p>
+                <ul>
+                  <li>Move valuables upstairs.
+                  </li>
+                  <li>Check pets and move them to safety.
+                  </li>
+                  <li>If you can, move any vehicles to higher ground.
+                  </li>
+                  <li>Alert your neighbours.
+                  </li>
+                  <li>If you have sandbags or flood boards put them in place.
+                  </li>
+                  <li>Be prepared to turn off gas and electricity supplies.
+                  </li>
+                  <li>If flooding is likely after darkness, carry out preparations beforehand while you still have light.
+                  </li>
+                </ul>
+                <p>
+                  Flood Safety.
+                </p>
+                <p>
+                  Floods can kill, always try and remain safe.<br />
+                  &nbsp;<br />
+                </p>
+                <ul>
+                  <li>Don't walk or drive through flood water.&nbsp; Even very shallow, fast flowing water can knock you over.&nbsp; Two feet of water will float your car.
+                  </li>
+                  <li>Floodwater is often contaminated with chemicals and sewage, so avoid contact as much as possible.
+                  </li>
+                  <li>Never try to swim through flood water.&nbsp; Not only might the water be contaminated, but you could get swept away or struck by a floating object in the water.
+                  </li>
+                </ul>
+                <p>
+                  <br />
+                  Further information on the risks to health from contact with flood water can be found on the following sites:-
+                </p>
+                <ul>
+                  <li>
+                    <a title="Health Protection Agency" href="http://www.hpa.org.uk/">Health Protection Agency</a>
+                  </li>
+                  <li>
+                    <a title="Public Health Wales" href="http://www.publichealthwales.wales.nhs.uk/">Public Health Wales</a>
+                  </li>
+                </ul>
+                <p>
+                  Cleaning Up Afterwards.<br />
+                  &nbsp;
+                </p>
+                <ul>
+                  <li>Contact your insurance company's emergency helpline and take advice on what you should do.
+                  </li>
+                  <li>When it's safe, ventilate your house by opening doors and windows, but beware of security.
+                  </li>
+                  <li>Contact your gas, electricity and water companies so that the systems can be tested before you turn them back on.
+                  </li>
+                  <li>Always take advice from your insurance company and find out what you should do.&nbsp; They will normally send a loss adjuster to assess any damage to the property and its contents. (see link to Association of British Insurers opposite)
+                  </li>
+                  <li>The insurance company should then arrange the disposal of contaminated items and replacements, and any work needed to the property following the flood.
+                  </li>
+                </ul>
+                <p>
+                  For more information view the Environment Agency Advice Guides (see link opposite)&nbsp;which now include new flood audio guides.&nbsp; These are the first ever audio CD and MP3 files to be produced by the Environment Agency.
+                </p>
+                <p>
+                  Documents
+                </p>
+                <ul>
+                  <li>
+                    <a title="Local Flood Risk Management Strategy" href="/documents/Documents_Environment/BGCBC_Flood_Risk_Strategy.pdf">Local Flood Risk Management Strategy</a>
+                  </li>
+                  <li>
+                    <a title="Local Flood Risk Management Strategy - Summary" href="/documents/Documents_Environment/BG_Local_Flood_Risk_Summary.pdf">Local Flood Risk&nbsp;Summary</a>
+                  </li>
+                </ul>
+                <p>
+                  &nbsp;
+                </p>
+                <p>
+                  <strong>Snow And Ice</strong>
+                </p>
+                <p>
+                  When snow or icy roads are forecast people should adjust their driving to suit the conditions.&nbsp; Black ice isn't always visible and so can be an even greater hazard for both motorists and pedestrians.&nbsp; Black ice may be formed when rain or drizzle fall on a road surface which is of a temperature at or below zero.
+                </p>
+                <p>
+                  Before snow or ice&nbsp;<br />
+                </p>
+                <ul>
+                  <li>If you have to make a journey when snow is forecast, make sure you have warm clothes, food, water, boots, a torch and a spade.
+                  </li>
+                  <li>Let someone know when you expect to arrive and your route.
+                  </li>
+                  <li>Try to wait until the roads have been gritted before travelling.
+                  </li>
+                  <li>Put grit or cat litter on paths and driveways to lessen the risk of slipping on compacted snow.
+                  </li>
+                  <li>Check on vulnerable neighbours.
+                  </li>
+                </ul>
+                <p>
+                  During snow or ice<br />
+                  &nbsp;&nbsp; &nbsp;<br />
+                  Avoid travel if possible.&nbsp; If you must drive, check the Highway Code for advice on driving in ice and snowy weather.&nbsp; A summary of the advice is: -&nbsp;<br />
+                  &nbsp;&nbsp;<br />
+                </p>
+                <ul>
+                  <li>Take care around gritters.
+                  </li>
+                  <li>Don't be tempted to overtake.
+                  </li>
+                  <li>Slow down; it can take 10 times longer to stop in snowy or icy conditions, so allow extra room.
+                  </li>
+                  <li>Use the highest gear possible to avoid wheel spin.
+                  </li>
+                  <li>Manoeuvre gently and avoid harsh braking and acceleration.&nbsp; If you start to skid, gently ease off the accelerator and avoid braking.&nbsp; If braking is necessary, pump the brakes don't slam them on.&nbsp; If you get stuck, stay with your car and tie something brightly coloured to your aerial.
+                  </li>
+                  <li>If you go outside wear several layers of clothing and keep dry to prevent loss of body heat.&nbsp; Watch out for signs of hypothermia such as uncontrollable shivering, slow/slurred speech, memory lapse and drowsiness; and frostbite with loss of feeling in and pale appearance of fingers, toes, nose and ear lobes.&nbsp; Keep moving your arms and legs to help the blood circulate.
+                  </li>
+                </ul>
+                <p>
+                  After snow and ice.<br />
+                  Be careful when walking or driving on compacted snow; it may have turned to ice.<br />
+                  Take care when shovelling snow.&nbsp; Cold air makes it harder to work and breathe, which adds some extra strain on the body and can be the cause of heart attacks in the vulnerable.
+                </p>
+                <p>
+                  (see link opposite)
+                </p>
+                <p>
+                  <strong>Storms &amp; Gales</strong>
+                </p>
+                <p>
+                  Follow these steps to limit damage and stay safe during periods of stormy weather.
+                </p>
+                <p>
+                  Before the Storm
+                </p>
+                <p>
+                  &nbsp;&nbsp;
+                </p>
+                <ul>
+                  <li>Secure any loose objects around your home and garden to stop them from blowing into windows and damaging your home.
+                  </li>
+                  <li>Close and fasten doors, windows and shutters around the property, taking extra care to make sure large doors, such as garages, are secure.
+                  </li>
+                  <li>Close loft hatches or doors leading to the roof space.
+                  </li>
+                  <li>If possible park vehicles in a garage or keep them well away from buildings or trees.
+                  </li>
+                </ul>
+                <p>
+                  During the Storm<br />
+                  &nbsp;&nbsp;<br />
+                </p>
+                <ul>
+                  <li>Try to stay indoors.
+                  </li>
+                  <li>Do not go out to repair damage whilst the storm is in progress.
+                  </li>
+                  <li>If possible enter and leave your home on the sheltered side.
+                  </li>
+                  <li>Take care whilst driving, especially on exposed routes, or if driving a high sided vehicle.
+                  </li>
+                  <li>Delay your journey or choose a different route if possible.
+                  </li>
+                </ul>
+                <p>
+                  After the Storm<br />
+                  &nbsp;&nbsp;<br />
+                </p>
+                <ul>
+                  <li>Contact your Insurance Company if there has been damage to your property or premises.
+                  </li>
+                  <li>Do not touch any cables that have been blown down.
+                  </li>
+                  <li>Make sure any vulnerable neighbours or relatives are safe and help them make arrangements for any repairs.
+                  </li>
+                </ul>
+                <p>
+                  View more advice on severe weather and check for weather warnings on the Met Office website.
+                </p>
+                <p>
+                  <strong>Dense Fog</strong>
+                </p>
+                <p>
+                  Travelling in fog can be extremely dangerous.&nbsp; Fog can drift rapidly and is often patchy.&nbsp; Warnings of dense fog are issued when visibility is expected to fall below 200 metres. Severe disruption to transport occurs when the visibility falls below 50 metres.
+                </p>
+                <p>
+                  During fog.<br />
+                  &nbsp;<br />
+                </p>
+                <ul>
+                  <li>Avoid travel if possible.
+                  </li>
+                  <li>Drive slowly with dipped headlights, full-beam lights reflect off the fog causing a 'white wall' effect.
+                  </li>
+                  <li>Keep an eye on your speed; fog can give the illusion of moving in slow motion.
+                  </li>
+                  <li>Use fog lights, but remember to turn them off when the visibility improves.
+                  </li>
+                  <li>Don't hang on the taillights of the car in front; rear lights can give a false sense of security.
+                  </li>
+                  <li>Watch out for freezing fog that is made of water droplets that freeze on contact with objects such as the pavement, road, car, etc.&nbsp; It can quickly form a layer of ice.
+                  </li>
+                </ul>
+                <p>
+                  <strong>Thunderstorms and Lightning</strong>
+                </p>
+                <p>
+                  There are many myths surrounding lightning, such as lightning never strikes the same place twice or it always strikes the tallest object.&nbsp; Both are false, as lightning strikes the best conductor on the ground whether it has been struck before or not.
+                </p>
+                <p>
+                  Before the thunderstorm.&nbsp;<br />
+                  &nbsp;&nbsp;<br />
+                </p>
+                <ul>
+                  <li>Unplug all non-essential appliances, including the television, as lightning can cause power surges.
+                  </li>
+                  <li>Seek shelter if possible.&nbsp; When you hear thunder you are already within range of where the next ground flash may occur, lightning can strike as far as 10 miles away from the centre of a storm.
+                  </li>
+                </ul>
+                <p>
+                  During the thunderstorm.<br />
+                  &nbsp;&nbsp;<br />
+                </p>
+                <ul>
+                  <li>Avoid using the phone; telephone lines can conduct electricity.
+                  </li>
+                  <li>Avoid using taps and sinks; metal pipes can conduct electricity.
+                  </li>
+                  <li>If outside avoid water and find a low-lying open place that is a safe distance from trees, poles or metal objects.
+                  </li>
+                  <li>Avoid activities such as golf, rod fishing or boating on a lake.
+                  </li>
+                </ul>
+                <p>
+                  If you find yourself in an exposed location it may be advisable to: -<br />
+                  &nbsp;&nbsp;<br />
+                </p>
+                <ul>
+                  <li>Squat close to the ground, with hands on knees and with head tucked between them.
+                  </li>
+                  <li>Try to touch as little of the ground with your body as possible.
+                  </li>
+                  <li>&nbsp;Do not lie down on the ground.
+                  </li>
+                  <li>&nbsp;If you feel your hair stand on end, drop to the above position immediately.
+                  </li>
+                </ul>
+                <p>
+                  <br />
+                  After the thunderstorm.
+                </p>
+                <p>
+                  <br />
+                  Avoid downed power lines or broken cables.<br />
+                  If someone is struck by lightning they often suffer severe burns.&nbsp; The strike also affects the heart.<br />
+                </p>
+                <p>
+                  <br />
+                  <strong>Heat Wave</strong>
+                </p>
+                <p>
+                  Whilst most people will be looking forward to warmer weather over the summer, extreme heat can be dangerous and has the potential to affect health.
+                </p>
+                <p>
+                  The current risk of a severe heatwave in Wales is relatively low, however during relatively mild heat waves, death rates are significantly raised in this country.
+                </p>
+                <p>
+                  The Heat-Health Watch system provided by the Met. Office operates in England and Wales from 1 June to 15 September each year. (see link opposite)&nbsp;
+                </p>
+                <p>
+                  (see Heat Wave Plan for Wales in&nbsp;related documents below)
+                </p>
+                <p>
+                  Who Is At Most Risk?<br />
+                  &nbsp;&nbsp;<br />
+                </p>
+                <ul>
+                  <li>Older people, especially those over 75 and living either on their own or in a care home.
+                  </li>
+                  <li>People with chronic illness.
+                  </li>
+                  <li>Babies &amp; small children.
+                  </li>
+                </ul>
+                <p>
+                  Health Risks.<br />
+                  &nbsp;<br />
+                  In a severe heatwave you may suffer from heat exhaustion or heatstroke.&nbsp; Both of which require urgent treatment.
+                </p>
+                <p>
+                  Visit the <a title="NHS Direct" href="http://www.nhsdirect.nhs.uk/">NHS Direct</a> website for more information and the symptoms of heat exhaustion and heatstroke.
+                </p>
+                <p>
+                  What you and your family/carer can do.<br />
+                  <br />
+                </p>
+                <ul>
+                  <li>Check that windows can be opened to ventilate rooms, especially at night.
+                  </li>
+                  <li>Shade windows during the day by drawing curtains or blinds, especially if they receive direct sunlight.
+                  </li>
+                  <li>Check you are in the coolest room possible.
+                  </li>
+                  <li>Use an electric fan to circulate the air.
+                  </li>
+                  <li>Make sure you have access to cool non alcoholic drinks, and that you drink regularly.
+                  </li>
+                  <li>Spray cool water on yourself, or have a flannel to cool you down.
+                  </li>
+                  <li>Plan cold menus and include foods with a high water content, such as fruit and salads.
+                  </li>
+                  <li>Wear loose, cotton clothing and wear a sun hat if you go outdoors.
+                  </li>
+                </ul>
+                <p>
+                  Looking after yourself and others during a heatwave.<br />
+                  &nbsp;&nbsp;<br />
+                </p>
+                <ul>
+                  <li>Keep out of the heat by avoiding the hottest part of the day (11am-3pm).
+                  </li>
+                  <li>Keep strenuous outdoor activities such as sport, DIY, to cooler parts of the day.
+                  </li>
+                  <li>If you go out, try to stay in shaded areas, wear a sun hat, light loose clothes, apply sunscreen and remember to take plenty of water with you.
+                  </li>
+                  <li>Try to stay cool by staying inside in the coolest part of the building.
+                  </li>
+                  <li>Close curtains in rooms that get a lot of sun.
+                  </li>
+                  <li>Close windows during the day and open them at night when its cooler outside.
+                  </li>
+                  <li>Take cool showers or baths, and splash yourself several times a day with cold water.
+                  </li>
+                  <li>Drink regularly, even if you don't feel particularly thirsty, avoiding alcohol, tea and coffee.
+                  </li>
+                  <li>Seek advice if you have any concerns.&nbsp; Contact your doctor, a pharmacist or NHS Direct (0845 4647) if you're worried about your health during a heatwave, especially if you are taking medication, or have any unusual symptoms.<br />
+                    &nbsp;&nbsp;&nbsp;
+                  </li>
+                </ul>
+                <div class="Top" style="display:">
+                  <a href="/environment/6355.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" width="8" height="8" alt="Return to top of page" /></a>
+                  <div style="clear:both;"></div>
+                </div>
+              </div><script language="JavaScript" type="text/javascript">
+//<![CDATA[
+              var win = null;
+              function newWindow(mypage,myname,w,h,features) {
+              var winl = (screen.width-w)/2;
+              var wint = (screen.height-h)/2;
+              if (winl < 0) winl = 0;
+              if (wint < 0) wint = 0;
+              var settings = 'height=' + h + ',';
+              settings += 'width=' + w + ',';
+              settings += 'top=' + wint + ',';
+              settings += 'left=' + winl + ',';
+              settings += features;
+              win = window.open(mypage,myname,settings);
+              win.window.focus();
+              }
+              //]]>
+              </script>
+              <div class="box-container related-documents">
+                <h1 class="green-heading">
+                  Related Documents
+                </h1>
+                <ul>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Documents_Governance/Winter_Driving_Tips.doc','','650','500','resizable,scrollbars,status,toolbar')" title="link to Winter_Driving_Tips.doc">Winter Driving Tips</a> - <img src="/documents/Documents_Governance/Winter_Driving_Tips_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />52.50kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Documents_Governance/WINTER_MAINTENANCE_INFO.doc','','650','500','resizable,scrollbars,status,toolbar')" title="link to WINTER_MAINTENANCE_INFO.doc">Winter Weather Information</a> - <img src="/documents/Documents_Governance/WINTER_MAINTENANCE_INFO_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />49.00kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Documents_Governance/METEOROLOGICAL_OFFICE_TERMINOLOGY.doc','','650','500','resizable,scrollbars,status,toolbar')" title="link to METEOROLOGICAL_OFFICE_TERMINOLOGY.doc">Met Office Terminology</a> - <img src="/documents/Documents_Governance/METEOROLOGICAL_OFFICE_TERMINOLOGY_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />32.50kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Documents_Governance/Coping_With_Severe_Weather.doc','','650','500','resizable,scrollbars,status,toolbar')" title="link to Coping_With_Severe_Weather.doc">Coping with Severe Weather</a> - <img src="/documents/Documents_Governance/Coping_With_Severe_Weather_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />147.92kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Documents_Governance/Heat_Health_Watch.doc','','650','500','resizable,scrollbars,status,toolbar')" title="link to Heat_Health_Watch.doc">Heat Health Watch</a> - <img src="/documents/Documents_Governance/Heat_Health_Watch_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />46.00kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Heat_Wave_Plan_(Wales).pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Heat_Wave_Plan_(Wales).pdf">Heat Wave Plan (Wales)</a> - <img src="/documents/Heat_Wave_Plan_(Wales)_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />763.64kb<br />
+                  </li>
+                </ul>
+              </div>
+              <div class="Top" style="display: none;">
+                <a href="/environment/6355.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div>
+              <div class="box-container text-box">
+                <h1 class="green-heading">
+                  Contact Information
+                </h1>
+                <p>
+                  For further information please contact
+                </p>
+                <p>
+                  Civil Contingencies Team<br />
+                  Central Depot<br />
+                  Barleyfield Industrial Estate<br />
+                  Nantyglo<br />
+                  Gwent<br />
+                  NP23 4YF
+                </p>
+                <p>
+                  <br />
+                  Principal Civil Contingencies Officer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 01495355568
+                </p>
+                <p>
+                  Civil Contingencies Officer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 01495 354708
+                </p>
+                <p>
+                  Civil Contingencies Assistant&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 01495 355081
+                </p>
+                <p>
+                  Risk Management Officer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 01495 355636<br />
+                </p>
+                <p>
+                  Email : <a href='mailto:&#101;&#109;&#101;&#114;&#103;&#101;&#110;&#99;&#121;&#46;&#112;&#108;&#97;&#110;&#110;&#105;&#110;&#103;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#111;&#118;&#46;&#117;&#107;'>&#101;&#109;&#101;&#114;&#103;&#101;&#110;&#99;&#121;&#46;&#112;&#108;&#97;&#110;&#110;&#105;&#110;&#103;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#111;&#118;&#46;&#117;&#107;</a>
+                </p>
+              </div>
+              <div style="clear: both;"></div>
+              <div class="Top" style="display:">
+                <a href="/environment/6355.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div><!-- // CONTENT MIDDLE COLUMN -->
+              
+            </div><!-- RIGHT COLUMN -->
+            <div id="right-column">
+              <span class="hide"><a name="rightcol" id="rightcol">Right Content Area</a></span> <!-- RIGHT IMAGE -->
+              <div class="side-box-container">
+                <img src="/images/Images_Transport/snowcars_rdax_180x108.jpg" alt="image" class="imgPanel" /><br />
+                
+              </div><!-- // RIGHT IMAGE --><!-- RELATED PAGES -->
+              <div class="side-box-container">
+                <h2 class="red-heading">
+                  Related Pages
+                </h2>
+                <ul class="related-links">
+                  
+                  <li>
+                    <a href="/advice/16971.asp" title="New winter campaign to keep Blaenau Gwent safe and well ">New winter campaign to keep Blaenau Gwent safe and well </a>
+                  </li>
+                  <li>
+                    <a href="/advice/16972.asp" title="Council urges Blaenau Gwent businesses to prepare for winter">Council urges Blaenau Gwent businesses to prepare for winter</a>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div><!-- // RELATED PAGES --><!-- RELATED SITES -->
+              <div class="side-box-container">
+                <h2 class="red-heading">
+                  Related Sites
+                </h2>
+                <ul class="related-links">
+                  <li>
+                    <a href="http://www.direct.gov.uk/en/Nl1/Newsroom/ChristmasHolidays/DG_173375" title="">Winter Driving</a>
+                  </li>
+                  <li>
+                    <a href="http://www.direct.gov.uk/en/Nl1/Newsroom/DG_191868" title="">Snow Clearing</a>
+                  </li>
+                  <li>
+                    <a href="http://www.metoffice.gov.uk/weather/uk/heathealth/" title="">Heat Health Watch</a>
+                  </li>
+                  <li>
+                    <a href="http://www.environment-agency.gov.uk/homeandleisure/floods/38325.aspx" title="">Environment Agency Advice Guides</a>
+                  </li>
+                  <li>
+                    <a href="http://www.environment-agency.gov.uk/" title="">Environment Agency</a>
+                  </li>
+                  <li>
+                    <a href="http://www.environment-agency.gov.uk/subjects/flood/floodwarning" title="">Environment Agency - Flood Warnings</a>
+                  </li>
+                  <li>
+                    <a href="http://www.environment-agency.gov.uk/subjects/flood/?lang=_e" title="">Environmnet Agency - Risk Areas</a>
+                  </li>
+                  <li>
+                    <a href="http://www.abi.org.uk/" title="">Association of British Insurers</a>
+                  </li>
+                  <li>
+                    <a href="http://www.bbc.co.uk/weather/ukweather/" title="">BBC Weather</a>
+                  </li>
+                  <li>
+                    <a href="http://www.metoffice.gov.uk/" title="">MET Office</a>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div><!-- // RELATED SITES -->
+              <!-- UTILITY LINKS RIGHT -->
+              <div class="side-box-container">
+                <form name="PageFeedback" method="post" action="/5431.asp" target="_self" id="PageFeedback">
+                  <input type="hidden" name="PageID" value="6355" /> <input type="hidden" name="Headline" value="Severe Weather" /> <input type="hidden" name="PageURL" value="/environment/6355.asp" />
+                  <ul class="utility-list">
+                    <li class="printer-friendly">
+                      <a href="JavaScript:window.print()">Print friendly<br />
+                      version</a>
+                    </li>
+                    <li class="page-feedback">
+                      <a href="JavaScript:document.PageFeedback.submit();">Feedback<br />
+                      on this page</a>
+                    </li>
+                  </ul>
+                </form>
+                <div class="clear"></div>
+              </div><!-- //UTILITY LINKS RIGHT -->
+              
+            </div><!-- //RIGHT COLUMN --><!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div><!-- FOOTER -->
+          <!-- PAGE FOOTER - WHITE BOX -->
+          <div class="white-box-top"></div>
+          <div class="white-box-body footer-content">
+            <!-- start of footer content -->
+            <a href="/about/5639.asp"><img src="/images/find-us.jpg" alt="Find Us" /></a> <a href="/council/5413.asp"><img src="/images/service-buddy.jpg" alt="Children's Complaints Service" /></a> <a href="/leisure/3865.asp"><img src="/images/Life.jpg" alt="life. Membership" /></a> <a href="/5515.asp"><img src="/images/connect-to-bg.jpg" alt="C2BG" /></a> <!-- <a href="http://www.direct.gov.uk"><img src="/images/directgov.jpg" alt="Direct Gov" /></a> -->
+             <a href="https://www.gov.uk/"><img src="/images/directgov.jpg" alt="GOV UK" /></a> <!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div>
+          <div id="footer-contact">
+            <address>
+              Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB Tel: 01495 311556 E-mail:&nbsp;<a href="mailto:info@blaenau-gwent.gov.uk">info@blaenau-gwent.gov.uk</a>
+            </address>
+          </div><!--RDExecute=ASP-->
+          <script type="text/javascript">
+//<![CDATA[
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-17447558-1', 'blaenau-gwent.gov.uk');
+          ga('send', 'pageview');
+          //]]>
+          </script> <script type="text/javascript">
+//<![CDATA[
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-17447558-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+          //]]>
+          </script> <!-- // FOOTER -->
+        </div>
+      </div><!-- (c) 2013 Gemius SA / gemiusHeatMap / sal.williams -->
+      <script type="text/javascript">
+//<![CDATA[
+      var ghmxy_align = 'center';
+      var ghmxy_type = 'absolute';
+      var ghmxy_identifier = 'nAs7WcRtsJtbrts1MoaCD_UTTDkFYFADtoQ3YMyqhWn.R7';
+      var ghmxy_hitcollector = 'pro.hit.gemius.pl';
+      //]]>
+      </script> <script type="text/javascript" src="http://pro.hit.gemius.pl/hmapxy.js">
+</script> 
+    </div>
+  </body>
+</html>

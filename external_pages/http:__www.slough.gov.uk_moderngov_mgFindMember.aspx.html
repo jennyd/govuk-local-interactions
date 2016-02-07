@@ -1,0 +1,697 @@
+ 
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<title>Find Councillor</title>
+<!-- noindex -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif]-->
+    <link rel="dns-prefetch" href="//script.slough.gov.uk">
+    <link rel="dns-prefetch" href="//css.slough.gov.uk">
+    <link rel="dns-prefetch" href="//static.slough.gov.uk">
+    <link rel="dns-prefetch" href="//image.slough.gov.uk">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="Robots" content="INDEX, FOLLOW" />
+    <meta name="dcterms.creator" content="Slough Borough Council" />
+    <meta name="dcterms.publisher" content="Slough Borough Council" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;" />
+
+    <link type="text/css" rel="stylesheet" href="/SBCMaster/css/iconsSBC.min.css" media="screen" /> 
+    <link type="text/css" rel="stylesheet" href="/SBCMaster/css/foundation.min.css?q=1" media="screen" />
+    <link type="text/css" rel="stylesheet" href="/SBCMaster/css/foundation_plus.min.css" media="screen and (min-device-width : 721px)" />
+    <!--[if !IEMobile&(lt IE 9)]>
+    <link type="text/css" rel="stylesheet" href="/SBCMaster/css/foundation_plus.css" media="screen" />
+    <![endif]-->
+    <!--[if !IEMobile&(IE)]>
+    <link type="text/css" rel="stylesheet" href="/SBCMaster/css/ie.min.css" media="screen" />
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="/SBCMaster/css/print.min.css" media="print" />
+
+
+    <script type="text/javascript" src="/ajax/libs/headjs/1.0.3/head.load.min.js"></script>
+    <script type="text/javascript" src="/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/ajax/libs/jquery.migrate/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript">
+    var cdn = (window.location.protocol === 'https:') ? '' : '//script.slough.gov.uk';
+    $(function() {
+        DelayedLoad();
+    });
+    function DelayedLoad() {
+        $(window).load(function () {
+            head.load(cdn + '/ajax/libs/jquery.hoverintent/2013.03.11/hoverintent.min.js', '/SBCMaster/scripts/megaMenus.min.js', function () { applyMegaMenus(); });
+            if ($('.slidesjs').length || $('#home_news_slider').length) {
+                head.load(cdn + '/ajax/libs/slidesjs/3.0/jquery.slides.edited.min.js', function () {
+                    $(".slidesjs").each(function () {
+                        var width = $(this).find('img').first().attr('width');
+                        var height = $(this).find('img').first().attr('height');
+                        $(this).find('img').each(function () {
+                            $(this).attr('width', '100%');
+                            $(this).removeAttr('height');
+                        });
+                        $(this).slidesjs({
+                            width: width,
+                            height: height,
+                            play: { active: false, auto: true, pauseOnHover: true },
+                            pagination: { active: true },
+                            navigation: { active: false }
+                        });
+                    });
+                    if ($('#home_news_slider').length) {
+                        $("#slides").slidesjs({ height: 235, width: 100, navigation: { active: true, effect: "slide" }, pagination: { active: false} });
+                    }
+                });
+            }
+            if ($('#DateCountdown').length) {
+                head.load(cdn + '/ajax/libs/countdown/TimeCircles.js', function () {
+                    $("#DateCountdown").TimeCircles({ circle_bg_color: "rgba(44,62,80 , 0.6 )", fg_width: 0.03, bg_width: 1 });
+                });
+            }         
+            if ($('#busTableRows').length) {
+                head.load(cdn + '/SbcServices/scripts/Sbc.TfS.min.js', function () {
+                    TfS.Bus.BusInit($('#busTableRows'));
+                    TfS.TfL.TubeInit($('#tubeStatus'));
+                    TfS.Train.TrainInit($('#trainTableRows'));
+                });
+            }
+            if ($('#twitterFeedHolder').length) { head.load('/SBCMaster/scripts/twWidget.min.js', '/SBCMaster/scripts/twitterWidget.min.js', function () { displayTwitterWidget(); }); }
+            if ($('.colorBox').length) { head.load('/SBCMaster/scripts/jflickrfeed.min.js', cdn + '/ajax/libs/jquery.colorbox/1.4.33/jquery.colorbox.min.js'); }
+
+            var EUcookie = getCookie("EUcookie");
+            if (EUcookie == null) {
+                $('body').prepend("<div class=\"cookieDiv\">"
+                    + "<p>Slough.gov.uk uses <a href=\"/help/cookies.aspx\">cookies</a>. "
+                    + "If you continue to use the site, we'll assume you're happy to accept the cookies. "
+                    + "<button onClick=\"setEUCookie();\" onKeyPress=\"if (event.which == 13) {setEUCookie();}\" >Ok</button></p>"
+                    + "</div>");
+            }
+
+            $(".content").each(function (i) {
+                $(this).find("a[href*='.pdf']").not("[class*='download']").addClass("downloadIcon pdf");
+                $(this).find("a[href*='.doc']").not("[class*='download']").addClass("downloadIcon doc");
+                $(this).find("a[href*='.xls']").not("[class*='download']").addClass("downloadIcon xls");
+                $(this).find("a[href*='.zip']").not("[class*='download']").addClass("downloadIcon zip");
+                $(this).find("a[href*='.txt']").not("[class*='download']").addClass("downloadIcon txt");
+                $(this).find("a[href*='.csv']").not("[class*='download']").addClass("downloadIcon csv");
+            });
+
+            head.load(
+                    '//www.google-analytics.com/analytics.js',
+                    ('https:' == document.location.protocol ? 'https://' : 'http://') + 'translate.google.com/translate_a/element.js?cb=googleTranslateElementInit',
+                    function () {
+                        ga('create', 'UA-25904134-1', 'auto');
+                        ga('send', 'pageview');
+                    });
+
+            /* track MegaMenu link clicks TODO: add 'MegaMenuLink' class */
+            $(".MegaMenuLink").each(function (index) {
+                addTracking(this, 'MegaMenu', 'Click', this.href);
+            });
+            /* track MegaMenu task clicks TODO: add 'MegaMenuTask' class */
+            $(".MegaMenuTask").each(function (index) {
+                addTracking(this, 'MegaMenu', 'Task', this.href);
+            });
+            /* callToActionButton */
+            $(".callToActionButton").each(function (index) {
+                addTracking(this, 'CallToAction', 'StraightTo', this.href);
+            });
+            /* callToAction */
+            $(".callToAction").each(function (index) {
+                addTracking(this, 'CallToAction', 'StraightTo', this.href);
+            });
+            /* Track external links */
+            $('a').each(function () {
+                if (this.host.indexOf('slough.gov.uk') == -1) {
+                    $(this).addClass('ExternalLink');
+                }
+            });
+            $(".ExternalLink").each(function (index) {
+                addTracking(this, 'ExternalLink', 'Click', this.href);
+            });
+            /* track downloads */
+            $(".downloadIcon").each(function (index) {
+                addTracking(this, 'Download', 'Click', this.getAttribute('href'));
+            });
+
+        });
+    }
+
+    function addTracking(link, category, action, label) {
+        $(link)
+                .on("click", function () {
+                    ga('send', 'event', category, action, label);
+                })
+                .on("keypress", function () {
+                    if (event.which == 13) {
+                        ga('send', 'event', category, action, label);
+                    }
+                });
+    }
+
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-25904134-1' }, 'google_translate_element');
+    }
+    function setCookie(c_name, value, exdays) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + exdays);
+        var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString() + ";path=/;domain=.slough.gov.uk");
+        document.cookie = c_name + "=" + c_value;
+    }
+    function getCookie(c_name) {
+        var i, x, y, ARRcookies = document.cookie.split(";");
+        for (i = 0; i < ARRcookies.length; i++) {
+            x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+            y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+            x = x.replace(/^\s+|\s+$/g, "");
+            if (x == c_name) {
+                return unescape(y);
+            }
+        }
+    }
+    function setEUCookie() {
+        setCookie('EUcookie', 'true', 365);
+        $('.cookieDiv').remove();
+        return false;
+    }
+
+</script>
+
+
+     <!-- /noindex -->
+ 
+<meta name="DC.subject" scheme="eGMS.IPSV" content="Websites" /><meta name="DC.Title" content="Home" /><meta name="keywords" content="Websites" /><meta name="DC.Subject" content="Slough Borough Council - services for residents of Slough" /><meta name="DC.Date" content="25 October 2011 11:46" /><meta name="DC.Identifier" content="/default.aspx" /><meta name="description" content="Home" />
+<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1' /><meta name="DC.title"  content="Find Councillor"/>
+<meta name="DC.description"  content="Find your Councillor by name, party, ward, or other options"/>
+<meta name="DC.date" scheme="W3CDTF"  content="2016-02-07"/>
+
+<link type="text/css" href="jquery-ui/css/Smoothness/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" /> 
+<link type="text/css" href="jquery-ui/Add-ons/mg.jqueryaddons.css" rel="stylesheet" /> 
+    <link rel="stylesheet" type="text/css" href="sitespecific/ssMgStyles.css" />
+    <link rel="stylesheet" type="text/css" href="sitespecific/ssWordStyles.css" />
+    <link rel="stylesheet" type="text/css" href="/cms/SBCMaster/css/council.css" />
+</head>
+
+<!--[if lt IE 7 ]> <body class="ie6 ieA"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7 ieA"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8 ieA"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+<!--[if gt IE 9]>  <body>             <![endif]-->
+<!--[if !IE]><!--> <body>         <!--<![endif]-->
+
+
+<!-- noindex -->
+    <div id="outer" class="container_12">
+        <div class="container_12">
+            <div class="header">
+                <div class="mobileOnly">
+                    <a href="/default.aspx" class="dotgovlogo" title="slough.gov.uk">slough.gov.uk</a>
+                    <div class="searchBox">
+                        <form method="get" id="mobileSearchForm" action="/search">
+                        <input type="text" title="Search text" name="q" placeholder="Enter Search Text" value="Enter Search Text"
+                            autocomplete="on" onfocus="JavaScript:if (this.value=='Enter Search Text')this.value=this.value.substring(0,0)" />
+                        <label class="hidden" for="mobileSearchButton">Search</label> <input id="mobileSearchButton" type="image" alt="search" src="/SBCMaster/images/srchbtn.gif" />
+                        </form>
+                    </div>
+                </div>
+                <div class="noMobile">
+                    <div class="grid_6">
+                        <div class="tools">
+                            <ul class="clean smallnav">
+                                <li><a href="/help/accessibility.aspx">Accessibility</a></li>
+                                <li><a href="/help/cookies.aspx">Cookies</a></li>
+                                <li><a href="/help/default.aspx">Help</a></li>
+                            </ul>
+                        </div>
+                        <a href="/default.aspx" class="dotgovlogo" title="slough.gov.uk">slough.gov.uk</a>
+                    </div>
+                    <div class="grid_6">
+                        <div class="logo noMobile">
+                            <a href="/default.aspx" title="Slough Borough Council">
+                                <img src="/SBCMaster/images/sbc-logo.jpg" width="170" height="62" alt="SBC" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+<!-- /noindex -->
+ 
+<!-- noindex -->
+
+            <div class="container_12" id="topbar">
+                <!-- Inter-Site Nav -->
+                <div class="nav grid_6" id="interSiteNav">
+                    <ul>
+
+                        <li><a class="tab-citizen" href="/default.aspx">Resident</a></li>
+            
+
+                        <li><a class="tab-business" href="/business/default.aspx">Business</a></li>
+            
+
+                        <li class="selected"><a class="tab-council" href="/council/default.aspx">About the Council</a></li>
+            
+                    </ul>
+                </div>
+                <!-- Search -->
+                <div class="grid_6">
+
+                    <div class="searchBox noMobile">
+                        <form method="get" id="searchForm" action="/search">
+                        <input type="text" title="Search text" name="q" placeholder="Enter Search Text" value="Enter Search Text"
+                            autocomplete="on" onfocus="JavaScript:if (this.value=='Enter Search Text')this.value=this.value.substring(0,0)" />
+                        <label class="hidden" for="searchsubmit">Search</label> <input type="image" id="searchsubmit" alt="search" src="/SBCMaster/images/srchbtn.gif" />
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+ 
+<!-- Menu -->
+            <div class="clear">
+            </div>
+            <div class="container_12 councilMenu" id="menucontainer">
+                <div id="menu" class="nav grid_12">
+                    <ul id="topnav">
+<li>
+<a href="/council/councillors-committees-and-meetings/default.aspx" class="top"><span class="link">Councillors &amp; committees</span></a>
+
+
+
+</li>
+ <li>
+<a href="/council/voting-and-elections/default.aspx" class="top"><span class="link">Voting &amp; elections</span></a>
+
+
+
+</li>
+ <li>
+<a href="/council/complaints-and-feedback/default.aspx" class="top"><span class="link">Complaints &amp; feedback</span></a>
+
+
+
+</li>
+ <li>
+<a href="/council/strategies-plans-and-policies/default.aspx" class="top"><span class="link">Strategies, plans &amp; policies</span></a>
+
+
+
+</li>
+ <li>
+<a href="/council/performance-and-spending/default.aspx" class="top"><span class="link">Performance &amp; spending</span></a>
+
+
+
+</li>
+ 
+
+                        <li><a href="#" class="top"><span class="link">More&nbsp;&#x25bc;</span></a>
+                            <div class="sub flip">
+                                <ul>
+                                    <li><a href="/council/data-protection-and-foi/default.aspx">Data protection &amp; FOI</a></li><li><a href="/council/key-statistics-and-data/default.aspx">Key statistics &amp; data</a></li><li><a href="/council/consultation/default.aspx">Consultations</a></li><li><a href="/council/service-standards/default.aspx">Service standards</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+ <!-- /noindex -->
+ 
+
+    <div class="container_12">
+<!-- Breadcrumb -->
+        <div class="clear"></div>
+        <div class="grid_12">
+            <div class="nav">
+                <ul class="pageBreadCrumb">
+                    <li class="breadcrumbFolder"><a href="/">Home</a></li>
+                    <li class="breadcrumbFolder"><a href="/council">Council information</a></li>
+                    <li class="breadcrumbFolder"><a href="/moderngov">Democratic services</a></li>
+                    <li class="breadcrumbPage">Find Councillor</li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid_12">
+            <br />
+        </div>
+        <div class="grid_9">
+        <!-- empty -->
+<h1>Find Councillor</h1>
+<p>To find out who represents your ward and get surgery times and contact details, please select from the details below:-<p><div class="mgContent" >
+
+
+	<form   action="mgFindMember.aspx"  method = "post" id="FormSelect" >
+	<div class="mgButtonAlign">
+	<div class="contactPointSummaryHolder">
+	<div class="mgFormRow" >
+	
+	<label for="User">By name&#58;</label>
+	<select id="User" name="User" title="Select user"> 
+
+	<option value="0" >Please select a councillor</option>
+
+		<option value="1019" >Abe,  Councillor Frank Abe</option>
+
+		<option value="1433" >Ajaib,  Councillor Zaffar Ajai</option>
+
+		<option value="204" >Anderson,  Councillor Robert A</option>
+
+		<option value="1434" >Bains,  Councillor Rayman Bain</option>
+
+		<option value="206" >Bal,  Councillor Joginder S Ba</option>
+
+		<option value="1211" >Brooker,  Councillor Preston B</option>
+
+		<option value="1111" >Carter,  Councillor Martin F. </option>
+
+		<option value="1435" >Chahal,  Councillor Wal Chahal</option>
+
+		<option value="126" >Chaudhry,  Councillor Shafiq A</option>
+
+		<option value="1436" >Cheema,  Councillor Avtar K. C</option>
+
+		<option value="159" >Chohan,  Councillor Nimrit Cho</option>
+
+		<option value="149" >Coad,  Councillor Diana Coad</option>
+
+		<option value="1112" >Dar,  Councillor Haqeeq Dar</option>
+
+		<option value="616" >Davis,  Councillor Roger Davis</option>
+
+		<option value="1611" >Dhaliwal,  Councillor Amarpree</option>
+
+		<option value="614" >Dhaliwal,  Councillor Arvind D</option>
+
+		<option value="1207" >Dhillon,  Councillor Antreev K</option>
+
+		<option value="121" >Holledge,  Councillor Michael </option>
+
+		<option value="1437" >Holledge,  Councillor Nora Hol</option>
+
+		<option value="1208" >Hussain,  Councillor Sabia Hus</option>
+
+		<option value="1214" >Malik,  Councillor Sandra Mali</option>
+
+		<option value="1021" >Mann,  Councillor Pavitar K. M</option>
+
+		<option value="1438" >Mansoor,  Councillor Fatima Ma</option>
+
+		<option value="421" >Matloob,  Councillor Fiza A Ma</option>
+
+		<option value="1612" >Morris,  Councillor Darren Mor</option>
+
+		<option value="1114" >Munawar,  Councillor Sohail Mu</option>
+
+		<option value="1203" >Nazir,  Councillor Mohammed Na</option>
+
+		<option value="613" >Pantelic,  Councillor Natasa P</option>
+
+		<option value="164" >Parmar,  Councillor Satpal S P</option>
+
+		<option value="1115" >Plenty,  Councillor Ted Plenty</option>
+
+		<option value="1440" >Rana,  Councillor Mandeep K. R</option>
+
+		<option value="130" >Rasib,  Councillor Mohammed Ra</option>
+
+		<option value="836" >Sandhu,  Councillor Rajinder S</option>
+
+		<option value="1210" >Shah,  Councillor Ishrat Shah</option>
+
+		<option value="1116" >Sharif,  Councillor Mohammed S</option>
+
+		<option value="1117" >Smith,  Councillor Dexter J. S</option>
+
+		<option value="843" >Sohal,  Councillor Paul S Soha</option>
+
+		<option value="1118" >Strutton,  Councillor Wayne St</option>
+
+		<option value="192" >Swindlehurst,  Councillor Jame</option>
+
+		<option value="1442" >Usmani,  Councillor Khaula Usm</option>
+
+		<option value="1020" >Wright,  Councillor Anna Wrigh</option>
+
+		<option value="120" >Zarait,  Councillor Raja M Zar</option>
+	</select>
+<input  class="mgGoButton"  type="submit" name="SubmitCllr" value="Go" alt="Find by name" />
+	</div>
+	<div class="mgFormRow" ><label for="PartyId">By political party:</label>
+		<select id="PartyId" name="PartyId"> 
+
+			<option  value="0"  selected="selected" >Select a political party</option>
+			
+				    <option  value="24" >Labour</option>
+
+				    <option  value="23" >Conservative</option>
+
+				    <option  value="13735" >UKIP</option>
+		</select> <input  class="mgGoButton"  type="submit" name="SubmitParty" value="Go"  alt="Find by party" />
+	    </div>
+	<div class="mgFormRow" >
+		<label for="WardId">or by ward:</label>
+		<select id="WardId" name="WardId"> 
+		 
+
+			<option  value="0"  selected="selected" >Select a ward</option>
+			
+				<option  value="472 ">All</option>
+
+				<option  value="445 ">Baylis and Stoke</option>
+
+				<option  value="13731 ">Britwell and Northborough</option>
+
+				<option  value="446 ">Central</option>
+
+				<option  value="449 ">Chalvey</option>
+
+				<option  value="447 ">Cippenham Green</option>
+
+				<option  value="451 ">Cippenham Meadows</option>
+
+				<option  value="458 ">Colnbrook with Poyle</option>
+
+				<option  value="13733 ">Elliman</option>
+
+				<option  value="452 ">Farnham</option>
+
+				<option  value="450 ">Foxborough</option>
+
+				<option  value="13734 ">Haymill and Lynch Hill</option>
+
+				<option  value="13732 ">Langley Kedermister</option>
+
+				<option  value="455 ">Langley St Mary&#39;s</option>
+
+				<option  value="454 ">Upton</option>
+
+				<option  value="457 ">Wexham Lea</option>
+		</select> <input  class="mgGoButton"  type="submit" name="SubmitWard" value="Go" alt="Find&#32;by&#32;ward" />
+	</div>
+	<div class="mgFormRow" >
+		<label for="Postcode">or by postcode:</label>
+		<input id="Postcode" name="Postcode" size="16" class="mgInput"   value="Enter&#32;postcode"	 onfocus="if(this.value=='Enter&#32;postcode')this.value='';"  title="Enter a full postcode" />
+
+		<input  class="mgGoButton"  type="submit" name="SubmitPostcode" value="Go" alt="Find by postcode" />
+		<span  class="mgSmallTxt" >e.g.&#32;GU33&#32;7BH</span>
+	</div>
+	
+	
+	
+	<div class="mgFormRow" ><label for="searchtext">or by part of their name:</label>
+		<input name="searchtext" id="searchtext" class="mgInput"   size="22" value="Enter&#32;name"  onfocus="if(this.value=='Enter&#32;name')this.value='';"  title="Enter search text here" />
+		<input  class="mgGoButton"  type="submit" name="SubmitName" value="Go" alt="Find by part of name" /> 
+	</div>
+<div class="mgHiddenField" >
+	<input type="hidden" value="" name="LastAction" id="LastAction" />
+	<input type="hidden" value="Enter&#32;name" name="LastSearch" id="LastSearch" />
+	<input type="hidden" value="Enter&#32;postcode" name="LastPostcode" id="LastPostcode" />
+	</div>
+	</div>
+	</div>
+	</form>
+
+<div  class="mgThumbsList" >
+
+</div>		
+<div class="mgHelpLine" >	
+
+</div>	
+</div>
+<div class="mgFooter" >		
+
+	<p>&nbsp;</p>
+
+<input type="hidden" value="false" id="hidIsExtLinkNewWindow" name="hidIsExtLinkNewWindow"/>
+
+
+    <script src="edit-doc-activex.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="jquery-ui/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.10.2.custom.min.js"></script>
+
+    <script type="text/javascript">
+	var mgJQuery = jQuery.noConflict(true);
+        var thisFormValidator;
+    </script>
+
+    <script type="text/javascript" src="jquery-ui/json/json2.js"></script>
+    <script type="text/javascript" src="jquery-ui/Add-ons/mg.jqueryaddons.min.js"></script>
+    <script type="text/javascript" src="mgAjaxScripts.js"></script> 
+          
+    <script type="text/javascript">
+        function CommonAjaxInit()
+        {
+            Common_DocumentReady(false, 629272640462387);
+        }
+
+        mgJQuery(document).ready(CommonAjaxInit);
+
+    </script>  
+</div>
+
+
+        </div>
+        <div class="grid_3">
+            <div class="contactPointSummaryHolder">
+                <h2>
+                    Democratic Services
+                </h2>
+                <ul>
+                    <li class="odd">
+		                <a href="mgWhatsNew.aspx?bcr=1">Latest Publications</a>
+	                </li>
+	                <li>
+		                <a href="ieDocSearch.aspx?bcr=1">Search Documents</a>
+	                </li>
+	                <li>
+		                <a href="ieDocHome.aspx?bcr=1">Council Meetings</a>
+	                </li>
+	                <li>
+		                <a href="mgGeneric.aspx?MD=Constitution&amp;bcr=1">Constitution</a>
+	                </li>
+	                <li>
+		                <a href="mgCalendarMonthView.aspx?GL=1&amp;bcr=1">Forthcoming &amp; Recent Meetings</a>
+	                </li>
+	                <li>
+		                <a href="mgePetitionListDisplay.aspx?bcr=1">Petitions</a>
+	                </li>
+	                <li>
+		                <a href="mgMemberIndex.aspx?bcr=1">Your Councillors</a>
+	                </li>
+	                <!--<li>
+		                <a href="mgDelegatedDecisions.aspx?bcr=1&amp;DM=0&amp;DS=3&amp;K=0&amp;DR=&amp;V=0">Decisions</a>
+	                </li>-->
+	                <li>
+		                <a href="mgPlansHome.aspx?bcr=1">Forward Plans</a>
+	                </li>
+	                <li>
+		                <a href="mgListCommittees.aspx?xbcr=1">Council Committees Explained</a>
+	                </li>
+	                <li>
+		                <a href="mgListCommittees.aspx?PC=1&amp;bcr=1">Parish Councils</a>
+		            </li>
+	                <li>
+		                <a href="mgListOutsideBodies.aspx?bcr=1">Outside Bodies</a>
+	                </li>
+	                <li>
+		                <a href="mgMemberIndexMP.aspx?bcr=1">Your MPs</a>
+	                </li>
+	                <li>
+		                <a href="mgMemberIndexMEP.aspx?bcr=1">Your MEPs</a>
+	                </li>
+	                <li>
+		                <a href="ecCatDisplay.aspx?bcr=1&amp;sch=doc">Document Library</a>
+	                </li>
+	                <li>
+		                <a href="mgRegisterKeywordInterest.aspx?bcr=1">Subscribe to Updates</a>
+	                </li>
+
+                </ul>
+            </div>
+            <div class="contactPointSummaryHolder">
+                <h2>
+                    Public Consultations
+                </h2>
+                <ul>
+                    <li>
+                        <a href="/council/consultation/">View details of public consultations and submit your comments online</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- noindex -->
+<!-- Footer -->
+        <div class="footer container_12" id="sectionFooter">
+            <h2>a to z of services</h2>
+            <div class="nav" id="atoz">
+                <ul class="clean" id="az">
+                    <li><a href="/atoz/?letter=a">A</a></li>
+                    <li><a href="/atoz/?letter=b">B</a></li>
+                    <li><a href="/atoz/?letter=c">C</a></li>
+                    <li><a href="/atoz/?letter=d">D</a></li>
+                    <li><a href="/atoz/?letter=e">E</a></li>
+                    <li><a href="/atoz/?letter=f">F</a></li>
+                    <li><a href="/atoz/?letter=g">G</a></li>
+                    <li><a href="/atoz/?letter=h">H</a></li>
+                    <li><a href="/atoz/?letter=i">I</a></li>
+                    <li><a href="/atoz/?letter=j">J</a></li>
+                    <li><a href="/atoz/?letter=k">K</a></li>
+                    <li><a href="/atoz/?letter=l">L</a></li>
+                    <li><a href="/atoz/?letter=m">M</a></li>
+                    <li><a href="/atoz/?letter=n">N</a></li>
+                    <li><a href="/atoz/?letter=o">O</a></li>
+                    <li><a href="/atoz/?letter=p">P</a></li>
+                    <li><a href="/atoz/?letter=q">Q</a></li>
+                    <li><a href="/atoz/?letter=r">R</a></li>
+                    <li><a href="/atoz/?letter=s">S</a></li>
+                    <li><a href="/atoz/?letter=t">T</a></li>
+                    <li><a href="/atoz/?letter=u">U</a></li>
+                    <li><a href="/atoz/?letter=v">V</a></li>
+                    <li><a href="/atoz/?letter=w">W</a></li>
+                    <li><a href="/atoz/?letter=x">X</a></li>
+                    <li><a href="/atoz/?letter=y">Y</a></li>
+                    <li><a href="/atoz/?letter=z">Z</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer container_12" id="siteFooter">
+            <div class="nav" id="siteFooterNav">
+                <div class="grid_2 sitFooterNav">
+                    <ul>
+                        <li><a href="/sitemap/default.aspx">sitemap</a></li><li><a href="/contact-us/default.aspx">contact</a></li><li><a href="/news/default.aspx">news</a></li>
+                    </ul>
+                </div>
+                <div class="grid_2 sitFooterNav">
+                    <div class="mobileOnly">
+                        <ul>
+                            <li><a href="/help/accessibility.aspx">accessibility</a></li><li><a href="/help/cookies.aspx">cookies</a></li><li><a href="/help/default.aspx">help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_8">
+
+                <ul class="ftr-img-links">
+                    <li><a href="/help/translations.aspx">translations<div class="footerImage ftr-translate"></div></a></li>
+                    <li><a href="/help/">help<div class="footerImage ftr-help"></div></a></li>
+                    <li><a href="http://www.twitter.com/sloughcouncil">twitter<div class="footerImage ftr-twitter"></div></a></li>
+                    <li><a href="http://www.streetlife.com">street life<div class="footerImage ftr-streetlife"></div></a></li>
+                    <li><a href="/feeds/feeds.aspx">feeds<div class="footerImage ftr-feeds"></div></a></li>
+                </ul>
+
+
+            </div>
+        </div>
+<!-- /noindex -->
+    </div>
+</div>
+    <div id="google_translate_element" style="height:28px;"></div>
+
+</body>
+</html>
+ 

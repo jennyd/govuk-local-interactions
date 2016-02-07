@@ -1,0 +1,1781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>Planning | Search Planning Applications</title>
+
+
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.1/build/reset-fonts-grids/reset-fonts-grids.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.rochford.gov.uk/templates/default/font_size.css" />
+<link rel="stylesheet" href="http://www.rochford.gov.uk/templates/default/homepage.css" type="text/css" />
+<link rel="stylesheet" href="http://www.rochford.gov.uk/templates/default/autocomplete.css" type="text/css">
+<link rel="stylesheet" href="http://www.rochford.gov.uk/templates/default/css/planning.css" type="text/css">
+<!--[if IE 6]>
+<link rel="stylesheet" href="http://www.rochford.gov.uk/templates/default/ie6.css" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="http://www.rochford.gov.uk/templates/default/ie7.css" type="text/css" />
+<![endif]-->
+
+
+<!--ASTUN-->
+<!-- Including CSS files -->
+	<!-- Core jQuery CSS -->
+			<script language="javascript">
+            	document.write('<link href="css/jQuery/jquery.core.css" type="text/css" rel="stylesheet" />');
+        	</script>
+	<!-- End of core jQuery CSS -->
+	<!-- CSS For jQuery autocomplete -->
+		<link href="css/jQuery/jquery.autocomplete.css" type="text/css" rel="stylesheet" />
+	<!--  End of CSS for jQuery autocomplete -->
+
+	<!-- jQuery CSS theme -->
+		<link href="css/jQuery/base/ui.all.css" type="text/css" rel="stylesheet" />
+	<!-- End jQuery CSS theme -->
+<!-- End of including CSS files -->
+<!--END ASTUN-->
+
+
+
+<!--ASTUN-->
+<link rel="stylesheet" href="css/rdc/atMyPages.css" media="screen" type="text/css">
+
+<link rel="stylesheet" href="css/rdc/templates.css" media="screen" type="text/css">
+
+<!--[if lt IE 8]><link rel="stylesheet" href="css/rdc/atMyPages-ie7.css" media="screen" type="text/css"><![endif]-->
+<!--[if lt IE 7]><link rel="stylesheet" href="css/rdc/atMyPages-ie6.css" media="screen" type="text/css"><![endif]-->
+<!--[if lt IE 6]><link rel="stylesheet" href="css/rdc/atMyPages-ie55.css" media="screen" type="text/css"><![endif]-->
+<script type="text/javascript">
+	document.write('<link href="css/atDefault_v26.css" type="text/css" rel="stylesheet" />');
+	document.write('<link href="css/rdc/atMyPages-js.css" type="text/css" rel="stylesheet" />');
+</script>
+<!--END ASTUN-->
+
+<script src="http://www.rochford.gov.uk/templates/default/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="http://www.rochford.gov.uk/templates/default/jquery-ui-1.8.1.custom.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+
+<!--stopindex-->
+
+<div id="accessStylePicker">
+&nbsp;<a href="#content" id="top" title="Skip navigation" tabindex="1">Skip navigation</a> |
+<a href="http://www.rochford.gov.uk/service_desk/accessibility" title="Website Accessibility" tabindex="1">Accessibility</a> |
+<a href="http://www.rochford.gov.uk/service_desk/copyright_information"  title="Privacy & Cookies" tabindex="1">Privacy & Cookies</a>
+
+</div>
+
+<div class="strip">&nbsp;</div>
+<div id="doc3" class="yui-t4">
+   <div id="hd">
+
+
+<div id="logo"><h1 title="Home"><a href="http://www.rochford.gov.uk/" title="Home" class="logo_img"><img src="http://www.rochford.gov.uk/images/logo.png" alt="Rochford District Council logo" title="Link to Rochford Council website home page" /></a></h1></div>
+<div id="telephone_number"></div>
+
+
+<br style="clear:both" /><div style="clear:both"></div>
+   <div id="menu1">
+   		<div style="float:left; width:100%;">
+			<ul>
+			<li class="selected"><a href="http://www.rochford.gov.uk" title="Link to Rochford District Council Homepage">Home</a></li> 
+
+				  
+				 <li><a href="http://www.rochford.gov.uk/A-Z" title="Link to Rochford District Council A-Z of Services">A-Z of Services</a></li>
+
+
+				<li><a href="http://www.rochford.gov.uk/Contact-the-Council" title="Link to Contact the Council">Contact the Council</a></li>
+				
+				
+				<li><a href="http://www.rochford.gov.uk/Have-Your-Say" title="Link to Have Your Say">Have Your Say</a></li>	
+				
+
+			</ul>
+		</div>
+	</div>
+
+<div id="menu2">
+
+<div style="clear:both"></div>
+
+</div></div>
+
+<div class="blindfx" style="width:100%;  height: auto; background-color: #eeeeee;">
+<div style="margin-top:10px; background-color:#444446; width:100%; height:auto; ">
+<table class="options_table">
+	<tr>
+		<td align="center">To customise your homepage, please return to the homepage and click on the tab 'Customise my homepage'. <br />Return to the homepage by clicking the home tab or alternatively click <a href="http://www.rochford.gov.uk/default.aspx" style="color:#ffffff; text-decoration:underline;" title="Rochford Council Home Page">Home</a>.</td>
+	</tr>
+</table>
+</div>
+</div>
+
+<div class="blindfx2" style="width:100%; height: auto;">
+<div style="margin-top:10px; background-color:#737373; width:100%; height:auto;" >
+<form id="locationForm" action="">
+<fieldset>
+<table class="location_table" summary="This table allows users to input text into fields to set there location details.">
+	<tr>
+		<td>Current Location:</td>
+		<td id="location_text"></td>
+	</tr>
+
+	<tr>
+		<td><label for="address" >Address:</label></td>
+		<td style="text-align:left;" >
+				<input style="text-align:left;" type="text" size="45"  id="address" />
+				<input type="hidden" id="hidden_val" value="" />
+				<input type="button" id="save_postcode_DC"  value="Save Location" />
+		</td>
+
+	</tr>
+
+</table></fieldset></form>
+
+</div>
+</div>
+
+   <div id="bd">
+	<div id="yui-main">
+	<div class="yui-b"><div class="yui-gf">
+    <div class="yui-u first">
+
+
+
+		<div id="navigation" class="groupItem">
+		<div id="nav_box" class="border">
+			<div class="header_wrapper2">
+					<div class="headers_page_nav"><h2 id="page_nav_header">
+		<!--<div class="head">-->
+			<a href="http://www.rochford.gov.uk/planning.aspx" title="Planning">Planning </a>
+		</h2></div>
+			</div>
+
+		<ul >
+
+		<li class="List_0hc ">
+			<a href="http://www.rochford.gov.uk/planning_and_building_control/advice.aspx" title="Advice" class="L0hc" >Advice</a>
+		</li>
+
+
+		<li class="List_0hc ">
+			<a href="http://www.rochford.gov.uk/planning_and_building_control/building_control.aspx" title="Building Control" class="L0hc" >Building Control</a>
+		</li>
+
+
+		<li class="List_0hc ">
+			<a href="http://www.rochford.gov.uk/planning_and_building_control/enforcement.aspx" title="Enforcement" class="L0hc" >Enforcement</a>
+		</li>
+
+
+		<li class="List_0hc ">
+			<a href="http://www.rochford.gov.uk/planning_and_building_control/environment.aspx" title="Environment" class="L0hc" >Environment</a>
+		</li>
+
+
+		<li class="List_0hc ">
+			<a href="http://www.rochford.gov.uk/planning/planning_applications.aspx" title="Planning Applications" class="L0hc" >Planning Applications</a>
+		</li>
+
+
+		<li class="List_1ncsel"><a href="http://www.rochford.gov.uk/planning/planning_applications/comment_on_a_planning_app.aspx" title="Comment on a Planning Application" class="L1ncsel" >Comment on a Planning Application</a></li>
+
+
+		<li class="List_1nc ">
+			<a href="http://www.rochford.gov.uk/planning/planning_applications/fees_for_discharge_of_conditio.aspx" title="Fees for discharge of conditions" class="L1nc" >Fees for discharge of conditions</a>
+		</li>
+
+
+		<li class="List_1nc ">
+			<a href="http://www.rochford.gov.uk/planning/planning_applications/major_planning_applications.aspx" title="Major Planning Applications" class="L1nc" >Major Planning Applications</a>
+		</li>
+		<li class="List_1hc ">
+			<a href="http://www.rochford.gov.uk/planning/planning_applications/major_residential_planning_app.aspx" title="Major Residential Planning Applications" class="L1nc" >Major Residential Planning Applications</a>
+		</li>
+
+
+		<li class="List_1nc ">
+			<a href="http://www.rochford.gov.uk/planning/planning_applications/make_a_planning_application.aspx" title="Make a Planning Application" class="L1nc" >Make a Planning Application</a>
+		</li>
+
+
+		<li class="List_1nc ">
+			<a href="http://www.rochford.gov.uk/planning/planning_applications/monthly_applications_decisions.aspx" title="Monthly Applications Decisions Register" class="L1nc" >Monthly Applications Decisions Register</a>
+		</li>
+
+
+		<li class="List_1nc ">
+			<a href="http://www.rochford.gov.uk/planning_and_building_control/planning_applications/planning_appeal_information.aspx" title="Planning Appeal Information" class="L1nc" >Planning Appeal Information</a>
+		</li>
+
+
+
+
+		<li class="List_1nc ">
+			<a href="http://www.rochford.gov.uk/planning/planning_applications/1app.aspx" title="Planning Application Forms (1App)" class="L1nc" >Planning Application Forms (1App)</a>
+		</li>
+
+		<li class="List_1nc ">
+					<a href="http://maps.rochford.gov.uk/DevelopmentControl.aspx?RequestType=ParseTemplate&Template=DevelopmentControlSearch.tmplt" title="Planning Application Search" class="L1nc" >View Planning Applications</a>
+		</li>
+
+		<li class="List_1nc ">
+			<a href="http://www.rochford.gov.uk/planning_and_building_control/planning_applications/weekly_list_of_planning_applic.aspx" title="Weekly List of Planning Applications" class="L1nc" >Weekly List of Planning Applications</a>
+		</li>
+
+
+		<li class="List_1nc ">
+			<a href="http://www.rochford.gov.uk/planning_and_building_control/planning_applications/weekly_parish_lists_of_plannin.aspx" title="Weekly Parish Lists of Planning Applications" class="L1nc" >Weekly Parish Lists of Planning Applications</a>
+		</li>
+
+
+		<li class="List_0hc ">
+			<a href="http://www.rochford.gov.uk/planning_and_building_control/policy.aspx" title="Policy" class="L0hc" >Policy</a>
+		</li>
+
+
+	</ul>
+	<div id="section_footer">
+			Use the links above to browse through the main section of our website.
+	</div>
+	</div>
+
+	</div>
+
+
+
+	    </div>
+    <div class="yui-u">
+
+	<br />
+	<div id="breadcrumb">
+
+					<span><a class="Path" title="Rochford Council Home Page" href="http://www.rochford.gov.uk/default.aspx">Home  </a> &gt; </span>
+
+
+					<span><a class="Path" title="Rochford Council Planning Page" href="http://www.rochford.gov.uk/planning.aspx">Planning  </a> &gt; </span>
+
+
+					<span><a class="Path" title="Rochford Council Planning Applications Page" href="http://www.rochford.gov.uk/planning/planning_applications.aspx">Planning Applications</a> &gt; </span>
+
+					<span>Search Planning Applications</span>
+
+			</div>
+			<br />
+
+			<!--startindex-->
+			<div>
+				<a href="" id="content"></a>
+
+
+
+
+<!--YOUR CONTENT HERE-->
+
+
+
+
+		<!-- iShareMaps content -->
+		<h1>Planning Applications - Search</h1>
+<br><H2>Search via a form</H2><br>
+<p>Use the form below to search via an address or an application number. You can filter the results using the advanced button</p>
+<form id='atParentContainer' action='http://maps.rochford.gov.uk/DevelopmentControl.aspx' method='GET'><input type='hidden' name='pageno' value='1'></input><input type='hidden' name='pagerecs' value='10'></input><input type='hidden' name='maxrecords' value='100'></input><input type='hidden' name='template' value='DevelopmentControlResults.tmplt'></input><input type='hidden' name='requestType' value='parseTemplate'></input><input type='hidden' name='usesearch' value='true'></input><input type='hidden' name='order' value='DATEAPRECV:DESCENDING'></input>
+
+	<div id="atSimpleOptions" class='ui-state-default ui-corner-all'  style="padding:8px;margin-top:15px" align="center">
+			<input style="font-size:1.4em;" value="Enter an application number or address" type="text" alt="Please enter the search term"  desc="Search" size="35" name="q:LIKE" id="searchBox" class="select"/>
+			<input style="font-size:1.4em;" class="submitBtn" type='submit' value='Search'></input>
+	</div>
+
+	<div id="atAdvancedOptions" class='ui-state-active ui-corner-bottom' style="border-top:none">
+		<div style="padding:15px">
+			<h3>Filter applications by:</h3>
+
+			<div class="inputSet">
+				<label for="srchType">Type</label>
+				<select align="center" fieldtype="select" id="srchType" name="DCAPPTYP:SRCH">
+					<option selected value="">All</option>
+					
+					<option value="ADV">Advert Application</option>
+					
+					<option value="REM">Approval of Reserved Matters</option>
+					
+					<option value="COLLB">Certficate of Lawfulness Listed Building</option>
+					
+					<option value="COU">Change of Use</option>
+					
+					<option value="CON">Conservation Area Consent</option>
+					
+					<option value="CPO">Consultation from County Planner</option>
+					
+					<option value="CM">County Matter Application</option>
+					
+					<option value="DP3">Deemed Permission Regulation 3 (56 days)</option>
+					
+					<option value="DP4">Deemed Permission Regulation 4 (56 days)</option>
+					
+					<option value="DPDPIA">Determination Under Class IA(COU Retail)</option>
+					
+					<option value="DPDP3J">Determination Under Class J(COUbuilding)</option>
+					
+					<option value="DPDP3M">Determination Under Class M (COUAgr)</option>
+					
+					<option value="DPDP1">Determination Under Part 1( Householder)</option>
+					
+					<option value="DPDP24">Determination Under Part 24 (Telecom)</option>
+					
+					<option value="DPDP31">Determination Under Part 31 (Demolition)</option>
+					
+					<option value="DPDP6">Determination Under Part 6 (Agriculture)</option>
+					
+					<option value="GD">Development by Government Department</option>
+					
+					<option value="DOC">Discharge Of Conditions</option>
+					
+					<option value="ELECTR">Electrical Apps (42 days determination)</option>
+					
+					<option value="EUC">Established Use Certificate</option>
+					
+					<option value="TIME">Extend time limit for implementation</option>
+					
+					<option value="FUL">Full Application</option>
+					
+					<option value="GDPNC">Government Department MOD.PnC</option>
+					
+					<option value="HAZARD">Hazardous Substance Application</option>
+					
+					<option value="LDC">Lawful Development Certificate</option>
+					
+					<option value="LBC">Listed Building Consent</option>
+					
+					<option value="NMA">Non material amendment</option>
+					
+					<option value="OUT">Outline Application</option>
+					
+					<option value="PD">Permitted Development ( Determ 28 day)</option>
+					
+					<option value="DEMCOM">Planning Application</option>
+					
+					<option value="DPDP3">Planning Application (56 days)</option>
+					
+					<option value="PREAPP">Pre-Application</option>
+					
+					<option value="ROC">Pre. 1990 Application</option>
+					
+					<option value="REG62">Regulation 62 Determination</option>
+					
+					<option value="RESEAR">Research Application</option>
+					
+					<option value="SEC53">Section 53 Determination</option>
+					
+					<option value="SEC64">Section 64 Determination</option>
+					
+					<option value="TPO">Tree Preservation Order</option>
+					
+				</select>
+			</div>
+
+			<div class="inputSet">
+				 <label for="srchStatus">Status</label>
+				 <select align="center" fieldtype="select" id="srchStatus" name="DCSTAT:SRCH">
+					<option selected value="">All</option>
+					
+					<option value="PER">Application Permitted</option>
+					
+					<option value="REF">Application Refused</option>
+					
+					<option value="WDN">Application Withdrawn</option>
+					
+					<option value="PERCOL">Approved Certificate of Lawfulness LB</option>
+					
+					<option value="PERLDC">Grant Lawful Development Certificate</option>
+					
+					<option value="LDCPT">LDC Split Decision</option>
+					
+					<option value="SPLITN">NMA Part Permitted Part Refused</option>
+					
+					<option value="PEROHL">No Objection (Overhead Power Lines)</option>
+					
+					<option value="NONDET">Non-determination Appeal</option>
+					
+					<option value="NOTPD">Not Permitted Development</option>
+					
+					<option value="PCO">Pending Consideration</option>
+					
+					<option value="PDE">Pending Decision</option>
+					
+					<option value="PD">Permitted Development</option>
+					
+					<option value="PERDPD">Permitted Development - Prior app reqd</option>
+					
+					<option value="PERCOU">Permitted Planning Permission (COU)</option>
+					
+					<option value="RC">Prior Approval Refused</option>
+					
+					<option value="REFDPD">Prior Approval Required - Refused</option>
+					
+					<option value="DPDNOT">Prior Approval of Details Not Required</option>
+					
+					<option value="REFLDC">Refuse Lawful Development Certificate</option>
+					
+					<option value="REFCOU">Refuse Planning Permission (COU)</option>
+					
+					<option value="REFLBC">Refused Listed Building Consent</option>
+					
+					<option value="SPLITL">Split decision LDC</option>
+					
+				</select>
+			</div>
+
+			<div class="inputSet">
+				 <label for="srchDecision">Decision</label>
+				 <select align="center" fieldtype="select" id="srchDecision" name="DCSTAT:SRCH">
+					<option selected value="">All</option>
+					
+					<option value="PER">Application Permitted</option>
+					
+					<option value="REF">Application Refused</option>
+					
+					<option value="WDN">Application Withdrawn</option>
+					
+					<option value="PERCOL">Approved Certificate of Lawfulness LB</option>
+					
+					<option value="PERLDC">Grant Lawful Development Certificate</option>
+					
+					<option value="LDCPT">LDC Split Decision</option>
+					
+					<option value="SPLITN">NMA Part Permitted Part Refused</option>
+					
+					<option value="PEROHL">No Objection (Overhead Power Lines)</option>
+					
+					<option value="NONDET">Non-determination Appeal</option>
+					
+					<option value="NOTPD">Not Permitted Development</option>
+					
+					<option value="PCO">Pending Consideration</option>
+					
+					<option value="PDE">Pending Decision</option>
+					
+					<option value="PD">Permitted Development</option>
+					
+					<option value="PERDPD">Permitted Development - Prior app reqd</option>
+					
+					<option value="PERCOU">Permitted Planning Permission (COU)</option>
+					
+					<option value="RC">Prior Approval Refused</option>
+					
+					<option value="REFDPD">Prior Approval Required - Refused</option>
+					
+					<option value="DPDNOT">Prior Approval of Details Not Required</option>
+					
+					<option value="REFLDC">Refuse Lawful Development Certificate</option>
+					
+					<option value="REFCOU">Refuse Planning Permission (COU)</option>
+					
+					<option value="REFLBC">Refused Listed Building Consent</option>
+					
+					<option value="SPLITL">Split decision LDC</option>
+					
+				</select>
+			</div>
+
+			<div class="inputSet">
+				<label for="srchAppealStatus">Appeal Status</label>
+				<select align="center" fieldtype="select" id="srchAppealStatus" name="APSTAT:SRCH">
+					<option selected value="">All</option>
+					
+					<option value="ALLOW">Appeal Allowed</option>
+					
+					<option value="DISMIS">Appeal Dismissed</option>
+					
+					<option value="INPROG">Appeal In Progress</option>
+					
+					<option value="LODGED">Appeal Lodged</option>
+					
+					<option value="APWDN">Appeal Withdrawn</option>
+					
+					<option value="APPWIT">Appeal Withdrawn</option>
+					
+					<option value="NOTVAL">Not Valid Appeal</option>
+					
+					<option value="SPLIT">Part Allowed/Part Dismissed</option>
+					
+				</select>
+			</div>
+
+			<div class="inputSet">
+				<label for="srchAppealDecision">Appeal Decision</label>
+				<select align="center" fieldtype="select" id="srchAppealDecision" name="APPLDECTYP:SRCH">
+					<option selected value="">All</option>
+					
+					<option value="ALLOW">Appeal Allowed</option>
+					
+					<option value="DISMIS">Appeal Dismissed</option>
+					
+					<option value="APWDN">Appeal Withdrawn</option>
+					
+					<option value="APPWIT">Application Withdrawn</option>
+					
+					<option value="NODEC">No Decison Made</option>
+					
+					<option value="NOTVAL">Not Valid Appeal</option>
+					
+					<option value="SPLIT">Part Allowed/Part Dismissed</option>
+					
+				</select>
+			</div>
+
+			<div class="inputSet">
+				<label for="srchWard">Ward</label>
+				<select align="center" fieldtype="select" id="srchWard" name="WARD:SRCH">
+					<option selected value="">All</option>
+					
+					<option value="ASHING">Ashingdon</option>
+					
+					<option value="ASHCAN">Ashingdon And Canewdon</option>
+					
+					<option value="BARSUT">Barling And Sutton</option>
+					
+					<option value="CANEWD">Canewdon</option>
+					
+					<option value="DOWHAL">Downhall</option>
+					
+					<option value="DOWRAW">Downhall And Rawreth</option>
+					
+					<option value="FOUGW">Foulness & Great Wakering East</option>
+					
+					<option value="FOULGW">Foulness And Great Wakering</option>
+					
+					<option value="GRANGE">Grange</option>
+					
+					<option value="GRGRAW">Grange & Rawreth</option>
+					
+					<option value="GWCENT">Great Wakering Central</option>
+					
+					<option value="GWWEST">Great Wakering West</option>
+					
+					<option value="HAWEAS">Hawkwell East</option>
+					
+					<option value="HAWNTH">Hawkwell North</option>
+					
+					<option value="HAWSTH">Hawkwell South</option>
+					
+					<option value="HAWWES">Hawkwell West</option>
+					
+					<option value="HAWWE">Hawkwell West</option>
+					
+					<option value="HOCCEN">Hockley Central</option>
+					
+					<option value="HOCCNT">Hockley Central</option>
+					
+					<option value="HOCEAS">Hockley East</option>
+					
+					<option value="HOCNTH">Hockley North</option>
+					
+					<option value="HOCWES">Hockley West</option>
+					
+					<option value="HOCWST">Hockley West</option>
+					
+					<option value="HULLBR">Hullbridge</option>
+					
+					<option value="HULRIV">Hullbridge Riverside</option>
+					
+					<option value="HULSTH">Hullbridge South</option>
+					
+					<option value="LODGE">Lodge</option>
+					
+					<option value="RAYCEN">Rayleigh Central</option>
+					
+					<option value="RAYCNT">Rayleigh Central</option>
+					
+					<option value="ROCH">Rochford</option>
+					
+					<option value="ROCEAS">Rochford Eastwood</option>
+					
+					<option value="ROCHE">Rochford Roche</option>
+					
+					<option value="ROCSA">Rochford St Andrews</option>
+					
+					<option value="SWEYNE">Sweyne Park</option>
+					
+					<option value="TRINIT">Trinity</option>
+					
+					<option value="WHEAT">Wheatley</option>
+					
+					<option value="WHEATL">Wheatley</option>
+					
+					<option value="WHTEHO">Whitehouse</option>
+					
+					<option value="WHOUSE">Whitehouse</option>
+					
+				</select>
+			</div>
+
+			<div class="inputSet">
+				<label for="srchParish">Parish</label>
+				<select align="center" fieldtype="select" id="srchParish" name="PARISH:SRCH">
+					<option selected value="">All</option>
+					
+					<option value="ASH">Ashingdon Parish Council</option>
+					
+					<option value="BARL">Barling Magna Parish Council</option>
+					
+					<option value="CAN">Canewdon Parish Council</option>
+					
+					<option value="FOUL">Foulness Parish Council</option>
+					
+					<option value="GTWAK">Great Wakering Parish Council</option>
+					
+					<option value="HAWK">Hawkwell Parish Council</option>
+					
+					<option value="HOCK">Hockley Parish Council</option>
+					
+					<option value="HULL">Hullbridge Parish Council</option>
+					
+					<option value="PAG">Paglesham Parish Council</option>
+					
+					<option value="RYRAW">Rawreth Parish Council</option>
+					
+					<option value="RYRTC">Rayleigh Town Council</option>
+					
+					<option value="ROCH">Rochford Parish Council</option>
+					
+					<option value="STAM">Stambridge Parish Council</option>
+					
+					<option value="SUTT">Sutton Parish Council</option>
+					
+				</select>
+			</div>
+
+			<div class="inputSet">
+				<label for="srchAgentName">Agent's Name</label>
+				<select align="center" fieldtype="select" id="srchAgentName" name="AGTNAME:SRCH">
+					<option selected value="">All</option>
+					
+					<option value=" APS Design Associates"> APS Design Associates</option>
+					
+					<option value=" APS Design Associates Ltd. - Paul Seager"> APS Design Associates Ltd. - Paul Seager</option>
+					
+					<option value=" S Sinclair"> S Sinclair</option>
+					
+					<option value="21st Century Licensing - Mr Paul West">21st Century Licensing - Mr Paul West</option>
+					
+					<option value="2TA Ltd">2TA Ltd</option>
+					
+					<option value="2TA Ltd - Mr John Sims">2TA Ltd - Mr John Sims</option>
+					
+					<option value="3rd Dimension">3rd Dimension</option>
+					
+					<option value="3rd Dimension Architects And Interior Design">3rd Dimension Architects And Interior Design</option>
+					
+					<option value="4 D Designs">4 D Designs</option>
+					
+					<option value="?">?</option>
+					
+					<option value="@ Architect">@ Architect</option>
+					
+					<option value="@ Architect Ltd">@ Architect Ltd</option>
+					
+					<option value="@ Architects Ltd">@ Architects Ltd</option>
+					
+					<option value="A">A</option>
+					
+					<option value="A & P Designs Ltd">A & P Designs Ltd</option>
+					
+					<option value="A & P Designs Ltd - Mrs Penny Little">A & P Designs Ltd - Mrs Penny Little</option>
+					
+					<option value="A & S Design">A & S Design</option>
+					
+					<option value="A And P Designs">A And P Designs</option>
+					
+					<option value="A And P Designs Ltd">A And P Designs Ltd</option>
+					
+					<option value="A And P Designs Ltd - Mrs Penny Little">A And P Designs Ltd - Mrs Penny Little</option>
+					
+					<option value="A B D Design And Build">A B D Design And Build</option>
+					
+					<option value="A B Designs">A B Designs</option>
+					
+					<option value="A B Mason">A B Mason</option>
+					
+					<option value="A Black">A Black</option>
+					
+					<option value="A Botten">A Botten</option>
+					
+					<option value="A Butten">A Butten</option>
+					
+					<option value="A C Bacon Engineering Ltd">A C Bacon Engineering Ltd</option>
+					
+					<option value="A C E Detail">A C E Detail</option>
+					
+					<option value="A C S Design">A C S Design</option>
+					
+					<option value="A C S Designs">A C S Designs</option>
+					
+					<option value="A Chalk">A Chalk</option>
+					
+					<option value="A Churchill">A Churchill</option>
+					
+					<option value="A E George">A E George</option>
+					
+					<option value="A E S Ltd">A E S Ltd</option>
+					
+					<option value="A F Weaver">A F Weaver</option>
+					
+					<option value="A G Coot">A G Coot</option>
+					
+					<option value="A G Coot Design">A G Coot Design</option>
+					
+					<option value="A G Coot Designs">A G Coot Designs</option>
+					
+					<option value="A Gentry">A Gentry</option>
+					
+					<option value="A H Stones">A H Stones</option>
+					
+					<option value="A Hadwen - Mackenzies">A Hadwen - Mackenzies</option>
+					
+					<option value="A Hill (Ambience Engineering)">A Hill (Ambience Engineering)</option>
+					
+					<option value="A J Bacon">A J Bacon</option>
+					
+					<option value="A J Blake">A J Blake</option>
+					
+					<option value="A J Clark">A J Clark</option>
+					
+					<option value="A J Ellwood">A J Ellwood</option>
+					
+					<option value="A J Gentry">A J Gentry</option>
+					
+					<option value="A J Gunn">A J Gunn</option>
+					
+					<option value="A J Kerr C/O The Livemore Partnership">A J Kerr C/O The Livemore Partnership</option>
+					
+					<option value="A J Latham">A J Latham</option>
+					
+					<option value="A J Little C/O Wollastons">A J Little C/O Wollastons</option>
+					
+					<option value="A J Rolph">A J Rolph</option>
+					
+					<option value="A J Rolph Esq">A J Rolph Esq</option>
+					
+					<option value="A K H Associates">A K H Associates</option>
+					
+					<option value="A Lane">A Lane</option>
+					
+					<option value="A Nolan">A Nolan</option>
+					
+					<option value="A P T">A P T</option>
+					
+					<option value="A P T ( James Fleming )">A P T ( James Fleming )</option>
+					
+					<option value="A P Webb">A P Webb</option>
+					
+					<option value="A R Dover">A R Dover</option>
+					
+					<option value="A R Dover Mbiat">A R Dover Mbiat</option>
+					
+					<option value="A R Property Designs">A R Property Designs</option>
+					
+					<option value="A R Property Designs - Mr Ashley Robinson">A R Property Designs - Mr Ashley Robinson</option>
+					
+					<option value="A R Property Designs Ltd">A R Property Designs Ltd</option>
+					
+					<option value="A S Broadley (Developments)">A S Broadley (Developments)</option>
+					
+					<option value="A S Planning">A S Planning</option>
+					
+					<option value="A T Inggs">A T Inggs</option>
+					
+					<option value="A W Leverett">A W Leverett</option>
+					
+					<option value="A W Squire Ltd">A W Squire Ltd</option>
+					
+					<option value="A Wallaker">A Wallaker</option>
+					
+					<option value="A Worthington">A Worthington</option>
+					
+					<option value="A&Q Partnership - Mr Justin Richardson">A&Q Partnership - Mr Justin Richardson</option>
+					
+					<option value="A. B. Designs">A. B. Designs</option>
+					
+					<option value="A. Biebuyck">A. Biebuyck</option>
+					
+					<option value="A. R. Dover">A. R. Dover</option>
+					
+					<option value="A. R. Property Designs - Mr Alex Robinson">A. R. Property Designs - Mr Alex Robinson</option>
+					
+					<option value="A.B. Designs">A.B. Designs</option>
+					
+					<option value="A.C.E Detail">A.C.E Detail</option>
+					
+					<option value="A.G. Coot Design">A.G. Coot Design</option>
+					
+					<option value="A.G.Coot Design">A.G.Coot Design</option>
+					
+					<option value="A.J. Bacon">A.J. Bacon</option>
+					
+					<option value="A.P.T">A.P.T</option>
+					
+					<option value="A.P.T.">A.P.T.</option>
+					
+					<option value="A.R.Dover">A.R.Dover</option>
+					
+					<option value="A.R.T">A.R.T</option>
+					
+					<option value="A3 Architects Ltd">A3 Architects Ltd</option>
+					
+					<option value="A9 Architecture">A9 Architecture</option>
+					
+					<option value="A9 Architecture - Alan Green">A9 Architecture - Alan Green</option>
+					
+					<option value="A9 Architecture - Mr Alan Green">A9 Architecture - Mr Alan Green</option>
+					
+					<option value="A9 Architecure">A9 Architecure</option>
+					
+					<option value="AAH Planning Consultants - Mrs Faye Scott">AAH Planning Consultants - Mrs Faye Scott</option>
+					
+					<option value="ABA Architecture">ABA Architecture</option>
+					
+					<option value="ABA Architecture - Lee Andrew">ABA Architecture - Lee Andrew</option>
+					
+					<option value="ABC Design And Build">ABC Design And Build</option>
+					
+					<option value="ABD">ABD</option>
+					
+					<option value="ABD Design & Build">ABD Design & Build</option>
+					
+					<option value="ABD Design And Build">ABD Design And Build</option>
+					
+					<option value="ABD Designs & Build">ABD Designs & Build</option>
+					
+					<option value="ABD Ltd">ABD Ltd</option>
+					
+					<option value="ABS (Essex) Ltd">ABS (Essex) Ltd</option>
+					
+				</select>
+			</div>
+
+			<div class="inputSet">
+				<div class='atDateSet inputSet'>
+					<div class="atDateSet1">
+						<label for="dateaprecvfrom">Date Application Received</label>
+						<input type="text"  desc="Application Received from" size="20" maxlength="11" name="DATEAPRECV:FROM:DATE" id="dateaprecvfrom" class="select date"/>
+					</div>
+					<div class="atDateSet2">
+						<label for="dateaprecvto">to:</label>
+						<input type="text"  desc="Application Received to" size="20" maxlength="11" name="DATEAPRECV:TO:DATE" id="dateaprecvto" class="select date"/>
+					</div>
+					<div class='clearFloats'></div>
+				</div>
+
+				<div class="atDateSet inputSet">
+					<div class="atDateSet1">
+						<label for="dateapvalfrom">Date Application Validated</label>
+						<input type="text"  desc="Application Received from" size="20" maxlength="11" name="DATEAPVAL:FROM:DATE" id="dateapvalfrom" class="select date"/>
+					</div>
+					<div class="atDateSet2">
+						<label for="dateapvalto">to:</label>
+						<input type="text"  desc="Application Received to" size="20" maxlength="11" name="DATEAPVAL:TO:DATE" id="dateapvalto" class="select date"/>
+					</div>
+					<div class='clearFloats'></div>
+				</div>
+
+				<div class="atDateSet inputSet">
+					<div class="atDateSet1">
+						<label for="dateactcomfrom">Actual Committee Date</label>
+						<input type="text"  desc="Application Received from" size="20" maxlength="11" name="DATEACTCOM:FROM:DATE" id="dateactcomfrom" class="select date"/>
+					</div>
+					<div class="atDateSet2">
+						<label for="dateactcomto">to:</label>
+						<input type="text"  desc="Application Received to" size="20" maxlength="11" name="DATEACTCOM:TO:DATE" id="dateactcomto" class="select date"/>
+					</div>
+					<div class='clearFloats'></div>
+				</div>
+			</div>
+		<input type="reset" value="Clear form">
+		</div>
+	</div>
+</form>
+
+<br><H2>Search via a map</H2>
+<br>
+<p>Alternatively you can use the map below. Search the map using your mouse and navigation controls on the left. To highlight a record hover over a green square and click on the reference number.</p>
+<iframe id="Template_ctl11_ctl00" title="Container for http://maps.rochford.gov.uk/atSoloMap.aspx?MapSource=Rochford/AllMaps&amp;layers=DCApplications&amp;StartZoom=43625&amp;StartEasting=589177&amp;StartNorthing=192363" url="http://maps.rochford.gov.uk/atSoloMap.aspx?MapSource=Rochford/AllMaps&amp;layers=DCApplications&amp;StartZoom=43625&amp;StartEasting=589177&amp;StartNorthing=192363" src="http://maps.rochford.gov.uk/atSoloMap.aspx?MapSource=Rochford/AllMaps&amp;layers=DCApplications&amp;StartZoom=43625&amp;StartEasting=589177&amp;StartNorthing=192363" frameborder="0" style="border:none;height:600px;width:100%;scrolling:no;">
+	Sorry, your browser does not appear to support IFRAME's. See the intended content  <a href="http://maps.rochford.gov.uk/atSoloMap.aspx?MapSource=Rochford/AllMaps&layers=DCApplications&StartZoom=43625&StartEasting=589177&StartNorthing=192363">here</a>.
+</iframe>
+
+		<!-- /iShareMaps content -->
+			</div>
+			<br />
+
+
+			<!--stopindex-->
+
+			<div>
+				<IMG style="border:0px;" alt="Back to previous page button" src="http://www.rochford.gov.uk/images/back.png" /><A href="javascript:history.go(-1)">Back</A> | <IMG style="border:0px;" alt="Go to the top of the page" src="http://www.rochford.gov.uk/images/up.png" /><A href="#top">Top</A> | <IMG style="border:0px;" alt="Printer Icon" src="http://www.rochford.gov.uk/images/print_page1.png" /><A href="http://www.rochford.gov.uk/planning/planning_applications/comment_on_a_planning_app.aspx?theme=print" onclick="window.open(this.href, 'blank'); return false;" onkeypress="if (event.keyCode==13) {window.open(this.href, 'blank'); return false;}">Print Page..</A>
+			</div>
+<!-- end of page controls ie print page etc -->
+
+
+
+	<br />
+
+
+
+
+	    </div>
+</div>
+</div>
+	</div>
+	<div class="yui-b">
+	<br />
+	<div style="width:100%; text-align:center;">
+<!--
+	<a href="images/parking_charges.jpg" title="image"><img src="http://www.rochford.gov.uk/images/parking_charges.jpg" width="92%" alt="PArking Charges in Rochford" ></a>
+-->
+
+
+</div>
+	</div>
+
+	</div>
+  	<br  style="clear:both;" />
+  <div style="clear:both;"> </div>
+  		  <p id="address"><!-- Rochford District Council, Council Offices, South Street, Rochford, Essex SS4 1BW - <strong>Tel: 01702 546366</strong> - <strong>Out of Hours: 01268 527317 </strong>- <a href="mailto:customerservices@rochford.gov.uk">customerservices@rochford.gov.uk</a> --></p>
+
+  		</div>
+     </div>
+<script src="http://www.rochford.gov.uk/templates/default/jquery.cookie.js" type="text/javascript"></script>
+<script src="js/jquery/plugins/jquery.advancedoptions.js" type="text/javascript"></script>
+<script src="custom/rdc/atTemplates.js" type="text/javascript"></script>
+
+
+
+
+  <script>
+  /*
+   * jQuery Autocomplete plugin 1.1
+   *
+   * Copyright (c) 2009 Jörn Zaefferer
+   *
+   * Dual licensed under the MIT and GPL licenses:
+   *   http://www.opensource.org/licenses/mit-license.php
+   *   http://www.gnu.org/licenses/gpl.html
+   *
+   * Revision: $Id: jquery.autocomplete.js 15 2009-08-22 10:30:27Z joern.zaefferer $
+   */
+
+  ;(function($) {
+
+  $.fn.extend({
+  	autocomplete: function(urlOrData, options) {
+  		var isUrl = typeof urlOrData == "string";
+  		options = $.extend({}, $.Autocompleter.defaults, {
+  			url: isUrl ? urlOrData : null,
+  			data: isUrl ? null : urlOrData,
+  			delay: isUrl ? $.Autocompleter.defaults.delay : 10,
+  			max: options && !options.scroll ? 10 : 150
+  		}, options);
+
+  		// if highlight is set to false, replace it with a do-nothing function
+  		options.highlight = options.highlight || function(value) { return value; };
+
+  		// if the formatMatch option is not specified, then use formatItem for backwards compatibility
+  		options.formatMatch = options.formatMatch || options.formatItem;
+
+  		return this.each(function() {
+  			new $.Autocompleter(this, options);
+  		});
+  	},
+  	result: function(handler) {
+  		return this.bind("result", handler);
+  	},
+  	search: function(handler) {
+  		return this.trigger("search", [handler]);
+  	},
+  	flushCache: function() {
+  		return this.trigger("flushCache");
+  	},
+  	setOptions: function(options){
+  		return this.trigger("setOptions", [options]);
+  	},
+  	unautocomplete: function() {
+  		return this.trigger("unautocomplete");
+  	}
+  });
+
+  $.Autocompleter = function(input, options) {
+
+  	var KEY = {
+  		UP: 38,
+  		DOWN: 40,
+  		DEL: 46,
+  		TAB: 9,
+  		RETURN: 13,
+  		ESC: 27,
+  		COMMA: 188,
+  		PAGEUP: 33,
+  		PAGEDOWN: 34,
+  		BACKSPACE: 8
+  	};
+
+  	// Create $ object for input element
+  	var $input = $(input).attr("autocomplete", "off").addClass(options.inputClass);
+
+  	var timeout;
+  	var previousValue = "";
+  	var cache = $.Autocompleter.Cache(options);
+  	var hasFocus = 0;
+  	var lastKeyPressCode;
+  	var config = {
+  		mouseDownOnSelect: false
+  	};
+  	var select = $.Autocompleter.Select(options, input, selectCurrent, config);
+
+  	var blockSubmit;
+
+  	// prevent form submit in opera when selecting with return key
+  	$.browser.opera && $(input.form).bind("submit.autocomplete", function() {
+  		if (blockSubmit) {
+  			blockSubmit = false;
+  			return false;
+  		}
+  	});
+
+  	// only opera doesn't trigger keydown multiple times while pressed, others don't work with keypress at all
+  	$input.bind(($.browser.opera ? "keypress" : "keydown") + ".autocomplete", function(event) {
+  		// a keypress means the input has focus
+  		// avoids issue where input had focus before the autocomplete was applied
+  		hasFocus = 1;
+  		// track last key pressed
+  		lastKeyPressCode = event.keyCode;
+  		switch(event.keyCode) {
+
+  			case KEY.UP:
+  				event.preventDefault();
+  				if ( select.visible() ) {
+  					select.prev();
+  				} else {
+  					onChange(0, true);
+  				}
+
+  				//Stop event propagation
+  				if( event.stopPropagation ) { event.stopPropagation(); } //For 'Good' browsers
+  				else { event.cancelBubble = true; } //For IE
+
+  				break;
+
+  			case KEY.DOWN:
+  				event.preventDefault();
+  				if ( select.visible() ) {
+  					select.next();
+  				} else {
+  					onChange(0, true);
+  				}
+
+  				//Stop event propagation
+  				if( event.stopPropagation ) { event.stopPropagation(); } //For 'Good' browsers
+  				else { event.cancelBubble = true; } //For I
+  				break;
+
+  			case KEY.PAGEUP:
+  				event.preventDefault();
+  				if ( select.visible() ) {
+  					select.pageUp();
+  				} else {
+  					onChange(0, true);
+  				}
+  				break;
+
+  			case KEY.PAGEDOWN:
+  				event.preventDefault();
+  				if ( select.visible() ) {
+  					select.pageDown();
+  				} else {
+  					onChange(0, true);
+  				}
+  				break;
+
+  			// matches also semicolon
+  			case options.multiple && $.trim(options.multipleSeparator) == "," && KEY.COMMA:
+  			case KEY.TAB:
+  			case KEY.RETURN:
+  				if( selectCurrent() ) {
+  					// stop default to prevent a form submit, Opera needs special handling
+  					event.preventDefault();
+  					blockSubmit = true;
+  					return false;
+  				}
+  				break;
+
+  			case KEY.ESC:
+  				select.hide();
+  				break;
+
+  			default:
+  				clearTimeout(timeout);
+  				timeout = setTimeout(onChange, options.delay);
+  				break;
+  		}
+  	}).focus(function(){
+  		// track whether the field has focus, we shouldn't process any
+  		// results if the field no longer has focus
+  		hasFocus++;
+  	}).blur(function() {
+  		hasFocus = 0;
+  		if (!config.mouseDownOnSelect) {
+  			hideResults();
+  		}
+  	}).click(function() {
+  		// show select when clicking in a focused field
+  		if ( hasFocus++ > 1 && !select.visible() ) {
+  			onChange(0, true);
+  		}
+  	}).bind("search", function() {
+  		// TODO why not just specifying both arguments?
+  		var fn = (arguments.length > 1) ? arguments[1] : null;
+  		function findValueCallback(q, data) {
+  			var result;
+  			if( data && data.length ) {
+  				for (var i=0; i < data.length; i++) {
+  					if( data[i].result.toLowerCase() == q.toLowerCase() ) {
+  						result = data[i];
+  						break;
+  					}
+  				}
+  			}
+  			if( typeof fn == "function" ) fn(result);
+  			else $input.trigger("result", result && [result.data, result.value]);
+  		}
+  		$.each(trimWords($input.val()), function(i, value) {
+  			request(value, findValueCallback, findValueCallback);
+  		});
+  	}).bind("flushCache", function() {
+  		cache.flush();
+  	}).bind("setOptions", function() {
+  		$.extend(options, arguments[1]);
+  		// if weve updated the data, repopulate
+  		if ( "data" in arguments[1] )
+  			cache.populate();
+  	}).bind("unautocomplete", function() {
+  		select.unbind();
+  		$input.unbind();
+  		$(input.form).unbind(".autocomplete");
+  	});
+
+
+  	function selectCurrent() {
+  		var selected = select.selected();
+  		if( !selected )
+  			return false;
+
+  		var v = selected.result;
+  		previousValue = v;
+
+  		if ( options.multiple ) {
+  			var words = trimWords($input.val());
+  			if ( words.length > 1 ) {
+  				var seperator = options.multipleSeparator.length;
+  				var cursorAt = $(input).selection().start;
+  				var wordAt, progress = 0;
+  				$.each(words, function(i, word) {
+  					progress += word.length;
+  					if (cursorAt <= progress) {
+  						wordAt = i;
+  						return false;
+  					}
+  					progress += seperator;
+  				});
+  				words[wordAt] = v;
+  				// TODO this should set the cursor to the right position, but it gets overriden somewhere
+  				//$.Autocompleter.Selection(input, progress + seperator, progress + seperator);
+  				v = words.join( options.multipleSeparator );
+  			}
+  			v += options.multipleSeparator;
+  		}
+
+  		$input.val(v);
+  		hideResultsNow();
+  		$input.trigger("result", [selected.data, selected.value]);
+  		return true;
+  	}
+
+  	function onChange(crap, skipPrevCheck) {
+  		if( lastKeyPressCode == KEY.DEL ) {
+  			select.hide();
+  			return;
+  		}
+
+  		var currentValue = $input.val();
+
+  		if ( !skipPrevCheck && currentValue == previousValue )
+  			return;
+
+  		previousValue = currentValue;
+
+  		currentValue = lastWord(currentValue);
+  		if ( currentValue.length >= options.minChars) {
+  			$input.addClass(options.loadingClass);
+  			if (!options.matchCase)
+  				currentValue = currentValue.toLowerCase();
+  			request(currentValue, receiveData, hideResultsNow);
+  		} else {
+  			stopLoading();
+  			select.hide();
+  		}
+  	};
+
+  	function trimWords(value) {
+  		if (!value)
+  			return [""];
+  		if (!options.multiple)
+  			return [$.trim(value)];
+  		return $.map(value.split(options.multipleSeparator), function(word) {
+  			return $.trim(value).length ? $.trim(word) : null;
+  		});
+  	}
+
+  	function lastWord(value) {
+  		if ( !options.multiple )
+  			return value;
+  		var words = trimWords(value);
+  		if (words.length == 1)
+  			return words[0];
+  		var cursorAt = $(input).selection().start;
+  		if (cursorAt == value.length) {
+  			words = trimWords(value)
+  		} else {
+  			words = trimWords(value.replace(value.substring(cursorAt), ""));
+  		}
+  		return words[words.length - 1];
+  	}
+
+  	// fills in the input box w/the first match (assumed to be the best match)
+  	// q: the term entered
+  	// sValue: the first matching result
+  	function autoFill(q, sValue){
+  		// autofill in the complete box w/the first match as long as the user hasn't entered in more data
+  		// if the last user key pressed was backspace, don't autofill
+  		if( options.autoFill && (lastWord($input.val()).toLowerCase() == q.toLowerCase()) && lastKeyPressCode != KEY.BACKSPACE ) {
+  			// fill in the value (keep the case the user has typed)
+  			$input.val($input.val() + sValue.substring(lastWord(previousValue).length));
+  			// select the portion of the value not typed by the user (so the next character will erase)
+  			$(input).selection(previousValue.length, previousValue.length + sValue.length);
+  		}
+  	};
+
+  	function hideResults() {
+  		clearTimeout(timeout);
+  		timeout = setTimeout(hideResultsNow, 200);
+  	};
+
+  	function hideResultsNow() {
+  		var wasVisible = select.visible();
+  		select.hide();
+  		clearTimeout(timeout);
+  		stopLoading();
+  		if (options.mustMatch) {
+  			// call search and run callback
+  			$input.search(
+  				function (result){
+  					// if no value found, clear the input box
+  					if( !result ) {
+  						if (options.multiple) {
+  							var words = trimWords($input.val()).slice(0, -1);
+  							$input.val( words.join(options.multipleSeparator) + (words.length ? options.multipleSeparator : "") );
+  						}
+  						else {
+  							$input.val( "" );
+  							$input.trigger("result", null);
+  						}
+  					}
+  				}
+  			);
+  		}
+  	};
+
+  	function receiveData(q, data) {
+  		if ( data && data.length && hasFocus ) {
+  			stopLoading();
+  			select.display(data, q);
+  			autoFill(q, data[0].value);
+  			select.show();
+  		} else {
+  			hideResultsNow();
+  		}
+  	};
+
+  	function request(term, success, failure) {
+  		if (!options.matchCase)
+  			term = term.toLowerCase();
+  		var data = cache.load(term);
+  		// recieve the cached data
+  		if (data && data.length) {
+  			success(term, data);
+  		// if an AJAX url has been supplied, try loading the data now
+  		} else if( (typeof options.url == "string") && (options.url.length > 0) ){
+
+  			var extraParams = {
+  				timestamp: +new Date()
+  			};
+  			$.each(options.extraParams, function(key, param) {
+  				extraParams[key] = typeof param == "function" ? param() : param;
+  			});
+
+  			$.ajax({
+  				// try to leverage ajaxQueue plugin to abort previous requests
+  				mode: "abort",
+  				// limit abortion to this input
+  				port: "autocomplete" + input.name,
+  				dataType: options.dataType,
+  				url: options.url,
+  				data: $.extend({
+  					q: lastWord(term),
+  					limit: options.max
+  				}, extraParams),
+  				success: function(data) {
+  					var parsed = options.parse && options.parse(data) || parse(data);
+  					cache.add(term, parsed);
+  					success(term, parsed);
+  				}
+  			});
+  		} else {
+  			// if we have a failure, we need to empty the list -- this prevents the the [TAB] key from selecting the last successful match
+  			select.emptyList();
+  			failure(term);
+  		}
+  	};
+
+  	function parse(data) {
+  		var parsed = [];
+  		var rows = data.split("\n");
+  		for (var i=0; i < rows.length; i++) {
+  			var row = $.trim(rows[i]);
+  			if (row) {
+  				row = row.split("|");
+  				parsed[parsed.length] = {
+  					data: row,
+  					value: row[0],
+  					result: options.formatResult && options.formatResult(row, row[0]) || row[0]
+  				};
+  			}
+  		}
+  		return parsed;
+  	};
+
+  	function stopLoading() {
+  		$input.removeClass(options.loadingClass);
+  	};
+
+  };
+
+  $.Autocompleter.defaults = {
+  	inputClass: "ac_input",
+  	resultsClass: "ac_results",
+  	loadingClass: "ac_loading",
+  	minChars: 1,
+  	delay: 400,
+  	matchCase: false,
+  	matchSubset: true,
+  	matchContains: false,
+  	cacheLength: 10,
+  	max: 100,
+  	mustMatch: false,
+  	extraParams: {},
+  	selectFirst: true,
+  	formatItem: function(row) { return row[0]; },
+  	formatMatch: null,
+  	autoFill: false,
+  	width: 0,
+  	multiple: false,
+  	multipleSeparator: ", ",
+  	highlight: function(value, term) {
+  		return value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" + term.replace(/([\^\$\(\)\[\]\{\}\*\.\+\?\|\\])/gi, "\\$1") + ")(?![^<>]*>)(?![^&;]+;)", "gi"), "<strong>$1</strong>");
+  	},
+      scroll: true,
+      scrollHeight: 180
+  };
+
+  $.Autocompleter.Cache = function(options) {
+
+  	var data = {};
+  	var length = 0;
+
+  	function matchSubset(s, sub) {
+  		if (!options.matchCase)
+  			s = s.toLowerCase();
+  		var i = s.indexOf(sub);
+  		if (options.matchContains == "word"){
+  			i = s.toLowerCase().search("\\b" + sub.toLowerCase());
+  		}
+  		if (i == -1) return false;
+  		return i == 0 || options.matchContains;
+  	};
+
+  	function add(q, value) {
+  		if (length > options.cacheLength){
+  			flush();
+  		}
+  		if (!data[q]){
+  			length++;
+  		}
+  		data[q] = value;
+  	}
+
+  	function populate(){
+  		if( !options.data ) return false;
+  		// track the matches
+  		var stMatchSets = {},
+  			nullData = 0;
+
+  		// no url was specified, we need to adjust the cache length to make sure it fits the local data store
+  		if( !options.url ) options.cacheLength = 1;
+
+  		// track all options for minChars = 0
+  		stMatchSets[""] = [];
+
+  		// loop through the array and create a lookup structure
+  		for ( var i = 0, ol = options.data.length; i < ol; i++ ) {
+  			var rawValue = options.data[i];
+  			// if rawValue is a string, make an array otherwise just reference the array
+  			rawValue = (typeof rawValue == "string") ? [rawValue] : rawValue;
+
+  			var value = options.formatMatch(rawValue, i+1, options.data.length);
+  			if ( value === false )
+  				continue;
+  			else
+  				return false;
+
+  			var firstChar = value.charAt(0).toLowerCase();
+  			// if no lookup array for this character exists, look it up now
+  			if( !stMatchSets[firstChar] )
+  				stMatchSets[firstChar] = [];
+
+  			// if the match is a string
+  			var row = {
+  				value: value,
+  				data: rawValue,
+  				result: options.formatResult && options.formatResult(rawValue) || value
+  			};
+
+  			// push the current match into the set list
+  			stMatchSets[firstChar].push(row);
+
+  			// keep track of minChars zero items
+  			if ( nullData++ < options.max ) {
+  				stMatchSets[""].push(row);
+  			}
+  		};
+
+  		// add the data items to the cache
+  		$.each(stMatchSets, function(i, value) {
+  			// increase the cache size
+  			options.cacheLength++;
+  			// add to the cache
+  			add(i, value);
+  		});
+  	}
+
+  	// populate any existing data
+  	setTimeout(populate, 25);
+
+  	function flush(){
+  		data = {};
+  		length = 0;
+  	}
+
+  	return {
+  		flush: flush,
+  		add: add,
+  		populate: populate,
+  		load: function(q) {
+  			if (!options.cacheLength || !length)
+  				return null;
+  			/*
+  			 * if dealing w/local data and matchContains than we must make sure
+  			 * to loop through all the data collections looking for matches
+  			 */
+  			if( !options.url && options.matchContains ){
+  				// track all matches
+  				var csub = [];
+  				// loop through all the data grids for matches
+  				for( var k in data ){
+  					// don't search through the stMatchSets[""] (minChars: 0) cache
+  					// this prevents duplicates
+  					if( k.length > 0 ){
+  						var c = data[k];
+  						$.each(c, function(i, x) {
+  							// if we've got a match, add it to the array
+  							if (matchSubset(x.value, q)) {
+  								csub.push(x);
+  							}
+  						});
+  					}
+  				}
+  				return csub;
+  			} else
+  			// if the exact item exists, use it
+  			if (data[q]){
+  				return data[q];
+  			} else
+  			if (options.matchSubset) {
+  				for (var i = q.length - 1; i >= options.minChars; i--) {
+  					var c = data[q.substr(0, i)];
+  					if (c) {
+  						var csub = [];
+  						$.each(c, function(i, x) {
+  							if (matchSubset(x.value, q)) {
+  								csub[csub.length] = x;
+  							}
+  						});
+  						return csub;
+  					}
+  				}
+  			}
+  			return null;
+  		}
+  	};
+  };
+
+  $.Autocompleter.Select = function (options, input, select, config) {
+  	var CLASSES = {
+  		ACTIVE: "ac_over"
+  	};
+
+  	var listItems,
+  		active = -1,
+  		data,
+  		term = "",
+  		needsInit = true,
+  		element,
+  		list;
+
+  	// Create results
+  	function init() {
+  		if (!needsInit)
+  			return;
+  		element = $("<div/>")
+  		.hide()
+  		.addClass(options.resultsClass)
+  		.css("position", "absolute")
+  		.appendTo(document.body);
+
+  		list = $("<ul/>").appendTo(element).mouseover( function(event) {
+  			if(target(event).nodeName && target(event).nodeName.toUpperCase() == 'LI') {
+  	            active = $("li", list).removeClass(CLASSES.ACTIVE).index(target(event));
+  			    $(target(event)).addClass(CLASSES.ACTIVE);
+  	        }
+  		}).click(function(event) {
+  			$(target(event)).addClass(CLASSES.ACTIVE);
+  			select();
+  			// TODO provide option to avoid setting focus again after selection? useful for cleanup-on-focus
+  			input.focus();
+  			return false;
+  		}).mousedown(function() {
+  			config.mouseDownOnSelect = true;
+  		}).mouseup(function() {
+  			config.mouseDownOnSelect = false;
+  		});
+
+  		if( options.width > 0 )
+  			element.css("width", options.width);
+
+  		needsInit = false;
+  	}
+
+  	function target(event) {
+  		var element = event.target;
+  		while(element && element.tagName != "LI")
+  			element = element.parentNode;
+  		// more fun with IE, sometimes event.target is empty, just ignore it then
+  		if(!element)
+  			return [];
+  		return element;
+  	}
+
+  	function moveSelect(step) {
+  		listItems.slice(active, active + 1).removeClass(CLASSES.ACTIVE);
+  		movePosition(step);
+          var activeItem = listItems.slice(active, active + 1).addClass(CLASSES.ACTIVE);
+          if(options.scroll) {
+              var offset = 0;
+              listItems.slice(0, active).each(function() {
+  				offset += this.offsetHeight;
+  			});
+              if((offset + activeItem[0].offsetHeight - list.scrollTop()) > list[0].clientHeight) {
+                  list.scrollTop(offset + activeItem[0].offsetHeight - list.innerHeight());
+              } else if(offset < list.scrollTop()) {
+                  list.scrollTop(offset);
+              }
+          }
+  	};
+
+  	function movePosition(step) {
+  		active += step;
+  		if (active < 0) {
+  			active = listItems.size() - 1;
+  		} else if (active >= listItems.size()) {
+  			active = 0;
+  		}
+  	}
+
+  	function limitNumberOfItems(available) {
+  		return options.max && options.max < available
+  			? options.max
+  			: available;
+  	}
+
+  	function fillList() {
+  		list.empty();
+  		var max = limitNumberOfItems(data.length);
+  		for (var i=0; i < max; i++) {
+  			if (!data[i])
+  				continue;
+  			var formatted = options.formatItem(data[i].data, i+1, max, data[i].value, term);
+  			if ( formatted === false )
+  				continue;
+  			var li = $("<li/>").html( options.highlight(formatted, term) ).addClass(i%2 == 0 ? "ac_even" : "ac_odd").appendTo(list)[0];
+  			$.data(li, "ac_data", data[i]);
+  		}
+  		listItems = list.find("li");
+  		if ( options.selectFirst ) {
+  			listItems.slice(0, 1).addClass(CLASSES.ACTIVE);
+  			active = 0;
+  		}
+  		// apply bgiframe if available
+  		if ( $.fn.bgiframe )
+  			list.bgiframe();
+  	}
+
+  	return {
+  		display: function(d, q) {
+  			init();
+  			data = d;
+  			term = q;
+  			fillList();
+  		},
+  		next: function() {
+  			moveSelect(1);
+  		},
+  		prev: function() {
+  			moveSelect(-1);
+  		},
+  		pageUp: function() {
+  			if (active != 0 && active - 8 < 0) {
+  				moveSelect( -active );
+  			} else {
+  				moveSelect(-8);
+  			}
+  		},
+  		pageDown: function() {
+  			if (active != listItems.size() - 1 && active + 8 > listItems.size()) {
+  				moveSelect( listItems.size() - 1 - active );
+  			} else {
+  				moveSelect(8);
+  			}
+  		},
+  		hide: function() {
+  			element && element.hide();
+  			listItems && listItems.removeClass(CLASSES.ACTIVE);
+  			active = -1;
+  		},
+  		visible : function() {
+  			return element && element.is(":visible");
+  		},
+  		current: function() {
+  			return this.visible() && (listItems.filter("." + CLASSES.ACTIVE)[0] || options.selectFirst && listItems[0]);
+  		},
+  		show: function() {
+  			var offset = $(input).offset();
+  			element.css({
+  				width: typeof options.width == "string" || options.width > 0 ? options.width : $(input).width(),
+  				top: offset.top + input.offsetHeight,
+  				left: offset.left
+  			}).show();
+              if(options.scroll) {
+                  list.scrollTop(0);
+                  list.css({
+  					maxHeight: options.scrollHeight,
+  					overflow: 'auto'
+  				});
+
+                  if($.browser.msie && typeof document.body.style.maxHeight === "undefined") {
+  					var listHeight = 0;
+  					listItems.each(function() {
+  						listHeight += this.offsetHeight;
+  					});
+  					var scrollbarsVisible = listHeight > options.scrollHeight;
+                      list.css('height', scrollbarsVisible ? options.scrollHeight : listHeight );
+  					if (!scrollbarsVisible) {
+  						// IE doesn't recalculate width when scrollbar disappears
+  						listItems.width( list.width() - parseInt(listItems.css("padding-left")) - parseInt(listItems.css("padding-right")) );
+  					}
+                  }
+
+              }
+  		},
+  		selected: function() {
+  			var selected = listItems && listItems.filter("." + CLASSES.ACTIVE).removeClass(CLASSES.ACTIVE);
+  			return selected && selected.length && $.data(selected[0], "ac_data");
+  		},
+  		emptyList: function (){
+  			list && list.empty();
+  		},
+  		unbind: function() {
+  			element && element.remove();
+  		}
+  	};
+  };
+
+  $.fn.selection = function(start, end) {
+  	if (start !== undefined) {
+  		return this.each(function() {
+  			if( this.createTextRange ){
+  				var selRange = this.createTextRange();
+  				if (end === undefined || start == end) {
+  					selRange.move("character", start);
+  					selRange.select();
+  				} else {
+  					selRange.collapse(true);
+  					selRange.moveStart("character", start);
+  					selRange.moveEnd("character", end);
+  					selRange.select();
+  				}
+  			} else if( this.setSelectionRange ){
+  				this.setSelectionRange(start, end);
+  			} else if( this.selectionStart ){
+  				this.selectionStart = start;
+  				this.selectionEnd = end;
+  			}
+  		});
+  	}
+  	var field = this[0];
+  	if ( field.createTextRange ) {
+  		var range = document.selection.createRange(),
+  			orig = field.value,
+  			teststring = "<->",
+  			textLength = range.text.length;
+  		range.text = teststring;
+  		var caretAt = field.value.indexOf(teststring);
+  		field.value = orig;
+  		this.selection(caretAt, caretAt + textLength);
+  		return {
+  			start: caretAt,
+  			end: caretAt + textLength
+  		}
+  	} else if( field.selectionStart !== undefined ){
+  		return {
+  			start: field.selectionStart,
+  			end: field.selectionEnd
+  		}
+  	}
+  };
+
+  })(jQuery);
+  </script>
+
+
+  <script src="custom/rdc2/global_temp.js" type="text/javascript"></script>
+
+  </body>
+  </html>

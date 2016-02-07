@@ -1,0 +1,115 @@
+
+<!-- EBC Amendment -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="eng">
+<head>
+<title>Eastleigh Borough Council Online Planning - Welcome</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<link rel="stylesheet" type="text/css" href="config/styles.css">
+<style type="text/css">
+A.button
+{
+	width: 120px;
+	text-align: center;
+}
+</style>
+</head>
+<BODY>
+<div class="body">
+
+<h1>Eastleigh Borough Council Online Planning - Welcome</h1>
+
+<form name="SearchForm" method="post" action="results.asp">
+<p>The Council is increasing the availability of documents associated with planning applications on the website. Please note the documents on this website may not represent the full extent of information available. Certain documents which contain information classed as sensitive in accordance with national guidelines may be withheld from internet publication. Copies of documents can be seen at the Council offices with a redacted version of any document classed as sensitive. </p>
+<!-- This file is used to control the display order of the items on the welcome screen -->
+
+
+<h2>Create Application</h2>
+
+<table cellSpacing="1" cellPadding="1" width="70%" border="0" align="center">
+  <tr>
+    <td><strong><a href="http://www.planningportal.gov.uk/wps/portal?pageName=APPLY&amp;PpAction=location_uri&amp;select_location=W1715" target="_blank" title="Opens in a new window">Submit or create your planning application</a></strong></td>
+    <td align="right"><a href="http://www.planningportal.gov.uk/wps/portal?pageName=APPLY&amp;PpAction=location_uri&amp;select_location=W1715" target="_blank" title="Opens in a new window"><img SRC="images/planningportal.gif" WIDTH="155" HEIGHT="92" alt="Planning Portal link"></a>
+    </td></tr></table>
+<h2>Search</h2>
+<table cellSpacing="1" cellPadding="1" width="70%" border="0" align="center">
+  <tr>
+    <td><strong><a href="search.asp">If you do not know exact details of the
+      planning application you require or wish to search in other ways please
+      click here:</a></strong>
+    </td>
+    <td align="right"><a href="search.asp" class="button">Search</a></td>
+  </tr>
+</table><h2>Quick Search</h2>
+<p>If you already know the planning application number or address of the
+property please enter here and then press the corresponding 'Go' button for
+details you wish to view: <a href="help.asp" target="_blank" title="Opens in a new window">For help with searching please click here</a></p>
+
+<table cellSpacing="1" cellPadding="1" width="70%" border="0" align="center">
+  <tr>
+    <td colspan="2">
+		<table cellSpacing="1" cellPadding="1" border="0">
+		  <tr>
+			<td><label for="ApplicationNumber">Planning Application Number:</label></td>
+			<td><input style="WIDTH: 250px" size="43" id="ApplicationNumber" name="ApplicationNumber"></td></tr>
+		  <tr>
+			<td><b>OR</b>&nbsp;</td>
+			<td></td>
+		</tr>
+		  <tr>
+			<td><label for="AddressPrefix">Site Address (1st Line):</label></td>
+			<td><input value style="WIDTH: 250px" id="AddressPrefix" name="AddressPrefix"></td></tr>
+		</table>    
+    </td>
+  <tr>
+    <td><img src="images/bullit.gif" align="middle" WIDTH="14" HEIGHT="17" alt="*"> <a href="javascript:document.SearchForm.submit1.click();">Search &amp; view current applications</a></td>
+    <td>
+		<p class="RightAlign"><input id="submit1" type="submit" class="button" value="Go" name="submit1"></p></td></tr>
+  <tr>
+    <td><img src="images/bullit.gif" align="middle" WIDTH="14" HEIGHT="17" alt="*"> <a href="javascript:document.SearchForm.submit2.click();">Search &amp; view applications decided</a></td>
+    <td>
+      <p class="RightAlign"><input id="submit2" type="submit" class="button" value="Go" name="submit2"></p></td></tr>
+  <tr>
+    <td><img src="images/bullit.gif" align="middle" WIDTH="14" HEIGHT="17" alt="*"> <a href="javascript:document.SearchForm.submit3.click();">View the progress of an application</a></td>
+    <td>
+      <p class="RightAlign"><input id="submit3" type="submit" class="button" value="Go" name="submit3"></p></td></tr>
+  <tr>
+    <td><img src="images/bullit.gif" align="middle" WIDTH="14" HEIGHT="17" alt="*"> <a href="javascript:document.SearchForm.submit4.click();">Comment on a current application</a></td>
+    <td>
+      <p class="RightAlign"><input id="submit4" type="submit" class="button" value="Go" name="submit4"></p></td></tr>
+  <tr>
+    <td><img src="images/bullit.gif" align="middle" WIDTH="14" HEIGHT="17" alt="*"> <a href="javascript:document.SearchForm.submit5.click();">Search &amp; view current appeals</a></td>
+    <td>
+		<p class="RightAlign"><input id="submit5" type="submit" class="button" value="Go" name="submit5"></p></td></tr>
+</table><h2>If you wish to view weekly lists click on one of
+the options below:</h2>
+<table cellSpacing="1" cellPadding="1" width="70%" border="0" align="center">
+  <tr>
+    <td align="center"><a href="weeklylistapp.asp">View the most recent Weekly List of Applications received</a></td>
+    <!--<td align="right"><a href="weeklylistapp.asp" class="button" title="View the most recent Weekly List of Applications received">Go</a></td>-->
+  </tr>
+  <tr>
+    <td align="center"><a href="weeklylistdec.asp">View the most recent Weekly List of Decisions made</a></td>
+    <!--<td align="right"><a href="weeklylistdec.asp" class="button" title="View the most recent Weekly List of Decisions made">Go</a></td>-->
+  </tr>
+</table><p align="Left">Please note that there are no details of legal agreements, decision notices pre October 1995 and applications before 1985 held in the system. Please contact the Development Control Unit for details if you require information on any of these (  Email <a href="mailto:planning@eastleigh.gov.uk">planning@eastleigh.gov.uk</a> or telephone 023 8068 8263/4).  Information on recent Planning Appeals is shown on a separate Appeals page from the Details page and associated documents are available on the Plans & Documents page.  Links to Officer reports are available on the Full Details page where an application is going to Committee.  <strong>These web pages are updated overnight at approximately 3am.  </strong></p>
+</form>
+
+<!-- EBC Amendment -->
+The information shown on this page was last updated on the 05 February 2016
+<!--Start of Google Analytics-->
+           <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20264814-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--End of Google Analytics-->
+</div></body>
+</html>

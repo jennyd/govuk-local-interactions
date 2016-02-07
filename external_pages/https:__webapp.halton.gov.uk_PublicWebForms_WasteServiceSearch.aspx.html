@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Halton Borough Council
+</title><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" type="text/css" href="https://webapp.halton.gov.uk/master/halton.css" />
+    <title>Waste Management Service Search</title>
+    <link rel="stylesheet" type="text/css" href="css/custom-theme/jquery-ui-1.10.4.custom.css" />
+    <style type="text/css">
+        .ui-widget
+        {
+            color: #194953;
+            font-family: "Segoe UI" , "Segoe" , Tahoma, Helvetica, Arial, sans-serif;
+            font-size: 10pt;
+        }
+        
+        .style-tabs.ui-tabs.ui-widget-content
+        {
+            background: none;
+            border: none;
+        }
+        
+        .style-tabs .ui-tabs-panel
+        {
+            color: #194953;
+            padding: 10px;
+            background: none;
+        }
+        
+        .style-tabs .ui-tabs-panel.dom-panel
+        {
+            border: 1px solid #909090;
+            border-top-width: 8px;
+        }
+        
+        .style-tabs .ui-tabs-panel.blue-panel
+        {
+            border: 1px solid #3395F7;
+            border-top-width: 8px;
+        }
+        
+        .style-tabs .ui-tabs-panel.green-panel
+        {
+            border: 1px solid #609C43;
+            border-top-width: 8px;
+        }
+        
+        .style-tabs .ui-tabs-nav li a, .style-tabs .ui-tabs-nav
+        {
+            padding: 0px;
+            text-align: center;
+        }
+        
+        .style-tabs .ui-widget-header, .style-tabs .ui-widget-header .ui-state-default
+        {
+            background: none;
+            border: none;
+        }
+        
+        .style-tabs .ui-tabs-nav li.ui-state-default a
+        {
+            color: white;
+        }
+        
+        .style-tabs .ui-tabs-nav li.ui-state-active a
+        {
+            color: white;
+            font-weight: bold;
+        }
+        
+        .style-tabs .ui-tabs-nav li.ui-state-default.dom-header
+        {
+            background-color: #AAAAAA;
+        }
+        
+        .style-tabs .ui-tabs-nav li.ui-state-active.dom-header
+        {
+            background-color: #909090;
+        }
+        
+        .style-tabs .ui-tabs-nav li.ui-state-default.blue-header
+        {
+            background-color: #9BBEE1;
+        }
+        
+        .style-tabs .ui-tabs-nav li.ui-state-active.blue-header
+        {
+            background-color: #3395F7;
+        }
+        
+        .style-tabs .ui-tabs-nav li.ui-state-default.green-header
+        {
+            background-color: #AFCDA1;
+        }
+        
+        .style-tabs .ui-tabs-nav li.ui-state-active.green-header
+        {
+            background-color: #609C43;
+        }
+        
+        .domesticCalButton
+        {
+            background-color: #909090;
+            color: White;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .recyclingCalButton
+        {
+            background-color: #3395F7;
+            color: White;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        .greenCalButton
+        {
+            background-color: #609C43;
+            color: White;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        
+        ul.imageList
+        {
+            vertical-align: top;
+            margin-left: 0px;
+            padding-left: 0px;
+            list-style-position: inside;
+            white-space: nowrap;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+
+            $("#ContentPlaceHolder1_txtProperty").on("change", txtProperty_change);
+            $("#ContentPlaceHolder1_txtStreet").on("change", txtStreet_change);
+            $("#ContentPlaceHolder1_txtPostcode").on("change", txtPostcode_change);
+
+            // jQuery Tabs.            
+            $("#collectionTabs").tabs({
+                active: parseInt($("#ContentPlaceHolder1_hidTabIndex").val()),
+                activate: function (event, ui) {
+                    $("#ContentPlaceHolder1_hidTabIndex").val($("#collectionTabs").tabs("option", "active"));
+                },
+                create: function (event, ui) {
+                    if ($(window).width() <= 500) {
+                        $("#domTab").prop("innerHTML", "Domestic<br/>Collections");
+                        $("#blueTab").prop("innerHTML", "Recycling<br/>Collections");
+                        $("#greenTab").prop("innerHTML", "Garden Waste<br/>Collections");
+                    }
+                }
+            });
+
+            // jQuery Autocomplete for txtStreet.
+            $("#ContentPlaceHolder1_txtStreet").autocomplete({
+                source: function (request, response) {
+                    $("#ContentPlaceHolder1_hidUSRN").val("");
+
+                    $.ajax({
+                        url: "WasteServiceSearch.aspx/GetStreetList",
+                        data: "{ 'prefixText': '" + request.term + "', 'previousItems': " + $("#ContentPlaceHolder1_hidStreetList").val() + " }",
+                        processData: false,
+                        dataType: "json",
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        dataFilter: function (data) {
+                            $("#ContentPlaceHolder1_hidStreetList").val(data.substring(data.indexOf("["), data.lastIndexOf("]") + 1));
+                            return data;
+                        },
+                        success: function (data) {
+                            response($.map(data.d, function (item) {
+                                return {
+                                    label: item.Label,
+                                    value: item.Value
+                                }
+                            }))
+                        }
+                    });
+                },
+                select: function (event, ui) {
+                    $("#ContentPlaceHolder1_txtStreet").val(ui.item.label);
+                    $("#ContentPlaceHolder1_hidUSRN").val(ui.item.value);
+                    return false;
+                },
+                minLength: 4
+            });
+
+            $("#ContentPlaceHolder1_pnlCollections").css("visibility", "visible");
+
+
+            // Maintain position.
+            var pos = $("#ContentPlaceHolder1_hidPosition");
+
+            $(window).load(function () {
+                var position = parseInt(pos.val());
+
+                if (!isNaN(position)) {
+                    $(window).scrollTop(position);
+                }
+                else if (pos.val() != null && pos.val() != "") {
+                    window.location.hash = pos.val();
+                }
+            });
+        });
+
+
+        function txtProperty_change() {
+            $("#ContentPlaceHolder1_hidUPRN").val("");
+            hideAddressList();
+            hideCollectionInfo();
+        }
+
+        function txtStreet_change() {
+            $("#ContentPlaceHolder1_txtPostcode").val("");
+            $("#ContentPlaceHolder1_hidUSRN").val("");
+            $("#ContentPlaceHolder1_hidUPRN").val("");
+            hideAddressList();
+            hideCollectionInfo();
+        }
+
+        function txtPostcode_change() {
+            $("#ContentPlaceHolder1_txtStreet").val("");
+            $("#ContentPlaceHolder1_hidUSRN").val("");
+            $("#ContentPlaceHolder1_hidUPRN").val("");
+            hideAddressList();
+            hideCollectionInfo();
+        }
+
+        function hideAddressList() {
+            $("#ContentPlaceHolder1_rowChooseAddress").css("visibility", "hidden");
+        }
+
+        function hideCollectionInfo() {
+            $("#ContentPlaceHolder1_pnlCollections").css("visibility", "hidden");
+        }
+
+        function goToHash(hash) {
+            if (/applewebkit/.test(navigator.userAgent.toLowerCase())) {
+                window.location.hash = "";
+                window.location.hash = hash;
+            } else {
+                window.location.hash = hash;
+            }
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-9717698-32', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <div class="hbc-top">
+        <div class="hbc-header-container">
+            <div class="hbc-header">
+                <div class="hbc-logo">
+                    <a href="http://www4.halton.gov.uk/pages/home.aspx">
+                        <img src="https://webapp.halton.gov.uk/master/hbc_logo.png" alt="HBC logo" /></a></div>
+                <div class="hbc-header-text">
+                    Municipal Building, Kingsway, Widnes, WA8 7QF
+                    <br />
+                    T. 0303 333 4300</div>
+            </div>
+        </div>
+        <div class="hbc-main-container">
+            <div class="hbc-main">
+                <form method="post" action="./WasteServiceSearch.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTI0MTg4MjgzOQ9kFgJmD2QWBAIBD2QWAgIDD2QWBGYPFQwfQ29udGVudFBsYWNlSG9sZGVyMV90eHRQcm9wZXJ0eR1Db250ZW50UGxhY2VIb2xkZXIxX3R4dFN0cmVldB9Db250ZW50UGxhY2VIb2xkZXIxX3R4dFBvc3Rjb2RlH0NvbnRlbnRQbGFjZUhvbGRlcjFfaGlkVGFiSW5kZXgfQ29udGVudFBsYWNlSG9sZGVyMV9oaWRUYWJJbmRleB1Db250ZW50UGxhY2VIb2xkZXIxX3R4dFN0cmVldBtDb250ZW50UGxhY2VIb2xkZXIxX2hpZFVTUk4hQ29udGVudFBsYWNlSG9sZGVyMV9oaWRTdHJlZXRMaXN0IUNvbnRlbnRQbGFjZUhvbGRlcjFfaGlkU3RyZWV0TGlzdB1Db250ZW50UGxhY2VIb2xkZXIxX3R4dFN0cmVldBtDb250ZW50UGxhY2VIb2xkZXIxX2hpZFVTUk4iQ29udGVudFBsYWNlSG9sZGVyMV9wbmxDb2xsZWN0aW9uc2QCAQ8VCRtDb250ZW50UGxhY2VIb2xkZXIxX2hpZFVQUk4fQ29udGVudFBsYWNlSG9sZGVyMV90eHRQb3N0Y29kZRtDb250ZW50UGxhY2VIb2xkZXIxX2hpZFVTUk4bQ29udGVudFBsYWNlSG9sZGVyMV9oaWRVUFJOHUNvbnRlbnRQbGFjZUhvbGRlcjFfdHh0U3RyZWV0G0NvbnRlbnRQbGFjZUhvbGRlcjFfaGlkVVNSThtDb250ZW50UGxhY2VIb2xkZXIxX2hpZFVQUk4kQ29udGVudFBsYWNlSG9sZGVyMV9yb3dDaG9vc2VBZGRyZXNzIkNvbnRlbnRQbGFjZUhvbGRlcjFfcG5sQ29sbGVjdGlvbnNkAgMPZBYCAgMPZBYEAgcPZBYCAhcPZBYCAgEPZBYCAgMPEGRkFgBkAgsPZBYEAgkPFgIeBVZhbHVlBQEwZAITD2QWBAIBD2QWBAILDxBkZBYAZAINDxBkZBYAZAICD2QWAgIBD2QWAmYPZBYEAgcPEGRkFgBkAg8PEGRkFgFmZGRLLCFWaJjC9fylV8xPCV4GQrMBa46ZMgTxiDLbL0BJDg==" />
+
+
+<script src="/PublicWebForms/ScriptResource.axd?d=9JIzvJkd4kEPX-JNsrF4m9Ka8vG2MINsdmDG31eCGz8TO99Th0ln0yEPcXgtheDBjtK6RHnrcjiWcmfOCukZ3ZYDvvEu5SXYd1IPXhnSaBgmJdOL-G2cc38MDVPpfsGpgPnVicJsuAPQYpKvvYFNwcdcomI6GJwakZ5twXt-f301&amp;t=5f9d5645" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var PageMethods = function() {
+PageMethods.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+PageMethods.prototype = {
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return PageMethods._staticInstance.get_path();},
+GetStreetList:function(prefixText,previousItems,succeededCallback, failedCallback, userContext) {
+return this._invoke(this._get_path(), 'GetStreetList',false,{prefixText:prefixText,previousItems:previousItems},succeededCallback,failedCallback,userContext); }}
+PageMethods.registerClass('PageMethods',Sys.Net.WebServiceProxy);
+PageMethods._staticInstance = new PageMethods();
+PageMethods.set_path = function(value) { PageMethods._staticInstance.set_path(value); }
+PageMethods.get_path = function() { return PageMethods._staticInstance.get_path(); }
+PageMethods.set_timeout = function(value) { PageMethods._staticInstance.set_timeout(value); }
+PageMethods.get_timeout = function() { return PageMethods._staticInstance.get_timeout(); }
+PageMethods.set_defaultUserContext = function(value) { PageMethods._staticInstance.set_defaultUserContext(value); }
+PageMethods.get_defaultUserContext = function() { return PageMethods._staticInstance.get_defaultUserContext(); }
+PageMethods.set_defaultSucceededCallback = function(value) { PageMethods._staticInstance.set_defaultSucceededCallback(value); }
+PageMethods.get_defaultSucceededCallback = function() { return PageMethods._staticInstance.get_defaultSucceededCallback(); }
+PageMethods.set_defaultFailedCallback = function(value) { PageMethods._staticInstance.set_defaultFailedCallback(value); }
+PageMethods.get_defaultFailedCallback = function() { return PageMethods._staticInstance.get_defaultFailedCallback(); }
+PageMethods.set_enableJsonp = function(value) { PageMethods._staticInstance.set_enableJsonp(value); }
+PageMethods.get_enableJsonp = function() { return PageMethods._staticInstance.get_enableJsonp(); }
+PageMethods.set_jsonpCallbackParameter = function(value) { PageMethods._staticInstance.set_jsonpCallbackParameter(value); }
+PageMethods.get_jsonpCallbackParameter = function() { return PageMethods._staticInstance.get_jsonpCallbackParameter(); }
+PageMethods.set_path("WasteServiceSearch.aspx");
+PageMethods.GetStreetList= function(prefixText,previousItems,onSuccess,onFailed,userContext) {PageMethods._staticInstance.GetStreetList(prefixText,previousItems,onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+if (typeof(FilterListItem) === 'undefined') {
+var FilterListItem=gtc("FilterListItem");
+FilterListItem.registerClass('FilterListItem');
+}
+//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0249ECFB" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAhcJYRf/XaSrDb/eV5dx9vg3q09dmNK7S7Mk4M7rzyfenYoY8vf89KQEe8HuCJIllyHyEu5FHVLll4S2Zdpa2us2tfksHbxfLBiSLpkSDr/UkbigG0oIjadY2NO9seBN52xrE0YF3na6nInoZdu6i4AjkxbpcxoWPNP2dR2wiSeix7uC3KTeRMNT44xOEEdnKpx+9wplkilZ92UfRPl6h0d" />
+                
+                <div id="tabsmaincontent" style="padding-left: 10px; padding-top: 5px; padding-right: 10px;">
+                    
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidPosition" id="ContentPlaceHolder1_hidPosition" />
+    <div id="ContentPlaceHolder1_pnlAZHeader">
+	
+        <h3 title="">
+            Waste Collection Service Search</h3>
+    
+</div>
+    <div id="ContentPlaceHolder1_pnlInstruct">
+	
+        <p>
+            Use this form to find your waste collection services.&nbsp;&nbsp;There is a <a href="https://youtu.be/CbiAhv4Asxo" target="_blank">video guide</a> for the garden waste service.
+        </p>
+        <p>
+            Fields marked with an asterisk (<b>*</b>) are mandatory and <b>must be completed
+            </b>before you can continue.</p>
+    
+</div>
+    <div id="ContentPlaceHolder1_pnlAddressSearch">
+	
+        <table border="0" cellspacing="2" cellpadding="5" summary="Enquiry form" style="width: 100%">
+            <tr valign="top">
+                <td colspan="2" style="padding-bottom: 10px">
+                    <span id="ContentPlaceHolder1_lblAddrTitle"><b>Your Address</b></span>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td style="width: 30%">
+                    <label for="ContentPlaceHolder1_txtProperty" id="ContentPlaceHolder1_lblProperty">Property Name or No.</label>
+                </td>
+                <td style="width: 70%; white-space: nowrap;">
+                    <input name="ctl00$ContentPlaceHolder1$txtProperty" type="text" id="ContentPlaceHolder1_txtProperty" style="min-width: 190px;
+                        max-width: 300px" />&nbsp;<em>*
+                            </em>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding-bottom: 20px">
+                    AND
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <label for="ContentPlaceHolder1_txtStreet" id="ContentPlaceHolder1_lblStreet">Type in Street Name and choose from list</label>
+                </td>
+                <td style="white-space: nowrap">
+                    <input name="ctl00$ContentPlaceHolder1$txtStreet" type="text" id="ContentPlaceHolder1_txtStreet" style="min-width: 190px;
+                        max-width: 300px" />
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidStreetList" id="ContentPlaceHolder1_hidStreetList" value="null" />
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$hidUSRN" id="ContentPlaceHolder1_hidUSRN" />
+                </td>
+            </tr>
+            <tr valign="top">
+                <td>
+                    <label for="ContentPlaceHolder1_txtPostcode" id="ContentPlaceHolder1_lblPostcode">OR  Postcode</label>
+                </td>
+                <td>
+                    <input name="ctl00$ContentPlaceHolder1$txtPostcode" type="text" id="ContentPlaceHolder1_txtPostcode" />&nbsp;<em>
+                        </em>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                </td>
+                <td style="padding-top: 20px">
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnSearch" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ContentPlaceHolder1_btnSearch" />
+                </td>
+            </tr>
+        </table>
+    
+</div>
+    
+    <a id="collections"></a>
+    
+
+                </div>
+                </form>
+            </div>
+        </div>
+        <!-- FOOTER CSS -->
+        <div class="hbc-footer-container">
+            <div class="hbc-footer">
+                <div class="hbc-social-buttons">
+                    <a href="http://www.facebook.com/haltonbc">
+                        <img src="https://webapp.halton.gov.uk/master/social_network-buttons_35.png" alt="" /></a>
+                    <a href="http://www.twitter.com/haltonbc">
+                        <img src="https://webapp.halton.gov.uk/master/social_network-buttons3_35.png" alt="" /></a>
+                    <a href="http://www.youtube.com/haltoncouncil">
+                        <img src="https://webapp.halton.gov.uk/master/social_network-buttons5_35.png" alt="" /></a>
+                    <a href="https://itunes.apple.com/gb/artist/halton-borough-council/id456194060">
+                        <img src="https://webapp.halton.gov.uk/master/social_network-buttons9_35.png" alt="" /></a>
+                    <a href="http://www4.halton.gov.uk/pages/cant-find-it.aspx">
+                        <img src="https://webapp.halton.gov.uk/master/social_network-buttons11_35.png" alt="" /></a>
+                </div>
+                <div class="hbc-footer-text">
+                    <a href="http://www4.halton.gov.uk/pages/cant-find-it.aspx">Can't Find It?</a></div>
+                <div class="hbc-footer-image">
+                    <img src="https://webapp.halton.gov.uk/master/FooterCorner_100.png" alt="" /></div>
+                <div class="hbc-footer-terms">
+                    <a href="http://www4.halton.gov.uk/pages/terms.aspx">Terms and Conditions</a></div>
+                <div class="hbc-footer-copy">
+                    &#169; Halton Borough Council</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

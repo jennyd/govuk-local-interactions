@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Log in</title>
+
+	<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+	<link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 9]>
+        <link href="/css/ie9.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if (lt IE 9) & (!IEMobile)]>
+        <script src="/js/respond.min.js" type="text/javascript"></script>
+    <![endif]-->
+	<script src="/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="/js/jquery.animate-shadow-min.js" type="text/javascript"></script> 
+	<script src="/js/modernizr-1.7.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+
+<div id="wcc_container">
+	<div id="wcc_blackbar">
+		<a alt="Warwickshire Direct" href="https://www.warwickshire.gov.uk/" title="Warwickshire Direct home"><img id="wcc_WCClogo" src="https://www.warwickshire.gov.uk/wp-content/themes/gamma/images/corpwhitelogo.png" /> </a>
+		<ul>
+			<li>
+				<a href="http://www.warwickshire.gov.uk/">Residents</a></li>
+			<li>
+				<a href="http://www.warwickshire.gov.uk/business">Business</a></li>
+			<li>
+				<a href="http://www.warwickshire.gov.uk/corporate">The Council</a></li>
+		</ul>
+	</div>
+	<div class="wcc_gradient" id="wcc_greenbar">
+		<a alt="Warwickshire Direct" href="http://www.warwickshire.gov.uk/" title="Warwickshire Direct home"><img id="wcc_WDlogo" src="https://www.warwickshire.gov.uk/wp-content/themes/gamma/images/wdwhitelogo.png" /> </a></div>
+</div>
+
+<div class="navbar navbar-inverse navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="/">Book a library computer</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="/Help" target="_blank">Help</a></li>
+                </ul>
+                <ul class="nav pull-right">
+                    <li class="divider-vertical"></li>
+
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+<div class="container" id="main-container">
+
+	
+
+
+
+
+<!-- alert goes here -->
+<!-- div style="background-color: #ffeecc; border: 1px solid #cc8801; padding: 5px;margin-bottom: 10px;">
+<h3>All Libraries are closed on Sunday 13th December for IT maintenance.</h3>
+<p>Please visit <a href=http://www.warwickshire.gov.uk/libraries>Libraries home page</a> for online renewals and other services. Some online services may also be unavailable.   We are sorry for any inconvenience this may cause.</p></div -->
+
+
+<p style="clear:both;"><span style="font-weight: bold">Please select a library and login with your library card number and PIN below:</span>  <a href="http://www.warwickshire.gov.uk/yourlibrarypin">more about your PIN</a>.</p>
+
+<p><b>Not a member?</b> You can <a href="http://www.warwickshire.gov.uk/jointhelibrary">Join now</a> but you will not be able to book a computer until you have received your library card.</p>
+
+<p>Please select the <span style="font-weight: 600;">'Logout' button</span> when you have finished.</p>
+
+<p>We reserve the right to change, amend or cancel your bookings.</p>
+<noscript>
+    <div class="validation-summary-errors">This website works best with JavaScript enabled</div>
+</noscript>
+
+
+<form action="/Account/Logon" method="post">    <div class="container">
+
+      <div class="form-signin">
+        
+        <h2 class="form-signin-heading">Log in</h2>
+
+        
+
+	    <label for="Site">Select a library:</label>
+        <select class="contextual-help-popup" data-content="Choose the library where you want to use a computer." data-original-title="Select library" data-placement="right" data-val="true" data-val-required="The Site field is required." id="Site" name="Site"><option>Please select your library.</option>
+<option>Alcester</option>
+<option>Atherstone</option>
+<option>Bedworth</option>
+<option>Bidford</option>
+<option>Bulkington</option>
+<option>Camp Hill</option>
+<option>Coleshill</option>
+<option>Dordon</option>
+<option>Dunchurch</option>
+<option>Hartshill</option>
+<option>Kenilworth</option>
+<option>Keresley</option>
+<option>Leamington</option>
+<option>Lillington</option>
+<option>Nuneaton</option>
+<option>PN7 Test Site</option>
+<option>Polesworth</option>
+<option>Rugby</option>
+<option>Shipston</option>
+<option>Southam</option>
+<option>Stockingford</option>
+<option>Stratford</option>
+<option>Warwick</option>
+<option>Water Orton</option>
+<option>Wellesbourne</option>
+<option>Whitnash</option>
+<option>Wolston</option>
+</select>
+   
+        <label for="UserID">Enter your library card number:</label>
+        <input class="contextual-help-popup" data-content="You must have a valid library card number and PIN number to login to this website." data-original-title="library card number" data-placement="right" data-val="true" data-val-required="The UserID field is required." id="UserID" maxlength="8" name="UserID" placeholder="library card number" type="text" value="" />
+
+<label for="Password">Enter your PIN:</label><input class="contextual-help-popup" data-content="You get three attempts to login, and then your library card number is blocked for 20 minutes." data-original-title="PIN" data-placement="right" id="Password" maxlength="20" name="Password" placeholder="PIN Number" type="password" />
+        <button class="btn btn-large btn-primary" type="submit" value="">Log in</button>
+      </div>
+
+    </div>
+</form>
+
+
+
+<div id="wcc_footer">
+	<div class="footer_span3 wcc_column">
+		<div style="text-align: center;">
+			<img alt="Warwickshire County Council" src="https://www.warwickshire.gov.uk/wp-content/uploads/2014/08/WCC+logo.png" style="width: auto !important" /></div>
+	</div>
+	<div class="footer_span3 wcc_column">
+		<ul>
+			<li>
+				<a href="https://www.warwickshire.gov.uk/help">Help using the website</a></li>
+			<li>
+				<a href="https://www.warwickshire.gov.uk/disclaimer">Privacy and disclaimer</a></li>
+		</ul>
+	</div>
+	<div class="footer_span2 wcc_column">
+		<ul>
+			<li>
+				<a a="" href="https://www.warwickshire.gov.uk/socialnetworking">Social media</a></li>
+			<li>
+				<a href="https://www.warwickshire.gov.uk/?page_id=976766">Services for...</a></li>
+		</ul>
+	</div>
+	<div class="footer_span2 wcc_column">
+		<ul>
+			<li>
+				<a href="https://www.warwickshire.gov.uk/customerservice">Customer service and complaints</a></li>
+		</ul>
+	</div>
+	<div class="footer_span2 wcc_column">
+		<ul>
+			<li>
+				<a href="https://www.warwickshire.gov.uk/locationmap">Contact us</a></li>
+			<li>
+				<a href="https://www.warwickshire.gov.uk/az">A-Z of services</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+<div class="footer_span2 footer_final">
+	<p>
+		&copy; Warwickshire County Council</p>
+</div>
+
+
+</div>
+
+
+
+<div id="cookie-bar" class="alert alert-info cookie-bar" style="display: none;">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+This website uses cookies        <a class="btn btn-mini" href="#">View Privacy Policy</a>
+        <button type="button" class="btn btn-mini" data-dismiss="alert">Dismiss</button>
+</div>
+<script type="text/javascript">//<![CDATA[
+    $(window).load(function () {
+        $('.contextual-help-popup').popover({
+            trigger: "focus",
+            placement: 'top',
+            template: '<div class="popover popover-help"><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>'
+        });
+        $("#cookie-bar").alert()
+    });//]]>
+</script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
+    $('#table-tab a:last').tab('show');
+    $('[rel=tooltip]').tooltip()
+
+    if ($.cookie('cookie-bar') != "hide") {
+        $("#cookie-bar").show();
+    }
+    $('#cookie-bar').bind('closed', function () {
+        $.cookie('cookie-bar', 'hide', { expires: 30, path: '/' });
+    })
+</script>
+</body>
+</html>

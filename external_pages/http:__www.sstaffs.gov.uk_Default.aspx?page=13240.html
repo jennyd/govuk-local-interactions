@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link href="/WebResource.axd?d=bYpB9sX2__vQpn_I9meN8iT5JcJoHfoSLsX9hoxu1aG0t9g6MS1J1I2xjE6YyNb977w3kngd63YidBCWAFwU-CPCabmK1Icj7z8Id3ysQaWpqWrHX67Nwbru2ptg3teg39mXbRpfiQXFs_i9mGxZm5fyTJk1&amp;t=634896113147659073" type="text/css" rel="stylesheet" /><base href="http://www.sstaffs.gov.uk/" /><title>
+	New Claim
+</title><link title="Alternate Page" href="/default.aspx" rel="alternate" /><link href="/templates/default/css/system/southstaffs2012.css" rel="stylesheet" type="text/css" /><link href="/templates/default/css/default.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/ratingSelector.js"></script>
+
+
+
+<script type="text/javascript">
+		var oRot;
+		function OnRotatorMouseOut(oRotator, args)
+		{
+			oRotator.showNext(Telerik.Web.UI.RotatorScrollDirection.Down);
+		}
+
+	</script>
+
+<style type="text/css">
+		.itemTemplate
+		{
+			width: 200px;
+			height: 400px;
+			background-color: Aqua;
+			color: Black;
+		}
+	
+
+   a#leftButton, a#rightButton
+        {
+            /*you can add a custom image, :hover psedoclass, etc*/
+            display: inline-block;
+            height: 150px;
+            vertical-align: middle;
+            width:16px;
+        }
+
+</style>
+ 
+    <link rel="stylesheet" type="text/css" href="/templates/default/css/Default.css" />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#featured > ul").tabs({ fx: { opacity: "toggle"} }).tabs("rotate", 5000, true);
+    });
+</script>
+
+
+<link href="/WebResource.axd?d=8lMw4RfM_KP0u1de1UhyZuqE6oLDXInypGqzPp5U5MxAPFYX3duXO1DGOfAackhtUF8buJ4fYutGpUEZlWvmc0xyiU_2hcraQnZlLUBteI4gF8JQDpsAHytzTkKqodUXNlCDLg2&amp;t=634569690520000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=IaBxcPkkTfXPmgd30F9MKr2UKmNOGCe-6QvfVp7ykABFfwo0w_uOUYDETX0zQQAlP3K8PANMkHr1MPhU4PsFyNSAEFZIXjpR3Xf4cao4iN1VPZ1nFRDPGB5dNR1TQfUVItAaSRVKdhLGROe5o5v3MR7PV641&amp;t=634569690520000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=LOXBWcB5K5oOmM9ER-fBap1SWnyqq-uSS-Hkv-mg3D5MhFiUrfdZpQhH_JVRR6vCLYs1D0pCJQpuKEUL9QwNYQYmcfNPm2M1JLR07T-9Z8znPbuOg9BX8EmFQ5H0V08W5GUc_Q2&amp;t=634569690520000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=SmPOJax14m33t-9NXyP-SLvBgIv1KDcHjWcB6w1PB6mdZlX64rYRIKRWQmxHA9pzFTyeOReGbilP0ZYj1xAK5XPAldAQMjOSHIBQooPi6O1rAZGIpItQvuzQ1DmfdQ-g_pSE9ykoAV-SznmRpFneOo-MNvs1&amp;t=634569690520000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=HNL7Fvxh8EZyOlaerQrFmMOS0yCQNabvWJlxYgmnThlDzaRYJ0-2G9fcae1uTe715WqrS5ZkIHmDBf74ZwePPdWJdKHpmxH7lKLjfWVKOobdVjEgp4HbrFnZ2R4xk-d9r-J5SA2&amp;t=634569690520000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=sYMa3Z4Roa8mQaHzS7LuMv2xaPArNt7eF86Fo5jWWksWExn6yr1ky4ojPxlIBgFvEPCDSvMBzG_1yKrHpQn9sUlomxEpnliRr4QW1qLbqmkWeSJ33hdePnFRl6Fc6VZIsjLf6i_Tj1FMaiKw5DfNzOx1QQY1&amp;t=634569690520000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=pkXKOvSmY-J9E9zApNtKm1MFMkA9Dhc_9HPtRXFdyIRGbEhZQ7UVhBQ4MxgrWTpsazzw3IQnU56xioJzlMsVufDA3yR6htutGhwAdfAUJqHjQ5dHs-u1W7AZxa2JmgMGDH7LOQ2&amp;t=634569690520000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=WW7sJLY5nnWHV8fA2wUk2uyEDxzLCT_enzZJCkBJhcLWmILrEzFChYA0wQC7SpgdFcqf4LfGu-rNZCS_GlAz0JrfU4s7fhCnzHt3DRJLATMVgPl2sjx-WkN2bvzXDQ5dLq7oHA2&amp;t=634569690520000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=paazUg_SzbiTMg8NoUg79rOp1XTFv8295oIVgQ46OEDPhytXwIVlKJlYhcUyPAuq0xi8hF2sqiO7BhQ20gd6JT_NLt08lGvU9LKveh44rP3Hx2ild5DzZ3Oi6pMVDj4HbeyOr3z4rJj53MKYkeIPeDemclw1&amp;t=634569690520000000" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><meta name="GENERATOR" content="Immediacy .NET CMS - Licensed To : South Staffordshire District Council" /><meta name="eGMS.Subject.Keywords" content="housing, benefit, new, claim, how, to, make, application" /><meta name="eGMS.description" content="How to make a new claim for Housing Benefit" /><meta name="DC.Date.Issued" content="2015-08-05" scheme="W3CDTF" /><meta name="DC.Date.Created" content="2006-01-17" scheme="W3CDTF" /><meta name="DC.Contributor" content="Anna Ball" /><meta name="DC.Coverage.Spatial" content="41UF" scheme="ONS SNAC" /><meta name="DC.Coverage.Temporal" content="2006-01-17" scheme="W3CDTF" /><meta name="DC.Identifier" content="http://www.sstaffs.gov.uk/your_services/direct_services/benefits/housing_benefit/new_claim.aspx" scheme="URI" /><meta name="DC.rights.Copyright" content="South Staffordshire Council 2005" /><meta name="DC.title" content="New Claim" /><meta name="DC.creator" content="South Staffordshire Council" /><meta name="DC.publisher" content="South Staffordshire Council" /><meta name="DC.date" content="2015-08-05" scheme="W3CDTF" /><meta name="DC.language" content="eng" scheme="ISO 639-2/T" /><meta name="DC.rights" content="Public Domain" /><meta name="DC.format" content="text/html" /><meta name="eGMS.Status" content="Version 26 For Publication" /><meta name="eGMS.Accessibility" content="Double-A" scheme="WCAG" /><meta name="keywords" content="housing, benefit, new, claim, how, to, make, application" /><meta name="description" content="How to make a new claim for Housing Benefit" /></head>
+<body>
+<form name="aspnetForm" method="post" action="/Default.aspx?page=13240" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWBAIBD2QWHAIBDxYCHgRocmVmBcQBL1dlYlJlc291cmNlLmF4ZD9kPWJZcEI5c1gyX192UXBuX0k5bWVOOGlUNUpjSm9IZm9TTHNYOWhveHUxYUcwdDlnNk1TMUoxSTJ4akU2WXlOYjk3N3cza25nZDYzWWlkQkNXQUZ3VS1DUENhYm1LMUljajd6OElkM3lzUWFXcHFXckhYNjdOd2JydTJwdGczdGVnMzltWGJScGZpUVhGc19pOW1HeFptNWZ5VEprMSZ0PTYzNDg5NjExMzE0NzY1OTA3M2QCBg8WAh8ABRwvdGVtcGxhdGVzL2RlZmF1bHQvSUxJTkt8MCx8ZAIHDxYCHwAFMS90ZW1wbGF0ZXMvZGVmYXVsdC9jc3Mvc3lzdGVtL3NvdXRoc3RhZmZzMjAxMi5jc3NkAggPFgIfAAUiL3RlbXBsYXRlcy9kZWZhdWx0L2Nzcy9kZWZhdWx0LmNzc2QCCg8WAh8ABSIvdGVtcGxhdGVzL2RlZmF1bHQvY3NzL0RlZmF1bHQuY3NzZAIMDxYCHwAFrwEvV2ViUmVzb3VyY2UuYXhkP2Q9OGxNdzRSZk1fS1AwdTFkZTFVaHladXFFNm9MRFhJbnlwR3F6UHA1VTVNeEFQRllYM2R1WE8xREdPZkFhY2todFVGOGJ1SjRmWXV0R3BVRVpsV3ZtYzB4eWlVXzJoY3JhUW5abExVQnRlSTRnRjhKUURwc0FIeXR6VGtLcW9kVVhObENETGcyJnQ9NjM0NTY5NjkwNTIwMDAwMDAwZAINDxYCHwAFxAEvV2ViUmVzb3VyY2UuYXhkP2Q9SWFCeGNQa2tUZlhQbWdkMzBGOU1LcjJVS21OT0dDZS02UXZmVnA3eWtBQkZmd28wd191T1VZREVUWDB6UVFBbFAzSzhQQU5Na0hyMU1QaFU0UHNGeU5TQUVGWklYanBSM1hmNGNhbzRpTjFWUFoxbkZSRFBHQjVkTlIxVFFmVVZJdEFhU1JWS2RoTEdST2U1bzV2M01SN1BWNjQxJnQ9NjM0NTY5NjkwNTIwMDAwMDAwZAIODxYCHwAFrwEvV2ViUmVzb3VyY2UuYXhkP2Q9TE9YQldjQjVLNW9PbU05RVItZkJhcDFTV255cXEtdVNTLUhrdi1tZzNENU1oRmlVcmZkWnBRaEhfSlZSUjZ2Q0xZczFEMHBDSlFwdUtFVUw5UXdOWVFZbWNmTlBtMk0xSkxSMDdULTlaOHpuUGJ1T2c5Qlg4RW1GUTVIMFYwOFc1R1VjX1EyJnQ9NjM0NTY5NjkwNTIwMDAwMDAwZAIPDxYCHwAFxAEvV2ViUmVzb3VyY2UuYXhkP2Q9U21QT0pheDE0bTMzdC05Tlh5UC1TTHZCZ0l2MUtEY0hqV2NCNncxUEI2bWRabFg2NHJZUklLUldRbXhIQTlwekZUeWVPUmVHYmlsUDBaWWoxeEFLNVhQQWxkQVFNak9TSElCUW9vUGk2TzFyQVpHSXBJdFF2dXpRMURtZmRRLWdfcFNFOXlrb0FWLVN6bm1ScEZuZU9vLU1OdnMxJnQ9NjM0NTY5NjkwNTIwMDAwMDAwZAIQDxYCHwAFrwEvV2ViUmVzb3VyY2UuYXhkP2Q9SE5MN0Z2eGg4RVp5T2xhZXJRckZtTU9TMHlDUU5hYnZXSmx4WWdtblRobER6YVJZSjAtMkc5ZmNhZTF1VGU3MTVXcXJTNVprSUhtREJmNzRad2VQUGRXSmRLSHBteEg3bEtMamZXVktPb2JkVmpFZ3A0SGJyRm5aMlI0eGstZDlyLUo1U0EyJnQ9NjM0NTY5NjkwNTIwMDAwMDAwZAIRDxYCHwAFxAEvV2ViUmVzb3VyY2UuYXhkP2Q9c1lNYTNaNFJvYThtUWFIelM3THVNdjJ4YVBBck50N2VGODZGbzVqV1drc1dFeG42eXIxa3k0b2pQeGxJQmdGdkVQQ0RTdk1CekdfMXlLckhwUW45c1Vsb214RXBubGlScjRRVzFxTGJxbWtXZVNKMzNoZGVQbkZSbDZGYzZWWklzakxmNmlfVGoxRk1haUt3NURmTnpPeDFRUVkxJnQ9NjM0NTY5NjkwNTIwMDAwMDAwZAISDxYCHwAFrwEvV2ViUmVzb3VyY2UuYXhkP2Q9cGtYS092U21ZLUo5RTl6QXBOdEttMU1GTWtBOURoY185SFB0UlhGZHlJUkdiRWhaUTdVVmhCUTRNeGdyV1Rwc2F6enczSVFuVTU2eGlvSnpsTXNWdWZEQTN5UjZodHV0R2h3QWRmQVVKcUhqUTVkSHMtdTFXN0FaeGEySm1nTUdESDdMT1EyJnQ9NjM0NTY5NjkwNTIwMDAwMDAwZAITDxYCHwAFrwEvV2ViUmVzb3VyY2UuYXhkP2Q9V1c3c0pMWTVubldIVjhmQTJ3VWsydXlFRHh6TENUX2VuelpKQ2tCSmhjTFdtSUxyRXpGQ2hZQTB3UUM3U3BnZEZjcWY0TGZHdS1yTlpDU19HbEF6MEpyZlU0czdmaENuekh0M0RSSkxBVE1WZ1BsMnNqeC1Xa04yYnZ6WERRNWRMcTdvSEEyJnQ9NjM0NTY5NjkwNTIwMDAwMDAwZAIUDxYCHwAFxAEvV2ViUmVzb3VyY2UuYXhkP2Q9cGFhelVnX1N6YmlUTWc4Tm9VZzc5ck9wMVhURnY4Mjk1b0lWZ1E0Nk9FRFBoeXRYd0lWbEtKbFloY1V5UEF1cTB4aThoRjJzcWlPN0JoUTIwZ2Q2SlRfTkx0MDhsR3ZVOUxLdmVoNDRyUDNIeDJpbGQ1RHpaM09pNnBNVkRqNEhiZXlPcjN6NHJKajUzTUtZa2VJUGVEZW1jbHcxJnQ9NjM0NTY5NjkwNTIwMDAwMDAwZAIDD2QWBAIBD2QWBAIDDxQrAAIPFgIeF0VuYWJsZUFqYXhTa2luUmVuZGVyaW5naGRkFgRmDw8WBB4IQ3NzQ2xhc3MFCXJjYkhlYWRlch4EXyFTQgICZGQCAQ8PFgQfAgUJcmNiRm9vdGVyHwMCAmRkAgUPPCsABAEADxYCHwFoZGQCBA9kFgYCAQ8UKwACFCsAAg8WAh8BaGQQFgFmFgEUKwACZGQPFgFmFgEFblRlbGVyaWsuV2ViLlVJLlJhZFRhYiwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAxMS4yLjkxNS4zNSwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0ZGQCAw8UKwACDxYCHwFoZBUBDFJhZFBhZ2VWaWV3MRYCZg9kFgICAQ8UKwACFCsAAg8WBB4LXyFEYXRhQm91bmRnHwFoZA8UKwAGFCsAAg8WDB4EVGV4dAUaQ2FsY3VsYXRlIEhvdXNpbmcgQmVuZWZpdCAeBVZhbHVlBQIxMR4LTmF2aWdhdGVVcmwFWWh0dHA6Ly93d3cuc3N0YWZmcy5nb3YudWsveW91cl9zZXJ2aWNlcy9kaXJlY3Rfc2VydmljZXMvYmVuZWZpdHMvYmVuZWZpdHNfY2FsY3VsYXRvci5hc3B4HgtJc1NlcGFyYXRvcmgeCkV4cGFuZE1vZGULKXpUZWxlcmlrLldlYi5VSS5NZW51SXRlbUV4cGFuZE1vZGUsIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTEuMi45MTUuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNAAeCEltYWdlVXJsBTBodHRwOi8vd3d3LnNzdGFmZnMuZ292LnVrL2ltYWdlcy9idWxsZXRXaGl0ZS5naWZkZBQrAAIPFgwfBQUeRmluZCBvdXQgYWJvdXQgSG91c2luZyBCZW5lZml0HwYFAjEyHwcFVWh0dHA6Ly93d3cuc3N0YWZmcy5nb3YudWsveW91cl9zZXJ2aWNlcy9kaXJlY3Rfc2VydmljZXMvYmVuZWZpdHMvaG91c2luZ19iZW5lZml0LmFzcHgfCGgfCQsrBAAfCgUwaHR0cDovL3d3dy5zc3RhZmZzLmdvdi51ay9pbWFnZXMvYnVsbGV0V2hpdGUuZ2lmZGQUKwACDxYMHwUFIkZpbmQgb3V0IGFib3V0IGNvdW5jaWwgdGF4IGJlbmVmaXQfBgUCMTMfBwVVaHR0cDovL3d3dy5zc3RhZmZzLmdvdi51ay95b3VyX3NlcnZpY2VzL2RpcmVjdF9zZXJ2aWNlcy9iZW5lZml0cy9ob3VzaW5nX2JlbmVmaXQuYXNweB8IaB8JCysEAB8KBTBodHRwOi8vd3d3LnNzdGFmZnMuZ292LnVrL2ltYWdlcy9idWxsZXRXaGl0ZS5naWZkZBQrAAIPFgwfBQUURmluZCB1c2VmdWwgY29udGFjdHMfBgUCMTQfBwVeaHR0cDovL3d3dy5zc3RhZmZzLmdvdi51ay95b3VyX3NlcnZpY2VzL2RpcmVjdF9zZXJ2aWNlcy9iZW5lZml0cy91c2VmdWxfY29udGFjdHNfYmVuZWZpdHMuYXNweB8IaB8JCysEAB8KBTBodHRwOi8vd3d3LnNzdGFmZnMuZ292LnVrL2ltYWdlcy9idWxsZXRXaGl0ZS5naWZkZBQrAAIPFgwfBQUUUmVwb3J0IEJlbmVmaXQgRnJhdWQfBgUCMTUfBwVTaHR0cDovL3d3dy5zc3RhZmZzLmdvdi51ay95b3VyX3NlcnZpY2VzL2RpcmVjdF9zZXJ2aWNlcy9iZW5lZml0cy9iZW5lZml0X2ZyYXVkLmFzcHgfCGgfCQsrBAAfCgUwaHR0cDovL3d3dy5zc3RhZmZzLmdvdi51ay9pbWFnZXMvYnVsbGV0V2hpdGUuZ2lmZGQUKwACDxYMHwUFHkxvZ2luIHRvIEJlbmVmaXRzIFNlbGYgc2VydmljZR8GBQI2Mx8HBVtodHRwOi8vd3d3LnNzdGFmZnMuZ292LnVrL3lvdXJfc2VydmljZXMvZGlyZWN0X3NlcnZpY2VzL2JlbmVmaXRzL2JlbmVmaXRzX3NlbGZfc2VydmljZS5hc3B4HwhoHwkLKwQAHwoFMGh0dHA6Ly93d3cuc3N0YWZmcy5nb3YudWsvaW1hZ2VzL2J1bGxldFdoaXRlLmdpZmRkDxQrAQZmZmZmZmYWAQVzVGVsZXJpay5XZWIuVUkuUmFkTWVudUl0ZW0sIFRlbGVyaWsuV2ViLlVJLCBWZXJzaW9uPTIwMTEuMi45MTUuMzUsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNGQWDGYPDxYMHwUFGkNhbGN1bGF0ZSBIb3VzaW5nIEJlbmVmaXQgHwYFAjExHwcFWWh0dHA6Ly93d3cuc3N0YWZmcy5nb3YudWsveW91cl9zZXJ2aWNlcy9kaXJlY3Rfc2VydmljZXMvYmVuZWZpdHMvYmVuZWZpdHNfY2FsY3VsYXRvci5hc3B4HwhoHwkLKwQAHwoFMGh0dHA6Ly93d3cuc3N0YWZmcy5nb3YudWsvaW1hZ2VzL2J1bGxldFdoaXRlLmdpZmRkAgEPDxYMHwUFHkZpbmQgb3V0IGFib3V0IEhvdXNpbmcgQmVuZWZpdB8GBQIxMh8HBVVodHRwOi8vd3d3LnNzdGFmZnMuZ292LnVrL3lvdXJfc2VydmljZXMvZGlyZWN0X3NlcnZpY2VzL2JlbmVmaXRzL2hvdXNpbmdfYmVuZWZpdC5hc3B4HwhoHwkLKwQAHwoFMGh0dHA6Ly93d3cuc3N0YWZmcy5nb3YudWsvaW1hZ2VzL2J1bGxldFdoaXRlLmdpZmRkAgIPDxYMHwUFIkZpbmQgb3V0IGFib3V0IGNvdW5jaWwgdGF4IGJlbmVmaXQfBgUCMTMfBwVVaHR0cDovL3d3dy5zc3RhZmZzLmdvdi51ay95b3VyX3NlcnZpY2VzL2RpcmVjdF9zZXJ2aWNlcy9iZW5lZml0cy9ob3VzaW5nX2JlbmVmaXQuYXNweB8IaB8JCysEAB8KBTBodHRwOi8vd3d3LnNzdGFmZnMuZ292LnVrL2ltYWdlcy9idWxsZXRXaGl0ZS5naWZkZAIDDw8WDB8FBRRGaW5kIHVzZWZ1bCBjb250YWN0cx8GBQIxNB8HBV5odHRwOi8vd3d3LnNzdGFmZnMuZ292LnVrL3lvdXJfc2VydmljZXMvZGlyZWN0X3NlcnZpY2VzL2JlbmVmaXRzL3VzZWZ1bF9jb250YWN0c19iZW5lZml0cy5hc3B4HwhoHwkLKwQAHwoFMGh0dHA6Ly93d3cuc3N0YWZmcy5nb3YudWsvaW1hZ2VzL2J1bGxldFdoaXRlLmdpZmRkAgQPDxYMHwUFFFJlcG9ydCBCZW5lZml0IEZyYXVkHwYFAjE1HwcFU2h0dHA6Ly93d3cuc3N0YWZmcy5nb3YudWsveW91cl9zZXJ2aWNlcy9kaXJlY3Rfc2VydmljZXMvYmVuZWZpdHMvYmVuZWZpdF9mcmF1ZC5hc3B4HwhoHwkLKwQAHwoFMGh0dHA6Ly93d3cuc3N0YWZmcy5nb3YudWsvaW1hZ2VzL2J1bGxldFdoaXRlLmdpZmRkAgUPDxYMHwUFHkxvZ2luIHRvIEJlbmVmaXRzIFNlbGYgc2VydmljZR8GBQI2Mx8HBVtodHRwOi8vd3d3LnNzdGFmZnMuZ292LnVrL3lvdXJfc2VydmljZXMvZGlyZWN0X3NlcnZpY2VzL2JlbmVmaXRzL2JlbmVmaXRzX3NlbGZfc2VydmljZS5hc3B4HwhoHwkLKwQAHwoFMGh0dHA6Ly93d3cuc3N0YWZmcy5nb3YudWsvaW1hZ2VzL2J1bGxldFdoaXRlLmdpZmRkAgUPD2QPEBYBZhYBFgIeDlBhcmFtZXRlclZhbHVlZBYBAgNkZBgCBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBQUiVGVtcGxhdGUkQXV0bzIzMzJJZDMxJFJhZENvbWJvQm94MQUgVGVtcGxhdGUkQXV0bzIzMzJJZDMxJFJhZEJ1dHRvbjEFJFRlbXBsYXRlJEF1dG8yMzQzNTM0ZDMxJFJhZFRhYlN0cmlwMQUlVGVtcGxhdGUkQXV0bzIzNDM1MzRkMzEkUmFkTXVsdGlQYWdlMQUgVGVtcGxhdGUkQXV0bzIzNDM1MzRkMzEkUmFkTWVudTEFIlRlbXBsYXRlJEF1dG8yMzMySWQzMSRSYWRDb21ib0JveDEPFCsAAmVlZNFRrz6T0KNOQjX9VbAhABF7Rmso" />
+
+
+<script src="/ScriptResource.axd?d=x-JwgX-A7Qi9nLbk2IaqWAFxd0xbe-Dwv_s8NepZTQsL0pQHtsNFwSxKO0LXEbhr-9JB8FjWXe8geUlBCOFW80eFRlrWSpFrxH0JWfQEnGB8wgxutBPyZzO9Wm1qooniBthF3weCIKMEBWPmZMg5fB85yhk1&amp;t=2e2045e2" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=5Lif3pBMBycyP32UUgU9YO0H_daxm00pFa-OUbWWQdM4v8zn1_hmrymMBn2vXJXqm6SCVRifu4nVoW7qTH2lo278IBYmtMKxKF7HRSarpO-exj9yfYiAKtOnmbLVso0em1anAA2&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=aXGJ0NNRVY5FQt__bRFQAJAyZyq6_RTGo0t6sDnHIOZV42UD0aLzO1Og9wXRbWsPdE4VAGqdg3PJv3R1StAyLMfPNq6mk0ZtIVVEzRRwJjtWLbxCIEynorRX8JwnjFebEOVCZA2&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=Q2JjoeeD9cD3KcN9HivoyvUkPtXS4OdVuNO0IbS_bXaq_X3joubIEMGd6HCI83I6D2iYtBl47y1tSeIdiZp4vQxJcR-9yPeBdD7Rdjsix1IYrGsGFGgRkx545h4l9rG4VVunbA2&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=szPIEqWDsWjCbcTafVIe1jovbTqjigmKO5psQQNl_F3K8i6JTvJRC17Gs4H60FZAzmG-ozSpV3ziD2BTPOow8BofdMTRT5mNDZoIJ4gsn8Wzmgyk0NLHXUO67HRn88UDzEu8Gw2&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=HL42epNJSaZ7fxw9D_cGUi7NlWIUIasu7dmedUxNRWaCfLt1sLy27wgutL2bYEgB4Pyd28netuCmulBHbAPMAAzJBbNktL_rL_Gxd3bUs178CZypmSj8nJNwXe9nMATnldnATiY65MxzD_rg1eXSumTef0s1&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=kaqAv0Jo9hsskHiDfnNEYFKY4Qxft04WP1bZYQmkbY5-7z96Wb8QhEPqVbz78rNSMSYKL42Rf1VngFw8oUVkHL1cQfnvnznCprtf2irYqeQWRA7y1ifyc615aK_LxyjUojcKgHM1Z6_wYdixU45CcobjXlM1&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=T3vU6EcfJt5eU00kIwUUuw5bCyYUPv1rwCthTaXGUAbOKbqVKE9XZIndBz2mUGC8asOzzqFHJYacTqbzsFwor5xqJH9PzpZe8PCnALvgiDQu4Nn9DsF-JSnCQKPaJlmDSU1GBpTVfBEIhI5CodQk1GkAsBw1&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=tFer06KhfMji7vJlde3DMKaU3MDvaAwkbmFV_AB3lgI-VQIZfHYrVWtq-foshhCE8ZR3KVzwvuS5H2ttHK95_HdlSd_neBSWY0XVe7YYlAHTZtwReiRScp4KTXTiUxIogQND4g2&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=VtENuXnsW5MnKJqnwgnETpe1rdOlPlJd_MLE6HWNyFj0j6oMhBZw86eWeXx9ug56mEsbHILkLW4GEER8MFw18HMQMw1hP-rYmdGFF4f5sANj-1uqp21iM6osx1qXzdUFqNDmodaCXQmMrih_AiKJCpL1Kdk1&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=AdDJaVDh2gwU7JEA0xA7csAokftsYNBpYZIzhrTpRCyzDXOH2G05lRYXZ4c44rEcZwiQjQK3ZUn5KIuQ4XDGPelspfbm13n754QR1HwFINe-ixtB5NkvkikIi4H6zANAHO7yvbTZ8UM7T77HI2Lqysxp0VA1&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=bujlSNaggzP0YWZJf1y-FzjOiWSod_E0XG3lZnzishl54-d5uirIZ6Jj2ev7f9wNwsf9c8pXosop7DcInK6geRerbg7ISD75WF7ZUth6PIX752vdc8Ca7sbQaavr1WkUhs0vyr98TqZ40i2YnsNiTyQMovaOAarvBnsRUbu2-WCZzy7T0&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<script src="/ScriptResource.axd?d=mF3Mi6gzIPtUpjs079jhWB4ljtW8jKxOtHnedfnqhWKw9KD8JJ5xUCgrZZBPXYWShi73vJFwZ2UBWWrV4u0aGphcvxMi5NP0fiKBetTydZlXax3q6XvDddTm4XGg6GMHEZOG3A2&amp;t=ffffffffbb8f054a" type="text/javascript"></script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAKp5/nrAwLRtL/YAQL82/6sDwLRtL/YAar6fwsbAbZjnwbIrggEVXfGn0j1" />
+
+<div id="searchtxt">
+</div>
+<div id="search"> 
+
+	<style type="text/css">
+        .style1
+        {
+            font-family: Verdana;
+        }
+    </style>
+
+	<!-- 2011.2.915.35 --><div id="Template_Auto2332Id31_RadAjaxManager1SU">
+	<span id="Template_Auto2332Id31_RadAjaxManager1" style="display:none;"></span>
+</div>
+
+	<div id="Template_Auto2332Id31_RadComboBox1" class="RadComboBox RadComboBox_Default" style="display:none;"><i><font face="Verdana" size="4">
+	<table summary="combobox" style="border-width:0;border-collapse:collapse;width:100%">
+		<tr>
+			<td style="width:100%;" class="rcbInputCell rcbInputCellLeft"><input name="Template$Auto2332Id31$RadComboBox1" type="text" class="rcbInput rcbEmptyMessage" id="Template_Auto2332Id31_RadComboBox1_Input" value="I'm looking for..." title="Search box" style="font-style:italic;font-family:Verdana;font-size:Medium;" /></td>
+			<td class="rcbArrowCell rcbArrowCellRight"><a id="Template_Auto2332Id31_RadComboBox1_Arrow" style="overflow: hidden;display: block;position: relative;outline: none;">select</a></td>
+		</tr>
+	</table>
+	<div class="rcbSlide" style="z-index:6000;"><div id="Template_Auto2332Id31_RadComboBox1_DropDown" class="RadComboBoxDropDown RadComboBoxDropDown_Default " style="display:none;"><div id="Template_Auto2332Id31_RadComboBox1_Header" class="rcbHeader">
+            <span class="style1"><em>Suggested Tasks:</em></span>
+        </div><div class="rcbScroll rcbWidth" style="height:200px;width:100%;"></div><div class="rcbMoreResults" id="Template_Auto2332Id31_RadComboBox1_MoreResultsBox"><a id="Template_Auto2332Id31_RadComboBox1_MoreResultsBoxImage">select</a><span></span></div></div></div><input id="Template_Auto2332Id31_RadComboBox1_ClientState" name="Template_Auto2332Id31_RadComboBox1_ClientState" type="hidden" />
+</font></i></div><noscript>
+	<div style="display:inline;">
+		<select name="ComboBox_RadComboBox1" id="ComboBox_RadComboBox1" title="Search box">
+
+		</select>
+	</div>
+</noscript>
+<a id="Template_Auto2332Id31_RadButton1" class="RadButton RadButton_Default rbSkinnedButton" href="javascript:void(0)" style="position:absolute; top:0px; left:341px;"><input class="rbDecorated" type="submit" name="Template$Auto2332Id31$RadButton1_input" id="Template_Auto2332Id31_RadButton1_input" value="Find" /><input id="Template_Auto2332Id31_RadButton1_ClientState" name="Template_Auto2332Id31_RadButton1_ClientState" type="hidden" /></a>
+
+	
+     
+
+ </div>
+
+<div id="search1"><img src="http://www.sstaffs.gov.uk/images/newsite/searchlogo.gif" alt="Search our website"  /></div>
+
+<div id="HorlinksSub">
+     	
+    <strong>You are here:</strong> 
+	
+		<a href="/default.aspx" title="Home Page">Home Page</a>
+	
+&nbsp;&gt;&nbsp;
+		<a href="/your_services.aspx" title="Your services">Your services</a>
+	
+&nbsp;&gt;&nbsp;
+		<a href="/your_services/direct_services.aspx" title="Direct Services">Direct Services</a>
+	
+&nbsp;&gt;&nbsp;
+		<a href="/your_services/direct_services/benefits.aspx" title="Benefits">Benefits</a>
+	
+&nbsp;&gt;&nbsp;
+		<a href="/your_services/direct_services/benefits/housing_benefit.aspx" title="Housing Benefit">Housing Benefit</a>
+	
+&nbsp;&gt;&nbsp;
+		<a href="/your_services/direct_services/benefits/housing_benefit/new_claim.aspx" title="New Claim">New Claim</a>
+	
+
+  </div> 
+
+   <div id="globalnav"> 
+    
+
+  
+  <a href="/system_pages/top_menu/your_council.aspx" title="Your Council">Your Council</a> 
+  
+
+  &nbsp;|&nbsp; 
+  
+  <a href="/system_pages/top_menu/open_council.aspx" title="Open Council">Open Council</a> 
+  
+
+  &nbsp;|&nbsp; 
+  
+  <a href="/system_pages/top_menu/accessibility.aspx" title="Accessibility">Accessibility</a> 
+  
+
+  &nbsp;|&nbsp; 
+  
+  <a href="/system_pages/top_menu/site_map.aspx" title="Site map">Site map</a> 
+  
+
+  &nbsp;|&nbsp; 
+  
+  <a href="/system_pages/top_menu/contact_us.aspx" title="Contact us">Contact us</a> 
+  
+
+  </div>
+
+<div id="masthead">
+ 
+  <div id="pageNavSub">
+
+<div id="SubTasks">
+
+<style type="text/css">
+    
+.RadMenu_Default
+{
+	font: normal 12px/23px "Segoe UI", Arial, sans-serif;
+	color: #000;
+	text-decoration: none;
+}
+
+.RadMenu
+{
+	white-space:nowrap;
+	float:left;
+	position:relative;
+    z-index /*\**/: 7000\9; /* IE8 hasLayout fix */
+}
+
+.RadMenu_Default
+{
+	font: normal 12px/23px "Segoe UI", Arial, sans-serif;
+	color: #000;
+	text-decoration: none;
+}
+
+.RadMenu
+{
+	white-space:nowrap;
+	float:left;
+	position:relative;
+    z-index /*\**/: 7000\9; /* IE8 hasLayout fix */
+}
+
+.RadMenu_Default .rmRootGroup
+{
+	border: 1px solid #828282;
+	background-repeat: repeat-x;
+	background-position: 0 -408px;
+	background-color: #e6e6e6;
+}
+
+.RadMenu_Default .rmRootGroup
+{
+	background-image: url('mvwres://Telerik.Web.UI, Version=2011.3.1115.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4/Telerik.Web.UI.Skins.Default.Menu.rmSprite.png');
+	background-color: transparent;
+}
+
+.RadMenu .rmRootGroup
+{
+	margin:0;
+	padding:0;
+	position:relative;
+	left:0;
+	display: inline-block;
+}
+
+.RadMenu_Default .rmRootGroup
+{
+	border: 1px solid #828282;
+	background-repeat: repeat-x;
+	background-position: 0 -408px;
+	background-color: #e6e6e6;
+}
+
+.RadMenu_Default .rmRootGroup
+{
+	background-image: url('mvwres://Telerik.Web.UI, Version=2011.3.1115.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4/Telerik.Web.UI.Skins.Default.Menu.rmSprite.png');
+	background-color: transparent;
+}
+
+.RadMenu .rmRootGroup
+{
+	margin:0;
+	padding:0;
+	position:relative;
+	left:0;
+	display: inline-block;
+}
+
+.RadMenu .rmItem
+{
+	padding: 0;
+}
+
+.RadMenu .rmItem
+{
+	float:left;
+	position:relative;
+	list-style-image: none;
+	list-style-position:outside;
+	list-style:none;	
+}
+
+.RadMenu .rmItem
+{
+	padding: 0;
+}
+
+.RadMenu .rmItem
+{
+	float:left;
+	position:relative;
+	list-style-image: none;
+	list-style-position:outside;
+	list-style:none;	
+}
+
+								.rmItem { float: left !important; }
+								.rmItem { float: left !important; }
+
+.RadMenu .rmLink
+{
+	padding: 0 0 0 12px;
+	outline: 0;
+	float: left;
+}
+
+.RadMenu .rmLink
+{
+	width:auto;
+}
+
+.RadMenu .rmLink
+{
+	padding: 0 0 0 12px;
+	outline: 0;
+	float: left;
+}
+
+.RadMenu .rmLink
+{
+	width:auto;
+}
+
+.rmLink { width: auto !important; }
+								.rmLink { width: auto !important; }
+								.RadMenu .rmLeftImage
+{
+	margin: 4px 2px 0 -3px;
+	padding-bottom: 4px;
+}
+
+.RadMenu .rmLeftImage
+{
+	border:0;
+	float:left;
+}
+
+.RadMenu .rmLeftImage
+{
+	margin: 4px 2px 0 -3px;
+	padding-bottom: 4px;
+}
+
+.RadMenu .rmLeftImage
+{
+	border:0;
+	float:left;
+}
+
+.RadMenu .rmText
+{
+	padding-bottom: 1px;
+	float: left;
+}
+
+.RadMenu .rmText
+{
+	display:block;
+}
+
+.RadMenu .rmText
+{
+	padding-bottom: 1px;
+	float: left;
+}
+
+.RadMenu .rmText
+{
+	display:block;
+}
+
+.RadMenu_Default .rmLast .rmText
+{
+	background-repeat: no-repeat;
+	background-position: 0 500px;
+}
+
+.RadMenu_Default .rmLast .rmText
+{
+	background-repeat: no-repeat;
+	background-position: 0 500px;
+}
+
+</style>
+
+    <div id="Template_Auto2343534d31_RadTabStrip1" class="RadTabStrip RadTabStrip_Default RadTabStripTop_Default" style="margin-top: 0">
+	<div class="rtsLevel rtsLevel1">
+		<ul class="rtsUL"><li class="rtsLI rtsFirst rtsLast"><a class="rtsLink rtsSelected" href="#"><span class="rtsOut"><span class="rtsIn"><img class="rtsImg" alt="" src="http://www.sstaffs.gov.uk/Images/popular_selected.jpg" /><span class="rtsTxt">Top tasks in this area</span></span></span></a></li></ul>
+	</div><input id="Template_Auto2343534d31_RadTabStrip1_ClientState" name="Template_Auto2343534d31_RadTabStrip1_ClientState" type="hidden" />
+</div>
+    <div id="Template_Auto2343534d31_RadMultiPage1">
+	<div id="Template_Auto2343534d31_RadPageView1">
+		
+            <div id="Template_Auto2343534d31_RadMenu1" class="RadMenu RadMenu_Telerik rmSized" style="top: 0px; left: 0px">
+			<ul class="rmRootGroup rmVertical">
+				<li class="rmItem rmFirst"><a href="http://www.sstaffs.gov.uk/your_services/direct_services/benefits/benefits_calculator.aspx" class="rmLink rmRootLink"><img alt="" src="http://www.sstaffs.gov.uk/images/bulletWhite.gif" class="rmLeftImage" /><span class="rmText">Calculate Housing Benefit </span></a></li><li class="rmItem "><a href="http://www.sstaffs.gov.uk/your_services/direct_services/benefits/housing_benefit.aspx" class="rmLink rmRootLink"><img alt="" src="http://www.sstaffs.gov.uk/images/bulletWhite.gif" class="rmLeftImage" /><span class="rmText">Find out about Housing Benefit</span></a></li><li class="rmItem "><a href="http://www.sstaffs.gov.uk/your_services/direct_services/benefits/housing_benefit.aspx" class="rmLink rmRootLink"><img alt="" src="http://www.sstaffs.gov.uk/images/bulletWhite.gif" class="rmLeftImage" /><span class="rmText">Find out about council tax benefit</span></a></li><li class="rmItem "><a href="http://www.sstaffs.gov.uk/your_services/direct_services/benefits/useful_contacts_benefits.aspx" class="rmLink rmRootLink"><img alt="" src="http://www.sstaffs.gov.uk/images/bulletWhite.gif" class="rmLeftImage" /><span class="rmText">Find useful contacts</span></a></li><li class="rmItem "><a href="http://www.sstaffs.gov.uk/your_services/direct_services/benefits/benefit_fraud.aspx" class="rmLink rmRootLink"><img alt="" src="http://www.sstaffs.gov.uk/images/bulletWhite.gif" class="rmLeftImage" /><span class="rmText">Report Benefit Fraud</span></a></li><li class="rmItem rmLast"><a href="http://www.sstaffs.gov.uk/your_services/direct_services/benefits/benefits_self_service.aspx" class="rmLink rmRootLink"><img alt="" src="http://www.sstaffs.gov.uk/images/bulletWhite.gif" class="rmLeftImage" /><span class="rmText">Login to Benefits Self service</span></a></li>
+			</ul><script type="text/javascript">
+				Telerik.Web.UI.RadMenu._adjustRootItemWidth("Template_Auto2343534d31_RadMenu1");
+			</script>
+<input id="Template_Auto2343534d31_RadMenu1_ClientState" name="Template_Auto2343534d31_RadMenu1_ClientState" type="hidden" />
+		</div>
+      
+            <br />
+      
+        
+	</div><input id="Template_Auto2343534d31_RadMultiPage1_ClientState" name="Template_Auto2343534d31_RadMultiPage1_ClientState" type="hidden" />
+</div>
+
+    
+
+
+
+</div>
+
+
+
+<div id="pageNavcontentSub">
+
+
+
+<div id="sidemenu"><div class="head">Also in this section:</div><ul><li><a href="/your_services/strategic_services/commercial_development.aspx" title="Commercial Development" class="L0"><span class="hc" style="margin-left:0px;">&nbsp;</span>Commercial Development</a></li>
+<li><a href="/your_services/direct_services/council_tax.aspx" title="Council Tax" class="L0"><span class="hc" style="margin-left:0px;">&nbsp;</span>Council Tax</a></li>
+<li><a href="/your_services/direct_services/business_rates.aspx" title="Business rates" class="L0"><span class="hc" style="margin-left:0px;">&nbsp;</span>Business rates</a></li>
+<li><a href="/your_services/direct_services/benefits.aspx" title="Benefits" class="L0"><span class="hc" style="margin-left:0px;">&nbsp;</span>Benefits</a></li>
+<li><a href="/your_services/direct_services/benefits/housing_benefit.aspx" title="Housing Benefit" class="L1"><span class="hc" style="margin-left:6px;">&nbsp;</span>Housing Benefit</a></li>
+<li><a href="/your_services/direct_services/benefits/housing_benefit/new_claim.aspx" title="New Claim" class="L2sel"><span class="hc" style="margin-left:12px;">&nbsp;</span>New Claim</a></li>
+<li><a href="/your_services/direct_services/benefits/housing_benefit/new_claim/proof_required_for_submitting.aspx" title="Proof Required for Submitting a Claim" class="L2"><span class="nc" style="margin-left:18px;">&nbsp;</span>Proof Required for Submitting a Claim</a></li>
+<li><a href="/your_services/direct_services/benefits/housing_benefit/current_claim_change_of_circu.aspx" title="Current Claim (Change of Circumstances)" class="L2"><span class="nc" style="margin-left:12px;">&nbsp;</span>Current Claim (Change of Circumstances)</a></li>
+<li><a href="/your_services/direct_services/benefits/housing_benefit/appeals.aspx" title="Appeals" class="L2"><span class="nc" style="margin-left:12px;">&nbsp;</span>Appeals</a></li>
+<li><a href="/your_services/direct_services/benefits/housing_benefit/backdating.aspx" title="Backdating" class="L2"><span class="nc" style="margin-left:12px;">&nbsp;</span>Backdating</a></li>
+<li><a href="/your_services/direct_services/benefits/housing_benefit/overpayments.aspx" title="Overpayments" class="L2"><span class="nc" style="margin-left:12px;">&nbsp;</span>Overpayments</a></li>
+<li><a href="/your_services/direct_services/benefits/housing_benefit/local_housing_allowance.aspx" title="Local Housing Allowance" class="L2"><span class="hc" style="margin-left:12px;">&nbsp;</span>Local Housing Allowance</a></li>
+<li><a href="/your_services/direct_services/benefits/housing_benefit/non_dependants_201415.aspx" title="Non Dependants 2015.16" class="L2"><span class="hc" style="margin-left:12px;">&nbsp;</span>Non Dependants 2015.16</a></li>
+<li><a href="/your_services/direct_services/benefits/council_tax_support-1.aspx" title="Council Tax Support" class="L1"><span class="nc" style="margin-left:6px;">&nbsp;</span>Council Tax Support</a></li>
+<li><a href="/your_services/direct_services/benefits/benefit_fraud.aspx" title="Benefit Fraud" class="L1"><span class="hc" style="margin-left:6px;">&nbsp;</span>Benefit Fraud</a></li>
+<li><a href="/your_services/direct_services/benefits/discretionary_housing_payments.aspx" title="Discretionary Housing Payments" class="L1"><span class="nc" style="margin-left:6px;">&nbsp;</span>Discretionary Housing Payments</a></li>
+<li><a href="/your_services/direct_services/benefits/extended_payments.aspx" title="Extended Payments" class="L1"><span class="nc" style="margin-left:6px;">&nbsp;</span>Extended Payments</a></li>
+<li><a href="/your_services/direct_services/benefits/useful_contacts_benefits.aspx" title="Useful Contacts Benefits" class="L1"><span class="nc" style="margin-left:6px;">&nbsp;</span>Useful Contacts Benefits</a></li>
+<li><a href="/your_services/direct_services/benefits/benefits_calculator.aspx" title="Benefits Calculator" class="L1"><span class="nc" style="margin-left:6px;">&nbsp;</span>Benefits Calculator</a></li>
+<li><a href="/your_services/direct_services/benefits/selling_your_home.aspx" title="Selling your home" class="L1"><span class="nc" style="margin-left:6px;">&nbsp;</span>Selling your home</a></li>
+<li><a href="/your_services/direct_services/benefits/have_you_reached_pension_age.aspx" title="Have you reached Pension age?" class="L1"><span class="nc" style="margin-left:6px;">&nbsp;</span>Have you reached Pension age?</a></li>
+<li><a href="/your_services/direct_services/benefits/state_pension_equalization.aspx" title="State Pension Equalization" class="L1"><span class="nc" style="margin-left:6px;">&nbsp;</span>State Pension Equalization</a></li>
+<li><a href="/your_services/direct_services/benefits/self_service.aspx" title="Benefits Self Service" class="L1"><span class="hc" style="margin-left:6px;">&nbsp;</span>Benefits Self Service</a></li>
+<li><a href="/your_services/direct_services/benefits/benefit_forms.aspx" title="Benefit Forms" class="L1"><span class="nc" style="margin-left:6px;">&nbsp;</span>Benefit Forms</a></li>
+<li><a href="/your_services/direct_services/service_standards.aspx" title="Direct Service Standards" class="L0"><span class="nc" style="margin-left:0px;">&nbsp;</span>Direct Service Standards</a></li>
+<li><a href="/your_services/direct_services/national_fraud_initiative.aspx" title="National Fraud Initiative (NFI)" class="L0"><span class="nc" style="margin-left:0px;">&nbsp;</span>National Fraud Initiative (NFI)</a></li>
+<li><a href="/your_services/direct_services/housing.aspx" title="Housing" class="L0"><span class="hc" style="margin-left:0px;">&nbsp;</span>Housing</a></li>
+<li><a href="/your_services/direct_services/welfare_bens__fairer_charging.aspx" title="Welfare Bens &amp; Fairer Charging" class="L0"><span class="nc" style="margin-left:0px;">&nbsp;</span>Welfare Bens &amp; Fairer Charging</a></li>
+</ul></div>
+	<br/>
+
+  </div>
+	
+              
+  </div>
+
+
+<div id="headerr">
+ <a href="http://www.sstaffs.gov.uk">
+ <img alt="header" src="images/newsite/ssdclogo.gif"/>
+</a>
+
+</div>
+
+<!-- end masthead -->
+
+
+<div id="pagecellsub">
+
+  <div id="contentsub">
+      
+<p>&nbsp;</p>
+<div class="serviceContainer">
+<div class="ImmTextAlign_Justify">
+<h1 class="ImmTextAlign_Left ImmUnderline_On">How do I make a new
+claim?</h1>
+<p class="ImmTextAlign_Left">&nbsp;</p>
+<p class="ImmTextAlign_Left">It
+is&nbsp;possible&nbsp;to&nbsp;obtain an estimation of your
+entitlement to Housing Benefit/ Council Tax Support&nbsp;using our
+on-line&nbsp;<a href="/your_services/direct_services/benefits/benefits_calculator.aspx">Benefits
+Calculator</a>&nbsp;before submitting a claim.</p>
+</div>
+<div class="ImmTextAlign_Left"></div>
+<div class="ImmTextAlign_Left">&nbsp;</div>
+<h2 class="ImmTextAlign_Left">The easiest way to make an
+application is:</h2>
+<p class="ImmTextAlign_Left">To complete the on-line application
+form <a href="/your_services/direct_services/benefits/benefits_calculator.aspx" onclick="window.open(this.href, '_blank'); return false;" onkeypress="if (event.keyCode==13) {window.open(this.href, '_blank'); return false;}">Benefits Calculator</a>&nbsp;for
+Housing Benefit/ Council Tax Support.&nbsp;</p>
+<div class="ImmTextAlign_Left">&nbsp;</div>
+<h2 class="ImmTextAlign_Left">Alternatively you can:</h2>
+<ul>
+<li class="ImmTextAlign_Left">Request an application form by
+calling the Benefits Department on (01902) 696668,</li>
+<li class="ImmTextAlign_Left">Complete an application form
+available from our main council offices at Codsall or your local
+housing office,</li>
+<li class="ImmTextAlign_Left">Write to the address below&nbsp;and
+an&nbsp;application&nbsp;form will be issued to you to complete and
+return to:<br />
+<em><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Revenues &amp; Benefits
+Services Unit<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; South Staffordshire Council<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; P.O. Box 1644<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Wolverhampton<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WV8 1ZF</strong></em></li>
+</ul>
+<p class="ImmIndent_1">&nbsp;</p>
+<p>If you have any difficulties with filling in the form either
+call into our offices where a member of our <em>Solutions</em>
+staff will assist you or you can telephone our offices for
+assistance.</p>
+<div class="ImmTextAlign_Justify">&nbsp;</div>
+<div class="ImmTextAlign_Justify">It is important that you complete
+and return your application form as soon as possible, as any delay
+may result in you losing Housing Benefit or Council Tax
+Support&nbsp;entitlement. Housing Benefit/ Council Tax Support is
+generally&nbsp;paid from the Monday following receipt of the form
+either at&nbsp;the Council Offices or the&nbsp;Department for Work
+&amp; Pensions.</div>
+<div class="ImmTextAlign_Justify">&nbsp;</div>
+<div class="ImmTextAlign_Justify">Any supporting documentation
+should accompany the application form where possible. However this
+can be provided within one month from the date your claim is
+received.&nbsp;You&nbsp;must provide original documents as we
+cannot accept photocopies. Please click on <a href="/your_services/direct_services/benefits/housing_benefit/new_claim/proof_required_for_submitting.aspx">Proof required for submitting a claim</a>&nbsp;for
+further information.</div>
+<div class="ImmTextAlign_Justify">&nbsp;</div>
+<div class="ImmTextAlign_Justify">For Information on the Local
+Authority's new scheme <strong>Council Tax Support</strong>,
+<a href="/your_services/direct_services/council_tax/council_tax_support.aspx">click here</a>.</div>
+<div class="ImmTextAlign_Justify">&nbsp;</div>
+<h2><strong><strong>Contacts</strong></strong></h2>
+<div class="ImmTextAlign_Left">
+<div class="ImmTextAlign_Left">
+<p>&nbsp;</p>
+<div class="ImmTextAlign_Left"><a href="mailto:benefitsservices@sstaffs.gov.uk"></a></div>
+<div class="ImmTextAlign_Left">
+<table summary="text">
+<thead>
+<tr>
+<th scope="col">Housing Benefit &amp; Council Tax
+Support&nbsp;Enquiries&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<th scope="col">Revenues &amp;
+Benefits&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Telephone: (01902) 696668</td>
+<td>South Staffordshire Council</td>
+</tr>
+<tr>
+<td>Fax: (01902) 696630</td>
+<td>Wolverhampton Road</td>
+</tr>
+<tr>
+<td>Email: <a href="mailto:benefits@sstaffs.gov.uk">benefits@sstaffs.gov.uk</a></td>
+<td>Codsall</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>South Staffordshire</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>WV8 1PX</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="ImmTextAlign_Left">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div class="ImmTextAlign_Left"><strong>LGSL No:</strong> 69</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>     
+
+
+
+
+
+
+<div id="ratethispage">
+									<span class="text">Rate this page</span><span class="items"><a rel="nofollow,noindex" class="rating_item" href="http://www.sstaffs.gov.uk/Default.aspx?page=17786&amp;PageRate=13240&amp;Rating=1"><img src="star_off.gif" alt="Rate this page - 1 / 5" width="18" height="17"  /></a><a rel="nofollow,noindex" class="rating_item" href="http://www.sstaffs.gov.uk/Default.aspx?page=17786&amp;PageRate=13240&amp;Rating=2"><img src="star_off.gif" alt="Rate this page - 2 / 5" width="18" height="17"  /></a><a rel="nofollow,noindex" class="rating_item" href="http://www.sstaffs.gov.uk/Default.aspx?page=17786&amp;PageRate=13240&amp;Rating=3"><img src="star_off.gif" alt="Rate this page - 3 / 5" width="18" height="17"  /></a><a rel="nofollow,noindex" class="rating_item" href="http://www.sstaffs.gov.uk/Default.aspx?page=17786&amp;PageRate=13240&amp;Rating=4"><img src="star_off.gif" alt="Rate this page - 4 / 5" width="18" height="17"  /></a><a rel="nofollow,noindex" class="rating_item" href="http://www.sstaffs.gov.uk/Default.aspx?page=17786&amp;PageRate=13240&amp;Rating=5"><img src="star_off.gif" alt="Rate this page - 5 / 5" width="18" height="17"  /></a></span></div>
+	<script type="text/javascript"><!--
+									var rating = new ratingSelector("ratethispage","Rate this page","-1","3.02","386");
+								//-->
+								</script>
+
+<noscript></noscript>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <div id="siteInfo">
+
+
+  </div>
+
+
+
+<div id="BrowseServicesLabel">
+<b>Browse services</b>
+</div>
+<div id="BrowseServices">
+<a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/Default.aspx?page=21319">Animal Fouling </a><br />
+<a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/Default.aspx?page=13226">Benefits</a><br />
+<a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/environmental_services/grounds_maintenance/bereavement_services.aspx">Bereavement services</a><br />
+<a style="color: #ffffff; text-decoration: none;" href="https://www.southernstaffs-buildingcontrol.co.uk/">Building control</a><br />
+<a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/strategic_services/business_landing_page.aspx">Business</a><br />
+<a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/Planning/conservation-1.aspx">Conservation</a><br />
+<a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/Default.aspx?page=12689">Council tax</a><br />
+<a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/default.aspx?page=12695">Country park </a>
+</div>
+
+
+<div id="BrowseServices2">
+<p><a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/Default.aspx?page=13000">Customer services</a><br />
+  <a style="color: #ffffff; text-decoration: none;"  href="https://www.southernstaffs-buildingcontrol.co.uk/">Dangerous buildings</a><br />
+  <a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/Default.aspx?page=17361">Development plans</a><br />
+  <a style="color: #ffffff; text-decoration: none;"  href="http://www.sstaffs.gov.uk/Default.aspx?page=13945">Elections</a><br />
+  <a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/legal__p_h_protection/food_safety.aspx">Food safety</a><br />
+  <a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/environmental_services/grounds_maintenance.aspx">Grounds maintenance</a><br />
+  <a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/direct_services/housing/housing_operations-1/homeless.aspx">Homelessness / housing advice</a><br />
+<a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/direct_services/commercial_development/commercial_property.aspx">Industrial estates</a></p>
+</div>
+
+<div id="BrowseServices3">
+<p><a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/Default.aspx?page=13322">Leisure centres</a><br />
+  <a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/legal_and_public_health_prote/licensing.aspx">Licensing</a><br />
+  <a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/legal__p_h_protection/enforcement/planning_enforcement-1.aspx">Planning enforcement</a><br />
+  <a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/legal__p_h_protection/environmental_protection.aspx">Pollution control</a><br />
+  <a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/legal__p_h_protection/flytipping.aspx">Street cleansing / Flytipping</a><br />
+  <a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/non_council_services/public_transport.aspx">Transport</a><br />
+  <a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/leisure_services/tourism_south_staffordshire.aspx">Tourism</a><br />
+<a style="color: #ffffff; text-decoration: none;" href="http://www.sstaffs.gov.uk/your_services/environmental_services/waste_and_recycling.aspx">Waste and recycling</a></p>
+</div>
+
+
+<div id="AZIcon">
+
+    <div id="AZ1">
+
+ <div id="AZBox">
+	        <b>  A-Z of services </b>
+	           
+
+
+	       <table>
+	                <tr>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=1">A</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=2">B</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=3">C</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=4">D</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=5">E</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=6">F</a></td>
+   			    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=7">G</a></td>
+	                </tr>
+	                <tr>
+	                 
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=8">H</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=9">I</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=10">J</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=11">K</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=12">L</a></td>
+			    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=13">M</a></td>
+			    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=14">N</a></td>
+
+	                </tr>
+	                <tr>
+	                   
+	                   
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=15">O</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=16">P</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=17">Q</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=18">R</a></td>
+			    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=19">S</a></td>
+   			    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=20">T</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=21">U</a></td>
+	                </tr>
+	                <tr>
+	                    
+	                
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=22">V</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=23">W</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=24">X</a></td>
+			    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=25">Y</a></td>
+	                    <td><a href="http://www.sstaffs.gov.uk/default.aspx?page=20739&Letter=26">Z</a></td>
+	                </tr>
+	        
+	            </table>
+
+
+
+	    </div>
+
+</div>
+
+
+
+</div>
+
+ <div id="copyrighthome"><a style="color: #ffffff; " href="http://www.sstaffs.gov.uk/Default.aspx?page=313">accreditations</a> |  South Staffordshire Council 2012 | <a style="color: #ffffff; " href="http://www.sstaffs.gov.uk/Default.aspx?page=33">Privacy policy and Cookies</a> 
+</div>
+
+<div id="google_translate_element1">
+<a href="http://southstaffordshire.thegoodlife.uk.net/"><img src="http://www.sstaffs.gov.uk/images/newsite/goodlifewebsite.gif" alt="South Staffordshire Goodlife Website" width="136px" Height="25px" /></a>
+
+<a href="http://www.myplacemysay.co.uk"><img src="http://www.sstaffs.gov.uk/images/newsite/MyPlace_webBW.gif" alt="MyPlaceMySay Website" /></a>
+
+<a href="http://www.staffordshireprepared.gov.uk/Home.aspx"><img src="http://www.sstaffs.gov.uk/images/newsite/staffsprep.gif" alt="Staffordshire Prepared website" /></a>
+<a href="http://www.sstaffs.gov.uk/Home.aspx"><img src="http://www.sstaffs.gov.uk/images/newsite/i54bw.gif" alt="i54 information website" /></a>
+
+<a href="http://www.direct.gov.uk"><img src="http://www.sstaffs.gov.uk/images/newsite/directgov2.gif" alt="DirectGov" /></a>
+
+</div>
+
+<div id="cookielogo" style="position: fixed; right: 0; bottom: 0">
+<a href="http://www.sstaffs.gov.uk/Default.aspx?page=33" target="_blank"><img src="images/newsite/cookie.gif" alt="Cookie Usage" width="80" height="80"></a>
+</div>
+
+
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    gaTrack: true,
+    gaId: 'UA-6726888-1',
+    layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+  }, 'google_translate_element1');
+}
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+
+
+</div>
+
+</div>
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+Telerik.Web.UI.RadComboBox._preInitialize("Template_Auto2332Id31_RadComboBox1");Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadAjaxManager, {"_updatePanels":"","ajaxSettings":[],"clientEvents":{OnRequestStart:"",OnResponseEnd:""},"defaultLoadingPanelID":"","enableAJAX":true,"enableHistory":false,"links":[],"styles":[],"uniqueID":"Template$Auto2332Id31$RadAjaxManager1","updatePanelsRenderMode":0}, null, null, $get("Template_Auto2332Id31_RadAjaxManager1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadComboBox, {"_dropDownWidth":0,"_isAspNet35":true,"_isTemplated":true,"_lodIsAutomatic":true,"_maxHeight":200,"_minFilterLength":3,"_postBackReference":"__doPostBack(\u0027Template$Auto2332Id31$RadComboBox1\u0027,\u0027arguments\u0027)","_showDropDownOnTextboxClick":false,"_showMoreResultsBox":true,"_skin":"Default","_uniqueId":"Template$Auto2332Id31$RadComboBox1","allowCustomText":true,"clientStateFieldID":"Template_Auto2332Id31_RadComboBox1_ClientState","collapseAnimation":"{\"duration\":450}","emptyMessage":"I\u0027m looking for...","enableItemCaching":true,"enableLoadOnDemand":true,"expandAnimation":"{\"duration\":450}","filter":1,"highlightTemplatedItems":true,"itemData":[],"localization":"{\"AllItemsCheckedString\":\"All items checked\",\"ItemsCheckedString\":\"items checked\",\"CheckAllString\":\"Check All\"}","markFirstMatch":true}, null, null, $get("Template_Auto2332Id31_RadComboBox1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadButton, {"_postBackReference":"","clientStateFieldID":"Template_Auto2332Id31_RadButton1_ClientState","iconData":{},"imageData":{},"text":"Find","toggleStatesData":[],"uniqueGroupName":"","uniqueID":"Template$Auto2332Id31$RadButton1"}, null, null, $get("Template_Auto2332Id31_RadButton1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadTabStrip, {"_selectedIndex":0,"_skin":"Default","attributes":{},"clientStateFieldID":"Template_Auto2343534d31_RadTabStrip1_ClientState","multiPageID":"Template_Auto2343534d31_RadMultiPage1","selectedIndexes":["0"],"tabData":[{"imageUrl":"http://www.sstaffs.gov.uk/Images/popular.jpg","selectedImageUrl":"http://www.sstaffs.gov.uk/Images/popular_selected.jpg","_implPageViewID":"Template_Auto2343534d31_RadPageView1"}]}, null, null, $get("Template_Auto2343534d31_RadTabStrip1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMenu, {"_childListElementCssClass":null,"_flow":0,"_skin":"Telerik","attributes":{},"clientStateFieldID":"Template_Auto2343534d31_RadMenu1_ClientState","collapseAnimation":"{\"duration\":450}","expandAnimation":"{\"duration\":450}","itemData":[{"value":"11","navigateUrl":"http://www.sstaffs.gov.uk/your_services/direct_services/benefits/benefits_calculator.aspx"},{"value":"12","navigateUrl":"http://www.sstaffs.gov.uk/your_services/direct_services/benefits/housing_benefit.aspx"},{"value":"13","navigateUrl":"http://www.sstaffs.gov.uk/your_services/direct_services/benefits/housing_benefit.aspx"},{"value":"14","navigateUrl":"http://www.sstaffs.gov.uk/your_services/direct_services/benefits/useful_contacts_benefits.aspx"},{"value":"15","navigateUrl":"http://www.sstaffs.gov.uk/your_services/direct_services/benefits/benefit_fraud.aspx"},{"value":"63","navigateUrl":"http://www.sstaffs.gov.uk/your_services/direct_services/benefits/benefits_self_service.aspx"}]}, null, null, $get("Template_Auto2343534d31_RadMenu1"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMultiPage, {"clientStateFieldID":"Template_Auto2343534d31_RadMultiPage1_ClientState","pageViewData":[{"id":"Template_Auto2343534d31_RadPageView1"}],"selectedIndex":0}, null, null, $get("Template_Auto2343534d31_RadMultiPage1"));
+});
+//]]>
+</script>
+
+</form>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6726888-1");
+pageTracker._trackPageview();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,853 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="pHead"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	CTS calculator start - Entitledto
+</title><meta name="keywords" /><meta name="description" /><link id="canonicalRel" rel="canonical" href="http://www.entitledto.co.uk/calculator/entitlementcalculator.aspx" /><link rel="stylesheet" href="/e2sitecss/site104/assets/css/style.css?v20130621" type="text/css" media="screen, projection" />
+    <!--[if lte IE 6]><link rel="stylesheet" href="/e2sitecss/site104/assets/css/style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
+     <link rel="stylesheet" type="text/css" media="all" href="/e2sitecss/accordion.css?v20130621" /><link type="text/css" rel="stylesheet" href="/e2sitecss/e2common.css" /><link rel="stylesheet" type="text/css" href="/e2sitecss/site104/assets/css/e2override.css?v1313" /><link id="csse2calc" type="text/css" rel="stylesheet" href="/e2sitecss/hideaccordian.css" />
+    <script language="javascript" type="text/javascript">
+<!--
+    function clearField(obj) {
+        if ((obj.value == "0") || (obj.value == "0.0") || (obj.value == " "))
+            obj.value = "";
+    }
+
+    //-->
+    </script>
+    <script language="JavaScript" type="text/javascript">
+<!--
+    function initdata() {
+    }
+    // -->
+    </script>
+    <script type="text/javascript">
+<!--
+    function gotoPage(sPage) { window.location = sPage + ''; }
+        function gotoSitePage(sPage) { window.location = sPage + ''; }
+        // -->
+    </script>
+    <script language="JavaScript" type="text/javascript">
+<!--
+    function fnInit() {
+    }
+    // -->
+    </script>
+    
+    <script language="JavaScript" src="js/vfctfuncs.js?v1212" type="text/javascript"></script>
+    <script language="JavaScript" type="text/javascript">
+<!--
+    function validateCouple() {
+        changeShareHomeLabel();
+        if (document.getElementById("SectionContents_couple").value > 0) {
+            if (!isScreenReader()) {
+                document.getElementById("SectionContents_ResCareLbl").innerHTML = 'Are you or your partner in hospital/ residential care or a full-time student?';
+                document.getElementById("SectionContents_ImmigrationControlLbl").innerHTML = 'Are you or your partner a British or Irish citizen?';
+            }
+            document.getElementById("coupleMsgRow").className = 'e2display';
+            document.getElementById("SectionContents_coupleMsg").className = 'info';
+        }
+        else {
+            if (!isScreenReader()) {
+                document.getElementById("SectionContents_ResCareLbl").innerHTML = 'Are you in hospital/ residential care, a prisoner, on strike, living abroad or a full-time student?';
+                document.getElementById("SectionContents_ImmigrationControlLbl").innerHTML = 'Are you a British or Irish citizen?';
+            }
+            document.getElementById("SectionContents_coupleMsg").className='e2hide';
+            document.getElementById("coupleMsgRow").className='e2hide';
+        }
+    }
+
+    function validateResCare(oSrc, args) {
+        if (document.getElementById("SectionContents_ResCaredd").value > 0) {
+            if (args != null) args.IsValid = false;
+        }
+        else {
+            if (args != null) args.IsValid = true;
+        }
+    }
+
+
+    function validateImmigrationControl(oSrc, args) {
+        if (document.getElementById("SectionContents_ImmigrationControldd").value > 0) {
+            if (args != null) args.IsValid = true;
+        }
+        else {
+            if (args != null) args.IsValid = false;
+        }
+    }
+
+
+    function initdata() {
+        fnInit();
+        validateCouple();
+        validateResCare(null, null);
+        validateImmigrationControl(null, null);
+        if (document.getElementById("SectionContents_niSite").value != "1")
+                showhousingStatusInfo();
+            ShareWithChanged();
+            ValidatePostcodePrivateTenant();
+            numChildrenChanged();
+            FiveYearResidencyChanged();
+            //            Page_ClientValidate();
+        }
+
+        //  switches text related to council tax based on country
+
+        function showhousingStatusInfoxxxxxxxxxxxxx() {
+            if (document.getElementById("supportedExemptAccommodationInfoDiv") == null) return;
+            //           document.getElementById("supportedExemptAccommodationInfoDiv").className = 'e2hide';
+            document.getElementById("housingStatusInfoDiv").className = 'e2hide';
+            //           document.getElementById("housingStatusInfoRow").className = 'e2hide';
+
+            if (document.getElementById("SelectYourCouncilLnk") != null) document.getElementById("SelectYourCouncilLnk").className = 'e2display';
+
+            // DG: set in config to hide postcodes
+            if (document.getElementById("hidePostcode").value == "1") {
+                document.getElementById("PostcodeTrimRow").className = 'e2hide';
+                document.getElementById("Postcode").className = 'e2hide';
+                document.getElementById("PostcodeTrim").className = 'e2hide';
+                if (document.getElementById("housingStatus").value != "1") {
+                    document.getElementById("Postcode").value = '';
+                }
+            }
+            if (document.getElementById("housingStatus") != null) {
+                if (document.getElementById("housingStatusInfoRow") != null) {
+                    document.getElementById("trCurrentHBClaimQuestion").className = 'e2hide';
+
+                    if (document.getElementById("housingStatus").value == "1") {
+                        //                        document.getElementById("PostcodeTrimRow").className = 'e2display';
+                        //                        document.getElementById("Postcode").className = 'e2display';
+                        //                        document.getElementById("PostcodeTrim").className = 'e2display';
+                        if (document.getElementById("SelectYourCouncilLnk") != null) document.getElementById("SelectYourCouncilLnk").className = 'e2hide';
+                    } else if (document.getElementById("housingStatus").value == "3") {
+                        //                        document.getElementById("housingStatusInfoDiv").innerHTML = 'Out-of-work benefits can help meet some of the costs of your mortgage. But be aware that help with interest is restricted to 3.63%, capital repayments are not included, there is normally a limit on the loan of £200,000 and there is a two year time limit on some claims. We will calculate benefit entitlement including mortgage help but many claimants will need to make some payments themselves.';
+                        //                        document.getElementById("housingStatusInfoRow").className = 'e2display';
+                    } else if (document.getElementById("housingStatus").value == "2") {
+                        //                        document.getElementById("housingStatusInfoDiv").innerHTML = 'Out-of-work benefits can help meet some of the costs of your mortgage. But be aware that help with interest is restricted to 3.63%, capital repayments are not included, there is normally a limit on the loan of £200,000 and there is a two year time limit on some claims. We will calculate benefit entitlement including mortgage help but many claimants will need to make some payments themselves.';
+                        //                        document.getElementById("housingStatusInfoRow").className = 'e2display';
+                    } else if (document.getElementById("housingStatus").value == "6") {
+                        //                        document.getElementById("housingStatusInfoRow").className = 'e2display';
+                        //                        document.getElementById("supportedExemptAccommodationInfoDiv").className = 'info';
+                        //                        document.getElementById("housingStatusInfoDiv").className = 'e2hide';
+                    }
+        }
+    }
+}
+
+
+function showhousingStatusInfo() {
+    var housingStatusInner = '';
+    if (document.getElementById("housingStatusInfoDiv") == null) return;
+
+    document.getElementById("housingStatusInfoDiv").className = 'e2hide';
+    document.getElementById("housingStatusInfoRow").className = 'e2hide';
+
+    if (document.getElementById("SelectYourCouncilLnk") != null) document.getElementById("SelectYourCouncilLnk").className = 'e2display';
+
+    // DG: set in config to hide postcodes
+    if (document.getElementById("hidePostcode").value == "1") {
+        document.getElementById("PostcodeTrimRow").className = 'e2hide';
+        document.getElementById("Postcode").className = 'e2hide';
+        document.getElementById("PostcodeTrim").className = 'e2hide';
+        if (document.getElementById("housingStatus").value != "1") {
+            document.getElementById("Postcode").value = '';
+        }
+    }
+    if (document.getElementById("housingStatus") != null) {
+        if (document.getElementById("housingStatusInfoRow") != null) {
+            if (document.getElementById("housingStatus").value == "1") {
+                                                document.getElementById("PostcodeTrimRow").className = 'e2display';
+                                               document.getElementById("Postcode").className = 'e2display';
+                                               document.getElementById("PostcodeTrim").className = 'e2display';
+                        if (document.getElementById("SelectYourCouncilLnk") != null) document.getElementById("SelectYourCouncilLnk").className = 'e2hide';
+                    } else if (document.getElementById("housingStatus").value == "3") {
+                        housingStatusInner = "Out-of-work benefits can help meet some of the costs of your mortgage. But be aware that help with interest is restricted to 3.63%, capital repayments are not included, there is normally a limit on the loan of £200,000 and there is a two year time limit on some claims. We will calculate benefit entitlement including mortgage help but many claimants will need to make some payments themselves.";
+                    } else if (document.getElementById("housingStatus").value == "6") {
+                        housingStatusInner = "Please note that if you select this option we will assume that you live in accommodation that is exempt from the benefits cap and under occupation rules. In order to meet the ‘exempt’ definition the care, support and supervision you receive must be more than minimal. If you are in doubt please read our information on <a href=\"javascript:gotoHelpPage('exemptaccommodation');\">supported exempt accommodation</a> and/or check with your landlord. If your accommodation is not exempt please instead select ‘tenant – social and voluntary’.";
+                    }
+        }
+    }
+    if ((housingStatusInner != '')&&(!isScreenReader())) {
+        document.getElementById("housingStatusInfoDiv").className = 'info';
+        document.getElementById("housingStatusInfoRow").className = 'e2display';
+        document.getElementById("housingStatusInfoDiv").innerHTML = housingStatusInner;
+    }
+}
+
+
+
+
+
+
+function ShareWithChanged() {
+    var selectedValue = document.getElementById("SectionContents_sharesWithDrp").value;
+    var sharesWithMsgInner = '';
+    document.getElementById("sharesWithMsg").className = 'e2hide';
+    document.getElementById("sharesWithMsgRow").className = 'e2hide';
+
+    if (selectedValue > "-1") {
+        if (selectedValue == "0" || selectedValue == "1") {
+                    //            relative or friend
+                    if (document.getElementById("SectionContents_siteid").value == 57) {
+                    } else if (document.getElementById("SectionContents_siteid").value == 102) {
+                        sharesWithMsgInner = "Your benefit entitlement may be affected by rules on non-dependants.  Please tell us more about non-dependants who live with you on the next page";
+                    } else {
+                        sharesWithMsgInner = "Your benefit entitlement may be affected by rules on non-dependant deductions.  Please tell us more about non-dependants who live with you on the next page  ";
+                    }
+                } else if (selectedValue == "2" || selectedValue == "3") {
+                    //  If sub-tenant or lodger
+                    sharesWithMsgInner = "Please tell us about any income you receive from your sub-tenant or lodger on the 'income for benefits' page. ";
+                } else if (selectedValue == "4") {
+                    //  If joint tenant
+                    sharesWithMsgInner = "Please get more information on benefit rules for <a href=\"javascript:gotoHelpPage('jointtenants');\">joint tenants</a>";
+                    sharesWithMsgInner = "If you rent privately and share some or all of the facilities in the property then help through Housing Benefit is normally calculated using the shared accommodation rate. The calculator will provide the maximum rent you can claim for and work out your entitlement. However, if you are a joint tenant who rents from your local council or a housing association, and you are affected by under occupation rules, you will need to get specialist advice. This is because the calculator does not correctly calculate how the reduction in benefit caused by having a spare room is split between joint tenants.";
+                } else if (selectedValue == "5") {
+                    //  If other
+                    if (document.getElementById("SectionContents_siteid").value == 57) {
+                    } else {
+                        sharesWithMsgInner = "You may need further advice to calculate your benefits. If you continue through the calculator we will not include the effect that the people who share your home may have on your entitlement.  ";
+                        sharesWithMsgInner = "Your benefit entitlement may be affected by rules on non-dependants.  Please tell us more about non-dependants who live with you on the next page";
+                        sharesWithMsgInner = "If you share your home with someone who is not your partner or a dependant child you should try to find out how they are defined in terms of benefit rules. To get a correct calculation you should normally select one of the other options.";
+                    }
+                }
+}
+    if ((sharesWithMsgInner != '')&&(!isScreenReader())) {
+        document.getElementById("sharesWithMsg").className = 'info';
+        document.getElementById("sharesWithMsgRow").className = 'e2display';
+        document.getElementById("sharesWithMsg").innerHTML = sharesWithMsgInner;
+    }
+}
+
+function numChildrenChanged() {
+    changeShareHomeLabel();
+    if ((document.getElementById("SectionContents_haveChildrenUnder5Row")) != null) {
+                if (document.getElementById("SectionContents_numChildren").value > 0) {
+                    document.getElementById("SectionContents_haveChildrenUnder5Row").className = 'e2display';
+                }
+                else {
+                    document.getElementById("SectionContents_haveChildrenUnder5Row").className='e2hide';
+                }
+            }
+        }
+
+        function FiveYearResidencyChanged() {
+            if (document.getElementById("SectionContents_HasFiveYearResidency")!=null)
+            {
+                if (document.getElementById("SectionContents_HasFiveYearResidency").value=="False") {
+                    document.getElementById("SectionContents_FiveYearResidencyMsg").className = 'e2display';
+                    document.getElementById("SectionContents_FiveYearResidencyMsg").className = 'info';
+                }
+                else {
+                    document.getElementById("SectionContents_FiveYearResidencyMsg").className = 'info';
+                }
+            }
+        }
+
+
+        
+
+        function changeShareHomeLabel() {
+            if (isScreenReader()) return;
+            var txtA = 'Does anyone else live in your home?';
+            var txtB = 'Does anyone else live in your home? Do not include your partner';
+            var txtC = 'Does anyone else live in your home? Do not include your dependent children but do include grown-up children';
+            var txtD = 'Does anyone else live in your home? Do not include your partner or dependent children but do include grown-up children';
+
+            var sharesWithLbl = document.getElementById("SectionContents_sharesWithLbl");
+            sharesWithLbl.innerHTML = txtA;
+
+            if(document.getElementById("SectionContents_couple").value > 0)
+                sharesWithLbl.innerHTML = txtB;
+            if(document.getElementById("SectionContents_numChildren").value > 0)        
+                sharesWithLbl.innerHTML = txtC;
+            if(document.getElementById("SectionContents_couple").value > 0 && document.getElementById("SectionContents_numChildren").value > 0)
+                sharesWithLbl.innerHTML = txtD;
+        }
+
+         function ValidatePostcodePrivateTenant(src, args) {         
+             if (document.getElementById("housingStatus")==null) return;
+             if(document.getElementById("housingStatus").value == 1) {
+                     if (document.getElementById("Postcode").value == "") {
+                 if (args != null) args.IsValid = false;
+             }
+             else {
+                 if (args != null) args.IsValid = true;
+             }  
+         }
+         }
+         -->
+    </script>
+    
+<!--[if !IE 7]><!-->
+    <link type="text/css" rel="stylesheet" href="/e2sitecss/hidefields.css" />
+<!--<![endif]-->
+<!--[if IE 7]><!-->
+    <link type="text/css" rel="stylesheet" href="/e2sitecss/ie7hidefields.css" />
+<!--<![endif]-->
+  <style>
+  .e2display input { visibility:visible; width: 70px;}
+  </style>
+
+</head>
+<body id="frmBody" onload="initdata();">
+ <input name="ctl00$titleSet" type="hidden" id="titleSet" value="1" />
+
+    <div id="wrapper">
+
+        <div id="header">
+            <div id="headerContent">
+                <div id="headerLogo">
+                    <a href="http://www.rochford.gov.uk/">
+                        <img src="/e2sitecss/site104/assets/graphics/rochfordlogo.gif" alt="Rochford District Council" /></a>
+                </div>
+                <div id="headerInfo">
+                    <p style="padding-top:20px;padding-right:150px;"><a href="http://www.rochford.gov.uk/">Back to Rochford District Council's website</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- #header-->
+    <form method="post" action="./entitlementcalculator.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="SectionContents_ToolkitScriptManager1_HiddenField" id="SectionContents_ToolkitScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTIxOTU0Nzc0Mg8WAh4UcmFuZ2VWYWxWaWV3U3RhdGVLZXkFATAWAmYPZBYEAgEPZBYEAgQPFgQeBGhyZWYFQWh0dHA6Ly93d3cuZW50aXRsZWR0by5jby51ay9jYWxjdWxhdG9yL2VudGl0bGVtZW50Y2FsY3VsYXRvci5hc3B4HgdWaXNpYmxlZ2QCDA8WAh8BBRwvZTJzaXRlY3NzL2hpZGVhY2NvcmRpYW4uY3NzZAIDDxYCHgZvbmxvYWQFC2luaXRkYXRhKCk7FgICAw9kFggCAQ8WAh4JaW5uZXJodG1sBR5Db3VuY2lsIHRheCBzdXBwb3J0IGNhbGN1bGF0b3JkAgMPPCsACQEADxYEHghEYXRhS2V5cxYAHgtfIUl0ZW1Db3VudAIHZBYOZg9kFghmDxUBC1R4dG1lbnVDdXJyZAIDDw8WAh4LTmF2aWdhdGVVcmwFWn4vRW50aXRsZW1lbnRDYWxjdWxhdG9yLmFzcHg/c2lkPTEwNCZDVFlMQVVBPTIyVUwmaWRrPWZlMzI1MGIyLTFhOGItNDU0ZS1hMzA0LWVlM2IwYzQxYTEyYmQWAmYPFQEBMWQCBw8PFgIfBwVafi9FbnRpdGxlbWVudENhbGN1bGF0b3IuYXNweD9zaWQ9MTA0JkNUWUxBVUE9MjJVTCZpZGs9ZmUzMjUwYjItMWE4Yi00NTRlLWEzMDQtZWUzYjBjNDFhMTJiZBYCZg8VAghUeHRtZW51QxRDVFMgY2FsY3VsYXRvciBzdGFydGQCCw8PFgQeDUFsdGVybmF0ZVRleHQFFENUUyBjYWxjdWxhdG9yIHN0YXJ0HghJbWFnZVVybAU0L2Uyc2l0ZWNzcy9zaXRlMTA0L2Fzc2V0cy9ncmFwaGljcy9zdGVwX2N1cnJlbnQwLmdpZmRkAgEPZBYIZg8VAQpUeHRNZW51U2V0ZAIDDw8WBB8HZR4HRW5hYmxlZGhkFgJmDxUBATJkAgcPDxYEHwdlHwpoZBYCZg8VAglUeHRtZW51VEQZQWdlIGFuZCBEaXNhYmlsaXR5IFN0YXR1c2QCCw8PFgQfCAUZQWdlIGFuZCBEaXNhYmlsaXR5IFN0YXR1cx8JBTYvZTJzaXRlY3NzL3NpdGUxMDQvYXNzZXRzL2dyYXBoaWNzL1Byb2dyZXNzX1NwYWNlci5naWZkZAICD2QWCGYPFQEKVHh0TWVudVNldGQCAw8PFgQfB2UfCmhkFgJmDxUBATNkAgcPDxYEHwdlHwpoZBYCZg8VAglUeHRtZW51VEQUQmVuZWZpdHMgeW91IHJlY2VpdmVkAgsPDxYEHwgFFEJlbmVmaXRzIHlvdSByZWNlaXZlHwkFNi9lMnNpdGVjc3Mvc2l0ZTEwNC9hc3NldHMvZ3JhcGhpY3MvUHJvZ3Jlc3NfU3BhY2VyLmdpZmRkAgMPZBYIZg8VAQpUeHRNZW51U2V0ZAIDDw8WBB8HZR8KaGQWAmYPFQEBNGQCBw8PFgQfB2UfCmhkFgJmDxUCCVR4dG1lbnVURBRPdXQtb2Ytd29yayBiZW5lZml0c2QCCw8PFgQfCAUUT3V0LW9mLXdvcmsgYmVuZWZpdHMfCQU2L2Uyc2l0ZWNzcy9zaXRlMTA0L2Fzc2V0cy9ncmFwaGljcy9Qcm9ncmVzc19TcGFjZXIuZ2lmZGQCBA9kFghmDxUBClR4dE1lbnVTZXRkAgMPDxYEHwdlHwpoZBYCZg8VAQE1ZAIHDw8WBB8HZR8KaGQWAmYPFQIJVHh0bWVudVREC0NvdW5jaWwgVGF4ZAILDw8WBB8IBQtDb3VuY2lsIFRheB8JBTYvZTJzaXRlY3NzL3NpdGUxMDQvYXNzZXRzL2dyYXBoaWNzL1Byb2dyZXNzX1NwYWNlci5naWZkZAIFD2QWCGYPFQEKVHh0TWVudVNldGQCAw8PFgQfB2UfCmhkFgJmDxUBATZkAgcPDxYEHwdlHwpoZBYCZg8VAglUeHRtZW51VEQKTmV0IEluY29tZWQCCw8PFgQfCAUKTmV0IEluY29tZR8JBTYvZTJzaXRlY3NzL3NpdGUxMDQvYXNzZXRzL2dyYXBoaWNzL1Byb2dyZXNzX1NwYWNlci5naWZkZAIGD2QWCGYPFQEKVHh0TWVudVNldGQCAw8PFgQfB2UfCmhkFgJmDxUBATdkAgcPDxYEHwdlHwpoZBYCZg8VAglUeHRtZW51VEQHUmVzdWx0c2QCCw8PFgQfCAUHUmVzdWx0cx8JBTYvZTJzaXRlY3NzL3NpdGUxMDQvYXNzZXRzL2dyYXBoaWNzL1Byb2dyZXNzX1NwYWNlci5naWZkZAIFDw8WAh4EVGV4dAUUQ1RTIGNhbGN1bGF0b3Igc3RhcnRkZAILD2QWOAIJDw8WAh8LBQQyMlVMZGQCEw9kFgRmDxYCHhFSZXF1aXJlT3BlbmVkUGFuZWdkAgEPZBYEZg8PFgQeCENzc0NsYXNzBRJhY2NvcmRuSGRyU2VsZWN0ZWQeBF8hU0ICAmQWAgIBDxYCHwJoZAIBDw8WBB8NBQphY2NvcmRuQ250Hw4CAhYCHgVzdHlsZQUOZGlzcGxheTpibG9jazsWBAIBDw8WAh8CaGQWBAIBDxYEHhJCb3VuZExpdGVyYWxTaXRlSUQCaB8CaGQCAw9kFhQCAw8WAh8BBSFqYXZhc2NyaXB0OmdvdG9IZWxwUGFnZSgnQ291cGxlJylkAgUPFgIfAQUjamF2YXNjcmlwdDpnb3RvSGVscFBhZ2UoJ0NoaWxkcmVuJylkAgcPDxYCHwsFSSB3aGV0aGVyIGFueW9uZSBlbHNlIGxpdmVzIGluIHlvdXIgaG9tZSAoc3VjaCBhcyBhIHJlbGF0aXZlIG9yIGEgbG9kZ2VyKSBkZAIKDw8WAh8CZ2RkAgsPFgQfAQUoamF2YXNjcmlwdDpnb3RvSGVscFBhZ2UoJ0hvdXNpbmdTdGF0dXMnKR8CZ2QCDQ8PFgIfAmhkZAIPDxYCHwJoZAIRDxYCHwEFLGphdmFzY3JpcHQ6Z290b0hlbHBQYWdlKCdncm91cHNub3RpbmNsdWRlZCcpZAITDw8WAh8LBY4CUGxlYXNlIG5vdGU6IHRoZSBjYWxjdWxhdG9yJ3MgZXN0aW1hdGVzIGFyZSBiYXNlZCBvbiB0aGUgaW5mb3JtYXRpb24geW91IHN1cHBseSB0byBnaXZlIHlvdSBhbiBpZGVhIG9mIHlvdXIgcG90ZW50aWFsIGVudGl0bGVtZW50cy4gRm9yIG9yZ2FuaXNhdGlvbnMgdGhhdCBjYW4gcHJvdmlkZSBpbmRpdmlkdWFsIGFzc2lzdGFuY2Ugc2VlIDxhIGhyZWY9ImphdmFzY3JpcHQ6Z290b0hlbHBQYWdlKCdtb3JlYWR2aWNlJyk7Ij5tb3JlIGFkdmljZSBvbiBiZW5lZml0czwvYT4uZGQCFQ8PFgIfAmdkZAIDD2QWCAIDDxYCHwEFIWphdmFzY3JpcHQ6Z290b0hlbHBQYWdlKCdjb3VwbGUnKWQCBQ8WAh8BBSNqYXZhc2NyaXB0OmdvdG9IZWxwUGFnZSgnY2hpbGRyZW4nKWQCBw8WAh8BBSxqYXZhc2NyaXB0OmdvdG9IZWxwUGFnZSgnZ3JvdXBzbm90aW5jbHVkZWQnKWQCCQ8PFgIfAmdkZAIbDw8WAh8CaGRkAh0PZBYCAgEPDxYCHwJoFgIeB29uZm9jdXMFRXRyeXtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19MQVNURk9DVVMnKS52YWx1ZT10aGlzLmlkfSBjYXRjaChlKSB7fWQCIQ9kFgICAQ8QD2QWBB8RBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge30eCG9uY2hhbmdlBRF2YWxpZGF0ZUNvdXBsZSgpO2RkZAIlDw8WAh8LBUFOdW1iZXIgb2YgY2hpbGRyZW4gdW5kZXIgMjAgKHRoYXQgeW91IHJlY2VpdmUgQ2hpbGQgQmVuZWZpdCBmb3IpP2RkAicPZBYCAgEPEA9kFgQfEQVFdHJ5e2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdfX0xBU1RGT0NVUycpLnZhbHVlPXRoaXMuaWR9IGNhdGNoKGUpIHt9HxIFFW51bUNoaWxkcmVuQ2hhbmdlZCgpO2RkZAIpD2QWAgIBD2QWAgIBDxAPZBYCHxEFRXRyeXtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19MQVNURk9DVVMnKS52YWx1ZT10aGlzLmlkfSBjYXRjaChlKSB7fWQWAWZkAisPZBYCAgEPZBYCAgEPEA9kFgQfEQVFdHJ5e2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdfX0xBU1RGT0NVUycpLnZhbHVlPXRoaXMuaWR9IGNhdGNoKGUpIHt9HxIFE1NoYXJlV2l0aENoYW5nZWQoKTsPFgdmAgECAgIDAgQCBQIGFgcQBQJubwUCLTFnEAUIcmVsYXRpdmUFATBnEAUGZnJpZW5kBQExZxAFCnN1Yi10ZW5hbnQFATJnEAUGbG9kZ2VyBQEzZxAFDGpvaW50IHRlbmFudAUBNGcQBQVvdGhlcgUBNWdkZAIxDxYCHwJoFgICAQ9kFgICAQ8QD2QWBB8RBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge30fEgUYc2hvd2hvdXNpbmdTdGF0dXNJbmZvKCk7ZBYBZmQCMw8WAh8CaGQCNQ9kFgICAQ8PFgIeB0Rpc3BsYXkLKipTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLlZhbGlkYXRvckRpc3BsYXkCZGQCNw9kFgICAQ8QD2QWAh8RBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge31kZGQCOw9kFgICAQ8PFgQfEwsrBAIeDEVycm9yTWVzc2FnZQXeAUltcG9ydGFudDogVGhlIGNhbGN1bGF0b3IgZG9lcyBub3QgY2FsY3VsYXRlIGVudGl0bGVtZW50cyBhY2N1cmF0ZWx5IGZvciBhbnkgb2YgdGhlIGdyb3VwcyBsaXN0ZWQuIEZvciBtb3JlIGluZm9ybWF0aW9uIHNlZSA8YSBocmVmPSJqYXZhc2NyaXB0OmdvdG9IZWxwUGFnZSgnZ3JvdXBzbm90aW5jbHVkZWQnKTsiPmdyb3VwcyBub3QgaW5jbHVkZWQgaW4gdGhlIGNhbGN1bGF0b3IuPC9hPmRkAj0PZBYCAgEPEA9kFgIfEQVFdHJ5e2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdfX0xBU1RGT0NVUycpLnZhbHVlPXRoaXMuaWR9IGNhdGNoKGUpIHt9ZGRkAj8PZBYCZg9kFgICAQ8PFgIfFAXeAUltcG9ydGFudDogVGhlIGNhbGN1bGF0b3IgZG9lcyBub3QgY2FsY3VsYXRlIGVudGl0bGVtZW50cyBhY2N1cmF0ZWx5IGZvciBhbnkgb2YgdGhlIGdyb3VwcyBsaXN0ZWQuIEZvciBtb3JlIGluZm9ybWF0aW9uIHNlZSA8YSBocmVmPSJqYXZhc2NyaXB0OmdvdG9IZWxwUGFnZSgnZ3JvdXBzbm90aW5jbHVkZWQnKTsiPmdyb3VwcyBub3QgaW5jbHVkZWQgaW4gdGhlIGNhbGN1bGF0b3IuPC9hPmRkAkEPZBYCAgEPZBYCAgEPEA9kFgQfEQVFdHJ5e2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdfX0xBU1RGT0NVUycpLnZhbHVlPXRoaXMuaWR9IGNhdGNoKGUpIHt9HxIFG0ZpdmVZZWFyUmVzaWRlbmN5Q2hhbmdlZCgpO2QWAQIBZAJHD2QWAgIBDxAPZBYCHxEFRXRyeXtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19MQVNURk9DVVMnKS52YWx1ZT10aGlzLmlkfSBjYXRjaChlKSB7fQ8WA2YCAQICFgMQBQcyMDEzLzE0BQIxMGcQBQcyMDE0LzE1BQIxMWcQBQcyMDE1LzE2BQIxMmcWAQICZAJLD2QWAgIBDxAPZBYCHxEFRXRyeXtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19MQVNURk9DVVMnKS52YWx1ZT10aGlzLmlkfSBjYXRjaChlKSB7fWQWAWZkAk0PFgIeBWNsYXNzBQZlMmhpZGUWBGYPZBYCAgEPZBYCZg8PZBYCHxUFBmUyaGlkZWQCAQ9kFgQCAQ8PZBYEHxUFBmUyaGlkZR8RBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge31kAgMPDxYCHwJoZGQCTw8WBB8VBQZlMmhpZGUfAmcWAgIBD2QWAgIBDw8WAh8CZ2RkAlEPZBYCAgEPZBYCAgEPEA9kFgIfEQVFdHJ5e2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdfX0xBU1RGT0NVUycpLnZhbHVlPXRoaXMuaWR9IGNhdGNoKGUpIHt9ZBYBZmQCXQ8WAh8CZxYCZg9kFgICAQ8PFgIfCwVGSGVscCB3aXRoIENvdW5jaWwgVGF4IHdpbGwgYmUgY2FsY3VsYXRlZCBmb3IgUm9jaGZvcmQgRGlzdHJpY3QgQ291bmNpbGRkAl8PFgIfAmdkAmMPZBYCZg9kFgICAQ8PZBYCHxEFRXRyeXtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19MQVNURk9DVVMnKS52YWx1ZT10aGlzLmlkfSBjYXRjaChlKSB7fWQCZQ8PFgIfCwUIU3RhcnQgPj4WAh8RBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge31kAmcPD2QWAh8RBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge31kAmkPD2QWAh8RBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge31kGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBQ5jdGwwMCRMb2dpbkJ0bpm8gdQGJxWKHqSWOdM+q/gHYfNMjE4CUEEW8XCeAS+/" />
+</div>
+
+<script type='text/Javascript'>/* <![CDATA[ */ function gotoHelpPage(sId){window.location = 'http://www.rochfordcts.entitledto.co.uk/help/viewhelp.aspx?ePage=EntitlementCalculator&helpfile='+ sId; }; function gotoPage(sPage) { window.location = sPage + ''; } 
+function gotoSitePage(sPage) { window.location = sPage + '?sid=104&amp;ctyid=0'; } 
+var fontprcnt = 100;  
+/* ]]> */</script>
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"en-GB","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"£","NaNSymbol":"NaN","CurrencyNegativePattern":1,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"Infinity","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"AM","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":0,"FullDateTimePattern":"dd MMMM yyyy HH:mm:ss","LongDatePattern":"dd MMMM yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"dd MMMM","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"ShortestDayNames":["Su","Mo","Tu","We","Th","Fr","Sa"],"DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"IsReadOnly":true,"NativeCalendarName":"Gregorian Calendar","AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""]},"eras":[1,"A.D.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=VgG2mIdOCoSvvCeBAEwRJcEh3dNsLE7BBuaNYzd7o36VS_zI9WzSfPImxmwAt63dVyuDmK_WfLOJMJ6MOpPMD2MWjnZLTWlJhxamY4HRqJu4Hmov4WGD_TU_qnO8YoGeZMw2H-Gv3sQOntc8m_IyYg2&amp;t=3a1336b1" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/entitlementcalculator.aspx?_TSM_HiddenField_=SectionContents_ToolkitScriptManager1_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.51116.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3afd384f95-1b49-47cf-9b47-2fa2a921a36a%3a475a4ef5%3a5546a2b%3ad2e10b12%3aeffe2a26%3af3d989c9" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FEEC018B" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACT6br2qsSSSsQnhdhZK+6lN0MsWWCgtqPweTelaXcb7JkcBtiWCf0Rm/OEYXAV/FgwGex3hO03+TGyedInZoDNVXXYjhIx/d+8st1gR3gn51jHP3h5BC+N9yTlWFImg27C/DmLWafM8/qknruJBd3Iony2ehpGETzHLnQxzCe5Bzj9kaVel03OAimT/ieV1kPq95yUTy8ziJ0//j5rU5ioi4dlI/GN4PcsiIach+fJ62xlPCoVoGMGnkv4OU0CMGKmD7F2FTND+MZLF6zozrJVqQkCq9ldCmiKkpri7Uuhv0KRJBhBbmy4JkU9vFK8Ldhk/Wu9lSaA6GYq6pHapFcrFWLsXPT2rcT9wAx/eCW2OHY3fb4R7H03ugwzENnRO0LWNCmuDLxuO9wW9unIQ/fxcZ+3nsAy4K4Fw+CNk4pgfYoXCs0djMGwfB2ABphF0aGew+F0W3WsCNI2ztmyIZCeDo+GGe6muxDNQ+Wsn67sBcqU6UNrHbvOvZGAzOwYupWrQY1R5Uu4OCP3dy8nafOEB+0HXDNxjD5lHyXRaW4CC4BuSMXMCmuFzqkoKC/mfS72plH8OTdXenC4lKe5cDbCjf7WdfdcYxZkRGF6ArF8AFntqu7CLq80dWYX4wCw8fkIHhaj6wjUVf8bVfTXARQtDNQ+dEa6O9RVrBpkjKCu5otB6vv8xskI58sjbU1SrMpFFKt8vWA7brENJOdlUfnknMhnN9K/9IiY6LGIerSAChWk7AzymTVFVIghAg3k0LpEZST+PEw3DoHs+VgMVwVt3d9xA8RDcq192CRxhG3vGAA==" />
+</div>
+        <div id="content">
+            <div id="middleContent">
+                <h1 id="H1Title">Council tax support calculator</h1>
+                    <table id="dlTxtCalcSteps" cellspacing="0" style="border-collapse:collapse;">
+	<tr>
+		<td>
+                            <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td>
+                                        <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0" width="60" class='TxtmenuCurr'>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img1_0" border="0" width="4" height="46" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk_0" href="EntitlementCalculator.aspx?sid=104&amp;CTYLAUA=22UL&amp;idk=fe3250b2-1a8b-454e-a304-ee3b0c41a12b">
+<div class="Nummenu">1</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img2_0" border="0" width="4" height="70" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk1_0" href="EntitlementCalculator.aspx?sid=104&amp;CTYLAUA=22UL&amp;idk=fe3250b2-1a8b-454e-a304-ee3b0c41a12b">
+<div class='TxtmenuC'>CTS calculator start</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img3_0" border="1" width="2" height="42" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="dlTxtCalcSteps_imgProgress_0" src="/e2sitecss/site104/assets/graphics/step_current0.gif" alt="CTS calculator start" style="width:95px;" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td><td>
+                            <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td>
+                                        <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0" width="60" class='TxtMenuSet'>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img1_1" border="0" width="4" height="46" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk_1" class="aspNetDisabled">
+<div class="Nummenu">2</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img2_1" border="0" width="4" height="70" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk1_1" class="aspNetDisabled">
+<div class='TxtmenuTD'>Age and Disability Status</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img3_1" border="1" width="2" height="42" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="dlTxtCalcSteps_imgProgress_1" src="/e2sitecss/site104/assets/graphics/Progress_Spacer.gif" alt="Age and Disability Status" style="width:95px;" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td><td>
+                            <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td>
+                                        <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0" width="60" class='TxtMenuSet'>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img1_2" border="0" width="4" height="46" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk_2" class="aspNetDisabled">
+<div class="Nummenu">3</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img2_2" border="0" width="4" height="70" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk1_2" class="aspNetDisabled">
+<div class='TxtmenuTD'>Benefits you receive</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img3_2" border="1" width="2" height="42" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="dlTxtCalcSteps_imgProgress_2" src="/e2sitecss/site104/assets/graphics/Progress_Spacer.gif" alt="Benefits you receive" style="width:95px;" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td><td>
+                            <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td>
+                                        <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0" width="60" class='TxtMenuSet'>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img1_3" border="0" width="4" height="46" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk_3" class="aspNetDisabled">
+<div class="Nummenu">4</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img2_3" border="0" width="4" height="70" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk1_3" class="aspNetDisabled">
+<div class='TxtmenuTD'>Out-of-work benefits</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img3_3" border="1" width="2" height="42" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="dlTxtCalcSteps_imgProgress_3" src="/e2sitecss/site104/assets/graphics/Progress_Spacer.gif" alt="Out-of-work benefits" style="width:95px;" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td><td>
+                            <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td>
+                                        <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0" width="60" class='TxtMenuSet'>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img1_4" border="0" width="4" height="46" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk_4" class="aspNetDisabled">
+<div class="Nummenu">5</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img2_4" border="0" width="4" height="70" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk1_4" class="aspNetDisabled">
+<div class='TxtmenuTD'>Council Tax</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img3_4" border="1" width="2" height="42" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="dlTxtCalcSteps_imgProgress_4" src="/e2sitecss/site104/assets/graphics/Progress_Spacer.gif" alt="Council Tax" style="width:95px;" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td><td>
+                            <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td>
+                                        <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0" width="60" class='TxtMenuSet'>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img1_5" border="0" width="4" height="46" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk_5" class="aspNetDisabled">
+<div class="Nummenu">6</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img2_5" border="0" width="4" height="70" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk1_5" class="aspNetDisabled">
+<div class='TxtmenuTD'>Net Income</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img3_5" border="1" width="2" height="42" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="dlTxtCalcSteps_imgProgress_5" src="/e2sitecss/site104/assets/graphics/Progress_Spacer.gif" alt="Net Income" style="width:95px;" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td><td>
+                            <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td>
+                                        <table style="border-collapse:collapse;" cellpadding="0" cellspacing="0" border="0" width="60" class='TxtMenuSet'>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img1_6" border="0" width="4" height="46" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk_6" class="aspNetDisabled">
+<div class="Nummenu">7</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img2_6" border="0" width="4" height="70" /></td>
+                                                <td>
+                                                    <a id="dlTxtCalcSteps_calcLnk1_6" class="aspNetDisabled">
+<div class='TxtmenuTD'>Results</div>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <img src="images/spacer.gif" id="dlTxtCalcSteps_Img3_6" border="1" width="2" height="42" /></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="dlTxtCalcSteps_imgProgress_6" src="/e2sitecss/site104/assets/graphics/Progress_Spacer.gif" alt="Results" style="width:95px;" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td><td></td><td></td><td></td>
+	</tr>
+</table>
+                    <table id="e2CalcNavTbl" width="100%">
+                        <tr>
+                            <td>
+                                <h2>
+                                    <span id="HdrTitle">CTS calculator start</span></h2>
+                            </td>
+                            <td align="right">
+                                
+                                
+                            </td>
+                        </tr>
+                    </table>
+                    
+    
+    
+    
+    <input name="ctl00$SectionContents$siteid" type="hidden" id="SectionContents_siteid" value="104" />    
+    
+    
+    <input name="ctl00$SectionContents$hidePostcode" type="hidden" id="hidePostcode" value="1" />
+    <input name="ctl00$SectionContents$calcIdentifier" type="hidden" id="calcIdentifier" />
+    <input name="ctl00$SectionContents$isScreenReader" type="hidden" id="isScreenReader" value="0" />
+
+
+    <div id="contentmain">
+        <div id="SectionContents_MyAccordion" class="ASPAccordion">
+	<input type="hidden" name="ctl00$SectionContents$MyAccordion_AccordionExtender_ClientState" id="SectionContents_MyAccordion_AccordionExtender_ClientState" value="-1" /><div id="SectionContents" class="accordnHdrSelected">
+		
+                        
+                    
+	</div><div id="SectionContents" class="accordnCnt" style="display:block;">
+		
+
+<div id="SectionContents_e2adjustments">
+			
+
+    <span id="SectionContents_CTSMsg"></span>
+
+To work out your potential entitlement we need to know <a href="javascript:gotoHelpPage('couple')" id="SectionContents_hlpcouple2_elnk">whether you are single or in a couple</a>, how many children under 20 you have (if in doubt see <a href="javascript:gotoHelpPage('children')" id="SectionContents_hlpchildren2_elnk">when to include children</a>) and whether you share your home with anyone else such as a relative or lodger.
+<br /><br />
+If you are a full-time student, in hospital/ residential care, a prisoner or on strike, living abroad or not a British or Irish citizen our estimate may not be correct. If you fall into one of these categories please see <a href="javascript:gotoHelpPage('groupsnotincluded')" id="SectionContents_hlpgroupsnotincluded1_elnk">groups not included in the calculator</a>.
+<br /><br />
+<span id="SectionContents_LoadCalcAdjText">&nbsp;If you are returning to a calculation you started earlier please retrieve your <a href="javascript:gotoSitePage('loadcalculation.aspx')">saved calculation.</a></span>
+
+		</div>
+
+                    
+	</div>
+</div>
+        <table cellspacing="3" cellpadding="2" border="0" id="calcTable" width="100%">
+
+
+            <tr>
+                <td>
+                    <input type="hidden" name="ctl00$SectionContents$niSite" id="SectionContents_niSite" value="0" />
+                    
+                </td>
+                <td id="RefIdTD">
+                    
+                </td>
+
+            </tr>
+
+            <tr>
+                <td valign="top">
+                    <label for="SectionContents_couple" id="SectionContents_coupleLbl">Are you single or in a couple?</label>
+                </td>
+                <td id="coupleTD">
+                    <select name="ctl00$SectionContents$couple" id="SectionContents_couple" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" onchange="validateCouple();">
+	<option value="0">single&#160;</option>
+	<option value="1">couple&#160;</option>
+
+</select>
+                </td>
+
+            </tr>
+            <tr id="coupleMsgRow">
+                <td valign="top" colspan="2">
+                    <div id="SectionContents_coupleMsg">To work out your entitlement accurately we will need to ask questions about both you and your partner.</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="SectionContents_numChildren" id="SectionContents_numChildrenLbl">Number of children under 20 (that you receive Child Benefit for)?</label>
+                </td>
+                <td id="numChildrenTD">
+                    <select name="ctl00$SectionContents$numChildren" id="SectionContents_numChildren" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" onchange="numChildrenChanged();">
+	<option value="0">none&#160;</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+
+</select>
+                </td>
+
+            </tr>
+            
+            <tr id="SectionContents_sharesWithRow">
+	<td>
+                    <label for="SectionContents_sharesWithDrp" id="SectionContents_sharesWithLblParent"><span id="SectionContents_sharesWithLbl" class="childBlock">Does anyone else live in your home? Do not include your partner or dependent children but do include grown-up children</span></label></td>
+	<td id="sharesWithTD">
+                    <select name="ctl00$SectionContents$sharesWithDrp" id="SectionContents_sharesWithDrp" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" onchange="ShareWithChanged();">
+		<option selected="selected" value="-1">no</option>
+		<option value="0">relative</option>
+		<option value="1">friend</option>
+		<option value="2">sub-tenant</option>
+		<option value="3">lodger</option>
+		<option value="4">joint tenant</option>
+		<option value="5">other</option>
+
+	</select>
+                    
+                </td>
+</tr>
+
+            <tr id="sharesWithMsgRow" class="e2hide">
+	<td valign="top" colspan="2">
+                    <div id="sharesWithMsg" class="info"></div>
+                </td>
+</tr>
+
+            
+
+
+            
+            
+
+<tr>
+                <td>
+                    <label for="SectionContents_ImmigrationControldd" id="SectionContents_ImmigrationControlLblParent"><span id="SectionContents_ImmigrationControlLbl" class="childBlock">Are you or your partner a British or Irish citizen?</span></label></td><td id="ImmigrationControlTD">
+                    <select name="ctl00$SectionContents$ImmigrationControldd" id="SectionContents_ImmigrationControldd" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}">
+	<option value="0">no</option>
+	<option selected="selected" value="1">yes</option>
+
+</select>
+                </td>
+
+            </tr>
+
+
+
+
+<tr>
+                <td>
+                    <label for="SectionContents_ResCaredd" id="SectionContents_ResCareLblParent"><span id="SectionContents_ResCareLbl" class="childBlock">Are you in hospital/ residential care, a prisoner, on strike, living abroad or a full-time student?</span></label></td><td id="ResCareTD">
+                    <select name="ctl00$SectionContents$ResCaredd" id="SectionContents_ResCaredd" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}">
+	<option value="0">no</option>
+	<option value="1">yes</option>
+
+</select>
+ </td>
+</tr>
+                        
+
+            
+
+            
+ 
+            <tr>
+                <td>
+                    </td>
+    <td id="calcYearTD">
+        
+
+    </td>
+</tr>
+            <tr>
+                <td>
+                    </td>
+                <td id="countryIdTD">
+                    
+
+                </td>
+</tr>
+            <tr id="PostcodeTrimRow" class="e2hide">
+	<td>
+                    <label for="Postcode" id="SectionContents_Label1"><span id="PostcodeTrim" class="e2hide">Your postcode:</span></label></td>
+	<td id="postcodeTD">
+                    <input name="ctl00$SectionContents$Postcode" type="text" maxlength="10" id="Postcode" class="infld" class="e2hide" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" />
+                    </td>
+</tr>
+
+           <tr id="SectionContents_SelectYourCouncilMobileRow" class="e2hide">
+	<td id="SelectYourCouncilLnkTD0">&nbsp;</td>
+	<td id="SelectYourCouncilLnkTD">
+<a id="SectionContents_SelectYourCouncilLnkMobLnk" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SectionContents$SelectYourCouncilLnkMobLnk&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">(or select your local council)</a>            
+</td>
+</tr>
+            
+           
+<tr id="trPostcodePrivateTenantValidator">
+<td colspan="2">
+    
+</td></tr>
+
+            
+            
+            
+            <tr id="SectionContents_LALnkRow">
+	<td colspan="2">
+                    <span id="SectionContents_LALnk">Help with Council Tax will be calculated for Rochford District Council</span>
+                </td>
+</tr>
+
+<tr id="SectionContents_endValidationRow">
+	<td colspan="2"></td>
+</tr>
+
+            <tr>
+                <td colspan="2">
+                   <span id="SectionContents_ErrMessage" class="hiderow"></span>
+                </td>
+            </tr>
+            <tr id="SectionContents_newCalcNoPostcodeRow">
+	<td align="right" colspan="2" class="navTDR">
+                    
+                </td>
+</tr>
+
+            <tr>
+                <td align="right" colspan='2' class="navTDR">
+                    <input type="submit" name="ctl00$SectionContents$nextBtn" value="Start >>" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SectionContents$nextBtn&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="SectionContents_nextBtn" accesskey="N" title="Save and go to next page (Alt N)" class="btn" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" />
+                </td>
+            </tr>
+ <tr>
+                <td nowrap="nowrap" class="navTDL">
+                    
+                </td>
+                <td nowrap="nowrap" align='right' class="navTDR">
+                    
+                </td>
+            </tr>
+        </table>
+    </div>
+
+             
+            </div>
+            <!-- #content-->
+        </div>
+        <!-- #wrapper -->
+        <div id="footer">
+           <div id="footerContent">
+                <div id="footerCopyright">
+                    <p>Copyright entitledto Ltd 2015 | <a href="javascript:gotoHelpPage('disclaim')">Disclaimer</a></p>
+                </div>
+                <div id="footerLogo">
+                      <a href="http://www.entitledto.co.uk/advisercalculator/default.aspx?sid=104" target="_top">
+                        <img src="/e2sitecss/shared/assets/graphics/icon-white-adviser.png" id="Img2" alt="Login to Public Adviser" /></a>
+                  
+                     <input type="image" name="ctl00$LoginBtn" id="LoginBtn" title="Login" src="/e2sitecss/shared/assets/graphics/icon-white-staff.png" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$LoginBtn&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" style="vertical-align:top;" />
+                    
+                    <a href="http://www.entitledto.co.uk" target="_top">
+                        <img src="/e2sitecss/shared/assets/graphics/e2pb-white.png" id="Img4" alt="Powered by entitledto" /></a>
+                </div>
+            </div>
+        </div> 
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+window.setTimeout('DoFocus()', 1);
+    function DoFocus()
+    {
+        try {
+            document.getElementById('').focus();
+        } catch (ex) {}
+    }(function() {var fn = function() {$get("SectionContents_ToolkitScriptManager1_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.AccordionBehavior, {"ClientStateFieldID":"SectionContents_MyAccordion_AccordionExtender_ClientState","FramesPerSecond":40,"HeaderCssClass":"accordnHdr","HeaderSelectedCssClass":"accordnHdrSelected","SelectedIndex":-1,"id":"SectionContents_MyAccordion_AccordionExtender","suppressHeaderPostbacks":true}, null, null, $get("SectionContents_MyAccordion"));
+});
+//]]>
+</script>
+</form>
+        </div>
+        <!-- #footer -->  
+</body>
+</html>

@@ -1,0 +1,1452 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<title>Well-being directory </title>
+
+<meta name="description" content="	">
+<meta name="keywords" content="	">
+					
+<!--
+Paladin: Theme Stylesheets
+-----
+	Theme Requested	: internet-2014
+	Theme Delivered	: internet-2014
+	Theme Variant	: default
+-----
+-->
+
+	<link rel="shortcut icon" href="/paladin2/configuration/2.0.0.0032/themes/internet-2014/common/images/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/paladin2/configuration/2.0.0.0032/themes/internet-2014/common/images/apple-touch-icon.png" />
+	<link rel="stylesheet" type="text/css" href="/paladin2/configuration/2.0.0.0032/themes/internet-2014/variants/default/css/bootstrap.css" />
+
+	<link rel="stylesheet" type="text/css" href="/paladin2/configuration/2.0.0.0032/themes/internet-2014/variants/default/css/lccstyles.css" />
+<!--
+	<link rel="stylesheet" type="text/css" href="/paladin2/configuration/2.0.0.0032/themes/internet-2014/variants/default/css/responsive.css" />
+-->
+<script type="text/javascript" src="/paladin2/configuration/2.0.0.0032/themes/internet-2010/js/readspeaker/rs_embhl.js"></script>
+
+	<script src="/paladin2/configuration/2.0.0.0032/themes/internet-2014/common/js/modernizr.js"></script>
+<!--
+	<script src="/paladin2/configuration/2.0.0.0032/themes/internet-2014/common/js/jquery.js"></script>
+	<script src="/paladin2/configuration/2.0.0.0032/themes/internet-2014/common/js/bootstrap.min.js"></script>
+-->
+					
+						<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "ICRAonline v2.0" l gen true for "http://www.lancashire.gov.uk" r (nz 1 vz 1 lz 1 oz 1 cz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://www.lancashire.gov.uk"  r (n 0 s 0 v 0 l 0))'>
+<meta name="eGMS.accessibility" content="Double-A" scheme="eGMS.WCAG10">
+<meta name="DC.description" content="Search the Well-being Directory">
+<meta name="DC.language" content="eng" scheme="DCTERMS.ISO639-2">
+<meta name="DC.publisher" content="Lancashire County Council">
+<meta name="keywords" content="Well-being directory, Lancashire County Council, services, community services">
+<meta name="robots" content="nofollow">
+
+						<script type="text/javascript" src="/ACS/findExtOrg/wellbeingDir/global.js"></script>
+<script type="text/javascript" src="expBox.js"></script>
+
+<script type="text/javascript">
+	<!--	
+	var http_request;	
+	var objTextBox;
+	var objSuggestions;
+	var intCurrentSuggestion = 0;
+	var intCurrentSuggestionCount = 0;
+	var savedXmlResults = null;
+	// Get the height of a line of text in the suggestions box.  This is used for handling the scrollbar
+	var classAjaxSuggest_intHeightOfCharacters = classAjaxSuggest_TextHeight();
+	var classAjaxSuggest_intMaxSuggestionLines = 10;
+	
+	function classAjaxSuggest_TextHeight()
+	{
+		document.writeln('<div id="TestSuggestion" style="position:absolute;padding-top:1px;padding-bottom:1px;">Loading AJAX Data</div>');
+		objTestSuggestion = document.getElementById("TestSuggestion");
+		if (objTestSuggestion)
+		{
+			var thisHeight = objTestSuggestion.clientHeight;
+			objTestSuggestion.style.display = "none";
+			return thisHeight;
+		} 
+		else 
+			return 0;
+	}
+	
+	function classAjaxSuggest_onLoad()
+	{	
+		objTextBox = document.getElementById("strKeyword");
+		objSuggestions = document.getElementById("divSuggestions");
+		
+		if (objTextBox && objSuggestions)
+		{
+			objSuggestions.style.display = "none";
+		}		
+		classAjaxSuggest_hideSuggestions();
+		classAjaxSuggest_alignBox();
+		return;
+	}
+	
+	function classAjaxSuggest_hideSuggestions()
+	{
+		if (objSuggestions)
+		{
+			objSuggestions.style.display = "none";
+			document.getElementById("divSuggestionsContainer").scrollTop = 0;
+		}
+	}
+	
+	function classAjaxSuggest_alignBox()
+	{
+		if (objTextBox && objSuggestions)
+		{
+		   // Resize the suggestions box
+			var intWidth = parseInt(objTextBox.style.width.substr(0,objTextBox.style.width.length-2)) + 10;
+			//alert(intWidth.toString() + "px");
+			objSuggestions.style.width   = intWidth.toString() + "px";
+			var browserSpecificXOffset = 0;
+			var browserSpecificYOffset = 0;
+			var pageMarginXOffsetString = '';
+			var pageMarginYOffsetString = '';
+			var pageMarginXOffset = 0;
+			var pageMarginYOffset = 0;			
+			// Have to allow for page margins			
+			pageMarginXOffsetString = getStyleSetting('body', 'marginLeft');
+			pageMarginYOffsetString = getStyleSetting('body', 'marginTop');
+			
+			if (pageMarginXOffsetString != '')
+			{
+				pageMarginXOffset = parseInt(pageMarginXOffsetString.substr(0, pageMarginXOffsetString.length - 2));
+			}
+			if (pageMarginYOffsetString != '')
+			{
+				pageMarginYOffset = parseInt(pageMarginYOffsetString.substr(0, pageMarginYOffsetString.length - 2));
+			}
+			// Slight peculiarities between IE and FF for placement...
+			if (document.all) // Object only appears in IE
+			{
+				browserSpecificXOffset = 4;
+				browserSpecificYOffset = 30;
+				// If no page margins were specified, have to manually adjust to allow for IE's default page margins
+				if (pageMarginXOffsetString == '')
+				{
+					pageMarginXOffset = 21;//9; //changed to adjust the existing gap between the textbox and the suggestion div. Not tested on FF.
+				}
+				if (pageMarginYOffsetString == '')
+				{
+					pageMarginYOffset = 97;//16; //changed to adjust the existing gap between the textbox and the suggestion div. Not tested on FF.
+				}
+			}
+			else
+			{
+				browserSpecificXOffset = 5;
+				browserSpecificYOffset = 29;				
+				// If no page margins were specified, have to manually adjust to allow for FF's default page margins
+				if (pageMarginXOffsetString == '')
+				{
+					pageMarginXOffset = 9;
+				}
+				if (pageMarginYOffsetString == '')
+				{
+					pageMarginYOffset = 9;
+				}
+			}
+				
+		//	 objSuggestions.style.marginLeft = (findXPos(objTextBox) + browserSpecificXOffset - pageMarginXOffset) + "px";
+		//	 objSuggestions.style.marginTop = (findYPos(objTextBox) + browserSpecificYOffset - pageMarginYOffset) + "px";
+			 objSuggestions.style.marginLeft = (findXPos(objTextBox) - pageMarginXOffset - 5) + "px";
+			 objSuggestions.style.marginTop = (findYPos(objTextBox) - pageMarginYOffset - 27) + "px";
+		//	 objSuggestions.style.marginLeft = (findXPos(objTextBox)) + "px";
+		//	 objSuggestions.style.marginTop = (findYPos(objTextBox)) + "px";
+		//	 objSuggestions.style.marginLeft = "0px";
+		//	 objSuggestions.style.marginTop = "0px";
+		//	 objSuggestions.style.left = "0px";
+		//	 objSuggestions.style.top = "0px";
+			// objSuggestions.style.left = (findXPos(objTextBox) + browserSpecificXOffset - pageMarginXOffset) + "px";
+			// objSuggestions.style.top = (findYPos(objTextBox) + browserSpecificYOffset - pageMarginYOffset) + "px";
+				
+				
+			//	alert(objTextBox.style.height + ", " + findXPos(objTextBox));
+			//	objSuggestions.style.height="260px";
+			//	objSuggestions.style.overflow-y="scroll";
+			//	objSuggestions.style.overflow="auto";
+			//	objSuggestions.style.left = objSuggestions.style.left + objTextBox.style.left;
+			//	objSuggestions.style.top="-510px";
+			//	objSuggestions.style.left="-450px";
+				objSuggestions.style.top="0px";
+				objSuggestions.style.left="0px";
+			//	objSuggestions.style.top="-510px";
+				objSuggestions.style.left=(browserSpecificXOffset+5)+"px";
+				objSuggestions.style.top=(browserSpecificYOffset+20)+"px";
+		}
+	}
+	
+	function findXPos(obj)
+	{
+		var curleft = 0;
+		if (obj.offsetParent) {
+			do {
+				curleft += obj.offsetLeft;
+			} while (obj = obj.offsetParent);
+		}
+		return curleft;
+	}
+	
+	function findYPos(obj)
+	{
+		var curtop = 0;
+		if (obj.offsetParent) {
+			do {
+				curtop += obj.offsetTop;
+			} while (obj = obj.offsetParent);
+		}
+		
+		return curtop;
+	}
+
+	function getStyleSetting(theElement, theStyle)
+	{
+		var retVal = '';
+		var runString = '';
+		
+		runString = 'retVal = document.' + theElement + '.style.' + theStyle;
+		eval(runString);
+		
+		if (retVal == '')
+		{
+			var i = 0;
+			var j = 0;
+			
+			for (i = 0; i < document.styleSheets.length; i++)
+			{
+				// Slightly different for IE and FF
+				if (document.all)
+				{
+					for (j = 0; j < document.styleSheets[i].rules.length; j++)
+					{
+						if (document.styleSheets[i].rules[j].selectorText.toLowerCase() == theElement.toLowerCase())
+						{
+							runString = 'retVal = document.styleSheets[i].rules[j].style.' + theStyle;
+							eval(runString);
+							
+							// Don't break - there may be multiple, overlapping declarations - use the last one, that's
+							// the one the browser will use
+						}
+					}
+				}
+				else
+				{
+					for (j = 0; j < document.styleSheets[i].cssRules.length; j++)
+					{
+						//alert('\'' + document.styleSheets[i].cssRules[j].selectorText + '\'');
+						if (document.styleSheets[i].cssRules[j].selectorText != null &&
+							document.styleSheets[i].cssRules[j].selectorText.toLowerCase() == theElement.toLowerCase())
+						{
+							runString = 'retVal = document.styleSheets[i].cssRules[j].style.' + theStyle;
+							eval(runString);
+							
+							// Don't break - there may be multiple, overlapping declarations - use the last one, that's
+							// the one the browser will use
+						}
+					}
+				}
+			}
+		}
+		
+		return retVal;
+	}
+	
+	function classAjaxSuggest_clickItem(strText)
+	{
+		document.frmSearchForm.strKeyword.value = strText;		
+		classAjaxSuggest_hideSuggestions();
+		
+		
+		return false;
+	}
+	
+	function classAjaxSuggest_selectItem(listNumber)
+	{
+		var objItemContainer; 
+		
+		var objItemText = document.getElementById("divSelection" + listNumber);
+		if (objItemText)
+		{
+			//objTextBox.value = objItemText.title;
+			objTextBox.value = objItemText.value;
+			objTextBox.focus();
+			objTextBox.select();
+		}
+	
+		// loop over all suggestions and put to white background
+		for (j = 1; j <= intCurrentSuggestionCount; j++)
+		{
+			objItemContainer = document.getElementById("divSelection" + j);
+			if (objItemContainer)
+			{
+				objItemContainer.className = "item";
+			}
+		}
+	
+		// highlight current suggestion
+		objItemContainer = document.getElementById("divSelection" + listNumber);
+		if (objItemContainer)
+		{
+			objItemContainer.className = "item_hover";
+		}
+	}
+	
+	function classAjaxSuggest_makeSuggestions(e) 
+	{
+
+		// Get the height of a line of text in the suggestions box.  This is used for handling the scrollbar
+//		classAjaxSuggest_intHeightOfCharacters = classAjaxSuggest_TextHeight();
+//		alert(classAjaxSuggest_intHeightOfCharacters);
+//		alert('""');
+		
+		http_request = false;
+		
+		if (e.keyCode > 0)
+		{
+			var intKeyID = e.keyCode;
+		}
+		else
+		{
+			var intKeyID = e.which;
+		}
+		
+
+		// *********************************************************
+		// make sure that only A-Z and 0-9 are typed, or down arrow (40) or the backspace (8) or delete (46) keys
+		// *********************************************************
+		if ((intKeyID >= 65 && intKeyID <= 90) || (intKeyID >= 48 && intKeyID <= 57) || (intKeyID >= 96 && intKeyID <= 105) || (intKeyID == 40 && objSuggestions && objSuggestions.style.display == "none") || (intKeyID == 8) || (intKeyID == 46))
+		{
+			var searchText = document.frmSearchForm.strKeyword.value;
+			if (searchText == '' || 
+				(1 > 0 && searchText.length < 1))
+			{
+				classAjaxSuggest_hideSuggestions();
+				
+				// It's possible that this has happened because the user has previously typed more than 
+				// (classAjaxSuggest_intMinCharactersToTypeBeforeSuggestion) characters, but has then backspaced and
+				// gone back under the (classAjaxSuggest_intCharactersAfterWhichToCache) limit. If this is the case we
+				// need to erase the saved document, we'll have to create it again when we next show the box
+				savedXmlResults = null;
+				
+				return;
+			}
+			
+			
+			
+			
+	// txtAddress = '/ACS/findExtOrg/wellbeingDir/keywordsXmlAjax.asp?strKeyword='+searchText
+		
+	//alert( '/ACS/findExtOrg/wellbeingDir/keywordsXmlAjax.asp?strKeyword='+searchText
+		
+			var address = '/ACS/findExtOrg/wellbeingDir/keywordsXmlAjax.asp?strKeyword='+searchText
+;
+		
+			if (window.XMLHttpRequest) { // Mozilla, Safari,...
+				http_request = new XMLHttpRequest();
+				if (http_request.overrideMimeType) {
+					http_request.overrideMimeType('text/xml');
+				}
+			} else if (window.ActiveXObject) { // IE
+				try {
+					http_request = new ActiveXObject("Msxml2.XMLHTTP");
+				} catch (e) {
+					try {
+					http_request = new ActiveXObject("Microsoft.XMLHTTP");
+					} catch (e) {}
+				}
+			}
+		
+			if (!http_request) {
+	//			alert('AJAX is not enabled in this browser.');
+				return false;
+			}
+			
+			http_request.onreadystatechange = classAjaxSuggest_alertContents;
+	//		alert(address);
+			http_request.open('GET', address, true);
+			http_request.send(null);
+			
+		}
+		// Up arrow
+		else if (intKeyID == 38)
+		{
+			if (intCurrentSuggestion == 0) 
+			{
+				// nothing's been selected yet, so go to the end
+				intCurrentSuggestion = intCurrentSuggestionCount;  
+				document.getElementById("divSuggestionsContainer").scrollTop = intCurrentSuggestionCount * classAjaxSuggest_intHeightOfCharacters;
+			}
+			else 
+			{
+				if (intCurrentSuggestion <= intCurrentSuggestionCount - classAjaxSuggest_intMaxSuggestionLines + 1)
+					document.getElementById("divSuggestionsContainer").scrollTop = document.getElementById("divSuggestionsContainer").scrollTop - classAjaxSuggest_intHeightOfCharacters;
+				intCurrentSuggestion -= 1;
+			}
+			classAjaxSuggest_selectItem(intCurrentSuggestion);
+		}
+		// Down arrow
+		else if (intKeyID == 40)
+		{
+			if (intCurrentSuggestion == intCurrentSuggestionCount) 
+			{
+				// we're at the end so start back at the beginning
+				intCurrentSuggestion = 0;  
+				document.getElementById("divSuggestionsContainer").scrollTop = 0;
+			}
+			else 
+			{
+				if (intCurrentSuggestion >= classAjaxSuggest_intMaxSuggestionLines)
+					document.getElementById("divSuggestionsContainer").scrollTop = document.getElementById("divSuggestionsContainer").scrollTop + classAjaxSuggest_intHeightOfCharacters;
+				intCurrentSuggestion += 1;
+			}			
+			classAjaxSuggest_selectItem(intCurrentSuggestion);
+		}
+	}
+	
+	function classAjaxSuggest_alertContents() 
+	{
+		if (http_request.readyState == 4) 
+		{
+			if (http_request.status == 200) 
+			{
+				var xmlDoc = http_request.responseXML;
+	//			alert(xmlDoc.parseError.reason)
+				
+				// Show the suggestions
+				classAjaxSuggest_showSuggestionsFromXML(xmlDoc, false);
+			} 
+			else 
+			{
+				// There has been an error. Show it to the user in the comments box				
+				objSuggestions.style.display = "";
+				document.getElementById("divSuggestionsContainer").style.display = "none";
+				document.getElementById("divSuggestionsDescription").innerHTML = "(Suggestions not available)";
+				classAjaxSuggest_alignBox();
+			}
+		}
+	}
+	
+	function classAjaxSuggest_showSuggestionsFromXML(xmlDoc, isCachedMatchList)
+	{
+		if (objSuggestions)
+		{
+			// unhide the suggestions box
+			objSuggestions.style.display = "";
+	//		alert('here');
+		}
+		
+		intCurrentSuggestion = 0;
+		intCurrentSuggestionCount = 0;
+		
+		var j = 0;
+		var blnShowItem = false;
+		var strHTMLItems = "";
+		var xmlResultsText = xmlDoc.getElementsByTagName('text');
+		var xmlResultsValue = xmlDoc.getElementsByTagName('value');
+		var xmlResultsToolTip = xmlDoc.getElementsByTagName('tooltip');
+	//	alert(xmlDoc);
+		
+		for (j = 0; j < xmlResultsText.length && intCurrentSuggestionCount < 100; j++)
+		{
+			// If we're showing a cached list of matches, we need to make sure this entry matches the new criteria before showing
+			if (isCachedMatchList == true)
+			{
+				var searchText = document.frmSearchForm.strKeyword.value;
+				eval('blnShowItem = (searchText, xmlResultsValue[j].firstChild.nodeValue)');
+			}
+			else
+			{
+				blnShowItem = true;
+			}
+			
+			if (blnShowItem == true)
+			{
+				strHTMLItems += '<div id="divSelection' + (intCurrentSuggestionCount + 1) + '" class="item" onMouseOver="this.className=\'item_hover\';" onMouseOut="this.className=\'item\';" title="' + classAjaxSuggest_cleanValue(xmlResultsToolTip[j].firstChild.nodeValue) + '" value="' + classAjaxSuggest_cleanValue(xmlResultsValue[j].firstChild.nodeValue) + '"'
+				
+					strHTMLItems += ' onClick="return classAjaxSuggest_clickItem(\'' + classAjaxSuggest_cleanValue(xmlResultsValue[j].firstChild.nodeValue) + '\');" style="width: ' + objTextBox.style.width + '; overflow: hidden;"';
+				
+				strHTMLItems += '>'; 
+				strHTMLItems += '  <span id="suggestion' + (intCurrentSuggestionCount + 1) + '">' + classAjaxSuggest_cleanText(xmlResultsText[j].firstChild.nodeValue) + '</span>';
+				strHTMLItems += '</div>';
+				
+				intCurrentSuggestionCount++;
+			}
+		}
+		
+		document.getElementById("divSuggestionsContainer").innerHTML = strHTMLItems;
+		
+		var strHTMLDescription = "";
+		if (intCurrentSuggestionCount > 0)
+		{
+			document.getElementById("divSuggestionsContainer").style.display = "";
+			
+				document.getElementById("divSuggestionsDescription").innerHTML = "Above are a list of keywords found.";
+		}
+		else
+		{
+			document.getElementById("divSuggestionsContainer").style.display = "none";
+			
+				document.getElementById("divSuggestionsDescription").innerHTML = "No keywords found.";
+		}
+		
+		classAjaxSuggest_alignBox();
+	}
+	
+	function classAjaxSuggest_cleanValue(text)
+	{
+		var strTxt;
+		strTxt = text.replace(/\'/g, "\'");
+		strTxt = strTxt.replace(/\&/g, "\&");
+		strTxt = strTxt.replace(/\(/g, "\(");
+		strTxt = strTxt.replace(/\)/g, "\)");
+		strTxt = strTxt.replace(/\,/g, "\,");
+		strTxt = strTxt.replace(/\-/g, "\-");
+		strTxt = strTxt.replace(/\//g, "\/");
+		return strTxt;
+	}
+	
+	function classAjaxSuggest_cleanText(text)
+	{
+		return text.replace(/\'/g, "&#39;");
+	}
+	
+	window.onresize = classAjaxSuggest_alignBox;
+	
+	//-->
+</script>
+
+
+						<link type="text/css" href="styles.css" rel="stylesheet">
+
+<style type="text/css">
+	.blur{	/*the dimensions of the suggestion box */
+		background-color: #ccc;
+		color: inherit;
+		position:absolute; 
+		margin-left: 4px;
+		margin-top: 6px;
+		z-index: 1000;
+	}
+	.shadow,
+	.content{
+		position: relative;
+		bottom: 2px;
+		right: 2px;
+	}
+	.shadow{
+		/*background-color: #666;
+		color: inherit;*/
+	}
+	.content{
+		background-color: #ffffff; /*background color of content*/
+		color: #000;
+		border: 1px solid #000;
+		padding: 3px 4px;
+		white-space: nowrap;
+		overflow-y:scroll;
+		height:12em;
+	}
+	.item
+	{
+		color: #000000;
+		background-color: #ffffff;
+		text-align: left;
+	}
+	.item_hover
+	{
+		cursor:pointer;
+		background-color: #0000ff;
+		color: #ffffff;
+		text-align: left;
+	}
+	.comment
+	{
+		background-color: #ffeeee;
+		color: #000000;
+		border: 1px solid #000; 
+		padding: 2px 10px;
+		width:120px;
+		text-align: left;
+	}
+</style>
+<link href="searchPage.css" rel="stylesheet">
+
+						
+						
+						</head>
+						<body>
+					
+<!--
+Paladin: Theme Markup
+-----
+	Class		: mGW7
+	Class Version	: 2.0.0.0066d
+	Theme Format	: 2.0.0.0032
+	Config ID	: www3.lancashire.gov.uk - 2011-06-22 - 13:45
+	Dev Type	: live
+	Server Type	: internet
+
+	Theme Requested	: internet-2014
+	Theme Delivered	: internet-2014
+	Theme Variant	: default
+	Theme Revision	: 1.0.1.0008
+-----
+-->
+
+
+<div class="masthead">
+
+	<div>
+		<div class="container">
+			<div class="pull-left logo">
+				<a href="http://www.lancashire.gov.uk"><img src="/paladin2/configuration/2.0.0.0032/themes/internet-2014/common/images/lcc-logo.png" alt="Lancashire County Council Logo"></a>
+			</div>
+			
+			<div class="pull-right site-service">
+				<a href="http://www.lancashire.gov.uk/health-and-social-care/your-health-and-wellbeing">Your health and wellbeing</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="header" style="">
+	<div class="container">
+		<div class="banner-box-container">
+			<div class="banner-box">Well-being directory</div>
+		</div>
+	</div>
+</div>
+	
+			
+
+<div class="container page-content ">
+	<div class="bs-row">
+
+								<div class="span6" id="pal_menu">
+									<nav>
+										<div id="pal_apptitle"><a href="index.asp">Well-being directory</a></div>
+									
+										<div id="pal_menubody">
+											
+										<ul class="pal_mainmenu">
+							
+											<li><a href="/ACS/findExtOrg/wellbeingDir/results.asp?display=remembered" title="" class="pal_menuitem_deselected">My basket</a></li>
+							
+											<li><a href="/ACS/findExtOrg/wellbeingDir/index.asp" title="" class="pal_menuselected active">Search for a service</a></li>
+							
+											<li><a href="/ACS/findExtOrg/wellbeingDir/subCat.asp" title="" class="pal_menuitem_deselected">Browse by category</a></li>
+							
+											<li><a href="/ACS/findExtOrg/wellbeingDir/contact.asp" title="" class="pal_menuitem_deselected">Contact us</a></li>
+							
+										</ul>
+										
+							
+											
+										</div>
+									</nav>
+								</div>
+							
+		<div class="span24" id="pal_content">
+		
+			<a accesskey="S" href="#access_s"></a><a name="access_s"></a>
+
+			<!-- START OF PAGE CONTENT -->
+
+
+
+					
+
+						
+							<div class="bs-row">
+								<div class="span6 span6-push-18 sidebar-container">
+						
+
+							<div class="well clearfix">
+								<h3 class="sidepanel-heading">Can't find it?</h3>
+						
+<div class="WB_sidePanel">If you can't find what you are looking for then please contact us by either using our <a href="feedback_cantfind.asp">on-line form</a> or using our <a href="contact.asp">contact details</a>.</div>
+							</div>
+						
+							<div class="well clearfix">
+								<h3 class="sidepanel-heading">Disclaimer</h3>
+						
+<div class="WB_sidePanel">Well-being directory <a href="http://www.lancashire.gov.uk/corporate/web/view.asp?siteid=2777&pageid=4900&e=e">disclaimer</a>.</div>
+							</div>
+						
+							<div class="well clearfix">
+								<h3 class="sidepanel-heading">Include your service?</h3>
+						
+<div class="WB_sidePanel">Do you run a service that you would like to be included in our Well-being Directory?  Then why not <a href="submitServiceDetails.asp">tell us about it</a>?  You will be asked to complete as much information about your service as possible, then a we'll contact you if we need more.</div>
+							</div>
+						
+								</div>
+						
+</div>
+<div style="min-height:100px; width:76%; text-align:justify;">
+<div id="pal_banner" style="background-image: url(/ACS/findExtOrg/wellbeingDir/catImage.asp?file_id=2); background-position:right top; background-repeat:no-repeat; margin-right:20px!important;"> 
+<div class="banner-overlay"> 
+</div> 
+</div> 
+<h1 style="text-align:left;">Well-being directory</h1>
+<strong>Welcome to our well-being directory</strong>  a directory of services from across Lancashire, to help you improve your quality of life and help you get through the day-to-day challenges you may face.  The services listed are provided by a range of organisations, including voluntary organisations, private companies, and local councils.
+</div> 
+<div>
+<form action="results.asp" method="post" name="frmSearchForm">
+<input type="hidden" name="searchMethod" value="basic">
+<div class="redBoxTop" xstyle="width: 600px;">
+<div class="redBoxHeader">Search for a service</div>
+</div>
+<div class="redBoxMiddle">
+<div class="fieldBox">
+<strong>Find me:</strong><br>
+<input name="strKeyword" type="text" id="strKeyword" onKeyUp="classAjaxSuggest_makeSuggestions(event);" value="" autocomplete="off" style="width:130px;">
+<div class="blur" id="divSuggestions" style="display:none;"  >
+		<div  >
+			<div class="content" id="divSuggestionsContainer">&nbsp;</div>
+			<div class="comment" id="divSuggestionsDescription"  >&nbsp;</div>
+		</div>
+</div>
+
+<br>
+<i>e.g. care home</i>
+</div>
+<div class="fieldBox">
+<strong>look in:</strong><br>
+<select name="category" id="selCategories" onmousedown="expand(this, this.form.spacerBox)" onfocus="expand(this, this.form.spacerBox)" onchange="contract(this, this.form.spacerBox,'200px')" onblur="contract(this, this.form.spacerBox,'200px')">
+	<option value="-1">All categories</option>
+<option value="348">Community Groups and Involvement
+</option>
+<option value="333">Employment, Volunteering and Training 
+</option>
+<option value="370">Feeling Safe in Your Home and Community
+</option>
+<option value="360">Getting the Right Help and Support
+</option>
+<option value="286">Health and Fitness
+</option>
+<option value="300">Home and Garden
+</option>
+<option value="311">Learning and Leisure
+</option>
+<option value="323">Managing Finances and Legal Advice
+</option>
+<option value="339">Mobility and Transport
+</option>
+<option value="378">Relationships and Families
+</option>
+
+</select>
+<input type="text" style="display:none;" id="spacerBox" name="spacerBox">
+<br>&nbsp;
+</div>
+<div class="fieldBox">
+<strong>located in:</strong><br>
+<select name="district" id="selDistricts">
+	<option value="-1">All areas</option>
+<option value="10">Blackburn
+</option>
+<option value="4">Blackpool
+</option>
+<option value="12">Burnley
+</option>
+<option value="9">Chorley
+</option>
+<option value="5">Fylde
+</option>
+<option value="11">Hyndburn
+</option>
+<option value="1">Lancaster and Morecambe
+</option>
+<option value="13">Pendle
+</option>
+<option value="6">Preston
+</option>
+<option value="3">Ribble Valley
+</option>
+<option value="14">Rossendale
+</option>
+<option value="7">South Ribble
+</option>
+<option value="8">West Lancashire
+</option>
+<option value="2">Wyre
+</option>
+
+</select><br>&nbsp;
+</div>
+<div class="fieldBox">
+&nbsp;<br>
+<input type="submit" name="submit" value="Go" id="goBtn1" onClick=" return checkAllServiceSearch();"><br>&nbsp;
+</div>
+</div>
+<div class="redBoxMiddle" xstyle="display:none!important;" id="advOptions">
+<div class="fieldBox">
+<div class="fieldBox" style="border-width:1px; border-color:silver; background-color:white;">
+Find me services based on:&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="ss" value="0" checked>any of these words&nbsp;&nbsp;
+<input type="radio" name="ss" value="1">this exact wording<br />
+</div>
+</div>
+<div class="fieldBox">
+<strong>Within approximately:</strong><br>
+<input type="radio" name="proximity" id="proximity1" value="3">3 miles
+<input type="radio" name="proximity" id="proximity2" value="10">10 miles
+<input type="radio" name="proximity" id="proximity3" value="30">30 miles
+<input type="radio" name="proximity" id="proximity4" value="60">60 miles
+&nbsp;&nbsp;<strong>of postcode</strong>&nbsp;&nbsp;
+<input type="text" name="postcode" id="postcode" value="" maxlength="9">
+</div>
+<div class="fieldBox">
+<strong>Show me services for:</strong><br>
+<select name="service_group" id="service_group">
+	<option value="-1">Select a group</option>
+<option value="30">All Adults and Children's Services
+</option>
+<option value="11">Asylum Seekers
+</option>
+<option value="15">Drug and alcohol misusers
+</option>
+<option value="12">Ex-offenders
+</option>
+<option value="13">Homeless people
+</option>
+<option value="8">People just out of hospital
+</option>
+<option value="19">People leaving care
+</option>
+<option value="21">People living with HIV/AIDS
+</option>
+<option value="9">People on a low income
+</option>
+<option value="7">People who have had a stroke
+</option>
+<option value="1">People with a learning disability
+</option>
+<option value="2">People with a mental health problem
+</option>
+<option value="3">People with a physical disability
+</option>
+<option value="6">People with an acquired disability/degenerative illness
+</option>
+<option value="4">People with hearing loss
+</option>
+<option value="5">People with sight loss
+</option>
+<option value="10">Refugees
+</option>
+<option value="18">Single parent households
+</option>
+<option value="17">Teenage parents
+</option>
+<option value="14">Travellers
+</option>
+<option value="16">Vulnerable/frail older people
+</option>
+<option value="20">Women fleeing domestic violence
+</option>
+
+</select>
+<select name="age_range" id="age_range">
+	<option value="-1">Select an age range</option>
+<option value="1">16-25
+</option>
+<option value="2">26-35
+</option>
+<option value="3">36-45
+</option>
+<option value="4">46-49
+</option>
+<option value="5">50-55
+</option>
+<option value="6">56-59
+</option>
+<option value="7">60-64
+</option>
+<option value="8">65-69
+</option>
+<option value="9">70-89
+</option>
+<option value="10">90+
+</option>
+
+</select>
+&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" value="Go" onClick=" return checkAllServiceSearch();"><br>&nbsp;
+</div>
+</div>
+<div class="redBoxBottom">
+<div class="redBoxFooter arrowNoFloat" onClick="showoptions();">
+<script type="text/javascript">document.write('more options');</script>
+<script type="text/javascript">document.write('<img src="images/red-down.gif" class="arrowNoFloat" id="moreOptLnk" alt="show more options">');</script>
+</div>
+</div>
+</form>
+</div>
+<script type="text/javascript">showoptions();</script>
+<div>
+<form action="cats.asp" method="post" name="frmSearchFormCat">
+<input type="hidden" name="searchMethod" value="basic">
+<div class="redBoxTop">
+<div class="redBoxHeader">Browse by category</div>
+</div>
+<div class="redBoxMiddle">
+<div class="catBox">
+<script type="text/javascript">document.write('<img src="images/grey-down.gif" class="arrow" onClick="showCat(\'catBox348\', this);" id="catArrow348" alt="expand">');</script>
+<a href="subCat.asp?catID=348&amp;e=1" class="catLink">Community Groups and Involvement</a>
+<div id="catBox348" xstyle="display:none;">
+<div class="subCatBox">
+<div style="float:right">(29)</div>
+<a href="results.asp?catID=354&amp;e=1" class="subcatLink" style="font-weight:bold;">Asylum Seekers and Refugees</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(52)</div>
+<a href="results.asp?catID=349&amp;e=1" class="subcatLink" style="font-weight:bold;">Black & Minority Ethnic Communities</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(27)</div>
+<a href="results.asp?catID=350&amp;e=1" class="subcatLink" style="font-weight:bold;">Chinese Communities</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(120)</div>
+<a href="results.asp?catID=352&amp;e=1" class="subcatLink" style="font-weight:bold;">Church/Faith Groups</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(401)</div>
+<a href="results.asp?catID=359&amp;e=1" class="subcatLink" style="font-weight:bold;">Community Facilities and Activities</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(28)</div>
+<a href="results.asp?catID=351&amp;e=1" class="subcatLink" style="font-weight:bold;">Eastern European Communities</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(59)</div>
+<a href="results.asp?catID=358&amp;e=1" class="subcatLink" style="font-weight:bold;">Forums and Partnerships</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(35)</div>
+<a href="results.asp?catID=355&amp;e=1" class="subcatLink" style="font-weight:bold;">Lesbian/Gay/Bisexual/Transgender</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(66)</div>
+<a href="results.asp?catID=356&amp;e=1" class="subcatLink" style="font-weight:bold;">Neighbourhood Groups</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(25)</div>
+<a href="results.asp?catID=353&amp;e=1" class="subcatLink" style="font-weight:bold;">Travellers</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(51)</div>
+<a href="results.asp?catID=357&amp;e=1" class="subcatLink" style="font-weight:bold;">Veterans and Ex-Service Personnel</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(120)</div>
+<a href="results.asp?catID=391&amp;e=1" class="subcatLink" style="font-weight:bold;">Volunteering</a>
+</div>
+</div>
+
+</div>
+<div class="catBox">
+<script type="text/javascript">document.write('<img src="images/grey-down.gif" class="arrow" onClick="showCat(\'catBox333\', this);" id="catArrow333" alt="expand">');</script>
+<a href="subCat.asp?catID=333&amp;e=1" class="catLink">Employment, Volunteering and Training </a>
+<div id="catBox333" xstyle="display:none;">
+<div class="subCatBox">
+<div style="float:right">(25)</div>
+<a href="results.asp?catID=336&amp;e=1" class="subcatLink" style="font-weight:bold;">Business Start-Up</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(49)</div>
+<a href="results.asp?catID=335&amp;e=1" class="subcatLink" style="font-weight:bold;">Careers Advice</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(74)</div>
+<a href="results.asp?catID=334&amp;e=1" class="subcatLink" style="font-weight:bold;">Job-Seeking</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(98)</div>
+<a href="results.asp?catID=337&amp;e=1" class="subcatLink" style="font-weight:bold;">Training</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(112)</div>
+<a href="results.asp?catID=338&amp;e=1" class="subcatLink" style="font-weight:bold;">Volunteering</a>
+</div>
+</div>
+
+</div>
+<div class="catBox">
+<script type="text/javascript">document.write('<img src="images/grey-down.gif" class="arrow" onClick="showCat(\'catBox370\', this);" id="catArrow370" alt="expand">');</script>
+<a href="subCat.asp?catID=370&amp;e=1" class="catLink">Feeling Safe in Your Home and Community</a>
+<div id="catBox370" xstyle="display:none;">
+<div class="subCatBox">
+<div style="float:right">(54)</div>
+<a href="results.asp?catID=377&amp;e=1" class="subcatLink" style="font-weight:bold;">Advocacy</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(21)</div>
+<a href="results.asp?catID=375&amp;e=1" class="subcatLink" style="font-weight:bold;">Assault and Theft</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(36)</div>
+<a href="results.asp?catID=376&amp;e=1" class="subcatLink" style="font-weight:bold;">Crime Prevention</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(66)</div>
+<a href="results.asp?catID=371&amp;e=1" class="subcatLink" style="font-weight:bold;">Domestic Abuse</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(17)</div>
+<a href="results.asp?catID=373&amp;e=1" class="subcatLink" style="font-weight:bold;">Racial Discrimination</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(37)</div>
+<a href="results.asp?catID=372&amp;e=1" class="subcatLink" style="font-weight:bold;">Sexual Abuse</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(16)</div>
+<a href="results.asp?catID=374&amp;e=1" class="subcatLink" style="font-weight:bold;">Sexual Discrimination</a>
+</div>
+</div>
+
+</div>
+<div class="catBox">
+<script type="text/javascript">document.write('<img src="images/grey-down.gif" class="arrow" onClick="showCat(\'catBox360\', this);" id="catArrow360" alt="expand">');</script>
+<a href="subCat.asp?catID=360&amp;e=1" class="catLink">Getting the Right Help and Support</a>
+<div id="catBox360" xstyle="display:none;">
+<div class="subCatBox">
+<div style="float:right">(94)</div>
+<a href="results.asp?catID=363&amp;e=1" class="subcatLink" style="font-weight:bold;">Advocacy</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(141)</div>
+<a href="results.asp?catID=364&amp;e=1" class="subcatLink" style="font-weight:bold;">Carers Support</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(80)</div>
+<a href="results.asp?catID=369&amp;e=1" class="subcatLink" style="font-weight:bold;">Equipment, Aids and Adaptations</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(73)</div>
+<a href="results.asp?catID=361&amp;e=1" class="subcatLink" style="font-weight:bold;">Meals and Shopping</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(102)</div>
+<a href="results.asp?catID=368&amp;e=1" class="subcatLink" style="font-weight:bold;">One Stop Shops for Advice</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(77)</div>
+<a href="results.asp?catID=367&amp;e=1" class="subcatLink" style="font-weight:bold;">Personal Care</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(108)</div>
+<a href="results.asp?catID=362&amp;e=1" class="subcatLink" style="font-weight:bold;">Sensory Impairment</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(57)</div>
+<a href="results.asp?catID=365&amp;e=1" class="subcatLink" style="font-weight:bold;">Short Breaks and Day Care </a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(261)</div>
+<a href="results.asp?catID=366&amp;e=1" class="subcatLink" style="font-weight:bold;">Support for People with Disabilities</a>
+</div>
+</div>
+
+</div>
+<div class="catBox">
+<script type="text/javascript">document.write('<img src="images/grey-down.gif" class="arrow" onClick="showCat(\'catBox286\', this);" id="catArrow286" alt="expand">');</script>
+<a href="subCat.asp?catID=286&amp;e=1" class="catLink">Health and Fitness</a>
+<div id="catBox286" xstyle="display:none;">
+<div class="subCatBox">
+<div style="float:right">(130)</div>
+<a href="results.asp?catID=289&amp;e=1" class="subcatLink" style="font-weight:bold;">Condition Management</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(108)</div>
+<a href="results.asp?catID=290&amp;e=1" class="subcatLink" style="font-weight:bold;">Counselling and Bereavement</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(47)</div>
+<a href="results.asp?catID=294&amp;e=1" class="subcatLink" style="font-weight:bold;">Dietary Advice</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(25)</div>
+<a href="results.asp?catID=297&amp;e=1" class="subcatLink" style="font-weight:bold;">Foot Care</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(230)</div>
+<a href="results.asp?catID=299&amp;e=1" class="subcatLink" style="font-weight:bold;">Healthy Lifestyle</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(33)</div>
+<a href="results.asp?catID=295&amp;e=1" class="subcatLink" style="font-weight:bold;">Hospital Discharge</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(132)</div>
+<a href="results.asp?catID=298&amp;e=1" class="subcatLink" style="font-weight:bold;">Long-Term Illness Support Groups</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(158)</div>
+<a href="results.asp?catID=291&amp;e=1" class="subcatLink" style="font-weight:bold;">Mental Health </a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(61)</div>
+<a href="results.asp?catID=293&amp;e=1" class="subcatLink" style="font-weight:bold;">Occupational and Alternative Therapy</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(307)</div>
+<a href="results.asp?catID=392&amp;e=1" class="subcatLink" style="font-weight:bold;">Physical Activity</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(34)</div>
+<a href="results.asp?catID=296&amp;e=1" class="subcatLink" style="font-weight:bold;">Pregnancy and Childcare</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(42)</div>
+<a href="results.asp?catID=292&amp;e=1" class="subcatLink" style="font-weight:bold;">Sexual Health</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(95)</div>
+<a href="results.asp?catID=288&amp;e=1" class="subcatLink" style="font-weight:bold;">Smoking, Drugs and Alcohol</a>
+</div>
+</div>
+
+</div>
+<div class="catBox">
+<script type="text/javascript">document.write('<img src="images/grey-down.gif" class="arrow" onClick="showCat(\'catBox300\', this);" id="catArrow300" alt="expand">');</script>
+<a href="subCat.asp?catID=300&amp;e=1" class="catLink">Home and Garden</a>
+<div id="catBox300" xstyle="display:none;">
+<div class="subCatBox">
+<div style="float:right">(45)</div>
+<a href="results.asp?catID=309&amp;e=1" class="subcatLink" style="font-weight:bold;">Domestic Services</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(15)</div>
+<a href="results.asp?catID=308&amp;e=1" class="subcatLink" style="font-weight:bold;">Energy Efficiency</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(43)</div>
+<a href="results.asp?catID=307&amp;e=1" class="subcatLink" style="font-weight:bold;">Equipment, Aids and Adaptations</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(14)</div>
+<a href="results.asp?catID=310&amp;e=1" class="subcatLink" style="font-weight:bold;">Furniture and White Goods</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(48)</div>
+<a href="results.asp?catID=305&amp;e=1" class="subcatLink" style="font-weight:bold;">Gardening</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(62)</div>
+<a href="results.asp?catID=301&amp;e=1" class="subcatLink" style="font-weight:bold;">Homelessness</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(64)</div>
+<a href="results.asp?catID=302&amp;e=1" class="subcatLink" style="font-weight:bold;">Housing Support</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(27)</div>
+<a href="results.asp?catID=304&amp;e=1" class="subcatLink" style="font-weight:bold;">Repair and Maintenance</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(35)</div>
+<a href="results.asp?catID=306&amp;e=1" class="subcatLink" style="font-weight:bold;">Safety and Security</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(39)</div>
+<a href="results.asp?catID=303&amp;e=1" class="subcatLink" style="font-weight:bold;">Sheltered Housing and Residential Care Homes</a>
+</div>
+</div>
+
+</div>
+<div class="catBox">
+<script type="text/javascript">document.write('<img src="images/grey-down.gif" class="arrow" onClick="showCat(\'catBox311\', this);" id="catArrow311" alt="expand">');</script>
+<a href="subCat.asp?catID=311&amp;e=1" class="catLink">Learning and Leisure</a>
+<div id="catBox311" xstyle="display:none;">
+<div class="subCatBox">
+<div style="float:right">(78)</div>
+<a href="results.asp?catID=319&amp;e=1" class="subcatLink" style="font-weight:bold;">Adult Education and College Courses</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(129)</div>
+<a href="results.asp?catID=316&amp;e=1" class="subcatLink" style="font-weight:bold;">Arts and Crafts</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(628)</div>
+<a href="results.asp?catID=318&amp;e=1" class="subcatLink" style="font-weight:bold;">Clubs and Groups</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(73)</div>
+<a href="results.asp?catID=315&amp;e=1" class="subcatLink" style="font-weight:bold;">Computers and I.T</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(372)</div>
+<a href="results.asp?catID=312&amp;e=1" class="subcatLink" style="font-weight:bold;">Hobbies</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(25)</div>
+<a href="results.asp?catID=320&amp;e=1" class="subcatLink" style="font-weight:bold;">Languages</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(47)</div>
+<a href="results.asp?catID=314&amp;e=1" class="subcatLink" style="font-weight:bold;">Library Services</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(75)</div>
+<a href="results.asp?catID=313&amp;e=1" class="subcatLink" style="font-weight:bold;">Local Events</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(113)</div>
+<a href="results.asp?catID=317&amp;e=1" class="subcatLink" style="font-weight:bold;">Music</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(16)</div>
+<a href="results.asp?catID=321&amp;e=1" class="subcatLink" style="font-weight:bold;">Pets</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(75)</div>
+<a href="results.asp?catID=322&amp;e=1" class="subcatLink" style="font-weight:bold;">Places to Visit</a>
+</div>
+</div>
+
+</div>
+<div class="catBox">
+<script type="text/javascript">document.write('<img src="images/grey-down.gif" class="arrow" onClick="showCat(\'catBox323\', this);" id="catArrow323" alt="expand">');</script>
+<a href="subCat.asp?catID=323&amp;e=1" class="catLink">Managing Finances and Legal Advice</a>
+<div id="catBox323" xstyle="display:none;">
+<div class="subCatBox">
+<div style="float:right">(77)</div>
+<a href="results.asp?catID=325&amp;e=1" class="subcatLink" style="font-weight:bold;">Benefit Advice</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(58)</div>
+<a href="results.asp?catID=326&amp;e=1" class="subcatLink" style="font-weight:bold;">Budget Management</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(63)</div>
+<a href="results.asp?catID=324&amp;e=1" class="subcatLink" style="font-weight:bold;">Debt Support</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(66)</div>
+<a href="results.asp?catID=332&amp;e=1" class="subcatLink" style="font-weight:bold;">Financial Support</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(48)</div>
+<a href="results.asp?catID=328&amp;e=1" class="subcatLink" style="font-weight:bold;">Fundraising and Grants</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(19)</div>
+<a href="results.asp?catID=329&amp;e=1" class="subcatLink" style="font-weight:bold;">Heating and Energy</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(38)</div>
+<a href="results.asp?catID=331&amp;e=1" class="subcatLink" style="font-weight:bold;">Legal Support and Advice</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(29)</div>
+<a href="results.asp?catID=330&amp;e=1" class="subcatLink" style="font-weight:bold;">Paying Bills</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(27)</div>
+<a href="results.asp?catID=327&amp;e=1" class="subcatLink" style="font-weight:bold;">Pensions Advice</a>
+</div>
+</div>
+
+</div>
+<div class="catBox">
+<script type="text/javascript">document.write('<img src="images/grey-down.gif" class="arrow" onClick="showCat(\'catBox339\', this);" id="catArrow339" alt="expand">');</script>
+<a href="subCat.asp?catID=339&amp;e=1" class="catLink">Mobility and Transport</a>
+<div id="catBox339" xstyle="display:none;">
+<div class="subCatBox">
+<div style="float:right">(14)</div>
+<a href="results.asp?catID=341&amp;e=1" class="subcatLink" style="font-weight:bold;">Blue Badges</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(11)</div>
+<a href="results.asp?catID=340&amp;e=1" class="subcatLink" style="font-weight:bold;">Bus and Train Passes</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(26)</div>
+<a href="results.asp?catID=347&amp;e=1" class="subcatLink" style="font-weight:bold;">Community Transport</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(11)</div>
+<a href="results.asp?catID=342&amp;e=1" class="subcatLink" style="font-weight:bold;">Dial a Ride</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(18)</div>
+<a href="results.asp?catID=343&amp;e=1" class="subcatLink" style="font-weight:bold;">Hospital/Medical Transport</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(32)</div>
+<a href="results.asp?catID=344&amp;e=1" class="subcatLink" style="font-weight:bold;">Scooters, Wheelchairs and Personal Transport</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(8)</div>
+<a href="results.asp?catID=346&amp;e=1" class="subcatLink" style="font-weight:bold;">Volunteer Transport</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(21)</div>
+<a href="results.asp?catID=345&amp;e=1" class="subcatLink" style="font-weight:bold;">Walking Aids</a>
+</div>
+</div>
+
+</div>
+<div class="catBox">
+<script type="text/javascript">document.write('<img src="images/grey-down.gif" class="arrow" onClick="showCat(\'catBox378\', this);" id="catArrow378" alt="expand">');</script>
+<a href="subCat.asp?catID=378&amp;e=1" class="catLink">Relationships and Families</a>
+<div id="catBox378" xstyle="display:none;">
+<div class="subCatBox">
+<div style="float:right">(115)</div>
+<a href="results.asp?catID=386&amp;e=1" class="subcatLink" style="font-weight:bold;">Carers Support</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(80)</div>
+<a href="results.asp?catID=385&amp;e=1" class="subcatLink" style="font-weight:bold;">Children's Groups and Activities</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(93)</div>
+<a href="results.asp?catID=388&amp;e=1" class="subcatLink" style="font-weight:bold;">Counselling and Bereavement</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(22)</div>
+<a href="results.asp?catID=382&amp;e=1" class="subcatLink" style="font-weight:bold;">Divorce and Seperation</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(53)</div>
+<a href="results.asp?catID=389&amp;e=1" class="subcatLink" style="font-weight:bold;">Domestic Abuse</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(15)</div>
+<a href="results.asp?catID=379&amp;e=1" class="subcatLink" style="font-weight:bold;">Fostering and Adoption</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(19)</div>
+<a href="results.asp?catID=381&amp;e=1" class="subcatLink" style="font-weight:bold;">Mediation</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(5)</div>
+<a href="results.asp?catID=384&amp;e=1" class="subcatLink" style="font-weight:bold;">Missing Persons</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(73)</div>
+<a href="results.asp?catID=380&amp;e=1" class="subcatLink" style="font-weight:bold;">Parenting</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(12)</div>
+<a href="results.asp?catID=387&amp;e=1" class="subcatLink" style="font-weight:bold;">Pets</a>
+</div>
+<div class="subCatBox">
+<div style="float:right">(14)</div>
+<a href="results.asp?catID=383&amp;e=1" class="subcatLink" style="font-weight:bold;">Tracing Family</a>
+</div>
+</div>
+
+</div>
+
+</div>
+<div class="redBoxBottom">
+</div>
+</form>
+</div>
+<script type="text/javascript">
+showCat('catBox348', document.getElementById("catArrow348"));
+showCat('catBox333', document.getElementById("catArrow333"));
+showCat('catBox370', document.getElementById("catArrow370"));
+showCat('catBox360', document.getElementById("catArrow360"));
+showCat('catBox286', document.getElementById("catArrow286"));
+showCat('catBox300', document.getElementById("catArrow300"));
+showCat('catBox311', document.getElementById("catArrow311"));
+showCat('catBox323', document.getElementById("catArrow323"));
+showCat('catBox339', document.getElementById("catArrow339"));
+showCat('catBox378', document.getElementById("catArrow378"));
+
+</script>
+<script type="text/javascript">
+			<!--
+				classAjaxSuggest_onLoad();
+				document.body.onclick = function () { classAjaxSuggest_hideSuggestions() };
+			// -->
+</script >
+<script type="text/javascript"><!-- 
+	var objGFormDiv = document.getElementById("pal_search");
+	if (objGFormDiv) {var objGForms = objGFormDiv.getElementsByTagName("FORM")};
+	if (objGForms) {
+		objGForms[0].action = "http://search.lancashire.gov.uk/search"
+		objGForms[0].site.value = "WellbeingDirectory"
+		objGForms[0].proxystylesheet.value = "internet_2009"
+		objGForms[0].client.value = "internet_2009"
+	}
+//--></script>
+
+					
+
+
+
+			<!-- END OF PAGE CONTENT -->
+		</div>
+	</div>
+</div>	  
+
+
+	<div class="footer">
+		
+        <div class="container">
+    	
+			<div class="pull-left">
+				<span class="copyright">
+					<span>&copy; 2016, Lancashire County Council</span>	
+					<span class="footer-links"><a href="http://www.lancashire.gov.uk/about.aspx">About&nbsp;our&nbsp;site</a> | <a href="http://www.lancashire.gov.uk/about/cookies">Cookies</a></span>
+				</span>
+			</div>
+            
+			<div class="pull-right">
+				<span id="foot-icons" class="find-us">        
+					<ul class="inline">
+						<li class="find-us-title hidden-phone">Find us on</li>
+						<li><a href="http://www.facebook.com/lancashirecc" title="Lancashire County Council on Facebook" class="find-us-facebook"><span class='hide-text'>facebook</span></a></li>
+						<li><a href="http://www.twitter.com/LancashireCC" title="Lancashire County Council on Twitter" class="find-us-twitter"><span class='hide-text'>twitter</span></a></li>
+						<li><a href="http://www.flickr.com/photos/lancashirecc/" class="find-us-flickr" title="Lancashire County Council on Flickr"><span class='hide-text'>flickr</span></a></li>        
+						<li><a href="http://www.youtube.com/user/lancashirecc" class="find-us-youtube" title="Lancashire County Council on YouTube"><span class='hide-text'>youTube</span></a></li>
+					</ul>
+				</span>	
+			</div>
+		
+		</div>
+        
+	</div> 
+
+
+							<script type="text/javascript" src="/home/survey/LPad.js"></script>
+							<script type="text/javascript" src="/home/survey/ServeJavaScript.asp"></script>
+						
+<script type="text/javascript">     
+						<!--
+						var searchWord = "";
+						var numberOfHits = "";
+						var path = "Home &gt;";
+						// -->
+						</script>
+						<script type="text/javascript" src="//uk1.siteimprove.com/js/siteanalyze_advanced.js"></script>
+							<script type="text/javascript">
+								var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+								document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+							</script>
+							<script type="text/javascript">
+								try
+								{
+									var pageTracker = _gat._getTracker("UA-12444051-1");
+									pageTracker._setDomainName(".lancashire.gov.uk");
+									pageTracker._trackPageview();
+								}
+								catch(err)
+								{
+								}
+							</script>
+						
+
+					
+						</body>
+						</html>
+					

@@ -1,0 +1,514 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb">
+<head><title>
+	Moorland CBL Homepage
+</title><link href="CSS/CBL_Style.css" rel="stylesheet" type="text/css" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta id="google-translate-customization" content="a81614fc988c6ecb-c8ed770bf8693b2e-g78bca1fd057ff7e7-1e" />
+    </meta>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+
+    <script src="js/jquery.cycle.all.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        (function () {
+            doBannerSlideShow();
+        })(jQuery)
+        function doBannerSlideShow() {
+            $('.bannerslideshow').cycle({
+                fx: 'fade',
+                speed: 'slow',
+                timeout: 6000,
+                slideExpr: '.bannerslideshowitem',
+                prev: '.bannerprev',
+                next: '.bannernext'
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        function RegisterBid(id) {
+            window.open('CheckBidEligibility.aspx' + '?AdvertID=' + id,
+                        'MyWin', 'height=350, width=350, toolbar=0, directories=0, status=0, menubar=0, scrollbars=0, resizable=0');
+        }
+
+    </script>
+
+    <script type="text/javascript" charset="utf-8">
+        function createCookie1(name, value, days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expires = "; expires=" + date.toGMTString();
+            }
+            else var expires = "";
+            document.cookie = name + "=" + value + expires + "; path=/";
+            location.reload(true);
+        }
+
+        function ReadCookie(name) {
+            name += '=';
+            var parts = document.cookie.split(/;\s*/);
+            for (var i = 0; i < parts.length; i++) {
+                var part = parts[i];
+                if (part.indexOf(name) == 0)
+                    return part.substring(name.length)
+            }
+            return null;
+        }
+
+    </script>
+</head>
+<body>
+    <form method="post" action="" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE0Mzk4NzkxMDUPZBYCZg9kFgICAw9kFgwCBQ8WAh4FY2xhc3MFDGl0ZW1TZWxlY3RlZGQCFw8PFgIeB1Zpc2libGVnZGQCGQ9kFgICAg8WAh8BaGQCGw9kFgICBw8QDxYGHg1EYXRhVGV4dEZpZWxkBQRUeXBlHg5EYXRhVmFsdWVGaWVsZAUKUHJvcFR5cGVJRB4LXyFEYXRhQm91bmRnZBAVCQ1ObyBQcmVmZXJlbmNlBEZsYXQTU2VtaSBEZXRhY2hlZCBIb3VzZQ1UZXJyYWNlIEhvdXNlCEJ1bmdhbG93BkJlZHNpdAtFbmQgVGVycmFjZQpNYWlzb25ldHRlBUhvdXNlFQkBMAExATIBMwE0ATUBNgE3ATgUKwMJZ2dnZ2dnZ2dnZGQCHQ9kFgICAg8WAh8BaGQCHw9kFgQCAQ8WAh4Fc3R5bGUFDkRpc3BsYXk6YmxvY2s7FgICAQ9kFhYCAQ8WAh4EVGV4dAUkPHA+UHJpb3J5IEF2ZW51ZSBMZWVrIFNUMTMgNlFKPGJyIC8+ZAIDDxYCHwYFQFNlbWkgRGV0YWNoZWQgSG91c2Ugd2l0aCAzIGJlZHJvb21zICjCozk2LjUzIHJlbnQgIHBlciB3ZWVrKTwvcD5kAgUPDxYEHghJbWFnZVVybAUofi9pbWFnZXMvbGFuZGxvcmRzL3lvdXJtb29ybGFuZHNsb2dvLnBuZx4NQWx0ZXJuYXRlVGV4dAURTW9vcmxhbmRzIEhvdXNpbmdkZAIHDxYCHwYFRjxwIHN0eWxlPSJjb2xvcjpyZWQ7Ij5XYW50IHRvIGJpZCBmb3IgdGhpcyBwcm9wZXJ0eT8gU2lnbiBpbiBmaXJzdDwvcD5kAgsPFgIeC18hSXRlbUNvdW50AgEWAgIBD2QWAgIBDw8WAh8HBTAvdXBsb2Fkcy9pbWFnZXMvMTc5L0hSLzIyIFByaW9yeSBBdmVudWUgTGVlay5KUEdkZAINDxYCHwFoZAIPDxYCHwYFgwI8c3Ryb25nPkRlc2NyaXB0aW9uPC9zdHJvbmc+PHA+VGhyZWUgYmVkcm9vbSBzZW1pIGRldGFjaGVkIGhvdXNlIHdpdGggdHdvIHJlY2VwdGlvbiByb29tcy4gVGhlIHByb3BlcnR5IGhhcyBnYXJkZW5zIHRvIHRoZSBmcm9udCBhbmQgcmVhciBhbmQgYSBkcml2ZXdheSBhbmQgaXMgbG9jYXRlZCBjbG9zZSB0byB0aGUgdG93biBjZW50cmUgYW5kIGJ1cyByb3V0ZS4gIFNvY2lhbCByZW50IGlzIGFwcHJveGltYXRlbHkgwqM5Ni41MyBwZXIgd2Vlay48L3A+ZAIRDxYCHwYFUzx1bD48bGk+R2FyZGVuIGFuZCBkcml2ZTwvbGk+PGxpPkdhcyBjZW50cmFsIGhlYXRpbmc8L2xpPjxsaT5VcHZjIHdpbmRvd3M8L2xpPjwvdWw+ZAITDw8WAh4LTmF2aWdhdGVVcmwFJ2h0dHA6Ly93d3cudXBteXN0cmVldC5jb20vU1QxMy02UUouaHRtbGRkAhUPDxYCHwoFKGh0dHA6Ly9tYXBzLmdvb2dsZS5jby51ay9tYXBzP3E9U1QxMys2UUpkZAIXDxYCHwYFxAg8c3Ryb25nIHN0eWxlPSJtYXJnaW4tdG9wOjIwcHg7Ij5FeHRyYSBkZXRhaWxzPC9zdHJvbmc+PGJyIC8+PHRhYmxlIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iNSIgc3R5bGU9ImJvcmRlci1jb2xsYXBzZTpjb2xsYXBzZTttYXJnaW4tYm90dG9tOjIwcHg7Ij48dHI+PHRkIGNsYXNzPSJleHRyYUJ1bGxldHNMZWZ0Ij5BZGFwdGF0aW9uczwvdGQ+PHRkIGNsYXNzPSJleHRyYUJ1bGxldHNSaWdodCI+Tm8gaW5mb3JtYXRpb24gYXZhaWxhYmxlPC90ZD48L3RyPjx0cj48dGQgY2xhc3M9ImV4dHJhQnVsbGV0c0xlZnQiPkJhdGhyb29tPC90ZD48dGQgY2xhc3M9ImV4dHJhQnVsbGV0c1JpZ2h0Ij5TdGFuZGFyZCBiYXRocm9vbTwvdGQ+PC90cj48dHI+PHRkIGNsYXNzPSJleHRyYUJ1bGxldHNMZWZ0Ij5Cb2lsZXI8L3RkPjx0ZCBjbGFzcz0iZXh0cmFCdWxsZXRzUmlnaHQiPlN0YW5kYXJkIGdhcyBib2lsZXI8L3RkPjwvdHI+PHRyPjx0ZCBjbGFzcz0iZXh0cmFCdWxsZXRzTGVmdCI+Q2VudHJhbCZuYnNwO0hlYXRpbmc8L3RkPjx0ZCBjbGFzcz0iZXh0cmFCdWxsZXRzUmlnaHQiPkZ1bGw8L3RkPjwvdHI+PHRyPjx0ZCBjbGFzcz0iZXh0cmFCdWxsZXRzTGVmdCI+SGVhdGluZyZuYnNwO3R5cGU8L3RkPjx0ZCBjbGFzcz0iZXh0cmFCdWxsZXRzUmlnaHQiPldldCBzeXN0ZW0gd2l0aCByYWRpYXRvcnM8L3RkPjwvdHI+PHRyPjx0ZCBjbGFzcz0iZXh0cmFCdWxsZXRzTGVmdCI+RmlyZTwvdGQ+PHRkIGNsYXNzPSJleHRyYUJ1bGxldHNSaWdodCI+Tm8gaW5mb3JtYXRpb24gYXZhaWxhYmxlPC90ZD48L3RyPjx0cj48dGQgY2xhc3M9ImV4dHJhQnVsbGV0c0xlZnQiPkRvb3I8L3RkPjx0ZCBjbGFzcz0iZXh0cmFCdWxsZXRzUmlnaHQiPlRpbWJlciBmcm9udCBkb29yczwvdGQ+PC90cj48dHI+PHRkIGNsYXNzPSJleHRyYUJ1bGxldHNMZWZ0Ij5LaXRjaGVuPC90ZD48dGQgY2xhc3M9ImV4dHJhQnVsbGV0c1JpZ2h0Ij5Ob24gZml0dGVkPC90ZD48L3RyPjx0cj48dGQgY2xhc3M9ImV4dHJhQnVsbGV0c0xlZnQiPldpbmRvd3M8L3RkPjx0ZCBjbGFzcz0iZXh0cmFCdWxsZXRzUmlnaHQiPlVQVkM8L3RkPjwvdHI+PC90YWJsZT5kAgMPFgIfBgVNPGEgaHJlZj0iUHJvcGVydHlSZXN1bHRzLmFzcHgiPlZpZXcgYWxsIDExIHByb3BlcnRpZXMgYXZhaWxhYmxlIHRoaXMgd2VlazwvYT5kZMLXU5I0mFTEF1LojbCYVyFWzXYK" />
+</div>
+
+
+<script src="/ScriptResource.axd?d=o9cyxxtJ4FFewngyLDjMQXSuD8RGhKnC8mmLJjE6ArcQQmjVEobXgXdDHBrSKeqdE-ZrDndIeeF60aGt_sVIfUibesALYUOYUflJETwR81S_XWUVZ3xBD7TiOEjPMWnv_x_2Mgt7W4zBekkzKESCrpIurPPu5ZgEX0qMpH_WX0EP_Y_00&amp;t=ffffffff805766b3" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+    
+    <div class="Holder">
+        <div id="Header">
+            <div id="ctl00_banner">
+                <p style="margin-top: 0px;">
+                    Moorlands CBL would like to use cookies to store information on your computer, in
+                    order to improve your experience when using our website. One of the cookies we use
+                    is essential for parts of the site to operate and has already been set. You may
+                    delete and block all cookies from this site, but parts of the site may not work.
+                    To find out more about the cookies we use and how to delete them, <a href="disclaimer.aspx"
+                        title="Privacy policy">see our disclaimer.</a></p>
+                <p>
+                    <input type="checkbox" name="ctlCookiesBanner$AcceptCookie" value="I accept cookies"
+                        id="AcceptCookie" onclick="createCookie1('CBLCookiesAllowed','True',365)" />
+                    Tick here to accept the policy.
+                </p>
+            </div>
+            <div class="HeaderLeft">
+                <a href="/">
+                    <img alt="Left banner" src="Images/yourmoorlandslogo.png" border="0" /></a>
+            </div>
+            <div class="HeaderMid">
+                <a href="/">
+                    <img alt="HomeChoice Logo" src="Images/mainlogotext.png" border="0" /></a>
+            </div>
+            <div class="HeaderRight">
+                <div style="margin-top: 20px;">
+                    <img alt="Staffordshire Council logo" src="Images/StaffsLogo.gif" />
+                </div>
+                <a style="visibility: hidden;" href="#skipNav">Skip to content</a>
+            </div>
+            <div style="clear: both;">
+            </div>
+        </div>
+        <div id="Menu">
+            <ul>
+                <li id="ctl00_menu1" class="itemSelected"><a href="/">Home</a></li>
+                <li id="ctl00_menu2" class="item"><a href="/PropertyResults.aspx">Properties</a></li>
+                <li id="ctl00_menu6" class="item"><a href="/FAQ.aspx">About HomeChoice</a></li>
+                <li id="ctl00_menu3" class="item"><a href="/MutualExchangeResults.aspx">Mutual
+                    Exchange</a></li>
+                <li id="ctl00_menu4" class="item"><a href="/RecentLettings.aspx">Recent Lettings</a></li>
+                <li id="ctl00_menu10" class="item"><a href="/ExtraCare.aspx">Retirement Living</a></li>
+                <li id="ctl00_menu11" class="item"><a href="/BedroomEntitlement.aspx">Bedroom
+                    Entitlement</a></li>
+                <li id="ctl00_menu12" class="item"><a href="/Welfarereform.aspx">Welfare Reform</a></li>
+                <li id="ctl00_menu13" class="item" style="border: none !important;"><a href="/HomeOwnership.aspx">
+                    Home Ownership</a></li>
+            </ul>
+            <div style="clear: both;">
+            </div>
+        </div>
+        
+<!-- BANNER -->
+<div class="banner">
+    <div class="bannerslideshow">
+        <div class="bannerslideshowitem">
+            <a href="/MutualExchangeResults.aspx">
+                <img src="images/banner/MutualExchangeSlide.jpg" alt="banner 1" /></a>
+        </div>
+        <div class="bannerslideshowitem">
+            <a href="/HomeOwnership.aspx">
+                <img src="images/banner/HomeownershipSlide.jpg" alt="banner 2" /></a>
+        </div>
+        <div class="bannerslideshowitem">
+            <a href="/PropertyResults.aspx">
+                <img src="images/banner/RentalSlide.jpg" alt="banner 3" /></a>
+        </div>
+        <div class="bannerslideshowitem">
+            <a href="/ExtraCare.aspx">
+                <img src="images/banner/RetirementLivingSlide.jpg" alt="banner 4" /></a>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="bannernext">
+            <img src="images/banner/bannerRightNavigation.png" title="toggle next slide" alt="right navigation" /></div>
+        <div class="bannerprev">
+            <img src="images/banner/bannerLeftNavigation.png" title="toggle previous slide" alt="left navigation" /></div>
+    </div>
+</div>
+<!-- END BANNER -->
+
+        <div id="LeftColumn">
+            <div class="infoBox">
+                <h2>
+                    Staff Sign in</h2>
+                <div class="infoBoxInner">
+                    <div id="ctl00_LoginCtrl_HideWhenLogged">
+    <table id="ctl00_LoginCtrl_LoginCtrl" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;">
+	<tr>
+		<td>
+            <p>
+                <label for="ctl00_LoginCtrl_LoginCtrl_UserName" id="ctl00_LoginCtrl_LoginCtrl_UserNameLabel">User Name:</label><br />
+                <input name="ctl00$LoginCtrl$LoginCtrl$UserName" type="text" id="ctl00_LoginCtrl_LoginCtrl_UserName" class="loginBox" />
+                &nbsp;
+            </p>
+            <p>
+                <label for="ctl00_LoginCtrl_LoginCtrl_Password" id="ctl00_LoginCtrl_LoginCtrl_PasswordLabel">Password:</label><br />
+                <input name="ctl00$LoginCtrl$LoginCtrl$Password" type="password" id="ctl00_LoginCtrl_LoginCtrl_Password" class="loginBox" />
+                &nbsp;
+            </p>
+            <p>
+                
+                <input type="submit" name="ctl00$LoginCtrl$LoginCtrl$LoginButton" value="Log In" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$LoginCtrl$LoginCtrl$LoginButton&quot;, &quot;&quot;, true, &quot;ctl00$Login2&quot;, &quot;&quot;, false, false))" id="ctl00_LoginCtrl_LoginCtrl_LoginButton" class="GeneralInput" />
+            </p>
+        </td>
+	</tr>
+</table>
+
+
+
+    <div style="clear: both;"></div>
+</div>
+
+
+
+
+                </div>
+            </div>
+            <div class="infoBox">
+                <h2>
+                    Search</h2>
+                <div class="infoBoxInner">
+                    
+
+<p>
+  <label for="ctl00_SearchCtrl_tbxSearch" id="ctl00_SearchCtrl_lbl1">City, Town, Area or Post code:</label><br />
+  <input name="ctl00$SearchCtrl$tbxSearch" type="text" id="ctl00_SearchCtrl_tbxSearch" style="width:210px;" />
+</p>
+<p>
+  <label for="ctl00_SearchCtrl_ddlPropType" id="ctl00_SearchCtrl_Label1">House Type:</label><br />
+  <select name="ctl00$SearchCtrl$ddlPropType" id="ctl00_SearchCtrl_ddlPropType" class="search_box_select">
+	<option value="0">No Preference</option>
+	<option value="1">Flat</option>
+	<option value="2">Semi Detached House</option>
+	<option value="3">Terrace House</option>
+	<option value="4">Bungalow</option>
+	<option value="5">Bedsit</option>
+	<option value="6">End Terrace</option>
+	<option value="7">Maisonette</option>
+	<option value="8">House</option>
+
+</select>
+</p>                
+<p>
+<label for="ctl00_SearchCtrl_ddlBedrooms" id="ctl00_SearchCtrl_Label2">Bedrooms:</label><br />
+<select name="ctl00$SearchCtrl$ddlBedrooms" id="ctl00_SearchCtrl_ddlBedrooms" class="search_box_select" style="width:112px;">
+	<option selected="selected" value="0">No Preference</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5 or more</option>
+
+</select>
+</p>       
+<p>
+<input type="submit" name="ctl00$SearchCtrl$submit" value="Search" id="ctl00_SearchCtrl_submit" class="GeneralInput" />
+</p>
+      
+      
+            
+
+  
+                </div>
+            </div>
+            <div class="infoBox">
+                <h2>
+                    Money matters</h2>
+                <div class="infoBoxInner">
+                    <ul>
+                        <li><a href="http://www.staffscu.co.uk" target="_blank" title="Staffordshire Credit Union">
+                            Staffordshire Credit Union</a></li>
+                        <li><a href="http://www.harvesthousing.org.uk/webbencalc/wbc.htm" target="_blank"
+                            title="Benefits calulator">Benefits calculator</a></li>
+                        <li><a href="http://www.harvesthousing.org.uk/uploads/resources/Housing%20Benefit%20f.pdf"
+                            target="_blank" title="Benefits leaflet">Benefits leaflet</a></li>
+                    </ul>
+                    <a style="border: 0;" href="http://get.adobe.com/uk/reader/" target="_blank" title="Download Adobe Reader (opens in new window)">
+                        <img src="/Images/get_adobe_reader.gif" alt="Download Adobe Reader (opens in new window)" />
+                    </a>
+                </div>
+            </div>
+            <div class="infoBox">
+                <h2>
+                    Was this page useful?</h2>
+                <div class="infoBoxInner">
+                    <div id="ctl00_ratethispage1_divNotVoted">
+  <p>
+   <span id="ctl00_ratethispage1_rblPageComment"><input id="ctl00_ratethispage1_rblPageComment_0" type="radio" name="ctl00$ratethispage1$rblPageComment" value="1" checked="checked" /><label for="ctl00_ratethispage1_rblPageComment_0">Yes</label><input id="ctl00_ratethispage1_rblPageComment_1" type="radio" name="ctl00$ratethispage1$rblPageComment" value="0" /><label for="ctl00_ratethispage1_rblPageComment_1">No</label></span>
+  </p>
+   <p>
+    <label for="ctl00_ratethispage1_txtComments" id="ctl00_ratethispage1_lblComment"><i>Optional Comment</i></label><br />
+    <input name="ctl00$ratethispage1$txtComments" type="text" id="ctl00_ratethispage1_txtComments" />
+   </p>
+   <p>
+      <input type="submit" name="ctl00$ratethispage1$btnSubmit" value="Submit" id="ctl00_ratethispage1_btnSubmit" class="GeneralInput" /> 
+   </p>
+
+  </div>
+  
+
+                </div>
+            </div>
+            <div class="infoBox">
+                <h2>
+                    Accessibility</h2>
+                <div class="infoBoxInner">
+                    <div id="google_translate_element">
+                    </div>
+                    <script type="text/javascript">
+                        function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                        }
+                    </script>
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    <p style="margin-top: 20px;">
+                        <a href="http://www.browsealoud.com/uk/download/" target="_blank">
+                            <img src="http://www.browsealoud.com/i/logo_download-browsealoud.gif" alt="Download Browsealoud"
+                                style="border: 0px none;" />
+                        </a>
+                    </p>
+                    <p>
+                        <a href="/listen.aspx" title="what is browsealoud">What is BrowseAloud? </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="RightColumn">
+            
+    <h1>
+        <a id="skipNav" style="color: #004d77;">Important news</a></h1>
+    <p>
+        Welcome to Staffordshire Moorlands Homechoice, a partnership between Staffordshire
+        Moorlands District Council and Moorlands Housing, part of the Your Housing Group.
+    </p>
+    <p>The Moorlands Home Choice website currently allows applicants to view advertised properties. All registered applicants will have bids placed on eligible properties on their behalf by the Your Moorlands team.</p>
+    <p>If you would like to register as an applicant please contact the Your Moorlands office for an application form or further assistance.</p>
+    <p>For existing applicants who want to make amends to their personal details please contact the Your Moorlands office.</p>
+    <p>
+        <strong>Properties will be advertised every Thursday at Midday and end on the following
+            Wednesday at 4.00pm</strong></p>
+    <div id="ctl00_ContentPlaceHolder1_FeaturedProp" class="infoBox" style="Display:block;">
+        <h2>
+            Property of the week</h2>
+        <div class="infoBoxInner">
+            
+
+
+
+<div>
+  <div style="float:left;font-size:14px;font-weight:bold;height:40px;padding-top:20px;">
+    <p>Priory Avenue Leek ST13 6QJ<br />
+    Semi Detached House with 3 bedrooms (£96.53 rent  per week)</p>
+  </div>
+  <div style="float:right;">
+    <img id="ctl00_ContentPlaceHolder1_FeaturedProperty_imgLandlord" src="images/landlords/yourmoorlandslogo.png" alt="Moorlands Housing" style="border-width:0px;" />
+  </div>
+  <div style="clear:both;"></div>
+</div>   
+
+<div visible="false">
+
+
+    </div>
+ <!-- BANNER -->
+ 
+        <div class="bannerProperty">
+            <div class="bannerleftnav">
+                <img src="/images/spacer.png" />
+            </div>
+            <div class="bannerrightnav">
+                <img src="/images/spacer.png" /></div>
+            <div class="bannerslideshow">
+    
+        <div class="bannerslideshowitem">
+                <img id="ctl00_ContentPlaceHolder1_FeaturedProperty_rptBanner_ctl01_MainPic" src="/uploads/images/179/HR/22%20Priory%20Avenue%20Leek.JPG" alt="Main Image" style="border-width:0px;" />
+            </div>
+    
+        </div>
+        <div class="break">
+        </div>
+        </div>
+    
+ <!-- END BANNER -->
+    
+    
+    
+    <div class="AdvertDescription">
+      <strong>Description</strong><p>Three bedroom semi detached house with two reception rooms. The property has gardens to the front and rear and a driveway and is located close to the town centre and bus route.  Social rent is approximately £96.53 per week.</p>
+      <ul><li>Garden and drive</li><li>Gas central heating</li><li>Upvc windows</li></ul>
+      <p><a id="ctl00_ContentPlaceHolder1_FeaturedProperty_myStreet" href="http://www.upmystreet.com/ST13-6QJ.html" target="_blank">
+      Information on the surrounding area on UpMyStreet (new window)
+      </a><br />
+      <a id="ctl00_ContentPlaceHolder1_FeaturedProperty_googleMaps" href="http://maps.google.co.uk/maps?q=ST13+6QJ" target="_blank">
+      See the property location on Google Maps (new window)
+      </a></p>
+    </div>
+    
+    <div class="AdvertBullets">
+       <strong style="margin-top:20px;">Extra details</strong><br /><table cellspacing="0" cellpadding="5" style="border-collapse:collapse;margin-bottom:20px;"><tr><td class="extraBulletsLeft">Adaptations</td><td class="extraBulletsRight">No information available</td></tr><tr><td class="extraBulletsLeft">Bathroom</td><td class="extraBulletsRight">Standard bathroom</td></tr><tr><td class="extraBulletsLeft">Boiler</td><td class="extraBulletsRight">Standard gas boiler</td></tr><tr><td class="extraBulletsLeft">Central&nbsp;Heating</td><td class="extraBulletsRight">Full</td></tr><tr><td class="extraBulletsLeft">Heating&nbsp;type</td><td class="extraBulletsRight">Wet system with radiators</td></tr><tr><td class="extraBulletsLeft">Fire</td><td class="extraBulletsRight">No information available</td></tr><tr><td class="extraBulletsLeft">Door</td><td class="extraBulletsRight">Timber front doors</td></tr><tr><td class="extraBulletsLeft">Kitchen</td><td class="extraBulletsRight">Non fitted</td></tr><tr><td class="extraBulletsLeft">Windows</td><td class="extraBulletsRight">UPVC</td></tr></table>
+    </div>
+    
+    
+    
+
+    <div style="clear:both;"></div>
+
+
+
+
+
+
+        </div>
+    </div>
+    <div class="infoBox">
+        <h2>
+            All properties</h2>
+        <div class="infoBoxInner">
+            <a href="PropertyResults.aspx">View all 11 properties available this week</a>
+        </div>
+    </div>
+    <div style="float: left; width: 364px; margin-right: 20px">
+        <div class="infoBox">
+            <h2>
+                Download our App</h2>
+            <div class="infoBoxInner" style="height: 220px;">
+                <p>
+                    Download our <a href="news.aspx" style="border: none;">App</a> free from the Android
+                    and Apple store!</p>
+                <div style="float: left; width: 82px; margin-top: 24px;">
+                    <img src="Images/cblapp.gif" alt="CBL App" style="width: 82px; height: 163px;" />
+                </div>
+                <div style="float: right; width: 209px; margin-top: 24px;">
+                    <img src="Images/app-store.gif" alt="Apple store" style="float:left; margin-top:15px;" />
+                    <img height="50" src="Images/MoorlandQRCode_IOS.jpg" alt="Apple store" style="clear:left; margin-bottom:30px; margin-top:15px; margin-left:10px;" />
+                    <img src="Images/android.gif" alt="Android market" style="float:left;" />
+                    <img height="50" src="Images/MoorlandQRCode_Android.jpg" alt="Android market" style="clear:left; margin-left:10px;" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="float: left; width: 306px;">
+        <div class="infoBox">
+            <h2>
+                Bedroom entitlement</h2>
+            <div class="infoBoxInner" style="height: 220px;">
+                <a href="BedroomEntitlement.aspx" title="Bedroom entitlement">
+                    <p>
+                        Find out about your bedroom entitlement</p>
+                    <img src="Images/bedroomEntitlement.gif" alt="Find out your bedroom entitlement"
+                        style="margin-top: 30px;" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;">
+    </div>
+    <div class="infoBox">
+        <h2>
+            What can I do on this site</h2>
+        <div class="infoBoxInner">
+            <h3>
+                If you are already a customer you can</h3>
+            <ul>
+                <li><a href="FAQ.aspx">Learn more about Staffordshire Moorlands Homechoice</a></li>
+                <li><a href="register.aspx">Find out how to register for housing and mutual exchanges
+                    in the area</a></li>
+                <li><a href="PropertyResults.aspx">Bid (apply) for properties</a></li>
+                <li><a href="FAQ.aspx">Get answers to common questions</a></li>
+                <li><a href="feedback.aspx">Give us feedback on the system to help us improve it for
+                    you</a></li>
+            </ul>
+            <h3>
+                If you are a new customer you can</h3>
+            <p>
+                Register on-line by following this link or by clicking the register button in the
+                top right corner of this page.</p>
+            <p>
+                Contact us for advice and assistance in completing an application, either by phoning
+                01538 380 600 or in person at Moorlands Housing or the Council’s offices. Details
+                are in the Contact us section to the right of this page.</p>
+            <p>
+                Existing customers should log in by typing their user name and password into the
+                boxes to the right of this page.</p>
+            <h3>
+                <a id="homelessness"></a>Are you worried about homelessness?</h3>
+            <p>
+                If you think you may be threatened with being homeless or are worried about homelessness contact the Staffordshire Moorlands District Council’s Housing Advice Team.
+            </p>
+            <p>
+                The Housing Advice Team offer advice about housing and housing related problems. Some areas of work include dealing with tenancy problems, unlawful eviction, mortgage and rent arrears, debt and relationship breakdown etc.
+            </p>
+            <p>
+                The team can help you to explore available housing options; remain in your current accommodation if appropriate and consider alternative temporary and permanent accommodation.
+            </p>
+            <p>
+                A <a href="http://www.staffsmoorlands.gov.uk/sm/council-services/advice-and-guidance/homelessness-advice" target="_blank">homelessness application</a> and any legal duties will be considered as appropriate.
+            </p>
+            <p>
+                The team can also help you to access appropriate housing related support such as independent money and debt advice that can help to maintain accommodation.
+            </p>
+            <p>
+                The Housing Advice Team are available on tel: 0345 605 3012, early advice and assistance can help to prevent homelessness.
+            </p>
+            <h3>Are you worried about the condition of a private sector property?</h3>
+            <p>
+                The <a href="http://www.staffsmoorlands.gov.uk/sm/council-services/housing/private-rented-housing" target="_blank">Environmental Health Team</a> provide advice on a range of private sector housing issues, including help for tenants and landlords, guidance on health and safety and repairs in private housing, energy efficiency and the North Staffordshire Landlord Accreditation Scheme.
+            </p>
+            <p>
+                Advice and financial assistance may be available for people in private housing to maintain or improve their homes or make adaptations for disabled householders.
+            </p>
+        </div>
+    </div>
+
+        </div>
+        <div style="clear: both;">
+        </div>
+    </div>
+    <div id="Footer">
+        <div class="Holder">
+            <div style="float: left; width: 70%;">
+                Moorlands Housing is part of the Your Housing Group
+            </div>
+            <div style="float: right; width: 30%; text-align: right;">
+                <a id="ctl00_navDsic" href="Disclaimer.aspx" style="color: White;">Disclaimer</a>&nbsp;|&nbsp;
+                <a id="ctl00_navAcc" href="Accessibility.aspx" style="color: White;">Accessibility</a>&nbsp;|&nbsp;
+                <a id="ctl00_navContact" href="ContactUs.aspx" style="color: White;">Contact Us</a>&nbsp;|&nbsp;
+                <a id="ctl00_navFeedback" href="Feedback.aspx" style="color: White;">Feedback</a>
+            </div>
+        </div>
+    </div>
+    
+    
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABqAtAfjqtkO5YvxjhEuLFpvEP+0rDtfvM94egpb8huSueo/kDR1L6xv384OmRvd92X54UJNr1LAhWdzLOF0ELPSvFesraHGlEgQJrdC3v2csDJcAJNBz3GY4Wy38xMXBJcIoVYiBLWj+zH5xDWBB+RGy5p/ZXRW+aZDuEAJJYfbykWtv6YHI8/YdjN2J5DGp/9zmpqnfula4TDdKpLx+zaVWPZ3xE9Uil3ohF2CAnzafd7n+qrz+z60Zf5OOp33NUmfBVVxpiyvBVWuYyYtg1p29/rQbEF2L/VayvsVXITYNkHgc1nOwwxRglm4N7vH6Ri90/YgoZnAxet+BfcPrmYMJdrR8j5/mvWSZ1wn2nfc2cSpKTGo5dvp9Ht+Sk2Meqosh/c0VTJS26La/gNoGAbSZe7qx7Au2t1hsXrOZ54jAkq4fWhA7Bby9bBSbg4LDSkmLQOVm9Z8ROyWTY0mYv8hMVfv3GgMy6qaC96zl/HdzylWHqoMJV5R/neQmrsY/kSVC84a6zpjXOge6zeMNXifZQKWtnhgkeXJBCMNAoDhiBnWBKXF5iEz8Vf+MHGhHR/P17IG" />
+</div></form>
+</body>
+</html>

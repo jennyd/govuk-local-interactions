@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>NPT Arts and Ents - Pontardawe Arts Centre, Gwyn Hall, Princess Royal Theatre, Community Arts, Special Events</title>
+    <meta name="keywords"
+          content="theatre, arts, centre, entertainment, live, programme, whats on, listings, south wales, drama, dance, comedy, music, opera, ballet, dance, music, musicals, venue, events, concert, gigs, Pontardawe Arts Centre, Gwyn Hall, Princess Royal Theatre">
+    <meta name="description"
+          content="Your online guide to whats on in Neath Port Talbot">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <meta http-equiv="expires" content="">
+    <meta http-equiv="content-language" content="english">
+    <meta content="general" name="rating">
+    <meta content="index,follow" name="robots">
+    <meta content="14 days" name="revisit-after">
+
+    <link href="http://www.nptartsandents.co.uk/css/default.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="http://www.nptartsandents.co.uk/css/slider.css" type="text/css"/>
+    <link rel="stylesheet" href="http://www.nptartsandents.co.uk/css/nivo-slider.css" type="text/css"/>
+    <link rel="stylesheet" href="http://www.nptartsandents.co.uk/css/listmenu_v.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="http://www.nptartsandents.co.uk/css/colorbox.css" type="text/css" media="screen"/>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.nptartsandents.co.uk/js/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript" src="http://www.nptartsandents.co.uk/js/fsmenu.js"></script>
+    <script type="text/javascript" src="http://www.nptartsandents.co.uk/js/jquery.colorbox-min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/minified/i18n/jquery-ui-i18n.min.js"
+            type="text/javascript"></script>
+    <link rel="stylesheet" href="http://www.nptartsandents.co.uk/css/jquery-ui-1.8.18.custom.css" type="text/css"
+          media="all"/>
+
+    <script>
+
+        var dates = [];
+
+        $(function () {
+            $.datepicker.setDefaults($.datepicker.regional["en-GB"]);
+            $("#calendar").datepicker({
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                altField: 'input#date',
+                dateFormat: 'yy-mm-dd',
+                beforeShowDay: highlightDays,
+                onSelect: function (dateText, inst) {
+                    $("#date").value = dateText;
+                    $("#calendarSearch").submit();
+                }
+            });
+            function highlightDays(date) {
+                for (var i = 0; i < dates.length; i++) {
+                    if (dates[i].getTime() == date.getTime()) {
+                        return [true, 'highlight'];
+                    }
+                }
+                return [true, ''];
+
+            }
+
+        });
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".iframe").colorbox({iframe: true, width: "980", height: "96%"});
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+
+<div class="frame">
+    <div class="header">
+        <div class="logo"><img src="/images/npt-logo.png" alt="NPT Arts &amp; Ents" border="0"/></div>
+        <div class="right">
+            <div class="languageBG"><a href=""><img src="/images/welsh-tab.png"
+                                                                                             width="88" height="54"
+                                                                                             alt="Gwyliwch yn y Gymraeg"
+                                                                                             border="0"/></a></div><!--
+  		<div class="accountBG"><a href="http://www.sro.celticleisure.org/CrmLogin.aspx?interface=1" class="iframe"><img src="/images/account-tab-eng.png" width="88" height="54" alt="My Account" border="0" /></a></div>
+  		<div class="basketBG"><a href="http://www.sro.celticleisure.org/MyBasket.aspx?interface=1" class="iframe"><img src="/images/basket-tab-eng.png" width="88" height="54" alt="My Basket" border="0" /></a></div>-->
+
+            <div class="accountBG account-gwynhall">
+                <a href="http://www.sro.celticleisure.org/gwynhall/CrmLogin.aspx?interface=1" class="iframe"><img
+                        src="/images/account-tab-cym.png" width="88" height="54" alt="Fy Masged" border="0"/></a>
+            </div>
+            <div class="basketBG basket-gwynhall">
+                <a href="http://www.sro.celticleisure.org/gwynhall/MyBasket.aspx?interface=1" class="iframe"><img
+                        src="/images/basket-tab-cym.png" width="88" height="54" alt="Fy Nghyfrif" border="0"/></a>
+            </div>
+            <div class="accountBG account-pontardawe">
+                <a href="http://www.sro.celticleisure.org/pontardawe/CrmLogin.aspx?interface=1" class="iframe"><img
+                        src="/images/account-tab-cym.png" width="88" height="54" alt="Fy Masged" border="0"/></a>
+            </div>
+            <div class="basketBG basket-pontardawe">
+                <a href="http://www.sro.celticleisure.org/pontardawe/MyBasket.aspx?interface=1" class="iframe"><img
+                        src="/images/basket-tab-cym.png" width="88" height="54" alt="Fy Nghyfrif" border="0"/></a>
+            </div>
+            <div class="accountBG account-princessroyal">
+                <a href="http://www.sro.celticleisure.org/princessroyal/CrmLogin.aspx?interface=1" class="iframe"><img
+                        src="/images/account-tab-cym.png" width="88" height="54" alt="Fy Masged" border="0"/></a>
+            </div>
+            <div class="basketBG basket-princessroyal">
+                <a href="http://www.sro.celticleisure.org/princessroyal/MyBasket.aspx?interface=1" class="iframe"><img
+                        src="/images/basket-tab-cym.png" width="88" height="54" alt="Fy Nghyfrif" border="0"/></a>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="line"></div>
+    <div class="venues">
+        <div class="left">
+            <a href="http://www.gwynhall.co.uk/"><img style="border:0px solid #000000" src="/images/gwyn-hall-button.jpg" width="139" height="159"></a><a href="http://www.nptartsandents.co.uk/page.php?id=2"><img style="border:0px solid #000000" src="/images/pontardawe-button.jpg" width="138" height="159"></a><a href="http://www.nptartsandents.co.uk/page.php?id=4"><img style="border:0px solid #000000" src="/images/princess-royal-button.jpg" width="138" height="159"></a><a href="http://www.nptartsandents.co.uk/page.php?id=6"><img style="border:0px solid #000000" src="/images/community-arts-button.jpg" width="139" height="159"></a><a href="http://www.nptartsandents.co.uk/page.php?id=5"><img style="border:0px solid #000000" src="/images/special-events-button.jpg" width="145" height="159"></a>
+        </div>
+        <div class="right"><img src="/images/search-title.gif" alt="Whats' on Search" width="147" height="18"/>
+
+            <form action="http://www.nptartsandents.co.uk/en/search-events/" method="get" name="reg" id="reg">
+                <select name="venue_name" class="searchvenues">
+                    <option value="All Venues"
+                            selected="selected">Where?</option>
+                    <option value="Pontardawe">Pontardawe Arts Centre</option>
+                    <option value="PrincessRoyal">Princess Royal Theatre</option>
+                    <option value="GwynHall">Gwyn Hall</option>
+                    <option value="SpecialEvents">Special Events</option>
+                    <option value="CommunityArts">Community Arts</option>
+                    <option value="ArtSpace">Art Space</option>
+                </select>
+
+                <select name="category" class="searchevents">
+                    <option value="0"
+                            selected="selected">All Events</option>
+                                            <option
+                            value="17">Ballet</option>
+                                            <option
+                            value="31">Café Cerdd</option>
+                                            <option
+                            value="15">Children's</option>
+                                            <option
+                            value="23">Circus</option>
+                                            <option
+                            value="10">Comedy</option>
+                                            <option
+                            value="6">Dance</option>
+                                            <option
+                            value="16">Demonstration</option>
+                                            <option
+                            value="3">Drama</option>
+                                            <option
+                            value="22">Exhibition</option>
+                                            <option
+                            value="26">Family Events</option>
+                                            <option
+                            value="21">Film & Cinema</option>
+                                            <option
+                            value="32">Live by Satellite</option>
+                                            <option
+                            value="29">Margam Festival</option>
+                                            <option
+                            value="5">Music</option>
+                                            <option
+                            value="12">Musical</option>
+                                            <option
+                            value="27">National Theatre Live</option>
+                                            <option
+                            value="7">Opera</option>
+                                            <option
+                            value="20">Panto</option>
+                                            <option
+                            value="19">Readings</option>
+                                            <option
+                            value="28">Special Event</option>
+                                            <option
+                            value="14">Storytelling</option>
+                                            <option
+                            value="18">Talk</option>
+                                            <option
+                            value="30">Workshops</option>
+                                    </select>
+
+                <input name="" type="image" src="/images/go-button.gif"/>
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="linethin"></div>
+    <div class="mainContent">
+
+
+	<div class="left">
+    	<div class="menu">
+          <ul class="menulist" id="listMenuRoot">
+			<li><a href="http://www.nptartsandents.co.uk/en/main/home">Home</a><li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home">Pontardawe Arts Centre</a>
+	<ul>
+		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/about-the-theatre">About the Theatre</a>
+	<ul>
+		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/about-the-theatre/our-history">Our history</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/about-the-theatre/governance">Governance</a>	</ul>
+</li>
+		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/facilities">Facilities</a>
+	<ul>
+		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/facilities/booking-information">Booking Information</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/facilities/seating-plan">Seating plan</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/facilities/technical-specification">Technical specification</a>	</ul>
+</li>
+		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/diary-of-events">What's On</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/cinema">Cinema</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/MovementImprov">Movement Improvisation Course</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/get-involved">Classes & Activities</a>
+	<ul>
+		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/get-involved/picturemakers">Picture Makers</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/get-involved/Future Blood">Future Blood</a>	</ul>
+</li>
+		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/foodiefriday">Foodie Fridays</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/scriptslam">Script Slam 2015</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/getting-here">Getting Here...</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/download-a-brochure">Download a brochure</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/gatsby">Gatsby Tea Rooms</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/chrysalis">The Chrysalis Programme</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/contact-us">Contact us</a>
+	<ul>
+		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/contact-us/join-our-mailing-list">Join our mailing list</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/home/contact-us/join-our-elist">Join our Elist</a>	</ul>
+</li>
+	</ul>
+</li>
+<li><a href="http://www.gwynhall.com">Gwyn Hall</a><li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home">Princess Royal Theatre</a>
+	<ul>
+		<li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home/about">About</a>
+	<ul>
+		<li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home/about/how-to-find-us">How to Find Us</a>	</ul>
+</li>
+		<li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home/facilities">Facilities</a>
+	<ul>
+		<li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home/facilities/booking-information">Booking Information</a>		<li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home/facilities/seating-plan">Seating Plan</a>		<li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home/facilities/technical-specification">Technical Specification</a>		<li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home/facilities/lighting-specification">Lighting Specification</a>	</ul>
+</li>
+		<li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home/diary-of-events">What's on</a>		<li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home/contact">Contact us</a>
+	<ul>
+		<li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home/contact/join-our-mailing-list">Join our mailing list</a>	</ul>
+</li>
+		<li><a href="http://www.nptartsandents.co.uk/en/princessroyal/home/download-a-brochure">Download a brochure</a>	</ul>
+</li>
+<li><a href="http://www.nptartsandents.co.uk/en/main/catchtheechoes">Catch the Echoes</a>
+	<ul>
+		<li><a href="http://www.nptartsandents.co.uk/en/main/catchtheechoes/productioncredits">Production credits</a>		<li><a href="http://www.nptartsandents.co.uk/en/main/catchtheechoes/1181-owainsstory">1181 - Owain's story</a>		<li><a href="http://www.nptartsandents.co.uk/en/main/catchtheechoes/1538-rhiannonsstory">1538 - Rhiannon's story</a>		<li><a href="http://www.nptartsandents.co.uk/en/main/catchtheechoes/1630-thevillagersstories">1630 - The Villagers Stories</a>		<li><a href="http://www.nptartsandents.co.uk/en/main/catchtheechoes/1802-arthursstory">1802 - Arthurs Story</a>		<li><a href="http://www.nptartsandents.co.uk/en/main/catchtheechoes/1820-thevillagersstories">1820 - The Villagers' Stories</a>		<li><a href="http://www.nptartsandents.co.uk/en/main/catchtheechoes/1853-nancysstory">1853 - Nancys Story</a>		<li><a href="http://www.nptartsandents.co.uk/en/main/catchtheechoes/1944-griffsstory">1944 - Griffs Story</a>		<li><a href="http://www.nptartsandents.co.uk/en/main/catchtheechoes/2012-eileensstory">2012 - Eileens Story</a>	</ul>
+</li>
+<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/rivertawe">Catch The Echoes: River Tawe</a>
+	<ul>
+		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/rivertawe/lucystory">1 Lucy's Story</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/rivertawe/staffbridge">2/3 The Staff Bridge & The Children's</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/rivertawe/minersbridge">4 The Miners Bridge</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/rivertawe/alicesbridge">5 Alice's Bridge</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/rivertawe/danielsbridge">6 Daniels Bridge</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/rivertawe/copperworker">7 The Copper Worker's Bridge</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/rivertawe/railwaymen">8 The Railway Men's Bridge</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/rivertawe/tommysbridge">9 Tommy's Bridge</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/rivertawe/rivertaweproduction">Production credits</a>		<li><a href="http://www.nptartsandents.co.uk/en/pontardawe/rivertawe/rivertawemap">River Tawe Map</a>	</ul>
+</li>
+<li><a href="http://www.nptartsandents.co.uk/en/main/termsandconditions">Terms and Conditions</a>							<li><a href="">Gwyliwch yn y  Gymraeg</a></li>
+			          </ul>
+
+			<script type="text/javascript">
+			//<![CDATA[
+
+			var listMenu = new FSMenu('listMenu', true, 'display', 'block', 'none');
+
+			//listMenu.showDelay = 0;
+			//listMenu.switchDelay = 125;
+			//listMenu.hideDelay = 500;
+			//listMenu.cssLitClass = 'highlighted';
+			//listMenu.showOnClick = 0;
+			//listMenu.hideOnClick = true;
+			//listMenu.animInSpeed = 0.2;
+			//listMenu.animOutSpeed = 0.2;
+
+
+			listMenu.animations[listMenu.animations.length] = FSMenu.animFade;
+			listMenu.animations[listMenu.animations.length] = FSMenu.animSwipeDown;
+			//listMenu.animations[listMenu.animations.length] = FSMenu.animClipDown;
+
+
+			var arrow = null;
+			if (document.createElement && document.documentElement)
+			{
+			 arrow = document.createElement('span');
+			 arrow.appendChild(document.createTextNode('>'));
+			 // Feel free to replace the above two lines with these for a small arrow image...
+			 //arrow = document.createElement('img');
+			 //arrow.src = 'arrow.gif';
+			 //arrow.style.borderWidth = '0';
+			 arrow.className = 'subind';
+			}
+			addReadyEvent(new Function('listMenu.activateMenu("listMenuRoot", arrow)'));
+
+			//]]>
+			</script>
+
+
+    	</div>
+             <!-- <img src="images/join-mailinglist.jpg" alt="Get the Latest News - Join our E-list" width="186" height="62" />-->
+
+    	
+
+    </div>
+
+
+
+        <div class="center">
+
+	
+   	  <div class="centerInner">
+
+
+				<hr class="onlyonartspace" />
+
+		<!-- AddThis Button BEGIN -->
+		<div class="addthis_toolbox addthis_default_style ">
+		<a class="addthis_button_preferred_1"></a>
+		<a class="addthis_button_preferred_2"></a>
+		<a class="addthis_button_preferred_3"></a>
+		<a class="addthis_button_preferred_4"></a>
+		<a class="addthis_button_compact"></a>
+		<a class="addthis_counter addthis_bubble_style"></a>
+		</div>
+		<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f4d4c0937259228"></script>
+		<!-- AddThis Button END -->
+
+	  </div>
+    </div>
+
+
+
+    <div class="right">
+    	<div class="hotTicket">
+    	  <form action="http://www.nptartsandents.co.uk/en/search-events/" method="get" name="calendarSearch" id="calendarSearch">
+			<div class="calendarSearch">
+				<div class="calendarSearchTitle">Events Calendar</div>
+				<input type="hidden" name="venue_name" value="" />
+				<input type="hidden" id="date" name="date" value="" />
+				<div id="calendar"></div>
+				<div class="calendarSearchFooter">Search events by date</div>
+			</div>
+		  </form>
+
+			</div>
+
+        <div class="socialNetworksBox">
+
+
+
+
+
+        <div>
+
+
+
+    	default right
+
+        </div>
+
+
+
+
+
+
+        </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="line"></div>
+  <div class="footer">
+	  <div class="footerInner">
+	  	<a href="http://www.artswales.org.uk/"><img src="/images/sponsor-arts-council.gif" alt="Arts Council Wales" width="155" height="72" border="0" /></a><a href="http://wales.gov.uk/?lang=en"><img src="/images/sponsor-welsh-gov.gif" alt="Welsh Government" width="142" height="72" border="0" /></a><a href="http://www.celticleisure.org/"><img src="/images/sponsor-celtic.gif" alt="Celtic Leisure" width="93" height="72" border="0" /></a><a href="http://www.npt.gov.uk/"><img src="/images/sponsor-neath-port.gif" alt="Neath Port Talbot" width="187" height="72" border="0" /></a><a href="http://ec.europa.eu/esf/home.jsp?langId=en"><img src="/images/sponsor-esf.gif" alt="ESF" width="111" height="72" border="0" /></a>
+	  </div>
+  </div>
+  <div id="sag"><a href="http://www.savageandgray.co.uk/" target="new">Site by Savage and Gray</a></div>
+
+</div>
+
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+			effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
+			slices: 15, // For slice animations
+			boxCols: 8, // For box animations
+			boxRows: 4, // For box animations
+			animSpeed: 500, // Slide transition speed
+			pauseTime: 6000, // How long each slide will show
+			startSlide: 0, // Set starting Slide (0 index)
+			directionNav: true, // Next & Prev navigation
+			directionNavHide: true, // Only show on hover
+			controlNav: true, // 1,2,3... navigation
+			controlNavThumbs: false, // Use thumbnails for Control Nav
+			controlNavThumbsFromRel: false, // Use image rel for thumbs
+			controlNavThumbsSearch: '.jpg', // Replace this with...
+			controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
+			keyboardNav: true, // Use left & right arrows
+			pauseOnHover: true, // Stop animation while hovering
+			manualAdvance: false, // Force manual transitions
+			captionOpacity: 0.8, // Universal caption opacity
+			prevText: 'Prev', // Prev directionNav text
+			nextText: 'Next', // Next directionNav text
+			randomStart: false, // Start on a random slide
+			beforeChange: function(){}, // Triggers before a slide transition
+			afterChange: function(){}, // Triggers after a slide transition
+			slideshowEnd: function(){}, // Triggers after all slides have been shown
+			lastSlide: function(){}, // Triggers when last slide is shown
+			afterLoad: function(){} // Triggers when slider has loaded
+    	});
+    });
+    </script>
+
+    	
+
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-29395682-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+
+    	
+
+</body>
+</html>

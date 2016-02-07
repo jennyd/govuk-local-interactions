@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+ 
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>
+	Council tax exemptions
+</title><meta name="GENERATOR" content="Contensis CMS Version 8.2" /><meta name="description" content="View if your eligible for a reduction or an exemption in council tax payments." /><meta name="keywords" content="council tax exemption, council tax reduction" /><link href="/SiteElements/Stylesheets/fonts.css?version=2287" rel="stylesheet" type="text/css" />
+<link href="/SiteElements/Stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="/SiteElements/Stylesheets/base.css?version=20079" rel="stylesheet" type="text/css" />
+<link href="/SiteElements/Marketplace/CookieBar/css/primebox.cookiebar.css" rel="stylesheet" type="text/css" />
+		<script  type="text/javascript" src="/WebResource.axd?d=_WkYbOpG5CpdqOOoSsP5YTPpM_xyNR6ViCwLrxHDSp5osm1x46n-fOLRT-hpb3JAnh_gvJJmXUCz1D-GGtOUYTLDTw4wn27l16AX2cqTcLx4DPmijyCJNZD3s6nEAv4B0&amp;t=635823139578913750&amp;build=821874"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+if (typeof(window.$j) == 'undefined') { window.$j = $; }
+window.$j.register = function(name) {if (!this._components){this._components = {};} this._components[name] = true;};
+window.$j.isRegistered = function(name) { if (!this._components) { return false; } return !!(this._components[name]); };
+window.$j.requires = function(name) { if (!this.isRegistered(name)) { alert('JQuery Extension " ' + name + '" not registered'); }};
+if (typeof(jQuery.fn.setArray) == 'undefined') { jQuery.fn.setArray = function( elems ) { this.length = 0; jQuery.fn.push.apply(this, elems); return this; }};
+//]]>
+</script>
+		<script  type="text/javascript" src="/SiteElements/Javascript/jquery.min.js?build=821874"></script>
+		<script  type="text/javascript" src="/SiteElements/Javascript/bootstrap.min.js?build=821874"></script>
+		<script  type="text/javascript" src="/SiteElements/Javascript/typeahead.bundle.min.js?build=821874"></script>
+		<script  type="text/javascript" src="/SiteElements/Javascript/search.min.js?version=12879&amp;build=821874"></script>
+		<script  type="text/javascript" src="/SiteElements/Javascript/ScrollSneak.min.js?version=5209&amp;build=821874"></script>
+<!--[if lte IE 8]><script type="text/javascript" src="/SiteElements/Javascript/html5shiv.min.js"></script><![endif]--><!--[if lte IE 8]><script type="text/javascript" src="/SiteElements/Javascript/respond.min.js"></script><![endif]--><!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="/SiteElements/Stylesheets/bootstrapie7.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/SiteElements/Stylesheets/typeahead.bootstrap.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form method="post" action="/EN/Resident/CouncilTax/Counciltaxdiscountsandexemptions/Counciltaxdiscountsandexemptions.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="ScriptManager_HiddenField" id="ScriptManager_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1NzMwNjQ3MjkPZBYCAgMQZGQWGAIDEGRkFgJmDxYCHgRUZXh0ZWQCBRBkZBYCZg8WAh8ABQRNZW51ZAIHEGRkFgJmDxYCHwAFlQE8YSBocmVmPSIvRU4vU2VhcmNoL01vYmlsZVNlYXJjaC5hc3B4Ij48aW1nIHNyYz0iL1NpdGVFbGVtZW50cy9JbWFnZXMvSWNvbnMvR2VuZXJhbEljb25zL01vYmlsZVNlYXJjaEljb25XaGl0ZVNvbGlkLnBuZyIgYWx0PSJTZWFyY2ggdGhpcyBzaXRlIi8+PC9hPmQCCRBkZBYCZg8WAh8ABfYEPHVsIGNsYXNzPSJuYXYgbmF2YmFyLW5hdiBuYXZiYXItbGVmdCB0b3AtZG9tYWluIj4NCiAgPGxpPjxhIGFjY2Vzc2tleT0iMSIgaHJlZj0iL0VOL1Jlc2lkZW50L1Jlc2lkZW50LmFzcHgiPnd3dy5SQ1RDQkMuZ292LnVrPC9hPjwvbGk+DQo8L3VsPg0KPHVsIGNsYXNzPSJuYXYgbmF2YmFyLW5hdiB0b3AtbGV2ZWwtbmF2LWhlYWRlciI+DQogIDxsaT48YSBjbGFzcz0iaGVhZGVyLWZpcnN0IiBocmVmPSIvRU4vUmVzaWRlbnQvUmVzaWRlbnQuYXNweCI+UmVzaWRlbnQ8L2E+PC9saT4NCiAgPGxpPjxhIGhyZWY9Ii9FTi9CdXNpbmVzcy9CdXNpbmVzcy5hc3B4Ij5CdXNpbmVzczwvYT48L2xpPg0KICA8bGk+PGEgaHJlZj0iL0VOL0NvdW5jaWwvQ291bmNpbC5hc3B4Ij5Db3VuY2lsPC9hPjwvbGk+DQogIDxsaT48YSBocmVmPSJodHRwOi8vd3d3Mi5yY3RjYmMuZ292LnVrL2VuL2V2ZW50cy9ldmVudHMuYXNweCI+VG91cmlzbSBhbmQgRXZlbnRzPC9hPjwvbGk+DQogIDxsaT48YSBocmVmPSIvRU4vR2V0SW52b2x2ZWQvR2V0SW52b2x2ZWQuYXNweCI+R2V0IEludm9sdmVkPC9hPjwvbGk+DQogIDxsaT48YSBocmVmPSIvRU4vTmV3c3Jvb20vTmV3c3Jvb20uYXNweCI+TmV3c3Jvb208L2E+PC9saT4NCjwvdWw+ZAINEGRkFgJmDxYCHwAFqQE8YSBocmVmPSIvZW4vaG9tZS5hc3B4Ij48aW1nIHNyYz0iL1NpdGVFbGVtZW50cy9JbWFnZXMvTG9nb3MvUkNUTE9HT3doaXRlLnBuZyIgY2xhc3M9ImltZy1yZXNwb25zaXZlIHJjdC1oZWFkZXItbG9nbyIgYWx0PSJSaG9uZGRhIEN5bm9uIFRhZiBDb3VudHkgQm9yb3VnaCBDb3VuY2lsIj48L2E+ZAIPD2QWAmYPFgIfAAX/CQoKCgoKPGRpdiBjbGFzcz0iaW5wdXQtZ3JvdXAgcmN0LXNpdGUtc2VhcmNoLWdyb3VwIiBpZD0iU2l0ZVdpZGVTZWFyY2giPgogICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgbmFtZT0iU2l0ZVdpZGVTZWFyY2hTZWFyY2hTZWN0aW9uQ29kZSIgaWQ9IlNpdGVXaWRlU2VhcmNoU2VhcmNoU2VjdGlvbkNvZGUiIGNsYXNzPSJTZWFyY2hTZWN0aW9uQ29kZSIgdmFsdWU9IiIgLz4KCTxpbnB1dCB0eXBlPSJoaWRkZW4iIG5hbWU9IlNpdGVXaWRlU2VhcmNoU2VhcmNoQ2F0ZWdvcnlDb2RlIiBpZD0iU2l0ZVdpZGVTZWFyY2hTZWFyY2hDYXRlZ29yeUNvZGUiIGNsYXNzPSJTZWFyY2hDYXRlZ29yeUNvZGUiIHZhbHVlPSIiIC8+CiAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBuYW1lPSJTaXRlV2lkZVNlYXJjaFNlYXJjaFBhZ2VMYW5ndWFnZUlkIiBpZD0iU2l0ZVdpZGVTZWFyY2hTZWFyY2hQYWdlTGFuZ3VhZ2VJZCIgY2xhc3M9IlNlYXJjaFBhZ2VMYW5ndWFnZUlkIiB2YWx1ZT0iMSIgLz4KIAk8bGFiZWwgZm9yPSJTaXRlV2lkZVNlYXJjaFNlYXJjaFF1ZXJ5IiBzdHlsZT0iZGlzcGxheTpub25lOyI+U2VhcmNoPC9sYWJlbD4KCTxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0iU2l0ZVdpZGVTZWFyY2hTZWFyY2hRdWVyeSIgY2xhc3M9ImZvcm0tY29udHJvbCByY3Qtc2l0ZS1zZWFyY2gtaW5wdXQgU3VnZ2VzdGlvbnMgU2VhcmNoUXVlcnlJbnB1dCIgZGF0YS1TdWdnZXN0aW9ucz0iU2l0ZVNlYXJjaCIgbmFtZT0iU2l0ZVdpZGVTZWFyY2hTZWFyY2hRdWVyeSIgcGxhY2Vob2xkZXI9IlNlYXJjaCB0aGlzIHNpdGUuLi4iIGRhdGEtdG9nZ2xlPSJ0b29sdGlwIiBkYXRhLXBsYWNlbWVudD0idG9wIiB0aXRsZT0iU2VhcmNoIiB2YWx1ZT0iIiAvPgogIDxzcGFuIGNsYXNzPSJpbnB1dC1ncm91cC1idG4iPgoJPGlucHV0IHR5cGU9InN1Ym1pdCIgbmFtZT0iU2l0ZVdpZGVTZWFyY2hTZWFyY2hTdWJtaXRCdXR0b24iIGlkPSJTaXRlV2lkZVNlYXJjaFNlYXJjaFN1Ym1pdEJ1dHRvbiIgIGNsYXNzPSJidG4gYnRuLWRlZmF1bHQgcmN0LXNpdGUtc2VhcmNoLWJ1dHRvbiIgdmFsdWU9IkdvIiAvPgogIDwvc3Bhbj4KPC9kaXY+Cgo8c2NyaXB0PgoKCiAgICAvL01ha2Ugc3VyZSBTZWFyY2gubWluLmpzIGhhcyBiZWVuIGxvYWRlZCBiZWZvcmUKICAgICQoZG9jdW1lbnQpLnJlYWR5KGZ1bmN0aW9uICgpIHsKICAgICAgICBUeXBlQWhlYWRTZWFyY2hTZXR1cCgiI1NpdGVXaWRlU2VhcmNoIiwgIlNpdGVXaWRlU2VhcmNoIiwgIiIsICIiLCAiMSIpOwogICAgfSk7Cgo8L3NjcmlwdD5kAhEPZBYGAgEQZGQWAmYPFgIfAAXIAzxkaXYgY2xhc3M9ImNvbnRhaW5lciI+DQogIDxuYXYgaWQ9Im5hdi1zYXZlLXRpbWUiPg0KICAgIDx1bCBjbGFzcz0ibmF2IG5hdi1waWxscyB0b3AtbGV2ZWwiPg0KICAgICAgPGxpIGNsYXNzPSJzYXZlLXRpbWUtaGVhZGluZyI+U2F2ZSB0aW1lLiBEbyBpdCBvbmxpbmUuPC9saT4NCiAgICAgIDxsaT48YSBocmVmPSIvRU4vQ29udGFjdHVzL1BheWl0LmFzcHgiPlBheSBJdDwvYT48L2xpPg0KICAgICAgPGxpPjxhIGhyZWY9Ii9FTi9Db250YWN0dXMvUmVwb3J0aXQuYXNweCI+UmVwb3J0IEl0PC9hPjwvbGk+DQogICAgICA8bGk+PGEgaHJlZj0iL0VOL0NvbnRhY3R1cy9BcHBseWZvcml0LmFzcHgiPkFwcGx5IGZvciBJdDwvYT48L2xpPg0KICAgICAgPGxpPjxhIGhyZWY9Ii9FTi9Db250YWN0dXMvQm9va2l0LmFzcHgiPkJvb2sgSXQ8L2E+PC9saT4NCiAgICA8L3VsPg0KICA8L25hdj4NCjwvZGl2PmQCBw8WAh8ABRZDb3VuY2lsIHRheCBleGVtcHRpb25zZAILDxYCHgdWaXNpYmxlaGQCEw9kFgJmDxYCHwAF9BIKCjxkaXYgY2xhc3M9IkEtWi1jb250YWluZXIiPgogIDxkaXYgY2xhc3M9ImNvbnRhaW5lciI+CiAgICA8ZGl2IGNsYXNzPSJyb3ciPiAgCiAgCiAgIDxkaXYgY2xhc3M9ImNvbC1tZC0zIGNvbC1sZy0yIEEtWi1UaXRsZSI+QSB0byBaIG9mIFNlcnZpY2VzPC9kaXY+CiAgIDxkaXYgY2xhc3M9ImNvbC1tZC05IGNvbC1sZy0xMCBBLVotbGlua3MiPgoJCTx1bCBjbGFzcz0iTGlzdEF0b1oiPgogICAgIAk8bGk+PGEgaHJlZj0iL0VOL0F0b1ovQXRvWm9mU2VydmljZXMuYXNweD9BWkxpc3RpbmdfQXRvWkxldHRlcj1BIj5BPC9hPjwvbGk+CiAgICAgCTxsaT48YSBocmVmPSIvRU4vQXRvWi9BdG9ab2ZTZXJ2aWNlcy5hc3B4P0FaTGlzdGluZ19BdG9aTGV0dGVyPUIiPkI8L2E+PC9saT4KICAgICAJPGxpPjxhIGhyZWY9Ii9FTi9BdG9aL0F0b1pvZlNlcnZpY2VzLmFzcHg/QVpMaXN0aW5nX0F0b1pMZXR0ZXI9QyI+QzwvYT48L2xpPgogICAgIAk8bGk+PGEgaHJlZj0iL0VOL0F0b1ovQXRvWm9mU2VydmljZXMuYXNweD9BWkxpc3RpbmdfQXRvWkxldHRlcj1EIj5EPC9hPjwvbGk+CiAgICAgCTxsaT48YSBocmVmPSIvRU4vQXRvWi9BdG9ab2ZTZXJ2aWNlcy5hc3B4P0FaTGlzdGluZ19BdG9aTGV0dGVyPUUiPkU8L2E+PC9saT4KICAgICAJPGxpPjxhIGhyZWY9Ii9FTi9BdG9aL0F0b1pvZlNlcnZpY2VzLmFzcHg/QVpMaXN0aW5nX0F0b1pMZXR0ZXI9RiI+RjwvYT48L2xpPgogICAgIAk8bGk+PGEgaHJlZj0iL0VOL0F0b1ovQXRvWm9mU2VydmljZXMuYXNweD9BWkxpc3RpbmdfQXRvWkxldHRlcj1HIj5HPC9hPjwvbGk+CiAgICAgCTxsaT48YSBocmVmPSIvRU4vQXRvWi9BdG9ab2ZTZXJ2aWNlcy5hc3B4P0FaTGlzdGluZ19BdG9aTGV0dGVyPUgiPkg8L2E+PC9saT4KICAgICAJPGxpPjxhIGhyZWY9Ii9FTi9BdG9aL0F0b1pvZlNlcnZpY2VzLmFzcHg/QVpMaXN0aW5nX0F0b1pMZXR0ZXI9SSI+STwvYT48L2xpPgogICAgIAk8bGk+PGEgaHJlZj0iL0VOL0F0b1ovQXRvWm9mU2VydmljZXMuYXNweD9BWkxpc3RpbmdfQXRvWkxldHRlcj1KIj5KPC9hPjwvbGk+CiAgICAgCTxsaT48YSBocmVmPSIvRU4vQXRvWi9BdG9ab2ZTZXJ2aWNlcy5hc3B4P0FaTGlzdGluZ19BdG9aTGV0dGVyPUsiPks8L2E+PC9saT4KICAgICAJPGxpPjxhIGhyZWY9Ii9FTi9BdG9aL0F0b1pvZlNlcnZpY2VzLmFzcHg/QVpMaXN0aW5nX0F0b1pMZXR0ZXI9TCI+TDwvYT48L2xpPgogICAgIAk8bGk+PGEgaHJlZj0iL0VOL0F0b1ovQXRvWm9mU2VydmljZXMuYXNweD9BWkxpc3RpbmdfQXRvWkxldHRlcj1NIj5NPC9hPjwvbGk+CiAgICAgCTxsaT48YSBocmVmPSIvRU4vQXRvWi9BdG9ab2ZTZXJ2aWNlcy5hc3B4P0FaTGlzdGluZ19BdG9aTGV0dGVyPU4iPk48L2E+PC9saT4KICAgICAJPGxpPjxhIGhyZWY9Ii9FTi9BdG9aL0F0b1pvZlNlcnZpY2VzLmFzcHg/QVpMaXN0aW5nX0F0b1pMZXR0ZXI9TyI+TzwvYT48L2xpPgogICAgIAk8bGk+PGEgaHJlZj0iL0VOL0F0b1ovQXRvWm9mU2VydmljZXMuYXNweD9BWkxpc3RpbmdfQXRvWkxldHRlcj1QIj5QPC9hPjwvbGk+CiAgICAgCTxsaT48YSBocmVmPSIvRU4vQXRvWi9BdG9ab2ZTZXJ2aWNlcy5hc3B4P0FaTGlzdGluZ19BdG9aTGV0dGVyPVEiPlE8L2E+PC9saT4KICAgICAJPGxpPjxhIGhyZWY9Ii9FTi9BdG9aL0F0b1pvZlNlcnZpY2VzLmFzcHg/QVpMaXN0aW5nX0F0b1pMZXR0ZXI9UiI+UjwvYT48L2xpPgogICAgIAk8bGk+PGEgaHJlZj0iL0VOL0F0b1ovQXRvWm9mU2VydmljZXMuYXNweD9BWkxpc3RpbmdfQXRvWkxldHRlcj1TIj5TPC9hPjwvbGk+CiAgICAgCTxsaT48YSBocmVmPSIvRU4vQXRvWi9BdG9ab2ZTZXJ2aWNlcy5hc3B4P0FaTGlzdGluZ19BdG9aTGV0dGVyPVQiPlQ8L2E+PC9saT4KICAgICAJPGxpPjxhIGhyZWY9Ii9FTi9BdG9aL0F0b1pvZlNlcnZpY2VzLmFzcHg/QVpMaXN0aW5nX0F0b1pMZXR0ZXI9VSI+VTwvYT48L2xpPgogICAgIAk8bGk+PGEgaHJlZj0iL0VOL0F0b1ovQXRvWm9mU2VydmljZXMuYXNweD9BWkxpc3RpbmdfQXRvWkxldHRlcj1WIj5WPC9hPjwvbGk+CiAgICAgCTxsaT48YSBocmVmPSIvRU4vQXRvWi9BdG9ab2ZTZXJ2aWNlcy5hc3B4P0FaTGlzdGluZ19BdG9aTGV0dGVyPVciPlc8L2E+PC9saT4KICAgICAJPGxpPjxhIGhyZWY9Ii9FTi9BdG9aL0F0b1pvZlNlcnZpY2VzLmFzcHg/QVpMaXN0aW5nX0F0b1pMZXR0ZXI9WCI+WDwvYT48L2xpPgogICAgIAk8bGk+PGEgaHJlZj0iL0VOL0F0b1ovQXRvWm9mU2VydmljZXMuYXNweD9BWkxpc3RpbmdfQXRvWkxldHRlcj1ZIj5ZPC9hPjwvbGk+CiAgICAgCTxsaT48YSBocmVmPSIvRU4vQXRvWi9BdG9ab2ZTZXJ2aWNlcy5hc3B4P0FaTGlzdGluZ19BdG9aTGV0dGVyPVoiPlo8L2E+PC9saT4KCQk8L3VsPgogICA8L2Rpdj4KCgo8L2Rpdj4KPC9kaXY+CjwvZGl2PmQCFRBkZBYCZg8WAh8ABYEDPHVsIGNsYXNzPSJuYXYgbmF2LXBpbGxzIG5hdi1mb290ZXIiPg0KICA8bGk+IDxhIGhyZWY9Ii9FTi9Db250YWN0dXMvQ29udGFjdFVzLmFzcHgiPkNvbnRhY3QgVXM8L2E+IDwvbGk+DQogIDxsaT4gPGEgaHJlZj0iL0VOL0hlbHAvU2l0ZU1hcC5hc3B4Ij5TaXRlIE1hcDwvYT4gPC9saT4NCiAgPGxpPiA8YSBocmVmPSIvRU4vSGVscC9UZXJtc09mVXNlLmFzcHgiPlRlcm1zIG9mIFVzZTwvYT4gPC9saT4NCiAgPGxpPiA8YSBocmVmPSIvRU4vSGVscC9Db29raWVQb2xpY3kuYXNweCI+Q29va2llIFBvbGljeTwvYT4gPC9saT4NCiAgPGxpPiA8YSBocmVmPSIvRU4vSGVscC9Qcml2YWN5U3RhdGVtZW50LmFzcHgiPlByaXZhY3kgU3RhdGVtZW50PC9hPiA8L2xpPg0KPC91bD4NCmQCFxBkZBYCZg8WAh8ABbwGPGRpdiBjbGFzcz0icm93Ij4NCg0KPGRpdiBjbGFzcz0iY29sLXhzLTcgY29sLW1kLTQgZm9vdGVyLWxvZ29zIj48YSBocmVmPSJodHRwczovL3d3dy5nb3YudWsiPjxpbWcgY2xhc3M9ImltZy1yZXNwb25zaXZlIiBzcmM9Ii9TaXRlRWxlbWVudHMvSW1hZ2VzL0xvZ29zL0dvdkxvZ28ucG5nIiBhbHQ9Ikdvdi51ayI+PC9hPjwvZGl2Pg0KDQo8ZGl2IGNsYXNzPSJjb2wteHMtNyBjb2wtbWQtNCBmb290ZXItbG9nb3MiPjxhIGhyZWY9Imh0dHBzOi8vdHdpdHRlci5jb20vUkNUQ291bmNpbCI+PGltZyBjbGFzcz0iaW1nLXJlc3BvbnNpdmUiIHNyYz0iL1NpdGVFbGVtZW50cy9JbWFnZXMvTG9nb3MvVHdpdHRlckxvZ28ucG5nIiBhbHQ9IlJDVCBvbiBUd2l0dGVyIj48L2E+PC9kaXY+DQoNCjxkaXYgY2xhc3M9ImNvbC14cy03IGNvbC1tZC00IGZvb3Rlci1sb2dvcyI+PGEgaHJlZj0iaHR0cHM6Ly9wb3J0aC5yY3RjYmMuZ292LnVrL2luZm9ybSI+PGltZyBjbGFzcz0iaW1nLXJlc3BvbnNpdmUiIHNyYz0iL1NpdGVFbGVtZW50cy9JbWFnZXMvTG9nb3MvSW5mb3JtTG9nby5wbmciIGFsdD0iUkNUIEluZm9ybSI+PC9hPjwvZGl2Pg0KDQo8L2Rpdj4NCg0KPGRpdiBjbGFzcz0icm93Ij4NCjxkaXYgY2xhc3M9ImNvbC14cy03IGNvbC1tZC00IGZvb3Rlci1sb2dvcyI+PGEgaHJlZj0iaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1JDVENvdW5jaWwiPjxpbWcgY2xhc3M9ImltZy1yZXNwb25zaXZlIiBzcmM9Ii9TaXRlRWxlbWVudHMvSW1hZ2VzL0xvZ29zL0ZhY2Vib29rbG9nby5wbmciIGFsdD0iUkNUIG9uIEZhY2Vib29rIj48L2E+PC9kaXY+DQo8L2Rpdj4NCg0KZAIZD2QWAmYPFgIfAAUBCmQCGw9kFgJmDxYCHwAF1QQKCgkJCiAgICAgICAgCTwhLS0gR29vZ2xlIFVuaXZlcnNhbCBBbmFseXRpY3MgLSBTdGFuZGFyZCAtLT4KICAgICAgICAgICAgPHNjcmlwdD4KICAgICAgICAgICAgKGZ1bmN0aW9uKGkscyxvLGcscixhLG0pe2lbJ0dvb2dsZUFuYWx5dGljc09iamVjdCddPXI7aVtyXT1pW3JdfHxmdW5jdGlvbigpewogICAgICAgICAgICAoaVtyXS5xPWlbcl0ucXx8W10pLnB1c2goYXJndW1lbnRzKX0saVtyXS5sPTEqbmV3IERhdGUoKTthPXMuY3JlYXRlRWxlbWVudChvKSwKICAgICAgICAgICAgbT1zLmdldEVsZW1lbnRzQnlUYWdOYW1lKG8pWzBdO2EuYXN5bmM9MTthLnNyYz1nO20ucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoYSxtKQogICAgICAgICAgICB9KSh3aW5kb3csZG9jdW1lbnQsJ3NjcmlwdCcsJy8vd3d3Lmdvb2dsZS1hbmFseXRpY3MuY29tL2FuYWx5dGljcy5qcycsJ2dhJyk7CgogICAgICAgICAgICBnYSgnY3JlYXRlJywgJ1VBLTg5OTIzOC05JywgJ2F1dG8nKTsKICAgICAgICAgICAgZ2EoJ3NlbmQnLCAncGFnZXZpZXcnKTsKCiAgICAgICAgICAgIDwvc2NyaXB0PgogICAgICAgICAgICA8IS0tIEVuZCBHb29nbGUgQW5hbHl0aWNzIC0tPgoJCQpkZE9Ag/qVkQ520R0RhlpEAg1mUJlSvd/xW4lpWSTeEDNQ" />
+</div>
+
+
+<script src="/ScriptResource.axd?d=CPXcc6lN4OoEPbulsU_mn9QnzLDwT-tEFw6QifjRH8SoCaQfTVHNNa-M26dOPoBrVjzbwbY5LaNAeJ35VSxoIjlkeTKXJrB4_xAjb0OjuYeuY9e_E3nk80Cbr354bJCRtKMqAcGQIcHAQLNMmVCbgV3yWHrNIAvrRFkJhsq-udg1&amp;t=ca758f3" type="text/javascript"></script><noscript><p>Browser does not support script.</p></noscript>
+        <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a><!-- BETA Message --><!-- Top Navbar START -->
+<div class="navbar navbar-default navbar-static-top rct-top-nav">
+<div class="container">
+<div class="navbar-header"><button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle Menu</span> Menu</button>
+<div class="mobile-search-icon visible-xs"><a href="/EN/Search/MobileSearch.aspx"><img src="/SiteElements/Images/Icons/GeneralIcons/MobileSearchIconWhiteSolid.png" alt="Search this site"/></a></div>
+</div>
+<div class="navbar-collapse collapse">
+<div class="row">
+<div class="col-md-10"><ul class="nav navbar-nav navbar-left top-domain">
+  <li><a accesskey="1" href="/EN/Resident/Resident.aspx">www.RCTCBC.gov.uk</a></li>
+</ul>
+<ul class="nav navbar-nav top-level-nav-header">
+  <li><a class="header-first" href="/EN/Resident/Resident.aspx">Resident</a></li>
+  <li><a href="/EN/Business/Business.aspx">Business</a></li>
+  <li><a href="/EN/Council/Council.aspx">Council</a></li>
+  <li><a href="http://www2.rctcbc.gov.uk/en/events/events.aspx">Tourism and Events</a></li>
+  <li><a href="/EN/GetInvolved/GetInvolved.aspx">Get Involved</a></li>
+  <li><a href="/EN/Newsroom/Newsroom.aspx">Newsroom</a></li>
+</ul></div>
+<div class="col-md-2">
+<ul class="nav navbar-nav navbar-right">
+<li>
+
+                            <a href="http://www.rctcbc.gov.uk/CY/Resident/CouncilTax/Counciltaxdiscountsandexemptions/Counciltaxdiscountsandexemptions.aspx">Cymraeg</a>
+
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Top Navbar END --><!-- Logo Header START -->
+<div class="rct-logo-header">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-5 col-md-4 col-lg-3"><a href="/en/home.aspx"><img src="/SiteElements/Images/Logos/RCTLOGOwhite.png" class="img-responsive rct-header-logo" alt="Rhondda Cynon Taf County Borough Council"></a></div>
+<div class="col-xs-12 col-sm-2 col-md-4 col-lg-5"></div>
+<div class="col-sm-5 col-md-4 col-lg-4 hidden-xs">
+
+
+
+
+
+<div class="input-group rct-site-search-group" id="SiteWideSearch">
+    <input type="hidden" name="SiteWideSearchSearchSectionCode" id="SiteWideSearchSearchSectionCode" class="SearchSectionCode" value="" />
+	<input type="hidden" name="SiteWideSearchSearchCategoryCode" id="SiteWideSearchSearchCategoryCode" class="SearchCategoryCode" value="" />
+    <input type="hidden" name="SiteWideSearchSearchPageLanguageId" id="SiteWideSearchSearchPageLanguageId" class="SearchPageLanguageId" value="1" />
+ 	<label for="SiteWideSearchSearchQuery" style="display:none;">Search</label>
+	<input type="text" id="SiteWideSearchSearchQuery" class="form-control rct-site-search-input Suggestions SearchQueryInput" data-Suggestions="SiteSearch" name="SiteWideSearchSearchQuery" placeholder="Search this site..." data-toggle="tooltip" data-placement="top" title="Search" value="" />
+  <span class="input-group-btn">
+	<input type="submit" name="SiteWideSearchSearchSubmitButton" id="SiteWideSearchSearchSubmitButton"  class="btn btn-default rct-site-search-button" value="Go" />
+  </span>
+</div>
+
+<script>
+
+
+    //Make sure Search.min.js has been loaded before
+    $(document).ready(function () {
+        TypeAheadSearchSetup("#SiteWideSearch", "SiteWideSearch", "", "", "1");
+    });
+
+</script><noscript><p>Browser does not support script.</p></noscript>
+</div>
+</div>
+</div>
+</div>
+<!-- Header Container END --><!-- Main Content START -->
+
+<div class="landing-page-top-level-nav-save-time"><div class="container">
+  <nav id="nav-save-time">
+    <ul class="nav nav-pills top-level">
+      <li class="save-time-heading">Save time. Do it online.</li>
+      <li><a href="/EN/Contactus/Payit.aspx">Pay It</a></li>
+      <li><a href="/EN/Contactus/Reportit.aspx">Report It</a></li>
+      <li><a href="/EN/Contactus/Applyforit.aspx">Apply for It</a></li>
+      <li><a href="/EN/Contactus/Bookit.aspx">Book It</a></li>
+    </ul>
+  </nav>
+</div></div>
+<div class="main-content-wrapper">
+<div class="container">
+<div class="row">
+<div class="col-md-12 rct-breadcrumb">
+<div>
+	<a title="Go to Home from here" class="sys_0 sys_t148" href="/EN/Home.aspx">Home</a>&#62;<a title="Go to Resident from here" class="sys_0 sys_t148" href="/EN/Resident/Resident.aspx">Resident</a>&#62;<a title="Go to Council Tax from here" class="sys_0 sys_t53" href="/EN/Resident/CouncilTax/CouncilTax.aspx">Council Tax</a>&#62;<span>Council tax discounts and exemptions</span>
+</div>
+</div>
+<div class="col-md-12">
+
+</div>
+<div class="col-md-12">
+<h1>Council tax exemptions</h1>
+</div>
+<div class="col-md-12 landing-content" id="content">
+<br />
+<div class="four-col-grid">
+<div class="row">
+<div class="four-col">
+<div class="col-md-3 col-sm-6">
+
+<div class="top-task-block">
+<div class="row">
+<div class="col-xs-3 col-sm-3 col-md-5 col-lg-4 top-task-block-image">
+<img alt="Problems-Paying" height="130" width="130" src="/EN/Resident/CouncilTax/Images/Icons/ProblemsPaying.png" />
+</div>
+<div class="col-xs-9 col-sm-9 col-md-7 col-lg-8 top-task-text-block">
+<div class="top-task-block-heading">
+<a title="Single persons council tax discount" class="sys_0 sys_t34" href="/EN/Resident/CouncilTax/Counciltaxdiscountsandexemptions/Singlepersonscounciltaxdiscount.aspx">Single person discount</a>
+</div>
+<div class="top-task-block-text">
+If you are aged 18 or over and live alone, you can apply for a 25% discount.
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="col-md-3 col-sm-6">
+
+<div class="top-task-block">
+<div class="row">
+<div class="col-xs-3 col-sm-3 col-md-5 col-lg-4 top-task-block-image">
+<img alt="Disabled-Discount" height="130" width="130" src="/EN/Resident/CouncilTax/Images/Icons/DisabledDiscount.png" />
+</div>
+<div class="col-xs-9 col-sm-9 col-md-7 col-lg-8 top-task-text-block">
+<div class="top-task-block-heading">
+<a title="Disabled person council tax reduction" class="sys_0 sys_t34" href="/EN/Resident/CouncilTax/Counciltaxdiscountsandexemptions/Disabledpersoncounciltaxreduction.aspx">Disabled person reduction</a>
+</div>
+<div class="top-task-block-text">
+Your bill may be reduced if you or a someone living at your property is permanently disabled.
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="col-md-3 col-sm-6">
+
+<div class="top-task-block">
+<div class="row">
+<div class="col-xs-3 col-sm-3 col-md-5 col-lg-4 top-task-block-image">
+<img alt="Discounts" height="130" width="130" src="/EN/Resident/CouncilTax/Images/Icons/Discounts.png" />
+</div>
+<div class="col-xs-9 col-sm-9 col-md-7 col-lg-8 top-task-text-block">
+<div class="top-task-block-heading">
+<a title="Student council tax exemptions" class="sys_0 sys_t34" href="/EN/Resident/CouncilTax/Counciltaxdiscountsandexemptions/Studentcounciltaxexemptions.aspx">Student exemptions</a>
+</div>
+<div class="top-task-block-text">
+You may be exempt or eligible for discount if you or someone in your home is a Student.
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="col-md-3 col-sm-6">
+
+<div class="top-task-block">
+<div class="row">
+<div class="col-xs-3 col-sm-3 col-md-5 col-lg-4 top-task-block-image">
+<img alt="Council-Tax-House" height="130" width="130" src="/EN/Resident/CouncilTax/Images/Icons/CouncilTaxHouse.png" />
+</div>
+<div class="col-xs-9 col-sm-9 col-md-7 col-lg-8 top-task-text-block">
+<div class="top-task-block-heading">
+<a title="Properties exempt from council tax payments" class="sys_0 sys_t34" href="/EN/Resident/CouncilTax/Counciltaxdiscountsandexemptions/Propertiesexemptfromcounciltaxpayments.aspx">Exempt properties</a>
+</div>
+<div class="top-task-block-text">
+View the criteria for properties exempt from council tax charges
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="four-col-grid">
+<div class="row">
+<div class="four-col">
+<div class="col-md-3 col-sm-6">
+
+<div class="top-task-block">
+<div class="row">
+<div class="col-xs-3 col-sm-3 col-md-5 col-lg-4 top-task-block-image">
+<img alt="Council-Tax-House" height="130" width="130" src="/EN/Resident/CouncilTax/Images/Icons/CouncilTaxHouse.png" />
+</div>
+<div class="col-xs-9 col-sm-9 col-md-7 col-lg-8 top-task-text-block">
+<div class="top-task-block-heading">
+<a title="Empty property and second home council tax discount" class="sys_0 sys_t34" href="/EN/Resident/CouncilTax/Counciltaxdiscountsandexemptions/Emptypropertyandsecondhomecounciltaxdiscount.aspx">Empty properties and second home discount</a>
+</div>
+<div class="top-task-block-text">
+View exemptions for empty - unfurnished properties and second homes.
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="col-md-3 col-sm-6">
+
+<div class="top-task-block">
+<div class="row">
+<div class="col-xs-3 col-sm-3 col-md-5 col-lg-4 top-task-block-image">
+<img alt="Council-Tax-Pay" height="130" width="130" src="/EN/Resident/CouncilTax/Images/Icons/CouncilTaxPay.png" />
+</div>
+<div class="col-xs-9 col-sm-9 col-md-7 col-lg-8 top-task-text-block">
+<div class="top-task-block-heading">
+<a title="Job related council tax discount" class="sys_0 sys_t34" href="/EN/Resident/CouncilTax/Counciltaxdiscountsandexemptions/Jobrelatedcounciltaxdiscount.aspx">Job related discounts</a>
+</div>
+<div class="top-task-block-text">
+You may be entitled to a discount if you occupy a dwelling provided by your employer.
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="col-md-3 col-sm-6">
+
+<div class="top-task-block">
+<div class="row">
+<div class="col-xs-3 col-sm-3 col-md-5 col-lg-4 top-task-block-image">
+<img alt="Question-Mark" height="130" width="130" src="/EN/Resident/CouncilTax/Images/Icons/QuestionMark.png" />
+</div>
+<div class="col-xs-9 col-sm-9 col-md-7 col-lg-8 top-task-text-block">
+<div class="top-task-block-heading">
+<a title="Other council tax discounts and exemptions" class="sys_0 sys_t34" href="/EN/Resident/CouncilTax/Counciltaxdiscountsandexemptions/Othercounciltaxdiscountsandexemptions.aspx">Other council tax discounts and exemptions</a>
+</div>
+<div class="top-task-block-text">
+There are a range of circumstances that may make you eligible for a discount or exemption.
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="col-md-3 col-sm-6">
+
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<p>&nbsp;</p>
+
+</div>
+
+</div>
+</div>
+</div>
+<div class="landing-pr">
+
+</div>
+
+<!-- Main Content END --><!-- A-Z START -->
+
+
+<div class="A-Z-container">
+  <div class="container">
+    <div class="row">  
+  
+   <div class="col-md-3 col-lg-2 A-Z-Title">A to Z of Services</div>
+   <div class="col-md-9 col-lg-10 A-Z-links">
+		<ul class="ListAtoZ">
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=A">A</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=B">B</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=C">C</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=D">D</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=E">E</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=F">F</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=G">G</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=H">H</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=I">I</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=J">J</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=K">K</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=L">L</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=M">M</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=N">N</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=O">O</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=P">P</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=Q">Q</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=R">R</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=S">S</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=T">T</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=U">U</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=V">V</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=W">W</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=X">X</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=Y">Y</a></li>
+     	<li><a href="/EN/AtoZ/AtoZofServices.aspx?AZListing_AtoZLetter=Z">Z</a></li>
+		</ul>
+   </div>
+
+
+</div>
+</div>
+</div>
+<!-- A-Z END --><!-- Footer START --><footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-6"><ul class="nav nav-pills nav-footer">
+  <li> <a href="/EN/Contactus/ContactUs.aspx">Contact Us</a> </li>
+  <li> <a href="/EN/Help/SiteMap.aspx">Site Map</a> </li>
+  <li> <a href="/EN/Help/TermsOfUse.aspx">Terms of Use</a> </li>
+  <li> <a href="/EN/Help/CookiePolicy.aspx">Cookie Policy</a> </li>
+  <li> <a href="/EN/Help/PrivacyStatement.aspx">Privacy Statement</a> </li>
+</ul>
+</div>
+<div class="col-md-6 footer-logos"><div class="row">
+
+<div class="col-xs-7 col-md-4 footer-logos"><a href="https://www.gov.uk"><img class="img-responsive" src="/SiteElements/Images/Logos/GovLogo.png" alt="Gov.uk"></a></div>
+
+<div class="col-xs-7 col-md-4 footer-logos"><a href="https://twitter.com/RCTCouncil"><img class="img-responsive" src="/SiteElements/Images/Logos/TwitterLogo.png" alt="RCT on Twitter"></a></div>
+
+<div class="col-xs-7 col-md-4 footer-logos"><a href="https://porth.rctcbc.gov.uk/inform"><img class="img-responsive" src="/SiteElements/Images/Logos/InformLogo.png" alt="RCT Inform"></a></div>
+
+</div>
+
+<div class="row">
+<div class="col-xs-7 col-md-4 footer-logos"><a href="https://www.facebook.com/RCTCouncil"><img class="img-responsive" src="/SiteElements/Images/Logos/Facebooklogo.png" alt="RCT on Facebook"></a></div>
+</div>
+
+</div>
+</div>
+</div>
+</footer><!-- Footer END -->
+
+
+
+
+		
+        	<!-- Google Universal Analytics - Standard -->
+            <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-899238-9', 'auto');
+            ga('send', 'pageview');
+
+            </script><noscript><p>Browser does not support script.</p></noscript>
+            <!-- End Google Analytics -->
+		
+
+    
+		<script  type="text/javascript" src="/SiteElements/Marketplace/CookieBar/js/primebox.cookiebar.js?build=821874"></script><noscript><p>Browser does not support script.</p></noscript>
+		<script  type="text/javascript" src="/SiteElements/Marketplace/CookieBar/js/zengenti.cookiebar.js?build=821874"></script><noscript><p>Browser does not support script.</p></noscript>
+
+<script type="text/javascript">
+//<![CDATA[
+
+		(function() {(function ($j) { 
+ $j(function(){ 
+ $j.fn.zengentiCookieBar({"message":"We use cookies to track usage and preferences.","acceptText":"I Understand","policyButton":true,"policyText":"Privacy Policy","policyURL":"/EN/Help/CookiePolicy.aspx","autoEnable":true,"acceptOnContinue":true,"expireDays":365.0,"forceShow":false,"effect":"slide","element":"body","append":false,"fixed":false,"bottom":false}); 
+ }) 
+ })(jQuery);}());
+
+//]]>
+</script><noscript><p>Browser does not support script.</p></noscript></form>
+</body>
+</html>

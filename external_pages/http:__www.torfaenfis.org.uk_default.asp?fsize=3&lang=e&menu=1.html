@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="verify-v1" content="zLXUtB5pqPpPshfsKkSL9gPoLAJx4CD9Z3m8pzRXv1I=" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no"/>
+<link href="newcss.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="newprintcss.css" rel="stylesheet" type="text/css" media="print" />
+<link href="td.css" rel="stylesheet" type="text/css" media="print" />
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2874104-5";
+urchinTracker();
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--//
+var fontsize=3;
+
+function decfont()
+{
+  fontsize=fontsize-1;
+  if (fontsize<1){fontsize=1;}
+  document.forms.fontchanger.fsize.value=fontsize;
+  document.forms.fontchanger.submit();
+}
+
+function incfont()
+{
+  fontsize=fontsize+1;
+  if (fontsize>6){fontsize=6;}
+  document.forms.fontchanger.fsize.value=fontsize;
+  document.forms.fontchanger.submit();
+}
+
+function langchange()
+{
+  if (document.getElementById("language").value!='a'){
+    document.forms.fontchanger.page.value='0';
+    document.forms.fontchanger.menu.value='1';
+    document.forms.fontchanger.lang.value=document.getElementById("language").value;
+    document.forms.fontchanger.submit();
+  }
+}
+
+//-->
+</script>
+<title>Torfaen FIS</title>
+
+<style type="text/css">
+#queryform{
+  width: 500px;
+}
+th{
+  text-align: left;
+}
+.resdrop{
+  width: 250px;
+}
+legend{
+  cursor: pointer;
+}
+a img{
+  border: none;
+}
+
+.bigredbutton{
+  width: 111px;
+  height: 37px;
+  border: 0;
+  margin: 0 0 0 20px;
+  padding: 0;
+  background: url(images/searchbutton.png) no-repeat 0 0;
+  vertical-align: center;
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* IE 5.x */
+  font-family: arial;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 0;
+  display:block;
+  line-height: 0;
+  text-indent: -1000em;
+}
+
+.bigredbuttonover{
+  width: 111px;
+  height: 37px;
+  border: 0;
+  margin: 0 0 0 20px;
+  background: url(images/searchbuttonover.png) no-repeat 0 0;
+  vertical-align: center;
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* IE 5.x */
+  font-family: arial;
+  font-weight: bold;
+  font-size: 0;
+  display:block;
+  line-height: 0;
+  color: #ffffff;
+  text-indent: -1000em;
+}
+
+.bigredbuttondown{
+  width: 111px;
+  height: 37px;
+  border: 0;
+  margin: 0 0 0 20px;
+  background: url(images/searchbuttondown.png) no-repeat 0 0;
+  vertical-align: center;
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* IE 5.x */
+  font-family: arial;
+  font-weight: bold;
+  font-size: 0;
+  display:block;
+  line-height: 0;
+  color: #ffffff;
+  text-indent: -1000em;
+}
+
+#socialicons{
+display:block;
+height:38px;
+margin-top:10px;
+margin-bottom: -35px;
+float:left;
+}
+
+#facebook{
+display:inline-block;
+height:38px;
+width:37px;
+margin-left: 5px;
+background: url(facebookWhiteTransparentBG.png) no-repeat 0 0;
+}
+
+#twitter{
+display:inline-block;
+height:38px;
+width:37px;
+margin-left: 5px;
+background: url(twitterWhiteTransparentBG.png) no-repeat 0 0;
+}
+
+</style>
+</head>
+<body>
+<div id="pagewrap">
+  <div id="verytop">
+<div id="socialicons">
+<a href="https://www.facebook.com/TorfaenFIS"><div id="facebook"></div></a>
+<a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fwww.torfaenfis.org.uk%2F&screen_name=TorfaenFIS&tw_p=followbutton&variant=2.0"><div id="twitter"></div></a>
+</div>
+  <div id="search">
+<script language="JavaScript" type="text/javascript">
+<!--//
+function fontchange()
+{
+  if (document.forms.searchform.fontsize.value=='inc'){
+    incfont();
+  }
+  if (document.forms.searchform.fontsize.value=='dec'){
+    decfont();
+  }
+  
+}
+//-->
+</script>
+<form name="searchform" action="default.asp" method="get">
+<table>
+<tr>
+  <td nowrap="nowrap">
+<!--    <select id="language" name="Language" onchange="langchange()">
+      <option value="a">Select Language</option>
+      <option value="e">English</option>
+      <option value="c">Welsh</option>
+
+    </select>
+-->
+  </td>
+  <td>
+    <select id="fontsize" name="fontsize" onchange="fontchange()">
+      <option value="">Font Size</option>
+
+      <option value="dec">Smaller</option>
+
+      <option value="inc">Bigger</option>      
+
+    </select>
+  </td>
+  <td>
+    <input type="text" class="searchbox" name="lookup" value=""/>&nbsp;
+    <input type="submit" value="Search"/>
+  </td>
+</tr>
+</table>
+    <input type="hidden" name="page" value="0"/>
+    <input type="hidden" name="menu" value="1"/>
+    <input type="hidden" name="fsize" value="3"/>
+    <input type="hidden" name="lang" value="e"/>
+</form>
+</div>
+  </div>
+  
+<div id="navmenu1">
+<table cellspacing="0" cellpadding="0"><tr>
+
+    <td width="5"><img src="images/buttleft.gif" alt=""/></td><td nowrap="nowrap"><ul><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=1" title="Home" accesskey="1">Home</a></li></ul></td><td width="5"><img src="images/buttright.gif" alt=""/></td><td>&nbsp;</td>
+
+    <td width="5"><img src="images/buttleft.gif" alt=""/></td><td nowrap="nowrap"><ul><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=2" title="CSSIW" accesskey="2">CSSIW</a></li></ul></td><td width="5"><img src="images/buttright.gif" alt=""/></td><td>&nbsp;</td>
+
+    <td width="5"><img src="images/buttleft.gif" alt=""/></td><td nowrap="nowrap"><ul><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=3" title="Work Life Balance" accesskey="3">Work Life Balance</a></li></ul></td><td width="5"><img src="images/buttright.gif" alt=""/></td><td>&nbsp;</td>
+
+    <td width="5"><img src="images/buttleft.gif" alt=""/></td><td nowrap="nowrap"><ul><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=4" title="Working in Childcare" accesskey="4">Working in Childcare</a></li></ul></td><td width="5"><img src="images/buttright.gif" alt=""/></td><td>&nbsp;</td>
+
+    <td width="5"><img src="images/buttleft.gif" alt=""/></td><td nowrap="nowrap"><ul><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=5" title="EYDCP Training" accesskey="5">EYDCP Training</a></li></ul></td><td width="5"><img src="images/buttright.gif" alt=""/></td><td>&nbsp;</td>
+
+    <td width="5"><img src="images/buttleft.gif" alt=""/></td><td nowrap="nowrap"><ul><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=6" title="Provider Information" accesskey="6">Provider Information</a></li></ul></td><td width="5"><img src="images/buttright.gif" alt=""/></td><td>&nbsp;</td>
+
+</tr></table>
+</div>
+
+  <div id="wrapper">
+  <br/>
+  <div id="logo">&nbsp;</div>
+  <div id="mid">
+    <div id="boxmid" class="boxmid3">
+ 
+    <img src="pics/Leaflets Image.JPG" title="Leaflets Image.JPG" alt="Leaflets Image.JPG" border="0" style="margin-left:80px; top:0;width:;height:;padding:0;"><h3>Free, impartial information on services and activities for children, young people and families, including parents-to-be, in Torfaen.</h3> 
+(Blaenavon, Pontypool, Cwmbran)   
+
+<p>You can access information and guidance using the pages of <b>this website</b> or get a <i>tailor-made information pack</i> by contacting us via:<br/>  <ul><li><b>Freephone helpline: 0800 0196 330</b> - speak to an advisor during office hours or leave a message on our 24hr answer machine service to be called back. Enquiries are processed quickly and we aim to return any missed calls within one day</li></ul>  <ul><li><b>Email <a href="mailto:FIS@torfaen.gov.uk">FIS@torfaen.gov.uk </a></b> - with details of your enquiry and your address if you would like to receive a pack via post rather than email  </li></ul>  <ul><li><b>Drop in to Cwmbran Integrated Children's Centre </b> (pictured below) - and speak to us face to face during office hours</li></ul>  <ul><li><b>Speak to our Outreach Officer, Hannah</b> - out and about in the community and at events in Torfaen throughout the year</li></ul>  <ul><li>Don't forget to try our <b>online search facility</b> for a list of <b><a href="http://www.torfaenfis.org.uk/default.asp?eys=1" >childcare or other services</a></b> by area.</li></ul> </p> 
+
+<h3>Follow us on Twitter:</h3>  
+<a href="https://twitter.com/TorfaenFIS" class="twitter-follow-button" data-show-count="false">Follow @TorfaenFIS</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<h3>Find us on Facebook:</h3>
+<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like-box href="http://www.facebook.com/pages/Torfaen-Family-Information-Service/106925502737311" width="900" show_faces="false" border_color="" stream="false" header="true"></fb:like-box><br/><br/> 
+
+
+
+ <img src="pics/ICC Front.JPG" title="Cwmbran ICC" alt="ICC Front.JPG" border="0" style="Margin-left: 80px; top:0;width:;height:;padding:0;"/>  <p>  <b>Childcare Sufficiency Assessment 2013-2014</b><br/>  For more information on the consultation in Torfaen, visit the <a href="http://www.torfaenfis.org.uk/default.asp?fsize=3&lang=e&menu=7&page=3"><b>Childcare Sufficiency Assessment page</b></a> of our website.</p>      <p>For more information on the history and remit of Torfaen Family Information Service, including information on the <b>Torfaen Together Plan</b>, visit the <b><a href="http://www.torfaenfis.org.uk/default.asp?fsize=3&lang=e&menu=1&page=1"target="_blank" >About Us</a></b> page.</p>  <br/>  <h3>What kind of information can I get from Torfaen FIS?</h3> 
+
+   <p>We traditionally hold detailed information on local childcare in Blaenavon, Pontypool or Cwmbran, including Flying Start and parent and toddler groups. However, we also hold an extensive range of information to support young people, parents and prospective parents of children and young people.<br/>  <br/>  <ul><li>We hold childcare related information on:<br/>  - Childminders<br/>  - Day Nurseries<br/>  - Playgroups and Cylchoedd Meithrin<br/>  - Before School Clubs</br>  - After School Clubs<br/>  - Holiday Clubs, Half Term and Summer Playschemes<br/>  - Nursery education<br/> - Flying Start<br/  - Including: Parent & Toddler Groups/ Cylchoedd Ti a Fi <br/>  - Tax Credits an Childcare Vouchers<br/></li></ul>    <ul><li>Information held to support parents/carers and prospective parents covers:<br/>  - The Torfaen Together Plan<br/>  - Education and family learning services - including information on choosing a school, resource bases for children with additional needs and Local Education Authority core services<br/>  - Health and wellbeing services, including antenatal services<br/>  - Play, sport and other recreational services, including local groups and activities<br/>  - Family support services<br/>  - Youth services and Youth Clubs<br/>  - Financial and legal services<br/>  - Child development and staying safe information<br/>  - Local and national services for disabled children and young people,including leisure facilities<br/>  - Welsh language support<br/></p></li></ul>    <p>Plus information on other local and national agencies who offer support and guidance to you and your family.<p/>    <p>We offer information and advice on <a href="http://www.torfaenfis.org.uk/default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=3&amp;eys=1" >where childcare providers are</a>, <a href="http://www.torfaenfis.org.uk/default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=2" >choosing the right provision for you and your child</a>, and <a href="http://www.torfaenfis.org.uk/default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=3" target="_blank">how to pay for childcare.</a></p>    <p>We can also provide advice on <a href="http://www.torfaenfis.org.uk/default.asp?fsize=3&amp;lang=e&amp;menu=4" >training for a career in childcare</a>, setting up as a childcare provider and how to access grants and other sources of funding. </p>    <p>Please note that Torfaen Family Information Service is not responsible for the content of external websites. Links are for information purposes only. A link does not imply an endorsement of the linked site or its contents.</p>    
+
+
+    </div>
+    <script language="Javascript" type="text/javascript">
+<!--//
+
+function chclass(obj)
+{
+  if (obj.className=="menuitem"){
+    obj.className="menuitemover";
+  } else {
+    obj.className="menuitem";
+  }
+}
+
+function gosearch()
+{
+  document.forms.newmenu.submit();
+}
+
+//-->
+</script>
+
+
+<div id="menubar">
+
+
+<form name="newmenu" action="default.asp" method="get" >
+  <div id="menu99" class="menu" style="width: 170px;text-align: center;">
+    <input type="submit" class="bigredbutton" id="searchbutt" value="Search" onmousedown="this.className='bigredbuttondown'" onmouseout="this.className='bigredbutton'" onmouseover="this.className='bigredbuttonover'"/> 
+<br/><br/>
+  </div>
+<input type="hidden" name="eys" value="1" />
+</form>
+
+
+  <div id="menu1" class="menu">
+    <table border="0" cellspacing="0" cellpadding="0" width="180">
+      <tr>
+        <td class="menuhead">Home</td>
+      </tr>
+      <tr>
+        <td class="menuholder"><ul>
+            <li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=1" title="About us">About us</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=2" title="Choosing Childcare">Choosing Childcare</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=3" title="Paying for Childcare">Paying for Childcare</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=4" title="Flying Start ">Flying Start </a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=5" title="The Foundation Phase">The Foundation Phase</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=6" title="Additional Needs">Additional Needs</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=7" title="Local Events">Local Events</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=8" title="News & Job Vacancies">News & Job Vacancies</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=9" title="Staff Contacts">Staff Contacts</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=1&amp;page=10" title="Useful Links">Useful Links</a></li>
+          </ul></td>
+      </tr>
+    </table>
+  </div>
+  <br/>
+  
+  <div id="menu7" class="menu">
+    <table border="0" cellspacing="0" cellpadding="0" width="180">
+      <tr>
+        <td class="menuhead" nowrap="nowrap"><a href="default.asp?fsize=3&amp;lang=e&amp;menu=7&amp;page=0" title="Information for Parents">Information for Parents</a></td>
+      </tr>
+      <tr>
+        <td class="menuholder"><ul>
+            <li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=7&amp;page=2" title="Publications and Resources">Publications and Resources</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=7&amp;page=3" title="Childcare Sufficiency Assessment">Childcare Sufficiency Assessment</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=7&amp;page=4" title="Nursery for 3 & 4 Year Olds">Nursery for 3 & 4 Year Olds</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=7&amp;page=5" title="Positive Parenting">Positive Parenting</a></li><li><a href="default.asp?fsize=3&amp;lang=e&amp;menu=7&amp;page=6" title="Welsh Medium Childcare & Education">Welsh Medium Childcare & Education</a></li>
+          </ul></td>	
+      </tr>
+
+    </table>
+  </div>
+  <div id="menu99" class="menu">
+  <table border="0" cellspacing="0" cellpadding="0" width="180">
+    <tr>
+      <td class="menuholder">
+        <br/>
+        <ul><li><a href="javascript:gosearch()">Search</a></li></ul>
+      </td>
+    </tr>
+  </table>
+  <br/>
+  
+</div>
+
+  </div>
+  <br/>
+  </div>
+  <form name="fontchanger" method="get" action="default.asp">
+    <input type="hidden" name="page" value="0"/>
+    <input type="hidden" name="menu" value="1"/>
+    <input type="hidden" name="fsize" value="3"/>
+    <input type="hidden" name="lang" value="e"/>
+
+  </form>
+<center><img src="images/FIS-logo-service.jpg" alt="FIS Service Logo" style="margin-top: 20px;"/></center>
+
+<br/>
+<br/>
+
+<br/>
+
+
+
+  <div id="verybottom"><p class="footpad"><strong>FREEPHONE/RHADFF&Ocirc;N 0800 0196330</strong></p></div>
+</div>
+</body>
+</html>

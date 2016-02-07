@@ -1,0 +1,1025 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+
+<head>
+<base href="http://www3.hants.gov.uk/" />
+
+	<!--[if lt IE 7]>
+	</base>
+	<![endif]-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="DC.Format" scheme="IMT" content="text/html" />
+	<meta name="DC.Rights.Copyright" content="http://www.hants.gov.uk/copyrite.html" />
+	<meta name="DC.Title" content="District council services" />
+	<meta name="DC.Subject" content="" />
+	<meta name="DC.Description" content="" />
+	<meta name="DC.Date" content="07-02-2016" />
+	<meta name="DC.Type" content="Web Publishing System" />
+	<meta name="DC.Creator" content="Hampshire County Council. The Castle, Winchester, Hampshire SO23 8UJ; info@hants.gov.uk" />
+	<meta name="DC.Publisher" content="Hampshire County Council. The Castle, Winchester, Hampshire SO23 8UJ; info@hants.gov.uk" />
+	<meta name="DC.Identifier" content="http://www3.hants.gov.uk/index/council/localgov/redirect-district.htm?lgsl=591" />
+	<meta name="hwebpid" content="193847"/>
+	
+	<script type="text/javascript" src="http://www.hants.gov.uk/ajax/libs/jquery/1.1.4/jquery.min.js"></script>
+	<!--  -->
+	<script type="text/javascript" src="http://www.hants.gov.uk/ajax/libs/cookie/1.0/jquery.cookie.min.js"></script>
+	<script type="text/javascript" src="http://www.hants.gov.uk/ajax/libs/json/2.2/jquery.json.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	var bolHantsdirect = (/(^|\;\s*)HANTSDIRECT(\;|\)|\s*$)/i).test(navigator.userAgent);
+	var bolLaganMedium = (/\/lagan(\/|$)/i).test(document.location.pathname);
+	var bolLagan = bolHantsdirect || bolLaganMedium;
+	var strMobileSwitchSrc = "http://www.hants.gov.uk/ajax/libs/mobileswitch/1.0/mobileswitch.min.js";
+	var strHantswebLayoutSrc = "http://www.hants.gov.uk/ajax/libs/hantsweblayout/1.0/hantsweblayout.min.js";
+	if(bolHantsdirect && !bolLaganMedium) document.write(unescape("%3Cscript src='lagan/laganswitch.js' type='text/javascript'%3E%3C/script%3E"));
+	if(strHantswebLayoutSrc && !bolLagan) document.write(unescape("%3Cscript src='" + strHantswebLayoutSrc + "' type='text/javascript'%3E%3C/script%3E"));
+	if(strMobileSwitchSrc && !bolLagan) document.write(unescape("%3Cscript src='" + strMobileSwitchSrc + "' type='text/javascript'%3E%3C/script%3E"));
+	//]]>
+	</script>
+	
+	
+	<!-- <script type="text/javascript" src=""></script> -->
+	<!-- <link rel="stylesheet" type="text/css" href="" /> -->
+	
+	
+<style type="text/css">
+<!--
+div#mapdiv {
+	clear: both;
+	height: 300px;
+	border:1px solid #ccc;
+	/*
+	margin-left: 33.5%;
+	margin-right: 0;
+	width: 65.5%;
+	margin-right: 12px;
+	*/
+	display: none;
+}
+div#nearestservice {
+	clear: both;
+}
+div#nearestservice h2 {
+	clear: right;
+}
+.hidden {
+	display: none;
+}
+/*
+table#services tr th {
+	text-align: left;
+}
+table#services tr td {
+	vertical-align: bottom;
+}
+*/
+table#services {
+	border-top:2px solid #006666;
+	border-bottom:2px solid #006666;
+	margin:1em 0;
+	text-align:left;
+	border-collapse:collapse;
+	clear: both;
+}
+table#services th {
+	background:#ddd;
+	padding:2px 4px;
+}
+table#services tbody td {
+	padding:2px 5px;
+	vertical-align: bottom;
+}
+table#services tr.altrow {
+	background:#e5efef;
+}
+table#services th.Numeric,
+table#services td.Numeric {
+	text-align:right;
+}
+div#formbox {
+	/*
+	float: left;
+	width: 30%;
+	*/
+}
+div#formbox form div.allformfields input.formfield {
+	width: 8em;
+}
+
+div#formbox form div.allformfields input.submitbutton {
+	clear: none;
+	margin: 0;
+	padding: 0;
+	margin-left: 3px;
+}
+.pageinfo .googleMapError p {
+	padding-top: 130px;
+	text-align: center;
+}
+-->
+</style>
+	<title>District council services</title>
+<meta  name="rightcol" content="yes" />
+<meta  name="news" content="no" />
+<meta  name="iwantto" content="no" />
+<meta  name="relatedlinks" content="no" />
+<meta  name="contacts" content="no" />
+<meta  name="rightpics" content="yes" />
+<meta  name="bcstart" content="2" />
+<meta  name="contactname" content="the Hantsweb Team" />
+
+	<!--  -->
+	<link rel="stylesheet" type="text/css" href="hantsweb-core.css?banner=banner-castle.jpg&amp;swatch=greengrey" id="corecss" />
+	<link rel="stylesheet" type="text/css" href="hantsweb-core-print.css?banner=banner-castle.jpg&amp;swatch=greengrey" media="print" id="corecssprint" />
+	
+<style type="text/css">
+
+#explore{
+	background-image:url('hcc-alldistricts.gif');
+	margin:0; padding:0; position:relative;
+	width:446px;
+	height:477px;
+}
+#exploremenu ul li{
+	display:inline;
+	list-style-image:none;
+}
+#exploremenu ul li a{
+	position:absolute;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.eastdorset{
+	top:272px;	
+	left:0px;	
+	width:57px;	
+	height:191px;
+	overflow: hidden;	
+	z-index:5;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.eastdorset:hover{
+	background-image:url('hcc-eastdorsetx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.poole{
+	top:358px;	
+	left:0px;	
+	width:27px;	
+	height:58px;
+	overflow: hidden;	
+	z-index:20;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.poole:hover{
+	background-image:url('hcc-poolex-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.bournemouth{
+	top:368px;	
+	left:12px;	
+	width:58px;	
+	height:34px;
+	overflow: hidden;	
+	z-index:15;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.bournemouth:hover{
+	background-image:url('hcc-bournemouthx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.christchurch{
+	top:347px;	
+	left:25px;	
+	width:68px;	
+	height:51px;
+	overflow: hidden;	
+	z-index:10;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.christchurch:hover{
+	background-image:url('hcc-christchurchx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.salisbury{
+	top:148px;	
+	left:0px;	
+	width:116px;	
+	height:145px;
+	overflow: hidden;	
+	z-index:0;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.salisbury:hover{
+	background-image:url('hcc-salisburyx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.kennet{
+	top:21px;	
+	left:0px;	
+	width:152px;	
+	height:147px;
+	overflow: hidden;	
+	z-index:0;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.kennet:hover{
+	background-image:url('hcc-kennetx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.newforest{
+	top:259px;	
+	left:1px;	
+	width:205px;	
+	height:147px;
+	overflow: hidden;	
+	z-index:0;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.newforest:hover{
+	background-image:url('hcc-newforestx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.westberkshire{
+	top:0px;	
+	left:115px;	
+	width:179px;	
+	height:110px;
+	overflow: hidden;	
+	z-index:0;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.westberkshire:hover{
+	background-image:url('hcc-westberkshirex-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.testvalley{
+	top:100px;	
+	left:86px;	
+	width:118px;	
+	height:204px;
+	overflow: hidden;	
+	z-index:0;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.testvalley:hover{
+	background-image:url('hcc-testvalleyx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.basingstoke{
+	top:82px;	
+	left:158px;	
+	width:150px;	
+	height:119px;
+	overflow: hidden;	
+	z-index:0;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.basingstoke:hover{
+	background-image:url('hcc-basingstokex-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.winchester{
+	top:171px;	
+	left:159px;	
+	width:137px;	
+	height:163px;
+	overflow: hidden;	
+	z-index:0;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.winchester:hover{
+	background-image:url('hcc-winchesterx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.southampton{
+	top:286px;	
+	left:154px;	
+	width:50px;	
+	height:38px;
+	overflow: hidden;	
+	z-index:20;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.southampton:hover{
+	background-image:url('hcc-southamptonx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.eastleigh{
+	top:260px;	
+	left:177px;	
+	width:47px;	
+	height:74px;
+	overflow: hidden;	
+	z-index:10;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.eastleigh:hover{
+	background-image:url('hcc-eastleighx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.fareham{
+	top:310px;	
+	left:204px;	
+	width:66px;	
+	height:45px;
+	overflow: hidden;	
+	z-index:15;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.fareham:hover{
+	background-image:url('hcc-farehamx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.gosport{
+	top:338px;	
+	left:236px;	
+	width:34px;	
+	height:35px;
+	overflow: hidden;	
+	z-index:20;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.gosport:hover{
+	background-image:url('hcc-gosportx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.portsmouth{
+	top:328px;	
+	left:266px;	
+	width:32px;	
+	height:42px;
+	overflow: hidden;	
+	z-index:15;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.portsmouth:hover{
+	background-image:url('hcc-portsmouthx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.havant{
+	top:306px;	
+	left:286px;	
+	width:39px;	
+	height:64px;
+	overflow: hidden;	
+	z-index:10;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.havant:hover{
+	background-image:url('hcc-havantx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.isleofwight{
+	top:369px;	
+	left:121px;	
+	width:173px;	
+	height:104px;
+	overflow: hidden;	
+	z-index:0;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.isleofwight:hover{
+	background-image:url('hcc-isleofwightx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.easthants{
+	top:159px;	
+	left:260px;	
+	width:124px;	
+	height:167px;
+	overflow: hidden;	
+	z-index:0;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.easthants:hover{
+	background-image:url('hcc-easthantsx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.hart{
+	top:89px;	
+	left:301px;	
+	width:73px;	
+	height:87px;
+	overflow: hidden;	
+	z-index:10;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.hart:hover{
+	background-image:url('hcc-hartx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.reading{
+	top:32px;	
+	left:271px;	
+	width:38px;	
+	height:40px;
+	overflow: hidden;	
+	z-index:20;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.reading:hover{
+	background-image:url('hcc-readingx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.wokingham{
+	top:0px;	
+	left:285px;	
+	width:67px;	
+	height:96px;
+	overflow: hidden;	
+	z-index:10;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.wokingham:hover{
+	background-image:url('hcc-wokinghamx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.bracknellforest{
+	top:43px;	
+	left:340px;	
+	width:57px;	
+	height:57px;
+	overflow: hidden;	
+	z-index:15;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.bracknellforest:hover{
+	background-image:url('hcc-bracknellforestx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.surreyheath{
+	top:82px;	
+	left:362px;	
+	width:54px;	
+	height:32px;
+	overflow: hidden;	
+	z-index:20;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.surreyheath:hover{
+	background-image:url('hcc-surreyheathx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.rushmoor{
+	top:110px;	
+	left:362px;	
+	width:25px;	
+	height:44px;
+	overflow: hidden;	
+	z-index:15;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.rushmoor:hover{
+	background-image:url('hcc-rushmoorx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.guildford{
+	top:92px;	
+	left:378px;	
+	width:68px;	
+	height:80px;
+	overflow: hidden;	
+	z-index:10;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.guildford:hover{
+	background-image:url('hcc-guildfordx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.waverley{
+	top:146px;	
+	left:349px;	
+	width:97px;	
+	height:83px;
+	overflow: hidden;	
+	z-index:15;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.waverley:hover{
+	background-image:url('hcc-waverleyx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+#exploremenu ul li a.chichester{
+	top:214px;	
+	left:320px;	
+	width:126px;	
+	height:180px;
+	overflow: hidden;	
+	z-index:0;	
+	line-height:0;
+	font-size:0;
+	text-decoration:none;
+}	
+#exploremenu ul li a.chichester:hover{
+	background-image:url('hcc-chichesterx-on.gif') ;
+	border:none;
+	text-decoration:none;
+}
+
+</style>
+
+</head>
+
+
+
+
+<body>
+<!-- muscat ignore -->
+<!-- googleoff: all -->
+<div id="setwidth" class="setwidth">
+	<p class="invisible">
+		<a href="index/council/localgov/redirect-district.htm#contentstart" accesskey="s" title="Skip to content">Skip to content</a>
+	</p>
+	
+	<div id="toolbar" class="toolbar">
+		<img src="logo.gif" width="175" height="50" alt="Hampshire County Council" class="hcclogo" />
+		<div id="toolbarinfo" class="toolbarinfo">
+			<div id="toolbarmain" class="toolbarmain">
+				<div id="hantsweblogo" class="hantsweblogo">
+					<a href="http://www.hants.gov.uk/" title="Hantsweb home" accesskey="1"><img src="hantsweb.gif" width="100" height="30" alt="Hantsweb home" /></a>
+				</div>
+				<!-- Search Google -->
+				<div id="searchform" class="searchform">
+					<script type="text/javascript">
+					//<![CDATA[
+					document.write('<!-- Google CSE Search Box Begins -->');
+					document.write('<form id="searchbox_009988739743092233991:4hx6rzq-jqg" action="http://www3.hants.gov.uk/search">');
+					document.write('<div>');
+					document.write('<input type="hidden" name="cx" value="009988739743092233991:4hx6rzq-jqg" />');
+					document.write('<input type="hidden" name="cof" value="FORID:11" />');
+					document.write('<label for="searchhantsweb" class="invisible">Search</label>');
+					document.write('<input name="q" type="text" class="field" id="searchhantsweb" maxlength="255" />');
+					document.write(' <input type="submit" name="sa" value="Search" class="button" />');
+					document.write('</div>');
+					document.write('</form> ');
+					document.write('<!-- Google CSE Search Box Ends -->');
+					//]]>
+					</script>
+
+					<noscript>
+					<!-- Google CSE Search Box Begins  -->
+					<form  id="searchbox_009988739743092233991:4hx6rzq-jqg" action="http://www.google.com/search">
+					<div>
+					<input type="hidden" name="cx" value="009988739743092233991:4hx6rzq-jqg" />
+					<input type="hidden" name="cof" value="FORID:0" />
+					<label for="searchhantsweb" class="invisible">Search</label>
+					<input name="q" type="text" class="field" id="searchhantsweb" maxlength="255" />
+					<input type="submit" name="sa" value="Search" class="button" />
+					</div>
+					</form>
+					<!-- Google CSE Search Box Ends -->
+					</noscript>
+				</div>
+				<!-- Search Google -->
+				<ul>
+					<li id="mobileswitchitem"><a rel="nofollow" id="mobileswitchlink" href="mobile/index/council/localgov/redirect-district.htm?lgsl=591">Mobile <span class="tinytext">(beta)</span></a></li>
+					<li><a href="http://www.hants.gov.uk/" title="Hantsweb home">Hantsweb Home</a></li>
+					<li><a href="http://www3.hants.gov.uk/azindex" accesskey="3">A-Z Services</a></li>
+					<li><a href="http://www.hants.gov.uk/contactus/">Contact us</a></li>
+					<li class="end"><a href="http://www3.hants.gov.uk/help/" accesskey="6">Help</a></li>	
+				</ul>
+			</div>
+			<div id="toolbarcrumb" class="toolbarcrumb">
+				<p>You are here<span><a href="http://www.hants.gov.uk/" title="Hantsweb home">Hantsweb Home</a></span><span></span><!--
+
+	
+
+					
+		
+					
+		
+			
+		
+					
+		
+			
+		
+					
+		
+			
+		
+					
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+--></p>
+			</div>
+		</div>
+	</div>
+	<!-- end muscat ignore -->
+	<div id="content" class="maincontent">
+		<a name="contentstart" id="contentstart"></a>
+		<div id="masthead" class="masthead">
+			<!-- googleon: all -->
+			<div id="bannersquare" class="bannersquare">
+				<h1>Local Government in Hampshire</h1>
+
+
+				
+							
+			</div>
+		</div>
+		<div id="pagebody" class="pagebody">
+			<div id ="leftcolumnwrapper" class="leftcolumnwrapper3col">
+				<div id="leftcolumn" class="leftcolumnSS">
+					<div id="navigation" class="navigation">
+						
+	
+	<ul>
+
+		
+	
+		
+	
+			
+		
+		
+	
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+			
+		
+		
+	
+			<li><a href="index/council/localgov.htm">Local Government in Hampshire</a></li>
+		
+		
+	
+			<li><a href="index/council/localgov/parish.htm">Town and Parish Councils</a></li>
+		
+			<li><a href="index/council/localgov/neighbr.htm">Neighbouring Councils</a></li>
+		
+			<li><a href="http://www.hampshire.police.uk/">Hampshire Constabulary</a></li>
+		
+			<li><a href="http://www.hantsfire.gov.uk/">Hampshire Fire &amp; Rescue</a></li>
+		
+			<li><a href="http://www.hiow.gov.uk/">Hampshire and Isle of Wight Local Government Association</a></li>
+		
+			<li><a href="http://www.local.gov.uk/">Local Government Association</a></li>
+		
+		
+	
+			<li><a href="index/council/shaping-services.htm">Shaping services</a></li>
+		
+		
+	
+			
+		
+			
+		
+			
+		
+		
+	
+		
+	
+		
+	
+	</ul>
+
+					</div>
+					<div id="pageinfowrapper" class="pageinfowrapper">
+						<div id="pageinfo" class="pageinfo">
+							
+							
+<div id="formbox">
+	<form action="index/council/localgov/redirect-district.htm" method="get">
+		<h1>Spillage - roads</h1>
+		<p>This service is provided by district/borough councils and unitary authorities.</p><p>Please 
+enter a Hampshire postcode:</p>
+
+		<div class="allformfields">
+			<div class="formrow">
+				<div class="formlabel">	Postcode:</div>
+				<label for="postcode" class="invisible">Postcode</label>
+				<input name="postcode" id="postcode" type="text" class="formfield" value="" maxlength="8" />
+				<input type="hidden" name="lgsl" value="591" />
+				<input type="submit" id="getgisdata" name="getgisdata" class="submitbutton" value="Go" />
+			</div>
+			
+		</div>
+	</form>
+</div>
+
+<div style="clear:both">
+	<p>Or choose an area from the map:</p>
+	
+			
+			
+			
+			<div id="explore">
+				<div id="exploremenu">
+					<ul><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=15&amp;Type=Single" class="basingstoke">basingstoke</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=30&amp;Type=Single" class="bournemouth">bournemouth</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=31&amp;Type=Single" class="bracknellforest">bracknellforest</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=67&amp;Type=Single" class="chichester">chichester</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=70&amp;Type=Single" class="christchurch">christchurch</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=104&amp;Type=Single" class="eastdorset">eastdorset</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=105&amp;Type=Single" class="easthants">easthants</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=113&amp;Type=Single" class="eastleigh">eastleigh</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=124&amp;Type=Single" class="fareham">fareham</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect//index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=133&amp;Type=Single" class="gosport">gosport</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=138&amp;Type=Single" class="guildford">guildford</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=149&amp;Type=Single" class="hart">hart</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=152&amp;Type=Single" class="havant">havant</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=165&amp;Type=Single" class="isleofwight">isleofwight</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=168&amp;Type=Single" class="kennet">kennet</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=210&amp;Type=Single" class="newforest">newforest</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=565&amp;Type=Single" class="poole">poole</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=252&amp;Type=Single" class="portsmouth">portsmouth</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=255&amp;Type=Single" class="reading">reading</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=272&amp;Type=Single" class="rushmoor">rushmoor</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=276&amp;Type=Single" class="salisbury">salisbury</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=308&amp;Type=Single" class="southampton">southampton</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=328&amp;Type=Single" class="surreyheath">surreyheath</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=340&amp;Type=Single" class="testvalley">testvalley</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=367&amp;Type=Single" class="waverley">waverley</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=372&amp;Type=Single" class="westberkshire">westberkshire</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=385&amp;Type=Single" class="winchester">winchester</a></li><li><a href="http://local.direct.gov.uk/LDGRedirect/index.jsp?LGSL=591&amp;LGIL=8&amp;AgencyId=389&amp;Type=Single" class="wokingham">wokingham</a></li></ul>
+				</div>
+			</div>
+		
+		
+			
+			
+		
+</div>
+							
+							
+							
+						</div>
+					</div>
+					<div class="clear">&nbsp;</div>
+				</div>
+			</div>
+			<div id="rightcolumn" class="rightcolumn">
+	
+	
+	
+
+
+	
+	
+	
+	
+	
+</div>
+			<div class="clear">&nbsp;</div>
+		</div>
+		
+		
+
+
+
+		<!-- googleoff: all --><!-- muscat ignore -->
+		<div id="footer" class="footer">
+			<div id="accessibilityFooter">
+	
+	
+	<!-- AddThis Button BEGIN -->
+	<div id="addThis" class="addthis_toolbox addthis_default_style">
+		<script type="text/javascript">
+		//<![CDATA[
+		var addthis_config = {ui_click: true};
+		try
+		{
+			var gaJsHost2 = (("https:" == document.location.protocol) ? "https://" : "http://");
+		}
+		catch(e){};
+		
+		if(gaJsHost2 == 'http://' && !bolLagan)
+		{
+			document.write(unescape('%3Ca href="' + gaJsHost2 + 'www.addthis.com/bookmark.php?v=250&amp;pub=hccaddthis" class="addthis_button_compact"%3EShare%3C/a%3E'));
+			document.write(unescape('%3Cspan class="addthis_separator"%3E|%3C/span%3E'));
+			document.write(unescape('%3Ca class="addthis_button_facebook"%3E%3C/a%3E'));
+			document.write(unescape('%3Ca class="addthis_button_email"%3E%3C/a%3E'));
+			document.write(unescape('%3Ca class="addthis_button_favorites"%3E%3C/a%3E'));
+			document.write(unescape('%3Ca class="addthis_button_print"%3E%3C/a%3E'));	
+			
+			document.write(unescape("%3Cscript src='" + gaJsHost2 + "s7.addthis.com/js/250/addthis_widget.js#pub=hccaddthis' type='text/javascript'%3E%3C/script%3E"));
+		}
+		//]]>
+		</script>
+		
+<script type="text/javascript" src="addtomyinfo-ajax.js"></script>
+
+<a class="myinfo-add myhantsweb-button" rel="nofollow" href="index/council/localgov/addtomyinfo.htm?id=193847&amp;url=http%253A%2f%2fwww3.hants.gov.uk%2fredirect-district%253Flgsl%253D591&amp;query=lgsl%3d591&amp;type=I&amp;title=District%20council%20services&amp;bookmarkTitle=District%20council%20services"><img src="ico-add-my-info.png" width="16" height="16" alt="Add to myHantsweb Information" class="myhantsweb-icon" title="Add to myHantsweb Information" style="vertical-align:middle;" /></a>
+<span class="addedOkay myhantsweb-button"></span>
+<span class="printlist-container">
+	<a class="myinfo-add printlist-add" rel="nofollow" href="index/council/localgov/addtoprintlist.htm?id=193847&amp;url=http%253A%2f%2fwww3.hants.gov.uk%2fredirect-district%253Flgsl%253D591&amp;query=lgsl%3d591&amp;type=I&amp;title=District%20council%20services&amp;bookmarkTitle=District%20council%20services"><img src="page_white_add.png" width="16" height="16" alt="add to booklet" class="vertimg" title="Add to Booklet" /></a>
+	<span class="addedToPrintListOkay"></span>
+</span>
+<a href="createbooklet.htm"><img src="managemybooklet.png" width="19" height="16" alt="Manage Booklet" class="vertimg" id="printlist-manage" title="Manage Booklet" /></a>
+	</div>
+	<!-- AddThis Button END -->
+	
+	<div id="accessibilityButtons">
+		<span style="font-size:180%;"><a title="set font largest" href="index/council/localgov/redirect-district.htm?lgsl=591&amp;textsize=large" id="textSizeLarge">A</a></span>&nbsp;
+		<span style="font-size:150%;"><a title="set font large" href="index/council/localgov/redirect-district.htm?lgsl=591&amp;textsize=medium" id="textSizeMedium">A</a></span>&nbsp;
+		<span style="font-size:100%;"><a title="set font medium" href="index/council/localgov/redirect-district.htm?lgsl=591&amp;textsize=small" id="textSizeSmall">A</a></span>&nbsp;
+		<a title="high contrast yellow on black" href="index/council/localgov/redirect-district.htm?lgsl=591&amp;medium=yb" id="mediumYb"><img src="highvis1.gif" width="20" height="20" alt="High contrast yellow on black" /></a>&nbsp;
+		<a title="high contrast yellow on purple" href="index/council/localgov/redirect-district.htm?lgsl=591&amp;medium=yp" id="mediumYp"><img src="highvis2.gif" width="20" height="20" alt="High contrast yellow on purple" /></a>&nbsp;
+		<a title="default colour scheme" href="index/council/localgov/redirect-district.htm?lgsl=591&amp;medium=1" id="mediumDefault"><img src="highvis3.gif" width="20" height="20" alt="Default colour scheme" /></a>
+	</div>
+</div>
+			<ul>
+				<li><a href="http://www3.hants.gov.uk/help/">Accessibility options</a>&nbsp; &nbsp;|</li>
+				<li><a href="http://www.hants.gov.uk/disclaimer.html" accesskey="8">Disclaimer</a>&nbsp; &nbsp;|</li>
+				<li><a href="http://www3.hants.gov.uk/privacy.html">Privacy &amp; Cookies</a>&nbsp; &nbsp;|</li>
+				<li><a href="http://www.hants.gov.uk/hantsweb/outages.html">Service availability</a>&nbsp; &nbsp;|</li>
+				<li><a href="contactus/call-charges.htm">Call charges</a></li>
+			</ul>
+			<p>Hampshire County Council, The Castle, Winchester, Hampshire, SO23 8UJ<br />
+			This page was last updated  on 12 May 2008. Â© <a href="copyright.htm">Copyright</a> Hampshire County Council 2016.</p>	
+		</div>
+		<!-- end muscat ignore --><!-- googleon: all -->
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+/* Code to tract Google Analytics stats on external links, download links and email links */
+if (document.getElementsByTagName) {
+        // Initialize external link handlers
+        var hrefs = document.getElementsByTagName("a");
+        for (var l = 0; l < hrefs.length; l++) {
+				// try {} catch{} block added by erikvold VKI
+			try{
+	                //protocol, host, hostname, port, pathname, search, hash
+	                if (hrefs[l].protocol == "mailto:") {
+	                        startListening(hrefs[l],"click",trackMailto);
+	                } else if (hrefs[l].hostname == location.host) {
+	                        var path = hrefs[l].pathname + hrefs[l].search;
+							var isDoc = path.match(/\.(?:doc|eps|jpg|png|svg|xls|ppt|pdf|xls|zip|txt|vsd|vxd|js|css|rar|exe|wma|mov|avi|wmv|mp3)($|\&|\?)/);
+	                        if (isDoc) {
+	                                startListening(hrefs[l],"click",trackExternalLinks);
+	                        }
+	                } else {
+	                        startListening(hrefs[l],"click",trackExternalLinks);
+	                }
+			}
+			catch(e){
+					continue;
+			}
+        }
+}
+
+function startListening (obj,evnt,func) {
+        if (obj.addEventListener) {
+                obj.addEventListener(evnt,func,false);
+        } else if (obj.attachEvent) {
+                obj.attachEvent("on" + evnt,func);
+        }
+}
+
+function trackMailto (evnt) {
+        var href = (evnt.srcElement) ? evnt.srcElement.href : this.href;
+        var mailto = "/mailto/" + href.substring(7);
+        if (typeof(pageTracker) == "object") pageTracker._trackPageview(mailto);
+}
+
+function trackExternalLinks (evnt) {
+        var e = (evnt.srcElement) ? evnt.srcElement : this;
+        while (e.tagName != "A") {
+                e = e.parentNode;
+        }
+        var lnk = (e.pathname.charAt(0) == "/") ? e.pathname : "/" + e.pathname;
+        if (e.search && e.pathname.indexOf(e.search) == -1) lnk += e.search;
+        if (e.hostname != location.host) lnk = "/external/" + e.hostname + lnk;
+        if (typeof(pageTracker) == "object") pageTracker._trackPageview(lnk); 
+}
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+try
+{
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+}
+catch(e){};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+try{
+var pageTracker = _gat._getTracker("UA-4081638-1");
+pageTracker._setDomainName(".hants.gov.uk");
+pageTracker._initData();
+pageTracker._trackPageview("/http://www3.hants.gov.uk/index/council/localgov/redirect-district.htm?lgsl=591");
+} catch(err) {}
+//]]>
+</script>
+</body>
+
+</html>

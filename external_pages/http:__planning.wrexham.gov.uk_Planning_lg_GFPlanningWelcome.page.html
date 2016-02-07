@@ -1,0 +1,498 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:clay="http://shale.apache.org/clay"
+      xmlns:t="http://myfaces.apache.org/tomahawk"
+      xmlns:w2="http://www.comino.com/jsftags">
+<head>
+	
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <!-- Start DC and eGMS Meta-Tags -->
+<meta name="eGMS.accessibility" scheme="ICRA" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://www.wrexham.gov.uk" r (nz 1 vz 1 lz 1 oz 1 cz 1))' />
+<meta name="subject" scheme="IPSV" content="local government" />
+<meta name="DC.Coverage" content="Wrexham, North East Wales, Wales, UK" lang="en" />
+<meta name="DC.Creator" content="Wrexham County Borough Council, Old Library, Queens Square, Wrexham LL11 1AU, UK. webmaster@wrexham.gov.uk" lang="en" />
+<meta name="DC.Date" scheme="W3CDTF" content="2009-01-16" />
+<meta name="DC.Date.created" scheme="ISO8601" content="2009-01-16" />
+<meta name="DC.Date.modified" scheme="ISO8601" content="2015-02-13" />
+<meta name="DC.Description" content="Latest Planning Applications Search Facility, Information, advice, forms and online facilities to support Building Control, Building Grants, Planning Environment, Planning Control, Planning Policy, and Support Services" lang="en" />
+<meta name="DC.Format" scheme="IMT" content="text/html" />
+<meta name="DC.Identifier" scheme="URI" content="http://www.wrexham.gov.uk/" />
+<meta name="DC.Language" scheme="ISO 639-2/T" content="eng" />
+<meta name="DC.Publisher" content="Wrexham County Borough Council, Old Library, Queens Square, Wrexham LL11 1AU, UK. webmaster@wrexham.gov.uk" lang="en" />
+<meta name="DC.Rights" content="http://www.wrexham.gov.uk/top_navigation/disclaimers.htm" lang="en" />
+<meta name="DC.Rights.copyright" content="(C) Copyright Wrexham County Borough Council" />
+<meta name="DC.Title" content="Latest Planning Applications Search Facility - Wrexham County Borough Council" lang="en" />
+<meta name="DC.Type" scheme="e-GMSTES" content="Planning" />
+<meta name="DC.Type.category" content="Planning" lang="en" />
+<meta name="DC.Subject" content="WCBC; Wrexham County Borough Council; local government; community services; National Assembly for Wales policy" lang="en" />
+<meta name="DC-GOV.Subject.Category" lang="en" content="Local Government" />
+<meta name="eGMS.subject.keywords" content="Wrexham, Local Authority, Local Authorities, Arts, Arts Agency, Wrexham County Borough Council, North Wales, Wrecsam, Wales, Tourism, Borderlands, Councillors, Entertainment, Culture and Heritage, Culture, Heritage, Libraries, Schools, Education, Sports, Leisure, Acton, Borras Park, Bronington, Brymbo, Bryn Cefn, Brynyffynnon, Cartrefle, Cefn, Chirk, Coedpoeth, Dyffryn Ceiriog, Erddig, Esclusham, Garden Village, Gresford, Grosvenor, Gwenfro, Gwersyllt, Hermitage, Holt, Johnstown, Little Acton, Llan Rural, Llay, Maesydre, Marchwiel, Marford and Hoseley, Minera, New Broughton, Offa, Overton, Pant, Pen y Cae, Penycae and Ruabon South, Plas Madoc, Ponciau, Queensway, Rhosnesni, Rossett, Ruabon, Smithfield, Stansty, Whitegate, Wynnstay" />
+<meta name="robots" content="all" />
+<meta name="revisit-after" content="1 day" />
+<meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" l gen true for "http://www.wrexham.gov.uk" r (nz 1 vz 1 lz 1 oz 1 cz 1))' />
+<meta name="keywords" content="Wrexham, Local Authority, Local Authorities, Arts, Arts Agency, Wrexham County Borough Council, North Wales, Wrecsam, Wales, Tourism, Borderlands, Councillors, Entertainment, Culture and Heritage, Culture, Heritage, Libraries, Schools, Education, Sports, Leisure, Acton, Borras Park, Bronington, Brymbo, Bryn Cefn, Brynyffynnon, Cartrefle, Cefn, Chirk, Coedpoeth, Dyffryn Ceiriog, Erddig, Esclusham, Garden Village, Gresford, Grosvenor, Gwenfro, Gwersyllt, Hermitage, Holt, Johnstown, Little Acton, Llan Rural, Llay, Maesydre, Marchwiel, Marford and Hoseley, Minera, New Broughton, Offa, Overton, Pant, Pen y Cae, Penycae and Ruabon South, Plas Madoc, Ponciau, Queensway, Rhosnesni, Rossett, Ruabon, Smithfield, Stansty, Whitegate, Wynnstay" />
+<meta name="description" content="Latest Planning Applications Search Facility, Information, advice, forms and online facilities to support Building Control, Building Grants, Planning Environment, Planning Control, Planning Policy, and Support Services" lang="en" />
+<meta name="author" content="Wrexham County Borough Council, Old Library, Queens Square, Wrexham LL11 1AU, UK. webmaster@wrexham.gov.uk" lang="en" />
+<!-- END DC and eGMS Meta-Tags -->
+<!-- TemplateEndEditable -->
+<!-- #BeginEditable "cookie_control" -->
+<script type="text/javascript">
+function cookie_control_specific_functions() {
+	
+}
+</script>
+<!-- #EndEditable -->
+<!--
+<script src="http://www.wrexham.gov.uk/Scripts/jquery-1.2.4a.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.wrexham.gov.uk/Scripts/jquery-cookie.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.wrexham.gov.uk/javascript/templates.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.wrexham.gov.uk/Scripts/head_nav_foot.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.wrexham.gov.uk/Scripts/use_cookie_colours.js" type="text/javascript" charset="utf-8"></script>
+-->
+
+<link rel="stylesheet" href="http://www.wrexham.gov.uk/css/head_nav_foot_new.css" type="text/css" charset="utf-8" media="screen" />
+<link rel="stylesheet" href="http://www.wrexham.gov.uk/css/templates.css" type="text/css" charset="utf-8" media="screen" />
+<link rel="stylesheet" href="http://www.wrexham.gov.uk/css/wrexham.css" type="text/css" charset="utf-8"  />
+<link rel="stylesheet" href="http://www.wrexham.gov.uk/css/print.css" type="text/css" charset="utf-8" media="print" />
+<link rel="stylesheet" href="http://www.wrexham.gov.uk/css/media_queries.css" type="text/css" charset="utf-8" media="all" />
+<!--<link rel="stylesheet" href="../css/generalV2.css" type="text/css" charset="utf-8" media="all" />-->
+<link rel="stylesheet" href="../css/jquery-ui-1.7.1.custom.css" type="text/css" charset="utf-8" media="all" />
+
+<!-- <span jsfid="javascript" path="/custom/layouts/WrexhamFiles/globalcss.js"/> -->
+
+<!-- <span jsfid="javascript" path="/custom/layouts/WrexhamFiles/chris_temp2.js"/> -->
+
+<!--[if lte IE 6]>
+<link href="http://www.wrexham.gov.uk/css/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<!-- need to be able to add indivual stylesheets here -->
+ <!--End of Wrexham Head Stuff-->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- <script jsfid="void" language="JavaScript" src="../js/equalcolumns.js" type="text/javascript"></script> -->
+    <!--The above are voided out and are only for design purposes only (to make sure that the
+        javascript paths resolves when viewing out of the context of clay
+        The Entries below are the real ones -->
+
+    <script type="text/javascript" src="/Planning/js/rss.js"><!--
+
+//--></script>
+    <script type="text/javascript" src="/Planning/js/drag_drop.js"><!--
+
+//--></script>
+    <script type="text/javascript" src="/Planning/js/w2.js"><!--
+
+//--></script>
+    <script type="text/javascript"><!--
+var w2HelperObject_hm=new Object();
+w2HelperObject_hm['context']='/Planning';
+var w2HelperObject=w2HelperObject_hm;
+
+//--></script>
+    <link rel="stylesheet" type="text/css" href="/Planning/custom/layouts/WrexhamFiles/generalV2-council.css" />
+    <link rel="stylesheet" type="text/css" href="/Planning/css/menuV2NoScript.css" />
+    <script type="text/javascript" src="/Planning/js/jquery-1.4.2.min.js"><!--
+
+//--></script>
+    <script type="text/javascript" src="/Planning/js/rss.js"><!--
+
+//--></script>
+    <script type="text/javascript" src="/Planning/js/drag_drop.js"><!--
+
+//--></script>
+    <!-- the two javascript files below needed for the new date picker -->
+    <script type="text/javascript" src="/Planning/js/jquery-ui-1.7.1.js"><!--
+
+//--></script>
+    <script type="text/javascript" src="/Planning/js/civicacore.js"><!--
+
+//--></script>
+
+    <title>Online Planning Applications Search Facility - WCBC</title>
+
+<style type="text/css">
+p.phack {
+  margin:10px 0 !important;
+}
+</style>
+
+</head>
+
+<body class="col2">
+
+<div id="access_banner">
+  <ul>
+    <li><a id="skip_to_content" name="skip_to_content" href="#maincontent">skip to content</a></li>
+    <li><a id="skip_to_search" name="skip_to_search" href="#search_div">skip to search</a></li>
+    <li><a id="_id48" name="_id48" href="http://www.wrexham.gov.uk/top_navigation/access.htm">accessibility</a></li>
+    <li><a id="listen_to_site" name="listen_to_site" href="http://www.wrexham.gov.uk/top_navigation/browsealoud.htm">listen to this site</a></li>
+    <li><a id="textsize" name="textsize" href="http://www.wrexham.gov.uk/top_navigation/access_options.htm">change text size</a></li>
+  </ul>
+</div>
+
+<div id="container_div">
+
+  <div id="header_div">
+    <div id="identity">
+      <a id="_id57" name="_id57" href="http://www.wrexham.gov.uk/english/index.cfm"><img src="http://www.wrexham.gov.uk/images/logos/wrexham_horiz_150px.gif" width="150" height="58" alt="Wrexham Council homepage" id="logo" /></a>    </div>
+
+    <ul id="pop_links">
+      <li><a id="_id60" name="_id60" href="http://www.wrexham.gov.uk/english/index.cfm">Home</a></li><li
+      ><a id="_id63" name="_id63" href="http://www.wrexham.gov.uk/top_navigation/map.htm">Site Map</a></li><li
+      ><a id="_id66" name="_id66" href="http://www.wrexham.gov.uk/faq/faq_index.htm">Frequently Asked Questions</a></li><li
+      ><a id="_id69" name="_id69" href="http://www.wrexham.gov.uk/top_navigation/contact.htm">Contact Us</a></li><li
+	><a id="_id72" name="_id72" href="http://www.wrexham.gov.uk/top_navigation/translate.htm">Languages</a></li><li class="last"
+      ><form id="language" method="post" action="/Planning/lg/GFPlanningWelcome.page" enctype="application/x-www-form-urlencoded" style="display: inline;"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="rO0ABXVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAExcHQAGi9sZy9HRlBsYW5uaW5nV2VsY29tZS5wYWdl" /><script type="text/javascript"><!--
+
+
+	function oamSetHiddenInput(formname, name, value)
+	{
+		var form = document.forms[formname];
+		if(typeof form.elements[name]=='undefined')
+		{
+			var newInput = document.createElement('input');
+			newInput.setAttribute('type','hidden');
+			newInput.setAttribute('id',name);
+			newInput.setAttribute('name',name);
+			newInput.setAttribute('value',value);
+			form.appendChild(newInput);
+		}
+		else
+		{
+			form.elements[name].value=value;
+		}
+		
+	}
+	
+	
+	function oamClearHiddenInput(formname, name, value)
+	{
+		var form = document.forms[formname];
+		if(typeof form.elements[name]!='undefined')
+		{
+			form.elements[name].value=null;
+		}
+		
+	}
+	
+	function oamSubmitForm(formName, linkId, target, params)
+	{
+		
+		var clearFn = 'clearFormHiddenParams_'+formName.replace(/-/g, '\$:').replace(/:/g,'_');
+		if(typeof eval('window.'+clearFn)!='undefined')
+		{
+			eval('window.'+clearFn+'(formName)');
+		}
+		
+		var oldTarget = '';
+		if((typeof target!='undefined') && target != null)
+		{
+			oldTarget=document.forms[formName].target;
+			document.forms[formName].target=target;
+		}
+		if((typeof params!='undefined') && params != null)
+		{
+			for(var i=0; i<params.length; i++)
+			{
+				oamSetHiddenInput(formName,params[i][0], params[i][1]);
+			}
+			
+		}
+		
+		oamSetHiddenInput(formName,formName +':'+'_idcl',linkId);
+		
+		if(document.forms[formName].onsubmit)
+		{
+			var result=document.forms[formName].onsubmit();
+			if((typeof result=='undefined')||result)
+			{
+				document.forms[formName].submit();
+			}
+			
+		}
+		else 
+		{
+			document.forms[formName].submit();
+		}
+		if(oldTarget==null) oldTarget='';
+		document.forms[formName].target=oldTarget;
+		if((typeof params!='undefined') && params != null)
+		{
+			for(var i=0; i<params.length; i++)
+			{
+				oamClearHiddenInput(formName,params[i][0], params[i][1]);
+			}
+			
+		}
+		
+		oamClearHiddenInput(formName,formName +':'+'_idcl',linkId);return false;
+	}
+	
+
+//--></script><a href="#" onclick="return oamSubmitForm('language','language:_id76',null,[['language_SUBMIT','1'],['lang','cy']]);" id="language:_id76" title="Cysyltiadau i Cymraeg">Cymraeg</a><input type="hidden" name="language_SUBMIT" value="1" /><input type="hidden" name="Civica.CSRFToken" value="zzAWF4PtZw0PDInqusKb" /><input type="hidden" name="language:_idcl" /><input type="hidden" name="language:_link_hidden_" /><input type="hidden" name="language_SUBMIT" /><input type="hidden" name="lang" /><script type="text/javascript"><!--
+
+	function clear_language()
+	{
+		clearFormHiddenParams_language('language');
+	}
+	
+	function clearFormHiddenParams_language(currFormName)
+	{
+		var f = document.forms['language'];
+		f.elements['language:_idcl'].value='';
+		f.elements['language:_link_hidden_'].value='';
+		f.elements['language_SUBMIT'].value='';
+		f.elements['lang'].value='';
+		f.target='';
+	}
+	
+	clearFormHiddenParams_language();
+//--></script></form></li></ul>
+
+    <script type="text/javascript"><!--
+var searchLabelText='Search';
+
+//--></script>
+    
+    <form action="http://www.google.co.uk" id="search_form" class="cse-search-box">
+      <div id="search_div">
+        <label id="searchLabel" for="label">Search / Chwillio</label>
+        <script type="text/javascript">
+        <!--
+        var searchLabel = document.getElementById("searchLabel");
+        if (searchLabel!=null)
+        {
+            searchLabel.innerHTML = searchLabelText;
+        }
+        //-->
+        </script>
+        <input id="label" type="text" name="q" size="25" maxlength="255" value="" />
+        <input type="hidden" name="cx" value="partner-pub-9512894565398755:0432111560" />
+        <input type="submit" name="sa" value="Go" />
+        <input type="hidden" name="ie" value="UTF-8" />
+        </div>
+    </form>
+    
+    
+    <div id="tabs">
+      <ul>
+        <li class="emergency_tab"><a id="_id84" name="_id84" href="http://www.wrexham.gov.uk/english/faq/emergency_planning.htm">Emergency</a></li>
+        <li><a id="_id87" name="_id87" href="http://www.wrexham.gov.uk/english/sections/residents.cfm">Residents</a></li>
+        <li><a id="_id90" name="_id90" href="http://www.wrexham.gov.uk/english/sections/business.htm">Business</a></li>
+        <li><a id="_id93" name="_id93" href="http://www.wrexham.gov.uk/english/tourism/index.htm">Visitor</a></li>
+      </ul>
+    </div>
+  </div> 
+  <!-- end of #header_div -->
+
+  <div id="content_div">
+
+
+<div id="leftnav">
+
+<!-- this is where the content goes -->
+    <div id="main_nav_div"> <!-- could just style ul, but don't have to worry about box model this way -->
+      <ul id="main-nav">
+        <li><a id="_id96" name="_id96" href="http://www.wrexham.gov.uk/english/sections/advice_benefits.htm">Advice, Emergencies &amp; Benefits</a></li><li
+        ><a id="_id99" name="_id99" href="http://www.wrexham.gov.uk/english/sections/business.htm">Business</a></li><li
+        ><a id="_id102" name="_id102" href="http://www.wrexham.gov.uk/english/sections/community_living.htm">Community &amp; Living</a></li><li
+        ><a id="_id105" name="_id105" href="http://www.wrexham.gov.uk/english/sections/council_democracy.htm">Council &amp; Democracy</a></li><li
+        ><a id="_id108" name="_id108" href="http://www.wrexham.gov.uk/english/sections/education_learning.htm">Education &amp; Learning</a></li><li
+        ><a id="_id111" name="_id111" href="http://www.wrexham.gov.uk/english/sections/environment_planning.htm">Environment &amp; Planning</a></li><li
+        ><a id="_id114" name="_id114" href="http://www.wrexham.gov.uk/english/sections/health_social_care.htm">Health &amp; Social Care</a></li><li
+        ><a id="_id117" name="_id117" href="http://www.wrexham.gov.uk/english/sections/housing.htm">Housing</a></li><li
+        ><a id="_id120" name="_id120" href="http://www.wrexham.gov.uk/english/sections/jobs.htm">Jobs &amp; Careers</a></li><li
+        ><a id="_id123" name="_id123" href="http://www.wrexham.gov.uk/english/sections/leisure_culture.htm">Leisure &amp; Culture</a></li><li
+        ><a id="_id126" name="_id126" href="http://www.wrexham.gov.uk/english/sections/transport_streets.htm">Transport &amp; Streets</a></li></ul>
+    </div>
+    
+    <div id="atoz_list">
+      <div><h2>A-Z of Services</h2><ul>
+          <li><a id="_id131" name="_id131" href="http://www.wrexham.gov.uk/english/council/A_Z/A.htm">A</a></li>
+          <li><a id="_id134" name="_id134" href="http://www.wrexham.gov.uk/english/council/A_Z/B.htm">B</a></li>
+          <li><a id="_id137" name="_id137" href="http://www.wrexham.gov.uk/english/council/A_Z/C.htm">C</a></li>
+          <li><a id="_id140" name="_id140" href="http://www.wrexham.gov.uk/english/council/A_Z/D.htm">D</a></li>
+          <li><a id="_id143" name="_id143" href="http://www.wrexham.gov.uk/english/council/A_Z/E.htm">E</a></li>
+          <li><a id="_id146" name="_id146" href="http://www.wrexham.gov.uk/english/council/A_Z/F.htm">F</a></li>
+          <li><a id="_id149" name="_id149" href="http://www.wrexham.gov.uk/english/council/A_Z/G.htm">G</a></li>
+          <li><a id="_id152" name="_id152" href="http://www.wrexham.gov.uk/english/council/A_Z/H.htm">H</a></li>
+          <li><a id="_id155" name="_id155" href="http://www.wrexham.gov.uk/english/council/A_Z/I.htm">I</a></li>
+          <li><a id="_id158" name="_id158" href="http://www.wrexham.gov.uk/english/council/A_Z/J.htm">J</a></li>
+          <li><span>K</span></li>
+          <li><a id="_id161" name="_id161" href="http://www.wrexham.gov.uk/english/council/A_Z/L.htm">L</a></li>
+          <li><a id="_id164" name="_id164" href="http://www.wrexham.gov.uk/english/council/A_Z/M.htm">M</a></li>
+          <li><a id="_id167" name="_id167" href="http://www.wrexham.gov.uk/english/council/A_Z/N.htm">N</a></li>
+          <li><a id="_id170" name="_id170" href="http://www.wrexham.gov.uk/english/council/A_Z/O.htm">O</a></li>
+          <li><a id="_id173" name="_id173" href="http://www.wrexham.gov.uk/english/council/A_Z/P.htm">P</a></li>
+          <li><span>Q</span></li>
+          <li><a id="_id176" name="_id176" href="http://www.wrexham.gov.uk/english/council/A_Z/R.htm">R</a></li>
+          <li><a id="_id179" name="_id179" href="http://www.wrexham.gov.uk/english/council/A_Z/S.htm">S</a></li>
+          <li><a id="_id182" name="_id182" href="http://www.wrexham.gov.uk/english/council/A_Z/T.htm">T</a></li>
+          <li><a id="_id185" name="_id185" href="http://www.wrexham.gov.uk/english/council/A_Z/U.htm">U</a></li>
+          <li><a id="_id188" name="_id188" href="http://www.wrexham.gov.uk/english/council/A_Z/V.htm">V</a></li>
+          <li><a id="_id191" name="_id191" href="http://www.wrexham.gov.uk/english/council/A_Z/W.htm">W</a></li>
+          <li><span>X</span></li>
+          <li><a id="_id194" name="_id194" href="http://www.wrexham.gov.uk/english/council/A_Z/Y.htm">Y</a></li>
+          <li><span>Z</span></li>
+      </ul></div>
+    
+    </div>
+</div> <!-- end of #leftnav -->
+
+<div id="maincontent">
+   <div id="title">
+     <div><h1>Online Planning Applications Search Facility</h1></div>
+   </div>
+   <div id="content"><!-- TemplateBeginEditable name="content" -->
+     
+                                            <div class="bodycontent">
+						<!--PAGEWATCH-->
+
+                                                <div class="errorMessageGroup">
+                                                    <!-- Main Form Messages -->
+							<div></div>
+                                                </div>
+                                                <!-- Main Form -->
+                                                <div
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:clay="http://shale.apache.org/clay"
+	xmlns:s="http://shale.apache.org/core"
+    xmlns:w2="http://www.comino.com/jsftags"
+    xmlns:t="http://myfaces.apache.org/tomahawk">
+<form id="_id419" method="post" action="/Planning/lg/GFPlanningWelcome.page" enctype="application/x-www-form-urlencoded"><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="rO0ABXVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAN0AAExcHQAGi9sZy9HRlBsYW5uaW5nV2VsY29tZS5wYWdl" /><script type="text/javascript"><!--
+google_ad_client = "ca-pub-9512894565398755";
+/* Planning */
+google_ad_slot = "8658784894";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script><div class="alignright" style="width:341px; border: solid 1px gray; float:right">
+<div class="alignright" style="border-bottom: solid 1px gray; float:right"><script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div style="width:341px; padding-left:5px;" class="panel-top"><h2 style="color:#94033f";><a id="_id419:_id421" name="_id419:_id421" href="http://www.wrexham.gov.uk/top_navigation/advertising.htm">Advertisements</a></h2></div>
+</div><p><strong>To search for a planning application you only need to complete one of the boxes below. If you know the Planning Application case number e.g. P/2015/1234, please enter into the &quot;Case Number&quot; box and then select &quot;search&quot;.</strong></p><br><!--<div style="border: 2px solid red; margin-bottom: 5px; padding: 5px;">
+    <p><h:outputText value="#{lgMessages['lg.GFPlanningWelcome.Alert.Home']}"/></p>
+    </div>--><p>If you do not know the Planning Application case number, please complete one of the following: Address (Street name only) or; Post code or; Community or; Ward  or; Date (from) and Date (to) Dates should be entered in the following format (dd/mm/yyyy). Please select &quot;search&quot;.  Any list will be displayed in date order with the most recent application first. Select the application you wish to view.<a id="_id419:_id427" name="_id419:_id427" href="../lg/plansearch.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&amp;Param=lg.Planning"> Search Planning Applications</a>. If you do not know any details but wish to see applications submitted either this week or between known dates please select &#147;Quick searches/Weekly lists&#148;</p><br><p>The status of the Planning Application (pending/approved/refused/appeal pending) is shown on the application details page.</p><p>If you would like information on the ways you can search and receive information about Planning Applications from Wrexham County Borough Council please select  <a id="_id419:_id436" name="_id419:_id436" href="http://www.wrexham.gov.uk/english/planning_portal/plan_apps/index.htm">New Planning Applications Information</a></p><h3>Search Facility</h3><a id="_id419:_id441" name="_id419:_id441" href="../lg/plansearch.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&amp;Param=lg.Planning">
+        Search Planning Applications
+    </a><h3>Quick Searches / Weekly Lists</h3><ul>
+    <li>	
+    <a id="_id419:_id448" name="_id419:_id448" href="../lg/plansearch.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&amp;Param=lg.Planning&amp;SDate1From=fw&amp;SDate1To=fw+7">
+        View Applications Validated This Week
+    </a>
+    </li>
+    <li>
+    <a id="_id419:_id453" name="_id419:_id453" href="../lg/plansearch.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&amp;Param=lg.Planning&amp;SDate1From=fw-7&amp;SDate1To=fw-1">
+        25/01/2016 to 31/01/2016
+    </a>
+    </li>
+    <li>
+    <a id="_id419:_id460" name="_id419:_id460" href="../lg/plansearch.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&amp;Param=lg.Planning&amp;SDate1From=fw-14&amp;SDate1To=fw-8">
+        18/01/2016 to 24/01/2016
+    </a>
+    </li>
+    <li>
+    <a id="_id419:_id467" name="_id419:_id467" href="../lg/plansearch.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&amp;Param=lg.Planning&amp;SDate1From=fw-21&amp;SDate1To=fw-15">
+        11/01/2016 to 17/01/2016
+    </a>
+    </li>
+    <li>
+    <a id="_id419:_id474" name="_id419:_id474" href="../lg/plansearch.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&amp;Param=lg.Planning&amp;SDate1From=fw-28&amp;SDate1To=fw-22">
+        04/01/2016 to 10/01/2016
+    </a>
+    </li>
+    <li>
+    <a id="_id419:_id481" name="_id419:_id481" href="../lg/plansearch.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&amp;Param=lg.Planning&amp;SDate1From=fw-35&amp;SDate1To=fw-29">
+        28/12/2015 to 03/01/2016
+    </a>
+    </li>
+    <li>
+    <a id="_id419:_id488" name="_id419:_id488" href="../lg/plansearch.page?org.apache.shale.dialog.DIALOG_NAME=gfplanningsearch&amp;Param=lg.Planning&amp;SDate1From=fw-42&amp;SDate1To=fw-36">
+        21/12/2015 to 27/12/2015
+    </a>
+    </li>
+    </ul><!--Subscribe to the latest Planning Applications<a href="plan.rssfeed?feedName=Planning" target="_blank"><t:graphicImage border="0" url="/images/rss.gif"/></a>--><input type="hidden" name="_id419_SUBMIT" value="1" /><input type="hidden" name="Civica.CSRFToken" value="zzAWF4PtZw0PDInqusKb" /></form>
+</div>
+						<!--/PAGEWATCH-->
+                                            </div>
+                                        
+     <!-- TemplateEndEditable --> 
+<div><h2>Decision Notices</h2><p>The Decision Notice for Planning Applications on which a decision has been made (from 2004) is available to view and print online. Please enter the &#8220;Case Number&#8221; if known. (See notes on other ways of searching for an application). Select &#8220;Documents&#8221; to view the file and select the Decision Notice which is labelled as <strong>PLN Decision &#8211; Web</strong>.</p><h2>Notes</h2><p>The Decision displayed above (GRANTED/REFUSED) is that of the original planning application determined by the local planning authority at Wrexham. An "Applicant" may appeal against this decision to the Planning Inspectorate who will appoint a Planning Inspector to review the planning application and may change this decision. If an appeal has been submitted the decision box will show &#8220;APPEAL PENDING&#8221; until the Planning Inspector has made a decision. The decision box will then change to reflect his/her decision (APPEAL APPROVED/ APPEAL DISMISSED).</p><br><p>Please note that you will only be able to see the full detail including plans and attachments (but not any comments made) on this Search Facility from Planning Applications that have been submitted after 1st January 2009. Applications submitted before this date will only show brief details and no plans unless they were submitted electronically. If you would like to view the details of any application submitted before this date please visit our office or e-mail <a id="_id269" name="_id269" href="mailto:planning_admin@wrexham.gov.uk">planning_admin@wrexham.gov.uk</a>.</p><h2>Related links:</h2><p class="phack"><img src="http://www.wrexham.gov.uk/images/furniture/arrow_1new.gif" alt="" width="8" height="18" /> <a id="_id272" name="_id272" href="/Planning/lg/GFPlanningWelcome.page">Online Planning Applications Search Facility</a></p><p class="phack"><img src="http://www.wrexham.gov.uk/images/furniture/arrow_1new.gif" alt="" width="8" height="18" /> <a id="_id275" name="_id275" href="http://www.wrexham.gov.uk/english/planning_portal/plan_policy/haveyoursay.htm">Have Your Say about a Planning Application</a></p><p class="phack"><img src="http://www.wrexham.gov.uk/images/furniture/arrow_1new.gif" alt="" width="8" height="18" /> <a id="_id278" name="_id278" href="http://www.wrexham.gov.uk/english/planning_portal/index.htm">Wrexham Planning Department</a> - providing  information, advice, forms and online facilities to support Building Control, Building Grants, Planning Environment, Planning Control, Planning Policy and Support Services</p></div>
+
+
+    <p class="backtotop"><a id="_id297" name="_id297" href="#maincontent">back to the top</a></p>
+   </div>
+</div>
+
+<!--                                -->
+
+<div id="footer_div">
+ <div><div id="rss">
+        <h2>RSS Feeds</h2>
+        <ul>
+          <li><a id="_id302" name="_id302" href="http://www.wrexham.gov.uk/top_navigation/what_are_rss_feeds.htm">What is RSS?</a></li>
+          <li><a id="_id305" name="_id305" href="http://www.wrexham.gov.uk/top_navigation/what_are_rss_feeds.htm#what">Our RSS Feeds</a></li>
+        </ul>
+      </div><div id="legal">
+        <h2>Legal</h2>
+        <ul>
+          <li><a id="_id308" name="_id308" href="http://www.wrexham.gov.uk/top_navigation/dataprotection.htm">Data Protection</a></li>
+          <li><a id="_id311" name="_id311" href="http://www.wrexham.gov.uk/top_navigation/equality.htm">Equality</a></li>
+          <li><a id="_id314" name="_id314" href="http://www.wrexham.gov.uk/top_navigation/foi.htm">Freedom of Information</a></li>
+          <li><a id="_id317" name="_id317" href="http://www.wrexham.gov.uk/top_navigation/privacy.htm">Privacy &amp; Cookies</a></li>
+          <li><a id="_id320" name="_id320" href="http://www.wrexham.gov.uk/top_navigation/disclaimers.htm">Terms &amp; Conditions</a></li>
+          <li>&copy; <script type="text/javascript" src="http://www.wrexham.gov.uk/copyright_w.js"></script> <acronym id="wcbc" title="Wrexham County Borough Council">WCBC</acronym></li>
+        </ul>
+      </div><div id="contact_details">
+        <h2>Contact Details</h2>
+        Wrexham County Borough Council<br />
+        The Guildhall<br />
+        Wrexham<br />
+        LL11 1AY<br />
+        email: <a id="_id323" name="_id323" href="mailto:contact-us@wrexham.gov.uk">contact-us@wrexham.gov.uk</a><br />
+        <a id="_id326" name="_id326" href="http://www.wrexham.gov.uk/top_navigation/feedback.cfm">Website Feedback</a><br />
+        telephone: 01978 292000<br />
+      </div><div>
+      <div id="walesmap">
+      	<h2>Location</h2>
+        <a id="_id329" name="_id329" href="http://www.wrexham.gov.uk/top_navigation/maps/findus.htm"><img src="http://www.wrexham.gov.uk/images/redesign/walesmap4.gif" width="92" height="120" alt="location of Wrexham" /></a>      </div>
+      </div><div id="external">
+        <h2>Useful Links</h2>
+        <ul>
+          <li><a id="_id332" name="_id332" href="http://www.wales.gov.uk/"><img src="http://www.wrexham.gov.uk/images/redesign/wag.gif" width="100" alt="Welsh Assembly Government" /></a></li>
+          <li><a id="_id335" name="_id335" href="http://www.gov.uk/"><img src="http://www.wrexham.gov.uk/images/redesign/directgov3.gif" width="100" alt="GOV.UK - public services all in one place" /></a></li>
+          <li><a id="_id338" name="_id338" href="http://www.wrexham.gov.uk/english/pride/index.htm"><img src="http://www.wrexham.gov.uk/images/redesign/pride_street_horizontal_200x93.gif" width="100" alt="Pride in Your Streets 01978 298989" /></a></li>
+          <li><a id="_id341" name="_id341" href="http://www.wrexham.gov.uk/english/contact"><img src="http://www.wrexham.gov.uk/images/redesign/contact_wrexham.jpg" width="100" alt="Contact Wrexham" /></a></li>
+          <li><a id="_id344" name="_id344" href="http://www.youngwrexham.co.uk/"><img src="http://www.wrexham.gov.uk/images/redesign/young_wrexham.gif" width="100" alt="Young Wrexham" /></a></li>
+          <li><a id="_id347" name="_id347" href="http://www.healthchallengewrexham.co.uk/"><img src="http://www.wrexham.gov.uk/images/redesign/health_challenge_wrexham.gif" width="100" alt="Health Challenge Wrexham" /></a></li>
+        </ul>
+      </div></div>
+    
+  </div>
+
+</div>
+  <!-- end of #content -->
+</div><!-- end of #container_div -->
+
+<!-- Cookie Control Scripts -->
+<script src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+<script src="http://www.wrexham.gov.uk/Scripts/cookieControl-4.1.min.js" type="text/javascript"></script>
+<script src="http://www.wrexham.gov.uk/Scripts/cookie_control_common.js" type="text/javascript"></script>
+
+<!-- MYFACES JAVASCRIPT -->
+
+</body>
+</html>
+

@@ -1,0 +1,350 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="ctl00_htmlRootElement" xmlns="http://www.w3.org/1999/xhtml" lang="en-gb">
+<head id="ctl00_Head1"><title>
+	Standard Search Page
+</title><link id="ctl00_Link1" rel="SHORTCUT ICON" href="../favicon.ico" /><link id="ctl00_Link2" rel="search" type="application/opensearchdescription+xml" title="Axiell Virtual Library" href="../openSearch-description.xml" /><link href="../App_Themes/Default/Basic%20-%20Copy%20(2).css" type="text/css" rel="stylesheet" /><link href="../App_Themes/Default/Basic%20-%20Copy.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/Default/Basic.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/Default/MockUps.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/Default/NavigationMenu.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/Default/Outline.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/Default/Style%20-%20Copy.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/Default/Style.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/Default/zzz_plymouth.css" type="text/css" rel="stylesheet" /><link href="../App_Themes_FontSizes/Default/Medium.css" rel="stylesheet" type="text/css" /><link href="../App_Themes_Print/Default/Print.css" rel="stylesheet" type="text/css" media="print" /></head>
+<body>
+    <!--<ul id="top">
+        <li id="skipNav"><a href="../#OutlineColumn" id="ctl00_SkipTooNavLink">Skip to navigation</a></li>
+        <li><a href="../#main" id="ctl00_SkipTooContentLink" accesskey="S">Skip to content</a></li>
+    </ul>-->
+    <form name="aspnetForm" method="post" action="02_001_Search.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MjQwMDU2Nw9kFgJmD2QWAgIBDxYCHgRsYW5nBQVlbi1nYhYGAgMPFgIeCWlubmVyaHRtbAUSU2tpcCB0byBuYXZpZ2F0aW9uZAIFDxYCHwEFD1NraXAgdG8gY29udGVudGQCBw9kFhgCAQ8PFhYeClNob3dEZXRhaWxoHhtSZW1vdmVGcm9tQmFza2V0UG9zdEFsdFRleHQFDCBmcm9tIGJhc2tldB4YUmVzZXJ2YXRpb25JdGVtc1Bvc3RUZXh0BREgaXRlbShzKSBzZWxlY3RlZB4RUmVzZXJ2ZUJ1dHRvblRleHQFB1Jlc2VydmUeF1Jlc2VydmF0aW9uQmFza2V0SGVhZGVyBQ5TRUxFQ1RFRCBJVEVNUx4XUmVtb3ZlRnJvbUJhc2tldEFsdFRleHQFB1JlbW92ZSAeDk5vUmVzZXJ2YXRpb25zBRlZb3UgaGF2ZSAwIGl0ZW1zIHNlbGVjdGVkHg5DbGVhckJ1dHRvblRpcAURQ2xlYXIgdGhlc2UgaXRlbXMeEFJlc2VydmVCdXR0b25UaXAFE1Jlc2VydmUgdGhlc2UgaXRlbXMeD0NsZWFyQnV0dG9uVGV4dAUFQ2xlYXIeF1Jlc2VydmF0aW9uSXRlbXNQcmVUZXh0BQlZb3UgaGF2ZSBkZAIDDxYCHgRUZXh0BRoNCiAgICAgIFBhZ2UgT3B0aW9ucw0KICAgIGQCBw8PFgIeDUxhbmd1YWdlTGFiZWwFD1NpdGUgTGFuZ3VhZ2U6IGRkAgkPDxYSHhVGb250U2l6ZU1lZGl1bVRvb2xUaXAFGkNoYW5nZSBmb250IHNpemUgdG8gbWVkaXVtHhBJbmNyZWFzZUxpbmtUZXh0BUA8aW1nIHNyYz0iL2ltYWdlcy9Gb250WExhcmdlLmdpZiIgYWx0PSJFeHRyYSBMYXJnZSBGb250IFNpemUiIC8+HhpGb250U3dpdGNoZXJTdHlsZTJQb3N0VGV4dGUeEERlY3JlYXNlTGlua1RleHQFOTxpbWcgc3JjPSIvaW1hZ2VzL0ZvbnRMYXJnZS5naWYiIGFsdD0iTGFyZ2UgRm9udCBTaXplIiAvPh4WRm9udFNpemVMYXJnZXN0VG9vbFRpcAUbQ2hhbmdlIGZvbnQgc2l6ZSB0byBsYXJnZXN0HhJGb250U3dpdGNoZXJTdHlsZTJnHg9EZWZhdWx0TGlua1RleHQFNjxpbWcgc3JjPSIvaW1hZ2VzL0ZvbnQuZ2lmIiBhbHQ9IkRlZmF1bHQgRm9udCBTaXplIiAvPh4URm9udFNpemVMYXJnZVRvb2xUaXAFGUNoYW5nZSBmb250IHNpemUgdG8gbGFyZ2UeGUZvbnRTd2l0Y2hlclN0eWxlMlByZVRleHRlZGQCCw8PFg4eElN0eWxlTGFiZWxMaW5rVGV4dGUeFFN0eWxlRGVmYXVsdExpbmtUZXh0BQdEZWZhdWx0HhRTdHlsZU5vU3R5bGVMaW5rVGV4dAUJVGV4dCBPbmx5HhNEZWZhdWx0U3R5bGVUb29sVGlwBRtTd2l0Y2ggdG8gZGVmYXVsdCBDU1Mgc3R5bGUeDk5vU3R5bGVUb29sVGlwBRZTd2l0Y2ggb2ZmIENTUyBzdHlsaW5nHghDc3NDbGFzcwUWU3R5bGVTd2l0Y2hlckNvbnRhaW5lch4EXyFTQgICZGQCDQ8PFgoeC0hlYWRpbmdUZXh0BRlCb29rIEphY2tldCBJbWFnZXM6Jm5ic3A7HgZPblRleHQFAk9uHgdPZmZUZXh0BQNPZmYfHQUVTmllbHNlbkltYWdlc1N3aXRjaGVyHx4CAmRkAg8PDxYKHx8FE1BhZ2UgVXBkYXRlczombmJzcDsfIAUbRHluYW1pY2FsbHkgdXBkYXRlIHRoZSBwYWdlHyEFIkRvIG5vdCBkeW5hbWljYWxseSB1cGRhdGUgdGhlIHBhZ2UfHQUWRHluYW1pY1VwZGF0ZXNTd2l0Y2hlch8eAgJkZAIRDw8WDB4QTG9nT3V0QnV0dG9uVGV4dAUIU2lnbiBPdXQeEExvZ2lubGlua1ByZVRleHRlHhFMb2dpbmxpbmtQb3N0VGV4dGUeDUxvZ2lubGlua1RleHQFB1NpZ24gSW4eDUxvZ2VkSW5Bc1RleHQFDVNpZ25lZCBpbiBhcyAeD0xvZ2VkSW5Qb3N0VGV4dGVkZAIXDw8WBB4RU2F2ZWRTZWFyY2hIZWFkZXIFDlNhdmVkIHNlYXJjaGVzHhZTYXZlZFNlYXJjaEFsbExpbmtUZXh0BRJBbGwgc2F2ZWQgc2VhcmNoZXNkZAIfDw8WAh4HVmlzaWJsZWhkZAIhD2QWCAIBDxYCHw0FITxoMT4NCiAgICAgICAgU2VhcmNoDQogICAgICA8L2gxPmQCAw8WAh8NBZkDPHA+IFNlYXJjaCB1c2luZyBhbnkgY29tYmluYXRpb24gb2Ygd29yZHMgZnJvbSB0aGUgdGl0bGUsIHN1YmplY3Qgb3IgYXV0aG9yJ3Mgc3VybmFtZS48L3A+PHA+PGI+VGlwcyBvbiBzZWFyY2hpbmcgPC9iPjwvcD48dWw+PGxpPkVudGVyIGtleXdvcmRzIHNlcGFyYXRlZCBieSBzcGFjZXM8L2xpPjxsaT5Vc2Ugc2luZ2xlIHdvcmRzIHJhdGhlciB0aGFuIGEgcGhyYXNlPC9saT48bGk+TGltaXQgeW91ciBzZWFyY2ggdG8gb25lIGxpYnJhcnkgYnkgY2hvb3NpbmcgaXQgZnJvbSB0aGUgZHJvcCBkb3duIGxpc3Q8L2xpPjxsaT5MaW1pdCB5b3VyIHNlYXJjaCBieSBtYXRlcmlhbCAoZm9yIGV4YW1wbGUsIGJvb2tzIG9yIERWRHMpIGJ5IGNob29zaW5nIGZyb20gdGhlIFR5cGUgZHJvcC1kb3duIGxpc3QuPC9saT48L3VsPmQCBQ9kFgwCAQ8PFgIfDQULU2VhcmNoIGZvcjpkZAIJDw8WAh8NBQNBdDpkZAILDxBkDxYVZgIBAgICAwIEAgUCBgIHAggCCQIKAgsCDAINAg4CDwIQAhECEgITAhQWFRAFDUFsbCBMaWJyYXJpZXMFATBnEAUPQ2VudHJhbCBMaWJyYXJ5BQMxMDBnEAURQ3Jvd25oaWxsIExpYnJhcnkFAzEwM2cQBRFEZXZvbnBvcnQgTGlicmFyeQUDMTA0ZxAFDkVmZm9yZCBMaWJyYXJ5BQMxMDVnEAUTRWdnYnVja2xhbmQgTGlicmFyeQUDMTA2ZxAFEkVybmVzZXR0bGUgTGlicmFyeQUDMTA3ZxAFD0VzdG92ZXIgTGlicmFyeQUDMTA4ZxAFEElDVCBTdXBwb3J0IFRlYW0FAzIwN2cQBQ1MYWlyYSBMaWJyYXJ5BQMxMDlnEAUMTGlicmFyaWVzIEhRBQMxMTZnEAUWTm9ydGggUHJvc3BlY3QgTGlicmFyeQUDMTEyZxAFEFBldmVyZWxsIExpYnJhcnkFAzExM2cQBRBQbHltcHRvbiBMaWJyYXJ5BQMxMTRnEAURUGx5bXN0b2NrIExpYnJhcnkFAzExNWcQBRBTb3V0aHdheSBMaWJyYXJ5BQMxMTdnEAUSU3QgQnVkZWF1eCBMaWJyYXJ5BQMxMThnEAUNU3Rva2UgTGlicmFyeQUDMTE5ZxAFD1RvdGhpbGwgTGlicmFyeQUDMTIwZxAFEVdlc3QgUGFyayBMaWJyYXJ5BQMxMjJnEAUaV29vZCBWaWV3IENvbGxlY3Rpb24gUG9pbnQFAzEyNmdkZAINDw8WBh4HQWxsVGV4dAUDQWxsHhFEcm9wRG93bkxhYmVsVGV4dAUGVHlwZTogHg5TaG93QXNEcm9wRG93bmdkZAIPDxYCHw1lZAIRDw8WAh8NBQZTZWFyY2hkZAIHDxYCHw1lZAInDxYCHwEFlwE8bGk+PGEgaHJlZj0nI3RvcCcgdGl0bGU9J1JldHVybiB0byB0aGUgdG9wIG9mIHRoZSBwYWdlJz5CYWNrIHRvIHRoZSB0b3A8aW1nIHNyYz0nL0FwcF9UaGVtZXMvRGVmYXVsdC9pbWFnZXMvdXBfYXJyb3cuZ2lmJyBib3JkZXI9JzAnIGFsdD0nJy8+PC9hPjwvbGk+ZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUNY3RsMDAkdHZ3TWVudTzpDmQM6R3sgXkRGViLRPDsNaWl" />
+
+
+<script src="/JavaScript/AdapterUtils.js" type="text/javascript"></script>
+<script src="/JavaScript/TreeViewAdapter.js" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="ECD6D2EB" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWLgL72qiGCgLnzoDhAgKq7rPMCwL7qY2MCgLi1Mo2AvnIoKEHAunMprYPApaTr6EEAtONqJMKAtONwJMKAq+5jPICAvqEr/IBAr/ztcwOAprV4JoBAqOUx84GAvDTrI0EAp/pzvsJArqG6NADAsGfis0FAuy0lLoPAtve1OQHAu+0lLoPAub39tEJAsGf9s0FAtW6j5ACAvDTqI0EAp/pyvsJArqG1NADAuy0kLoPAtve0OQHAub38tEJAqOUz84GAtW6i5ACAsGf8s0FAvfd09sBAs+Px/oDAv6ytbYNAo77rr4OAob6gNQEAv65094JArrwhd8FAqqI5cQJAv6ysbYNArPBurkBAvyy1bUNAtWqjuQL/bPu+bJO5Zn0Bd404B2PBYjyIVw=" />
+        <div class="header" id="top">
+            <!--<div class="resbasket">-->
+                    <div id="ctl00_ReservationBasketDisplay1">
+	<div id="BasketContainer" class="resbasket"><div class="basketTitle"><div class="basketTitleImage">&nbsp;</div><span class="basketTitleText">SELECTED ITEMS</span></div><div id="BasketItemsContainer">You have 0 items selected</div></div>
+</div>       
+            <!--</div>-->
+        </div>
+        <div id="headerMenu" > <!--class="floatcontainer"> -->
+            <!--<div id="optionsContainer"><a href="javascript:toggleLayer('PageOptions','ctl00_optionsImage');">
+                
+      Page Options
+    
+                <img src="../images/i_info_1.gif" id="ctl00_optionsImage" alt=" " />
+            </a> -->
+            <div id="PageOptions">
+            <!-- <div id="ctl00_languageSelector">
+	<div id="ctl00_languageContainer" class="LanguageSelectorContainer">
+		Site Language: <ul><li><a title="English" href="javascript:__doPostBack('ctl00$ctl18','')"><img src="/images/gb.gif" alt="English" /></a></li><li><a title="Welsh" href="javascript:__doPostBack('ctl00$ctl21','')"><img src="/images/cy.gif" alt="Welsh" /></a></li><li><a title="French" href="javascript:__doPostBack('ctl00$ctl24','')"><img src="/images/fr.gif" alt="French" /></a></li></ul>
+	</div>
+</div>-->
+                <div id="ctl00_fontSizeSwitcher">
+	<div id="ctl00_FontSizeSwitcherContainer" class="FontSizeSwitcherContainer">
+		<ul><li><input type="submit" name="ctl00$btnMediumFont" value="A" id="ctl00_btnMediumFont" title="Change font size to medium" class="fontMedium" /></li><li><input type="submit" name="ctl00$btnLargeFont" value="A" id="ctl00_btnLargeFont" title="Change font size to large" class="fontLarger" /></li><li><input type="submit" name="ctl00$btnLargestFont" value="A" id="ctl00_btnLargestFont" title="Change font size to largest" class="fontLargest" /></li></ul>
+	</div>
+</div>
+                <div class="pageOptionSeperator">|</div>
+                <div id="ctl00_StyleSwitcher" class="StyleSwitcherContainer">
+	<ul><li><input type="submit" name="ctl00$ctl35" value="Text Only" title="Switch off CSS styling" class="linkButton" /></li></ul>
+</div>
+                <!-- <div id="ctl00_ImagesSwitcher" class="NielsenImagesSwitcher">
+	Book Jacket Images:&nbsp;<ul><li><a href="javascript:__doPostBack('ctl00$ImagesSwitcher$ctl02','')">On</a></li><li><a href="javascript:__doPostBack('ctl00$ImagesSwitcher$ctl04','')">Off</a></li></ul>
+</div> 
+                <div id="ctl00_DynamicUpdatesSwitcher" class="DynamicUpdatesSwitcher">
+	Page Updates:&nbsp;<ul><li><a href="javascript:__doPostBack('ctl00$DynamicUpdatesSwitcher$ctl02','')">Do not dynamically update the page</a></li></ul>
+</div>-->
+            </div>
+            <div class="login">
+                <div id="ctl00_LoginInfoControl1">
+	<input type="submit" name="ctl00$LogInButton" value="Sign In" id="ctl00_LogInButton" class="logInButton" />
+</div>
+                <div class="loginIcon">&nbsp;</div>
+            </div>
+         </div>
+            
+         <!--<div id="headerlinks">
+            <div class="navheader">
+                <div class="toplink-text">Navigation</div>
+            </div>
+            <div class="homelink">
+                <div class="toplink-button">
+                    <a href="/07_OnlineResources/07_001_OnlineResources.aspx">E-resources</a>
+                </div>
+            </div>
+            <div class="homelink">
+                <div class="toplink-button">
+                    <a href="/06_SelfRegistration/06_001_YourDetails.aspx">Register</a>
+                </div>
+            </div>
+            <div class="homelink">
+                <div class="toplink-button">
+                    <a href="/Default.aspx">Home</a>
+                </div>
+            </div>
+        </div>-->
+        <div class="site">
+            <div id="OutlineColumn3">
+                
+<div class="AspNet-TreeView" id="ctl00_tvwMenu">
+		<ul id="ctl00_tvwMenu_UL">
+			<li class="AspNet-TreeView-Root AspNet-TreeView-Leaf"><div class="menuicon1">&nbsp;</div><div class="menulink">
+				<span class="spacemenu">&nbsp;</span>
+				<a class="menuitem" href="/default.aspx" title="Home" title="Home">
+					Home</a></div>
+			</li>
+			<li class="AspNet-TreeView-Root AspNet-TreeView-Selected"><div class="menuicon2">&nbsp;</div><div class="menulink">
+				<div class="collapsemenu" onclick="ExpandCollapse__AspNetTreeView(this)" onkeypress="ExpandCollapse__AspNetTreeView(this)">&nbsp;</div>
+				<a class="menuitem" href="/02_Catalogue/02_001_Search.aspx" title="Search the Catalogue">
+					Search the Catalogue</a>
+				<ul>
+					<li class="AspNet-TreeView-Leaf AspNet-TreeView-ParentSelected"><div class="submenulink">
+						<a class="menuitem" href="/02_Catalogue/02_001_Search.aspx?" title="Keyword Search">
+							Keyword Search</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf AspNet-TreeView-ParentSelected"><div class="submenulink">
+						<a class="menuitem" href="/02_Catalogue/02_001_Search.aspx?searchType=0" title="Author Search">
+							Author Search</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf AspNet-TreeView-ParentSelected"><div class="submenulink">
+						<a class="menuitem" href="/02_Catalogue/02_001_Search.aspx?searchType=1" title="Title Search">
+							Title Search</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf AspNet-TreeView-ParentSelected"><div class="submenulink">
+						<a class="menuitem" href="/02_Catalogue/02_001_Search.aspx?searchType=5" title="ISBN Search">
+							ISBN Search</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf AspNet-TreeView-ParentSelected"><div class="submenulink">
+						<a class="menuitem" href="/02_Catalogue/02_002_AdvancedSearch.aspx" title="Advanced Search">
+							Advanced Search</a></div>
+					</li>
+				</ul></div>
+			</li>
+			<li class="AspNet-TreeView-Root"><div class="menuicon3">&nbsp;</div><div class="menulink">
+				<div class="collapsemenu" onclick="ExpandCollapse__AspNetTreeView(this)" onkeypress="ExpandCollapse__AspNetTreeView(this)">&nbsp;</div>
+				<a class="menuitem" href="/01_YourAccount/01_001_AccountDetails.aspx" title="Your Membership">
+					Your Membership</a>
+				<ul>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_002_YourLoans.aspx" title="Your Loans">
+							Your Loans</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_006_YourReservations.aspx" title="Your Reservations">
+							Your Reservations</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_009_YourAccount.aspx" title="Your Account">
+							Your Account</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_028_YourPersonalDetails.aspx" title="Your Personal Details">
+							Your Personal Details</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_005_YourLoansHistory.aspx" title="Your Loans History">
+							Your Loans History</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_020_YourWishlist.aspx" title="Your Wishlist">
+							Your Wishlist</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_031_YourSavedSearches.aspx" title="Your Saved Searches">
+							Your Saved Searches</a></div>
+					</li>
+				</ul></div>
+			</li>
+			<li class="AspNet-TreeView-Root AspNet-TreeView-Leaf"><div class="menuicon4">&nbsp;</div><div class="menulink">
+				<span class="spacemenu">&nbsp;</span>
+				<a class="menuitem" href="/03_Reviews/03_004_ViewTitlesReviews.aspx" title="Recently Reviewed Titles">
+					Recently Reviewed Titles</a></div>
+			</li>
+			<li class="AspNet-TreeView-Root AspNet-TreeView-Leaf"><div class="menuicon5">&nbsp;</div><div class="menulink">
+				<span class="spacemenu">&nbsp;</span>
+				<a class="menuitem" href="/05_ReadingLists/05_001_BrowseReadingLists.aspx" title="Browse Reading Lists">
+					Browse Reading Lists</a></div>
+			</li>
+			<li class="AspNet-TreeView-Root AspNet-TreeView-Leaf"><div class="menuicon6">&nbsp;</div><div class="menulink">
+				<span class="spacemenu">&nbsp;</span>
+				<a class="menuitem" href="/06_SelfRegistration/06_001_YourDetails.aspx" title="Join The Library">
+					Join The Library</a></div>
+			</li>
+			<li class="AspNet-TreeView-Root AspNet-TreeView-Leaf"><div class="menuicon7">&nbsp;</div><div class="menulink">
+				<span class="spacemenu">&nbsp;</span>
+				<a class="menuitem" href="http://www.plymouth.gov.uk/referenceonline.htm" title="Reference Online">
+					Reference Online</a></div>
+			</li>
+		</ul>
+
+</div>
+                
+                <div>
+                    
+                    
+                </div>
+                
+                
+            </div>
+            
+            <div id="headerlinks">
+                <ul class="headerlinkslist">
+                    <!-- <div class="navheader"><div class="toplink-text">Navigation</div></div> -->
+                    <li>
+                        <div class="homelink">
+                            <div class="toplink-button">
+                                <a href="http://www.plymouth.gov.uk/libraries"><b>Plymouth Libraries</b></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="registerlink">
+                            <div class="toplink-button">
+                                <a href="/06_SelfRegistration/06_001_YourDetails.aspx"><b>Join now</b></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="eresourcelink">
+                            <div class="toplink-button">
+                                <a href="/05_ReadingLists/05_001_BrowseReadingLists.aspx"><b>Recommended</b></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="main">
+                <div class="content">
+                    
+                    
+    <h1>
+        Search
+      </h1>
+    <p> Search using any combination of words from the title, subject or author's surname.</p><p><b>Tips on searching </b></p><ul><li>Enter keywords separated by spaces</li><li>Use single words rather than a phrase</li><li>Limit your search to one library by choosing it from the drop down list</li><li>Limit your search by material (for example, books or DVDs) by choosing from the Type drop-down list.</li></ul>
+    <div id="ctl00_ContentPlaceCenterContent_SearchContainer" class="basicSearch">
+	
+        <span class="basicsearchrow">&nbsp;</span>
+        <span class="basicsearchrow"><span class="basiclabel">
+            <label for="ctl00_ContentPlaceCenterContent_searchTerm" id="ctl00_ContentPlaceCenterContent_searchTermLabel">Search for:</label>
+        </span><span class="basicfield">
+            <input name="ctl00$ContentPlaceCenterContent$searchTerm" type="text" id="ctl00_ContentPlaceCenterContent_searchTerm" size="20" maxlength="255" />
+        </span></span><span class="basicsearchrow"><span class="basiclabel">
+                        <label for="ctl00_ContentPlaceCenterContent_branch" id="ctl00_ContentPlaceCenterContent_branchLimitLabel">At:</label>
+                    </span><span class="basicfield">
+                        <select name="ctl00$ContentPlaceCenterContent$branch" id="ctl00_ContentPlaceCenterContent_branch">
+		<option value="0">All Libraries</option>
+		<option value="100">Central Library</option>
+		<option value="103">Crownhill Library</option>
+		<option value="104">Devonport Library</option>
+		<option value="105">Efford Library</option>
+		<option value="106">Eggbuckland Library</option>
+		<option value="107">Ernesettle Library</option>
+		<option value="108">Estover Library</option>
+		<option value="207">ICT Support Team</option>
+		<option value="109">Laira Library</option>
+		<option value="116">Libraries HQ</option>
+		<option value="112">North Prospect Library</option>
+		<option value="113">Peverell Library</option>
+		<option value="114">Plympton Library</option>
+		<option value="115">Plymstock Library</option>
+		<option value="117">Southway Library</option>
+		<option value="118">St Budeaux Library</option>
+		<option value="119">Stoke Library</option>
+		<option value="120">Tothill Library</option>
+		<option value="122">West Park Library</option>
+		<option value="126">Wood View Collection Point</option>
+
+	</select>
+                    </span></span>
+        <div id="ctl00_ContentPlaceCenterContent_SearchSectionSelector" class="contentSectionNavigationContainer">
+		<span class='basicsearchrow'><span class='basiclabel'><label for="ctl00_ContentPlaceCenterContent_SearchSectionSelector_media">Type: </label></span><span class='basicfield'><select name="ctl00$ContentPlaceCenterContent$SearchSectionSelector$media" id="ctl00_ContentPlaceCenterContent_SearchSectionSelector_media">
+			<option value="">All</option>
+			<option value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,22,63,44,45,47,50,51,53,62,56,65,58,60,10,64,70">Printed books</option>
+			<option value="71">eBooks</option>
+			<option value="15,19,61,68">Audiobooks</option>
+			<option value="20,21,23,24,25,26,27,28,29,30">Music scores</option>
+			<option value="31,32,33,34,35,36">CDs</option>
+			<option value="41,42,43,67">DVDs</option>
+			<option value="37,38,39,40">Maps</option>
+			<option value="72">Health resources</option>
+			<option value="48,49,52,54,55,66">Images of Plymouth</option>
+			<option value="59">Plymouth Newspaper Index</option>
+
+		</select></span></span>
+	</div>
+        <br />
+        
+        <span class="basicsearchsubmit">
+            <input type="submit" name="ctl00$ContentPlaceCenterContent$searchSubmit" value="Search" id="ctl00_ContentPlaceCenterContent_searchSubmit" class="button" />
+        </span>
+    
+</div>
+    
+
+                    <div id="OutlineColumn2"> 
+                        
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!--<div class="searchrecent">                     
+                    <div class="recent">
+                        <div class= "history">
+                            <div id="ctl00_RecommendationsContainer">
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            
+            <div class="toplink">
+                <ul id="ctl00_topLink" style="float: right;"><li><a href='#top' title='Return to the top of the page'>Back to the top<img src='/App_Themes/Default/images/up_arrow.gif' border='0' alt=''/></a></li></ul>
+            </div>
+            
+            <div id="footer">
+                <ul> 
+                    <li>
+                        Quick Links:
+                    </li>
+                    <li>   
+                        <a href="../SiteMap.aspx" id="ctl00_A4" title="Footer Site Map">Site Map</a>
+                    </li>
+
+                    <li>   
+                        <a href="http://www.plymouth.gov.uk/homepage/general/tsandcs.htm#privacy" id="ctl00_A1" title="Privacy Policy">Privacy Policy</a>
+                    </li>
+                    <li>   
+                        <a href="http://www.plymouth.gov.uk/homepage/general/tsandcs.htm#disclaimer" id="ctl00_A2" title="Disclaimer">Disclaimer</a>
+                    </li>
+                    <li>   
+                        <a href="http://www.plymouth.gov.uk/homepage/general/tsandcs.htm#tsandcsanchor-terms" id="ctl00_A5" title="Terms and Conditions">Terms and Conditions</a>
+                    </li>
+
+                    <li>
+                        <a href="../00_003_ContactUs.aspx" id="ctl00_A3" title="Footer Contact Us">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="../00_005_Accessibility.aspx" id="ctl00_AccessibilityLink" title="Accessibility">Accessibility</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="dsfooter">
+                Powered by <a href="http://www.axiell.co.uk" class="footerlink">Axiell ViewPoint</a><span> v3.0.4.1 &copy; 2008</span>
+            </div>
+        </div>
+    </form>
+       <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9162158-15']);
+  _gaq.push(['_setDomainName', 'webopac.plymouth.gov.uk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js">
+<head>
+<meta charset="utf-8" />
+
+  
+  
+  
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <meta name="keywords" content="Direct payments" />
+    
+    <meta name="dcterms.available" content="2015-03-04T13:32:20Z" />
+    <meta name="dc.type" content="Content Page" />
+  
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="google-translate-customization" content="c891ed76c3b0235-832d37a42e0942b1-gafa62815664b2abd-11" />
+<title>Direct payments - barnet.gov.uk</title>
+
+<!--
+TODO: shortcut icon needs setting. Don't re-enable with href="#" as it causes another GET request to be triggered by Chrome.
+<link rel="shortcut icon" type="image/ico" href="#" />
+-->
+
+<link rel="stylesheet" href="/docroot/css/leaflet.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/docroot/css/chosen.min.css" />
+<link rel="stylesheet" href="/docroot/css/jquery.mCustomScrollbar.min.css" />
+
+
+<link rel="stylesheet" href="/docroot/css/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="/docroot/js/jquery-1.11.0.min.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="/docroot/js/jquery-ui.js"></script>
+<script src="/docroot/js/date-picker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/styles.css" media="screen, print" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.date.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.time.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/print.css" media="print" />
+
+
+<script src="/docroot/js/plugins/rem.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+  <script src="/docroot/js/plugins/nwmatcher-1.2.5.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/selectivizr.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/docroot/css/ie8.css" />
+<![endif]-->
+
+<!--[if ! lte IE 6]><!-->
+
+
+<!-- #TODO CBSCH-261 Fixing Foundation Javascript error -->
+<style type="text/css">
+meta.foundation-data-attribute-namespace {
+    font-family: false;
+}
+</style>
+
+<script src="/docroot/js/leaflet.js"></script>
+<script src="/docroot/js/leaflet.markercluster-src.js"></script>
+<script src="/docroot/js/leaflet.markercluster.js"></script>
+
+<script src="/docroot/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/init-behaviour.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.placeholder.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.accordion.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.tab.js" type="text/javascript"></script>
+
+<script src="/docroot/js/scroll.js" type="text/javascript"></script>
+
+<script src="/docroot/js/classie.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery-truncate/jquery.truncate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/modernizr.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/fastclick.js" type="text/javascript"></script>
+
+<script src="/docroot/js/iframeResizer.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.reveal.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/additional-methods.min.js" type="text/javascript"></script>
+
+<script src="https://www.browsealoud.com/plus/scripts/ba.js" type="text/javascript"></script>
+
+<script src="/docroot/js/browse-aloud.js" type="text/javascript"></script>
+
+
+<!--<![endif]-->
+<script>
+    /*<![CDATA[*/
+    (function (BCP) {
+        BCP.registerAjaxUrl = '/citizen-home/register/content/column1/singleton.html';
+        BCP.loginAjaxUrl = '/citizen-home/login/content/column1/singleton.html';
+    })(BCP);
+    /*]]>*/
+</script>
+
+<!-- Clickjacking prevention for legacy browsers that don't support X-Frame-Options header -->
+  
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+  
+
+<script>
+
+    /*<![CDATA[*/
+    jQuery(document).ready(function() {
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        var TP_GA = {
+            gaTrackerId : 'UA-60148629-1',
+            auth : false,
+            authDimensionName : 'dimension1'
+        }
+
+        ga('create', TP_GA.gaTrackerId, 'auto');
+        ga('set', 'forceSSL', true);
+
+        if (TP_GA.authDimensionName != '') {
+            ga('set', TP_GA.authDimensionName, TP_GA.auth.toString());
+        }
+
+        ga('send', 'pageview');
+    });
+    /*]]>*/
+</script>
+  
+ 
+
+</head>
+<body id="citizen-content-pg" class="nav-col">
+      
+    <div class="header">
+        <header>
+            <div id="skiptocontent">
+                <a href="#contentskip">Skip to content</a>
+            </div>
+             <span class="barnet-logo column small-3">
+                <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                    Barnet</a>
+                <img class="print-only" src="/docroot/img/barnet-logo-green.png" />
+            </span> 
+             <form class="global-search search-controls service-search large-6 large-offset-1 column" method="GET" action="/citizen-home/search.html">
+                <div class="global-search-input">
+                    <input type="search" name="keywords" title="main-search" />
+                </div>
+                <div class="global-search-submit">
+                    <button type="submit" class="button expand">Search</button>
+                </div>
+            </form> 
+              
+            <div class="user-section">
+                 <div id="129fae96-207a-4482-963b-0578a901db3b">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/branding/user/singleton';
+        var target = '#' + '129fae96-207a-4482-963b-0578a901db3b';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                                {
+                                    pageLanguage : 'en',
+                                    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+                                },
+                                'google_translate_element');
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+            </div>
+              
+            <div class="mobile-nav">
+                <i class="iconfontello-search"></i>
+                <i class="iconfontello-menu"></i>
+            </div>
+        </header>
+    </div>
+      
+      
+      
+    
+      
+      
+      
+    <div class="content">
+        
+              
+<nav id="nav" class="side-nav side-nav-off medium-4 large-3 column">
+    <!-- TODO: Why do we need a LI wrapping the nav? This means our level has to start at 2! -->
+    <ul class="nav-level-1" style="display: block">
+        <li class="open">
+              
+            <ul class="nav-level-2" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/adult-social-care.html">
+                        <i></i>
+                        <span class="menu-item">Adult social care</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/adult-social-care/support-from-the-council.html">
+                        <i></i>
+                        <span class="menu-item">Support from the council</span>
+                    </a>
+                      
+            <ul class="nav-level-4" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-from-the-council/needs-assessment-by-social-services.html">
+                        <i></i>
+                        <span class="menu-item">Needs assessment by social services</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-from-the-council/regaining-independence.html">
+                        <i></i>
+                        <span class="menu-item">Regaining independence</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-from-the-council/Personal-budgets.html">
+                        <i></i>
+                        <span class="menu-item">Personal budgets</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li class="open active">
+                    <a href="/citizen-home/adult-social-care/support-from-the-council/direct-payments.html">
+                        <i></i>
+                        <span class="menu-item">Direct payments</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-from-the-council/planning-your-support.html">
+                        <i></i>
+                        <span class="menu-item">Planning your support</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-from-the-council/Financial-assessment.html">
+                        <i></i>
+                        <span class="menu-item">Financial assessment</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-from-the-council/support-with-direct-payments.html">
+                        <i></i>
+                        <span class="menu-item">Support with Direct Payments</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-from-the-council/access-to-social-care-records.html">
+                        <i></i>
+                        <span class="menu-item">Access to social care records</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+        </li>
+    </ul>
+</nav>
+  
+            <div class="large-9 medium-8 small-12 column main-content">
+                 <nav id="breadcrumb-nav">
+        <div id="breadcrumb" class="breadcrumb-panel">
+            <ul class="breadcrumbs">
+                  
+                
+                <li>
+                    <a href="/citizen-home.html">Home</a>
+                </li>
+                 
+                  
+                <li class="service-nav">
+                    <select onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="Our services">Our services</option>
+                        <option value="/citizen-home/business.html">Business Support in Barnet</option>
+                        <option value="/citizen-home/environmental-health.html">Environmental Health and Trading Standards</option>
+                        <option value="/citizen-home/libraries.html">Libraries</option>
+                        <option value="/citizen-home/regeneration.html">Regeneration</option>
+                        <option value="/citizen-home/public-health.html">Public Health </option>
+                        <option value="/citizen-home/adult-social-care.html">Adult social care</option>
+                        <option value="/citizen-home/council-and-democracy.html">Council and democracy</option>
+                        <option value="/citizen-home/housing-and-community.html">Housing and community</option>
+                        <option value="/citizen-home/schools-and-education.html">Schools and education</option>
+                        <option value="/citizen-home/parks-sport-and-leisure.html">Parks, sport and leisure</option>
+                        <option value="/citizen-home/council-tax-and-benefits.html">Council Tax and Benefits</option>
+                        <option value="/citizen-home/parking-roads-and-pavements.html">Parking, roads and pavements</option>
+                        <option value="/citizen-home/rubbish-waste-and-recycling.html">Rubbish, waste and recycling</option>
+                        <option value="/citizen-home/children-young-people-and-families.html">Children, young people and families</option>
+                        <option value="/citizen-home/births-deaths-marriages-and-nationality.html">Births, deaths, marriages and nationality</option>
+                        <option value="/citizen-home/planning-conservation-and-building-control.html">Planning, Conservation and Building Control</option>
+                        <option value="/citizen-home/news.html">News and features</option>
+                        <option value="/citizen-home/directories.html">Directories</option>
+                        <option value="/citizen-home/events.html">Events List</option>
+                        <option value="/citizen-home/pledgebank.html">Pledges</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="/citizen-home/adult-social-care.html">Adult social care</a>
+                </li>
+                 
+                  
+                
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-from-the-council.html">Support from the council</a>
+                </li>
+                 
+                  
+                
+                
+                  
+            </ul>
+        </div>
+    </nav> 
+                  
+                <span class="skip-anchor" id="contentskip"></span>
+                 <main id="main" role="main">
+                    
+                  
+                <div id="intro" class="content-page-intro">
+
+                      
+                    <div class="small-12 columns left flush-left">
+                    
+                        <h1>Direct payments</h1>
+                          
+                        <ul>
+                            <li>
+                                
+                                    <small>Adult social care</small>
+                                
+                            </li>
+                        </ul>
+                        
+                       
+                          
+                          
+                       
+                    </div>
+
+                    
+                    
+                    
+                    
+                      
+                     
+                </div>
+                  
+                 
+            <div class="row">
+                 
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <h4><strong>What are Direct Payments?</strong></h4>
+
+<p>Direct payments are cash payments made to people who qualify for social care services from Barnet Council.&nbsp;</p>
+
+<p>The payments mean that you can arrange your own services or support. You have more freedom, choice and control as you can decide how your needs are met, by whom, in a way that suits you.</p>
+
+<p>If you already receive support from the council and would like to join the direct payments scheme, you should contact your care manager or social worker and let them know that you are interested in receiving a direct payment for your social care needs.</p>
+
+<h4><strong>Who can receive direct payments?</strong></h4>
+
+<p>You can receive Direct Payments, if you are 16 or over, and assessed by the council as needing social care services.</p>
+
+<p>People caring for someone who needs social care support may also be entitled to a direct payment in their own right. Visit our looking after someone section for more information.</p>
+
+</div>
+
+    <div class="snippet"><iframe width="420" height="236" src="//www.youtube.com/embed/SCZ2Mz_v_N8" frameborder="0" allowfullscreen></iframe><!-- rel:snippet --></div>
+</br>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <h4><strong>What can direct payments be used for?</strong></h4>
+
+<p>Direct Payments can only be spent on support to meet your social care needs, as identified in your social care needs assessment. You will need to create a support plan, showing the areas in your life that you need support with. This must be agreed by Barnet Council before you start receiving your direct payments.</p>
+
+<p>However, you can be flexible and creative when creating your support plan and deciding how your needs should be met. For example, some people use their direct payments for things such as buying a computer or a musical instrument, so that they can increase their self-confidence, learn a new skill and meet or connect with people in their community. Or you may prefer to use your direct payment to employ a personal assistant (PA)&nbsp;to help you with practical tasks and getting around, or to support you at work.</p>
+
+<p><strong>What direct payments cannot be used for?</strong></p>
+
+<p>You cannot use your direct payments to employ a relative or partner who lives in your home, apart from in exceptional circumstances. You also cannot use it to purchase permanent residential care, but you can use it to pay for short breaks as part of your assessed care needs.</p>
+
+<h4><strong>Direct payments for equipment</strong></h4>
+
+<p>You can&nbsp;choose to receive a direct payment to&nbsp;buy equipment&nbsp;to help you&nbsp;at home. This is usually for&nbsp;large pieces of equipment (with a value over &pound;100) such as bath lifts or chairs. You&nbsp;choose where to buy the equipment.</p>
+
+<p>You would normally be given a prescription for smaller pieces of equipment, but you&nbsp;can&nbsp;choose to receive a direct payment instead.</p>
+
+<ul>
+	<li>For more inforamtion see our&nbsp;<a href="/citizen-home/adult-social-care/support-at-home/equipment-to-help-you-at-home.html">equipment to help you at home page</a></li>
+</ul>
+
+<h4><strong>What you need to do to receive direct payments</strong></h4>
+
+<p>To receive direct payments, you will have to:</p>
+
+<ul>
+	<li>have a&nbsp;<a href="/citizen-home/adult-social-care/support-from-the-council/Financial-assessment.html" title="financial assessment">financial assessment</a>&nbsp;to see if you need to contribute some of your own money in addition to your direct payment from the council</li>
+	<li>sign a written agreement with us to say that you will spend the money on the services you have been assessed as needing. You will not be able to receive your first payment until you have signed this agreement</li>
+	<li>set up a separate bank account to keep your direct payment money in, along with any contribution you need to make. This account must not contain any other money than that intended for your social care support</li>
+	<li>keep proof of spending and other agreed documents for inspection by the Council four times a year</li>
+</ul>
+
+<p>We are legally obliged to check how people are spending their direct payments. You are therefore expected to keep records of all your expenditure relating to your direct payments, including your bank statements. More information can be found in the direct payments policy and procedures.</p>
+
+<h4><strong>What amount of direct payments will I receive?</strong></h4>
+
+<p>Direct payments are paid once a month into your dedicated bank account. The amount you receive will depend on what support you have had been assessed as needing.</p>
+
+<p>You&nbsp;may have to contribute towards the cost of your care, depending on your circumstances.&nbsp; This will be discussed during your assessment. If you do have to contribute towards the cost of your support, the amount you must contribute will be deducted from your direct payment.</p>
+
+<p>The amount you receive is reviewed once a year, when you have your annual review of your care needs. If you go on holiday, or need to have a stay in hospital, you must let your social worker or care manager know, as they may need to adjust the amount of your direct payment.</p>
+
+<h4><strong>One-off Direct Payments</strong></h4>
+
+<p>Some people will be given a one-off payment for the purchase of large items, such as a washing machine, or one-off opportunities such as training courses. For many people, their direct payment for equipment may also be a one-off payment.</p>
+
+<p>You will not be expected to open a separate bank account, but must send a receipt or other evidence that the money was spent appropriately to your social worker or care manager.</p>
+
+<h4><strong>Support for people receiving Direct Payments</strong></h4>
+
+<p>Once you have agreed that you will receive your personal budget as a direct payment, there is support available to help you set up your payments, and ongoing help with managing your money and using it in the most effective way.&nbsp; See our&nbsp;<a href="/citizen-home/adult-social-care/support-from-the-council/support-with-direct-payments.html">support with direct payments page</a>&nbsp;for more information.</p>
+
+</div>
+<section class="contacts-widget widget">
+                    <h2>Contacts</h2>
+                      
+                    <div class="contacts-widget-wrapper clearfix">
+                          
+                        <div>
+                            <ul class="contact-info">
+                                <li class="text-strong">Direct Payments Advisory Team</li>
+                                <li>North London Business Park (NLBP), Oakleigh Road South, London N11 1NP</li>
+                                <li>&nbsp;</li>
+                                
+                                <li>
+                                    <span class="text-strong">Tel: </span>
+                                    <span>020 8359 3760</span>
+                                </li>
+                                <li>
+                                    <span class="text-strong">FAX: </span>
+                                    <span>0870 889 5485</span>
+                                </li>
+                                <li>
+                                    <span class="text-strong">Email: </span>
+                                    <span>directpaymentsadvisoryteam@barnet.gov.uk </span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                          
+                    </div>
+                    
+                    
+                      
+                </section> 
+    <section class="documents-widget widget">
+        <h2>Download documents</h2>
+        <div class="documents-widget-wrapper clearfix">
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:d832f71f-de61-4ff7-af67-2d52058efa7b/London_Borough_of_Barnet___Direct_Payments_Policy_2013___FINAL.pdf">LBB Direct Payments Policy 2013</a>
+                <span>0.32 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:59274b71-16f2-4e76-a6fc-fb5707caa5f2/London_Borough_of_Barnet___Direct_Payments_Procedures___2013.pdf">LBB Direct Payments Procedures 2013</a>
+                <span>0.09 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:27ccc8f1-63e5-473a-871f-df4c83775fa2/DP_Factsheet_1_Introduction_to_Direct_Payments.pdf">Factsheet 1: Introduction to DP </a>
+                <span>0.25 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:7d8ea193-dff8-407a-99ba-c2f8caee11f2/DP_Factsheet_2_Using_an_agency_to_recruit_a_PA.pdf">Factsheet 2: Using an agency to recruit a PA</a>
+                <span>0.21 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:b4474f85-e8a2-4e8a-b0c7-e53b7d65f16b/DP_Factsheet_3_Recruiting_people_and_staying_safe.pdf">Factsheet 3: Recruiting a PA and staying safe</a>
+                <span>0.38 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:a8f75cf0-f74e-438d-bbbe-a1d22da724de/DP_Factsheet_4_Your_responsibilities_as_an_employer.pdf">Factsheet 4: Your Responsibilities as an Employer</a>
+                <span>0.39 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:33dceeb9-7317-4577-bff4-7ee96e71ba35/DP_Factsheet_5_Training_for_personal_assistants.pdf">Factsheet 5: Training for Personal Assistants </a>
+                <span>0.16 MB</span>
+                  
+
+                  
+            </div>
+
+              
+        </div>
+    </section>
+      
+            </div>
+         
+                </main> 
+                
+                 <div class="row">
+                    <div class="panel">
+                          
+                <section class="gm_sidebar row">
+                    <div class="gm-container">
+                        <div class="rate-page">
+                            <i class="iconfontello-thumbs-up"></i>
+                            <p>Rate this page</p>
+                        </div>
+                        <div class="rating-options">
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=3" target="_blank" title="rate this page as GOOD" rel="nofollow">
+                                <img src="/docroot/img/govmetric/smiling.png" alt="green smiley (good)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=2" target="_blank" title="rate this page as AVERAGE" rel="nofollow">
+                                <img src="/docroot/img/govmetric/indifferent.png" alt="orange smiley (average)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=4" target="_blank" title="rate this page as POOR" rel="nofollow">
+                                <img src="/docroot/img/govmetric/sad.png" alt="red smiley (poor)" />
+                            </a>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+                    <script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+                    <script type="text/javascript" src="//hitcounter.govmetric.com/982"></script>
+                </section>
+                  
+                    </div>
+                </div> 
+                
+            </div>
+        
+        
+          
+    </div>
+      
+      
+    <footer>
+          
+          
+        <nav class="footer-nav clearfix row">
+            <ul class="footer-links left">
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html" class="internal-link">Contact us</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/copyright.html" class="internal-link">Copyright</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/privacy.html" class="internal-link">Privacy notice</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" class="internal-link">Accessibility</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Disclaimer.html" class="internal-link">Disclaimer</a>
+                            
+                            
+                            
+                             </li>
+                
+                
+                
+                
+                
+                
+            </ul>
+            <ul class="social-icons right">
+                <li><a href="https://www.gov.uk/"><img height="18" width="90" src="/docroot/img/gov-uk-logo.png" alt="gov uk logo" /></a></li>
+                <li><a href="https://www.flickr.com/photos/barnetcouncil"><i class="flaticon-flickr"></i></a></li>
+                <li><a href="https://twitter.com/barnetcouncil"><i class="flaticon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/BarnetCouncil"><i class="flaticon-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/user/Barnetcouncil1"><i class="flaticon-youtube"></i></a></li>
+                <li class="browse-aloud-icon"><a id="show-browsealoud" title="Listen with BrowseAloud"><img src="/docroot/img/browse-aloud-logo.png" alt="Listen with BrowseAloud" /></a></li>
+            </ul>
+        </nav>
+        <div class="site-footer">
+            <div class="row">
+                <span class="barnet-logo right">
+                    <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                        Barnet</a>
+                </span>
+            </div>
+        </div>
+          
+    </footer>
+      
+    <script src="/docroot/js/plugins/retina.min.js" type="text/javascript"></script>
+    <script src="/docroot/js/plugins/chosen.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery("#ordering-download-form select").chosen();
+    jQuery(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+</body>
+</html>

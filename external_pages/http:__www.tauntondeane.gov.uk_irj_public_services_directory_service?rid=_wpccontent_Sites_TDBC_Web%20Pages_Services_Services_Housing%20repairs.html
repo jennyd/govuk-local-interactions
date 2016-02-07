@@ -1,0 +1,994 @@
+<!DOCTYPE  HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><LINK REL=stylesheet HREF="/irj/portalapps/com.sap.portal.design.portaldesigndata/themes/portal/SWOneTheme/prtl_std/prtl_std_nn7.css?7.1.8.0.1">
+<LINK REL=stylesheet HREF="/irj/portalapps/com.sap.portal.design.portaldesigndata/themes/portal/SWOneTheme/glbl/glbl_nn7.css?7.1.8.0.1">
+
+<script type="text/javascript">
+/*HTML Business for Java, NW701_08_REL, 97065, Mon Dec 06 09:55:56 GMT 2010*/
+ur_system = {doc : window.document , mimepath :"/irj/portalapps/com.sap.portal.design.urdesigndata/themes/portal/SWOneTheme/common/", stylepath : "/irj/portalapps/com.sap.portal.design.urdesigndata/themes/portal/SWOneTheme/ur/", emptyhoverurl : "/irj/portalapps/com.sap.portal.htmlb/jslib/emptyhover.html", is508 : false, dateformat : 1, domainrelaxing : "MINIMAL"};
+</script>
+
+<LINK REL="stylesheet" HREF="/irj/go/km/docs/etc/wpceditor/css/runtime/content.css">
+<LINK REL="stylesheet" HREF="/irj/go/km/docs/etc/wpceditor/css/runtime/sdn_apps.css">
+<LINK REL="stylesheet" HREF="/irj/go/km/docs/etc/wpceditor/css/runtime/sdn_general.css">
+<SCRIPT src="/irj/portalapps/com.sap.nw.wpc.runtime/scripts/wpc_asyncsupport.js"></SCRIPT>
+<SCRIPT src="/irj/portalapps/com.sap.nw.wpc.runtime/scripts/ur_loader.js"></SCRIPT>
+<LINK REL="stylesheet" HREF="/irj/go/km/docs/etc/wpceditor/css/sw1/scc/styles.css"><link rel="stylesheet" media="print" href="/irj/go/km/docs/etc/wpceditor/css/sw1/scc/print.css" >
+<LINK REL="stylesheet" HREF="/irj/go/km/docs/etc/wpceditor/css/sw1/tdbc/styles.css"><link rel="stylesheet" media="print" href="/irj/go/km/docs/etc/wpceditor/css/sw1/tdbc/print.css" ><title >SAP NetWeaver Portal</title><meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"><script SRC="/irj/portalapps/com.sap.portal.pagebuilder/scripts/minipagesupport.js" ></script><script SRC="/irj/portalapps/com.sw1.portal.framework/scripts/sw1.js" ></script><script SRC="/irj/portalapps/com.sw1.portal.framework/scripts/light_workArea.js" ></script></head><body class="prtlBody urFontBaseFam urScrl"><SCRIPT>var emptyDocumentUrl = "/irj/portalapps/com.sap.portal.pagebuilder/html/EmptyDocument.html";</SCRIPT>
+
+
+
+
+
+
+
+
+
+<SCRIPT>if (typeof EPCM != "undefined") {EPCM.relaxDocumentDomain();} else { var d=document.domain; if (d.search(/^\d+\.\d+\.\d+\.\d+$/)>=0) {} else { var l=d.indexOf("."); if (l>=0) {d=d.substr(l+1)} } if (document.domain != d) {document.domain = d;}}
+pageSupport.pageHelperUrl = '/irj/servlet/prt/portal/prtroot/com.sap.portal.pagebuilder.PageHelper';
+pageSupport.proxyModesUrl = '/irj/servlet/prt/portal/prtroot/com.sap.portal.pagebuilder.IviewModeProxy';
+pageSupport.addPageId('pcd:portal_content/com.sw1.sw_one/com.sw1.admin_content/com.sw1.tdbc.tdbc/com.sw1.tdbc.dt_tdbc_desktop/frameworkPages/com.sw1.tdbc.fw_tdbc_framework','2','local');
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.admin_content/com.sw1.tdbc.tdbc/com.sw1.tdbc.dt_tdbc_desktop/frameworkPages/com.sw1.tdbc.fw_tdbc_framework/com.sw1.tdbc.iv_tdbc_portal_header","page2ivu0");
+pageSupport._addIViewBank("page2ivu0",new iviewBank("","",pageSupport.EMBEDDED,1,"2","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.admin_content/com.sw1.tdbc.tdbc/com.sw1.tdbc.dt_tdbc_desktop/frameworkPages/com.sw1.tdbc.fw_tdbc_framework/com.sap.portal.lightinnerpage","page2ivu1");
+pageSupport._addIViewBank("page2ivu1",new iviewBank("","",pageSupport.EMBEDDED,1,"2","QuickLink=services%2fdirectory%2fservice&rid=%2fwpccontent%2fSites%2fTDBC%2fWeb+Pages%2fServices%2fServices%2fHousing+repairs&guest_user=tdbcAnon","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.admin_content/com.sw1.tdbc.tdbc/com.sw1.tdbc.dt_tdbc_desktop/frameworkPages/com.sw1.tdbc.fw_tdbc_framework/com.sw1.tdbc.iv_tdbc_portal_footer","page2ivu2");
+pageSupport._addIViewBank("page2ivu2",new iviewBank("","",pageSupport.EMBEDDED,1,"2","","GET","false"));
+</SCRIPT>
+
+
+
+
+
+
+
+
+
+
+
+<SCRIPT src="/irj/portalapps/com.sw1.portal.wpc.editor.components/scripts/helper.js"></SCRIPT>
+
+<script type="text/javascript">
+ var anonymousAccess = true;
+ initFramework();
+</script>
+<div id="zSuroundLayer">
+	<div id="inner_page_div">
+		<div id="zHeader">
+
+
+
+
+
+	<!-- google analytics integration -->
+	<script type="text/javascript">
+		
+	</script>
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol ) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		var trackerId = 'UA-1397584-1';
+		
+		try{
+		  var pageTracker = _gat._getTracker(trackerId);
+		  pageTracker._trackPageview();
+		} catch(err) {}
+		
+	</script>
+	<ul id="z-skip-links">
+		<li><a accesskey="z" href="#main-content">Skip to main content</a></li>
+	</ul>
+
+	<!-- PAGE HEADER -->
+	<div id="z-header" class="z-WinterSeason">
+		<div class="z-menu">
+			<ul>
+				
+				<li class="z-menu-list-first"><a href="/irj/public/contactus" accesskey="9" title="Link for contact us information">Contact us</a></li>
+				
+				<!--<li><a href="/irj/public/help" title="Link for help information">Help</a></li>-->
+				<li><a href="/irj/public/accessibility" accesskey="0" title="Link for accessibility help information">Accessibility Help</a></li>
+				<li>
+					<a href="#" title="Zoom view utility, interface link to zoom out" onclick="decreaseFontSize();return true;">
+						<span>A -</span>
+					</a>
+					<a href="#" title="Zoom view utility, interface link to zoom in" onclick="increaseFontSize();return true;">
+						<span>A+</span>
+					</a>
+				</li>
+				<li class="z-menu-list-last">
+					<a href="/irj/public/home/atoz" title="Link for A to Z directory for this web site">
+						<span>A - Z</span>
+					</a>
+				</li>
+			</ul>
+			<div class="clear-float"></div>
+		</div>
+		<div class="z-logo"><a href="/irj/public/home" Alt="Link to Home Page" Title="Link to Home Page" style="display:block;width:975px;height:111px;text-indent: -9999px;">Taunton Deane Borough Council</a></div>
+	</div>
+	<!-- PAGE HEADER -->
+	
+	<ul id="z-skip-links"> 
+		<li><a accesskey="s" href="#main-content">Skip to main content</a></li> 
+	</ul> 
+	
+	<!-- PAGE NAVIGATION MENU -->
+	<div id="z-navigation" class="z-WinterSeason">
+		<div class="z-menu">
+		
+
+			<ul>
+	
+			
+			
+				
+				
+				
+				
+				
+				
+				
+				
+				<li class="z-menu-list-first z-unselected">
+					<a
+						 href="/irj/public/home"
+						 title="Page navigation link for 'Home' home page."
+						 accesskey="1"
+						>
+						Home
+					</a>
+				</li>
+			
+				
+				
+				
+				
+				
+				
+				
+				
+				<li class="z-selected">
+					<a class="selected"
+						 href="/irj/public/services"
+						 title="Page navigation link for 'Services' home page."
+						
+						>
+						Services
+					</a>
+				</li>
+			
+				
+				
+				
+				
+				
+				
+				
+				
+				<li class="z-unselected">
+					<a
+						 href="/irj/public/news"
+						 title="Page navigation link for 'News' home page."
+						 accesskey="2"
+						>
+						News
+					</a>
+				</li>
+			
+				
+				
+				
+				
+				
+				
+				
+				
+				<li class="z-unselected">
+					<a
+						 href="/irj/public/council"
+						 title="Page navigation link for 'Council' home page."
+						
+						>
+						Council
+					</a>
+				</li>
+			
+				
+				
+				
+				
+				
+				
+				
+				
+				<li class="z-menu-list-last z-unselected">
+					<a
+						 href="/irj/public/jobs"
+						 title="Page navigation link for 'Jobs' home page."
+						
+						>
+						Jobs
+					</a>
+				</li>
+			
+			</ul>
+			
+		</div>
+	</div>
+	<!-- PAGE NAVIGATION MENU -->
+
+<SCRIPT>var emptyDocumentUrl = "/irj/portalapps/com.sap.portal.pagebuilder/html/EmptyDocument.html";</SCRIPT>
+
+
+<SCRIPT>pageSupport.addPageId('pcd:portal_content/com.sw1.sw_one/com.sw1.admin_content/com.sw1.tdbc.tdbc/com.sw1.tdbc.dt_tdbc_desktop/frameworkPages/com.sw1.tdbc.fw_tdbc_framework/com.sap.portal.lightinnerpage','1','local');
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.admin_content/com.sw1.tdbc.tdbc/com.sw1.tdbc.dt_tdbc_desktop/frameworkPages/com.sw1.tdbc.fw_tdbc_framework/com.sap.portal.lightinnerpage/com.sw1.iv_acc_workarea","page1ivu0");
+pageSupport._addIViewBank("page1ivu0",new iviewBank("","",pageSupport.EMBEDDED,1,"1","","GET","false"));
+</SCRIPT><DIV id="mememe"><SCRIPT  type="text/javascript">workArea.iviewId = 'pcd:portal_content/com.sw1.sw_one/com.sw1.users/com.sw1.tdbc.tdbc/com.sw1.tdbc.roles/com.sw1.tdbc.rl_tdbc_anon_role/com.sw1.global.ws_global_anon_content/services/directory/com.sw1.pgt_sw1_wpc_3';workArea.isPage = true;workArea.refreshUrl = '/irj/servlet/prt/portal/prtpos/com!252esap!252eportal!252enavigation!252eportallauncher!252eanonymous!7b!3b1!7d.pcd!253aportal!255fcontent!252fcom!252esw1!252esw!255fone!252fcom!252esw1!252eadmin!255fcontent!252fcom!252esw1!252etdbc!252etdbc!252fcom!252esw1!252etdbc!252edt!255ftdbc!255fdesktop!252fframeworkPages!252fcom!252esw1!252etdbc!252efw!255ftdbc!255fframework.com!252esap!252eportal!252elightinnerpage.com!252esw1!252eiv!255facc!255fworkarea!7brefresh!7d---/prttarget/pcd!253aportal_content!252fcom!252esw1!252esw_one!252fcom!252esw1!252eadmin_content!252fcom!252esw1!252etdbc!252etdbc!252fcom!252esw1!252etdbc!252edt_tdbc_desktop!252fframeworkPages!252fcom!252esw1!252etdbc!252efw_tdbc_framework.com!252esap!252eportal!252elightinnerpage.com!252esw1!252eiv_acc_workarea/prtroot/com.sap.portal.navigation.portallauncher.anonymous?QuickLink=services%2fdirectory%2fservice&rid=%2fwpccontent%2fSites%2fTDBC%2fWeb+Pages%2fServices%2fServices%2fHousing+repairs&guest_user=tdbcAnon';if (typeof pageTitleBar != 'undefined') { pageTitleBar.enableExpand();pageTitleBar.enableRefresh();pageTitleBar.enablePersonalize();pageTitleBar.disableHelp();pageTitleBar.enableDetails();}workArea.method = 'GET';</SCRIPT><SCRIPT>var emptyDocumentUrl = "/irj/portalapps/com.sap.portal.pagebuilder/html/EmptyDocument.html";</SCRIPT>
+
+
+<SCRIPT>pageSupport.addPageId('pcd:portal_content/com.sw1.sw_one/com.sw1.users/com.sw1.tdbc.tdbc/com.sw1.tdbc.roles/com.sw1.tdbc.rl_tdbc_anon_role/com.sw1.global.ws_global_anon_content/services/directory/com.sw1.pgt_sw1_wpc_3','0','local');
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.users/com.sw1.tdbc.tdbc/com.sw1.tdbc.roles/com.sw1.tdbc.rl_tdbc_anon_role/com.sw1.global.ws_global_anon_content/services/directory/com.sw1.pgt_sw1_wpc_3/runtime","page0ivu0");
+pageSupport._addIViewBank("page0ivu0",new iviewBank("","",pageSupport.EMBEDDED,1,"0","","GET","false"));
+</SCRIPT>
+<script>
+ var wpc_detected_browser_abbrev='nn6'; 
+ try { 
+   includeUnifiedRenderingCss();
+ } catch(er) { 
+//   alert( 'unsuccessful includeUnifiedRenderingCss() ' );
+ };
+</script>
+<SCRIPT>var emptyDocumentUrl = "/irj/portalapps/com.sap.portal.pagebuilder/html/EmptyDocument.html";</SCRIPT>
+
+
+
+
+
+
+<SCRIPT>pageSupport.addPageId('pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services','3','local');
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_pageheader","page3ivu0");
+pageSupport._addIViewBank("page3ivu0",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_t1","page3ivu1");
+pageSupport._addIViewBank("page3ivu1",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_t2","page3ivu2");
+pageSupport._addIViewBank("page3ivu2",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_l1","page3ivu3");
+pageSupport._addIViewBank("page3ivu3",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_l2","page3ivu4");
+pageSupport._addIViewBank("page3ivu4",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_l3","page3ivu5");
+pageSupport._addIViewBank("page3ivu5",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_l4","page3ivu6");
+pageSupport._addIViewBank("page3ivu6",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_l5","page3ivu7");
+pageSupport._addIViewBank("page3ivu7",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_l6","page3ivu8");
+pageSupport._addIViewBank("page3ivu8",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_r1","page3ivu9");
+pageSupport._addIViewBank("page3ivu9",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_r2","page3ivu10");
+pageSupport._addIViewBank("page3ivu10",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_r3","page3ivu11");
+pageSupport._addIViewBank("page3ivu11",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_r4","page3ivu12");
+pageSupport._addIViewBank("page3ivu12",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_r5","page3ivu13");
+pageSupport._addIViewBank("page3ivu13",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_r6","page3ivu14");
+pageSupport._addIViewBank("page3ivu14",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_r7","page3ivu15");
+pageSupport._addIViewBank("page3ivu15",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_r8","page3ivu16");
+pageSupport._addIViewBank("page3ivu16",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_b1","page3ivu17");
+pageSupport._addIViewBank("page3ivu17",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+pageSupport._addIvuPageId("pcd:portal_content/com.sw1.sw_one/com.sw1.wpc/com.sw1.layouts/com.sw1.pg_services/com.sw1.iv_b2","page3ivu18");
+pageSupport._addIViewBank("page3ivu18",new iviewBank("","",pageSupport.EMBEDDED,1,"3","","GET","false"));
+</SCRIPT>
+
+
+
+
+
+<!--<div id="z-page-home zLyLC2">-->
+<!-- SERVICES PAGE TEMPLATE -->
+<div id="z-page-services">
+	
+    <script language="javascript">
+		var prtMode = 'default';
+		var gTabService = true;
+		var gTabContacts = false;
+		var gTabGeneral = true;
+		var gTabAdvisor = false;
+		
+		var activeTabs = [false, true, false, true];
+		
+		function switchTab(tabId){
+			
+			// uncheck all tabs 
+			for (i=1;i<5;i++){
+				if (activeTabs[i-1]){
+					if (document.getElementById("zTab"+i)) document.getElementById("zTab"+i).className = "zHidden";
+					if (document.getElementById("zTabItem"+i)) document.getElementById("zTabItem"+i).className = "tabOff";
+				}
+			}
+			
+			// activate one tab, jump to the next is it is not active
+			if (!activeTabs[tabId-1]){
+				// set next tab as non existent
+				tabId = 0;
+				// look for the next active one
+				for (i=1;i<5;i++){
+					if (activeTabs[i-1]){
+						tabId = i;
+						break;
+					}
+				}
+			}
+			// finally select the tab
+			if (tabId>0){
+				if (document.getElementById("zTab"+tabId)) document.getElementById("zTab"+tabId).className = "zVisible";
+				if (document.getElementById("zTabItem"+tabId)) document.getElementById("zTabItem"+tabId).className = "zVisible tabOn";
+			}
+
+			return false;
+
+		}
+		
+		function checkForEmptyTabs(){
+			
+				activeTabs = [gTabAdvisor, gTabService, gTabContacts, gTabGeneral];
+			
+
+			for (i=1;i<5;i++){
+				if (!activeTabs[i-1]){
+					if (document.getElementById("zTabItem"+i)) document.getElementById("zTabItem"+i).className="zHidden";
+					if (document.getElementById("zTabItemAnchor"+i)) document.getElementById("zTabItemAnchor"+i).className="zHidden";
+					if (document.getElementById("zTab"+i)) document.getElementById("zTab"+i).className="zHidden";
+				} else {
+					if (document.getElementById("zTabItem"+i)) document.getElementById("zTabItem"+i).className="zVisible";
+					if (document.getElementById("zTabItem"+i)) document.getElementById("zTabItem"+i).className="zVisible";
+					if (document.getElementById("zTabItemAnchor"+i)) document.getElementById("zTabItemAnchor"+i).className="zVisible";
+				}
+			}
+		}
+
+		function clearTabItemAnchorHRefs(){
+			for (i=1;i<5;i++){
+				if (document.getElementById("zTabItemAnchor"+i)){
+					document.getElementById("zTabItemAnchor"+i).href="#";
+				}
+			}
+		}
+		
+		function wpcCSSFixes(){
+			
+			if (document.getElementById("pickList")){
+				var nodes = document.getElementById("pickList");
+				if (nodes.hasChildNodes()){
+					var firstNode = nodes.firstChild;
+					firstNode.style.width = 'auto';
+					firstNode.style.height= '25px';
+					if (firstNode.hasChildNodes()){
+						var childNode0 = firstNode.firstChild;
+						var childNode1 = childNode0.nextSibling;
+						var childNode2 = firstNode.lastChild;
+						
+						childNode0.style.height = '10px';
+						childNode1.style.height = '10px';
+						
+						//var lastNode = firstNode.lastChild;
+						childNode2.style.width = 'auto';
+						childNode2.style.color = '#fff';
+						childNode2.style.height = '15px';
+					}
+				}
+			}
+			if (document.getElementById("t3FloatFrame")){
+				var popupFrame = document.getElementById("t3FloatFrame");
+				popupFrame.style.clear = 'both';
+				popupFrame.style.width = '100%';
+			}		
+		}
+		
+	</script>
+
+
+
+	
+	<div id="zServiceInfoArea">
+
+		<!-- CHANNEL CONTENT -->
+		<div id="z-content-channel">
+
+			<!-- CHANNEL HEADER : SEARCH / BREADCRUMB / SCOPE NOTE / ETC -->
+				<div id="z-column">
+					<div id="wpc_casheader"></div>
+					
+					
+			</div>
+			<!-- CHANNEL HEADER : SEARCH / BREADCRUMB / SCOPE NOTE / ETC -->
+	
+			<a name="main-content"></a>
+				
+			<!-- LH COLUMNN CONTENT -->
+			<div id="z-column-lh">
+				<div class="z-column-canvas">
+
+					<!-- LH COLUMNN - INNER RIGHT HAND CONTENT -->
+					<div class="z-column-inner-lh">
+						<div class="z-column-canvas-inner">
+
+			<div id="zServiceDetail">
+				    	<div id="service_description_area" class="zLyContainer"><div class="z-xsl-output-container">
+  <div class="z-column-inner">
+    <div class="z-column-canvas-inner z-imaged-title">
+      <div>
+        <div id="Media">
+          <span class="linkMedia">
+            <a title="Contact us" href="/irj/public/contactus">
+              <img src="/irj/go/km/docs/etc/public/mimes/images/Twitterbird.gif" title="Twitter image"/>
+            </a>
+          </span>
+        </div>
+        <div>
+          <h1>Housing repairs</h1>
+        </div>
+      </div>
+      <div class="clear-float">
+        <!-- -->
+      </div>
+    </div>
+  </div>
+  <div class="z-column-inner-lh">
+    <div class="z-column-canvas-inner-lh">
+      <div class="z-content">
+        <table class="z-service-details z-table-paired-value" summary="Service article; service information with one level column headers">
+          <caption>Service details for Housing repairs</caption>
+          <tr>
+            <th>Service element</th>
+            <th>Service details</th>
+          </tr>
+          <tr>
+            <td>Responsibility:</td>
+            <td>
+              <a href="/irj/public/council/departments/department?rid=/guid/6052d446-e642-2c10-8ea7-d212629e2348">Housing Services</a>
+              <!-- -->
+            </td>
+          </tr>
+        </table>Here you can find out how to report any repairs required to your Council home, such as loss of heating and hot water.<br /><br /><strong>Please use the 'Do it online' button below to report a fault/repair. Please have your tenant reference number to hand.<br /></strong><br />If you require permission for a water meter to be installed in a council house, please contact Housing Maintenance on 01823 356333 or complete the online form.
+      </div>
+    </div>
+  </div>
+  <div class="z-column-inner-rh">
+    <div class="z-column-canvas-inner-rh">
+      <div class="z-content">
+        <img src="/irj/go/km/docs/guid/20756076-da37-2c10-82be-d8e9d5578bd2" height="140" width="140" alt="Workmen"/>
+        <!---->
+      </div>
+    </div>
+  </div>
+  <div class="clear-float">
+    <!-- -->
+  </div>
+</div>
+</div>
+			        <div id="service_app_area" class="zLyContainer"><div class="zWebformsLayer">
+  <form id="service_app_form" name="service_app_form" method="post" action="http://www1.tauntondeane.gov.uk/tdbcsites/repairs/hrvalidate.asp" target="_top">
+    <script type="text/javascript">
+      <!--
+										function openServiceApp(){
+											var thisContainer = document.getElementById('zServiceDetail').parentNode.parentNode;
+											thisContainer.style.width = '100%';
+											document.getElementById('zServiceDetail').style.width = '100%';
+											document.getElementById('z-column-lh').style.width = '100%';
+											//document.getElementById('z-column-inner-lh').style.width = '100%';
+											
+											document.getElementById('service_tab_area').style.display = 'none';
+											//document.getElementById('service_top_area').style.display = 'none';
+											//document.getElementById('z-column').style.display = 'none';
+											document.getElementById('service_right_area').style.display = 'none';
+											document.getElementById('service_bottom_area').style.display = 'none';
+											document.getElementById('service_description_area').style.display = 'none';
+											document.getElementById('service_app').style.display = 'block';
+											document.getElementById('openApp').style.display = 'none';
+											document.getElementById('closeApp').style.display = 'inline';
+											document.getElementById('service_app_form').submit();
+											
+										}
+										function closeServiceApp(){
+											//var thisContainer = document.getElementById('zServiceDetail').parentNode.parentNode;
+											//thisContainer.style.width = '67%';
+											document.getElementById('service_app').src = '/irj/go/km/docs/etc/public/loading.html';
+											document.getElementById('service_app').style.display = 'none';
+											document.getElementById('service_tab_area').style.display = 'block';
+											//document.getElementById('service_top_area').style.display = 'block';
+											document.getElementById('z-column').style.display = 'block';
+											document.getElementById('service_right_area').style.display = 'block';
+											document.getElementById('service_bottom_area').style.display = 'block';
+											document.getElementById('service_description_area').style.display = 'block';
+											//document.getElementById('zServiceDetail').style.width = '66%';
+											document.getElementById('z-column-lh').style.width = '67%';
+											//document.getElementById('z-column-inner-lh').style.width = '67%';
+											document.getElementById('openApp').style.display = 'inline';
+											document.getElementById('closeApp').style.display = 'none';
+										}
+										function resizeIframe(frameid){
+											var FFextraHeight = 300;
+											var minHeight = 500;
+											var currentfr=document.getElementById(frameid);	
+											if (currentfr.style.display == 'none') return;
+											if (currentfr && !window.opera){
+											  if (currentfr.contentDocument && currentfr.contentDocument.body.offsetHeight)
+												currentfr.height = currentfr.contentDocument.body.offsetHeight + FFextraHeight;
+											  else if (currentfr.Document && currentfr.Document.body.scrollHeight)
+												currentfr.height = currentfr.Document.body.scrollHeight + FFextraHeight;
+											 if (currentfr.height < minHeight)
+											  	currentfr.height = minHeight;
+											  if (currentfr.addEventListener){
+												currentfr.addEventListener("load", readjustIframe, false);
+												currentfr.addEventListener("focus", readjustIframe, false);
+												currentfr.addEventListener("blur", readjustIframe, false);
+											  } else if (currentfr.attachEvent){
+												currentfr.detachEvent("onload", readjustIframe);
+												currentfr.attachEvent("onload", readjustIframe);
+												currentfr.detachEvent("onFocus", readjustIframe);
+												currentfr.attachEvent("onFocus", readjustIframe);
+												currentfr.detachEvent("onblur", readjustIframe);
+												currentfr.attachEvent("onblur", readjustIframe);
+											  }
+											}
+										}
+										
+										function testfunc(loadevt){
+											resizeIframe('service_app');
+										}
+										
+										function readjustIframe(loadevt){
+											var crossevt=(window.event)? event : loadevt;
+											var iframeroot=(crossevt.currentTarget)? crossevt.currentTarget : crossevt.srcElement;
+											if (iframeroot)
+												resizeIframe(iframeroot.id);
+										}
+										-->
+    </script>
+    <div id="dioButtom">
+      <div id="openApp">
+        <p id="accessible-message" class="zVisible">JavaScript is disabled in your browser, you will need to enable it to use the online form. To access this service by phone or email please use the 'contacts' tab.  To find out more about the accessibility of this site please use our 'Accessibility Help' information.</p>
+        <input class="z-search-input-button linkSearch" disabled="disabled" type="submit" value="Do it online" id="openAppButton" onClick="openServiceApp();return false;"/>
+        <p id="ie8-message" class="zHidden">
+          You appear to be using Internet Explorer 8. You need to use the Compatibility View button
+          <img class="z-icon-left-space" src="/irj/go/km/docs/etc/public/mimes/images/compat_view.gif" alt="Icon of compatibillity view button"/>in your browser to use our 'Do It Online' forms .
+        </p>
+      </div>
+      <span id="closeApp" class="zHidden">
+        <input class="z-find-jobs-input-button linkSearch" type="submit" value="Return to Service Page" id="closeAppButton" onClick="closeServiceApp();return false;"/>
+      </span>
+    </div>
+    <iframe id="service_app" name="service_app" class="zHidden" onload="resizeIframe('service_app')" onFocus="resizeIframe('service_app')" onblur="resizeIframe('service_app')" src="/irj/go/km/docs/etc/public/loading.html" height="80" width="100%" frameborder="0" scrolling="auto" title="Dynamic Content Area">
+      Your Browser Currently Has IFRAMES Disabled.
+									Please
+      <a class="boldLink" target="_blank" href="http://www1.tauntondeane.gov.uk/tdbcsites/repairs/hrvalidate.asp" title="Click To Open In A New Window">"Click Here"</a>To Open This Content In A New Window.
+    </iframe>
+  </form>
+  <script type="text/JavaScript">var currUrl = window.location;
+					if (currUrl.toString().match('/irj/advisor/services') != null)
+							document.getElementById('dioButtom').style.display = 'none';</script>
+  <script type="text/JavaScript">
+    <!--
+	
+	function getInternetExplorerVersion()
+ {    var rv = -1; // Return value assumes failure.
+    if (navigator.appName == 'Microsoft Internet Explorer') 
+{       
+ var ua = navigator.userAgent;    
+    var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})"); 
+       if (re.exec(ua) != null) 
+           rv = parseFloat(RegExp.$1); 
+   } 
+   return rv;
+}
+
+
+function checkVersion() 
+{   
+var msg = "You're not using Windows Internet Explorer."; 
+   var ver = getInternetExplorerVersion();  
+  if (ver > -1) 
+{ 
+  if (ver >= 8.0) 
+	{  
+    					 document.getElementById('openAppButton').className = "z-search-input-button linkSearch zVisible";
+    						document.getElementById('ie8-message').className = "zVisible";
+    						document.getElementById('openAppButton').disabled = true;
+   } else  {
+    						document.getElementById('openAppButton').className = "z-search-input-button linkSearch zVisible";
+    					 document.getElementById('ie8-message').className = "zHidden";
+    					 document.getElementById('openAppButton').disabled = false;
+    }
+   }  
+
+}
+
+function jsEnabledMode() {
+	document.getElementById('accessible-message').className = "zHidden";
+	document.getElementById('openAppButton').className = "z-search-input-button linkSearch zVisible";
+	document.getElementById('openAppButton').disabled = false;
+	checkVersion();
+}
+
+jsEnabledMode();
+
+-->
+  </script>
+  <!-- -->
+</div>
+</div>
+			        <div id="service_tab_area" class="zLyContainer">
+		            <div class="zAlignLeft">
+		               
+		                 <ul class="zTabNavigation">
+		                 	
+		                 		
+		                 			<li id="zTabItem2" class="tabOn"><a id="zTabItemAnchor2" href="?rid=/wpccontent/Sites/TDBC/Web Pages/Services/Services/Housing repairs&amp;ssTab=2" onClick="switchTab(2)">About this service</a></li>
+		                 		
+
+		                 		
+		                 			<li id="zTabItem3" class="tabOff"><a id="zTabItemAnchor3" href="?rid=/wpccontent/Sites/TDBC/Web Pages/Services/Services/Housing repairs&amp;ssTab=3" onClick="switchTab(3)">Contacts</a></li>
+		                 		
+
+		                 		
+			                    <li id="zTabItem4" class="tabOff"><a id="zTabItemAnchor4" href="?rid=/wpccontent/Sites/TDBC/Web Pages/Services/Services/Housing repairs&amp;ssTab=4" onClick="switchTab(4)">General advice</a></li> 
+		                 		
+		                </ul>
+		                <div class="clear">&nbsp;</div>
+		                <div class="zLyContainerBlock" >
+		                    
+
+		                 		
+			                    <div id="zTab2"><div class="z-xsl-output-container">
+  <div class="z-headed-section z-dotted-x-base">
+    <div class="z-column-canvas-inner">
+      <div class="z-content">
+        <ul class="z-page-index-links">
+          <li>
+            <a href="#section_who_can_use_it" title="Index section link to - Who can use it?">Who can use it?</a>
+          </li>
+          <li>
+            <a href="#section_how_do_i_use_it" title="Index section link to - How do I use it?">How do I use it?</a>
+          </li>
+          <li>
+            <a href="#section_what_happens_next" title="Index section link to - What happens next?">What happens next?</a>
+          </li>
+          <li>
+            <a href="#section_what_is_covered" title="Index section link to - What is covered?">What is covered?</a>
+          </li>
+          <li>
+            <a href="#section_how_long_does_it_take" title="Index section link to - How long does it take?">How long does it take?</a>
+          </li>
+          <li>
+            <a href="#section_how_much_does_it_cost" title="Index section link to - How much does it cost?">How much does it cost?</a>
+          </li>
+          <li>
+            <a href="#section_laws_and_regulation" title="Index section link to - Laws and regulation">Laws and regulation</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="z-headed-section z-dotted-x-base">
+    <div class="z-column-canvas-inner">
+      <div class="z-content">
+        <a name="section_who_can_use_it" title="Page marker for section - Who can use it?">
+        </a>
+        <h2>Who can use it?</h2>If you are a tenant of a Taunton Deane Borough Council property you can use this service to report repairs that need doing to your council home.<br /><br />If you are a leaseholder of a Taunton Deane Borough Council flat, you may use this service to report repairs which relate&nbsp;to the common parts of your flat block such as the roof, outside walls, communal stairs and communal lights.
+      </div>
+    </div>
+  </div>
+  <div class="z-headed-section z-dotted-x-base">
+    <div class="z-column-canvas-inner">
+      <div class="z-content">
+        <a name="section_how_do_i_use_it" title="Page marker for section - How do I use it?">
+        </a>
+        <h2>How do I use it?</h2><p>If you wish to a report repair request then you can contact us by</p> <p>&nbsp;</p> <ul class="unIndentedList"> <li>Using our online reporting service </li> <li>By emailing <a href="mailto:housing.repairs@tauntondeane.gov.uk">housing.repairs@tauntondeane.gov.uk</a></li> <li>By calling 01823 356333 during office hours </li> <li>By faxing 01823 356329 during office hours</li> <li>By writing to: Housing Repairs Priory Depot Priory Way Taunton TA1 2BB </li> <li>By visting The Deane House, Taunton or the Link Centre, Halcon or the Rent Office, Wellington</li> </ul> <p>&nbsp;</p> <p>During busy times you may experience a delay before one of our staff is able to answer your call. If you need to report an emergency repair outside of normal office hours please call 01823 351411. This service is only for real emergencies, for example a major water or roof leak, a major loss of power or an insecure property. You should report any other repair during normal office hours or using the website.</p>
+      </div>
+    </div>
+  </div>
+  <div class="z-headed-section z-dotted-x-base">
+    <div class="z-column-canvas-inner">
+      <div class="z-content">
+        <a name="section_what_happens_next" title="Page marker for section - What happens next?">
+        </a>
+        <h2>What happens next?</h2><p>When you have requested a repair a Works Order will be raised. In some cases we will need to inspect the problem before the correct repair can be ordered.</p> <p>&nbsp;</p> <p>If you are out when the workman or surveyor calls they will leave a note. If this happens please contact the Repairs Office to arrange a more convenient time. If you do not contact the office your repair order will be cancelled after one further visit has been made.</p>
+      </div>
+    </div>
+  </div>
+  <div class="z-headed-section z-dotted-x-base">
+    <div class="z-column-canvas-inner">
+      <div class="z-content">
+        <a name="section_what_is_covered" title="Page marker for section - What is covered?">
+        </a>
+        <h2>What is covered?</h2>We carry out repairs caused by 'fair wear and tear'. This covers a range of problems, such as:<br /><br /> <ul> <li>Unsafe electrics or loss of power</li> <li>Leaking pipes</li> <li>Loss of water supply</li> <li>Faulty WC's</li> <li>Blocked drains and waste pipes</li> <li>Loss of space heating or hot water</li> <li>Unsafe ceilings</li> <li>Defective window or door locks</li> <li>Unsafe paths</li> <li>Faulty communal stair lights</li> <li>Leaking roofs</li> <li>Repairs to communal TV aerials</li> <li>Broken WC seat</li> <li>Taps which cannot be turned</li> </ul> This list covers the majority of repairs needed. For further information please&nbsp;read the tenants welcome pack<br />The repairs policy does not cover:<br /><br /> <ul> <li>The cultivation of rear and front gardens (except relet properties) </li> <li>The internal decoration of the property </li> <li>Washing machine flexible connections to internal plumbing </li> <li>Adjustments to internal doors to allow for tenants' carpets </li> <li>The fitting of extra 13amp sockets </li> <li>The flexible connection plus bayonet connection to a gas cooker </li> <li>Fluorescent tube replacement </li> <li>Sink, bath and basin waste plug </li> </ul>
+      </div>
+    </div>
+  </div>
+  <div class="z-headed-section z-dotted-x-base">
+    <div class="z-column-canvas-inner">
+      <div class="z-content">
+        <a name="section_how_long_does_it_take" title="Page marker for section - How long does it take?">
+        </a>
+        <h2>How long does it take?</h2><p>We operate a priority repair system to try to make sure that more serious repairs are dealt with first. Below is a list of the more common repairs and times - for a more comprehensive list please refer to the either the Housing Repairs Handbook or the General Advice section.</p> <p>&nbsp;</p> <p>Priority 1: These repairs will be completed within 24 hours. Where this is not possible a temporary holding repair will be carried out. <br />1. Unsafe electrical fittings <br />2. Total loss of power or water supply <br />3. Loss of space and/or water heating <br />4. Blocked WC where there is only 1 in the property <br />5. Security of property -defective door lock</p> <p>&nbsp;</p> <p>Priorty 2: These repairs will be completed within 3 working days <br />1. Partial loss of electric or water supply <br />2. Blocked WC where more than 1 exists <br />3. Blocked sink, bath or basin and/or associated waste pipe <br />4. Repairs to smoke alarms systems <br />5. Tap which cannot be turned</p> <p>Priority 3: These repairs will be completed within 7 working days. <br />1. Defective socket outlet, switch, lamp holder, light drop flex, etc. <br />2. Minor plumbing repairs such as faulty ball valves and siphons <br />3. Faulty locks where the security of the premises is not at risk. <br />4. Bathroom or kichen extractor fan not working. <br />5. Door entry phone not working.</p> <p>&nbsp;</p> <p>Priority 4: These repairs will be completed within 28 days. <br />1. Minor cracks or leaks to external soil pipes <br />2. Repairs to wall and ceiling plaster <br />3. Repairs or replacement of defective bathroom fittings <br />4. Carpentry repairs <br />5. Footpath repairs</p> <p>&nbsp;</p> <p>Priority 5: These are major repair works which fall outside of the repair priority system such as the installation of a horizontal damp proof course, or major structural works, where it may be necessary for you to be relocated into temporary alternative accommodation. For more information please refer to the Tenants Welcome Pack.</p>
+      </div>
+    </div>
+  </div>
+  <div class="z-headed-section z-dotted-x-base">
+    <div class="z-column-canvas-inner">
+      <div class="z-content">
+        <a name="section_how_much_does_it_cost" title="Page marker for section - How much does it cost?">
+        </a>
+        <h2>How much does it cost?</h2><p>There is generally no cost for tenants for having repairs carried out by the Council to items that are original Council fixtures and fittings, which require repair due to 'fair wear and tear'.</p> <p>&nbsp;</p> <p>However the Council reserves the right to recharge tenants in the following circumstances:</p> <ul> <li>The replacement of broken glass in windows and doors</li> <li>Repairs or renewal - in particular lock changes due to lost keys or damage caused by misuse.</li> <li>Gaining entry or changing locks due to loss of key for reasons other than genuine repair.</li> <li>Replacement of lavatory seats and sanitary ware, e.g. toilet, bath or basin, where these are broken by misuse.</li> </ul>
+      </div>
+    </div>
+  </div>
+  <div class="z-headed-section z-dotted-x-base">
+    <div class="z-column-canvas-inner">
+      <div class="z-content">
+        <a name="section_laws_and_regulation" title="Page marker for section - Laws and regulation">
+        </a>
+        <h2>Laws and regulation</h2>Right to Repair Regulations 1994 The Regulations give secure tenants of local housing authorities certain rights relating to repairs to their homes which their landlords are obliged, under repairing covenants, to carry out. Each tenant is given the right, if a first contractor does not complete a qualifying repair within specified time limits, to request the Council to appoint a second contractor to carry out the repairs.
+      </div>
+    </div>
+  </div>
+  <div class="clear-float">
+    <!-- -->
+  </div>
+</div>
+</div>
+		                 		
+
+		                 		
+			                    <div id="zTab3" class="zHidden"><div class="z-xsl-output-container zWebformsLayer">
+  <script type="text/javascript">if (document.getElementById('z-page-services')) {gTabContacts=true; checkForEmptyTabs();}</script>
+  <div class="z-contacts-container"><div class="z-xsl-output-container zWebformsLayer"><div class="z-headed-section z-dotted-x-base"><div class="z-column-canvas-inner"><div class="z-content"><table class="z-table-paired-value" summary="Service article; service information with one level column headers"><caption>Service details for </caption><tr><th>Contact type</th><th>Contact details</th></tr><tr><td class="z-title-icon z-title-icon-contact zTitleIconContact zTxtNormalBlack">Contact</td><td><p>Housing Property Officer</p><!-- --></td></tr><tr><td class="z-title-icon z-title-icon-address zTitleIconAddress zTxtNormalBlack">Address</td><td><p>Housing Property<BR>Priory Depot<BR>Priory Way<BR>Taunton<BR>TA1 2BB</p><!-- --></td></tr><tr><td class="z-title-icon z-title-icon-mail zTitleIconMail zTxtNormalBlack">Email</td><td><p><a href="mailto:housing.repairs@tauntondeane.gov.uk"alt="housing.repairs@tauntondeane.gov.uk"title="housing.repairs@tauntondeane.gov.uk">housing.repairs@tauntondeane.gov.uk</a></p><!-- --></td></tr><tr><td class="z-title-icon z-title-icon-phone zTitleIconPhone zTxtNormalBlack">Contact no</td><td><p>01823 356333</p><!-- --></td></tr><tr><td class="z-title-icon z-title-icon-fax zTitleIconFax zTxtNormalBlack">Fax</td><td><p>01823 356329</p><!-- --></td></tr><tr><td class="z-title-icon z-title-icon-hours zTitleIconHours zTxtNormalBlack">Opening Hours</td><td><p><P>Monday to Thursday: 8:30am to 5:00pm</P><P>Friday: 8:30 to 4:30pm</P><P>Saturday and Sunday: Closed</P></p><!-- --></td></tr></table></div></div></div></div></div>
+  <span>
+    <!-- -->
+  </span>
+</div>
+</div>           
+		                 		
+
+		                 		
+			                    <div id="zTab4" class="zHidden"><div class="z-xsl-output-container zWebformsLayer">
+  Empty container. Please edit to add content.
+  <script type="text/javascript">if (document.getElementById('z-page-services')) {gTabGeneral=false; checkForEmptyTabs();}</script>
+</div>
+</div>
+		                 		
+		                </div>
+		            </div>  
+		        	</div> 
+	        	</div> 
+	
+						</div>
+					</div>
+					<!-- LH COLUMNN - INNER RIGHT HAND CONTENT -->
+	
+					<!-- LH COLUMNN - INNER RIGHT HAND CONTENT -->
+					<div class="z-column-inner-rh">
+						<div class="z-column-canvas-inner">
+	
+						</div>
+					</div>
+					<!-- LH COLUMNN - INNER RIGHT HAND CONTENT -->
+				</div>
+			</div>
+			<!-- LH COLUMNN CONTENT -->
+
+			<!-- RH COLUMNN CONTENT -->
+			<div id="z-column-rh">
+				<div class="z-column-canvas">
+
+					<!-- RH COLUMNN - INNER LEFT HAND CONTENT -->
+					<div class="z-column-inner-lh">
+						<div class="z-column-canvas-inner">
+<div id="service_right_area">
+		          <div class="zLyContainer">
+<!-- RESOURCE : \etc\wpceditor\styles\sw1\wpc_sw1_srv_related_content.xsl --><div class="z-xsl-output-container z-assistive-menu">
+  <div class="z-section">
+    <div class="z-header">
+      <h2>Related services</h2>
+    </div>
+    <ul class="z-links-listed-section">
+      <li>
+        <a href="/irj/public/services/directory/service?rid=/guid/e0d5e1a4-5636-2c10-7095-dccd771c78aa" title="Safety information about immersion heaters" target="_self">Safety information about immersion heaters</a>
+      </li>
+    </ul>
+    <ul class="z-links-listed-section">
+      <li>
+        <a href="/irj/public/services/directory/service?rid=/guid/20ab05a8-5636-2c10-9495-e4a37aab6fa4" title="The handyman service" target="_self">The handyman service</a>
+      </li>
+    </ul>
+    <!-- -->
+  </div>
+</div>
+<!-- RESOURCE : \etc\wpceditor\styles\sw1\wpc_sw1_srv_related_content.xsl -->
+</div>
+		          <div class="zLyContainer">
+<!-- RESOURCE : \etc\wpceditor\styles\sw1\wpc_sw1_srv_related_content.xsl --><div class="z-xsl-output-container z-assistive-menu">
+  <div class="z-section">
+    <div class="z-header">
+      <h2>Information and Resources</h2>
+    </div>
+    <div class="z-content">
+      <h3>
+        <a href="/irj/go/km/docs/CouncilDocuments/TDBC/Documents/Housing/20081209RightToRepair.pdf" title="Right To Repair leaflet (124Kb)" target="_self">Right To Repair leaflet (124Kb)</a>
+      </h3>
+      <img src="/irj/go/km/docs/guid/008fdeef-d937-2c10-5885-82ad604421fb" alt="Image description: Right To Repair leaflet (124Kb)"/>
+      <!-- -->
+      <p>
+        You can find out about the regulations around your right to repair here....
+        <span class="z-more">
+          <a href="/irj/go/km/docs/CouncilDocuments/TDBC/Documents/Housing/20081209RightToRepair.pdf" title="Click here to read more Right To Repair leaflet (124Kb)" target="_self">Read more</a>
+        </span>
+      </p>
+      <!-- -->
+    </div>
+    <div class="clear-float">
+      <!-- -->
+    </div>
+    <!-- -->
+    <div class="z-content">
+      <h3>
+        <a href="/irj/go/km/docs/CouncilDocuments/TDBC/Documents/Housing/New%20Lettable%20SStandard.pdf" title="Lettable Standard (411Kb)" target="_self">Lettable Standard (411Kb)</a>
+      </h3>
+      <img src="/irj/go/km/docs/guid/008fdeef-d937-2c10-5885-82ad604421fb" alt="Image description: Lettable Standard (411Kb)"/>
+      <!-- -->
+      <p>
+        New lettable standard as from August 2010...
+        <span class="z-more">
+          <a href="/irj/go/km/docs/CouncilDocuments/TDBC/Documents/Housing/New%20Lettable%20SStandard.pdf" title="Click here to read more Lettable Standard (411Kb)" target="_self">Read more</a>
+        </span>
+      </p>
+      <!-- -->
+    </div>
+    <div class="clear-float">
+      <!-- -->
+    </div>
+    <!-- -->
+    <!-- REVISE THIS SECTION -->
+    <div class="z-content z-dont-know"><br />The documents on this website can be downloaded and are published using Adobe Portable Document Format (PDF).&nbsp;To view or print these documents you need&nbsp;Adobe's Acrobat PDF reader on your computer.&nbsp;This&nbsp;can be downloaded from the&nbsp;Adobe Systems' website <a href="http://getadobe.com/uk/reader/">http://getadobe.com/uk/reader/</a> (external link).</div>
+    <!-- -->
+  </div>
+</div>
+<!-- RESOURCE : \etc\wpceditor\styles\sw1\wpc_sw1_srv_related_content.xsl -->
+</div>
+		          <div class="zLyContainer">
+<!-- RESOURCE : \etc\wpceditor\styles\sw1\wpc_sw1_srv_related_content.xsl --><div class="z-xsl-output-container z-assistive-menu">
+  <div class="z-section">
+    <!-- -->
+  </div>
+</div>
+<!-- RESOURCE : \etc\wpceditor\styles\sw1\wpc_sw1_srv_related_content.xsl -->
+</div>
+		          <div class="zLyContainer"><div class="zAlignLeft"><table style="border-top: #006633 1px solid; width: 300px; border-bottom: #006633 1px solid;" border="0"> <tbody> <tr> <td style="vertical-align: top;"> <table style="text-align: centre;" border="0" cellspacing="2" cellpadding="0"> <tbody> <tr> <td style="vertical-align: top;" colspan="3"><strong>How do you rate this information?</strong></td> </tr> <tr> <td style="vertical-align: middle; text-align: left;"><a href="https://secure1.somerset.gov.uk/forms/tdbcshowform.asp?fm_formalias=TDBC_Pos_fback" target="_blank"><img title="Good" src="/irj/go/km/docs/wpccontent/Sites/TDBC/Site%20Content/Services/Metrics/Images/face1.jpg" alt="Good face" /></a></td> <td style="vertical-align: middle; text-align: left;"><a href="https://secure1.somerset.gov.uk/forms/tdbcshowform.asp?fm_formalias=TDBC_Av_fback" target="_blank"><img title="Average" src="/irj/go/km/docs/wpccontent/Sites/TDBC/Site%20Content/Services/Metrics/Images/face2.jpg" alt="Average face" /></a></td> <td style="vertical-align: middle; text-align: left;"><a href="https://secure1.somerset.gov.uk/forms/tdbcshowform.asp?fm_formalias=TDBC_Neg_fback" target="_blank"><img title="Poor" src="/irj/go/km/docs/wpccontent/Sites/TDBC/Site%20Content/Services/Metrics/Images/face3.jpg" alt="Bad face" /></a></td> </tr> <tr> <td style="vertical-align: top;" colspan="3"><a href="/irj/public/services/directory/service?rid=/guid/607362c6-0e0b-3010-b188-a6bb16500522">How we use your feedback</a></td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p></div>
+</div>
+		          <div class="zLyContainer"></div>
+		          <div class="zLyContainer"></div>
+		          <div class="zLyContainer"></div>
+		          <div class="zLyContainer"></div>
+</div>
+			
+						</div>
+					</div>
+					<!-- RH COLUMNN - INNER LEFT HAND CONTENT -->
+
+					<!-- RH COLUMNN - INNER RIGHT HAND CONTENT -->
+					<div class="z-column-inner-rh">
+						<div class="z-column-canvas-inner">
+
+						</div>
+					</div>
+					<!-- RH COLUMNN - INNER RIGHT HAND CONTENT -->
+
+				</div>
+			</div>
+			<!-- RH COLUMNN CONTENT -->
+
+		</div>
+		<!-- CHANNEL CONTENT -->
+	
+		<!-- CHANNEL FOOTER -->
+		<div id="service_bottom_area" class="zLyAreaBlock zLyPaddingArea">
+				<div class="zLyContainer zNoPadding"></div>
+				<div class="zLyContainer zNoPadding"></div>
+		</div>
+		<!-- CHANNEL FOOTER -->
+			
+	</div>
+
+
+</div>
+<!-- HOME PAGE TEMPLATE -->
+<script language="javascript">
+	checkForEmptyTabs();
+	clearTabItemAnchorHRefs();
+ 	
+	switchTab(2);
+	
+
+//	switchTab(1);
+	
+	
+</script>
+
+
+<!-- PageBuilder:End of Container - column1 -->
+
+
+
+
+
+</DIV>
+<!-- PageBuilder:End of Container - column1 -->
+
+
+
+
+
+
+<!-- PageBuilder:End of Container - header -->
+</div>
+		<div id="zMainContent">
+<!-- PageBuilder:End of Container - body -->
+</div>
+		<div class="clear-float"></div>
+		<div id="zFooter">
+			<div class="clear-float"></div>
+	
+			<!-- FOOTER CONTENT -->
+			<div id="z-footer">
+				<div class="z-solid-line"></div>
+			
+				<div class="z-menu z-menu-left">
+					<ul>
+						<li class="z-menu-list-single"><a href="/irj/public/privacy" title="Link for Privacy &amp; Security information">Privacy &amp; Security</a></li>
+					<!--
+						<li class="z-menu-list-first"><a accesskey="P" href="/irj/public/privacy" title="Link for Privacy &amp; Security information">Privacy &amp; Security</a></li>
+						<li><a accesskey="L" href="/irj/public/legal" title="Link for Legal Information">Legal Information</a></li>
+						<li class="z-menu-list-last"><a accesskey="F" href="/irj/public/foi" title="Link for Freedom of Information">Freedom of Information</a></li>
+					-->
+					</ul>
+				</div>
+
+				<div class="z-menu z-menu-right">
+					<ul>
+						<li class="z-menu-list-single"><a accesskey="8" href="/irj/public/legal" title="Link for Legal Information">Legal Information</a></li>
+					<!--
+						<li class="z-menu-list-first"><a accesskey="W" href="/irj/public/availability" title="Link for Website availability information">Website availability</a></li>
+						<li><a accesskey="R" href="/irj/public/feeds" title="Link for RSS feeds information">RSS feeds</a></li>
+						<li class="z-menu-list-last"><a accesskey="A" href="/irj/public/accreditations" title="Link for Accreditation information">Accreditations</a></li>
+					-->
+					</ul>
+				</div>
+				<div class="clear-float"></div>
+			</div>
+			<!-- FOOTER CONTENT -->
+<!-- PageBuilder:End of Container - footer -->
+</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+ //var anonymousAccess = true;
+ //addEvent(window, 'load', function(){ initFramework(); } );
+</script>
+
+
+</body></html>

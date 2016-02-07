@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>SW2 Error Redirect</title>
+</head>
+<body>
+    <script>
+        (function(){
+            var current = window.location.host;
+            window.location.replace("http://"+current+"/error");
+        })();
+    </script>
+</body>
+</html>

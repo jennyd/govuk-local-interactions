@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Website OK -->
+
+<title>Surrey County Council - Highways problems and enquiries</title>
+
+<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- Dublin Core metadata -->
+<link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
+<meta name="dcterms.coverage" content="Surrey, England, UK" />
+<meta name="dcterms.creator" content="Surrey County Council, County Hall, Penrhyn Road, Kingston upon Thames, Surrey KT1 2DN. Telephone: 03456 009 009. E-mail: webmaster@surreycc.gov.uk" />
+<meta name="dcterms.modified" content="2016-02-07 02:53:56" />
+<meta name="dcterms.description" content="" />
+<meta name="dcterms.format" content="text/html" />
+<meta name="dcterms.identifier" content="http://online.surreycc.gov.uk/env/hews/hews.nsf/ATOZRTF?OpenForm&amp;Cat=P" />
+<meta name="dcterms.language" content="eng" />
+<meta name="dcterms.publisher" content="Surrey County Council, County Hall, Penrhyn Road, Kingston upon Thames, Surrey, KT1 2DN. Telephone: 03456 009 009. E-mail: webmaster@surreycc.gov.uk" />
+<meta name="dcterms.rights" content="Copyright Surrey County Council" />
+<meta name="dcterms.title" content="Highways problems and enquiries" />
+<meta name="dcterms.type" content="Text" />
+
+<!-- Standard metadata --> 
+<meta name="description" xml:lang="en" lang="en" content="" />
+<meta name="keywords" content="" />
+<meta name="robots" content="index,follow,noarchive,noimageindex,noimageclick" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+<!-- Icons -->
+<link rel="icon" href="//online.surreycc.gov.uk/favicon.ico" type="image/ico" />
+<link rel="shortcut icon" href="//online.surreycc.gov.uk/favicon.ico" type="image/x-icon" />
+
+<!-- head updated: 2014-02-24 09:09 -->
+
+<!-- Global CSS -->
+<link rel="stylesheet" href="//classic.surreycc.gov.uk/__data/assets/file/0006/677553/bootstrap-v3.min.css" type="text/css" />
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="//classic.surreycc.gov.uk/__data/assets/file/0004/677605/bootstrap-v3-ie.min.css" type="text/css" />
+<![endif]-->
+<!-- link rel="stylesheet" href="//www.surreycc.gov.uk/__data/assets/file/0020/660521/scc-global.css" type="text/css" / -->
+<link rel="stylesheet" href="//online.surreycc.gov.uk/css/scc-global.css" type="text/css" />
+
+<!-- Search CSS -->
+<link rel="stylesheet" href="//www.siteimprove.com/searchimprove/autocomplete/autocomplete.css" type="text/css" />
+
+<!-- GovMetric CSS -->
+<link rel="stylesheet" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" type="text/css" />
+
+<!-- SpeakIT CSS -->
+<link rel="stylesheet" href="//classic.surreycc.gov.uk/__data/assets/file/0009/785628/jquery-ui-1.8.24.custom.insipio.css" type="text/css" />
+
+<!-- jQuery 1.7 -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript"></script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7538929-2']);
+  _gaq.push(['_setDomainName', 'surreycc.gov.uk']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- /ext_cssdoctypeandheader --><html>
+<head>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+//#################################################################################//Returns the current database pathfunction ODB() {  var URL = window.location.pathname.toLowerCase();     var DatabasePath = URL.substring(0,URL.indexOf(".nsf"))+".nsf/";  return DatabasePath;}//#################################################################################//When "A to Z RTF" form is opened in the browser, from "A" - "Z" buttons are shown.  Based on these buttons user can //search the category.  We use "QueryOpenRTF" agent in in webqueryopen event of the form to get this category.  The //agent takes the category value ("A", "B", "C" etc.) from querystring.  Through this function we pass the category value//to the querystring from where the queryopen agent will take the category value.function showCategory(catValue){		location = ODB() + "ATOZRTF?OpenForm&Cat="+catValue}//#################################################################################//this function is called from QueryOpenAtoZRTF agent//agent passes different parameters to this function and link for that category (e.g Abandoned Vehicle) is produced in this//function and opens the URL in the browserfunction generateCategoryLink(formToBeOpened,confirmCode,queryType,atozSubject,faultID){	//unscape the parameters passed from agent as those values contain %20 in blank space (with blank space values cannot be passed from agent)		CCode = escape(unescape(confirmCode));	Subject = escape(unescape(atozSubject));	//faultID is passed from agent, but do not need this, as faultID is generated in this function through javascript	//so that faultid is always unique even though user comes to this page by pressing "Back" button of the browser	//faultID generation in the agent is no longer required, but the code has not been removed yet from the agent	//as it might be required in the future		faultID = Math.round(Math.random() * 99999999999);	location = ODB() +formToBeOpened+"&CCode="+CCode+"~"+queryType+"&Subject="+Subject+"&faultID="+faultID;}
+// -->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+document._domino_target = "_self";
+function _doClick(v, o, t, h) {
+  var form = document._AtoZRTF;
+  if (form.onsubmit) {
+     var retVal = form.onsubmit();
+     if (typeof retVal == "boolean" && retVal == false)
+       return false;
+  }
+  var target = document._domino_target;
+  if (o.href != null) {
+    if (o.target != null)
+       target = o.target;
+  } else {
+    if (t != null)
+      target = t;
+  }
+  form.target = target;
+  form.__Click.value = v;
+  if (h != null)
+    form.action += h;
+  form.submit();
+  return false;
+}
+// -->
+</script>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" onload="//See comments on the PageValid fieldif (document.forms.hiddenfields.PageValid.value != '') {	alert(document.forms.hiddenfields.PageValid.value)}">
+
+<form onsubmit="return false;return true;" method="post" action="/env/hews/hews.nsf/ATOZRTF?OpenForm&amp;Seq=1&amp;Cat=P" name="_AtoZRTF">
+<input type="hidden" name="__Click" value="0"></form>
+<!-- subformHeader -->
+<!-- scc logo and navigation -->
+<!-- ext_cssSCCLogoAndNavigation -->
+</head>
+<body>
+    <!--[if !IE]>--><div id="scc-page" class="scc-page"><!--<![endif]--><!--[if lte IE 7]><div id="scc-page" class="ie6-7"><![endif]--><!--[if IE 8]><div id="scc-page" class="ie8"><![endif]-->
+
+<div id="scc-masthead" class="scc-masthead">
+    <div class="container">
+        <h1 id="scc-logo" class="scc-logo"><a title="Go to homepage" href="http://new.surreycc.gov.uk/"><img src="//classic.surreycc.gov.uk/__data/assets/image/0010/282799/scc-logo.gif" alt="Surrey County Council" width="112" height="90" /></a></h1>
+        <ul id="scc-responsive-controls" class="scc-responsive-controls">
+            <li id="scc-menu-control" class="scc-menu-control"><a href="#">Menu</a></li><li id="scc-search-control" class="scc-search-control">
+                <a href="http://surrey.searchimprove.com/">Search</a></li><li class="scc-listen-control">
+                <a href="https://www.surreycc.gov.uk/help/accessibility/listen-to-our-website" id="speaklink" accesskey="L" title="Listen">L</a></li>
+        </ul>
+        <form id="scc-site-search" class="scc-site-search" action="http://surrey.searchimprove.com/search.aspx" method="get">
+            <h2 class="offscreen">Site search</h2>
+            <div>
+                <label for="scc-site-search-query" class="offscreen">Search</label>
+                <input type="hidden" value="775499063" name="pckid" />
+                <input type="hidden" value="465884" name="aid" />
+                <input type="text" value="" size="15" id="scc-site-search-query" class="scc-input-text" name="sw" placeholder="Search site..." /><input type="submit"
+                    value="Go" id="scc-site-search-button" class="scc-btn scc-btn-search" />
+            </div>
+        </form><!-- /#scc-site-search -->
+        <ul id="scc-global-nav" class="scc-global-nav">
+            <li class="odd"><a href="http://new.surreycc.gov.uk/do-it-online">Do it online</a></li>
+            <li><a href="https://www.surreycc.gov.uk/jobs">Jobs</a></li>
+            <li class="odd"><a href="http://findmynearest.surreycc.gov.uk/mysurrey.aspx">My nearest</a></li>
+            <li><a href="http://new.surreycc.gov.uk/contact-us">Contact us</a></li>
+            <li class="odd"><a href="http://new.surreycc.gov.uk/a-z-of-services">A-Z</a></li>
+            <li class="visible-xs visible-sm"><a href="http://new.surreycc.gov.uk/schools-and-learning">Schools and learning</a></li>
+            <li class="visible-xs visible-sm odd"><a href="http://new.surreycc.gov.uk/people-and-community">People and community</a></li>
+            <li class="visible-xs visible-sm">
+                <a href="http://new.surreycc.gov.uk/social-care-and-health">Social care and health</a></li>
+            <li class="visible-xs visible-sm odd">
+                <a href="http://new.surreycc.gov.uk/environment-housing-and-planning">Environment, housing and planning</a></li>
+            <li class="visible-xs visible-sm">
+                <a href="http://new.surreycc.gov.uk/roads-and-transport">Roads and transport</a></li>
+            <li class="visible-xs visible-sm odd">
+                <a href="http://new.surreycc.gov.uk/business-and-consumers">Business and consumers</a></li>
+            <li class="visible-xs visible-sm">
+                <a href="http://new.surreycc.gov.uk/heritage-culture-and-recreation">Heritage, culture and recreation</a></li>
+            <li class="visible-xs visible-sm odd">
+                <a href="http://new.surreycc.gov.uk/your-council">Your council</a></li>
+            <li class="scc-more">
+                <a href="http://new.surreycc.gov.uk/#topics">More &#187;</a></li>
+        </ul>
+    </div><!-- /container -->
+</div><!-- /scc-masthead -->
+
+<!-- header updated: 2014-02-28 13:41 -->
+
+<div class="container">
+<div id="scc-section-title" class="scc-section-title">
+    <a href="http://new.surreycc.gov.uk/do-it-online">Do it online</a>
+</div><!-- /scc-section-title -->
+
+<div class="speakit-player clear-after">
+    <div id="speakit_player"></div>
+</div>
+
+<div id="scc-breadcrumb" class="scc-breadcrumb">
+    <h2>You are here</h2>
+    <ul>
+        <li class="first"><a href="https://www.surreycc.gov.uk">Home</a></li>
+        <li><a href="http://new.surreycc.gov.uk/do-it-online" title="Do it online">Do it online</a></li><li>Highways problems and enquiries</li>
+    </ul>
+</div><!-- /scc-breadcrumb -->
+
+<div id="scc-content" class="scc-content speakit">
+    <div class="row">
+        <!-- If no related column is required (eg. 'see also' links) then set next DIV class to 'col-md-12 col-xs-12' otherwise use 'col-md-9  col-xs-12' -->
+        <div class="col-md-12 col-xs-12">
+            <div id="scc-main-content" class="scc-main-content">
+
+                <!-- <h1>Page title here</h1> -->
+
+<!-- end of subformHeader -->
+<!-- subformPageTitle -->
+<h1>Highways problems and enquiries</h1>
+<!-- end of subformPageTitle -->
+You can use this page to report a problem or make an enquiry relating to Surrey's highways.
+<br><br>
+If you would like to speak to someone or if you would like help completing this form, please call 0300 200 1003.
+<br><br>
+Please select the subject that relates most closely to your problem or enquiry from the list below. You can use the A to Z to help you find the subject. If we don't deal with this ourselves, we'll direct you to who does.
+<br><br>
+<b>If you are <a href="https://www.surreycc.gov.uk/roads-and-transport/road-maintenance-and-cleaning/problems-on-roads-and-highways/help-using-the-map-based-defect-reporting-system">reporting an emergency</a> or an issue you consider to be dangerous, please do not report it online but instead call our Contact Centre on 0300 200 1003.  If you make an online report we will inspect the location within 5 days.</b> 
+<br>
+<p>
+<div class="atoz">
+  <div class="atoz_link">
+    <div class="atoz_link">
+      <ul>
+      <li><a href="javascript:showCategory('A')">A</a></li>
+	<li><a href="javascript:showCategory('B')">B</a></li>
+	<li><a href="javascript:showCategory('C')">C</a></li>
+	<li><a href="javascript:showCategory('D')">D</a></li>
+	<li><a href="javascript:showCategory('E')">E</a></li>
+	<li><a href="javascript:showCategory('F')">F</a></li>
+	<li><a href="javascript:showCategory('G')">G</a></li>
+	<li><a href="javascript:showCategory('H')">H</a></li>
+	<li><a href="javascript:showCategory('I')">I</a></li>
+	<li><a href="javascript:showCategory('J')">J</a></li>
+	<li><a href="javascript:showCategory('K')">K</a></li>
+	<li><a href="javascript:showCategory('L')">L</a></li>
+	<li><a href="javascript:showCategory('M')">M</a></li>
+	<li><a href="javascript:showCategory('N')">N</a></li>
+	<li><a href="javascript:showCategory('O')">O</a></li>
+	<li><a href="javascript:showCategory('P')">P</a></li>
+	<li><a href="javascript:showCategory('Q')">Q</a></li>
+	<li><a href="javascript:showCategory('R')">R</a></li>
+	<li><a href="javascript:showCategory('S')">S</a></li>
+	<li><a href="javascript:showCategory('T')">T</a></li>
+	<li><a href="javascript:showCategory('U')">U</a></li>
+	<li><a href="javascript:showCategory('V')">V</a></li>
+	<li><a href="javascript:showCategory('W')">W</a></li>
+	<li><a href="javascript:showCategory('X')">X</a></li>
+	<li><a href="javascript:showCategory('Y')">Y</a></li>
+	<li><a href="javascript:showCategory('Z')">Z</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<h2>P</h2>
+<p><TABLE width="569" BORDER=0 CELLSPACING=0 CELLPADDING=0><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = http://new.surreycc.gov.uk/roads-and-transport/parking/parking-restrictions-and-controls target =_self><b>Parking controls</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Find out about parking restrictions</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = javascript:generateCategoryLink('LERTF?OpenForm','PKGE','1','Parking%20enquiry','SWNN-A6W5EQ')><b>Parking enquiry</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Log an enquiry about parking or about obtaining permission to park</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = http://www.surreycc.gov.uk/roads-and-transport/community-and-hospital-transport/commonly-asked-questions-on-community-transport/transport-for-older-people-and-people-with-disabilities target =_self><b>Parking for people with disabilities</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Find out about disabled parking bays</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = http://www.surreycc.gov.uk/roads-and-transport/parking/where-to-park/parking-fines target =_self><b>Parking illegally</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Log an enquiry with the district or borough council about illegal parking</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = http://new.surreycc.gov.uk/roads-and-transport/parking/parking-restrictions-and-controls target =_self><b>Parking restrictions and control in Surrey</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Find out about parking restrictions</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = http://www.surreycc.gov.uk/roads-and-transport/parking/parking-reviews target =_self><b>Parking reviews information</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Find out about parking reviews and how to submit new requests</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = javascript:generateCategoryLink('LERTF?OpenForm','EVEN','1','Parties','SWNN-A6W5EQ')><b>Parties</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Log an about regarding a street party or event</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = http://new.surreycc.gov.uk/your-council/neighbouring-district-and-borough-councils target =_self><b>Pavement cleaning (litter, leaves)</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Log an enquiry with a district or borough council about rubbish on the highway</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = https://www.surreycc.gov.uk/roads-and-transport/road-maintenance-and-cleaning/problems-on-roads-and-highways/report-a-defect-part-ii?defectid=237109 target =_self><b>Pavement problem</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Log a report or enquiry about the footway</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = http://www.surreycc.gov.uk/sccwebsite/sccwspages.nsf/LookupWebPagesByTITLE_RTF/Road+permits+and+licences?opendocument target =_self><b>Permits /licences enquiry</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Find out about applying for a permit or licence</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = http://www.direct.gov.uk/en/HomeAndCommunity/Planning/ThePlanningSystem/DG_10026876 target =_self><b>Planning Permission</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Development Site</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = https://www.surreycc.gov.uk/roads-and-transport/road-maintenance-and-cleaning/problems-on-roads-and-highways/report-a-defect-part-ii?defectid=237069 target =_self><b>Ponding</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Report a flooding problem (not  from rivers)</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = http://www.surreycc.gov.uk/roads-and-transport/road-permits-and-licences/banners-on-the-road-side/banners-on-the-roadside target =_self><b>Poster request</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Log a request to erect or have erected a banner or poster</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = https://www.surreycc.gov.uk/roads-and-transport/road-maintenance-and-cleaning/problems-on-roads-and-highways/report-a-defect-part-ii?defectid=237135 target =_self><b>Pothole</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Report a pothole</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = http://new.surreycc.gov.uk/roads-and-transport/road-maintenance-and-cleaning/drainage-and-flooding target =_self><b>Public sewer floods</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Report a flooding issue to a water utility company</font></td></tr><tr valign="top" onmouseover="bgColor='#FFFF99'" onmouseout="bgColor='#FFFFFF'"><td width="350" align="left">
+					<a href = https://www.surreycc.gov.uk/roads-and-transport/road-maintenance-and-cleaning/problems-on-roads-and-highways/report-a-defect-part-ii?defectid=237069 target =_self><b>Puddles</b></a></td>
+					<td align="left" width="219"><font style="color: #003366">Report a flooding problem (not  from rivers)</font></td></tr></table></form>
+
+
+            </div><!-- /scc-main-content OR /scc-related -->
+        </div><!-- /col -->
+    </div><!-- /row -->  
+</div><!-- /scc-content -->
+</div><!-- /container -->
+
+<div id="scc-page-info" class="scc-page-info grid_12">
+    <div class="container">
+        <h2 class="offscreen sr-only">Page information</h2>
+        <ul>
+            <li class="first">Updated: 07 Feb 2016</li>
+            <li>Adam Lee
+            <script type="text/javascript">
+<!--
+//<![CDATA[    
+    if (document.location.protocol == 'http:'){document.write('</li><li><a href="http://www.surreycc.gov.uk/send-to-a-friend">Send to a friend</a></li><li class="last"><a href="http://www.addthis.com/bookmark.php?v=250&pub=sccwebteam" class="addthis_button"><img alt="Bookmark and share" src="https://cache.addthis.com/cachefly/static/btn/v2/lg-share-en.gif" width="125" height="16" style="vertical-align:bottom;margin-bottom:2px" /></a><script src="http://s7.addthis.com/js/300/addthis_widget.js?pub=sccwebteam" type="text/javascript"></' + 'script>');} 
+//]]>
+//-->
+</script>
+</li>
+        </ul>
+        <p class="scc-top offscreen"><a href="#">Top</a></p>
+    </div><!-- /container -->
+</div><!-- /page-info -->
+
+<div id="scc-atoz-picker" class="scc-atoz-picker">
+    <div class="container">
+        <h2>A-Z of services</h2>
+        <ul>
+            <li><a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=A"><span class="offscreen">Services beginning with </span>A</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=B"><span class="offscreen">Services beginning with </span>B</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=C"><span class="offscreen">Services beginning with </span>C</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=D"><span class="offscreen">Services beginning with </span>D</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=E"><span class="offscreen">Services beginning with </span>E</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=F"><span class="offscreen">Services beginning with </span>F</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=G"><span class="offscreen">Services beginning with </span>G</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=H"><span class="offscreen">Services beginning with </span>H</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=I"><span class="offscreen">Services beginning with </span>I</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=J"><span class="offscreen">Services beginning with </span>J</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=K"><span class="offscreen">Services beginning with </span>K</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=L"><span class="offscreen">Services beginning with </span>L</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=M"><span class="offscreen">Services beginning with </span>M</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=N"><span class="offscreen">Services beginning with </span>N</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=O"><span class="offscreen">Services beginning with </span>O</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=P"><span class="offscreen">Services beginning with </span>P</a></li><li>
+            <span class="offscreen">Services beginning with </span><span>Q</span></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=R"><span class="offscreen">Services beginning with </span>R</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=S"><span class="offscreen">Services beginning with </span>S</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=T"><span class="offscreen">Services beginning with </span>T</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=U"><span class="offscreen">Services beginning with </span>U</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=V"><span class="offscreen">Services beginning with </span>V</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=W"><span class="offscreen">Services beginning with </span>W</a></li><li>
+            <span class="offscreen">Services beginning with </span><span>X</span></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=Y"><span class="offscreen">Services beginning with </span>Y</a></li><li>
+            <a href="http://new.surreycc.gov.uk/a-z-of-services?result_1429_result_page=Z"><span class="offscreen">Services beginning with </span>Z</a></li>
+        </ul>
+    </div><!-- /container -->
+</div><!-- /scc-atoz-picker (static) -->
+
+<div id="scc-footer" class="scc-footer">
+    <div class="container">
+        <ul class="scc-footer-links">
+            <li><a href="http://new.surreycc.gov.uk/">Home</a></li>
+            <li class="scc-atoz-link"><a href="http://new.surreycc.gov.uk/a-z-of-services">A-Z of services</a></li>
+            <li><a href="http://new.surreycc.gov.uk/site-map">Site map</a></li>
+            <li><a href="http://www.surreycc.gov.uk/your-council/about-our-website">About our website</a></li>
+            <li><a href="http://new.surreycc.gov.uk/help">Help</a></li>
+            <li><a href="http://www.surreycc.gov.uk/help/accessibility">Accessibility</a></li>
+            <li><a href="http://new.surreycc.gov.uk/disclaimer">Disclaimer</a></li>
+            <li><a href="http://www.surreycc.gov.uk/your-council/about-our-website/use-of-cookies-on-our-site">Use of cookies on our site</a></li>
+        </ul>
+        <p class="scc-social-media scc-footer-social-media"><a href="http://www.surreycc.gov.uk/your-council/about-our-website/social-media" title="Follow us on social media">Follow us on social media</a></p>
+        <p class="scc-footer-map"><a href="http://www.openstreetmap.org/?mlat=51.40490&#38;mlon=-0.30480#map=17/51.40490/-0.30480&#38;layers=N">View map</a></p>
+        <p>Surrey County Council<span class="sep">, </span>County Hall<span class="sep">, </span>Penrhyn Road<span class="sep">, </span>Kingston upon Thames<span class="sep">, </span>KT1 2DN</p>
+        <ul class="scc-footer-contact-channels">
+            <li>Tel: 03456 009 009</li>
+            <li><a href="http://new.surreycc.gov.uk/contact-us">View all key contact numbers</a></li>
+            <li><a href="http://www.surreycc.gov.uk/contact-us/feedback-form">Contact us online</a></li>
+        </ul>
+        <p>&copy; Surrey County Council 2014
+        <br /><span style="font-size:80%">ID: 719783</span></p>
+    </div><!-- /container -->
+</div><!-- /scc-footer -->
+
+<!-- footer updated: 2014-03-28 08:50 -->
+
+<!-- Global JS -->
+<!-- script src="//www.surreycc.gov.uk/__data/assets/js_file/0008/677555/scc-global.js?v=0.1.24"></script -->
+<script src="/scripts/scc-global.js"></script>
+
+<!-- SiteAnalyse -->
+<script type="text/javascript">
+    /*<![CDATA[*/
+    (function() {
+        var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+        sz.src = '//uk1.siteimprove.com/js/siteanalyze_465884.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+    })();
+    /*]]>*/
+</script>
+
+<!-- GovMetric JS -->
+<div class="gm_sidebar gm_sidebar_rh"><a href="https://websurveys.govmetric.com/theme/gm/1414" data-href="http://websurveys.govmetric.com/?id=1414" target="_blank" class="gm_sidebar_anchor" title="please rate this information / page" rel="nofollow"><img src="//wsstatic.govmetric.com/imgs/triggers/rh.png" alt="Please rate this page" title="Please rate this page" /></a></div>
+<script src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+<script src="//hitcounter.servmetric.com/1415"></script>
+
+<!-- Search JS -->
+<script src="//www.siteimprove.com/searchimprove/autocomplete/jquery.autocomplete.js"></script>
+<script src="//www.siteimprove.com/searchimprove/autocomplete/autocomplete_settings_775499063.js"></script>
+
+<!-- SpeakIT JS -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.js"></script>
+<script src="//spoxy3.insipio.com/standard/js/jquery.jplayer.min.js"></script>
+<script src="//spoxy3.insipio.com/filepath/www.surreycc.gov.uk/js/speakit.min.js"></script>
+<script src="//spoxy3.insipio.com/standard/js/jQuery.XDomainRequest-noConflict.js"></script>
+
+</div><!-- /scc-page -->
+
+
+
+<!--  -->
+
+<form name="hiddenfields">
+
+
+
+<input name="SaveOptions" type="hidden" value="0">
+<input name="Base" type="hidden" value="env/hews/hews.nsf">
+<input name="$PublicAccess" type="hidden" value="1">
+<input name="WebPageCreationDate" type="hidden" value="02/07/2016">
+<input name="DocsByUNIDView" type="hidden" value="(mainunids)">
+<input name="WebPageOwner" type="hidden" value="Adam Lee/EAI/SCC">
+<input name="WebPageCreator" type="hidden" value="Adam Lee">
+<input name="WebPageSearchDescription" type="hidden" value="">
+<input name="HTTPS" type="hidden" value="OFF">
+<input name="SERVER_NAME" type="hidden" value="online.surreycc.gov.uk">
+<input name="PATH_INFO" type="hidden" value="/env/hews/hews.nsf/ATOZRTF?OpenForm&amp;Cat=P">
+<input name="WebPageTitle" type="hidden" value="Highways problems and enquiries">
+<input name="QUERY_STRING" type="hidden" value="OpenForm&amp;Cat=P">
+<input name="TemplateLocation" type="hidden" value="templates\htmllib.nsf">
+<input name="WS_Main" type="hidden" value="Do it online">
+<input name="CL1_1" type="hidden" value="Highways problems and enquiries">
+<input name="CL1_Main" type="hidden" value="Highways problems and enquiries">
+<input name="CL2_Main" type="hidden" value="">
+<input name="CL1Concat" type="hidden" value="Highways problems and enquiries">
+<input name="Breadcrumb" type="hidden" value="&lt;li&gt;&lt;a href=&quot;http://new.surreycc.gov.uk/do-it-online&quot; title=&quot;Do it online&quot;&gt;Do it online&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Highways problems and enquiries&lt;/li&gt;">
+<input name="WebPageSearchKeywords" type="hidden" value="highway defect">
+<input name="WebPageSearchKeywords" type="hidden" value="highway enquiries">
+<input name="WebPageSearchKeywords" type="hidden" value="highway problems">
+<input name="WebPageSearchKeywords" type="hidden" value="report a problem">
+<input name="WebPageSearchKeywords" type="hidden" value="transport enquiries">
+<input name="WebPageSearchKeywords" type="hidden" value="transport problems">
+<input name="WebPageSearchKeywords" type="hidden" value="surrey">
+<input name="UseRTForTXTONLYViewTITLE" type="hidden" value="www.surreycc.gov.uk">
+<input name="WCMLocation" type="hidden" value="do-it-online">
+<input name="PageValid" type="hidden" value="">
+<input name="Query_String_Decoded" type="hidden" value="OpenForm&amp;Cat=P">
+<input name="UserRoles" type="hidden" value="Public">
+<input name="HomeURL" type="hidden" value="http://www.surreycc.gov.uk">
+<input name="ImageLocation" type="hidden" value="http://www.surreycc.gov.uk/imgs/">
+<input name="catDocLink" type="hidden" value="[&lt;TABLE width=&quot;569&quot; BORDER=0 CELLSPACING=0 CELLPADDING=0&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = http://new.surreycc.gov.uk/roads-and-transport/parking/parking-restrictions-and-controls target =_self&gt;&lt;b&gt;Parking controls&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Find out about parking restrictions&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = javascript:generateCategoryLink('LERTF?OpenForm','PKGE','1','Parking%20enquiry','SWNN-A6W5EQ')&gt;&lt;b&gt;Parking enquiry&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Log an enquiry about parking or about obtaining permission to park&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = http://www.surreycc.gov.uk/roads-and-transport/community-and-hospital-transport/commonly-asked-questions-on-community-transport/transport-for-older-people-and-people-with-disabilities target =_self&gt;&lt;b&gt;Parking for people with disabilities&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Find out about disabled parking bays&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = http://www.surreycc.gov.uk/roads-and-transport/parking/where-to-park/parking-fines target =_self&gt;&lt;b&gt;Parking illegally&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Log an enquiry with the district or borough council about illegal parking&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = http://new.surreycc.gov.uk/roads-and-transport/parking/parking-restrictions-and-controls target =_self&gt;&lt;b&gt;Parking restrictions and control in Surrey&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Find out about parking restrictions&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = http://www.surreycc.gov.uk/roads-and-transport/parking/parking-reviews target =_self&gt;&lt;b&gt;Parking reviews information&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Find out about parking reviews and how to submit new requests&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = javascript:generateCategoryLink('LERTF?OpenForm','EVEN','1','Parties','SWNN-A6W5EQ')&gt;&lt;b&gt;Parties&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Log an about regarding a street party or event&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = http://new.surreycc.gov.uk/your-council/neighbouring-district-and-borough-councils target =_self&gt;&lt;b&gt;Pavement cleaning (litter, leaves)&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Log an enquiry with a district or borough council about rubbish on the highway&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = https://www.surreycc.gov.uk/roads-and-transport/road-maintenance-and-cleaning/problems-on-roads-and-highways/report-a-defect-part-ii?defectid=237109 target =_self&gt;&lt;b&gt;Pavement problem&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Log a report or enquiry about the footway&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = http://www.surreycc.gov.uk/sccwebsite/sccwspages.nsf/LookupWebPagesByTITLE_RTF/Road+permits+and+licences?opendocument target =_self&gt;&lt;b&gt;Permits /licences enquiry&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Find out about applying for a permit or licence&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = http://www.direct.gov.uk/en/HomeAndCommunity/Planning/ThePlanningSystem/DG_10026876 target =_self&gt;&lt;b&gt;Planning Permission&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Development Site&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = https://www.surreycc.gov.uk/roads-and-transport/road-maintenance-and-cleaning/problems-on-roads-and-highways/report-a-defect-part-ii?defectid=237069 target =_self&gt;&lt;b&gt;Ponding&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Report a flooding problem (not  from rivers)&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = http://www.surreycc.gov.uk/roads-and-transport/road-permits-and-licences/banners-on-the-road-side/banners-on-the-roadside target =_self&gt;&lt;b&gt;Poster request&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Log a request to erect or have erected a banner or poster&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = https://www.surreycc.gov.uk/roads-and-transport/road-maintenance-and-cleaning/problems-on-roads-and-highways/report-a-defect-part-ii?defectid=237135 target =_self&gt;&lt;b&gt;Pothole&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Report a pothole&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = http://new.surreycc.gov.uk/roads-and-transport/road-maintenance-and-cleaning/drainage-and-flooding target =_self&gt;&lt;b&gt;Public sewer floods&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Report a flooding issue to a water utility company&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr valign=&quot;top&quot; onmouseover=&quot;bgColor='#FFFF99'&quot; onmouseout=&quot;bgColor='#FFFFFF'&quot;&gt;&lt;td width=&quot;350&quot; align=&quot;left&quot;&gt;
+					&lt;a href = https://www.surreycc.gov.uk/roads-and-transport/road-maintenance-and-cleaning/problems-on-roads-and-highways/report-a-defect-part-ii?defectid=237069 target =_self&gt;&lt;b&gt;Puddles&lt;/b&gt;&lt;/a&gt;&lt;/td&gt;
+					&lt;td align=&quot;left&quot; width=&quot;219&quot;&gt;&lt;font style=&quot;color: #003366&quot;&gt;Report a flooding problem (not  from rivers)&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;]"></form>
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&ns=1';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script></body>
+</html>

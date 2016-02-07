@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Check Your Collection Day</title>
+<link rel='stylesheet' type='text/css' href='css/nbc.css' />
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="lib/getUrlParam.js"></script>
+<script src="js/binFinder.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="main" align="center">
+		<table>
+			<tr>
+				<td>
+					<label>Your Postcode</label>
+				</td>
+				<td>
+					<input style="font-style:italic;color:#989898" onfocus="this.value = '';this.setAttribute('style', '');this.focus();" onmousedown="this.value = '';this.setAttribute('style', '');this.focus();" name="postcode" id="postcode" type="textbox" value="postcode" size="22"> 
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<p class="advice">Don't know your postcode? <a href='http://postcodefinder.postoffice.co.uk/postcodefinderm.aspx' target='_blank'>Click Here</a></p>
+				</td>
+			</tr>
+		</table>
+		<div id='button'>
+			<a class="button red" href="#findRounds" onclick="findRoundsByPostcode()"><span>Search</span></a>
+		</div>
+</div>
+</body>
+</html>
+
+
+
+

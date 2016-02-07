@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js">
+<head>
+<meta charset="utf-8" />
+
+  
+  
+  
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <meta name="keywords" content="Children, young people and families" />
+    
+    <meta name="dcterms.available" content="2014-12-22T13:41:36Z" />
+    <meta name="dc.type" content="Service Area" />
+  
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="google-translate-customization" content="c891ed76c3b0235-832d37a42e0942b1-gafa62815664b2abd-11" />
+<title>Children, young people and families - barnet.gov.uk</title>
+
+<!--
+TODO: shortcut icon needs setting. Don't re-enable with href="#" as it causes another GET request to be triggered by Chrome.
+<link rel="shortcut icon" type="image/ico" href="#" />
+-->
+
+<link rel="stylesheet" href="/docroot/css/leaflet.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/docroot/css/chosen.min.css" />
+<link rel="stylesheet" href="/docroot/css/jquery.mCustomScrollbar.min.css" />
+
+
+<link rel="stylesheet" href="/docroot/css/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="/docroot/js/jquery-1.11.0.min.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="/docroot/js/jquery-ui.js"></script>
+<script src="/docroot/js/date-picker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/styles.css" media="screen, print" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.date.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.time.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/print.css" media="print" />
+
+
+<script src="/docroot/js/plugins/rem.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+  <script src="/docroot/js/plugins/nwmatcher-1.2.5.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/selectivizr.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/docroot/css/ie8.css" />
+<![endif]-->
+
+<!--[if ! lte IE 6]><!-->
+
+
+<!-- #TODO CBSCH-261 Fixing Foundation Javascript error -->
+<style type="text/css">
+meta.foundation-data-attribute-namespace {
+    font-family: false;
+}
+</style>
+
+<script src="/docroot/js/leaflet.js"></script>
+<script src="/docroot/js/leaflet.markercluster-src.js"></script>
+<script src="/docroot/js/leaflet.markercluster.js"></script>
+
+<script src="/docroot/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/init-behaviour.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.placeholder.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.accordion.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.tab.js" type="text/javascript"></script>
+
+<script src="/docroot/js/scroll.js" type="text/javascript"></script>
+
+<script src="/docroot/js/classie.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery-truncate/jquery.truncate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/modernizr.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/fastclick.js" type="text/javascript"></script>
+
+<script src="/docroot/js/iframeResizer.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.reveal.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/additional-methods.min.js" type="text/javascript"></script>
+
+<script src="https://www.browsealoud.com/plus/scripts/ba.js" type="text/javascript"></script>
+
+<script src="/docroot/js/browse-aloud.js" type="text/javascript"></script>
+
+<script src="/docroot/js/news/news-carousel.js" type="text/javascript"></script>
+<!--<![endif]-->
+<script>
+    /*<![CDATA[*/
+    (function (BCP) {
+        BCP.registerAjaxUrl = '/citizen-home/register/content/column1/singleton.html';
+        BCP.loginAjaxUrl = '/citizen-home/login/content/column1/singleton.html';
+    })(BCP);
+    /*]]>*/
+</script>
+
+<!-- Clickjacking prevention for legacy browsers that don't support X-Frame-Options header -->
+  
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+  
+
+<script>
+
+    /*<![CDATA[*/
+    jQuery(document).ready(function() {
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        var TP_GA = {
+            gaTrackerId : 'UA-60148629-1',
+            auth : false,
+            authDimensionName : 'dimension1'
+        }
+
+        ga('create', TP_GA.gaTrackerId, 'auto');
+        ga('set', 'forceSSL', true);
+
+        if (TP_GA.authDimensionName != '') {
+            ga('set', TP_GA.authDimensionName, TP_GA.auth.toString());
+        }
+
+        ga('send', 'pageview');
+    });
+    /*]]>*/
+</script>
+  
+ 
+
+</head>
+<body id="citizen-service-area-pg" class="service">
+      
+    <div class="header">
+        <header>
+            <div id="skiptocontent">
+                <a href="#contentskip">Skip to content</a>
+            </div>
+             <span class="barnet-logo column small-3">
+                <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                    Barnet</a>
+                <img class="print-only" src="/docroot/img/barnet-logo-green.png" />
+            </span> 
+             <form class="global-search search-controls service-search large-6 large-offset-1 column" method="GET" action="/citizen-home/search.html">
+                <div class="global-search-input">
+                    <input type="search" name="keywords" title="main-search" />
+                </div>
+                <div class="global-search-submit">
+                    <button type="submit" class="button expand">Search</button>
+                </div>
+            </form> 
+              
+            <div class="user-section">
+                 <div id="129fae96-207a-4482-963b-0578a901db3b">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/branding/user/singleton';
+        var target = '#' + '129fae96-207a-4482-963b-0578a901db3b';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                                {
+                                    pageLanguage : 'en',
+                                    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+                                },
+                                'google_translate_element');
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+            </div>
+              
+            <div class="mobile-nav">
+                <i class="iconfontello-search"></i>
+                <i class="iconfontello-menu"></i>
+            </div>
+        </header>
+    </div>
+      
+      
+      
+    
+      
+      
+      
+    <div class="content">
+        
+              
+<nav id="nav" class="side-nav side-nav-off medium-4 large-3 column">
+    <!-- TODO: Why do we need a LI wrapping the nav? This means our level has to start at 2! -->
+    <ul class="nav-level-1" style="display: block">
+        <li class="open">
+              
+            <ul class="nav-level-2" style="display: block">
+                  
+                <li class="open active">
+                    <a href="/citizen-home/children-young-people-and-families.html">
+                        <i></i>
+                        <span class="menu-item">Children, young people and families</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Childcare</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/fyi-families-and-young-peoples-information-service.html">
+                        <i></i>
+                        <span class="menu-item">FYi (families and young people&#039;s information service)</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/directme.html">
+                        <i></i>
+                        <span class="menu-item">DirectMe</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/workforce-development.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Workforce development</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/youth-support.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Youth support in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/parental-support.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Parental support</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/key-strategic-documents-and-plans.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Key strategic documents and plans</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/Safeguarding-children.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Safeguarding children</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/fostering-adopting-and-looked-after-children.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Fostering, adopting and looked after children</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/children-and-young-people-with-disabilities.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Children and young people with disabilities</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/comments-compliments-and-complaints---childrens-service.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Comments, compliments and complaints - Children&#039;s Service</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/barnet-educational-training-support-beets.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Education, Employment and Training Support (BEETS) Careers Advice Service</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/the-local-offer-and-special-educational-needs.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">The Local Offer and Special Educational Needs</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/forms.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+        </li>
+    </ul>
+</nav>
+  
+            <div class="large-9 medium-8 small-12 column main-content">
+                 <nav id="breadcrumb-nav">
+        <div id="breadcrumb" class="breadcrumb-panel">
+            <ul class="breadcrumbs">
+                  
+                
+                <li>
+                    <a href="/citizen-home.html">Home</a>
+                </li>
+                 
+                  
+                <li class="service-nav">
+                    <select onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="Our services">Our services</option>
+                        <option value="/citizen-home/business.html">Business Support in Barnet</option>
+                        <option value="/citizen-home/environmental-health.html">Environmental Health and Trading Standards</option>
+                        <option value="/citizen-home/libraries.html">Libraries</option>
+                        <option value="/citizen-home/regeneration.html">Regeneration</option>
+                        <option value="/citizen-home/public-health.html">Public Health </option>
+                        <option value="/citizen-home/adult-social-care.html">Adult social care</option>
+                        <option value="/citizen-home/council-and-democracy.html">Council and democracy</option>
+                        <option value="/citizen-home/housing-and-community.html">Housing and community</option>
+                        <option value="/citizen-home/schools-and-education.html">Schools and education</option>
+                        <option value="/citizen-home/parks-sport-and-leisure.html">Parks, sport and leisure</option>
+                        <option value="/citizen-home/council-tax-and-benefits.html">Council Tax and Benefits</option>
+                        <option value="/citizen-home/parking-roads-and-pavements.html">Parking, roads and pavements</option>
+                        <option value="/citizen-home/rubbish-waste-and-recycling.html">Rubbish, waste and recycling</option>
+                        <option value="/citizen-home/children-young-people-and-families.html">Children, young people and families</option>
+                        <option value="/citizen-home/births-deaths-marriages-and-nationality.html">Births, deaths, marriages and nationality</option>
+                        <option value="/citizen-home/planning-conservation-and-building-control.html">Planning, Conservation and Building Control</option>
+                        <option value="/citizen-home/news.html">News and features</option>
+                        <option value="/citizen-home/directories.html">Directories</option>
+                        <option value="/citizen-home/events.html">Events List</option>
+                        <option value="/citizen-home/pledgebank.html">Pledges</option>
+                    </select>
+                </li>
+                
+                  
+            </ul>
+        </div>
+    </nav> 
+                 <div class="page-title">
+        
+        
+        <h1>Children, young people and families</h1>
+        
+        
+        
+          
+    </div> 
+                <span class="skip-anchor" id="contentskip"></span>
+                 <main id="main" role="main">
+                    
+                  
+                 <div class="row">
+                  
+                <section>
+                    <div class="row">
+                         <div class="small-12 transversal clearfix">
+                            <!-- transversal -->
+                            <div class="large-7 column">
+                                <form class="ask-a-question-form clearfix" method="GET" action="https://ask.barnet.gov.uk/citizen/search">
+                                    <div class="transversal-ask field field-with-button">
+                                        <h3>Ask a question</h3>
+                                        <input id="nlpq" name="nlpq" type="text" title="Ask a question" placeholder="Type your question here" /> <input name="kb" type="hidden" value="children-families" />
+                                        <button class="button">Go</button>
+                                    </div>
+                                </form>
+                                  
+                            </div>
+                              
+                        </div> 
+                    </div>
+                </section>
+                  
+                <section>
+                    <div class="row">
+                        <div class="large-6 small-12 column">
+                              
+                            <h3>Related links</h3>
+                             <div class="related-link-container">
+                                <ul>
+                                      
+                                    <li class="related-link">
+                                        <i class="iconfontello-right-dir"></i>
+                                         <a href="https://www.barnet.gov.uk/citizen-home/children-young-people-and-families/directme.html" class="external-link" rel="external">Directme</a> 
+                                    </li> 
+                                    <li class="related-link">
+                                        <i class="iconfontello-right-dir"></i>
+                                         <a href="http://www.barnet.gov.uk/wwcib" class="external-link" rel="external">Working with Children in Barnet</a> 
+                                    </li> 
+                                    <li class="related-link">
+                                        <i class="iconfontello-right-dir"></i>
+                                          
+                            <a href="/citizen-home/children-young-people-and-families/fyi-families-and-young-peoples-information-service.html" class="internal-link">FYi (families and young people&#039;s information service)</a>
+                            
+                            
+                            
+                              
+                                    </li> 
+                                    <li class="related-link">
+                                        <i class="iconfontello-right-dir"></i>
+                                          
+                            <a href="/citizen-home/children-young-people-and-families/Safeguarding-children/multi-agency-safeguarding-hub-mash.html" class="internal-link">Multi-Agency Safeguarding Hub (MASH)</a>
+                            
+                            
+                            
+                              
+                                    </li> 
+                                    <li class="related-link">
+                                        <i class="iconfontello-right-dir"></i>
+                                          
+                            <a href="/citizen-home/children-young-people-and-families/youth-support.html" class="internal-link">Find out about youth support</a>
+                            
+                            
+                            
+                              
+                                    </li> 
+                                    <li class="related-link">
+                                        <i class="iconfontello-right-dir"></i>
+                                          
+                            <a href="/citizen-home/children-young-people-and-families/fostering-adopting-and-looked-after-children.html" class="internal-link">Find out about fostering in Barnet</a>
+                            
+                            
+                            
+                              
+                                    </li> 
+                                    <li class="related-link">
+                                        <i class="iconfontello-right-dir"></i>
+                                          
+                            <a href="/citizen-home/children-young-people-and-families/parental-support.html" class="internal-link">Find out about support for parents</a>
+                            
+                            
+                            
+                              
+                                    </li> 
+                                    <li class="related-link">
+                                        <i class="iconfontello-right-dir"></i>
+                                         <a href="http://www.barnet.gov.uk/bscb/" class="external-link" rel="external">Barnet Safeguarding Children Board</a> 
+                                    </li> 
+                                    <li class="related-link">
+                                        <i class="iconfontello-right-dir"></i>
+                                          
+                            <a href="/citizen-home/children-young-people-and-families/key-strategic-documents-and-plans/barnet-children-and-young-people-plan/barnet-children-and-young-people-plan---keeping-children-and-young-people-safe.html" class="internal-link">Keeping children and young people safe</a>
+                            
+                            
+                            
+                              
+                                    </li>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                      
+                                </ul>
+                            </div> 
+                              
+                        </div>
+                        <div class="large-6 small-12 links-or-text-container column">
+                              
+                            <h3></h3>
+                             
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>We work with partners to help ensure that children and young people are kept safe, receive good quality education and any additional support needs are identified early and addressed.<br />
+<br />
+We work to deliver on the outcomes in the Council&rsquo;s Corporate Plan and in the partnership&nbsp;<a href="/citizen-home/children-young-people-and-families/key-strategic-documents-and-plans/barnet-children-and-young-people-plan.html" style="line-height: 20.7999992370605px;">Barnet Children and Young People Plan</a>&nbsp;to create better life chances for children and young people across the borough; and to promote family and community well-being and encourage cohesive, safe communities.&nbsp;</p>
+
+<p><a href="/citizen-home/children-young-people-and-families/the-local-offer-and-special-educational-needs/barnet-send-information-advice-and-support-service/barnet-sendiass-groups/Children--young-people-and-families-page-2.html">Read more.</a></p>
+
+</div>
+ 
+                              
+                        </div>
+                    </div>
+                </section>
+                  
+                  
+                
+                  
+                  
+                <section>
+                    <div class="row">
+                        <div class="small-12 column popular-tasks">
+                            <h3>Popular Tasks</h3>
+                              
+                            <div class="row">
+                                  
+                                      
+                                        <div class="popular-link small-12 medium-6">
+                                              
+                            <a href="/citizen-home/children-young-people-and-families/Safeguarding-children/multi-agency-safeguarding-hub-mash.html" class="internal-link">Concerned about the safety of a child?</a>
+                            
+                            
+                            
+                              
+                                        </div>
+                                      
+                                 
+                                  
+                                      
+                                        <div class="popular-link small-12 medium-6">
+                                              
+                            <a href="/citizen-home/children-young-people-and-families/forms/Notification-of-possible-private-fostering-arrangement.html" class="internal-link">Notification of possible private fostering arrangement</a>
+                            
+                            
+                            
+                              
+                                        </div>
+                                      
+                                  
+                                
+                            </div>
+                            
+                            
+                              
+                            <div class="button-wrapper clearfix">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                  
+                <section>
+                    <div class="row">
+                        <div class="large-12 small-12 news column">
+                             <div id="news_carousel" class="carousel">
+                      
+                    <ul id="news_carousel_list" class="carousel--item-wrap">
+                        <li id="news_carousel_item_1" class="carousel--item is-active" data-image-src="/dam/jcr:a8816f0a-3915-423e-8ef9-2ed8c9b52e26/008308_UKYP_Carousel_Large_digital_.jpg" data-image-caption="UK Youth Parliament 2013">
+                            <h3 class="carousel--item-title">
+                                <a href="/citizen-home/news/Parliamentarians-of-the-future-sought.html">Parliamentarians of the future sought</a>
+                            </h3>
+                            <div class="carousel--item-bd">
+                                <p>Young people across Barnet are being encouraged to get involved in the 2016 UK Youth Parliament (UKYP) elections due to be held in February and March.</p>
+                            </div>
+                        </li>
+                        <li id="news_carousel_item_2" class="carousel--item" data-image-src="/dam/jcr:2c83d5a3-e726-47f6-935b-cc852c8d633b/Interior%20and%20exterior%20building%20shots%20June%202012%20003.jpg">
+                            <h3 class="carousel--item-title">
+                                <a href="/citizen-home/news/Barnet-Youth-Zone-location-confirmed-.html">Barnet Youth Zone location confirmed</a>
+                            </h3>
+                            <div class="carousel--item-bd">
+                                <p>Barnet Council has given the go ahead for a £6million state-of-the-art OnSide Youth Zone to be developed on Montrose Playing Fields in Burnt Oak, near to Grahame...</p>
+                            </div>
+                        </li>
+                        <li id="news_carousel_item_3" class="carousel--item last" data-image-src="/dam/jcr:25df3f43-f4c5-4799-a110-5c19689a0682/008508_CSA_Carousel_Small.jpg" data-image-caption="CSA cover image">
+                            <h3 class="carousel--item-title">
+                                <a href="/citizen-home/news/Parents--views-on-childcare-sought.html">Parents’ views on childcare sought</a>
+                            </h3>
+                            <div class="carousel--item-bd">
+                                <p>Parents, parents-to-be and carers are being asked about their childcare needs as part of a borough-wide review.</p>
+                            </div>
+                        </li>
+                        
+                        
+                    </ul>
+                    <div id="carousel_img" class="carousel--img">
+                        <img id="news-bg-img" src="/dam/jcr:a8816f0a-3915-423e-8ef9-2ed8c9b52e26/008308_UKYP_Carousel_Large_digital_.jpg" height="400" width="800" />
+                    </div>
+                      
+                      
+                </div> 
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                         <div class="small-12 column downloads">
+                            <h3>Documents which are popular</h3>
+                              
+                            <div class="row">
+                                  
+                                      
+                                 
+                                  
+                                      
+                                  
+                                
+                            </div>
+                            
+                            
+                              
+                             <p>No popular documents found.</p> 
+                            <div class="button-wrapper">
+                                <form method="GET" action="/citizen-home/search.html">
+                                    <input class="button" type="submit" value="View all documents" /> <input type="hidden" name="docs" value="true" /> <input type="hidden" name="linkedFrom" value="*/citizen-home/children-young-people-and-families*" />
+                                </form>
+                            </div>
+                        </div> 
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                          
+                         <div class="large-6 small-12 column browse-directories">
+        <h3>Browse directories</h3>
+        <div class="small-12 column">
+            <ul class="ul">
+                <li class="directory-item">
+                    <a href="/citizen-home/directories/Directories?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3853b84ae7c2872585b55&amp;list=true">Childminders</a>
+                </li>
+                <li class="directory-item">
+                    <a href="/citizen-home/directories/Directories?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3852a84ae7c28725849b3&amp;list=true">Children&#39;s centres</a>
+                </li>
+                <li class="directory-item">
+                    <a href="/citizen-home/directories/Directories?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3853684ae7c2872585703&amp;list=true">DirectMe</a>
+                </li>
+                <li class="directory-item">
+                    <a href="/citizen-home/directories/Directories?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3853b84ae7c2872585b47&amp;list=true">Home childcarer/Nanny</a>
+                </li>
+                <li class="directory-item">
+                    <a href="/citizen-home/directories/Directories?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3854284ae7c2872585d99&amp;list=true">Local Offer</a>
+                </li>
+                <li class="directory-item">
+                    <a href="/citizen-home/directories/Directories?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3853b84ae7c2872585b35&amp;list=true">Nanny/Au Pair Agencies</a>
+                </li>
+                <li class="directory-item">
+                    <a href="/citizen-home/directories/Directories?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3853a84ae7c2872585a85&amp;list=true">Nursery / daycare / pre-school</a>
+                </li>
+                <li class="directory-item">
+                    <a href="/citizen-home/directories/Directories?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3853684ae7c28725856cb&amp;list=true">Out of school care</a>
+                </li>
+                <li class="directory-item">
+                    <a href="/citizen-home/directories/Directories?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3853584ae7c28725855ee&amp;list=true">Parent and Toddler Groups</a>
+                </li>
+                <li class="directory-item">
+                    <a href="/citizen-home/directories/Directories?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3852b84ae7c2872584a55&amp;list=true">Short Breaks</a>
+                </li>
+                
+                
+                
+                
+            </ul>
+        </div>
+    </div> 
+                          
+                         <div class="large-6 small-12 column browse-directories">
+                    <h3>Events</h3>
+                      
+                    
+                    
+                      
+                      
+                </div> 
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                         <div class="large-6 small-12 column foi-requests">
+                    <h3>Freedom of Information Requests</h3>
+                      
+                    <ul class="foiRequests">
+                        <li><a href="/citizen-home/foi-requests/2015-11-25/2360496/c898e592-6d05-48e6-9f38-6ee49eda3faa.html">Prevent/Channel referrals</a></li>
+                        <li><a href="/citizen-home/foi-requests/2015-10-29/2289296/c898e592-6d05-48e6-9f38-6ee49eda3faa.html">Children&#39;s social worker recruitment and retention</a></li>
+                        <li><a href="/citizen-home/foi-requests/2015-10-29/2350096/c898e592-6d05-48e6-9f38-6ee49eda3faa.html">Orthoptic-led vision screening in school</a></li>
+                        <li><a href="/citizen-home/foi-requests/2015-08-14/2098796/c898e592-6d05-48e6-9f38-6ee49eda3faa.html">Adults&#39; and Children&#39;s Case Management System</a></li>
+                        
+                        
+                        
+                        
+                    </ul>
+                    <a href="/citizen-home/foi-requests/101002/c898e592-6d05-48e6-9f38-6ee49eda3faa.html">More
+                        FOIs...</a>
+                      
+                      
+                      
+                </div> 
+                         <div class="large-6 small-12 column council-decisions">
+                    <h3>Council Decisions</h3>
+                      
+                    <ul class="decisions">
+                        <li>
+                            <a href="http://barnet.moderngov.co.uk/mgIssueHistoryHome.aspx?IId=28626&amp;Opt=0">Child and Adolescent Mental Health - Contract Extension</a>
+                            <span class="decisionDate">04 February 2016</span>
+                        </li>
+                        <li>
+                            <a href="http://barnet.moderngov.co.uk/mgIssueHistoryHome.aspx?IId=28628&amp;Opt=0">Barnet Carers and Young Carers Strategy 2015-20: &quot;Carers are supported and valued by our communities&quot;</a>
+                            <span class="decisionDate">04 February 2016</span>
+                        </li>
+                        <li>
+                            <a href="http://barnet.moderngov.co.uk/mgIssueHistoryHome.aspx?IId=28488&amp;Opt=0">Family Services Fees and Charges - 2016-17</a>
+                            <span class="decisionDate">29 January 2016</span>
+                        </li>
+                        
+                        
+                    </ul>
+                    <a href="https://barnet.moderngov.co.uk/mgDelegatedDecisions.aspx?DR=07/02/2014-14/02/2016&amp;FILT=D101002">More decisions...</a>
+                      
+                      
+                      
+                </div> 
+                    </div>
+                </section>
+                  
+                <section>
+                    <div class="service-contacts">
+                        <h3>Contacts</h3>
+                        <ul class="large-block-grid-2">
+
+                            <li>
+                                  
+                        <div>
+                            <ul class="contact-info">
+                                <li class="text-strong">Families and Young People&#039;s Information Service</li>
+                                <li>North London Business Park (NLBP), <br/>Oakleigh Road South, <br/>London N11 1NP</li>
+                                <li>&nbsp;</li>
+                                
+                                <li>
+                                    <span class="text-strong">Tel: </span>
+                                    <span>0800 389 8312</span>
+                                </li>
+                                
+                                <li>
+                                    <span class="text-strong">Email: </span>
+                                    <span>fyi@barnet.gov.uk</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                          
+                            </li>
+                        </ul>
+
+                    </div>
+                </section>
+                  
+                  
+            </div> 
+                </main> 
+                
+                 <div class="row">
+                    <div class="panel">
+                          
+                <section class="gm_sidebar row">
+                    <div class="gm-container">
+                        <div class="rate-page">
+                            <i class="iconfontello-thumbs-up"></i>
+                            <p>Rate this page</p>
+                        </div>
+                        <div class="rating-options">
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=3" target="_blank" title="rate this page as GOOD" rel="nofollow">
+                                <img src="/docroot/img/govmetric/smiling.png" alt="green smiley (good)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=2" target="_blank" title="rate this page as AVERAGE" rel="nofollow">
+                                <img src="/docroot/img/govmetric/indifferent.png" alt="orange smiley (average)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=4" target="_blank" title="rate this page as POOR" rel="nofollow">
+                                <img src="/docroot/img/govmetric/sad.png" alt="red smiley (poor)" />
+                            </a>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+                    <script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+                    <script type="text/javascript" src="//hitcounter.govmetric.com/982"></script>
+                </section>
+                  
+                    </div>
+                </div> 
+                
+            </div>
+        
+        
+          
+    </div>
+      
+      
+    <footer>
+          
+          
+        <nav class="footer-nav clearfix row">
+            <ul class="footer-links left">
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html" class="internal-link">Contact us</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/copyright.html" class="internal-link">Copyright</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/privacy.html" class="internal-link">Privacy notice</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" class="internal-link">Accessibility</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Disclaimer.html" class="internal-link">Disclaimer</a>
+                            
+                            
+                            
+                             </li>
+                
+                
+                
+                
+                
+                
+            </ul>
+            <ul class="social-icons right">
+                <li><a href="https://www.gov.uk/"><img height="18" width="90" src="/docroot/img/gov-uk-logo.png" alt="gov uk logo" /></a></li>
+                <li><a href="https://www.flickr.com/photos/barnetcouncil"><i class="flaticon-flickr"></i></a></li>
+                <li><a href="https://twitter.com/barnetcouncil"><i class="flaticon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/BarnetCouncil"><i class="flaticon-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/user/Barnetcouncil1"><i class="flaticon-youtube"></i></a></li>
+                <li class="browse-aloud-icon"><a id="show-browsealoud" title="Listen with BrowseAloud"><img src="/docroot/img/browse-aloud-logo.png" alt="Listen with BrowseAloud" /></a></li>
+            </ul>
+        </nav>
+        <div class="site-footer">
+            <div class="row">
+                <span class="barnet-logo right">
+                    <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                        Barnet</a>
+                </span>
+            </div>
+        </div>
+          
+    </footer>
+      
+    <script src="/docroot/js/plugins/retina.min.js" type="text/javascript"></script>
+    <script src="/docroot/js/plugins/chosen.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery("#ordering-download-form select").chosen();
+    jQuery(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+</body>
+</html>

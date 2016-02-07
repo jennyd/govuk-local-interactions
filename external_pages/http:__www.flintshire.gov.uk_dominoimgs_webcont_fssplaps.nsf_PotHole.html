@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+document._domino_target = "_self";
+function _doClick(v, o, t, h) {
+  var form = document._PotHole;
+  if (form.onsubmit) {
+     var retVal = form.onsubmit();
+     if (typeof retVal == "boolean" && retVal == false)
+       return false;
+  }
+  var target = document._domino_target;
+  if (o.href != null) {
+    if (o.target != null)
+       target = o.target;
+  } else {
+    if (t != null)
+      target = t;
+  }
+  form.target = target;
+  form.__Click.value = v;
+  if (h != null)
+    form.action += h;
+  form.submit();
+  return false;
+}
+// -->
+</script>
+</head>
+<body text="#000000" bgcolor="#FFFFFF">
+
+<form method="post" action="/webcont/fssplaps.nsf/PotHole?OpenForm&amp;Seq=1" name="_PotHole">
+<input type="hidden" name="__Click" value="0"><link href="http://code.google.com/apis/maps/documentation/javascript/examples/standard.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places&sensor=true"></script> 
+<script type="text/javascript"> 
+  var map;
+  var markersArray = [];
+  var infowindow = new google.maps.InfoWindow();
+  
+  if (window.addEventListener) //DOM method for binding an event
+     window.addEventListener("load", initialize , false)
+  else if (window.attachEvent) //IE exclusive method for binding an event
+     window.attachEvent("onload", initialize);
+  
+  function initialize()
+  {
+   geocoder = new google.maps.Geocoder();
+    var flintshire = new google.maps.LatLng(53.19110919981205,-3.1610183715820312);
+    var mapOptions = {
+      zoom: 11,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById("map_canvas_map"),
+    mapOptions);
+    var input = document.getElementById('searchLocation');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    
+    autocomplete.bindTo('bounds', map);
+    
+    google.maps.event.addListener(autocomplete, 'place_changed',function() {
+    	var place = autocomplete.getPlace();
+    	var placePosition = place.geometry;
+    	
+    	map.setCenter(placePosition.location);
+    	map.setZoom(16);
+    	
+    });if(navigator.geolocation) {
+ navigator.geolocation.getCurrentPosition(function(position) {
+ var pos = new google.maps.LatLng(position.coords.latitude,
+              position.coords.longitude);
+	map.setCenter(pos);
+	map.setZoom(16);
+	addMarker(pos,"Pot hole/twll", "Pot hole here/twll yma");
+}, function() {
+       map.setCenter(flintshire);
+   });
+   } 
+else 
+   {
+      // Browser doesn't support Geolocation
+      map.setCenter(flintshire);
+   }
+    google.maps.event.addListener(map, 'click', function(event) 
+   {
+   	addMarker(event.latLng,"Pot hole/twll", "Pot hole here/twll yma");
+   });
+  }
+function updateTitle(title)
+  {
+  	if (markersArray) {
+    for (var i=0; i<markersArray.length;i++) {
+        markersArray[i].setTitle(title);
+    }
+    }
+  }
+ function addMarker(location, p_title, p_info)
+   {
+    clearOverlays();
+     var tmpmarker;
+      tmpmarker = new google.maps.Marker({
+      position: location,
+      map: map,
+      title: p_title,
+      draggable : true
+    });
+    tmpmarker.setClickable(true);
+    document.getElementById("lat").value=location.lat().toString();
+    document.getElementById("long").value=location.lng().toString();
+    google.maps.event.addListener(tmpmarker, 'click', function(event)
+    {
+      infowindow.setContent(p_info);
+      infowindow.open(map, tmpmarker);
+    });
+  google.maps.event.addListener(tmpmarker, 'dragend', function(mEvent)
+  {
+  	var newtitle = "Pot hole here/Twll yma";
+	updateTitle(newtitle);
+	document.getElementById("lat").value=mEvent.latLng.lat().toString();
+	document.getElementById("long").value=mEvent.latLng.lng().toString();
+   });
+    
+    markersArray.push(tmpmarker);
+  }
+  function clearOverlays() 
+  {
+    for (var i = 0; i < markersArray.length; i++ )
+    {
+      markersArray[i].setMap(null);
+    }
+  }
+function validate(form)
+{
+	var locn;
+	var temp;
+	locn = window.location.toString();
+	temp = locn.indexOf("www");
+	if (temp>=0)
+	{
+		form.action="/dominoimgs/webcont/fssplaps.nsf/PotHole?OpenForm&seq=1";
+	}
+}
+</script>
+<h1>Flintshire County Council/Cyngor Sir y Fflint</h1>
+<h2>Report a pothole, pavement or road defect/Rhoi gwybod am dwll neu ddiffyg mewn pafin neu ffordd</h2>
+<p>
+	1. Check the map marker shows the exact location* / 1. Gofalwch fod y marciwr yn dangos yr union leoliad ar y map**<br />
+	2. Fill in the fields below / 2. Llenwch y meysydd isod <br />
+	3. Submit the report / 3. Anfonwch yr adroddiad <br />
+	*If location incorrect or no marker showing click map to relocate or show marker. Use location field to find an address/street then select from the list (tip: don’t hit enter if 	using keyboard as this submits your report <br />
+	**Os yw’r lleoliad yn anghywir neu os nad oes marciwr i’w weld, cliciwch ar y map i ailosod y lleoliad neu i ddangos y marciwr. Defnyddiwch y rhestr lleoliadau i ddewis y 	cyfeiriad/stryd (os ydych yn defnyddio bysellfwrdd, peidiwch â phwyso ‘enter’ neu bydd eich adroddiad yn cael ei anfon) <br />
+</p>
+<div><input id="searchLocation" type="text" size="50" placeholder="Location/Lleoliad"></div>
+<div id="map_canvas_map" style="width:60%; height:40%"></div> 
+<div id="formData">
+<p>
+<input name="lat" value="" id="lat" type="hidden">
+<input name="long" value="" id="long" type="hidden"><br>
+Name/Enw:<br>
+
+<input name="Name" value=""><br>
+Phone/Ffon:<br>
+
+<input name="Phone" value=""><br>
+e-mail/e-bost:<br>
+
+<input name="emailadd" value=""><br />Your comment/Sylwadau
+<br /><textarea Name="frmTxtComment" rows=5 cols=30 wrap=virtual></textarea><br /><input type="Submit" value="Submit/Cyflwyno" name="submit" onclick="javascript:validate(this.form);" />
+</div></form>
+</body>
+</html>

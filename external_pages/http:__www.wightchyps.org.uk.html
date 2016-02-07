@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <meta charset="utf-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=9" />
+ <title>WightChyps</title>
+     
+
+    <link href="/WightChyps/Content/localOffer.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script><!-- added for the draggable items in myBook - is there a better link to use -->
+
+     <script src="/WightChyps/Scripts/LocalOffer/localOfferCommon.js"></script>
+     <script src="/WightChyps/Scripts/WightChyps/wightChyps.js"></script>
+     
+     
+     <script type="text/javascript" src="https://dviozkukkvl45.cloudfront.net/point/point.js"></script>
+     <link href="/localoffer/Content/point.css" rel="stylesheet" />
+     <script type="text/javascript" src="/localoffer/Scripts/point_config.js"></script>
+     <script type="text/javascript">
+
+         var baseUrl = '/WightChyps/';
+         var selFontSize = 0;
+         var dirWCId = 1;
+         var dirLOId = 4;
+
+
+
+         function changeFontSize(selSize) {
+             //selSize is the font size modifier
+             $(".breadcrumbContainer, #serviceFooterNamePO p, #disclaimerPanel p").css({ 'font-size': 12 + selSize + 'px' });
+             $("span").css({ 'font-size': 14 + selSize + 'px' });
+             $('.faqText').css({ 'font-size': 13 + selSize + 'px' });
+             $("p, a.readMore, a.readLess, #introLinks li a, footerContactDetails a, .searchButton, .searchBox, fieldset.radioGroup  label, .searchCatHeader, #resultsTopbar, #resultsFooterNav, #serviceDetails, #serviceDetails li, .myBookControl").css({ 'font-size': 14 + selSize + 'px' });
+             $(".resultDetails h2, #serviceDetailsPO h3, #serviceKeyInfoPO h3, .rightPrintPanel h3, #serviceDetails h3, #serviceKeyInfo h3").css({ 'font-size': 16 + selSize + 'px' });
+             $(".leftPrintPanel h2").css({ 'font-size': 18 + selSize + 'px' });
+             $(".introBox h1, .optionBoxText, #serviceKeyInfo h2, #serviceDetails h2, #serviceFooterNamePO h3, #serviceKeyInfoPO h2, #serviceDetailsPO h2, #disclaimerPanel h3").css({ 'font-size': 20 + selSize + 'px' });
+             $(".optionBoxText a").css({ 'font-size': 22 + selSize + 'px' });
+             $(".resultsHeader h1").css({ 'font-size': 16 + selSize + 'px' });
+             $("#serviceHeaderName h1, #serviceHeaderNamePO h1, #serviceFooterNamePO h1").css({ 'font-size': 28 + selSize + 'px' });
+
+             var hsize = 80 + (selSize * 10);
+             $(".optionBox").css({ 'height': hsize + 'px' });
+             resizeAfterDataLoad();
+         }
+
+     </script>
+     </head>
+ <body id="layoutBody">
+     <div id="body">
+         
+         <section class="content-wrapper main-content clear-fix">
+             
+
+
+<div id="siteContainer">          
+    <div id="header">
+        <div id="headerBar">
+
+
+            <div id="headerBarContent">
+                
+             <div id="headerUtils">
+                 <!-- mockups of the point symbols and browse aloud on left side of footer -->
+                 <!-- img class="PS" src="/wightchyps/images/off.png" / -->
+
+		 <img src="/wightchyps/images/on.png" id="point_togglebutton" class="PS" onclick="Point.togglePoint();" alt="Toggle Point Symbols" title="Toggle Point Symbols" />
+             
+
+		 <!-- mock up of the browse aloud 
+                 <img class="PS" src="/wightchyps/images/BA_softDev.png" />
+		 -->
+		 <span class="PSR">
+		 <script type="text/javascript" src="//www.browsealoud.com/plus/scripts/ba.js"></script>
+		 <script type="text/javascript">
+			var _baLocale = 'uk', _baUseCookies = true, _baMode = 'https://www.iwight.com/wightchyps/images/BA_softDev.png', _baHiddenMode = false, _baHideOnLoad = false;
+		 </script>
+	
+		 </span>
+
+             </div>
+
+                <div id="fontSizeSelector3" class="fontSizeSelector" data-tooltip="4">A</div>
+                <div id="fontSizeSelector2" class="fontSizeSelector" data-tooltip="2">A</div>
+                <div id="fontSizeSelector1" class="fontSizeSelector fontSizeSelectedFont" data-tooltip="0">A</div>
+                <br />
+                <p class="headerText"></p>
+            </div>
+        </div>
+        <div id="headerWrapper">
+            <div id="logoWrapper" class="wrapper">
+                <div id="logo">
+                    <a href="."><img src="/WightChyps/Content/images/logo-sub.png"  title="Back to the Isle of Wight Council Homepage" alt="Isle of Wight Council Homepage" width="160" height="142"/></a>
+                </div>                       
+                <div id="brandingHeaderImage">
+                    <img id="headerImage" src="/WightChyps/Content/images/wightchyps header2.png" />
+                </div>                                              
+            </div>
+        </div>
+        <div id="contentWrapper" class="wrapper">
+            <div class="breadcrumbContainer">
+                <div id="breadCrumbDiv"></div>
+            </div>   
+            <div class="introBox">
+ 
+            </div>
+            <div id="searchresults">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    $('.first, #headerWrapper, #breadDivLast').mouseenter(function (e) {
+        $("#directorySelection").animate({ height: "0px" }, 0);
+    });
+
+
+
+    $(document).ready(function () {
+
+        
+        
+        var intro;
+        if (searchParamsLO.Directory == 4) {
+            intro = "introMessageLO";
+        } else {
+            intro = "introMessage";
+        }
+        $.ajax({
+            url: baseUrl + "Home/" + intro,
+            type: "GET",
+            async: false,
+            cache: false,
+            success: function (data) {
+                $(".introBox").html(data);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert("Error getting the bread crumb:" + thrownError);
+            }
+
+        });
+
+        $('.fontSizeSelector').on('click mouseenter', function () {
+            selFontSize = $(this).data("tooltip");
+            changeFontSize(selFontSize);
+
+            $('.fontSizeSelectedFont').removeClass("fontSizeSelectedFont");
+            $(this).addClass("fontSizeSelectedFont");
+
+
+        });
+
+
+        var crumb = new Object();
+        crumb.Directory = "WightChyps";
+        crumb.Level = 1;
+        $.ajax({
+            url: baseUrl + "BreadCrumb/HomePage/",
+            contentType: "application/json; charset=utf-8",
+            data: "{'breadCrumbData':" + JSON.stringify(crumb) + "}",
+            type: "POST",
+            async: false,
+            cache: false,
+            success: function (data) {
+                $("#breadCrumbDiv").html(data);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert("Error getting the bread crumb:" + thrownError);
+            }
+
+        });
+
+
+        var dataId = '0';
+        if ((dataId == "") || (dataId == "0")) {
+            getMainContent();//default is to load main
+        }
+        else {
+            //if ID is set then go straight to article (or listing)
+            var slug1 = '';
+            var slug2 = '';
+            getArticleOrListing(dataId, slug1, slug2);
+        }
+    });
+
+    function getArticleOrListing(dataId, slug1, slug2) {
+
+        if (slug2 != "") {
+            $.ajax({
+                type: "GET",
+                async: false,
+                cache: false,
+                url: baseUrl + 'serviceLevel/LocalOfferArticleServicePage/' + dataId,
+                success: function (data) {
+                    $("#searchresults").html(data);
+                    $('#menuNav').toggle();
+                },
+                error: function () {
+                    alert("An error happened while loading the article");
+                }
+            });
+
+            $('#rpSlDirectory').hide();
+            $('#rpSlFaqs').hide();
+
+        }
+        else {
+            $.ajax({
+                type: "GET",
+                async: false,
+                cache: false,
+                url: baseUrl + 'ServiceLevel/DirectoryListingServicePage/' + dataId,
+                success: function (data) {
+                    $("#searchresults").html(data);
+                    //debugger;
+                    SelectDirectoriesResultTab();
+                },
+                error: function () {
+                    alert("An error happened while getting the search");
+                }
+            });
+        }
+
+        
+        setFooterText(window.location.href);
+        //var vvv = window.location.origin + baseUrl;
+        
+
+        resizeServiceLevelAfterDataLoad();
+
+        var loDir = baseUrl;
+        if (loDir.toLowerCase().indexOf('localoffer') >= 0) {
+            searchParamsLO.Directory = 4;
+            TabSwap();
+            document.title = "Local Offer";
+            return;
+        } else {
+            searchParamsLO.Directory = 1;
+            TabSwap();
+            document.title = "WightChyps";
+            return;
+        }
+        
+    }
+
+    function getMainContent(swapMode) {
+        //console.log(swapMode);
+            $.ajax({
+                type: "GET",
+                url: baseUrl + "Home/defaultContent/",
+                cache: false,
+                async: false,
+                success: function (data) {
+                    $("#searchresults").html(data);
+                    changeFontSize(selFontSize);
+                    //console.log(swapMode);
+                    var loDir = baseUrl;
+                    //console.log(swapMode);
+                    if (swapMode == null || swapMode == "") {
+                        if (loDir.indexOf('localoffer') >= 0) {
+                            searchParamsLO.Directory = 4;
+                            TabSwap();
+                            document.title = "Local Offer";
+                            return;
+                        } else {
+                            searchParamsLO.Directory = 1;
+                            TabSwap();
+                            document.title = "WightChyps";
+                            return;
+                        }
+                    }
+
+                    //console.log(swapMode);
+                        if (swapMode == 4) {
+                            //console.log("In swap mode 4:"+swapMode);
+                            searchParamsLO.Directory = 4;
+                            TabSwap();
+                            document.title = "Local Offer";
+                            return;
+                        } else {                            
+                            //console.log("In swap mode 1:" + swapMode);
+                            searchParamsLO.Directory = 1;
+                            TabSwap();
+                            document.title = "WightChyps";
+                            return;
+
+                    }
+
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert("Error getting the default content as:" + thrownError);
+                }
+
+            });
+    }
+    
+
+
+
+</script>
+         </section>
+     </div>
+     <div id="footer" class="wrapper">
+         <div id="footerCentre">
+
+             <!-- div id="footerUtils" -->
+                 <!-- img class="PS" src="/wightchyps/images/off.png" /-->
+                 <!-- img src="/wightchyps/images/BA.png" /-->
+             <!-- /div-->
+             
+             <p class="footerText"></p>
+             
+             <p id="footerCopyRight"> © 1999-2015 Isle of Wight Council.</p>                      
+             
+             
+             
+             <!-- turn on/off point symbols (only works properly on live
+                <img src="/wightchyps/images/on.png" id="point_togglebutton" onclick="Point.togglePoint();" width="113" height="32" alt="Toggle Point Symbols" title="Toggle Point Symbols" />
+             -->
+
+
+         </div>
+     </div>
+    
+ </body>
+</html>

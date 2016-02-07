@@ -1,0 +1,383 @@
+
+
+
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 iel8" lang="en-gb"><![endif]-->
+<!--[if IE 7]>   <html class="no-js ie7 iel8" lang="en-gb"><![endif]-->
+<!--[if IE 8]>   <html class="no-js ie8 iel8" lang="en-gb"><![endif]-->
+<!--[if IE 9]>   <html class="no-js ie9" lang="en-gb"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en-gb"><!--<![endif]-->
+    <head>
+        <meta name="viewport" content="initial-scale=1.0">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="HandHeldFriendly" content="true">
+        <meta name="mobileoptimized" content="0">
+
+                <meta property="og:url" content="http://hart.fixmystreet.com/">
+        <meta property="og:title" content="FixMyStreet">
+        <meta property="og:site_name" content="FixMyStreet">
+        <meta property="og:description" content="Report, view, and discuss local street-related problems.">
+        <meta property="og:type" content="website">
+                <meta property="og:image" content="http://hart.fixmystreet.com/cobrands/fixmystreet/images/fms-og_image.jpg">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+
+
+
+
+        <link rel="stylesheet" href="/cobrands/hart/base.css?1454086164">
+        <link rel="stylesheet" href="/cobrands/hart/layout.css?1453222236" media="(min-width:48em)">
+        <link rel="stylesheet" href="/cobrands/hart/hart.css?1444406856">
+        
+        <!--[if (lt IE 9) & (!IEMobile)]>
+            <link rel="stylesheet" href="/cobrands/hart/layout.css?1453222236">
+        <![endif]-->
+
+        <script src="/js/modernizr.custom.js?1443702439" charset="utf-8"></script>
+        <script src="/cobrands/fixmystreet/position_map.js?1443702439" charset="utf-8"></script>
+        
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="cobrand" content="hart">
+
+<script type="text/javascript" src="/js/validation_rules.js?404116"></script>
+<script type="text/javascript" src="/js/translation_strings.en-gb.js?404116"></script>
+
+<script type="text/javascript" src="/jslib/jquery-1.7.2.min.js"></script>
+<script src="/js/jquery.validate.min.js?1348728484" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/js/dropzone.min.js?1454086132"></script>
+
+<script type="text/javascript" src="/js/geo.min.js?1348728484"></script>
+<script type="text/javascript" src="/js/fixmystreet.js?1454086132"></script>
+<script type="text/javascript" src="/cobrands/fixmystreet/fixmystreet.js?1454086132"></script>
+
+
+
+
+
+
+
+<script>
+yepnope.addPrefix( 'preload', function ( resource ) {
+    resource.noexec = true;
+    return resource;
+});
+Modernizr.load({
+    load: [
+        "preload!/js/OpenLayers.fixmystreet.js?1443702439",
+        "preload!/js/map-OpenLayers.js?1444313854",
+        "preload!/js/map-OpenStreetMap.js?1443702439",
+        "preload!/js/jquery.ba-hashchange.min.js?1348728484"
+    ]
+});
+</script>
+
+
+
+
+
+
+
+
+
+<title>
+    
+    FixMyStreet</title>
+
+        
+        <script type="text/javascript">
+            $(function(){
+                var $html = $('html');
+                $(window).resize(function(){
+                    if(!$html.hasClass('mobile')) {
+                        // Hart has a bigger header and so needs more room for
+                        // the map controls
+                        $('#fms_pan_zoom').css({ top: '17.75em' });
+                    }
+                }).resize();
+            });
+        </script>
+
+        <link rel="Shortcut Icon" type="image/x-icon" href="/cobrands/hart/favicon.ico">
+
+        <script src="/cobrands/fixmystreet-uk-councils/js.js?1443702439"></script>
+
+
+    </head>
+    
+    <body class="frontpage fullwidthpage">
+
+    <div class="wrapper">
+        <div class="table-cell">
+            <header id="site-header" role="banner">
+                <div class="mobile-header-nav">
+                    <ul>
+                        <li> <a href="http://www.hart.gov.uk/"><div class="home-icon">&nbsp;</div></a>
+                        <li> <a href="#main-nav"><div class="menu-icon">&nbsp;</div></a>
+                    </ul>
+                </div>
+                <div class="header-container">
+                    <a id="site-logo" href="http://www.hart.gov.uk">Hart District Council</a>
+                </div>
+            </header>
+
+            <div id="front-main">
+    <div id="front-main-container">
+                    <div id="postcode-intro">
+                <h1> Report something in Hart that needs to be fixed </h1>
+                <h2> (like graffiti, fly tipping, broken paving slabs, or street lighting) </h2>
+            </div>
+
+
+        
+
+        
+        <form action="https://hart.fixmystreet.com/around" method="get" name="postcodeForm" id="postcodeForm">
+            <label for="pc">Enter a Hart postcode, or street name and area:</label>
+            <div>
+                <input type="text" name="pc" value="" id="pc" size="10" maxlength="200" placeholder="e.g. ‘GU51 4JX’ or ‘Primrose Drive’">
+                <input type="submit" value="Go" id="sub">
+            </div>
+
+            
+
+        </form>
+        
+    </div>
+</div>
+
+
+            <div class="container">
+                <div class="content" role="main">
+
+        <!-- 
+ -->
+
+
+
+
+
+
+<div class="tablewrapper">
+    <div id="front-howto">
+        <h2> How to report </h2>
+
+<ol class="big-numbers">
+    <li>Enter a Hart postcode, or street name and area</li>
+    <li> Locate it on a map of the area </li>
+    <li> Enter its details </li>
+    <li>Confirm the report and Hart Council will investigate</li>
+</ol>
+
+<div id="hart_hants_note">
+    This site can also be used to report problems to Hampshire County Council via FixMyStreet.
+</div>
+
+<section class="full-width">
+
+
+
+
+<div id="front_stats">
+    <div><big>4</big> reports recently</div>
+    <div><big>8</big> fixed in past month</div>
+    
+    <div><big>618</big> updates on reports</div>
+    
+</div>
+
+
+</section>
+
+
+    </div>
+
+    
+
+
+<div id="front-recently">
+    <h2>
+            Recently reported
+            </h2>
+
+    <section class="full-width">
+        <ul class="item-list item-list--reports item-list--front-page">
+          
+            <li class="item-list__item item-list--reports__item ">
+<a href="https://hart.fixmystreet.com/report/761716">
+    
+        <img class="img" height="60" width="90" src="/photo/761716.0.fp.jpeg?4096d820" alt="">
+    
+        <h4>Illegally parked vehicle</h4>
+        <small> 10:28,  6 Feb 2016
+        
+        </small>
+</a>
+</li>
+
+
+          
+            <li class="item-list__item item-list--reports__item ">
+<a href="https://hart.fixmystreet.com/report/759420">
+    
+        <img class="img" height="60" width="90" src="/photo/759420.0.fp.jpeg?32638955" alt="">
+    
+        <h4>Broken down car left in an unsafe position</h4>
+        <small> 07:53,  3 Feb 2016
+        
+        </small>
+</a>
+</li>
+
+
+          
+            <li class="item-list__item item-list--reports__item ">
+<a href="https://hart.fixmystreet.com/report/758229">
+    
+        <img class="img" height="60" width="90" src="/photo/758229.0.fp.jpeg?e1d3735a" alt="">
+    
+        <h4>Abandoned car</h4>
+        <small> 17:11,  1 Feb 2016
+        
+        </small>
+</a>
+</li>
+
+
+          
+            <li class="item-list__item item-list--reports__item ">
+<a href="https://hart.fixmystreet.com/report/757756">
+    
+        <img class="img" height="60" width="90" src="/photo/757756.0.fp.jpeg?46daff45" alt="">
+    
+        <h4>Car Dumped in residential carpark</h4>
+        <small> 09:50,  1 Feb 2016
+        
+        </small>
+</a>
+</li>
+
+
+          
+            <li class="item-list__item item-list--reports__item ">
+<a href="https://hart.fixmystreet.com/report/757565">
+    
+        <img class="img" height="60" width="90" src="/photo/757565.0.fp.jpeg?37e69fe1" alt="">
+    
+        <h4>Obscene graffiti on the road</h4>
+        <small> 22:25, 31 Jan 2016
+        
+        </small>
+</a>
+</li>
+
+
+          
+        </ul>
+    </section>
+</div>
+
+
+</div>
+
+            </div><!-- .content role=main -->
+
+        </div><!-- .container -->
+
+    </div><!-- .table-cell -->
+
+    <div class="nav-wrapper clearfix">
+        <div class="main-menu-wrapper">
+            <div class="main-menu">
+            <ul class="clearfix">
+                <li class="home"><span class="report-a-problem-btn"
+                    >Report</span></li><li><a href="/my">Your reports</a></li><li><a href="/reports/Hart">All reports</a></li><li><a href="/alert">Local alerts</a></li><li class="last"><a href="/faq">Help</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="nav-wrapper-2 clearfix">
+            <div id="main-nav" class="clearfix" role="navigation">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="http://www.hart.gov.uk/home">Home</a>
+                    </li>
+                    <li>
+                        <a href="http://www.hart.gov.uk/services">My Services</a>
+                    </li>
+                    <li>
+                        <a href="http://www.hart.gov.uk/residents">Residents</a>
+                    </li>
+                    <li>
+                        <a href="http://www.hart.gov.uk/businesses">Businesses</a>
+                    </li>
+                    <li>
+                        <a href="http://www.hart.gov.uk/visiting">Visiting</a>
+                    </li>
+                    <li>
+                        <a href="http://www.hart.gov.uk/the-council">The Council</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sign-in">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="hart-footer-wrapper">
+        <div id="footer_outside_wrapper">
+            <div id="footer_inside_wrapper" class="clearfix">
+                <div id="footer-right" class="clearfix">
+                    <ul class="footer-nav">
+                        <li> <a href="http://www.hart.gov.uk/sitemap">Site map</a> </li>
+                        <li> <a href="http://www.hart.gov.uk/Accessibility">Accessibility</a> </li>
+                    </ul>
+                </div>
+                <footer id="hart-footer" class="clearfix">
+                    <div id="copyright-block" class="desk-only">
+                        <strong>©</strong> &nbsp;
+                            <a href="http://www.hart.gov.uk/disclaimer" title="More information on the Disclaimer">Hart District Council</a>
+                    </div>
+                    <ul class="footer-nav clearfix">
+                        <li> <a href="http://www.hart.gov.uk/disclaimer">Disclaimer</a></li>
+                        <li> <a href="http://www.hart.gov.uk/freedom-information">Freedom of Information</a></li>
+                        <li> <a href="http://www.hart.gov.uk/privacy">Privacy</a></li>
+                    </ul>
+                </footer>
+                <div class="clearfix" id="footer-row-2">
+                    <div id="hart-powered-by">
+                        <a href="https://www.fixmystreet.com/council">Powered by <img src="/cobrands/hart/fms-logo.png" alt="FixMyStreet" style="height:20px;"></a>
+                    </div>
+                    <div id="footer-images">
+                        <a href="https://twitter.com/HartCouncil">
+                            <img alt="" src="/cobrands/hart/twitter-logo.png" style="height:43px; width:43px" />
+                        </a> 
+                        <a href="http://www.facebook.com/HartDistrictCouncil">
+                            <img alt="" src="/cobrands/hart/facebook-logo.png" style="height:43px; margin-right: 10px; width:43px" />
+                        </a> 
+                        <a href="http://www.gov.uk">
+                            <img alt="" src="/cobrands/hart/gov-logo.png" style="height:43px; width:172px" />
+                        </a>
+                    </div>
+                </div>
+                <div id="footer-row-3">
+                    <div id="copyright-block-mobile" class="mob-only">
+                        <strong>©</strong> &nbsp;
+                        <a href="http://www.hart.gov.uk/disclaimer" title="More information on the Disclaimer">
+                            Hart District Council</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_border">
+    </div>
+
+
+</div>
+</body>
+</html>
+

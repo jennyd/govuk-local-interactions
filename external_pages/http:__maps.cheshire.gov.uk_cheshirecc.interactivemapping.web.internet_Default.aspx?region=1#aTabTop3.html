@@ -1,0 +1,2052 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<title>Interactive Mapping</title>
+<meta name="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<meta name="CODE_LANGUAGE" Content="C#">
+<meta name="vs_defaultClientScript" content="JavaScript">
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+<LINK href="https://maps.cheshire.gov.uk/ASPNetTemplate/CheshireEastInternet/CSS/cccmain_Non_IE.css" type="text/css" rel="stylesheet">
+<LINK href="https://maps.cheshire.gov.uk/ASPNetTemplate/CheshireEastInternet/CSS/template.css" type="text/css" rel="stylesheet">
+<LINK href="/CheshireCC.InteractiveMapping.Web.Internet/Css/Internet.css" type="text/css" rel="stylesheet">
+<LINK href="/CheshireCC.InteractiveMapping.Web.Internet/CSS/MapViewer.css" type="text/css" rel="stylesheet">
+</HEAD>
+<BODY>
+<div id="ceHeader">
+	<div id="ceHeaderLinks">
+		<ul>
+			<li></li>				
+			<li></li>								
+		</ul>
+	</div>
+
+	<div id="ceBanner">
+		<div id="ceLogo">
+			<div id="ceLogoLink">
+				<a href="http://www.cheshireeast.gov.uk" title="Home Page" alt="Home Page"><h1>Home Page</h1></a>
+			</div>
+			<div id="ceAZSearch">
+				<div id="ceAZBox">
+					<div class="nc"><div class="b1t"></div><div class="b2"></div><div class="b3"></div><div class="b4"></div></div>
+					<div id="ceAZ"><a href="http://www.cheshireeast.gov.uk/default.aspx?page=9979"><img runat="server" 
+                            src="https://maps.cheshire.gov.uk/ASPNetTemplate/CheshireEastInternet/images/atoz-button-gif.gif" alt="A to Z site index" /></a></div>
+					<div class="nc"><div class="b4"></div><div class="b3"></div><div class="b2"></div><div class="b1b"></div></div>
+				</div>
+				<div id="ceSearchBox">
+					<div class="nc"><div class="b1t"></div><div class="b2"></div><div class="b3"></div><div class="b4"></div></div>
+					<div class="srch">
+						<form action="http://cheshire.searchimprove.com/search.aspx" method="get" class="ceSearchForm">
+							<label for="search" style="position:absolute;top:-1000px;">Search Siteabsolute;top:-1000px;">Search Site</label>
+							<div class="srchInput">
+								<input type="hidden" name="pckid" value="1044181725" />
+								<input type="hidden" name="aid" value="9349" />
+								<input type="hidden" name="pt" value="6018936" />
+								<input type="text" name="sw" id="search" value="Enter Search Term" onfocus="if(this.value=='Enter Search Term'){this.value='';}" onblur="if(this.value==''){this.value='Enter Search Term';}" />
+								<button type="submit"><img runat="server" src="https://maps.cheshire.gov.uk/ASPNetTemplate/CheshireEastInternet/images/searchbutton-gif.gif" alt="Search this site" style="margin-top:-3px;" /></button>
+							</div>
+						</form>
+					</div>
+					<div class="nc"><div class="b4"></div><div class="b3"></div><div class="b2"></div><div class="b1b"></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="ceContainer" class="ceHomePage">
+	<div id="ceMenuPanel">
+		<div id="ceSectionMenu">
+			<ul>
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=0" title="Home Page">Home Page</a></li>
+				
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=12032" title="About Cheshire East">About Cheshire East</a></li>
+			
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=10026" title="Business">Business</a></li>
+			
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=10028" title="Community and Living">Community and Living</a></li>
+			
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=10034" title="Council and Democracy">Council and Democracy</a></li>
+			
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=10031" title="Education and Learning">Education and Learning</a></li>
+			
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=10030" title="Environment and Planning">Environment and Planning</a></li>
+				
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=12035" title="Housing">Housing</a></li>
+				
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=11782" title="Jobs and Careers">Jobs and Careers</a></li>
+				 
+				 <li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=10032" title="Leisure, Culture and Tourism">Leisure, Culture and Tourism</a></li>
+			
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=12034" title="Social Care and Health">Social Care and Health</a></li>
+			
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=10033" title="Transport and Travel">Transport and Travel</a></li>
+			
+				<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=12036" title="Waste and Recycling">Waste and Recycling</a></li>
+			</ul>
+			<br/>
+		</div>					
+			
+		<div class="nc"><div class="r4"></div><div class="r3"></div><div class="r2"></div><div class="r1"></div></div>			
+			
+		<div id="ceContactUs" style="padding-left:1em;">
+			<div class="ncT"><div class="b1t"></div><div class="b2"></div><div class="b3"></div><div class="b4"></div></div>
+			<h2 class="boxHeading">Contact Us</h2>
+			<div class="boxContent">
+				<div style="width:100%">
+					
+						Cheshire East Information Line<br />
+                        Telephone: 0300 123 55 00
+                    <ul style="MARGIN-TOP: 0.1em">
+                        <li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=14885">Essential Numbers</a></li>
+                        <li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=14886">Emergency Contact Information</a></li>
+                    </ul>
+					
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+			<div class="nc"><div class="b4"></div><div class="b3"></div><div class="b2"></div><div class="b1b"></div></div>
+		</div>
+
+		<br />
+	</div>
+
+	<div id="ceMain">
+		<a name="main"></a>
+		<div class="ceHomePageBox">
+			<div class="nc"><div class="b1t"></div><div class="b2"></div><div class="b3"></div><div class="b4"></div></div>
+			<div class="boxContent">
+				<div style="width:100%;">
+					
+					<form name="Form1" method="post" action="Default.aspx?region=1" id="Form1" style="margin: 0px;">
+<input type="hidden" name="__VIEWSTATE" value="dDwtNzQzNTI3NDkxO3Q8O2w8aTwwPjs+O2w8dDw7bDxpPDI3PjtpPDI5Pjs+O2w8dDx0PHA8cDxsPERhdGFNZW1iZXI7RGF0YVRleHRGaWVsZDtEYXRhVmFsdWVGaWVsZDs+O2w8YXJlYTtuYW1lO2FyZWFJZDs+Pjs+O3Q8aTwxOD47QDxTRUxFQ1QgQ0FURUdPUlk6O1JvYWQgU3VyZmFjZSAoQ2FycmlhZ2V3YXkpO1BhdmVtZW50IChGb290d2F5KTtCcmlkZ2U7R3JpZC9EcmFpbjtNYW5ob2xlO0dyYXNzZWQgQXJlYTtQZWRlc3RyaWFuIENyb3NzaW5nO1N0cmVldCBMaWdodDtUcmFmZmljIFNpZ25hbCAoUGVybWFuZW50KTtUcmFmZmljIFNpZ25hbCAoVGVtcG9yYXJ5KTtUcmFmZmljIFNpZ247SGVkZ2UvVHJlZTtCb2xsYXJkO0J1cyBTaGVsdGVycyBhbmQgU3RvcHM7U3RyZWV0IE5hbWUgUGxhdGU7T3RoZXI7U3RyZWV0IGNsZWFuaW5nIGFuZCBmbHktdGlwcGluZzs+O0A8XGU7MTsyOzM7NDs1OzY7Nzs4Ozk7MTA7MTE7MTI7MTM7MTQ7MTU7MTY7XGU7Pj47Pjs7Pjt0PHA8bDxEYXRhTWVtYmVyO18hSXRlbUNvdW50Oz47bDxhcmVhO2k8MTY+Oz4+O2w8aTwwPjtpPDE+O2k8Mj47aTwzPjtpPDQ+O2k8NT47aTw2PjtpPDc+O2k8OD47aTw5PjtpPDEwPjtpPDExPjtpPDEyPjtpPDEzPjtpPDE0PjtpPDE1Pjs+O2w8dDw7bDxpPDA+Oz47bDx0PHQ8cDxsPERhdGFUZXh0RmllbGQ7RGF0YVZhbHVlRmllbGQ7PjtsPG5hbWU7dHlwZUlkOz4+O3Q8aTw4PjtAPFNFTEVDVCBGQVVMVDo7UG90aG9sZTtDcmFja2luZztFZGdlIERldGVyaW9yYXRpb247T2JzdHJ1Y3Rpb247TXVkIE9uO0Zsb29kaW5nO090aGVyOz47QDxcZTsxMTsxMjsxMzsxNDsxNTsxNjsxNzs+Pjs+Ozs+Oz4+O3Q8O2w8aTwwPjs+O2w8dDx0PHA8bDxEYXRhVGV4dEZpZWxkO0RhdGFWYWx1ZUZpZWxkOz47bDxuYW1lO3R5cGVJZDs+Pjt0PGk8OD47QDxTRUxFQ1QgRkFVTFQ6O0NyYWNrZWQgUGF2aW5nO0tlcmIgRGFtYWdlZDtQb3Rob2xlO09ic3RydWN0aW9uO011ZCBPbjtGbG9vZGluZztPdGhlcjs+O0A8XGU7MjE7MjI7MjM7MjQ7MjU7MjY7Mjc7Pj47Pjs7Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8dDxwPGw8RGF0YVRleHRGaWVsZDtEYXRhVmFsdWVGaWVsZDs+O2w8bmFtZTt0eXBlSWQ7Pj47dDxpPDU+O0A8U0VMRUNUIEZBVUxUOjtEYW1hZ2VkO0dyYWZmaXRpO0NvbGxhcHNlZDtPdGhlcjs+O0A8XGU7MzE7MzI7MzM7MzQ7Pj47Pjs7Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8dDxwPGw8RGF0YVRleHRGaWVsZDtEYXRhVmFsdWVGaWVsZDs+O2w8bmFtZTt0eXBlSWQ7Pj47dDxpPDY+O0A8U0VMRUNUIEZBVUxUOjtCbG9ja2VkO01pc3Npbmc7RGFtYWdlZDtEaXNsb2RnZWQ7T3RoZXI7PjtAPFxlOzQxOzQyOzQzOzQ0OzQ1Oz4+Oz47Oz47Pj47dDw7bDxpPDA+Oz47bDx0PHQ8cDxsPERhdGFUZXh0RmllbGQ7RGF0YVZhbHVlRmllbGQ7PjtsPG5hbWU7dHlwZUlkOz4+O3Q8aTw2PjtAPFNFTEVDVCBGQVVMVDo7Um9ja2luZztDb3ZlciBNaXNzaW5nO0RhbWFnZWQ7RGlzbG9kZ2VkO090aGVyOz47QDxcZTs1MTs1Mjs1Mzs1NDs1NTs+Pjs+Ozs+Oz4+O3Q8O2w8aTwwPjs+O2w8dDx0PHA8bDxEYXRhVGV4dEZpZWxkO0RhdGFWYWx1ZUZpZWxkOz47bDxuYW1lO3R5cGVJZDs+Pjt0PGk8Mz47QDxTRUxFQ1QgRkFVTFQ6O05lZWRzIEN1dHRpbmc7T3RoZXI7PjtAPFxlOzYxOzYyOz4+Oz47Oz47Pj47dDw7bDxpPDA+Oz47bDx0PHQ8cDxsPERhdGFUZXh0RmllbGQ7RGF0YVZhbHVlRmllbGQ7PjtsPG5hbWU7dHlwZUlkOz4+O3Q8aTw0PjtAPFNFTEVDVCBGQVVMVDo7TGlnaHQgT3V0O0RhbWFnZWQgUmVmdWdlO090aGVyOz47QDxcZTs3MTs3Mjs3Mzs+Pjs+Ozs+Oz4+O3Q8O2w8aTwwPjs+O2w8dDx0PHA8bDxEYXRhVGV4dEZpZWxkO0RhdGFWYWx1ZUZpZWxkOz47bDxuYW1lO3R5cGVJZDs+Pjt0PGk8Nj47QDxTRUxFQ1QgRkFVTFQ6O0xpZ2h0IE91dDtEb29yIE1pc3Npbmc7Q29sdW1uIERhbWFnZWQ7T24gRHVyaW5nIERheTtPdGhlcjs+O0A8XGU7ODE7ODI7ODM7ODQ7ODU7Pj47Pjs7Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8dDxwPGw8RGF0YVRleHRGaWVsZDtEYXRhVmFsdWVGaWVsZDs+O2w8bmFtZTt0eXBlSWQ7Pj47dDxpPDQ+O0A8U0VMRUNUIEZBVUxUOjtMaWdodCBPdXQ7RGFtYWdlZDtPdGhlcjs+O0A8XGU7OTE7OTI7OTM7Pj47Pjs7Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8dDxwPGw8RGF0YVRleHRGaWVsZDtEYXRhVmFsdWVGaWVsZDs+O2w8bmFtZTt0eXBlSWQ7Pj47dDxpPDQ+O0A8U0VMRUNUIEZBVUxUOjtMaWdodCBPdXQ7RGFtYWdlZDtPdGhlcjs+O0A8XGU7OTE7OTI7OTM7Pj47Pjs7Pjs+Pjt0PDtsPGk8MD47PjtsPHQ8dDxwPGw8RGF0YVRleHRGaWVsZDtEYXRhVmFsdWVGaWVsZDs+O2w8bmFtZTt0eXBlSWQ7Pj47dDxpPDU+O0A8U0VMRUNUIEZBVUxUOjtNaXNzaW5nO0RhbWFnZWQgb3IgRGVmYWNlZDtMaWdodCBPdXQ7T3RoZXI7PjtAPFxlOzEwMTsxMDI7MTAzOzEwNDs+Pjs+Ozs+Oz4+O3Q8O2w8aTwwPjs+O2w8dDx0PHA8bDxEYXRhVGV4dEZpZWxkO0RhdGFWYWx1ZUZpZWxkOz47bDxuYW1lO3R5cGVJZDs+Pjt0PGk8Nj47QDxTRUxFQ1QgRkFVTFQ6O05lZWRzIEN1dHRpbmc7RGVicmlzIG9uIFJvYWQ7T3Zlci1oYW5naW5nIGJyYW5jaGVzO0RhbmdlciBvZiBGYWxsaW5nO090aGVyOz47QDxcZTsxMTE7MTEyOzExMzsxMTQ7MTE1Oz4+Oz47Oz47Pj47dDw7bDxpPDA+Oz47bDx0PHQ8cDxsPERhdGFUZXh0RmllbGQ7RGF0YVZhbHVlRmllbGQ7PjtsPG5hbWU7dHlwZUlkOz4+O3Q8aTw1PjtAPFNFTEVDVCBGQVVMVDo7TGlnaHQgT3V0O0RhbWFnZWQ7TWlzc2luZztPdGhlcjs+O0A8XGU7MTIxOzEyMjsxMjM7MTI0Oz4+Oz47Oz47Pj47dDw7bDxpPDA+Oz47bDx0PHQ8cDxsPERhdGFUZXh0RmllbGQ7RGF0YVZhbHVlRmllbGQ7PjtsPG5hbWU7dHlwZUlkOz4+O3Q8aTwyPjtAPFNFTEVDVCBGQVVMVDo7RGFtYWdlZDs+O0A8XGU7MTMxOz4+Oz47Oz47Pj47dDw7bDxpPDA+Oz47bDx0PHQ8cDxsPERhdGFUZXh0RmllbGQ7RGF0YVZhbHVlRmllbGQ7PjtsPG5hbWU7dHlwZUlkOz4+O3Q8aTw0PjtAPFNFTEVDVCBGQVVMVDo7RGFtYWdlZDtNaXNzaW5nO090aGVyOz47QDxcZTsxNDE7MTQyOzE0Mzs+Pjs+Ozs+Oz4+O3Q8O2w8aTwwPjs+O2w8dDx0PHA8bDxEYXRhVGV4dEZpZWxkO0RhdGFWYWx1ZUZpZWxkOz47bDxuYW1lO3R5cGVJZDs+Pjt0PGk8Mj47QDxTRUxFQ1QgRkFVTFQ6O090aGVyOz47QDxcZTsxNTE7Pj47Pjs7Pjs+Pjs+Pjs+Pjs+Pjs+Y073YVjtviLkgCqwWn66JFb1Er0=" />
+	<script type="text/javascript" src="Scripts/MapViewer.js"></script>
+
+	<script type="text/javascript">
+var layerList = new LayerListObject();
+layerList.push(new LayerObject('MMA','OS MM AREA',false,0,0.6,false,'polygon'));
+layerList.push(new LayerObject('MMT','OS MM Text',false,0,0.6,false,'line'));
+layerList.push(new LayerObject('OS10K','OS 1:10k',false,0.6,0.9,false,'null'));
+layerList.push(new LayerObject('OS10Kx','OS 1:10k',false,0.9,1.1,false,'null'));
+layerList.push(new LayerObject('OSSV','OS Street View',false,0.9,1.1,false,'null'));
+layerList.push(new LayerObject('OSSVx','OS Street View',false,1.1,3,false,'null'));
+layerList.push(new LayerObject('OS50K','OS 1:50k',false,3,15,false,'null'));
+layerList.push(new LayerObject('OS250K','OS 1:250000',false,15,75,false,'null'));
+layerList.push(new LayerObject('MSKCCC','County Mask',false,0,9999999,false,'polygon'));
+layerList.push(new LayerObject('MSK10M','County 10 Mile Mask',false,0,9999999,false,'polygon'));
+layerList.push(new LayerObject('SEA','Sea',false,75,9999999,false,'polygon'));
+layerList.push(new LayerObject('LAND','Land',false,75,9999999,false,'polygon'));
+layerList.push(new LayerObject('BOU','Cheshire Boundary',true,75,9999999,false,'polygon'));
+layerList.push(new LayerObject('PLA','Places in Cheshire',true,75,9999999,false,'point'));
+layerList.push(new LayerObject('PLC','All Places in Cheshire',false,0,9999999,false,'point'));
+layerList.push(new LayerObject('PLO','Places outside Cheshire',true,75,9999999,false,'null'));
+layerList.push(new LayerObject('AER','Aerial Photos',false,1.85208333333333,9999999,false,'null'));
+layerList.push(new LayerObject('AP','Area Partnerships',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('PAR','Parishes',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('WCON','Westminster Constituencies',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('EURO','European Constituencies',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('EDIV','All Wards Pre 2011 Elections',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('DIST','Districts Pre 1 April 2009',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('CE','Cheshire East',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('GWCE','Cheshire East Wards',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('UWCE','Cheshire East Wards Pre 2011 Elections',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('MCE','Mask Cheshire East',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('CW','Cheshire West and Chester ',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('GWCW','Cheshire West and Chester Wards',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('UWCW','Cheshire West and Chester Wards Pre 2011 Elections',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('MCW','Mask Cheshire West and Chester',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('COA','Census Output Areas',false,0,9999999,false,'polygon'));
+layerList.push(new LayerObject('CPAR','Census Parish',false,0,9999999,false,'polygon'));
+layerList.push(new LayerObject('LOCA','Cheshire Local Areas',false,0,9999999,false,'polygon'));
+layerList.push(new LayerObject('PCT','Primary Care Trusts',false,0,9999999,false,'polygon'));
+layerList.push(new LayerObject('POLLD','Cheshire West Polling Districts',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('POLLS','Cheshire West Polling Stations',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('MRIV','Major Rivers',false,0,9999999,true,'line'));
+layerList.push(new LayerObject('MAJR','Major Roads',false,75,9999999,true,'line'));
+layerList.push(new LayerObject('AH','Adopted Highways',false,0,11,true,'line'));
+layerList.push(new LayerObject('DRN','Digitised Road Network',false,0,9999999,false,'line'));
+layerList.push(new LayerObject('WGRIT','Winter Gritting Routes',false,0.6,9999999,true,'line'));
+layerList.push(new LayerObject('STA','Railway Stations',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('BUS','Bus Stops',false,0,40,true,'point'));
+layerList.push(new LayerObject('LIT','Street Lights',false,0,11,true,'point'));
+layerList.push(new LayerObject('PROP','Local Government Buildings',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('BSCL','Bus Stop Clearway',false,0,0.9,true,'polygon'));
+layerList.push(new LayerObject('PEDAR','Pedestrianised Area',false,0,0.9,true,'polygon'));
+layerList.push(new LayerObject('PHDR','Prohibition of driving',false,0,0.9,true,'polygon'));
+layerList.push(new LayerObject('SCKC','School Keep Clear',false,0,0.9,true,'polygon'));
+layerList.push(new LayerObject('DISP','Disabled Persons Parking Places',false,0,0.9,true,'line'));
+layerList.push(new LayerObject('LIMW','Limited Waiting',false,0,0.9,true,'line'));
+layerList.push(new LayerObject('NOLOAD','Restriction of loading and unloading',false,0,0.9,true,'line'));
+layerList.push(new LayerObject('NOWAIT','Restricted Road',false,0,0.9,true,'line'));
+layerList.push(new LayerObject('NWAAT','Prohibited Road',false,0,0.9,true,'line'));
+layerList.push(new LayerObject('TAXI','Taxi Stand',false,0,0.9,true,'line'));
+layerList.push(new LayerObject('OWAY','One Way',false,0,0.9,true,'line'));
+layerList.push(new LayerObject('SCH','Schools',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('PSCA','Primary School Catchment Areas',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('SSCA','Secondary School Catchment Areas',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('CCEN','Childrens Centres',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('PARKS','Play Areas',false,0,9999999,true,'polygon'));
+layerList.push(new LayerObject('LIB','Libraries',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('FOOT','Footpaths',false,0.6,9999999,true,'line'));
+layerList.push(new LayerObject('BRID','Bridleways',false,0.6,9999999,true,'line'));
+layerList.push(new LayerObject('RSTR','Restricted Byways',false,0.6,9999999,true,'line'));
+layerList.push(new LayerObject('BWYT','Byways Open to all Traffic',false,0.6,9999999,true,'line'));
+layerList.push(new LayerObject('PRO1','Walking',false,0.6,9999999,true,'line'));
+layerList.push(new LayerObject('PRO2','Cycling',false,0.6,9999999,true,'line'));
+layerList.push(new LayerObject('PRO3','Riding',false,0.6,9999999,true,'line'));
+layerList.push(new LayerObject('AAIPT','Areas of Archeological Importance Locations',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('AAIPG','Areas of Archeological Importance Boundaries',false,0,25,true,'polygon'));
+layerList.push(new LayerObject('AAPPT','Areas of Archeological Potential Locations',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('AAPPG','Areas of Archeological Potential Boundaries',false,0,25,true,'polygon'));
+layerList.push(new LayerObject('CAPT','Conservation Area Locations',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('CAPG','Conservation Area Boundaries',false,0,25,true,'polygon'));
+layerList.push(new LayerObject('RBPT','Registered Battlefield Locations',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('RBPG','Registered Battlefield Boundaries',false,0,25,true,'polygon'));
+layerList.push(new LayerObject('LBPT','Listed Building Locations',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('LBPG','Listed Building Areas',false,0,25,true,'polygon'));
+layerList.push(new LayerObject('RPGPT','Registered Parks and Garden Locations',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('RPGPG','Registered Parks and Garden Boundaries',false,0,25,true,'polygon'));
+layerList.push(new LayerObject('SMPT','Scheduled Monument Locations',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('SMPG','Scheduled Monument Boundaries',false,0,25,true,'polygon'));
+layerList.push(new LayerObject('CPKN','Country Parks',false,0,9999999,true,'point'));
+layerList.push(new LayerObject('CODE','Codepoint',false,0,9999999,false,'point'));
+layerList.push(new LayerObject('ADDRNLPG','Addresspoint NLPG',false,0,9999999,false,'point'));
+layerList.push(new LayerObject('ADDR','Addresspoint',false,0,9999999,false,'point'));
+layerList.push(new LayerObject('AERCOPY','Aerial Copyright',false,0,9999999,false,'null'));
+layerList.push(new LayerObject('SCALEBAR','Scalebar',false,0,9999999,false,'null'));
+</script>
+
+
+
+	<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-50478253-12', 'cheshire.gov.uk');
+	ga('send', 'pageview');
+	</script>
+	<script type="text/javascript">
+		// Declare global object variables
+		var Map = null;
+		var Overview = null;
+		var Identify = null;
+		//var Address = null;
+		var Tabs = new Object();
+		var Mouse = null;
+		var ZoomMarker = null;
+		var LeftMenu = null;
+		var LeftMenu = null;
+		var Themes = null;
+		var RedFlag = null;
+		var RedFlagReset = null;
+		var BrowserDetails = null;
+		//Zoom box and map navigation objects
+		var NavTool = null;
+		var ZoomBox = null;
+
+		//EI Change to use HTTPs for data protection for maps.cheshire.gov.uk
+		if (window.location.host == "maps.cheshire.gov.uk")
+		{
+			if (window.location.protocol != "https:"){ window.location.href = "https:" + window.location.href.substring(window.location.protocol.length); }
+		}
+		
+		//Boolean variable to add the navigation tool object.  Enables zoombox zoom in/zoom out function.
+		//Without this the pan mode is selected all the time.
+		var blnIncludeNavTool = false;
+
+		window.onload = OnLoadFunction;
+		
+		function OnLoadFunction() {
+			// Initialise global object variables
+			Themes = new ThemesObject();
+			Map = new MapObject();
+			Overview = new OverviewObject();
+			Identify = new IdentifyObject();
+			//Address = new AddressObject();
+			Search = new SearchObject();
+			RedFlag = new RedFlagObject();
+			RedFlag.init();
+			RedFlagReset = new RedFlagResetObject();
+			RedFlagReset.init();
+			Tabs = new TabsObject();
+			if (location.href.indexOf("Confirmation") != -1) {
+				Tabs.click(1);
+				Tabs.click(3); // go to fault reporting
+			} else if (location.hash.indexOf("aTabTop") != -1) {
+				var ix = location.hash.indexOf("aTabTop") + 7;
+				var tabNum = parseInt(location.hash.substring(ix,ix+1));
+				Tabs.click(1);
+				Tabs.click(tabNum);
+			} else {
+				Tabs.click(1);
+			}
+			Map.loadStepOne();
+			Mouse = new MouseObject();
+			// set the zoommarker object
+			ZoomMarker = new ZoomMarkerObject();
+			LeftMenu = new LeftMenuObject();
+			Map.loadStepTwo();
+			layerList.resetCheckboxes();
+			
+			BrowserDetails = new BrowserDetailsObject();
+			NavTool = new NavToolObject(blnIncludeNavTool);
+			ZoomBox = new ZoomBoxObject();
+			
+			
+		}
+	</script>
+
+	<!--<div class="breadcrumbs rwcrumbs">
+		&gt;&gt; <a href="http://www.cheshire.gov.uk">Home</a> &gt; Interactive Mapping
+	</div>-->
+	
+	<!--<div style="position: absolute; top: 150px; left: 780px;"><a href="http://maps.cheshire.gov.uk/findmynearest/" style="color: #6995BA; background-color: white; font-style: italic;">Text-only version</a></div>-->
+
+	<!--[if IE 6]>
+	<script type="text/javascript">
+	try {
+		document.execCommand("BackgroundImageCache", false, true);
+	} catch (ex) {
+		// ignore error
+	}
+	</script>
+	<![endif]-->
+	<script type="text/javascript">
+	
+		// The handleEnter function is used to trap the enter key on forms,
+		// so that if a user presses enter it executes the appropriate search
+		// rather than the default search, by simulating a button-click.
+		// By default the browser would execute the search in the top-right corner.
+		function handleEnter(evt, btnId) {
+			var e = evt ? evt : event;
+			var keycode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+			if (keycode == 13) {
+				document.getElementById(btnId).click();
+				return false;
+			} else {
+				return true;
+			}
+		}
+
+		function openTextVersion() {
+			var url;
+			url = "http://maps.cheshire.gov.uk/findmynearest/main.aspx";
+			window.open(url+'?region='+Map.region);
+		}
+	</script>
+	
+	<!-- hidden fields -->
+	<input name="hidInitialEasting" id="hidInitialEasting" type="hidden" value="363000" />
+	<input name="hidInitialNorthing" id="hidInitialNorthing" type="hidden" value="363000" />
+	<input name="hidInitialMpp" id="hidInitialMpp" type="hidden" value="160" />
+	<input name="hidInitialHLayer" id="hidInitialHLayer" type="hidden" />
+	<input name="hidInitialHField" id="hidInitialHField" type="hidden" />
+	<input name="hidInitialHValue" id="hidInitialHValue" type="hidden" />
+	
+	<!-- Add by Jon Satchwell 26/09/2008-->
+	<input name="hidInitialLabelE" id="hidInitialLabelE" type="hidden" value="0" />
+	<input name="hidInitialLabelN" id="hidInitialLabelN" type="hidden" value="0" />
+	<input name="hidInitialLabelText" id="hidInitialLabelText" type="hidden" />
+	
+	<input name="hidInitialRegion" id="hidInitialRegion" type="hidden" value="1" />
+	
+	<!-- Add by Jon Satchwell 26/09/2008-->
+	<input type="hidden" id="hidMouseOnMap"		 name="MouseOnMap"		    value="0"  />
+	<!-- main content -->
+	
+	<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr valign="top">
+		<!-- START: the sliding left-menu -->
+		<!--<td width="10" valign="top" class="bottomnavcolor" style="font-size: 12pt;">
+			
+			<div id="divLeftMenu" style="position: absolute; overflow: hidden; z-index: 4; height: 350px; width: 175px; left: -166px; background-color: #3F55A1; padding: 0px; border: 0px; margin: 0px;" onmouseover="return LeftMenu.mOver();" onmouseout="return LeftMenu.mOut();">
+				<div id="navcontainer2" class="navcontainer" style="">
+					<ul id="navlist2">
+						<li><a href="http://www.cheshire.gov.uk/aboutcheshire/">About Cheshire</a></li>
+						<li><a href="http://www.cheshire.gov.uk/Business/">Business</a></li>
+						<li><a href="http://www.cheshire.gov.uk/CommunityAndLiving/">Community And Living</a></li>
+						<li><a href="http://www.cheshire.gov.uk/CommunitySafety/">Community Safety</a></li>
+						<li><a href="http://www.cheshire.gov.uk/Council/">Council</a></li>
+						<li><a href="http://www.cheshire.gov.uk/TourismLeisureAndCulture/" style="text-align: left;">Culture, Leisure And Tourism</a></li>
+						<li><a href="http://www.cheshire.gov.uk/EducationAndLearning/">Education And Learning</a></li>
+						<li><a href="http://www.cheshire.gov.uk/Environment/">Environment</a></li>
+						<li><a href="http://www.cheshire.gov.uk/JobsAndCareers/">Jobs And Careers</a></li>
+						<li><a href="http://www.cheshire.gov.uk/socialcareandhealth/">Social Care And Health</a></li>
+						<li><a href="http://www.cheshire.gov.uk/TransportAndRoads/">Transport And Roads</a></li>
+					</ul>
+				</div>
+				<br /><br />
+				<div style="padding: 2px 0px 0px 6px;" class="contactdetails">
+					Cheshire County Council<br />
+					County Hall<br />
+					Chester, Cheshire<br />
+					CH1 1SF<br />
+					&nbsp;<br />
+					Email: <a href="mailto:info@cheshire.gov.uk" style="color: white; text-decoration: none; font-weight: normal;">info@cheshire.gov.uk</a><br />
+					<a href="http://www.cheshire.gov.uk" style="color: white; text-decoration: none; font-weight: normal;">www.cheshire.gov.uk</a><br />
+					24 Hour Tel: 0845 11 333 11<br />
+				</div>
+				<ul class="whitearrowbullets" style="font-size: 8pt; padding: 15px 0px 0px 5px">
+					<li><a href="http://www.cheshire.gov.uk/ContactUs.htm">How to find us</a></li>
+					<li><a href="http://www.cheshire.gov.uk/Feedback.htm">Feedback</a></li>
+				</ul>
+			</div>
+			 
+		</td>  -->
+
+		<!-- END: the sliding left-menu -->
+		
+		<!--Search Box-->
+		<td width="520" style="background-color: #ffcc66; font-size: 9pt;">
+			<!-- START: the left panel, tabs and content -->
+			<!--Text version link moved 21.02.2011-->	
+			<div id="divAccessible"><a href="#" onclick="openTextVersion();" >Text-only version</a></div>								
+			<!-- tabs -->
+			<div class="subTitle" style="font-weight:bold;">Interactive Mapping</div>
+			<ul id="newtabs" style="position: absolute; margin: 0 0 0 0; z-index: 3; padding-left: 0px; text-decoration: none">
+				<li><a href="#aTabTop1" onclick="return Tabs.click(1);" onmouseover="return Tabs.mOver(1);" onmouseout="return Tabs.mOut(1);" id="tabHead1">Map Features</a></li>
+				<li><a href="#aTabTop2" onclick="return Tabs.click(2);" onmouseover="return Tabs.mOver(2);" onmouseout="return Tabs.mOut(2);" id="tabHead2" style="display: none;">Social Data</a></li>
+				<!--li><a href="#aTabTop3" onclick="return Tabs.click(3);" onmouseover="return Tabs.mOver(3);" onmouseout="return Tabs.mOut(3);" id="tabHead3">Find Location</a></li-->
+				<li><a href="#aTabTop3" onclick="return Tabs.click(3);" onmouseover="return Tabs.mOver(3);" onmouseout="return Tabs.mOut(3);" id="tabHead3">Highway Faults</a></li>
+				<li><a href="#aTabTop4" onclick="return Tabs.click(4);" onmouseover="return Tabs.mOver(4);" onmouseout="return Tabs.mOut(4);" id="tabHead4">Print</a></li>
+				<li><a href="#aTabTop5" onclick="return Tabs.click(5);" onmouseover="return Tabs.mOver(5);" onmouseout="return Tabs.mOut(5);" id="tabHead5">Help</a>
+			</ul>
+			<!-- black line under the tabs -->
+			<div class="newtabs" style="background: #ffcc66; height: 22px; border-bottom: 2px solid black;"></div>
+
+			<!-- tab body containers (note that the height is adjusted in javascript) -->
+			<div style="height: 300px; overflow: hidden;" id="divTextHeight">
+			  <div style="height: 316px; overflow: scroll; background: white;">
+				<!-- tab 1 -->
+				<div id="tabBody1" style="width:400px; padding: 10px; text-align: left;" class="opened"><a name="aTabTop1"></a>
+					<div class="titleText"></div>
+					<!--<a href="./maintenance.html" target="_blank">ESSENTIAL MAINTENANCE ON 21st March 2015</a></br><i>(link opens in new window)</i><br/><br/>-->
+					<div>
+						The interactive map will give you information about the County. If this is your first visit, please use the 'Help' tab to find out more about how to use it. 
+					</div>
+					<!--<div>
+						<p style="color: red; font-weight: bold">Due to essential maintenance, dynamic mapping data will not be available for approximately 2 hours from 16:00 on Wednesday 6th February.</p>
+					</div>-->
+					<div>&nbsp;</div>
+					<div id="divIdentifySubPage" style="border: 2px ridge; background-color: #f0f0ff; padding: 5px; display: none;">
+						Map is at scale 1:640'000.
+					</div>
+					<div class="titleText" style="margin-bottom: 0px; padding-bottom: 0px;">Add layers to the map <span style="font-weight: normal;">[maximum ten layers]</span>:</div>
+					<script type="text/javascript">
+						function showLayerHelpText(obj,txt) {
+							var div = document.getElementById('divLayerHelpText');
+							div.style.display = '';
+							div.style.zIndex = '5';
+							div.innerHTML = txt;
+							obj.parentNode.appendChild(div);
+						}
+						function hideLayerHelpText() {
+							var div = document.getElementById('divLayerHelpText');
+							div.style.display = 'none';
+						}
+					</script>
+					<span id="divLayerHelpText" style="border: 1px solid #444; font-weight: normal; background-color: #ffc; padding: 3px; width: 160px; position: absolute; display: none;">&nbsp;</span>
+					<dl id="dlLayers" class="layers" onselectstart="return false;">
+						
+								
+								
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Aerial Photos</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/AER.gif" alt="" /><input type="checkbox" class="cb" name="cb_AER"  onclick="return layerList.clickId('AER');" style="height: 13px;" />Aerial Photos 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Aerial Photography is copyright GetMapping PLC');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_AER" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_AER"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_AER" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> East and West Cheshire Administrative Boundaries</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/AP.gif" alt="" /><input type="checkbox" class="cb" name="cb_AP"  onclick="return layerList.clickId('AP');" style="height: 13px;" />Area Partnerships 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_AP" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_AP"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_AP" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/PAR.gif" alt="" /><input type="checkbox" class="cb" name="cb_PAR"  onclick="return layerList.clickId('PAR');" style="height: 13px;" />Parishes 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Civil Parishes are for electing Parish Councillors (not Unitary Councillors), who run local parish or town councils.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_PAR" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_PAR"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_PAR" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/WCON.gif" alt="" /><input type="checkbox" class="cb" name="cb_WCON"  onclick="return layerList.clickId('WCON');" style="height: 13px;" />Westminster Constituencies 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Westminster Constituencies are for voting in the UK Parliament (House of Commons). There are eight constituencies in Cheshire.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_WCON" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_WCON"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_WCON" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/EURO.gif" alt="" /><input type="checkbox" class="cb" name="cb_EURO"  onclick="return layerList.clickId('EURO');" style="height: 13px;" />European Constituencies 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'European Constituencies are for voting in the European Parliament. All of Cheshire is covered by the North-West region, which also includes Merseyside, Greater Manchester, Lancashire, and Cumbria.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_EURO" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_EURO"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_EURO" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Historical Data Administrative Boundaries</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/EDIV.gif" alt="" /><input type="checkbox" class="cb" name="cb_EDIV"  onclick="return layerList.clickId('EDIV');" style="height: 13px;" />All Wards Pre 2011 Elections 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Unitary Wards are for electing Councillors. (not Parish Councillors)');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_EDIV" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_EDIV"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_EDIV" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/DIST.gif" alt="" /><input type="checkbox" class="cb" name="cb_DIST"  onclick="return layerList.clickId('DIST');" style="height: 13px;" />Districts Pre 1 April 2009 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'There are six districts in Cheshire: Chester, Congleton, Crewe and Nantwich, Ellesmere Port and Neston, Macclesfield, and Vale Royal.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_DIST" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_DIST"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_DIST" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Cheshire East Administrative Boundaries</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/CE.gif" alt="" /><input type="checkbox" class="cb" name="cb_CE"  onclick="return layerList.clickId('CE');" style="height: 13px;" />Cheshire East 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Unitary Boundary for Cheshire East (from 1st April 2009).');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_CE" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_CE"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_CE" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/GWCE.gif" alt="" /><input type="checkbox" class="cb" name="cb_GWCE"  onclick="return layerList.clickId('GWCE');" style="height: 13px;" />Cheshire East Wards 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Unitary Wards for Cheshire East come into force at the May 2011 Elections');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_GWCE" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_GWCE"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_GWCE" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/UWCE.gif" alt="" /><input type="checkbox" class="cb" name="cb_UWCE"  onclick="return layerList.clickId('UWCE');" style="height: 13px;" />Cheshire East Wards Pre 2011 Elections 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Unitary Wards for Cheshire East (from 1st April 2009 to 5th May 2011).');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_UWCE" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_UWCE"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_UWCE" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/MCE.gif" alt="" /><input type="checkbox" class="cb" name="cb_MCE"  onclick="return layerList.clickId('MCE');" style="height: 13px;" />Mask Cheshire East 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Mask Cheshire East.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_MCE" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_MCE"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_MCE" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Cheshire West and Chester Administrative Boundaries</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/CW.gif" alt="" /><input type="checkbox" class="cb" name="cb_CW"  onclick="return layerList.clickId('CW');" style="height: 13px;" />Cheshire West and Chester  
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Unitary Boundary for Cheshire West and Chester (from 1st April 2009).');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_CW" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_CW"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_CW" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/GWCW.gif" alt="" /><input type="checkbox" class="cb" name="cb_GWCW"  onclick="return layerList.clickId('GWCW');" style="height: 13px;" />Cheshire West and Chester Wards 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Unitary Wards for Cheshire West and Chester come into force at the May 2011 Elections.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_GWCW" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_GWCW"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_GWCW" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/UWCW.gif" alt="" /><input type="checkbox" class="cb" name="cb_UWCW"  onclick="return layerList.clickId('UWCW');" style="height: 13px;" />Cheshire West and Chester Wards Pre 2011 Elections 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Unitary Wards for Cheshire West and Chester (from 1st April 2009 to 5th May 2011).');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_UWCW" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_UWCW"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_UWCW" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/MCW.gif" alt="" /><input type="checkbox" class="cb" name="cb_MCW"  onclick="return layerList.clickId('MCW');" style="height: 13px;" />Mask Cheshire West and Chester 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Mask Cheshire West and Chester.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_MCW" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_MCW"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_MCW" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								
+								
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Local Elections</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/POLLD.gif" alt="" /><input type="checkbox" class="cb" name="cb_POLLD"  onclick="return layerList.clickId('POLLD');" style="height: 13px;" />Cheshire West Polling Districts 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_POLLD" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_POLLD"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_POLLD" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/POLLS.gif" alt="" /><input type="checkbox" class="cb" name="cb_POLLS"  onclick="return layerList.clickId('POLLS');" style="height: 13px;" />Cheshire West Polling Stations 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_POLLS" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_POLLS"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_POLLS" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Rivers, roads and railways</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/MRIV.gif" alt="" /><input type="checkbox" class="cb" name="cb_MRIV"  onclick="return layerList.clickId('MRIV');" style="height: 13px;" />Major Rivers 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_MRIV" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_MRIV"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_MRIV" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/MAJR.gif" alt="" /><input type="checkbox" class="cb" name="cb_MAJR"  onclick="return layerList.clickId('MAJR');" style="height: 13px;" />Major Roads 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Motorways and A-roads');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_MAJR" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_MAJR"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_MAJR" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/AH.gif" alt="" /><input type="checkbox" class="cb" name="cb_AH"  onclick="return layerList.clickId('AH');" style="height: 13px;" />Adopted Highways 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'This dataset shows only highways which are adopted and maintained by Cheshire County Council. It is only intended to show the approximate location of the adopted highways and does not show their lateral extent. Motorways and trunk roads are maintained by the Highways Agency. Some footpaths and rural roads are maintained privately.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_AH" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_AH"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_AH" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/WGRIT.gif" alt="" /><input type="checkbox" class="cb" name="cb_WGRIT"  onclick="return layerList.clickId('WGRIT');" style="height: 13px;" />Winter Gritting Routes 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_WGRIT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_WGRIT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_WGRIT" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/STA.gif" alt="" /><input type="checkbox" class="cb" name="cb_STA"  onclick="return layerList.clickId('STA');" style="height: 13px;" />Railway Stations 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_STA" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_STA"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_STA" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/BUS.gif" alt="" /><input type="checkbox" class="cb" name="cb_BUS"  onclick="return layerList.clickId('BUS');" style="height: 13px;" />Bus Stops 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_BUS" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_BUS"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_BUS" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/LIT.gif" alt="" /><input type="checkbox" class="cb" name="cb_LIT"  onclick="return layerList.clickId('LIT');" style="height: 13px;" />Street Lights 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_LIT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_LIT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_LIT" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Government</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/PROP.gif" alt="" /><input type="checkbox" class="cb" name="cb_PROP"  onclick="return layerList.clickId('PROP');" style="height: 13px;" />Local Government Buildings 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_PROP" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_PROP"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_PROP" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Parking Restrictions and Controls</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Local authority parking enforcements - At present data only available for for Crewe');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/BSCL.gif" alt="" /><input type="checkbox" class="cb" name="cb_BSCL"  onclick="return layerList.clickId('BSCL');" style="height: 13px;" />Bus Stop Clearway 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_BSCL" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_BSCL"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_BSCL" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/PEDAR.gif" alt="" /><input type="checkbox" class="cb" name="cb_PEDAR"  onclick="return layerList.clickId('PEDAR');" style="height: 13px;" />Pedestrianised Area 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_PEDAR" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_PEDAR"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_PEDAR" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/PHDR.gif" alt="" /><input type="checkbox" class="cb" name="cb_PHDR"  onclick="return layerList.clickId('PHDR');" style="height: 13px;" />Prohibition of driving 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_PHDR" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_PHDR"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_PHDR" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/SCKC.gif" alt="" /><input type="checkbox" class="cb" name="cb_SCKC"  onclick="return layerList.clickId('SCKC');" style="height: 13px;" />School Keep Clear 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_SCKC" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_SCKC"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_SCKC" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/DISP.gif" alt="" /><input type="checkbox" class="cb" name="cb_DISP"  onclick="return layerList.clickId('DISP');" style="height: 13px;" />Disabled Persons Parking Places 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_DISP" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_DISP"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_DISP" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/LIMW.gif" alt="" /><input type="checkbox" class="cb" name="cb_LIMW"  onclick="return layerList.clickId('LIMW');" style="height: 13px;" />Limited Waiting 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_LIMW" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_LIMW"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_LIMW" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/NOLOAD.gif" alt="" /><input type="checkbox" class="cb" name="cb_NOLOAD"  onclick="return layerList.clickId('NOLOAD');" style="height: 13px;" />Restriction of loading and unloading 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_NOLOAD" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_NOLOAD"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_NOLOAD" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/NOWAIT.gif" alt="" /><input type="checkbox" class="cb" name="cb_NOWAIT"  onclick="return layerList.clickId('NOWAIT');" style="height: 13px;" />Restricted Road 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_NOWAIT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_NOWAIT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_NOWAIT" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/NWAAT.gif" alt="" /><input type="checkbox" class="cb" name="cb_NWAAT"  onclick="return layerList.clickId('NWAAT');" style="height: 13px;" />Prohibited Road 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_NWAAT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_NWAAT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_NWAAT" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/TAXI.gif" alt="" /><input type="checkbox" class="cb" name="cb_TAXI"  onclick="return layerList.clickId('TAXI');" style="height: 13px;" />Taxi Stand 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_TAXI" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_TAXI"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_TAXI" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/OWAY.gif" alt="" /><input type="checkbox" class="cb" name="cb_OWAY"  onclick="return layerList.clickId('OWAY');" style="height: 13px;" />One Way 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_OWAY" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_OWAY"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_OWAY" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Education</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Schools and catchment areas');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/SCH.gif" alt="" /><input type="checkbox" class="cb" name="cb_SCH"  onclick="return layerList.clickId('SCH');" style="height: 13px;" />Schools 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_SCH" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_SCH"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_SCH" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/PSCA.gif" alt="" /><input type="checkbox" class="cb" name="cb_PSCA"  onclick="return layerList.clickId('PSCA');" style="height: 13px;" />Primary School Catchment Areas 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_PSCA" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_PSCA"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_PSCA" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/SSCA.gif" alt="" /><input type="checkbox" class="cb" name="cb_SSCA"  onclick="return layerList.clickId('SSCA');" style="height: 13px;" />Secondary School Catchment Areas 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_SSCA" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_SSCA"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_SSCA" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Children and Families Services</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/CCEN.gif" alt="" /><input type="checkbox" class="cb" name="cb_CCEN"  onclick="return layerList.clickId('CCEN');" style="height: 13px;" />Childrens Centres 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_CCEN" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_CCEN"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_CCEN" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Culture and Leisure</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/PARKS.gif" alt="" /><input type="checkbox" class="cb" name="cb_PARKS"  onclick="return layerList.clickId('PARKS');" style="height: 13px;" />Play Areas 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_PARKS" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_PARKS"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_PARKS" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/LIB.gif" alt="" /><input type="checkbox" class="cb" name="cb_LIB"  onclick="return layerList.clickId('LIB');" style="height: 13px;" />Libraries 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_LIB" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_LIB"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_LIB" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Public Rights of Way</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'This is a working copy of the definitive map. It is not the definitive map and should not be used for legal purposes.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/FOOT.gif" alt="" /><input type="checkbox" class="cb" name="cb_FOOT"  onclick="return layerList.clickId('FOOT');" style="height: 13px;" />Footpaths 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'A footpath is a highway over which the right of way is on foot only');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_FOOT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_FOOT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_FOOT" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/BRID.gif" alt="" /><input type="checkbox" class="cb" name="cb_BRID"  onclick="return layerList.clickId('BRID');" style="height: 13px;" />Bridleways 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'A bridleway is a highway over which the right of way is on foot, on bicycle, and on horseback');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_BRID" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_BRID"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_BRID" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/RSTR.gif" alt="" /><input type="checkbox" class="cb" name="cb_RSTR"  onclick="return layerList.clickId('RSTR');" style="height: 13px;" />Restricted Byways 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'A restricted byway is a highway over which the right of way is on foot, on bicycle, on horseback and in or on vehicles other than mechanically propelled vehicles.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_RSTR" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_RSTR"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_RSTR" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/BWYT.gif" alt="" /><input type="checkbox" class="cb" name="cb_BWYT"  onclick="return layerList.clickId('BWYT');" style="height: 13px;" />Byways Open to all Traffic 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'A highway for all traffic, but one used mainly for the purposes for which footpaths and bridleways are used');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_BWYT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_BWYT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_BWYT" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Promoted Routes</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'For more information regarding promoted routes please visit www.discovercheshire.co.uk');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/PRO1.gif" alt="" /><input type="checkbox" class="cb" name="cb_PRO1"  onclick="return layerList.clickId('PRO1');" style="height: 13px;" />Walking 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_PRO1" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_PRO1"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_PRO1" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/PRO2.gif" alt="" /><input type="checkbox" class="cb" name="cb_PRO2"  onclick="return layerList.clickId('PRO2');" style="height: 13px;" />Cycling 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'This includes National Cycle Network (NCN) numbered routes');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_PRO2" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_PRO2"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_PRO2" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/PRO3.gif" alt="" /><input type="checkbox" class="cb" name="cb_PRO3"  onclick="return layerList.clickId('PRO3');" style="height: 13px;" />Riding 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_PRO3" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_PRO3"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_PRO3" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Historic Environment Record</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Historic Environment Sites covering Cheshire East and Cheshire West and Chester');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/AAIPT.gif" alt="" /><input type="checkbox" class="cb" name="cb_AAIPT"  onclick="return layerList.clickId('AAIPT');" style="height: 13px;" />Areas of Archeological Importance Locations 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_AAIPT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_AAIPT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_AAIPT" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/AAIPG.gif" alt="" /><input type="checkbox" class="cb" name="cb_AAIPG"  onclick="return layerList.clickId('AAIPG');" style="height: 13px;" />Areas of Archeological Importance Boundaries 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_AAIPG" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_AAIPG"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_AAIPG" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/AAPPT.gif" alt="" /><input type="checkbox" class="cb" name="cb_AAPPT"  onclick="return layerList.clickId('AAPPT');" style="height: 13px;" />Areas of Archeological Potential Locations 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_AAPPT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_AAPPT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_AAPPT" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/AAPPG.gif" alt="" /><input type="checkbox" class="cb" name="cb_AAPPG"  onclick="return layerList.clickId('AAPPG');" style="height: 13px;" />Areas of Archeological Potential Boundaries 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_AAPPG" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_AAPPG"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_AAPPG" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/CAPT.gif" alt="" /><input type="checkbox" class="cb" name="cb_CAPT"  onclick="return layerList.clickId('CAPT');" style="height: 13px;" />Conservation Area Locations 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Status Active(Black Border), Status Active - Article 4(Red Border)');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_CAPT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_CAPT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_CAPT" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/CAPG.gif" alt="" /><input type="checkbox" class="cb" name="cb_CAPG"  onclick="return layerList.clickId('CAPG');" style="height: 13px;" />Conservation Area Boundaries 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Status Active(Black Border), Status Active - Article 4(Red Border)');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_CAPG" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_CAPG"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_CAPG" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/RBPT.gif" alt="" /><input type="checkbox" class="cb" name="cb_RBPT"  onclick="return layerList.clickId('RBPT');" style="height: 13px;" />Registered Battlefield Locations 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'The inclusion of a site on the English Heritage Register of Parks and Gardens of Special Historic Interest in no way implies that public access is available. The vast majority are on private land and have no public access.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_RBPT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_RBPT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_RBPT" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/RBPG.gif" alt="" /><input type="checkbox" class="cb" name="cb_RBPG"  onclick="return layerList.clickId('RBPG');" style="height: 13px;" />Registered Battlefield Boundaries 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'The inclusion of a site on the English Heritage Register of Parks and Gardens of Special Historic Interest in no way implies that public access is available. The vast majority are on private land and have no public access.');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_RBPG" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_RBPG"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_RBPG" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/LBPT.gif" alt="" /><input type="checkbox" class="cb" name="cb_LBPT"  onclick="return layerList.clickId('LBPT');" style="height: 13px;" />Listed Building Locations 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Grade I(Navy),      Grade II*(Royal Blue),      Grade II(Light Blue),     Ecclestiastical Grade B(Green),      No Grade(Pink)');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_LBPT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_LBPT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_LBPT" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/LBPG.gif" alt="" /><input type="checkbox" class="cb" name="cb_LBPG"  onclick="return layerList.clickId('LBPG');" style="height: 13px;" />Listed Building Areas 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Grade I(Navy),      Grade II*(Royal Blue),      Grade II(Light Blue),     Ecclestiastical Grade B(Green),      No Grade(Pink)');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_LBPG" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_LBPG"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_LBPG" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/RPGPT.gif" alt="" /><input type="checkbox" class="cb" name="cb_RPGPT"  onclick="return layerList.clickId('RPGPT');" style="height: 13px;" />Registered Parks and Garden Locations 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Grade II(Black Border), Grade II*(Red Border)');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_RPGPT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_RPGPT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_RPGPT" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/RPGPG.gif" alt="" /><input type="checkbox" class="cb" name="cb_RPGPG"  onclick="return layerList.clickId('RPGPG');" style="height: 13px;" />Registered Parks and Garden Boundaries 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'Grade II(Black Border), Grade II*(Red Border)');" onmouseout="hideLayerHelpText();" style="cursor: pointer; " alt="" />
+											</div>
+											<div id="vc_RPGPG" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_RPGPG"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_RPGPG" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/SMPT.gif" alt="" /><input type="checkbox" class="cb" name="cb_SMPT"  onclick="return layerList.clickId('SMPT');" style="height: 13px;" />Scheduled Monument Locations 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_SMPT" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_SMPT"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_SMPT" style="padding-left: 100px; display: none;">.</div>
+										
+											<div>
+												<img src="legend/SMPG.gif" alt="" /><input type="checkbox" class="cb" name="cb_SMPG"  onclick="return layerList.clickId('SMPG');" style="height: 13px;" />Scheduled Monument Boundaries 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_SMPG" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_SMPG"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_SMPG" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+								<dt class="closed"><span onclick="layerList.catClick(this);"><img src="images/tree/plusclose.png" alt="Open/Close Category" /> Nature</span> <img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" /></dt>
+								<dd class="closed">
+								<!-- JC: Hack to add warning to LGR data-->
+								<div id="alertTextForCategory" style="color: green; font-weight: bold" >
+								</div>
+								<!-- JC: END-->
+									
+											<div>
+												<img src="legend/CPKN.gif" alt="" /><input type="checkbox" class="cb" name="cb_CPKN"  onclick="return layerList.clickId('CPKN');" style="height: 13px;" />Country Parks 
+												<img src="images/i14px.gif" onmouseover="showLayerHelpText(this,'');" onmouseout="hideLayerHelpText();" style="cursor: pointer; display: none;" alt="" />
+											</div>
+											<div id="vc_CPKN" style="padding-left: 60px; display: none;">
+												<img src="images/tree/plusclose.png" width="32" height="16" style="cursor: pointer;" onclick="layerList.clickMore(this.parentNode.id.substr(3)); return false;" alt="Open/Close" />
+												<span id="spn_CPKN"><i>Counting.....</i></span> 
+											</div>
+											<div id="vd_CPKN" style="padding-left: 100px; display: none;">.</div>
+										
+								</dd>
+							
+					</dl>
+					<div>&nbsp;</div>
+					<!--
+					<div style="font-size: 0.8em; color: #808080;" id="divDisclaimer">
+						<b>Disclaimer:</b>
+						The information provided on this website is provided for information purposes 
+						only. You should not rely upon it when you make, or refrain from making, any 
+						decision or when you take, or refrain from taking, any action. Cheshire County 
+						Council seeks to meet the highest standard of information quality and every 
+						effort has been taken to ensure that the information presented is accurate. 
+						However, the Council makes no warranty, express or implied as to accuracy and 
+						will not be held responsible for any consequences arising out of any 
+						inaccuracies or omissions. Also read the <a href="http://www.cheshire.gov.uk/accessibility/readibility_usability.htm">Usability Statement</a>.
+					</div>
+					-->
+					<div>&nbsp;</div>
+					<div style="color: #999; margin-top: 10px; font-size: 8pt; text-align: center;">Last updated: <span id="lblLastUpdated">19 May 2015</span></div>
+				</div>
+				<!-- tab 2 -->
+				<div id="tabBody2" style="width:0px; padding: 10px;" class="closed"><a name="aTabTop2"></a>
+					<div class="titleText">Social Data</div>
+					<div style="color: #cc0000;">Currently unavailable</div>
+				  
+				</div>
+				<!-- tab 3 -->
+				<div id="tabBody3" style="width:400px; padding: 10px;" class="closed"><a name="aTabTop3"></a>
+					<div class="titleText"></div>
+					<div id="divHighwayFaultsStep1">
+						<!-- <a href="./maintenance.html" target="_blank">ESSENTIAL MAINTENANCE ON 25th JANUARY 2014</a></br><i>(link opens in new window)</i><br/><br/> -->
+						<div>
+							Use this form to report potholes, missing signs, broken street lights, etc.<br />
+							&nbsp;<br />
+							For out-of-hours emergencies, please contact your local area highways team (<a href="http://www.cheshirewestandchester.gov.uk/residents/transport_and_roads/roads_and_road_wo/area_highways_teams.aspx" target=_blank>Cheshire West and Chester Area Highways Team</a> 
+							or <a href="http://www.cheshireeasthighways.org/Contact-and-applications.aspx" target=_blank>Cheshire East Area Highways Team</a>) by telephone. Faults reported using this page are monitored during normal working hours only.<br />
+							&nbsp; 
+						</div>
+						<script type="text/javascript">
+							function faultTypeClick(anchor, typeId) {
+								var step1 = document.getElementById("divHighwayFaultsStep1");
+								var step2 = document.getElementById("divHighwayFaultsStep2");
+								var spn = document.getElementById("spnHighwayFaultType");
+								var catName = anchor.parentNode.parentNode.cells[1].innerHTML;
+								spn.innerHTML = catName + ": " + anchor.innerHTML;
+								//RedFlag.init();
+								step2.style.display = "";
+								//step1.style.display = "none";
+								step2.scrollIntoView();
+							}
+							function ResetFlagClick() {
+								RedFlag.resetFlag();
+							}
+						</script>
+						<script type="text/javascript">
+							var faultCat = 0;
+							var faultType = 0;
+							function faultCatChange(index) {
+								var sels = document.getElementById('divFaultTypes').getElementsByTagName('select');
+								sels[faultCat].style.display = 'none'; // hide old one
+								sels[index].style.display = ''; // show new one
+								sels[faultCat].style.position = 'absolute'; // position old one
+								sels[index].style.position = ''; // position new one
+								sels[faultCat].selectedIndex = 0; // reset old one
+								faultCat = index;
+								// Special cases:
+								if (index == 8) { // Street Light
+									var cb = document.getElementsByName("cb_LIT")[0];
+									if (!cb.checked)
+										cb.click();
+									RedFlag.lights = true;
+									document.getElementById("divNearestStreet").style.display = "";
+									document.getElementById("txtFaultStreetLightBool").value = "true";
+								} else {
+									// hide street lights
+									var cb = document.getElementsByName("cb_LIT")[0];
+									if (cb.checked)
+										cb.click();
+									RedFlag.lights = false;
+									document.getElementById("divNearestStreet").style.display = "none";
+									document.getElementById("txtFaultStreetLightBool").value = "false";
+								}
+								//  index==15: street cleaning and fly-tipping
+								//  index==16: street cleaning and fly-tipping
+								document.getElementById('divFaultNote').style.display = (index == 17) ? "" : "none";
+							}
+							function faultTypeChange(index) {
+								faultType = index;
+								RedFlag.init();
+								document.getElementById('divHighwayFaultsStep2').style.display = "";
+							}
+						</script>
+						<div id="divFaultCats" ><b style="padding-right: 4px; vertical-align: top;">1.  Select category:</b> <select name="ddlFaultAreas" id="ddlFaultAreas" onchange="faultCatChange(this.selectedIndex);">
+	<option value="">SELECT CATEGORY:</option>
+	<option value="1">Road Surface (Carriageway)</option>
+	<option value="2">Pavement (Footway)</option>
+	<option value="3">Bridge</option>
+	<option value="4">Grid/Drain</option>
+	<option value="5">Manhole</option>
+	<option value="6">Grassed Area</option>
+	<option value="7">Pedestrian Crossing</option>
+	<option value="8">Street Light</option>
+	<option value="9">Traffic Signal (Permanent)</option>
+	<option value="10">Traffic Signal (Temporary)</option>
+	<option value="11">Traffic Sign</option>
+	<option value="12">Hedge/Tree</option>
+	<option value="13">Bollard</option>
+	<option value="14">Bus Shelters and Stops</option>
+	<option value="15">Street Name Plate</option>
+	<option value="16">Other</option>
+	<option value="">Street cleaning and fly-tipping</option>
+
+</select></div>
+						<div id="divFaultTypes"><b style="padding-right: 6px; vertical-align: top;">2.  Select problem:</b>
+							<select id="selBlank" style="width: 150px;" disabled="disabled"><option value="">(select category first)</option></select>
+							<select name="rptFaultAreas:_ctl0:selFaultTypes" id="rptFaultAreas__ctl0_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="11">Pothole</option>
+	<option value="12">Cracking</option>
+	<option value="13">Edge Deterioration</option>
+	<option value="14">Obstruction</option>
+	<option value="15">Mud On</option>
+	<option value="16">Flooding</option>
+	<option value="17">Other</option>
+</select><select name="rptFaultAreas:_ctl1:selFaultTypes" id="rptFaultAreas__ctl1_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="21">Cracked Paving</option>
+	<option value="22">Kerb Damaged</option>
+	<option value="23">Pothole</option>
+	<option value="24">Obstruction</option>
+	<option value="25">Mud On</option>
+	<option value="26">Flooding</option>
+	<option value="27">Other</option>
+</select><select name="rptFaultAreas:_ctl2:selFaultTypes" id="rptFaultAreas__ctl2_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="31">Damaged</option>
+	<option value="32">Graffiti</option>
+	<option value="33">Collapsed</option>
+	<option value="34">Other</option>
+</select><select name="rptFaultAreas:_ctl3:selFaultTypes" id="rptFaultAreas__ctl3_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="41">Blocked</option>
+	<option value="42">Missing</option>
+	<option value="43">Damaged</option>
+	<option value="44">Dislodged</option>
+	<option value="45">Other</option>
+</select><select name="rptFaultAreas:_ctl4:selFaultTypes" id="rptFaultAreas__ctl4_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="51">Rocking</option>
+	<option value="52">Cover Missing</option>
+	<option value="53">Damaged</option>
+	<option value="54">Dislodged</option>
+	<option value="55">Other</option>
+</select><select name="rptFaultAreas:_ctl5:selFaultTypes" id="rptFaultAreas__ctl5_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="61">Needs Cutting</option>
+	<option value="62">Other</option>
+</select><select name="rptFaultAreas:_ctl6:selFaultTypes" id="rptFaultAreas__ctl6_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="71">Light Out</option>
+	<option value="72">Damaged Refuge</option>
+	<option value="73">Other</option>
+</select><select name="rptFaultAreas:_ctl7:selFaultTypes" id="rptFaultAreas__ctl7_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="81">Light Out</option>
+	<option value="82">Door Missing</option>
+	<option value="83">Column Damaged</option>
+	<option value="84">On During Day</option>
+	<option value="85">Other</option>
+</select><select name="rptFaultAreas:_ctl8:selFaultTypes" id="rptFaultAreas__ctl8_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="91">Light Out</option>
+	<option value="92">Damaged</option>
+	<option value="93">Other</option>
+</select><select name="rptFaultAreas:_ctl9:selFaultTypes" id="rptFaultAreas__ctl9_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="91">Light Out</option>
+	<option value="92">Damaged</option>
+	<option value="93">Other</option>
+</select><select name="rptFaultAreas:_ctl10:selFaultTypes" id="rptFaultAreas__ctl10_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="101">Missing</option>
+	<option value="102">Damaged or Defaced</option>
+	<option value="103">Light Out</option>
+	<option value="104">Other</option>
+</select><select name="rptFaultAreas:_ctl11:selFaultTypes" id="rptFaultAreas__ctl11_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="111">Needs Cutting</option>
+	<option value="112">Debris on Road</option>
+	<option value="113">Over-hanging branches</option>
+	<option value="114">Danger of Falling</option>
+	<option value="115">Other</option>
+</select><select name="rptFaultAreas:_ctl12:selFaultTypes" id="rptFaultAreas__ctl12_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="121">Light Out</option>
+	<option value="122">Damaged</option>
+	<option value="123">Missing</option>
+	<option value="124">Other</option>
+</select><select name="rptFaultAreas:_ctl13:selFaultTypes" id="rptFaultAreas__ctl13_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="131">Damaged</option>
+</select><select name="rptFaultAreas:_ctl14:selFaultTypes" id="rptFaultAreas__ctl14_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="141">Damaged</option>
+	<option value="142">Missing</option>
+	<option value="143">Other</option>
+</select><select name="rptFaultAreas:_ctl15:selFaultTypes" id="rptFaultAreas__ctl15_selFaultTypes" onchange="faultTypeChange(this.selectedIndex);" style="position: absolute; display: none;">
+	<option value="">SELECT FAULT:</option>
+	<option value="151">Other</option>
+</select>
+							<select id="selLast" style="position: absolute; display: none;" disabled="disabled"><option value="">(see note below)</option></select>
+						</div>
+						
+						<div id="divFaultNote" style="display: none;">
+							&nbsp;<br />
+							<STRONG><small style="color: #C00; font-size: 8pt;">For fly-tipping and street cleansing issues please use the appropriate links below instead.</small></STRONG><br />
+							&nbsp;<br />
+							<STRONG>Cheshire West and Chester Council:</STRONG><br />
+							&bull; <a target="_blank" href="http://www.cheshirewestandchester.gov.uk/contact_us/online_services/report_it/street_cleaning.aspx">Street Cleansing</a><br />
+							&bull; <a target="_blank" href="http://www.cheshirewestandchester.gov.uk/contact_us/online_services/report_it/flytipping.aspx">Fly Tipping</a><br />
+							<!--
+							&bull; <a target="_blank" href="http://www.chester.gov.uk/main.asp?page=1683">Chester - Street Cleansing</a><br />
+							&bull; <a target="_blank" href="http://www.congleton.gov.uk/?t=328">Congleton - Street Care and Cleaning</a><br />
+							&bull; <a target="_blank" href="http://www.crewe-nantwich.gov.uk/main.asp?page=932">Crewe &amp; Nantwich - Street Cleansing</a><br />
+							&bull; <a target="_blank" href="http://www.epnbc.gov.uk/waste/AtoZRoadSweeping.htm">Ellesmere Port &amp; Neston - Street Cleaning</a><br />
+							&bull; <a target="_blank" href="http://www.macclesfield.gov.uk/standardpage.asp?pageid=11310">Macclesfield - Street Cleansing</a><br />
+							&bull; <a target="_blank" href="http://www2.valeroyal.gov.uk/internet/vr.nsf/AllByUniqueIdentifier/DOC1DC6768323AFF4EA802570A600312C6B">Vale Royal - Street Care and Cleaning</a><br />  -->
+							&nbsp;<br />
+							<STRONG>Cheshire East Council:</STRONG><br />
+							&bull; <a target="_blank" href="http://www.cheshireeast.gov.uk/environment/street_cleansing_and_litter/street_cleansing_and_litter.aspx">Street Cleansing and Fly Tipping</a><br />
+							<!--
+							&bull; <a target="_blank" href="http://www.chester.gov.uk/main.asp?page=1732">Chester - Flytipping</a><br />
+							&bull; <a target="_blank" href="http://www.congleton.gov.uk/?t=328">Congleton - Street Care and Cleaning</a><br />
+							&bull; <a target="_blank" href="http://www.crewe-nantwich.gov.uk/main.asp?page=3671">Crewe &amp; Nantwich - Flytipping</a><br />
+							&bull; <a target="_blank" href="http://www.epnbc.gov.uk/waste/flytipping.htm">Ellesmere Port &amp; Neston - Flytipping</a><br />
+							&bull; <a target="_blank" href="http://www.macclesfield.gov.uk/standardpage.asp?pageid=11082">Macclesfield - Flytipping</a><br />
+							&bull; <a target="_blank" href="http://www2.valeroyal.gov.uk/internet/vr.nsf/AllByUniqueIdentifier/DOCD682E92BE46008D180256F07003F7EB3">Vale Royal - StreetScene Services</a> -->
+						</div>
+						<div>&nbsp;</div>
+					</div>
+					<div id="divHighwayFaultsStep2">
+						<!--You have selected: <b><span id="spnHighwayFaultType">&nbsp;</span></b><br />
+						&nbsp;<br />-->
+						<table cellpadding="0" cellspacing="0" border="0"><tr>
+							<td>
+								<b>3.  Locate the fault on the map by either:</b><br />
+								&bull; Using the Location Search tool above the map and entering a street, town or postcode, or<br />
+								&bull; Using the yellow zoom tools on the map to zoom and drag map into position<br />
+								&nbsp;<br />
+							</td>
+							<!--<td style="text-align: right; vertical-align: top; padding-top: 3px;">
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="" src="images/flag_cross_shadow.png" onclick="alert('This is the shadow of the flag. The real flag can be found on the map.');" alt="" />
+							</td>-->
+							</tr>
+							<tr>
+							<td>
+								<b>4.  Drag the flag onto the fault</b>
+								then complete the rest of the form.
+								<input name="txtFaultFlagCoords" type="text" value="0,0" id="txtFaultFlagCoords" style="display: none;" />
+							</td>
+							<td></td>
+						</tr></table>
+						<!--div>You can also use the <b>Location Search</b> (above the map) to find a particular street, then position the flag at the right coordinate.</div-->
+						<div>&nbsp;</div>
+						<div style="vertical-align: top;">
+							<b style="color: #999;">Nearest street:</b> &nbsp;
+							<input name="txtFaultStreetName" type="text" value="(place flag on map first)" readonly="readonly" id="txtFaultStreetName" onclick="alert('The nearest street is determined automatically when you drag the red flag onto the map');" style="border-width: 1px; background-color: #eee; vertical-align: middle; width: 240px; color: #808080;" />
+							<input name="txtFaultStreetUSRN" type="text" value="0" id="txtFaultStreetUSRN" style="display: none;" />
+							<input name="txtFaultStreetMail" type="text" id="txtFaultStreetMail" style="display: none;" />
+						</div>
+						<div id="divNearestStreet" style="vertical-align: top; display: none;">
+							<b style="color: #999;">Nearest street light:</b> &nbsp;
+							<input name="txtFaultStreetLightName" type="text" value="(place flag on map first)" readonly="readonly" id="txtFaultStreetLightName" onclick="alert('The nearest street light is determined automatically when you drag the red flag onto the map');" style="border-width: 1px; background-color: #eee; vertical-align: middle; width: 213px; color: #808080;" />
+							<input name="txtFaultStreetLightNum" type="text" value="0" id="txtFaultStreetLightNum" style="display: none;" />
+							
+							<input name="txtFaultStreetLightColumnNum" type="text" value="0" id="txtFaultStreetLightColumnNum" style="display: none;" />
+							
+							<input name="txtFaultStreetLightBool" type="text" value="false" id="txtFaultStreetLightBool" style="display: none;" />
+						</div>
+						<div>&nbsp;</div>
+					</div>
+					<div>
+						<b>5.  Describe the fault location:</b> (not required for street light faults)
+						<textarea name="txtFaultLocation" rows="4" cols="40" id="txtFaultLocation" style="font-family: Arial; float: left;"></textarea>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+					<div>
+						<b>6.  Fault Description:</b>
+						<textarea name="txtFaultComments" rows="4" cols="40" id="txtFaultComments" style="font-family: Arial; float: left;"></textarea>
+					</div>
+					<div style="clear: both;">&nbsp;</div>
+					<div id="divHighwayFaultsStep3">
+						<table summary="Contact details table" style="">
+							<tr><td colspan="2" style="text-align: left;"><strong>7.  Enter your contact details below</strong>  in case we need to contact you</td></tr>
+							<tr>
+								<td>Title</td>
+								<td>
+									<select name="ddlFaultUserTitle" id="ddlFaultUserTitle">
+	<option selected="selected" value="">Select</option>
+	<option value="Cllr">Cllr</option>
+	<option value="Dr">Dr</option>
+	<option value="Mr">Mr</option>
+	<option value="Ms">Ms</option>
+	<option value="Miss">Miss</option>
+	<option value="Mrs">Mrs</option>
+	<option value="Sir">Sir</option>
+	<option value="Lord">Lord</option>
+	<option value="Rev">Rev</option>
+	<option value="Lady">Lady</option>
+
+</select>
+								</td>
+							</tr>
+							<tr>
+								<td>First Name <small style="color: #C00; font-size: 8pt;">(* required)</small></td>
+								<td><input name="txtFaultUserFirstName" type="text" maxlength="100" id="txtFaultUserFirstName" />
+									&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td>Last Name <small style="color: #C00; font-size: 8pt;">(* required)</small></td>
+								<td><input name="txtFaultUserLastName" type="text" maxlength="100" id="txtFaultUserLastName" />
+									&nbsp;
+								</td>
+							</tr>
+							<tr><td colspan="2">&nbsp;</td></tr>
+							<tr>
+								<td>Home Address:</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>Flat</td>
+								<td><input name="txtFaultUserFlat" type="text" maxlength="50" id="txtFaultUserFlat" /></td>
+							</tr>
+							<tr>
+								<td>Property Number/Name</td>
+								<td><input name="txtFaultUserPropertyNumberName" type="text" maxlength="50" id="txtFaultUserPropertyNumberName" /></td>
+							</tr>
+							<tr>
+								<td>Street</td>
+								<td><input name="txtFaultUserStreet" type="text" maxlength="100" id="txtFaultUserStreet" /></td>
+							</tr>
+							<tr>
+								<td>Town</td>
+								<td><input name="txtFaultUserTown" type="text" maxlength="50" id="txtFaultUserTown" /></td>
+							</tr>
+							<tr>
+								<td>County</td>
+								<td><input name="txtFaultUserCounty" type="text" maxlength="50" id="txtFaultUserCounty" /></td>
+							</tr>
+							<tr>
+								<td>Postcode</td>
+								<td><input name="txtFaultUserPostcode" type="text" maxlength="8" id="txtFaultUserPostcode" /></td>
+							</tr>
+							<tr><td colspan="2">&nbsp;</td></tr>
+							<tr>
+								<td valign="top">Email Address</td>
+								<td>
+									<input name="txtFaultUserEmailAddress" type="text" maxlength="100" id="txtFaultUserEmailAddress" />
+									&nbsp;
+									<br />
+									An acknowledgement will be sent to<br /> the email address you specify here
+								</td>
+							</tr>
+							<tr>
+								<td>Telephone Number</td>
+								<td><input name="txtFaultUserTelephoneNumber" type="text" maxlength="50" id="txtFaultUserTelephoneNumber" /></td>
+							</tr>
+						</table>
+						<div>&nbsp;</div>
+						<div><strong>8.  Check the information you have entered and click on the
+						button below to submit the fault report.</strong></div>
+						<div>&nbsp;</div>
+						<div style="text-align: center">
+							<input type="submit" name="btnFaultSubmit" value="Send Fault Report Now" onclick="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(); " language="javascript" id="btnFaultSubmit" class="btn" />
+							<br />
+							<script type="text/javascript">
+								function fnValidateFaultSelectors() {
+									// First drop-down
+									var s1 = document.getElementById("ddlFaultAreas");
+									var s1v = s1.options[s1.selectedIndex].value;
+									if (s1v == "") {
+										alert("Please select a fault category (at the top of the page)");
+										return false;
+									}
+									
+									// Second drop-down
+									var faultArea = parseInt(s1v);
+									var s2 = document.getElementById("rptFaultAreas__ctl" + (faultArea-1) + "_selFaultTypes");
+									var s2v = s2.options[s2.selectedIndex].value;
+									if (s2v == "") {
+										alert("Please select a fault sub-category (at the top of the page)");
+										return false;
+									}
+									
+									// First name, last name
+									if (document.getElementById("txtFaultUserFirstName").value == "") {
+										alert("Please provide your first name");
+										return false;
+									}
+									if (document.getElementById("txtFaultUserLastName").value == "") {
+										alert("Please provide your last name");
+										return false;
+									}
+									
+									// Flag positioned
+									if (!RedFlag.isOnMap) {
+										alert("Please drag the red flag onto the map to mark the fault location");
+										return false;
+									}
+									// Flag sufficiently accurate
+									if (Map.scale > 1) {
+										alert("Please zoom in to accurately position the flag");
+										return false;
+									}
+									if (document.getElementById("txtFaultStreetUSRN").value == "0") {
+										alert("Please position the flag on or near a road to indicate where the highway fault lies.");
+										return false;
+									}
+									
+									// Otherwise ok
+									return true;
+								}
+								// Override standard ASP.NET validation (because it doesn't work in FireFox)
+								document.getElementById("btnFaultSubmit").onclick = fnValidateFaultSelectors;
+							</script>
+						</div>
+						<div>&nbsp;</div>
+										</div>
+				</div>
+				<!-- tab 4 -->
+				<div id="tabBody4" style="width:400px; padding: 10px;" class="closed"><a name="aTabTop4"></a>
+					<div class="titleText"></div>
+					<div>
+						Click on the page orientation to preview your map:<br />
+						&nbsp;
+					</div>
+					<script type="text/javascript">
+						function openPrintPreview(portrait) {
+							var url;
+							
+							var a = layerList.serialiseCounting().split(".");
+							//var isValid = false;
+							var canPrint = false;
+							for (var i=0; i<a.length; i++) {
+								var spn = document.getElementById("spn_" + a[i]);
+								if (spn != null) {
+									canPrint = true; }
+							}
+							
+							var url;
+							if (canPrint) {
+								if (portrait) 
+								{
+									url = "PrintPortrait.aspx";
+								} else
+								{	
+									url = "PrintLandscape.aspx";
+								}
+								
+								window.open(url+  '?e='+Map.e+  '&n='+Map.n+ '&region='+Map.region+ '&mpp='+Map.scale+  '&layers='+layerList.serialiseVisible());
+								return false;
+							}
+							else {
+								alert("Ensure additional data has been added to the map before trying to print!");
+							}
+						}
+					</script>
+					<table border="0">
+						<tr>
+							<td>Portrait</td>
+							<td>Landscape</td>
+						</tr>
+						<tr style="vertical-align: top;">
+							<td><button onclick="return openPrintPreview(true);"  onmouseover="this.style.backgroundColor='blue';" onmouseout="this.style.backgroundColor='white';" style="cursor: pointer; padding: 0px; background-color: white; width: 173px;"><img src="images/portrait.png" alt="Print preview with Portrait layout" /></button></td>
+							<td><button onclick="return openPrintPreview(false);" onmouseover="this.style.backgroundColor='blue';" onmouseout="this.style.backgroundColor='white';" style="cursor: pointer; padding: 0px; background-color: white; width: 234px; vertical-align: top;"><img src="images/landscape.png" style="vertical-align: top;" alt="Print preview with Landscape layout" /></button></td>
+						</tr>
+					</table>
+					<div>&nbsp;</div>
+					<div>&nbsp;</div>
+				</div>
+				<!-- tab 5 -->
+				<div id="tabBody5" style="width:400px; padding: 10px;" class="closed"><a name="aTabTop5"></a>
+					<div class="titleText"></div>
+					<div>
+						The layout of this page is designed so that you can 
+						view map based information on the right hand 
+						side of your screen at all times, whilst allowing you 
+						to view and query text based information on the left 
+						hand side using the tabs.
+					</div>
+					<dl class="help" style="margin-top: 10px;">
+						<dt>Using the Map</dt>
+						<dd>
+							<ul>
+								<li>Drag the map with your mouse</li>
+								<li>Use the zoom bar on the left of the map to zoom in or out</li>
+								<li>Use the arrows on the top-left of the map to scroll</li>
+								<li>Use the centre square of the arrows to go back to the start</li>
+								<li><b>Click on the map to identify items on the map</b></li>
+							</ul>
+						</dd>
+						<dt>Linking to the Map</dt>
+						<dd>
+							<ul>
+								<li>Right click on the link below</li>
+								<li>Select "Copy Shortcut" or "Copy Link Location"</li>
+								<li><a id="aLinkMap" href=".">Link to this map (grid reference <span id="spnLinkGridRef">0</span>)</a></li>
+								<li>Please be aware that the information available in this system may change 
+							or become unavailable, and this will affect the map you are creating a link to. 
+							You should therefore regularly check that your map is up to date.</li>
+							</ul>
+						</dd>
+						<dt>Map Features tab</dt>
+						<dd>
+							<ul>
+								<li>
+									When the map is zoomed out, only the map scale is shown.
+								</li>
+								<li>
+									You can zoom in on the map to view all the 
+									details in a particular area. 
+									Use the checkboxes to add data to the map, e.g. schools, libraries, parks, etc.
+								</li>
+								<li>
+									Much of this information is available in text format, 
+									try using the search box in the top-right corner.
+								</li>
+							</ul>
+						</dd>
+						<!--dt>Social Data tab - <span style="font-weight: normal;">Show statistics e.g. crime rates, air quality, housing standards, number of children, etc.</span></dt>
+						<dd>&nbsp;</dd>
+						<dt>Find Location tab - <span style="font-weight: normal;">This gives you the facility to zoom the map to a particular postcode, street, town or district.</span></dt>
+						<dd>&nbsp;</dd-->
+						<dt>Highway Faults tab</dt>
+						<dd>
+							<ul>
+								<li>
+									Report faults with roads, footpaths, bridges, and other facilities managed by the local authorities
+								</li>
+								<li>
+									Complete the form and drag the flag onto the map to mark where the fault lies.
+								</li>
+								<li>
+									The request will be delivered directly to our engineering department who will handle the enquiry.
+								</li>
+							</ul>
+						</dd>
+						<dt>Print tab - <span style="font-weight: normal;">Print in portrait or landscape formats.</span></dt>
+						<dd>&nbsp;</dd>
+						<dt>Help tab - <span style="font-weight: normal;">Gives advice on how to use the functionality contained in this page.</span></dt>
+					</dl>
+						<div style="text-align: center;">
+						<a href="http://www.cheshirewestandchester.gov.uk">Cheshire West and Chester Home</a>
+						| <a href="http://www.cheshireeast.gov.uk">Cheshire East Home</a>
+					</div>
+				</div>
+				<!-- tab 6 -->
+			   
+			  </div>
+			</div>
+			<!-- END: the left panel, tabs and content -->
+		</td>
+		
+		<td style="background-color: #3F55A1;">
+			<!-- START: the right panel, map and map controls -->
+			<!--Moved Search Box from here to Left Pane 21.02.2011 -->
+			<script type="text/javascript">
+				// Script for search box
+				var srchDefaultText = "Search for town, street, postcode, etc.";
+				function srchFocus(obj) {
+					if (obj.value == srchDefaultText) {
+						obj.value = "";
+						obj.style.color = "";
+					}
+					document.getElementById('divLocationSearchHelp').style.display = '';
+					document.getElementById('divLocationSearchResults').style.display = 'none';
+				}
+				function srchBlur(obj) {
+					if (obj.value == "") {
+						obj.value = srchDefaultText;
+						obj.style.color = "#999";
+					}
+					document.getElementById('divLocationSearchHelp').style.display = 'none';
+				}
+				function srchTrapEnter(obj,evt) {
+					var e = evt ? evt : event;
+					var keycode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;
+					if (keycode == 13) {
+						srchBlur(obj);
+						var btn = obj.nextSibling;
+						if (btn.nodeName == "#text") btn = btn.nextSibling;
+						btn.focus();
+						btn.click();
+						return false;
+					} else {
+						return true;
+					}
+				}
+				function srchGoto(eastingCommaNorthing) {
+					var arr = eastingCommaNorthing.split(',');
+					ZoomMarker.moveToNewLocation(parseInt(arr[0]),parseInt(arr[1]),0.635);
+					document.getElementById("divLocationSearchResults").style.display = 'none';
+					Identify.hide();
+				}
+				function srchDo(btn) {
+					// Determine what to do next
+					doLocationSearch();
+				}
+			</script>
+			<div style="background-color: #FFCC66; padding: 2px 0px 2px 80px;">
+				<input type="text" id="txtLocationSearch" style="width: 222px; color: #999;" value="Search for town, street, postcode, etc." onfocus="srchFocus(this);" onblur="srchBlur(this);" onkeydown="return srchTrapEnter(this,event);" />
+				<button id="btnLocationSearch" style="width: 140px; position: absolute;" class="btn" onclick="srchDo(this); return false;">Location Search</button>
+			</div>
+			<div id="divLocationSearchHelp" style="color: #555; display: none; font-size: 9pt; position: absolute; z-index: 12; margin-top: -3px; margin-left: 80px; background-color: #FFEEBB; border: 1px solid #999; padding: 3px;">
+				You can search for<b>:</b><br />
+				<table style="font-size: 9pt;" cellpadding="0" cellspacing="0">
+					<tr><td>&nbsp;&raquo; Postcodes&nbsp;</td><td>e.g.&nbsp; CH1 1SF</td></tr>
+					<tr><td>&nbsp;&raquo; Towns / villages&nbsp;</td><td>e.g.&nbsp; Helsby</td></tr>
+					<tr><td>&nbsp;&raquo; Streets &nbsp; &nbsp;</td><td>e.g.&nbsp; Crook Lane</td></tr>
+					<tr><td>&nbsp;&raquo; Streets and towns &nbsp; &nbsp;</td><td>e.g.&nbsp; Park Road, Nantwich</td></tr>
+					<tr><td>&nbsp;&raquo; Road numbers&nbsp;</td><td>e.g.&nbsp; B5153</td></tr>
+					<tr><td>&nbsp;&raquo; Buildings&nbsp;</td><td>e.g.&nbsp; Chester Library</td></tr>
+				</table>
+			</div>						
+			<div id="divLocationSearchResults" style="color: #555; display: none; font-size: 9pt; position: absolute; z-index: 12; margin-top: -3px; margin-left: 80px; width: 360px; background-color: #FFEEBB; border: 1px solid #999; padding: 3px;">&nbsp;
+			</div>
+			<!-- The red flag is moved around by altering the margins on divRedFlag (-172,60).
+				 If the text next to the shadow changes then change the margins on divRedFlag
+				 until the red flag is on top of its shadow again.
+				 Don't change the margins on the flag img unless a different image is used.
+				 Margins on the image are set such that a margin of 0,0 is equivalent to the 
+				 top-left of the map, and a margin of mapWidth,mapHeight is equivalent to the
+				 opposite corner. This ensures that the X below the flag marks the spot.
+			-->
+			<div id="divRedFlag" 
+				style="display: none; margin-left: -49px; margin-top: 292px; position: absolute; z-index: 8; overflow: visible;
+				"><div 
+					style="font-weight: bold; display: none; position: absolute; width: 170px; margin-left: -150px; margin-top: -60px; text-align: center; border: 1px solid #000; padding: 1px 2px; background-color: #ffffe1; font-size: 11px;"
+					>To enable this tool, zoom in until the flag turns red</div><img 
+					src="images/flag_cross_grey.gif" 
+					width="24" height="39" 
+					alt="" 
+					style="z-index: 9; position: absolute; cursor: pointer; margin-left: -10px; margin-top: -30px;" 
+					ondragstart="return false;" 
+			/></div>
+			<div id="divRedFlagReset" 
+				style="display: none; margin-left: -49px; margin-top: 292px; position: absolute; z-index: 8; overflow: visible;
+				"><div 
+					style="font-weight: bold; display: none; position: absolute; width: 90px; margin-left: -85px; margin-top: -60px; text-align: center; border: 1px solid #000; padding: 1px 2px; background-color: #ffffe1; font-size: 11px;"
+					>Reset flag</div><img 
+					src="images/flag_cross_reset.gif" 
+					width="24" height="39" 
+					alt="" 
+					style="z-index: 9; position: absolute; cursor: pointer; margin-left: -10px; margin-top: -30px;"  
+			/></div>
+			<map name="zoomBar" id="zoomBar">
+				<!-- the order of the items here will be the tab-order for keyboard users -->
+				<area shape="rect" href="javascript:pan(North);" coords="20   0 36  16" onclick="Map.panClick('n'); return false;"  alt="" title="Move north" >
+				<area shape="rect" href="javascript:pan(East);"  coords="40  20 56  36" onclick="Map.panClick('e'); return false;"	alt="" title="Move east" >
+				<area shape="rect" href="javascript:pan(South);" coords="20  40 36  56" onclick="Map.panClick('s'); return false;"	alt="" title="Move south" >
+				<area shape="rect" href="javascript:pan(West);"  coords=" 0  20 16  36" onclick="Map.panClick('w'); return false;"	alt="" title="Move west" >
+				<area shape="rect" href="javascript:restart;"	coords="20  20 36  36" onclick="Map.reset(); return false;"	  alt="" title="View all Cheshire" >
+				<area shape="rect" href="javascript:zoomIn;"	coords="20  65 36  81" onclick="return ZoomMarker.zoomIn();"  alt="" title="Zoom in" >
+				<area shape="rect" href="javascript:zoom(10);"	coords="21  88 35  94" onclick="return ZoomMarker.mClick(10);" alt="" title="Zoom to 1:600 (building level)" >
+				<area shape="rect" href="javascript:zoom(9);"	coords="21  96 35 102" onclick="return ZoomMarker.mClick(9);"  alt="" title="Zoom to 1:1200 (building level)" >
+				<area shape="rect" href="javascript:zoom(8);"	coords="21 104 35 110" onclick="return ZoomMarker.mClick(8);"  alt="" title="Zoom to 1:2400 (street level)" >
+				<area shape="rect" href="javascript:zoom(7);"	coords="21 112 35 118" onclick="return ZoomMarker.mClick(7);"  alt="" title="Zoom to 1:3780 (street level)" >
+				<area shape="rect" href="javascript:zoom(6);"	coords="21 120 35 126" onclick="return ZoomMarker.mClick(6);"  alt="" title="Zoom to 1:7560 (village level)" >
+				<area shape="rect" href="javascript:zoom(5);"	coords="21 128 35 134" onclick="return ZoomMarker.mClick(5);"  alt="" title="Zoom to 1:20000 (town level)" >
+				<area shape="rect" href="javascript:zoom(4);"	coords="21 136 35 142" onclick="return ZoomMarker.mClick(4);"  alt="" title="Zoom to 1:40000 (parish level)" >
+				<area shape="rect" href="javascript:zoom(3);"	coords="21 144 35 150" onclick="return ZoomMarker.mClick(3);"  alt="" title="Zoom to 1:100000 (parish level)" >
+				<area shape="rect" href="javascript:zoom(2);"	coords="21 152 35 158" onclick="return ZoomMarker.mClick(2);"  alt="" title="Zoom to 1:200000 (district level)" >
+				<area shape="rect" href="javascript:zoom(1);"	coords="21 160 35 166" onclick="return ZoomMarker.mClick(1);"  alt="" title="Zoom to 1:300000 (district level)" >
+				<area shape="rect" href="javascript:zoom(0);"	coords="21 168 36 174" onclick="return ZoomMarker.mClick(0);"  alt="" title="Zoom to 1:600000 (county level)" >
+				<area shape="rect" href="javascript:zoomOut;"	coords="20 181 36 197" onclick="return ZoomMarker.zoomOut();"  alt="" title="Zoom out" >
+			</map>
+			<div style="position: absolute; padding: 10px; z-index: 8;">
+				<div style="position: absolute;" id="divZoomBarWhole"><img src="images/zoom/zoomBarWhole.png" width="59" height="200" usemap="#zoomBar" border="0" style="" alt="" /></div>
+				<div style="position: absolute; margin-left: 19px;" id="divMarker"><img src="images/zoom/zoomSlider.png" width="22" height="14" border="0" style="" alt="" /></div>
+			</div>
+			<div style="background-color: white; text-align: left;">
+				<!-- START divInfo -->
+				<div id="divInfo" style="position: absolute; width: 287px; height: 170px; margin-left: 100px; margin-top: 100px; z-index: 10; padding: 0px; font-size: 9pt; display: none; background-image: url(images/infobox_none.png);">
+					<div style="position: absolute; margin-left: 237px; margin-top: 1px;">
+						<button class="btnInfo" id="btnClose" onclick="Identify.clearSelection(); return false;"></button>
+					</div>
+					<img id="infoArrow" src="images/infobox_arrow_right.gif" style="position: absolute; margin-left: 268px; margin-top: 69px;" />
+					<div id="infoBody" style="width: 269px; height: 167px; overflow: hidden;"><div style="width: 269px; height: 183px; overflow: scroll;">[text]</div></div>
+				</div>
+				<!-- END divInfo -->
+				<div id="divMapContainer" class="grabbing" style="cursor: url('images/grab.cur'); width: 240px; height: 180px; background-color: #D4D0C8; text-align: left;">
+					<div id="divMap1" style="position: absolute; z-index: 4; width: 240px; height: 180px; overflow: hidden; visibility: hidden;"><img id="imgMap1" onload="Map_ImageLoaded(1);" src="images/transparent.gif" galleryimg="no" alt="" oncontextmenu="return event.shiftKey;" /></div>
+					<div id="divMap2" style="position: absolute; z-index: 3; width: 240px; height: 180px; overflow: hidden; visibility: hidden;"><img id="imgMap2" onload="Map_ImageLoaded(2);" src="images/transparent.gif" galleryimg="no" alt="" oncontextmenu="return event.shiftKey;" /></div>
+					<div id="divMap3" style="position: absolute; z-index: 2; width: 240px; height: 180px; overflow: hidden; visibility: hidden;"><img id="imgMap3" onload="Map_ImageLoaded(3);" src="images/transparent.gif" galleryimg="no" alt="" oncontextmenu="return event.shiftKey;" /></div>
+					<div id="divOverview" style="position: absolute; z-index: 5; width: 147px; height: 107px; background-color: navy;"><div style="position: absolute; margin-top: 7px; margin-left: 7px;"><div id="divGridRef" style="position: absolute; padding-left: 25px; margin-top: 87px">&nbsp;</div><img src="images/overview.gif" alt="Overview map" width="140" height="100" style="cursor: crosshair;" onmouseup="Overview.ClickMe(event);" /></div><div style="position: absolute; overflow: hidden; margin-left: 7px; margin-top: 7px; width: 140px; height: 100px;"><div id="divRedBox" style="width: 14px; height: 14px;"><div style="border: 2px solid red; line-height: 1px; font-size: 1px;">&nbsp;</div></div></div></div>
+					<div id="divLoad" style="position: absolute; z-index: 5; text-align: center;"><img src="images/loading.gif" width="96" height="44" style="margin-top: 200px; margin-left: 200px; opacity: 0.85;" alt="Loading" /></div>
+				
+						<div id='zoomBox' style='border-left: blue 2px solid; border-bottom: blue 2px solid; 
+							border-right: blue 2px solid; border-top: blue 2px solid; background-image:url(images/shade.gif); 
+							position: absolute; z-index: 11; visibility: hidden;'>
+						</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				var hasPngSupport;
+				if (typeof document.body.style.maxHeight != "undefined") {
+					// IE 7, mozilla (firefox), safari, opera 9
+					hasPngSupport = true;
+				} else {
+					// IE6, older browsers
+					// Internet Explorer takes the filter:alphaImageLoader CSS property
+					document.getElementById('divZoomBarWhole').firstChild.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=resize, src='images/zoom/zoomBarWhole.png')";
+					document.getElementById('divZoomBarWhole').firstChild.src = "images/zoom/transparent.png";
+					
+					document.getElementById('divMarker').firstChild.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=resize, src='images/zoom/zoomSlider.png');";
+					document.getElementById('divMarker').firstChild.src = "images/zoom/transparent.png";
+					
+					document.getElementById('divInfo').style.backgroundImage = "url('images/infobox_none.gif')"; // can't use AlphaImageLoader, it messes up the contents of the box
+					hasPngSupport = false;
+				}
+			</script>
+			<!-- END: the right panel, map and map controls -->
+		</td>
+	</tr>
+	</table>
+	<div id="divNavTools" style="position: absolute; background-color: transparent; top:85px; right:0px; height:20px; z-index:999;
+	visibility: hidden">
+		<a href="#" onclick="NavTool.setTool('imgZoomin','zoomin');">
+			<img id="imgZoomin" src="images/zoom-in_OFF.gif" onmouseout="javascript:NavTool.mOut(this.id,'zoomin')" 
+			onmouseover="javascript:NavTool.mOver(this.id,'zoomin')" alt="Zoom in" name="zoomin">
+		</a>
+		<a href="#" onclick="NavTool.setTool('imgZoomout','zoomout');">
+			<img id="imgZoomout" src="images/zoom-out_OFF.gif" onmouseout="javascript:NavTool.mOut(this.id,'zoomout')" 
+			onmouseover="javascript:NavTool.mOver(this.id,'zoomout')" alt="Zoom out" name="zoomout">
+		</a>
+		<a href="#" onclick="NavTool.setTool('imgPan','pan');">
+			<img id="imgPan" src="images/pan_ON.gif" onmouseout="javascript:NavTool.mOut(this.id,'pan')" 
+			onmouseover="javascript:NavTool.mOver(this.id,'pan')" alt="Pan" name="pan">
+		</a>
+	</div>
+	
+	
+<input name="scrollLeft" id="scrollLeft" type="hidden" value="0" /><input name="scrollTop" id="scrollTop" type="hidden" value="0" /><!-- SmartScroller ASP.NET Generated Code -->
+<script language = "javascript">
+<!--
+function SmartScroller_GetCoords()
+{
+   var scrollX, scrollY;
+   if (document.all)
+   {
+      if (!document.documentElement.scrollLeft)
+         scrollX = document.body.scrollLeft;
+      else
+         scrollX = document.documentElement.scrollLeft;
+      if (!document.documentElement.scrollTop)
+         scrollY = document.body.scrollTop;
+      else
+         scrollY = document.documentElement.scrollTop;
+   }
+   else
+   {
+      scrollX = window.pageXOffset;
+      scrollY = window.pageYOffset;
+   }
+   document.forms["Form1"].scrollLeft.value = scrollX;
+   document.forms["Form1"].scrollTop.value = scrollY;
+}
+function SmartScroller_Scroll()
+{
+   var x = document.forms["Form1"].scrollLeft.value;
+   var y = document.forms["Form1"].scrollTop.value;
+   window.scrollTo(x, y);
+}
+// Cross-browser event addition
+function addEvent(obj, evType, fn, useCapture){
+   if (obj.addEventListener){
+      obj.addEventListener(evType, fn, useCapture);
+      return true;
+   } else if (obj.attachEvent){
+      var r = obj.attachEvent("on"+evType, fn);
+      return r;
+   }
+}
+addEvent(window, "load", SmartScroller_Scroll, false);
+addEvent(window, "scroll", SmartScroller_GetCoords, false);
+addEvent(window, "click", SmartScroller_GetCoords, false);
+addEvent(window, "keypress", SmartScroller_GetCoords, false);
+// -->
+</script>
+<!-- End SmartScroller ASP.NET Generated Code -->
+
+
+</form>
+				</div>
+			</div>
+			<div class="nc"><div class="b4"></div><div class="b3"></div><div class="b2"></div><div class="b1b"></div></div>
+		</div>
+	</div><!-- end ceMain -->
+</div>
+
+<div id="ceFooter">
+	<div id="ceFooterContacts">
+		Cheshire East Council &nbsp;Telephone: 0300 123 55 00<br/>
+		Westfields, Middlewich Road, Sandbach, CW11 1HZ
+	</div>
+
+		<ul id="ceFooterLinks">
+		<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=12043">Contact Us</a></li>
+		<li><a href="http://www.cheshireeast.gov.uk/default.aspx?page=12044">Copyright and Disclaimer</a></li>				
+		<li class="navlinkend"><a href="http://www.cheshireeast.gov.uk/default.aspx?page=14711">Website Information</a></li>
+	</ul>
+</div>	
+</BODY>
+</HTML>

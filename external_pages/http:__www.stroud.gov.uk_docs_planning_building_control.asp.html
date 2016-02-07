@@ -1,0 +1,900 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Building Control</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta http-equiv="pics-Label" content='(pics-1.1 "http://www.icra.org/pics/vocabularyv03/" l gen true for "http://www.stroud.gov.uk" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0) gen true for "http://www.stroud.gov.uk" r (n 0 s 0 v 0 l 0 oa 0 ob 0 oc 0 od 0 oe 0 of 0 og 0 oh 0 c 0))' />
+	<meta name="keywords" content="building, GBCP, Gloucestershire, building, control, partnership, control, buolding control, building regulations, applications, dangerous, structures, inspections, register," />
+	<meta name="description" content="www.stroud.gov.uk is your online resource for Stroud District Council" />
+	<meta name="DC.language" scheme="ISO 639-2/T" content="eng" />
+	<meta name="DC.format" content="text/html" />
+	<meta name="DC.coverage" content="UK" />
+	<meta name="DC.publisher" content="Stroud District Council, Ebley Mill, Westward Road, Stroud GL5 4UB (01453) 766321 info@stroud.gov.uk" />
+	<meta name="DC.title" content="Home Page" />
+	<meta name="DC.identifier.systemId" content="www.stroud.gov.uk$home_page" />
+	<meta name="DC.creator" content="Stroud District Council - Marketing" />
+	<meta name="DC.date.created" scheme="W3CDTF" content="2004-07-20" />
+	<meta name="DC.date.modified" scheme="W3CDTF" content="2005-07-21" />
+	<meta name="eGMS.subject.category" scheme="GCL" content="Local government" />
+	<meta name="eGMS.subject.category" scheme="LGCL" content="Council, government and democracy" />
+	<meta name="DC.subject" scheme="eGMS.IPSV" content="Local government" />
+	<meta name="eGMS.subject.category" scheme="IPSV" content="Local government" />
+	<meta name="eGMS.Subject.Keyword" content="Stroud District Council Local Government Website" />
+	<meta name="eGMS.accessibility" scheme="WCAG" content="Double-A" />
+
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/print.css" rel="stylesheet" type="text/css" media="print"/>
+<link href="css/sdcheadfoot.css" rel="stylesheet" type="text/css" />
+
+<!--[if lte IE 7]>
+	<link href="css/ie.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">var isIE7 = true;</script>
+<![endif]-->
+<!--[if lte IE 6]>
+	<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">var isIE6 = true;</script>
+<![endif]-->
+	<script type="text/javascript" src="/jquery/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="/jquery/js/jquery-ui-1.8.2.min.js"></script>
+	<script type="text/javascript" src="/jquery/js/jquery.ui.datepicker-en-GB.js"></script>
+   
+	<script type="text/javascript" src="js/jquery.ba-bbq.min.js"></script>
+	<script type="text/javascript" src="js/script_new.js"></script>
+   
+	<script type="text/javascript">
+	    $(function () {
+	        $("#inspection_date").datepicker({ minDate: +1 });
+	    });
+
+	    function clearField(fObj) {
+	        switch (fObj.value) {
+	            case "Type contact name":
+	                fObj.value = "";
+	            case "Type contact telephone":
+	                fObj.value = "";
+	            case "Type contact email address":
+	                fObj.value = "";
+	            case "0000":
+	                fObj.value = "";
+	            case "Type site address":
+	                fObj.value = "";
+	            case "dd/mm/yyyy":
+	                fObj.value = "";
+	            default:
+	        }
+	    }
+
+	    function verify(fObj) {
+	        var err = "";
+	        if (fObj.elements["name"].value == "" || fObj.elements["name"].value == "Type contact name") {
+	            err += "Please enter a contact name.\n\n";
+	        }
+	        if (
+		(fObj.elements["phone1"].value == "" || fObj.elements["phone1"].value == "Type contact telephone") && (fObj.elements["plan_no1"].value == "" || fObj.elements["plan_no1"].value == "0000" || fObj.elements["plan_no2"].value == "" || fObj.elements["plan_no2"].value == "0000")) {
+	            err += "Please enter either a contact telephone number or the Building Regs. plan number.\n\n";
+	        }
+	        if (fObj.elements["address"].value == "" || fObj.elements["address"].value == "Type site address") {
+	            err += "Please enter the site address.\n\n";
+	        }
+	        if (fObj.elements["email"].value == "" || fObj.elements["email"].value == "Type contact email address") {
+	            err += "Please enter a contact email address.\n\n";
+	        }
+
+	        // the Function remChars is defined in /src/scripts.js (which is referenced in header.asp)
+	        // use this Function to remove all illegal/unwanted characters in all TEXT and TEXTAREA fields
+	        // remChars(fObj);
+	        if (err != "") {
+	            alert(err);
+	            return false;
+	        }
+	        return true;
+	    }
+
+	    function checkParaLength(fobj, dRef, maxChrLength) {
+	        if (fobj.value.length > maxChrLength) {
+	            dispChrsLeft = fobj.value.length - maxChrLength;
+	            var dispChrs = document.getElementById("" + dRef);
+	            dispChrs.innerText = "Characters: " + fobj.value.length + "  Warning: " + dispChrsLeft + " character(s) too many.  Please reduce before submitting this form.";
+	        } else {
+	            dispChrsLeft = maxChrLength - fobj.value.length;
+	            var dispChrs = document.getElementById("" + dRef);
+	            dispChrs.innerText = "Characters: " + fobj.value.length + " Characters Remaining: " + dispChrsLeft;
+	        }
+	        return true;
+	    }
+	</script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- Site Header -->
+	<h1 style="display:none"></h1><h2 style="display:none"></h2><h3 style="display:none"></h3><h4 style="display:none"></h4>
+<!-- Site Header -->
+
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-56248640-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = '//uk1.siteimprove.com/js/siteanalyze_455358.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+/*]]>*/
+</script>
+
+
+<div id="banner"><a href="/"><img src="/docs/housing/new/img/ph_banner.jpg" alt="Stroud District Council - Return to Home Page" width="1200" height="91"/></a></div>
+<div class="row">
+	<form action="http://www.stroud.gov.uk/docs/search_results.asp" id="cse-search-box">
+		<input type="hidden" name="cx" value="001833584606955381224:dry_nslbzry" />
+		<input type="hidden" name="cof" value="FORID:9" />
+		<span class="left">&nbsp;&nbsp;7th February 2016</span>
+	
+					<span class="right"><a href="/" title="Return to Home Page">Home</a> |
+			<a href="/machinery/reportit.asp" title="Report it">Report it</a> |
+            <a href="/docs/payment_enquiries.asp" title="Pay it">Pay it</a> |
+            	<a href="/docs/online_services.asp" title="services online">Do it online</a> |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="/docs/az_services.asp" title="View the A to Z">A to Z</a> |
+			<a href="/PLO/alerts_consultation.aspx" title="Sign up or login to email alerts">Email alerts</a> |
+			<a href="/machinery/sitemap.asp" title="View the Stroud District Council Site Map" accesskey="3">Site map</a>&nbsp;&nbsp;
+			<label for="q1">Search&nbsp;Site:</label>&nbsp;<input style="border: 0px" type="text" id="q1" size="30" name="q" /> &nbsp;<input style="vertical-align: text-bottom" type="image" src="/template_images/go.jpg" name="submit" id="submit" value="Search Site" alt="Go"/>&nbsp;&nbsp;
+			<input type="hidden" name="+%2Dfiletype%3Apdf" />
+		</span>
+	</form>
+</div>
+
+
+	<!-- Left Side Column -->
+	<div id="left-sidebar"> <!--<img src="img/ph_left_sb.jpg" alt="" />-->
+		<div id="popular-q2" class="br">
+	<h2 class="menu-header">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menu<span class="open"></span></h2>
+	<div class="toggle-box">
+		<ul class="q-list">
+			<li><a href="/docs/council_tax/benefits.asp">Benefits</a></li>
+			<li><a href="/docs/business.asp">Business support</a></li>
+			<li><a href="/docs/business/business_rates.asp">Business rates</a></li>
+            <li><a href="/docs/community.asp">Community and living</a></li>
+<li><a href="/docs/housing/housing_main.asp">Council housing</a></li>
+			<li><a href="/docs/council_tax/council_tax.asp">Council tax</a></li>
+			<li><a href="/democracy/council_democracy_cmis.asp">Democracy</a></li>
+<li><a href="/docs/education.asp">Education</a></li>
+			<li><a href="/docs/democ/elections_voting.asp">Elections</a></li>
+			<li><a href="/docs/environment/environment.asp">Environment</a></li>
+			<li><a href="/docs/forms.asp">Forms</a></li>
+			<li><a href="/docs/health.asp">Health</a></li>
+			<li><a href="/docs/housing/housing_index.asp">Housing</a></li>
+			<li><a href="/docs/vacancies.asp">Jobs</a></li>
+			<li><a href="/docs/leisure.asp">Leisure</a></li>
+			<li><a href="/docs/licensing/licensing_home.asp">Licensing</a></li>
+			<li><a href="/opendata/opendata.asp">Open data</a></li>
+            <li><a href="/docs/transport.asp">Parking and travel</a></li>
+			<li><a href="/docs/planning/planning_home.asp">Planning</a></li>
+			<li><a href="/docs/environment/waste.asp">Recycling and waste</a></li>
+            <li><a href="/docs/bus_regen.asp">Regeneration</a></li>
+         
+		</ul>
+	</div>
+</div>
+	</div>
+	<!-- Middle and Right Column -->
+	<div id="content">
+		<!-- Right Column -->
+		<div id="right-sidebar" class="br shadow-2">
+			<div id="contact-details" class="br">
+				<h2>Contact details<span class="open"></span></h2>
+				<div class="toggle-box">
+					<ul class="contact-info">
+						<li class="phone">01453 754 871</li>
+						<li class="mail"><a href="mailto:building.control@stroud.gov.uk">Email</a></li>
+						<li class="address"><span>Postal Address</span>
+							<div class="reveal-address">
+								<p>Building Control</p>
+								<p>Stroud District Council</p>
+								   <p>Ebley Mill</p>
+                                 <p>Ebley Wharf</p>
+                                 <p>Stroud</p>
+                                 <p>GL5 4UB</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+<!--
+		<div id="popular-q" class="br">
+				<h2>Apply for it<span class="open"></span></h2>
+				<div class="toggle-box">
+					<ul class="q-list">
+			            <li><a href="building_control.asp#s=sectioncontent2&amp;p=submitbcapp">Application Forms and Charges</a></li>
+		                <li><a href="building_control.asp#s=sectioncontent6&amp;p=requestform">Building Inspection Request Form</a></li>
+                    </ul>
+</div>
+		  </div>-->
+
+		<!--<div id="do-it-online" class="br">
+				<h2>Building control news<span class="open"></span></h2>
+				<div class="toggle-box">
+					<ul class="q-list">
+                  
+                        <li><a href="building_control.asp#s=sectioncontent5&p=links,bcnews"></li>
+					
+
+					</ul>
+</div>
+		  </div>-->
+
+          <div id="do-it-online" class="br">
+				<h2>Guide to extending your home<span class="open"></span></h2>
+				<div class="toggle-box">
+			<ul class="q-list">
+
+                <li> <a href="/docs/planning/building_control.asp#s=sectioncontent5&p=bcnews"><img src="/img/booklet_extending_your_home.jpg" 
+alt="Extending your home booklet" border="0"  /></a></li> 
+
+</ul>
+</div>
+		  </div>
+
+</div>
+
+		<!-- Middle Column -->
+		<div id="middle-wrap">
+			<div id="main" class="br shadow-2">
+				<p id="breadcrumb">You are here: <a href="/">Home page</a> &#187; <a href="/docs/planning/planning_home.asp">Planning and Buildings</a>  &#187; Building Control</p>
+				<!-- Middle Content Start -->
+				<div id="subheading" class="cf"><!--<img class="ss" src="/img/building_control.jpg" alt="Building Control" />-->
+				<h1 class="page-title">Building Control </h1>
+
+				 <!-- <h4 class="subheader">Building Control administers Building Regulations and maintains standards of health, safety and energy conservation in most building schemes, including new buildings, alterations and extensions.</h4>-->
+<!--<h2 class="subheader">Welcome to our building control pages.</h2>-->
+<h4 class="subheader">
+	Building regulations are minimum standards of health and safety that apply to most types of buildings and structures across England and Wales. </h4>
+<!--<p>The Building Control team work to ensure the delivery of safe, healthy, accessible and sustainable buildings for current and future generations across the Stroud District. </p>
+                    -->
+                  &nbsp;<h2>Gloucestershire Building Control Partnership</h2>
+                     
+                     <p>A partnership arrangement exists between Stroud District Council and Gloucester City Council to deliver building control services. We are committed to maintaining the highest standards in the design, approval and construction of buildings.</p>
+                    <p>Building on the established reputation of accountable Local Authority provision we provide a contemporary, progressive and tailored service to business and householders through partnership arrangement across Gloucester and Stroud.</p>
+                     
+                                          <p>  <a href="http://www.gbcpartners.co.uk">  <img src="/img/gbcp.jpg" alt="gbcp" class="artistic_left" /></a>
+</p>  
+
+                     <p>For further information on the services we provide and details on how to submit an application, please visit the Gloucestershire Building Control Partnership website, by clicking on our partnership logo.</p>
+                  <br />
+          
+<!--p>Our Building Control Service has the following benefits:</p>
+<p>Providing pre-application advice on all building projects,  providing a choice of application methods â full plans or building notice, carry out a programme of targeted site inspections to assess building work on site, the option to submit applications by email and pay by credit card, view the progress of your building control application on-line, correspond by letter or email if preferred.</p>
+<p>In addition to the above building regulation services, we ensure: Dangerous and dilapidated buildings are made safe; and        the demolition of buildings and structures is carried out as safely as possible. </p>
+-->
+
+</div>
+				<div id="secions-accordion">
+					<div id="cont-box">
+<h2 class="choose-title">Choose a section</h2>
+						<div id="section">
+							<table class="section-table" summary="This table contains links to different sections">
+								<caption class="section-caption">Choose a section</caption>
+																							 <tr class="section-row">
+																 <td class="section-left"><a href="/docs/planning/building_control.asp#s=sectioncontent6&p=requestform" class="inner-wrap"> <span class="pic-box"> <img src="/img/search_th.jpg" alt="Building Control Inspections" width="89" height="79" /> </span> <span class="info-box"> <span class="section-header">Request a Building Control Inspection <span class="section-descr"></span> </span> </a></td>
+									<td class="section-right"><a href="/PLO/BC_apps.aspx" class="inner-wrap"> <span class="pic-box"> <img src="/img/inspec_th.jpg" alt="Building control register" width="89" height="79" /> </span> <span class="info-box"> <span class="section-header">Building Control Register</span><span class="section-descr">Find out the status of an application and contact details online.</span></span></a></td>
+								</tr>
+								
+							</table>
+						</div>
+						<!--<div id="sectioncontent1" class="sectionhide">
+
+							<h3 class="closed" id="reg">Building Control Register</h3>
+							<div class="reveal-text-box">
+
+ </ul>
+
+
+
+							</div>
+
+
+
+			</div>-->
+
+<div id="sectioncontent3" class="sectionhide">
+							<h2>Guidance and Information</h2>
+
+
+
+
+<h3 class="closed" id="ex">Exemptions</h3>
+							<div class="reveal-text-box">
+
+<p>Some types of Buildings or Work are exempt and so you do not need to notify us and we do not need to inspect them. To be exempt, each type needs to meet certain rules, given below. </p>
+
+<h4>Porches </h4>
+<p>By definition a porch is a space which covers either a front or back door. If the space contains anything else,(e.g. a WC), it cannot be exempt. If the original front/rear door is removed, then the new space is considered an extension and cannot be exempt. To be exempt porches must also be built at ground level and have a floor area of less than 30mÂ² </p>
+<h4>Conservatories </h4>
+<p>The regulations give guidance to define a conservatory. At least 75% of the roof and at least 50% of the walls should be made of translucent materials (e.g. glass or polycarbonate sheets). Additionally, it must be separated form the rest of the dwelling by windows, doors or walls which are as thermally efficient as the rest of the external parts of the dwelling. Thus, if the existing door(s) are removed then the new space is considered an extension and cannot be exempt. If you propose having a solid roof, then there are separate rules for Sun Rooms and you should contact us to discuss. Where fixed heating is installed it should be capable of being separately controlled, so that when not in use during winter periods, it can be turned off to avoid unnecessarily wasting energy. To be exempt conservatories must also be built at ground level and have a floor area of less than 30mÂ².</p>
+<h4>Covered Yards and Covered Ways </h4>
+<p>To be exempt covered ways/yards must also be built at ground level and have a floor area of less than 30mÂ² </p>
+<h4>Carports </h4>
+<p>To be exempt carports must be built at ground level and have a floor area of less than 30mÂ². They must also be open to the air, on at least two sides, for fire reasons. </p>
+<h4>Small Detached Buildings</h4>
+<p>Less than 15mÂ² floor area: </p>
+<p>These are exempt provided they contain no sleeping accommodation and are detached. </p>
+<p>Between 15mÂ² and 30mÂ² floor area: </p>
+<p>These are exempt provided they contain no sleeping accommodation and are detached. They must also be built 1m or&nbsp;more from the relevant boundary. If you wish to build closer than this, then the walls and roof must be of materials of limited combustibility. &nbsp; </p>
+<p>Where garages are attached to a dwelling they are not exempt. Attached means when it's directly fixed to the dwelling but it's not attached if it's via a section of garden wall. </p>
+<p>View the Planning Portals interactive house to see if you need to apply.</p>
+<ul>
+	<li><a class = "normal" href="http://www.planningportal.gov.uk/house">interactive house guide </a></li>
+</ul>
+			</div>
+
+							<h3 class="closed" id="choose">Choosing Your Builder</h3>
+			<div class="reveal-text-box">
+				<p>If you are planning any work to your property and need to employ a builder you should consider your choice very carefully. You may be about to make one of the largest investments of your life and you should thoroughly check out any builders before employing their services. </p>
+				<p><strong>Here is a list of things you might think about doing:</strong></p>
+				<ul>
+					<li>Consider employing a professional to advise you. Typically this could be an architect, architectural technician, surveyor or engineer. </li>
+					<li>Talk to your professional about the work s/he will be responsible for. (It might be that s/he will only prepare plans for planning and building control approval, or will s/he prepare full working drawings showing exactly how the project is to be built with a detailed specification the builder can follow? Will s/he supervise the work on site on your behalf once work commences?)</li>
+				<li>Whether you employ a professional or not, do ensure that you have obtained the relevant statutory approvals (telephone 01453 754871 if in doubt) and inform Building Control once you intend to start work. Don't pay your builder until a completion inspection has been carried out by one of the Stroud District Council's Building Control Surveyors. (The Building Control Surveyor may identify defects during the completion inspection and if your builder has moved on to another project it may be difficult for him to return to your job.)</li>
+				<li>Always obtain at least three quotations and compare them to ensure that each builder is pricing for the same amount of work. (This is where a full and detailed specification is very useful.)</li>
+				<li>Don't automatically pick the cheapest quote<em>.</em> (Cash in hand prices to avoid VAT are associated with a history of related problems with quality of work and delays). </li>
+				<li>Look for a builder who is part of the Government's 'Trust Mark' Scheme. </li>
+				<li>Be wary if asked for large deposits or payments before work is carried out. </li>
+				<li>Consider taking out a warranty for a new build, such as the LABC New Home Warranty, NHBC Warranty etc. </li>
+				<li>Use a simple form of contact to agree joint responsibilities, such as the The Joint Contracts Tribunal (JCT) is an independent body and has produced the Building Contract to make life easier for you and your builder. </li>
+				</ul>
+				<p><strong>Ask the builders questions: </strong></p>
+
+				<ul>
+								<li>Where have they worked before? They may have photographs of other projects. </li>
+								<li>Are they happy for you to see their work and ask questions of previous customers?</li>
+								<li>What are they good at? (Their particular expertise) </li>
+								<li>Are they insured? (Don't forget to inform your own insurance company about the work) </li>
+								<li>Will they sub contract parts of the work to other builders/tradesmen?</li>
+								<li>How do they want to be paid: on completion or in stages?</li>
+								<li>Can they supply references from satisfied clients?</li>
+								<li>Are they happy to accept a retention clause? (This is where you hold back say 5% of the cost for six months following completion to assure yourself that work such as remedying warped doors or shrinkage cracks can be financed. The builder would be paid the 5% once he has returned to remedy any defects)</li>
+					<li> Will the builder give you a start and completion date and will they agree to a reduction in cost if they don't complete on time. </li>
+				</ul>
+
+			</div>
+
+<h3 class="closed" id="comp">Competent Persons</h3>
+			<div class="reveal-text-box">
+				<p>Competent Persons Schemes were introduced by the Government to allow individuals and enterprises to self-certify that their work complies with the building regulations as an alternative to submitting a building notice or using an approved inspector. The principles of self-certification are based on giving people who are competent in their field the ability to self-certify that their work complies with the building regulations without the need to submit a building notice and thus incurring local authority inspections or charges.</p>
+				<p><strong>Types of work include:  </strong></p>
+				<ul>
+					<li>Replacement windows and doors</li>
+				<li> New and replacement boilers, gas or oil</li>
+				<li>Solid fuel burning appliances</li>
+				<li>New and replacement electrical work in dwellings</li>
+				<li>Micro generation installations, such as PV panels                </li>
+				</ul>
+			<p>Work carried out by installers under a competent person scheme is required to notify the local authority within 30 days of the completion of the work.</p>
+			<p>A list of self certification schemes is available in Schedule 3: Self-certification schemes and Exemptions from Requirements to Give Building Notice or Deposit Full Plans of the Building Regulations 2010 (as amended). The list can be viewed here at <a href="https://www.gov.uk/browse/housing/planning-permission">www.gov.uk/browse/housing/planning-permission</a></p>
+			</div>
+
+<h3 class="closed" id="pwall">Party Wall Act</h3>
+			<div class="reveal-text-box">
+				<p>The Party Wall Act 1996 (âthe Act') came into force on the 1st July 1997 throughout England and Wales. If you intend to carry out work which involves one of the following categories: </p>
+
+					<ul>
+						<li>Work on an existing wall or structure shared with another property (section 2 of the Act) </li>
+					<li>Building a freestanding wall or a wall of a building up to or astride the boundary with the neighbouring building (section 1 of the Act); or </li>
+				<li> Excavating near or adjacent to a neighbouring building (section 6 of the Act) You must find out whether that work falls within the Act. If it does, you must notify all affected neighbours in writing informing them of the nature of works and how you intend to ensure their safety during construction works. </li>
+				</ul>
+					<p>The Act is separate from Planning and Building Regulations (not administered by Local Authorities); so you must remember that reaching agreement with your neighbour under the Act does not remove the possible need for planning permission or building regulations approval. </p>
+					<p>For further details and a copy of the brochure, please view: <a href="https://www.gov.uk/browse/housing/planning-permission">https://www.gov.uk/browse/housing/planning-permission</a> - PDF, 3000KB </p>
+
+			</div>
+
+            <h3 class="closed" id="energy">Energy Efficiency</h3>
+			<div class="reveal-text-box">
+            <p>If you're making improvements to your home, why not think about making energy efficiency improvements at the same time.  Often it works out cheaper and is a lot less disruptive to do this when carrying out other works, plus you'll save money on your energy bills too.  For advice and information on any financial help towards energy efficiency improvements visit our 
+                <a href="/docs/environment/energy.asp">energy efficiency pages</a>. </p>
+            </div>
+
+
+
+<h3 class="closed" id="links">Useful Links</h3>
+			<div class="reveal-text-box">
+
+							<ul>
+							<li><strong> E-book guide to extending your home</strong> - <a class="normal" href="http://www.extendingyourhome.com/stroud">www.extendingyourhome.com/stroud</a></li>
+                                <li><strong>Energy efficiency pages</strong> - <a class="normal" href="http://www.stroud.gov.uk/energy">
+                                    www.stroud.gov.uk/energy</a></li>
+							<li><strong>The Approved Documents link</strong> - <a class="normal" href="http://www.planningportal.gov.uk/buildingregulations/approveddocuments/">www.planningportal.gov.uk/buildingregulations/approveddocuments</a></li>
+							<!--<li><strong>Association of Building Engineers</strong> - <a class="normal" href="http://www.abe.org.uk/">www.abe.org.uk</a></li>-->
+							<li><strong>The Building Act 1984</strong> - <a class="normal"  href="http://www.legislation.gov.uk/ukpga/1984/55/contents">www.legislation.gov.uk/ukpga/1984/55/contents </a></li>
+							<li><strong>The Building Regulations 2010</strong> - <a class="normal" href="http://www.legislation.gov.uk/uksi/2010/2214/contents/made">www.legislation.gov.uk/uksi/2010/2214/contents/made </a></li>
+							<li><strong>The Building Control home page on planning portal</strong> - <a class="normal" href="http://www.planningportal.gov.uk/buildingregulations/">www.planningportal.gov.uk/buildingregulations</a></li>
+							<li><strong>The Carbon Trust</strong> - <a class="normal" href="http://www.carbontrust.com">www.carbontrust.co.uk/Pages/Default.aspx </a></li>
+							<li><strong>Chartered institute of Building</strong> - <a class="normal" href="http://www.ciob.org.uk/">www.ciob.org.uk</a></li>
+							<li><strong>Competent persons schemes and information</strong> - <a class="normal" href="https://www.gov.uk/browse/housing/planning-permission">www.gov.uk/browse/housing/planning-permission</a></li>
+							<li><strong>Do I need to submit an application? interactive house</strong> - <a class=" normal" href="http://www.planningportal.gov.uk/permission/">www.planningportal.gov.uk/permission/ </a></li>
+							<li><strong>Energy Saving Trust</strong> - <a class="normal" href="http://www.energysavingtrust.org.uk">www.energysavingtrust.org.uk</a></li>
+							<li><strong>LABC</strong> - <a class="normal" href="http://www.labc.uk.com/">www.labc.uk.com</a></li>
+							<li><strong>Party Wall Act 1996 explanatory booklet</strong> - <a class="normal" href="https://www.gov.uk/browse/housing/planning-permission">www.gov.uk/browse/housing/planning-permission</a></li>
+							<li><strong>Royal Institute of Chartered Surveyors</strong> - <a class="normal" href="http://www.rics.org/">www.rics.org</a></li>
+							<li><strong>Submit-a-Plan</strong> - <a class="normal" href="http://www.submitaplan.com">www.submitaplan.com</a></li>
+							 <li><strong>Stroud Access Group</strong> - <a class="normal" href="http://community.stroud.gov.uk/default.asp?pid=23">community.stroud.gov.uk/default.asp?pid=23 </a></li>
+							</ul>
+</div>
+
+
+
+
+</div>
+
+<div id="sectioncontent4" class="sectionhide">
+
+<h2>Dangerous Structures and Demolition</h2>
+
+							<h3 class="closed" id="danger">Dangerous structure</h3>
+			<div class="reveal-text-box">
+				<p>Where a building or structure is in such a condition that it may place people in danger; the Council have legal powers to investigate, and to require that it be made safe. Typical examples would be walls which are leaning or unstable and loose roof tiles. </p>
+			<p>In order to be considered dangerous, a building or structure must actually pose a threat of causing harm to a person. Buildings which are dilapidated would not necessarily therefore be considered dangerous, and minor items (damaged timber fencing panels for example) are also unlikely to qualify. </p>
+					<p>Where a dangerous building or structure is investigated, the action that is required will usually take one of two forms: </p>
+					<ul>
+						<li>If the building or structure is considered so dangerous that we consider immediate action necessary, after serving the appropriate notice, we will employ contractors to make it safe straightaway. In many cases this may take the form of fencing-off the affected area to allow remedial work to be carried out later by the owner. </li>
+					<li>Where the building is considered dangerous â but not immediately so, we will normally try to contact the owner and require that the work be made safe within a reasonable period of time. If the owner fails to do so, we can apply to a Magistrate's Court for an order allowing us to do so instead. </li>
+					</ul>
+					<p>Note that in both cases we can only require the minimum amount of work necessary to make the building or structure safe, and we will attempt to recover any costs we incur in doing so from the building owner.</p>
+					<h4>Investigating reported dangerous structures </h4>
+					<p>Our aims are to: </p>
+					<ul>
+						<li>Investigate reported dangerous structures within 24 hours (2 hours where reported by the emergency services) </li>
+					<li>Ensure buildings and structures are made safe and their condition does not put at risk or cause injury to members of the public </li>
+					</ul>
+					<h4>Reporting a dangerous structure </h4>
+					<p>Telephone 01453 754871 during office hours<br />
+						Out of hours emergencies must be reported through message link: telephone 01453 222 104  </p>
+			</div>
+
+<h3 class="closed" id="demo">Demolition</h3>
+			<div class="reveal-text-box">
+				<p>The safe demolition of all types of buildings is the responsibility of building control who will make certain that proper precautions are taken to ensure the safety of the public around the immediate vicinity of the demolition site. </p>
+
+<p>A person intending to demolish a building (or part) must give notice to building control and await receipt of the Council's âcounter notice' before starting work. </p>
+								<h4>&nbsp;How to apply for consent </h4>
+								<ul>
+									<li>Complete and submit the notice of demolition </li>
+									<li>Provide us with a location plan. Please indicate the building. </li>
+									<li>Statutory undertakers should be notified in order that they may arrange for their services to be properly sealed. </li>
+								</ul>
+								<h4>Commencing demolition work </h4>
+								<p>Demolition works may only commence after receipt of the Council's counter notice or on expiry of 6 weeks from the date notice was given to the Council. </p>
+								<p>When notified of commencement, the surveyor can carry out inspections during the course of demolition and on completion to ensure the conditions of demolition are met. This will be dependant on the complexity of demolition and any works that may need to be carried out to make the site safe. </p>
+								<h4>Demolition counter notice requirements </h4>
+								<p>Building control will carry out a site inspection and will serve a counter notice in accordance with Sections 81 and 82 of the Building Act 1984. </p>
+								<p>The Council's counter notice will specify requirements that the owner or agent must adhere to during the demolition process. These requirements relate to: </p>
+								<ul>
+									<li>Shoring and weatherproofing adjacent buildings </li>
+									<li>Repairing damage to adjacent buildings </li>
+									<li>Removing rubbish from site </li>
+									<li>Disconnecting, sealing or removing drains and sewers on site </li>
+									<li>Making good disturbed ground </li>
+									<li>Making arrangements for statutory undertakers for the disconnection of services to the building </li>
+									<li>Arrangements for burning of material on site </li>
+									<li>Other matters such as securing the site against unauthorised access, or ensuring compliance with British Standard 6187 Code of Practice on Demolition. </li>
+								</ul>
+								<p>The demolition contractor also has an obligation to advise all service providers and neighbours. If you intend to carry out a demolition or you need information or advice regarding demolition, please contact our Building Control team. </p>
+								<p>Planning consent may also be required prior to demolishing a building. For further information please contact the Planning Technicians on 01453 754442 </p>
+								<ul>
+									<li><a class="normal" href="/info/building_control/Demolition_Notice_Application.doc">Notice of Intended Demolition Application Form - Word, 115KB</a></li>
+								<li><a class="normal" href="/info/building_control/Demolition_Notice.pdf">Notice of Intended Demolition Application Form - PDF, 85KB</a></li>
+								</ul>
+			</div>
+
+
+</div>
+
+
+                        <div id="sectioncontent8" class="sectionhide">
+
+
+
+							<h3 class="closed" id="gbcp">Gloucestershire Building Control Partnership (GBCP) </h3>
+			<div class="reveal-text-box">
+                                  <img src="/img/gbcp_web.jpg" alt="New website GBCP" border="0" class="artistic_right"/></a>
+                <p><strong>
+                    <br />
+                    Gloucestershire Building Control Partnership (GBCP) </strong>has been established to provide Local Authority Building Control services on behalf of Stroud District Council and Gloucester City Council. The aim of the partnership is to ensure that customers expectations are exceeded on a daily basis by creating a robust and sustainable service, building on the established reputation of accountable Local Authority provision. The Partnership is planned to commence on the 1st July 2015, hosted by Stroud District Council.</p>
+                
+            <p>GBCPâs dedicated team of building control professionals makes us uniquely placed to provide clients with clear expert guidance on a range of construction projects no matter how big or small. </p>
+                  <ul>
+                     <li><a class="normal" href="http://www.gbcpartners.co.uk/">www.gbcpartners.co.uk</a></li>
+                       </ul>
+            </div></div>
+
+
+<div id="sectioncontent5" class="sectionhide">
+
+<h2>Service Benefits</h2>
+
+							<h3 class="closed" id="aims">Our Aims</h3>
+			<div class="reveal-text-box">
+				<p>Our Building Control Service has the following benefits: </p>
+
+						<ul>
+							<li>Providing pre-application advice on all building projects </li>
+						<li>Providing a choice of application methods â full plans or building notice </li>
+						<li>Carry out a programme of targeted site inspections to assess building work on site </li>
+						<li>The option to submit applications by email and pay by credit card </li>
+						<li>View the progress of your building control application on-line </li>
+						<li>Correspond by letter or email if preferred</li>
+						</ul>
+
+						<p>In addition to the above building regulation services, we ensure: </p>
+						<ul>
+							<li>Dangerous and dilapidated buildings are made safe</li>
+						<li>The Demolition of buildings and structures is carried out as safely as possible </li>
+						</ul>
+			<p>The following information should assist you if you are considering carrying out building work, if you require further information please <a href="mailto:building.control@stroud.gov.uk">contact us</a>.
+
+</p>
+			</div>
+
+
+<h3 class="closed" id="preapp">Pre-Application Advice</h3>
+			<div class="reveal-text-box">
+				<p>We welcome preliminary discussions with customers about building and development proposals by email or at face to face meetings. </p>
+				<p>We are happy to participate and comment throughout the early stages of design. We will undertake any necessary consultations with other in-house services or external organisations in order to provide comprehensive co-ordinated design advice. </p>
+				<p>Relevant issues will be highlighted in order for both strategic and detailed matters to be addressed at the earliest possible stage. </p>
+			</div>
+
+<h3 class="closed" id="bcnews">Building Control News</h3>
+			<div class="reveal-text-box">
+
+          <h4>Revised Building Regulations</h4> 
+          <p>On the 6th April 2014, revised Approved Documents L1A and L2B came into force. The changes will require new buildings to achieve improved levels of energy performance as the next step on the road map toward zero carbon. The changes require new build homes to be 6% more energy efficient and non-domestic buildings to be 9% more energy efficient than those built under the 2010 editions of L1A and L2A, this is an âaggregateâ improvement calculated across the new build mix. The 
+              <a href="/info/building_control/part_L.pdf">attached PDF</a> provides some guidance on the changes as well as useful web links. </p>
+          
+             
+<div class="highlight-box">   
+<h2>Guide to extending your home</h2>      
+   <a href="http://www.extendingyourhome.com/stroud"><img src="/img/extending_your_home.jpg" alt="Extensions" width="161" height="228" border="0" class="artistic_left"/></a>   
+  <br/> <h4> Our Guide to Extending Your Home will help you as a homeowner to plan your project from the outset.</h4>
+              <p>It will guide you through the Building Regulation process, by providing clear and specific advice on a range of typical domestic building projects. It is hoped that when you have read the guide you will have a better understanding of what is involved in a domestic building project. The guide also aims to highlight issues which will affect compliance with the Building Regulations.</p>
+              <p><strong>To download</strong></p>
+              <ul>
+                <li>- <a href="http://extendingyourhome.com/stroud">View the e-book</a> - Link (In order to view you need the current version of Adobe Flash Player)</li>
+              </ul>
+              <a href="http://extendingyourhome.com/stroud"></a></div> 
+<h4>Revised Building Regulations </h4>
+              <p>On the 6 th April 2013, revised Approved Documents came into force. The new Approved Documents are Part K, Part M and Part P. Regulation 7 will also be updated on the 1 st July 2013. The attached PDF provides some guidance on the changes as well as useful web links. </p>
+              <ul>
+                <li><a class="normal" href="/info/planning/Revised_Building_Regulations_2013.pdf">Revised building regulations 2013</a> - PDF </li>
+              </ul>
+             
+
+<h4>Private Sewers Transfer </h4>
+<p>Following the implementation of the Private Sewers Transfer Regulations 2011 on the 1 st October 2011, you may require a building over agreement from your sewerage undertaker when erecting a building or extension that is over or within three metres of a sewer. A sewer under these regulations will typically carry waste water from more than one property and communicates to a public sewer. Further information is available from DEFRA and Water UK at: <a href="http://www.defra.gov.uk/environment/quality/water/sewage/sewers/">www.defra.gov.uk/environment/quality/water/sewage/sewers </a> and <a href="http://www.water.org.uk/publications/reports/guide-transfer-private-sewers-regulations-2011">www.water.org.uk/home/policy/private-sewers-transfer</a>. </p>
+			</div>
+
+
+
+</div>
+
+
+<div id="sectioncontent6" class="sectionhide">
+
+<h2>Building Control Inspections</h2>
+
+<!--<h3 class="closed" id="inspec">Building Control Inspections</h3>
+			<div class="reveal-text-box">
+				<p>The Building Regulations stipulates key stages in any building project where the Council should be notified. These are called statutory notifications. In addition we request notification at floor level and roof structure </p>
+
+				<h4>Statutory Notifications </h4>
+				<p>Commencement of work - at least two clear working day's notice </p>
+				<ul>
+					<li>Foundation excavation - at least one clear working day's notice </li>
+					<li>Foundation concrete - at least one clear working day's notice </li>
+				<li>Oversite preparation, - before laying concrete or floor units - at least one clear working day's notice </li>
+				<li>Damp proof course - at least one clear working day's notice </li>
+				<li>Foul and surface water drains before covering - at least one clear working day's notice </li>
+				<li>Drains after covering notice - within five days </li>
+				<li>Occupation - notice five days before occupation </li>
+				<li>Completion of work - notice within five days </li>
+				<li>Floor structure (non statutory) </li>
+				<li>Roof structure (non statutory) </li>
+				</ul>
+				<p>We will inform you when we acknowledge receipt of your application of the stages we wish to be notified. Where notification is received before 10:30a.m (weekdays) and an inspection is required it is our aim to carry out a site inspection on the same day the request has been made. We will schedule inspections and inform you of an approximate time by 11:30a.m </p>
+						<p>Notifications can be given by email to <a href="mailto:building.control@stroud.gov.uk">building.control@stroud.gov.uk</a> by telephone to 01453 754871 or in writing to the Council Offices. </p>
+						<h4>Inspection Records </h4>
+						<p>If you would like online access to view the progress of your application by Building Control during the course of the works, please write or email the office to request a PIN number. On larger sites we can provide a site inspection log book, where all site inspections can be recorded. </p>
+						<h4>Completion Inspection: </h4>
+						<p>Completion inspections are booked on the next available day. You will be informed of the time of the inspection on the day of the appointment. </p>
+						<h4>Completion certificates</h4>
+						<p>When your work is finished and a satisfactory final inspection has been carried out we will issue you with a completion certificate. These certificates are valuable evidence to show that the work has been checked for compliance with the Building Regulations. A completion certificate will be needed when selling your property or when raising finance so make sure you ask for a final inspection and get a completion certificate. </p>
+						<p>To ensure prompt issuing of the completion certificate the following tests and/or commissioning certificates may be requested by the Building Control Surveyor depending on the type of building and the extent of the work being undertaken: </p>
+						<ul>
+							<li>Fire alarm and detection system </li>
+						<li>Emergency lighting </li>
+						<li>Air leakage </li>
+						<li>Automatic smoke ventilation </li>
+						<li> Sound insulation </li>
+						<li>Energy Performance Certificate </li>
+						</ul>
+			</div>
+    -->
+<h3 class="closed" id="requestform">Building Inspection Request Form</h3>
+			<div class="reveal-text-box">
+
+<br/>
+<div class="highlight-box">
+<h4>Building Inspection Request Form</h4>
+
+	<p class="intro">All fields need to be completed in order to submit the form.</p>
+	<p>For same day inspections, we need to receive your notification <strong>Before 10.00am</strong>.</p>
+
+	<p>Items with an * are required fields.</p>
+
+	<form action="building_control.asp?submit#s=sectioncontent6&amp;p=requestform" method="post" onsubmit="return verify(this);">
+	<input type="hidden" name="doit" value="dispatch" />
+
+<table cellpadding="5" cellspacing="1" summary="Building Inspection Request Form">
+		<tr>
+			<td><label for="name">* Contact Name:</label></td>
+			<td><input type="text" id="name" name="name" class="form_standard" maxlength="100" size="50" value="Type contact name" onfocus="clearField(this);" /></td>
+		</tr>
+		<tr>
+			<td class="appFormQuestion"><label for="phone1">* Contact Telephone:</label></td>
+			<td ><input type="text" id="phone1" name="phone1" class="form_standard" maxlength="20" size="25" value="Type contact telephone" onfocus="clearField(this);"/></td>
+		</tr>
+		<tr>
+
+			<td class="appFormQuestion"><label for="email">* Contact Email address:</label></td>
+			<td ><input type="text" id="email" name="email" class="form_standard" maxlength="50" size="50" value="Type contact email address" onfocus="clearField(this);"/></td>
+		</tr>
+		<tr>
+			<td class="appFormQuestion"><label for="plan_no1">Building Regs. Plan Number</label><br /></td>
+			<td><label for="plan_no1">:</label><input type="text" id="plan_no1" name="plan_no1" class="form_small" maxlength="4" size="4" value="0000" onfocus="clearField(this);"/> <label for="plan_no2">/</label> <input type="text" id="plan_no2" name="plan_no2" class="form_small" maxlength="4" size="4" value="0000" onfocus="clearField(this);"/>
+			<br />(E.g. 2005/1234)</td>
+		</tr>
+		<tr>
+			<td class="appFormQuestion" style="vertical-align:top"><label for="address">* Site Address:</label></td>
+			<td ><textarea name="address" id="address" class="form_standard" cols="50" rows="3" onfocus="clearField(this);">Type site address</textarea></td>
+		</tr>
+		<tr>
+			<td class="appFormQuestion"><label for="type_insp">* Type of Inspection:</label></td>
+			<td><select id="type_insp" name="type_insp">
+				
+				<option value="Commencement of work" selected="selected">Commencement of work</option>
+				<option value="Foundation Excavation" >Foundation Excavation</option>
+				<option value="Foundation Concrete" >Foundation Concrete</option>
+				<option value="Oversite Preparation (Before concrete)" >Oversite Preparation (Before concrete)</option>
+				<option value="Damp Proof Course" >Damp Proof Course</option>
+				<option value="Foul and Surface Water Drains before covering" >Foul and Surface Water Drains before covering</option>
+				<option value="Drains after covering" >Drains after covering</option>
+				<option value="Floor Level" >Floor Level</option>
+				<option value="Roof Carcase (Pre-plasterboard)" >Roof Carcase (Pre-plasterboard)</option>
+				<option value="Before Occupation" >Before Occupation</option>
+				<option value="Completion of Work" >Completion of Work</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td class="appFormQuestion"><label for="inspection_date">Date when inspection is required:</label></td>
+			<td><input type="text" id="inspection_date" name="inspection_date" maxlength="10" size="10" onfocus="clearField(this);" value="dd/mm/yyyy" /></td>
+		</tr>
+		<tr>
+			<td colspan="2"><p><strong>Please note:</strong> Where a completion inspection is requested, we cannot guarantee that we will carry out the inspection on the day that has been requested.</p></td>
+		</tr>
+		<tr>
+			<td>   <div id="submit-button">
+								<input name="submit" type="submit" value="Submit"/>
+							</div></td>
+		</tr>
+	</table>
+	</form>
+	<p>You will receive an automatic email response confirming that your request has reached the building control service mailbox.  This will be within 15 minutes of submitting the form.</p>
+
+</div>
+		</div>
+    <!--
+<h3 class="closed" id="regpol">The Building Regulations Enforcement Policy - A guide for building owners.</h3>
+			<div class="reveal-text-box">
+				<h4>Who is responsible for ensuring the work accords with the Building Regulations? </h4>
+
+				<p>It is NOT the Council's responsibility to make sure building works comply with the regulations, it is the OWNER's. In the same way that it is not a policeman's fault if a driver has a defective car, It is the property owner's duty to make sure that their builder is competent and up to the job. It is the Council's role to make spot checks during the construction phase, similar to MOT testing. </p>
+						<p>At the end of the project, the Council will prepare a completion certificate. This confirms that the Council did not observe any errors or omissions when they visited. It is NOT a form of warrantee or guarantee and should not be taken as such. </p>
+						<h4>What is enforcement? </h4>
+						<p>It is a formal procedure available to Local Authorities which enables them to ensure that building work complies with the national Building Regulations. </p>
+						<h4>When are these procedures used? </h4>
+						<p>When an inspecting Building Control Officer sees that either work carried out does not comply with the Building Regulations or work, which would normally be required to be inspected at specified stages has been covered over without the Council having been given the opportunity to inspect the work at that stage. </p>
+						<h4>How do the procedures work? </h4>
+						<p>In the majority of cases, the inspecting Building Control Officer will try and solve the problem informally with your builder if you have employed one or with you personally if you are organising or doing the work yourself. This will usually involve having the incorrect work already done altered or, if an inspection has not been carried out when it should have been due to a failure to give the Council the necessary notice, it will mean that the work not inspected will need to be opened up for an inspection. These informal methods usually mean that the problem is sorted out within two or three days. </p>
+						<p>If these informal methods are unsuccessful, the inspecting Building Control Officer will issue on site to your builder a list of the offending items and the builder will be given a period of twenty eight days to rectify the offending work or open up work as necessary. You will automatically be given a copy, a further copy is placed upon the Council's file and a fourth copy is held by a more senior member of the Building Control team. His job is to regularly monitor the progress being made to put the work right. </p>
+						<p>Irrespective of whether or not the Council decides to invoke statutory enforcement procedures, the existence of such a list of unresolved outstanding work on the file will mean that a Completion Certificate will not be issued. </p>
+						<h4>What could happen next? </h4>
+						<p>Depending upon the nature of the outstanding work, the Council has a discretion to use powers contained in an Act of Parliament called The Building Act 1984. Two options are available: </p>
+						<ul>
+									<li>Any contravention of Building Regulations is a criminal offence. Under section 35 of The Building Act 1984, the Council can prosecute anyone who fails to comply with the regulations. This could be your builder, or even you as the owner, particularly if you are organising the work yourself using different sub-contracted trades. A decision to prosecute someone for failing to comply with Building Regulations is not taken lightly. The Council's lawyers would have to be satisfied that not only was the case likely to succeed, but also that the background circumstances meant that it was in the interests of the public at large that the case should be made to the Magistrates. For example, the Council may have details of earlier offences of a similar nature by a builder which caused undue hardship to other building owners and that it was in the general interest of future clients of that builder that the prosecution take place. Anyone convicted of contraventions of Building Regulations will usually be fined and the Court can also order that that person pay a fine for each day that passes following conviction until the work is put right. </li>
+									<li>Even if the Council doesn't prosecute anyone for the contravention, it can also serve a formal notice under section 36 of The Building Act 1984 upon you as the building owner. This notice specifies the extent of the offending work and the timescale within which it must be put right. </li>
+						</ul>
+						<p>What sort of contraventions of Building Regulations could lead to the Council serving a notice on me under section 36 of The Building Act 1984? </p>
+						<p>Each building project is different and so it is difficult to be completely specific about a full list of circumstances where a Notice would be served. However, as a general rule, they would be used as a tool of last resort where: </p>
+						<ul>
+									<li>The building was structurally defective. </li>
+									<li>Means of escape and other fire safety precautions were defective. </li>
+									<li>Where relevant, if sound insulation was inadequate, and </li>
+									<li>Where relevant, suitable access and facilities for disabled people have not been provided. </li>
+						</ul>
+						<h4>What happens if I don't put the work right within the time allowed by the Council? </h4>
+						<p>The Council may choose to do the work itself. It doesn't have to, but if it does do the work, it will then send you a bill for it. The decision to carry out the work would need to be taken by a senior Councillor known as the Cabinet Member for Planning. </p>
+						<h4>Are there any ways to question what the Council is doing? </h4>
+						<p>Yes. At any stage in the process you are entitled to use the Council's complaints procedures, details of which are available on-line or by contacting the Council at Ebley Mill. </p>
+						<p>If the problem gets to the stage where a notice under section 36 of The Building Act 1984 is served on you, you can challenge the Council by obtaining a specialist report to try and demonstrate that the Council was wrong in serving the Notice on you in the first place. The way of doing this is specified in section 37 of The Building Act 1984, but the Council will automatically send you details of how to appeal with any formal Notice. </p>
+			</div>-->
+			</div>
+						<div id="sectioncontent2" class="sectionhide">
+							<h2>Building Control Applications</h2>
+
+
+ <h3 class="closed" id="need">Do I Need Building Regulations Approval? </h3>
+							<div class="reveal-text-box">
+								<p>You need Building Regulation permission when: </p>
+								<ul>
+																	<li>you erect or extend a building </li>
+																	<li>you materially alter a building e.g. carry out structural alterations </li>
+																	<li>you extend or alter a controlled service within a building e.g. install a new heating boiler  </li>
+																	<li>you want to change the building's fundamental use </li>
+																	<li>you carry out work or renovate a thermal element</li>
+								</ul>
+								<p>View the Planning Portals interactive house to see if you need to apply.</p>
+								<ul>
+									<li><a class = "normal" href="http://www.planningportal.gov.uk/house">interactive house guide </a></li>
+							</ul>
+							<p>Please also view the <a href="building_control.asp#s=sectioncontent3&amp;p=ex">exemptions section</a>.</p>
+							<h4>Pre-application advice </h4>
+							<p>We welcome preliminary discussions with customers about building and development proposals by email or at face to face meetings. </p>
+							<p>We are happy to participate and comment throughout the early stages of design. We will undertake any necessary consultations with other in-house services or external organisations in order to provide comprehensive co-ordinated design advice. </p>
+							<p>Relevant issues will be highlighted in order for both strategic and detailed matters to be addressed at the earliest possible stage.</p>
+							<!--<ul>
+											<li><a class="normal" href="/info/planning/GI_How_to_make_an_application.pdf">Building Control Guidance</a> - PDF,  25KB</li>
+									</ul>-->
+							</div>
+<!--
+<h3 class="closed" id="makebc">Making a Building Regulation Application</h3>
+							<div class="reveal-text-box">
+																<p>There are two ways of making a building regulation application. The same form is used for either preferred route, you select your route at the start of the form. The charge is the same and both are inspected on site to assess the building work for compliance with the Building Regulations. </p>
+																<p>Full plans applications afford greater protection to the applicant and more certainty in terms of satisfying the what will be built which may assist in reducing the risk of abortive work. </p>
+																<p>A full plans application must be used where are required to be submitted for works being carried out within 3m of a public sewer or where it is proposed to erect a building fronting a private street or for building work to which the Regulatory Reform (Fire Safety) Order 2005 applies i.e. commercial properties. </p>
+																<h4>1) Full Plans Application</h4>
+																<p>This involves the deposit of detailed plans and specifications for the work. The plans are checked in detail for compliance with the building regulations and if found to be satisfactory, an approval notice is issued. If they require amendment you or your agent will be contacted before a decision is issued. </p>
+																<p><strong>A full plans application should contain:</strong></p>
+																<ul>
+																	<li>The completed Application Form and the appropriate charge (see âBuilding Control Charges' for details) </li>
+																<li>One copy of the specification and detailed drawings of the existing (where applicable) and proposed building work including site boundaries and drainage systems. The drawings should be to a suitable metric scale. </li>
+																<li>A location plan, drawn to a metric scale of not less than 1:1250. Suitable Ordnance Survey plans are available from Stroud District Council, for a fee. </li>
+																<li>Where Fire Authority consultation is required an additional set of specification and detailed drawings of the existing (where applicable) and proposed building work should be included showing fire resistance, compartmentation, fire detection and alarm systems, emergency lighting, means of escape and signage as appropriate together with design occupancy numbers and a statement as to which code of practice has been used. </li>
+																<li>One copy of any structural design and calculations. </li>
+																</ul>
+																<p><strong>Please note. </strong>Unlike building notice applications, full plans applications are checked in detail and a formal Decision Notice is issued. If a stamped copy of the specification and plans is required for your record purposes, a additional set should be provided. </p>
+																<h4>2) Building Notice Application</h4>
+																		<p>This simply involves filling in the Application Form and submitting the relevant charge. Building notices are most suited to small domestic works but can be used for new houses, extensions and commercial work where fire safety issues are not involved (please ask for advice.) In particular we recommend that a Full Plans Application be made for a loft conversion. If a Building Notice is submitted, plans/drawings showing structural alterations and fire precautions will usually be requested for loft conversions and for any other work where complex designs might be involved. </p>
+																		<p>A Building Notice cannot be used where building works are being carried out within 3m of a public sewer or where it is proposed to erect a building fronting a private street or for building work to which the Regulatory Reform (Fire Safety) Order 2005 applies i.e. commercial properties. </p>
+																		<p><strong>A Building Notice Application should also include: </strong></p>
+																		<ul>
+																			<li>If the proposal is for a new building or extension a site plan to a scale of not less than 1:1250 which shows its location, the boundaries of the site, the drainage and any public sewers in the vicinity. A site plan is not required for internal or other alteration work. Suitable Ordnance Survey plans are available from the Stroud District Council for a fee. </li>
+																		<li>One copy of any structural design and calculations (where applicable). </li>
+																		</ul>
+																		<p>No formal notices are issued but your Building Notice will be acknowledged.</p>
+							</div>-->
+
+ <!--<h3 class="closed" id="rega">Regularisation of Unauthorised Work</h3>
+							<div class="reveal-text-box">
+								<p>The Building Regulations provide for a property owner to apply to the Local Authority for a regularisation certificate in respect of âunauthorised' building work. This means work which was carried out on or after 11 th November 1985 and which should have been subject to the Building Regulations procedures but was not. </p>
+							<p>A completed application form should be returned with the appropriate charge and detailed drawings and specification to permit an assessment of the unauthorised works. </p>
+							<ul>
+								<li>
+									<p><a href="/info/REGULARISATION_OF_UNAUTHORISED_WORK_GUIDANCE.pdf">Regularisation Of Unauthorised Work Guidance</a> - PDF, 32 KB </p>
+							  </li>
+							  </ul>
+							<ul>
+								<li><a class="normal" href="/info/application_for_a_regularisation_certificate.pdf">Application For A Regularisation Certificate</a> - PDF, 135 KB</li>
+								<li><a class="normal" href="/info/application_for_a_regularisation_certificate.doc">Application For A Regularisation Certificate</a> - Word 2,873 KB</li>
+							</ul>
+							</div>
+<h3 class="closed" id="submitbcapp">Submit a Building Regulation Application</h3>
+						<div class="reveal-text-box">
+													<h4>Apply online</h4>
+													<p>You can send your Building Control application online to <a href="http://www.submitaplan.com/">www.submit-a-plan.com</a> the Local Authority Building Control (LABC) portal.
+ Please note that payment will be required before an application can be validated. Payment can be made by cheque or by contacting 01453 754871 to make a debit/credit card payment.
+ </p>
+													<h4>Apply by email</h4>
+													<p>You can submit an application by email by downloading and completing the application form and emailing it to: <a href="mailto:building.control@stroud.gov.uk">building.control@stroud.gov.uk</a> along with relevant plans and specifications (where applicable). Please note that payment will be required before an application can be validated. Payment can be made by cheque or by contacting 01453 754871 to make a debit/credit card payment. </p>
+													<h4>Apply by post or in person  </h4>
+													<p>You can submit an application by post or in person to the address below by downloading and completing the application form and sending the form, charge and relevant plans and specifications (where applicable) to: </p>
+<p>Building Control
+	<br />
+	Stroud District Council<br />
+	Ebley Mill<br />
+	Stroud<br />
+	GL5 4UB </p>
+<div class="highlight-box">
+
+	<h2>Fees</h2>
+							<ul><li><a class="normal" href="/info/planning/building_control_charges.pdf">Building Control Charges</a> - PDF 144 KB</li>
+					</ul>
+
+<h2>Application Forms</h2>
+								<table id="tableconsult" class="tableconsult" summary="Consultation table">
+			<thead><tr>
+			<th scope="col">PDF Format </th>
+			<th scope="col">Word Format </th>
+			</tr></thead>
+			<tbody>
+			<tr>
+			<td><a href="/info/building_regulations_application_Form.pdf">Building Regulations Application Form - (PDF Version)</a> </td>
+			<td><a href="/info/building_control/app_form.doc">Building Regulations Application Form Application Form - (Word Version)</a>
+				</td>
+			</tr>
+			<tr class="even">
+			<td><a href="/info/application_for_a_regularisation_certificate.pdf">Application Form For A Regularisation Certificate - (PDF Version)</a>  </td>
+			<td><a href="/info/building_control/app_reg.doc">Application Form For A Regularisation Certificate - (Word Version)</a> </td>
+			</tr>
+			<tr>
+				<td><a href="/info/planning/demolition_notice.pdf">Demolition Notice - (PDF Version)</a> </td>
+				<td><a href="/info/building_control/demo_app.doc">Demolition Notice - (Word Version)</a> </td>
+				</tr>
+				</tbody>
+			</table>
+						</div>
+</div>
+			</div>-->
+					</div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Site Footer -->
+		<div id="footer">
+			<hr />
+			<div id="footer-address">
+				      <p>Stroud District Council<br/>
+			          Ebley Mill<br/>
+			          Ebley Wharf<br/>
+			          Stroud<br/>
+			          GL5 4UB</p>
+                                 Tel: 01453 766321<br />
+                                 <br />
+  </div>
+
+			<div id="footer-links">
+				<a class="sect6" href="/docs/accessibility.asp#p=webaccess">Accessibility</a><br />
+<!--<a class="sect6" href="/opendata/foi.asp">Freedom of Information</a><br />-->
+				<a class="sect6" href="/docs/something_need_changing.asp">Something need changing?</a><br />
+                <a class="sect6" href="/docs/accessibility.asp#p=toc" accesskey="8">Terms &amp; Conditions</a><br />
+				<a class="sect6" href="/docs/accessibility.asp#p=translate">Translate this website</a><br />
+				<a class="sect6" href="/docs/accessibility.asp#p=webhelp" accesskey="6">Website Help</a>
+			</div>
+  <div id="footer-logos">
+				<br />
+                	  	<a class="sect6" href="http://www.mindfulemployer.net/"><img src="/src/new_homepage/Mindful_Employer_logo.jpg" 
+                    alt="Mindful employer" title="Mindful employer" 
+                    style="height: 42px; width: 111px" /></a>&nbsp;
+                    <img src="/src/new_homepage/gold_address_data.jpg" alt="2013 - Gold Award for Address Data" title="2013 - Gold Award for Address Data" />&nbsp;
+				<a class="sect6" href="http://www.investorsinpeople.co.uk/"><img src="/src/new_homepage/IIP_LOGO.jpg" alt="Investors in People logo" title="Link to Investors IIP"  /></a>&nbsp;
+				<!--<img src="/src/new_homepage/beacon_base.gif" alt="Beacon Council logo" title="Beacon Council 2002-03 Crime Reduction 2003-04 Services for Older People 2007-08 Emergency Planning" width="151" height="55" />-->
+				<a class="sect6" href="http://www.w3.org"><img src="/src/new_homepage/validhtmlcss.gif" alt="W3C logos" title="Valid XHTML 1.0 Strict and Valid CSS!" width="78" height="55" /></a>&nbsp;				<a class="sect6" href="http://www.iema.net/ems/emas"><img src="/src/new_homepage/LogoEmasweb.png" alt="EMAS logo" title="EMAS - the Eco-Management and Audit Scheme, is a voluntary initiative designed to improve companies' environmental performance." width="39" height="55" /></a>&nbsp;
+				<!--<a class="sect6" href="https://www.gov.uk/"><img src="/img/gov_uk_logo.gif" alt="Gov.uk logo" title="Gov.uk" /></a>-->
+			</div>
+			<br />
+		</div>
+	</div>
+</body>
+</html>

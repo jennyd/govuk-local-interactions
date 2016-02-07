@@ -1,0 +1,116 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<style>
+a:link			{font:8pt/11pt verdana; color:FF0000}
+a:visited		{font:8pt/11pt verdana; color:#4e4e4e}
+</style>
+
+<meta name="ROBOTS" content="NOINDEX">
+
+<title>404 Not Found</title>
+
+<meta http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+</head>
+
+<script type="text/javascript">
+function Homepage(){
+<!--
+// in real bits, urls get returned to our script like this:
+// res://shdocvw.dll/http_404.htm#http://www.DocURL.com/bar.htm
+
+	//For testing use DocURL = "res://shdocvw.dll/http_404.htm#https://www.microsoft.com/bar.htm"
+	DocURL = document.URL;
+
+	//this is where the http or https will be, as found by searching for :// but skipping the res://
+	protocolIndex=DocURL.indexOf("://",4);
+
+	//this finds the ending slash for the domain server
+	serverIndex=DocURL.indexOf("/",protocolIndex + 3);
+
+		//for the href, we need a valid URL to the domain. We search for the # symbol to find the begining
+	//of the true URL, and add 1 to skip it - this is the BeginURL value. We use serverIndex as the end marker.
+	//urlresult=DocURL.substring(protocolIndex - 4,serverIndex);
+	BeginURL=DocURL.indexOf("#",1) + 1;
+
+	urlresult=DocURL.substring(BeginURL,serverIndex);
+
+	//for display, we need to skip after http://, and go to the next slash
+	displayresult=DocURL.substring(protocolIndex + 3 ,serverIndex);
+
+	InsertElementAnchor(urlresult, displayresult);
+}
+
+function HtmlEncode(text)
+{
+    return text.replace(/&/g, '&amp').replace(/'/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function TagAttrib(name, value)
+{
+    return ' '+name+'="'+HtmlEncode(value)+'"';
+}
+
+function PrintTag(tagName, needCloseTag, attrib, inner){
+    document.write( '<' + tagName + attrib + '>' + HtmlEncode(inner) );
+    if (needCloseTag) document.write( '</' + tagName +'>' );
+}
+
+function URI(href)
+{
+    IEVer = window.navigator.appVersion;
+    IEVer = IEVer.substr( IEVer.indexOf('MSIE') + 5, 3 );
+
+    return (IEVer.charAt(1)=='.' && IEVer >= '5.5') ?
+        encodeURI(href) :
+        escape(href).replace(/%3A/g, ':').replace(/%3B/g, ';');
+}
+
+function InsertElementAnchor(href, text)
+{
+    PrintTag('A', true, TagAttrib('HREF', URI(href)), text);
+}
+
+//-->
+</script>
+
+<body bgcolor="FFFFFF">
+
+<p><a href="http://www.conwy.gov.uk/index.asp?Language=1" target="_top"><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><img src="/ccbcappimages/404/home.gif" width="145" height="25" border="0" alt="Click here to return to the Conwy Web Site Home Page"></font></a></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sorry, the page
+  you are looking for has not been found.</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">To return to the
+  page you came from, press the 'back button' on your browser.</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> If you try the
+  same link again and this message appears, please let us know about the problem
+  by <a href="mailto:gwe.web@conwy.gov.uk?subject=Broken%20link%20error">sending
+  us an e-mail</a>. Please include details of the page you are unable to access,
+  and the page on which the broken link appears.</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Thank you for your
+  help and our apologies for any inconvenience.</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Conwy County Borough
+  Council</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"> (click on the
+  logo above to go back to the <a href="http://www.conwy.gov.uk/index.asp?Language=1" target="_top">home
+  page</a>)</font></p>
+<hr />
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><a href="http://www.conwy.gov.uk/index.asp?Language=2" target="_top"><img src="/ccbcappimages/404/homew.gif" alt="Cliciwch ar yma er mwyn dychwelyd i'r dudalen cartref" width="145" height="25" border="0"></a></font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Mae'n ddrwg gennym,
+  ond ni lwyddwyd i ddod o hyd i'r dudalen yr ydych yn chwilio amdani.</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">I ddychwelyd i'r
+  dudalen y daethoch ohoni, pwyswch y 'botwm &ocirc;l' ar eich porwr.</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Os byddwch yn rhoi
+  cynnig ar yr un cyswllt eto, ac yn cael bod y neges hon yn ail-ymddangos, rhowch
+  wybod i ni am y broblem os gwelwch yn dda drwy <a href="mailto:gwe.web@conwy.gov.uk?subject=Broken%20link%20error">anfon
+  neges e-bost</a> atom. Dylech gynnwys manylion am y dudalen yr ydych yn methu
+  mynd ati, a'r dudalen lle mae'r cyswllt sydd wedi torri.</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Diolch am eich
+  cymorth; mae'n ddrwg gennym am unrhyw anhwylustod.</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Cyngor Bwrdeistref
+  Sirol Conwy</font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">(Cliciwch ar y
+  logo uchod er mwyn dychwelyd i'r <a href="http://www.conwy.gov.uk/index.asp?Language=1" target="_top">dudalen cartref</a>)</font></p>
+</body>
+</html>

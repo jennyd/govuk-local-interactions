@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="imagetoolbar" content="no">
+<title>Harrogate Borough Council - My Property - Search</title>
+ <!--<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" >         
+<link type="text/css" rel="stylesheet" href="main.css" />
+
+
+<script type="text/javascript">
+   
+window.onload = function () {
+  var node = document.getElementById("no");
+  if (node) {
+    try {
+      node.focus();
+    } catch (err) {}
+  }
+}
+
+</script>
+
+    <link rel="shortcut icon" href="/templates/2011/templatefiles/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" type="text/css" href="/templates/2011/templatefiles/default.css" />
+    
+    <style type="text/css">
+		/* fix scrolling on list pages */
+		#s4-bodyContainer {
+			position: relative;
+		}
+ 
+		/* hide body scrolling (SharePoint will handle) */
+		/*
+    body {
+			height:100%;
+			overflow:hidden;
+			width:100%;
+		}
+		*/
+				
+		/* popout breadcrumb menu needs background color for firefox */
+		.s4-breadcrumb-menu {
+			background:#F2F2F2;
+		}
+ 
+		/* if you want to change the left nav width, change this and the margin-left in .s4-ca */
+		body #s4-leftpanel {
+			/* width:155px; */
+		}		
+		
+		/* body area normally has a white background */
+		.s4-ca {
+			background:transparent none repeat scroll 0 0;
+			/* margin-left:155px; */
+		}	
+	</style>
+	
+	<script type="text/javascript" src="/templates/2011/templatefiles/jquery-1.4.4.min.js"></script>
+    
+    
+</head>
+<body>
+    <div id="container">
+        <div id="topOne">
+            <div id="logo">
+                <a href="http://www.harrogate.gov.uk/"><img src="/templates/2011/templatefiles/harrogateboroughcouncil.jpg" width="227" height="83" alt="Harrogate Borough Council" /></a>
+            </div>
+            <div id="global">
+                <h4>
+                    General Enquiries: +44 (0) 1423 500 600</h4>
+                <div id="search">
+                  <label for="txtSearch">Search our website</LABEL>
+                  <input id="txtSearch" type="text" name="Search our website" jQuery1297334815593="2">
+                  <a id="SearchSubmit" href="#" jQuery1297334815593="1"><img class="btnSearch" alt="Search" src="/templates/2011/templatefiles/search.gif"></a>
+                </div>
+           <SCRIPT type=text/javascript>
+						var j$ = jQuery.noConflict();
+					    j$(document).ready(function () {
+							j$("#SearchSubmit").click(function (){
+								SearchSubmit();
+							});
+							j$('#txtSearch').keypress(function(e){
+								if (e.which == 13){
+									SearchSubmit();
+								}
+							});
+					    });
+					    
+					    function SearchSubmit()
+					    {
+						    // Redirect to search
+						    var searchValue = j$("#txtSearch").val();
+						    var searchUrl = "http://www.harrogate.gov.uk/pages/Results.aspx?k=" + searchValue;
+						    window.location.href = searchUrl;
+					    }
+					</SCRIPT>   
+            </div>
+            				
+  				<br class="clear" />
+        </div>
+        <div id="topTwo">
+            <div id="strapline">
+                <h4>
+                    Working for you</h4>
+            </div>
+            <div id="tools">
+                <div id="breadcrumbs">
+                    <a href="http://www.harrogate.gov.uk/">Home</a>
+                </div>
+                <div id="rate">
+                    &nbsp;
+                </div>
+                <br class="clear" />
+            </div>
+            <br class="clear" />
+        </div>
+        <div id="main">
+            
+            <div id="content">
+              
+
+	<div id="contentContainer" > 
+
+
+<!--<h3>My Property - Address Search</h3>-->
+
+<div id="llpgsearch">
+<form action="index.asp" method="post">
+<input type="hidden" name="max" value="10"/>
+<input type="hidden" name="start" value="0"/>
+<input type="hidden" name="no" id="no" value=""  />
+<input type="hidden" name="street" id="street" value=""  />
+<input type="hidden" name="town" id="town" value=""  />
+
+<h4>Welcome to My Property</h4>
+
+<p style="margin:10px 0 15px 0px;">
+To view information about a property within the Harrogate district, including waste collection days, council tax band details, local councillors and more, please enter your postcode into the search form below.
+</p>
+
+<p style="margin:25px 0 5px 0px;">
+<label for="no">Post Code:</label>
+<input type="text" name="postcode" id="postcode" value=""  tabindex="1"/>
+<span class="example">e.g. HG1 2SG</span>
+</p>
+<p style="margin:5px 0 25px 50px;">
+<input type="submit" value="Search" id="btnSearch" tabindex="5"  />
+</p>
+<p>
+If you dont know the postcode, find it using the <a href="http://www.royalmail.com/find-a-postcode" target=_blank>Royal Mail Postcode Finder</a>.
+</p>
+</form>
+</div>
+
+
+
+</div><!-- end of contentContainer -->
+
+            </div><!-- end of content -->
+            <br class="clear" />
+            <br class="clear" />
+            <div id="site-footer">
+					<div id="footer-left">
+						<ul>
+							<li><a title="Contact us" href="http://www.harrogate.gov.uk/cs/Pages/Contact_Us.aspx">Contact us</a> | </li>
+							<li><a title="Terms of use" href="http://www.harrogate.gov.uk/Pages/Disclaimer.aspx">Terms of use</a> | </li>
+							<li><a title="Privacy and Cookies" href="http://www.harrogate.gov.uk/Pages/Privacy_and_Cookies.aspx">Privacy &amp; Cookies</a></li>
+						</ul>
+					</div>
+					<div id="footer-right">
+						&copy; Copyright 2015 Harrogate Borough Council
+					</div>
+				</div>
+        </div>
+    </div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2373650-2");
+pageTracker._trackPageview();
+</script>
+
+  </body>
+</html>

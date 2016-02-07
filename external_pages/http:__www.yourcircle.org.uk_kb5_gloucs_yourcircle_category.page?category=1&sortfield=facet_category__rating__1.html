@@ -1,0 +1,495 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Help at Home | Your Circle</title>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<meta name="robots" content="index, follow" />
+	
+	<meta name="description" content="This website is designed to help you find information and advice about the wide range of services and support for Adults and Older People available in Gloucestershire." />
+	<meta name="keywords" content="Adult Social Care, Gloucestershire" />
+	<meta name="Author" content="Open Objects Ltd, www.openobjects.com" />
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="includes/images/client/favicon.ico" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="includes/css/style.css" media="screen,projection" />
+	<link rel="stylesheet" type="text/css" href="includes/css/print.css" media="print" />
+	<link id="darkonlight" rel="stylesheet" href="includes/css/darkonlight.css" media="screen,projection" type="text/css" title="Dark Text on Light Background" />
+	<link id="lightondark" rel="alternate stylesheet" href="includes/css/lightondark.css" media="screen,projection" type="text/css" title="Light Text on Dark Background" />
+	
+	<!--[if lt IE 8]> <link rel="stylesheet" type="text/css" media="all" href="includes/css/ie6.css"/><![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="includes/css/yourcircle.css" media="screen,projection" />
+	<link rel="stylesheet" type="text/css" href="includes/css/jquery-ui-1.8.6.custom.css" media="screen,projection" />
+	
+	<!-- JavaScript -->
+	
+	<script type="text/javascript" src="includes/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="includes/js/jquery.cookies.js"></script>
+	<script type="text/javascript" src="includes/js/common.js"></script>
+  	<script type="text/javascript" src="includes/js/jquery.tooltip.min.js"></script>
+	<script type="text/javascript" src="includes/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="includes/js/jquery-ui-1.8.6.custom.min.js"></script>
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.categorylist a').tooltip({
+				// split on the " - " string
+				showBody: " - ",
+				showURL: false,
+				fade: 250,
+				delay: 0
+			});
+			$('#resetbutton').tooltip({
+				showURL: false,
+				fade: 250,
+				delay: 0
+			});
+			
+			
+			if($.cookie('TEXT_SIZE')) {
+				$('body').addClass($.cookie('TEXT_SIZE'));
+			}
+			$('.resizer a').click(function() {
+				var textSize = $(this).parent().attr('class');
+				$('body').removeClass('small medium large contrast').addClass(textSize);
+				$.cookie('TEXT_SIZE',textSize, { path: '/', expires: 10000 });
+				return false;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-10559214-11']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+	<!--[if IE 6]><script type="text/javascript" src="includes/js/jquery.pngFix.js"></script>
+	<script type="text/javascript"> 
+		$(document).ready(function(){ 
+			$(document).pngFix();
+		}); 
+	</script>
+	<![endif]-->
+	
+</head>
+
+<body id="categorylanding" class="category red">
+    <div class="page_wrapper">
+      <p id="skip"><a href="#contentanchor">Skip to content</a></p>
+	  
+      <div id="header">
+        <div id="homelink"><a href="home.page" title="Home">Home</a></div>
+		
+		<ul class="resizer">
+			<li class="small"><a href="#" title="Set the font size to normal">A</a></li>
+			<li class="medium"><a href="#" title="Increase the font size">A</a></li>
+			<li class="large"><a href="#" title="Double the font size">A</a></li>
+			<li class="contrast"><a href="#" title="Set font contrast">A</a></li>
+		</ul>
+		
+		<a title="NHS Gloucestershire" target="_blank" href="http://www.nhsglos.nhs.uk/"><img class="partners" src="includes/images/client/nhsgloucestershire.gif" alt="NHS Gloucestershire"/></a>
+		<a title="Gloucestershire County Council" target="_blank" href="http://www.gloucestershire.gov.uk/"><img class="partners" src="includes/images/client/gcc.gif" alt="Gloucestershire County Council"/></a>
+
+		<ul id="navigation">
+          <li class="smallspot1"><a href="home.page" title="Home">Home</a></li>
+		  <li class="smallspot2"><a href="addentry.page" title="Add Entry">Add Entry</a></li>
+          <li class="smallspot3"><a href="help.page" title="How to use this website">How To Use This Website</a></li>
+		  <!--<li class="smallspot4"><a href="feedback.page" title="Feedback Form">Feedback Form</a></li>-->
+		  <li class="smallspot4"><a href="about.page" title="About Your Circle">About Your Circle</a></li>
+          <li class="smallspot2"><a href="category.page?category=4" title="Contact">Contact</a></li>
+		  <li class="smallspot3"><a href="accessibility.page" title="Accessibility Options">Accessibility Options</a></li>
+			
+			
+								
+				
+				
+					<li class="smallspot5">Not logged in - <a href="login.page">Your Account</a></li>
+						
+			
+			
+			
+		</ul>
+
+      </div>
+      <div id="content">
+	  
+	  <div id="lhs">
+		<ul class="categorylist">
+			<li><a title="Help at Home - Information and ideas to help you maintain your independence" href="category.page?category=1&amp;sortfield=facet_category__rating__1" id="helpathome">Help at Home</a></li>
+			<li><a title="Things to Do - Social and leisure activities available locally" href="category.page?category=2&amp;sortfield=facet_category__rating__2" id="thingstodo">Things to Do</a></li>
+			<li><a title="Somewhere to Live - Information on the right home for your needs" href="category.page?category=3&amp;sortfield=facet_category__rating__3" id="somewheretolive">Somewhere to Live</a></li>
+			<li><a title="Travel - Travel &amp; Transport" href="category.page?category=5&amp;sortfield=facet_category__rating__5" id="traveltransport">Travel &amp; Transport</a></li>
+			<li><a title="Keeping Well - Information and ideas to help you stay fit and healthy" href="category.page?category=6&amp;sortfield=facet_category__rating__6" id="keepingwell">Keeping Well</a></li>
+			<li><a title="Money Matters - Information about the cost of care and financial help that might be available" href="category.page?category=7&amp;sortfield=facet_category__rating__7" id="moneymatters">Money Matters</a></li>
+			<li><a title="Hearing and Sight - " href="category.page?category=13&amp;sortfield=facet_category__rating__13" id="hearingandsight">Hearing and Sight</a></li>
+			<li><a title="Carers - Information and support specifically for carers" href="category.page?category=9&amp;sortfield=facet_category__rating__9" id="carers">Carers</a></li>
+			<li><a title="Keeping Safe - " href="category.page?category=11&amp;sortfield=facet_category__rating__11" id="keepingsafe">Keeping Safe</a></li>
+			<li><a title="Working and Learning - Information and ideas on what's available" href="category.page?category=8&amp;sortfield=facet_category__rating__8" id="workingandlearning">Working and Learning</a></li>
+			<li><a title="About Social Care - " href="category.page?category=10&amp;sortfield=facet_category__rating__10" id="aboutsocialcare">About Social Care</a></li>
+			<li><a title="More Help &amp; Advice - Extra help to find the right solution for your needs" href="category.page?category=4&amp;sortfield=facet_category__rating__4" id="morehelpandadvice">More Help &amp; Advice</a></li>
+			<li><a title="Tools for organisations - " href="category.page?category=12&amp;sortfield=facet_category__rating__12" id="toolsfororganisations">Tools for organisations</a></li>
+		</ul>
+		
+	  </div>
+	    <a name="contentanchor"></a>
+		
+		<div id="flash"></div>
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+  <div class="content_main">
+	  
+		
+		<h1>Help at Home</h1>
+		<p class="pullout">Ideas to help you maintain your independence</p>
+		As you get older, or if you have a disability, it can be more of a challenge to look after yourself, your family or your home. There are many ways you can make life easier.		
+		
+		
+		
+			<!-- Loop thru ALL child categories -->
+			<div class="facet">
+				<!--<h3>Sub-categories</h3>-->
+				
+				<ul>
+					<li id="allrecords"><a href="results.page?category=1&amp;sorttype=field&amp;sortorder=1&amp;sortfield=facet_category__rating__1">All services and activities in this category</a></li>
+				
+					<li>
+					
+					
+						
+							<a href="category.page?category=1-a&amp;sortfield=facet_category__rating__1-a">Home Care Agencies</a>
+						
+						
+					
+					
+					</li>
+				
+					<li>
+					
+					
+						
+							<a href="category.page?category=1-b&amp;sortfield=facet_category__rating__1-b">Meal Provider</a>
+						
+						
+					
+					
+					</li>
+				
+					<li>
+					
+					
+						
+							<a href="category.page?category=1-c&amp;sortfield=facet_category__rating__1-c">Mobility Equipment</a>
+						
+						
+					
+					
+					</li>
+				
+					<li>
+					
+					
+						
+							<a href="category.page?category=1-d&amp;sortfield=facet_category__rating__1-d">Safety</a>
+						
+						
+					
+					
+					</li>
+				
+					<li>
+					
+					
+						
+							<a href="category.page?category=1-e&amp;sortfield=facet_category__rating__1-e">Support at home</a>
+						
+						
+					
+					
+					</li>
+				
+					<li>
+					
+					
+						
+							<a href="category.page?category=1-g&amp;sortfield=facet_category__rating__1-g">Repairs and Maintenance</a>
+						
+						
+					
+					
+					</li>
+				
+					<li>
+					
+					
+						
+							<a href="category.page?category=1-h&amp;sortfield=facet_category__rating__1-h">Sitting Service</a>
+						
+						
+					
+					
+					</li>
+				
+					<li>
+					
+					
+						
+							<a href="category.page?category=1-i&amp;sortfield=facet_category__rating__1-i">Personal Assistants</a>
+						
+						
+					
+					
+					</li>
+				
+				</ul>
+			</div>
+		
+ 
+		
+			
+	
+		
+		
+			<h3>Useful advice</h3>
+		  
+			
+				
+				<div class="onehit" id="xizMgIP-6Iw">
+					<h4><a href="viewadvicenote.page?record=xizMgIP-6Iw">Domiciliary Care Agencies in Gloucestershire</a></h4>
+					<p></p>
+					
+						
+						<p class="description">Healthwatch Gloucestershire's 'Find a Service' (formerly GUiDE) provides a comprehensive list of Domiciliary Care Agencies in your locality. Click on the link for easy access.</p>
+					
+					
+				</div>
+			
+				
+				<div class="onehit" id="bqXzhaN3-Z0">
+					<h4><a href="viewadvicenote.page?record=bqXzhaN3-Z0">Would a guided assessment be useful?</a></h4>
+					<p></p>
+					
+						
+						<p class="description">If you have a disability or as you get older, it can be more of a challenge to look after yourself, your family or your home. There are many ways<a href="viewadvicenote.page?record=bqXzhaN3-Z0" title="Show More">&nbsp;More&#8230;</a></p>
+					
+					
+				</div>
+			
+				
+				<div class="onehit" id="IR3SyxQCxDA">
+					<h4><a href="viewadvicenote.page?record=IR3SyxQCxDA">Help to choose mobility equipment</a></h4>
+					<p></p>
+					
+						
+						<p class="description">Buying the wrong type of equipment can result in a costly mistake. A quick and easy online assessment can help you make wise choices.&nbsp; AskSARA, provided by the Disabled Living<a href="viewadvicenote.page?record=IR3SyxQCxDA" title="Show More">&nbsp;More&#8230;</a></p>
+					
+					
+				</div>
+			
+				
+				<div class="onehit" id="mydS_b06vTU">
+					<h4><a href="viewadvicenote.page?record=mydS_b06vTU">What are Community Meals (meals on wheels)?</a></h4>
+					<p></p>
+					
+						
+						<p class="description">Community Meals, which used to be called meals on wheels,&nbsp;are delivered to people who are living in their own homes. Meals are available 7 days per week. Special dietary needs<a href="viewadvicenote.page?record=mydS_b06vTU" title="Show More">&nbsp;More&#8230;</a></p>
+					
+					
+				</div>
+			
+				
+				<div class="onehit" id="M34Qxg0yGMM">
+					<h4><a href="viewadvicenote.page?record=M34Qxg0yGMM">Home care agencies - what to look for</a></h4>
+					<p></p>
+					
+						
+						<p class="description">Home care agencies can provide&nbsp;a care worker - people who can assist you with everyday activities, such as getting out of bed, getting dressed or going to the shops. The<a href="viewadvicenote.page?record=M34Qxg0yGMM" title="Show More">&nbsp;More&#8230;</a></p>
+					
+					
+				</div>
+			
+				
+				<div class="onehit" id="6tXAN5C26tI">
+					<h4><a href="viewadvicenote.page?record=6tXAN5C26tI">Can I get help paying for care at home?</a></h4>
+					<p></p>
+					
+						
+						<p class="description">If you or your family feel that you need extra support to stay independent at home, you may be eligible for support from social care. Listed below are some of<a href="viewadvicenote.page?record=6tXAN5C26tI" title="Show More">&nbsp;More&#8230;</a></p>
+					
+					
+				</div>
+			
+				
+				<div class="onehit" id="EdnkrACbQvs">
+					<h4><a href="viewadvicenote.page?record=EdnkrACbQvs">Thinking about repairs and maintenance to your home?</a></h4>
+					<p></p>
+					
+						
+						<p class="description">If you're getting building work or home improvements done, it can be hard to know if the company or contractor is being reasonable in their charges and services. Follow&nbsp;the guide<a href="viewadvicenote.page?record=EdnkrACbQvs" title="Show More">&nbsp;More&#8230;</a></p>
+					
+					
+				</div>
+			
+				
+				<div class="onehit" id="r5S8FHqBNdw">
+					<h4><a href="viewadvicenote.page?record=r5S8FHqBNdw">How can an Occupational Therapist help me?</a></h4>
+					<p></p>
+					
+						
+						<p class="description">Occupational therapy is the assessment and treatment of physical and psychiatric conditions using specific, purposeful activity to prevent disability and promote independent function in all aspects of daily life.What Social<a href="viewadvicenote.page?record=r5S8FHqBNdw" title="Show More">&nbsp;More&#8230;</a></p>
+					
+					
+				</div>
+			
+				
+				<div class="onehit" id="1lMYHDnSLbc">
+					<h4><a href="viewadvicenote.page?record=1lMYHDnSLbc">Are you a Carer?</a></h4>
+					<p></p>
+					
+						
+						<p class="description">A Carer is any person who provides unpaid help regularly to a partner, child, relative, friend or neighbour who is frail, has physical or mental health illness, disability or issues<a href="viewadvicenote.page?record=1lMYHDnSLbc" title="Show More">&nbsp;More&#8230;</a></p>
+					
+					
+				</div>
+			
+				
+				<div class="onehit" id="p-ERANbmR7o">
+					<h4><a href="viewadvicenote.page?record=p-ERANbmR7o">Do you need help from social care?</a></h4>
+					<p></p>
+					
+						
+						<p class="description">Are you new to social services? If you or your family feel that you need extra support, your first step is think about the kind of support you might need.<a href="viewadvicenote.page?record=p-ERANbmR7o" title="Show More">&nbsp;More&#8230;</a></p>
+					
+					
+				</div>
+			
+		
+  </div>
+  <div class="content_sec">
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	<form action="results.page" method="get" id="pageForm">
+	<ul>
+	  <li>
+		<label for="qt">Search for <a title="Help with keyword searching" href="help.page#keyword">?</a>:</label>
+		<input type="text" id="qt" name="qt" value="" />
+	  </li>
+	  <p>Search from the homepage to return information from the whole of Your Circle.</p>
+	  <li>
+		<label for="loc">location <a title="Help with location searching" href="help.page#placename">?</a>:</label>
+		<input type="text" id="loc" name="loc" value="" />
+	  </li>
+	  <li>
+		<button id="searchbutton" type="submit" value="search">Search</button>
+				
+	  </li>
+	</ul>
+	<input type="hidden" name="category" value="1" />
+	</form>
+	
+	<button id="shortlistbutton" type="reset" title="" value="Your Shortlist" onclick="window.location.href='shortlist.page'">Your Shortlist</button>
+  </div>
+</div>
+		
+	  	<div class="category red-lhs-image">&nbsp;</div>
+
+		<p id="address1">
+			Gloucestershire<br/>
+			County Council<br/>
+			Shire Hall<br/>
+			Westgate Street<br/>
+			Gloucester<br/>
+			Gloucestershire GL1 2TG
+		</p>
+		<p id="address2">
+			T: 01452 426868<br/>
+			E: <a href="mailto:yourcircle@gloucestershire.gov.uk" title="email yourcircle@gloucestershire.gov.uk">yourcircle@<br/>gloucestershire.gov.uk</a><br/>
+			www.yourcircle.org.uk
+		</p>
+		
+      </div>
+      <div id="footer">
+	  <img src="includes/images/client/footer.gif" alt="T:01452 426868 / E:yourcircle@gloucestershire.gov.uk" id="contactimg" />
+        <ul>
+          <li class="leftspace"><a href="disclaimer.page" title="Disclaimer">Disclaimer</a></li>
+		  <li class="leftspace rightspace"><a href="http://ww3.gloucestershire.gov.uk/Complaints/" title="Comments Form" target="_blank">Compliments &amp; Complaints</a></li>
+          <li class="leftspace rightspace"><a href="partners.page" title="Partners">Partners</a></li>
+        </ul>
+      </div>
+    </div>
+  
+  
+</body>
+</html>

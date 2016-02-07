@@ -1,0 +1,205 @@
+ï»¿<!DOCTYPE html>
+<html>
+    <head id="Head1"><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!-- Browser meta overrides -->
+        <meta http-equiv="cleartype" content="on" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>Report a Problem - Nottingham City Council</title>
+		<script src="js/detectmobilebrowser.js" ></script>
+        <!-- Font (Google Web Fonts) -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+		<!-- <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css' /> -->
+		<!-- <link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css' /> -->
+        <!-- STYLESHEETS -->
+        <link rel="stylesheet" href="http://geoserver.nottinghamcity.gov.uk/jsapi/library/3.6/3.6/js/dojo/dijit/themes/tundra/tundra.css" />
+        <link rel="stylesheet" href="http://geoserver.nottinghamcity.gov.uk/jsapi/library/3.6/3.6/js/esri/css/esri.css" />
+
+        <!-- UI -->
+        <link rel="stylesheet" href="style/problem.min.css" />
+	
+        <!-- NCC APIs -->
+	    <link rel="stylesheet" href="http://geoserver.nottinghamcity.gov.uk/amd-modules/36/printTools/printTools.css" />
+	    <link rel="stylesheet" href="http://geoserver.nottinghamcity.gov.uk/amd-modules/36/draw/draw.css" />
+	    <link rel="stylesheet" href="http://geoserver.nottinghamcity.gov.uk/amd-modules/36/savedItem/savedItem.css" />
+	    <link rel="stylesheet" href="http://geoserver.nottinghamcity.gov.uk/amd-modules/36/address/search.css" />
+	    <link rel="stylesheet" href="http://geoserver.nottinghamcity.gov.uk/amd-modules/36/mapBase/loading.css" />
+        <link rel="stylesheet" href="http://geoserver.nottinghamcity.gov.uk/amd-modules/36/mapBase/customise-symbols.css" />
+    
+        <!-- SCRIPTS -->
+        <!-- Dojo [AMD] setup -->
+	    <script type="text/javascript">
+	        var dojoConfig = {
+	            async: true,
+	            parseOnLoad: true,
+	            baseUrl: "",
+	            tlmSiblingOfDojo: false,
+	            packages: [
+				    { name: "dojo", location: "http://geoserver.nottinghamcity.gov.uk/jsapi/library/3.6/3.6compact/js/dojo/dojo" },
+				    { name: "dijit", location: "http://geoserver.nottinghamcity.gov.uk/jsapi/library/3.6/3.6compact/js/dojo/dijit" },
+				    { name: "dojox", location: "http://geoserver.nottinghamcity.gov.uk/jsapi/library/3.6/3.6compact/js/dojo/dojox" },
+				    { name: "esri", location: "http://geoserver.nottinghamcity.gov.uk/jsapi/library/3.6/3.6compact/js/esri" },
+				    { name: "ncc", location: "http://geoserver.nottinghamcity.gov.uk/amd-modules/36" }
+			    ]
+	        };
+	    </script>
+        <!-- js api main -->               
+        <script type="text/javascript" src="http://geoserver.nottinghamcity.gov.uk/jsapi/library/3.6/3.6compact/"></script>
+        <!-- geotools (for fast, in-browser 27700 <-> 4326 conversion) -->
+        <script src="js/geotools.min.js"></script>
+
+        <!-- Inline styles for this UI -->
+        <style type="text/css">
+	
+        </style>
+		<!-- hotjar, the latest saviour of the website -->
+<!-- Hotjar Tracking Code for geoserver.nottinghamcity.gov.uk -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:48069,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+		<!-- hotjar -->		
+    </head>
+	<body class="tundra">
+		<div id="mainContainer">
+            <div id="mapContainer" style="position:absolute;">
+				<div id="map">
+					<div id="scalebar"></div> 
+                    <div id="ovw"></div>
+                    <div id="en"></div>
+                    <div id="copy">&copy; Crown Copyright and database right <script>document.write(new Date().getFullYear());</script>. Ordnance Survey Licence number 100019317.</div>
+                </div>
+				<div id="top_toolbar_actual" class="top_toolbar">
+					<span id="zoomToScaleSelect"></span><span id="mapTypeSelect"></span>
+					<!-- Container for slider buttons: Opacity, Aerial and Historical timeline select -->
+					<div id="sliderContainer">
+						<div id="aerialSlider"></div>
+						<!-- <div id="historicalSlider"></div> -->
+						<div id="opacitySlider"></div>
+					</div>
+					<!-- end slider -->
+				</div>
+				<div id="linkToThis">
+					<span>Your link to copy: </span>
+					<input type="text" id="linkText" />
+				</div>
+			</div>
+            <div id="leftRegion" style="z-index:99;position:absolute;">
+				<div id="header">
+					<span id="headerText">Report a problem</span>
+                    <div id="backToMap" style="position:absolute;top:0;right:0;width:auto;padding:1em;background-color:#000;color:#fff;z-index:33;cursor:pointer;display:none;">Back to map</div>
+				</div>
+				<div id="controls" style="overflow:auto;">
+					<!-- <h2 class="header">How do I report a problem?</h2> -->
+					<h2 class="header">Click on the map or search for an address</h2>
+					<!--
+					<ol>
+						<li>Click on the map or search for an address</li>
+						<li>Select the type of problem and give us any additional information</li>
+						<li>Click the Send button</li>
+						<li>The coloured circles on the map are reported problems</li>
+						<li><a href="#" id="appHelpLink">Click here for help with using the map</a></li>
+					</ol>
+					<p style="float:left;width:70%;margin-left:10px"></p>
+					<h2 class="header">Search for an address near the problem</h2> -->
+					<div title="Search for an address..." data-dojo-type="dijit/layout/ContentPane" id="addressPane">
+						<div id="addressSearchContainer"></div>
+						<div id="addressResultsDiv" style="display:none;"></div>
+					</div>  
+					<!-- <h2 class="header">Complete required information</h2> -->
+					<h2 class="header">Choose the problem type<div class="additionalHeader">and give us any additional information</div></h2>
+					<div>
+						
+						<form id="f1">
+							<p id="streetlightsContainer" class="assets" title="Including the number of the nearest lamppost in your location comments can help us find the problem more easily">
+								<label for="cbStreetLights">Switch on Lampost IDs:</label>
+								<input type="checkbox" data-dojo-type="dijit/form/CheckBox" id="cbStreetLights" style="margin-left:150px" />(this may take some time)
+							</p>
+							<p><label for="ddlProblemTypeDij">Category:</label><select id="ddlProblemTypeDij" data-dojo-type="dijit/form/Select"><option value="x">Populating...</option></select>
+							</p>
+							<p><label for="ddlProblemDetailDij">Type:</label><select id="ddlProblemDetailDij" data-dojo-type="dijit/form/Select"><option value="x">Populating...</option></select>
+							</p>
+							<!-- <div id="urlLink" style="border:0px solid #000;width:190px;margin-left:140px;"></div> -->
+							<div id="url"></div>
+							<p>
+								<label for="probDescText">Problem description/comments:</label><textarea data-dojo-type="dijit/form/SimpleTextarea" id="probDescText" name="probDescText" title="Please provide a description of the problem" maxLength="1500" class="textActive"></textarea>
+							</p>
+							<p>
+								<label for="locDescText">Location description/comments:</label><textarea data-dojo-type="dijit/form/SimpleTextarea" id="locDescText" name="locDescText" title="Please provide a description of the location.  If you know the ID of the nearest lampost, you can add that here " maxLength="1500" class="textActive"></textarea>
+							</p>
+			            <h4>If you would like to be contacted</h4>
+							<p>
+							<label for="nameText">Your name:</label><input type="text" dojoType="dijit.form.TextBox" id="nameText" name="nameText" MaxLength="50"/><span class="extext">Optional</span>
+							</p>
+							<p>
+							<label for="emailText">Your email:</label><input type="email" dojoType="dijit.form.ValidationTextBox" id="emailText" name="emailText" promptMessage="Please enter a valid email address" invalidMessage="Invalid email address" RegExp="[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[A-Za-z0-9-]*[A-Za-z0-9])?" /><span class="extext">Optional</span>
+							</p>
+							<p>
+							<label for="phoneText">Your phone number:</label><input type="number" dojoType="dijit.form.ValidationTextBox" id="phoneText" name="phoneText" invalidMessage="Phone number can only contain numbers" RegExp="[\d]*"/><span class="extext">Optional</span>
+							</p>
+			            <input type="hidden" id="x" name="x" /><input type="hidden" id="y" name="y" />
+			            <input type="hidden" id="problemcategory" name="problemcategory" /><input type="hidden" id="problemdetail" name="problemdetail" /><input type="hidden" id="siteCode" name="siteCode" />
+			            <!-- <div class="formRow"> -->
+						<!-- <h2 class="header">Send the information to the Council</h2> -->
+						<p>
+							<a href="#" id="btnSend" class="nccButton" style="width:250px">Send to Council >></a>
+							<div id="processingDiv" class="processing"><img alt="This is an animated picture denoting a waiting time" src="images/loading/loaderb64.gif" /><p>Sending the problem to the council. Please wait...</p></div>
+							<div class="extext" style="width:250px;margin:0 auto;display:block">Send details of your reported problem to Nottingham City Council</div>
+						</p>
+					    <!-- </div> -->
+						</form>
+						<div runat="server" id="catResults"></div>					
+					</div>
+                    <div id="someContainer" style="clear:both;margin:5px 5px 0px 5px;">
+                        <a href="#" style="display:none;" id="identifyClick">Identify</a>                        
+                        <div id="resultsInternal" style="margin-bottom:10px"></div>
+                    </div>
+
+					<h2 class="header">Need help?</h2>
+					<p> Online: <a href="#" id="appHelpLink">Click here for help with using the map</a><br/>
+						Telephone: 0115 9152000<br/>
+						Email: <a href="mailto:neighbourhood.services@nottinghamcity.gov.uk?subject=Report a problem web application">neighbourhood.services@nottinghamcity.gov.uk</a>
+					</p>
+					<!-- 
+					<p>
+						If you are having problems using the map, please call for assistance
+					</p>
+					-->
+					<!--
+					<h2 class="header">Feedback</h2>
+					<p>
+						Please click the following link to provide feedback about this website<br/>
+						<a href="http://www.nottinghamcity.gov.uk/index.aspx?articleid=205" target="_blank">Feedback</a>
+					</p>
+					-->
+				</div>
+			</div>
+		</div><!-- End mainContainer -->
+
+        <!-- Page script -->
+		<script type="text/javascript" src="data/categories2.js"></script>
+        <script type="text/javascript" src="js/problem.min.js"></script>		
+        <!-- Dojo AMD Requires for the dijits used in this page UI -->
+        <script type="text/javascript">
+            // Nothing
+        </script>	
+	 <script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-2299364-1");
+		pageTracker._trackPageview("/My Nottingham Homepage/My Services/Do it Online/New reporting maps");
+		} catch(err) {}
+	   </script>		
+	</body>
+</html>

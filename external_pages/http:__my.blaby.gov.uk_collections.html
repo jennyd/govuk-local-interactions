@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Bin collection dates</title>
+    <meta http-equiv="content-style-type" content="text/css">
+
+    <meta name="Description" content="Find out when your waste and recycling is collected">
+    <meta name="Keywords" content="recycling,refuse,bin,collection,dates">
+    <meta name="Language" content="EN-GB">
+    <meta name="Title" content="Recycling and refuse - collection dates">
+    <meta name="Copyright" content="Blaby District Council">
+
+    <style>
+        .menulist {
+            display: inline;
+        }
+
+        #map {
+            height: 280px;
+            /* width:50%;
+            float: right; */
+        }
+		.show-grid {
+			margin-bottom: 20px;
+			margin-top: 6px;
+		}
+		.no-bottom {
+			margin-bottom: 0 !important;
+		}		
+
+    </style>
+    <link rel="stylesheet" href="/libs/leaflet/leaflet.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/libs/leaflet/leaflet.ie.css"/>
+    <![endif]-->
+    <link href="/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="myblaby.css" media="all">
+	<link rel="shortcut icon" href="http://www.blaby.gov.uk/EasySiteWeb/EasySite/StyleData/Blaby_Master/Images/favicon.ico" />
+	
+</head>
+<body style="font-size: 80%;">
+
+<div id="style-masthead">
+	<div class="style-mo">
+		<div class="cls style-mi">
+
+			<div id="style-help" class="style-ho">
+				<div class="cls style-hi">
+                <p class="skip"><a accesskey="S" title="Skip To Content" href="#skiplinks">Skip To Content</a></p>
+					<map id="snv-help" title="">
+						<ul class="inline links">
+                            <li class="text-resizer-links"><span class="text-resizer-title">Text Size:</span>
+						        <a href="http://www.blaby.gov.uk/?vAction=fntDown" title="Smaller Text" accesskey="m" rel="nofollow"><span class="text-smaller">A</span></a>
+						        <a href="http://www.blaby.gov.uk/?vAction=fntReset" title="Normal Text" accesskey="n" rel="nofollow"><span class="text-normal">A</span></a>
+                                <a href="http://www.blaby.gov.uk/?vAction=fntUp" title="Larger Text" accesskey="b" rel="nofollow"><span class="text-larger">A</span></a><span class="sep">|</span>						        
+					        </li>
+                            <li><a href="http://www.blaby.gov.uk/?vAction=swpTextOnly" title="Text Only" accesskey="t" rel="nofollow"><span class="text-o"><span class="text-i">Text Only</span></span></a><span class="sep">|</span></li>
+							<li><a href="http://www.blaby.gov.uk/accessibility/" title="Accessibility" accesskey="0"><span class="text-o"><span class="text-i">Accessibility</span></span></a><span class="sep">|</span></li>
+							<li><a href="http://www.blaby.gov.uk/cookies/" title="Cookies" accesskey="c"><span class="text-o"><span class="text-i">Cookies</span></span></a><span class="sep">|</span></li>
+							<li><a href="http://www.blaby.gov.uk/google-translate/" title="Google Translate" accesskey="l"><span class="text-o"><span class="text-i">Google Translate</span></span></a></li>
+							
+						</ul>
+					</map>                    				
+				</div>
+			</div>
+	
+        <div id="style-header-o">
+            <div id="style-header-i">
+			<div id="style-avatar"><a href="http://www.blaby.gov.uk/" title="Blaby District Council - homepage" accesskey="1"><img src="images/blaby-district-council-logo.gif" alt="Blaby District Council"></a></div>
+			<div id="style-search" class="style-so">
+				<div class="cls style-si">
+					<form action="http://www.blaby.gov.uk/search/" method="get">
+						<fieldset>
+							<legend>Search our Site</legend>
+							<div class="fields">
+								<div class="element keywords">
+									<div class="question"><label class="label" for="q">Keywords</label></div>
+									<div class="answer"><input id="q" class="textbox" name="q" accesskey="4" value="Search our site" onfocus="if (this.value=='Search our site') { this.value=''; };return true;" type="text"></div>
+								</div>
+							</div>
+							<div class="buttons"><input class="button" value="                Find                      " type="submit"></div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+            <p id="advanced-search"><a href="http://www.blaby.gov.uk/search/" title="Advanced Search">Advanced Search</a></p>
+            <div id="header-buttons">
+                <a href="http://www.blaby.gov.uk/a-z/" title="A-Z of Services"><img src="images/az-button.png" alt="A-Z of Services button"></a>
+            </div>
+            </div>
+		</div>	
+		</div>
+	</div>
+</div>
+<div id="style-topnav-o">
+    <div id="style-topnav-i">
+        <a href="http://www.blaby.gov.uk/" title="Homepage" id="homepage-link">Homepage</a>
+        <!-- CT local site -->
+        <!---->
+        <!-- Blaby build site -->
+        <div id="Blaby_Top_Nav" class="style-element-outer custom-menu custom-menu-Blaby_Top_Nav"><div class="style-element-inner"><div class="style-element-body clear"><div class="panel fn-panel-alpha alpha">
+  <ul class="navigation">
+    <li>
+      <a href="http://www.blaby.gov.uk/resident/" class="title">
+        <span class="text">Resident</span>
+      </a>
+    </li>
+  </ul>
+</div><div class="panel fn-panel-beta beta">
+  <ul class="navigation">
+    <li>
+      <a href="http://www.blaby.gov.uk/business/" class="title">
+        <span class="text">Business</span>
+      </a>
+    </li>
+  </ul>
+</div><div class="panel fn-panel-gamma gamma">
+  <ul class="navigation">
+    <li>
+      <a href="http://www.blaby.gov.uk/about-the-council/" class="title">
+        <span class="text">About The Council</span>
+      </a>
+    </li>
+  </ul>
+</div><div class="panel fn-panel-delta delta">
+  <ul class="navigation">
+    <li>
+      <a href="http://www.blaby.gov.uk/news-events/" class="title">
+        <span class="text">News &amp; Events</span>
+      </a>
+    </li>
+  </ul>
+</div><div class="panel fn-panel-epsilon epsilon">
+  <ul class="navigation">
+    <li>
+      <a href="http://www.blaby.gov.uk/about-the-council/website-and-social-media/my-account/" class="title">
+        <span class="text">My Account</span>
+      </a>
+    </li>
+  </ul>
+</div></div></div></div>
+    </div>
+</div>
+
+<div style="background: url('images/main-bg-gradient.gif') repeat-x scroll left top #FEFFFE; clear: both; margin: auto;">
+	<div style="background: none repeat scroll 0 0 transparent; margin: auto; padding: 0; width: 960px;">
+			<div style="clear: both; overflow: hidden; background: none repeat scroll 0 0 transparent; margin: auto; padding: 15px 7px 20px; width: 946px;">
+				<div style="clear: both; padding: 3px 3px 15px;">
+					<div style="color: #252525;font-size: 0.95em;">
+<h1 id="skiplinks">Bin collection dates</h1>
+
+
+<div class="body">
+<div class="address-lookup">
+
+<!-- 
+<form action="/collections" method="get" class="form" id="property-finder" accept-charset="UTF-8">
+<input type="hidden" id="location" value="change" name="location"/>
+<input type="hidden" id="letter" value="" name="letter" />
+	<label for="address" class="fm-field-name">Postcode:</label>
+	<input type="text" id="address" value="" class="field" name="address"> 
+	<input type="submit" value="Search" class="button"> 
+</form>
+-->
+
+<!-- EIBS -->
+
+<div class="element-panel-alpha-outer">
+	<div class="element-panel-alpha-inner" style="width:70%; float:left;">
+		<div class="element-panel-alpha-header-outer">
+			<div class="element-panel-alpha-header-inner">
+			    <h2 id="esctl_23016_h" class="element-panel-alpha-header"><span id="esctl_23016_lblPanelTitle" class="oPanelTitle">Bin Collections</span></h2>
+			</div>
+		</div>
+	<div class="element-panel-alpha-body-outer">
+		<div class="element-panel-alpha-body-inner clearfix">
+			<div class="element-panel-alpha-body-content-outer">
+				<div class="element-panel-alpha-body-content-inner clearfix">
+				
+				<div class="element-columns-alpha-outer">
+					<div class="element-columns-alpha-inner">
+						<div class="element-column-left-alpha-outer" style="width: 50%; float: left;">
+							<div class="element-column-left-alpha-inner">
+								<div class="element-column-left-alpha-content">
+									<div id="esctl_23021_pnlAssetHolder" class="oAssetInline oAssetLeft">
+										<div id="esctl_23021_pnlAssetImgHolder" class="clear" style="width: 299px;">
+											<div class="asset">
+												<img src="images/bin-lorries.png" alt="Blaby map placeholder image" style="height: 208px; width: 299px;">
+											</div>
+										</div>
+				 
+									</div>
+								</div>
+							</div>
+						</div>
+					<div class="element-column-right-alpha-outer" style="width: 50%; float: right;">
+						<div class="element-column-right-alpha-inner">
+							<div class="element-column-right-alpha-content">
+							 <div class="ContentEditor">Please enter your postcode to find your what days your refuse and recycling bins are collected: <br /> </div>
+							 <div id="esctl_23023_pnlQuickSearch" class="page-element-outer oDirectoryQuickSearch">				
+								<div class="page-element-inner">
+									<div class="oDataFormContainer">
+									<form action="/collections#showaddress" method="get" class="form" id="property-finder" accept-charset="UTF-8">
+										<input type="hidden" id="location" value="change" name="location"/>
+										<fieldset class="oDataFormFieldset form form-search">
+										<legend class="oDataFormLegend">My blaby</legend>
+										<div class="oDataFormElementContainer">
+											<div class="search-plugin clear">
+												<div class="element">
+												<span class="question">
+													<label>Postcode:</label>
+												</span>
+												<div class="answer">
+													<input value="" name="address" id="address" class="textbox" type="text" />
+													<input value="" name="layer" id="layer" type="hidden" />
+												</div>
+												</div>
+
+												<label class="checkbox">
+														<input type="checkbox" value="1" id="rememberloc" name="rememberloc" > Remember my location using a cookie. <br /><a title="Find out more about how we use Cookies on this site" href="http://www.blaby.gov.uk/cookies">What is a cookie?</a>.													
+												</label>
+											</div>
+										</div>
+										</fieldset>
+										<div class="oDataFormButtonContainer buttons">
+												<input value="Search" class="oDataFormButton button" type="submit">
+										</div>
+									</div>
+									</form>
+								</div>
+							 </div>
+
+							</div>
+						</div>
+					</div>
+					
+					</div>
+				</div>
+
+				</div>
+				<p></p>
+			</div>
+		</div>					
+	</div>
+
+	<div class="address-results" style="clear:both; padding: 0px 5px 0px 0px;">
+	<div class="row">
+		<hr style="border: 0; color: #007d5a; background-color: #007d5a; height: 3px; margin: 15px 0px 0px 20px;">
+	</div>
+</div>
+
+	</div>	
+	
+	<div style="height: auto; overflow: hidden; width:30%; float:left;">
+<div style="background: url(images/panel-purple-header-right.png) no-repeat scroll right top transparent; padding-right: 15px;">
+<div style="background: url(images/panel-purple-header-left.png) no-repeat scroll left top transparent; height: 35px; padding: 14px 5px 0 20px;"><h2 style="color: #FFFFFF; font-size: 1.15em; line-height: 1; margin: 0;">Summary</h2></div></div>
+<div style="background: url(images/panel-body-right.png) no-repeat scroll right bottom transparent; padding-right: 15px;">
+<div style=" background: url(images/panel-body-left.png) no-repeat scroll left bottom transparent; padding: 10px 0px 15px 15px;">
+<p><img src="/images/icon-computer.png" style="float: right; margin: 0px 10px 0px 10px;">To find out which day your household refuse, recycling and garden waste is collected, and to download a copy of the collections calender for your property in PDF format, first enter your postcode in the box on the left-hand side, and click 'Search'.</p><p>Once the street information loads, select your property to view collection information relevant to your area.</p><hr style="border: 0; color: #007d5a; background-color: #007d5a; height: 1px;">
+<p>Help us improve the Bins & Recycling section of the My Blaby website by suggesting new features and services that you would like to see.</p>
+<p>Send your suggestions to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#119;&#101;&#98;&#115;&#105;&#116;&#101;&#46;&#116;&#101;&#97;&#109;&#64;&#98;&#108;&#97;&#98;&#121;&#46;&#103;&#111;&#118;&#46;&#117;&#107;">&#119;&#101;&#98;&#115;&#105;&#116;&#101;&#46;&#116;&#101;&#97;&#109;&#64;&#98;&#108;&#97;&#98;&#121;&#46;&#103;&#111;&#118;&#46;&#117;&#107;</a></p>
+</div></div></div>			
+</div>
+
+<!-- EIBS END -->
+
+</div></div>
+
+	</div>
+</div> <!-- row -->
+</div></div></div></div></div>
+
+
+        <div id="style-az-o">
+            <div id="style-az-i">
+                <span>A-Z of Services</span>
+                <ul>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=A" title="A" class="az-bar-link">A</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=B" title="B" class="az-bar-link">B</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=C" title="C" class="az-bar-link">C</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=D" title="D" class="az-bar-link">D</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=E" title="E" class="az-bar-link">E</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=F" title="F" class="az-bar-link">F</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=G" title="G" class="az-bar-link">G</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=H" title="H" class="az-bar-link">H</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=I" title="I" class="az-bar-link">I</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=J" title="J" class="az-bar-link">J</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=K" title="K" class="az-bar-link">K</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=L" title="L" class="az-bar-link">L</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=M" title="M" class="az-bar-link">M</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=N" title="N" class="az-bar-link">N</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=O" title="O" class="az-bar-link">O</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=P" title="P" class="az-bar-link">P</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=Q" title="Q" class="az-bar-link">Q</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=R" title="R" class="az-bar-link">R</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=S" title="S" class="az-bar-link">S</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=T" title="T" class="az-bar-link">T</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=U" title="U" class="az-bar-link">U</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=V" title="V" class="az-bar-link">V</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=W" title="W" class="az-bar-link">W</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=X" title="X" class="az-bar-link">X</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=Y" title="Y" class="az-bar-link">Y</a></li>
+                    <li><a href="http://www.blaby.gov.uk/a-z/?l=Z" title="Z" class="az-bar-link">Z</a></li>
+                </ul>
+            </div>
+        </div>
+		
+		<div id="style-extras">
+			<div class="style-eo">
+				<div class="cls style-ei">
+
+                <div id="footer-contact">
+					<p class="ftitle">Council Address:</p>
+                    <p class="footer-address">Blaby District Council<br />Council Offices<br />Desford Road<br />Narborough<br />Leicestershire, LE19 2EP</p>
+                    <p class="contact-links"><a href="http://www.blaby.gov.uk/contact-us/" title="Contact Us" accesskey="9">Contact Us</a><br />
+                    <a href="http://www.blaby.gov.uk/opening-times/" title="Opening Times" accesskey="">Opening Times</a></p>
+                </div>
+
+                <div id="footer-social">
+					<p class="ftitle">Connect:</p>
+					<div class="sx-sharing">
+						<ul>
+							<li class="first facebook"><a href="http://www.facebook.com/blabydc" title="Facebook" target="_blank"><img src="http://www.blaby.gov.uk/EasySiteWeb/EasySite/StyleData/Blaby_Master/Images/ico_social_facebook.png" alt="Facebook" /></a><span class="text-block"><span class="text"><a href="http://www.facebook.com/blabydc" title="Facebook" target="_blank">Facebook.com/BlabyDC</a></span></span></li>
+							<li class="twitter"><a href="https://twitter.com/BlabyDC" title="Twitter" target="_blank"><img src="http://www.blaby.gov.uk/EasySiteWeb/EasySite/StyleData/Blaby_Master/Images/ico_social_twitter.png" alt="Twitter" /></a><span class="text-block"><span class="text"><a href="https://twitter.com/BlabyDC" title="Twitter" target="_blank">Twitter.com/BlabyDC</a></span></span></li>
+							<li class="flickr"><a href="https://www.flickr.com/groups/blabydc/" title="Flickr" target="_blank"><img src="http://www.blaby.gov.uk/EasySiteWeb/EasySite/StyleData/Blaby_Master/Images/ico_social_flickr.png" alt="Flickr" /></a><span class="text-block"><span class="text"><a href="https://www.flickr.com/groups/blabydc/" title="Flickr" target="_blank">Flickr Photographs</a></span></span></li>
+							<li class="last feeds"><a href="/news.rss" title="RSS Feeds" target="_blank"><img src="http://www.blaby.gov.uk/EasySiteWeb/EasySite/StyleData/Blaby_Master/Images/ico_social_rss.png" alt="RSS Feed" id="rss-icon" /></a><span class="text-block"><span class="text"><a href="/news.rss" title="RSS Feeds" target="_blank">RSS News Feed</a></span></span></li>
+						</ul>
+                    </div>
+                </div>
+
+				<div class="flinks">
+					<p class="ftitle">Website Information:</p>
+					<map id="snv-flinks" name="assistance">
+						<ul class="inline links">
+							<li><a href="http://www.blaby.gov.uk/availability/" accesskey="a">Availability</a></li>
+                            <li><a href="http://www.blaby.gov.uk/data-protection/" accesskey="7">Data Protection</a></li>
+                            <li><a href="http://www.blaby.gov.uk/freedom-of-information/" accesskey="2">Freedom of Information</a></li>
+                            <li><a href="http://www.blaby.gov.uk/site-map/" accesskey="3">Site Map</a></li>
+							<li><a href="http://www.blaby.gov.uk/privacy-policy/" accesskey="6">Privacy Policy</a></li>
+							<li><a href="http://www.blaby.gov.uk/copyright/" accesskey="8">Copyright</a></li>
+						</ul>
+					</map>
+				</div>
+                <div class="cse">
+                <!--<a href="/about-the-council/service-standards/customer-service-excellence/"><img src="http://www.blaby.gov.uk/EasySiteWeb/EasySite/StyleData/Blaby_Master/Images/ft-cseuk-sml.png" alt="Customer Service Excellence" /></a>-->
+                <a href="http://eepurl.com/_dh2n"><img src="http://www.blaby.gov.uk/EasySiteWeb/EasySite/StyleData/Blaby_Master/Images/email-updates.png" alt="Email Updates" /></a>
+                <!--<a href="/news-events/press-releases/2014-press-releases/council-website-named-as-one-of-best-in-country/">--><img src="http://www.blaby.gov.uk/EasySiteWeb/EasySite/StyleData/Blaby_Master/Images/BC-2015-4-Stars.png" alt="Socitm Better Connected, measuring quality in council websites" /><!--</a>-->
+                </div>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-590891-1']);
+  _gaq.push(['_setDomainName', 'blaby.gov.uk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><!-- footer -->
+
+
+</body>
+</html>

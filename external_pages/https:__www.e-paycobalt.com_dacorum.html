@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><title>PCN Payment System : Stage 1</title>
+
+
+
+
+  
+	<link rel="stylesheet" href="/dacorum/main.css" type="text/css">
+	<link rel="stylesheet" href="/basket.css" type="text/css">
+	
+		<link rel="stylesheet" href="/dacorum/branding76.css" type="text/css"><!-- Function to position cursor on first available field on the page -->
+	
+
+	
+	<script language="JavaScript" type="text/javascript">
+		<!--
+		function placeFocus() {
+			if (document.forms.length > 0) {
+				var field = document.forms[0];
+				for (i = 0; i < field.length; i++) {
+					if ((field.elements[i].tagName != "FIELDSET")) {
+						if ((field.elements[i].type != "text") && (field.elements[i].type != "textarea") && (field.elements[i].type.toString().charAt(0) != "s")) {
+						} else {
+							document.forms[0].elements[i].focus();
+							var value = document.forms[0].elements[i].value;
+							document.forms[0].elements[i].value = value;
+							break;
+						}
+					}
+				}
+			}
+		}
+		//-->
+	</script>
+
+<link href="/dacorum/immresource.css" type="text/css" rel="stylesheet"><link href="/dacorum/basic.css" type="text/css" rel="stylesheet"><link href="/dacorum/layout.css" type="text/css" rel="stylesheet"><link href="/dacorum/custom.css" type="text/css" rel="stylesheet"><link href="/dacorum/DBCPlugIns.css" type="text/css" rel="stylesheet"><link href="/dacorum/dbc.css" type="text/css" rel="stylesheet"><link rel="stylesheet" media="print" type="text/css" href="/dacorum/dbc.htm">
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4996990-13']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript';
+ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+		<script type="text/javascript" src="/js/jquery.js"></script>
+		<script type="text/javascript" src="/js/jquery-ui-1.7.2.custom.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.tools.js"></script>
+	<script type="text/javascript">
+    // select all desired input fields and attach tooltips to them
+      $(function(){
+	    $("#wrapper input:not(.button)[title], #wrapper select[title]").tooltip({
+	
+	    // place tooltip on the right edge
+	    position: "center right",
+	
+	    // a little tweaking of the position
+	    offset: [-2, 10],
+	
+	    // use the built-in fadeIn/fadeOut effect
+	    effect: "fade",
+	
+	    // custom opacity setting
+	    opacity: 1
+	
+	    });
+      });
+	</script>
+	<style type="text/css">
+/* simple css-based tooltip */
+.tooltip {
+    background-color:#000;
+    border:1px solid #fff;
+    padding:10px 15px;
+    width:320px;
+    display:none;
+    color:#fff;
+    text-align:left;
+    font-size:12px;
+ 
+    /* outline radius for mozilla/firefox only */
+    -moz-box-shadow:0 0 10px #000;
+    -webkit-box-shadow:0 0 10px #000;
+}
+.tooltip a {
+	color: greenyellow;
+}
+.no-border {/*border: 0;*/}
+.valign-top {vertical-align: top;}
+	</style>
+<style type="text/css">#wfcontent #wrapper {width:auto;}</style>
+
+<script type="text/javascript" src="/js/main.1415892304.js"></script></head><body onload="placeFocus()">
+<div id="head">
+		
+	
+	<!-- base href="http://www.dacorum.gov.uk/" -->
+	
+	
+	
+	
+	
+	
+	
+
+
+
+ <div id="header">
+       <span class="rm"></span>  
+		<a class="rm" href="http://www.dacorum.gov.uk/default.aspx?page=5250#content">skip to content</a>
+		<span class="rm"></span>
+		<a class="rm" href="http://www.dacorum.gov.uk/default.aspx?page=5250#navigation">skip to navigation</a> 
+		<span class="rm"></span>
+
+
+      <div id="top-nav">
+        <div class="col-1">
+           <ul>
+            <li><a href="http://www.dacorum.gov.uk/default.aspx?page=18">A-Z</a> .</li>
+            <li><a href="http://www.dacorum.gov.uk/default.aspx?page=81">Sitemap</a> .</li>
+            <li><a href="http://www.dacorum.gov.uk/default.aspx?page=82">Help</a> .</li>
+            <li><a href="http://www.dacorum.gov.uk/default.aspx?page=88">Contact</a> .</li>
+            <!--<li><a href="default.aspx?page=85">FAQ</a> .</li>-->
+            <li><a href="http://www.dacorum.gov.uk/default.aspx?page=86">Accessibility Options</a> .</li>
+            <li><a href="http://www.dacorum.gov.uk/default.aspx?page=1500">Jobs at the Council</a></li>
+          </ul>
+        </div><!-- end col-1-->
+        <div class="col-2">
+			<div style="display: inline;" id="searchBox"><label for="searchcriteria" accesskey="s">Search </label><input id="searchcriteria" name="searchcriteria" style="height: 20px; width: 100px;" value="Search" onkeydown="javascript:checkForSubmit();var keyCode = event.keyCode ? event.keyCode : event.charCode ? event.charCode : event.which; return checkForSubmit(keyCode); return false" onfocus="javascript:if(this.value == 'Search')this.value = '';" onblur="javascript:if(this.value == '')this.value = 'Search';" type="text"><a href="javascript:doSearch();"><img src="/dacorum/gobutton.gif" alt="Go"></a></div>
+
+
+
+<noscript>
+<div>Browser does not support script.</div></noscript>
+
+			<p class="popular-search"><span class="rm"></span><a href="http://www.dacorum.gov.uk/aprs/scripts/semaphoreserver.exe?DB=dacorum&amp;FILE=search">Advanced Search</a></p>
+        </div><!-- end col-2 -->
+        <div class="cl">&nbsp;</div>
+     </div><!-- end top-nav -->
+     <img src="/dacorum/dacorum-logo.gif" class="logo" alt="Dacorum Borough Council logo">
+     <h1 id="dbc-heading"><img src="/dacorum/dacorum-text.gif" alt="Dacorum Borough Council"></h1>
+     <p class="strapline">Welcome to Dacorum Borough Council</p>
+    </div><!-- end header -->
+
+  
+  
+  
+  <div id="main"><ul id="progress" style="margin-top: 0">
+		<li id="current"><strong>Welcome</strong></li>
+			<li>Enter Details</li>
+			<li>Confirmation</li>
+			<li>Checkout</li>
+			<li>Finish</li>
+	</ul><div class='clear'></div>
+<br class='tflclear'/>
+<h1 id="title">Pay your Penalty Charge Notice online </h1>
+		<div id="feedback">
+		</div>
+	<div id="help">
+			</div><!-- //help -->
+	
+		<div id="wrapper">
+			<div id="content">
+				<div id="body-wrapper">Welcome to the Dacorum Borough Council Penalty Charge Notice payment system.<br/><br/>
+
+<b>Please note if you receive a ticket and pay it, you cannot contest it later.</b><br/><br/>
+
+Before proceeding please ensure that you have:<br/>
+
+<ul><li>The charge notice number.</li><li>Your vehicle registration number.</li><li> A valid credit or debit card.</li></ul>
+This system will accept Visa, Mastercard, Switch/Maestro and Electron.</div><div class="payment-methods" style="text-align:center"><br />
+<img src="/images/mastercard.gif" alt="Mastercard"/>
+<img src="/images/visa.gif" alt="Visa" />
+<img src="/images/electron.gif" alt="Electron" />
+</div>
+
+<form  action="/dacorum" method="post" id="WebPayProduct">
+    <p><input name="fund" type="hidden" value="143" /></p>
+	<div class="formbuttonrow">
+		<input class="button" name="_qf_WebPayProduct_next" value="Next &gt;" type="submit" />
+	</div>
+	<div id="required" class="required"></div>
+</form>  		</div><!-- //content -->
+		</div><!-- wrapper -->
+	</div><!-- //main -->
+	<div class="security">
+ 	<img src="/images/padlock.gif" alt="Secure Connection Padlock" border="0">
+ 	Security Information: A padlock displayed on your browser indicates you are using a secure, encrypted connection.
+</div>
+	
+  
+  
+    <div id="footer">
+            <p>&copy; 2016 Cobalt Telephone Technologies Ltd. <a href="http://www.dacorum.gov.uk/default.aspx?page=2341">Legal Disclaimers</a>. Feedback: <a href="mailto:communications@dacorum.gov.uk">communications@dacorum.gov.uk</a></p>
+    </div><!-- end footer -->
+         <span style="font-weight:normal; font-size:75%;"><a href="/dacorum/privacy" style="float:right; text-align:center;width:100%;" target="_blank" title="Clicking this link will open a new window. Privacy & cookie policy">Privacy & Cookie Policy</a>
+
+
+
+</div>
+</body></html>

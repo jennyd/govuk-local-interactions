@@ -1,0 +1,972 @@
+
+
+	
+	
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" >
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb">
+		<head><title>
+	Abandoned Vehicles - West Devon Borough Council
+</title>
+				<base href="http://www.westdevon.gov.uk/" />
+
+				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+				<meta http-equiv="Content-Style-Type" content="text/css" />
+				<meta http-equiv="Content-Script-Type" content="text/javascript" />
+				<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+				<meta  name="generator" content="GOSS iCM - Intelligent Content Management" />
+<meta  name="DC.format.medium" content="html/text" />
+<meta  name="DC.date.created" content="2012-12-05T09:39:07+00:00" scheme="W3CDTF" />
+<meta  name="DC.date.issued" content="2012-12-05T09:38:38+00:00" scheme="W3CDTF" />
+<meta  name="DC.date.modified" content="2013-04-02T13:42:48+01:00" scheme="W3CDTF" />
+<meta  name="DC.date.disposal.review" content="2111-12-05T09:38:38+00:00" scheme="W3CDTF" />
+<meta  name="eGMS.accessibility" content="double-a" scheme="eGMS.WCAG20" />
+<meta  name="DC.title" content="Abandoned Vehicles" />
+<meta  name="DC.description" content="If you have noticed a vehicle that you think is abandoned, you can report it to us. If we determine that the vehicle is abandoned, we get it removed if necessary." />
+<meta  name="description" content="If you have noticed a vehicle that you think is abandoned, you can report it to us. If we determine that the vehicle is abandoned, we get it removed if necessary." />
+<meta  name="DC.identifier" content="http://www.westdevon.gov.uk/article/2515/Abandoned-Vehicles" scheme="DCTERMS.URI" />
+<meta  name="DC.language" content="EN" scheme="ISO 639-3/T" />
+<meta  name="DC.rights.copyright" content="Copyright 2016 West Devon Borough Council" />
+<meta  name="DC.type" content="standard" scheme="eGMS.TES" />
+<meta  name="DC.Audience" content="" />
+<meta  name="DC.contributor" content="(mr) Richard Sheard , Chief Executive, United Kingdom" />
+<meta  name="DC.creator" content="(mr) Richard Sheard , Chief Executive, United Kingdom" />
+<meta  name="DC.publisher" content="(mr) Richard Sheard , Chief Executive, United Kingdom" />
+
+
+				<script src="./westdevon/scripts/jquery/jquery-1.7.2.min.js" type="text/javascript"></script>
+				<script src="./westdevon/scripts/jquery/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+				<script src="./westdevon/scripts/jquery/jquery.touchSwipe.min.js" type="text/javascript" />
+				<script src="./westdevon/scripts/json.js" type="text/javascript"></script>
+				<script src="./westdevon/scripts/jquery/json-rpc.js" type="text/javascript"></script>
+				<script src="./westdevon/scripts/menu.js" type="text/javascript"></script>
+				<script src="./westdevon/scripts/search.js" type="text/javascript"></script>
+				<script src="./westdevon/scripts/analytics.js" type="text/javascript"></script>
+				
+				
+					<link rel="icon" href="http://www.westdevon.gov.uk/westdevon/favicon.ico"/>
+					<link rel="shortcut icon" href="http://www.westdevon.gov.uk/westdevon/favicon.ico"/>
+					<link rel="apple-touch-icon" href="http://www.westdevon.gov.uk/westdevon/apple-touch-icon.png"/> 
+				
+				
+				
+						<script type="text/javascript" src="./westdevon/scripts/javascripts.js"></script><script type="text/javascript" src="./westdevon/scripts/ckeditor/ckeditor.js"></script><script type="text/javascript" src="./westdevon/scripts/swfobject.js"></script><script type="text/javascript" src="./westdevon/scripts/audio-player.js"></script><script type="text/javascript" src="./westdevon/scripts/captcha.js"></script>
+						<script type='text/javascript'>if(Civica===undefined){var Civica={}}_w2ResourceURL="/civica/Resource/";Civica.ContentUrl="/civica/Content/";Civica.ResourceUrl="/civica/Resource/";Civica.AppContentUrl="/civica/Content/";Civica.AppResourceUrl="/civica/Resource/";Civica.APIUrl="/civica/Resource/Civica/Handler.ashx/";Civica.MappingUrl="/civica/Resource/Civica/Mapping/";Civica.DocumentViewerUrl="/documentviewer";Civica.KeyObjectViewerUrl="/requestviewer";Civica.Recaptcha={PublicKey:"6LfeJuMSAAAAAGLSttgZ2QtZgxCooYHU6OQnrrI1",Theme:"red"};Civica.CallScriptUrl="/call-script/";Civica.StartProcessUrl="/start-process/";</script>
+<!-- External resources -> external.min.js -->
+<script type="text/javascript" src="/civica/Bundles/external.min.js?t=121078"></script>
+
+<!-- Civica common -> common.min.js -->
+<script type="text/javascript" src="/civica/Bundles/common.min.js?t=121078"></script>
+
+<!-- Core styles -> common.min.css -->
+<link href="/civica/Bundles/common.min.css?t=121078" media="all" rel="stylesheet" type="text/css" />
+
+<!-- CSM Resources -> csm.min.js -->
+<script type="text/javascript" src="/civica/Bundles/csm.min.js?t=121078"></script>
+
+					
+				
+
+				
+				<link href="./westdevon/css/editor.css" rel="stylesheet" type="text/css" media="all" />
+<link href="./westdevon/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="./westdevon/css/colours.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 7]> 
+<link href="./westdevon/css/ie7.css" rel="stylesheet" type="text/css" media="all" />
+ <![endif]-->
+<!--[if IE 8]> 
+<link href="./westdevon/css/ie8.css" rel="stylesheet" type="text/css" media="all" />
+ <![endif]-->
+<link href="./westdevon/css/styleprint.css" rel="stylesheet" type="text/css" media="print" />
+
+				
+				<link href="./westdevon/scripts/jquery/css/flick/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" media="all" />
+			
+			
+				<script type="text/javascript">
+					var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-2108199-1']);
+					_gaq.push(['_setDomainName', '.westdevon.gov.uk']);
+					_gaq.push(['_setAllowHash', false]);
+					
+							_gaq.push(['_setCustomVar', 1, 'L1', 'Parking and Travel', 3]);
+						
+							_gaq.push(['_setCustomVar', 2, 'L2', 'Abandoned Vehicles', 3]);
+						
+					_gaq.push(['_trackPageview']);
+
+					(function() {
+						var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					})();
+				</script>
+			
+	</head>
+
+		<body onload="pageLoaded();">
+			<div id="pagewrapper">
+				<div id="topbanner">
+					
+						<div id="toplogo">
+							<a href="http://www.westdevon.gov.uk/article/1650/Residents" title="Link to Residents homepage" >
+								
+										<img alt="Link to homepage" src="./westdevon/images/toplogo.png" />
+									
+							</a>
+						</div>
+					
+					
+
+
+		<div id="toputilnav">
+			<ul>
+				<li class="even first">
+					<a accesskey="s" href="http://www.westdevon.gov.uk/article/2515/Abandoned-Vehicles#SkipNavigation">Skip Navigation</a>
+				</li>
+				<li class="odd">
+					<a href="http://www.westdevon.gov.uk/article/1646/West-Devon-Borough-Council" title="West Devon Borough Council">Home</a>
+				</li>
+	
+		
+				<li class="even">
+					<a href="http://www.westdevon.gov.uk/article/2449/Accessibility">Accessibility</a>
+				</li>
+			
+	
+		
+				<li class="odd">
+					<a href="http://www.westdevon.gov.uk/article/3155/Search">Search</a>
+				</li>
+			
+	
+		
+				<li class="even last">
+					<a href="http://www.westdevon.gov.uk/article/1673/About-Cookies">About Cookies</a>
+				</li>
+			
+	
+			</ul>
+		</div>
+	
+
+
+					
+	<div id="toplevelsearch">
+		<form action="article/3155/Search" method="get">
+			<fieldset>
+				<legend>Search site</legend>
+				<label for="q"><span>Search</span></label>
+				<input type="submit" name="go" value="Go" title="Search for entered keyword" class="btntext" />
+				<input type="text" maxlength="50" name="q" id="q" class="searchkeyword" value="Search" onfocus="focustextfield(this,'Search')" onblur="blurtextfield(this,'Search')" />
+				<input type="hidden" name="searchMethod" id="searchMethod" value="ALL" />
+				
+			</fieldset>
+		</form>
+	</div>
+
+<script type="text/javascript">var SEARCH_URL = '/ajax.ashx';  var SEARCH_COLLECTIONS = 'Article';</script>
+					
+				</div>
+				<div id="toplevel">
+					
+
+	
+	<div id="toplevelnav">
+	
+			<ul>
+		
+			<li class="active-tab0 active-tab0-first">
+				<a href="http://www.westdevon.gov.uk/article/1650/Residents">Residents</a>
+			</li>
+		
+			<li class="tab1 tab1">
+				<a href="http://www.westdevon.gov.uk/article/7391/Do-it-Online">Do it Online</a>
+			</li>
+		
+			<li class="tab2 tab2">
+				<a href="http://www.westdevon.gov.uk/article/1880/Business">Business</a>
+			</li>
+		
+			<li class="tab3 tab3">
+				<a href="http://www.westdevon.gov.uk/article/1881/Your-Communities">Your Communities</a>
+			</li>
+		
+			<li class="tab0 tab0">
+				<a href="http://www.westdevon.gov.uk/article/1882/Your-Council">Your Council</a>
+			</li>
+		
+			<li class="tab1 tab1-last">
+				<a href="http://www.westdevon.gov.uk/myaccount">Your Account</a>
+			</li>
+		
+			</ul>
+		
+	</div>
+
+				</div>
+				
+
+		<div id="secondlevel" class="active-tab0 active-tab0-first">
+			<ul class="nav">
+	
+		<li class="nav item0 ">
+			
+					<a href="http://www.westdevon.gov.uk/article/2291/Planning">Planning</a>
+				
+			
+					<ul class="menu" style="visibility: hidden">
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/searchlanding">Search Planning Applications</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2364/Before-A-Planning-Application-Is-Made">Before A Planning Application Is Made</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2365/During-The-Application-Process">During The Application Process</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2367/After-A-Planning-Decision-Is-Made">After A Planning Decision Is Made</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2376/Comment-on-a-Planning-Application">Comment on a Planning Application</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2373/Strategic-Planning">Strategic Planning</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2404/Planning-Concerns">Planning Concerns</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2375/Hedges--Trees" title="Hedges &amp; Trees">Hedges &amp; Trees</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2380/Conservation--Listed-Buildings" title="Conservation &amp; Listed Buildings">Conservation &amp; Listed Buildings</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2374/Local-Land-Charges">Local Land Charges</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2379/Street-Naming--Numbering" title="Street Naming &amp; Numbering">Street Naming &amp; Numbering</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/3605/Building-Control">Building Control</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/4165/Weekly-Lists-of-Planning-Applications-Registered">Weekly Lists of Planning Applications Registered</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/4504/Denbrook-Wind-Farm-Development">Denbrook Wind Farm Development</a>
+					</li>
+				
+					<li class="even last">
+						<a href="http://www.westdevon.gov.uk/planningfaqs">FAQs</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item1 ">
+			
+					<a href="http://www.westdevon.gov.uk/recyclingwaste" title="Recycling &amp; Waste">Recycling &amp; Waste</a>
+				
+			
+					<ul class="menu" style="visibility: hidden">
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/missedwaste">Report a Missed Waste Collection</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/newcontainer">Request a New or Additional Waste Container</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/lostcontainer">Report a Lost, Stolen or Damaged Waste Container</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/wastequestion">Ask our Waste Team a question</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/4134/Find-Recycling--Waste-collection-information" title="Find Recycling &amp; Waste collection information">Find Recycling &amp; Waste collection information</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/1674/Recycling-at-Home">Recycling at Home</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/1676/More-Recycling--Recycling-Centres" title="More Recycling &amp; Recycling Centres">More Recycling &amp; Recycling Centres</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/1675/Other-Household-Collections">Other Household Collections</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/1835/Waste-Reduction--Composting" title="Waste Reduction &amp; Composting">Waste Reduction &amp; Composting</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2583/Report-Dog-Fouling">Report Dog Fouling </a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2590/Fly-Tipping-and-Littering">Fly Tipping and Littering</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/1678/Commercial-Waste">Commercial Waste</a>
+					</li>
+				
+					<li class="even last">
+						<a href="http://www.westdevon.gov.uk/article/3962/Real-nappies">Real nappies</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item2 ">
+			
+					<a href="http://www.westdevon.gov.uk/counciltax">Council Tax</a>
+				
+			
+					<ul class="menu" style="visibility: hidden">
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2543/Make-a-payment-of-Council-Tax">Make a payment of Council Tax</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2544/Reducing-your-Council-Tax">Reducing your Council Tax</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2545/Behind-with-your-payments">Behind with your payments?</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2567/I-am-moving-or-something-has-changed">I am moving or something has changed</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2546/Council-Tax-Essentials">Council Tax Essentials</a>
+					</li>
+				
+					<li class="odd">
+						<a href="https://www.westdevon.gov.uk/article/5836/Paying-by-Instalments">Paying by Instalments</a>
+					</li>
+				
+					<li class="even last">
+						<a href="http://www.westdevon.gov.uk/article/6089/Council-Tax-and-NNDR-FAQs">Council Tax and NNDR FAQs</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item3 ">
+			
+					<a href="http://www.westdevon.gov.uk/article/1655/Housing--Benefits" title="Housing &amp; Benefits">Housing &amp; Benefits </a>
+				
+			
+					<ul class="menu" style="visibility: hidden">
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/10597/Universal-Credit">Universal Credit</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/4926/Local-Discretionary-Welfare-Support">Local Discretionary Welfare Support</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2482/Threatened-with-Homelessness">Threatened with Homelessness</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2483/Housing-advice">Housing advice</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2484/Affordable-housing">Affordable housing</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2485/Apply-for-Social-Housing">Apply for Social Housing</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2486/Housing-Grants-Loans--Services" title="Housing Grants, Loans &amp; Services">Housing Grants, Loans &amp; Services</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2487/Housing-Benefit">Housing Benefit</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/3775/Council-Tax-Reduction">Council Tax Reduction</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2948/Benefits-Calculator">Benefits Calculator</a>
+					</li>
+				
+					<li class="even last">
+						<a href="http://www.westdevon.gov.uk/article/4317/Changes-to-Benefits-and-Grants-from-April-2013">Changes to Benefits and Grants from April 2013</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item4 ">
+			
+					<a href="http://www.westdevon.gov.uk/article/2300/Parking-and-Travel" class="onpath">Parking and Travel</a>
+				
+			
+					<ul class="menu" style="visibility: hidden">
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2509/Pay-a-Parking-Fine">Pay a Parking Fine</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/appeal">Appeal a Parking Fine</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/3993/Parking-Permits">Parking Permits</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2513/Car-park-locations">Car park locations</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2514/Disabled-Blue-Badge-Parking">Disabled Blue Badge Parking</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/4860/RingGo-Parking-Payment-Service">RingGo Parking Payment Service</a>
+					</li>
+				
+					<li class="even">
+						<span>Abandoned Vehicles</span>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/3560/On-Street-Parking-Enforcement">On Street Parking Enforcement</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/3897/Fly-Tipping-and-Littering">Fly Tipping and Littering</a>
+					</li>
+				
+					<li class="odd last">
+						<a href="http://www.westdevon.gov.uk/article/4262/Current-Public-Consultations-for-Car-Parking">Current Public Consultations for Car Parking</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item5 ">
+			
+					<a href="http://www.westdevon.gov.uk/article/2306/Pests-Noise--Pollution" title="Pests, Noise &amp; Pollution">Pests, Noise &amp; Pollution</a>
+				
+			
+					<ul class="menu" style="visibility: hidden">
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2522/Noise-Nuisance">Noise Nuisance</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2516/Air-Pollution">Air Pollution</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2517/Contaminated-Land">Contaminated Land</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2518/In--Around-My-Home" title="In &amp; Around My Home">In &amp; Around My Home</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/3895/Fly-Tipping-and-Littering">Fly Tipping and Littering</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/3994/Pest-Control">Pest Control</a>
+					</li>
+				
+					<li class="even last">
+						<a href="http://www.westdevon.gov.uk/article/2521/Water">Water </a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+		<li class="nav item6 last">
+			
+					<script type="text/javascript">
+						/* <![CDATA[ */
+						document.write('<span class="more">More</span>');
+						/* ]]> */
+					</script>
+				
+			
+					<ul class="menu" style="visibility: hidden">
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/1656/Leisure-Sports--Outdoor-Spaces" title="Leisure, Sports &amp; Outdoor Spaces">Leisure, Sports &amp; Outdoor Spaces</a>
+					</li>
+				
+					<li class="odd">
+						<a href="http://www.westdevon.gov.uk/article/2323/Emergency-Planning">Emergency Planning</a>
+					</li>
+				
+					<li class="even">
+						<a href="http://www.westdevon.gov.uk/article/2326/Food-Hygiene">Food Hygiene</a>
+					</li>
+				
+					<li class="odd last">
+						<a href="http://www.westdevon.gov.uk/article/4273/West-Devon-Connect">West Devon Connect</a>
+					</li>
+				
+					</ul>
+				
+		</li>
+	
+			</ul>
+		</div>
+		
+			
+					<noscript>
+						<ul id="secondlevelmore">
+				
+					<li class="">
+						<a href="http://www.westdevon.gov.uk/article/1656/Leisure-Sports--Outdoor-Spaces" title="Leisure, Sports &amp; Outdoor Spaces">Leisure, Sports &amp; Outdoor Spaces</a>
+					</li>
+				
+					<li class="">
+						<a href="http://www.westdevon.gov.uk/article/2323/Emergency-Planning">Emergency Planning</a>
+					</li>
+				
+					<li class="">
+						<a href="http://www.westdevon.gov.uk/article/2326/Food-Hygiene">Food Hygiene</a>
+					</li>
+				
+					<li class="">
+						<a href="http://www.westdevon.gov.uk/article/4273/West-Devon-Connect">West Devon Connect</a>
+					</li>
+				
+						</ul>
+					</noscript>
+				
+		
+	
+
+				<span style="position:absolute;"> <!-- fix for IE not linking to empty named anchor -->
+					<a id="SkipNavigation">&nbsp;</a>
+				</span>
+				
+
+
+
+				
+
+
+	
+			<div id="breadcrumb">
+				<ol>
+		
+			<li class="even first">
+				<a href="http://www.westdevon.gov.uk/article/1650/Residents">Residents</a>
+			</li>
+		
+			<li class="odd">
+				<a href="http://www.westdevon.gov.uk/article/2300/Parking-and-Travel">Parking and Travel</a>
+			</li>
+		
+			<li class="even last">
+				<span>Abandoned Vehicles</span>
+			</li>
+		
+				</ol>
+			</div>
+		
+
+
+				
+
+				
+				<div id="maincolumnwrapper">
+					<div id="contentwrap">
+	
+						
+							
+									<div id="contentrightnav">
+										<div class="contentleft">
+											<div class="contentbodywrap">
+								
+						
+						<div id="centrecolumn">
+							
+
+
+	
+	
+
+		
+		
+	<div id="headingtext">
+		<h1>Abandoned Vehicles</h1>
+			
+				
+			</div>
+		
+		
+		
+		
+
+		
+			<div id="introtext">
+				<p>If you have noticed a vehicle that you think is abandoned, you can report it to us. If we determine that the vehicle is abandoned, we get it removed if necessary.</p>
+			</div>
+		
+		
+		<h2>What is an abandoned vehicle?</h2><ul><li>An abandoned vehicle is a vehicle which appears to have no owner. It is not simply a vehicle which is either untaxed or dangerously parked on the public highway </li><li>Usually it is a car, but it can be any vehicle no longer wanted by the owner or keeper, and which has been left in a public area.</li></ul><h2>How to report an abandoned vehicle</h2><p><strong>You can tell us about an abandoned vehicle using our <a href="https://www.westdevon.gov.uk/article/3375/Tell-Us-Online" title="Tell Us Online">Tell Us Online page</a>.</strong> You can also <strong>c</strong>ontact us by phone or email.</p><h2>Information we need about the vehicle</h2><p>If possible, provide the following information:</p><ul><li>Location of vehicle </li><li>Make and model </li><li>Colour </li><li>Registration number </li><li>How long has it been there </li><li>Any other information that may be relevant.</li></ul><h2>What happens when you report an abandoned vehicle? </h2><ul><li>We inspect the vehicle and contact the registered keeper. If we don't hear from them and we agree the vehicle is abandoned, we apply a statutory notice, giving the owner an opportunity to remove it </li><li>When notice expires, if the vehicle is still in the same position, it will be removed. If the owner claims the vehicle it will be their responsibility to remove it. </li></ul><h2>We can't usually deal with</h2><ul><li>Untaxed vehicles - untaxed vehicles which are not abandoned are a matter for the DVLA. Untaxed vehicles can be reported anonymously here&nbsp;<a class=" inlinelink id2426" href="http://www.dft.gov.uk/dvla/onlineservices/report_unlicensed.aspx" rel="external" title="DVLA - Report an Untaxed Vehicle">DVLA - Report an Untaxed Vehicle</a>&nbsp;or by&nbsp;phoning the <strong>DVLA Road Tax Cheat Line</strong> on <strong>08000 325202. </strong>If you have seen an untaxed vehicle which appears to be abandoned, we will investigate, but lack of a current tax disc alone does not make a vehicle an 'abandoned vehicle'. </li><li>Cars &quot;trespassing&quot; on private property. Vehicles that are abandoned elsewhere (in car parks, by garages, on private land) are the responsibility of the relevant land owners. </li></ul><p><strong>The law on abandoned vehicles:</strong></p><ul><li>The law requires Local Authority to remove vehicles which are apparently abandoned on highways, and some other land to which the public have access, subject to giving notice of removal </li><li>Usually seven days notice is given </li><li>In some circumstances we will only give 24 hours notice </li><li>In exceptional circumstances, such as where the vehicle is an immediate danger to public, we may remove it without notice.</li></ul><p><strong>Contact the Police if vehicles are</strong></p><ul><li>Parked in a dangerous position or are causing an obstruction </li><li>In dangerous positions at the roadside after a road traffic accident </li><li>Lost or stolen.</li></ul>
+	
+		
+	
+	
+
+							
+
+
+	
+		<div id="contentlinks">
+			<ul class="contentTop">
+				<li id="emailpage" class="even first">
+				</li>
+				<li class="odd print">
+					<script type="text/javascript">
+						/* <![CDATA[ */
+						document.write('<img class="icon" src="./westdevon/images/print.gif" alt="Print" />');
+						document.write('<a href="javascript:printWindow();">Print this page</a>');
+						/* ]]> */
+					</script>
+				</li>
+				<li class="even last">
+					<!--  AddThis Button BEGIN  -->					<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;username=xa-4bfc0153695eecdb">
+						<img src="http://s7.addthis.com/static/btn/v2/lg-share-en.gif" width="125" height="16" alt="Bookmark and Share" style="border:0"/>
+					</a>
+					<script type="text/javascript">
+						var addthis_config = {
+							data_ga_property: 'UA-2108199-1',
+							data_track_clickback: true
+						};
+					</script>
+					<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4bfc0153695eecdb">
+					</script>
+					<!--  AddThis Button END  -->				</li>
+			</ul>
+		</div>
+	
+
+							
+
+
+
+
+
+
+
+						</div>
+						
+							
+										</div>
+									<div id="rightcolumn">
+										<div class="related">
+								
+
+
+
+
+
+
+	
+
+
+
+	
+			
+			
+			
+					<div id="relatedarticles" class="box greysurround">
+						
+						    <h2>
+						        
+        						
+						        
+					                Related pages						        
+						        </h2>
+						
+						<div class="contenttop"><ul class="contentbtm">
+				
+				
+							<li class="even first">
+								<a href="http://www.westdevon.gov.uk/article/2513/Car-park-locations">Car park locations</a>
+							</li>
+				
+				
+							<li class="odd last">
+								<a href="http://www.westdevon.gov.uk/article/3560/On-Street-Parking-Enforcement">On Street Parking Enforcement</a>
+							</li>
+				
+						</ul></div>
+					</div>
+				
+			
+
+		
+
+
+
+
+	
+			
+			
+					<div id="relatedlinks" class="box greysurround">
+						<div class="top itemcount1">
+							
+						    <h2>
+						        
+        						
+						        
+					                Related websites						        
+						        </h2>
+						
+
+						<div class="contenttop"><ul class="contentbtm">
+				
+							<li class="even first last">
+								<a rel="external" class="offsitelink id6466" href="http://www.dft.gov.uk/dvla/contactus/vehicles_enquiries.aspx" title="http://www.dft.gov.uk/dvla/contactus/vehicles_enquiries.aspx">DVLA - Contact Details</a>
+							</li>
+				
+						</ul></div>
+					</div></div>
+				
+		
+
+
+
+
+
+	
+			
+			
+		
+
+
+	
+		
+	
+	
+	
+	
+		
+		
+	
+
+
+	
+			
+			
+					
+							<div class="box greysurround relatedfeatures">
+								<h2>Call us</h2>
+								<div class="contenttop"><ul class="contentbtm">
+						
+									<li class="odd">
+										<a href="http://www.westdevon.gov.uk/article/3473/Tel-01822-813600">Tel: 01822 813600</a>
+									</li>
+						
+								</ul>
+							</div>
+						</div>
+						
+							<div class="box greysurround relatedfeatures">
+								<h2>Email us</h2>
+								<div class="contenttop"><ul class="contentbtm">
+						
+									<li class="odd">
+										<a href="https://www.westdevon.gov.uk/article/3630/Environmental-Health">Environmental Health</a>
+									</li>
+						
+								</ul>
+							</div>
+						</div>
+						
+			
+		
+
+
+
+	
+			
+			
+			
+		
+
+
+
+
+	
+			
+			
+		
+
+
+
+	
+
+
+										</div></div></div>
+								
+						
+					</div>
+				</div>
+			</div>
+		</div>
+			
+				<div id="footer">
+					
+
+
+
+		<div id="footerlinks">
+			<ul>
+	
+				<li>
+					<a href="http://www.facebook.com/#!/pages/West-Devon/239950532798679?fref=ts">
+						<img src="./media/iconlink/i/g/facebook.png" alt="Facebook WDBC" />
+					</a>
+				</li>
+	
+				<li>
+					<a href="http://www.youtube.com/channel/UCDZEXV47SxBpXUDR6qbhtiA">
+						<img src="./media/iconlink/c/1/youtube.png" alt="YouTube WDBC" />
+					</a>
+				</li>
+	
+				<li>
+					<a href="http://www.twitter.com/WestDevon_BC">
+						<img src="./media/iconlink/7/3/twitter.png" alt="Twitter WDBC" />
+					</a>
+				</li>
+	
+				<li>
+					<a href="article/3722/RSS-News-Feed---Latest-News">
+						<img src="./media/iconlink/2/c/feed.png" alt="RSS WDBC - Residents" />
+					</a>
+				</li>
+	
+			</ul>
+		</div>
+	
+
+		<div id="newslink">
+			<a href="index.aspx?articleid=1809">In the news</a>
+		</div>
+
+
+		<div id="bottomutilnav">
+			<ul>
+	
+				<li class="even first">
+					<a href="http://www.westdevon.gov.uk/article/1671/Contact-us">Contact us</a>
+				</li>
+	
+				<li class="odd">
+					<a href="http://www.westdevon.gov.uk/article/2925/Site-Map">Site Map</a>
+				</li>
+	
+				<li class="even">
+					<a href="http://www.westdevon.gov.uk/article/3956/Emergency-Links">Emergency Links</a>
+				</li>
+	
+				<li class="odd">
+					<a href="http://www.westdevon.gov.uk/article/4153/Interactive-Maps">Interactive Maps</a>
+				</li>
+	
+				<li class="even last">
+					<a href="http://www.westdevon.gov.uk/article/3959/GOVUK">GOV.UK</a>
+				</li>
+	
+			</ul>
+		</div>
+	
+	
+
+		<div id="footerutilnav">
+			<ul>
+				<li class="first">
+			&copy; West Devon Borough Council				</li>
+	
+				<li class="even">
+					<a href="http://www.westdevon.gov.uk/article/3953/Terms--Conditions" title="Terms &amp; Conditions">Terms &amp; Conditions</a>
+				</li>
+	
+				<li class="odd last">
+					<a href="https://www.westdevon.gov.uk/article/4090/Website-Feedback">Website Feedback</a>
+				</li>
+	
+			</ul>
+		</div>
+	
+
+				</div>
+			
+
+			<script type="text/javascript" src="./iCMRender.4.0.5.10000/iCMRender.Resources.Javascript.iCM.js.axd"></script><noscript><div></div></noscript><script type="text/javascript">
+//<![CDATA[
+
+MagicSearchRPC = function() {
+  return {
+GetSearchResults: function(avalue, acollections, aokcallback, afailcallback, atarget) {
+    iCM.MakePostRPCCall({"method": "SwdpControls_Swdp$Controls$MagicSearch_GetSearchResults", "id": "null", "version": "1.1", "url": "ajax.ashx", "params": {"value": avalue,"collections": acollections}},aokcallback, afailcallback, atarget  );
+}
+  }
+}();
+
+iCM.RPC.MagicSearch = MagicSearchRPC;
+
+//]]>
+</script>
+			
+		</body>		
+	</html>

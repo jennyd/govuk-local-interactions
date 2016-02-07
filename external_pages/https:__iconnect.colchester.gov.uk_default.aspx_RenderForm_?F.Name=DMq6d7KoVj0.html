@@ -1,0 +1,141 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <title>Abandoned Vehicle</title> 
+  <!-- AF:'' CI:'' UC:'' -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" src="../scripts/jquery-1.7.2.min.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/dust-full-1.2.0.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/dust-helpers-1.1.1.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/jquery.firmsteputil.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/jquery.validate.min.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/jquery.toolbar-1.0.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/jquery.profileWizard-1.0.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/jquery.rrcoverride.js?v=354"></script>
+  <script type="text/javascript"> 
+    var jQuery172 = jQuery.noConflict(); 
+    var $ = jQuery172; 
+    var $log = $.noop;
+    (function($) {
+      $(function() {
+        $('#toolbar').toolbar();
+        $('.editProfileLink').profileWizard();
+        $('#footer').footer();
+        AFBootstrap('.form-wrapper');
+        if(!$.isFunction(OnAJAXDone)) {
+          console.warn('OnAJAXDone not present in form - AJAX is going to break the theming');
+        } else {
+          OnAJAXDone(AFBootstrap);
+        }
+      });
+    })(jQuery172);
+  </script> 
+  <script type="text/javascript" src="../scripts/config.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/routes.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/jquery.xdr.ajax-transport.js?v=354"></script>
+  <script type="text/javascript" src="../tb/js/bootstrap.js?v=354"></script>
+  <script type="text/javascript" src="../build/js/compiled-templates.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/api.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/jquery.app.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/yepnope.js?v=354"></script>
+  <script type="text/javascript" src="../scripts/jquery.footer-1.0.js?v=354"></script>
+ 
+  <!-- includes AF js/css and jQuery 1.3 --> 
+  <script type="text/javascript" src="//colchesteras.firmstep.com/js/combined.js"></script><link rel="stylesheet" type="text/css" href="//colchesteras.firmstep.com/js/combined.css"/><link rel="stylesheet" type="text/css" href="https://fs-filestore-eu.s3.amazonaws.com/AchieveService/css/as-v3.0.css" /><META NAME="robots" CONTENT="noindex,nofollow">
+<script type='text/javascript' src='https://fs-filestore-eu.s3.amazonaws.com/plugins/az-list/jquery.listnav.pack-2.1.js'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function() {
+ jQuery('#services').listnav({
+    includeAll: false,  
+    noMatchText: 'There are no matching services.',
+    showCounts: false
+  });
+});
+</script>
+
+<link href='https://fs-filestore-eu.s3.amazonaws.com/plugins/az-list/listnav.css' type='text/css' rel='stylesheet'></style>
+<!--[if IE 6]> 
+<link rel='stylesheet' type='text/css' href='https://fs-filestore-eu.s3.amazonaws.com/AchieveService/css/as-ie6v1.1.css' /> 
+<![endif]-->
+
+
+<script src="https://www.google.com/jsapi?key=ABQIAAAAUFf-Xby8Z4JBg_U5bhjjLxQKLV94h6MTpU3pesBK7ssOlLbBmBQyAc7YO4QPjVbtPXlxJGGBXKXd4w" type="text/javascript"></script>
+<script type="text/javascript" src="//colchesteras.firmstep.com/js/jquery.history.js"></script>
+<link rel="stylesheet" type="text/css" href="//colchesteras.firmstep.com/js/Maps/fullcalendar.css"></link>
+<script type="text/javascript" src="//colchesteras.firmstep.com/js/Maps/fullcalendar.js"></script>
+<script type="text/javascript" src="//colchesteras.firmstep.com/js/Maps/maps.js"></script>
+
+
+<!--[if IE 6]> <style type="text/css"> body .aftextinput, body .aftextarea { width: 98%; } .abscontainer { zoom:1; }</style> <![endif]--><style type="text/css">.cit2532cTFV .lM1rM2 .lM1rM2 {width: 99.96%}
+.cit2532cTFV .lM1rM2 {width:99.96%}
+.cit2532cTFV .lM1rM2 .lM3rM2 {width: 49.97%}
+.cit2532cTFV .lM3rM2 .lM3rM2 {width: 99.97%}
+.cit2532cTFV .lM3rM2 .lM4rM2 {width: 79.98%}
+.cit2532cTFV .lM1rM2 .lM1rM3 {width: 49.99%}
+.cit2532cTFV .lM3rM2 .lM3rM4 {width: 19.99%}
+.cit2532cTFV .lM3rM2 .lM4rM5 {width: 20.16%}
+.cit2532cTFV .lM3rM2 .lM5rM2 {width: 59.82%}</style><script type="text/javascript">function clearHelp()
+			{
+			 jQuery(".selectedfield").removeClass("selectedfield");
+			 jQuery(".richhelptext").hide();
+			}</script><script type='text/javascript' src='//colchesteras.firmstep.com/js/0.js' id='bwsjs'></script>
+		 
+
+  <link rel="stylesheet" type="text/css" href="../getStylesheet.php"/>
+
+</head>
+<body>
+    <div id="toolbar"></div>
+    <div class="content container container-fluid">
+      <div class="row-fluid"> 
+        <div class="form-wrapper"> 
+        <!--FS2-Form-Begin--><div id="body"><form method='post' enctype='multipart/form-data'  action="?ID=BouR4LQCNgH&amp;F.Name=DMq6d7KoVj0&amp;HideToolbar=1&amp;fs2s=E9Hc1B1Mnji&amp;HideToolbar=1&amp;fs2c=MDrg1poBR28&amp;fs2svr=ec2-46-137-118-171"><!--FS2PS: Begin Cgwazqqu86y--><!--FS2PS: End Cgwazqqu86y--><!--FS2PS: Begin inkGzB4LA7a--><!--FS2PS: End inkGzB4LA7a--><!--FS2PS: Begin ChoMMPpMJvk--><!--FS2PS: End ChoMMPpMJvk--><div id="cit2532cTFV" class="formouter"><span class="corneroutertopleft"></span><span class="corneroutertopright"></span><div class="sectionnametable"><div class="sectionnamerender"><!--FS2PS: Begin qwTUC9uXAdv-->Abandoned Vehicle Report<!--FS2PS: End qwTUC9uXAdv--></div></div><!--FS2PS: Begin fPgoAZWAhww--><!--FS2PS: Begin e4YHkkmDL7R--><span class="navbartitle ">Section Navigation Bar</span><div class="progressbartoptable"><span class="cornerinnertopleft"></span><span class="cornerinnertopright"></span><ol><li class="activenav"><input type="submit" name="ZQXR8wkzENV" id="ZQXR8wkzENV" value="Reporting a Vehicle" class="progress1 activesection" title="Abandoned Vehicle Report"  /><span class="afternavbutton"></span></li><li class="inactivenav"><input type="submit" name="tknh96cQx1r" id="tknh96cQx1r" value="Your Details" class="progress0" title="Your Details"  /><span class="afternavbutton"></span></li><li class="inactivenav"><input type="submit" name="gDdXRKt2z62" id="gDdXRKt2z62" value="Vehicle Details" class="progress0" title="Vehicle Details"  /><span class="afternavbutton"></span></li><li class="inactivenav"><input type="submit" name="PKgwVsd7F3h" id="PKgwVsd7F3h" value="Vehicle Location" class="progress0" title="Vehicle Location"  /><span class="afternavbutton"></span></li></ol><span class="niftyclear"></span><span class="cornerinnernavbottomleft"></span><span class="cornerinnernavbottomright"></span><span class="niftyclear"></span></div><!--FS2PS: End e4YHkkmDL7R--><!--FS2PS: End fPgoAZWAhww--><script type="text/javascript">$bwsajat()</script><!--FS2PS: Begin rb1gxML3PDh--><!--FS2PS: End rb1gxML3PDh--><div class="renderdisplaytable cit2532cTFV abandonedvehiclereport"><div class="renderbuttonstable"><span class="cornerinnertopleft"></span><span class="cornerinnertopright"></span><!--FS2PS: Begin nR67Xc2XGA8--><!--FS2PS: End nR67Xc2XGA8--><div class="enternosubmit"><!--FS2PS: Begin T11qyYpNyTn--><!--FS2PS: Begin WLSGHvGMroC--><script type="text/javascript">var _gaq=_gaq||[];
+					_gaq.push(['_setAccount', 'UA-19256518-3']);
+					_gaq.push(['_trackPageview', '/Form/Abandoned_Vehicles___Report/Abandoned_Vehicle_Report']);</script><!--FS2PS: End WLSGHvGMroC--><input type="hidden" id="U7mWoHHQEiF" name="U7mWoHHQEiF"  value=""/><script type="text/javascript">$$("0~~~0~U7mWoHHQEiF")</script><script type="text/javascript">if(typeof clearHelp == 'function') { 
+						jQuery(":input").focus(clearHelp);
+						jQuery(":input").click(clearHelp);
+					}</script><div class="bws colspan clear lM1rM2"><!--FS2PS: Begin nsM3duRvN2Y--><div id="tqGqh7yoG3N" class="bws colspan clear lM1rM2 "><div id="CBwv9KH9VCY" class=" nondatael"><h1>Abandoned Vehicle Report</h1></div></div><!--FS2PS: End nsM3duRvN2Y--><!--FS2PS: Begin GE6BsBkJ7dW--><div class="bws forceclear"></div><div id="jYqZ25DZgpF" class="bws colspan clear lM1rM2"><div id="aj59egpBMUb" class=" nondatael"><div style="height: 10px; "> </div></div></div><!--FS2PS: End GE6BsBkJ7dW--><!--FS2PS: Begin Z1HKUtxoEaB--><div class="bws forceclear"></div><div id="f2KEUtCDjHJ" class="bws colspan clear lM1rM2 "><div id="ZP4uzgHfBRL" class=" nondatael"><p>From 1st November 2014 tax discs are no longer issued. Please check if a vehicle is taxed before completing this form.</p>
+
+<p>You can check if a vehicle is taxed by clicking <a href="https://www.gov.uk/check-vehicle-tax" target="_blank">here</a> and entering the vehicle&#39;s details.</p>
+
+<p>Colchester Borough Council cannot remove vehicles that are legally on the road. Any issues regarding obstructions etc must be referred to your local police station.</p>
+</div></div><!--FS2PS: End Z1HKUtxoEaB--><!--FS2PS: Begin WNAJr1K9thk--><div class="bws forceclear"></div><div id="mebMEejGfR1" class="bws colspan clear lM1rM2"><div id="G9VfWo2qmqS" class=" nondatael"><div style="height: 10px; "> </div></div></div><!--FS2PS: End WNAJr1K9thk--><!--FS2PS: Begin SU5ihwR1FFt--><div class="bws forceclear"></div><div id="TVQbKeRqaMA" class="bws colspan clear lM1rM2  "><div class="datael"><div id="SgkYoYqyF66" class="dataell bws colspan fieldlabel bws leftlabel clear lM1rM3">Is the vehicle taxed? <span style="color:red" title="This field is mandatory">*</span></div><div id="jAJCBvDRMEj" class="bws colspan lM3rM2 af-form-selectone"><div class="dataelr"><fieldset class="bws fieldsetcontrol horiz"><legend>Is the vehicle taxed?</legend><div class="bws colspan clear lM3rM4"><div class="seloneel"><input type="radio" name="TTphYDWpPkQ" value="0" id="EGcS2W7EFwx" class="bws radio"/><label for="EGcS2W7EFwx" class="bws radio">Yes</label><script type="text/javascript">$$("0~~~T~EGcS2W7EFwx~");</script></div></div><div class="bws colspan lM4rM5"><div class="seloneel"><input type="radio" name="TTphYDWpPkQ" value="1" id="W3XHZf3QH9c" class="bws radio"/><label for="W3XHZf3QH9c" class="bws radio">No</label><script type="text/javascript">$$("0~~~T~W3XHZf3QH9c~");</script></div></div><div class="bws colspan lM5rM2"><div class="seloneel"><input type="radio" name="TTphYDWpPkQ" value="2" id="JEVYdBz9S3A" class="bws radio"/><label for="JEVYdBz9S3A" class="bws radio">Don't know</label><script type="text/javascript">$$("0~~~T~JEVYdBz9S3A~");</script></div></div><div class="bws colspan"></div></fieldset><div style="clear: both"><!--FS2PS: Begin FzJuJ1aZgTr--><!--FS2PS: Begin Z7QTgTUGf6x--><!--FS2PS: End Z7QTgTUGf6x--><!--FS2PS: End FzJuJ1aZgTr--></div></div></div></div></div><!--FS2PS: End SU5ihwR1FFt--><!--FS2PS: Begin NDYoaPUSjHJ--><!--FS2PS: End NDYoaPUSjHJ--><!--FS2PS: Begin Et2MZSohaHb--><div class="bws forceclear"></div><div id="A7NpqygnSeH" class="bws colspan clear lM1rM2"><div id="krZF8RyKRmT" class=" nondatael"><div style="height: 10px; "> </div></div></div><!--FS2PS: End Et2MZSohaHb--><!--FS2PS: Begin A7bGSnvTj6A--><div class="bws forceclear"></div><div id="K1pojsh7Qqq" class="bws colspan clear lM1rM2 "><div id="hhfgXdnhYqB" class=" nondatael"><p><strong>We can no longer take&nbsp;Abandoned Vehicle reports that are made anonymously. </strong></p>
+
+<p><strong>Your details will never been passed to anyone outside of the Council and will only be used by the Council if more information is required or to provide you feedback about your report.</strong></p>
+
+<p><strong>The Council cannot remove a vehicle solely because it is causing an obstruction. If this is case the Police may be able to take action and you should contact them on 101 or 01245 491491.</strong></p>
+</div></div><!--FS2PS: End A7bGSnvTj6A--><!--FS2PS: Begin kQqECbJEssY--><!--FS2PS: End kQqECbJEssY--><!--FS2PS: Begin K2DfTbjUqyN--><div class="bws forceclear"></div><div id="ok4V7FXx1rv" class="bws colspan clear lM1rM2 "><div id="pBvzm2SoFxh" class=" nondatael"><hr /></div></div><!--FS2PS: End K2DfTbjUqyN--><!--FS2PS: Begin SbztEcDsQbL--><div class="bws forceclear"></div><fieldset id="NCxCcYMJ7MD" class="bws colspan subform clear lM1rM2"><div class="subformel"><!--FS2PS: Begin hqGzyZhvu7w--><!--FS2PS: Begin UrwqJKTF7dt--><!--FS2PS: Begin a9YszitF1dG--><!--FS2PS: End a9YszitF1dG--><!--FS2PS: Begin cbJkwdUvUXy--><!--FS2PS: End cbJkwdUvUXy--><!--FS2PS: Begin MEMZRVRSc7P--><!--FS2PS: End MEMZRVRSc7P--><!--FS2PS: Begin HdZzNNXQnod--><!--FS2PS: End HdZzNNXQnod--><!--FS2PS: Begin thMmkUr4CL5--><!--FS2PS: End thMmkUr4CL5--><!--FS2PS: Begin M7MU24R3gnX--><!--FS2PS: End M7MU24R3gnX--><!--FS2PS: Begin NGeGW1nR8xS--><div class="bws forceclear"></div><!--FS2PS: End NGeGW1nR8xS--><!--FS2PS: Begin Gt9X1CGqUPq--><div class="bws forceclear"></div><!--FS2PS: End Gt9X1CGqUPq--><!--FS2PS: Begin UWQaaWvG2uM--><div class="bws forceclear"></div><!--FS2PS: End UWQaaWvG2uM--><!--FS2PS: Begin j2LjAYMcuvn--><!--FS2PS: End j2LjAYMcuvn--><!--FS2PS: Begin SyWwJVUb8qM--><!--FS2PS: End SyWwJVUb8qM--><!--FS2PS: Begin NWtpoLKsbwX--><!--FS2PS: End NWtpoLKsbwX--><!--FS2PS: Begin rAbtxUsqHHb--><!--FS2PS: End rAbtxUsqHHb--><!--FS2PS: Begin Za2PTbQd2a7--><!--FS2PS: End Za2PTbQd2a7--><!--FS2PS: Begin eoQ3UbQ3cqx--><!--FS2PS: End eoQ3UbQ3cqx--><!--FS2PS: End UrwqJKTF7dt--><!--FS2PS: End hqGzyZhvu7w--><!--FS2PS: Begin sfDCmJ2V8Jj--><!--FS2PS: End sfDCmJ2V8Jj--><!--FS2PS: Begin AojrMEzfx8S--><!--FS2PS: End AojrMEzfx8S--></div></fieldset><!--FS2PS: End SbztEcDsQbL--></div><!--FS2PS: End T11qyYpNyTn--></div><!--FS2PS: Begin s411CsNj9oF--><div style="clear: both;" class="afnavbuttons"><input value="0" name="current_section_index" type="hidden" /><input type="submit" name="Vikf2dBDnxG" value="Next" class="genericsubmit navbuttons nextbutton" title='Next' /><input type="submit" name="WQX5vgNZGiq" id="WQX5vgNZGiq" value="Cancel" class="genericsubmit navbuttons cancelbutton" title='Cancel' /><script type="text/javascript">$$("0~~WQX5vgNZGiq~1")</script></div><!--FS2PS: End s411CsNj9oF--><span class="cornerinnerbottomleft"></span><span class="cornerinnerbottomcenter"></span><span class="cornerinnerbottomright"></span></div><div style="clear: both;" class="eformstext"><a class="eformslink" href="http://www.firmstep.com/achieve_forms.html">eForms</a> by AchieveForms</div></div><span class="cornerouterbottomleft"></span><span class="cornerouterbottomright"></span><span class="niftyclear"></span></div><script type="text/javascript"><!--
+$$("0~~~W~~cit2532cTFV~cit2532cTFV")//--></script><script type="text/javascript">OnLoad(function(){
+						jQuery('.eformslink').click(function() {
+							window.open( 'http://www.firmstep.com/achieve_forms.html','_blank' );
+							if (window.event){event.returnValue = false;}
+							return false;} );
+						});</script><script type='text/javascript'><!--
+setTimeout('$_()',1);//--></script><script type="text/javascript">
+                                             <!--
+                                                window.hbloc = '/build/popup.php/HB/?fs2hb=E9Hc1B1Mnji';
+                                                if (false) window._ajaxmode='None';
+                                            // -->
+                                             </script>
+                                             <div style="margin:0;padding:0;display:inline">
+                                                <input type="hidden" name="FS2ActionUrl" value="/build/popup.php/AJAX/?rrcreturn=%2fbuild%2ffillform.php%3fF.Name%3dDMq6d7KoVj0&amp;fs2s=E9Hc1B1Mnji" />
+                                            </div></form></div><!--FS2-Form-End--><script type='text/javascript'>
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+	var _gaq = _gaq||[];
+	_gaq.push(['_setAccount','UA-19256518-3'], ['_setCustomVar',1,'Authentication','Anonymous']);</script>
+                            <!-- You are being served by ec2-46-137-118-171 -->
+                            <!-- StartTime: 00:47:13.511 -->
+                            <!-- FS2 took: 904ms -->
+                            <!-- Rest took: 0ms -->
+                                </div> 
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script type="text/javascript" src="../scripts/ga.js?v=354"></script>
+</body>
+</html> 

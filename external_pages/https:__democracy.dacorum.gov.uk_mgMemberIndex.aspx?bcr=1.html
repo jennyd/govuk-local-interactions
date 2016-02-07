@@ -1,0 +1,834 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Modern.gov Reverse CMS --><head>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1' /><meta name="DC.title"  content="Your Councillors"/>
+<meta name="DC.description"  content="The currently elected Councillors representing your views at this council"/>
+<meta name="DC.date" scheme="W3CDTF"  content="2016-02-07"/>
+<meta name="DC.subject" scheme="eGMS.IPSV"  content="Government, politics and public administration"/>
+<meta name="DC.subject" scheme="eGMS.IPSV"  content="Local government"/>
+<meta name="DC.subject" scheme="eGMS.IPSV"  content="Decision making"/>
+<meta name="DC.subject" scheme="eGMS.IPSV"  content="Councillors"/>
+
+<link type="text/css" href="jquery-ui/css/Smoothness/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" /> 
+<link type="text/css" href="jquery-ui/Add-ons/mg.jqueryaddons.css" rel="stylesheet" /> 
+    
+	<link rel="stylesheet" href="SiteSpecific/ssMgStyles.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="SiteSpecific/ssWordStyles.css" type="text/css" media="all" />
+<title>
+	Your Councillors
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="Stylesheet" type="text/css" href="https://www.dacorum.gov.uk/Sitefinity/WebsiteTemplates/DBCCorp2013/App_Themes/DBCCorp2013/Global/Reset.css" /><link rel="Stylesheet" type="text/css" href="https://www.dacorum.gov.uk/Sitefinity/WebsiteTemplates/DBCCorp2013/App_Themes/DBCCorp2013/Global/Layout.css" />
+
+
+    <script src="https://eforms.dacorum.gov.uk/eForms/Scripts/modernizr-2.6.2.js"></script>
+ 
+       <link id="cssBoot" rel="stylesheet" href="https://eforms.dacorum.gov.uk/eForms/Content/bootstrap.css" /><link id="cssSite" rel="stylesheet" href="https://eforms.dacorum.gov.uk/eForms/Content/Site.css" /><link rel="shortcut icon" type="image/x-icon" href="https://www.dacorum.gov.uk/Sitefinity/WebsiteTemplates/DBCCorp2013/App_Themes/DBCCorp2013/Images/icons/favicon.ico" /><link rel="icon" type="image/ico" href="https://www.dacorum.gov.uk/Sitefinity/WebsiteTemplates/DBCCorp2013/App_Themes/DBCCorp2013/Images/icons/favicon.ico" /></head>
+<body>
+
+
+        <script src="https://eforms.dacorum.gov.uk/eForms/Scripts/jquery-2.1.1.js" type="text/javascript"></script>
+        <script src="https://eforms.dacorum.gov.uk/eForms/Scripts/jquery-ui-1.11.1.js" type="text/javascript"></script>
+
+
+        <div class="container body-content">
+
+            <div id="tophdrblk" style="display: block; margin-bottom: 20px;">
+                <div style="display: inline-block;">
+                    <a href="http://www.dacorum.gov.uk" title="Dacorum Borough Council homepage">
+                        <img class="logo" src="https://www.dacorum.gov.uk/Sitefinity/WebsiteTemplates/DBCCorp2013/App_Themes/DBCCorp2013/Images/DacorumLogo.gif" alt="Dacorum shield logo"/></a>
+
+                </div>
+                <div class="widgetholder">
+                    <div id="pnlSearch" class="searchbox" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;btnSearch&#39;)">
+
+                        <input name="ctl00$searchBox" type="text" id="searchBox" class="searchterm" placeholder="Enter your search here" /><input type="button" name="ctl00$btnSearch" value="Search" onclick="javascript: location.href = 'http://webapps.dacorum.gov.uk/search/?q=' + $('#searchBox').val();" id="btnSearch" class="submit" />
+
+                    </div>
+                    <div class="atoz">
+                        <ul class="atozList">
+                            <li>a - z: </li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancA">A</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancB">B</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancC">C</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancD">D</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancE">E</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancF">F</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancG">G</a></li>
+                            <li>
+                                <a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancH">H</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancI">I</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancJ">J</a></li>
+                            <li>
+                                <a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancK">K</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancL">L</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancM">M</a></li>
+                            <li>
+                                <a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancN">N</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancN">O</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancO">P</a></li>
+                            <li>
+                                <a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancQ">Q</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancR">R</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancS">S</a></li>
+                            <li>
+                                <a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancT">T</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancU">U</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancV">V</a></li>
+                            <li>
+                                <a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancW">W</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancX">X</a></li>
+                            <li><a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancY">Y</a></li>
+                            <li>
+                                <a href="http://webapps.dacorum.gov.uk/search/atoz.aspx#ancZ">Z</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 25%; display: inline-block;">
+                <div id="ContentLeftNavigation" class="leftNavigation">
+                    <ul>
+
+                        <li class="nav-section1"><a href="http://www.dacorum.gov.uk/" title="home page">Home</a> </li>
+                        <li class="nav-section1"><a href="http://www.dacorum.gov.uk/home/council-democracy" title="Link to home page">Council and democracy</a> </li>
+                        <li class="nav-section1"><a href="mgMemberIndex.aspx?bcr=1" title="councillors">Your Councillors</a> </li>
+                        <li class="nav-section1"><a href="mgCalendarMonthView.aspx?GL=1&amp;bcr=1" title="calendar of meetings for current year">Meetings, minutes and agendas</a> </li>
+                        <li class="nav-section1"><a href="http://www.dacorum.gov.uk/home/council-democracy/previous-years-meetings-and-agendas" title="Previous years calendar of meetings">Previous years meetings and agendas</a> </li>
+                        <li class="nav-section1"><a href="http://www.dacorum.gov.uk/home/council-democracy/meetings-minutes-and-agendas/council-committees-explained" title="Council committees explained">Council committees explained</a> </li>
+                        <li class="nav-section1"><a href="mgDelegatedDecisions.aspx?bcr=1&amp;DM=0&amp;DS=2&amp;K=0&amp;DR=&amp;V=0" title="register of decisions">Decisions</a> </li>
+<!--                        <li class="nav-section1"><a href="mgDelegatedDecisions.aspx?DS=1&amp;H=0&amp;META=mgforthcomingdecisions&amp;bcr=1" title="Forthcoming Decisions">Forthcoming Decisions</a> </li>-->
+                        <li class="nav-section1"><a href="mgPlansHome.aspx?bcr=1" title="Forward Plans">Forward plans</a> </li>
+                        <li class="nav-section1"><a href="ieDocHome.aspx?bcr=1" title="committee meetings">Meetings</a> </li>
+                        <li class="nav-section1"><a href="mgListOutsideBodies.aspx?bcr=1" title="outside bodies">Outside organisations</a> </li>
+                        <li class="nav-section1"><a href="http://www.dacorum.gov.uk/home/council-democracy/parish-town-councils" title="parish councils">Town and Parish councils</a> </li>
+                        <li class="nav-section1"><a href="ieDocSearch.aspx?bcr=1" title="free text search">Search documents</a> </li>
+                        <li class="nav-section1"><a href="mgRegisterKeywordInterest.aspx?bcr=1" title="subscribe to updates">Subscribe to updates</a> </li>
+                        <li class="nav-section1"><a href="http://www.dacorum.gov.uk/home/council-democracy/your-councillors/mps-meps" title="MPs and MEPs">MPs and MEPs</a> </li>
+                        <li class="nav-section1"><a href="mgWhatsNew.aspx?bcr=1" title="what's new">What's New</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div style="width: 74%; display: inline-block; vertical-align: top;">
+                <div id="modgov"><div class="mgHeader"><h1  class="mgMainTitleTxt" >Your Councillors</h1></div>
+<p>Local Councillors are elected by the community to decide
+ how the council should carry out its various activities. They represent
+ public interest as well as individuals living within the ward in which 
+he or she has been elected to serve a term of office.</p>
+<p>They have regular contact with the general public through council
+ meetings, telephone calls or surgeries. Surgeries provide an opportunity
+ for any ward resident to go and talk their councillor face to face and
+ these take place on a regular basis.</p>
+<p>Councillors are not paid a salary for their work, but they do receive 
+allowances. By law, all members of the Council are required to complete 
+a declaration of interest form, the details of which are published annually.</p>
+<p>To find your councillor please use the below links:</p><div class="mgLinks" >
+	
+	
+	<ul  class="mgActionList" >
+		<li><a  href="mgFindMember.aspx"  title="Link&#32;to&#32;find&#32;councillors">Find your councillor</a></li>
+
+		<li><a  href="mgMemberIndex.aspx?FN=ALPHA&amp;VW=LIST&amp;PIC=0"  title="Link to display councillors alphabetically"> Your councillors alphabetically</a></li>
+  	<li><a  href="mgMemberIndex.aspx?FN=PARTY&amp;VW=LIST&amp;PIC=0"  title="Link to display councillors by political party">Your councillors by political party</a></li>
+		<li><a  href="mgMemberIndex.aspx?FN=WARD&amp;VW=LIST&amp;PIC=0"  title="Link&#32;to&#32;display&#32;councillors&#32;by&#32;ward">Your councillors by ward</a></li>
+
+		<li><a  href="mgCommitteeMailingList.aspx?ID=0"  title="Link to full list of contact details">Full list of contact details</a></li>
+			<li><a  href="mgUserAttendanceSummary.aspx"  title="Link to member attendance summary" >Member attendance summary</a></li>
+			<li><a  href="mgMemberIndex.aspx?VW=TABLE&amp;PIC=1&amp;FN="  title="Link&#32;to&#32;table&#32;of&#32;councillors" >View councillors in a table</a></li>
+	</ul>
+
+</div>
+<div class="mgContent" >
+
+		<div  class="mgThumbsList" >
+
+<ul >
+		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=21"  >
+			<img  class="mgCouncillorImages"   src="UserData/1/2/0/Info00000021/smallpic.jpg"  width="90" height="117" 
+			alt="link to details of Councillor&#32;Gbola&#32;Adeleke" /><br />Councillor Gbola Adeleke</a>
+			
+			<p>Bovingdon, Flaunden and Chipperfield</p>
+			
+			<p>Conservative</p>
+				
+				
+				<p>Mayor of Dacorum</p>
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=30"  >
+			<img  class="mgCouncillorImages"   src="UserData/0/3/0/Info00000030/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Graham&#32;Adshead" /><br />Councillor Graham Adshead</a>
+			
+			<p>Adeyfield East</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=31"  >
+			<img  class="mgCouncillorImages"   src="UserData/1/3/0/Info00000031/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Sharon&#32;Adshead" /><br />Councillor Sharon Adshead</a>
+			
+			<p>Adeyfield West</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=32"  >
+			<img  class="mgCouncillorImages"   src="UserData/2/3/0/Info00000032/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Alan&#32;Anderson" /><br />Councillor Alan Anderson</a>
+			
+			<p>Kings Langley</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=33"  >
+			<img  class="mgCouncillorImages"   src="UserData/3/3/0/Info00000033/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Julian&#32;Ashbourn" /><br />Councillor Julian Ashbourn</a>
+			
+			<p>Berkhamsted West</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=34"  >
+			<img  class="mgCouncillorImages"   src="UserData/4/3/0/Info00000034/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Julie&#32;Banks" /><br />Councillor Julie Banks</a>
+			
+			<p>Grovehill</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=35"  >
+			<img  class="mgCouncillorImages"   src="UserData/5/3/0/Info00000035/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Adam&#32;Barnes" /><br />Councillor Adam Barnes</a>
+			
+			<p>Bovingdon, Flaunden and Chipperfield</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=20"  >
+			<img  class="mgCouncillorImages"   src="UserData/0/2/0/Info00000020/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Hazel&#32;Bassadone" /><br />Councillor Hazel Bassadone</a>
+			
+			<p>Leverstock Green</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=36"  >
+			<img  class="mgCouncillorImages"   src="UserData/6/3/0/Info00000036/smallpic.jpg"  width="90" height="117" 
+			alt="link to details of Councillor&#32;Stephen&#32;Bateman" /><br />Councillor Stephen Bateman</a>
+			
+			<p>Berkhamsted East</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=37"  >
+			<img  class="mgCouncillorImages"   src="UserData/7/3/0/Info00000037/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Alex&#32;Bhinder" /><br />Councillor Alex Bhinder</a>
+			
+			<p>Grovehill</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=38"  >
+			<img  class="mgCouncillorImages"   src="UserData/8/3/0/Info00000038/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;John&#32;Birnie" /><br />Councillor John Birnie</a>
+			
+			<p>Bennetts End</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=39"  >
+			<img  class="mgCouncillorImages"   src="UserData/9/3/0/Info00000039/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Christina&#32;Brown" /><br />Councillor Christina Brown</a>
+			
+			<p>Hemel Hempstead Town</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=19"  >
+			<img  class="mgCouncillorImages"   src="UserData/9/1/0/Info00000019/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Herbert&#32;Chapman" /><br />Councillor Herbert Chapman</a>
+			
+			<p>Watling</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=43"  >
+			<img  class="mgCouncillorImages"   src="UserData/3/4/0/Info00000043/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Michael&#32;Clark" /><br />Councillor Michael Clark</a>
+			
+			<p>Apsley and Corner Hall</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=40"  >
+			<img  class="mgCouncillorImages"   src="UserData/0/4/0/Info00000040/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;David&#32;Collins" /><br />Councillor David Collins</a>
+			
+			<p>Berkhamsted Castle</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=41"  >
+			<img  class="mgCouncillorImages"   src="UserData/1/4/0/Info00000041/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Elaine&#32;Collins" /><br />Councillor Elaine Collins</a>
+			
+			<p>Berkhamsted East</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=42"  >
+			<img  class="mgCouncillorImages"   src="UserData/2/4/0/Info00000042/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Olive&#32;Conway" /><br />Councillor Olive Conway</a>
+			
+			<p>Tring West and Rural</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=44"  >
+			<img  class="mgCouncillorImages"   src="UserData/4/4/0/Info00000044/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Terry&#32;Douris" /><br />Councillor Terry Douris</a>
+			
+			<p>Ashridge</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=45"  >
+			<img  class="mgCouncillorImages"   src="UserData/5/4/0/Info00000045/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Graeme&#32;Elliot" /><br />Councillor Graeme Elliot</a>
+			
+			<p>Chaulden and Warners End.</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=46"  >
+			<img  class="mgCouncillorImages"   src="UserData/6/4/0/Info00000046/smallpic.jpg"  width="90" height="117" 
+			alt="link to details of Councillor&#32;Alan&#32;Fantham" /><br />Councillor Alan Fantham</a>
+			
+			<p>Northchurch</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=47"  >
+			<img  class="mgCouncillorImages"   src="UserData/7/4/0/Info00000047/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Tony&#32;Fethney" /><br />Councillor Tony Fethney</a>
+			
+			<p>Highfield</p>
+			
+			<p>Labour</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=48"  >
+			<img  class="mgCouncillorImages"   src="UserData/8/4/0/Info00000048/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Anne&#32;Fisher" /><br />Councillor Anne Fisher</a>
+			
+			<p>Hemel Hempstead Town</p>
+			
+			<p>Labour</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=49"  >
+			<img  class="mgCouncillorImages"   src="UserData/9/4/0/Info00000049/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Margaret&#32;Griffiths" /><br />Councillor Margaret Griffiths</a>
+			
+			<p>Leverstock Green</p>
+			
+			<p>Conservative</p>
+				
+				
+				<p>Deputy Leader</p>
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=50"  >
+			<img  class="mgCouncillorImages"   src="UserData/0/5/0/Info00000050/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Fiona&#32;Guest" /><br />Councillor Fiona Guest</a>
+			
+			<p>Chaulden and Warners End.</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=23"  >
+			<img  class="mgCouncillorImages"   src="UserData/3/2/0/Info00000023/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Neil&#32;Harden" /><br />Councillor Neil Harden</a>
+			
+			<p>Boxmoor</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=51"  >
+			<img  class="mgCouncillorImages"   src="UserData/1/5/0/Info00000051/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Penny&#32;Hearn" /><br />Councillor Penny Hearn</a>
+			
+			<p>Tring East</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=52"  >
+			<img  class="mgCouncillorImages"   src="UserData/2/5/0/Info00000052/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Stephen&#32;Hearn" /><br />Councillor Stephen Hearn</a>
+			
+			<p>Tring Central</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=53"  >
+			<img  class="mgCouncillorImages"   src="UserData/3/5/0/Info00000053/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Mike&#32;Hicks" /><br />Councillor Mike Hicks</a>
+			
+			<p>Tring West and Rural</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=54"  >
+			<img  class="mgCouncillorImages"   src="UserData/4/5/0/Info00000054/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Tina&#32;Howard" /><br />Councillor Tina Howard</a>
+			
+			<p>Apsley and Corner Hall</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=55"  >
+			<img  class="mgCouncillorImages"   src="UserData/5/5/0/Info00000055/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Isy&#32;Imarni" /><br />Councillor Isy Imarni</a>
+			
+			<p>Gadebridge</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=56"  >
+			<img  class="mgCouncillorImages"   src="UserData/6/5/0/Info00000056/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Brenda&#32;Link" /><br />Councillor Brenda Link</a>
+			
+			<p>Highfield</p>
+			
+			<p>Liberal Democrats</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=57"  >
+			<img  class="mgCouncillorImages"   src="UserData/7/5/0/Info00000057/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Jan&#32;Maddern" /><br />Councillor Jan Maddern</a>
+			
+			<p>Nash Mills</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=58"  >
+			<img  class="mgCouncillorImages"   src="UserData/8/5/0/Info00000058/smallpic.jpg"  width="90" height="118" 
+			alt="link to details of Councillor&#32;Suqlain&#32;Mahmood" /><br />Councillor Suqlain Mahmood</a>
+			
+			<p>Bennetts End</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=59"  >
+			<img  class="mgCouncillorImages"   src="UserData/9/5/0/Info00000059/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Janice&#32;Marshall" /><br />Councillor Janice Marshall</a>
+			
+			<p>Boxmoor</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=60"  >
+			<img  class="mgCouncillorImages"   src="UserData/0/6/0/Info00000060/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Peter&#32;Matthews" /><br />Councillor Peter Matthews</a>
+			
+			<p>Berkhamsted West</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=61"  >
+			<img  class="mgCouncillorImages"   src="UserData/1/6/0/Info00000061/smallpic.jpg"  width="90" height="118" 
+			alt="link to details of Councillor&#32;Robert&#32;McLean" /><br />Councillor Robert McLean</a>
+			
+			<p>Kings Langley</p>
+			
+			<p>Conservative</p>
+				
+				
+				<p>Deputy Mayor of Dacorum</p>
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=62"  >
+			<img  class="mgCouncillorImages"   src="UserData/2/6/0/Info00000062/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Stan&#32;Mills" /><br />Councillor Stan Mills</a>
+			
+			<p>Aldbury and Wigginton</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=63"  >
+			<img  class="mgCouncillorImages"   src="UserData/3/6/0/Info00000063/smallpic.jpg"  width="90" height="117" 
+			alt="link to details of Councillor&#32;Colin&#32;Peter" /><br />Councillor Colin Peter</a>
+			
+			<p>Apsley and Corner Hall</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=64"  >
+			<img  class="mgCouncillorImages"   src="UserData/4/6/0/Info00000064/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Roxanne&#32;Ransley" /><br />Councillor Roxanne Ransley</a>
+			
+			<p>Tring Central</p>
+			
+			<p>Liberal Democrats</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=65"  >
+			<img  class="mgCouncillorImages"   src="UserData/5/6/0/Info00000065/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Stewart&#32;Riddick" /><br />Councillor Stewart Riddick</a>
+			
+			<p>Bovingdon, Flaunden and Chipperfield</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=66"  >
+			<img  class="mgCouncillorImages"   src="UserData/6/6/0/Info00000066/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Tom&#32;Ritchie" /><br />Councillor Tom Ritchie</a>
+			
+			<p>Berkhamsted Castle</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=67"  >
+			<img  class="mgCouncillorImages"   src="UserData/7/6/0/Info00000067/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Goverdhan&#32;Silwal" /><br />Councillor Goverdhan Silwal</a>
+			
+			<p>Grovehill</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=22"  >
+			<img  class="mgCouncillorImages"   src="UserData/2/2/0/Info00000022/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Graham&#32;Sutton" /><br />Councillor Graham Sutton</a>
+			
+			<p>Leverstock Green</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=68"  >
+			<img  class="mgCouncillorImages"   src="UserData/8/6/0/Info00000068/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Rosie&#32;Sutton" /><br />Councillor Rosie Sutton</a>
+			
+			<p>Woodhall Farm</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=18"  >
+			<img  class="mgCouncillorImages"   src="UserData/8/1/0/Info00000018/smallpic.jpg"  width="90" height="126" 
+			alt="link to details of Councillor&#32;Roger&#32;Taylor" /><br />Councillor Roger Taylor</a>
+			
+			<p>Gadebridge</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=69"  >
+			<img  class="mgCouncillorImages"   src="UserData/9/6/0/Info00000069/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Jane&#32;Timmis" /><br />Councillor Jane Timmis</a>
+			
+			<p>Watling</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=70"  >
+			<img  class="mgCouncillorImages"   src="UserData/0/7/0/Info00000070/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Ron&#32;Tindall" /><br />Councillor Ron Tindall</a>
+			
+			<p>Adeyfield West</p>
+			
+			<p>Liberal Democrats</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=71"  >
+			<img  class="mgCouncillorImages"   src="UserData/1/7/0/Info00000071/smallpic.jpg"  width="90" height="128" 
+			alt="link to details of Councillor&#32;John&#32;Whitman" /><br />Councillor John Whitman</a>
+			
+			<p>Chaulden and Warners End.</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=16"  >
+			<img  class="mgCouncillorImages"   src="UserData/6/1/0/Info00000016/smallpic.jpg"  width="90" height="117" 
+			alt="link to details of Councillor&#32;Andrew&#32;Williams" /><br />Councillor Andrew Williams</a>
+			
+			<p>Boxmoor</p>
+			
+			<p>Conservative</p>
+				
+				
+				<p>Leader of the Council</p>
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=72"  >
+			<img  class="mgCouncillorImages"   src="UserData/2/7/0/Info00000072/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;Colette&#32;Wyatt-Lowe" /><br />Councillor Colette Wyatt-Lowe</a>
+			
+			<p>Woodhall Farm</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=73"  >
+			<img  class="mgCouncillorImages"   src="UserData/3/7/0/Info00000073/smallpic.jpg"  width="90" height="120" 
+			alt="link to details of Councillor&#32;William&#32;Wyatt-Lowe" /><br />Councillor William Wyatt-Lowe</a>
+			
+			<p>Adeyfield East</p>
+			
+			<p>Conservative</p>
+				
+	
+	</li>
+</ul>
+
+		</div>
+</div>
+<div class="mgFooter" >		
+
+	<p>&nbsp;</p>
+
+    <script src="edit-doc-activex.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="jquery-ui/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.10.2.custom.min.js"></script>
+
+    <script type="text/javascript">
+	var mgJQuery = jQuery.noConflict(true);
+        var thisFormValidator;
+    </script>
+
+    <script type="text/javascript" src="jquery-ui/json/json2.js"></script>
+    <script type="text/javascript" src="jquery-ui/Add-ons/mg.jqueryaddons.min.js"></script>
+    <script type="text/javascript" src="mgAjaxScripts.js"></script> 
+          
+    <script type="text/javascript">
+        function CommonAjaxInit()
+        {
+            Common_DocumentReady(false, 629272640462387)
+        }
+
+        mgJQuery(document).ready(CommonAjaxInit);
+
+    </script>  
+</div>
+
+</div>
+            </div>
+
+            <footer>
+                <div class="footer" style="">
+                    <ul class="footer-list">
+                        <li>Civic Centre</li>
+                        <li>Marlowes</li>
+                        <li>Hemel Hempstead</li>
+                        <li>Hertfordshire HP1 1HH</li>
+                        <li style="padding-top: 5px;">
+                            <div class="cuMain" onclick="location.href='http://www.dacorum.gov.uk/home/do-it-online/contact-us';" style="cursor: pointer;">
+                                <div class="cuLeft"><a href="/home/do-it-online/contact-us">Contact us</a></div>
+                                <div class="cuRight">
+                                    <img src="https://www.dacorum.gov.uk/Sitefinity/WebsiteTemplates/DBCCorp2013/App_Themes/DBCCorp2013/Images/tiles/ContactUs.png" alt="Phone and envelope"/>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="footer-list" style="width: 24%;">
+                        <li><a href="http://www.dacorum.gov.uk/home/tools/accessibility-options/accessibility-exceptions">Accessibility</a></li>
+                        <li><a href="http://www.dacorum.gov.uk/home/tools/general-help-with-using-this-website-2">Help</a></li>
+                        <li><a href="http://www.dacorum.gov.uk/home/sitemap">Sitemap</a></li>
+                        <li><a href="http://www.dacorum.gov.uk/home/legal-information/legal-disclaimers">Legal notices</a></li>
+                        <li><a href="http://www.dacorum.gov.uk/home/legal-information/privacy-statement">Privacy policy</a></li>
+                        <li><a href="http://www.dacorum.gov.uk/home/cookies-policy">Cookie policy</a></li>
+                        <li><a href="http://gov.uk" target="_blank">
+                            <img src="https://www.dacorum.gov.uk/images/default-source/web-graphics/govuk.png?Status=Temp&amp;sfvrsn=2" alt="Connect to GOV.UK" style="padding-right: 5px">GOV.UK</a></li>
+                    </ul>
+                    <div class="footer-list tiles">
+                        <div class="follow-us">
+                            <a href="https://twitter.com/DacorumBC" target="_blank" title="twitter">
+                                <img src="https://www.dacorum.gov.uk/Sitefinity/WebsiteTemplates/DBCCorp2013/App_Themes/DBCCorp2013/Images/icons/twitter.png" alt="twitter" /></a><a href="https://www.facebook.com/dacorum" target="_blank" title="facebook"><img src="https://www.dacorum.gov.uk/Sitefinity/WebsiteTemplates/DBCCorp2013/App_Themes/DBCCorp2013/Images/icons/facebook.png" alt="facebook" /></a><a href="https://www.linkedin.com/company/dacorum-borough-council" target="_blank" title="Dacorum Borough Council on LinkedIn"><img src="https://www.dacorum.gov.uk/Sitefinity/WebsiteTemplates/DBCCorp2013/App_Themes/DBCCorp2013/Images/tiles/linkedin.jpg" alt="LinkedIn Icon" /></a>
+                        </div>
+                        <div class="follow-us">
+                            <a href="https://maps.google.co.uk/maps?q=Dacorum+District&amp;hl=en&amp;sll=51.75374,-0.469195&amp;sspn=0.066841,0.106945&amp;oq=Dacorum&amp;hnear=Dacorum+District,+Hertfordshire,+United+Kingdom&amp;t=m&amp;z=10&amp;iwloc=A" target="_blank" title="Dacorum map">
+                                <img src="https://www.dacorum.gov.uk/Sitefinity/WebsiteTemplates/DBCCorp2013/App_Themes/DBCCorp2013/Images/icons/compass2.png" alt="Dacorum on a map" /></a><a href="http://www.dacorumlooknofurther.co.uk/" onclick="window.open(this.href); return false;" title="Dacorum Look No Further website"><img width="64" height="64" src="https://www.dacorum.gov.uk/images/default-source/web-graphics/sqrdlnf4.png?sfvrsn=2" alt="Dacorum Look No Further logo" /></a><a href="https://www.youtube.com/dacorumbc" target="_blank" title="Dacorum BC on Youtube"><img width="64" height="64" src="https://www.dacorum.gov.uk/images/default-source/web-graphics/youtube64px.gif?sfvrsn=2" alt="YouTube" /></a>
+                        </div>
+                    </div>
+
+                </div>
+            </footer>
+        </div>
+
+
+    <script type="text/javascript">
+
+        var prm;
+
+        $(document).ready(function () {
+            $("#pageHeader").css("background-position-y", "40px");
+        });
+    </script>
+
+    <!-- START OF Google Analytics CODE -->
+    <script type="text/javascript">
+
+          <!--
+    var pgTitle = '';
+    pgTitle = pgTitle.replace(" ", "_");
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-17714213-1']);
+    _gaq.push(['_setDomainName', '.dacorum.gov.uk']);
+    _gaq.push(['_setCustomVar', 1, 'Section', 'ModernGov', 3]);
+    _gaq.push(['_setCustomVar', 2, 'SectionPage', 'mainTemplate', 3]);
+    _gaq.push(['_trackPageview']);
+
+
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    //-->
+    </script>
+    <!-- END OF Google Analytics CODE -->
+
+
+
+</body>
+</html>
+<!-- modern.gov reverse CMS 1.0: https://eforms.dacorum.gov.uk/eforms/ModernGov/CMSTemplate-->

@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><!-- InstanceBegin template="/Templates/consult.dwt.asp" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta name="keywords" content="Research, Sandwell, Consultation, Database" />
+<meta name="description" content="Welcome to the Research Sandwell Consultation Database" />
+<meta name="author" content="Designed and Written by John Flood" />
+
+
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+//-->
+</script>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+<script type="text/JavaScript">
+<!--
+function refresh_win() { opener.location.reload(true); }
+//-->
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--this saves any data entered onto the form if user navigates away from the current page using the dropdown menu
+function save_submit(new_link, new_url) 
+{ 
+	document.f.hfnewpage.value = new_link
+
+	if ( document.f.hfcurpage.value=="maintenance_workplan_maintain.asp" || document.f.hfcurpage.value=="maintenance_workplan_close.asp")
+		{	document.fadd.hfredirect.value="Y"
+			document.fadd.hfnewurl.value = new_url
+			if (document.f.hfcurpage.value!=document.f.hfnewpage.value)
+				{
+					//alert('we need to save any changes')
+					document.fadd.submit();
+				}
+		}
+ }
+//-->
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--this saves any data entered onto the form if user navigates away from the current page using the first/prev/next or last buttons
+function nav_submit(new_link, new_url) 
+{ 
+	document.f.hfnewpage.value = new_link
+
+		document.fadd.hfredirect.value="Y"
+			document.fadd.hfnewurl.value = new_url
+			
+					//alert('we need to save any changes')
+					document.fadd.submit();
+				
+ }
+//-->
+</script>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function next_link(new_link) { 
+	document.f.hfnewpage.value = new_link
+ }
+//-->
+function setLEAD(name,user) {
+window.document.cookie=name+"="+escape(user)+";path=/"
+window.document.cookie="TASK=All;path=/"
+window.document.cookie="THEME=All;path=/"
+window.document.cookie="PRIORITY=All;path=/"
+window.document.cookie="PCOMPLETE=Open;path=/"
+window.document.cookie="GROUP=N;path=/"
+
+//alert("cookie "+name+"="+user)
+//document.fadd.submit();
+}
+function setLEAD2(name,user) {
+window.document.cookie=name+"="+escape(user)+";path=/"
+window.document.cookie="TASK=All;path=/"
+window.document.cookie="THEME=All;path=/"
+window.document.cookie="PRIORITY=All;path=/"
+window.document.cookie="PCOMPLETE=Open;path=/"
+window.document.cookie="GROUP=Y;path=/"
+
+//alert("cookie "+name+"="+user)
+//document.fadd.submit();
+}
+function setTASK(name,user) {
+window.document.cookie=name+"="+escape(user)+";path=/"
+window.document.cookie="LEAD=All;path=/"
+window.document.cookie="THEME=All;path=/"
+window.document.cookie="PRIORITY=All;path=/"
+window.document.cookie="PCOMPLETE=Open;path=/"
+window.document.cookie="GROUP=N;path=/"
+//alert("cookie "+name+"="+user)
+//document.fadd.submit();
+}
+function setMethod(method) {
+window.document.cookie="METHOD="+escape(method)+";path=/"
+//alert("cookie "+name+"="+user)
+//document.fadd.submit();
+}
+function setQuery(query) {
+window.document.cookie="QUERY="+escape(query)+";path=/"
+//alert("cookie "+name+"="+user)
+//document.fadd.submit();
+}
+
+
+</script>
+<title>Consultation Database</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<!--<script type="text/javascript" src="/lisv2/research/includes/screen_res.js"></script>-->
+<link href="/lisv2/research/css/consult.css" rel="stylesheet" type="text/css" />
+<link href="/lisv2/research/css/1024.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/lisv2/research/css/consult_print.css" media="print" />
+<link rel="shortcut icon" type="image/x-icon" href="/lisv2/research/images/favicon.ico" media="print" />
+
+<!-- InstanceBeginEditable name="head" -->
+<!--Enter anything to go into the head section here-->
+
+<!-- InstanceEndEditable -->
+</head>
+<body>
+<!--open contents, this is where the page builds from-->
+	<div id="contents"> 
+<div id="header">
+</div>
+<!--open the menu bar-->
+	<div id="menu">
+	<span class="menu">Consultation Database :</span><a href="/lisv2/research/navigation/c_home.asp" title="Consultation Home Page">Home </a>| <a href="/lisv2/research/navigation/c_current.asp" title="Current Consultation">Consultation </a>| <a href="/lisv2/research/navigation/c_search.asp" title="Search Consultation">Search Project </a>| <a href="/lisv2/research/navigation/c_home.asp?logout=1" title="Logout">Logout </a>| <a href="/lisv2/research/navigation/c_register.asp" title="Register your details to use the database">Register</a>| <a href="/lisv2/navigation/home.asp" title="Sandwell Trends">Sandwell Trends</a>
+<!--close the menu bar-->
+	</div>
+<!--open the contents, this is where non static code goes-->
+	<div id="content">
+<!-- InstanceBeginEditable name="main_layer" -->
+<h3></h3>
+   	  <form action="/lisv2/research/navigation/c_current.asp" method="post" name="fadd" id="fadd" >
+ 		
+		<p><label for="cConsult">Please choose :</label><select tabindex="1" id="cConsult" name="cConsult">
+		  <option value="Ongoing" selected="selected">Ongoing</option>
+		  <option value="Proposed" >Proposed</option>
+          <option value="Historic" >Historic</option> 
+          </select>
+		  <input name="btnSubmit" type="submit" value="Submit" /></p>
+		 </form>
+	<p>Listed below are the Ongoing projects within the Consultation Database. 
+      You are only authorised to EDIT or DELETE projects that you have created 
+      and you must be <a href="/lisv2/research/navigation/c_login.asp">logged in</a>.</p>
+	  
+	
+		  
+	<table summary="List of Ongoing projects listed in the Consultation Database" class="datatable">
+   <caption>Ongoing Projects in Database sorted by End date.</caption>
+  <tr> 
+  	<th scope="col">View</th>
+	
+    <th scope="col">ID</th>
+    <th scope="col">Title</th>
+    <th scope="col">Objectives</th>
+    <th scope="col">Organisation</th>
+    <th scope="col">Theme</th>
+    <th scope="col">Contact Name</th>
+        <th scope="col">Start Date</th>
+		<th scope="col">End Date</th>
+  </tr>
+  
+	<tr>		 
+		   
+	<td><a href="/lisv2/research/navigation/c_current_selected.asp?id=412&amp;sMethod=View"><img class="action" src="/lisv2/research/images/b_browse.png" alt="Browse details" /></a></td>
+	
+	
+   <td>412</td>
+   <td>Journeys - The use of Journeys and Expeditions in Sandwell MBC as a tool for youth development</td>
+   <td>Audit provision 
+Examine pactictioner values, use and expected outcomes from using journeys and expeditions as a tool in Outdoor Education</td>
+   <td>Sandwell MBC</td>
+   <td>Children &amp; Families</td>
+   <td>Stuart Meese</td>
+   <td>01/11/2015</td>
+   <td>12/05/2016</td>
+  </tr>
+   
+	<tr class="altrow">
+		   
+	<td><a href="/lisv2/research/navigation/c_current_selected.asp?id=390&amp;sMethod=View"><img class="action" src="/lisv2/research/images/b_browse.png" alt="Browse details" /></a></td>
+	
+	
+   <td>390</td>
+   <td>Scorecard Survey</td>
+   <td>To measure the Council's performance on the scorecard indicators</td>
+   <td>Sandwell MBC</td>
+   <td>Improvement &amp; Efficiency</td>
+   <td>Richard Wheeler</td>
+   <td>01/04/2014</td>
+   <td>31/03/2016</td>
+  </tr>
+   
+</table>
+   
+<!-- InstanceEndEditable -->
+<!--close contents-->
+	</div>
+	<div id="SMBC">
+	<img src="/lisv2/research/images/SMBC_Logo.jpg" alt="Sandwell MBC Logo" />
+	</div>
+<!--open footer-->
+	<div id="footer">
+	<p>Design and code by <a href="/lisv2/research/navigation/home.asp">Research Sandwell</a> | <a href="http://validator.w3.org/check?uri=referer">Valid XHMTL</a> | <a href="http://jigsaw.w3.org/css-validator/check?uri=referer">Valid CSS</a>| <a href="/lisv2/research/navigation/c_home.asp" title="Help">Help </a></p>
+<!--close footer-->
+	</div>
+<!--close contents-->
+	</div>
+
+</body>
+<!-- InstanceEnd --></html>

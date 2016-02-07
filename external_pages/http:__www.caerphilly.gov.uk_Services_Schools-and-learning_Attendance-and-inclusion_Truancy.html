@@ -1,0 +1,673 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="head"><title>
+	Caerphilly - Truancy
+</title><meta charset="UTF-8" /> 
+<link href="/CMSPages/GetResource.ashx?stylesheetname=caerphilly.finalCss" type="text/css" rel="stylesheet"/> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+<script src="/App_Themes/caerphilly.finalCss/js/html5shiv.js"></script>
+<script src="/App_Themes/caerphilly.finalCss/js/respond.min.js"></script>
+<![endif]-->
+<link href='/App_Themes/printstyle.css' rel='stylesheet' type='text/css' media='print' /> 
+<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"/> 
+<link href="/favicon.ico" type="image/x-icon" rel="icon"/> 
+<link href="/CMSPages/GetResource.ashx?stylesheetfile=/App_Themes/caerphilly.finalCss/css/bootstrap-theme.css" type="text/css" rel="stylesheet" /><link href="/CMSPages/GetResource.ashx?stylesheetfile=/App_Themes/caerphilly.finalCss/css/font-awesome.css" type="text/css" rel="stylesheet" /><link href="/CMSPages/GetResource.ashx?stylesheetfile=/App_Themes/caerphilly.finalCss/css/font-awesome-ie7.css" type="text/css" rel="stylesheet" /><link href="/CMSPages/GetResource.ashx?stylesheetfile=/App_Themes/caerphilly.finalCss/css/jcarousel.responsive.css" type="text/css" rel="stylesheet" /><link href="/CMSPages/GetResource.ashx?stylesheetfile=/App_Themes/caerphilly.finalCss/css/jquery.fancybox-1.3.4.css" type="text/css" rel="stylesheet" /><link href="/CMSPages/GetResource.ashx?stylesheetfile=/App_Themes/caerphilly.finalCss/css/media.css" type="text/css" rel="stylesheet" /><link href="/CMSPages/GetResource.ashx?stylesheetfile=/App_Themes/caerphilly.finalCss/css/rs-responsive.css" type="text/css" rel="stylesheet" /><link href="/CMSPages/GetResource.ashx?stylesheetfile=/App_Themes/caerphilly.finalCss/css/style.css" type="text/css" rel="stylesheet" /><link href="/CMSPages/GetResource.ashx?stylesheetfile=/App_Themes/caerphilly.finalCss/js/jquery.bxslider.css" type="text/css" rel="stylesheet" /><link href="/CMSPages/GetResource.ashx?stylesheetfile=/App_Themes/caerphilly.finalCss/js/rs-plugin/css/settings.css" type="text/css" rel="stylesheet" /><link href="/CMSPages/GetResource.ashx?stylesheetfile=/App_Themes/caerphilly.finalCss/js/style-switcher/styler.css" type="text/css" rel="stylesheet" /><link href="/CMSPages/GetResource.ashx?_templates=24120" type="text/css" rel="stylesheet"/> 
+<link href="/CMSPages/GetResource.ashx?_webparts=677" type="text/css" rel="stylesheet"/> 
+<link href="/CMSPages/GetResource.ashx?_webpartlayouts=656" type="text/css" rel="stylesheet"/> 
+</head>
+<body class="LTR ENGB ContentBody" >
+    <form method="post" action="/Services/Schools-and-learning/Attendance-and-inclusion/Truancy.aspx" id="form">
+<div class="aspNetHidden">
+<input type="hidden" name="manScript_HiddenField" id="manScript_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODc3OTc4NjAwD2QWAgIBDxYCHgZhY3Rpb24FRC9TZXJ2aWNlcy9TY2hvb2xzLWFuZC1sZWFybmluZy9BdHRlbmRhbmNlLWFuZC1pbmNsdXNpb24vVHJ1YW5jeS5hc3B4FgICBQ9kFgJmDw8WBB4IQ3NzQ2xhc3MFD1BhZ2VQbGFjZWhvbGRlch4EXyFTQgICZBYCZg9kFgYCAQ9kFgRmDw8WAh4HVmlzaWJsZWhkZAIBD2QWAmYPZBYCAgEPDxYCHgRUZXh0BX9CeSB1c2luZyB0aGlzIHNpdGUgeW91IGFncmVlIHRvIG91ciB1c2Ugb2YgY29va2llcy4gPGEgaHJlZj0nY29va2llc2luZm8uaHRtbCcgdGFyZ2V0PSdfdGFyZ2V0Jz5DbGljayBmb3IgbW9yZSBpbmZvcm1hdGlvbjwvYT4uZGQCDQ9kFgJmD2QWAgICD2QWAmYPDxYEHwEFD1BhZ2VQbGFjZWhvbGRlch8CAgJkFgJmD2QWDAIDD2QWBGYPDxYCHwNoZGQCAQ8PFgIfA2hkZAIFD2QWAmYPDxYCHwNoZBYCZg8WAh4LXyFJdGVtQ291bnQC/////w9kAgkPZBYKZg8PFgIfA2hkFgJmDxYKHhJUcmFuc2Zvcm1hdGlvbk5hbWUFGENNUy5NZW51SXRlbS5SZWxhdGVkRG9jcx4WSGlkZUNvbnRyb2xGb3JaZXJvUm93c2ceDFplcm9Sb3dzVGV4dAUNTm8gZGF0YSBmb3VuZB4MRW5hYmxlUGFnaW5naB8FZmQCAQ8PFgIfA2hkFgJmDxYKHwYFLUNhZXJwaGlsbHkuQ29udGFjdFVzLkNhZXJwaGlsbHlfQ29udGFjdFVzSW5mbx8HZx8IBQ1ObyBkYXRhIGZvdW5kHwloHwVmZAIDDw8WAh8DaGQWAmYPFgofBgUoQ01TLk1lbnVJdGVtLkNhZXJwaGlsbHlfUmVsYXRlZERvY3VtZW50cx8HZx8IBQ1ObyBkYXRhIGZvdW5kHwloHwVmZAIEDw8WAh8DaGQWAmYPFgQfBQL/////Dx8DaGQCBQ8PFgIfA2hkFgJmDxYEHwUC/////w8fA2hkAgsPZBYCZg8PFgIfA2hkFgICBQ8WAh4FVmFsdWUFB1RydWFuY3lkAg0PZBYCAgEPZBYCZg9kFgJmD2QWAmYPZBYCAgEPDxYCHwQFD0FkZCB0byBteSBwYWdlc2RkAg8PZBYMZg8PFgIfA2hkZAIBDw8WAh8DaGRkAgIPDxYCHwNoZGQCAw8PFgIfA2hkZAIEDw8WAh8DaGRkAgUPDxYCHwNoZGQCDw9kFgJmD2QWAmYPFgIfBQIaFjQCAQ9kFgJmDxUCFX4vU2VhcmNoLmFzcHg/QWxwaGE9YQFhZAICD2QWAmYPFQIVfi9TZWFyY2guYXNweD9BbHBoYT1iAWJkAgMPZBYCZg8VAhV+L1NlYXJjaC5hc3B4P0FscGhhPWMBY2QCBA9kFgJmDxUCFX4vU2VhcmNoLmFzcHg/QWxwaGE9ZAFkZAIFD2QWAmYPFQIVfi9TZWFyY2guYXNweD9BbHBoYT1lAWVkAgYPZBYCZg8VAhV+L1NlYXJjaC5hc3B4P0FscGhhPWYBZmQCBw9kFgJmDxUCFX4vU2VhcmNoLmFzcHg/QWxwaGE9ZwFnZAIID2QWAmYPFQIVfi9TZWFyY2guYXNweD9BbHBoYT1oAWhkAgkPZBYCZg8VAhV+L1NlYXJjaC5hc3B4P0FscGhhPWkBaWQCCg9kFgJmDxUCFX4vU2VhcmNoLmFzcHg/QWxwaGE9agFqZAILD2QWAmYPFQIVfi9TZWFyY2guYXNweD9BbHBoYT1rAWtkAgwPZBYCZg8VAhV+L1NlYXJjaC5hc3B4P0FscGhhPWwBbGQCDQ9kFgJmDxUCFX4vU2VhcmNoLmFzcHg/QWxwaGE9bQFtZAIOD2QWAmYPFQIVfi9TZWFyY2guYXNweD9BbHBoYT1uAW5kAg8PZBYCZg8VAhV+L1NlYXJjaC5hc3B4P0FscGhhPW8Bb2QCEA9kFgJmDxUCFX4vU2VhcmNoLmFzcHg/QWxwaGE9cAFwZAIRD2QWAmYPFQIVfi9TZWFyY2guYXNweD9BbHBoYT1xAXFkAhIPZBYCZg8VAhV+L1NlYXJjaC5hc3B4P0FscGhhPXIBcmQCEw9kFgJmDxUCFX4vU2VhcmNoLmFzcHg/QWxwaGE9cwFzZAIUD2QWAmYPFQIVfi9TZWFyY2guYXNweD9BbHBoYT10AXRkAhUPZBYCZg8VAhV+L1NlYXJjaC5hc3B4P0FscGhhPXUBdWQCFg9kFgJmDxUCFX4vU2VhcmNoLmFzcHg/QWxwaGE9dgF2ZAIXD2QWAmYPFQIVfi9TZWFyY2guYXNweD9BbHBoYT13AXdkAhgPZBYCZg8VAhV+L1NlYXJjaC5hc3B4P0FscGhhPXgBeGQCGQ9kFgJmDxUCFX4vU2VhcmNoLmFzcHg/QWxwaGE9eQF5ZAIaD2QWAmYPFQIVfi9TZWFyY2guYXNweD9BbHBoYT16AXpkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBTtwJGx0JHpvbmVDb29raWVDb250ZW50JENhZXJwaGlsbHlTaG93Q29va2llTXNnJGxidG5DbG9zZU1zZ+eZ5Ch6yzBjDuA9S+jcNYSxLZ7Xw3nwpafsJ7q9tQiW" />
+</div>
+
+<input type="hidden" name="lng" id="lng" value="en-GB" />
+<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fWebServiceCall.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//<![CDATA[
+
+function PM_Postback(param) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(5040); } if(window.CMSContentManager) { CMSContentManager.allowSubmit = true; }; __doPostBack('m$am',param); }
+function PM_Callback(param, callback, ctx) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(5040); }if (window.CMSContentManager) { CMSContentManager.storeContentChangedStatus(); };WebForm_DoCallback('m$am',param,callback,ctx,null,true); }
+//]]>
+</script>
+<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fjquery%2fjquery-core.js" type="text/javascript"></script>
+<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSWebParts%2fSmartSearch%2fSearchBox_files%2fPredictiveSearch.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=oJ7W23bpQiBwiJTjvQ2rTsVRThdHUUtLgAwm78cvcUxeuNIvvqV1VqJTA1jzogL20&amp;t=629f8909" type="text/javascript"></script>
+<script src="/CMSPages/PortalTemplate.aspx?_TSM_HiddenField_=manScript_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.60919.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-GB%3aee051b62-9cd6-49a5-87bb-93c07bc43d63%3a475a4ef5%3aeffe2a26%3a7e63a579" type="text/javascript"></script>
+<script type="text/javascript">
+	//<![CDATA[
+
+var CMS = CMS || {};
+CMS.Application = {
+  "isRTL": "false",
+  "applicationUrl": "/",
+  "imagesUrl": "/CMSPages/GetResource.ashx?image=%5bImages.zip%5d%2f",
+  "isDialog": false
+};
+
+//]]>
+</script>
+    
+    <div id="ctxM">
+
+</div>
+    
+<div id="container" class="main">
+  <div id="out">
+    <div id="home_marker"></div>
+    <div id="header">
+      <div class="inner">
+        <!-- start notification bar -->
+        <div id="p_lt_zoneCookieContent_CaerphillyShowCookieMsg_divCookieBar" class="notify-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-11 col-xs-11 col-sm-11">
+                <div style="color: white;">
+                    <span id="p_lt_zoneCookieContent_CaerphillyShowCookieMsg_lblCookieMsg">By using this site you agree to our use of cookies. <a href='cookiesinfo.html' target='_target'>Click for more information</a>.</span>
+                </div>
+            </div>
+            <div class="col-md-1 col-xs-1 col-sm-1" style="height:0px;">
+                <input type="image" name="p$lt$zoneCookieContent$CaerphillyShowCookieMsg$lbtnCloseMsg" id="p_lt_zoneCookieContent_CaerphillyShowCookieMsg_lbtnCloseMsg" class="icon-remove-sign" src="../../../App_Themes/caerphilly.finalCss/img/close_icon.png" alt="close msg" align="absmiddle" />
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- /end notification bar -->
+        <!-- start top grey bar -->
+        <div class="top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2 col-xs-12 col-sm-3">
+                <!-- your logo goes here -->
+                <a href="/main.aspx" id="logo"><img id="p_lt_zoneCaerphillyLogo_EditableImage_ucEditableImage_imgImage" title="Caerphilly Logo" src="/getattachment/logo.png.aspx?width=169&amp;height=63&amp;ext=.png" alt="Caerphilly Logo" />
+
+ </a>
+              </div>
+              <div class="col-md-3 col-xs-12 col-sm-3 phone">
+                  <a href="https://public.govdelivery.com/accounts/UKCAERPHILLY/subscriber/new" style="text-decoration: none;" title="Sign up for e-mail alerts"><img alt="Sign up for e-mail alerts" src="/App_Themes/caerphilly.finalCss/img/Stay-Connected-logo-WHITE.png" /></a>
+
+
+
+
+                  <!--<a class="christmax" href="/contact-us/Christmas-opening-times">Christmas Arrangement</a>-->
+              </div>
+              <div id="headerin" class="col-md-7 col-xs-12 col-sm-6">
+                <div id="language">
+  <ul>
+    <li><a class="first" href="javascript:void(0);" onclick="skipcontent()">Skip to content</a></li>
+    <li><a href="/Public/Accessibility.aspx">Accessibility</a></li>
+    <li><a class="first" href="/contact-us.aspx">Contact us</a></li>
+    <li><a href="/News.aspx">News centre</a></li>
+    <li><a href="/My-Page.aspx">My pages</a></li>
+    <li><a href="/Services/Schools-and-learning/Attendance-and-inclusion/Truancy?lang=cy-gb">Cymraeg</a>
+    </li>
+  </ul>
+</div>
+                <div class="contacts_block">
+                  <div id="searchbox" class="input-group col-md-12 col-xs-12 col-sm-12">
+                    
+  <style>
+    .autocomplete-suggestions { border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+    .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+    .autocomplete-selected { background: #F0F0F0; }
+    .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+  </style>
+  <label for="p_lt_zoneSearch_SearchBox_txtWord" id="p_lt_zoneSearch_SearchBox_lblSearch" style="display:none;">Search for:</label>
+  
+  <div id="p_lt_zoneSearch_SearchBox_pnlPredictiveResultsHolder" class="predictiveSearchHolder">
+
+</div>
+  <div id="p_lt_zoneSearch_SearchBox_pnlSearch" class="searchBox">
+	
+    <input type="hidden" name="p$lt$zoneSearch$SearchBox$txtWord_exWatermark_ClientState" id="p_lt_zoneSearch_SearchBox_txtWord_exWatermark_ClientState" /><input name="p$lt$zoneSearch$SearchBox$txtWord" type="text" maxlength="1000" id="p_lt_zoneSearch_SearchBox_txtWord" class="form-control width85" />
+    <input type="submit" name="p$lt$zoneSearch$SearchBox$btnSearch" value="Search" id="p_lt_zoneSearch_SearchBox_btnSearch" class="input-group-addon width60 btn btn-primary" />
+  
+</div>
+  <script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript">
+    var options, ac;
+    jQuery(function() {
+      options = { serviceUrl: '/AutoSearch.ashx'};
+      ac = jQuery('#p_lt_zoneSearch_SearchBox_txtWord').autocomplete(options);
+    });
+  </script>
+                  </div>
+                  <!-- edit phone number here -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="scrollup"></a>
+        </div>
+        <!-- /end top grey bar -->
+        <!-- start logo and nav area -->
+        <div id="main" class="bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-xs-12 col-sm-12">
+                <div id="top_menu">
+                  <div class="navigation">
+	<div id="corner"></div>
+        <ul>
+<li>
+     <a class='styler_active_color' href='/main.aspx'>Popular tasks</a>
+</li><li>
+     <a class='styler_active_color' href='/Services.aspx'>Resident</a>
+</li><li>
+     <a class='styler_active_color' href='/Business.aspx'>Business</a>
+</li><li>
+    <a class='styler_active_color' href='/Things-To-Do.aspx'>Things to do</a>
+</li><li>
+     <a class='styler_active_color' href='/My-Council.aspx'>The council</a>
+</li><li>
+     <a class='styler_active_color' href='/Get-involved.aspx'>Get involved</a>
+</li>
+	</ul>
+</div><div class="navbar">
+  <div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+      <span class="menu-btn-name">Menu</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+<li>
+  <a href='/main.aspx' onclick='javascript:openUrl(this);'>
+    Popular tasks
+  </a>
+  <ul><li><a href='/Services/Jobs-and-training/Help-finding-work.aspx' onclick='javascript:openUrl(this);'>Job vacancies</a></li><li><a href='/Services/Schools-and-learning/Schools,-term-dates-and-closures.aspx' onclick='javascript:openUrl(this);'>School term dates and closures</a></li><li><a href='/Services/Household-waste-and-recycling/Bin-collection-days.aspx' onclick='javascript:openUrl(this);'>Bin collection days</a></li><li><a href='/Services/Sports-and-Leisure/Leisure-Centres.aspx' onclick='javascript:openUrl(this);'>Leisure centres</a></li><li><a href='/Services/Household-waste-and-recycling/Recycling-centres.aspx' onclick='javascript:openUrl(this);'>Recycling centres</a></li><li><a href='/Things-To-Do/Events.aspx' onclick='javascript:openUrl(this);'>Whats on</a></li><li><a href='/Services/Transport-and-parking/Bus-timetables.aspx' onclick='javascript:openUrl(this);'>Bus timetables</a></li><li><a href='/Things-To-Do/Libraries/Library-locations-and-opening-times.aspx' onclick='javascript:openUrl(this);'>Library locations and opening times</a></li><li><a href='/Services/Housing-benefits.aspx' onclick='javascript:openUrl(this);'>Housing benefit</a></li><li><a href='/Services/Council-tax/Pay-your-bill.aspx' onclick='javascript:openUrl(this);'>Pay your council tax bill</a></li><li><a href='/Services/Planning-and-building-control.aspx' onclick='javascript:openUrl(this);'>Planning and building control</a></li><li><a href='/Services/Housing/Find-a-home/Homes-ready-to-rent.aspx' onclick='javascript:openUrl(this);'>Homes ready to rent</a></li></ul>
+</li><li>
+  <a href='/Services.aspx' onclick='javascript:openUrl(this);'>
+    Resident
+  </a>
+  
+</li><li>
+  <a href='/Business.aspx' onclick='javascript:openUrl(this);'>
+    Business
+  </a>
+  
+</li><li>
+  <a href='/Things-To-Do.aspx' onclick='javascript:openUrl(this);'>
+    Things to do
+  </a>
+  
+</li><li>
+  <a href='/My-Council.aspx' onclick='javascript:openUrl(this);'>
+    The council
+  </a>
+  
+</li><li>
+  <a href='/Get-involved.aspx' onclick='javascript:openUrl(this);'>
+    Get involved
+  </a>
+  
+</li>
+		</ul>
+	</div>
+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /end logo and nav area -->
+      </div>
+      <!-- <div id="empty_header"></div> -->
+    </div>
+    <div id="wrapper">
+      
+
+<!-- Breadcrumb and News Alert Section --> 
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-xs-12 col-sm-12">
+      <div class="breadcrumb">
+        <ul>
+
+
+      <li><a href="/Services" class="CMSBreadCrumbsLink">Resident</a> &nbsp;<i class="icon icon-forward"></i>&nbsp;   <a href="/Services/Schools-and-learning" class="CMSBreadCrumbsLink">Schools and learning</a> &nbsp;<i class="icon icon-forward"></i>&nbsp;   <a href="/Services/Schools-and-learning/Attendance-and-inclusion" class="CMSBreadCrumbsLink">Attendance and inclusion</a> &nbsp;<i class="icon icon-forward"></i>&nbsp;   <span  class="CMSBreadCrumbsCurrentItem">Truancy</span></li>
+
+</ul>
+      </div>
+    </div>
+    <div class="col-md-12 col-xs-12 col-sm-12">
+      
+    </div>
+  </div>
+</div>
+<!-- Breadcrumb and News Alert Section --> 
+
+<div class="container">
+  <div class="sections mod row">
+    <div class="articles col-md-8 col-xs-8 col-sm-8" id="sectionContent">
+      <h1 class="title">Truancy
+
+
+
+</h1><p>By law, children of compulsory school age - five to 16 years - who are registered at a school must attend daily.</p>
+
+<p>Parents or carers are responsible for ensuring that their child attends unless there is a valid reason for their absence.</p>
+
+<p>Our schools keep&nbsp;records of a child&#39;s attendance, which will be shown on your child&#39;s school reports and records of achievement. The government issues guidelines on school attendance, which all schools and parents must follow.&nbsp;</p>
+
+<h2>Having difficulties getting your child to school?</h2>
+
+<p>If you are having difficulty in getting your child to school or think there may be a reason why your child does not want to go to school, you should speak to your child&#39;s class teacher for help and support.</p>
+
+<p><span style="line-height: 1.42857143;">We can also provide support by working directly with parents and schools. For example, where children have a long term illness, where families are in difficulty or where a child is being bullied.</span></p>
+
+<p>For further information about school attendance please <a href="/contact-us/General-enquiries/School-attendance-and-inclusion.aspx">contact us</a>.</p>
+
+<h2>Fixed penalty notices</h2>
+
+<p><span style="line-height: 1.42857143;">From September 2014 a headteacher can request the issue of a fixed penalty notice&nbsp;for irregular attendance of a child or young person registered in their school. Visit the <a href="/Services/Schools-and-learning/Attendance-and-inclusion/Holidays-in-term-time.aspx">non-attendance and holidays during term time</a> section for details.</span></p>
+
+
+
+
+
+    </div>
+    <div class="secright col-md-4 col-xs-4 col-sm-4">
+      <div class="blk">
+<div class="name">Contact us</div>
+
+<ul class="cnt">
+	<li class="cnt-email"><a href="/contact-us/General-enquiries/Schools-and-learning/School-attendance-and-inclusion.aspx">Email</a></li>
+	<li class="cnt-phone"><a href="/contact-us/General-enquiries/Schools-and-learning/School-attendance-and-inclusion.aspx">Telephone</a></li>
+	<li class="cnt-mini"><a href="/contact-us/General-enquiries/Schools-and-learning/School-attendance-and-inclusion.aspx">Address</a></li>
+</ul>
+</div>
+
+
+
+
+
+
+    </div>
+    <div class="articles col-md-8 col-xs-8 col-sm-8">
+      
+    </div>
+    <div class="col-md-12 col-xs-12 col-sm-12 share_icons">
+      <div class="col-md-3 col-xs-12 col-sm-12"><a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"><span><img src="/App_Themes/caerphilly.finalCss/img/facebook_new.png" width="24" /> </span>Share on Facebook </a></div>
+
+<div class="col-md-3 col-xs-12 col-sm-12"><a class="twitter_link" href="http://twitter.com/intent/tweet?text=Truancy&amp;url=http://sc-aptdweb/Kentico8/Services/Schools-and-learning/Attendance-and-inclusion/Truancy.aspx" target="_blank"><span><img src="/App_Themes/caerphilly.finalCss/img/twitter_new.png" width="24" /> </span>Share on Twitter </a></div>
+
+<div class="col-md-3 col-xs-12 col-sm-12">
+<div class="icon icon-comment print_btn" style="float:left;margin-right:7px;">&nbsp;</div>
+<a href="/PostComment.aspx?Id=1285">&nbsp;</a> <a href="/PostComment.aspx?Id=1285">Post Feedback</a></div>
+
+
+
+
+<div class="col-md-3 col-xs-12 col-sm-12"><div id="p_lt_zoneMainContent_pageplaceholder_p_lt_zoneShare_AddToMyPage_sys_pnlUpdate">
+	
+<a onclick="javascript:callButtonClick();"><span class="icon icon-heart print_btn"></span>
+    <span id="p_lt_zoneMainContent_pageplaceholder_p_lt_zoneShare_AddToMyPage_plcUp_lblText">Add to my pages</span>
+</a>
+<div style="display: none;">
+    <input type="submit" name="p$lt$zoneMainContent$pageplaceholder$p$lt$zoneShare$AddToMyPage$plcUp$btnAddToMyPage" value="" id="btnAddToMyPage" style="width:0px;" />
+</div>
+
+<script type="text/javascript">
+    function callButtonClick() {
+        document.getElementById("btnAddToMyPage").click();
+    }
+</script>
+
+
+</div></div><div class="col-md-3 col-xs-12 col-sm-12">
+<div class="icon icon-print print_btn" style="float:left;margin-right:7px;">&nbsp;</div>
+<a onclick="javascript:PrintPage();" style="cursor:pointer;">Print this</a></div>
+
+
+
+
+
+<script type="text/javascript">
+	//<![CDATA[
+function PrintPage()
+{
+var prtContent = $("#sectionContent").html();
+var addCss = '<html><head><title></title><link href="http://kentico.adappt.co.uk/CMSPages/GetResource.ashx?stylesheetname=caerphilly.finalCss" rel="stylesheet" type="text/css" /><link href="http://kentico.adappt.co.uk/App_Themes/caerphilly.finalCss/css/bootstrap.css" rel="stylesheet" type="text/css" /><link href="http://kentico.adappt.co.uk/App_Themes/caerphilly.finalCss/css/style.css" rel="stylesheet" type="text/css" /></head><body><div id="wrapper"><div class="container"><div class="sections mod row"><div class="articles col-md-12 col-xs-12 col-sm-12">' + prtContent + '</div></div></div></div></body></html>';
+var WinPrint = window.open('', 'Print Preview', 'left=0,top=0,width=800,height=500,toolbar=0,scrollbars=1,status=0');
+WinPrint.document.body.innerHTML = addCss;
+WinPrint.document.close();
+WinPrint.focus();
+WinPrint.print();
+WinPrint.close();
+}
+//]]>
+</script>
+    </div>
+    <div class="col-md-12 col-xs-12 col-sm-12 comment_section">
+        
+    </div>
+  </div>
+</div>
+      <!-- start map -->
+      <!-- /end map -->
+      <!-- start of a-z -->
+      <div id = "a2z" class="row">
+        <div class="container">
+          <div class="azt col-md-3 col-xs-12 col-sm-3">
+  <a href="/Search.aspx?Alpha=A">a to z of services </a>
+</div>
+        <div>
+            <ul id="az">
+    
+        <li>
+            <a href='/Search.aspx?Alpha=a'>a</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=b'>b</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=c'>c</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=d'>d</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=e'>e</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=f'>f</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=g'>g</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=h'>h</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=i'>i</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=j'>j</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=k'>k</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=l'>l</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=m'>m</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=n'>n</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=o'>o</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=p'>p</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=q'>q</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=r'>r</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=s'>s</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=t'>t</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=u'>u</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=v'>v</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=w'>w</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=x'>x</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=y'>y</a>
+        </li>
+    
+        <li>
+            <a href='/Search.aspx?Alpha=z'>z</a>
+        </li>
+    
+        </ul>
+        </div>
+    
+
+        </div>
+      </div>
+    </div>
+    <div id="empty"></div>
+  </div>
+</div>
+<!-- start footer -->
+<div id="footer">
+  <div class="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 last">
+          <div class="text">
+            <p>Connect to us on social media and join in the conversation</p>
+
+
+
+
+<ul class="social_links clearfix">
+  <li>
+    <a title="Facebook" class="fb" href="https://www.facebook.com/yourcaerphilly" target="_blank"></a>
+  </li>
+  <li>
+    <a title="Twitter" class="tw" href="https://twitter.com/caerphillycbc" target="_blank"></a>
+  </li>
+  <li>
+    <a title="Instagram" class="ig" href="http://www.instagram.com/caerphillycbc" target="_blank"></a>
+  </li>
+  <li>
+    <a title="You tube" class="yt" href="https://www.youtube.com/user/CaerphillyCBCTV" target="_blank"></a>
+  </li>
+  <li>
+    <a title="Flickr" class="fl" href="https://www.flickr.com/photos/caerphillycbc" target="_blank"></a>
+  </li>
+  <li>
+    <a title="My Map page" class="myp " href="/my-page.aspx"></a>
+  </li>
+</ul>
+
+
+
+
+<!--[if lt IE 9]>
+For your experience this site is best viewed in Internet Explorer 9 or higher, Mozilla Firefox 20 or higher, Safari 7 or higher, Chrome 30 or higher, Opera 8 or higher or an equivalent browser software.
+<![endif]-->
+            <br /><p><i>For your experience this site is best viewed in Internet Explorer 9 or higher, Mozilla Firefox 20 or higher, Safari 7 or higher, Chrome 30 or higher, Opera 8 or higher or equivalent browser software.</i>
+
+
+
+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="container">
+      <div class="row">
+        <div id = "footermenu">
+          <ul>
+<li class='first'>
+  <a href='/Accessibility'>Accessibility</a>
+</li>
+
+ <li>
+  <a href='/Disclaimer'>Disclaimer</a>
+</li>
+
+ <li>
+  <a href='/Copyright'>Copyright</a>
+</li>
+
+ <li>
+  <a href='/Privacy-Policy'>Privacy Policy</a>
+</li>
+
+ <li>
+  <a href='/Cookies'>Cookies</a>
+</li>
+
+ <li>
+  <a href='/ListenToSite'>Listen to site</a>
+</li>
+
+ <li>
+  <a href='/Public/Sitemap'>Sitemap</a>
+</li>
+
+
+</ul>
+        </div>
+        <!-- enter copyright information here -->
+        <div class="copyrights">
+          Copyright &copy; 2014, Caerphilly County Borough Council, All Rights Reserved.
+
+
+
+ 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/jquery.jcarousel.min.js"></script> 
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/jcarousel.responsive.js"></script> 
+<!-- <script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/jquery-ui.min.js"></script>-->
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/bootstrap.js"></script>
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/jquery.carouFredSel-6.2.1.js"></script>
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/library.js"></script>
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/function.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="/App_Themes/caerphilly.finalCss/js/jquery.easy-pie-chart.js"></script>
+<script type="text/javascript">
+  ! function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id = id;
+      js.src = p + "://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+  }(document, "script", "twitter-wjs");
+  
+  function openUrl(obj)
+  {
+    window.location.href=obj.href;
+  }
+</script>
+<!-- START GoogleCode -->
+<script type="text/javascript">
+  var _gaq= _gaq || [];
+  var vartitle= $(document).find("title").text();
+  _gaq.push(['_setAccount', 'UA-23595087-1']);
+  _gaq.push(['_setCustomVar', 'Page',vartitle, 3]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga= document.createElement('script'); ga.type= 'text/javascript'; ga.async= true;
+    ga.src= ('https:'== document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s= document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- End GoogleCode -->
+
+<!-- START Socitm Code -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var socitm_my_domains= "www.caerphilly.gov.uk,www.caerffili.gov.uk";
+  var socitm_custcode= "456";
+  var socitm_language_opt= "en-GB";
+  var socitm_intro_file= "/SOCITM/socitm_intro_en_GB.html";
+  /* ]]> */
+</script>
+<script type="text/javascript" src="http://socitm.govmetric.com/js/socitm_wrapper.aspx"></script>
+<noscript>
+  <a href="http://socitm.govmetric.com/survey.aspx?code=456">Please help us improve our website...</a>
+  <img src="http://socitm.govmetric.com/imagecounter.aspx?code=456" height="1" width="1" alt="">
+</noscript>
+<!-- END Socitm Code -->
+<script type="text/javascript">
+  $(document).ready(function(){ 
+    var culLang= $('#lng').val();
+    culLang= culLang.substring(0,2);
+    document.getElementsByTagName('html')[0].setAttribute('lang', culLang);
+    document.getElementsByTagName('html')[0].setAttribute('xml:lang', culLang); 
+  })
+</script>
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("manScript_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+
+<script type="text/javascript">
+	//<![CDATA[
+WebServiceCall('http://www.caerphilly.gov.uk/CMSPages/WebAnalyticsService.asmx', 'LogHits', '{"parameters":{"pageGUID":"3692cd70-2ca8-4683-b9fd-8c2913236e13","referrer":""}}')
+//]]>
+</script>
+<script type="text/javascript">
+	//<![CDATA[
+var predictiveSearchObject_p_lt_zoneSearch_SearchBox = new PredictiveSearchExtender('p_lt_zoneSearch_SearchBox', 'p_lt_zoneSearch_SearchBox_txtWord', 'p_lt_zoneSearch_SearchBox_pnlPredictiveResultsHolder', 3, true, 'selectedResult', 'predictiveSearchResults');
+predictiveSearchObject_p_lt_zoneSearch_SearchBox.CallPredictiveSearch = function(arg, context) { WebForm_DoCallback('p$lt$zoneSearch$SearchBox',arg,predictiveSearchObject_p_lt_zoneSearch_SearchBox.RecieveSearchResults,context,null,false); }
+
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"p_lt_zoneSearch_SearchBox_txtWord_exWatermark_ClientState","WatermarkText":"What are you looking for?","id":"p_lt_zoneSearch_SearchBox_txtWord_exWatermark"}, null, null, $get("p_lt_zoneSearch_SearchBox_txtWord"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

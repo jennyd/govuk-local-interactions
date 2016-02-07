@@ -1,0 +1,563 @@
+
+
+
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-gb" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb">
+<head id="ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>
+	Report a highways problem - where is the problem
+</title><link type="text/css" rel="Stylesheet" href="Style/core.css" /><link type="text/css" rel="Stylesheet" href="Style/content.css" /><link type="text/css" rel="Stylesheet" href="Style/CMS.css" /><meta name="eGMS.accessibility" content="Double-A" scheme="WCAG" /><meta name="eGMS.accessibility" content="approved" scheme="RNIB" /><meta name="DC.publisher" content="Cambridgeshire County Council, Shire Hall, Castle Hill, Cambridge, CB3 0AP. Phone +44 (0)1223 717111 (Main switchboard), +44 (0)845 045 5200 (Cambs Direct). Fax  +44 (0)1223 718045 . Email info@cambridgeshire.gov.uk" /><meta name="CCN.Publisher.ID" content="Cambridgeshire County Council" /><meta name="DC.rights.copyright" content="The content on this page is copyright, Cambridgeshire County Council" />
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+    
+<link rel="stylesheet" type="text/css" href="Style/Highways.css" />
+
+
+<link href="http://my.cambridgeshire.gov.uk/css/jQuery/base/ui.core.css" type="text/css" rel="stylesheet" />
+<link href="http://my.cambridgeshire.gov.uk/css/jQuery/base/ui.dialog.css" type="text/css" rel="stylesheet" />
+<link href="http://my.cambridgeshire.gov.uk/css/jQuery/base/ui.theme.css" type="text/css" rel="stylesheet" />
+
+
+<script src="http://my.cambridgeshire.gov.uk/js/lib/prototype-1.6.0.3.js" type="text/javascript"></script>
+
+
+<script src="http://my.cambridgeshire.gov.uk/FileIncluderJS.aspx" type="text/javascript"></script>
+<script type="text/javascript" src="./Script/map.js"></script>
+
+
+<!--[if IE]><script type="text/javascript" src="./Script/jquery.bgiframe.min.js"></script><![endif]-->
+<link type="text/css" rel="stylesheet" href="./Style/jquery.autocomplete.css" />
+ 
+
+</head>
+<body>
+    <form method="post" action="./ReportProblem1.aspx" id="aspnetForm">
+<input type="hidden" name="easting_val" id="easting_val" value="" />
+<input type="hidden" name="northing_val" id="northing_val" value="" />
+<input type="hidden" name="asset_id_val" id="asset_id_val" value="" />
+<input type="hidden" name="asset_id_name_val" id="asset_id_name_val" value="" />
+<input type="hidden" name="case_id_val" id="case_id_val" value="" />
+<input type="hidden" name="type_val" id="type_val" value="" />
+<input type="hidden" name="street_val" id="street_val" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY2MzM3MDk5Mw9kFgJmD2QWAgIDD2QWAgIDD2QWBAILDw8WAh4EVGV4dAUEVG93bmRkAg8PDxYCHwAFBlN0cmVldGRkZMPv+0g+BvfNvE4Z05IyBxClYeGw/xVaF7dYf3ncjAsu" />
+
+<script type="text/javascript">var townCentres = [];townCentres['Abbots Ripton'] = {'e':'523239','n':'277997'};townCentres['Abbotsley'] = {'e':'523066','n':'256673'};townCentres['Abington Pigotts'] = {'e':'530579','n':'244822'};townCentres['Alconbury'] = {'e':'518628','n':'275255'};townCentres['Alconbury Weston'] = {'e':'518418','n':'277091'};townCentres['Aldreth'] = {'e':'544570','n':'273440'};townCentres['Alwalton'] = {'e':'514184','n':'294246'};townCentres['Arrington'] = {'e':'532037','n':'250661'};townCentres['Ashley'] = {'e':'569377','n':'261538'};townCentres['Babraham'] = {'e':'550809','n':'251473'};townCentres['Balsham'] = {'e':'556663','n':'251438'};townCentres['Bar Hill'] = {'e':'538178','n':'263512'};townCentres['Barham'] = {'e':'515090','n':'274804'};townCentres['Barham And Woolley'] = {'e':'515090','n':'274804'};townCentres['Barrington'] = {'e':'539139','n':'250178'};townCentres['Bartlow'] = {'e':'559104','n':'245391'};townCentres['Barton'] = {'e':'540839','n':'256489'};townCentres['Bassingbourn Cum Kneesworth'] = {'e':'533904','n':'243617'};townCentres['Benwick'] = {'e':'534041','n':'290588'};townCentres['Black Horse Drove'] = {'e':'559380','n':'291790'};townCentres['Bluntisham'] = {'e':'535362','n':'273881'};townCentres['Bottisham'] = {'e':'555750','n':'259960'};townCentres['Bourn'] = {'e':'532993','n':'256638'};townCentres['Boxworth'] = {'e':'534443','n':'263127'};townCentres['Brampton'] = {'e':'520666','n':'270600'};townCentres['Brington'] = {'e':'507704','n':'276453'};townCentres['Brington And Molesworth'] = {'e':'507704','n':'276453'};townCentres['Brinkley'] = {'e':'561743','n':'255425'};townCentres['Broughton'] = {'e':'527272','n':'277479'};townCentres['Buckden'] = {'e':'519347','n':'267951'};townCentres['Buckworth'] = {'e':'515186','n':'276978'};townCentres['Burrough Green'] = {'e':'562708','n':'256687'};townCentres['Burwell'] = {'e':'557774','n':'266747'};townCentres['Bury'] = {'e':'529058','n':'283591'};townCentres['Bythorn'] = {'e':'504648','n':'275482'};townCentres['Bythorn And Keyston'] = {'e':'504648','n':'275482'};townCentres['Caldecote'] = {'e':'535125','n':'257815'};townCentres['Cambourne'] = {'e':'532120','n':'259249'};townCentres['Cambridge'] = {'e':'545281','n':'257565'};townCentres['Carlton'] = {'e':'562971','n':'253858'};townCentres['Castle Camps'] = {'e':'561760','n':'242607'};townCentres['Catworth'] = {'e':'508935','n':'273068'};townCentres['Caxton'] = {'e':'530135','n':'258225'};townCentres['Chatteris'] = {'e':'542075','n':'284259'};townCentres['Cherry Hinton'] = {'e':'548610','n':'256479'};townCentres['Chesterton'] = {'e':'512509','n':'295551'};townCentres['Chesterton (Peterborough)'] = {'e':'512509','n':'295551'};townCentres['Cheveley'] = {'e':'567361','n':'261615'};townCentres['Childerley'] = {'e':'535878','n':'261629'};townCentres['Chippenham'] = {'e':'566930','n':'268644'};townCentres['Chittering'] = {'e':'549642','n':'270020'};townCentres['Christchurch'] = {'e':'548301','n':'298129'};townCentres['Coates'] = {'e':'530945','n':'297816'};townCentres['Coldham'] = {'e':'543345','n':'302864'};townCentres['Colne'] = {'e':'536590','n':'276876'};townCentres['Comberton'] = {'e':'538544','n':'256983'};townCentres['Conington'] = {'e':'517425','n':'285957'};townCentres['Conington (Huntingdon)'] = {'e':'517632','n':'286009'};townCentres['Conington (South Cambs)'] = {'e':'532317','n':'266282'};townCentres['Coppingford'] = {'e':'515480','n':'279940'};townCentres['Coton'] = {'e':'541671','n':'258243'};townCentres['Cottenham'] = {'e':'546059','n':'268659'};townCentres['Countywide'] = {'e':'544377','n':'259377'};townCentres['Coveney'] = {'e':'548536','n':'283175'};townCentres['Covington'] = {'e':'505908','n':'271145'};townCentres['Croxton'] = {'e':'525017','n':'258862'};townCentres['Croydon'] = {'e':'530570','n':'249954'};townCentres['Denton'] = {'e':'516367','n':'288332'};townCentres['Denton And Caldecote'] = {'e':'516367','n':'288332'};townCentres['Diddington'] = {'e':'519091','n':'265700'};townCentres['Doddington'] = {'e':'536837','n':'289021'};townCentres['Downham'] = {'e':'551229','n':'286727'};townCentres['Dry Drayton'] = {'e':'537853','n':'261471'};townCentres['Dullingham'] = {'e':'563166','n':'257829'};townCentres['Duxford'] = {'e':'546819','n':'244765'};townCentres['Eagle Business Park'] = {'e':'519682','n':'293497'};townCentres['Earith'] = {'e':'538530','n':'276022'};townCentres['East Chesterton'] = {'e':'546276','n':'259829'};townCentres['Easton'] = {'e':'514009','n':'270840'};townCentres['Eastrea'] = {'e':'529512','n':'297176'};townCentres['Eaton Ford'] = {'e':'517334','n':'260354'};townCentres['Eaton Socon'] = {'e':'516702','n':'259104'};townCentres['Ellington'] = {'e':'515705','n':'271746'};townCentres['Elm'] = {'e':'542516','n':'303245'};townCentres['Elsworth'] = {'e':'531105','n':'263287'};townCentres['Eltisley'] = {'e':'527819','n':'260202'};townCentres['Elton'] = {'e':'509818','n':'294116'};townCentres['Ely'] = {'e':'557958','n':'280775'};townCentres['Eynesbury'] = {'e':'518460','n':'259255'};townCentres['Eynesbury Hardwicke'] = {'e':'519576','n':'257280'};townCentres['Farcet'] = {'e':'522848','n':'292951'};townCentres['Fen Ditton'] = {'e':'548348','n':'261191'};townCentres['Fen Drayton'] = {'e':'533618','n':'268637'};townCentres['Fenstanton'] = {'e':'531278','n':'268308'};townCentres['Fenton'] = {'e':'531939','n':'279502'};townCentres['Folksworth'] = {'e':'513767','n':'289703'};townCentres['Folksworth And Washingley'] = {'e':'513767','n':'289703'};townCentres['Fordham'] = {'e':'561713','n':'270625'};townCentres['Foul Anchor'] = {'e':'546305','n':'317742'};townCentres['Fowlmere'] = {'e':'542267','n':'244777'};townCentres['Foxton'] = {'e':'541475','n':'248262'};townCentres['Friday Bridge'] = {'e':'546510','n':'304800'};townCentres['Fulbourn'] = {'e':'552038','n':'255417'};townCentres['Gamlingay'] = {'e':'523933','n':'252289'};townCentres['Girton'] = {'e':'541547','n':'261623'};townCentres['Glatton'] = {'e':'515271','n':'286378'};townCentres['Godmanchester'] = {'e':'524598','n':'269393'};townCentres['Gorefield'] = {'e':'540778','n':'310609'};townCentres['Grafham'] = {'e':'515421','n':'268303'};townCentres['Grantchester'] = {'e':'542766','n':'256164'};townCentres['Graveley'] = {'e':'525473','n':'264666'};townCentres['Great Abington'] = {'e':'552530','n':'247516'};townCentres['Great And Little Chishill'] = {'e':'541738','n':'239682'};townCentres['Great And Little Eversden'] = {'e':'535751','n':'254889'};townCentres['Great Chishill'] = {'e':'542340','n':'238840'};townCentres['Great Eversden'] = {'e':'535719','n':'253716'};townCentres['Great Gidding'] = {'e':'511906','n':'283913'};townCentres['Great Gransden'] = {'e':'527370','n':'256659'};townCentres['Great Paxton'] = {'e':'521146','n':'263507'};townCentres['Great Raveley'] = {'e':'525360','n':'281380'};townCentres['Great Shelford'] = {'e':'546123','n':'253201'};townCentres['Great Staughton'] = {'e':'513193','n':'263816'};townCentres['Great Stukeley'] = {'e':'521990','n':'274650'};townCentres['Great Wilbraham'] = {'e':'555204','n':'256273'};townCentres['Guilden Morden'] = {'e':'527966','n':'241852'};townCentres['Guyhirn'] = {'e':'540180','n':'303790'};townCentres['Haddenham'] = {'e':'543796','n':'274726'};townCentres['Haddon'] = {'e':'513624','n':'293103'};townCentres['Hail Weston'] = {'e':'515670','n':'262829'};townCentres['Hamerton'] = {'e':'513051','n':'279271'};townCentres['Hamerton And Steeple Gidding'] = {'e':'513051','n':'279271'};townCentres['Hardwick'] = {'e':'536810','n':'258217'};townCentres['Harlton'] = {'e':'538871','n':'253097'};townCentres['Harston'] = {'e':'542982','n':'251212'};townCentres['Hartford'] = {'e':'525220','n':'273000'};townCentres['Haslingfield'] = {'e':'541774','n':'252702'};townCentres['Hatley'] = {'e':'528630','n':'251067'};townCentres['Hauxton'] = {'e':'543087','n':'252500'};townCentres['Hemingford Abbots'] = {'e':'527657','n':'268968'};townCentres['Hemingford Grey'] = {'e':'529712','n':'269267'};townCentres['Heydon'] = {'e':'542837','n':'241088'};townCentres['Highfields'] = {'e':'534960','n':'258304'};townCentres['Hildersham'] = {'e':'554798','n':'248015'};townCentres['Hilton'] = {'e':'528648','n':'265596'};townCentres['Hinxton'] = {'e':'549941','n':'245682'};townCentres['Histon'] = {'e':'543950','n':'264267'};townCentres['Holme'] = {'e':'521153','n':'289339'};townCentres['Holywell'] = {'e':'534010','n':'270770'};townCentres['Holywell Cum Needingworth'] = {'e':'534526','n':'272046'};townCentres['Horningsea'] = {'e':'550005','n':'263031'};townCentres['Horseheath'] = {'e':'561494','n':'247020'};townCentres['Houghton'] = {'e':'527747','n':'273608'};townCentres['Houghton And Wyton'] = {'e':'527747','n':'273608'};townCentres['Huntingdon'] = {'e':'524077','n':'273155'};townCentres['Ickleton'] = {'e':'547816','n':'242892'};townCentres['Impington'] = {'e':'544705','n':'262897'};townCentres['Isleham'] = {'e':'563807','n':'275711'};townCentres['Kennett'] = {'e':'569445','n':'267789'};townCentres['Keyston'] = {'e':'504390','n':'275450'};townCentres['Kimbolton'] = {'e':'510130','n':'267800'};townCentres['Kings Ripton'] = {'e':'525617','n':'276391'};townCentres['Kingston'] = {'e':'534039','n':'254365'};townCentres['Kirtling'] = {'e':'569234','n':'257189'};townCentres['Knapwell'] = {'e':'532923','n':'261638'};townCentres['Landbeach'] = {'e':'547529','n':'266910'};townCentres['Leighton Bromswold'] = {'e':'511487','n':'275933'};townCentres['Leverington'] = {'e':'544233','n':'311788'};townCentres['Linton'] = {'e':'556515','n':'247059'};townCentres['Litlington'] = {'e':'531903','n':'242198'};townCentres['Little Abington'] = {'e':'553344','n':'250371'};townCentres['Little Downham'] = {'e':'552573','n':'283996'};townCentres['Little Eversden'] = {'e':'537364','n':'253272'};townCentres['Little Gidding'] = {'e':'513331','n':'282199'};townCentres['Little Gransden'] = {'e':'527926','n':'254073'};townCentres['Little Ouse'] = {'e':'562036','n':'289194'};townCentres['Little Paxton'] = {'e':'518433','n':'262842'};townCentres['Little Raveley'] = {'e':'525487','n':'279895'};townCentres['Little Shelford'] = {'e':'545628','n':'250799'};townCentres['Little Stukeley'] = {'e':'520742','n':'275550'};townCentres['Little Thetford'] = {'e':'553134','n':'276300'};townCentres['Little Wilbraham'] = {'e':'553597','n':'257906'};townCentres['Littleport'] = {'e':'558777','n':'288500'};townCentres['Lode'] = {'e':'553154','n':'264263'};townCentres['Lolworth'] = {'e':'536466','n':'263920'};townCentres['Longstanton'] = {'e':'539695','n':'266353'};townCentres['Longstowe'] = {'e':'530653','n':'254610'};townCentres['Madingley'] = {'e':'539937','n':'260162'};townCentres['Manea'] = {'e':'548113','n':'290112'};townCentres['March'] = {'e':'540497','n':'296947'};townCentres['Melbourn'] = {'e':'538303','n':'243785'};townCentres['Meldreth'] = {'e':'537299','n':'246056'};townCentres['Mepal'] = {'e':'543811','n':'282200'};townCentres['Milton'] = {'e':'547539','n':'262835'};townCentres['Molesworth'] = {'e':'507325','n':'275976'};townCentres['Morborne'] = {'e':'513833','n':'291321'};townCentres['Murrow'] = {'e':'537742','n':'307206'};townCentres['Needingworth'] = {'e':'534465','n':'272033'};townCentres['Newnham'] = {'e':'543682','n':'257155'};townCentres['Newton'] = {'e':'542426','n':'313917'};townCentres['Newton (South Cambs)'] = {'e':'543827','n':'249446'};townCentres['Norman Cross'] = {'e':'516104','n':'290909'};townCentres['Oakington'] = {'e':'541298','n':'264523'};townCentres['Offord Cluny'] = {'e':'523016','n':'267609'};townCentres['Offord Cluny And Offord D\'arcy'] = {'e':'522789','n':'265244'};townCentres['Offord Darcy'] = {'e':'522789','n':'265244'};townCentres['Old Hurst'] = {'e':'530564','n':'276584'};townCentres['Old Weston'] = {'e':'509703','n':'278139'};townCentres['Orchard Park'] = {'e':'544975','n':'261728'};townCentres['Orwell'] = {'e':'536198','n':'250017'};townCentres['Over'] = {'e':'537967','n':'271314'};townCentres['Pampisford'] = {'e':'550314','n':'248531'};townCentres['Papworth Everard'] = {'e':'528682','n':'262436'};townCentres['Papworth St Agnes'] = {'e':'526940','n':'264501'};townCentres['Parson Drove'] = {'e':'536767','n':'308344'};townCentres['Perry'] = {'e':'514360','n':'267500'};townCentres['Pidley'] = {'e':'533268','n':'277775'};townCentres['Pidley Cum Fenton'] = {'e':'533567','n':'278708'};townCentres['Pondersbridge'] = {'e':'526166','n':'291975'};townCentres['Prickwillow'] = {'e':'559806','n':'282433'};townCentres['Pymoor'] = {'e':'549652','n':'286406'};townCentres['Queen Adelaide'] = {'e':'556133','n':'281456'};townCentres['Rampton'] = {'e':'542706','n':'268596'};townCentres['Ramsey'] = {'e':'529370','n':'288221'};townCentres['Ramsey Forty Foot'] = {'e':'530847','n':'288080'};townCentres['Ramsey Heights'] = {'e':'524962','n':'285223'};townCentres['Ramsey Mereside'] = {'e':'528705','n':'289043'};townCentres['Ramsey St Marys'] = {'e':'525424','n':'288307'};townCentres['Reach'] = {'e':'556563','n':'266377'};townCentres['Sapley'] = {'e':'524562','n':'273895'};townCentres['Sawston'] = {'e':'548111','n':'249828'};townCentres['Sawtry'] = {'e':'517162','n':'282198'};townCentres['Shepreth'] = {'e':'539389','n':'247665'};townCentres['Shingay Cum Wendy'] = {'e':'531588','n':'247127'};townCentres['Shippea Hill'] = {'e':'563992','n':'284338'};townCentres['Shudy Camps'] = {'e':'562259','n':'244719'};townCentres['Sibson'] = {'e':'509402','n':'297760'};townCentres['Sibson Cum Stibbington'] = {'e':'509402','n':'297760'};townCentres['Snailwell'] = {'e':'565459','n':'267108'};townCentres['Soham'] = {'e':'557895','n':'276216'};townCentres['Somersham'] = {'e':'535893','n':'279458'};townCentres['Southoe'] = {'e':'518306','n':'264358'};townCentres['Southoe And Midloe'] = {'e':'518102','n':'265334'};townCentres['Spaldwick'] = {'e':'512754','n':'272138'};townCentres['St Ives'] = {'e':'531432','n':'272404'};townCentres['St Neots'] = {'e':'518169','n':'260139'};townCentres['St Neots (Rural)'] = {'e':'520416','n':'259684'};townCentres['Stapleford'] = {'e':'548600','n':'252976'};townCentres['Steeple Gidding'] = {'e':'514120','n':'281396'};townCentres['Steeple Morden'] = {'e':'529932','n':'242634'};townCentres['Stetchworth'] = {'e':'563600','n':'258698'};townCentres['Stibbington'] = {'e':'508400','n':'298710'};townCentres['Stilton'] = {'e':'517278','n':'289430'};townCentres['Stonea'] = {'e':'545830','n':'293100'};townCentres['Stonely'] = {'e':'510840','n':'267110'};townCentres['Stow Cum Quy'] = {'e':'552426','n':'261222'};townCentres['Stow Longa'] = {'e':'511453','n':'271483'};townCentres['Stow-Cum-Quy'] = {'e':'552180','n':'260610'};townCentres['Stretham'] = {'e':'551523','n':'273600'};townCentres['Stuntney'] = {'e':'555550','n':'278200'};townCentres['Sutton'] = {'e':'542270','n':'279097'};townCentres['Sutton (Ely)'] = {'e':'544170','n':'278800'};townCentres['Swaffham Bulbeck'] = {'e':'556022','n':'263369'};townCentres['Swaffham Prior'] = {'e':'555482','n':'265473'};townCentres['Swavesey'] = {'e':'536485','n':'267791'};townCentres['Tadlow'] = {'e':'527946','n':'248019'};townCentres['Tetworth'] = {'e':'521279','n':'254058'};townCentres['Teversham'] = {'e':'550002','n':'258039'};townCentres['The Stukeleys'] = {'e':'521805','n':'274555'};townCentres['Thorney Toll'] = {'e':'534080','n':'303950'};townCentres['Thriplow'] = {'e':'544121','n':'245859'};townCentres['Tilbrook'] = {'e':'507983','n':'269687'};townCentres['Tipps End'] = {'e':'550700','n':'294860'};townCentres['Toft'] = {'e':'536419','n':'256288'};townCentres['Toseland'] = {'e':'523172','n':'262199'};townCentres['Trumpington'] = {'e':'544590','n':'255290'};townCentres['Turves'] = {'e':'533510','n':'296920'};townCentres['Tydd Gote'] = {'e':'545340','n':'317990'};townCentres['Tydd St Giles'] = {'e':'540312','n':'315165'};townCentres['Upton'] = {'e':'510620','n':'300440'};townCentres['Upton And Coppingford'] = {'e':'516971','n':'279396'};townCentres['Upware'] = {'e':'553786','n':'270107'};townCentres['Upwell'] = {'e':'549890','n':'302300'};townCentres['Upwood'] = {'e':'525930','n':'282610'};townCentres['Upwood And The Raveleys'] = {'e':'525001','n':'281801'};townCentres['Wansford'] = {'e':'507370','n':'299560'};townCentres['Warboys'] = {'e':'532842','n':'282346'};townCentres['Waresley'] = {'e':'523364','n':'254917'};townCentres['Waresley-Cum-Tetworth'] = {'e':'523364','n':'254917'};townCentres['Washingley'] = {'e':'513520','n':'289090'};townCentres['Water Newton'] = {'e':'510899','n':'296304'};townCentres['Waterbeach'] = {'e':'550827','n':'267947'};townCentres['Wennington'] = {'e':'523385','n':'279359'};townCentres['Wentworth'] = {'e':'548804','n':'279376'};townCentres['West Wickham'] = {'e':'561368','n':'249168'};townCentres['West Wratting'] = {'e':'559436','n':'252210'};townCentres['Westley Waterless'] = {'e':'560602','n':'256594'};townCentres['Weston Colville'] = {'e':'560925','n':'252999'};townCentres['Westwick'] = {'e':'542200','n':'265300'};townCentres['Whaddon'] = {'e':'534791','n':'246700'};townCentres['Whittlesey'] = {'e':'528678','n':'295515'};townCentres['Whittlesford'] = {'e':'546677','n':'247898'};townCentres['Wicken'] = {'e':'555650','n':'272429'};townCentres['Wilburton'] = {'e':'549466','n':'274766'};townCentres['Willingham'] = {'e':'541511','n':'271497'};townCentres['Wimblington'] = {'e':'543945','n':'291892'};townCentres['Wimpole'] = {'e':'533602','n':'250963'};townCentres['Winwick'] = {'e':'510246','n':'280561'};townCentres['Wisbech'] = {'e':'545054','n':'308553'};townCentres['Wisbech St Mary'] = {'e':'538797','n':'305602'};townCentres['Wistow'] = {'e':'527619','n':'281843'};townCentres['Witcham'] = {'e':'546596','n':'281642'};townCentres['Witchford'] = {'e':'550638','n':'279745'};townCentres['Woodditton'] = {'e':'565200','n':'259519'};townCentres['Woodhurst'] = {'e':'531665','n':'275677'};townCentres['Woodwalton'] = {'e':'521800','n':'283400'};townCentres['Woolley'] = {'e':'515090','n':'274804'};townCentres['Wyton'] = {'e':'527747','n':'273608'};townCentres['Wyton On The Hill'] = {'e':'527747','n':'273608'};townCentres['Yaxley'] = {'e':'518709','n':'291841'};townCentres['Yelling'] = {'e':'526058','n':'261899'};</script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="50B58B36" />
+    <div class="container_16">
+<div id="head">
+<a href="http://www.cambridgeshire.gov.uk"><img class="logo" src="./images/logo.png" alt="logo"></img></a>
+</div>
+        <div class="clear"></div>
+        <div class="breadCrumb">
+                <div>
+                    <a href="http://www.cambridgeshire.gov.uk/info/20081/roads_and_pathways/10/road_closures_and_reporting_problems" target="_self" title="Back to Highways Reporting Homepage">> Back to Highways Reporting Homepage</a>
+                </div>
+        </div>
+        <div class="grid_16 contentArea">
+            <a name="content"></a>
+            
+    <div class="contentHeader">
+        <a name="content"></a>
+        <h1 id="ctl00_MainColumnHeading_headingControl">Report a highways problem</h1>
+        <p>&#160;</p>
+    </div>
+
+            
+    
+    <div class="clearfix highways-form miniform">
+        <div class="grid_5 alpha">
+            
+            <div class="grey-box" id="type_selection">
+            <p class="stepheading">
+                <img width="20" height="20" src="images/step1.png" alt="1"/>
+                <strong>What is the problem?</strong>
+            </p>
+            <div>
+                <label for="ctl00_MainContentArea_typeDropDownList" id="ctl00_MainContentArea_Label3">Type of problem:</label>
+                <select name="ctl00$MainContentArea$typeDropDownList" id="ctl00_MainContentArea_typeDropDownList" class="RequestType full">
+	<option value="BRIG">Bridges</option>
+	<option value="DEVC">Development Management</option>
+	<option value="ENVM">Material on the highway</option>
+	<option value="ROWM">Public rights of way</option>
+	<option value="SWRK">Road works</option>
+	<option selected="selected" value="MAIN">Roads and pavement surfaces</option>
+	<option value="SBFC">Signs, lines, bollards and furniture</option>
+	<option value="SIGT">Traffic lights</option>
+	<option value="TRAF">Traffic management</option>
+	<option value="TREE">Tree issues</option>
+
+</select>
+            </div>
+            </div>
+            
+            
+            <div class="grey-box" id="loc_selection">
+            <p class="stepheading">
+                <img width="20" height="20" src="images/step2.png" alt="2"/>
+                <strong>Where is the problem?</strong>
+            </p>
+                <label for="ctl00_MainContentArea_RoadSearch" id="ctl00_MainContentArea_RoadSearchLabel" class="top">Search by road name or number:</label>
+                <input name="ctl00$MainContentArea$RoadSearch" type="text" id="ctl00_MainContentArea_RoadSearch" class="road-search full" />&#160;
+                <noscript>
+                    <label class="screen-reader" for="road_search_button">Search by road name or number</label>
+                    <input id="road_search_button" name="road_search_button" type="submit" value="Search" />
+                    
+                </noscript>
+                
+                <div class="rule-with-text">
+                    <span>Or select</span>
+                </div>
+                
+                <label for="ctl00_MainContentArea_townDropDownList" id="ctl00_MainContentArea_TownLabel">Town</label>
+                <select name="ctl00$MainContentArea$townDropDownList" id="ctl00_MainContentArea_townDropDownList" class="full TownDropDown">
+	<option value="">Select a town</option>
+	<option value="Abbots Ripton">Abbots Ripton</option>
+	<option value="Abbotsley">Abbotsley</option>
+	<option value="Abington Pigotts">Abington Pigotts</option>
+	<option value="Alconbury">Alconbury</option>
+	<option value="Alconbury Weston">Alconbury Weston</option>
+	<option value="Aldreth">Aldreth</option>
+	<option value="Alwalton">Alwalton</option>
+	<option value="Arrington">Arrington</option>
+	<option value="Ashley">Ashley</option>
+	<option value="Babraham">Babraham</option>
+	<option value="Balsham">Balsham</option>
+	<option value="Bar Hill">Bar Hill</option>
+	<option value="Barham">Barham</option>
+	<option value="Barrington">Barrington</option>
+	<option value="Bartlow">Bartlow</option>
+	<option value="Barton">Barton</option>
+	<option value="Bassingbourn Cum Kneesworth">Bassingbourn Cum Kneesworth</option>
+	<option value="Benwick">Benwick</option>
+	<option value="Black Horse Drove">Black Horse Drove</option>
+	<option value="Bluntisham">Bluntisham</option>
+	<option value="Bottisham">Bottisham</option>
+	<option value="Bourn">Bourn</option>
+	<option value="Boxworth">Boxworth</option>
+	<option value="Brampton">Brampton</option>
+	<option value="Brington">Brington</option>
+	<option value="Brinkley">Brinkley</option>
+	<option value="Broughton">Broughton</option>
+	<option value="Buckden">Buckden</option>
+	<option value="Buckworth">Buckworth</option>
+	<option value="Burrough Green">Burrough Green</option>
+	<option value="Burwell">Burwell</option>
+	<option value="Bury">Bury</option>
+	<option value="Bythorn">Bythorn</option>
+	<option value="Caldecote">Caldecote</option>
+	<option value="Cambourne">Cambourne</option>
+	<option value="Cambridge">Cambridge</option>
+	<option value="Carlton">Carlton</option>
+	<option value="Castle Camps">Castle Camps</option>
+	<option value="Catworth">Catworth</option>
+	<option value="Caxton">Caxton</option>
+	<option value="Chatteris">Chatteris</option>
+	<option value="Cherry Hinton">Cherry Hinton</option>
+	<option value="Chesterton">Chesterton</option>
+	<option value="Cheveley">Cheveley</option>
+	<option value="Chippenham">Chippenham</option>
+	<option value="Chittering">Chittering</option>
+	<option value="Christchurch">Christchurch</option>
+	<option value="Coates">Coates</option>
+	<option value="Coldham">Coldham</option>
+	<option value="Colne">Colne</option>
+	<option value="Comberton">Comberton</option>
+	<option value="Conington">Conington</option>
+	<option value="Coppingford">Coppingford</option>
+	<option value="Coton">Coton</option>
+	<option value="Cottenham">Cottenham</option>
+	<option value="Countywide">Countywide</option>
+	<option value="Coveney">Coveney</option>
+	<option value="Covington">Covington</option>
+	<option value="Croxton">Croxton</option>
+	<option value="Croydon">Croydon</option>
+	<option value="Denton">Denton</option>
+	<option value="Diddington">Diddington</option>
+	<option value="Doddington">Doddington</option>
+	<option value="Downham">Downham</option>
+	<option value="Dry Drayton">Dry Drayton</option>
+	<option value="Dullingham">Dullingham</option>
+	<option value="Duxford">Duxford</option>
+	<option value="Eagle Business Park">Eagle Business Park</option>
+	<option value="Earith">Earith</option>
+	<option value="East Chesterton">East Chesterton</option>
+	<option value="Easton">Easton</option>
+	<option value="Eastrea">Eastrea</option>
+	<option value="Eaton Ford">Eaton Ford</option>
+	<option value="Eaton Socon">Eaton Socon</option>
+	<option value="Ellington">Ellington</option>
+	<option value="Elm">Elm</option>
+	<option value="Elsworth">Elsworth</option>
+	<option value="Eltisley">Eltisley</option>
+	<option value="Elton">Elton</option>
+	<option value="Ely">Ely</option>
+	<option value="Eynesbury">Eynesbury</option>
+	<option value="Farcet">Farcet</option>
+	<option value="Fen Ditton">Fen Ditton</option>
+	<option value="Fen Drayton">Fen Drayton</option>
+	<option value="Fenstanton">Fenstanton</option>
+	<option value="Fenton">Fenton</option>
+	<option value="Folksworth">Folksworth</option>
+	<option value="Fordham">Fordham</option>
+	<option value="Foul Anchor">Foul Anchor</option>
+	<option value="Fowlmere">Fowlmere</option>
+	<option value="Foxton">Foxton</option>
+	<option value="Friday Bridge">Friday Bridge</option>
+	<option value="Fulbourn">Fulbourn</option>
+	<option value="Gamlingay">Gamlingay</option>
+	<option value="Girton">Girton</option>
+	<option value="Glatton">Glatton</option>
+	<option value="Godmanchester">Godmanchester</option>
+	<option value="Gorefield">Gorefield</option>
+	<option value="Grafham">Grafham</option>
+	<option value="Grantchester">Grantchester</option>
+	<option value="Graveley">Graveley</option>
+	<option value="Great Abington">Great Abington</option>
+	<option value="Great And Little Chishill">Great And Little Chishill</option>
+	<option value="Great Chishill">Great Chishill</option>
+	<option value="Great Eversden">Great Eversden</option>
+	<option value="Great Gidding">Great Gidding</option>
+	<option value="Great Gransden">Great Gransden</option>
+	<option value="Great Paxton">Great Paxton</option>
+	<option value="Great Raveley">Great Raveley</option>
+	<option value="Great Shelford">Great Shelford</option>
+	<option value="Great Staughton">Great Staughton</option>
+	<option value="Great Stukeley">Great Stukeley</option>
+	<option value="Great Wilbraham">Great Wilbraham</option>
+	<option value="Guilden Morden">Guilden Morden</option>
+	<option value="Guyhirn">Guyhirn</option>
+	<option value="Haddenham">Haddenham</option>
+	<option value="Haddon">Haddon</option>
+	<option value="Hail Weston">Hail Weston</option>
+	<option value="Hamerton">Hamerton</option>
+	<option value="Hardwick">Hardwick</option>
+	<option value="Harlton">Harlton</option>
+	<option value="Harston">Harston</option>
+	<option value="Hartford">Hartford</option>
+	<option value="Haslingfield">Haslingfield</option>
+	<option value="Hatley">Hatley</option>
+	<option value="Hauxton">Hauxton</option>
+	<option value="Hemingford Abbots">Hemingford Abbots</option>
+	<option value="Hemingford Grey">Hemingford Grey</option>
+	<option value="Heydon">Heydon</option>
+	<option value="Highfields">Highfields</option>
+	<option value="Hildersham">Hildersham</option>
+	<option value="Hilton">Hilton</option>
+	<option value="Hinxton">Hinxton</option>
+	<option value="Histon">Histon</option>
+	<option value="Holme">Holme</option>
+	<option value="Holywell">Holywell</option>
+	<option value="Horningsea">Horningsea</option>
+	<option value="Horseheath">Horseheath</option>
+	<option value="Houghton">Houghton</option>
+	<option value="Huntingdon">Huntingdon</option>
+	<option value="Ickleton">Ickleton</option>
+	<option value="Impington">Impington</option>
+	<option value="Isleham">Isleham</option>
+	<option value="Kennett">Kennett</option>
+	<option value="Keyston">Keyston</option>
+	<option value="Kimbolton">Kimbolton</option>
+	<option value="Kings Ripton">Kings Ripton</option>
+	<option value="Kingston">Kingston</option>
+	<option value="Kirtling">Kirtling</option>
+	<option value="Knapwell">Knapwell</option>
+	<option value="Landbeach">Landbeach</option>
+	<option value="Leighton Bromswold">Leighton Bromswold</option>
+	<option value="Leverington">Leverington</option>
+	<option value="Linton">Linton</option>
+	<option value="Litlington">Litlington</option>
+	<option value="Little Abington">Little Abington</option>
+	<option value="Little Downham">Little Downham</option>
+	<option value="Little Eversden">Little Eversden</option>
+	<option value="Little Gidding">Little Gidding</option>
+	<option value="Little Gransden">Little Gransden</option>
+	<option value="Little Ouse">Little Ouse</option>
+	<option value="Little Paxton">Little Paxton</option>
+	<option value="Little Raveley">Little Raveley</option>
+	<option value="Little Shelford">Little Shelford</option>
+	<option value="Little Stukeley">Little Stukeley</option>
+	<option value="Little Thetford">Little Thetford</option>
+	<option value="Little Wilbraham">Little Wilbraham</option>
+	<option value="Littleport">Littleport</option>
+	<option value="Lode">Lode</option>
+	<option value="Lolworth">Lolworth</option>
+	<option value="Longstanton">Longstanton</option>
+	<option value="Longstowe">Longstowe</option>
+	<option value="Madingley">Madingley</option>
+	<option value="Manea">Manea</option>
+	<option value="March">March</option>
+	<option value="Melbourn">Melbourn</option>
+	<option value="Meldreth">Meldreth</option>
+	<option value="Mepal">Mepal</option>
+	<option value="Milton">Milton</option>
+	<option value="Molesworth">Molesworth</option>
+	<option value="Morborne">Morborne</option>
+	<option value="Murrow">Murrow</option>
+	<option value="Needingworth">Needingworth</option>
+	<option value="Newnham">Newnham</option>
+	<option value="Newton">Newton</option>
+	<option value="Newton (South Cambs)">Newton (South Cambs)</option>
+	<option value="Norman Cross">Norman Cross</option>
+	<option value="Oakington">Oakington</option>
+	<option value="Offord Cluny">Offord Cluny</option>
+	<option value="Offord Darcy">Offord Darcy</option>
+	<option value="Old Hurst">Old Hurst</option>
+	<option value="Old Weston">Old Weston</option>
+	<option value="Orchard Park">Orchard Park</option>
+	<option value="Orwell">Orwell</option>
+	<option value="Over">Over</option>
+	<option value="Pampisford">Pampisford</option>
+	<option value="Papworth Everard">Papworth Everard</option>
+	<option value="Papworth St Agnes">Papworth St Agnes</option>
+	<option value="Parson Drove">Parson Drove</option>
+	<option value="Perry">Perry</option>
+	<option value="Pidley">Pidley</option>
+	<option value="Pondersbridge">Pondersbridge</option>
+	<option value="Prickwillow">Prickwillow</option>
+	<option value="Pymoor">Pymoor</option>
+	<option value="Queen Adelaide">Queen Adelaide</option>
+	<option value="Rampton">Rampton</option>
+	<option value="Ramsey">Ramsey</option>
+	<option value="Ramsey Forty Foot">Ramsey Forty Foot</option>
+	<option value="Ramsey Heights">Ramsey Heights</option>
+	<option value="Ramsey Mereside">Ramsey Mereside</option>
+	<option value="Ramsey St Marys">Ramsey St Marys</option>
+	<option value="Reach">Reach</option>
+	<option value="Sapley">Sapley</option>
+	<option value="Sawston">Sawston</option>
+	<option value="Sawtry">Sawtry</option>
+	<option value="Shepreth">Shepreth</option>
+	<option value="Shingay Cum Wendy">Shingay Cum Wendy</option>
+	<option value="Shippea Hill">Shippea Hill</option>
+	<option value="Shudy Camps">Shudy Camps</option>
+	<option value="Sibson">Sibson</option>
+	<option value="Snailwell">Snailwell</option>
+	<option value="Soham">Soham</option>
+	<option value="Somersham">Somersham</option>
+	<option value="Southoe">Southoe</option>
+	<option value="Spaldwick">Spaldwick</option>
+	<option value="St Ives">St Ives</option>
+	<option value="St Neots">St Neots</option>
+	<option value="St Neots (Rural)">St Neots (Rural)</option>
+	<option value="Stapleford">Stapleford</option>
+	<option value="Steeple Gidding">Steeple Gidding</option>
+	<option value="Steeple Morden">Steeple Morden</option>
+	<option value="Stetchworth">Stetchworth</option>
+	<option value="Stibbington">Stibbington</option>
+	<option value="Stilton">Stilton</option>
+	<option value="Stonea">Stonea</option>
+	<option value="Stonely">Stonely</option>
+	<option value="Stow Cum Quy">Stow Cum Quy</option>
+	<option value="Stow Longa">Stow Longa</option>
+	<option value="Stow-Cum-Quy">Stow-Cum-Quy</option>
+	<option value="Stretham">Stretham</option>
+	<option value="Stuntney">Stuntney</option>
+	<option value="Sutton">Sutton</option>
+	<option value="Swaffham Bulbeck">Swaffham Bulbeck</option>
+	<option value="Swaffham Prior">Swaffham Prior</option>
+	<option value="Swavesey">Swavesey</option>
+	<option value="Tadlow">Tadlow</option>
+	<option value="Tetworth">Tetworth</option>
+	<option value="Teversham">Teversham</option>
+	<option value="The Stukeleys">The Stukeleys</option>
+	<option value="Thorney Toll">Thorney Toll</option>
+	<option value="Thriplow">Thriplow</option>
+	<option value="Tilbrook">Tilbrook</option>
+	<option value="Tipps End">Tipps End</option>
+	<option value="Toft">Toft</option>
+	<option value="Toseland">Toseland</option>
+	<option value="Trumpington">Trumpington</option>
+	<option value="Turves">Turves</option>
+	<option value="Tydd Gote">Tydd Gote</option>
+	<option value="Tydd St Giles">Tydd St Giles</option>
+	<option value="Upton">Upton</option>
+	<option value="Upware">Upware</option>
+	<option value="Upwell">Upwell</option>
+	<option value="Upwood">Upwood</option>
+	<option value="Wansford">Wansford</option>
+	<option value="Warboys">Warboys</option>
+	<option value="Waresley">Waresley</option>
+	<option value="Washingley">Washingley</option>
+	<option value="Water Newton">Water Newton</option>
+	<option value="Waterbeach">Waterbeach</option>
+	<option value="Wennington">Wennington</option>
+	<option value="Wentworth">Wentworth</option>
+	<option value="West Wickham">West Wickham</option>
+	<option value="West Wratting">West Wratting</option>
+	<option value="Westley Waterless">Westley Waterless</option>
+	<option value="Weston Colville">Weston Colville</option>
+	<option value="Westwick">Westwick</option>
+	<option value="Whaddon">Whaddon</option>
+	<option value="Whittlesey">Whittlesey</option>
+	<option value="Whittlesford">Whittlesford</option>
+	<option value="Wicken">Wicken</option>
+	<option value="Wilburton">Wilburton</option>
+	<option value="Willingham">Willingham</option>
+	<option value="Wimblington">Wimblington</option>
+	<option value="Wimpole">Wimpole</option>
+	<option value="Winwick">Winwick</option>
+	<option value="Wisbech">Wisbech</option>
+	<option value="Wisbech St Mary">Wisbech St Mary</option>
+	<option value="Wistow">Wistow</option>
+	<option value="Witcham">Witcham</option>
+	<option value="Witchford">Witchford</option>
+	<option value="Woodditton">Woodditton</option>
+	<option value="Woodhurst">Woodhurst</option>
+	<option value="Woodwalton">Woodwalton</option>
+	<option value="Woolley">Woolley</option>
+	<option value="Wyton">Wyton</option>
+	<option value="Wyton On The Hill">Wyton On The Hill</option>
+	<option value="Yaxley">Yaxley</option>
+	<option value="Yelling">Yelling</option>
+
+</select>
+                <noscript>
+                    <input type="submit" name="showStreets" value="Show streets" />
+                </noscript>
+                
+                <label for="ctl00_MainContentArea_streetDropDownList" id="ctl00_MainContentArea_StreetLabel">Street</label>
+                <select name="ctl00$MainContentArea$streetDropDownList" id="ctl00_MainContentArea_streetDropDownList" disabled="disabled" class="aspNetDisabled full StreetDropDown">
+	<option value="">Select a street</option>
+
+</select>
+                
+                 <div id="ctl00_MainContentArea_locationDescriptionContainer" class="locationDescription">
+                <label for="ctl00_MainContentArea_locationDescriptionTextBox" id="ctl00_MainContentArea_locationDescriptionLabel">Describe the location of the problem:<span class='mandatory'>*</span></label>
+                <textarea name="ctl00$MainContentArea$locationDescriptionTextBox" rows="2" cols="20" id="ctl00_MainContentArea_locationDescriptionTextBox" class="full locationDescriptionText default-text unfocus">
+e.g. outside number 5</textarea>
+                <span class="maxCharLegnthError">Location description cannot be any longer than 70 characters.</span>&nbsp;
+
+                </div>
+                
+                
+            </div>
+            
+           <div class="grey-box clearfix" id="map_selection">
+            
+
+                <img id="ctl00_MainContentArea_MapSelectionImage" alt="3" src="./images/step3.png" height="20" width="20" />
+                <span id="ctl00_MainContentArea_MapSelectionLabel" class="selectmessage">Click on the map to indicate the precise location of the problem.</span>
+                
+            </div>
+            
+           
+            
+            <div style="margin-top: 10px;margin-bottom: 10px;">
+                <input type="submit" name="ctl00$MainContentArea$continueButton" value="Continue »" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContentArea$continueButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_MainContentArea_continueButton" class="form-submit" />
+            </div>
+            
+        </div>
+        <div class="grid_7">
+            <div class="clearfix">
+                <div id="atMap">
+                <!--<div id="atInitialLoader" class="ui-state-default" style=" margin:180px auto auto;width: 75px; background: none repeat scroll 0% 0% rgb(255, 255, 255); z-index: 800; text-align: center; padding: 10px; border-width: 5px; -moz-border-radius: 15px 15px 15px 15px; -moz-box-shadow: 5px 5px 3px rgb(129, 129, 129); display: block !important;">
+										<img src="images/stopwatch.gif" id="atMapTimer" style="float:none" alt="">
+										<span>
+											<br/><span style="display:block; padding-top:7px">Loading...</span>
+										</span>
+					</div>-->
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        document.write("<div id='atInitialLoader' class='ui-state-default' style=' top:100px; left:162px;width: 76px; background: none repeat scroll 0% 0% rgb(255, 255, 255); position: absolute; z-index: -1; text-align: center; padding: 10px; border-width: 5px; -moz-border-radius: 15px 15px 15px 15px; -moz-box-shadow: 5px 5px 3px rgb(129, 129, 129); display: block !important;'>");
+                        document.write("<img src='images/stopwatch.gif' id='atMapTimer' style='float:none'>");
+                        document.write("<span>");
+                        document.write("	<br><span style='display:block; padding-top:7px'>Loading...</span>");
+                        document.write("</span>");
+                        document.write("</div>");
+                        //]]>
+
+				    </script>
+                    <noscript><p>To use the map, you need to have javascript enabled. If you are unable to display the map, please <a href="https://forms.cambridgeshire.gov.uk/customer/servlet/ep.app?ut=X&amp;type=259830">report without a map</a>.</p></noscript>
+                </div>
+            </div>
+            <div id="mapselect_incorrect_image"></div>
+            <div id="map_selection2" class="white-box" style="margin-top: 10px;"><span id="ctl00_MainContentArea_map_selection2_span">No location selected</span></div>
+            <p id="right_of_way_disclaimer" style="display:none"><strong>Note:</strong> This map does not represent a definitive account of public rights of way and associated infrastructure. See more information on <a target="_blank" href="http://www.cambridgeshire.gov.uk/environment/countrysideandrights/definitivemapandstate/">public access rights of way</a></p>
+            
+            
+            
+       
+            <p>
+                Having problems reporting? <a target="_blank" href="https://www.cambridgeshire.gov.uk/site/xfp/scripts/xforms_form.aspx?formID=38&language=en">Report difficulties using the system<span class="screen-reader">(opens in new window)</span></a>.
+           <br />
+                If you have additional accessibility requirements please <a href="https://www.cambridgeshire.gov.uk/site/xfp/scripts/xforms_form.aspx?formID=25&language=en">click here</a>.
+            </p>
+        </div>
+        <div class="grid_4 omega" >
+        <div id="highways_key" class="white-box map-key clearfix" >
+                <ul>
+                      <li><img src="images/red_dot.png" width="24" height="24" alt="Problem" /><span>Known Problem</span></li>
+                      <li><img src="images/new_marker.png" width="24" height="24" alt="New" /><span>New Problem</span></li>
+                      
+                      <li class="key_edit" style="display:none"><img src="images/previous_location_marker.png" width="24" height="24" alt="Previous location" /><span>Previous <br />location</span></li>
+                      <li class="key_road" ><img src="images/grey_line.gif" width="24" alt="Public road" /><span>Public road</span></li>
+                      <li class="key_right_of_way" style="display:none"><img src="images/green_line.gif" width="24" height="10" alt="Footpath" /><span>Footpath</span></li>
+                      <li class="key_right_of_way" style="display:none"><img src="images/blue_line.gif" width="24" height="10" alt="Bridleway" /><span>Bridleway</span></li>
+                      <li class="key_right_of_way" style="display:none"><img src="images/red_line.gif" width="24" height="10" alt="Byway" /><span>Byway</span></li>
+                      <li class="key_right_of_way" style="display:none"><img src="images/orange_line.gif" width="24" height="10" alt="Restricted byway" /><span>Restricted Byway</span></li>
+                      <li class="key_right_of_way" style="display:none"><img src="images/blue_line_dashed.gif" width="24" height="10" alt="Logged icon" /><span>County Farm paths</span></li>
+                      <li class="key_right_of_way" style="display:none"><img src="images/light_blue_square.png" width="24" height="24" alt="Under repair icon" /><span>Stile, step, gate, barrier</span></li>
+                      <li class="key_right_of_way" style="display:none"><img src="images/green_square.png" width="24" height="24" alt="Completed icon" /><span>Sign</span></li>
+                      <li class="key_right_of_way key_bridges" style="display:none"><img src="images/yellow_square.png" width="24" height="24" alt="Bridge" /><span id="bridgecrossing">Bridge</span></li>
+                      <li class="key_signals" style="display:none"><img src="images/blue_square.png" width="24" height="24" alt="Junction" /><span>Junction</span></li>
+                      <li class="key_signals" style="display:none"><img src="images/pink_square.png" width="24" height="24" alt="Crossing" /><span>Crossing</span></li>
+                </ul>
+            </div>
+        
+        </div>
+        
+    </div>
+
+            <div class="clear">
+            </div>
+          
+        </div>
+        <div class="clear">
+        </div>
+
+    </div>
+
+    
+
+  <div class="footer">
+<div class="wrapper">
+<div class="right-content">
+<a class="twitter" title="Follow us on Twitter!" href="https://twitter.com/cambsCC"><i class="icon twitter"></i></a>
+<a class="facebook" title="Join our Facebook Page!" href="https://www.facebook.com/cambsCC"><i class="icon facebook"></i></a>
+</div>
+
+    	<ul>
+		<li><a href="http://www.cambridgeshire.gov.uk/atoz">A-Z Services</a></li>
+		<li><a href="http://www.cambridgeshire.gov.uk/contact-us ">Contact us</a></li>
+		
+		<li><a href="http://www.cambridgeshire.gov.uk/terms">Terms &amp; Disclaimer</a></li>
+		<li><a href="http://www.cambridgeshire.gov.uk/website-help">Help with website</a></li>	
+
+		</ul>
+		<p class="jadu">All content © 2013 Cambridgeshire County Council. All Rights Reserved. 
+
+
+		
+
+		</p>
+
+
+		<ul class="hidden">
+			<li><a accesskey="1" href="http://www.cambridgeshire.gov.uk">Homepage</a></li>
+			<li><a accesskey="2" href="http://www.cambridgeshire.gov.uk/whats_new" rel="nofollow">What's new </a></li>
+			<li><a accesskey="3" href="http://www.cambridgeshire.gov.uk/site_map" rel="nofollow">Site map</a></li>
+			<li><a accesskey="4" href="http://www.cambridgeshire.gov.uk/site_search" rel="nofollow">Search facility </a></li>
+			<li><a accesskey="5" href="http://www.cambridgeshire.gov.uk/faqs" rel="nofollow">Frequently asked questions</a></li>
+			<li><a accesskey="6" href="http://www.cambridgeshire.gov.uk/a_to_z" rel="nofollow">Help</a></li>
+			<li><a accesskey="7" href="http://www.cambridgeshire.gov.uk/contact" rel="nofollow">Contact details</a></li>
+			<li><a accesskey="8" href="http://www.cambridgeshire.gov.uk/terms" rel="nofollow">Terms &amp; Privacy</a></li>
+			<li><a accesskey="9" href="http://www.cambridgeshire.gov.uk/feedback" rel="nofollow">Feedback</a></li>
+			<li><a accesskey="0" href="http://www.cambridgeshire.gov.uk/accessibility" rel="nofollow">Access key details</a></li>
+		</ul>
+</div>
+</div>
+
+    </form>
+</body>
+</html>

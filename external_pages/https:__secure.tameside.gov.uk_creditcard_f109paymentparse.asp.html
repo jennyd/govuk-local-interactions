@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Credit / Debit Card Payments</title>
+	<meta name="e-GMS.accessibility" scheme="WCAG" content="Bobby AAA Accredited" />
+	<meta name="audience" content="Tameside Residents" />
+	<meta name="dcterms.audience" scheme="e-GMSAES" content="Tameside Residents" />
+	<meta name="dc.coverage" content="Tameside, UK" />
+	<meta name="author" content="Alan Pearce" />
+	<meta name="dc.creator" content="Alan Pearce" />
+	<meta name="date" content="2015-10-13T14:17:36" />
+	<meta name="dc.date" scheme="W3CDTF" content="2015-10-13T14:17:36" />
+	<meta name="dc.date.modified" scheme="W3CDTF" content="2015-10-13T14:17:36" />
+	<meta name="description" content="Credit/Debit card prepayment screen" />
+	<meta name="dc.description" content="Credit/Debit card prepayment screen" />
+	<meta name="dc.format" content="text/xhtml" />
+	<meta name="dc.format.extent" content="62,395b" />
+	<meta name="dc.language" scheme="ISO 639-2/T" content="eng" />
+	<meta name="dc.publisher" content="Tameside Metropolitan Borough Council, Council Offices, Wellington Road, Ashton Under Lyne, OL6 6DL" />
+	<meta name="dc.rights.copyright" content="&copy; 2003 Tameside Metropolitan Borough Council - http://www.tameside.gov.uk/copy.htm" />
+	<meta name="e-GMS.status" scheme="LGCL" content="19 (Live)" />
+	<meta name="e-GMS.subject" scheme="LGCL" content="" />
+	<meta name="e-GMS.subject.category" scheme="LGCL" content="" />
+	<meta name="e-GMS.subject.keyword" scheme="LGCL" content="" />
+	<meta name="keywords" content="" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<link rel="shortcut icon" href="http://www.tameside.gov.uk/images/tmbc2007/favicon.ico" />
+	<link href="../stylesheets3d/public-stylesheet.css" type="text/css" rel="stylesheet" />
+	<link href="../stylesheets3d/public-stylesheet-forms.css" type="text/css" rel="stylesheet" />
+	<link href="../stylesheets3d/stylesheet_printer.css" type="text/css" rel="stylesheet" media="print" />
+  <link href="../stylesheets3d/stylesheet.css" type="text/css" rel="stylesheet" media="screen" />
+	
+
+	
+<link href="/stylesheets/public-stylesheet-forms.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+	function valueClear(e)
+	{
+		var targ
+		if (!e) var e = window.event
+
+		if (e.target) targ = e.target
+		else if (e.srcElement) targ = e.srcElement
+
+		if (targ.nodeType == 3) // defeat Safari bug
+			targ = targ.parentNode
+
+			if (targ.value == " " || targ.value == "Please enter details...")
+			{
+				targ.value = "";
+			}
+	}
+</script>
+
+	<script type="text/javascript" src="/webincludes/jquery-1.7.min.js"></script>
+
+	<script type="text/javascript">
+
+			$(document).ready(function() {
+				$("#F02_I02_Account_Reference_Number").focus(function()
+				{
+					if($(this).val() == "Enter No.")
+					{
+						$(this).val("");
+					}
+				});
+
+				$("#F02_I03_Amount_To_Pay").focus(function()
+				{
+					if($(this).val() == "Amount")
+					{
+						$(this).val("");
+					}
+				});
+				
+				$("#F03_I02_Card_Number").focus(function()
+				{
+					if($(this).val() == "Enter Number")
+					{
+						$(this).val("");
+					}
+				});
+				
+				$("#F03_I03_Issue_No").focus(function()
+				{
+					if($(this).val() == "##")
+					{
+						$(this).val("");
+					}
+				});
+				
+				$("#F03_I04_From_Month").focus(function()
+				{
+					if($(this).val() == "mm")
+					{
+						$(this).val("");
+					}
+				});
+				
+				$("#F03_I05_From_Year").focus(function()
+				{
+					if($(this).val() == "yy")
+					{
+						$(this).val("");
+					}
+				});
+				
+				$("#F03_I06_Expiry_Month").focus(function()
+				{
+					if($(this).val() == "mm")
+					{
+						$(this).val("");
+					}
+				});
+				
+				$("#F03_I07_Expiry_Year").focus(function()
+				{
+					if($(this).val() == "yy")
+					{
+						$(this).val("");
+					}
+				});
+				
+				$("#F03_I08_Security_Number").focus(function()
+				{
+					if($(this).val() == "###")
+					{
+						$(this).val("");
+					}
+				});
+				
+			});
+	</script>
+
+</head>
+<body>
+
+<div id="topleft">
+	<a href="#skipnav">Skip to content</a>
+</div>
+<div class="banner_container"><h1><a href="http://www.tameside.gov.uk/" accesskey="1"><img src="../images/tameside_logo.png" alt="Tameside MBC" /></a></h1></div>
+
+<div class="page_container" style="width:100%">
+	<div class="page_content">
+		<div class="content_form">
+
+			<a name="skipnav" id="skipnav"></a>
+			
+			<div class="page_heading">
+				<h2 class="block_header">Credit / Debit Card Payments</h2>
+			</div>
+			<div class="form_navigation">
+				<strong>Useful Links:</strong>	
+			  <a href="http://www.tameside.gov.uk/">Tameside Homepage</a> | 
+				
+				<a href="http://www.tameside.gov.uk/privacypolicy">Privacy Policy</a> | 
+				<a href="http://www.tameside.gov.uk/search/">Search Tameside.gov.uk</a><br />
+</div>
+	<div class="main_content">
+  <form action="https://secure.tameside.gov.uk/creditcard/f109paymentparse.asp" method="post">
+
+  <div class="center"><h1>Card Holders Details</h1></div>
+	
+  
+		<div class="center">
+			Mandatory fields are identified with <img src="/images/2004mandatory.gif" width="18" height="18" alt="Mandatory fields identified with this symbol" class="absmiddle" />
+			<br />
+		</div>
+  
+  <div><br /></div>
+
+	
+		<table style="margin-bottom:10px" class="formbreadcrumbs" cellspacing="0" cellpadding="0" border="0" summary="Bread Crumb Trail">
+			<tr>
+				<td align="right"><img src="/images/left-process30.gif" width="30" height="20" alt=" " /></td>
+				<td><img src="/images/unselected-process.gif" width="25" height="20" alt=" " /></td>
+					<td><img src="/images/background-process.gif" width="40" height="20" alt=" " /></td>
+					<td><img src="/images/background-process.gif" height="20" width="5" alt=" " /></td>
+					<td><img src="/images/background-process.gif" width="40" height="20" alt=" " /></td>
+					<td><img src="/images/selected-process.gif" width="25" height="20" alt=" " /></td>
+					<td><img src="/images/background-process.gif" width="40" height="20" alt=" " /></td>
+					<td><img src="/images/background-process.gif" height="20" width="5" alt=" " /></td>
+					<td><img src="/images/background-process.gif" width="40" height="20" alt=" " /></td>
+					<td><img src="/images/unselected-process.gif" width="25" height="20" alt=" " /></td>
+					<td><img src="/images/background-process.gif" width="40" height="20" alt=" " /></td>
+					<td><img src="/images/background-process.gif" height="20" width="5" alt=" " /></td>
+					<td><img src="/images/background-process.gif" width="40" height="20" alt=" " /></td>
+					<td><img src="/images/unselected-process.gif" width="25" height="20" alt=" " /></td>
+					<td><img src="/images/background-process.gif" width="40" height="20" alt=" " /></td>
+					<td><img src="/images/background-process.gif" height="20" width="5" alt=" " /></td>
+					<td><img src="/images/background-process.gif" width="40" height="20" alt=" " /></td>
+					<td><img src="/images/unselected-process.gif" width="25" height="20" alt=" " /></td>
+				<td align="left"><img src="/images/right-process30.gif" width="30" height="20" alt=" " /></td>
+			</tr>
+			<tr>
+				<td colspan="3" align="center" style="color:#999999; line-height:0.9em; font-size:x-small">Personal Details</td>
+					<td></td>
+					<td colspan="3" align="center" style="color:#0080C0; font-weight:bold; line-height:0.9em; font-size:x-small">Card Holders Details</td>
+					<td></td>
+					<td colspan="3" align="center" style="color:#999999; line-height:0.9em; font-size:x-small">Payment Details</td>
+					<td></td>
+					<td colspan="3" align="center" style="color:#999999; line-height:0.9em; font-size:x-small">Confirm Details</td>
+					<td></td>
+					<td colspan="3" align="center" style="color:#999999; line-height:0.9em; font-size:x-small">Card Details</td>
+			</tr>
+		</table>
+		
+
+	<div class="center">
+		<br />
+		<table class="aligncenter left" cellspacing="0" cellpadding="0" border="0" summary="Personal Details">
+			<tr>
+				<td class="nowrap"><b><label for="F01_I01_Title">Title</label> / <label for="F01_I02_Forename">Forename(s)</label></b></td>
+				<td class="nowrap"><img src="/images/2004mandatory.gif" height="18" width="18" alt="This Field Is Mandatory" title="This Field Is Mandatory" class="absmiddle" />&nbsp;<select name="F01_I01_Title" id="F01_I01_Title" class="selectbox"><option selected="selected"></option><option>Mr</option><option>Mrs</option><option>Miss</option><option>Ms</option><option>Sir</option><option>Rev</option><option>Dr</option><option>Cllr</option></select><img src="/images/2004mandatory.gif" height="18" width="18" alt="This Field Is Mandatory" title="This Field Is Mandatory" class="absmiddle" />&nbsp;<input type="text" name="F01_I02_Forename" id="F01_I02_Forename" value=" " size="19" maxlength="32" onfocus="valueClear(event);" class="inputbox" /></td>
+			</tr>
+			<tr>
+				<td><b><label for="F01_I03_Surname">Surname</label></b></td>
+				<td><img src="/images/2004mandatory.gif" height="18" width="18" alt="This Field Is Mandatory" title="This Field Is Mandatory" class="absmiddle" />&nbsp;<input type="text" name="F01_I03_Surname" id="F01_I03_Surname" value=" " size="32" maxlength="32" onfocus="valueClear(event);" class="inputbox" /></td>
+			</tr>
+			<tr>
+				<td><b><label for="F01_I04_Property">Property No. / Name</label>&nbsp;</b></td>
+				<td><img src="/images/2004mandatory.gif" height="18" width="18" alt="This Field Is Mandatory" title="This Field Is Mandatory" class="absmiddle" />&nbsp;<input type="text" name="F01_I04_Property" id="F01_I04_Property" value=" " size="32" maxlength="20" onfocus="valueClear(event);" class="inputbox" /></td>
+			</tr>
+			<tr>
+				<td><b><label for="F01_I05_Street">Street</label></b></td>
+				<td><img src="/images/2004mandatory.gif" height="18" width="18" alt="This Field Is Mandatory" title="This Field Is Mandatory" class="absmiddle" />&nbsp;<input type="text" name="F01_I05_Street" id="F01_I05_Street" value=" " size="32" maxlength="32" onfocus="valueClear(event);" class="inputbox" /></td>
+			</tr>
+			
+				<tr>
+					<td><b><label for="F01_I06_Area">Area</label></b></td><td><img src="/images/2004blank.gif" class="absmiddle" height="18" width="18" alt="" />&nbsp;<input type="text" name="F01_I06_Area" id="F01_I06_Area" value=" " size="32" maxlength="32" onfocus="valueClear(event);" class="inputbox" /></td>
+				</tr>
+				<tr>
+					<td><b><label for="F01_I07_Town">Town</label></b></td><td><img src="/images/2004mandatory.gif" height="18" width="18" alt="This Field Is Mandatory" title="This Field Is Mandatory" class="absmiddle" />&nbsp;<input type="text" name="F01_I07_Town" id="F01_I07_Town" value=" " size="32" maxlength="32" onfocus="valueClear(event);" class="inputbox" /></td> 
+				</tr>
+				<tr>
+					<td><b><label for="F01_I08_County">County</label></b></td>
+					<td><img src="/images/2004blank.gif" class="absmiddle" height="18" width="18" alt="" />&nbsp;<input type="text" name="F01_I08_County" id="F01_I08_County" value=" " size="32" maxlength="32" onfocus="valueClear(event);" class="inputbox" /></td>
+				</tr>
+			
+			<tr>
+				<td><b><label for="F01_I09_Postcode">Postcode</label></b></td>
+				<td><img src="/images/2004mandatory.gif" height="18" width="18" alt="This Field Is Mandatory" title="This Field Is Mandatory" class="absmiddle" />&nbsp;<input type="text" name="F01_I09_Postcode" id="F01_I09_Postcode" value=" " size="8" maxlength="8" onfocus="valueClear(event);" class="inputbox" /></td>
+			</tr>
+			<tr>
+				<td><b><label for="F01_I10_TelNo">Tel No.</label></b></td>
+				<td><img src="/images/2004blank.gif" class="absmiddle" height="18" width="18" alt="" />&nbsp;<input type="text" name="F01_I10_TelNo" id="F01_I10_TelNo" value=" " size="32" maxlength="32" onfocus="valueClear(event);" class="inputbox" /></td>
+			</tr>
+		</table>
+		<br />
+	</div>
+
+	
+	<div class="center"> <input type="submit" name="Form_1" value="Clear" /><input type="submit" name="Form_1" value="Continue" />
+
+		<input type="hidden" name="F02_I02_Account_Reference_Number" value="" /><input type="hidden" name="F02_I03_Amount_To_Pay" value="" /><input type="hidden" name="F04_I02_Card_Number" value="" /><input type="hidden" name="F04_I03_Issue_No" value="" /><input type="hidden" name="F04_I04_From_Month" value="" /><input type="hidden" name="F04_I05_From_Year" value="" /><input type="hidden" name="F04_I06_Expiry_Month" value="" /><input type="hidden" name="F04_I07_Expiry_Year" value="" /><input type="hidden" name="F10_I09_Local" value="" /><input type="hidden" name="history" value=",1," />
+	</div>
+	</form>
+	</div><br />
+			<div class="cement"></div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+<div class="footer amablue4" style="width: 100%;">
+	<div>|
+		<a href="http://www.tameside.gov.uk/privacypolicy">Privacy Policy</a> |
+		<a href="http://www.tameside.gov.uk/termsandconditions" accesskey="8">Terms &amp; Conditions</a> |
+		<a href="http://www.tameside.gov.uk/copyright">Copyright &amp; Disclaimer</a> |
+	</div>
+
+	<div>
+		Access Keys:
+		<a href="http://www.tameside.gov.uk/webapps/updated.htm" accesskey="2">New &amp; Updated Pages (Alt+2)</a> |
+		<a href="http://www.tameside.gov.uk/sitemap" accesskey="3">Site Map (Alt+3)</a> |
+		<a href="http://www.tameside.gov.uk/webapps/textfaqmenu.htm" accesskey="5">FAQ's (Alt+5)</a> |
+		<a href="http://www.tameside.gov.uk/help" accesskey="6">Help (Alt+6)</a> |
+		<a href="http://www.tameside.gov.uk/servicecharter/complaints" accesskey="7">Complaints (Alt+7)</a> |
+		<a href="http://public.tameside.gov.uk/forms/f1158websitefeedback.asp" accesskey="9">Feedback Form (Alt+9)</a> |
+		<a href="http://www.tameside.gov.uk/accessibility" accesskey="0">Accessibility (Alt+0)</a>
+	</div>
+
+	<div>
+		Towns:
+		<a href="http://www.tameside.gov.uk/ashton">Ashton-under-Lyne</a> |
+		<a href="http://www.tameside.gov.uk/audenshaw">Audenshaw</a> |
+		<a href="http://www.tameside.gov.uk/denton">Denton</a> |
+		<a href="http://www.tameside.gov.uk/droylsden">Droylsden</a> |
+		<a href="http://www.tameside.gov.uk/dukinfield">Dukinfield</a> |
+		<a href="http://www.tameside.gov.uk/hyde">Hyde</a> |
+		<a href="http://www.tameside.gov.uk/longdendale">Longdendale</a> |
+		<a href="http://www.tameside.gov.uk/mossley">Mossley</a> |
+		<a href="http://www.tameside.gov.uk/stalybridge">Stalybridge</a>
+	</div>
+</div>
+
+
+
+<div id="SiteCensus" style="position:absolute; top:10px; left:10px; z-index:60;">
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-5751125-1");
+		pageTracker._setDomainName("tameside.gov.uk");
+		pageTracker._trackPageview();
+	} catch(err) {}
+</script>
+</div>
+
+
+</body>
+</html>

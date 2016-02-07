@@ -1,0 +1,429 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <!-- The following metatag added to avoid aberrant behaviour in IE9
+        cannot use enter on Login page -->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8;" /><title>
+	Cambridgeshire.net
+</title>
+    <!-- /CCCDIT.InfoCam.Site -->
+    <link media="screen" href="assets/css/base.css" type="text/css" rel="stylesheet" /><link media="print" href="assets/css/print.css" type="text/css" rel="stylesheet" /><script type="text/javascript" src="assets/js/jquery-1.9.1.min.js"></script><script type="text/javascript" src="assets/js/jquery-migrate-1.1.1.min.js"></script><script type="text/javascript" src="assets/js/jquery.MetaData.js"></script><script type="text/javascript" src="assets/js/base.js"></script>
+
+    
+    <style type="text/css">
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {display: inline-block;}  /* for IE/Mac */
+
+    </style>
+    
+   
+    <script type="text/javascript">
+       $(document).ready(function() {
+        $('.search-input').each(function() {
+            var default_value = this.value;
+            $(this).focus(function() {
+                if (this.value == default_value) {
+                    if(this.value == "e.g. \"art history\"")
+                        this.value = '';
+                    $('.search-input').removeClass('unfocus');
+                }
+            });
+            $(this).blur(function() {
+                if (this.value == '') {
+                    this.value = default_value;
+                    $('.search-input').addClass('unfocus');
+                }
+            });
+        });
+    });
+   </script>
+
+    
+
+    <!--[if IE]>
+    <style type="text/css">
+        .clearfix {
+        zoom: 1;     /* triggers hasLayout */
+        display: block;     /* resets display for IE/Win */
+        }  /* Only IE can see inside the conditional comment
+        and read this CSS rule. Don't ever use a normal HTML
+        comment inside the CC or it will close prematurely. */
+    </style>
+    <![endif]-->
+    
+    
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="default.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTkwMDgzNzQyNA9kFgJmD2QWAgIDD2QWBAIDDxYCHgVjbGFzcwUHY3VycmVudGQCIw9kFgICAw9kFgJmDw8WAh4EVGV4dGVkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAwUWY3RsMDAkcmVtZW1iZXJMb2NhdGlvbgUjY3RsMDAkbG9naW4kTG9naW5TdGF0dXNCdXR0b24kY3RsMDEFI2N0bDAwJGxvZ2luJExvZ2luU3RhdHVzQnV0dG9uJGN0bDAzK6UzyuAaRTGNrj2Q7D+uN+etIek=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+    
+    <div id="all">
+        <div id="header" class="clearfix">
+            <div class="logo">
+                <img id="ctl00_Image1" src="assets/img/cambs.net40.gif" alt="Cambridgeshire.net" border="0" /><span>Linking with your local community</span>
+            </div>
+
+            <ul id="nav" class="clearfix">
+                <li class="current"><a id="ctl00_home" href="Default.aspx"><span><span>Home</span></span></a></li>
+                <li><a id="ctl00_events" href="events/Default.aspx"><span><span>Events and Activities</span></span></a></li>
+                <li><a id="ctl00_groups" href="groups/Default.aspx"><span><span>Groups, Clubs and Organisations</span></span></a></li>
+                <!--<li><a href="#" id="venues">Community Venues</a></li>-->
+                <li><a id="ctl00_courses" href="courses/Default.aspx"><span><span>Courses</span></span></a></li>
+                <li><a id="ctl00_publicservices" href="http://search2.openobjects.com/kbroker/cambridgeshire/cambsnet/a2z/search.a2z?letter=a&amp;action=browseEntries&amp;servlet=search.lsim&amp;provider=3"><span><span>Local Public Services</span></span></a></li>
+                <li><a id="ctl00_support" href="content/support.aspx"><span><span>Support for your Group</span></span></a></li>
+                <!--
+                <li><a href="#" id="involved">Get Involved</a></li>-->
+            </ul>
+           <div class="form siteSearch clearfix">
+                <h2>Search</h2>
+                <ul>
+                    <li>
+                        <select name="ctl00$SiteSearchType" id="ctl00_SiteSearchType">
+	<option selected="selected" value="All">All of Cambridgeshire.net</option>
+	<option value="Events">Events and Activities</option>
+	<option value="Groups">Groups, Clubs &amp; Organisations</option>
+	<option value="Courses">Courses</option>
+
+</select>
+                    </li>
+                    <li>
+                        <label for="ctl00_SiteSearchText" id="ctl00_Label1">for</label>
+                        <input name="ctl00$SiteSearchText" type="text" id="ctl00_SiteSearchText" class="search-input unfocus" value="e.g. &quot;art history&quot;" />
+                    </li>
+						<li><label for="ctl00_SiteSearchLocation" id="ctl00_Label2">near</label>
+                        <input name="ctl00$SiteSearchLocation" type="text" id="ctl00_SiteSearchLocation" /></li>
+						<li><input id="ctl00_rememberLocation" type="checkbox" name="ctl00$rememberLocation" /><label for="ctl00_rememberLocation">Remember location</label></li>
+
+						<li><span class="btnLg"><span><span><span><input type="submit" name="ctl00$SiteSearchGo" value="Go" id="ctl00_SiteSearchGo" /> </span></span></span></span></li>
+					
+                </ul>
+            </div>
+           
+
+            
+
+            
+        </div>
+    
+        
+            
+<div id="body">
+    <div class="content fullWidth">
+        <div class="homeFW bg-tear-white-hp">
+						<div class="homeFWL"><div class="homeFWL2">
+							<!-- Full width box || Events and Activities -->
+							<div class="nosplit"><div>
+								<div class="showEvent">
+									<h2>Events &amp; Activities in Cambridgeshire</h2>
+									
+                                    
+		<br />
+<font size="2">Whether you're looking for a regular activity<br />
+or a one off-event, find out what's on in <br />
+Cambridge and Cambridgeshire <a href="/events/Default.aspx">here</a> </font><br />
+<br />
+<br />
+									
+									
+									<div id="formEvent">
+										<ul>
+											<li>
+                                                <label for="ctl00_cphMain_EventOn" id="ctl00_cphMain_Label1">Things to do in Cambridge and Cambridgeshire</label>
+                                                <select name="ctl00$cphMain$EventOn" id="ctl00_cphMain_EventOn">
+	<option value="Today">Today</option>
+	<option value="Tomorrow">Tomorrow</option>
+	<option value="This weekend">This weekend</option>
+	<option value="Next weekend">Next weekend</option>
+	<option value="Next 7 days">Next 7 days</option>
+	<option value="Next 30 days">Next 30 days</option>
+
+</select>
+											</li>
+											<li>
+                                                <label for="ctl00_cphMain_EventFor" id="ctl00_cphMain_Label2">for</label>
+                                                <select name="ctl00$cphMain$EventFor" id="ctl00_cphMain_EventFor">
+	<option value="Anyone">Anyone</option>
+	<option value="Children And Families">Children &amp; Families</option>
+	<option value="Young People">Young People</option>
+	<option value="Older People">Older People</option>
+
+</select>
+												
+											</li>
+											<li><span class="btnDg"><span><span><span><input type="submit" name="ctl00$cphMain$QuickEventSearch" value="Go" id="ctl00_cphMain_QuickEventSearch" /></span></span></span></span></li>
+										</ul>
+									</div>
+								</div>
+							</div></div>
+						</div></div>
+                    						
+						<div class="homeFWR">
+							<!--  box || register  -->
+							<div class="box-reg"><div><div>
+							    
+		<h2>Add your event, activity, group or course to this site for FREE!</h2>
+<p>Become part of our ever-expanding network of<br />
+community resources by registering your details today for free.</p>
+<p>Why not <a href="/SignUp.aspx"><strong>find out more</strong><span class="hide"> about registering with Cambridgeshire.net</span></a>?</p>
+<p class="regBtn"><span class="btnGr"><span><span><span><span><a href="/SignUp.aspx">Register</a></span></span></span></span></span></p>
+
+							</div></div></div>
+						</div>
+
+        </div>
+        <div class="homeFW">
+						<div class="homeFWL ptx"><div class="homeFWL2">
+							<!-- 50/50 box || Groups, clubs & activities / Community venues in cambridgeshire -->
+
+							<div class="split mtop">
+								<div class="box-std-hp hover"><div>
+								    
+		<h2>
+				<a href="./groups/Default.aspx">Groups, clubs &amp; organisations</a> </h2>
+<p class="linkImage"><img style="border-bottom: medium none; border-left: medium none; border-top: medium none; border-right: medium none" alt="Groups, clubs &amp; organisations" src="http://www.cambridgeshire.net/assets/img/gfx-groups-aw.jpg" />Want to meet people who share your interests, or who can give the support you need? Use our database to find groups, clubs and organisations near you.</p>
+<style>
+.box-promo-hp {display:none;}
+</style>
+
+								</div></div>
+								<div class="half2 box-std-hp hover"><div>
+                                        <h2>      <a href="./courses/Default.aspx">Courses in Cambridgeshire</a> </h2>  <p class="linkImage"><img style="border-bottom: medium none; border-left: medium none; border-top: medium none; border-right: medium none" alt="Courses in Cambridgeshire" src="http://www.cambridgeshire.net/assets/img/gfx-courses-aw.jpg" />To develop your career or pursue personal interests, we can help you find suitable courses in your area.</p>    
+								</div></div>
+							</div>
+								
+							<!-- 50/50 box || Courses in Cambridgeshire / Local public services -->
+							<div class="split">
+								<div class="box-std-hp hover"><div>
+                                    
+		<h2>
+				<a href="/search/Results.aspx?searchText=volunteering&amp;searchType=Event,Activity,Organisation,Course">Looking to Volunteer?</a> </h2>
+<p class="linkImage"><img style="border-bottom: medium none; border-left: medium none; border-top: medium none; border-right: medium none" alt="Volunteering" src="http://www.cambridgeshire.net/assets/img/volunteering1.jpg" /></p>
+<p>Search here for volunteering opportunities in your area.</p>
+
+								</div></div>
+								<div class="half2 box-std-hp hover"><div>
+									    <h2>      <a href="/groups/Results.aspx?Category=Venues+for+hire">Looking for a venue to hire?</a> </h2>  <p class="linkImage"><img alt="Venues to hire" style="border:none" src="http://www.cambridgeshire.net/assets/img/gfx-venues-aw.jpg" /> Whatever event or activity you're organising, search here to find your nearest halls, function rooms and venues for hire.</p>  
+								</div></div>
+
+							</div>
+								
+							<!-- 50/50 box || Community news  / Want to get involved in your local community? -->
+							<div class="split">
+								<div class="box-std-hp"><div>
+								    
+		<h2>Community news </h2>
+<p><a href="http://www.cambridgeshire.net/event/volunteer-for-cambridge/149488.aspx"><strong>Volunteer For Cambridge</strong></a></p>
+<p>Giving, learning, sharing; you can make a difference. Volunteer for Cambridge is your one-stop shop for finding out how to get involved in the causes you care about, give something back and gain skills.</p>
+
+								</div></div>
+
+								<div class="half2 box-hlg-hp-t"><div><div>
+									
+		<h3>
+				<font color="#ffffff">Social care and community support options on Cambridgeshire.net</font> </h3>
+<p>Did you know you can now find details of your local <a href="http://www.cambridgeshire.net/groups/Results.aspx?Category=Social+care">social care and support providers</a> on Cambridgeshire.net?<br />
+<br />
+More and more providers of services for <a href="http://www.cambridgeshire.net/groups/Results.aspx?Category=Social+care&amp;audience=Older+people">older people</a> and <a href="http://www.cambridgeshire.net/groups/Results.aspx?Category=Social+care&amp;SpecialistProvision=Disabled+people">people with a disability</a> will be listed, including <a href="http://www.cambridgeshire.net/groups/Results.aspx?Category=Social+care&amp;SocialCareService=Home+care+provider+-+personal+care">home care providers</a> and <a href="http://www.cambridgeshire.net/groups/Results.aspx?Category=Social+care&amp;SocialCareService=Day+services">day services</a>. Find out who is offering services such as <a href="http://www.cambridgeshire.net/groups/Results.aspx?Category=Social+care&amp;SocialCareService=Live-in+care">live-in care</a> and <a href="http://www.cambridgeshire.net/groups/Results.aspx?Category=Social+care&amp;SocialCareService=Community+support">community support</a> in your area.<br />
+<br />
+You can find out more about your social care and support options by contacting <a href="http://www.cambridgeshire.gov.uk/social/">Cambridgeshire County Council</a>.</p>
+
+								</div></div></div>
+							</div>
+								
+							<!-- 50/50 box || Promotions  -->
+
+							<div class="split">
+								<div class="box-promo-hp"><div>
+								    
+								</div></div>
+								<div class="half2 box-promo-hp"><div>
+									
+		<h2>
+				<a href="http://www.yourlifeyourchoice.org.uk" target="_blank">Your Life, Your Choice</a> </h2>
+<p class="linkImageHor"><a href="http://www.yourlifeyourchoice.org.uk" target="blank"><img style="border-bottom: medium none; border-left: medium none; width: 250px; height: 33px; border-top: medium none; border-right: medium none" alt="Your Life, Your Choice" src="http://www.cambridgeshire.net/assets/img/YLYC2ColourLRes2.jpg" /></a> </p>
+<br />
+<br />
+<p>Use the site to help choose the right social and health services that are local to you </p>
+
+								</div></div>
+							</div>
+				
+						</div></div>
+						
+						<div class="homeFWR">
+							<!--  box || upcoming events   -->
+							<div class="box-noc-sc">
+								<h2 class="ptx">Upcoming events</h2>
+                                <ul class="list-hlg" xmlns:ccc="http://www.cambridgeshire.net/xslthelper">
+  <li>
+    <a href="event/hedgelaying--conservation-volunteer-day/168639.aspx&#xD;&#xA;            ">Hedgelaying – Conservation Volunteer Day</a>07 February 2016
+							, 11:00-15:30
+							, Cambridge</li>
+  <li>
+    <a href="event/speech-and-language-dropin/165502.aspx&#xD;&#xA;            ">Speech and Language Drop-in</a>08 February 2016
+							to 08 February 2016
+							, 15.30 - 16.30
+							, Cambridge</li>
+  <li>
+    <a href="event/engage-in-the-afternoon--dementia-friends-/168445.aspx&#xD;&#xA;            ">Engage in the Afternoon - Dementia Friends </a>08 February 2016
+							, 14:00-15:30
+							, Warboys</li>
+</ul>
+							</div>
+			                <div class="box-std-sc" xmlns:ccc="http://www.cambridgeshire.net/xslthelper">
+  <div>
+    <h2>Recently added and updated events or activities</h2>
+    <ul class="list-hlg">
+      <li>
+        <a href="event/sacrewell-farm-trip/168660.aspx&#xD;&#xA;						">Sacrewell Farm Trip - Wisbech South Children's Centre</a>29 March 2016
+							, 9.30 - 4.30
+							, Peterborough</li>
+    </ul>
+    <ul class="list-hlg">
+      <li>
+        <a href="event/sacrewell-farm-trip/168659.aspx&#xD;&#xA;						">Sacrewell Farm Trip - The Oasis Children's Centre</a>29 March 2016
+							, 9.30-4.30
+							, Peterborough</li>
+    </ul>
+    <ul class="list-hlg">
+      <li>
+        <a href="event/sacrewell-farm-trip/168657.aspx&#xD;&#xA;						">Sacrewell Farm Trip - Murrow Children's Centre</a>29 March 2016
+							, 9.30-4.30
+							, Peterborough</li>
+    </ul>
+    <ul class="list-hlg">
+      <li>
+        <a href="event/engage-in-the-afternoon--a-bag-of-yarns/168658.aspx&#xD;&#xA;						">Engage in the Afternoon - A Bag of Yarns - Great Shelford Library</a>23 March 2016
+							, 2pm-3.30pm
+							, Great Shelford</li>
+    </ul>
+  </div>
+</div>
+							<!--  box || sorted online   -->
+							<div class="box-std-sc"><div>
+							    
+		<p>
+				<a href="http://www.youthoria.org/" target="blank">
+						<img alt="Youthoria (logo)" src="assets/img/Youthoria-Web-Thumb.jpg" /> </a>
+		</p>
+<h2>Aged 11-19?</h2>
+<p>Search here for <a href="http://www.cambridgeshire.net/search/Results.aspx?searchType=Event,Activity,Organisation,Course&amp;pageSize=30&amp;audience=Young%20people"><strong>groups &amp; activities</strong></a>. </p>
+<p>Or visit <a href="http://www.youthoria.org/" target="blank"><strong>Youthoria</strong></a> - the Youth Support Services website for young people in Cambridgeshire. Here you'll find information, advice and entertainment; and you can search our database for things to do.</p>
+<hr />
+<h2><a href="http://www.cambridgeshire.gov.uk/info/20062/adults_and_older_people" target="_blank">Adults &amp; older people</a> </h2>
+<p>Use the site to help choose the right social and health services that are local to you.</p>
+
+							</div></div>
+						</div>
+					</div>
+    </div>
+</div>
+
+        
+        
+<div id="footer">
+			<h2 class="hide">Promotions</h2>
+			<ul id="fPromos" class="clearfix">
+				<li class="promo1">
+							<h3>
+				<span>Please note that some content is not up to date due to problems with some users unable to access the system		</span></h3>
+<p><a href="/SignUp.aspx">Find out more</a></p>
+<p class="regBtn"><span class="btnGr"><span><span><span><a href="/SignUp.aspx">Register</a></span></span></span></span></p>
+
+				</li>
+				<li class="promo2">
+					
+		<h3>
+				<span>I know of something that could be listed... </span>
+		</h3>
+<p><a href="https://forms.cambridgeshire.gov.uk/customer/servlet/ep.app?ut=x&amp;type=230055&amp;auth=10032&amp;st=CDN">Suggest an event or group </a></p>
+
+				</li>
+				<li class="promo3">
+					
+		<h3> <span>I wish there was an activity on...</span> </h3> <p><a href="https://forms.cambridgeshire.gov.uk/customer/servlet/ep.app?ut=x&amp;type=230050&amp;auth=10032&amp;st=CDN">Suggest an activity</a></p> 
+				</li>
+				<li class="promo4">
+					
+		<h3> <span>I want to stay safe...</span> </h3> <p><a href="/Safeguarding.aspx">Read our Staying Safe Guide for children and young people</a></p> 
+				</li>
+			</ul>
+		
+			<h2 class="hide">Contact &amp; copyright info</h2>
+			<ul id="fLinks">
+                <li>
+                    <a id="ctl00_Footer1_lnkAbout" href="About.aspx">About Us</a></li>
+                <li>
+                    <a id="ctl00_Footer1_lnkContact" href="Contacts.aspx">Contact Us</a></li>
+                <li>
+                    <a id="ctl00_Footer1_lnkTerms" href="Terms.aspx">Conditions</a></li>
+                <li>
+                    <a id="ctl00_Footer1_lnkPrivacy" href="Privacy.aspx">Privacy</a></li>
+                <li>
+                    <a id="ctl00_Footer1_lnkDisclaimer" href="Disclaimer.aspx">Disclaimer</a></li>
+                <li>
+                    <a id="ctl00_Footer1_lnkAccessibility" href="Accessibility.aspx">Accessibility</a></li>
+                <li class="last">
+                    <a id="ctl00_Footer1_lnkPartners" href="Partners.aspx">Partners</a></li>
+			</ul>
+		</div>
+
+           
+        
+        <div id="utilities">
+                <h2 class="hide">Site Information</h2>
+                
+            
+            <ul>
+				<li id="ctl00_login_liRegister"><a id="ctl00_login_HyperLink2" href="SignUp.aspx">Register</a></li>
+				
+				<li id="ctl00_login_liLogin" class="last"><a id="ctl00_login_LoginStatusButton" href="javascript:__doPostBack('ctl00$login$LoginStatusButton$ctl02','')">Log in</a> </li>
+				
+				
+			</ul>
+<!--<div id="loginStatusControl" class="loginStatusControl">-->
+    <!--<div id="loginStatusControl-leftEnd"></div>-->
+         
+        
+        
+    <!--<div id="loginStatusControl-rightEnd"></div>-->
+<!--</div>-->
+
+			
+			
+			<ul>
+                <li>
+                    <a id="ctl00_lnkCookies" href="http://www.cambridgeshire.gov.uk/help/cookies/branded-applications.htm">Cookies</a></li>
+                <li>
+                    <a id="ctl00_lnkOpenData" href="http://www.cambridgeshire.gov.uk/council/access-to-information/open-data/open-data-sets.htm">Open Data</a></li>
+                <li class="last">
+                    <a id="ctl00_lnkHelp" href="Help.aspx">Help</a></li>
+			</ul>
+
+        </div>
+    </div>
+    
+           
+    </form>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4121061-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

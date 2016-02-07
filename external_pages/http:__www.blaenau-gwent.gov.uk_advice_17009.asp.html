@@ -1,0 +1,640 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- PageID 17009 - published by Open Text Web Solutions 10 - 10.0.1.51 - 29448 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="Title" content="Blaenau Gwent County Borough Council - Winter Maintenance" />
+    <meta name="Description" content="Blaenau Gwent County Borough Council" />
+    <meta name="Author" content="Blaenau Gwent County Borough Council" />
+    <meta name="DC.Title" content="Blaenau Gwent County Borough Council: - Winter Maintenance" />
+    <meta name="DC.Coverage" content="Blaenau Gwent, South Wales, UK" lang="ENG" xml:lang="ENG" />
+    <meta name="DC.Identifier" scheme="URI" content="/advice/17009.asp" />
+    <meta name="DC.Date.Created" scheme="W3CDTF" content="03/11/2011" />
+    <meta name="DC.Date.Issued" scheme="W3CDTF" content="15/01/2016 10:12:11" />
+    <meta name="DC.Date.Modified" scheme="W3CDTF" content="17 November 2011" />
+    <meta name="DC.Format" content="text/html" />
+    <meta name="DC.Creator" content="Blaenau Gwent County Borough Council: Steve Wedgbury" />
+    <meta name="DC.publisher" content="Blaenau Gwent County Borough Council, Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB, Tel (01495) 350555, http://www.blaenau-gwent.gov.uk" />
+    <meta name="DC.Contributor" content="Civil Contingencies" />
+    <meta name="DC.Language" scheme="ISO 639-2" content="ENG" />
+    <meta name="DC.Subject" scheme="IPSV" content="" />
+    <meta name="DC.Rights" content="http://www.blaenau-gwent.gov.uk/copyright" />
+    <meta name="eGMS.accessibility" content="Double-A" scheme="WCAG" />
+    <meta name="eGMS.subject.category.identifier" scheme="LNGL" content="" />
+    <meta name="eGMS.subject.category" scheme="IPSV" content="" />
+    <meta name="keywords" content="" />
+    <title>
+      Blaenau Gwent County Borough Council - Winter Maintenance
+    </title>
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" src="/scripts/jquery-1.3.2.min.js">
+</script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image1 .desc").show(); //Show Banner
+            $(".main_image1 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb1 ul li:first").addClass('active');
+            $(".image_thumb1 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image1").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image1 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image1 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image1 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb1 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse1").click(function () {
+                $(".main_image1 .block").slideToggle();
+                $("a.collapse1").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image2 .desc").show(); //Show Banner
+            $(".main_image2 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb2 ul li:first").addClass('active');
+            $(".image_thumb2 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image2").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image2 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image2 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image2 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb2 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse2").click(function () {
+                $(".main_image2 .block").slideToggle();
+                $("a.collapse2").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        function f(n) {
+            document.getElementById('body').style.fontSize = n
+        }
+    //]]>
+    </script><!-- IE6 STYLE OVERRIDES --><!--[if lte IE 6]>
+        <link href="" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- IE7 STYLE OVERRIDES -->
+    <!--[if IE 7]>
+           <link href=""  rel="stylesheet" type="text/css" />
+    <![endif]-->
+  </head>
+  <body id="body">
+    <a name="Top" id="Top"></a> <!-- HEADER -->
+     <!-- ************************************** -->
+     <!-- HEADER  (grey bar, white bar, red bar) -->
+     <!-- ************************************** -->
+    <div id="header">
+      <!-- HEADER TOP BAR( grey ) -->
+      <div id="header-toplinks-outer">
+        <div id="header-toplinks-inner">
+          <!-- SEARCH BOX -->
+          <div id="header-search">
+            
+              <form name="kbs" method="get" action="http://search3.openobjects.com/kb5/gwent/search/en/results.page" id="kbs">
+                <input name="qt" class="searchbox" type="text" maxlength="50" value="Search" onfocus="this.value=''" id="query" /> <input class="searchbutton" type="submit" value="" />
+              </form>
+            </form>
+          </div><!-- TOP HEADER LINKS -->
+          <div id="header-toplinks">
+            <ul>
+              <li class="first">
+                 <a href="" title="Cymraeg" accesskey="l">Cymraeg</a> 
+              </li>
+              <li>
+                <a href="/council/69.asp" title="Accessibility" accesskey="a">Accessibility</a>
+              </li>
+              <li>
+                <a href="/help.asp" title="Help" accesskey="h">Help</a>
+              </li>
+              <li>
+                <a href="/ContactUs.asp" title="Contact Us" accesskey="c">Contact Us</a>
+              </li>
+              <li>
+                <a href="/council/1838.asp" title="News Centre" accesskey="m">News Centre</a>
+              </li>
+              <li>
+                <a href="http://www.blaenau-gwent.gov.uk/19002.asp" title="Cookies" accesskey="v">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- HEADER COUNCIL LOGO ( tag line set in css )-->
+      <div id="header-mast-outer">
+        <!-- Begin Logo -->
+        <div id="logo">
+          <a href="/index.asp"><img src="/images/logo.jpg" alt="Blaenau Gwent County Borough Council - Cyngor Bwrdeisdref Sirol Blaenau Gwent" /></a>
+        </div><!-- End Logo --><!-- Begin Hour -->
+        <div id="hour-ENG"></div><!-- End Hour -->
+        <!-- Begin Tagline -->
+        <div id="tagline"></div><!-- End Tagline -->
+      </div><!-- HEADER BOTTOM BAR ( red ) -->
+      <div id="header-bottomlinks-outer">
+        <div id="header-bottomlinks-inner">
+          <!-- LINKS LIST -->
+          <div id="header-bottomlinks">
+            <ul>
+              <li class="first">
+                <a href="/index.asp" title="Home" accesskey="h">Home</a>
+              </li>
+              <li>
+                <a href="/jobs/262.asp" title="Jobs" accesskey="j">Jobs</a>
+              </li>
+              <li>
+                <a href="/onlineServices/forms.asp" title="Online Forms" accesskey="o">Online Forms</a>
+              </li>
+              <li>
+                <a href="/faqs/faq.asp" title="FAQ's" accesskey="5">FAQ's</a>
+              </li>
+              <li>
+                <a href="/sitemap.asp" title="Sitemap" accesskey="3">Sitemap</a>
+              </li>
+              <li>
+                <a href="/A-Z.asp" title="A-Z" accesskey="z">A-Z</a>
+              </li>
+              <li>
+                <a href="/news/2487.asp" title="News" accesskey="n">News</a>
+              </li>
+              <li>
+                <a href="/whatsOn/6775.asp" title="What's On" accesskey="w">What's On</a>
+              </li>
+            </ul>
+          </div><!-- TEXT SIZE CHOOSER -->
+          <div id="header-textsize">
+            <span>Enlarge Screen Text Here:</span> <span class="small-text"><a href="javascript:f('0.6em');">A</a></span> <span class="medium-text"><a href="javascript:f('0.8em');">A</a></span> <span class="large-text"><a href="javascript:f('1.2em');">A</a></span>
+          </div><!-- CLEAR DIV ( alloew red background to extend with text size ) -->
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div><!-- SPACER ( few pixels light blue spacer ) -->
+    <div id="header-spacer"></div><!-- // HEADER -->
+    <!-- PAGE CONTENT -->
+    <div id="main-content-body-outer">
+      <div id="main-content-valley">
+        <!-- MAIN PAGE CONTENT - WHITE BOX -->
+        <div class="white-box-top"></div>
+        <div class="white-box-body body-content">
+          <div style="text-align: center; height: 100px; position: relative; left: 13%;">
+            <script type="text/javascript">
+//<![CDATA[
+            document.write('\x3Cscript type="text/javascript" src="//can.capacitygrid.com/code/blaenaugwentcbc/leaderboard/public">\x3C/script>');
+            //]]>
+            </script>
+          </div>
+          <div id="left-column">
+            <!-- Begin Online Services -->
+            <div id="online-services">
+              <span>What would you like to do?</span> <a href="/onlineServices/15981.asp" id="payforit" name="payforit">Pay for it</a> <a href="/onlineServices/15980.asp" id="reportit" name="reportit">Report it</a> <a href="/onlineServices/15979.asp" id="requestit" name="requestit">Request it</a> <a href="/onlineServices/15978.asp" id="sayit" name="sayit">Say It</a> <a href="/onlineServices/15982.asp" id="findit" name="findit">Find It</a>
+            </div><!-- LEFT NAVIGATION -->
+            <div class="side-box-container no-border">
+              <h2 class="red-heading">
+                Browse by Service:
+              </h2>
+              <ul class="navigation-list">
+                
+                <li class="level-0">
+                  <a href="/index.asp">Home</a>
+                </li>
+                <li class="level-0 up">
+                  <a href="/advice.asp" title="Advice &amp; Benefits">Advice &amp; Benefits</a>
+                </li>
+                <li class="level-2">
+                  <a href="/advice/95.asp" title="Emergencies">Emergencies</a>
+                </li>
+                <li class="level-3 up">
+                  <a href="/advice/17000.asp" title="Winter Wellbeing">Winter Wellbeing</a>
+                </li>
+                <li class="level-3">
+                  <a href="/advice/17009.asp" title="Winter Maintenance">Winter Maintenance</a>
+                </li>
+              </ul>
+            </div><!-- // LEFT NAVIGATION -->
+          </div><!-- CONTENT MIDDLE COLUMN -->
+          
+            <div id="three-column-middle">
+              
+              <h1 class="green-heading" style="display: ;">
+                Winter Maintenance
+              </h1>
+              <div class="no-border page-content">
+                <p>
+                  <!-- AddThis Button BEGIN --><!-- AddThis Button BEGIN -->
+                </p>
+                <div class="addthis_toolbox addthis_default_style">
+                  <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a><a class="addthis_button_tweet"></a><a class="addthis_counter addthis_pill_style"></a>
+                </div><script type="text/javascript">
+//<![CDATA[
+                var addthis_config = {"data_track_addressbar":true};
+                //]]>
+                </script> <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4deccd374bbf9512">
+</script> <!-- AddThis Button END -->
+                <div class="Top" style="display: none;">
+                  <a href="/advice/17009.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" width="8" height="8" alt="Return to top of page" /></a>
+                  <div style="clear:both;"></div>
+                </div>
+              </div>
+              <div class="no-border page-content">
+                <p>
+                  <img src="/images/winter_maintenance_small.jpg" alt="Image" />
+                </p>
+                <p title="Brynmawr">
+                  <strong><a href="http://maps.google.com/maps/ms?ie=UTF&amp;msa=0&amp;msid=216807689793223047410.0004cd81530d7f4b2dc3b"></a>WINTER MAINTENANCE</strong>
+                </p>
+                <p title="Brynmawr">
+                  <strong><br /></strong><strong>What we are doing?<br /></strong>
+                </p>
+                <p>
+                  Blaenau Gwent County Borough Council are preparing for potential snow and freezing conditions this winter.
+                </p>
+                <p>
+                  The Council has a "Snow Plan" (see document below) to be as ready as possible for severe and prolonged periods of freezing weather like the conditions experienced over the last&nbsp;few winters.<br />
+                  Stocks of salt are already stored at the Council's storage barn at Waun-y-Pound Industrial Estate in Ebbw Vale - which was built in partnership with the Welsh Assembly Government and is also being used by neighborouring local authorities.
+                </p>
+                <p>
+                  Employees from other departments have also been identified to help with snow clearance where necessary - targeting areas such as town centres and residential homes.
+                </p>
+                <p>
+                  <br />
+                  <strong>What services are running?</strong>
+                </p>
+                <p>
+                  Local people will be able to access information on services and school closures on this website and through updates on local radio (see links opposite).&nbsp; School closures will also be reported every morning during disruptive snow conditionsboth on this website and the BBC Wales website.
+                </p>
+                <p>
+                  <strong>Funerals -</strong> As part of our planning for adverse weather the Council is also ready to help out with funerals.
+                </p>
+                <p>
+                  &nbsp;
+                </p>
+                <p>
+                  <strong>Winter Gritting</strong>
+                </p>
+                <p>
+                  Blaenau Gwent Council&rsquo;s priority during snow conditions is to keep the main routes open and clear for motorists.&nbsp; 48% of the roads in the Borough are pre-salted as part of the winter maintenance programme.
+                </p>
+                <p>
+                  This includes:<br />
+                </p>
+                <ul>
+                  <li>All A and B roads
+                  </li>
+                  <li>Local high risk sites and important access routes (e.g. bus routes, near schools, routes to emergency services sites).<br />
+                  </li>
+                </ul>
+                <p>
+                  The gritting and snow ploughing routes, and locations of grit bins are available below.
+                </p>
+                <p>
+                  PLEASE NOTE: To report an incident on the Heads of The Valleys, please contact The South Wales Trunk Road Agency on 0300 1231213. Blaenau Gwent County Borough Council hold no responsibility for the gritting of this road.
+                </p>
+                <p>
+                  &nbsp;
+                </p>
+                <p>
+                  <strong>What we can&rsquo;t do</strong>
+                </p>
+                <p>
+                  Sometimes, despite our best efforts to keep main routes clear, it is impossible to keep these roads &lsquo;snow free&rsquo; while it is snowing!<br />
+                  We are unable to salt and clear all of our roads, as this is an enormous task, and would be very costly. Minor roads not on the priority routes will not be salted or cleared unless there is an emergency.<br />
+                  We do not treat footpaths, except in very severe snow conditions, where we will help clear footpaths in shopping centres.
+                </p>
+                <p>
+                  &nbsp;
+                </p>
+                <p>
+                  <strong>What we can do</strong>
+                </p>
+                <p>
+                  To help local residents and businesses, we provide grit bins and salt for residents and local businesses to use on public roads and footpaths that are not on the &lsquo;gritting routes&rsquo;.<br />
+                  Where possible, we try to help out with emergencies for example making sure residents can get to urgent hospital appointments (such as dialysis and oncology).<br />
+                  We also move staff onto snow clearance duties to help clear snow in town centres and cemeteries, and improve access to care homes.<br />
+                  During disruptive snow conditions, local people will be able to access information on services and school closures through the Blaenau Gwent website and updates on local radio.
+                </p>
+                <p>
+                  &nbsp;
+                </p>
+                <p>
+                  <strong>How you can help</strong>
+                </p>
+                <p>
+                  We encourage residents and local businesses to use the salt available in the grit bins for use on public footpaths and roads to prevent icing. The locations of the grit bins are available below.<br />
+                  There's no law stopping you from clearing snow and ice on the pavement outside your home or from public spaces. It's unlikely you'll be sued or held legally responsible for any injuries on the path if you have cleared it carefully. Visit <a href="http://www.directgov.uk">www.directgov.uk</a> for clear guidance on how to do this.
+                </p>
+                <p>
+                  &nbsp;
+                </p>
+                <p>
+                  <strong>Grit Bins</strong>
+                </p>
+                <p>
+                  To help local residents and businesses, we provide grit bins and salt for residents and local businesses to use on public footpaths, and also on public roads that are not on the &lsquo;gritting routes&rsquo;.
+                </p>
+                <p>
+                  A list of existing Grit Bin locations&nbsp;throughout Blaenau Gwent can be found in the related documents section below.<br />
+                </p>
+                <p>
+                  &nbsp;
+                </p>
+                <p>
+                  <strong>Gritting Routes<br /></strong>
+                </p>
+                <p>
+                  The following links are to Google Maps where the Blaenau Gwent Gritting Routes for the particular areas are displayed
+                </p>
+                <p>
+                  <a title="Brynmawr" href="http://maps.google.com/maps/ms?ie=UTF&amp;msa=0&amp;msid=216807689793223047410.0004cd81530d7f4b2dc3b"><strong>Brynmawr</strong></a>
+                </p>
+                <p>
+                  <a title="Abertillery" href="http://maps.google.com/maps/ms?ie=UTF&amp;msa=0&amp;msid=216807689793223047410.0004cd8061ea65499d510"><strong>Abertillery</strong></a>
+                </p>
+                <p>
+                  <a title="Ebbw Vale" href="http://maps.google.com/maps/ms?ie=UTF&amp;msa=0&amp;msid=216807689793223047410.0004cd6f1ebf040866f12"><strong>Ebbw Vale</strong></a>
+                </p>
+                <p>
+                  <a title="Tredegar" href="http://maps.google.com/maps/ms?ie=UTF&amp;msa=0&amp;msid=216807689793223047410.0004cd6d7f2bca1dde397"><strong>Tredegar</strong></a><br />
+                </p>
+                <p>
+                  &nbsp;
+                </p>
+                <p>
+                  To find out more information on road conditions or closures:-
+                </p>
+                <dl>
+                  <dt title="Abertillery 1">
+                    <br />
+                    AA Road Watch -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tel:-&nbsp;09068884322 or visit: <a title="AA Road Watch" href="http://www.theaa.com/traffic-news/index.jsp">AA Roadwatch<br /></a>Traffic Wales Information - Tel:- 08456026020 or visit <a title="Traffic Wales" href="http://www.traffic-wales.com/">Traffic Wales<br /></a><br />
+                    <br />
+                    <br />
+                    <br />
+                  </dt>
+                  <dd>
+                    <div class="Top" style="display:">
+                      <a href="/advice/17009.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" width="8" height="8" alt="Return to top of page" /></a>
+                      <div style="clear:both;"></div>
+                    </div>
+                  </dd>
+                </dl>
+              </div><script language="JavaScript" type="text/javascript">
+//<![CDATA[
+              var win = null;
+              function newWindow(mypage,myname,w,h,features) {
+              var winl = (screen.width-w)/2;
+              var wint = (screen.height-h)/2;
+              if (winl < 0) winl = 0;
+              if (wint < 0) wint = 0;
+              var settings = 'height=' + h + ',';
+              settings += 'width=' + w + ',';
+              settings += 'top=' + wint + ',';
+              settings += 'left=' + winl + ',';
+              settings += features;
+              win = window.open(mypage,myname,settings);
+              win.window.focus();
+              }
+              //]]>
+              </script>
+              <div class="box-container related-documents">
+                <h1 class="green-heading">
+                  Related Documents
+                </h1>
+                <ul>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Abertillery_Salt_Bins_2015_2016.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Abertillery_Salt_Bins_2015_2016.pdf">Abertillery Salt Bins</a> - <img src="/documents/Abertillery_Salt_Bins_2015_2016_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />42.08kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Brynmawr_Salt_Bins_2015_2016.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Brynmawr_Salt_Bins_2015_2016.pdf">Brynmawr Salt Bins</a> - <img src="/documents/Brynmawr_Salt_Bins_2015_2016_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />37.57kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Ebbw_Vale_Salt_Bins_2015_2016.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Ebbw_Vale_Salt_Bins_2015_2016.pdf">Ebbw Vale Salt Bins</a> - <img src="/documents/Ebbw_Vale_Salt_Bins_2015_2016_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />43.36kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Nantyglo_Blaina_Salt_Bins_2015_2016.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Nantyglo_Blaina_Salt_Bins_2015_2016.pdf">Nantyglo &amp; Blaina Salt Bins</a> - <img src="/documents/Nantyglo_Blaina_Salt_Bins_2015_2016_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />38.44kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Tredegar_Salt_Bins_2015_2016.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Tredegar_Salt_Bins_2015_2016.pdf">Tredegar Salt Bins</a> - <img src="/documents/Tredegar_Salt_Bins_2015_2016_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />46.37kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Documents_Governance/SEVERE_WEATHER_PLAN_-_SNOW_v.1_2010_-_public_version.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to SEVERE_WEATHER_PLAN_-_SNOW_v.1_2010_-_public_version.pdf">Snow Plan</a> - <img src="/documents/Documents_Governance/SEVERE_WEATHER_PLAN_-_SNOW_v.1_2010_-_public_version_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />224.29kb<br />
+                  </li>
+                </ul>
+              </div>
+              <div class="Top" style="display: none;">
+                <a href="/advice/17009.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div><script language="JavaScript" type="text/javascript">
+//<![CDATA[
+              var win = null;
+              function newWindow(mypage,myname,w,h,features) {
+              var winl = (screen.width-w)/2;
+              var wint = (screen.height-h)/2;
+              if (winl < 0) winl = 0;
+              if (wint < 0) wint = 0;
+              var settings = 'height=' + h + ',';
+              settings += 'width=' + w + ',';
+              settings += 'top=' + wint + ',';
+              settings += 'left=' + winl + ',';
+              settings += features;
+              win = window.open(mypage,myname,settings);
+              win.window.focus();
+              }
+              //]]>
+              </script>
+              <div class="box-container related-documents">
+                <h1 class="green-heading">
+                  Presalting Routes
+                </h1>
+                <ul>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/ABERTILLERY_PRESALTING_ROUTE_2014_-_2015.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to ABERTILLERY_PRESALTING_ROUTE_2014_-_2015.pdf">Abertillery Presalting Route</a> - <img src="/documents/ABERTILLERY_PRESALTING_ROUTE_2014_-_2015_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />58.40kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/BRYNMAWR_PRESALTING_ROUTE_2014_-_2015.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to BRYNMAWR_PRESALTING_ROUTE_2014_-_2015.pdf">Brynmawr Presalting Route</a> - <img src="/documents/BRYNMAWR_PRESALTING_ROUTE_2014_-_2015_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />58.53kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/EBBW_VALE_PRESALTING_ROUTES_2014_-_2015.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to EBBW_VALE_PRESALTING_ROUTES_2014_-_2015.pdf">Ebbw Vale Presalting Route</a> - <img src="/documents/EBBW_VALE_PRESALTING_ROUTES_2014_-_2015_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />67.79kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/INDUSTRIAL_PRESALTING_ROUTE_2014_-_2015.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to INDUSTRIAL_PRESALTING_ROUTE_2014_-_2015.pdf">Industrial Presalting Route</a> - <img src="/documents/INDUSTRIAL_PRESALTING_ROUTE_2014_-_2015_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />59.03kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/TREDEGAR_PRESALTING_ROUTE_2014_-_2015.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to TREDEGAR_PRESALTING_ROUTE_2014_-_2015.pdf">Tredegar Presalting Route</a> - <img src="/documents/TREDEGAR_PRESALTING_ROUTE_2014_-_2015_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />61.74kb<br />
+                  </li>
+                </ul>
+              </div>
+              <div class="Top" style="display: none;">
+                <a href="/advice/17009.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div>
+              <div class="box-container text-box">
+                <h1 class="green-heading">
+                  Contact Information
+                </h1>
+                <p>
+                  For further information please contact
+                </p>
+                <p>
+                  Contact Centre / C2BG &nbsp; &nbsp; Tel.&nbsp; 01495311556
+                </p>
+                <p>
+                  8:00 am - 5:30 pm&nbsp; Monday - Friday
+                </p>
+                <p>
+                  Emergency / Out of Hours&nbsp; 01495311556
+                </p>
+                <p>
+                  Email : <a href='mailto:&#105;&#110;&#102;&#111;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#111;&#118;&#46;&#117;&#107;'>&#105;&#110;&#102;&#111;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#111;&#118;&#46;&#117;&#107;</a>
+                </p>
+              </div>
+              <div style="clear: both;"></div>
+              <div class="Top" style="display:">
+                <a href="/advice/17009.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div><!-- // CONTENT MIDDLE COLUMN -->
+              
+            </div><!-- RIGHT COLUMN -->
+            <div id="right-column">
+              <span class="hide"><a name="rightcol" id="rightcol">Right Content Area</a></span> <!-- RIGHT IMAGE -->
+              <div class="side-box-container">
+                <img src="/images/Images_Logos/WinterWellbeing_logo_sm_rdax_180x180.jpg" alt="Winter Wellbeing Logo" class="imgPanel" /><br />
+                
+              </div><!-- // RIGHT IMAGE --><!-- RELATED SITES -->
+              <div class="side-box-container">
+                <h2 class="red-heading">
+                  Related Sites
+                </h2>
+                <ul class="related-links">
+                  <li>
+                    <a href="http://www.metoffice.gov.uk/learning/get-ready-for-winter" title="">Met Office- Get ready for winter</a>
+                  </li>
+                  <li>
+                    <a href="www.traffic-wales.com" title="">Traffic Wales</a>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div><!-- // RELATED SITES -->
+              <!-- UTILITY LINKS RIGHT -->
+              <div class="side-box-container">
+                <form name="PageFeedback" method="post" action="/5431.asp" target="_self" id="PageFeedback">
+                  <input type="hidden" name="PageID" value="17009" /> <input type="hidden" name="Headline" value="Winter Maintenance" /> <input type="hidden" name="PageURL" value="/advice/17009.asp" />
+                  <ul class="utility-list">
+                    <li class="printer-friendly">
+                      <a href="JavaScript:window.print()">Print friendly<br />
+                      version</a>
+                    </li>
+                    <li class="page-feedback">
+                      <a href="JavaScript:document.PageFeedback.submit();">Feedback<br />
+                      on this page</a>
+                    </li>
+                  </ul>
+                </form>
+                <div class="clear"></div>
+              </div><!-- //UTILITY LINKS RIGHT -->
+              
+            </div><!-- //RIGHT COLUMN --><!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div><!-- FOOTER -->
+          <!-- PAGE FOOTER - WHITE BOX -->
+          <div class="white-box-top"></div>
+          <div class="white-box-body footer-content">
+            <!-- start of footer content -->
+            <a href="/about/5639.asp"><img src="/images/find-us.jpg" alt="Find Us" /></a> <a href="/council/5413.asp"><img src="/images/service-buddy.jpg" alt="Children's Complaints Service" /></a> <a href="/5515.asp"><img src="/images/connect-to-bg.jpg" alt="C2BG" /></a> <!-- <a href="http://www.direct.gov.uk"><img src="/images/directgov.jpg" alt="Direct Gov" /></a> -->
+             <a href="https://www.gov.uk/"><img src="/images/directgov.jpg" alt="GOV UK" /></a> <!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div>
+          <div id="footer-contact">
+            <address>
+              Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB Tel: 01495 311556 E-mail:&nbsp;<a href="mailto:info@blaenau-gwent.gov.uk">info@blaenau-gwent.gov.uk</a>
+            </address>
+          </div><!--RDExecute=ASP-->
+          <script type="text/javascript">
+//<![CDATA[
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-17447558-1', 'blaenau-gwent.gov.uk');
+          ga('require', 'displayfeatures'); 
+          ga('send', 'pageview');
+          //]]>
+          </script> <script type="text/javascript">
+//<![CDATA[
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-17447558-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+          //]]>
+          </script> <!-- // FOOTER -->
+        </div>
+      </div><!-- iBar Code -->
+      <script type="text/javascript">
+//<![CDATA[
+      document.write('\x3Cscript type="text/javascript" src="//can.capacitygrid.com/code/blaenaugwentcbc/ibar/public">\x3C/script>');
+      //]]>
+      </script> 
+    </div>
+  </body>
+</html>

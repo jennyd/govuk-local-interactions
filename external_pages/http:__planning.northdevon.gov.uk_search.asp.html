@@ -1,0 +1,188 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="eng">
+<head>
+<title>North Devon Council Online Planning - Search</title>
+<link rel="stylesheet" type="text/css" href="config/styles.css">
+<script type="text/javascript">
+function GetDate(inStr)
+{
+	WinWidth = 325;
+	WinHeight = 300;
+	Datewinattrib = "scrollbars=yes,status=no,toolbar=no,menubar=no,width=" + WinWidth + ",height=" + WinHeight + ",left=" + ((screen.width / 2) - (WinWidth / 2)) + ",top=" + ((screen.height / 2) - (WinHeight / 2));
+	Dateurl = "calendar.asp?ObjectName=" + inStr;
+	DateWin = window.open(Dateurl,"DateWin",Datewinattrib);
+	return;
+}
+
+var popUp; 
+
+function OpenCalendar(idname)
+{
+	popUp = window.open('calendar.asp?ObjectName=' + idname, 'popupcal', 'width=165,height=208,left=200,top=250');
+}
+
+</SCRIPT>
+
+</head>
+<body>
+<link rel="stylesheet" href="config/nddc-global.css" type="text/css" media="all" />
+<table align="left" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+        <tr>
+	  <td bgcolor="#005E7D" width="10%" height="86"></td>
+          <td height="70" width="168" bgcolor="#005E7D"><a href="http://www.northdevon.gov.uk/" title="North Devon District Council Home Page" class="linkTopRight" accesskey="1"><img src="config/top_logo.gif" alt="logo - North Devon District Council Logo" height="70" width="168"></a></td>
+          <td bgcolor="#005E7D" width="77%" style="font-family:verdana,arial,helvetica,sans-serif;margin-left:20px;margin-top:5px;font-size:9pt; color:#000000;"></td>
+        </tr>
+        <tr>
+          <td colspan="3"><img src="/config/spacer.gif" alt="spacer image" style="background-color: rgb(255, 255, 255);" height="2" width="1"></td>
+        </tr>
+        <tr>
+          <td colspan="3" style="padding: 3px 0px 0px 9px; height: 20px; background-color: #98ab2a; color: #FFFFFF; font-weight: bold; font-size: 11px;"><a href="http://planning.northdevon.gov.uk/" class="sitenavLink">Home</a> | <a href="http://www.northdevon.gov.uk/planning-and-building-control/" class="sitenavLink">Planning Home</a> | <a href="http://www.northdevon.gov.uk/do-it-online/contact-us" class="sitenavLink">Contact Us</a> | <a href="http://www.northdevon.gov.uk/planning-and-building-control/search,-track-and-comment-on-applications/" class="sitenavLink">Planning Applications</a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form name="SearchForm" method="post" action="results.asp">
+<h1>North Devon Council Online Planning - Search</h1>
+
+<p>To view advanced details of a planning application
+please enter a detail or details in the boxes below and click on the "Search"
+button. <a href="help.asp" target="_blank" title="Opens in a new window">For help with searching please click here</a></p>
+<p class="Centered">
+<table cellSpacing="0" cellPadding="4" border="0">
+  <tr>
+    <td class="RecordTitle"><label for="ApplicationNumber">Planning Application Number:</label></td>
+    <td colspan="3" class="RecordDetail"><input id="ApplicationNumber" name="ApplicationNumber" value=""></td>
+</tr>
+  <tr>
+    <td class="RecordTitle"><label for="AddressPrefix">Site Address (1st Line):</label></td>
+    <td colspan="3" class="RecordDetail"><input id="AddressPrefix" name="AddressPrefix" size="40" value=""></td>
+</tr>
+  <tr>
+    <td class="RecordTitle"><label for="Postcode">Post Code:</label></td>
+    <td colspan="3" class="RecordDetail"><input id="Postcode" name="Postcode" value=""></td>
+</tr>
+  <tr>
+    <td class="RecordTitle"><label for="CaseOfficer">Case Officer:</label></td>
+    <td colspan="3" class="RecordDetail"><SELECT id="CaseOfficer" name="CaseOfficer" style="width:auto;"><OPTION value=""></OPTION><OPTION value="Miss A. Cooke">Miss A. Cooke</OPTION><OPTION value="Miss C Wakefield">Miss C Wakefield</OPTION><OPTION value="Miss D. Floyd">Miss D. Floyd</OPTION><OPTION value="Miss S-J. Allin">Miss S-J. Allin</OPTION><OPTION value="Miss T Blackmore">Miss T Blackmore</OPTION><OPTION value="Mr A Jones">Mr A Jones</OPTION><OPTION value="Mr C Boyles">Mr C Boyles</OPTION><OPTION value="Mr F Shelton">Mr F Shelton</OPTION><OPTION value="Mr K Wickham">Mr K Wickham</OPTION><OPTION value="Mr V Christian">Mr V Christian</OPTION><OPTION value="Mr. A. Austen">Mr. A. Austen</OPTION><OPTION value="Mr. A. Austen">Mr. A. Austen</OPTION><OPTION value="Mr. A. Devereaux">Mr. A. Devereaux</OPTION><OPTION value="Mr. A. Jones">Mr. A. Jones</OPTION><OPTION value="Mr. A. Sargent">Mr. A. Sargent</OPTION><OPTION value="Mr. A.G. Tucker">Mr. A.G. Tucker</OPTION><OPTION value="Mr. A.K. Barnett">Mr. A.K. Barnett</OPTION><OPTION value="Mr. D. Cook">Mr. D. Cook</OPTION><OPTION value="Mr. D. Rance">Mr. D. Rance</OPTION><OPTION value="Mr. D. Smith">Mr. D. Smith</OPTION><OPTION value="Mr. D.J. Heard">Mr. D.J. Heard</OPTION><OPTION value="Mr. F. Shelton">Mr. F. Shelton</OPTION><OPTION value="Mr. G. Stephenson">Mr. G. Stephenson</OPTION><OPTION value="Mr. G. Townsend">Mr. G. Townsend</OPTION><OPTION value="Mr. J Richards">Mr. J Richards</OPTION><OPTION value="Mr. J. A. Burns">Mr. J. A. Burns</OPTION><OPTION value="Mr. J. Bate">Mr. J. Bate</OPTION><OPTION value="Mr. J. Brain">Mr. J. Brain</OPTION><OPTION value="Mr. J. White">Mr. J. White</OPTION><OPTION value="Mr. K Hilson">Mr. K Hilson</OPTION><OPTION value="Mr. K. Bines">Mr. K. Bines</OPTION><OPTION value="Mr. K. Wickham">Mr. K. Wickham</OPTION><OPTION value="Mr. L. Andrews">Mr. L. Andrews</OPTION><OPTION value="Mr. M. Alcock">Mr. M. Alcock</OPTION><OPTION value="Mr. M. Brown">Mr. M. Brown</OPTION><OPTION value="Mr. M. Kelly">Mr. M. Kelly</OPTION><OPTION value="Mr. M. Saunders">Mr. M. Saunders</OPTION><OPTION value="Mr. M.J. Easton">Mr. M.J. Easton</OPTION><OPTION value="Mr. P. Green">Mr. P. Green</OPTION><OPTION value="Mr. R. Bagley">Mr. R. Bagley</OPTION><OPTION value="Mr. R. Pedlar">Mr. R. Pedlar</OPTION><OPTION value="Mr. S. Emery">Mr. S. Emery</OPTION><OPTION value="Mr. S. Harrington">Mr. S. Harrington</OPTION><OPTION value="Mrs D. Butler">Mrs D. Butler</OPTION><OPTION value="Mrs J. Hayes">Mrs J. Hayes</OPTION><OPTION value="Mrs S-J. Mackenzie-Shapland">Mrs S-J. Mackenzie-Shapland</OPTION><OPTION value="Mrs. C. Hall">Mrs. C. Hall</OPTION><OPTION value="Mrs. E. Tucker">Mrs. E. Tucker</OPTION><OPTION value="Mrs. H. Smith">Mrs. H. Smith</OPTION><OPTION value="Mrs. J. Albon">Mrs. J. Albon</OPTION><OPTION value="Mrs. J. Algate">Mrs. J. Algate</OPTION><OPTION value="Mrs. K. Little">Mrs. K. Little</OPTION><OPTION value="Mrs. M. Pool">Mrs. M. Pool</OPTION><OPTION value="Mrs. S. Piper">Mrs. S. Piper</OPTION><OPTION value="Ms D. Sheard">Ms D. Sheard</OPTION><OPTION value="Ms S Kruga">Ms S Kruga</OPTION><OPTION value="Ms S. O`Brien">Ms S. O`Brien</OPTION><OPTION value="Ms. J. Watkins">Ms. J. Watkins</OPTION></SELECT></td>
+</tr>
+  <tr>
+    <td class="RecordTitle"><label for="ParishName">Parish:</label></td>
+    <td colspan="3" class="RecordDetail"><SELECT id="ParishName" name="ParishName" style="width:auto;"><OPTION value=""></OPTION><OPTION value="ARLINGTON">ARLINGTON</OPTION><OPTION value="ASHFORD">ASHFORD</OPTION><OPTION value="ATHERINGTON">ATHERINGTON</OPTION><OPTION value="BARNSTAPLE">BARNSTAPLE</OPTION><OPTION value="BERRYNARBOR">BERRYNARBOR</OPTION><OPTION value="BISHOPS NYMPTON">BISHOPS NYMPTON</OPTION><OPTION value="BISHOPS TAWTON">BISHOPS TAWTON</OPTION><OPTION value="BITTADON">BITTADON</OPTION><OPTION value="BRATTON FLEMING">BRATTON FLEMING</OPTION><OPTION value="BRAUNTON">BRAUNTON</OPTION><OPTION value="BRAYFORD">BRAYFORD</OPTION><OPTION value="BRENDON & COUNTISBURY">BRENDON & COUNTISBURY</OPTION><OPTION value="BURRINGTON">BURRINGTON</OPTION><OPTION value="CHALLACOMBE">CHALLACOMBE</OPTION><OPTION value="CHELDON NOW CHULMLEIGH">CHELDON NOW CHULMLEIGH</OPTION><OPTION value="CHITTLEHAMHOLT">CHITTLEHAMHOLT</OPTION><OPTION value="CHITTLEHAMPTON">CHITTLEHAMPTON</OPTION><OPTION value="CHULMLEIGH">CHULMLEIGH</OPTION><OPTION value="COMBE MARTIN">COMBE MARTIN</OPTION><OPTION value="COUNTISBURY NOW BRENDON">COUNTISBURY NOW BRENDON</OPTION><OPTION value="CREACOMBE NOW RACKENFORD">CREACOMBE NOW RACKENFORD</OPTION><OPTION value="EAST & WEST BUCKLAND">EAST & WEST BUCKLAND</OPTION><OPTION value="EAST ANSTEY">EAST ANSTEY</OPTION><OPTION value="EAST DOWN">EAST DOWN</OPTION><OPTION value="EAST WORLINGTON">EAST WORLINGTON</OPTION><OPTION value="FILLEIGH">FILLEIGH</OPTION><OPTION value="FREMINGTON">FREMINGTON</OPTION><OPTION value="FREMINGTONB">FREMINGTONB</OPTION><OPTION value="GEORGE NYMPTON">GEORGE NYMPTON</OPTION><OPTION value="GEORGEHAM">GEORGEHAM</OPTION><OPTION value="GOODLEIGH">GOODLEIGH</OPTION><OPTION value="HEANTON PUNCHARDON">HEANTON PUNCHARDON</OPTION><OPTION value="HIGH BRAY NOW BRAYFORD">HIGH BRAY NOW BRAYFORD</OPTION><OPTION value="HORWOOD LOVACOTT NEWTON TRACEY">HORWOOD LOVACOTT NEWTON TRACEY</OPTION><OPTION value="HORWOOD NOW NEWTON TRACEY">HORWOOD NOW NEWTON TRACEY</OPTION><OPTION value="ILFRACOMBE">ILFRACOMBE</OPTION><OPTION value="INSTOW">INSTOW</OPTION><OPTION value="KENTISBURY">KENTISBURY</OPTION><OPTION value="KINGS NYMPTON">KINGS NYMPTON</OPTION><OPTION value="KNOWSTONE">KNOWSTONE</OPTION><OPTION value="LANDKEY">LANDKEY</OPTION><OPTION value="LANDKEY">LANDKEY</OPTION><OPTION value="LOXHORE">LOXHORE</OPTION><OPTION value="LYNTON & LYNMOUTH">LYNTON & LYNMOUTH</OPTION><OPTION value="MARIANSLEIGH">MARIANSLEIGH</OPTION><OPTION value="MARTINHOE">MARTINHOE</OPTION><OPTION value="MARWOOD">MARWOOD</OPTION><OPTION value="MESHAW">MESHAW</OPTION><OPTION value="MOLLAND">MOLLAND</OPTION><OPTION value="MORTEHOE">MORTEHOE</OPTION><OPTION value="NO PARISH DETAILS">NO PARISH DETAILS</OPTION><OPTION value="NORTH DEVON COUNCIL AREA">NORTH DEVON COUNCIL AREA</OPTION><OPTION value="NORTH MOLTON">NORTH MOLTON</OPTION><OPTION value="PARRACOMBE">PARRACOMBE</OPTION><OPTION value="PILTON WEST">PILTON WEST</OPTION><OPTION value="QUEENS NYMPTON">QUEENS NYMPTON</OPTION><OPTION value="RACKENFORD">RACKENFORD</OPTION><OPTION value="ROMANSLEIGH">ROMANSLEIGH</OPTION><OPTION value="ROSE ASH">ROSE ASH</OPTION><OPTION value="SATTERLEIGH & WARKLEIGH">SATTERLEIGH & WARKLEIGH</OPTION><OPTION value="SHIRWELL">SHIRWELL</OPTION><OPTION value="SOUTH MOLTON">SOUTH MOLTON</OPTION><OPTION value="STOKE RIVERS">STOKE RIVERS</OPTION><OPTION value="SWIMBRIDGE">SWIMBRIDGE</OPTION><OPTION value="TAWSTOCK">TAWSTOCK</OPTION><OPTION value="TAWSTOCK">TAWSTOCK</OPTION><OPTION value="TRENTISHOE">TRENTISHOE</OPTION><OPTION value="TWITCHEN">TWITCHEN</OPTION><OPTION value="WEST ANSTEY">WEST ANSTEY</OPTION><OPTION value="WEST BUCKLAND NOW E & W BUCK.">WEST BUCKLAND NOW E & W BUCK.</OPTION><OPTION value="WEST DOWN">WEST DOWN</OPTION><OPTION value="WESTLEIGH">WESTLEIGH</OPTION><OPTION value="WITHERIDGE">WITHERIDGE</OPTION></SELECT></td>
+</tr>
+  <tr>
+    <td class="RecordTitle"><label for="AreaTeam">Area Team:</label></td>
+    <td colspan="3" class="RecordDetail"><SELECT id="AreaTeam" name="AreaTeam" style="width:auto;"><OPTION value=""></OPTION><OPTION value="BAC">BAC</OPTION><OPTION value="IAC">IAC</OPTION><OPTION value="NDCA">NDCA</OPTION><OPTION value="NOR">NOR</OPTION><OPTION value="NRAC">NRAC</OPTION><OPTION value="SMAC">SMAC</OPTION><OPTION value="SOU">SOU</OPTION></SELECT></td>
+</tr>
+  <tr>
+    <td class="RecordTitle"><label for="WardMember">Ward:</label></td>
+    <td colspan="3" class="RecordDetail"><SELECT id="WardMember" name="WardMember" style="width:auto;"><OPTION value=""></OPTION><OPTION value="BAC">BAC</OPTION><OPTION value="BARNSTAPLE">BARNSTAPLE</OPTION><OPTION value="BARNSTAPLE LONGBRIDGE">BARNSTAPLE LONGBRIDGE</OPTION><OPTION value="BARNSTAPLE NEWPORT">BARNSTAPLE NEWPORT</OPTION><OPTION value="BARNSTAPLE PILTON">BARNSTAPLE PILTON</OPTION><OPTION value="BARNSTAPLE ST MARYS">BARNSTAPLE ST MARYS</OPTION><OPTION value="BARNSTAPLE TRINITY">BARNSTAPLE TRINITY</OPTION><OPTION value="BARNSTAPLE YEO">BARNSTAPLE YEO</OPTION><OPTION value="BICKINGTON & ROUNDSWELL">BICKINGTON & ROUNDSWELL</OPTION><OPTION value="BISHOPS NYMPTON">BISHOPS NYMPTON</OPTION><OPTION value="BISHOPS TAWTON">BISHOPS TAWTON</OPTION><OPTION value="BRATTON FLEMING">BRATTON FLEMING</OPTION><OPTION value="BRAUNTON">BRAUNTON</OPTION><OPTION value="BRAUNTON EAST">BRAUNTON EAST</OPTION><OPTION value="BRAUNTON WEST">BRAUNTON WEST</OPTION><OPTION value="CENTRAL TOWN">CENTRAL TOWN</OPTION><OPTION value="CHITTLEHAMPTON">CHITTLEHAMPTON</OPTION><OPTION value="CHULMLEIGH">CHULMLEIGH</OPTION><OPTION value="COMBE MARTIN">COMBE MARTIN</OPTION><OPTION value="FORCHES & WHIDDON VALLEY">FORCHES & WHIDDON VALLEY</OPTION><OPTION value="FREMINGTON">FREMINGTON</OPTION><OPTION value="GEORGEHAM & MORTEHOE">GEORGEHAM & MORTEHOE</OPTION><OPTION value="HEANTON PUNCHARDON">HEANTON PUNCHARDON</OPTION><OPTION value="IAC">IAC</OPTION><OPTION value="ILFRACOMBE">ILFRACOMBE</OPTION><OPTION value="ILFRACOMBE CENTRAL">ILFRACOMBE CENTRAL</OPTION><OPTION value="ILFRACOMBE EAST">ILFRACOMBE EAST</OPTION><OPTION value="ILFRACOMBE WEST">ILFRACOMBE WEST</OPTION><OPTION value="INSTOW">INSTOW</OPTION><OPTION value="LANDKEY, SWIMBRIDGE">LANDKEY, SWIMBRIDGE</OPTION><OPTION value="LYNTON & LYNMOUTH">LYNTON & LYNMOUTH</OPTION><OPTION value="MARWOOD">MARWOOD</OPTION><OPTION value="MORTEHOE">MORTEHOE</OPTION><OPTION value="NDC AREA">NDC AREA</OPTION><OPTION value="NO WARD DETAILS">NO WARD DETAILS</OPTION><OPTION value="NORTH">NORTH</OPTION><OPTION value="NORTH MOLTON">NORTH MOLTON</OPTION><OPTION value="NRAC">NRAC</OPTION><OPTION value="PLC">PLC</OPTION><OPTION value="PLC SUB COM A">PLC SUB COM A</OPTION><OPTION value="PLC SUB COM B">PLC SUB COM B</OPTION><OPTION value="PLC SUB COM C">PLC SUB COM C</OPTION><OPTION value="SMAC">SMAC</OPTION><OPTION value="SOUTH">SOUTH</OPTION><OPTION value="SOUTH MOLTON">SOUTH MOLTON</OPTION><OPTION value="SWIMBRIDGE">SWIMBRIDGE</OPTION><OPTION value="TAWSTOCK">TAWSTOCK</OPTION><OPTION value="WITHERIDGE">WITHERIDGE</OPTION></SELECT></td>
+</tr>
+  <tr>
+    <td class="RecordTitle"><label for="DateReceivedStart">Date Received From:</label></td>
+    <td class="RecordDetail"><input id="DateReceivedStart" name="DateReceivedStart" value=""><a HREF="javascript:GetDate('SearchForm.DateReceivedStart');"><img src="images/icon-calendar.gif" align="Middle" WIDTH="24" HEIGHT="16" alt="Calendar"></a></td>
+    <td class="RecordTitle"><label for="DateReceivedEnd">Date Received To:</label></td>
+    <td class="RecordDetail"><input id="DateReceivedEnd" name="DateReceivedEnd" value=""><a HREF="javascript:GetDate('SearchForm.DateReceivedEnd');"><img src="images/icon-calendar.gif" align="Middle" WIDTH="24" HEIGHT="16" alt="Calendar"></a></td></tr>
+  <tr>
+    <td class="RecordTitle"><label for="DateDecidedStart">Date of Decision From:</label></td>
+    <td class="RecordDetail"><input id="DateDecidedStart" name="DateDecidedStart" value=""><a HREF="javascript:GetDate('SearchForm.DateDecidedStart');"><img src="images/icon-calendar.gif" align="Middle" WIDTH="24" HEIGHT="16" alt="Calendar"></a></td>
+    <td class="RecordTitle"><label for="DateDecidedEnd">Date of Decision To:</label></td>
+    <td class="RecordDetail"><input id="DateDecidedEnd" name="DateDecidedEnd" value=""><a HREF="javascript:GetDate('SearchForm.DateDecidedEnd');"><img src="images/icon-calendar.gif" align="Middle" WIDTH="24" HEIGHT="16" alt="Calendar"></a></td></tr>
+  <tr>
+    <td class="RecordTitle"><label for="Locality">Locality:</label></td>
+    <td class="RecordDetail"><input id="Locality" name="Locality" size="40" value=""></td>
+    <td class="RecordTitle"><label for="AgentName">Agent:</label></td>
+    <td class="RecordDetail"><input id="AgentName" name="AgentName" value=""></td></tr>
+  <tr>
+    <td class="RecordTitle"><label for="ApplicantName">Applicant Name:</label></td>
+    <td class="RecordDetail"><input id="ApplicantName" name="ApplicantName" value=""></td>
+    <td class="RecordTitle"><label for="ShowDecided">Decided/Not Decided:</label></td>
+    <td class="RecordDetail">
+		<select id="ShowDecided" name="ShowDecided" onchange="javascript:document.SearchForm.Submit.focus();">
+			<option value></option>
+			<option value="2">Decided</option>
+			<option value="1">Not Decided</option>
+		</select>
+	</td></tr>
+  <tr>
+    <td class="RecordTitle"><label for="DecisionLevel">Decision Level/Committee:</label></td>
+    <td class="RecordDetail"><SELECT id="DecisionLevel" name="DecisionLevel" style="width:auto;"><OPTION value=""></OPTION><OPTION value="Barnstaple & Fremington Area Committee">Barnstaple & Fremington Area Committee</OPTION><OPTION value="Delegated Decision">Delegated Decision</OPTION><OPTION value="Full  Council">Full  Council</OPTION><OPTION value="Ilfracombe Area Committee">Ilfracombe Area Committee</OPTION><OPTION value="North Area">North Area</OPTION><OPTION value="Northern Rural Area Committee">Northern Rural Area Committee</OPTION><OPTION value="Planning Board">Planning Board</OPTION><OPTION value="Planning Committee">Planning Committee</OPTION><OPTION value="Planning Panel">Planning Panel</OPTION><OPTION value="Policy Committee">Policy Committee</OPTION><OPTION value="South Area">South Area</OPTION><OPTION value="South Molton Area Committee">South Molton Area Committee</OPTION></SELECT></td>
+    <td></td>
+    <td></td></tr></table></p>
+<p class="Centered"><label for="Sort1">Select the order in which you require the search results
+to be sorted e.g. address by date order:</label></p>
+<p>
+<table cellSpacing="1" cellPadding="1" width="100%" border="0">
+  <tr>
+    <td align="center"><input class="button" type="reset" value="Reset" onclick="doReset();return false;" onkeypress="doReset();return false;"></td>
+    <td align="center">
+		<select id="Sort1" name="Sort1">
+		    <option value></option>
+			<option value="ApplicationNumber">Planning Application Number</option>
+			<option value="FullAddressPrefix" selected>Site Address</option>
+			<option value="DateReceived DESC">Received Date</option>
+			<option value="DecisionDate DESC">Decision Date</option>
+		</select>
+    </td>
+    <td align="center"><label for="Sort2">AND</label></td>
+    <td align="center">
+		<select id="Sort2" name="Sort2">
+		    <option value></option>
+			<option value="ApplicationNumber">Planning Application Number</option>
+			<option value="FullAddressPrefix">Site Address</option>
+			<option value="DateReceived DESC" selected>Received Date</option>
+			<option value="DecisionDate DESC">Decision Date</option>
+		</select>
+    </td>
+    <td align="center"><input class="button" type="submit" value="Search" id="Submit" name="Submit"></td></tr></table></p>
+<p align="left"><strong>Please note that the Online Planning Service browser provides an interface with planning applications details and is updated throughout the day.</strong><br>For lengthy browsing sessions, periodically click on Refresh button to ensure that the latest information is displayed.
+<br>Please note that only limited details are available with regard to Certificate of Lawfulness Applications due to the fact that the Summarys of Decision contain personal information under the Data Protection Act 1998.
+<br>Only details of applications registered as valid from 1 January 1987 are available and search results should not be relied upon as complete records for any specific location.
+<br>Summary details of decision conditions and/or reasons for applications determined from 16 April 1999 onwards are available to view.
+<br>Copies of decision notices determined from 1 September 2005 and copies of application forms, associated plans, drawings 
+<br>and supporting documents 
+for applications registered from 1 September 2005, are available to view in pdf format.
+<br>Digital copies should normally be available to view within 5 working days of the date of the Weekly List that the application appears on.<br>Details of appeals lodged with the Planning Inspectorate from 2001 onwards can be viewed
+by following the View Appeal link on application Details or Full Details screen.<br>Please contact the Development Control Unit for information on any application or appeal not held on this system.</p>
+<TABLE WIDTH=75% BORDER=0 CELLSPACING=1 CELLPADDING=1 align="center">
+	<TR>
+		<TD align="center">Click here to return to:</TD>
+		<TD align="center"><A href="welcome.asp">Welcome Screen</A></TD>
+	</TR>
+</TABLE>
+
+</form>
+<script type="text/javascript">
+function doReset()
+{
+	var i
+	for (i = 0;i < document.SearchForm.length;i++)
+	{
+		if ((document.SearchForm.elements[i].id !== "Submit") && (document.SearchForm.elements[i].id !== "Sort1") && (document.SearchForm.elements[i].id !== "Sort2") && (document.SearchForm.elements[i].value !== "Reset"))
+		{
+			document.SearchForm.elements[i].value = "";
+		}
+	}
+}
+
+function frmFind_onkeypress()
+{
+	if (event.keyCode == 13)
+	{
+		document.SearchForm.submit();
+		event.returnValue=false;
+	}
+}
+document.onkeydown = frmFind_onkeypress;
+</script>
+
+</body>
+</html>

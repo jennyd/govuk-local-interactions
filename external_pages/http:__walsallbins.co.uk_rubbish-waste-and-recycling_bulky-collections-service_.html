@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en-US"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Bulky collections service | Walsall Bins</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://walsallbins.co.uk/xmlrpc.php" />
+
+<!-- Begin wp_head() -->
+<link rel="alternate" type="application/rss+xml" title="Walsall Bins &raquo; Feed" href="http://walsallbins.co.uk/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Walsall Bins &raquo; Comments Feed" href="http://walsallbins.co.uk/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/walsallbins.co.uk\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.2"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='usquare-css-css'  href='http://walsallbins.co.uk/wp-content/plugins/usquare/css/frontend/usquare_style.css?ver=4.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='customfont1-css'  href='http://walsallbins.co.uk/wp-content/plugins/usquare/fonts/ostrich%20sans/stylesheet.css?ver=4.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='customfont2-css'  href='http://walsallbins.co.uk/wp-content/plugins/usquare/fonts/PT%20sans/stylesheet.css?ver=4.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-smoothness-css'  href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.min.css?ver=1.11.4' type='text/css' media='all' />
+<link rel='stylesheet' id='arconix-faq-css'  href='http://walsallbins.co.uk/wp-content/plugins/arconix-faq/includes/css/arconix-faq.css?ver=1.5.2' type='text/css' media='all' />
+<link rel='stylesheet' id='leaf-style-css'  href='http://walsallbins.co.uk/wp-content/themes/walsall-bins/style.css?ver=4.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='leaf-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Oswald:400|PT+Sans:400,700,400italic' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css'  href='http://walsallbins.co.uk/wp-content/tablepress-combined.min.css?ver=2' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://walsallbins.co.uk/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://walsallbins.co.uk/wp-content/plugins/jetpack/css/jetpack.css?ver=3.5.3' type='text/css' media='all' />
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-includes/js/jquery/jquery.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-content/plugins/usquare/js/frontend/jquery.easing.1.3.js?ver=4.2.2'></script>
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-content/plugins/usquare/js/frontend/jquery.usquare.js?ver=4.2.2'></script>
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-content/plugins/usquare/js/frontend/jquery.mousewheel.min.js?ver=4.2.2'></script>
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-content/plugins/usquare/js/frontend/jquery.tinyscrollbar.min.js?ver=4.2.2'></script>
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-content/plugins/alligator-popup/js/popup.js?ver=1.2.0'></script>
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-content/plugins/iframe-wrapper/iframe-wrapper.js?ver=4.2.2'></script>
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-content/themes/leaf/js/modernizr-2.6.2.js?ver=2.6.2'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://walsallbins.co.uk/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://walsallbins.co.uk/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.2.2" />
+<link rel='canonical' href='http://walsallbins.co.uk/rubbish-waste-and-recycling/bulky-collections-service/' />
+<link rel='shortlink' href='http://wp.me/P4moXr-4h' />
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-17330571-20']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+			<!-- Marquee version 2.75 -->
+			<script type="text/javascript" src="http://walsallbins.co.uk/wp-content/plugins/marquee/scroller.js"></script>
+			<link rel="stylesheet" type="text/css" href="http://walsallbins.co.uk/wp-content/plugins/marquee/marquee.css"/>
+			<!-- end Marquee -->
+			<style media="screen" type="text/css">
+#scb-wrapper ul,#scb-wrapper li,#scb-wrapper a {display:inline;margin:0;padding:0;font-family:sans-serif;font-size:0.96em;line-height:1;} #scb-wrapper li {margin:0 .5em;} #scb-wrapper img {display:inline;vertical-align:middle;margin:0;padding:0;border:0 none;} #scb-wrapper #scb-email {padding-right:1em;}#scb-wrapper li a span {white-space:nowrap;}
+@media screen and (min-width:640px) {#scb-wrapper.scb-fixed {position:fixed;bottom:0;left:0;z-index:10000;width:100%;}}
+@media screen and (max-width:768px) {#scb-wrapper #scb-phone span,#scb-wrapper #scb-cellphone span,#scb-wrapper #scb-email span {display:none;}}
+@media screen and (max-width:480px) {#scb-wrapper #scb-directs {margin-bottom:.5em;} #scb-wrapper ul {display:block;}}
+@media screen and (min-width: 640px) { body { padding-bottom: 35px !important; } }
+#scb-wrapper { padding: 15px 15px; background-color: #eaeaea; color: #019535; text-align: center; } 
+#scb-wrapper h2 { display: inline; margin: 0; padding: 0; font: normal normal bold 15px/1 sans-serif;  color: #019535; }
+@media screen and (max-width: 768px) { #scb-wrapper h2 { display: none; } }
+#scb-wrapper a { color: #019535; } 
+#scb-wrapper h2, #scb-wrapper ul, #scb-wrapper li, #scb-wrapper a { font-size: 15px; } 
+</style>
+<style media="print" type="text/css">#scb-wrapper { display:none; }</style>
+<link rel='dns-prefetch' href='//jetpack.wordpress.com'>
+<link rel='dns-prefetch' href='//s0.wp.com'>
+<link rel='dns-prefetch' href='//s1.wp.com'>
+<link rel='dns-prefetch' href='//s2.wp.com'>
+<link rel='dns-prefetch' href='//public-api.wordpress.com'>
+<link rel='dns-prefetch' href='//0.gravatar.com'>
+<link rel='dns-prefetch' href='//1.gravatar.com'>
+<link rel='dns-prefetch' href='//2.gravatar.com'>
+<!-- Begin Leaf css -->
+<style type="text/css">
+#page { max-width: 100%; margin-top: 0px; margin-bottom: 0px; box-shadow: none;}
+a:hover, .site-header h1 a:hover, .site-header h2 a:hover, .comments-link a:hover, .entry-meta a:hover, .widget-area .widget a:hover, .footer-navigation li a:hover, .copyright a:hover, .site-info a:hover, .comment-content .reply a:hover, #respond #submit:hover { color: #019535;}
+.image-tag, .aside-format, .audio-format, .gallery-format, .image-format, .link-format, .video-format, .search-bar .submit, .iview-caption.caption3, .pagination .current, .pagination a:hover { background-color: #019535;}
+.search-bar:after {border-right-color: #019535;}
+
+
+
+</style>
+<!-- End Leaf css -->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url('http://webwalsall.com/walsallbins/wp-content/themes/leaf/images/body-BG.png'); background-repeat: repeat; background-position: top left; background-attachment: fixed; }
+</style>
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Bulky collections service" />
+<meta property="og:url" content="http://walsallbins.co.uk/rubbish-waste-and-recycling/bulky-collections-service/" />
+<meta property="og:description" content="The bulky collection service allows the collection of household items from domestic premises that cannot be collected otherwise through the wheeled bin collection services due to the size and bulk ..." />
+<meta property="article:published_time" content="2013-10-20T20:54:34+00:00" />
+<meta property="article:modified_time" content="2015-10-12T08:42:47+00:00" />
+<meta property="article:author" content="http://walsallbins.co.uk/author/bins-admin/" />
+<meta property="og:site_name" content="Walsall Bins" />
+<meta property="og:image" content="http://walsallbins.co.uk/wp-content/uploads/bulky-collections.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:image" content="http://walsallbins.co.uk/wp-content/uploads/bulky-collections.jpg?w=240" />
+<meta name="twitter:card" content="summary" />
+
+<style id="custom-css-css">.site-content{border-right:none}.site-content article{margin:30px auto}</style>
+<!-- End wp_head() -->
+
+</head>
+
+<body class="page page-id-265 page-child parent-pageid-249 page-template-default custom-background">
+
+<div id="page" class="hfeed site">
+
+	<div id="head-container">
+	
+				
+		
+		<div class="row">
+			<header id="masthead" class="site-header row twelve columns" role="banner">
+
+				<div class="row">
+					<div class="header-group six columns">
+					
+													<a href="http://walsallbins.co.uk/" title="Walsall Bins" rel="home">
+								
+
+
+
+
+<!--<img src="http://cms.walsall.gov.uk/environmentbannertop.jpg" width="999" height="129" alt="" /> -->
+
+<img src="http://webwalsall.com/walsallbins/wp-content/uploads/2014/02/bins-2.jpg" width: auto; height: auto;>
+
+
+							</a>
+											</div><!-- .header-group .six .columns -->
+
+
+
+
+  
+
+					
+												
+
+
+				</div><!-- .row -->
+
+
+				
+				<nav role="navigation" class="site-navigation main-navigation">
+					<h1 class="assistive-text">Menu</h1>
+					<div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+
+
+					<div class="menu-main-menu-container"><ul id="menu-main-menu" class="sf-menu"><li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-11"><a href="http://walsallbins.co.uk/">Home</a></li>
+<li id="menu-item-751" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-751"><a href="http://walsallbins.co.uk/bin-collection-calendar/">Bin collection calendar</a></li>
+<li id="menu-item-259" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-259"><a href="http://walsallbins.co.uk/rubbish-waste-and-recycling/">Rubbish, waste and recycling</a></li>
+<li id="menu-item-812" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-812"><a href="http://walsallbins.co.uk/waste_consultation_2015/">Waste Consultation 2015</a></li>
+<li id="menu-item-1083" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1083"><a href="http://cms.walsall.gov.uk/peoplespanel">People&#8217;s Panel</a></li>
+</ul></div>
+
+
+
+
+
+
+				</nav><!-- .site-navigation .main-navigation -->
+				
+			</header><!-- #masthead .site-header .twelve .columns -->
+		</div><!-- .row -->
+
+
+
+	</div><!-- #head-container -->
+	
+
+
+		
+	<div id="main" class="row">
+	<div id="primary" class="site-content eight columns">
+		<div id="content" role="main">
+		
+			
+						
+				
+		<article id="post-265" class="post-265 page type-page status-publish has-post-thumbnail hentry">
+			<header class="entry-header">
+				<h1 class="entry-title">Bulky collections service</h1>
+			</header><!-- .entry-header -->
+
+			<div class="entry-content">
+				<p><a href="http://walsallbins.co.uk/wp-content/uploads/bulky-collections.jpg"><img class=" size-full wp-image-957 alignleft" src="http://walsallbins.co.uk/wp-content/uploads/bulky-collections.jpg" alt="bulky-collections" width="113" height="150" /></a></p>
+<p style="text-align: left;">The bulky collection service allows the collection of household items from domestic premises that cannot be collected otherwise through the wheeled bin collection services due to the size and bulk of the items.</p>
+<p>We can&#8217;t collect everything that is too large for a wheelie bin, the items we will take are things that would normally be taken during a house move, so doesn&#8217;t include any fixtures and fittings.</p>
+<p>The service is covered by the Environmental Protection Act 1990 and the Controlled Waste Regulation 2012 which allows the council to make a charge.</p>
+<h5> For a nominal charge we will collect:</h5>
+<ul>
+<li style="text-align: left;">White goods- fridges, freezers, washing machines, cookers etc.</li>
+<li style="text-align: left;">furniture- tables, chairs, settees, wardrobes,beds, chests of drawers etc</li>
+<li style="text-align: left;">bicycles</li>
+<li style="text-align: left;">three piece suites (this is 3 items)</li>
+<li style="text-align: left;">cookers</li>
+<li style="text-align: left;">washing machines and tumble dryers</li>
+<li style="text-align: left;">TVs</li>
+<li style="text-align: left;">vacuum cleaners</li>
+<li style="text-align: left;">rugs ( rolled up and securely taped)</li>
+<li style="text-align: left;">Carpet or lino ( rolled and securely taped, NOT folded.) each roll is classed as one item</li>
+<li style="text-align: left;">Garden furniture</li>
+<li style="text-align: left;">barbecues</li>
+<li style="text-align: left;">gas bottles(empty)</li>
+<li style="text-align: left;">mattresses</li>
+</ul>
+<h5>We will not collect:</h5>
+<ul>
+<li style="text-align: left;">builders&#8217; materials such as bricks, blocks, rubble</li>
+<li style="text-align: left;">garden waste</li>
+<li style="text-align: left;">items left from household refurbishment such as kitchen cabinets, bathroom suites and window frames/doors</li>
+<li style="text-align: left;">garden sheds</li>
+<li style="text-align: left;">wooden fence panels</li>
+<li style="text-align: left;">bags of domestic waste</li>
+<li style="text-align: left;">fire hearths and grates</li>
+</ul>
+<p>Certain items such as beds will be counted as more than one item if there is a headboard, base and mattress, a three piece suite is 3 items, a fire hearth and grate is also 3 items etc. There is also a maximum of 3 sofas in any one collection.</p>
+<p>We make a list of the items you want us to dispose of at the time of booking. If you need to make any changes you will need to contact us on 01922 653344 no later than 12 noon on the day before your collection. We will not collect items that are not on the list because they may not have been put out for collection by you.</p>
+<h3>Charges</h3>
+<p>From 2nd February 2015 our pricing structure will be as follows:</p>
+<ul>
+<li style="text-align: left;">1-3 items £15.00</li>
+<li style="text-align: left;">4-6 items £30.00</li>
+<li style="text-align: left;">7-9 items £45.00</li>
+</ul>
+<p>This replaces our single charge for up to five items and brings us in line with neighbouring councils. Further information about the changes to our bulky collection prices can be found in our press release from 19th January 2015</p>
+<ul>
+<li><a href="https://www.walsall.gov.uk/News/Story/2015/1/19/Bulky_collection_charges_reviewed">Bulky collection charges reviewed</a></li>
+</ul>
+<h3>Payment</h3>
+<p>Payment can be made by cash, cheque or credit/debit card at the First Stop Shop in the Civic Centre, Darwall Street, Walsall.</p>
+<p>You can book and pay for a bulky collection by telephoning on 01922 653344.</p>
+<p>Alternatively, cheques may be sent by post to: Clean and Green Services, Environment Depot, 200 Pelsall Road, Brownhills, Walsall, WS8 7EN. Cheques to be made payable to &#8216;Walsall Council&#8217;.</p>
+<h3>When do we collect?</h3>
+<p>We now operate a 7 days a week collection service .  Please ask if you would prefer a particular collection day and we  will do our best to accommodate your  request.</p>
+<h3>Points to note:</h3>
+<ul>
+<li>All items need to be ready for collection by 7am on the agreed day. If your items are not ready when we arrive you will need to re-book your collection.</li>
+<li>Let us know if you need to put your items on the footpath because you don’t have a front garden or driveway. We&#8217;ll try and collect early on the day to minimise obstruction to others</li>
+<li>Please cover items that could become waterlogged as they may be too heavy to lift when wet.</li>
+<li>Please ensure that the items to be collected are intact and whole and are easily accessible. Your items should be left at the closest point on your property next to the public highway.</li>
+<li>We cannot enter your property to collect items.</li>
+</ul>
+<h3>If you prefer&#8230;.</h3>
+<p>&#8230;You can take your bulky items to the Household Waste Recycling Centres at Fryers Road, Leamore or Merchants Way, Aldridge &#8211; free of charge or if you have serviceable good quality items you no longer require you could use the Freecycle® Network. For more information please visit their website <a href="http://uk.freecycle.org/">uk.freecycle.org/</a></p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-265" class="share-facebook sd-button share-icon" href="http://walsallbins.co.uk/rubbish-waste-and-recycling/bulky-collections-service/?share=facebook" target="_blank" title="Share on Facebook"><span>Facebook</span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-265" class="share-twitter sd-button share-icon" href="http://walsallbins.co.uk/rubbish-waste-and-recycling/bulky-collections-service/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-265" class="share-google-plus-1 sd-button share-icon" href="http://walsallbins.co.uk/rubbish-waste-and-recycling/bulky-collections-service/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon" href="http://walsallbins.co.uk/rubbish-waste-and-recycling/bulky-collections-service/?share=tumblr" target="_blank" title="Click to share on Tumblr"><span>Tumblr</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://walsallbins.co.uk/rubbish-waste-and-recycling/bulky-collections-service/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://walsallbins.co.uk/rubbish-waste-and-recycling/bulky-collections-service/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-end"></li></ul></div></div></div>							</div><!-- .entry-content -->
+			<footer class="entry-meta">
+							</footer><!-- .entry-meta -->
+		</article><!-- #post -->				
+					<div class="comments-wrap row">
+		<div id="comments" class="comments-area twelve columns">
+
+			
+			
+			
+		</div><!-- #comments .comments-area .twelve .columns -->
+	</div><!-- .comments-wrap .row -->				
+						
+			
+		</div><!-- #content -->
+	</div><!-- #primary .site-content .eight .columns -->
+
+
+			<div id="secondary" class="widget-area four columns" role="complementary">
+			
+						
+			<aside id="search-2" class="widget widget_search"><h3 class="widget-title"><span>Search</span></h3>
+	<div class="search-bar">
+		<form method="get" id="searchform" action="http://walsallbins.co.uk/">
+			<label for="s" class="assistive-text">Search</label>
+			<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+			<input type="text" class="field" name="s" id="s" placeholder="Search..." />
+		</form>
+	</div><!-- .search-bar --></aside><aside id="text-12" class="widget widget_text"><h3 class="widget-title"><span>Contact us</span></h3>			<div class="textwidget"><h1>Clean and Green Services</h1>
+Walsall Council Environment Depot<br>
+200 Pelsall Road, Brownhills<br>
+Walsall<br>
+WS8 7EN
+<br>
+Telephone: <a href="tel: 01922 653344">01922 653344</a>
+<br>
+Email: <a href="mailto:cleanandgreen@walsall.gov.uk">cleanandgreen@walsall.gov.uk</a>
+
+
+
+
+
+
+</div>
+		</aside>			
+						
+		</div><!-- #secondary .widget-area .four .columns -->
+		
+		</div><!-- #main .row -->
+
+		
+<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="row footer-row">
+			
+	
+					</div><!-- .row .footer-row -->
+		
+		
+		<div class="footer-info">
+			<div class="row info-wrap">
+			
+				<div class="copyright six columns">
+					&copy; 2016 <a href="http://walsallbins.co.uk/" title="Walsall Bins">Walsall Bins</a>
+				</div><!-- .copyright .six .columns -->
+
+				
+			</div><!-- .row info-wrap-->
+		</div><!-- .footer-info -->
+		
+		<div class="scroll-to-top"></div><!-- .scroll-to-top -->
+
+
+
+<div class="site-info six columns">
+
+					
+
+
+
+
+
+				</div><!-- .site-info .six .columns -->
+
+
+
+
+
+<p style="text-align:center; color: white">
+
+The Civic Centre, Darwall Street, Walsall, West Midlands, WS1 1TP | Telephone 01922 650000 | Textphone  01922 654000 </br> 
+
+ © Walsall Council 2015 &nbsp;&nbsp;&nbsp;
+<a STYLE="text-decoration:underline" href="http://cms.walsall.gov.uk/copyright/">Copyright  </a> |  
+<a STYLE="text-decoration:underline" href="http://cms.walsall.gov.uk/disclaimer/">Disclaimer</a>   |  
+<a STYLE="text-decoration:underline" href="http://cms.walsall.gov.uk/privacy_statement">Privacy Statement</a>   | 
+<a STYLE="text-decoration:underline" href="http://cms.walsall.gov.uk/cookies">Cookie Policy</a>  | 
+<a STYLE="text-decoration:underline" href="http://www.walsall.gov.uk">Walsall Council</a> 
+
+
+
+		
+	</footer><!-- #colophon .site-footer -->
+</div><!-- #page .hfeed .site -->
+
+<!-- Begin wp_footer() -->
+
+		<div id="the_container" style="display:none;width:100%;margin:auto;">
+					<div id="Hide_Marquee">
+				<a href="#" style="position:absolute;" onclick="Hide_Marquee();return false;"><img src="http://walsallbins.co.uk/wp-content/plugins/marquee/img/exit.png" width="16" height="16" alt="" title="Click here to hide the message."/></a>
+			</div>
+			<div id="marquee_content" style="overflow:hidden;height:45px;background:#019535;color:#fff">
+
+			</div>
+		</div>
+		<script type="text/javascript">
+		//<![CDATA[
+		var insertO = document.getElementById("content");
+
+		if(typeof window.addEventListener != 'undefined') {	//.. gecko, safari, konqueror and standard
+		window.addEventListener('load', MarqueeLoaded, false);
+		}
+		else if(typeof document.addEventListener != 'undefined') {	//.. opera 7
+		document.addEventListener('load', MarqueeLoaded, false);
+		}
+		else if(typeof window.attachEvent != 'undefined') {	//.. win/ie
+		window.attachEvent('onload', MarqueeLoaded);
+		}
+		function MarqueeLoaded() {
+			if(insertO) {
+				var scrollers = document.getElementById('marquee_content');
+
+				var 
+				scroll_body = document.createElement('div'),
+				scroll = document.createElement('div');
+
+				scroll_body.style.width = '100%';
+				scroll_body.style.height = '45px';
+				scroll.className = 'jscroller2_ignoreleave jscroller2_left jscroller2_speed-50 jscroller2_mousemove';
+				scroll.style.fontSize = '18pt';
+				scroll.style.lineHeight = '45px';
+				scroll.style.margin = 0;
+				scroll.innerHTML = 'Our household waste recycling centres will be open  2 additional days over the Christmas break......are you recycling as much as you can?';
+				scroll_body.appendChild(scroll);
+				scrollers.appendChild(scroll_body);
+
+				insertO.insertBefore(document.getElementById("the_container"), insertO.firstChild);
+				document.getElementById("the_container").style.display="";
+				ByRei_jScroller2.add(scroll,"left");
+				ByRei_jScroller2.start();
+							}
+		}
+		//]]>
+		</script>
+			<div style="display:none">
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/walsallbins.co.uk\/rubbish-waste-and-recycling\/bulky-collections-service\/":265};
+		window.WPCOM_jetpack = true;
+				window.WPCOM_site_ID = 64444501;
+			</script>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-tumblr' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+			<div id="sharing_email" style="display: none;">
+		<form action="/rubbish-waste-and-recycling/bulky-collections-service/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" />
+			<script> document.getElementById('jetpack-source_f_name').value = ''; </script>
+			
+			<img style="float: right; display: none" class="loading" src="http://walsallbins.co.uk/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201605'></script>
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-content/themes/leaf/js/scripts.js?ver=4.2.2'></script>
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-content/themes/leaf/js/plugins.js?ver=4.2.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://walsallbins.co.uk/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=3.5.3'></script>
+
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			if ($(window).scrollTop() != "0")
+				$(".scroll-to-top").fadeIn(1200)
+			var scrollDiv = $(".scroll-to-top");
+			$(window).scroll(function()
+			{
+				if ($(window).scrollTop() == "0")
+					$(scrollDiv).fadeOut(350)
+				else
+					$(scrollDiv).fadeIn(1200)
+			});
+			$(".scroll-to-top").click(function(){
+				$("html, body").animate({
+					scrollTop: 0
+				}, 600)
+			})
+		});
+	</script>
+<script type='text/javascript' src='http://stats.wp.com/e-201605.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.5.3',blog:'64444501',post:'265',tz:'0',srv:'walsallbins.co.uk'} ]);
+	_stq.push([ 'clickTrackerInit', '64444501', '265' ]);
+</script>
+<!-- End wp_footer() -->
+
+<div id="scb-wrapper" class="scb-fixed"><h2>Contact us on</h2><ul id="scb-directs"><li id="scb-phone"><a href="tel:01922653344"><img src="http://walsallbins.co.uk/wp-content/plugins/speed-contact-bar/public/assets/images/phone_dark.svg" width="30" height="30" alt="Phone Number" />&nbsp;<span>01922 653344</span></a></li><li id="scb-email"><a href="mailto:&#99;lean&#97;&#110;d&#103;r&#101;e&#110;&#64;wals&#97;&#108;l.&#103;ov&#46;&#117;k"><img src="http://walsallbins.co.uk/wp-content/plugins/speed-contact-bar/public/assets/images/email_dark.svg" width="30" height="30" alt="E-Mail" />&nbsp;<span>&#99;lean&#97;&#110;d&#103;r&#101;e&#110;&#64;wals&#97;&#108;l.&#103;ov&#46;&#117;k</span></a></li></ul><ul><li id="scb-facebook"><a href="https://www.facebook.com/pages/Walsall-Bins-and-Things/221976751205224"><img src="http://walsallbins.co.uk/wp-content/plugins/speed-contact-bar/public/assets/images/facebook.svg" width="30" height="30" alt="Facebook" /></a></li><li id="scb-twitter"><a href="https://twitter.com/CleanGreenTweet"><img src="http://walsallbins.co.uk/wp-content/plugins/speed-contact-bar/public/assets/images/twitter.svg" width="30" height="30" alt="Twitter" /></a></li></ul></div></body>
+</html>

@@ -1,0 +1,272 @@
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+    <!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<link rel="Shortcut Icon" href="resources/images/logo/wdc-favicon.ico" />
+	        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	        <meta name="google-site-verification" content="fkWC3smNfmDNM6aXy2EsW7TFTM9KZA-egFwbmc0pJ2o" />
+	        <title>Round Lookup - Wychavon District Council</title>
+	        <link href="resources/css/main.css" rel="stylesheet"/>
+	        <!--[if lt IE 9]>
+	        	<script src="resources/js/html5shiv.js"></script>
+	        	<script src="resources/js/respond.min.js"></script>
+	        <![endif]-->
+		</head>
+		<body class="static">
+			<div class="holder">
+				<div id="header" class="block">
+				<div class="span12 max-height-banner">
+					<div class="container">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<a href="http://www.wychavon.gov.uk"> <img class="main-logo top-margin" src="resources/images/logo/wdc-logo.png" alt="Wychavon District Council logo"> </a>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
+							<a href="http://www.wychavon.gov.uk"> <img class="main-logo pull-right" src="resources/images/logo/wdc-logo2.png" alt="Wychavon District Council logo"> </a>
+						</div>
+					</div>
+				</div>
+				<div id="nav-wrapper">
+					<nav id="nav" class="navbar navbar-default navbar-static-top full-width z-index-5" role="navigation" style="top:0px;">
+						<div class="navbar-header">
+							<button type="button" id="mobile-menu-button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<div class="navbar-brand mobile-link-colour visible-xs">
+								<a href="http://www.wychavon.gov.uk">
+									<strong>Navigation Menu</strong>
+								</a>
+							</div>
+						</div>
+						<div class="container">
+							<div id="mob-menu" class="collapse navbar-collapse navbar-ex1-collapse nav-item-align">
+								<ul id="navbar" class="nav navbar-nav navbar-left">
+									<li>
+										<a href="http://www.wychavon.gov.uk/"><span class="glyphicon glyphicon-home"></span> Home</a>
+									</li>
+									<li class="hidden-sm">
+										<a href="http://www.wychavon.gov.uk/about-wychavon-district-council">About us</a>
+									</li>
+									<li>
+										<a href="http://www.wychavon.gov.uk/pay-it">Pay it</a>
+									</li>
+									<li>
+										<a href="http://www.wychavon.gov.uk/report-it">Report it</a>
+									</li>
+									<li>
+										<a href="http://www.wychavon.gov.uk/request-it">Request it</a>
+									</li>
+									<li>
+										<a href="http://www.wmjobs.co.uk/our-employers/wychavon-district-council/" target="_blank">Jobs</a>
+									</li>
+									<li class="hidden-sm">
+										<a href="http://www.wychavon.gov.uk/news-and-alerts">News &amp; Alerts</a>
+									</li>
+									<li class="hidden-sm">
+										<a href="http://www.wychavon.gov.uk/events">Events</a>
+									</li>
+									<li>
+										<a href="http://www.wychavon.gov.uk/contact-us">Contact us</a>
+									</li>
+									<li>
+										<a href="http://www.wychavon.gov.uk/information">More services</a>
+									</li>
+								</ul>
+								<ul class="nav navbar-nav navbar-right visible-lg">
+									<li>
+										<a class="nopadding" href="https://www.facebook.com/wychavon" target="_blank"> <img class="social-logos-navbar" src="resources/images/social/facebook-logo.png" alt="Facebook logo - Link to council facebook page."/> </a>
+									</li>
+									<li>
+										<a class="nopadding" href="https://twitter.com/Wychavon" target="_blank"> <img class="social-logos-navbar" src="resources/images/social/twitter-logo.png" alt="Twitter Logo - Link to council twitter page"/> </a>
+									</li>
+									<li>
+										<a class="nopadding" href="http://www.youtube.com/user/wychavonvideo" target="_blank"> <img class="social-logos-navbar" src="resources/images/social/youtube-logo.png" alt="Youtube Logo - Link to council youtube page"/> </a>
+									</li>
+									<li>
+										<a class="nopadding" href="https://www.flickr.com/photos/wychavon/" target="_blank">
+											<img class="social-logos-navbar" src="resources/images/social/flickr-logo.png" alt="Large Flickr dots on a square background, on white">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+				</div>
+				<div class="block push">
+					<div class="container app_holder">
+
+<div id="applicationholder" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	<h1 class="blue-text">Find your waste and recycling collection details</h1>
+	<h2 class="blue-text">Use the form below to find your address</h2>
+	<br/>
+	<form target="_self" method="post" name="sw2WDCBinLookupFrm" id="sw2WDCBinLookupFrm" action="HandleSearchScreen">
+
+		<div class="row">
+			<div class="">
+			</div>
+			<div class="form-group">
+				<label for="txtPCode1">Enter your postcode: <span class="required">*</span></label>
+				<div class="input-group" style="max-width:350px">
+					<input name="txtPCode1" id="txtPCode1" class="form-control" value="" onchange="sw2WDCBinLookupOnChange()" type="text">
+					<span class="input-group-btn">
+						<input id="btnPCode1" class="btn btn-primary" value="Find Address" onclick="GetAddressDataFromPostCode('1', 'WDC', 'false', '', 'sw2WDCBinLookupOnNoData', 'sw2WDCBinLookupOnChange()', 'sw2WDCBinLookupOnSelect')" type="button">
+					</span>
+				</div>
+			</div>
+			<div class="form-group" style="text-align:left;" id="dAddressResults1">
+			</div>
+			<div id="dNoRecs1" class="form-group" style="text-align:left; display:none; padding:0; margin:0 0 0 0;">
+				<p class="required">Sorry we cannot find your postcode. Please enter a valid Wychavon postcode or email our bins and recycling team at client.services@wychavon.gov.uk or call them on 01386 565018.</p>
+			</div>
+			<div id="trAddress1" class="form-group" style="display:none"></div>
+			<textarea style="display:none;" name="txtAddress1" id="txtAddress1" cols="45" rows="5"></textarea>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<input class="btn btn-primary" disabled="disabled" id="btnSubmit" name="btnSubmit" value="Next" type="submit">
+			</div>
+		</div>	
+		<div class="row form-group">
+			<img src="http://swict.malvernhills.gov.uk/sw2images/images/index.jpg" style="vertical-align: middle" alt="" />
+
+				Don't know your postcode? 
+			<a class="" href="http://www.royalmail.com/postcode-finder" target="_self" onclick="">Find it here</a>
+
+		</div>
+		<div class="row" style="margin-bottom:20px;">
+			<!-- Embedded WhosOn: Insert the script below at the point on your page where you want the Click To Chat link to appear -->
+			<script type='text/javascript' src='//gateway3.whoson.com/include.js?domain=www.wychavon.gov.uk'></script>
+			<script type='text/javascript' >
+				if(typeof sWOTrackPage=='function')sWOTrackPage();
+			</script>
+			<!-- End of embedded WhosOn -->
+		</div>
+		<input type="hidden" name="txtPage"  id="txtPage" value="std"/>
+
+		<input type="hidden" name="txtSearchPerformedFlag"  id="txtSearchPerformedFlag" value="false"/>
+ 
+	</form>
+
+</div>
+
+<script type="text/javascript">
+function sw2WDCBinLookupOnNoData(){
+	var e=document.getElementById("txtSearchPerformedFlag");
+	e.value="true";
+	document.getElementById("sw2WDCBinERR").style.display = 'none';
+	var eb=document.getElementById("btnSubmit");
+	eb.disabled=false;
+}
+
+function sw2WDCBinLookupOnSelect(){
+	var e=document.getElementById("selAddress1");
+	var eb=document.getElementById("btnSubmit");
+	e.value=="----Please"?eb.disabled=true:eb.disabled=false;
+}
+
+function sw2WDCBinLookupOnChange(){
+	var resultElement = document.getElementById("selAddress1");
+	if (resultElement != undefined){
+		document.getElementById("selAddress1").options.length = 0;
+		hideElementById("selAddress1");
+		var eb=document.getElementById("btnSubmit");
+		eb.disabled=true;
+	}
+}
+</script>
+
+				</div>
+			</div>
+			<div id="footer" class="block">
+				<div class="span12 tile-5">
+					<div class="container">
+						<div class="visible-xs">
+							<h4 class="spaced-text footer-heading-pad white-text"><strong>Follow us on...</strong></h4>
+							<div>
+								<a class="nopadding" href="https://www.facebook.com/wychavon" target="_blank">
+									<img class="scaled-logo spaced-logo logos-top" src="resources/images/social/facebook-logo.png" alt="Facebook logo">
+								</a>
+								<a class="nopadding" href="https://twitter.com/Wychavon" target="_blank">
+									<img class="scaled-logo" src="resources/images/social/twitter-logo.png" alt="Twitter logo">
+								</a>
+								<a class="nopadding" href="http://www.youtube.com/user/wychavonvideo" target="_blank">
+									<img class="scaled-logo spaced-logo logos-top" src="resources/images/social/youtube-logo.png" alt="Youtube logo">
+								</a>
+								<a class="nopadding" href="https://www.flickr.com/photos/wychavon/" target="_blank">
+									<img class="scaled-logo spaced-logo logos-top" src="resources/images/social/flickr-logo.png" alt="Large Flickr dots on a square background, on white">
+								</a>
+							</div>
+						</div>
+						<ul class="spaced-text list-inline mobile-inline-menu no-left-margin">
+							<li>
+								<a href="http://www.wychavon.gov.uk/copyright" class="white-text white-link">Copyright</a>
+							</li>
+							<li>
+								<a href="http://www.wychavon.gov.uk/privacy" class="white-text white-link">Privacy</a>
+							</li>
+							<li>
+								<a href="http://www.wychavon.gov.uk/disclaimer" class="white-text white-link">Disclaimer</a>
+							</li>
+							<li>
+								<a href="http://www.wychavon.gov.uk/membersarea" class="white-text white-link">Councillor Access</a>
+							</li>
+							<li>
+								<a href="http://www.wychavon.gov.uk/contact-us" class="white-text white-link">Contact us</a>
+							</li>
+							<li>
+								<a href="http://www.wychavon.gov.uk/sitemap" class="white-text white-link">Sitemap</a>
+							</li>
+							<li class="visible-md visible-lg pull-right">
+								<a href="http://www.gov.uk" class="white-text white-link" target="_blank">GOV.UK - For more Government Services and Information</a> 
+							</li>
+							<li class="hidden-md hidden-lg">
+								<a href="http://www.gov.uk" class="white-text white-link" target="_blank">GOV.UK - For more Government Services and Information</a>
+							</li>
+							<li>
+								<a href="http://www.wychavon.gov.uk/login" id="sign-in" class="white-text white-link" rel="nofollow">Login</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="resources/js/jquery-1.11.0.min.js"></script>
+		<script src="resources/js/bootstrap.min.js"></script>
+		<script src="resources/js/custom.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-12368924-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+	<script src="resources/js/app_specific/sw2.js"></script>
+	<script src="resources/js/app_specific/cal.js"></script>
+<script type="text/javascript">
+			/*<![CDATA[*/
+			(function() {
+			var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+			sz.src = '//uk1.siteimprove.com/js/siteanalyze_298491.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+			})();
+			/*]]>*/
+		</script>
+	</body>
+</html>

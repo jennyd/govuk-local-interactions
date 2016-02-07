@@ -1,0 +1,815 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html id="ctl00_html_tag" xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" dir="ltr">
+<head><meta http-equiv="X-UA-Compatible" content="IE=8" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" />
+    <!-- Mobile Specific Metas
+       ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<script src='//code.jquery.com/jquery-1.7.2.min.js' type='text/javascript'></script>
+
+
+<script type="text/javascript">
+    function Custom_AddListMenuItems(m, ctx) {
+        AddECBMenuItems(m, ctx);  
+    }
+
+    function Custom_AddDocLibMenuItems(m, ctx) {
+        AddECBMenuItems(m, ctx);
+    }
+
+    function AddECBMenuItems(m, ctx) {
+        var pageUrl = ctx.HttpRoot + "/_layouts/NY.ExportVersionHistory/ExportVersionHistory.aspx?ID=" + currentItemID + "&amp;List=" + ctx.listName;
+        if (ctx.verEnabled) {
+            CAMOpt(m, "Export Version History", "window.open('" + pageUrl + "');", "/_layouts/images/NY.ExportVersionHistory/Excel_Small.png");
+            CAMSep(m);
+        }
+    }
+</script>
+<meta name="description" content="Find out more about your community parks" /><meta name="keywords" content="community parks, local, parks, park near you, playgrounds, Leeds, things to do, places to go, outdoor, environment, nature, estate, Home farm, Pudsey park, gardens, families, where to go, outdoors, green spaces, " /><script src='//code.jquery.com/jquery-1.7.2.min.js' type='text/javascript'></script>
+<script src='/_layouts/LCC.SharePoint.JQuery/CookieBanner.js' type='text/javascript'></script>
+<!-- Web chat tracking code provided by connection point. START -->
+<script src="http://static.atgsvcs.com/js/atgsvcs.js"></script>
+<script type="text/javascript">
+    ATGSvcs.setUOID("200106307565");
+    (function() {
+         var l = "leedscitycouncil.custhelp.com" ,d=document,ss='script',s=d.getElementsByTagName(ss)[0],rn=d.createElement(ss),rn2=d.createElement(ss);
+         rn.type=rn2.type='text/javascript';
+         rn.defer=rn2.defer=rn.async=rn2.async=!0;
+         rn.src=rn2.src=('https:'==d.location.protocol?'https://':'http://')+l;
+         rn.src+='/rnt/rnw/javascript/vs/1/vsapi.js';
+         rn2.src+='vs/1/vsopts.js';
+         s.parentNode.insertBefore(rn,s);
+         s.parentNode.insertBefore(rn2,s);
+    })();
+</script>
+<!-- Web chat tracking code provided by connection point. END -->
+<link rel="shortcut icon" href="/_layouts/images/WIRPBrand/favicon.ico" type="image/vnd.microsoft.icon" /><title>
+	
+	Your local park
+
+</title>
+    <script type="text/javascript">
+        var _fV4UI = true;
+    </script>
+
+    
+
+    <!--[if IE]><![endif]-->
+    <!--[if lt IE 7 ]> <html lang="en" class="ie6">    <![endif]-->
+    <!--[if IE 7 ]>    <html lang="en" class="ie7">    <![endif]-->
+    <!--[if IE 8 ]>    <html lang="en" class="ie8">    <![endif]-->
+    <!--[if IE 9 ]>    <html lang="en" class="ie9">    <![endif]-->
+
+    <!-- Custom CSS  -->
+
+    
+
+    <!-- Custom Scripts -->
+    <script src="/Style%20Library/Scripts/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery.noConflict();
+    </script>
+    <script src="/Style%20Library/Scripts/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+    <script src="/Style%20Library/Scripts/jquery.cycle.all.js" type="text/javascript"></script>
+    <script src="/Style%20Library/Scripts/TextZoom.js" type="text/javascript"></script>
+    <script src="/Style%20Library/Scripts/ImageSlideShow/galleria-1.3.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Style%20Library/Scripts/customLcc.js?rev=4.2.2.7"></script>
+    <script src="/Style%20Library/Scripts/jquery.pajinate.js" type="text/javascript"></script>
+
+    <!-- load SharePoint javascript -->
+    <script type="text/javascript">
+// <![CDATA[
+document.write('<script type="text/javascript" src="/_layouts/1033/init.js?rev=mnhGGwFP5YmS9WIiyvdiYQ%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/ny.exportversionhistory/exportversionhistory.js"></' + 'script>');
+document.write('<script type="text/javascript" src="/ScriptResource.axd?d=KGc4p_OHnOVr16gsAiwcVaCThFdiLzSVdHC5Sdc1UaGGHwpjgJeIjvWG6KfljT-ps6UxzJD1xatCqx35MwHMMQB8M3WKmJ6E1iBjXbLWFno2oI4Awlk8JYFJruVFDDXSUJ54yobtrB_0cus8ZvFcHBhaPOo1&amp;t=e4ad9b3"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D"></' + 'script>');
+// ]]>
+</script>
+
+<script type="text/javascript">
+    // <![CDATA[
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    if (window.location.href.indexOf("-sde-its") > -1) {
+        // this is for Integration enviornment (for test purpose)
+        ga('create', 'UA-51569622-1', 'leeds.gov.uk');
+    }
+    else {
+        ga('create', 'UA-39638056-1', 'leeds.gov.uk');
+    }
+    ga('send', 'pageview');
+
+
+    // ]]> 
+</script>
+<script type="text/javascript">
+    /**
+    * Function that tracks a click on an outbound link in universal Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label.
+    */
+    var trackOutboundLink = function (eventAction, eventLabel, url) {
+        ga('send', 'event', eventAction, eventLabel, url, {
+            'hitCallback':
+              function () {
+                  document.location = url;
+              }
+        });
+    }
+</script>
+
+
+<script type="text/javascript">
+    if (typeof jQuery != 'undefined') {
+        jQuery(document).ready(function ($) {
+            var filetypes = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3|mp4)$/i;
+            var baseHref = '';
+            if (jQuery('base').attr('href') != undefined)
+                baseHref = jQuery('base').attr('href');
+            jQuery('a').each(function () {
+                var href = jQuery(this).attr('href');
+                var isExternal = new RegExp('^https?://');
+                if (href && (!href.match(document.domain) && isExternal.test(href)) && !href.match('#')) {
+                    jQuery(this).click(function () {
+                        if (ga.q) {
+                            document.location = url;
+
+                        } else {
+                            trackOutboundLink('outbound', 'click', href);
+                        }
+                        return false;
+                    });
+                }
+                else if (href && href.match(filetypes)) {
+                    jQuery(this).click(function () {
+                        var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+                        var filePath = href;
+                        if (ga.q) {
+                            document.location = url;
+                        } else {
+                            trackOutboundLink('download', 'click-' + extension, filePath);
+                        }
+                        return false;
+                    });
+                }
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        function KeepLastFont() {
+            var font = ReadCookie('cookieFontSize')
+            //alert("Initial Load Cookie value is :: " + font);
+            if ((font != null) && (font != 14)) {
+                document.getElementById('txtFont').value = font;
+                var fontSize = font.toString() + "px";
+                FontSizeChange_SetAllDocumentFontSize(fontSize);
+            }
+        }
+    </script>
+
+<link rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Themable/Core%20Styles/controls.css"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/corev4.css?rev=p63%2BuzTeSJc22nVGNZ5zwg%3D%3D"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/WirpBrand/default.css?rev=4.2.2.7"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/WirpBrand/structure.css?rev=4.2.2.7"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/WirpBrand/responsive.css?rev=4.2.2.7"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/WirpBrand/LayoutApps.css"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/WIRPBrand/RTEStyleOptions.css"/>
+</head>
+
+<body onload="if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper(); KeepLastFont();">
+    
+    
+
+            <script type="text/javascript">
+                // <![CDATA[
+                set_bannerDate();
+                // ]]> 
+            </script>
+        
+
+
+
+
+    <!-- Start lccBodyContainer -->
+    <div class="lccBodyContainer">
+        <!-- Start Utility Bar -->
+        <div class="utilityBar s4-notdlg ">
+            <div class="pageControl container">
+                <div class="floatLeft"><a href="/pages/default.aspx" accesskey="1">
+                    <img src="/_layouts/images/standard/lccLogo.png" alt="Leeds City Council" /></a></div>
+                <div class="utilityNavigation-wrap noindex">
+                    <div class="utilityNavigation">
+                        <ul>
+                            
+                                    <!-- <style type="text/css">
+                             .mainContent
+                             {
+                             overflow-x: hidden !important;
+                             }
+                             </style>-->
+                                    <!-- Display the Login link only when anonymous call from with the Intranet -->
+                                    
+                                    <!--[if lte IE 7]>  
+                              <style type="text/css"> 
+                               html { overflow: auto !important; overflow-x: hidden; } 
+                                body { overflow: auto !important; } 
+                                 </style> 
+                                  <![endif]-->
+                                
+                            <li><a href="/pages/AtoZ.aspx" accesskey="3">A to Z</a></li>
+                            <li><a href="http://news.leeds.gov.uk/" accesskey="2">Newsroom</a></li>
+                            <li><a href="/pages/contactus.aspx" accesskey="9">Contact us</a></li>
+                            <li><a href="/pages/Accessibility.aspx" accesskey="0">Accessibility</a></li>
+                            <li>
+                                <div id="google_translate_element"></div>
+                                <script type="text/javascript">
+                                    function googleTranslateElementInit() {
+                                        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+                                    }
+                                </script>
+                                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            </li>
+                            <li><a title="Decrease Text Size" class="sizeOne" href="javascript:FontSizeChange_Decrease();">A-</a>
+                                <a title="Increase Text Size" class="sizeTwo" href="javascript:FontSizeChange_Increase();">A+</a></li>
+                        </ul>
+                    </div>
+                    <input id="txtFont" value="14" type="hidden" />
+                </div>
+
+            </div>
+            <div class="clear">
+                <!-- -->
+            </div>
+        </div>
+        <!-- End Utility Bar -->
+
+        <div class="pageControl container">
+
+            <!-- Start Body Container -->
+            <div class="bodyContainer">
+
+                <form name="aspnetForm" method="post" action="Your-local-park.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+<input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+<input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+<input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+<input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+<input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+<input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xC33CE2026B8E4F915639CE7769E48DFE16B0C902EC0E4B647E6A06D4AA7916D25BEABA533C477D5A3BF02FC72EE7463A1A803C39618390D5DF7407631796FE51,07 Feb 2016 05:53:03 -0000" />
+<input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
+<input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+<input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+<input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+<input type="hidden" name="_wpSelected" id="_wpSelected" value="" />
+<input type="hidden" name="_wzSelected" id="_wzSelected" value="" />
+<input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+<input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTMxODc3MzU0MRBkZBYCZg9kFgICAQ9kFgQCAQ9kFgICCw9kFgJmD2QWAgIBDxYCHhNQcmV2aW91c0NvbnRyb2xNb2RlCymIAU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYkNvbnRyb2xzLlNQQ29udHJvbE1vZGUsIE1pY3Jvc29mdC5TaGFyZVBvaW50LCBWZXJzaW9uPTE0LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTcxZTliY2UxMTFlOTQyOWMBZAIJD2QWCAIND2QWAgIDD2QWBGYPZBYCAgEPFgIeB1Zpc2libGVoFgJmD2QWBAICD2QWBgIBDxYCHwFoZAIDDxYIHhNDbGllbnRPbkNsaWNrU2NyaXB0BXhqYXZhU2NyaXB0OkNvcmVJbnZva2UoJ1Rha2VPZmZsaW5lVG9DbGllbnRSZWFsJywxLCA1MywgJ2h0dHA6XHUwMDJmXHUwMDJmd3d3LmxlZWRzLmdvdi51a1x1MDAyZmxlaXN1cmUnLCAtMSwgLTEsICcnLCAnJykeGENsaWVudE9uQ2xpY2tOYXZpZ2F0ZVVybGQeKENsaWVudE9uQ2xpY2tTY3JpcHRDb250YWluaW5nUHJlZml4ZWRVcmxkHgxIaWRkZW5TY3JpcHQFIlRha2VPZmZsaW5lRGlzYWJsZWQoMSwgNTMsIC0xLCAtMSlkAgUPFgIfAWhkAgMPDxYKHglBY2Nlc3NLZXkFAS8eD0Fycm93SW1hZ2VXaWR0aAIFHhBBcnJvd0ltYWdlSGVpZ2h0AgMeEUFycm93SW1hZ2VPZmZzZXRYZh4RQXJyb3dJbWFnZU9mZnNldFkC6wNkZAIBD2QWBAIFD2QWAgIBDxAWAh8BaGQUKwEAZAIHD2QWAmYPZBYCZg8UKwADZGRkZAIbD2QWAgIED2QWBgIFDxYCHwALKwQBZAIJDxYCHwALKwQBZAIPDxYCHwALKwQBZAIhD2QWAmYPDxYEHghDc3NDbGFzcwUPc29jaWFsQm9va21hcmtzHgRfIVNCAgJkFgQCAQ9kFgJmDxYCHgRUZXh0BQ9Db25uZWN0IHdpdGggdXNkAgMPFgIeC18hSXRlbUNvdW50AgMWBmYPZBYCZg8VAyZodHRwczovL3d3dy5mYWNlYm9vay5jb20vTGVlZHNjb3VuY2lsLyQvU3R5bGUlMjBMaWJyYXJ5L0ltYWdlcy9mYWNlYm9vay5wbmcIZmFjZWJvb2tkAgEPZBYCZg8VAyBodHRwczovL3R3aXR0ZXIuY29tL2xlZWRzY2NfaGVscCMvU3R5bGUlMjBMaWJyYXJ5L0ltYWdlcy90d2l0dGVyLnBuZwd0d2l0dGVyZAICD2QWAmYPFQMpaHR0cHM6Ly93d3cueW91dHViZS5jb20vdXNlci9MZWVkc2NvdW5jaWwjL1N0eWxlJTIwTGlicmFyeS9JbWFnZXMveW91VHViZS5wbmcHeW91dHViZWQCJw9kFgICAQ9kFgICAQ9kFgJmD2QWAgIBDw9kFgYeBWNsYXNzBSJtcy1zYnRhYmxlIG1zLXNidGFibGUtZXggczQtc2VhcmNoHgtjZWxscGFkZGluZwUBMB4LY2VsbHNwYWNpbmcFATBkZAUmsikX8G/GfNFGCRSPrrV7WnoK" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var MSOWebPartPageFormName = 'aspnetForm';
+var g_presenceEnabled = true;
+var g_wsaEnabled = false;
+var g_wsaLCID = 1033;
+var g_wsaSiteTemplateId = 'BLANKINTERNET#2';
+var g_wsaListTemplateId = 850;
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fleisure", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{50914f48-7cb6-4bcc-b3a7-d9c34ad519f4}",pageItemId:23, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};//]]>
+</script>
+
+<script src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();//]]>
+</script>
+
+
+                    <!-- Handles SharePoint Scripts -->
+                    
+
+                    <!-- Controls the WebParts and Zones -->
+                    
+
+                    <!-- Accessibility -->
+                    <noscript><div class='noindex'>You may be trying to access this site from a secured browser on the server. Please enable scripts and reload this page.</div></noscript>
+                    <div id="TurnOffAccessibility" style="display: none" class="s4-notdlg noindex">
+                        <a id="linkTurnOffAcc" href="#" class="ms-TurnOffAcc" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
+                            Turn off more accessible mode
+                        </a>
+                    </div>
+                    <div class="s4-notdlg s4-skipribbonshortcut noindex">
+                        <a href="javascript:;" onclick="javascript:this.href='#startNavigation';" class="ms-SkiptoNavigation">
+                            Skip Ribbon Commands
+                        </a>
+                    </div>
+                    <div class="s4-notdlg noindex">
+                        <a href="javascript:;" onclick="javascript:this.href='#mainContent';" class="ms-SkiptoMainContent" accesskey="s">
+                            Skip to main content
+                        </a>
+                    </div>
+                    <!-- End Accessibility -->
+                    <!-- Start Hide Ribbon for Anonymous Users -->
+                    
+                    <!-- End Hide Ribbon for Anonymous Users -->
+                    <!-- Start Scrolling Body Area -->
+
+                    <!-- Stick it to the Ribbon -->
+                    <div id="s4-workspace-Disabled" class="mainWorkspace">
+
+                        <!-- Start header -->
+                        <div id="s4-titlerow" class="header s4-notdlg ">
+
+                            <div class="branding">
+                                <a href="/Pages/default.aspx"><span class="sr-only">Leeds City Council Homepage</span></a>
+                            </div>
+                            <div id="bannerDate"></div>
+                            <!-- Start Search -->
+                            <div class="searchControl">
+                                
+                               <script type="text/javascript">
+// <![CDATA[
+         function searchCounter() {
+             var counter = sessionStorage.getItem("searchCount");
+             if (counter == '') {
+                 sessionStorage.setItem("searchCount", 0);
+             }
+             else {
+                 counter++;
+                 sessionStorage.setItem("searchCount", counter);
+             }
+         }
+  // ]]> 
+
+</script>
+    <label class="sr-only" for="txtMainSearch">Search for...</label> 
+    <input type="text" value="Search ..." id="txtMainSearch" class="SearchMainBox" accesskey="S" onkeypress="if (event.keyCode == 13) { window.location.href = '/Pages/search.aspx?k=' + escape(document.getElementById('txtMainSearch').value) + '&u=' + window.location.href.split('?')[0].slice(0, window.location.href.split('?')[0].lastIndexOf('/') + 1).toLowerCase().replace('/pages', ''); }" title="Search ..." onfocus="this.value=''"  onblur=" if(this.value==''){this.value='Search ...';}" />
+    <div class="SearchMainButton">
+    <label class="sr-only" for="btnMainSearch">Website Search</label>   
+    <input type="button" onclick="searchCounter(); window.location.href = '/Pages/search.aspx?k=' + escape(document.getElementById('txtMainSearch').value) + '&u=' + window.location.href.split('?')[0].slice(0, window.location.href.split('?')[0].lastIndexOf('/') + 1).toLowerCase().replace('/pages', ''); " class="button" value="Search" id="btnMainSearch" />
+    <span class="tL"></span><span class="bL"></span>
+    </div>
+    <div style="display:none">
+       <label for="btnMainSearch">Search</label>
+       <label for="txtMainSearch">Go</label>
+    </div>
+
+
+                            </div>
+                            <!-- End Search -->
+
+                            <!-- Start Top Navigation Area -->
+
+                            
+                                
+                                    <div class="nav-wrap noindex">
+
+                                        <ul class="primaryNavigation"><li><a href="http://www.leeds.gov.uk/Pages/default.aspx" id="MegaNav_Resi">Residents<span></span></a></li><li><a href="http://www.leeds.gov.uk/leisure/Pages/default.aspx" id="MegaNav_Leis">Leisure<span></span></a></li><li><a href="http://www.leeds.gov.uk/Business/Pages/default.aspx" id="MegaNav_Busi">Business<span></span></a></li><li><a href="http://www.leeds.gov.uk/council/Pages/default.aspx" id="MegaNav_Your">Your council<span></span></a></li><li><a href="http://www.leeds.gov.uk/Whereilive/Pages/default.aspx" id="MegaNav_Wher">Where I live<span></span></a></li><li><a href="http://www.leeds.gov.uk/events/Pages/default.aspx" id="MegaNav_What">What's on<span></span></a></li><li><a href="https://my.leeds.gov.uk/Pages/default.aspx" id="MegaNav_MyLe">MyLeeds login<span></span></a></li></ul>
+                                    </div>
+
+                                
+                            
+
+
+                            <!-- End Top Navigation Area -->
+
+                            <div class="clear"></div>
+                            <!-- Page Title - Disabled -->
+                            <div style="display: none;">
+                                
+                            </div>
+
+                            <!-- Pages description -->
+                            
+                            
+                            <!-- Start Page Editing Status Bar -->
+                            <div id="s4-statusbarcontainer">
+                                <div id="pageStatusBar" class="s4-status-s1"></div>
+                            </div>
+                            <!-- End Page Editing Status Bar -->
+
+                            <!-- Start Left Nav -->
+                            <div id="s4-leftpanel" class="leftNav s4-notdlg"></div>
+                            <!-- End Left Nav -->
+                        </div>
+                        <!-- End Header -->
+                        <!-- Start Main Content Area -->
+                        <div id="s4-bodyContainer">
+
+                            <div id="s4-mainarea">
+                                
+                                        
+
+                                    
+
+                                <div class='s4-ba'>
+                                    <div class='ms-bodyareacell'>
+                                        <div id="ctl00_MSO_ContentDiv">
+                                            <a id="mainContent"></a>
+                                            <!-- Emergency Message -->
+                                            
+
+                                            
+<div class="mainContainerHome">	
+	<div class="two-thirds column">
+         
+		<div class="breadcrumb">
+        	<div class="tL"><!-- --></div><div class="tR"><!-- --></div>			            
+            <ul><li><a href="/Pages/Default.aspx" class="breadcrumbLink-Link">Home</a></li><li><a href="/leisure/Pages/default.aspx" class="breadcrumbLink-Link">Leisure</a></li><li><a href="/leisure/Pages/Parks-and-countryside.aspx" class="breadcrumbLink-Link">Parks and countryside</a></li><li class="noBorderBackground">Your local park</li></ul> 						
+	    </div> 
+		   <h1>
+			Your local park
+			</h1>
+		         
+	          
+	          
+
+			<div class="highLight">
+				<div id="ctl00_PlaceHolderMain_ctl00_label" style='display:none'>PageOverview</div><div id="ctl00_PlaceHolderMain_ctl00__ControlWrapper_LimitedHTMLFieldControl" class="ms-rtestate-field" style="display:inline" ></div>
+			</div>
+			 <div class="contentPodContainer">  	
+    		  <div class="contentPod contentPod1"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Armley-Park.aspx"><li class="contentPodHeader"><h3><span>Armley Park</span></h3></li></a></ul></div><div class="contentPod contentPod2"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Banstead-Park.aspx"><li class="contentPodHeader"><h3><span>Banstead Park</span></h3></li></a></ul></div><div class="contentPod contentPod3"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Bramley-Park.aspx"><li class="contentPodHeader"><h3><span>Bramley Park</span></h3></li></a></ul></div><div class="contentPod contentPod4"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Calverley-Victoria-Park.aspx"><li class="contentPodHeader"><h3><span>Calverley Victoria Park</span></h3></li></a></ul></div><div class="contentPod contentPod5"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Farnley-Hall-Park.aspx"><li class="contentPodHeader"><h3><span>Farnley Hall Park</span></h3></li></a></ul></div><div class="contentPod contentPod6"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Horsforth-Hall-Park.aspx"><li class="contentPodHeader"><h3><span>Horsforth Hall Park</span></h3></li></a></ul></div><div class="contentPod contentPod7"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Meanwood-Park.aspx"><li class="contentPodHeader"><h3><span>Meanwood Park</span></h3></li></a></ul></div><div class="contentPod contentPod8"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Potternewton-Park.aspx"><li class="contentPodHeader"><h3><span>Potternewton Park</span></h3></li></a></ul></div><div class="contentPod contentPod9"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Pudsey-Park-.aspx"><li class="contentPodHeader"><h3><span>Pudsey Park</span></h3></li></a></ul></div><div class="contentPod contentPod10"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Yeadon-Tarnfield-Park.aspx"><li class="contentPodHeader"><h3><span>Yeadon Tarnfield Park</span></h3></li></a></ul></div><div class="contentPod contentPod11"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Volunteering-with-the-Parks-and-Countryside-Service.aspx"><li class="contentPodHeader"><h3><span>Volunteer</span></h3></li></a></ul></div><div class="contentPod contentPod12"><ul><a href="http://www.leeds.gov.uk/leisure/Pages/Parkswatch.aspx"><li class="contentPodHeader"><h3><span>Parkswatch</span></h3></li></a></ul></div>   	
+    	       	
+    	    </div>
+    	<div class="freeContentArea" style="float:left;width:100%">
+    		<div id="ctl00_PlaceHolderMain_ctl01_label" style='display:none'>Main Body Text</div><div id="ctl00_PlaceHolderMain_ctl01__ControlWrapper_LimitedHTMLFieldControl" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl01_label"><p>There are&#160;62 community parks in Leeds.&#160;&#160;These green spaces contain a variety of facilities including playgrounds, sport pitches and gardens for local people to enjoy.<br/><br/>To find out the location of community parks in your area, go to <a href="http://www.google.co.uk/maps"><strong><span id="ms-rterangecursor-start" style="display: none;"></span>www.google.co.uk/maps<span id="ms-rterangecursor-end" style="display: none;"></span></strong></a>, and enter the park name into the search field. </p>
+<ul><li>Allerton Bywater Sports Ground</li>
+<li>Armley Park</li>
+<li>Banstead Park</li>
+<li>Barley Hill Park</li>
+<li>Becketts Park</li>
+<li>Blenheim Square</li>
+<li>Bramley Falls Wood Park</li>
+<li>Bramley Park</li>
+<li>Burley Park</li>
+<li>Calverley Park (Victoria Park)</li>
+<li>Chapel Allerton Park</li>
+<li>Churwell Park</li>
+<li>Cranmore Recreation Ground</li>
+<li>Cross Flatts Park</li>
+<li>Dartmouth Park</li>
+<li>Drighlington Moor Park</li>
+<li>East End Park</li>
+<li>Farnley Hall Park</li>
+<li>Glebelands Rec, Ninelands Lane</li>
+<li>Gotts Park</li>
+<li>Grove Hill Park, Otley</li>
+<li>Grove Road Recreation Ground</li>
+<li>Guiseley Nethermoor Park</li>
+<li>Hainsworth Park</li>
+<li>Halton Dene - Primrose Valley</li>
+<li>Harehills Park</li>
+<li>Hartley Avenue Park</li>
+<li>Holbeck Moor</li>
+<li>Holt Park</li>
+<li>Horsforth Hall Park</li>
+<li>Hunslet Lake</li>
+<li>Hunslet Moor</li>
+<li>Kirk Lane Park</li>
+<li>Lewisham Park</li>
+<li>Ley Lane</li>
+<li>Lovell Park</li>
+<li>Manston Park</li>
+<li>Meanwood Park</li>
+<li>Micklefield Park, Rawdon</li>
+<li>New Farnley Park</li>
+<li>New Wortley Recreation Ground</li>
+<li>Nowell Mount</li>
+<li>Nunroyd Park, Guiseley</li>
+<li>Penny Pocket Park</li>
+<li>Potternewton Park</li>
+<li>Pudsey Park</li>
+<li>Rodley Park Recreation Ground</li>
+<li>Rothwell Country Park</li>
+<li>Scarth Gardens</li>
+<li>Scatcherd Park</li>
+<li>Springhead Park</li>
+<li>Stanningley Park</li>
+<li>Tarnfield Park, Yeadon</li>
+<li>Tennant Hall POS</li>
+<li>The Hollies</li>
+<li>The Rein</li>
+<li>Tyersal Park</li>
+<li>Western Flatts Cliff Park</li>
+<li>Westroyd Park</li>
+<li>Wharfemeadows Park, Otley</li>
+<li>Whinmoor Park, Coal Road</li>
+<li>Woodhouse Moor Park</li></ul>
+<p class="limitedrte-Style-blockquote"><strong>Volunteer groups</strong></p>
+<p>Some community parks have &#39;Friends of&#39; groups and volunteer groups that work in partnership with the Parks and Countryside service to keep them in top condition. To find out more about these, visit our <strong>Volunteer </strong>page.</p>
+<p><span class="limitedrte-Style-blockquote"><strong>Events</strong></span></p>
+<p><span class="limitedrte-Style-blockquote">To find out about events being held in parks,&#160;take a look at the <strong>Parks and Countryside Events leaflet </strong>link in this page.</span></p>
+<p><span class="limitedrte-Style-blockquote">Throughout the summer, many parks play host to music in bandstands as part of the International Concert Season.&#160;For details of who is&#160;playing where, visit the International Concert Season website in the <strong>External Links</strong> section of this page.</span></p>
+<p><span class="limitedrte-Style-blockquote"><strong>Contact us</strong></span></p>
+<p><span class="limitedrte-Style-blockquote"></span>If you would like information about any of these sites, please contact the Parks and Countryside service:</p>
+<ul><li><strong>Online</strong> - go to the email link on this page and fill in the&#160;online form</li>
+<li><strong>Telephone</strong> -&#160;call us on 0113 3957400</li>
+<li><strong>Email</strong> - email us at <a href="mailto:parks@leeds.gov.uk"><strong>parks@leeds.gov.uk</strong></a></li>
+<li><strong>Safety issues in parks</strong> - please&#160;use the <strong>Parkswatch</strong> link towards&#160;the top of this page</li></ul>
+​</div>
+    	</div>
+    	  	
+    	<!-- start mandatory fields -->
+      	<div class="lccMandatoryFields">
+    	
+	    </div>
+        <!-- end mandatory fields    -->
+
+    </div><!-- mainContent -->
+    	
+    <div class="one-third column">
+      
+    <div class="clear"><!-- --></div>   	 		
+   		<div class="socialBookmarks">
+         	<h2>Follow us:</h2><ul><li><a href='http://www.facebook.com/leedsparks'><img alt='facebook' src='/_layouts/images/standard/facebook.png' /></a></li><li><a href='http://www.twitter.com/leedsparks'><img alt='twitter' src='/_layouts/images/standard/twitter.png' /></a></li></ul><div class="clear"><!-- --></div><div class="bL"><!-- --></div><div class="bR"><!-- --></div>
+        </div>
+         
+        <div class="promo"><a href='/docs/parks%20and%20countryside%20events%20booklet.pdf'><img alt ='people watching live music in a park' src='/PublishingImages/Promo%20images/bands-in-the-park.jpg'></img><span>See all our Parks and Countryside events - opens as a PDF (6.5MB)</span></a></div><div class="promo"><a href='/leisure/Pages/Leeds-Botanical---Gardens-Tour.aspx'><img alt ='Group of people in a park with the site manager' src='/PublishingImages/Promo%20images/GardenToursPromo.jpg'></img><span>Love gardening? Find out about our group tours of Leeds parks</span></a></div>   	
+   		<div  class="userControl">              
+	         <h2>Events</h2><ul class="eventList"><li><div class="eventDate">07</div><div class="eventContent"><a href="http://www.leeds.gov.uk/Events/Pages/english-class-at-leeds-refugee-forum.aspx">English class at Leeds Refugee Forum</a><p class="date">Learning English<br />07 February 2016 - 1:00pm</p></div><div class="clear"><!-- --></div></li><li><div class="eventDate">07</div><div class="eventContent"><a href="http://www.leeds.gov.uk/Events/Pages/armley-chatterbooks.aspx">Armley Chatterbooks</a><p class="date">Armley library<br />07 February 2016 - 4:00pm</p></div><div class="clear"><!-- --></div></li><li><div class="eventDate">07</div><div class="eventContent"><a href="http://www.leeds.gov.uk/Events/Pages/rothwell-readers-group.aspx">Rothwell Reader's Group</a><p class="date">Rothwell library<br />07 February 2016 - 5:30pm</p></div><div class="clear"><!-- --></div></li><li class="allEvents"><a href="/events">All events</a><a class="floatRight" href="http://www.leeds.gov.uk/Events/_layouts/listfeed.aspx?List=%7BF1E6408C%2D3860%2D4A6C%2D9226%2DE3DC9BDA1E13%7D&amp;Source=http%3A%2F%2Fwww%2Esdeleeds%2Ea%2FEvents%2FPages%2FForms%2FAllItems%2Easpx"><img src="_layouts/images/standard/rssIcon.png" alt="rssIcon" /></a></li></ul><div class="clear"><!-- --></div>         
+	    </div>
+              
+		<div id="ctl00_m_g_9c33fcf3_5b24_4b79_a585_9f81709af094">
+
+</div>
+        
+    </div>    
+    
+</div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End Main Content Area -->
+                        <!-- Footer -->
+                        
+                        <div class="footer container s4-notdlg noindex">
+                            <div class="footerNavigation noindex">
+                                <ul><li><a href="/leisure/Pages/Libraries.aspx">Libraries</a></li><li><a href="http://democracy.leeds.gov.uk/mgMemberIndex.aspx?bcr=1&amp;amp%3blccnavid=100004%7c200033%7c358">Local councillors</a></li><li><a href="/museumsandgalleries/Pages/default.aspx">Museums and galleries</a></li><li><a href="/residents/Pages/Parking-in-Leeds.aspx">Parking in Leeds</a></li><li><a href="/sports/Pages/default.aspx">Sport and active lifestyles</a></li></ul>
+                            </div>
+                            <div class="utilities">
+                                <ul class="utilitiesList">
+                                    <li><a href="/pages/AtoZ.aspx">A to Z</a></li>
+                                    <li><a href="/pages/TermsAndConditions.aspx" accesskey="8">Terms and conditions</a></li>
+                                    <li class="noBorder"><a href="/pages/PrivacyStatement.aspx">Privacy statement</a></li>
+                                </ul>
+                                <div class="content_9 floatLeft marginTop10 noindex">                                   
+                                        <img class="floatLeft" src="/_layouts/images/standard/FooterlccLogo.png" alt="Leeds City Council" />
+                                    <p>Official local authority website for Leeds providing information on local services.</p>
+                                </div>
+
+                                <div class="content_4 floatLeft">
+                                    <div id="ctl00_SocialMediaLinks">
+	<div id="ctl00_SocialMediaLinks_pnlSocialMediaLinks" class="socialBookmarks">
+		
+    <h2 id="ctl00_SocialMediaLinks_headerTag">Connect with us</h2>
+    <ul>
+
+        <li>
+            <a href="https://www.facebook.com/Leedscouncil/" >
+                <span class="sr-only">Opens external website</span>
+                <img src="/Style%20Library/Images/facebook.png" alt="facebook" />
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://twitter.com/leedscc_help" >
+                <span class="sr-only">Opens external website</span>
+                <img src="/Style%20Library/Images/twitter.png" alt="twitter" />
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.youtube.com/user/Leedscouncil" >
+                <span class="sr-only">Opens external website</span>
+                <img src="/Style%20Library/Images/youTube.png" alt="youtube" />
+            </a>
+        </li>
+    
+        </ul>
+
+	</div>
+
+</div>
+                                </div>
+                                
+                            </div>
+                            <div class="bottom noindex">
+                                <p>&copy; LCC Leeds City Council | 2013</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <!-- =====  End scrolling body area with these two previous div's ============================================================ -->
+
+                    <!-- The form digest security control used to for security validation on forms -->
+                    
+                        
+                    
+
+
+
+                    <!-- =====  Hidden Placeholders ============================================================ -->
+                    
+
+                    <!-- Handle Search "Enter" Key and Back Button -->
+                    <div style="display: none;">
+                        <label for="__spText1">__spText1</label>
+                        <input type="text" name="__spText1" id="__spText1" style="display: none;" size="1" />
+                        <label for="__spText2">__spText2</label>
+                        <input type="text" name="__spText2" id="__spText2" style="display: none;" size="1" />
+                    </div>
+
+                <div id="ctl00_panelZone">
+	<div style='display:none' id='hidZone'></div>
+</div><div><input type='hidden' id='_wpcmWpid' name='_wpcmWpid' value='' /></div><div><input type='hidden' id='wpcmVal' name='wpcmVal' value=''/></div>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F037CAE9" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var _spFormDigestRefreshInterval = 1440000;window.g_updateFormDigestPageLoaded = new Date(); window.g_updateFormDigestPageLoaded.setDate(window.g_updateFormDigestPageLoaded.getDate() -5);
+function EnsureScripts(scriptInfoList, finalFunction)
+{
+if (scriptInfoList.length == 0)
+{
+finalFunction();
+}
+else
+{
+var scriptInfo = scriptInfoList.shift();
+var rest = function () { EnsureScripts(scriptInfoList, finalFunction); };
+var defd;
+try
+{
+eval('defd = typeof(' + scriptInfo[1] + ');');
+}
+catch (e)
+{
+defd = 'undefined';
+}
+if (scriptInfo[2])
+{
+EnsureScript(scriptInfo[0], defd, null);
+ExecuteOrDelayUntilScriptLoaded(rest, scriptInfo[0]);
+}
+else
+{
+EnsureScript(scriptInfo[0], defd, rest);
+}
+}
+}
+function PublishingRibbonUpdateRibbon()
+{
+var pageManager = SP.Ribbon.PageManager.get_instance();
+if (pageManager)
+{
+pageManager.get_commandDispatcher().executeCommand('appstatechanged', null);
+}
+}var _fV4UI = true;
+function _RegisterWebPartPageCUI()
+{
+    var initInfo = {editable: false,isEditMode: false,allowWebPartAdder: false,listId: "{50914f48-7cb6-4bcc-b3a7-d9c34ad519f4}",itemId: 23,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: false,forceCheckout: true,rootFolderUrl: "\u002fleisure\u002fPages",itemPermissions:{High:16,Low:196673}};
+    SP.Ribbon.WebPartComponent.registerWithPageManager(initInfo);
+    var wpcomp = SP.Ribbon.WebPartComponent.get_instance();
+    var hid;
+    hid = document.getElementById("_wpSelected");
+    if (hid != null)
+    {
+        var wpid = hid.value;
+        if (wpid.length > 0)
+        {
+            var zc = document.getElementById(wpid);
+            if (zc != null)
+                wpcomp.selectWebPart(zc, false);
+        }
+    }
+    hid = document.getElementById("_wzSelected");
+    if (hid != null)
+    {
+        var wzid = hid.value;
+        if (wzid.length > 0)
+        {
+            wpcomp.selectWebPartZone(null, wzid);
+        }
+    }
+}
+ExecuteOrDelayUntilScriptLoaded(_RegisterWebPartPageCUI, "sp.ribbon.js"); var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';//]]>
+</script>
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type="text/javascript">RegisterSod("sp.core.js", "\u002f_layouts\u002fsp.core.js?rev=7ByNlH\u00252BvcgRJg\u00252BRCctdC0w\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=b6\u00252FcRx1a6orhAQ\u00252FcF\u00252B0ytQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002fsp.ui.dialog.js?rev=Tpcmo1\u00252FSu6R0yewHowDl5g\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.core.js");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f1033\u002fcore.js?rev=Emb5hNX1RZMNXk9oS82yvA\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.runtime.js", "\u002f_layouts\u002fsp.runtime.js?rev=IGffcZfunndj0247nOxKVg\u00253D\u00253D");RegisterSodDep("sp.runtime.js", "sp.core.js");RegisterSodDep("sp.runtime.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002fsp.js?rev=\u00252B4ZEyA892P3T0504qi0paw\u00253D\u00253D");RegisterSodDep("sp.js", "sp.core.js");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("cui.js", "\u002f_layouts\u002fcui.js?rev=OOyJv78CADNBeet\u00252FvTvniQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002finplview.js?rev=WB6Gy8a027aeNCq7koVCUg\u00253D\u00253D");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
+<script type="text/javascript">RegisterSod("ribbon", "\u002f_layouts\u002fsp.ribbon.js?rev=F\u00252BUEJ66rbXzSvpf7nN69wQ\u00253D\u00253D");RegisterSodDep("ribbon", "core.js");RegisterSodDep("ribbon", "sp.core.js");RegisterSodDep("ribbon", "sp.js");RegisterSodDep("ribbon", "cui.js");RegisterSodDep("ribbon", "sp.res.resx");RegisterSodDep("ribbon", "sp.runtime.js");RegisterSodDep("ribbon", "inplview");</script>
+<script type="text/javascript">RegisterSod("sp.publishing.resources.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252EPublishing\u00252EResources\u0026rev=q6nxzZIVVXE5X1SPZIMD3A\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.pub.ribbon.js", "\u002f_layouts\u002fsp.ui.pub.ribbon.js?rev=RGQSBI9Dm0E345iq\u00252FxUpHg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("msstring.js", "\u002f_layouts\u002f1033\u002fmsstring.js?rev=QtiIcPH3HV7LgVSO7vONFg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f1033\u002fnon_ie.js?rev=EVTj1bu32\u00252FMla6SDN\u00252FsNTA\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSodDep("browserScript", "msstring.js");</script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+
+            </div>
+            <!-- End Body Container -->
+            <!-- Start Developer Dashboard -->
+            
+            <!-- End Developer Dashboard -->
+
+            <!-- Additional Form instances -->
+            
+
+            <!-- Old browsers warning -->
+            
+            <script type="text/javascript">
+                // <![CDATA[
+                var searchWord = getParameterByName('k');
+                var numberOfHits = get_searchHits();
+                // ]]> 
+            </script>
+
+            <script type="text/javascript">
+                $(document).ready(function() {
+
+                    equalheight = function(container) {
+
+                        var currentTallest = 0,
+                            currentRowStart = 0,
+                            rowDivs = new Array(),
+                            $el,
+                            topPosition = 0;
+                        $(container).each(function() {
+
+                            $el = $(this);
+                            $($el).height('auto');
+                            topPostion = $el.position().top;
+
+                            if (currentRowStart !== topPostion) {
+                                for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+                                    rowDivs[currentDiv].height(currentTallest);
+                                }
+                                rowDivs.length = 0; // empty the array
+                                currentRowStart = topPostion;
+                                currentTallest = $el.height();
+                                rowDivs.push($el);
+                            } else {
+                                rowDivs.push($el);
+                                currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+                            }
+                            for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv++) {
+                                rowDivs[currentDiv].height(currentTallest);
+                            }
+                        });
+                    }
+
+                    $(window).load(function() {
+                        equalheight('.contentPodHeader h3');
+                    });
+
+
+                    $(window).resize(function() {
+                        equalheight('.contentPodHeader h3');
+                    });
+                });
+            </script>
+
+        </div>
+    </div>
+    <!-- end lccBodyContainer -->
+</body>
+</html>
+<!-- Rendered using cache profile:Public Internet (Purely Anonymous) at: 2016-02-07T05:53:03 -->

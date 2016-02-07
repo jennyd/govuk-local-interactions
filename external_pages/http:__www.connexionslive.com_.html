@@ -1,0 +1,664 @@
+
+<!doctype html>
+<html>
+<head id="ctl00_headerTag">
+<!--[if IE 7]>    <html class="ie7 ie">    <![endif]-->
+<!--[if IE 8]>    <html class="ie8 ie">    <![endif]-->
+<!--[if IE 9]>    <html class="ie9 ie">    <![endif]-->
+<meta charset="utf-8" /><meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" name="viewport" /><title>
+	Career Connect
+</title><link href="css/normalize.css" type="text/css" rel="stylesheet" /><link href="css/styles.css" type="text/css" rel="stylesheet" /><link href="css/mobile.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" /><link href="scripts/sidr/css/jquery.sidr.dark.css" rel="stylesheet" /><link type="text/css" rel="stylesheet" href="scripts/datepicker/css/ui-lightness/jquery-ui-1.10.4.custom.css" /><link rel="icon" type="image/png" href="favicon.png" /><script type="text/javascript" src="scripts/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="scripts/selectivizr-min.js"></script>
+<script type="text/javascript" src="scripts/modernizr.custom.29520.js"></script>
+<script type="text/javascript" src="scripts/sidr/jquery.sidr.min.js"></script>
+<script type="text/javascript" src="scripts/overlabel.js"></script>
+<script type="text/javascript" src="scripts/jquery.flexslider.js"></script>
+<script type="text/javascript" src="scripts/accordion.js"></script>
+<script type="text/javascript" src="scripts/datepicker/js/jquery-ui-1.10.4.custom.js"></script>
+
+<script src="//use.typekit.net/lhb1chv.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+<script>if(Function('/*@cc_on return 10===document.documentMode@*/')()){document.documentElement.className='ie';}
+</script>
+<script>if(Function('/*@cc_on return 11===document.documentMode@*/')()){document.documentElement.className='ie';}
+</script>
+<script>
+$(document).ready(function(){	
+	$(function() {
+		$(".accordion").Accordion({	
+				openItems: 0,	
+				toggler : ".accordion_header",
+				container : ".resourceContainer",
+				toggle : true
+			});
+	});
+	
+	$(function() {
+		$(".datepicker").datepicker({ dateFormat: 'dd-mm-yy' });
+	});
+
+	$("label.overlabel").overlabel();
+	
+	$('#simple-menu').sidr({
+		displace:true,
+		side:'right'
+	});
+	$(".closemenu").click(function(){
+	  $.sidr('close', 'sidr');
+	});
+	
+	$('#main_nav li ul').hide().removeClass('fallback');
+		$('#main_nav li').hover(
+		  function () {
+			$('ul', this).stop().slideDown(0);
+		  },
+		  function () {
+			$('ul', this).stop().slideUp(0);
+		  }
+	);
+	
+	$("#login_icon").click(function(){	  
+	  $('#ctl00_Panel_Login').toggleClass('login_form_slide');  	  
+	 });
+	 
+	$("#tools_icon").click(function(){	  
+	  $('#ctl00_Panel_Tools').toggleClass('login_form_slide');  	  
+	 });
+	 	 
+	 $("#star1").click(function(){	  
+	  $('#rating_bg').css('width','19%');  	  
+	 });
+	 
+	 $("#star2").click(function(){	  
+	  $('#rating_bg').css('width','38%');  	  
+	 });
+	 
+	 $("#star3").click(function(){	  
+	  $('#rating_bg').css('width','57%');  	  
+	 });
+	 
+	 $("#star4").click(function(){	  
+	  $('#rating_bg').css('width','76%');  	  
+	 });
+	 
+	 $("#star5").click(function(){	  
+	  $('#rating_bg').css('width','95%');  	  
+	 });
+	 
+	 $('.flexslider').flexslider({
+		animation: 'fade',
+		animationLoop: true,             //Boolean: Should the animation loop? If false, directionNav will received "disable" classes at either end
+		slideshow: true,                //Boolean: Animate slider automatically
+		slideshowSpeed: 6000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
+		animationSpeed: 800,             //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+		pauseOnHover: true, 
+		pauseOnAction:false,
+		controlNav: false,
+		directionNav: false,
+		start: function(slider) {			 
+			/* $('.flex-active-slide').find('h1').animate({ left: '2.5%', top: '30%', opacity: '1'}, 2000);
+			 $('.flex-active-slide').find('div.button').animate({ left: '40%', top: '80%', opacity: '1'}, 2000);			 
+			 
+			 // remove class loading after start
+			 slider.removeClass('loading');*/
+		},
+		before: function(slider) {
+			 /*$('.flex-active-slide').find('h1').animate({ left: '200%', top: '30%', opacity: '0'}, 2000);
+			 $('.flex-active-slide').find('div.button').animate({ left: '-200%', top: '80%', opacity: '0'}, 2000);*/
+		},
+		after: function(slider) {
+			/* $('.flex-active-slide').find('h1').animate({ left: '2.5%', top: '30%', opacity: '1'}, 2000);
+			 $('.flex-active-slide').find('div.button').animate({ left: '40%', top: '80%', opacity: '1'}, 2000);*/		
+		}
+	});
+	
+	$('.portal_box').hover(function(){
+		var myObject = $(this).find('.info_text');
+		myObject.toggleClass('show');
+	});
+});
+</script>
+<script type="text/javascript">
+if(navigator.userAgent.match(/iPad/i)) {
+	viewport = document.querySelector("meta[name=viewport]");
+	viewport.setAttribute('content', 'width=1200');
+}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19123645-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<meta name="description" /><meta name="keywords" /></head>
+
+<body>
+<form name="aspnetForm" method="post" action="Default.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE5ODk0MjcyMzAPZBYCZg9kFgQCAQ9kFgICCw8WAh4EVGV4dAXyBDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9InNjcmlwdHMvanF1ZXJ5LTEuMTEuMC5taW4uanMiPjwvc2NyaXB0Pg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0ic2NyaXB0cy9zZWxlY3Rpdml6ci1taW4uanMiPjwvc2NyaXB0Pg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0ic2NyaXB0cy9tb2Rlcm5penIuY3VzdG9tLjI5NTIwLmpzIj48L3NjcmlwdD4NCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9InNjcmlwdHMvc2lkci9qcXVlcnkuc2lkci5taW4uanMiPjwvc2NyaXB0Pg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0ic2NyaXB0cy9vdmVybGFiZWwuanMiPjwvc2NyaXB0Pg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiIHNyYz0ic2NyaXB0cy9qcXVlcnkuZmxleHNsaWRlci5qcyI+PC9zY3JpcHQ+DQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJzY3JpcHRzL2FjY29yZGlvbi5qcyI+PC9zY3JpcHQ+DQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJzY3JpcHRzL2RhdGVwaWNrZXIvanMvanF1ZXJ5LXVpLTEuMTAuNC5jdXN0b20uanMiPjwvc2NyaXB0Pg0KZAIDD2QWEgIFDxYCHgtfIUl0ZW1Db3VudAIGFgxmD2QWAgIBDw8WAh4LTmF2aWdhdGVVcmwFFFlvdW5nLVBlb3BsZS1pMi5odG1sZBYCZg8VAQxZb3VuZyBQZW9wbGVkAgEPZBYCAgEPDxYCHwIFEEJ1c2luZXNzLWkzLmh0bWxkFgJmDxUBCEJ1c2luZXNzZAICD2QWAgIBDw8WAh8CBQ5BZHVsdHMtaTQuaHRtbGQWAmYPFQEGQWR1bHRzZAIDD2QWAgIBDw8WAh8CBRtTY2hvb2wtYW5kLUNvbGxlZ2VzLWk1Lmh0bWxkFgJmDxUBEFNjaG9vbHMvQ29sbGVnZXNkAgQPZBYCAgEPDxYCHwIFD1BhcmVudHMtaTcuaHRtbGQWAmYPFQEHUGFyZW50c2QCBQ9kFgICAQ8PFgIfAgULQ1BELWk4Lmh0bWxkFgJmDxUBA0NQRGQCBw8WAh8BAgwWGGYPZBYCAgEPDxYEHwIFDENvbnRhY3QuYXNweB8ABRZDb250YWN0IENhcmVlciBDb25uZWN0ZGQCAQ9kFgICAQ8PFgQfAgURQWNoaWV2ZS1pMTQyLmh0bWwfAAUZQWNoaWV2ZSBOb3J0aHdlc3QgQ29ubmVjdGRkAgIPZBYCAgEPDxYEHwIFHk1hbmNoZXN0ZXJDb25uZXhpb25zLWkxNjkuaHRtbB8ABRVNYW5jaGVzdGVyIENvbm5leGlvbnNkZAIDD2QWAgIBDw8WBB8CBRxTYWxmb3JkLUNvbm5leGlvbnMtaTEzNy5odG1sHwAFElNhbGZvcmQgQ29ubmV4aW9uc2RkAgQPZBYCAgEPDxYEHwIFDEZpbmRfdXMuYXNweB8ABQdGaW5kIFVzZGQCBQ9kFgICAQ8PFgQfAgURQ2FzZV9zdHVkaWVzLmFzcHgfAAUMQ2FzZSBTdHVkaWVzZGQCBg9kFgICAQ8PFgQfAgUTV2hvLVdlLUFyZS1pNDkuaHRtbB8ABQpXaG8gV2UgQXJlZGQCBw9kFgICAQ8PFgQfAgUQV29ya19mb3JfdXMuYXNweB8ABQtXb3JrIEZvciBVc2RkAggPZBYCAgEPDxYEHwIFDVJlZ2lzdGVyLmFzcHgfAAUIUmVnaXN0ZXJkZAIJD2QWAgIBDw8WBB8CBQpMb2dpbi5hc3B4HwAFBUxvZ2luZGQCCg9kFgICAQ8PFgQfAgUVU3RhZmYtUG9ydGFsLWk1NC5odG1sHwAFDFN0YWZmIFBvcnRhbGRkAgsPZBYCAgEPDxYEHwIFD0xlZ2FsLWkxMDcuaHRtbB8ABQVMZWdhbGRkAg0PZBYCAgEPFgIeBXN0eWxlBQ1kaXNwbGF5Om5vbmU7FgJmDxYCHwAFBiZuYnNwO2QCEQ8WAh8BAgYWDAIBD2QWBgIDDw8WAh8CBRRZb3VuZy1QZW9wbGUtaTIuaHRtbGQWAmYPFQEMWW91bmcgUGVvcGxlZAIFDxYCHwECAxYKZg9kFgICAQ8WAh8ABSI8ZGl2IGNsYXNzPSJkcm9wZG93biIgaWQ9Im1lbnVfMSI+ZAIBD2QWAgIBD2QWBgIBDw8WAh8CBRZDYXJlZXJzLUFkdmljZS1pOS5odG1sZBYCZg8VAQ5DYXJlZXJzIEFkdmljZWQCAw8PFgIeCEltYWdlVXJsBSF1cGxvYWRlZGZpbGVzL2ltYWdlcy9tZW51aW1nMS5qcGdkZAIFDxYCHwECBRYKZg9kFgICAQ8PFgIfAgUcRXhwbG9yZS1Zb3VyLUZ1dHVyZS1pODIuaHRtbGQWAmYPFQETRXhwbG9yZSBZb3VyIEZ1dHVyZWQCAQ9kFgICAQ8PFgIfAgUXTWFrZS1EZWNpc2lvbnMtaTgzLmh0bWxkFgJmDxUBDk1ha2UgRGVjaXNpb25zZAICD2QWAgIBDw8WAh8CBRdNYWtlLUl0LUhhcHBlbi1pODQuaHRtbGQWAmYPFQEOTWFrZSBJdCBIYXBwZW5kAgMPZBYCAgEPDxYCHwIFIUdldHRpbmctVGhlLVJpZ2h0LUFkdmljZS1pODUuaHRtbGQWAmYPFQEYR2V0dGluZyBUaGUgUmlnaHQgQWR2aWNlZAIED2QWAgIBDw8WAh8CBRFQYXRod2F5cy1pNjUuaHRtbGQWAmYPFQEIUGF0aHdheXNkAgIPZBYCAgEPZBYGAgEPDxYCHwIFE0pvYi1TZWFyY2gtaTEwLmh0bWxkFgJmDxUBCkpvYiBTZWFyY2hkAgMPDxYCHwQFIXVwbG9hZGVkZmlsZXMvaW1hZ2VzL21lbnVpbWcyLmpwZ2RkAgUPFgIfAQIFFgpmD2QWAgIBDw8WAh8CBRZDcmVhdGluZy1hLUNWLWk4Ni5odG1sZBYCZg8VAQ1DcmVhdGluZyBhIENWZAIBD2QWAgIBDw8WAh8CBRdJbnRlcnZpZXctVGlwcy1pODcuaHRtbGQWAmYPFQEOSW50ZXJ2aWV3IFRpcHNkAgIPZBYCAgEPDxYCHwIFGUFzc2Vzc21lbnQtVGVzdHMtaTg4Lmh0bWxkFgJmDxUBEEFzc2Vzc21lbnQgVGVzdHNkAgMPZBYCAgEPDxYCHwIFGFdvcmstRXhwZXJpZW5jZS1pODkuaHRtbGQWAmYPFQEPV29yayBFeHBlcmllbmNlZAIED2QWAgIBDw8WAh8CBSBTZWFzb25hbC0tUGFydFRpbWUtV29yay1pOTAuaHRtbGQWAmYPFQEZU2Vhc29uYWwgJiBQYXJ0LVRpbWUgV29ya2QCAw9kFgICAQ9kFgYCAQ8PFgIfAgUYU2VsZi1Bc3Nlc3NtZW50LWkxMS5odG1sZBYCZg8VAQ9TZWxmIEFzc2Vzc21lbnRkAgMPDxYCHwQFIXVwbG9hZGVkZmlsZXMvaW1hZ2VzL21lbnVpbWczLmpwZ2RkAgUPFgIfAQICFgRmD2QWAgIBDw8WAh8CBRhMZWFybmluZy1TdHlsZXMtaTkxLmh0bWxkFgJmDxUBD0xlYXJuaW5nIFN0eWxlc2QCAQ9kFgICAQ8PFgIfAgUhUXVhbGlmaWNhdGlvbnMtRXhwbGFpbmVkLWk5Mi5odG1sZBYCZg8VARhRdWFsaWZpY2F0aW9ucyBFeHBsYWluZWRkAgQPZBYCAgEPFgIfAAUGPC9kaXY+ZAIHDxYEHwEC/////w8eB1Zpc2libGVoZAICD2QWBgIDDw8WAh8CBRBCdXNpbmVzcy1pMy5odG1sZBYCZg8VAQhCdXNpbmVzc2QCBQ8WBB8BAv////8PHwVoZAIHDxYCHwECBBYMZg9kFgQCAQ8WAh8ABSg8ZGl2IGNsYXNzPSJkcm9wZG93biIgaWQ9Im9uZWNvbG1lbnVfMiI+ZAIDDw8WAh8EBSZ1cGxvYWRlZGZpbGVzL2ltYWdlcy9tZW51X2J1c2luZXNzLmpwZ2RkAgEPZBYCAgEPDxYCHwIFDkNFSUFHLWkxMi5odG1sZBYCZg8VAQtSZWNydWl0bWVudGQCAg9kFgICAQ8PFgIfAgUaSm9icy1mb3ItVG9tb3Jyb3ctaTEzLmh0bWxkFgJmDxUBEEFzc2Vzc21lbnQgVG9vbHNkAgMPZBYCAgEPDxYCHwIFEUFsc28tU2VlLWkxNC5odG1sZBYCZg8VAQhUcmFpbmluZ2QCBA9kFgICAQ8PFgIfAgURUmVzZWFyY2gtaTY2Lmh0bWxkFgJmDxUBCFJlc2VhcmNoZAIFD2QWAgIBDxYCHwAFBjwvZGl2PmQCAw9kFgYCAw8PFgIfAgUOQWR1bHRzLWk0Lmh0bWxkFgJmDxUBBkFkdWx0c2QCBQ8WBB8BAv////8PHwVoZAIHDxYCHwECAxYKZg9kFgQCAQ8WAh8ABSg8ZGl2IGNsYXNzPSJkcm9wZG93biIgaWQ9Im9uZWNvbG1lbnVfMyI+ZAIDDw8WAh8EBSR1cGxvYWRlZGZpbGVzL2ltYWdlcy9tZW51X2FkdWx0cy5qcGdkZAIBD2QWAgIBDw8WAh8CBSJOYXRpb25hbC1DYXJlZXJzLVNlcnZpY2UtaTEyNS5odG1sZBYCZg8VARhOYXRpb25hbCBDYXJlZXJzIFNlcnZpY2VkAgIPZBYCAgEPDxYCHwIFGUNhcmVlci1Db2FjaGluZy1pMTI2Lmh0bWxkFgJmDxUBD0NhcmVlciBDb2FjaGluZ2QCAw9kFgICAQ8PFgIfAgUcUmVkdW5kYW5jeS1TdXBwb3J0LWkxMjcuaHRtbGQWAmYPFQESUmVkdW5kYW5jeSBTdXBwb3J0ZAIED2QWAgIBDxYCHwAFBjwvZGl2PmQCBA9kFgYCAw8PFgIfAgUbU2Nob29sLWFuZC1Db2xsZWdlcy1pNS5odG1sZBYCZg8VARBTY2hvb2xzL0NvbGxlZ2VzZAIFDxYEHwEC/////w8fBWhkAgcPFgIfAQIGFhBmD2QWBAIBDxYCHwAFKDxkaXYgY2xhc3M9ImRyb3Bkb3duIiBpZD0ib25lY29sbWVudV80Ij5kAgMPDxYCHwQFJXVwbG9hZGVkZmlsZXMvaW1hZ2VzL21lbnVfc2Nob29scy5qcGdkZAIBD2QWAgIBDw8WAh8CBR1BYm91dC1BZHVsdC1TZXJ2aWNlcy1pMTUuaHRtbGQWAmYPFQEaQ2FyZWVyIE1hbmFnZW1lbnQgU2VydmljZXNkAgIPZBYCAgEPDxYCHwIFF1N0YWZmLVRyYWluaW5nLWkxNi5odG1sZBYCZg8VAQ5TdGFmZiBUcmFpbmluZ2QCAw9kFgICAQ8PFgIfAgUWUXVhbGl0eS1Bd2FyZC1pNzMuaHRtbGQWAmYPFQENUXVhbGl0eSBBd2FyZGQCBA9kFgICAQ8PFgIfAgUbSm9icy1Gb3ItVG9tb3Jyb3ctaTEwOS5odG1sZBYCZg8VARFKb2JzIEZvciBUb21vcnJvd2QCBQ9kFgICAQ8PFgIfAgUZQXNzZXNzbWVudC1Ub29scy1pNzQuaHRtbGQWAmYPFQEQQXNzZXNzbWVudCBUb29sc2QCBg9kFgICAQ8PFgIfAgUNUHJvZHVjdHMuYXNweGQWAmYPFQEIUHJvZHVjdHNkAgcPZBYCAgEPFgIfAAUGPC9kaXY+ZAIFD2QWBgIDDw8WAh8CBQ9QYXJlbnRzLWk3Lmh0bWxkFgJmDxUBB1BhcmVudHNkAgUPFgQfAQL/////Dx8FaGQCBw8WAh8BAgUWDmYPZBYEAgEPFgIfAAUoPGRpdiBjbGFzcz0iZHJvcGRvd24iIGlkPSJvbmVjb2xtZW51XzUiPmQCAw8PFgIfBAUldXBsb2FkZWRmaWxlcy9pbWFnZXMvbWVudV9wYXJlbnRzLmpwZ2RkAgEPZBYCAgEPDxYCHwIFEENhcmVlcnMtaTc4Lmh0bWxkFgJmDxUBB0NhcmVlcnNkAgIPZBYCAgEPDxYCHwIFDUpvYnMtaTc5Lmh0bWxkFgJmDxUBBEpvYnNkAgMPZBYCAgEPDxYCHwIFGUFzc2Vzc21lbnQtVG9vbHMtaTgwLmh0bWxkFgJmDxUBEEFzc2Vzc21lbnQgVG9vbHNkAgQPZBYCAgEPDxYCHwIFGUhpZ2hlci1FZHVjYXRpb24taTgxLmh0bWxkFgJmDxUBEEhpZ2hlciBFZHVjYXRpb25kAgUPZBYCAgEPDxYCHwIFIU5hdGlvbmFsLUNhcmVlcnMtU2VydmljZS1pOTYuaHRtbGQWAmYPFQEYTmF0aW9uYWwgQ2FyZWVycyBTZXJ2aWNlZAIGD2QWAgIBDxYCHwAFBjwvZGl2PmQCBg9kFgYCAw8PFgIfAgULQ1BELWk4Lmh0bWxkFgJmDxUBA0NQRGQCBQ8WBB8BAv////8PHwVoZAIHDxYCHwECBRYOZg9kFgQCAQ8WAh8ABSg8ZGl2IGNsYXNzPSJkcm9wZG93biIgaWQ9Im9uZWNvbG1lbnVfNiI+ZAIDDw8WAh8EBSF1cGxvYWRlZGZpbGVzL2ltYWdlcy9tZW51X2NwZC5qcGdkZAIBD2QWAgIBDw8WAh8CBUNRdWFsaWZpY2F0aW9ucy1pbi1DYXJlZXJzLUluZm9ybWF0aW9uLUFkdmljZS1hbmQtR3VpZGFuY2UtaTEwMi5odG1sZBYCZg8VARZRdWFsaWZpY2F0aW9ucyBpbiBDSUFHZAICD2QWAgIBDw8WAh8CBT5NYW5hZ2VtZW50LUxlYWRlcnNoaXAtYW5kLUNvbXBseWluZy13aXRoLUxlZ2lzbGF0aW9uLWkxMDMuaHRtbGQWAmYPFQEmTWFuYWdlbWVudCwgTGVhZGVyc2hpcCBhbmQgTGVnaXNsYXRpb25kAgMPZBYCAgEPDxYCHwIFUVRlYWNoaW5nLUFzc2Vzc2luZy1JbnRlcm5hbC1WZXJpZmljYXRpb24tYW5kLVByb2Zlc3Npb25hbC1Db21tdW5pY2F0aW9uLWkxMDQuaHRtbGQWAmYPFQEpVGVhY2hpbmcsIEFzc2Vzc2luZywgSVYgYW5kIENvbW11bmljYXRpb25kAgQPZBYCAgEPDxYCHwIFGUNhcmVlci1Db2FjaGluZy1pMTA1Lmh0bWxkFgJmDxUBD0NhcmVlciBDb2FjaGluZ2QCBQ9kFgICAQ8PFgIfAgULRXZlbnRzLmFzcHhkFgJmDxUBBkV2ZW50c2QCBg9kFgICAQ8WAh8ABQY8L2Rpdj5kAhMPZBYmAgEPFgIfAAXLDDxsaT4NCgk8aW1nIGNsYXNzPSJtYWluX2ltZyIgc3JjPSJ1cGxvYWRlZGZpbGVzL2hvbWVwYWdlL21haW5faW1nMi5qcGciIC8+DQoJPGRpdiBjbGFzcz0ib3V0ZXIiPg0KCQk8ZGl2IGNsYXNzPSJpbm5lciI+DQoJCQk8aDE+Q3JlYXRlIGEgYmV0dGVyIGZ1dHVyZTwvaDE+DQoJCQk8ZGl2IGNsYXNzPSJidXR0b24iPjxhIGNsYXNzPSJsbmtfSm9iUHJvZmlsZXMiPjxzcGFuPkl0IHN0YXJ0cyBoZXJlPC9zcGFuPjxpbWcgc3JjPSJpbWcvcmlnaHRfYXJyb3cucG5nIiBjbGFzcz0iYnRuX2Fycm93Ij48L2E+PC9kaXY+DQoJCTwvZGl2Pg0KCTwvZGl2Pg0KPC9saT4NCjxsaT4NCgk8aW1nIGNsYXNzPSJtYWluX2ltZyIgc3JjPSJ1cGxvYWRlZGZpbGVzL2hvbWVwYWdlL3lvdW5ncGVvcGxlXzEuanBnIiAvPg0KCTxkaXYgY2xhc3M9Im91dGVyIj4NCgkJPGRpdiBjbGFzcz0iaW5uZXIiPg0KCQkJPGgxPkNyZWF0ZSBhIGJldHRlciBmdXR1cmU8L2gxPg0KCQkJPGRpdiBjbGFzcz0iYnV0dG9uIj48YSBjbGFzcz0ibG5rX0pvYlByb2ZpbGVzIj48c3Bhbj5JdCBzdGFydHMgaGVyZTwvc3Bhbj48aW1nIHNyYz0iaW1nL3JpZ2h0X2Fycm93LnBuZyIgY2xhc3M9ImJ0bl9hcnJvdyI+PC9hPjwvZGl2Pg0KCQk8L2Rpdj4NCgk8L2Rpdj4NCjwvbGk+DQo8bGk+DQoJPGltZyBjbGFzcz0ibWFpbl9pbWciIHNyYz0idXBsb2FkZWRmaWxlcy9ob21lcGFnZS9sZWFybmluZ18xLmpwZyIgLz4NCgk8ZGl2IGNsYXNzPSJvdXRlciI+DQoJCTxkaXYgY2xhc3M9ImlubmVyIj4NCgkJCTxoMT5DcmVhdGUgYSBiZXR0ZXIgZnV0dXJlPC9oMT4NCgkJCTxkaXYgY2xhc3M9ImJ1dHRvbiI+PGEgY2xhc3M9Imxua19Kb2JQcm9maWxlcyI+PHNwYW4+SXQgc3RhcnRzIGhlcmU8L3NwYW4+PGltZyBzcmM9ImltZy9yaWdodF9hcnJvdy5wbmciIGNsYXNzPSJidG5fYXJyb3ciPjwvYT48L2Rpdj4NCgkJPC9kaXY+DQoJPC9kaXY+DQo8L2xpPg0KPGxpPg0KCTxpbWcgY2xhc3M9Im1haW5faW1nIiBzcmM9InVwbG9hZGVkZmlsZXMvaG9tZXBhZ2UvYWR1bHRzXzEuanBnIiAvPg0KCTxkaXYgY2xhc3M9Im91dGVyIj4NCgkJPGRpdiBjbGFzcz0iaW5uZXIiPg0KCQkJPGgxPkNyZWF0ZSBhIGJldHRlciBmdXR1cmU8L2gxPg0KCQkJPGRpdiBjbGFzcz0iYnV0dG9uIj48YSBjbGFzcz0ibG5rX0pvYlByb2ZpbGVzIj48c3Bhbj5JdCBzdGFydHMgaGVyZTwvc3Bhbj48aW1nIHNyYz0iaW1nL3JpZ2h0X2Fycm93LnBuZyIgY2xhc3M9ImJ0bl9hcnJvdyI+PC9hPjwvZGl2Pg0KCQk8L2Rpdj4NCgk8L2Rpdj4NCjwvbGk+DQo8bGk+DQoJPGltZyBjbGFzcz0ibWFpbl9pbWciIHNyYz0idXBsb2FkZWRmaWxlcy9ob21lcGFnZS9kaXZlcnNpdHlfMS5qcGciIC8+DQoJPGRpdiBjbGFzcz0ib3V0ZXIiPg0KCQk8ZGl2IGNsYXNzPSJpbm5lciI+DQoJCQk8aDE+Q3JlYXRlIGEgYmV0dGVyIGZ1dHVyZTwvaDE+DQoJCQk8ZGl2IGNsYXNzPSJidXR0b24iPjxhIGNsYXNzPSJsbmtfSm9iUHJvZmlsZXMiPjxzcGFuPkl0IHN0YXJ0cyBoZXJlPC9zcGFuPjxpbWcgc3JjPSJpbWcvcmlnaHRfYXJyb3cucG5nIiBjbGFzcz0iYnRuX2Fycm93Ij48L2E+PC9kaXY+DQoJCTwvZGl2Pg0KCTwvZGl2Pg0KPC9saT4NCmQCAw8WAh8ABecDPGgxIGNsYXNzPSJoZWFkZXIiPkFib3V0IENhcmVlciBDb25uZWN0PC9oMT4NCjxwIGNsYXNzPSJib2R5X3RleHQiPkNhcmVlciBDb25uZWN0IGlzIGEgY2hhcml0eSB3aG8gYXJlIHBhc3Npb25hdGUgYWJvdXQgcHJvdmlkaW5nIGhpZ2ggcXVhbGl0eSBpbmRlcGVuZGVudCBjYXJlZXJzIGFkdmljZSwgYnJpZGdpbmcgdGhlIGdhcCB0byBsZWFybmluZyBhbmQgZW1wbG95bWVudCBhbmQgYmV0dGVyIGxpZmUgY2hhbmNlcyBmb3IgeW91bmcgcGVvcGxlIGFuZCBhZHVsdHMuPGJyIC8+PGJyIC8+V2UgcHJvdmlkZSBhIHdpZGUgcmFuZ2Ugb2YgY2FyZWVyIG1hbmFnZW1lbnQgc2VydmljZXMsIHNvbWUgZnVuZGVkIGJ5IExvY2FsIEF1dGhvcml0aWVzIGFuZCBzY2hvb2xzIGFuZCBjb2xsZWdlcyBpbiB5b3VyIGFyZWEuPGJyIC8+PGJyIC8+V2UgYXJlIGFsc28gYSBwcm92aWRlciBvZiB0aGUgTmF0aW9uYWwgQ2FyZWVycyBTZXJ2aWNlIGZvciBhZHVsdHMuPC9wPmQCBQ8WAh8ABdYFPGEgaHJlZj0iUGFnZUluZm8uYXNweD9Kb2ItUHJvZmlsZXMtaTExMS5odG1sIiB0aXRsZT0iIj48aW1nIHNyYz0idXBsb2FkZWRmaWxlcy9ob21lcGFnZS9pbWcxLnBuZyIgYm9yZGVyPSIwIiBjbGFzcz0iaW5zdGFncmFtX2ltZyIgLz48L2E+DQo8YSBocmVmPSJQYWdlSW5mby5hc3B4P0pvYi1Qcm9maWxlcy1pMTExLmh0bWwiIHRpdGxlPSIiPjxpbWcgc3JjPSJ1cGxvYWRlZGZpbGVzL2hvbWVwYWdlL2ltZzIucG5nIiBib3JkZXI9IjAiIGNsYXNzPSJpbnN0YWdyYW1faW1nIG1vYmlsZV9lbmQiIC8+PC9hPg0KPGEgaHJlZj0iUGFnZUluZm8uYXNweD9Kb2ItUHJvZmlsZXMtaTExMS5odG1sIiB0aXRsZT0iIj48aW1nIHNyYz0idXBsb2FkZWRmaWxlcy9ob21lcGFnZS9pbWczLnBuZyIgYm9yZGVyPSIwIiBjbGFzcz0iaW5zdGFncmFtX2ltZyIgLz48L2E+DQo8YSBocmVmPSJQYWdlSW5mby5hc3B4P0pvYi1Qcm9maWxlcy1pMTExLmh0bWwiIHRpdGxlPSIiPjxpbWcgc3JjPSJ1cGxvYWRlZGZpbGVzL2hvbWVwYWdlL2ltZzQucG5nIiBib3JkZXI9IjAiIGNsYXNzPSJpbnN0YWdyYW1faW1nIG1vYmlsZV9lbmQiIC8+PC9hPg0KPGEgaHJlZj0iUGFnZUluZm8uYXNweD9Kb2ItUHJvZmlsZXMtaTExMS5odG1sIiB0aXRsZT0iIj48aW1nIHNyYz0idXBsb2FkZWRmaWxlcy9ob21lcGFnZS9pbWc1LnBuZyIgYm9yZGVyPSIwIiBjbGFzcz0iaW5zdGFncmFtX2ltZyBlbmQiIC8+PC9hPg0KZAIHDw8WAh8CBQ9DVl9CdWlsZGVyLmFzcHhkFgJmDw8WAh8EBSJ1cGxvYWRlZGZpbGVzL2hvbWVwYWdlL2N2X2ljb24ucG5nZGQCCQ8WAh8ABQpDViBCdWlsZGVyZAILDxYCHwAFNlByb2R1Y2UgYSB3aW5uaW5nIENWIHdpdGggb3VyIGVhc3kgdG8gdXNlIG9ubGluZSB0b29sLmQCDQ8PFgIfAgUPQ1ZfQnVpbGRlci5hc3B4ZGQCDw8PFgIfAgU+cGFnZWluZm8uYXNweD9UcnVlLW9yLUZhbHNlLURvLXRoZXNlLWpvYnMtcmVhbGx5LWV4aXN0LXExLmh0bWxkFgJmDw8WAh8EBS91cGxvYWRlZGZpbGVzL2hvbWVwYWdlL2ludGVyYWN0aXZlcXVpel9pY29uLnBuZ2RkAhEPFgIfAAUNUmVhbCBvciBGYWtlP2QCEw8WAh8ABTxXaGljaCBqb2JzIGFyZSByZWFsIGFuZCB3aGljaCBhcmUgZmFrZSwgdGVzdCB5b3VyIGtub3dsZWRnZS5kAhUPDxYCHwIFPnBhZ2VpbmZvLmFzcHg/VHJ1ZS1vci1GYWxzZS1Eby10aGVzZS1qb2JzLXJlYWxseS1leGlzdC1xMS5odG1sZGQCFw8PZBYCHgdvbmNsaWNrBZABd2luZG93Lm9wZW4oJ2h0dHA6Ly93d3cuY2FyZWVyY29ubmVjdC5vcmcudWsvQ2hhdC9DdXRlU29mdF9DbGllbnQvQ3V0ZUNoYXQvU3VwcG9ydFJlZGlyZWN0LmFzcHgnLCcnLCdzdGF0dXM9MSx3aWR0aD01MDAsaGVpZ2h0PTUwMCxyZXNpemFibGU9MScpFgJmDw8WAh8EBSh1cGxvYWRlZGZpbGVzL2hvbWVwYWdlL2xpdmVjaGF0X2ljb24ucG5nZGQCGQ8WAh8ABQlMaXZlIENoYXRkAhsPFgIfAAU0QWNjZXNzIGxpdmUgY2hhdCBhbmQgc3BlYWsgdG8gYSBsb2NhbCBhZHZpc2VyIHRvZGF5LmQCHQ8PZBYCHwYFkAF3aW5kb3cub3BlbignaHR0cDovL3d3dy5jYXJlZXJjb25uZWN0Lm9yZy51ay9DaGF0L0N1dGVTb2Z0X0NsaWVudC9DdXRlQ2hhdC9TdXBwb3J0UmVkaXJlY3QuYXNweCcsJycsJ3N0YXR1cz0xLHdpZHRoPTUwMCxoZWlnaHQ9NTAwLHJlc2l6YWJsZT0xJylkAh8PDxYCHwIFASNkFgJmDw8WAh8EBSl1cGxvYWRlZGZpbGVzL2hvbWVwYWdlL2Fzc2Vzc21lbnRxdWl6LnBuZ2RkAiEPFgIfAAUPQXNzZXNzbWVudCBRdWl6ZAIjDxYCHwAFNkFyZSB5b3UgcmVhZHkgZm9yIHlvdXIgZnV0dXJlPy4uLiBUYWtlIHRoZSB0ZXN0IHRvZGF5LmQCJQ8PFgIfAgUBI2RkAhUPFgIfAQIGFgxmD2QWAgIBDw8WAh8CBRRZb3VuZy1QZW9wbGUtaTIuaHRtbGQWAmYPFQEMWW91bmcgUGVvcGxlZAIBD2QWAgIBDw8WAh8CBRBCdXNpbmVzcy1pMy5odG1sZBYCZg8VAQhCdXNpbmVzc2QCAg9kFgICAQ8PFgIfAgUOQWR1bHRzLWk0Lmh0bWxkFgJmDxUBBkFkdWx0c2QCAw9kFgICAQ8PFgIfAgUbU2Nob29sLWFuZC1Db2xsZWdlcy1pNS5odG1sZBYCZg8VARBTY2hvb2xzL0NvbGxlZ2VzZAIED2QWAgIBDw8WAh8CBQ9QYXJlbnRzLWk3Lmh0bWxkFgJmDxUBB1BhcmVudHNkAgUPZBYCAgEPDxYCHwIFC0NQRC1pOC5odG1sZBYCZg8VAQNDUERkAh8PFgIfAQIMFhhmD2QWAgIBDw8WAh8CBQxDb250YWN0LmFzcHhkFgJmDxUBFkNvbnRhY3QgQ2FyZWVyIENvbm5lY3RkAgEPZBYCAgEPDxYCHwIFEUFjaGlldmUtaTE0Mi5odG1sZBYCZg8VARlBY2hpZXZlIE5vcnRod2VzdCBDb25uZWN0ZAICD2QWAgIBDw8WAh8CBR5NYW5jaGVzdGVyQ29ubmV4aW9ucy1pMTY5Lmh0bWxkFgJmDxUBFU1hbmNoZXN0ZXIgQ29ubmV4aW9uc2QCAw9kFgICAQ8PFgIfAgUcU2FsZm9yZC1Db25uZXhpb25zLWkxMzcuaHRtbGQWAmYPFQESU2FsZm9yZCBDb25uZXhpb25zZAIED2QWAgIBDw8WAh8CBQxGaW5kX3VzLmFzcHhkFgJmDxUBB0ZpbmQgVXNkAgUPZBYCAgEPDxYCHwIFEUNhc2Vfc3R1ZGllcy5hc3B4ZBYCZg8VAQxDYXNlIFN0dWRpZXNkAgYPZBYCAgEPDxYCHwIFE1doby1XZS1BcmUtaTQ5Lmh0bWxkFgJmDxUBCldobyBXZSBBcmVkAgcPZBYCAgEPDxYCHwIFEFdvcmtfZm9yX3VzLmFzcHhkFgJmDxUBC1dvcmsgRm9yIFVzZAIID2QWAgIBDw8WAh8CBQ1SZWdpc3Rlci5hc3B4ZBYCZg8VAQhSZWdpc3RlcmQCCQ9kFgICAQ8PFgIfAgUKTG9naW4uYXNweGQWAmYPFQEFTG9naW5kAgoPZBYCAgEPDxYCHwIFFVN0YWZmLVBvcnRhbC1pNTQuaHRtbGQWAmYPFQEMU3RhZmYgUG9ydGFsZAILD2QWAgIBDw8WAh8CBQ9MZWdhbC1pMTA3Lmh0bWxkFgJmDxUBBUxlZ2FsZAIhDxYCHwAFBDIwMTZkAjEPFgIfBWgWAgIDDw8WAh8FaGRkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBRBjdGwwMCRidG5fU2VhcmNoCT7Ey0vLA0ikAghvnD96ez5RiGc=" />
+
+
+<script src="/ScriptResource.axd?d=N_FP3ZFgAWm4FgjZJxtoXYIZ-AlZxGa0lEaOjftqO2q-AXgyitcjhvzGDxcyaBCatXL-pi6mSVDR6Ys4o-eqikqfrNVNDzgtFgD9TgJRBBXvPss_NUVdmwOtcDSVCUy9HCXLEyALQhV-D4sw44smpzCZRuA1&amp;t=2e2045e2" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDAKP7MCVAgKkv7OTCQK3s/6/CAL8qOKBDAKb9L6WBgLL0+3iCwLriKDOCQKT4cT0BwKLj7SIAgKXk/6zAwLMkvfTDgLx0rrVBuy1UByjxRGCAKEflxl0/QTDVDM2" />
+
+<div id="sidr">
+	<div class="menu_img"><img src="img/menu_img.png" class="menu_logo" /></div>
+	
+	<ul class="menu-links mobile_main_nav" style="display:none;"> 
+				 
+					<li><a id="ctl00_Repeater_Nav_Mobile_ctl00_lnk_Nav" href="Young-People-i2.html">Young People</a>
+					
+					 
+					<li><a id="ctl00_Repeater_Nav_Mobile_ctl01_lnk_Nav" href="Business-i3.html">Business</a>
+					
+					 
+					<li><a id="ctl00_Repeater_Nav_Mobile_ctl02_lnk_Nav" href="Adults-i4.html">Adults</a>
+					
+					 
+					<li><a id="ctl00_Repeater_Nav_Mobile_ctl03_lnk_Nav" href="School-and-Colleges-i5.html">Schools/Colleges</a>
+					
+					 
+					<li><a id="ctl00_Repeater_Nav_Mobile_ctl04_lnk_Nav" href="Parents-i7.html">Parents</a>
+					
+					 
+					<li><a id="ctl00_Repeater_Nav_Mobile_ctl05_lnk_Nav" href="CPD-i8.html">CPD</a>
+					
+					
+	</ul>
+	
+    <ul class="menu-links">
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl00_lnk_Right_Nav" href="Contact.aspx">Contact Career Connect</a></li>                    		
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl01_lnk_Right_Nav" href="Achieve-i142.html">Achieve Northwest Connect</a></li>                    		
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl02_lnk_Right_Nav" href="ManchesterConnexions-i169.html">Manchester Connexions</a></li>                    		
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl03_lnk_Right_Nav" href="Salford-Connexions-i137.html">Salford Connexions</a></li>                    		
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl04_lnk_Right_Nav" href="Find_us.aspx">Find Us</a></li>                    		
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl05_lnk_Right_Nav" href="Case_studies.aspx">Case Studies</a></li>                    		
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl06_lnk_Right_Nav" href="Who-We-Are-i49.html">Who We Are</a></li>                    		
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl07_lnk_Right_Nav" href="Work_for_us.aspx">Work For Us</a></li>                    		
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl08_lnk_Right_Nav" href="Register.aspx">Register</a></li>                    		
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl09_lnk_Right_Nav" href="Login.aspx">Login</a></li>                    		
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl10_lnk_Right_Nav" href="Staff-Portal-i54.html">Staff Portal</a></li>                    		
+			 
+      	<li><a id="ctl00_Repeater_Right_Nav_ctl11_lnk_Right_Nav" href="Legal-i107.html">Legal</a></li>                    		
+			
+		 </ul>
+</div>
+<div id="wrapper">
+	<header>	
+		<div id="header_inner" class="content">
+			<div id="logo_container"><a href="Default.aspx"><img src="img/logo.png" class="logo" /></a></div>    
+			<div class="menu_btn"><a href="#sidr" id="simple-menu"><img src="img/menu_btn.png" class="menu_btn_img" /></a></div>    
+			<div id="shopping_basket">    
+				<a href="Basket.aspx" class="full">
+				<div id="ctl00_basket_Items" class="basket_Items" style="display:none;">&nbsp;</div>				
+				<img src="img/basket_icon.png" class="basket_img" /> 
+				</a>				
+			</div>  
+			<div id="ctl00_Panel_Search" class="search_bar">
+	  
+				<input name="ctl00$txt_Search" type="text" id="ctl00_txt_Search" class="search" />
+				<input type="image" name="ctl00$btn_Search" id="ctl00_btn_Search" class="search_btn" src="img/search_icon.png" border="0" /> 
+			
+</div>
+			<nav id="main_nav"> 
+				  
+				<ul>
+				 
+					<input type="hidden" name="ctl00$Repeater_Nav$ctl01$inp_TopMenuPicture" id="ctl00_Repeater_Nav_ctl01_inp_TopMenuPicture" />
+					<li><a id="ctl00_Repeater_Nav_ctl01_lnk_Nav" href="Young-People-i2.html">Young People</a>          
+					  
+					<ul class="fallback">            	
+						<div class="menu_spacer"></div>    
+						<div class="dropdown" id="menu_1">  						
+					            
+							<div id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl01_dd_col" class="dd_col">                    
+								<h4><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl01_lnk_Nav" href="Careers-Advice-i9.html">Careers Advice</a></h4>                    
+								<img id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl01_img_TopMenuPicture" src="uploadedfiles/images/menuimg1.jpg" border="0" />
+								<ul>
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl01_Repeater_Nav_Sub2_ctl00_lnk_Nav" href="Explore-Your-Future-i82.html">Explore Your Future</a></li>              
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl01_Repeater_Nav_Sub2_ctl01_lnk_Nav" href="Make-Decisions-i83.html">Make Decisions</a></li>              
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl01_Repeater_Nav_Sub2_ctl02_lnk_Nav" href="Make-It-Happen-i84.html">Make It Happen</a></li>              
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl01_Repeater_Nav_Sub2_ctl03_lnk_Nav" href="Getting-The-Right-Advice-i85.html">Getting The Right Advice</a></li>              
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl01_Repeater_Nav_Sub2_ctl04_lnk_Nav" href="Pathways-i65.html">Pathways</a></li>              
+										  
+								</ul>                    
+							</div>                    
+					            
+							<div id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl02_dd_col" class="dd_col">                    
+								<h4><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl02_lnk_Nav" href="Job-Search-i10.html">Job Search</a></h4>                    
+								<img id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl02_img_TopMenuPicture" src="uploadedfiles/images/menuimg2.jpg" border="0" />
+								<ul>
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl02_Repeater_Nav_Sub2_ctl00_lnk_Nav" href="Creating-a-CV-i86.html">Creating a CV</a></li>              
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl02_Repeater_Nav_Sub2_ctl01_lnk_Nav" href="Interview-Tips-i87.html">Interview Tips</a></li>              
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl02_Repeater_Nav_Sub2_ctl02_lnk_Nav" href="Assessment-Tests-i88.html">Assessment Tests</a></li>              
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl02_Repeater_Nav_Sub2_ctl03_lnk_Nav" href="Work-Experience-i89.html">Work Experience</a></li>              
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl02_Repeater_Nav_Sub2_ctl04_lnk_Nav" href="Seasonal--PartTime-Work-i90.html">Seasonal & Part-Time Work</a></li>              
+										  
+								</ul>                    
+							</div>                    
+					            
+							<div id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl03_dd_col" class="dd_col">                    
+								<h4><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl03_lnk_Nav" href="Self-Assessment-i11.html">Self Assessment</a></h4>                    
+								<img id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl03_img_TopMenuPicture" src="uploadedfiles/images/menuimg3.jpg" border="0" />
+								<ul>
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl03_Repeater_Nav_Sub2_ctl00_lnk_Nav" href="Learning-Styles-i91.html">Learning Styles</a></li>              
+									  
+									<li><a id="ctl00_Repeater_Nav_ctl01_Repeater_Nav_Sub1_MultiColumn_ctl03_Repeater_Nav_Sub2_ctl01_lnk_Nav" href="Qualifications-Explained-i92.html">Qualifications Explained</a></li>              
+										  
+								</ul>                    
+							</div>                    
+						
+						</div>                                 
+					</ul>
+					       
+										
+				</li>    
+				 
+					<input type="hidden" name="ctl00$Repeater_Nav$ctl02$inp_TopMenuPicture" id="ctl00_Repeater_Nav_ctl02_inp_TopMenuPicture" value="menu_business.jpg" />
+					<li><a id="ctl00_Repeater_Nav_ctl02_lnk_Nav" href="Business-i3.html">Business</a>          
+					       
+					  
+					<ul class="fallback single">   
+						<div class="menu_spacer"></div>      
+						<div class="dropdown" id="onecolmenu_2">	
+						<img id="ctl00_Repeater_Nav_ctl02_Repeater_Nav_Sub1_SingleColumn_ctl00_img_TopMenuPicture" class="toppic" src="uploadedfiles/images/menu_business.jpg" border="0" />					
+										
+					<li><a id="ctl00_Repeater_Nav_ctl02_Repeater_Nav_Sub1_SingleColumn_ctl01_lnk_Nav" href="CEIAG-i12.html">Recruitment</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl02_Repeater_Nav_Sub1_SingleColumn_ctl02_lnk_Nav" href="Jobs-for-Tomorrow-i13.html">Assessment Tools</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl02_Repeater_Nav_Sub1_SingleColumn_ctl03_lnk_Nav" href="Also-See-i14.html">Training</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl02_Repeater_Nav_Sub1_SingleColumn_ctl04_lnk_Nav" href="Research-i66.html">Research</a></li>              	
+						
+						</div>  
+					</ul>
+										
+				</li>    
+				 
+					<input type="hidden" name="ctl00$Repeater_Nav$ctl03$inp_TopMenuPicture" id="ctl00_Repeater_Nav_ctl03_inp_TopMenuPicture" value="menu_adults.jpg" />
+					<li><a id="ctl00_Repeater_Nav_ctl03_lnk_Nav" href="Adults-i4.html">Adults</a>          
+					       
+					  
+					<ul class="fallback single">   
+						<div class="menu_spacer"></div>      
+						<div class="dropdown" id="onecolmenu_3">	
+						<img id="ctl00_Repeater_Nav_ctl03_Repeater_Nav_Sub1_SingleColumn_ctl00_img_TopMenuPicture" class="toppic" src="uploadedfiles/images/menu_adults.jpg" border="0" />					
+										
+					<li><a id="ctl00_Repeater_Nav_ctl03_Repeater_Nav_Sub1_SingleColumn_ctl01_lnk_Nav" href="National-Careers-Service-i125.html">National Careers Service</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl03_Repeater_Nav_Sub1_SingleColumn_ctl02_lnk_Nav" href="Career-Coaching-i126.html">Career Coaching</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl03_Repeater_Nav_Sub1_SingleColumn_ctl03_lnk_Nav" href="Redundancy-Support-i127.html">Redundancy Support</a></li>              	
+						
+						</div>  
+					</ul>
+										
+				</li>    
+				 
+					<input type="hidden" name="ctl00$Repeater_Nav$ctl04$inp_TopMenuPicture" id="ctl00_Repeater_Nav_ctl04_inp_TopMenuPicture" value="menu_schools.jpg" />
+					<li><a id="ctl00_Repeater_Nav_ctl04_lnk_Nav" href="School-and-Colleges-i5.html">Schools/Colleges</a>          
+					       
+					  
+					<ul class="fallback single">   
+						<div class="menu_spacer"></div>      
+						<div class="dropdown" id="onecolmenu_4">	
+						<img id="ctl00_Repeater_Nav_ctl04_Repeater_Nav_Sub1_SingleColumn_ctl00_img_TopMenuPicture" class="toppic" src="uploadedfiles/images/menu_schools.jpg" border="0" />					
+										
+					<li><a id="ctl00_Repeater_Nav_ctl04_Repeater_Nav_Sub1_SingleColumn_ctl01_lnk_Nav" href="About-Adult-Services-i15.html">Career Management Services</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl04_Repeater_Nav_Sub1_SingleColumn_ctl02_lnk_Nav" href="Staff-Training-i16.html">Staff Training</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl04_Repeater_Nav_Sub1_SingleColumn_ctl03_lnk_Nav" href="Quality-Award-i73.html">Quality Award</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl04_Repeater_Nav_Sub1_SingleColumn_ctl04_lnk_Nav" href="Jobs-For-Tomorrow-i109.html">Jobs For Tomorrow</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl04_Repeater_Nav_Sub1_SingleColumn_ctl05_lnk_Nav" href="Assessment-Tools-i74.html">Assessment Tools</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl04_Repeater_Nav_Sub1_SingleColumn_ctl06_lnk_Nav" href="Products.aspx">Products</a></li>              	
+						
+						</div>  
+					</ul>
+										
+				</li>    
+				 
+					<input type="hidden" name="ctl00$Repeater_Nav$ctl05$inp_TopMenuPicture" id="ctl00_Repeater_Nav_ctl05_inp_TopMenuPicture" value="menu_parents.jpg" />
+					<li><a id="ctl00_Repeater_Nav_ctl05_lnk_Nav" href="Parents-i7.html">Parents</a>          
+					       
+					  
+					<ul class="fallback single">   
+						<div class="menu_spacer"></div>      
+						<div class="dropdown" id="onecolmenu_5">	
+						<img id="ctl00_Repeater_Nav_ctl05_Repeater_Nav_Sub1_SingleColumn_ctl00_img_TopMenuPicture" class="toppic" src="uploadedfiles/images/menu_parents.jpg" border="0" />					
+										
+					<li><a id="ctl00_Repeater_Nav_ctl05_Repeater_Nav_Sub1_SingleColumn_ctl01_lnk_Nav" href="Careers-i78.html">Careers</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl05_Repeater_Nav_Sub1_SingleColumn_ctl02_lnk_Nav" href="Jobs-i79.html">Jobs</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl05_Repeater_Nav_Sub1_SingleColumn_ctl03_lnk_Nav" href="Assessment-Tools-i80.html">Assessment Tools</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl05_Repeater_Nav_Sub1_SingleColumn_ctl04_lnk_Nav" href="Higher-Education-i81.html">Higher Education</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl05_Repeater_Nav_Sub1_SingleColumn_ctl05_lnk_Nav" href="National-Careers-Service-i96.html">National Careers Service</a></li>              	
+						
+						</div>  
+					</ul>
+										
+				</li>    
+				 
+					<input type="hidden" name="ctl00$Repeater_Nav$ctl06$inp_TopMenuPicture" id="ctl00_Repeater_Nav_ctl06_inp_TopMenuPicture" value="menu_cpd.jpg" />
+					<li><a id="ctl00_Repeater_Nav_ctl06_lnk_Nav" href="CPD-i8.html">CPD</a>          
+					       
+					  
+					<ul class="fallback single">   
+						<div class="menu_spacer"></div>      
+						<div class="dropdown" id="onecolmenu_6">	
+						<img id="ctl00_Repeater_Nav_ctl06_Repeater_Nav_Sub1_SingleColumn_ctl00_img_TopMenuPicture" class="toppic" src="uploadedfiles/images/menu_cpd.jpg" border="0" />					
+										
+					<li><a id="ctl00_Repeater_Nav_ctl06_Repeater_Nav_Sub1_SingleColumn_ctl01_lnk_Nav" href="Qualifications-in-Careers-Information-Advice-and-Guidance-i102.html">Qualifications in CIAG</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl06_Repeater_Nav_Sub1_SingleColumn_ctl02_lnk_Nav" href="Management-Leadership-and-Complying-with-Legislation-i103.html">Management, Leadership and Legislation</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl06_Repeater_Nav_Sub1_SingleColumn_ctl03_lnk_Nav" href="Teaching-Assessing-Internal-Verification-and-Professional-Communication-i104.html">Teaching, Assessing, IV and Communication</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl06_Repeater_Nav_Sub1_SingleColumn_ctl04_lnk_Nav" href="Career-Coaching-i105.html">Career Coaching</a></li>              	
+										
+					<li><a id="ctl00_Repeater_Nav_ctl06_Repeater_Nav_Sub1_SingleColumn_ctl05_lnk_Nav" href="Events.aspx">Events</a></li>              	
+						
+						</div>  
+					</ul>
+										
+				</li>    
+					
+					</ul>
+					     
+			</nav>    
+			<div class="clear"></div>
+		</div>
+	</header>
+			
+	<section id="top_pic">
+		<div class="flexslider">    	
+			<ul class="slides">
+				<li>
+	<img class="main_img" src="uploadedfiles/homepage/main_img2.jpg" />
+	<div class="outer">
+		<div class="inner">
+			<h1>Create a better future</h1>
+			<div class="button"><a class="lnk_JobProfiles"><span>It starts here</span><img src="img/right_arrow.png" class="btn_arrow"></a></div>
+		</div>
+	</div>
+</li>
+<li>
+	<img class="main_img" src="uploadedfiles/homepage/youngpeople_1.jpg" />
+	<div class="outer">
+		<div class="inner">
+			<h1>Create a better future</h1>
+			<div class="button"><a class="lnk_JobProfiles"><span>It starts here</span><img src="img/right_arrow.png" class="btn_arrow"></a></div>
+		</div>
+	</div>
+</li>
+<li>
+	<img class="main_img" src="uploadedfiles/homepage/learning_1.jpg" />
+	<div class="outer">
+		<div class="inner">
+			<h1>Create a better future</h1>
+			<div class="button"><a class="lnk_JobProfiles"><span>It starts here</span><img src="img/right_arrow.png" class="btn_arrow"></a></div>
+		</div>
+	</div>
+</li>
+<li>
+	<img class="main_img" src="uploadedfiles/homepage/adults_1.jpg" />
+	<div class="outer">
+		<div class="inner">
+			<h1>Create a better future</h1>
+			<div class="button"><a class="lnk_JobProfiles"><span>It starts here</span><img src="img/right_arrow.png" class="btn_arrow"></a></div>
+		</div>
+	</div>
+</li>
+<li>
+	<img class="main_img" src="uploadedfiles/homepage/diversity_1.jpg" />
+	<div class="outer">
+		<div class="inner">
+			<h1>Create a better future</h1>
+			<div class="button"><a class="lnk_JobProfiles"><span>It starts here</span><img src="img/right_arrow.png" class="btn_arrow"></a></div>
+		</div>
+	</div>
+</li>
+
+			</ul>
+		</div>
+	</section>
+	<div id="header_cta">
+		<div class="content" style="cursor:pointer;" onclick="window.open('http://www.careerconnect.org.uk/Chat/CuteSoft_Client/CuteChat/SupportRedirect.aspx','','status=1,width=500,height=500,resizable=1')">
+			<img src="img/chat_icon.png">
+			<p><span>WANT TO CHAT?</span>TALK TO SOMEONE ONLINE NOW!</p>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<section id="about" class="content">
+    	<h1 class="header">About Career Connect</h1>
+<p class="body_text">Career Connect is a charity who are passionate about providing high quality independent careers advice, bridging the gap to learning and employment and better life chances for young people and adults.<br /><br />We provide a wide range of career management services, some funded by Local Authorities and schools and colleges in your area.<br /><br />We are also a provider of the National Careers Service for adults.</p>
+	</section>
+    
+	<div class="spacer_30"></div>
+	<section id="instagram">
+		<div id="img_container" class="content">
+			<a href="PageInfo.aspx?Job-Profiles-i111.html" title=""><img src="uploadedfiles/homepage/img1.png" border="0" class="instagram_img" /></a>
+<a href="PageInfo.aspx?Job-Profiles-i111.html" title=""><img src="uploadedfiles/homepage/img2.png" border="0" class="instagram_img mobile_end" /></a>
+<a href="PageInfo.aspx?Job-Profiles-i111.html" title=""><img src="uploadedfiles/homepage/img3.png" border="0" class="instagram_img" /></a>
+<a href="PageInfo.aspx?Job-Profiles-i111.html" title=""><img src="uploadedfiles/homepage/img4.png" border="0" class="instagram_img mobile_end" /></a>
+<a href="PageInfo.aspx?Job-Profiles-i111.html" title=""><img src="uploadedfiles/homepage/img5.png" border="0" class="instagram_img end" /></a>
+
+		</div>
+		<div class="clear"></div>
+	</section>
+	<section id="online_tools" class="content">
+		<h1 class="header">Online Tools</h1>
+		<div class="tool_container">    
+			<a id="ctl00_ContentPlaceHolder1_lnk_Tool1Link_2" href="CV_Builder.aspx"><img id="ctl00_ContentPlaceHolder1_img_Tool1Icon" src="uploadedfiles/homepage/cv_icon.png" border="0" /></a>
+			<h4>CV Builder</h4>
+			<p>Produce a winning CV with our easy to use online tool.</p>
+			<div class="button"><a id="ctl00_ContentPlaceHolder1_lnk_Tool1Link" href="CV_Builder.aspx">Find Out More</a></div>    
+		</div>    
+		<div class="tool_container">    
+			<a id="ctl00_ContentPlaceHolder1_lnk_Tool2Link_2" href="pageinfo.aspx?True-or-False-Do-these-jobs-really-exist-q1.html"><img id="ctl00_ContentPlaceHolder1_img_Tool2Icon" src="uploadedfiles/homepage/interactivequiz_icon.png" border="0" /></a>
+			<h4>Real or Fake?</h4>
+			<p>Which jobs are real and which are fake, test your knowledge.</p>
+			<div class="button"><a id="ctl00_ContentPlaceHolder1_lnk_Tool2Link" href="pageinfo.aspx?True-or-False-Do-these-jobs-really-exist-q1.html">Find Out More</a></div>  
+		</div>    
+		<div class="tool_container">    
+			<a id="ctl00_ContentPlaceHolder1_lnk_Tool3Link_2" onclick="window.open('http://www.careerconnect.org.uk/Chat/CuteSoft_Client/CuteChat/SupportRedirect.aspx','','status=1,width=500,height=500,resizable=1')"><img id="ctl00_ContentPlaceHolder1_img_Tool3Icon" src="uploadedfiles/homepage/livechat_icon.png" border="0" /></a>
+			<h4>Live Chat</h4>
+			<p>Access live chat and speak to a local adviser today.</p>
+			<div class="button"><a id="ctl00_ContentPlaceHolder1_lnk_Tool3Link" onclick="window.open('http://www.careerconnect.org.uk/Chat/CuteSoft_Client/CuteChat/SupportRedirect.aspx','','status=1,width=500,height=500,resizable=1')">Find Out More</a></div>  
+		</div>    
+		<div class="tool_container">    
+			<a id="ctl00_ContentPlaceHolder1_lnk_Tool4Link_2" href="#"><img id="ctl00_ContentPlaceHolder1_img_Tool4Icon" src="uploadedfiles/homepage/assessmentquiz.png" border="0" /></a>
+			<h4>Assessment Quiz</h4>
+			<p>Are you ready for your future?... Take the test today.</p>
+			<div class="button"><a id="ctl00_ContentPlaceHolder1_lnk_Tool4Link" href="#">Find Out More</a></div>     
+		</div>    
+		<div class="spacer_30"></div>
+		<div class="spacer_30"></div>
+	</section>
+	
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".lnk_JobProfiles").click(function(){
+		$('#mb_JobProfiles').addClass('show');
+	});
+	$("#lnk_JobProfiles_close").click(function(){
+		$('#mb_JobProfiles').removeClass('show');
+	});
+});
+</script>
+
+<style>
+
+.home_popup_inner {width:93%; margin:0 auto;}
+.home_popup_inner .popup_col {width:17.6%; margin-right:3%; margin-top:20px; float:left;}
+.home_popup_inner .popup_col.end {margin-right:0;}
+.home_popup_inner img.hme_pop_img {width:100%; border:5px solid #D42E48; border-radius:50%; margin-bottom:10px; box-sizing:border-box;}
+.home_popup_inner a.button {font-size:0.9em; margin:0 auto; width:100%; display:block; text-align:center; background:#D42E48; padding:10px 0;} 
+.home_popup_inner a.button:hover {background:#8B0C22;}
+.home_popup_inner h3 {text-align:center; margin-bottom:5px; margin-top:-5px;}
+.popup.home a.close {font-weight:700; color:#333; font-size:1.4em; float:right; margin:10px 10px 0 0; }
+
+</style>
+
+
+<div id="mb_JobProfiles" class="modalDialog">
+    <div class="popup home">
+    <a id="lnk_JobProfiles_close" class="close">X</a>
+    <div class="clear"></div>
+       <!--<img src="img/homepop_tmp.jpg" />  -->
+       <div class="home_popup_inner">
+       <div class="popup_col">
+       		<img src="img/popup_youngpeople.png" class="hme_pop_img">
+        	<a href="PageInfo.aspx?Young-People-i2.html" class="button">Young People</a>
+       </div>
+       <div class="popup_col">
+       		<img src="img/popup_employer.png" class="hme_pop_img">
+        	<a href="PageInfo.aspx?Business-i3.html" class="button">Business</a>
+       </div>
+       <div class="popup_col">
+       		<img src="img/popup_adult.png" class="hme_pop_img">
+        	<a href="PageInfo.aspx?Adults-i4.html" class="button">Adults</a>
+       </div>
+       <div class="popup_col">
+       		<img src="img/popup_school.png" class="hme_pop_img">
+        	<a href="PageInfo.aspx?School-and-Colleges-i5.html" class="button">Schools/Colleges</a>
+       </div>
+       <div class="popup_col end">
+       		<img src="img/popup_parent.png" class="hme_pop_img">
+        	<a href="PageInfo.aspx?Parents-i7.html" class="button">Parents</a>
+       </div>
+       <div class="clear"></div>
+       </div>
+   
+    </div>
+</div>	
+		
+	<footer>
+		<div id="footer_inner" class="content">
+			<nav id="footer_nav">     				
+				<ul>
+				 
+				<li><a id="ctl00_Repeater_Footer_Nav_ctl00_lnk_Footer_Nav" href="Young-People-i2.html">Young People</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer_Nav_ctl01_lnk_Footer_Nav" href="Business-i3.html">Business</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer_Nav_ctl02_lnk_Footer_Nav" href="Adults-i4.html">Adults</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer_Nav_ctl03_lnk_Footer_Nav" href="School-and-Colleges-i5.html">Schools/Colleges</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer_Nav_ctl04_lnk_Footer_Nav" href="Parents-i7.html">Parents</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer_Nav_ctl05_lnk_Footer_Nav" href="CPD-i8.html">CPD</a></li>                    		
+					
+				</ul>				   
+			</nav>    
+			<div id="footer_social">    
+				<a href="https://www.facebook.com/connectmycareer" target="_blank"><img src="img/footer_fb.png" class="footer_icon" /></a>
+				<a href="https://twitter.com/connectmycareer" target="_blank"><img src="img/footer_twitter.png" class="footer_icon" /></a>
+				<a href="http://www.youtube.com/user/connexionslive" target="_blank"><img src="img/footer_instagram.png" class="footer_icon" /></a>
+				<a href="https://www.linkedin.com/company/career-connect-limited" target="_blank"><img src="img/footer_linkedin.png" class="footer_icon" /></a>				
+			</div>    
+			<nav id="footer_subnav">    				 
+				<ul>				 
+				 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl00_lnk_Footer2_Nav" href="Contact.aspx">Contact Career Connect</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl01_lnk_Footer2_Nav" href="Achieve-i142.html">Achieve Northwest Connect</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl02_lnk_Footer2_Nav" href="ManchesterConnexions-i169.html">Manchester Connexions</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl03_lnk_Footer2_Nav" href="Salford-Connexions-i137.html">Salford Connexions</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl04_lnk_Footer2_Nav" href="Find_us.aspx">Find Us</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl05_lnk_Footer2_Nav" href="Case_studies.aspx">Case Studies</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl06_lnk_Footer2_Nav" href="Who-We-Are-i49.html">Who We Are</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl07_lnk_Footer2_Nav" href="Work_for_us.aspx">Work For Us</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl08_lnk_Footer2_Nav" href="Register.aspx">Register</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl09_lnk_Footer2_Nav" href="Login.aspx">Login</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl10_lnk_Footer2_Nav" href="Staff-Portal-i54.html">Staff Portal</a></li>                    		
+					 
+				<li><a id="ctl00_Repeater_Footer2_Nav_ctl11_lnk_Footer2_Nav" href="Legal-i107.html">Legal</a></li>                    		
+					
+				</ul>     
+			 </nav>     
+			 <p>© Copyright Career Connect Limited 2016. Company No. 04233289 - Charity No. 1141077</p>   
+		</div>    
+		<div class="clear"></div>
+	</footer>
+</div>
+<div id="fixed_social" class="mobilehide lhsnavhide">
+	<div class="social_box"><a id="login_icon"><img src="img/login_icon.png" width="23" /></a>
+		<div id="ctl00_Panel_Login" class="login_form">
+					
+			
+			<div class="overlabel-wrapper">
+				<label for="ctl00_txt_Username" class="overlabel">Username</label>
+				<input name="ctl00$txt_Username" type="text" id="ctl00_txt_Username" />
+			</div>
+			<div class="overlabel-wrapper">
+				<label for="ctl00_txt_Password" class="overlabel">Password</label>
+				<input name="ctl00$txt_Password" type="password" id="ctl00_txt_Password" />
+			</div>
+			<input type="submit" name="ctl00$Btn_Login" value="Login" id="ctl00_Btn_Login" />
+			<p><a href="Register.aspx">Not got an account?</a></p>	
+			<div class="clear"></div>	
+						
+						
+		
+</div>
+	</div>
+	<div class="social_box"><a href="http://www.facebook.com/pages/Connectmycareer/215311365279944" target="_blank" id="fb_icon" ><img src="img/fb_icon.png" width="14" /></a></div>
+    <div class="social_box"><a href="https://twitter.com/connectmycareer" target="_blank" id="twitter_icon"><img src="img/twitter_icon.png" width="24" /></a></div>
+    <div class="social_box"><a href="http://www.youtube.com/user/connexionslive" target="_blank" id="yt_icon"><img src="img/instagram_icon.png" width="23" /></a></div>
+    <div class="social_box"><a href="https://www.linkedin.com/company/career-connect-limited" target="_blank" id="li_icon"><img src="img/linkedin_icon.png" width="23" /></a></div>	
+	<div class="social_box"><a onclick="window.open('http://www.careerconnect.org.uk/Chat/CuteSoft_Client/CuteChat/SupportRedirect.aspx','','status=1,width=500,height=500,resizable=1')" id="chat_icon"><img src="img/chat_icon_side.png" width="25" /></a></div>
+	
+
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

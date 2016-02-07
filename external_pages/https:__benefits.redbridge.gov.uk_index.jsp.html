@@ -1,0 +1,413 @@
+
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Benefit Claim and Calculator</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<base target="_top">
+	
+	<link rel="shortcut icon" href="/images/favicon.ico">
+	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+	
+	<link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/jquery-ui-1.8.2.custom.css">
+  <link rel="stylesheet" type="text/css" href="/styles/becs_standard_layout.css"/>
+  <link rel="stylesheet" type="text/css" href="/redbridge_extra.css"/>
+  
+	
+  
+  <!--jQuery -->
+  <script type="text/javascript" src="/scripts/jquery.min.js"></script>    
+  <script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
+  
+  <!--Modernizr-->
+  <script type="text/javascript" src="/scripts/modernizr.js"></script>      
+
+  <!--GOOGLE ANALYTICS-->
+ 
+</head>
+<body>
+	<div id="MainContainer">
+<div class="wrapper container_12" id="HeaderContainer">
+
+		<div id="HeaderMain">
+            <h1 class="grid_4" id="Logo">
+                <a href="//www.redbridge.gov.uk">
+					<img title="Go to Redbridge i home" alt="Redbridge i logo" src="/images/RiLogo.png">
+                </a>
+            </h1>
+            <div class="grid_4" id="SearchCol">
+		        <div id="SearchMain">    
+					<div class="searchbgIE">
+						<form action="//www.redbridge.gov.uk/Search" method="post">
+							<input type="submit" value="Go" class="float_right button primary searchbutton">			
+							<label class="visuallyhidden" for="SearchBox">Search</label>            
+							<input type="text" value="Search Redbridge i..." class="searchbox" name="SearchBox" id="SearchBox" autocomplete="off">
+						</form>
+						<div id="suggestions"></div>
+					</div>
+				</div>	
+            </div>
+			<div class="grid_3" id="LoginStatus">        
+				<a class="button lightgrey" id="LoginBtn" href="//www.redbridge.gov.uk/Account/Login">Login</a>
+				<a class="button lightgrey" id="SignUpBtn" href="//ww.redbridge.gov.uk/Account/Register">Sign up</a>
+			</div>
+        </div>
+        <div id="HeaderBar">
+
+                <ul id="MainMenu">
+                        <li>
+                            <a href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment.aspx">Planning</a>
+                             <div class="subMenu">
+                                <ul class="tasks">
+<li><a class="view-planning-applications" href="/planning">View planning applications</a></li><li><a class="planning-applications-activity" href="http://planning.redbridge.gov.uk/swiftlg/apas/run/Wchweeklylist.displayPlanningLists">Planning applications activity</a></li><li><a class="do-i-need-planning-permission" href="http://www.redbridge.gov.uk/cms/planning_land_and_buildings/planning/advice_and_guidance/do_i_need_planning_permission.aspx">Do I need planning permission</a></li>                                </ul>    
+                                <ul class="menuItems">
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment/planning_policy__regeneration/local_development_framework.aspx">Local Development Framework</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment/planning/make_a_planning_application.aspx">Make a planning application</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment/planning/advice_and_guidance.aspx">Advice and guidance</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment/planning/make_a_planning_application/planning_application_forms.aspx">Application forms</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment/planning_policy__regeneration/local_development_framework/community_infrastructure_levy.aspx">Community Infrastructure Levy</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment/building_control.aspx">Building Control</a></li>
+                                        <li><a title="More Planning" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment.aspx">More</a></li>
+                                </ul>   
+                             </div>
+                        </li>
+                        <li>
+                            <a href="http://www2.redbridge.gov.uk/cms/children_and_schools.aspx">Schools</a>
+                             <div class="subMenu">
+                                <ul class="tasks">
+<li><a class="term-dates" href="http://www.redbridge.gov.uk/cms/education_and_young_people/school_support_information/term_and_holiday_dates.aspx">Term dates</a></li><li><a class="primary-schools" href="http://www.redbridge.gov.uk/cms/education_and_young_people/schools/primary_schools.aspx">Primary Schools</a></li><li><a class="secondary-schools" href="http://www.redbridge.gov.uk/cms/education_and_young_people/schools/secondary_school.aspx">Secondary Schools</a></li>                                </ul>    
+                                <ul class="menuItems">
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/jobs_skills_and_learning/teachers_and_teaching.aspx">Jobs and teaching</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/children_and_schools/school_support_information/applications_and_admissions.aspx">Applications and admissions</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/children_and_schools/school_support_information/league_tables.aspx">League tables</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/children_and_schools/schools/pre_school.aspx">Pre school/nursery</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/children_and_schools/school_support_information/waiting_list.aspx">Waiting lists</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/children_and_schools/schools/sen_schools.aspx">Special Educational Needs</a></li>
+                                        <li><a title="More Schools" href="http://www2.redbridge.gov.uk/cms/children_and_schools.aspx">More</a></li>
+                                </ul>   
+                             </div>
+                        </li>
+                        <li>
+                            <a href="	http://www2.redbridge.gov.uk/cms/leisure_and_libraries/libraries.aspx">Libraries</a>
+                             <div class="subMenu">
+                                <ul class="tasks">
+<li><a class="renew-library-book" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/libraries/use_the_library_online/renew_your_library_books.aspx">Renew library book</a></li><li><a class="online-services" href="https://www.londonlibraries.gov.uk/Redbridge/01_YourAccount/01_009_YourAccount.aspx">Online services</a></li><li><a class="local-libraries" href="http://www.redbridge.gov.uk/cms/leisure_and_libraries/libraries/visiting_your_local_library/your_local_library.aspx">Local libraries</a></li>                                </ul>    
+                                <ul class="menuItems">
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/libraries/your_local_library/ilford_central_library.aspx">Ilford Central Library</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/libraries/events_and_activities/children_and_families.aspx">Children and family activities</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/libraries/visiting_your_local_library/borrow_from_a_library.aspx">Borrow from a library</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/libraries/visiting_your_local_library/your_local_library/gants_hill_library.aspx">Gants Hill Library</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/libraries/visiting_your_local_library/your_local_library/south_woodford_library.aspx">South Woodford Library</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/leisure_and_culture/the_redbridge_card.aspx">Redbridge Card (library card)</a></li>
+                                        <li><a title="More Libraries" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/libraries.aspx">More</a></li>
+                                </ul>   
+                             </div>
+                        </li>
+                        <li>
+                            <a href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/rubbish_and_recycling.aspx">Rubbish</a>
+                             <div class="subMenu">
+                                <ul class="tasks">
+<li><a class="reuse-recycling-centre" href="http://www.redbridge.gov.uk/cms/parking_rubbish_and_streets/rubbish_and_recycling/reuse_and_recycling_centres.aspx">Reuse &amp; recycling centre</a></li><li><a class="order-a-new-recycling-box" href="https://www.redbridge.gov.uk/report/request-recycling-box">Order a new recycling box</a></li><li><a class="report-something" href="http://www.redbridge.gov.uk/cms/parking_rubbish_and_streets/general_street_information/report_something_to_us.aspx">Report something</a></li>                                </ul>    
+                                <ul class="menuItems">
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/rubbish_and_recycling/commercial_waste.aspx">Commercial waste</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/rubbish_and_recycling/domestic_rubbish_and_recycling.aspx">Domestic rubbish and recycling</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/rubbish_and_recycling/green_garden_waste_bags.aspx">Garden waste</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/parking,_rubbish_and_streets/report_street_related_issues/report_flytipping.aspx">Fly-tipping</a></li>
+                                        <li><a title="" href="http://www.redbridge.gov.uk/report/missed-domestic-refuse">Missed rubbish collection</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/rubbish_and_recycling/bulky_clinical_hazardous/bulky_waste.aspx">Large items (beds, sofas..)</a></li>
+                                        <li><a title="More Rubbish" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/rubbish_and_recycling.aspx">More</a></li>
+                                </ul>   
+                             </div>
+                        </li>
+                        <li>
+                            <a href="	http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/parking_and_vehicles.aspx">Parking</a>
+                             <div class="subMenu">
+                                <ul class="tasks">
+<li><a class="pay-parking-fine" href="http://www.redbridge.gov.uk/cms/parking_rubbish_and_streets/parking_and_vehicles/pay_a_parking_fine.aspx">Pay parking fine</a></li><li><a class="apply-for-parking-permits" href="http://www.redbridge.gov.uk/cms/parking_rubbish_and_streets/parking_and_vehicles/parking_permits_and_zones/residents_and_visitor_permits.aspx">Apply for parking permits</a></li><li><a class="apply-for-dropped-kerb" href="http://www.redbridge.gov.uk/cms/parking_rubbish_and_streets/parking_and_vehicles/footway_crossings_dropped_kerb.aspx">Apply for dropped kerb</a></li>                                </ul>    
+                                <ul class="menuItems">
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/parking,_rubbish_and_streets/parking_and_vehicles/pay_a_fine/challenging_a_parking_pcn.aspx">About parking fines</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/parking_and_vehicles/parking_permits_and_zones/controlled_parking_zones_cpz.aspx">Controlled Parking Zones</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/parking_and_vehicles/car_parks.aspx">Car Parks</a></li>
+                                        <li><a title="" href="http://www.redbridge.gov.uk/report/abandoned-vehicle">Report an abandoned vehicle</a></li>
+                                        <li><a title="More Parking" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/parking_and_vehicles.aspx">More</a></li>
+                                </ul>   
+                             </div>
+                        </li>
+                        <li>
+                            <a href="	http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/housing.aspx">Housing</a>
+                             <div class="subMenu">
+                                <ul class="tasks">
+<li><a class="housing-benefit-entitlements" href="https://benefits.redbridge.gov.uk/">Housing Benefit entitlements</a></li><li><a class="register-for-a-home" href="http://www.redbridge.gov.uk/cms/council_tax_and_housing/housing_advice_and_support/register_for_a_home.aspx">Register for a home</a></li><li><a class="housing-allowance-rates" href="http://www2.redbridge.gov.uk/cms/council_tax_and_housing/housing_benefit/local_housing_allowances/local_housing_allowance_rates.aspx">Housing allowance rates</a></li>                                </ul>    
+                                <ul class="menuItems">
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/housing_benefit.aspx">Housing Benefit</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/housing/redbridge_homes.aspx">Redbridge Homes</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/finding_and_renting_a_property/housing_associations.aspx">Housing Associations</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/housing/register_for_a_home/bidding_for_a_property.aspx">Bid for a property</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/housing/housing_advice_centre.aspx">Housing advice</a></li>
+                                        <li><a title="More Housing" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/housing.aspx">More</a></li>
+                                </ul>   
+                             </div>
+                        </li>
+                        <li>
+                            <a href="	http://www2.redbridge.gov.uk/cms/leisure_and_libraries/leisure_and_culture.aspx">Leisure &amp; Events</a>
+                             <div class="subMenu">
+                                <ul class="tasks">
+<li><a class="events-and-activities" href="http://www.redbridge.gov.uk/events/">Events and activities</a></li><li><a class="places-to-go" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/leisure_and_culture/places_to_go_facilities.aspx">Places to go</a></li><li><a class="halls-for-hire" href="http://www.redbridge.gov.uk/cms/community_and_life_events/community_related_information/halls_to_hire.aspx">Halls for hire</a></li>                                </ul>    
+                                <ul class="menuItems">
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/leisure_and_culture/parks_and_open_spaces.aspx">Parks and open spaces</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/leisure_and_culture/the_redbridge_card.aspx">Redbridge Card</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/leisure_and_culture/places_to_go_facilities/redbridge_museum.aspx">Redbridge Museum</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/leisure/parks_and_open_spaces/list_of_parks_and_open_spaces-/valentines_park.aspx">Valentines Mansion and Park</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/leisure_and_culture/parks_and_open_spaces/list_of_parks_and_open_spaces/fairlop_waters.aspx">Fairlop Waters</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/leisure/leisure_facilities_and_activit/fullwell_cross_leisure_centre.aspx">Fullwell Cross Leisure Centre</a></li>
+                                        <li><a title="More Leisure &amp; Events" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/leisure_and_culture.aspx">More</a></li>
+                                </ul>   
+                             </div>
+                        </li>
+                        <li>
+                            <a href="	http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/council_tax.aspx">Council Tax</a>
+                             <div class="subMenu">
+                                <ul class="tasks">
+<li><a class="pay-your-council-tax" href="https://payments.redbridge.gov.uk/LaunchInternet.aspx?saleformid=5">Pay your Council Tax</a></li><li><a class="council-tax-banding" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/council_tax/council_tax_banding.aspx">Council Tax banding</a></li><li><a class="register-for-council-tax" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/council_tax/register_for_council_tax.aspx">Register for Council Tax</a></li>                                </ul>    
+                                <ul class="menuItems">
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/council_tax_and_housing/council_tax/benefits_discountsexemptions.aspx">Benefits, discounts, exemptions</a></li>
+                                        <li><a title="" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/council_tax/change_in_circumstances.aspx">Change in circumstances</a></li>
+                                        <li><a title="More Council Tax" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/council_tax.aspx">More</a></li>
+                                </ul>   
+                             </div>
+                        </li>
+                    <li class="allsections more"><a href="#">All sections</a>
+                        <div class="subMenu">
+                            <ul class="menuItems">
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/care_and_health.aspx">Care and Health</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/business_and_consumers.aspx">Business and Consumers</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/the_council.aspx">The Council</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/citizens_and_registrations.aspx">Citizens and Registrations</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing.aspx">Council Tax, Benefits and Housing</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/crime_and_public_safety.aspx">Crime and Public Safety</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/children_and_schools.aspx">Children and Schools</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/jobs_skills_and_learning.aspx">Jobs, Skills and Learning</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries.aspx">Leisure and Libraries</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/news_and_events.aspx">News and Events</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets.aspx">Parking, Rubbish and Streets</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment.aspx">Planning and the Environment</a></li>
+                                   <li><a href="http://www2.redbridge.gov.uk/cms/london_2012_games.aspx">London 2012 Games</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+        </div>        
+
+</div>
+	        <div id="Main" class="wrapper container_16 clearfix">
+				<div class="grid_4" id="NavigationColumn">
+				
+  			<div id="SidebarLoader">
+  			
+  			<nav id="MyAccountMenu">
+
+						<h2><span>Your account</span></h2>
+ 						<ul>
+							<li class="counciltax"><a href="//www.redbridge.gov.uk/CouncilTax">Council Tax<span>See your bill and pay online</span></a></li>
+							<li class="recyclerefuse"><a href="//www.redbridge.gov.uk/RecycleRefuse">Recycle &amp; Refuse<span>Report problems and collection details</span></a></li>
+							<li class="planning"><a href="//www.redbridge.gov.uk/Planning">Planning<span>Applications and building control</span></a></li>
+							<li class="reports"><a href="//www.redbridge.gov.uk/Report">Reports<span>View and make reports</span></a></li>
+							<li class="jobs"><a href="https://jobs.redbridge.gov.uk/bridge.asp?URL=https://jobs.redbridge.gov.uk/searchapply/CurrentApplications.asp">Jobs<span>Applications and opportunities</span></a></li>
+							<li class="leisure"><a href="//www.redbridge.gov.uk/Leisure">Leisure<span>Make bookings, and more</span></a></li>
+							<li class="libraries"><a href="//www.redbridge.gov.uk/Libraries">Libraries<span>Reservations and current borrowing</span></a></li>
+						</ul>
+
+        </nav>
+        
+        <nav id="MainTabs">
+
+						<h2><span>Also see...</span></h2>
+						<ul><!-- in alpha order -->
+							<li class="consult"><a href="//www.redbridge.gov.uk/haveyoursay">Consultations</a></li><li class="data">
+							<a href="http://data.redbridge.gov.uk">DataShare</a></li><li class="events">
+							<a href="//www.redbridge.gov.uk/Events">Events &amp; activities</a></li><li class="forums">
+							<a href="http://forums.redbridge.gov.uk">Forums</a></li><li class="maps">
+							<a href="//www.redbridge.gov.uk/Map">Map</a></li><li class="payit">
+							<a href="https://payments.redbridge.gov.uk/">Pay it</a></li><li class="reportit">
+						</li></ul>
+
+       </nav>
+       
+       <div id="SocialButtons">
+
+					<div id="SocialButtons">
+						<a class="facebook socialIcon" href="http://www.facebook.com/RedbridgeLive">
+							<img alt="Go to our Facebook page" src="/images/facebookflogo.png"></a>
+						<a class="twitter socialIcon" href="http://twitter.com/redbridgelive">        
+							<img alt="View our Twitter account" src="/images/TwitterIcon.png"></a>
+					</div>
+
+        </div>
+        
+        </div>
+
+				</div>			
+
+
+	            <div id="MainColumn" class="grid_12 clearfix">
+	                <p class="breadcrumb">					
+						<a href="http://www.redbridge.gov.uk">Home Page</a> &gt;
+						<span>Benefit Claim and Calculator</span>
+					</p>
+
+	                <h2><a class="button float_right" href="http://www.redbridge.gov.uk">Home</a>Benefit Claim and Calculator</h2>
+
+	                <div id="becs">
+	                <p class="switch-link">
+  <a href="/access_index.jsp;jsessionid=B622290A63911D8CEA5AF1EF2B548D9B">Switch to accessible version</a>
+</p>
+	                
+	                
+	                <h1 class="title">
+    Calculate and claim Housing Benefit and Council Tax Reduction
+</h1>
+
+
+
+<p class="indexPara"><strong>Do you live in the area covered by London Borough of Redbridge?  Want to find out how much benefit you could get?  Want to claim benefit straightaway?</strong></p>
+
+<p class="indexPara">Use the <strong>BENEFIT CLAIM AND CALCULATOR</strong> to:</p>
+<ul>
+  <li><strong>see</strong> how much Housing Benefit and Council Tax Reduction you could get if you rent - then claim online!</li>
+  <li><strong>check</strong> and claim Council Tax Reduction if you own your home</li>
+  <li><strong>find out</strong> if you're entitled to Income Support, Pension Credit or Tax Credits</li>
+</ul>
+
+<p class="indexPara">It&lsquo;s quick, easy and secure.</p>
+
+<p class="indexPara">The first part is the online calculator - answer questions accurately to see what you could get.  Then go on to the second part - the online claim - to get things moving quickly!</p>
+
+<p class="indexPara">
+  <a class="btn primary" class="introLinks" id="becsStartCalculator" href="/servlet/QuestEngine;jsessionid=B622290A63911D8CEA5AF1EF2B548D9B?TNSA_A=claim&amp;TNSA_S=html">Start a new calculation/claim</a>
+  <a class="btn" class="introLinks" id="becsContinueCalculator" href="/returningindex.jsp;jsessionid=B622290A63911D8CEA5AF1EF2B548D9B">Return to a calculation/claim you have saved</a>
+</p>
+
+<br />
+<p class="indexPara"><strong>Please note that the online benefits claim system is for residents of London Borough of Redbridge only.</strong> You can find your local authority by clicking the button below.</p>
+
+<p class="indexPara">
+				<a class="btn" class="introLinks" id="directGov" target="_directGov" href="http://www.local.direct.gov.uk/LDGRedirect/Start.do?mode=1">Find Your Local Authority</a>
+</p>
+
+<h2 class="extraInfo">Welfare Reform</h2>
+<p class="extraInfoPara">The welfare and benefits information outlined on our website may be affected by the Government's Welfare Reform Act 2012. If you are awarded Housing Benefit and are subject to the benefit cap, we will write to you and let you know. This means that the amount of Housing Benefit quoted in the calculation on this website may be reduced.</p>
+	                </div>
+                </div>
+
+	        </div>
+
+<div id="footerSuperMenu" class="container_12 clearfix">
+        <div class="grid_12">
+            <div id="SuperMenu" class="clearfix">
+            <h2><span>All areas</span></h2>
+                <ul class="AtoZ unstyled">
+                    <li><a href="//www.redbridge.gov.uk/atoz/a">A</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/b">B</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/c">C</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/d">D</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/e">E</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/f">F</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/g">G</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/h">H</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/i">I</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/j">J</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/k">K</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/l">L</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/m">M</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/n">N</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/o">O</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/p">P</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/q">Q</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/r">R</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/s">S</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/t">T</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/u">U</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/v">V</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/w">W</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/x">X</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/y">Y</a></li><li>
+                    <a href="//www.redbridge.gov.uk/atoz/z">Z</a></li>
+                </ul>
+                <ul class="items">
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/care_and_health.aspx">Care and Health</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/care_and_health/adult_social_services.aspx">Adult Social Services</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/care_and_health/children_and_families.aspx">Children and Families (Children's Trust)</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/care_and_health/health.aspx">Health</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/care_and_health/welfare_and_benefits1.aspx">Welfare and benefits</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/business_and_consumers.aspx">Business and Consumers</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/business_and_consumers/doing_business.aspx">Doing business</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/business_and_consumers/licensing_and_trading.aspx">Licensing and street trading</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/business_and_consumers/trading_standards_enforcement.aspx">Trading standards enforcement and regulations</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/the_council.aspx">The Council</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/the_council/about_redbridge_i.aspx">About Redbridge i</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/the_council/about_the_council.aspx">About the Council</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/the_council/council_people_and_elections.aspx">Council people and elections</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/the_council/my_neighbourhood.aspx">My Neighbourhood</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/the_council/public_meetings.aspx">Public meetings</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/citizens_and_registrations.aspx">Citizens and Registrations</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/citizens_and_registrations/births_deaths_and_marriages.aspx">Births, deaths, marriages and civil partnerships</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/community_and_life_events/british_citizenship.aspx">British Citizenship</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/community_and_life_events/community_related_information.aspx">Community related information</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/citizens_and_registrations/equality_and_diversity.aspx">Equality and diversity</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/community_and_life_events/moving_to_redbridge.aspx">Moving to Redbridge</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing.aspx">Council Tax, Benefits and Housing</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/council_tax.aspx">Council Tax</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/housing.aspx">Housing</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/housing_benefit.aspx">Housing Benefit</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/council_tax_benefits_housing/welfare_and_benefits.aspx">Welfare and Benefits</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/crime_and_public_safety.aspx">Crime and Public Safety</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/crime_and_public_safety/crime_prevention.aspx">Crime prevention</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/crime_and_public_safety/keeping_redbridge_safe.aspx">Keeping Redbridge safe</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/crime_and_public_safety/public_safety.aspx">Public Safety</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/crime_and_public_safety/report_something_to_the_counci.aspx">Report something to the Council</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/children_and_schools.aspx">Children and Schools</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/children_and_schools/children_and_families.aspx">Children and Families (Children's Trust)</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/children_and_schools/redbridge_youth.aspx">Redbridge Youth</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/children_and_schools/school_support_information.aspx">School Support Information</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/children_and_schools/schools.aspx">Schools</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/jobs_skills_and_learning.aspx">Jobs, Skills and Learning</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/jobs_skills_and_learning/further_education.aspx">Further education</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/jobs_skills_and_learning/jobs.aspx">Jobs</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/jobs_skills_and_learning/skills_and_learning.aspx">Skills and learning</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/jobs_skills_and_learning/work_redbridge.aspx">Work Redbridge</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries.aspx">Leisure and Libraries</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/highlight_events.aspx">Highlights</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/leisure_and_culture.aspx">Leisure and Culture</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/leisure_and_libraries/libraries.aspx">Libraries</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/news_and_events.aspx">News and Events</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/news_and_events/events2.aspx">Events</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/news_and_events/filming_in_redbridge.aspx">Filming in Redbridge</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/news_and_events/latest_news.aspx">Latest news</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/news_and_events/news.aspx">News</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/news_and_events/press_and_media_office.aspx">Press and media office</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/news_and_events/redbridge_facebook_page.aspx">Redbridge Council Facebook page</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/news_and_events/redbridge_life.aspx">Redbridge Life</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/news_and_events/redbridge_live.aspx">Redbridge Live</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/news_and_events/submit_your_event.aspx">Submit your event</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/news_and_events/submit_your_news.aspx">Submit your news</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets.aspx">Parking, Rubbish and Streets</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/general_street_information.aspx">General street information</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/parking_and_vehicles.aspx">Parking and vehicles</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/parking_rubbish_and_streets/rubbish_and_recycling.aspx">Rubbish and recycling</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment.aspx">Planning and the Environment</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment/building_control.aspx">Building Control</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment/planning.aspx">Planning</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment/planning_policy__regeneration.aspx">Planning policy and regeneration</a>,                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/planning_and_the_environment/the_environment.aspx">The Environment</a>                                    </div>
+                        </li>
+                        <li class="item"><a class="title" href="http://www2.redbridge.gov.uk/cms/london_2012_games.aspx">London 2012 Games</a>
+                                    <div class="subitems">
+                                            <a class="subitem" href="http://www2.redbridge.gov.uk/cms/"></a>                                    </div>
+                        </li>
+                </ul>
+            </div>
+         </div>
+    </div>
+    </div>    
+
+	<!--[if lt IE 7 ]>
+	<script src="/scripts/dd_belatedpng.js"></script>
+	<script> DD_belatedPNG.fix('img, .png_bg');</script>
+	<![endif]-->
+
+</body>
+</html>
+

@@ -1,0 +1,2222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv=content-type content="text/html; charset=UTF-8">
+<meta content="" name=description>
+<meta content="" name=keywords>
+<title>Devon Home Choice</title>
+<link rel="shortcut icon" href="images/logo_dhc.gif" type="/Devon_Home_Choice/images/logo_dhc.gif"> 
+<link rel="icon" href="images/logo_dhc.gif" type="/Devon_Home_Choice/images/logo_dhc.gif">
+<link rel="stylesheet" type="text/css" href="/Devon_Home_Choice/balloontip.css">
+<link rel="stylesheet" type="text/css"  href="/Devon_Home_Choice/styles/concatenated-min.css">
+<script type="text/javascript" src="/Devon_Home_Choice/js/tabcontent.js"></script>
+<script src="/Devon_Home_Choice/js/jquery-1.9.1.js"></script>
+<script src="/Devon_Home_Choice/js/jquery-ui.js"></script>
+<script src="/Devon_Home_Choice/js/jquery.uniform.js" type="text/javascript"></script>
+
+<script language="javascript" type="text/javascript">
+ 	var textBoxData = "";
+	function removeText(elementId){
+		//textBoxData=document.getElementById(elementId).value;
+		document.getElementById(elementId).value="";
+	}
+/*	function addText(elementId){
+		document.getElementById(elementId).value=textBoxData;
+	}
+*/
+</script>
+<script type="text/javascript">
+
+
+function changeCssfile(size , check12){
+		var pageName = "";
+		graphicalmode="graphical";
+		textOnlyMode= "textual";
+		var cssName="";	
+		/*Graphics Mode*/
+		if(size=="12" && check12==graphicalmode)
+		{
+             cssName="redoa.css";
+		}
+		else if(size=="13"  && check12==graphicalmode)
+		{
+             cssName="redoaa.css";
+		}
+		else if(size=="14"  && check12==graphicalmode)
+		{
+             cssName="redoaaa.css";
+		}
+		/*TextOnly Css*/
+	    else if(size=="12" && check12==textOnlyMode)
+		{
+		     cssName="redoa.css";
+		}
+		else if(size=="13"  && check12==textOnlyMode)
+		{
+             cssName="redoaa.css";
+		}
+		else if(size=="14"  && check12==textOnlyMode)
+		{
+             cssName="redoaaa.css";
+		}
+
+		if(check12==graphicalmode){
+
+			document.cfeMenuForm.websiteformat.value = "graphical";
+		}
+		else{
+				document.cfeMenuForm.websiteformat.value = "textual";
+		}
+		document.cfeMenuForm.changeCss.value = cssName;
+		
+		if(location.pathname!="" && location.pathname.indexOf('.')>=0){
+			document.cfeMenuForm.action = location.pathname;
+		}
+		else{
+			if(document.getElementById("showPageName")!=null){
+				pageName=document.getElementById("showPageName").value;
+			}
+			document.cfeMenuForm.action = "/Devon_Home_Choice"+"/CFEHome.jsp";
+		}
+		document.cfeMenuForm.submit();
+		return false;  
+	}
+
+
+function textOnlyClick(){
+		var pageName = "";
+		document.cfeMenuForm.colorSchemeText.value='0';
+		document.cfeMenuForm.websiteformat.value = "textual";
+		document.cfeMenuForm.changeCss.value = "CFE.css";
+		if(location.pathname!="" && location.pathname.indexOf('.')>=0){
+			//alert(location.pathname);
+             var abcd="";
+			 if(location.pathname=="/"+"Devon_Home_Choice/CFEHome.jsp"){
+			  abcd="Home";
+		     }  
+			else if(location.pathname=="/"+"Devon_Home_Choice/CFELogin.jsp"){
+			  abcd="Login";
+		     }  
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFELanguages.jsp"){
+			  abcd="Languages";
+		     }  
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFEAboutUs.jsp"){
+			  abcd="About Us";
+		     }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFEContactUs.jsp"){
+			  abcd="Contact Us";
+		     }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFEListProperty.jsp"){
+				abcd="List Property";
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFESiteMap.jsp"){
+				abcd="SiteMap";
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/HousingOption.jsp"){
+				abcd="Housing Options";
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFEAccessKey.jsp"){
+				abcd="Accessibility";
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/pb_ListAdvert.jsp"){
+				abcd="List Advert";
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFELogout.jsp"){
+				abcd="Logout";
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/PrivacyStatement.jsp"){
+				abcd="Privacy Statement";
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFETerms.jsp"){
+				abcd="Terms";
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFEViewPropertyDetails.jsp"){
+				abcd="List Property";
+				
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFESeeMorePropertyImages.jsp"){
+				abcd="List Property";
+				
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFEViewRentDetails.jsp"){
+				abcd="List Property";
+				
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFEViewSelfDetails.jsp"){
+				abcd="List Property";
+				
+			 }
+			 else if(location.pathname=="/"+"Devon_Home_Choice/CFESystemGuide.jsp"){
+				abcd="System Guide";
+				
+			 }
+
+			var locationSearch = location.search;
+			var siteFormat = document.cfeMenuForm.websiteformat.value;
+			if(locationSearch.indexOf("graphical")!=-1 && siteFormat=="textual") {
+					locationSearch=locationSearch.replace("graphical","textual");
+			}
+
+			document.cfeMenuForm.action = location.pathname + locationSearch;
+			document.cfeMenuForm.selectedMenu.value=abcd;
+		}else{
+			document.cfeMenuForm.action = "/Devon_Home_Choice"+"/CFEHome.jsp";
+			if(document.getElementById("showPageName")!=null){
+			pageName=document.getElementById("showPageName").value;
+			document.cfeMenuForm.action = "/Devon_Home_Choice"+pageName;
+			}
+			
+		}
+		document.cfeMenuForm.submit();
+		return false;  
+	}
+	 
+
+function graphicClick(){ 
+		var pageName = "";
+		fileName=location.pathname;
+		if(fileName!="" && fileName.indexOf('/')==0){
+			fileName=fileName.substring((fileName.lastIndexOf('/')+1),fileName.length);
+			
+		}
+		document.cfeMenuForm.websiteformat.value = "graphical";
+		document.cfeMenuForm.colorSchemeText.value = "1";
+		document.cfeMenuForm.changeCss.value = "CFE.css";
+
+		var locationSearch = location.search;
+		var siteFormat = document.cfeMenuForm.websiteformat.value;
+		if(locationSearch.indexOf("textual")!=-1 && siteFormat=="graphical") {
+			locationSearch=locationSearch.replace("textual","graphical");
+		}
+
+		document.cfeMenuForm.action = location.pathname + locationSearch;
+		if(fileName=="CFEListProperty.jsp"){
+			if(location.pathname!="" && location.pathname.indexOf('.')>=0){
+				document.cfeMenuForm.action = location.pathname + locationSearch;
+			}
+        }
+		else{
+			if(location.pathname!="" && location.pathname.indexOf('.')>=0){
+				document.cfeMenuForm.action = location.pathname + locationSearch;
+			}
+			else{
+				if(pageName=="CFEListProperty.jsp"){
+					document.cfeMenuForm.action = "/Devon_Home_Choice"+pageName+"?selectedMenu=List Property";
+				}else{
+					document.cfeMenuForm.action = "/Devon_Home_Choice"+pageName;
+				}
+			}
+		}
+		document.cfeMenuForm.submit();
+		return false;  
+	}
+
+
+
+	function changeColor(){
+		var pageName = "";
+		var siteFormat = "";
+		document.cfeMenuForm.colorSchemeText.value = document.cfeMenuForm.colorScheme.options[document.cfeMenuForm.colorScheme.selectedIndex].value;
+		//document.cfeMenuForm.action = location.pathname;
+		var locationSearch = location.search;
+		if(locationSearch.indexOf("textual")!=-1 && siteFormat=="graphical") {
+			locationSearch=locationSearch.replace("textual","graphical");
+		}
+
+		if(location.pathname!="" && location.pathname.indexOf('.')>=0){
+			document.cfeMenuForm.action = location.pathname+locationSearch;
+		}
+		else{
+			document.cfeMenuForm.action = "/Devon_Home_Choice"+pageName;
+		}
+		document.cfeMenuForm.submit();
+ 	}
+	function navigate(filePath , obj){
+        document.cfeMenuForm.action = "/Devon_Home_Choice/"+filePath;
+		document.cfeMenuForm.submit();
+		return;
+		
+
+		if(obj.id=="home")
+		{
+			document.getElementById("home").src="images/home_2.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="login")
+		{
+           
+			document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login_2.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="logout")
+		{ 
+			 
+	   	    document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="languages")
+		{
+
+    		document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages_2.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="aboutus")
+		{
+			
+    		document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us_2.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="contactus")
+		{
+			
+    		document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us_2.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="logout")
+		{
+			
+    		document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+		return false;
+	}
+
+	function navigate(filePath){
+        //document.cfeMenuForm.changeCss.value = cssName;
+		if((filePath.search("CFELogout.jsp")!=-1)&&(false))
+		{
+			value=confirm("Have you set your bids in preferred order- press OK to close the window or Cancel to go back and set your preferences");
+			if(!value)
+			{
+				document.cfeMenuForm.action = "/Devon_Home_Choice/"+"CFEViewSelfDetails.jsp";
+				document.cfeMenuForm.submit();
+				return false;
+			}
+		}
+		document.cfeMenuForm.action = "/Devon_Home_Choice/"+filePath;
+		document.cfeMenuForm.submit();
+		return false;
+}
+	function defaultColorValue(){
+		var format = "graphical";
+		if(format=="textual")
+		{
+			
+			document.cfeMenuForm.colorScheme.value = "1";
+		}
+	}
+
+/* Unused methods
+function changeImage(obj)
+{
+  return
+  var temp = new Array();
+  var abctemp=document.getElementById(obj.id).src;
+  
+ if(obj.id=="home")
+	{
+		
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+
+		if (imagename!="home_2.gif")
+			{
+			   document.getElementById("home").src="images/home_1.gif";
+			}
+	}
+
+   else if(obj.id=="login")
+	{
+	   temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+
+		if (imagename!="login_2.gif")
+			{
+				document.getElementById("login").src="images/login_1.gif";
+			}
+	}
+
+	else if(obj.id=="languages")
+	{     
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+			if (imagename!="languages_2.gif")
+				{
+					document.getElementById("languages").src="images/languages_1.gif";
+				}
+	}
+
+	else if(obj.id=="aboutus")
+	{
+		 temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+		if (imagename!="about_us_2.gif")
+		{
+    		document.getElementById("aboutus").src="images/about_us_1.gif";
+		}
+	}
+	else if(obj.id=="contactus")
+	{
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+		if (imagename!="contact_us_2.gif")
+		{
+    		document.getElementById("contactus").src="images/contact_us_1.gif";
+		}
+			
+	}
+	else if(obj.id=="logout")
+	{
+	
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+		if (imagename!="logout_2.gif")
+		{
+    		document.getElementById("logout").src="images/logout_1.gif";
+		}
+	}
+}
+*/
+
+/* Unused methods
+function backImage(obj)
+{
+   return;
+  var temp = new Array();
+  var   abctemp=abctemp=document.getElementById(obj.id).src;;
+  
+if(obj.id=="home")
+	{ 
+		
+	    temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];	
+		if (imagename!="home_2.gif")
+			{
+			document.getElementById("home").src="images/home.gif";
+			}
+	}
+else if(obj.id=="login")
+		{
+	           
+			temp = abctemp.split('/'); 
+	        var imagename=temp[temp.length-1];	
+             if (imagename!="login_2.gif")
+			{
+			document.getElementById("login").src="images/login.gif";
+			}
+		}
+
+ else if(obj.id=="languages")
+	{
+		 temp = abctemp.split('/'); 
+	     var imagename=temp[temp.length-1];	
+		 if (imagename!="languages_2.gif")
+		{
+		document.getElementById("languages").src="images/languages.gif";
+		}
+	}
+    
+ else if(obj.id=="aboutus")
+	{
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];	
+		if (imagename!="about_us_2.gif")
+		{
+			document.getElementById("aboutus").src="images/about_us.gif";
+		}
+	}
+ else if(obj.id=="contactus")
+	{
+    	    temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];	
+        if (imagename!="contact_us_2.gif")
+		{
+		  document.getElementById("contactus").src="images/contact_us.gif";
+		}
+	}
+else if(obj.id=="logout")
+	{
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];	
+        if (imagename!="logout_2.gif")
+		{
+		  document.getElementById("logout").src="images/logout.gif";
+		}
+	}
+  
+  
+}
+*/
+
+function confirmLogout(appId, partnerName)
+{
+		if(appId!="null")
+		{
+				xmlhttp=GetXmlHttpObject();
+				if (xmlhttp==null)
+				{
+					alert ("Your browser does not support AJAX!");
+					return;
+				}
+				
+					var url="/cblCfeService?actionType=128&applicantId="+appId;
+					xmlhttp.onreadystatechange=function()
+					{
+	if(xmlhttp.readyState==4 && xmlhttp.status==200)
+	{
+		var respStr = xmlhttp.responseText;
+		if(respStr!="0")
+		{
+			 document.resultSection.action = "/Devon_Home_Choice/CFELogout.jsp?selectedMenu=Logout"; 
+			document.resultSection.submit();
+
+		/*	if(document.getElementById("containerMessagePopup")!=null){
+			
+				document.getElementById("containerMessagePopup").innerHTML="";
+				var divHTML = "<table width='100%'>"+
+							"<tr>"+				
+							"<td>"+
+							"<img src='images/failure.png' style='display:block'/>"+
+							"</td>"+
+							"<td >Are you sure you want to logout? You have not bid on the properties added to your selections</td>"+
+							"</tr>"+
+							"<tr>"+
+							"<td  colspan='2'>"+
+							"<a href='#' class='black' style='float:right;'><span onclick='logoutApplicant()'>Ok</span></a> <a href='#' class='black' style='float:right;'><span onclick='closeMessagePopUp()'>Cancel</span></a> "+
+							"</td>"+
+											
+							"</tr>"+
+							"</table>"; 
+						document.getElementById("containerMessagePopup").innerHTML = logoutApplicant();
+			
+			
+			
+			setTimeout(function(){ $('#msgPopup-modal-content').modal();
+			 if(document.getElementById("modalCloseImage")!=null){
+				document.getElementById("modalCloseImage").style.display="none";
+				document.getElementById("modalCloseImage").style.visibility="hidden";
+			}}, 10);*/
+			
+		}
+		if(respStr=="0")
+		{
+				document.cfeMenuForm.action ="/"+partnerName+"/CFELogout.jsp?selectedMenu=Logout";
+				document.cfeMenuForm.submit();
+		}
+	}
+					};
+					xmlhttp.open("GET",url,true);
+					xmlhttp.send(null);
+			}
+}
+function logoutApplicant(){
+	 document.resultSection.action = "/Devon_Home_Choice/CFELogout.jsp?selectedMenu=Logout"; 
+	 document.resultSection.submit();
+
+
+		}
+function renderCartMsg(containerDiv,imgSrc, msg)
+{
+containerDiv.innerHTML="";
+var divHTML = "<table>"+
+				"<tr>"+				
+				"<td>"+
+				"<img src='"+imgSrc+"'/>"+
+				"</td>"+
+				"<td >"+msg+"</td>"+
+				"</tr>"+				
+				"</table>";
+				containerDiv.innerHTML = divHTML;
+				
+}
+
+function renderMessagePopup(containerDiv,imgSrc, msg)
+{
+if(containerDiv!=null)
+	{
+	containerDiv.innerHTML="";
+var divHTML = "<table width='100%'>"+
+				"<tr>"+				
+				"<td>"+
+				"<img src='"+imgSrc+"'/>"+
+				"</td>"+
+				"<td><span style='font:bold;'>"+msg+"</span></td>"+
+				"</tr>"+
+				"<tr>"+
+				"<td style='width:100%;' colspan='2'>"+
+				"<a href='#' class='black' style='float:right;'><span onclick='closeMessagePopUp()'>OK</span></a> "+
+				"</td>"+
+				"</tr>"+
+				"</table>";
+				containerDiv.innerHTML = divHTML;
+				}
+	
+}
+function closeMessagePopUp()
+{
+	$.modal.close();
+}
+function renderWaitProcess(containerDiv)
+{
+	if(containerDiv!=null)
+		{
+				
+				var divHTML = "<table width='90%' height='90%'>"+
+				"<tr>"+
+				"<td align='center'>"+
+				"<img src='images/wait.gif' alt='Loading...' style='display:block'/>"+
+				"</td>"+
+				"</tr>"+
+				"</table>";
+				containerDiv.innerHTML=divHTML;
+		}
+}
+function renderCartLoadingProcess()
+{
+	if(document.getElementById("cartMsgDiv")!=null)
+		{
+		
+			var divHTML = "<img src='images/wait.gif'/>";
+			document.getElementById("cartMsgDiv").innerHTML =divHTML;
+			document.getElementById("cartMsgDiv").style.display="block";
+			 
+		}
+		if(document.getElementById("simplemodal-container")!=null)
+		{
+			var divHeight = document.getElementById("simplemodal-container").style.height;
+			var numericDivHeight;
+			
+			if(divHeight.indexOf('px')!=-1)
+			{
+			numericDivHeight = divHeight.substring(0,divHeight.indexOf('px'));
+			}
+			numericDivHeight = parseInt(numericDivHeight)+30;
+			
+			document.getElementById("simplemodal-container").style.height=numericDivHeight+"px";
+		}
+}
+function gallerySetup(){
+
+    var galleries = $('.ad-gallery').adGallery();
+    $('#switch-effect').change(
+      function() {
+        galleries[0].settings.effect = $(this).val();
+        return false;
+      }
+    );
+    $('#toggle-slideshow').click(
+      function() {
+        galleries[0].slideshow.toggle();
+        return false;
+      }
+    );
+    $('#toggle-description').click(
+      function() {
+        if(!galleries[0].settings.description_wrapper) {
+          galleries[0].settings.description_wrapper = $('#descriptions');
+        } else {
+          galleries[0].settings.description_wrapper = false;
+        }
+        return false;
+      }
+    );
+	//When you click on a link with class of poplight and the href starts with a # 
+	$('a.poplight[href^=#]').click(function() { 
+		var popID = $(this).attr('rel'); //Get Popup Name
+		
+		var popURL = $(this).attr('href'); //Get Popup href to define size
+				
+		//Pull Query & Variables from href URL
+		var query= popURL.split('?');
+		var dim= query[1].split('&');
+		var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+
+		//Fade in the Popup and add close button
+		$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="/acm_style/images/close_pop.gif" class="btn_close" title="Close Window" alt="Close" /></a>');
+		
+		//Define margin for center alignment (vertical + horizontal) - we add 80 to the height/width to accomodate for the padding + border width defined in the css
+		var popMargTop = ($('#' + popID).height() + 80) / 2;
+		var popMargLeft = ($('#' + popID).width() + 80) / 2;
+		
+		//Apply Margin to Popup
+		$('#' + popID).css({ 
+			'margin-top' : -popMargTop,
+			'margin-left' : -popMargLeft
+		});
+		
+		//Fade in Background
+		$('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+		$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer 
+		
+		return false;
+	});
+	
+	//Close Popups and Fade Layer
+	$('a.close, #fade').live('click', function() { //When clicking on the close or fade layer...
+
+	  	$('#fade , .popup_block').fadeOut(function() {
+			$('#fade, a.close').remove();  
+	}); //fade them both out
+		
+		return false;
+	});
+  
+
+}
+function placeBidFromCart(propertyId)
+{
+	renderCartLoadingProcess();
+	placeBidUpdated("false", propertyId, "true");
+}
+// isClickedForMultipleBid denotes whether Bid button is clicked from Top or from per record bid button
+function placeBidUpdated(isClickedForMultipleBid, propertyId, isBidPlacedFromCart, noOfRecordsPopulated)
+{   
+//this condition put because pop-up should appear only when bid is not placed from cart.
+
+var isClickedFrom = null;
+if(isBidPlacedFromCart=="false")
+{
+
+	isClickedFrom = "otherThanCart";
+	renderWaitProcess(document.getElementById("containerMessagePopup"));
+	$('#msgPopup-modal-content').modal();
+
+	/*renderWaitProcess(document.getElementById("containerMessagePopup"));*/
+	renderWaitProcess();
+	setTimeout(function(){$('#msgPopup-modal-content').modal();},10);
+
+	if(document.getElementById("modalCloseImage")!=null)
+	{
+		document.getElementById("modalCloseImage").style.display="none";
+	}
+}
+else
+{
+renderCartLoadingProcess();
+isClickedFrom = "cart";
+}
+var selectedPropertyIds = getSelectedPropertyIds(isClickedForMultipleBid, propertyId,noOfRecordsPopulated,isClickedFrom);
+
+if(selectedPropertyIds!="")
+{
+				xmlhttp=GetXmlHttpObject();
+				if (xmlhttp==null)
+				{
+					alert ("Your browser does not support AJAX!");
+					return;
+				}
+				
+				var actionType=encodeURIComponent(150);
+				var actionId=encodeURIComponent(11);
+				var propertyRefId = encodeURIComponent(selectedPropertyIds);
+				var applicantId= encodeURIComponent(document.getElementById("applicantId").value);
+				var bidSource= encodeURIComponent(document.getElementById("bidSource").value);
+				var parameters="actionType="+actionType+"&actionId="+actionId+"&propertyRefId="+propertyRefId+"&applicantId="+applicantId+"&bidSource="+bidSource;
+				xmlhttp.onreadystatechange=function()
+					{
+						if(xmlhttp.readyState==4 && (xmlhttp.status == 303 || xmlhttp.status == 12150))
+						{
+							window.location.assign("/CFEPartner.jsp?NotLoggedIn=NotLoggedIn");		
+						}
+						if(xmlhttp.readyState==4 && xmlhttp.status == 200)
+						{
+							var msgImage="";
+							var respStr = xmlhttp.responseText;
+							//alert("respStr : " +respStr);
+							if(respStr!=null)
+							{
+								if(respStr=="sessionTimeOut")
+								{
+									window.location.assign("/CFEPartner.jsp?NotLoggedIn=NotLoggedIn");
+								}
+								else
+								{
+									var arrRespStr= respStr.split(":");
+									if(arrRespStr!=null && arrRespStr.length>=2)
+									{
+										if(arrRespStr[0]=="bidPlacedSuccess")
+										{
+											msgImage = "images/success.png";
+											//alert(arrRespStr[1]);
+											
+											if(isBidPlacedFromCart=="true")
+											{
+												if(document.getElementById("cartMsgDiv")!=null)
+												{
+													renderCartMsg(document.getElementById("cartMsgDiv"), msgImage,arrRespStr[1]);
+													
+												}
+												removeFromCart(selectedPropertyIds, true, true);
+											}
+											else
+											{
+												renderMessagePopup(document.getElementById("containerMessagePopup"), msgImage,arrRespStr[1] )
+											}
+											if(arrRespStr.length>2)
+											{
+												if(document.getElementById("divBidCountInCurrentSession")!=null)
+												{
+													document.getElementById("divBidCountInCurrentSession").innerHTML = "Bid Made Today : " + arrRespStr[2];
+												}
+											}
+											return true;
+										}
+										else if(arrRespStr[0]=="bidPlacedFailure")
+										{
+											msgImage = "images/failure.png";
+											//alert(arrRespStr[1]);
+											if(isBidPlacedFromCart=="true")
+											{
+												if(document.getElementById("cartMsgDiv")!=null)
+												{
+													renderCartMsg(document.getElementById("cartMsgDiv"), msgImage,arrRespStr[1]);
+													
+												}
+												
+											}
+											else
+											{
+												renderMessagePopup(document.getElementById("containerMessagePopup"), msgImage,arrRespStr[1] )
+											}
+											return false;
+										}
+	
+									}
+								}
+							}
+
+						}
+					}
+				xmlhttp.open("POST", "/cblservice", true)
+				xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+				xmlhttp.send(parameters)
+				}
+				else
+				{
+					if(isBidPlacedFromCart=="false")
+					{
+						renderMessagePopup(document.getElementById("containerMessagePopup"),'images/failure.png','Please select atleast one property.');
+					}
+					else
+					{
+						renderCartMsg(document.getElementById("cartMsgDiv"), "images/failure.png",'Please select atleast one property.');
+					}
+				}
+					
+ }
+function displaySlideShow(propertyId,displaySlideShowFromCart){
+		if(displaySlideShowFromCart)
+		{
+			if(document.getElementById("backButton")!=null)
+				{
+					document.getElementById("backButton").style.display="block";
+				}
+		}
+		if(!displaySlideShowFromCart)
+		{
+			if(document.getElementById("backButton")!=null)
+			{
+				document.getElementById("backButton").style.display="none";
+			}
+		}
+		xmlhttp=GetXmlHttpObject();
+		if (xmlhttp==null)
+		{
+			alert ("Your browser does not support AJAX!");
+			return;
+		}
+		var url="/cblCfeService?actionType=126&propertyId="+propertyId+"&actionId=127";
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4)
+			{
+				var commaSepratedImagePath=xmlhttp.responseText.split(",");
+				var splitString = "";
+				var cfeViewPath = "../images/";
+				var fullImagePath = "";
+				var innerLI="";
+				if(commaSepratedImagePath!=null && commaSepratedImagePath.length>0)
+				{
+					for ( var i = 0; i < commaSepratedImagePath.length;  i++)
+					{
+						if(commaSepratedImagePath[i]!="")
+						{
+							fullImagePath = cfeViewPath+commaSepratedImagePath[i];
+							innerLI = innerLI+"<li>"+
+								"<a href='"+fullImagePath+"'>"+
+									"<img src='"+fullImagePath+"' class='thumbnails'/>"+
+								"</a>"+
+								"</li>";
+						}
+						if(commaSepratedImagePath[i] =="" && commaSepratedImagePath.length=="1")
+						{
+							innerLI = innerLI+"<li>"+
+								"<a href='"+"../"+"Devon_Home_Choice"+"/images/cross_image.gif"+"'>"+
+									"<img src='"+"../"+"Devon_Home_Choice"+"/images/cross_image.gif"+"' class='thumbnails'/>"+
+								"</a>"+
+								"</li>";
+						}
+					} 
+					document.getElementById("imageSection").innerHTML = " ";
+					document.getElementById("imageSection").innerHTML = innerLI;
+					setTimeout(function(){$('#basic-modal-content').modal(); },10);
+					{
+						var galleries =setTimeout(function(){$('.ad-gallery').adGallery(); },10);
+						$('#switch-effect').change(
+						  function() {
+							galleries[0].settings.effect = $(this).val();
+							return false;
+						  }
+						);
+						$('#toggle-slideshow').click(
+						  function() {
+							galleries[0].slideshow.toggle();
+							return false;
+						  }
+						);
+						$('#toggle-description').click(
+						  function() {
+							if(!galleries[0].settings.description_wrapper) {
+							  galleries[0].settings.description_wrapper = $('#descriptions');
+							} else {
+							  galleries[0].settings.description_wrapper = false;
+							}
+							return false;
+						  }
+						);
+						//When you click on a link with class of poplight and the href starts with a # 
+						$('a.poplight[href^=#]').click(function() { 
+							var popID = $(this).attr('rel'); //Get Popup Name
+							
+							var popURL = $(this).attr('href'); //Get Popup href to define size
+									
+							//Pull Query & Variables from href URL
+							var query= popURL.split('?');
+							var dim= query[1].split('&');
+							var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+					
+							//Fade in the Popup and add close button
+							$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="/acm_style/images/close_pop.gif" class="btn_close" title="Close Window" alt="Close" /></a>');
+							
+							//Define margin for center alignment (vertical + horizontal) - we add 80 to the height/width to accomodate for the padding + border width defined in the css
+							var popMargTop = ($('#' + popID).height() + 80) / 2;
+							var popMargLeft = ($('#' + popID).width() + 80) / 2;
+							
+							//Apply Margin to Popup
+							$('#' + popID).css({ 
+								'margin-top' : -popMargTop,
+								'margin-left' : -popMargLeft
+							});
+							
+							//Fade in Background
+							$('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+							$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer 
+							
+							return false;
+						});
+						
+						//Close Popups and Fade Layer
+						$('body').on('click','a.close, #fade', function() { //When clicking on the close or fade layer...
+					
+							$('#fade , .popup_block').fadeOut(function() {
+								$('#fade, a.close').remove();  
+						}); //fade them both out
+							
+							return false;
+						});
+					}
+				}
+			}
+		}
+		xmlhttp.open("GET",url,true);
+		xmlhttp.send(null);
+}
+
+function removeFromCart(propId, isCalledFromCart, isCalledWhileBidding)
+{
+	
+	if(isCalledFromCart==true && isCalledWhileBidding==false)
+	{
+		
+		renderCartLoadingProcess();
+	}
+		xmlhttp=GetXmlHttpObject();
+				if (xmlhttp==null)
+				{
+					alert ("Your browser does not support AJAX!");
+					return;
+				}
+				
+					var url="/cblCfeService?actionType=122&propertyId="+propId+"&actionId=124";		
+					xmlhttp.onreadystatechange=function()
+					{
+						if(xmlhttp.readyState==4 && (xmlhttp.status == 303 || xmlhttp.status == 12150))
+						{	
+							window.location.assign("/CFEPartner.jsp?NotLoggedIn=NotLoggedIn");
+						}
+						if(xmlhttp.readyState==4 && xmlhttp.status == 200)
+						{
+							var respStr = xmlhttp.responseText;
+							//alert("respStr : " +respStr);
+							if(respStr!="")
+							{	
+								if(respStr=="sessionTimeOut")
+								{
+									window.location.assign("/CFEPartner.jsp?NotLoggedIn=NotLoggedIn");
+								}
+								else
+								{			
+									var jsonData= JSON.parse(respStr);
+									if(jsonData!=null && jsonData.responseCart!=null && jsonData.responseCart.length==1)
+									{
+										if(document.getElementById("countPropertyAdded")!=null)
+										{
+											document.getElementById("countPropertyAdded").innerHTML="Properties Added ("+jsonData.responseCart[0].countPropertyAdded+")";
+											
+										}
+										
+										if(isCalledFromCart==true && isCalledWhileBidding==false)
+										{
+										
+											if(document.getElementById("cartMsgDiv")!=null)
+											{
+												renderCartMsg(document.getElementById("cartMsgDiv"),"images/success.png", jsonData.responseCart[0].responseMessage);
+											}
+										}
+										renderHandleCartControls(jsonData,'removeFromCart');
+									}
+								
+								//removing row from cart screen
+									propId = propId.toString();
+									var arrPropertyId = new Array();
+									if(propId.indexOf(",")!=-1)
+									{
+									arrPropertyId = propId.split(",");
+									}
+									else
+									{
+										arrPropertyId[0]= propId;
+									}									
+									
+									if(arrPropertyId!=null && arrPropertyId.length>0)
+									{
+										for(var i=0; i<arrPropertyId.length; i++)
+										{
+											var strPropId = arrPropertyId[i];
+											if(document.getElementById("propertyRefIdCart"+strPropId)!=null)
+											{
+												document.getElementById("propertyRefIdCart"+strPropId).checked=false;
+												document.getElementById("propertyRefIdCart"+strPropId).disabled=true;
+												//document.getElementById("propertyRefIdCart"+strPropId)=null;
+											}
+											if(document.getElementById("cartRow_1_"+strPropId)!=null)
+											{
+												document.getElementById("cartRow_1_"+strPropId).style.display="none";
+											}
+											if(document.getElementById("cartRow_2_"+strPropId)!=null)
+											{
+											document.getElementById("cartRow_2_"+strPropId).style.display="none";
+											}
+											if(document.getElementById("cartRow_3_"+strPropId)!=null)
+											{
+											document.getElementById("cartRow_3_"+strPropId).style.display="none";
+											}
+											if(document.getElementById("cartRow_4_"+strPropId)!=null)
+											{
+											document.getElementById("cartRow_4_"+strPropId).style.display="none";
+											}
+										}
+											
+									}
+							}
+						}
+					}
+					}
+					xmlhttp.open("GET",url,true);
+					xmlhttp.send(null);
+	
+	
+}
+function getSelectedPropertyIds(isClickedFromTop, propertyId, noOfRecordsPopulated, isClickedFrom)
+{
+
+var selectedPropId = "";
+		var noOfRecords = noOfRecordsPopulated;
+		
+		//alert("isClickedFromTop :" +isClickedFromTop);
+		var propPopulatedId =null;
+		var propCheckBoxName=null;
+		if(isClickedFrom=="cart")
+		{
+
+			propCheckBoxName = document.getElementsByName("propertyRefIdCart");
+
+		}
+		else if(isClickedFrom=="otherThanCart")
+		{
+			propCheckBoxName = document.getElementsByName("propertyRefId");
+		}
+		
+		if(isClickedFromTop=="true")
+		{
+		
+			/*if(noOfRecords==1)
+			{
+				alert("propCheckBoxName : " + propCheckBoxName);
+				if(propCheckBoxName!=null)
+				{
+					propPopulatedId = propCheckBoxName;	
+					alert("propPopulatedId.checked : " +  propPopulatedId.checked);
+		
+				}
+			
+				if(propPopulatedId!=null && propPopulatedId.checked==true)
+				{
+					alert("inside if");
+					selectedPropId = propPopulatedId.value;
+					//alert("selectedPropId : " + selectedPropId);
+					
+				}
+				alert("propPopulatedId : " + propPopulatedId);
+					alert("selectedPropId : " + selectedPropId);
+			}
+			else if(noOfRecords>1 )
+			{*/
+				if(propCheckBoxName!=null)
+				{
+					propPopulatedId = propCheckBoxName;	
+		
+				}
+	
+
+				for( var i=0; i<propPopulatedId.length; i++)
+				{
+					if(propPopulatedId[i]!=null && propPopulatedId[i].checked==true)
+					{
+						selectedPropId = selectedPropId + propPopulatedId[i].value + ",";
+					}
+				}
+			//}
+		}
+		else if(isClickedFromTop=="false")
+		{
+		
+				selectedPropId=propertyId;
+		}
+		//alert("selectedPropId : " + selectedPropId);
+		return selectedPropId;
+}
+
+function displaySlideShowFromCart(propertyId,appId,displaySlideShowFromCart)
+{
+	$.modal.close();
+	var pathname = window.location.pathname;
+	var innerAnchor = "";
+	if(document.getElementById("backButton")!=null)
+	{
+		innerAnchor = "<a href='#' onclick='reopenCart("+appId+")' style='float:right;'>Back to Selection</a>";
+		document.getElementById("backButton").innerHTML = innerAnchor;
+	}
+	displaySlideShow(propertyId,displaySlideShowFromCart);
+	
+}
+function reopenCart(appId){
+	$.modal.close();
+	popupCart(appId);
+}
+function updateApplicantCart(action, isClickedFromTop, propertyId, noOfRecordsPopulated){
+	
+	renderWaitProcess(document.getElementById("containerMessagePopup"));
+//	setTimeout(function(){ $('#msgPopup-modal-content').modal(); }, 10);
+	$('#msgPopup-modal-content').modal(); 
+	
+	if(document.getElementById("modalCloseImage")!=null)
+	{
+		document.getElementById("modalCloseImage").style.display="none";
+	}
+
+		var selectedPropId = getSelectedPropertyIds(isClickedFromTop, propertyId, noOfRecordsPopulated,"otherThanCart");
+
+		if(selectedPropId!=null )
+		{
+			
+				xmlhttp=GetXmlHttpObject();
+				if (xmlhttp==null)
+				{
+					alert ("Your browser does not support AJAX!");
+					return;
+				}
+				
+					var url="/cblCfeService?actionType=122&selectedPropId="+selectedPropId +"&actionId=123";		
+					xmlhttp.onreadystatechange=showResponse;
+					xmlhttp.open("GET",url,true);
+					xmlhttp.send(null);
+		}
+		
+		
+}
+function showResponse()
+{
+//alert("xmlhttp.status :" + xmlhttp.statusText);
+	if(xmlhttp.readyState==4 && (xmlhttp.status == 303 || xmlhttp.status == 12150))
+	{
+		window.location.assign("/CFEPartner.jsp?NotLoggedIn=NotLoggedIn");
+		
+	}
+	if(xmlhttp.readyState==4 && xmlhttp.status == 200)
+	{
+		
+		var respStr = xmlhttp.responseText;
+		
+		var msgImage="";
+		if(respStr!="")
+		{
+			if(respStr=="sessionTimeOut")
+			{
+				window.location.assign("/CFEPartner.jsp?NotLoggedIn=NotLoggedIn");
+			}
+			else
+			{
+				var jsonData= JSON.parse(respStr);
+				if(jsonData!=null && jsonData.responseCart!=null && jsonData.responseCart.length==1)
+				{
+					
+					if(jsonData.responseCart[0].taskStatus=="Success")
+					{
+						msgImage = "images/success.png";
+					}
+					else if(jsonData.responseCart[0].taskStatus=="Failure")
+					{
+						msgImage = "images/failure.png";
+					}
+					renderMessagePopup(document.getElementById("containerMessagePopup"), msgImage,jsonData.responseCart[0].responseMessage );
+					renderHandleCartControls(jsonData,'addToCart');
+				}
+			}
+
+		}
+	}
+}
+function popupCart(appId)
+{
+	
+	renderWaitProcess(document.getElementById("containerCart"));
+	
+	setTimeout(function(){$('#cart-modal-content').modal();
+	 if(document.getElementById("modalCloseImage")!=null)
+	{
+		document.getElementById("modalCloseImage").style.display="none";
+		document.getElementById("modalCloseImage").style.visibility="hidden";
+	}}, 10);	
+	
+	xmlhttp=GetXmlHttpObject();
+				if (xmlhttp==null)
+				{
+					alert ("Your browser does not support AJAX!");
+					return;
+				}
+				
+					var url="/cblCfeService?actionType=122&actionId=125&applicantId="+appId;		
+					xmlhttp.onreadystatechange=showCart;
+					xmlhttp.open("GET",url,true);
+					xmlhttp.send(null);
+}	
+function showCart()
+{
+if(xmlhttp.readyState==4 && (xmlhttp.status == 303 || xmlhttp.status == 12150))
+	{
+		window.location.assign("/CFEPartner.jsp?NotLoggedIn=NotLoggedIn");
+		
+	}
+if(xmlhttp.readyState==4 && xmlhttp.status == 200)
+	{
+
+		var respStr = xmlhttp.responseText;
+		var strTrue="true";
+		var strNull="null";
+		var strFalse="false";
+		if(respStr!="")
+		{
+			if(respStr=="sessionTimeOut")
+			{
+				window.location.assign("/CFEPartner.jsp?NotLoggedIn=NotLoggedIn");
+			}
+			else
+			{
+
+			//alert("respStr : " + respStr );
+			//sample jsonstructure
+			// {"completeCartDetail":[{"propertyId":152569534,"propertyDetail":[{"propertyType":"Other","address1":"Shaftesbury Place","address2":"135 Warwick Road","address3":"London","postCode":"W14 8NJ","areaDesc":"Central","notes":"<p>Available to any on the Housing register preference to Homeless applicants.<\/p>\r\n<p>Minimum points:100<\/p>\r\n<p>AHR Cat:F-General needs<\/p>\r\n<p>Close to local amenities in the Earls Court area.<\/p>","landlordName":"Notting Hill Housing Trust","numberBedrooms":1,"numberBedspaces":2,"advertNumber":"240736","available":"AVAILABLE"}]}]}
+			var jsonData= JSON.parse(respStr);
+	
+			var cartDetail = "";
+			var rowClass="";
+			var displaySlideShowFromCart = true;
+			if(jsonData!=null && jsonData.completeCartDetail!=null && jsonData.completeCartDetail.length>0)
+			{
+				//cartTable.fnClearTable();
+				//For browser compatibility IE 6 ,7 &#39 is used instead of &apos 
+				var recordCtr = 0;
+				var recordCount = jsonData.completeCartDetail.length;
+				cartDetail = "<form name='cfeApplicantCart' id='cfeApplicantCart'>";
+				cartDetail = cartDetail + "<div id='cartMsgDiv' style='height:auto;width=860px;display:none;text-align:left' ></div>";
+				cartDetail = cartDetail+ "<table cellpadding='0' cellspacing='0' style='width:100%'>";
+				cartDetail = cartDetail+ "<tr>";
+				cartDetail = cartDetail+ "<td style='padding:0px 13px;width:10px'><input type='checkbox' name='cfeSelectAllListCart1' id='cfeSelectAllListCart1' onclick='checkUncheckAllCart(cfeApplicantCart.propertyRefIdCart,cfeApplicantCart.cfeSelectAllListCart1,"+recordCount+")' title='select all'  alt='select all'/></td>";
+				cartDetail = cartDetail+"<td style='padding: 0px 13px'>"
+				cartDetail = cartDetail+"<a href='#' class='black' alt='Remove from your Selections' title='Remove from your Selections'><span onclick='removeMultiplePropFromCart("+recordCount+")'>Remove from your Selections</span></a> ";
+				cartDetail = cartDetail+"<a href='#' class='black' alt='Bid' title='Bid'><span onClick='return placeBidUpdated(&#39;"+strTrue+"&#39;,&#39;"+strNull+"&#39;,&#39;"+strTrue+"&#39;,"+recordCount+")'>Bid</span></a>";
+				cartDetail = cartDetail+"<a href='#' class='black' onclick='javascript:if(document.getElementById(\"backToCartFromMap\")!=null){document.getElementById(\"backToCartFromMap\").style.display=\"block\"};showPropertiesOnMapFromCart("+recordCount+")' alt='View Selected Properties On Map' title='View Selected Properties On Map'><span>View Selected Properties On Map</span></a>"		 
+
+				cartDetail = cartDetail+ "</td>"
+
+	
+				cartDetail = cartDetail+ "</tr>";
+				cartDetail = cartDetail+ "</table>";
+				cartDetail = cartDetail + "<div id='cartdataDiv' style='height:195px;width=860px;overflow:auto;border:1px solid #CCCCCC' >";
+				
+				cartDetail = cartDetail+ "<table class='data-table' cellpadding='3'  style='width:100%;border:0px solid #fff;margin:0 auto;'>";
+				for(var i=0; i<jsonData.completeCartDetail.length; i++)
+				{
+					 if((i+1)%2 !=0)
+					 {
+						rowClass="altrow"; 
+					 }
+					else         
+					 {
+						rowClass="";
+					 }
+					var propDetail = jsonData.completeCartDetail[i].propertyDetail;
+					var propertyId = jsonData.completeCartDetail[i].propertyId;
+					var appId = jsonData.completeCartDetail[i].applicantId;
+					
+					//alert("propertyId : " +propertyId);
+					if(propDetail!=null && propDetail.length>0)
+					{
+						for(var j=0; j<propDetail.length; j++)
+						{
+							cartDetail = cartDetail+"<tr class='"+rowClass+"' id='cartRow_1_"+propertyId+"'>"+
+											"<td rowspan='4' width='20px'><input type='checkbox' name='propertyRefIdCart' id='propertyRefIdCart"+propertyId+"' value='"+propertyId+"'/> </td>"+
+											"<td width='410px'>"+
+											"<b>"+propDetail[j].propertyType+"</b> - "+
+											"<a href='#' onclick='gotoPropertyList("+propertyId+","+appId+")'>"+
+											propDetail[j].address1;
+											if(propDetail[j].address2!="")
+											{
+											cartDetail = cartDetail+", "+ propDetail[j].address2;
+											}
+											if(propDetail[j].address3!="")
+											{
+											cartDetail = cartDetail+", "+ propDetail[j].address3;
+											}
+											if(propDetail[j].address4!="")
+											{
+											cartDetail = cartDetail+", "+ propDetail[j].address4;
+											}
+											if(propDetail[j].postCode!="")
+											{
+											cartDetail = cartDetail+", "+ propDetail[j].postCode;
+											}
+											
+											var virtualToursNotExist=false;
+											if(propDetail[j].virtualTour=='false'){
+												virtualToursNotExist=true;
+											}
+											
+											cartDetail = cartDetail+"</a>"+				
+											"<td width='100px' align='right'>"+
+											"<b>"+propDetail[j].areaDesc+"</b>"+
+											"</td>"+
+											"<td rowspan='3' width='110px'>"+
+											"<div class='prop-img'>"+
+												"<img class='propertyImage' src='"+propDetail[j].propImageSrc +"' alt='"+propDetail[j].propImageAlt+"' border='0' width='119' height='100'/>"+
+											"</div>"+			
+											"</td>"+
+											"<td rowspan='3' width='140px'>"+
+											"<a href='#' class='basic' onclick='displaySlideShowFromCart("+propertyId+","+appId+","+displaySlideShowFromCart+")'>View Images("+propDetail[j].propImageCount+")</a><br /><br />"+
+											"<a href='#' onclick='javascript:if(document.getElementById(\"backToCartFromVT\")!=null){document.getElementById(\"backToCartFromVT\").style.display=\"block\"};goToVirtualTour("+propertyId+","+virtualToursNotExist+");'>Take a Virtual Tour </a><br /><br />"+
+											"<a href = '#?w=900&"+propDetail[j].address1+","+ propDetail[j].address2+","+propDetail[j].address3+","+propDetail[j].address3+","+propDetail[j].postCode+"' rel='popup' class='mapButtonHome' onclick='javascript:if(document.getElementById(\"backToCartFromMap\")!=null){document.getElementById(\"backToCartFromMap\").style.display=\"block\"};showPropertyOnMapFromPopup(\""+propDetail[j].address1+","+ propDetail[j].address2+","+propDetail[j].address3+","+propDetail[j].address3+","+propDetail[j].postCode+"\")'>"+
+											"View Property on Map"+"</a>"+
+											"</td>"+
+											"</tr>"+
+											"<tr class='"+rowClass+"' id='cartRow_2_"+propertyId+"'>"+
+											"<td colspan='2'><b>"+
+											propDetail[j].landlordName+"</b>"+"&nbsp;&nbsp;&nbsp;"+
+											"Bedrooms/Bedspaces: <b>"+propDetail[j].numberBedrooms+"/"+propDetail[j].numberBedspaces+"</b><br /><br />"+
+											propDetail[j].notes+
+											"</td>"+
+											"</tr>"+
+											"<tr class='"+rowClass+"' id='cartRow_3_"+propertyId+"'>"+
+											"<td><b>Advert No: "+
+											propDetail[j].advertNumber+"</b>"+
+											"</td>"+
+											"<td align='right'><b>"+
+											propDetail[j].available+"</b>"+
+											"</td>"+
+											"</tr>"+
+											"<tr class='"+rowClass+"' id='cartRow_4_"+propertyId+"'>"+
+											"<td colspan='4'>"+
+											"<a href='#' class='green' ><span onClick='placeBidFromCart("+propertyId+")'>Bid</span></a>"+
+											"<a href='#' class='black'><span onClick='removeFromCart("+propertyId+",true, false)'>Remove from Selection</span></a>  "+
+											"</td>"+
+											"</tr>";
+						}
+						
+					}
+	
+				}
+				cartDetail = cartDetail+"</table></div></form>";
+				//$.modal.close();
+				document.getElementById("containerCart").innerHTML=cartDetail;
+				document.getElementById("divClosePopupLink").innerHTML="<a href='#' onclick='verifyCartPopUpClose("+recordCount+","+appId+")'><b>CLOSE</b></a>";
+				//setTimeout(function(){$('#cart-modal-content').modal();}, 500);
+
+				/*$('#cart-modal-content').modal();*/
+				/*$.modal($("#cart-modal-content"));*/
+
+						
+
+						
+			}
+			else
+			{
+				document.getElementById("containerCart").innerHTML="";
+				document.getElementById("containerCart").innerHTML="There is no Property in your selection";
+			}
+			}
+		}
+		
+				
+	}
+}
+
+
+
+
+
+function GetXmlHttpObject()
+	{
+		if (window.XMLHttpRequest)
+		{
+		 // code for IE7+, Firefox, Chrome, Opera, Safari
+		 return new XMLHttpRequest();
+		 }
+		if (window.ActiveXObject)
+		 {
+			 // code for IE6, IE5
+		 return new ActiveXObject("Microsoft.XMLHTTP");
+		 }
+		return null;
+	}
+
+function renderHandleCartControls(jsonData,action)
+{
+	var formatType = "graphical";
+	if(document.getElementById("divViewAppCart")!=null)
+	{
+		var divViewAppCart = document.getElementById("divViewAppCart");
+		if(jsonData.responseCart[0].countPropertyAdded!="0")
+		{
+			if(formatType =="textual")
+			{
+				divViewAppCart.innerHTML = "<input type='button' id='buttonViewAppCart' name='buttonViewAppCart' value='View Selected Properties("+jsonData.responseCart[0].countPropertyAdded+")' onclick='popupCart("+jsonData.responseCart[0].applicantId+")' class='butonsts-bid'>"
+			}
+			else
+			{
+				divViewAppCart.innerHTML="<a href='#' id='buttonViewAppCart' name='buttonViewAppCart' class='black' style=';float:right'> <span style='font-weight:bold;font-size:13px;' onclick='popupCart("+jsonData.responseCart[0].applicantId+")'>View Selected Properties("+jsonData.responseCart[0].countPropertyAdded+")</span></a>";
+			}
+		}
+		else
+		{
+			if(formatType =="textual")
+			{
+				divViewAppCart.innerHTML = "<input type='button' id='buttonViewAppCart' name='buttonViewAppCart' value='View Selected Properties("+jsonData.responseCart[0].countPropertyAdded+")' class='butonsts-bid' style='font-weight:bold;font-size:13px;'>"
+			}
+			else
+			{
+				divViewAppCart.innerHTML="<a href='#' id='buttonViewAppCart' name='buttonViewAppCart' class='disable' style='float:right;cursor:default'> <span style='font-weight:bold;font-size:13px;'>View Selected Properties("+jsonData.responseCart[0].countPropertyAdded+")</span></a>";
+			}
+			
+		}
+	}
+	
+	/*if(document.getElementById("countPropertyAdded")!=null)
+	{
+		if(jsonData.responseCart[0].countPropertyAdded!="0")
+		{					
+			
+			document.getElementById("countPropertyAdded").innerHTML="<a href='#' onclick='popupCart("+jsonData.responseCart[0].applicantId+")'>Properties Added ("+jsonData.responseCart[0].countPropertyAdded+")</a>";
+		
+		}
+		else
+		{
+			document.getElementById("countPropertyAdded").innerHTML="Properties Added(0)";
+		}
+	}*/
+	//handling controls on property detail page
+	if(action=="addToCart")
+	{
+		if(document.getElementById("divRemoveFromSelectionPropertyDetailPage")!=null && document.getElementById("divAddToYourSelectionPropertyDetailPage")!=null)
+		{
+			document.getElementById("divRemoveFromSelectionPropertyDetailPage").style.display="block";
+			document.getElementById("divAddToYourSelectionPropertyDetailPage").style.display="none";
+			
+		}
+	}
+	else if(action=="removeFromCart")
+	{
+
+		if(document.getElementById("divRemoveFromSelectionPropertyDetailPage")!=null && document.getElementById("divAddToYourSelectionPropertyDetailPage")!=null)
+		{
+
+			document.getElementById("divRemoveFromSelectionPropertyDetailPage").style.display="none";
+			document.getElementById("divAddToYourSelectionPropertyDetailPage").style.display="block";
+			
+		}
+	}
+}
+function removeMultiplePropFromCart(noOfRecordsPopulated)
+{
+	var selectedPropId = getSelectedPropertyIds('true', 'null', noOfRecordsPopulated, 'cart');
+	if(selectedPropId!="")
+	{
+		removeFromCart(selectedPropId, true, false);
+	}
+	else
+	{
+		renderCartLoadingProcess();
+		renderCartMsg(document.getElementById("cartMsgDiv"), "images/failure.png",'Please select atleast one property.');
+			
+	}
+	//alert("selectedPropId : " + selectedPropId);
+	
+}
+function showPropertiesOnMapFromCart(noOfRecordsPopulated){
+		var selectedPropId = getSelectedPropertyIds('true', 'null', noOfRecordsPopulated, 'cart');
+		if(selectedPropId!="")
+		{
+		propertiesAddresses=new Array();
+		addressCounter=0;
+		var mainCheckboxes= document.getElementsByName("propertyRefIdCart");
+
+		for(i=0;i<mainCheckboxes.length;i++){
+				if(mainCheckboxes[i].checked){
+					var divName="propertyAddress"+mainCheckboxes[i].value;
+					propertiesAddresses[addressCounter++]=document.getElementById(divName);
+				}
+		}
+		$.modal.close();
+		loadMapForMultipleAddresses();
+		}
+	else
+	{
+		renderCartLoadingProcess();
+		renderCartMsg(document.getElementById("cartMsgDiv"), "images/failure.png",'Please select atleast one property.');
+			
+	}
+}
+function hidePopUpCloseImage(popupName)
+{
+
+$(popupName).modal({onShow: function (dialog) {
+	// Access elements inside the dialog
+	// Useful for binding events, initializing other plugins, etc.
+	
+	if(document.getElementById("modalCloseImage")!=null)
+	{
+		document.getElementById("modalCloseImage").style.display="none";
+		document.getElementById("modalCloseImage").style.visibility="hidden";
+	}
+}});
+}
+function hideMsgPopUpCloseImage()
+{
+alert("abc");
+$("#msgPopup-modal-content").modal({onShow: function (dialog) {
+	// Access elements inside the dialog
+	// Useful for binding events, initializing other plugins, etc.
+	alert("---"+ document.getElementById("modalCloseImage"));
+	if(document.getElementById("modalCloseImage")!=null)
+	{
+		document.getElementById("modalCloseImage").style.display="none";
+		document.getElementById("modalCloseImage").style.visibility="hidden";
+	}
+}});
+}
+
+function verifyCartPopUpClose(recordCount, appId)
+{
+	var recordCount=0;
+	var cartPropCheckBox = document.getElementsByName("propertyRefIdCart");
+	if(cartPropCheckBox!=null && cartPropCheckBox.length>0)
+	{
+		
+		for(var i=0; i<cartPropCheckBox.length; i++)
+		{
+			if(!cartPropCheckBox[i].disabled)
+			{
+				recordCount++;
+				break;
+			}
+		}
+	}
+	else
+	{
+		$.modal.close();
+	}
+	
+	if(recordCount>0)
+	{
+		$.modal.close();
+		if(document.getElementById("containerMessagePopup")!=null)
+		{
+		document.getElementById("containerMessagePopup").innerHTML="";
+	var divHTML = "<table width='100%'>"+
+					"<tr>"+				
+					
+					"<td colspan='2'>"+"You still have properties in your selection are you sure you want to exit?"+"</td>"+
+					"</tr>"+
+					"<tr>"+
+					"<td style='width:90%;' >"+
+					"<a href='#' class='black' style='float:right;'><span onclick='closeMessagePopUp()'>Yes</span></a> "+
+					"</td>"+
+					"<td style='width:10%;' >"+
+					"<a href='#' class='black' style='float:right;'><span onclick='reopenCart("+appId+")'>No</span></a> "+
+					"</td>"+
+					"</tr>"+
+					"</table>";
+					document.getElementById("containerMessagePopup").innerHTML = divHTML;
+		}
+	setTimeout(function(){ $('#msgPopup-modal-content').modal();
+	 if(document.getElementById("modalCloseImage")!=null)
+	{
+		document.getElementById("modalCloseImage").style.display="none";
+		document.getElementById("modalCloseImage").style.visibility="hidden";
+	}}, 10);
+	
+	}
+	else
+	{
+		$.modal.close();
+	}
+}
+// manin check box selection, vni 20 Oct
+ 
+ function viewBidPosition(applicantId,propertyId){
+//$.modal.close();
+		document.getElementById("iframeForBidPosition").src="/Devon_Home_Choice/ViewBidPosition.jsp?applicantId="+applicantId+"&propertyId="+propertyId;
+		var popID = 'popupForBidPosition'; //Get Popup Name
+		
+		var popWidth = '200'; //Gets the first query string value
+		var popHeight = '100'; //Gets the first query string value		
+		//Fade in the Popup and add close button
+		$('#' + popID).fadeIn().css({ 'width': Number( popWidth ),'height': Number( popHeight ) }).prepend('<a href="#" class="main_close"><img src="/Devon_Home_Choice/img/basic/x.png" class="btn_close" title="Close Window" alt="Close" /></a>');
+		
+		//Define margin for center alignment (vertical + horizontal) - we add 80 to the height/width to accomodate for the padding + border width defined in the css
+		var popMargTop = 160;
+		var popMargLeft = 100;
+		
+		//Apply Margin to Popup
+		$('#' + popID).css({ 
+			'margin-top' : -popMargTop,
+			'margin-left' : -popMargLeft
+		});
+		
+		//Fade in Background
+		//$('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+		//$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer 
+
+		return false;
+
+}
+function seePotentialMexPropertyClick()
+{
+	 document.filter.action = "/Devon_Home_Choice/CFESeeMExProperty.jsp"; 
+	 document.filter.target="_blank";
+	 document.filter.submit();
+
+		//reseting field values.
+		document.filter.action = ""; 	
+		document.filter.target="";
+}
+
+
+function navigateToSeeAllProperties(filePath, lbiSubportalFlag, psoSubportalFlag){
+       
+
+		document.cfeMenuForm.action = "/Devon_Home_Choice/"+filePath;
+
+		if(lbiSubportalFlag){
+			document.cfeMenuForm.lbiSubportalFlag.value=true;
+		}else if(psoSubportalFlag){
+			document.cfeMenuForm.psoSubportalFlag.value=true;
+		}
+		document.cfeMenuForm.submit();
+		return false;
+}
+
+
+</script>
+
+<link rel="StyleSheet" href="/Devon_Home_Choice/styles/template_gr.css" type="text/css">
+	<link rel="StyleSheet" href="/Devon_Home_Choice/styles/compose.css" type="text/css">
+</head>
+  <body  class="blackWhite">     
+<div id="wrapper" class="blackWhite">
+ 	<!-- CBL Refactored - commented code removeed -->
+<!-- edited by bidCountIndicator starts -->
+<!-- Code to show Bid countdown indicator-->
+<!--
+<SCRIPT type="text/javascript">
+var xmlhttp;
+var JStimeDiff;
+var JSbeginOrEnd="";
+var month = '*';     //  '*' for next month, '0' for this month or 1 through 12 for the month 
+var day = '1';       //  Offset for day of month day or + day  
+var hour = 0;        //  0 through 23 for the hours of the day
+var tz = -5;         //  Offset for your timezone in hours from UTC
+var lab = 'tzcd';    //  The id of the page entry where the timezone countdown is to show
+
+window.document.onload = start();
+
+
+	function getTimeDiff()
+	{
+		xmlhttp=GetXmlHttpObject();
+		if (xmlhttp==null)
+		{
+			alert ("Your browser does not support AJAX!");
+			return;
+		}
+		var url="/Devon_Home_Choice/CFECountDownTimeCalculator.jsp?partnerId=1023";
+		xmlhttp.onreadystatechange=stateChanged;
+		xmlhttp.open("GET",url,true);
+		xmlhttp.send(null);
+	}
+
+	function stateChanged()
+	{
+		if (xmlhttp.readyState==4)
+		{
+			var text=xmlhttp.responseText.split(":");
+			JStimeDiff=text[0];
+			JSbeginOrEnd=text[1];
+			// condition added to not to display NaN if there is no data in DB for INDICATOR
+			if(!isNaN(JStimeDiff)){
+				displayTZCountDown(JStimeDiff,lab);
+			}
+		}
+	}
+
+	function start() 
+	{
+		getTimeDiff();
+	}
+
+	function displayTZCountDown(countdown,lab) 
+	{
+
+		var secs = countdown % 60; 
+		if (secs < 10)
+		{
+			secs = '0'+secs;
+		}
+		var countdown1 = (countdown - secs) / 60;
+		var mins = countdown1 % 60; 
+		if (mins < 10){
+			mins = '0'+mins;
+		}
+		countdown1 = (countdown1 - mins) / 60;
+		var hours = countdown1 % 24;
+		if (hours < 10){
+			hours = '0'+hours;
+		}
+		var days = (countdown1 - hours) / 24;
+
+		if(days<10)
+		{
+			//RT-3563
+			document.getElementById('tzcd').innerHTML = '<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">DAYS</td><td align="center">:</td><td align="center" width="10%">HH</td><td align="center">:</td><td align="center">MM</td><td align="center">:</td><td align="center">SS</td><td></td></tr><tr><td align="center">'+days+'</td><td align="center">:</td><td align="center">'+hours+'</td><td align="center">:</td><td align="center">'+mins+'</td><td align="center">:</td><td align="center">'+secs+'s '+'</td><td align="left">'+JSbeginOrEnd+'</td></tr></table>';
+		/*
+		document.getElementById('tzcd').innerHTML = 'DAYS : HH : MM : SS <br>0'+days+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : '+hours+ ' : ' +mins+ ' : '+secs+'s '+JSbeginOrEnd;*/
+		}
+		else
+		{
+			//RT-3563
+			document.getElementById('tzcd').innerHTML = '<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">DAYS</td><td align="center">:</td><td align="center" width="10%">HH</td><td align="center">:</td><td align="center">MM</td><td align="center">:</td><td align="center">SS</td><td></td></tr><tr><td align="center">'+days+'</td><td align="center">:</td><td align="center">'+hours+'</td><td align="center">:</td><td align="center">'+mins+'</td><td align="center">:</td><td align="center">'+secs+'s '+'</td><td align="left">'+JSbeginOrEnd+'</td></tr></table>';
+		/*
+		document.getElementById('tzcd').innerHTML = 'DAYS : HH : MM : SS <br>'+days +'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : '+hours+ ' : '+mins+' : '+secs+'s '+JSbeginOrEnd;*/
+		}
+
+		if(countdown==0)
+		{
+			setTimeout('start()',999);
+			return;
+		}
+
+		if((countdown-1) >= 0)
+		{
+			setTimeout('displayTZCountDown('+(countdown-1)+',\''+lab+'\');',999);
+		}
+}
+	
+
+
+	function GetXmlHttpObject()
+	{
+		if (window.XMLHttpRequest)
+		{
+		 // code for IE7+, Firefox, Chrome, Opera, Safari
+		 return new XMLHttpRequest();
+		 }
+		if (window.ActiveXObject)
+		 {
+			 // code for IE6, IE5
+		 return new ActiveXObject("Microsoft.XMLHTTP");
+		 }
+		return null;
+	}
+
+</SCRIPT>
+-->
+<!-- edited by bidCountIndicator ends -->
+<form name = "cfeMenuForm" method="post" action="">
+<div id="top-bar" >
+	 <div class="top-nav">
+		<ul style="width:758px;width:780px\9;float:right; margin-top:0;*margin-top: 10px; *width: 790px; *margin-right: 0px;">
+				<li class="seprator">Text size:
+			<a href="#" title="Decrease Text Size"  onClick='changeCssfile("12","graphical")'  style="padding-left:2px; padding-right:2px; font-size:11px">A</a> |   
+			<a href="#" title="Revert text styles to default"  onClick='changeCssfile("13","graphical")' style="padding-left:2px; padding-right:2px;font-size:13px">A</a> | 
+			<a href="#" title="Increase Text Size"  onClick='changeCssfile("14","graphical")'  style="padding-left:2px; padding-right:10px;font-size:15px">A</a></li>
+				 <li class="seprator" style="padding-top:1px;*padding-top:2px"><input type="radio" name="radio"  onclick="return textOnlyClick()" class="radio"><label class="blackWhite">Text Only</label></li>
+				 <li class="seprator" style="padding-top:1px;*padding-top:2px"><input type="radio" name="radio" checked="checked" onClick='return graphicClick()' class="radio"><label class="blackWhite">Graphical</label></li>
+				<li class="seprator" title="Sitemap">
+					<a href="CFESiteMap.jsp" onClick='return navigate("CFESiteMap.jsp?selectedMenu=SiteMap")' class="textwhite" accesskey="a" id="selectedMapNavAnchor"><span id="selectAccessNavSpan">Sitemap</span></a>
+				</li>
+				<li class="seprator" title="Site Accessibility">
+					<a href="CFEAccessKey.jsp" onClick='return navigate("CFEAccessKey.jsp?selectedMenu=Accessibility")' class="textwhite" accesskey="0" id="selectAccessNavAnchor"><span id="selectedAccessNavSpan">Site Accessibility</span></a>
+				</li>
+
+				<!--<li class="seprator" title="Languages">
+					<a href="CFELanguages.jsp" onClick='return navigate("CFELanguages.jsp?selectedMenu=Language")' id="selectLangNavAnchor"><span id="selectedLangNavSpan" >Languages</span></a>
+				</li>-->
+				
+				<li class="seprator" title="Contact Us">
+					<a href="CFEContactUs.jsp" onClick='return navigate("CFEContactUs.jsp?selectedMenu=ContactUs")' class="textwhite" id="selectedContactNavAnchor"><span id="selectContactNavSpan">Contact Us</span></a>
+				</li>
+				<li  class="seprator" style="background:none"><div id="google_translate_element"></div></li>
+			</ul>
+		</div>	
+	</div>
+	<div id="header">
+		<p id="tzcd" style="font-size:12px;display:none;visibility:hidden"></p>	
+		<div id="logo">
+		<img class="logo_img" width="90" height="90" src="/Devon_Home_Choice/images/logo_dhc.gif" alt="Devon Home Choice Logo" />
+        <img src="/Devon_Home_Choice/images/devon.png" alt="Devon Home Choice Header" class="header_img" />
+	  </div>
+	</div>
+
+ <input type="hidden" name="websiteformat" value="graphical">
+    <input type="hidden" name="monthsInterval" id="backMonths" value="">  
+    <input type="hidden" name="hiddenApplicantId" value="">
+    <input type="hidden" name="propertyId" value="" /> 
+    <input type="hidden" name="applicantId" value="null" /> 
+    <!--<input type="hidden" name="isWithDrawBid" value="0" /> -->
+    <input type="hidden" name="colorSchemeText" value="1" /> 
+    <input type="hidden" name="hiddenBedroom"  value=""/>
+    <input type="hidden" name="withOutLoginViewProperties" value=""/>
+    <input type="hidden" name="bidPeriodId" value="" /> 
+    <input type="hidden" name="changeCss" value="CFE.css"/> 
+    <input type="hidden" name="selectedMenu" value="null" /> 
+    <input type="hidden" name="selectTab" id="selectTab" value="null" /> 
+    <input type="hidden" id="searchFilterType" name="searchFilterType" value="null"/>
+
+	<div id="balloon2" class="balloonstyle" style="width: 750px;">
+		This page gives you quick information on the Choice Based Lettings Scheme and has links to take you to pages where you can view properties, check your details and bid for properties.<br><br>&#8220;Login&#8221; button takes you to the page where you enter your Password to see your details and bid on properties &#8211; NOTE &#8211; to Log in you must be a registered user of the site.<br><br>&#8220;See All Properties&#8221; &#8211;  takes you to a page where you can look at the properties on the site&#8211; any one can use this facility but you cannot bid on any properties unless you login (see above)<br><br>&#8220;Housing Options&#8221; &#8211; takes you to a page with details on other ways of finding housing and meeting housing need.<br><br>&#8220;This week&#8217;s advert and results&#8221; &#8211; takes you to a page where adverts for properties are stored.<br><br>&#8220;Languages&#8221; &#8211; takes you to a page where you can change the language the key information on the site is displayed in<br><br>&#8220;Contact Us&#8221; &#8211; takes you to a page where you can get details of how to contact us.<br><br><h3>ACCESSIBILITY AND DISPLAY OPTIONS</h3>The links at the top of the page let you change the size and colour layout of the site to suit your needs and move around the site quickly via the sitemap if this suits you.<br><br>The Accessibility link gives you more information about features on the site to help visually impaired users use the site. </div>
+
+
+	<input type="hidden" name="lbiSubportalFlag" value="false"/>
+	<input type="hidden" name="psoSubportalFlag" value="false"/>
+
+ </form>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script><form name="cfeHomeForm" id="cfeHomeForm" method="post" action="">
+                <div id="content_container" class="blackWhite" >
+                        <table cellpadding="0" cellspacing="0" width="967">
+                                <tr>
+                                        <td width="121" valign="top" >
+                                            <div  class="sidebar">
+<div id="leftmenu" class="bar" >
+<ul>
+<li>
+			<a href="#"  onClick='return navigate("/CFEHome.jsp?selectedMenu=Home")' title="Home" accesskey="1"  class="home">Home</a>
+		</li>
+
+<li >
+				<a href="#" title="Login" onClick='return navigate("CFELogin.jsp?selectedMenu=Login")' accesskey="l" class="login">Login</a>
+			</li>
+<li >
+					<a href="#" title="See All Properties" onClick='return navigate("CFEListProperty.jsp?withOutLoginViewProperties=999&amp;availableFlag=true&menuFlag=true&selectedMenu=List Property")' accesskey="p" class="see-all">See All Properties</a>
+				</li>
+<li >
+
+				<a href="#" title="Housing Options" onClick='return navigate("CFEHousingOption.jsp?selectedMenu=Housing Option")' accesskey="h" class="housing">Housing Options</a>
+
+			</li>
+<li>
+			<a href="#" title="How it works" onClick='return navigate("CFEHowitworks.jsp?selectedMenu=How it works")' class="self-assement">How it works</a>
+		</li>
+		<li>
+			<a href="#" title="Homes coming soon" onClick='return navigate("CFEHomescomingsoon.jsp?selectedMenu=Homes coming soon")' class="self-assement">Homes coming soon</a>
+		</li>
+		<li>
+			<a href="#" title="Rough sleeping" onClick='return navigate("CFERoughsleeping.jsp?selectedMenu=Rough sleeping")' class="self-assement">Rough sleeping</a>
+		</li>
+		<li>
+			<a href="#" title="Your views" onClick='return navigate("CFEYourviews.jsp?selectedMenu=Your views")' class="self-assement">Your views</a>
+		</li>
+		<li>
+			<a href="#" title="Social Housing Fraud" onClick='return navigate("CFESocialHousingFraud.jsp?selectedMenu=Social Housing Fraud")' class="self-assement">Social Housing Fraud</a>
+		</li>
+		<li>
+			<a href="#" title="Partners" onClick='return navigate("CFEPartners.jsp?selectedMenu=Partners")' class="self-assement">Partners</a>
+		</li>
+		<!--<li>
+			<a href="/Devon_Home_Choice/PDF/(2012-08-02)-LAHR-good-practice-guide-2010.pdf" title="Accessible Housing Register"  class="" target="_blank">Accessible Housing Register</a>
+		</li>-->
+		<li style="border-bottom:none;">
+			<a href="#" title="FAQ" onClick='return navigate("CFEFaq.jsp?selectedMenu=Faq")' class="self-assement">FAQ</a>
+		</li>
+</ul>
+
+
+                
+              <!-- <a href="" onClick='return navigate("CFEListAdvert.jsp?selectedMenu=List Advert")' accessKey="w"><img src="images/DESIGN5.gif"  class="bdBtWhite" border="0"   alt=""/></a>
+			  
+
+			
+
+			    
+				<a href="http://www.direct.gov.uk/" ><img src="images/dg_4016022.gif" width="133" class="bdBtWhite" border="0"   alt="Directgov-Public services all in one place"/></a>
+
+
+			<br>
+				<a href="http://www.yourlondon.gov.uk" ><img src="images/your_london.jpg" width="133" class="bdBtWhite" border="0"   alt="Your London"/></a>-->
+			<br/>
+<!--
+<script type="text/javascript">
+
+google_ad_client = "ca-pub-2873999518428880";
+
+/* LBI - Left SkyScraper */
+
+google_ad_slot = "5008960791";
+
+google_ad_width = 120;
+
+google_ad_height = 600;
+
+//
+
+</script>
+
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+-->
+</div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+        // Get current url
+        // Select an a element that has the matching href and apply a class of 'active'. Also prepend a - to the content of the link
+        var url = window.location;
+			// Will only work if string in href matches with location
+			$('#leftmenu ul li a[href="'+ url +'"]').addClass('active');
+			// Will also work for relative and absolute hrefs
+			$('#leftmenu ul li a').filter(function() {
+				return this.href == url;
+			}).addClass('better-active');
+		
+    });
+</script></td>
+                                        <td width="814" valign="top">
+                                    <div id="content" class="blackWhite">
+                                        <table class="home-content" style="width:100%">
+	<tr>
+    	<td >
+         <div class="content-box-top" >
+          <h1>Affordable housing options in Devon</h1>
+               <img src="/Devon_Home_Choice/images/home_top.png" alt="Home page banner"/>
+            <p>
+				Council and housing association homes available to rent and shared ownership homes are advertised through Devon Home Choice.
+            </p>
+        </div>
+        </td>
+    </tr>
+		 <!-- text went to CFEHome.jsp -->
+</table><table class="home-content">
+									<tr>
+										<td width="50%">
+										<div class="content-box" >
+										<h2>Property Search</h2>
+										<div class="home_img_div">
+											<img src="/Devon_Home_Choice/images/cbl.png" alt="CBL"/>
+											<a class="btn" href="#" onClick='return navigateToSeeAllProperties("CFEListProperty.jsp?withOutLoginViewProperties=999&amp;availableFlag=true&menuFlag=true&selectedMenu=List Property", true, false)'>Search</a>
+										</div>
+										<p>Search here to see available properties. You need to login to bid. <a href="/Devon_Home_Choice/html/Howtobidforhomesv2.pdf" target="_blank">Please click here for a details of how to bid for homes.</a> Please note no properties are advertised on a Tuesday except homes that are immediately available.
+										</p>
+										<!--<p>
+											We write to everyone who qualifies to bid, giving them the six-figure User ID and Pin numbers that they need to bid.
+										</p>-->										
+										</div>
+										</td>
+										<td>
+										<div class="content-box" >
+										 <h2>Homes Immediately Available</h2>
+											<div class="home_img_div">
+												<img src="/Devon_Home_Choice/images/pso.png" alt="PSO"/>
+												<a class="btn" href="#" onClick='return navigateToSeeAllProperties("CFEAHOListProperties.jsp?FilterTab=availableNow&selectedMenu=List Property", false, true)'>Search</a>
+											</div>
+											<p>
+												Search here for details of homes that are available now.You do not need to bid for these homes.The first eligible person to contact the landlord will be considered.
+											</p>
+											<br/>
+											<!--<p>&nbsp;</p>-->											
+										</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+										<div class="content-box" style="min-height:198px">
+										 <h2>News</h2>
+											<div class="home_img_div">
+												<img src="/Devon_Home_Choice/images/mex.png" alt="Mutual Exchange"/>
+											 <a class="btn" href="#" onClick='return navigate("CFEOptionsforTenants.jsp")'>Search</a>
+											</div>
+										<p>
+											Search here for the latest news.
+										</p>
+										</div>
+										</td>
+										<td>
+										<div class="content-box" style="min-height:198px">
+										 <h2>Useful Information</h2>
+										<div class="home_img_div">
+											<img src="/Devon_Home_Choice/images/shared.png" alt="Useful Information"/>
+										<a href="#" class="btn"  onClick='return navigate("CFEUsefulInformation.jsp")'>Search</a>
+										</div>
+										<p>
+										Search here for the Devon Home Choice Policy and Procedures, Local Letting Plans, Local Allocation Polices, Devon Home Choice Monitoring Reports and other useful information.
+										</p>
+										</div>
+										</td>
+									</tr>
+									<tr>
+										<td>&nbsp;
+											
+										</td>
+									</tr>
+									<tr>
+										
+										<td width="863px" >
+												 <span></span>
+										</td>
+										<td width="863px">
+													 <span></span>
+										</td>
+										
+									</tr>
+								</table>
+
+                                        <input type="hidden" name="colorSchemeText" id="colorSchemeText" value="1" /> 
+                                        <input type="hidden" name="selectedMenu" id="selectedMenu" value="null" /> 
+                            </div>
+                </td>
+            <td width="30" valign="top" id="right_column">
+                    <!-- ISI_LISTEN_START -->
+	<div class="right-menu">
+<h3 class="title">Useful Links</h3>
+<a href="http://www.devonhomechoice.com/Devon_Home_Choice/PDF/DHC_UserGuide2015.pdf" target="_blank"><img src="https://www.homeconnections.org.uk/Devon_Home_Choice/images/hc_front_cover.png" alt="Home Connection User Guide PDF" /></a></div>
+<div class="right-menu center"><a href="http://www.devonhomechoice.com/Devon_Home_Choice/PDF/DHC_UserGuide2015.pdf" target="_blank">Devon Home Choice User Guide</a></div>
+<div class="right-menu center"><a href="https://www.devonhomechoice.com/Devon_Home_Choice/html/Howtobidforhomesv2.pdf" target="_blank">How to bid for homes on the website</a></div>
+<div class="right-menu center"><a href="https://forms.devonhomechoice.com/Welcome.aspx?pid=73">Register with Devon Home Choice</a></div>
+<div class="right-menu center"><a href="https://forms.Devonhomechoice.com/Welcome.aspx?pid=73%20">Finish a part-completed application</a></div>
+<div class="right-menu center"><a href="https://formscoc.devonhomechoice.com/QuestionnaireStart.aspx?qid=308">Update your application</a></div>
+<div class="right-menu center"><a href="https://forms.devonhomechoice.com/DevonMiniCoC.aspx">Tell us about changes to your phone number or email address</a></div>
+<div class="right-menu center"><a href="http://www.yestohomes.co.uk/" target="_blank"><img src="https://www.homeconnections.org.uk/Devon_Home_Choice/images/YestoHomeslogo.jpg" alt="" width="130" height="42" /></a></div><!-- ISI_LISTEN_STOP -->
+   <div id="">
+			<a href="http://asp.readspeaker.net/cgi-bin/homeconnectionsrsone?customerid=1003372&amp;url=http://www.homeconnections.org.uk//Devon_Home_Choice/CFEHome.jsp?partnerName=Devon_Home_Choice"  target="rs" >
+			<img src="/Devon_Home_Choice/images/sayit.gif" class="padme" alt="Say it"/></a>
+			<!--<a href="#" rel="balloon2" >
+			<img src="/Devon_Home_Choice/images/info.gif" alt="information" onmouseover='ShowLayer()' onmouseout='HideLayer()'/></a> -->
+			</div>
+	<br/>
+  <!-- <script type="text/javascript">
+
+	google_ad_client = "ca-pub-2873999518428880";
+
+	/* LBI - Right Skyscrpaer */
+
+	google_ad_slot = "9439160397";
+
+	google_ad_width = 120;
+
+	google_ad_height = 600;
+
+	//
+
+	</script>
+
+	<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>--></td>
+            </tr>
+        </table>
+       
+        </div>
+        </form> 
+	<script type="text/javascript">
+function submitLink(target){
+	document.forms[0].action = target;
+	document.forms[0].submit();
+}
+
+</script>
+
+<table>
+	<tr>
+		<td style="text-align:center; padding-top:10px;">
+			<!--
+			<script type="text/javascript">
+
+			google_ad_client = "ca-pub-2873999518428880";
+
+			/* LBI - bottom leaderboard */
+
+			google_ad_slot = "7822826393";
+
+			google_ad_width = 468;
+
+			google_ad_height = 60;
+
+			//
+
+			</script>
+			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>-->
+		</td>
+	</tr>
+</table>
+
+
+
+<div id="footer">
+			<p>
+				<a accesskey="8" href="#" class="hyperlinkcolor" onclick="submitLink('/Devon_Home_Choice/CFEPrivacyStatement.jsp')">Privacy statement and cookie policy</a>&nbsp; | &nbsp;
+				<a href="#" class="hyperlinkcolor" onclick="submitLink('/Devon_Home_Choice/CFETerms.jsp')">terms@home connections 2002-2014</a>
+				&nbsp; | &nbsp;<!--
+				<a href="mailto:help@home-connections.co.uk" class="hyperlinkcolor">webmaster</a>
+				&nbsp; | &nbsp;-->
+				<a href="http://www.home-connections.co.uk" class="hyperlinkcolor">Powered by Home Connections</a>
+				&nbsp; | &nbsp;
+				 
+				  <a href="#">Ver: 5.15.GA.190116 P</a>
+						
+				  
+			</p>
+</div>
+
+
+<!--<script type="text/javascript" src="/Devon_Home_Choice/js/styleswitcher.js"></script>-->
+
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+	
+	
+	function changeBodyFont(){
+		document.body.style.fontSize = '78%';
+	}
+
+	window.onLoad=changeBodyFont()
+
+</SCRIPT></div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2665539-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script><!--<script type="text/javascript" src="/Devon_Home_Choice/js/functions.js" language="javascript"></script>
+<script type="text/javascript" src="/Devon_Home_Choice/js/fontswitcher.js" language="javascript"></script>-->
+<script src="/Devon_Home_Choice/js/yahoo-dom-event.js" type=text/javascript></script>
+<script src="/Devon_Home_Choice/js/selector-beta-min.js" type=text/javascript></script>
+<script src="/Devon_Home_Choice/js/animation-min.js" type=text/javascript></script>
+<script src="/Devon_Home_Choice/js/all-min.js" type=text/javascript></script>
+<script src="/Devon_Home_Choice/js/concatenated-min.js" type=text/javascript></script>
+<script language="javascript" type="text/javascript" src="/Devon_Home_Choice/validation.js"></script>
+<script language="javascript" type="text/javascript" src="/Devon_Home_Choice/balloontip.js"></script>
+
+<script language="javascript" type="text/javascript">
+	//<![CDATA[
+	(function() {
+		var pager = new Ojay.Paginator('#portal-image-promo-inner', {
+			width:     '615px',
+		    height:    '239px',
+		    direction: 'horizontal',
+			infinite:		true
+		});
+		pager.setup();
+		if (pager.getPages() > 1) pager.addControls('after');
+	})();
+	//]]>
+	</SCRIPT>
+
+
+
+</body>
+</html>
+
+
+
+  

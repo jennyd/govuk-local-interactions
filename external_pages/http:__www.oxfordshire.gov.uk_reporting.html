@@ -1,0 +1,355 @@
+
+
+
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 iel8" lang="en-gb"><![endif]-->
+<!--[if IE 7]>   <html class="no-js ie7 iel8" lang="en-gb"><![endif]-->
+<!--[if IE 8]>   <html class="no-js ie8 iel8" lang="en-gb"><![endif]-->
+<!--[if IE 9]>   <html class="no-js ie9" lang="en-gb"><![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en-gb"><!--<![endif]-->
+    <head>
+        <meta name="viewport" content="initial-scale=1.0">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="HandHeldFriendly" content="true">
+        <meta name="mobileoptimized" content="0">
+
+
+
+        <link rel="stylesheet" href="/cobrands/oxfordshire/base.css?1454086166">
+        <link rel="stylesheet" href="/cobrands/oxfordshire/layout.css?1453222238" media="(min-width:48em)">
+        
+        <!--[if (lt IE 9) & (!IEMobile)]>
+            <link rel="stylesheet" href="/cobrands/oxfordshire/layout.css?1453222238">
+        <![endif]-->
+
+        <script src="/js/modernizr.custom.js?1443702439" charset="utf-8"></script>
+        <script src="/cobrands/oxfordshire/position_map.js?1443702439" charset="utf-8"></script>
+        
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<meta name="cobrand" content="oxfordshire">
+
+<script type="text/javascript" src="/js/validation_rules.js?404117"></script>
+<script type="text/javascript" src="/js/translation_strings.en-gb.js?404117"></script>
+
+<script type="text/javascript" src="/jslib/jquery-1.7.2.min.js"></script>
+<script src="/js/jquery.validate.min.js?1348728484" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/js/dropzone.min.js?1454086132"></script>
+
+<script type="text/javascript" src="/js/geo.min.js?1348728484"></script>
+<script type="text/javascript" src="/js/fixmystreet.js?1454086132"></script>
+<script type="text/javascript" src="/cobrands/fixmystreet/fixmystreet.js?1454086132"></script>
+
+
+
+
+
+
+
+<script>
+yepnope.addPrefix( 'preload', function ( resource ) {
+    resource.noexec = true;
+    return resource;
+});
+Modernizr.load({
+    load: [
+        "preload!/js/OpenLayers.fixmystreet.js?1443702439",
+        "preload!/js/map-OpenLayers.js?1444313854",
+        "preload!/js/map-OpenStreetMap.js?1443702439",
+        "preload!/js/jquery.ba-hashchange.min.js?1348728484"
+    ]
+});
+</script>
+
+
+
+
+
+
+
+
+
+<title>
+    
+    FixMyStreet</title>
+
+        
+
+        
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22094787-2']);
+    _gaq.push(['_setDomainName', '.oxfordshire.gov.uk']);
+    _gaq.push(['_setCustomVar',1,'level1','Roads and transport',3]);
+    _gaq.push(['_setCustomVar',2,'level2','FixMyStreet',3]);
+    _gaq.push(['_trackPageview']);
+    jQuery(document).ready( function () {
+     jQuery.occ.gaico({
+      messageIcon: '/cms/sites/all/themes/publicsite/images/gaico_exclamation.png',
+      permanentMessageIcon: '/cms/sites/all/themes/publicsite/images/gaico_question.png'
+     });
+    });
+
+</script>
+
+
+
+        <script src="/cobrands/fixmystreet-uk-councils/js.js?1443702439"></script>
+
+
+    </head>
+    <body class="frontpage fullwidthpage">
+<div id="oxford-wrapper">
+    <div id="oxford-header" class="desk-only oxford-left">
+        <a href="http://www.oxfordshire.gov.uk/" title="Home" class="logo">Oxfordshire County Council<span></span></a>
+        <span id="oxford-links">
+            <a href="http://www.oxfordshire.gov.uk/" title="">Oxfordshire County Council home</a>
+        </span>
+        <div style="clear:both"></div>
+        <span class="header"><a href="/">Report a road or street problem</a></span>
+
+      
+
+        <div id="navigation">
+            <div class="menubar">
+                <div class="menu-inner">
+                    <ul class="menu">
+                        <li>
+                            <span>Report</span>
+                        </li>
+                        <li>
+                            <a href="/my">Your reports</a>
+                        </li>
+                        <li>
+                            <a href="/reports/Oxfordshire">All reports</a>
+                        </li>
+                        <li>
+                            <a href="/alert">Local alerts</a>
+                        </li>
+                        <li>
+                            <a href="/faq">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- end of oxford header -->
+
+    <div class="wrapper">
+
+        <div class="table-cell">
+            <header id="site-header" role="banner">
+                <div class="container">
+                    <a href="/" id="site-logo">Oxfordshire FixMyStreet</a>
+                    <a href="#main-nav" id="nav-link">Main Navigation</a>
+                </div>
+            </header>
+
+          
+
+            <div id="front-main">
+    <div id="front-main-container">
+                    <h1 class="main">Find and report road or street problems</h1>
+
+
+        
+
+        
+        <form action="http://fixmystreet.oxfordshire.gov.uk/around" method="get" name="postcodeForm" id="postcodeForm">
+            <label for="pc">Enter an Oxfordshire postcode, or street name and area:</label>
+            <div>
+                <input type="text" name="pc" value="" id="pc" size="10" maxlength="200" placeholder="e.g. ‘OX20 1SZ’ or ‘Park St, Woodstock’">
+                <input type="submit" value="Go" id="sub">
+            </div>
+
+            
+
+        </form>
+        
+    </div>
+</div>
+
+
+            <div class="container">
+                <div class="content" role="main">
+
+        <!-- 
+ -->
+
+
+
+
+
+
+<div class="tablewrapper">
+    <div id="front-howto">
+        <h2>How to report a problem</h2>
+
+<ol class="big-numbers">
+
+    <li>Enter an Oxfordshire postcode, or street name and area</li>
+    <li>Locate the problem on a map of the area</li>
+    <li>Enter details of the problem</li>
+    
+        <li>Confirm the report and Oxfordshire County Council will investigate</li>
+    
+
+</ol>
+
+
+<section class="full-width">
+
+
+
+
+<div id="front_stats">
+    <div><big>395</big> reports in past week</div>
+    <div><big>683</big> fixed in past month</div>
+    
+    <div><big>63,945</big> updates on reports</div>
+    
+</div>
+
+
+</section>
+
+
+
+    </div>
+
+    
+
+
+<div id="front-recently">
+    <h2>
+            Recently reported problems
+            </h2>
+
+    <section class="full-width">
+        <ul class="item-list item-list--reports item-list--front-page">
+          
+            <li class="item-list__item item-list--reports__item item-list__item--with-pin">
+<a href="http://fixmystreet.oxfordshire.gov.uk/report/761827">
+    
+        <img class="img" height="60" width="90" src="/photo/761827.0.fp.jpeg?6e218702" alt="">
+    
+        <h4>Beesley road Banbury</h4>
+        <small> 12:49,  6 Feb 2016
+        
+        </small>
+</a>
+</li>
+
+
+          
+            <li class="item-list__item item-list--reports__item item-list__item--with-pin">
+<a href="http://fixmystreet.oxfordshire.gov.uk/report/761828">
+    
+        <img class="img" height="60" width="90" src="/photo/761828.0.fp.jpeg?4e75dee2" alt="">
+    
+        <h4>Verge protection post uprooted again</h4>
+        <small> 12:48,  6 Feb 2016
+        
+        </small>
+</a>
+</li>
+
+
+          
+            <li class="item-list__item item-list--reports__item item-list__item--with-pin">
+<a href="http://fixmystreet.oxfordshire.gov.uk/report/761825">
+    
+        <img class="img" height="60" width="90" src="/photo/761825.0.fp.jpeg?3f748ab5" alt="">
+    
+        <h4>Hastings Close Banbury</h4>
+        <small> 12:40,  6 Feb 2016
+        
+        </small>
+</a>
+</li>
+
+
+          
+            <li class="item-list__item item-list--reports__item item-list__item--with-pin">
+<a href="http://fixmystreet.oxfordshire.gov.uk/report/761809">
+    
+        <img class="img" height="60" width="90" src="/photo/761809.0.fp.jpeg?265931a3" alt="">
+    
+        <h4>Pot hole</h4>
+        <small> 12:15,  6 Feb 2016
+        
+        </small>
+</a>
+</li>
+
+
+          
+            <li class="item-list__item item-list--reports__item item-list__item--with-pin">
+<a href="http://fixmystreet.oxfordshire.gov.uk/report/761713">
+    
+        <img class="img" height="60" width="90" src="/photo/761713.0.fp.jpeg?f6312a97" alt="">
+    
+        <h4>Stratford Road Banbury</h4>
+        <small> 10:58,  6 Feb 2016
+        
+        </small>
+</a>
+</li>
+
+
+          
+        </ul>
+    </section>
+</div>
+
+
+</div>
+
+                    
+                    <footer role="contentinfo">
+                        <p><a href="/privacy">Privacy and cookies</a></p>
+                    </footer>
+                    
+                </div><!-- .content role=main -->
+            </div><!-- .container -->
+        </div><!-- .table-cell -->
+
+        <div class="nav-wrapper">
+            <div class="nav-wrapper-2">
+                <div id="main-nav" role="navigation">
+                    <ul class="nav-menu nav-menu--mysoc">
+                        <li><a id="mysoc-logo" href="https://www.fixmystreet.com/council">Powered by <img src="/cobrands/oxfordshire/images/fms-logo-105x20.png" alt="FixMyStreet"></a></li>
+                    </ul>
+
+                    <ul class="nav-menu nav-menu--main">
+                        <li><span class="report-a-problem-btn"
+                            >Report a problem</span></li><li><a href="/my">Your reports</a></li><li><a href="/reports">All reports</a></li><li><a href="/alert">Local alerts</a></li><li><a href="/faq">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<!-- 
+
+ -->
+    </div> <!-- .wrapper -->
+    <div id="oxford-footer" class="desk-only">
+        <address>
+            <strong>Oxfordshire County Council</strong><br>
+            <a href="http://www.oxfordshire.gov.uk/cms/public-site/contact-oxfordshire-county-council" title="Contact the council">Contact the council</a><br>
+            <a href="/privacy">View our terms and conditions</a>
+        </address>
+        <ul><!-- use | between items -->
+            <li class="powered-by-fms">
+                <a href="https://www.fixmystreet.com/">Powered&nbsp;by&nbsp;<img src="/cobrands/oxfordshire/images/fms-logo-inverse.png" alt="FixMyStreet"></a>
+            </li>
+        </ul>
+    </div>
+</div> <!-- oxford-wrapper -->
+</body>
+</html>
+

@@ -1,0 +1,753 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!--[if IE 6]><html class="ie6"><![endif]-->
+<!--[if IE 7]><html class="ie7"><![endif]-->
+<head>
+
+	<!-- #BeginEditable "doctitle" -->
+<title>Simple Search</title>
+<!-- #EndEditable -->
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" href="http://www.fenland.gov.uk/publicaccess-skin/styles/screen.css" type="text/css" media="screen,projection" />
+    <!--[if lte IE 9]><link href="http://www.fenland.gov.uk/publicaccess-skin/styles/ie.css" rel="stylesheet" type="text/css" media="screen, projection" /><![endif]-->
+    
+    <link rel="stylesheet" href="http://www.fenland.gov.uk/publicaccess-skin/styles/print.css" type="text/css" media="print" />
+    <script type="text/javascript" src="http://www.fenland.gov.uk/publicaccess-skin/scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="http://www.fenland.gov.uk/publicaccess-skin/scripts/jquery.toolbar.idox.min.js"></script>
+    <script type="text/javascript" src="http://www.fenland.gov.uk/publicaccess-skin/scripts/common.js"></script>
+    
+    <script type="text/javascript">
+	$('html').addClass('js');
+    </script>
+    
+    <!-- Fenland Head-->
+    <!--base href="http://www.fenland.gov.uk/" /-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="viewport" content="width=320;" />
+    <meta name="generator" content="GOSS iCM - Intelligent Content Management" />
+    <meta name="DC.format.medium" content="html/text" />
+    <meta name="DC.date.created" scheme="W3CDTF" content="2010-05-27T12:33:28+01:00" />
+    <meta name="DC.date.issued" scheme="W3CDTF" content="2010-05-27T12:33:27+01:00" />
+    <meta name="DC.date.modified" scheme="W3CDTF" content="2011-06-07T15:23:36+01:00" />
+    <meta name="DC.date.disposal.review" scheme="W3CDTF" content="2109-05-27T12:33:27+01:00" />
+    <meta name="eGMS.accessibility" scheme="eGMS.WCAG20" content="Double-A" />
+    <meta name="DC.title" content="Home" />
+    <meta name="DC.description" content="" />
+    <meta name="DC.identifier" scheme="DCTERMS.URI" content="http://www.fenland.gov.uk/home" />
+    <meta name="DC.language" scheme="ISO 639-3/T" content="en" />
+    <meta name="DC.rights.copyright" content="Copyright 2011 Fenland District Council" />
+    <meta name="DC.type" scheme="eGMS.TES" content="Reference" />
+    <meta name="DC.contributor" content="United Kingdom" />
+    <meta name="DC.creator" content="United Kingdom" />
+    <meta name="DC.publisher" content="United Kingdom" />
+    
+<script type="text/javascript" src="http://www.fenland.gov.uk/publicaccess-skin/scripts/fenland/javascripts.js"></script>
+    
+    
+    <link href="http://www.fenland.gov.uk/publicaccess-skin/styles/fenland/editor.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="http://www.fenland.gov.uk/publicaccess-skin/styles/fenland/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="http://www.fenland.gov.uk/publicaccess-skin/styles/fenland/colours.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="http://www.fenland.gov.uk/publicaccess-skin/styles/fenland/styleprint.css" rel="stylesheet" type="text/css" media="print" />
+    <link href="http://www.fenland.gov.uk/publicaccess-skin/styles/fenland/home.css" rel="stylesheet" type="text/css" media="all" />
+    
+    
+    <link media="only screen and (max-device-width: 480px)" href="http://www.fenland.gov.uk/publicaccess-skin/styles/fenland/mobile.css" type="text/css" rel="stylesheet" />
+    <!-- End Fenland Head -->
+    
+    <!-- #BeginEditable "head" --><!-- #EndEditable -->
+    <!-- #BeginEditable "webapp" --><!-- #EndEditable -->
+
+</head>
+<body onload="pageLoaded();">
+	<!-- Fenland Header-->
+        <a id="skipnavlink" accesskey="s" href="http://www.fenland.gov.uk/home#SkipNavigation">
+      <span>
+        Skip Navigation
+      </span></a>
+    <div id="pagewrapper">
+      <div id="topbanner">
+        <div id="toplogo">
+          
+          
+          <a href="http://www.fenland.gov.uk/home" title="Home" >
+            <img alt="Fenland District Council" src="http://www.fenland.gov.uk/publicaccess-skin/images/fenland/toplogo.jpg" width="155" height="75" /></a>
+          
+        </div>
+        <div id="headercontent">
+          
+          <div id="toplevelsearch">
+            <form id="kbs" name="kbs" class="search-form" method="GET" action="http://www.fenland.gov.uk/article/5836/Search">
+              <fieldset>
+                <label for="qt" title="Search">
+                  Search
+                </label>
+                <input id="qt" name="qt" type="text" size="15" maxlength="1000" value="">
+                <input id="submit" type="submit" value="Search" class="btntext">
+              </fieldset>
+            </form>
+          </div>
+          
+          <ul id="toputilnav">
+            
+            <li class="even first">
+              <a href="http://www.fenland.gov.uk/help">Help</a></li>
+            
+            <li class="odd">
+              <a href="http://www.fenland.gov.uk/sitemap">Sitemap</a></li>
+            
+            <li class="even last">
+              <a href="http://www.fenland.gov.uk/accessibility">Accessibility</a></li>
+            
+          </ul>
+          
+          
+          <div class="toplevelnavwrap">
+            <ul id="toplevelnav">
+              
+               <li class="even first">
+                <a href="http://www.fenland.gov.uk">
+                  Home
+                </a></li>
+              
+              <li class="odd">
+                <a href="http://www.fenland.gov.uk/article/1899/Contact-Us">Contact us</a></li>
+              
+              <li class="even">
+                <a href="http://www.fenland.gov.uk/article/2059/Current-Vacancies">Jobs</a></li>
+              
+              <li class="odd">
+                <a href="http://www.fenland.gov.uk/article/2094/Council-Tax">Council Tax</a></li>
+              
+              <li class="even">
+                <a href="http://www.fenland.gov.uk/article/2919/Make-a-Payment">Make a Payment</a></li>
+                
+              <li class="odd last">
+                <span class="selected">Planning Register</span></li>  
+                
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+      <div id="headeratoz">
+        
+<ul>
+          <li class="first even">
+            <strong>A - Z of Services:</strong></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5642/A">A</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5702/B">B</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5746/C">C</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5644/D">D</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/8826/E">E</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5648/F">F</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5641/G">G</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5727/H">H</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5646/I">I</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5703/J">J</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5574/K">K</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5649/L">L</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5576/M">M</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5728/N">N</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5578/O">O</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/7218/P">P</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5580/Q">Q</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/7518/R">R</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5713/S">S</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5704/T">T</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5824/U">U</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5709/V">V</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5707/W">W</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5588/X">X</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="odd">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5698/Y">Y</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+          <li class="even last">
+            <span class="yellowbox">
+              <span>
+                <span>
+                  <span>
+                    <a href="http://www.fenland.gov.uk/article/5590/Z">Z</a>
+                  </span>
+                </span>
+              </span>
+            </span></li>
+        </ul>
+      </div> <!-- End Header -->
+
+	<!-- IDOX PA START -->
+    <div id="idox">
+        <div id="pa">
+            <div class="container">
+                <!--div id="header">
+                    <img alt="IDOX PA" src="../images/logo.gif"/>        
+                    <h1>IDOX Public Access <span><strong>DC</strong> | <strong>CA</strong> | <strong>BC</strong> | <strong>BS</strong> </span></h1>
+                </div-->
+       			<div id="toolbar" class="nojs">
+                    <ul>	
+                        <li id="search" class="main"><a href="#"><span>Search</span></a>
+                            <ul>
+                                <li id="planLinks"><a href="http://www.fenland.gov.uk/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=simple&amp;searchType=Application"><span>Planning</span></a>
+                                    <ul>
+                                        <li id="planBasicSearch"><a href="http://www.fenland.gov.uk/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=simple&amp;searchType=Application">Simple Search</a></li>
+                                        <li id="planAdvancedSearch"><a href="http://www.fenland.gov.uk/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=advanced&amp;searchType=Application">Advanced Search</a></li>
+                                        <li id="planListSearch"><a href="http://www.fenland.gov.uk/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=weeklyList&amp;searchType=Application">Weekly/Monthly Lists</a></li>
+                                        <li id="planPropertySearch"><a href="http://www.fenland.gov.uk/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=property&amp;type=custom">Property Search</a></li>
+                                      <!-- #BeginLibraryItem "/Library/mapPlanningNavItem.lbi" -->
+
+
+
+
+
+
+
+    <li id="planMapsearch">
+        
+        <a href="/publicaccess/spatialDisplay.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=display&amp;searchType=Application">Map Search</a>
+    </li>
+<!-- #EndLibraryItem -->
+                                    </ul>
+                                </li>
+                                <li id="liLinks"><a href="http://www.fenland.gov.uk/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=simple&amp;searchType=LicencingApplication"><span>Licensing</span></a>
+                                    <ul>
+                                    <li id="liBasicSearch"><a href="http://www.fenland.gov.uk/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=simple&amp;searchType=LicencingApplication">Simple Search</a></li>
+                                    <li id="liAdvancedSearch"><a href="http://www.fenland.gov.uk/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=advanced&amp;searchType=LicencingApplication">Advanced Search</a></li>
+                                    <li id="liPropertySearch"><a href="http://www.fenland.gov.uk/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=property&amp;type=custom">Property Search</a></li>
+                                    <!-- #BeginLibraryItem "/Library/maplicensingNavItem.lbi" -->
+
+
+
+
+
+
+
+    <li id="liMapsearch">
+        
+        <a href="/publicaccess/spatialDisplay.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=display&amp;searchType=Licencing">Map Search</a>
+    </li>
+<!-- #EndLibraryItem -->
+                                    </ul>
+                                </li>         				
+                            </ul>
+                        </li>
+                        <!-- #BeginEditable "applicationForms" -->
+
+
+
+
+
+   
+<!-- #EndEditable -->   				
+                        <li id="myprofile" class="main"><a href="#"><span>My Profile</span></a>
+                            <ul>
+                              <!-- #BeginLibraryItem "/Library/consulteeInTrayNavItem.lbi" -->
+
+
+
+
+
+
+    <!-- #EndLibraryItem -->
+                                <li><a href="http://www.fenland.gov.uk/publicaccess/registered/displayUserDetails.do;jsessionid=53A57735B5E611C90ADE8D1223258537">Profile Details</a></li>
+                                <li><a href="http://www.fenland.gov.uk/publicaccess/registered/savedSearch.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=display">Saved Searches</a></li>
+                                <li><a href="http://www.fenland.gov.uk/publicaccess/registered/userAdmin.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=showNotifiedApplications">Notified Applications</a></li>
+                                <li><a href="http://www.fenland.gov.uk/publicaccess/registered/trackedApplication.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=display">Tracked Applications</a></li>
+                                <!-- #BeginEditable "formSubmissions" -->
+
+
+
+
+
+
+
+
+<!-- #EndEditable -->    	
+                            </ul>
+                        </li>
+                        <li id="loginLink" class="main"><!-- #BeginEditable "loginlogout" -->
+
+
+
+
+
+
+
+
+
+
+	<a href="/publicaccess/registered/userAdmin.do;jsessionid=53A57735B5E611C90ADE8D1223258537">Login</a>
+<!-- #EndEditable --></li>
+                        <!-- #BeginEditable "register" -->
+
+
+
+
+
+
+
+
+   
+
+
+	<li id="register">
+        <a href="/publicaccess/registrationWizard.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=start">Register</a>
+	</li>
+
+<!-- #EndEditable -->
+                    </ul>
+    			</div>
+                
+                <div id="pageheading">
+                    <h1><strong>Planning</strong> &raquo; <!-- #BeginEditable "pageheading" -->Simple Search <!-- #EndEditable --></h1>
+                    <!-- #BeginEditable "helplink" --><!-- #EndEditable -->
+                </div>
+                
+                <!-- START WAM CONTENT -->
+                <div class="content">
+                    <!-- #BeginEditable "errormsg" -->
+  
+    
+    
+
+    
+    
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "pagehead" -->
+    <p>
+        Search for Planning Applications, Appeals and Enforcements by keyword, application reference, postcode or by a single line of an address.
+    </p>
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "tabs" -->
+    
+        
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<ul class="tabs">
+
+    
+    <li>
+        <a href="/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=simple" class="active">Simple</a>
+    </li>
+
+    
+    <li>
+        <a href="/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=advanced" class="">Advanced</a>
+        
+    </li>
+
+    
+        
+        <li>
+            <a href="/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=weeklyList" class="">Weekly / Monthly Lists</a>
+            
+        </li>
+    
+
+    
+    <li>
+        <a href="/publicaccess/search.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=property&amp;type=custom" class="">Property</a>
+        
+    </li>
+
+    
+    
+        <li>
+            
+            <a href="/publicaccess/spatialDisplay.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=display&amp;searchType=Application" class="">Map</a>
+        </li>
+    
+
+</ul>
+
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "tabsubnav" --><!-- #EndEditable -->
+                    <!-- #BeginEditable "pagebody" -->
+<div class="tabcontainer toplevel" id="simpleSearch">
+    <form name="searchCriteriaForm" method="post" action="/publicaccess/simpleSearchResults.do;jsessionid=53A57735B5E611C90ADE8D1223258537?action=firstPage" id="simpleSearchForm">
+
+<div class="row1">
+    <span id="searchfor">
+        Search for:
+    </span>
+
+    
+    
+        <label for="Application">
+            <input type="radio" name="searchType" value="Application" checked="checked" id="Application" />
+            Applications
+            
+            
+        </label>
+    
+        <label for="Appeal">
+            <input type="radio" name="searchType" value="Appeal" id="Appeal" />
+            Appeals
+            
+            
+        </label>
+    
+        <label for="Enforcement">
+            <input type="radio" name="searchType" value="Enforcement" id="Enforcement" />
+            Enforcements
+            
+            
+        </label>
+    
+	
+</div>
+
+<div class="row2">
+    <label for="simpleSearchString">
+        
+            Enter a <strong>keyword</strong>, <strong>reference number</strong>, <strong>postcode</strong> or <strong>single line of an address</strong>.
+        
+        
+    </label>
+</div>
+
+<div class="row3">
+    <span class="fieldhelp">
+        
+            <a href="http://www.fenland.gov.uk/publicaccess-skin/help/fieldhelp/simpleSearchString.htm" target="_blank" rel="external">
+                <img src="http://www.fenland.gov.uk/publicaccess-skin/images/help.gif" alt="Help with Simple Search (opens in a new window)" title="Help with Simple Search (opens in a new window)" width="16" height="16" class="helpicon" />
+            </a>
+        
+        
+    </span>
+    <input type="text" name="searchCriteria.simpleSearchString" maxlength="255" value="" onblur="javascript:this.value=this.value.replace(/^\s+|\s+$/g,'')" onfocus="javascript:this.value=this.value.replace(/^\s+|\s+$/g,'')" class="text" id="simpleSearchString" />
+
+    <input type="hidden" name="searchCriteria.simpleSearch" value="true" />
+    <input type="submit" value="Search" class="button primary" />
+		
+    </div>
+
+    </form>
+</div>
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "pagefoot" --><!-- #EndEditable -->
+                </div>
+                <!-- END WAM CONTENT -->
+                
+                <p id="poweredBy">
+                    <a target="_blank" href="http://www.idoxgroup.com/">
+                        <img alt="an idox solution (opens in a new window)" title="Go to the Idox website (opens in a new window)" src="http://www.fenland.gov.uk/publicaccess-skin/images/idox.gif"/>
+                    </a>
+                </p>
+            </div>
+        </div>    
+    </div>  
+    <!-- IDOX PA END -->     
+
+	<!-- Fenland Footer -->
+    <div id="footer">
+        <div id="copyright">
+          Copyright &#169; 
+<script type="text/javascript">document.write(new Date().getFullYear());</script>
+          Fenland District Council						
+        </div>
+        <div class="footerimages">
+          <div class="t">
+            <div class="r">
+              <div class="b">
+                <a href="http://www.localgov.co.uk/index.cfm?method=awards.home" title="The 2010 MJ Winner : This link will open in a new browser window">
+                  <img alt="The 2010 MJ Winner" src="http://www.fenland.gov.uk/publicaccess-skin/images/fenland/footer/the-mj-winner.jpg" /></a>
+                <a href="http://www.investorsinpeople.co.uk/Pages/Home.aspx" title="Investors in People : This link will open in a new browser window">
+                  <img alt="Investors in People" src="http://www.fenland.gov.uk/publicaccess-skin/images/fenland/footer/investors-in-people.jpg" /></a>
+                <a href="http://www.cse.cabinetoffice.gov.uk/homeCSE.do" title="Customer Service Excellence : This link will open in a new browser window">
+                  <img alt="Customer Service Excellence" src="http://www.fenland.gov.uk/publicaccess-skin/images/fenland/footer/customer-service-excellence.jpg" /></a>
+                <a href="http://www.direct.gov.uk/en/index.htm?CID=LA" title="Directgov : This link will open in a new browser window">
+                  <img alt="Directgov: Public services all in one place" src="http://www.fenland.gov.uk/publicaccess-skin/images/fenland/footer/localdirectgov.jpg" /></a>
+                <a href="http://www.cambridgeshire.net/" title="Cambridgeshire.net : This link will open in a new browser window">
+                  <img alt="Cambridgeshire.net" src="http://www.fenland.gov.uk/publicaccess-skin/images/fenland/footer/cambs-net-logo.jpg" /></a>
+                <a href="http://www.facebook.com/FenlandDistrictCouncil" title="Find Us On facebook : This link will open in a new browser window">
+                  <img alt="Find Us On facebook" src="http://www.fenland.gov.uk/publicaccess-skin/images/fenland/footer/findus-fb.jpg" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      
+    </div>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-686673-1";
+urchinTracker();
+</script> <!-- End Footer -->
+</body>
+</html>
+

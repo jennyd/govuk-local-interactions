@@ -1,0 +1,510 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<title>Custom Error Page</title>
+<meta name="generator" content="Ideagen - WCM 7 - v7.1.0.19" />
+<meta charset="utf-8" />
+<meta name="Author" content="EIBS Support" />
+<meta name="Description" content="This is an example of the customisable error page. " />
+<meta name="ROBOTS" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+
+<link type="text/css" rel="stylesheet" href="/easysiteweb/easysite/styledata/nch_default/css/style.css" />
+<link type="text/css" rel="stylesheet" href="/easysiteweb/easysite/styledata/nch_master/css/master.css" />
+<link type="text/css" rel="stylesheet" href="/easysiteweb/easysite/styledata/nch_master/css/contenteditor.css" />
+<link type="text/css" rel="stylesheet" href="/easysiteweb/easysite/styledata/nch_master/css/contentformats.css" />
+<link type="text/css" rel="stylesheet" href="/easysiteweb/easysite/styledata/nch_default/css/ie7.css" />
+<link type="text/css" rel="stylesheet" href="/easysiteweb/easysite/supportfiles/jquery/ui/smoothness/jquery-ui-1.9.1.custom.min.css" />
+<link type="text/css" rel="stylesheet" href="/easysiteweb/style/faux/css/ux.net.css" />
+
+<script type="text/javascript" src="/EasySiteWeb/easysite/handlers/javascripthandler.ashx?p=~/easysite/supportfiles/eibs.core.js&amp;v=v71019"></script>
+<script type="text/javascript" src="/easysiteweb/easysite/supportfiles/jquery/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/easysiteweb/easysite/supportfiles/jquery/jquery-ui-1.9.1.custom.min.js"></script>
+<script type="text/javascript" src="/easysiteweb/easysite/supportfiles/jquery/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="/easysiteweb/easysite/supportfiles/renderengine_scrollposhelper.js"></script>
+<script type="text/javascript" src="/easysiteweb/easysite/handlers/javascripthandler.ashx?p=%7e%2fEasySite%2fSupportFiles%2fjquery%2fjquery.eibs.megamenus.js&amp;v=v7.1.0.19"></script>
+<script type="text/javascript">/*<![CDATA[*/ addOnLoadEvent(function() { $.megaMenu('') }); /*]]>*/</script>
+<script type="text/javascript" src="/easysiteweb/easysite/handlers/javascripthandler.ashx?p=%7e%2fEasySite%2fSupportFiles%2fNotificationMessages%2fNotificationPanel.js&amp;v=v7.1.0.19"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+<link type="text/css" rel="stylesheet" href="/EasySiteWeb/EasySite/StyleData/NCH_Master/CSS/rwd.css" />
+<script type="text/javascript" src="/EasySiteWeb/EasySite/StyleData/NCH_Master/Scripts/toggleRwdMenu.js"></script>
+<script type="text/javascript" src="/EasySiteWeb/EasySite/StyleData/NCH_Master/Scripts/exit.js" ></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+	var myLatlng = new google.maps.LatLng(52.94787, -1.14281);
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+	var marker = new google.maps.Marker({
+		position: myLatlng,
+		map: map,
+		title: 'Nottingham City Homes Ltd',
+		
+	});
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+</script></head>
+<body id="faux">
+
+<div id="sx-masthead">
+
+    <div id="exit-btn">
+        <a href="#" onclick="exitpage()" >Quick<br />Exit</a>
+    </div>
+    <div id="exit-msg">
+       <p>If you are in danger <br />
+           please use a safer computer, <br />
+           or call 999 or <br />
+           1800 RESPECT (1800 737 732).<br />
+           <br />
+           To leave this site quickly <br />
+           click the ‘Quick Exit’ button <br />
+           at the top of any page. </p>
+    </div>
+
+	<div class="sx-mo">
+		<div class="cls sx-mi">
+	
+			<div id="sx-avatar"><a href="/" title="Nottingham City Homes - homepage"><img src="/EasySiteWeb/EasySite/StyleData/NCH_Master/Images/nch-logoV3.gif" alt="Nottingham City Homes logo" /></a></div>
+
+			<a href="#" title="Menu" id="rwd-menu-button" onclick="toggleRwdMenu()">Menu</a>
+
+			<div class="header-buttons">
+				<a href="https://ip.e-paycapita.com/AIP/itemSelectionPage.do?link=showItemSelectionPage&siteId=072&languageCode=EN&source=AIP&fc=01" title="Pay your rent" class="header-button" id="rent" target="_blank">Pay your rent &raquo;</a>
+				<a href="/repairs-and-improvements/repairs/" title="Report a repair" class="header-button" id="repair" target="_blank">Report a repair &raquo;</a>
+				<a href="http://www.nottinghamhomelink.org.uk/" class="header-button" id="home" target="_blank">Find a home &raquo;</a>
+				<a href="/" title="Login" class="header-button" id="login">Login &raquo;</a>
+			</div>
+		
+			<div id="sx-search" class="sx-so">
+				<div class="cls sx-si">
+					<form action="/search/" method="get">
+						<fieldset>
+							<legend>Search our Site</legend>							
+							<div class="buttons"><input class="button" type="submit" value="                Find                      " /></div>
+							<div class="fields">
+								<div class="element keywords">
+									<div class="question"><label class="label" for="q">Keywords</label></div>
+									<div class="answer"><input id="q" class="textbox" type="text" name="q" value="Search Website ..." onfocus="if (this.value=='Search Website ...') { this.value=''; };return true;" /></div>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div id="header-social">
+				<ul class="header-social-links">
+					<li id="facebook"><a href="https://www.facebook.com/nottmcityhomes" title="Facebook">Facebook</a></li>
+					<li id="youtube"><a href="https://www.youtube.com/user/NottinghamCityHomes" title="YouTube">YouTube</a></li>
+					<li id="twitter"><a href="https://twitter.com/nottmcityhomes" title="Twitter">Twitter</a></li>
+				</ul>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+
+
+<div id="megamenu-wrapper">
+	<a href="#" title="Menu" id="rwd-menu-close-button" onclick="toggleRwdMenu()">Close</a>
+	
+				<div class="sel mega-menu">
+					<div class="sel-o">
+						<div class="cls sel-i">
+							<ul class="tabs">
+				<li class="first  menu-tab mt-alpha" >
+					<a class="mt-panel-title" href="/"><span class="text">HOME</span></a>
+					<ul class="panels">
+						<li class="menu-tab-panel">
+							<div class="mt-panel-o">
+								<div class="cls mt-panel-i">
+			
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class=" menu-tab mt-beta" >
+					<a class="mt-panel-title" href="/your-home/"><span class="text">YOUR HOME</span></a>
+					<ul class="panels">
+						<li class="menu-tab-panel">
+							<div class="mt-panel-o">
+								<div class="cls mt-panel-i">
+			<div class="pel-outer columns-outer columns-alpha">
+										<div class="pel-inner columns-inner">
+											<div class="clear columns-body">
+<div class="column-outer column-alpha" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+
+</div>
+							</div>
+						</div><div class="column-outer column-beta" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+<div id="ctl01__8c3350f6a6e1b48_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_41693a8c-f467-45a9-8927-3fa3bead3ba5_InnerRenderer_41693a8c-f467-45a9-8927-3fa3bead3ba5_esctl_7f20295d-dee1-4032-8b0c-95149fb3a344_InnerRenderer_7f20295d-dee1-4032-8b0c-95149fb3a344_esctl_8dbe6410-45fe-4680-8d5f-cb88e908011f_pnlAssetHolder" class="pel asset-inline justify-centre">
+	
+	<div id="ctl01__8c3350f6a6e1b48_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_41693a8c-f467-45a9-8927-3fa3bead3ba5_InnerRenderer_41693a8c-f467-45a9-8927-3fa3bead3ba5_esctl_7f20295d-dee1-4032-8b0c-95149fb3a344_InnerRenderer_7f20295d-dee1-4032-8b0c-95149fb3a344_esctl_8dbe6410-45fe-4680-8d5f-cb88e908011f_pnlAssetImgHolder" class="cls asset-width" style="width:30px;">
+		
+		
+		<div class="asset">
+			<img src="/_resources/assets/inline/full/0/157.png" alt="work-for-nch.png" style="height:28px;width:30px;" />
+		</div>
+		
+		
+	
+	</div>
+ 
+</div>
+ 
+</div>
+							</div>
+						</div>
+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class=" menu-tab mt-gamma" >
+					<a class="mt-panel-title" href="/your-neighbourhood/"><span class="text">YOUR NEIGHBOURHOOD</span></a>
+					<ul class="panels">
+						<li class="menu-tab-panel">
+							<div class="mt-panel-o">
+								<div class="cls mt-panel-i">
+			<div class="pel-outer columns-outer columns-alpha">
+										<div class="pel-inner columns-inner">
+											<div class="clear columns-body">
+<div class="column-outer column-alpha" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+
+</div>
+							</div>
+						</div><div class="column-outer column-beta" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+<div id="ctl01__8c3350f6ab81c41_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_f77d37ae-2866-43eb-b072-1595e3c1a4d2_InnerRenderer_f77d37ae-2866-43eb-b072-1595e3c1a4d2_esctl_3b3f7838-f081-4aa4-a530-91d69a911c99_InnerRenderer_3b3f7838-f081-4aa4-a530-91d69a911c99_esctl_1a92ea54-1477-42ac-8d3d-f4fdce3c4412_pnlAssetHolder" class="pel asset-inline justify-centre">
+	
+	<div id="ctl01__8c3350f6ab81c41_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_f77d37ae-2866-43eb-b072-1595e3c1a4d2_InnerRenderer_f77d37ae-2866-43eb-b072-1595e3c1a4d2_esctl_3b3f7838-f081-4aa4-a530-91d69a911c99_InnerRenderer_3b3f7838-f081-4aa4-a530-91d69a911c99_esctl_1a92ea54-1477-42ac-8d3d-f4fdce3c4412_pnlAssetImgHolder" class="cls asset-width" style="width:30px;">
+		
+		
+		<div class="asset">
+			<img src="/_resources/assets/inline/full/0/157.png" alt="work-for-nch.png" style="height:28px;width:30px;" />
+		</div>
+		
+		
+	
+	</div>
+ 
+</div>
+ 
+</div>
+							</div>
+						</div>
+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class=" menu-tab mt-delta" >
+					<a class="mt-panel-title" href="/find-a-home/"><span class="text">FIND A HOME</span></a>
+					<ul class="panels">
+						<li class="menu-tab-panel">
+							<div class="mt-panel-o">
+								<div class="cls mt-panel-i">
+			<div class="pel-outer columns-outer columns-alpha">
+										<div class="pel-inner columns-inner">
+											<div class="clear columns-body">
+<div class="column-outer column-alpha" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+
+</div>
+							</div>
+						</div><div class="column-outer column-beta" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+<div id="ctl01__8c3350f6a92d6fa_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_3d0255e3-2b90-41e2-b606-78c3d6d81b29_InnerRenderer_3d0255e3-2b90-41e2-b606-78c3d6d81b29_esctl_a38da5ae-5ffa-42d1-9161-6c0a51edf6d4_InnerRenderer_a38da5ae-5ffa-42d1-9161-6c0a51edf6d4_esctl_ae694e4a-2c63-4b9e-8875-43572350a66b_pnlAssetHolder" class="pel asset-inline justify-centre">
+	
+	<div id="ctl01__8c3350f6a92d6fa_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_3d0255e3-2b90-41e2-b606-78c3d6d81b29_InnerRenderer_3d0255e3-2b90-41e2-b606-78c3d6d81b29_esctl_a38da5ae-5ffa-42d1-9161-6c0a51edf6d4_InnerRenderer_a38da5ae-5ffa-42d1-9161-6c0a51edf6d4_esctl_ae694e4a-2c63-4b9e-8875-43572350a66b_pnlAssetImgHolder" class="cls asset-width" style="width:30px;">
+		
+		
+		<div class="asset">
+			<img src="/_resources/assets/inline/full/0/157.png" alt="work-for-nch.png" style="height:28px;width:30px;" />
+		</div>
+		
+		
+	
+	</div>
+ 
+</div>
+ 
+</div>
+							</div>
+						</div>
+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class=" menu-tab mt-epsilon" >
+					<a class="mt-panel-title" href="/get-involved/"><span class="text">GET INVOLVED</span></a>
+					<ul class="panels">
+						<li class="menu-tab-panel">
+							<div class="mt-panel-o">
+								<div class="cls mt-panel-i">
+			<div class="pel-outer columns-outer columns-alpha">
+										<div class="pel-inner columns-inner">
+											<div class="clear columns-body">
+<div class="column-outer column-alpha" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+
+</div>
+							</div>
+						</div><div class="column-outer column-beta" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+<div id="ctl01__8c3350f6ae4e573_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_3e49a1c7-e609-4de2-bb8b-1caa48bb53c4_InnerRenderer_3e49a1c7-e609-4de2-bb8b-1caa48bb53c4_esctl_0e4aad98-947d-4951-b315-0b2ad5dea969_InnerRenderer_0e4aad98-947d-4951-b315-0b2ad5dea969_esctl_28a55d3c-7ae4-4d29-9801-fec0a6d9018b_pnlAssetHolder" class="pel asset-inline justify-centre">
+	
+	<div id="ctl01__8c3350f6ae4e573_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_3e49a1c7-e609-4de2-bb8b-1caa48bb53c4_InnerRenderer_3e49a1c7-e609-4de2-bb8b-1caa48bb53c4_esctl_0e4aad98-947d-4951-b315-0b2ad5dea969_InnerRenderer_0e4aad98-947d-4951-b315-0b2ad5dea969_esctl_28a55d3c-7ae4-4d29-9801-fec0a6d9018b_pnlAssetImgHolder" class="cls asset-width" style="width:30px;">
+		
+		
+		<div class="asset">
+			<img src="/_resources/assets/inline/full/0/157.png" alt="work-for-nch.png" style="height:28px;width:30px;" />
+		</div>
+		
+		
+	
+	</div>
+ 
+</div>
+ 
+</div>
+							</div>
+						</div>
+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class=" menu-tab mt-zeta" >
+					<a class="mt-panel-title" href="/about-us/"><span class="text">ABOUT US</span></a>
+					<ul class="panels">
+						<li class="menu-tab-panel">
+							<div class="mt-panel-o">
+								<div class="cls mt-panel-i">
+			<div class="pel-outer columns-outer columns-alpha">
+										<div class="pel-inner columns-inner">
+											<div class="clear columns-body">
+<div class="column-outer column-alpha" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+
+</div>
+							</div>
+						</div><div class="column-outer column-beta" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+<div id="ctl01__8c3350f6a2213f4_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_61b0e3ee-8ea6-4d27-9247-74b46b6b5d43_InnerRenderer_61b0e3ee-8ea6-4d27-9247-74b46b6b5d43_esctl_3392245f-7eef-4f9c-9c47-d92b36619b6f_InnerRenderer_3392245f-7eef-4f9c-9c47-d92b36619b6f_esctl_0a7e1a08-625a-4f1c-9566-dbbca28969b0_pnlAssetHolder" class="pel asset-inline justify-centre">
+	
+	<div id="ctl01__8c3350f6a2213f4_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_61b0e3ee-8ea6-4d27-9247-74b46b6b5d43_InnerRenderer_61b0e3ee-8ea6-4d27-9247-74b46b6b5d43_esctl_3392245f-7eef-4f9c-9c47-d92b36619b6f_InnerRenderer_3392245f-7eef-4f9c-9c47-d92b36619b6f_esctl_0a7e1a08-625a-4f1c-9566-dbbca28969b0_pnlAssetImgHolder" class="cls asset-width" style="width:30px;">
+		
+		
+		<div class="asset">
+			<img src="/_resources/assets/inline/full/0/157.png" alt="work-for-nch.png" style="height:28px;width:30px;" />
+		</div>
+		
+		
+	
+	</div>
+ 
+</div>
+ 
+</div>
+							</div>
+						</div>
+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="last  menu-tab mt-eta" >
+					<a class="mt-panel-title" href="/repairs-and-improvements/"><span class="text">REPAIRS AND IMPROVEMENTS</span></a>
+					<ul class="panels">
+						<li class="menu-tab-panel">
+							<div class="mt-panel-o">
+								<div class="cls mt-panel-i">
+			<div class="pel-outer columns-outer columns-alpha">
+										<div class="pel-inner columns-inner">
+											<div class="clear columns-body">
+<div class="column-outer column-alpha" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+
+</div>
+							</div>
+						</div><div class="column-outer column-beta" style="float: left; clear: right; width: 50%;">
+								<div class="column-inner">
+									<div class="clear column-body">
+<div id="ctl01__8c3350f6a3d59ab_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_41df8b29-b8b9-4a95-bddd-0060f6fe4eac_InnerRenderer_41df8b29-b8b9-4a95-bddd-0060f6fe4eac_esctl_2887e638-1e7c-41cc-afce-3dd5f975725c_InnerRenderer_2887e638-1e7c-41cc-afce-3dd5f975725c_esctl_37dd1ea3-cdb5-4aab-b567-094c5b3f5e1d_pnlAssetHolder" class="pel asset-inline justify-centre">
+	
+	<div id="ctl01__8c3350f6a3d59ab_ctl00_MegaMenuPanelStructureDisplayRenderer_esctl_41df8b29-b8b9-4a95-bddd-0060f6fe4eac_InnerRenderer_41df8b29-b8b9-4a95-bddd-0060f6fe4eac_esctl_2887e638-1e7c-41cc-afce-3dd5f975725c_InnerRenderer_2887e638-1e7c-41cc-afce-3dd5f975725c_esctl_37dd1ea3-cdb5-4aab-b567-094c5b3f5e1d_pnlAssetImgHolder" class="cls asset-width" style="width:30px;">
+		
+		
+		<div class="asset">
+			<img src="/_resources/assets/inline/full/0/157.png" alt="work-for-nch.png" style="height:28px;width:30px;" />
+		</div>
+		
+		
+	
+	</div>
+ 
+</div>
+ 
+</div>
+							</div>
+						</div>
+</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+</div>
+
+<div id="sx-body" >
+	<div class="sx-bdo">
+		<div class="cls sx-bdi">
+        
+        
+
+<div id="sx-bct" class="sx-bo">
+	<div class="sx-bi">
+		<a href="/">Home</a><span class="sep">»</span>
+<a href="/error-page/">Error Page</a>	
+	</div>
+</div>
+            					
+			<div id="sx-content">
+				<div class="sx-co">
+					<div class="cls sx-ci">
+
+						<!-- // Start Content // -->
+						<form method="post" onsubmit="javascript:return ((window.WebForm_OnSubmit) ? WebForm_OnSubmit() : true);" id="frmMain" action="/error-page/"><fieldset class="oMasterForm net">
+<legend class="oMasterForm net" id="skiplinks">Custom Error Page</legend>
+<input type="hidden" name="EasySitePostBack" id="EasySitePostBack" value="" />
+<input type="hidden" name="ScrollPos" id="ScrollPos" value="0" />
+<input type="hidden" name="LinkState" id="LinkState" value="" />
+
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATEZIP" id="VIEWSTATEZIP" value="+8/In8LPyqVraW5oZGFoYWjKnyLGlwYkmNL4RbQZmFLSU5iYULksqFw2IJeNiRFVkB3IZQEKQvggmRQ4gU0MYgTCQhCLX4xJjj0sszgzKSc1AyTMjKYAxOJEtZcLlcuDyuVD4QIA" />
+<input type="hidden" name="__VIEWSTATE" id="VIEWSTATE" value="/wEPZmQl6j1P0xy4B6iwoSkqjS64edzy1slKtP48bzrUo/jrmA==" />
+</div>
+
+						
+						
+						<input type="hidden" name="PageNotifications$hfState" id="PageNotifications_hfState" />
+						<div class="ClientAreaContainer">
+							<div id="-ux-content" class="mode-live"><div class="contenteditor"><h1>Error Page</h1></div><div class="contenteditor"><p>Please return to the page you were on and try and refresh the page via the browser options.</p>
+<p>&#160;</p>
+<p>Alternatively navigate to a different page, and then return to the page on which you experienced the error.</p>
+<p>&#160;</p>
+<p>If you are still having problems please contact your local administrator.</p>
+<p>&#160;</p>
+</div></div>
+
+
+						</div>						
+						
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="VIEWSTATEGENERATOR" value="8F2BBC86" />
+	<input type="hidden" name="__EVENTVALIDATION" id="EVENTVALIDATION" value="/wEdAAJ4cJByAWZksh1B+OexTbVnxJMl82VmbJPmhJ8RpBZ23qmPpjeeAiTdUbpAaR23H5MFTfpPwEdFV5G5HXBM7XSv" />
+</div></fieldset>
+</form>
+						
+						<!-- // End Content // -->
+					</div>
+				</div>
+			</div>
+			
+
+
+<div id="sx-nav">
+	<div class="sx-no">
+		<div class="cls sx-ni">
+			<nav>
+				<map id="sn-nv-map"><ul id="navigation"><li class="depth0"><a href="/" class="toplevel depth-0"><span class="text">Homepage</span></a><ul><li class="depth1"><a href="/error-page/" class="current depth-1"><span class="text">Error Page</span></a></li><li class="depth1"><a href="/your-home/" class="sibling depth-1"><span class="text">Your home</span></a></li><li class="depth1"><a href="/repairs-and-improvements/" class="sibling depth-1"><span class="text">Repairs and improvements</span></a></li><li class="depth1"><a href="/find-a-home/" class="sibling depth-1"><span class="text">Find a home</span></a></li><li class="depth1"><a href="/your-neighbourhood/" class="sibling depth-1"><span class="text">Your neighbourhood</span></a></li><li class="depth1"><a href="/get-involved/" class="sibling depth-1"><span class="text">Get involved</span></a></li><li class="depth1"><a href="/about-us/" class="sibling depth-1"><span class="text">About us</span></a></li><li class="depth1"><a href="/accessibility/" class="sibling depth-1"><span class="text">Accessibility</span></a></li></ul></li></ul></map>
+				
+			</nav>
+		</div>
+	</div>
+</div>
+
+
+		</div>
+	</div>
+</div>
+
+
+
+		
+		<div id="sx-extras">
+			<div class="sx-eo">
+				<div class="cls sx-ei">
+					<div class="flinks">
+						<map id="snv-flinks">
+							<ul class="inline links">
+								<li id="about"><a href="/about-us/" title="About Us">About Us</a></li>
+							    <li id="work"><a href="/about-us/working-for-nottingham-city-homes/" title="Work For Us">Work For Us</a></li>
+							    <li id="contact"><a href="/about-us/contact-us/" title="Contact Us">Contact Us</a></li>
+							</ul>
+						</map>
+					</div>
+				</div>
+				<div class="footer-social">
+							<ul class="footer-social-links">
+								<li id="facebook"><a href="https://www.facebook.com/nottmcityhomes" title="Facebook">Facebook</a></li>
+							    <li id="youtube"><a href="https://www.youtube.com/user/NottinghamCityHomes" title="YouTube">YouTube</a></li>
+							    <li id="twitter"><a href="https://twitter.com/nottmcityhomes" title="Twitter">Twitter</a></li>
+							</ul>
+					</div>
+			</div>
+		</div>
+
+
+<!-- // Analytics code can go in here or in DocumentHeader.ascx // -->
+<script type="text/javascript" src="/EasySiteWeb/EasySite/SupportFiles/RenderEngine_SetScrollPos.js"></script>
+</body>
+</html>

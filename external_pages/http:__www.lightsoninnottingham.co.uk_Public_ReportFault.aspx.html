@@ -1,0 +1,795 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="ctl00_Head1"><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	Nottingham Street Lighting Services
+</title><meta name="keywords" content="Nottingham,city,county,council,streetlighting,streetlights,street,light,lighting,SSE,Contracting,contact,notify,report,track,fault,faulty,broken,lamp,post,signal,traffic,bollard" /><meta name="description" content="Easily subscribe for work schedule updates, report & track a faulty street light using our interactive maps in the Nottingham area. Contact us if you have a question or suggestion regarding the Street Lighting in your area." /><link rel="stylesheet" href="../Scripts/Royal/bootstrap.css" /><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" /><link rel="stylesheet" href="../Scripts/Royal/royalslider.css" /><link rel="stylesheet" href="../Scripts/Royal/royalslider.default-theme.css" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+    <script src="../Scripts/Royal/jquery.easing-1.3.js"></script>
+    <script src="../Scripts/Royal/bootstrap.min.js"></script>
+    <script src="../Scripts/Royal/jquery.royalslider.min.js"></script>
+    <script src="../Scripts/Royal/custom.js"></script>
+
+    <!--[if lt IE 9]>
+      		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+
+    <!-- Fonts Live:tha6nnd Local:ula6ddf -->
+    <script type="text/javascript" src="http://use.typekit.net/tha6nnd.js"></script>
+    <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+<link href="../App_Themes/Royal/Admin.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/Royal/Print.css" type="text/css" rel="stylesheet" /><link href="../App_Themes/Royal/styles.css" type="text/css" rel="stylesheet" /><link href="../favicon.ico" rel="SHORTCUT ICON" /></head>
+<body id="ctl00_BodyTag">
+    <form name="aspnetForm" method="post" action="ReportFault.aspx" id="aspnetForm">
+<input type="hidden" name="VIEWSTATE__KEY" id="VIEWSTATE__KEY" value="11bf381e-dc3a-4fa5-a91d-cab5c97e8cc4" />
+<input type="hidden" name="VIEWSTATE__KEY_SIZE" id="VIEWSTATE__KEY_SIZE" value="5.29Kb" />
+<input type="hidden" name="__VIEWSTATE" id="
+__VIEWSTATE" value="" />
+
+
+<script src="/Public/GetAPI.ashx?api=Google" type="text/javascript"></script>
+<script src="/Public//Services//ProcessScript.ashx?File=Scripts//GoogleMapsTemplate.js&amp;mili=891" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var AppRoot='';//]]>
+</script>
+
+<script src="/Scripts/ajax.js?mili=891" type="text/javascript"></script>
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAL+raDpAgKnv5+dDQLNydP9CQL2r/ztAjztWE71BxipS/WVphvc7UXJFlFF" />
+        <div id="CoverAll" class="Hidden">
+            &nbsp;
+        </div>
+        <div id="PrivacyPolicy" class="Hidden">
+            <strong class="xtop"><strong class="xb1"></strong><strong class="xb2 color_d"></strong>
+                <strong class="xb3 color_d"></strong><strong class="xb4 color_d"></strong></strong>
+            <div class="xboxcontent color_d" style="padding: 5px;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <th>
+                            <img id="ctl00_CloseBtn" title="Close" onclick="javascript:HideCoverAll('PrivacyPolicy');" src="../Images/close.gif" border="0" style="cursor: pointer; float: right; margin-right: 5px;" />
+                            &nbsp;Privacy Policy
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px;">
+                            <div style="font-weight: bold; padding-top: 5px; padding-bottom: 5px;">
+                                Personal information
+                            </div>
+                            <div>
+                                All personal information asked for will only be used for the purpose indicated.
+                            It will not be used for any other purpose without first obtaining your permission
+                            and will not be kept for longer than necessary.
+                            </div>
+                            <div style="font-weight: bold; padding-top: 5px; padding-bottom: 5px;">
+                                Use of IP addresses
+                            </div>
+                            <div>
+                                IP addresses are only collected for the sole purpose of system administration and
+                            for auditing the use of the site. We do not link IP addresses to anything personally
+                            identifiable, which means that while your user session will be logged you will remain
+                            anonymous to us.
+                            </div>
+                            <div style="font-weight: bold; padding-top: 5px; padding-bottom: 5px;">
+                                Use of cookies
+                            </div>
+                            <div>
+                                We only use cookies to remember the information you have provided to us when first
+                            registering on the website. Cookies are also used if reporting a street light fault
+                            and selecting the ‘remember me’ option.
+                            </div>
+                            <div style="font-weight: bold; padding-top: 5px; padding-bottom: 5px;">
+                                Security
+                            </div>
+                            <div>
+                                This site has security measures in place to protect the loss, misuse, and alteration
+                            of the information under our control.
+                            </div>
+                            <div style="font-weight: bold; padding-top: 5px; padding-bottom: 5px;">
+                                Contacting us
+                            </div>
+                            <div>
+                                If you have any questions about this privacy statement or data protection issues
+                            generally, you can contact
+                            <a id="ctl00_PrivacyContact1" href="mailto:lightsoninnottingham@ssecontracting.com">lightsoninnottingham@ssecontracting.com</a>
+                            </div>
+                            <div>
+                                If you have any comments or questions about the accuracy of information on this
+                            site please contact
+                            <a id="ctl00_PrivacyContact2" href="mailto:lightsoninnottingham@ssecontracting.com">lightsoninnottingham@ssecontracting.com</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <strong class="xbottom"><strong class="xb4 color_d"></strong><strong class="xb3 color_d"></strong><strong class="xb2 color_d"></strong><strong class="xb1"></strong></strong>
+        </div>
+        <div class="container white-container">
+            <div class="inner-wrapper">
+                <header>
+                    <div class="logo-bar">
+                        <div class="row" style="margin-bottom: 25px;">
+                            <div class="col-md-6">
+                                <a href="../Public"><img class="logo" usemap="#Map" src="../images/sse-lighting-logo.jpg" border="0" style="margin-bottom: 0;" /></a>
+                                <map name="Map" id="Map">
+                                    <area alt="" title="SSE Enterprise" href="http://www.sseenterprise.co.uk" target="_blank" shape="rect" coords="0,0,210,87" />
+                                </map>
+                            </div>
+                            <div class="col-md-6" style="text-align: right;">
+                                <a title="Visit the council website" href="http://www.nottinghamcity.gov.uk/" target="_blank"><img class="logo2" usemap="#Map2" src="../images/city-logo.png" border="0" style="margin-bottom: 0;" /></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="hidden-md hidden-sm hidden-lg navbar navbar-default">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                <li class="first">
+                                    <a id="ctl00_HyperLink3" title="Go to the home page" class="tab1" href="../Default.aspx">Home</a></li>
+                                <li class="second">
+                                    <a id="ctl00_HyperLink4" title="Report a fault to us" class="tab2" href="ReportFault.aspx">Report a Fault</a>
+                                </li>
+                                <li id="ctl00_li1" class="third">
+                                    <a id="ctl00_HyperLink5" title="View the work schedule for your area" class="tab3" href="WorkSchedule.aspx">Work Schedule</a>
+                                </li>
+                                <li class="fourth">
+                                    <a id="ctl00_HyperLink6" title="Your Community" class="tab4" href="Community.aspx">Your Community</a>
+                                </li>
+                                <li class="fifth">
+                                    <a id="ctl00_HyperLink7" title="Read Frequently Asked Questions/Tips" class="tab5" href="Faq.aspx">Information </a>
+                                </li>
+                                <li class="sixth">
+                                    <a id="ctl00_HyperLink8" title="Send us your comments/enquiry" class="tab6" href="Enquiries.aspx">Contact Us</a>
+                                </li>
+                                <li class="seventh">
+                                    <a id="ctl00_HyperLink9" title="Complete our feedback questionnaire" class="tab7" href="Survey.aspx">Feedback<br /> </a>
+                                </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="primary-navigation hidden-xs">
+                            <ul class="list-unstyled list-inline site-links">
+                                <li class="first">
+                                    <a id="ctl00_hlHome" title="Go to the home page" class="tab1" href="../Default.aspx">Home</a></li>
+                                <li class="second">
+                                    <a id="ctl00_hlReport" title="Report a fault to us" class="tab2" href="ReportFault.aspx">Report a Fault</a>
+                                </li>
+                                <li id="ctl00_liWorkSchedule" class="third">
+                                    <a id="ctl00_hlWorksSchedule" title="View the work schedule for your area" class="tab3" href="WorkSchedule.aspx">Work Schedule</a>
+                                </li>
+                                <li class="fourth">
+                                    <a id="ctl00_hlCommunity" title="Your Community" class="tab4" href="Community.aspx">Your Community</a>
+                                </li>
+                                <li class="fifth">
+                                    <a id="ctl00_hlFAQs" title="Read Frequently Asked Questions/Tips" class="tab5" href="Faq.aspx">Information </a>
+                                </li>
+                                <li class="sixth">
+                                    <a id="ctl00_hlEnquiries" title="Send us your comments/enquiry" class="tab6" href="Enquiries.aspx">Contact Us</a>
+                                </li>
+                                <li class="seventh">
+                                    <a id="ctl00_hlSurvey" title="Complete our feedback questionnaire" class="tab7" href="Survey.aspx">Feedback<br /> </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                
+                
+
+                <div id="contentContainer">
+                    
+    <style type="text/css">
+        @media (max-width: 992px) {
+            .col-md-9 {
+                float: none !important;
+                margin-bottom: 15px;
+            }
+
+            .resultbox {
+                height: auto !important;
+            }
+
+            .gmnoprint img {
+                width: auto !important;
+                height: auto !important;
+                top: 7px !important;
+                left: 8px !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .rfwrapper {
+                margin: 0 -25px;
+            }
+
+            #ZoomTemplate {
+                bottom: 82px;
+            }
+
+            #isMobile {
+                display: none;
+            }
+        }
+    </style>
+    <div class="row rfwrapper">
+        <div id="isMobile"></div>
+        <div class="col-md-9" style="float: right; overflow: hidden;">
+            <div class="content-box air-container" style="position: relative;">
+                <h2>
+                    
+                    <div>
+                        <b>Interactive Map <small style="color: white;">
+                            </small></b>
+                        <a href="javascript:ShowInstructions(true)">
+                            <img src="../Images/NavButtons/Help.png" align="top" height="16" border="0" /></a>
+                    </div>
+                </h2>
+                <div style="display: block; height: 459px;" align="left">
+                    <div id="loading" style="display: none; text-align: center; width: 100%; height: 437px; position: absolute; z-index: 1000; background-color: #808080; color: #000000; filter: alpha(opacity=70); opacity: 0.7;">
+                        <div style="padding-top: 200px; font-size: 32px; color: #000000;">
+                            LOADING
+                        </div>
+                    </div>
+                    <div id="ZoomTemplate" class="gmnoprint" style="position: absolute; padding: 5px 5px 5px 18px; line-height: 1; margin: 68px 0 0 48px; width: 150px; height: 72px; font-size: 13px; display: none; z-index: 1001; opacity: 0; filter: alpha(opacity=0); background-image: url('../images/ZoomPlease.gif'); background-repeat: no-repeat;">
+                        There are too many items to display at this level, you'll need to zoom in.
+                    </div>
+                    <div id="FaultInstructions" class="gmnoprint" style="position: absolute; padding: 6px 10px; margin-top: 20%; margin-left: 20%; width: 200px; height: 110px; background-image: url('../images/FaultInstruct.gif'); display: none; z-index: 1001; opacity: 0; filter: alpha(opacity=0); -moz-opacity: 0; font-size: 13px; cursor: pointer; background-repeat: no-repeat;"
+                        onclick="animateHideItem(this.id);">
+                        <u><b>Instructions</b></u>
+                        <div style="margin-top: 5px; line-height: 1;">
+                            <div style="margin-bottom: 5px;">Hover your mouse over an item to see its location information and details.</div>
+                            <div>To report a fault click on the faulty item on the map.</div>
+                        </div>
+                    </div>
+                    <div id="map" style="height: 435px; overflow: hidden; display: block;">
+                    </div>
+                    <div id="pano" style="display: none; height: 350px; width: 600px; border-top-style: none;">
+                    </div>
+                </div>
+                <div class="box-content" style="padding: 5px 0 0 10px; background: #009890; color: white;">
+                    <div style="display: none; float: left; padding: 0 0 0 5px; font-weight: bold;"
+                        id="divTogglelabels">
+                        Toggle On/Off:&nbsp;&nbsp;&nbsp;<span onclick="toggleLabels();" style="cursor: pointer; text-decoration: underline;">Labels</span> &nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div id="divToggleStreetview" onclick="toggleStreetview();" style="display: none; float: left; padding: 5px 0 0 5px; font-weight: bold;">
+                        <span style="cursor: pointer; text-decoration: underline;">Streetview</span> <span
+                            style="color: Red;">(beta)</span>
+                    </div>
+                    <div style="text-align: right; padding-right: 3px;">
+                        <div id="ctl00_cphContent_boxTrackFault">
+                            <b>Enter Reference to Track a fault report:</b>
+                            <input name="ctl00$cphContent$tbTrackFault" type="text" id="ctl00_cphContent_tbTrackFault" class="textbox" onkeypress="return submitenter(this, event, function(){document.getElementById(this.id.replace('tbT','btnT')).click()});" style="font-size: 0.9em; width: 10em; margin: 3px;" />
+                            <input type="submit" name="ctl00$cphContent$btnTrackFault" value="Track" onclick="redirectCarryParams('TrackFaultReport.aspx','FaultReportID=' + document.getElementById(this.id.replace('btnT','tbT')).value); return false;" id="ctl00_cphContent_btnTrackFault" class="btn btn-default" style="font-size: 12px; padding: 2px 10px;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3" style="overflow: hidden;">
+            <div style="" align="left" id="leftColumn">
+                <div>
+                    <div id="ctl00_cphContent_faultnote" class="content-box red-container CCModeHide" style="margin-bottom: 15px;">
+                        <h2>Please Note
+                        </h2>
+                        <div style="color: red;" class="content">
+                            This page is for reporting a fault on a specific street light. For general enquiries please <a href='Enquiries.aspx' style='color: Red;'>click here</a>
+                        </div>
+                    </div>
+                    <div class="content-box blue-container">
+                        <h2>Search</h2>
+                        <div class="content">
+                            <div id="ctl00_cphContent_simpleSearch" class="header-search" style="float: none; width: auto; margin: 0;">
+                                Type the name of a street<span id="ctl00_cphContent_lblLandmark">, postcode or a landmark</span>
+                                below and press <b class="fa">&#xf002;</b> to find that location quickly or use the map controls
+                                to move and zoom in manually.
+                                
+                                <div style="margin-top: 5px;">
+                                    <img alt="" id="LookupWait" src="../Images/loading.gif" style="position: absolute; margin-top: 9px; display: none; margin-left: -18px; height: 14px; left: 0;" />
+                                    <input type="text" id="tbSearch" class="search-input" style="width: 80%;" placeholder="Search" />
+                                    <input id="RunLookup" type="button" value="&#xf002;" class="button fa" style="background-color: #004687;" />
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="resultbox" style="margin-top: 0px; height: 20em;">
+                    <ul id="ResultsList" class="list-unstyled" style="list-style: disc; margin: 10px 0 0 30px;">
+                    </ul>
+                </div>
+                <div style="border: 1px solid #72BC1F; margin: 5px 0; display: none;" id="divFaultHistoryAlt">
+                    <div style="text-align: center; display: block; font-size: 11px; background-color: #72BC1F; font-weight: bold; color: White;">
+                        Item Details and History
+                    </div>
+                    <div id="divFaultHistoryAltData" style="height: 120px; overflow-x: hidden; overflow-y: auto; margin-bottom: 3px; text-align: left; padding: 3px;">
+                        <div style="padding: 15px;">
+                            <b>Please wait, gathering data... </b>
+                            <img src="../Images/loading.gif" />
+                        </div>
+                    </div>
+                    <center>
+                            <input type="button" style=" background-color: #72BD21; color: #FFFFFF; margin: 3px 0;"
+                                value="Report a Fault for this Item" onclick="redirectCarryParams('ReportAccessible.aspx', 'StreetlightId=' + curActiveUnit, 'pArea,pStreet,pUnitReference'); return false;" />
+                        </center>
+                </div>
+                <div class="CCModeHide">
+                    
+<div id="legend" class="mapLegend" style="margin-top: 3px;">
+    
+            <div class="content-box blue-container">
+                <h2>Legend of light icons</h2>
+                <div class="content">
+                    <table style="width: 100%;">
+                        <tbody>
+                            
+            <tr>
+                <td align="center" valign="middle">
+                    <img src="../Images/Icons/n-35.Png?m=2" height="10" width="10" border="0" />
+                </td>
+                <td>
+                    Beacon
+                </td>
+        
+            <td align="center" valign="middle">
+                <img src="../Images/Icons/n-33.Png?m=2" height="10" width="10" border="0" />
+            </td>
+            <td>
+                Bollard
+            </td>
+            </tr>
+        
+            <tr>
+                <td align="center" valign="middle">
+                    <img src="../Images/Icons/n-37.Png?m=2" height="10" width="10" border="0" />
+                </td>
+                <td>
+                    Feeder Pillar
+                </td>
+        
+            <td align="center" valign="middle">
+                <img src="../Images/Icons/n-34.Png?m=2" height="10" width="10" border="0" />
+            </td>
+            <td>
+                Sign
+            </td>
+            </tr>
+        
+            <tr>
+                <td align="center" valign="middle">
+                    <img src="../Images/Icons/n-31.Png?m=2" height="10" width="10" border="0" />
+                </td>
+                <td>
+                    Street Light
+                </td>
+        
+            <td align="center" valign="middle">
+                <img src="../Images/Icons/n-32.Png?m=2" height="10" width="10" border="0" />
+            </td>
+            <td>
+                Subway
+            </td>
+            </tr>
+        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+    
+</div>
+
+                    <br />
+                    <div class="content-box air-container">
+                        <h2>Having trouble?</h2>
+                        <div class="content">
+                            Having trouble using the interactive version?<br />
+                            <a id="ctl00_cphContent_hlReportAccessible" class="btn btn-blue" href="ReportAccessible.aspx" style="margin: 10px;">
+                                <i class="fa fa-arrow-right"></i>
+                                Use the standard tool
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+        .Tab1TitleRed {
+            color: re.d;
+        }
+
+        #map h3 {
+            font-size: 14px;
+            padding: 5px;
+            background-color: #004687;
+            color: white;
+            margin: 0;
+        }
+
+        #map a {
+            color: #004687;
+            font-weight: bold;
+        }
+
+        #Tab1Div {
+            width: 100%;
+            min-height: 210px;
+            border: solid 1px #004687;
+            border-radius: 0 10px;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .mapPopupContent {
+            padding: 5px;
+            color: black;
+        }
+    </style>
+    <div id="Tab1DivTemplate" style="display: none;">
+        <div id="ReportPage0" onclick="div0_click(event);">
+            <div id="ctl00_cphContent_Tab1Title" style="background-color: white;" class="Tab1TitleRed">
+                <h3>You are about to report this item as faulty
+                </h3>
+            </div>
+            <div id="LocationTemplate" class="mapPopupContent">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th valign="top" width="100px">Street:
+                        </th>
+                        <td>
+                            <div id="FaultTemplateStreetName">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th valign="top">Description:
+                        </th>
+                        <td>
+                            <div id="FaultTemplateLightDescr">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Unit type:
+                        </th>
+                        <td>
+                            <div id="FaultTemplateUnitType">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Unit ref.:
+                        </th>
+                        <td valign="top">
+                            <span id="FaultTemplateUnitReference"></span>&nbsp;&nbsp;&nbsp; <span id="FaultTemplateUnitSummary"></span>
+                        </td>
+                    </tr>
+                    <tr id="ReportFaultRow">
+                        <td valign="middle" align="center" colspan="2" style="padding-top: 5px;">
+                            <img alt="" id="FaultTemplateUnitIcon" style="padding: 2px; display: none;" src=""
+                                height="55" />
+                            <a href="javascript:" onclick="ShowHistory(); return false;" style="display: none;"
+                                id="FaultTemplateViewHistory">View Previous Fault Reports</a>
+                            <div style="padding-bottom: 5px; font-weight: bold;">
+                                Do you wish to continue?
+                            </div>
+                            <input id='div0yes' type="button" value="For Faults Only" class="btn btn-blue" style="font-size: 12px; padding: 2px 10px;"
+                                onclick="ForFaultsOnly();" />
+                            <input id='div0no' type="button" value="For Other Issues" class="btn btn-blue" style="font-size: 12px; padding: 2px 10px;"
+                                onclick="ForOtherIssues();" />
+                            <input id='div0emergency' type="button" value="For Emergency Faults Only" class="btn btn-blue" style="font-size: 12px; padding: 2px 35px; margin-top: 5px;"
+                                onclick="HideReportPage(0); ShowReportPage(8);" />
+                        </td>
+                    </tr>
+                    <tr id="OtherIssueRow" style="display: none;">
+                        <td valign="middle" align="center" colspan="2" style="padding-top: 10px;">Please call <b>
+                            0800 0966217</b>
+                            and quote the Unit Ref above for further assistance.
+                        </td>
+                    </tr>
+                    <tr id="CantRaiseFault" style="display: none;">
+                        <td valign="middle" align="center" colspan="2" style="padding-top: 10px;">This unit is not maintained as part of the contract. Please call <b>
+                            0800 0966217</b>
+                            &nbsp;for further assistance.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="ReportPage1" style="display: none;" onclick="div1_click(event);">
+            <h3>Report this item as faulty</h3>
+            <div class="mapPopupContent">
+                <div id="DIV2">
+                    <b>Fault Type:</b>
+                    <select id="FaultTemplateType" style="width: 100%;" onchange="FaultSelected();">
+                        <option value="">--- Please select ---</option>
+                        <option value="-1">General Enquiry</option>
+                        <option value='26' style='color:red;'>Obscene / Racist / Offensive Graffiti On Unit</option><option value='27' style='color:red;'>School Crossing Light Out</option><option value='135' style='color:red;'>Door Off / Damaged / Open</option><option value='25' style='color:red;'>Missing Belisha Beacon</option><option value='30' style='color:red;'>Bollard Knocked Down</option><option value='31' style='color:red;'>Bollard Shell Missing</option><option value='28' style='color:red;'>Damaged / Unsafe Unit Requiring Attendance</option><option value='29' style='color:red;'>Lantern Hanging</option><option value='6' >Light On During Day Time</option><option value='8' >Dim Light</option><option value='24' style='color:red;'>Exposed Wires</option><option value='4' style='color:red;'>Street Light Leaning Dangerously</option><option value='19' >Sign Face Removed / Missing / Turned</option><option value='21' >Light Coming On Too Late Or Off Too Early</option><option value='10' >Light Not Working</option><option value='11' >Light Flashing</option><option value='0' >Other (Specified)</option>
+                    </select>
+                </div>
+                <div id="DIV1">
+                    <b>Comments:</b>
+                    <div style="display: block; clear: both;">
+                        <textarea id="FaultTemplateComments" rows="4" style="font-size: 12px; width: 100%;"></textarea>
+                    </div>
+                </div>
+                <div style="padding-top: 2px; text-align: center;">
+                    <input type="button" value="Back" title="Back"
+                        class="btn btn-blue" style="font-size: 12px; padding: 2px 20px;"
+                        onclick="HideReportPage(1); ShowReportPage(0);" />&nbsp;
+                <input type="button" value="Next" title="Next" id="FaultTemplateNext1" disabled="disabled"
+                    class="btn btn-blue" style="font-size: 12px; padding: 2px 20px;"
+                    onclick="HideReportPage(1); Next1_Click(); " />
+                </div>
+            </div>
+        </div>
+        <div id="ReportPage2" style="display: none;" onclick="div2_click(event);">
+            <h3>Report this item as faulty
+            </h3>
+            <div class="mapPopupContent">
+                <div style="display: none; padding-bottom: 5px;">
+                    <span style="width: 120px; display: block; float: left; font-weight: bold;">House name/no.:</span>
+                    <input id="FaultTemplateHouse" type="text" style="width: 165px;" />
+                </div>
+                <div style="padding-bottom: 5px;">
+                    <span style="width: 120px; display: block; float: left; font-weight: bold;">Your Name:</span><input
+                        id="FaultTemplateName" type="text" style="width: 165px;" />
+                </div>
+                <div style="padding-bottom: 5px;">
+                    <span style="width: 120px; display: block; float: left; font-weight: bold;">Your Postcode:</span><input
+                        id="FaultTemplatePostCode" type="text" style="width: 165px;"
+                        onblur="this.value=FormatPostcode(this.value); return true;" />
+                </div>
+                <div style="padding-bottom: 5px;">
+                    <span style="width: 120px; display: block; float: left; font-weight: bold;">Your Telephone:</span><input
+                        id="FaultTemplateTelephone" type="text" style="width: 165px;" />
+                </div>
+                <div style="padding-bottom: 5px;">
+                    <span style="width: 120px; display: block; float: left; font-weight: bold;">Email Address:</span><input
+                        id="FaultTemplateEmail" type="text" style="width: 165px;" />
+                </div>
+                <div id="FaultTemplateRememberMeBox" style="padding-bottom: 5px;">
+                    <span style="width: 120px; display: block; float: left; font-weight: bold;">Remember Details:</span><input
+                        id="FaultTemplateRememberMe" type="checkbox" style="padding: 0; margin: 0;" />
+                </div>
+                <div style="padding-top: 5px; padding-bottom: 5px; text-align: center;">
+                    <input type="button" value="Back" title="Back"
+                        class="btn btn-blue" style="font-size: 12px; padding: 2px 20px;"
+                        onclick="HideReportPage(2); ShowReportPage(1); SelectComment(); " />
+                    &nbsp;
+                    <input id="FaultTemplateSend" type="button" value="Send" title="Send"
+                        class="btn btn-blue" style="font-size: 12px; padding: 2px 20px;"
+                        onclick="return ValidateFaultDetails();" />
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" id="ReportPage7">
+            <h3>Item History
+            </h3>
+            <div class="mapPopupContent">
+                <div id="FaultTemplateHistoryData" style="height: 140px; overflow-x: hidden; overflow-y: auto; margin-bottom: 5px; text-align: left; min-width: 275px;">
+                    <div style="padding: 15px;">
+                        <b>Please wait, gathering data... </b>
+                        <img src="../Images/loading.gif" />
+                    </div>
+                </div>
+                <input type="button" value="< Back" onclick="HideReportPage(7); ShowReportPage(0); return false;"
+                    class="btn btn-blue" style="font-size: 12px; padding: 2px 20px;" />
+            </div>
+        </div>
+        <div style="display: none;" id="ReportPage8">
+            <h3>Emergency Fault
+            </h3>
+            <div class="mapPopupContent">
+                This is an emergency fault. Please call our emergency hotline on <b style="white-space: nowrap;">
+                    0800 0966217</b>
+                &nbsp;and quote <b>Unit Reference: <span id="EmergencyContactUnitRef"></span></b>
+                &nbsp;for further assistance.<br />
+                <br />
+                &nbsp;Thank you.
+            </div>
+        </div>
+    </div>
+    <div style="display: none;">
+        <div id="CompletedTemplate" onclick="divComplete_click(event);">
+            <div class="mapPopupContent">
+                <p style="padding-top: 10px;">
+                    <b>Thank you</b> very much for reporting this fault. Your report has been recorded and
+                    the item will be scheduled for repair.
+                </p>
+                <p>
+                    Your fault report reference number is: <a id="FaultTemplateFaultRef" style="font-weight: bold;"></a>
+                </p>
+                <p>
+                    Please make a note of this number as you will need it to check the status of your
+                    fault report in the future. <span id="FaultTemplateEmergencyContact" style="font-weight: bold; display: none; color: #800000">This is an emergency fault. Our hotline number is
+                        0800 0966217.</span>
+                </p>
+                <div style="text-align: center;">
+                    <a href="javascript:" onclick="ClosePopup();" title="Close the window"
+                        class="btn btn-blue" style="font-size: 12px; padding: 2px 20px;">Close Window</a>
+                </div>
+            </div>
+        </div>
+        <div id="TryAgainTemplate" onclick="divTryAgain_click(event);">
+            <div class="mapPopupContent">
+                <div id="FaultTemplateErrorMessage" style="padding: 20px;">
+                    Sorry, the report was not sent. Please try again.
+                </div>
+                <div style="text-align: center;">
+                    <input onclick="ClosePopup();" type="button" value="Close" title="Close the window"
+                        class="btn btn-blue" style="font-size: 12px; padding: 2px 20px;" />
+                </div>
+                <br />
+            </div>
+        </div>
+        <div id="WaitTemplate" style="width: 260px;">
+            <div style="font-size: 13px;">
+                <br />
+                <br />
+                <br />
+                <br />
+                <center>
+                    Saving, please wait
+                </center>
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+        <div id="EmergencyContact">
+            <center style="text-align: center; vertical-align: middle; font-weight: bold; color: #800000; padding-top: 25px;">
+                <div style="text-align: left; width: 253px;">
+                    This is an emergency fault. Please call our emergency hotline on
+                    0800 0966217.
+                    <br />
+                    <br />
+                    Please quote Unit Ref: <span id="EmergencyContactUnitRef2"></span>&nbsp;for further
+                    assistance.<br />
+                    <br />
+                    Thank you.
+                </div>
+            </center>
+        </div>
+    </div>
+    <div id="debug" style="display: none;">
+    </div>
+
+                </div>
+
+                <div id="footer" class="row">
+                    
+    <div class="primary-navigation" style="text-align: center; margin-top: 15px; margin-bottom: 15px; color: white; padding: 10px;">
+        
+        <a id="ctl00_cphFooter_PostCodeLink" href="javascript:__doPostBack('ctl00$cphFooter$PostCodeLink','')"><font color="White">Click here to enter your postcode to see localised information for your area</font></a>
+    </div>
+
+                </div>
+
+                <footer class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="copyright">
+                            <p>
+                                SSE Enterprise Lighting is a trading name of SSE Contracting Limited which is part of the SSE Group.<br />
+                                The Registered Office of SSE Contracting Limited is 55 Vastern Road Reading Berkshire RG1 8BU.<br />
+                                Registered in England & Wales No. 02317133.<br />
+                                <a href="http://www.sseenterprise.co.uk" target="_blank">www.sseenterprise.co.uk</a>
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+
+                <div id="copyright">
+                    
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td width="49%" align="left" class="menu" style="padding-top: 7px;">
+                                <a id="ctl00_HyperLink1" title="About Us" href="About-Us.aspx">About this Website</a>
+                            </td>
+                            <td align="center" style="white-space: nowrap;">
+                                
+                                <div>
+                                    <span class="menu" style="padding-bottom: 0px; padding-top: 0px; padding-left: 0px;">
+                                        <a style="cursor: default; padding-top: 0px; padding-bottom: 2px;" href="javascript:">Accessibility:</a></span> <a title="Normal Text Size" style="color: #000066; font-weight: bold; font-size: 11px; padding-left: 1px; padding-right: 1px;"
+                                            href="javascript:" onclick="changeSize('12px');">A</a> <a title="Medium Text Size" style="color: #000066; font-weight: bold; font-size: 12px; border-bottom-width: 0px; padding-left: 1px; padding-right: 1px;"
+                                                href="javascript:"
+                                                onclick="changeSize('');;">A</a> <a title="Large Text Size" style="color: #000066; font-weight: bold; font-size: 13px; padding-left: 1px; padding-right: 1px;"
+                                                    href="javascript:"
+                                                    onclick="changeSize('18px');">A</a> <a href="javascript:" onclick="changeColor();"
+                                                        title="Toggle High Visibility Colours">
+                                                        <img id="ctl00_Image1" src="../Images/highvis.gif" border="0" style="border: solid 1px white; vertical-align: bottom; height: 14px;" /></a>
+                                </div>
+                            </td>
+                            <td width="49%" align="right" class="menu" style="padding-top: 7px;">
+                                <a id="ctl00_HyperLink2" title="About Cookies" href="http://www.sse.co.uk/AboutCookies" target="_blank">About Cookies</a>
+                                &nbsp;&nbsp;&nbsp;
+                    <a href="javascript:ShowPrivacyPolicy();">Privacy&nbsp;Policy</a> &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+var IconImages = new Array();IconImages[31] = new Object();
+IconImages[31].n='../Images/Icons/n-31.Png';
+IconImages[31].m='../Images/Icons/m-31.Png';
+IconImages[31].f='../Images/Icons/f-31.Png';
+IconImages[31].l=undefined;
+IconImages[32] = new Object();
+IconImages[32].n='../Images/Icons/n-32.Png';
+IconImages[32].m='../Images/Icons/m-32.Png';
+IconImages[32].f='../Images/Icons/f-32.Png';
+IconImages[32].l=undefined;
+IconImages[33] = new Object();
+IconImages[33].n='../Images/Icons/n-33.Png';
+IconImages[33].m='../Images/Icons/m-33.Png';
+IconImages[33].f='../Images/Icons/f-33.Png';
+IconImages[33].l=undefined;
+IconImages[34] = new Object();
+IconImages[34].n='../Images/Icons/n-34.Png';
+IconImages[34].m='../Images/Icons/m-34.Png';
+IconImages[34].f='../Images/Icons/f-34.Png';
+IconImages[34].l=undefined;
+IconImages[35] = new Object();
+IconImages[35].n='../Images/Icons/n-35.Png';
+IconImages[35].m='../Images/Icons/m-35.Png';
+IconImages[35].f='../Images/Icons/f-35.Png';
+IconImages[35].l=undefined;
+IconImages[37] = new Object();
+IconImages[37].n='../Images/Icons/n-37.Png';
+IconImages[37].m='../Images/Icons/m-37.Png';
+IconImages[37].f='../Images/Icons/f-37.Png';
+IconImages[37].l=undefined;
+IconImages[38] = new Object();
+IconImages[38].n='../Images/Icons/n-38.Png';
+IconImages[38].m='../Images/Icons/m-38.Png';
+IconImages[38].f='../Images/Icons/f-38.Png';
+IconImages[38].l=undefined;
+EmergencyUnitTypes = ',,';EmergencyFaultTypes = ',26,27,135,25,30,31,28,29,24,4,';var AllowEmergencyFaultReports = false;MaxMapHeight();InitialiseMap();document.getElementById('tbSearch').onkeypress = function() { return submitenter(this, event, Lookup); };document.getElementById('RunLookup').onclick = function() { Lookup(); return false; };ShowFaults = true; ShowMaintenance = true; var SiteName = "Nottingham"; var isOsMapSupported = false; var isCCMode = false;//]]>
+</script>
+</form>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-17546476-11']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    
+    
+    <script src='../Scripts/cookiesdirective.v1.5.js' type="text/javascript"></script>
+    <script type="text/javascript">
+        function cookiesDirectiveScriptWrapper() {
+            //console.log('cookies are accepted');
+        }
+        cookiesDirective('bottom', 1, 'http://www.sse.co.uk/AboutCookies/', 'Google Analytics, Google Maps, Microsoft Bing Maps, Yahoo! Maps, OS OpenSpace Maps');
+    </script>
+</body>
+</html>

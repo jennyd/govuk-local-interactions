@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="application-name" content="Kent County Council Consultations"/> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="mobile-web-app-capable" content="yes" />
+<link rel="canonical" href="http://consultations.kent.gov.uk/consult.ti" />
+<title>Kent County Council Consultations - Home Page</title>
+<!--[if lte IE 8]><link rel="stylesheet" href="/inovem/static/site1.default-ie8.20151129192455.css" media="all" charset="utf-8" /><![endif]-->
+<link rel="stylesheet" href="/inovem/static/site1.default-main.20160115142519.css" media="all" charset="utf-8" />
+<link rel="stylesheet" href="/inovem/static/site1.default-bg.20160115142519.css" media="all" charset="utf-8" />
+<link rel="stylesheet" href="/inovem/static/site1.default-rounded.20151129192455.css" media="all" charset="utf-8" />
+<link rel="stylesheet" href="/inovem/static/site1.default.20151129192455.css" media="all" charset="utf-8" />
+<link rel="stylesheet" href="/inovem/static/site100.default-main.20151129192455.css" media="all" charset="utf-8" />
+<link rel="stylesheet" href="/inovem/static/site100.default.20151129192455.css" media="all" charset="utf-8" />
+<link rel="stylesheet" href="http://www.kent.gov.uk/__data/assets/css_file/0015/2562/style.min.css" media="all" charset="utf-8" />
+<link rel="stylesheet" href="/inovem/static/site490.kent.20151129203636.css" media="all" charset="utf-8" />
+<link rel="stylesheet" href="/inovem/public/jquery/select2/select2_3.3.2.css" type="text/css" />
+<!-- IE7/8 support -->
+<!--[if lt IE 9]>
+<script src="http://www.kent.gov.uk/__data/assets/js_file/0018/4383/respond.min.js"></script>
+<![endif]-->
+<!-- Javascript -->
+<script src="http://www.kent.gov.uk/__data/assets/js_file/0020/2567/custom.modernizr.js"></script>
+<script src="http://www.kent.gov.uk/__data/assets/js_file/0003/2568/jquery-1.10.2.min.js"></script>
+<script src="http://www.kent.gov.uk/__data/assets/js_file/0006/4767/vendor.min.js"></script>
+<script src="http://www.kent.gov.uk/__data/assets/js_file/0018/6516/main.min.js"></script>
+<link id="favicon" rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><script type="text/javascript" src="/inovem/static/package__package.20160115145059.js" charset="utf-8"></script>
+<script type="text/javascript">
+//<![CDATA[
+var in_JQ = jQuery.noConflict();
+var in_globals = {
+CSRFToken : 'b0906dab3a15397b1b2fbd86e207d3d8fc7fd96c_20160207040727_a',
+sessionTimeoutURL : '/consult.ti/system/siteMessage/sessionTimeout/user',
+logoutOnInactivity : 'N',
+uiActionURL : '/consult.ti/system/uiAction',
+ajaxActionURL : '/consult.ti/system/ajaxAction',
+prefsCookie : 'ECONSUSERPREFS'
+};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function(document,navigator,standalone) {
+// prevents links from apps from oppening in mobile safari
+// this javascript must be the first script in your <head>
+if ((standalone in navigator) && navigator[standalone]) {
+var curnode, location=document.location, stop=/^(a|html)$/i;
+document.addEventListener('click', function(e) {
+curnode=e.target;
+while (!(stop).test(curnode.nodeName)) { curnode=curnode.parentNode; }
+// Condidions to do this only on internal links, but not on modal popups
+if('href' in curnode 
+&& ( curnode.href.indexOf('http') || ~curnode.href.indexOf(location.host) ) 
+&& ( curnode.className.indexOf("in_modalLinkConfirm") < 0)
+&& ( curnode.className.indexOf("in_jqDialog") < 0)
+) {
+e.preventDefault();
+location.href = curnode.href;
+}
+},false);
+}
+})(document,window.navigator,'standalone');
+in_JQ(document).ready(function($) {
+if (('standalone' in window.navigator) && window.navigator['standalone']) {
+document.getElementsByTagName('body')[0].className += " in_WebApp";
+}
+});
+//]]>
+</script>
+<script type="text/javascript" src="/inovem/static/common.20160115142518.js" charset="utf-8"></script>
+<meta name="eGMS.accessibility" scheme="WCAG" content="Double-A" />
+<meta name="DC.coverage" content="UK" />
+<meta name="DC.creator" content="INOVEM Inclusionware" />
+<meta name="DC.language" scheme="ISO 639-2/T" content="eng" />
+<meta name="eGMS.subject.category" scheme="GCL" content="Government, politics and public administration" />
+<meta name="DC.title" content="Home Page" />
+<meta name="DC.publisher" content="Kent County Council Consultations" />
+<meta name="DC.identifier" scheme="URI" content="http://consultations.kent.gov.uk/consult.ti" />
+<meta name="DC.date.created" scheme="W3CDTF" content="2000-01-01" />
+</head>
+<body class=" in_pageModestandard in_jqAutoFocus in_notLoggedIn in_notInWorkspace " id="in_url_home" data-group-email=""><a name="top"></a>
+<a id="id_skip" class="in_webOnly" href="#skip" accesskey="s">Skip to main content</a>
+<script type="text/javascript">
+//<![CDATA[
+document.getElementsByTagName('body')[0].className += " in_jsAvailable";
+try { top.document.domain } catch (e) { 
+var f = function() { document.body.innerHTML = ''; }
+setInterval(f, 10);
+if (document.body) document.body.onload = f;
+}
+//]]>
+</script>
+<!--[if lt IE 7]><div class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><div class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><div class="lt-ie9"><![endif]-->
+<a id="id_skip" class="in_webOnly" href="#skip" accesskey="s">Skip to main content</a> <header>
+<div>
+<div class="row">
+<a href="http://www.kent.gov.uk/" class="logo">
+Kent County Council
+</a>
+</div>
+<div class="nav-bar">
+<div class="row">
+<div class="search">
+<form action="http://www.kent.gov.uk/search" method="get">
+<input type="hidden" value="results" name="mode">
+<input type="text" id="queries_keyword_query" class="sq-form-field" size="5" name="queries_keyword_query" placeholder="Search Kent.gov.uk...">
+<input type="submit" value="Go">
+</form>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- END Standard header and landing page navigation -->
+<!-- START heading 1 -->
+<!-- !!skipLink!! -->
+<div class="row">
+<div class="large-12 column">
+<h1>Home Page</h1> 
+</div>
+</div>
+<!-- END heading 1 -->
+<!-- Column content row wrapper -->
+<div class="row">
+<!-- START Left hand navigation -->
+<!-- !!skipLink!! -->
+<div class="medium-3 large-3 column inapp-sidebar">
+<nav>
+<p>Consultations</p>
+<ul class="menu in_bulletMenu">
+<li><a href="/consult.ti/system/findConsultations?DOSEARCH=Y&amp;PAGEINFONAME=listcurrentconsultations&amp;ca_weblistcontrol=Main&amp;type=O"
+title="List Current Consultations">Current</a></li>
+<li><a href="/consult.ti/system/findConsultations?DOSEARCH=Y&amp;PAGEINFONAME=listfutureconsultations&amp;ca_weblistcontrol=Main&amp;type=P"
+title="List Future Consultations">Future</a></li>
+<li><a href="/consult.ti/system/findConsultations?DOSEARCH=Y&amp;PAGEINFONAME=listarchiveconsultations&amp;ca_weblistcontrol=Main&amp;type=C"
+title="List Closed Consultations">Closed</a></li>
+<li><a href="/consult.ti/system/findConsultations"
+title="Search for Consultations">Search</a></li>
+</ul>
+</nav>
+<nav><p>Your Account</p><ul class="userbar" role="navigation">
+<li id='in_userbar_register'><a title="Register on this site" href="/consult.ti/system/register" class="userbar">Register</a></li>
+<li id='in_userbar_login'><a title="Log in to this site" href="/consult.ti/system/login" class="userbar">Log in</a></li>
+<li id='in_userbar_help' class='in_newWindow'><a title="Get help (opens in a new window)" target="help" href="/consult.ti/system/help?helpTopic=site&amp;viewmode=popup" class="userbar" accesskey="6">Help</a></li></ul></nav>
+</div>
+<!-- END Left hand navigation -->
+<!-- START Fonts & typography styles, right hand content -->
+<!-- !!skipLink!! -->
+<div class="medium-9 large-9 column in_aria-role__main">
+<a name="skip"></a><div class="in_pageDescription"></div> 
+<div id="pagetitle" class="in_pageTitle">
+<h1 style="margin: 0 -15px 5px !important; padding: 5px 8px 18px 0 !important;">Consultations</h1>
+</div>
+<p>This Consultation Directory provides a full list of KCC's past, current and planned consultations. It will help you find the opportunities available so you can let us know what you think about the local services and policies that matter to you.<br />From here you can look at planned, current and past consultations and look at the results of these and how they have been used to influence our decision making.</p>
+<p>If you <a href="/consult.ti/system/register">register with us </a>and tell us the issues you are interested in, we will contact you when an activity is due to take place, or you can join in as and when they happen. You can also register to be emailed when the feedback for a particular consultation or involvement activity is published on this website.</p>
+<p>There are separate lists for&nbsp;<a href="/consult.ti/system/findConsultations?DOSEARCH=Y&amp;PAGEINFONAME=listcurrenttrafficconsultations&amp;ca_weblistcontrol=Traffic&amp;type=O&amp;showsearch=N"><strong>Highway consultations</strong>, including <strong>Traffic Regulation Orders</strong>, <strong>Public Notices</strong>&nbsp;and&nbsp;<strong>Start of Works Notices</strong></a>&nbsp;and for&nbsp;<strong><a href="/consult.ti/system/findConsultations?DOSEARCH=Y&amp;PAGEINFONAME=listcurrentprowconsultations&amp;ca_weblistcontrol=Right+Of+Way&amp;type=O&amp;showsearch=N">Public Rights of Way Notices</a>.</strong>&nbsp;&nbsp;</p>
+<p><em>Please note</em>: comments relating to planning policy should be made separately - <a href="http://consult.kent.gov.uk/portal">View and comment on planning policy online.</a></p>
+<p>We hope you find this directory service helpful and easy to use. But if you have any comments or questions about the Consultation Directory, please email us at: <a href="mailto:webteam@kent.gov.uk">webteam@kent.gov.uk</a></p>
+</div>
+<!-- END Fonts & typography styles, right hand content -->
+</div>
+<footer id="footer">
+<div>
+<a href="#" class="icon icon-top back-to-top" title="Back to top"></a>
+<div class="row">
+<div class="small-12 medium-7 columns">
+<ul class="footer-nav">
+<li><a href="http://www.kent.gov.uk/aboutthissite">About this website</a></li>
+</ul>
+</div>
+<div class="small-12 medium-4 columns right copy">
+<div class="icon icon-logo-full icon-logo-full-dims"></div>
+<p>&copy; Kent County Council
+<span style="font-size: 65%;"><br />Powered by INOVEM Inclusionware&trade; - <a target="_blank" href="http://www.inovem.com/" title="INOVEM website (opens in a new window)" style="color: white;">Online Consultation and Collaboration Software</a></span></p>
+</div>
+</div>
+<div class="social">
+<div class="row">
+</div>
+</div>
+</div>
+</footer>
+<!-- END Footer -->
+<!--[if lt IE 7]></div><![endif]-->
+<!--[if IE 7]></div><![endif]-->
+<!--[if IE 8]></div><![endif]-->
+</body>
+</html>

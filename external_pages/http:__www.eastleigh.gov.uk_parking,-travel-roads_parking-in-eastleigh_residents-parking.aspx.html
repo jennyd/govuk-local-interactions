@@ -1,0 +1,708 @@
+
+    <!DOCTYPE html>
+    <html lang="en-GB">
+        <head>
+	
+            <title>Eastleigh Borough Council</title>
+            <meta name="Copyright" content="Copyright 2014 Eastleigh Borough Council" />
+            <meta name="Author"    content="Eastleigh Borough Council - CSICT Development Team" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta charset="UTF-8" />
+            <meta name="description" content='Residents' Parking'>
+            <meta name="keywords" content='Residents' Parking'>
+            <meta name="author" content="Eastleigh Borough Council">
+
+                <!-- Styles -->
+            <link href="/css/master.less.css"    rel="stylesheet" type="text/css" />
+            		    <style type="text/css">
+    	    #wrapper {background: #BCB;}
+
+    	     @media( min-width: 1061px)
+    	     {
+    	         #wrapper 
+    	         {
+					background: #eaebec;
+    	            background: linear-gradient( rgba(200, 200, 200, 0.8), rgba(200, 200, 200, 0.8) ),url('/media/63537/Snowy-Bandstand.JPG');
+    	            background-size: cover;
+    	         }
+    	     }
+    	</style>
+      
+
+			<!--Start of Google Analytics-->
+            <script type="text/javascript">
+                !function (e, a, t, n, c, o, s) { e.GoogleAnalyticsObject = c, e[c] = e[c] || function () { (e[c].q = e[c].q || []).push(arguments) }, e[c].l = 1 * new Date, o = a.createElement(t), s = a.getElementsByTagName(t)[0], o.async = 1, o.src = n, s.parentNode.insertBefore(o, s) } (window, document, "script", "//www.google-analytics.com/analytics.js", "ga"), ga("create", "UA-20264814-1", "auto"), ga("send", "pageview");
+            </script>
+			
+			<script>
+			/**
+			* Function that tracks a click on an outbound link in Google Analytics.
+			* This function takes a valid URL string as an argument, and uses that URL string
+			* as the event label.
+			*/
+			var trackOutboundLink = function(url) {
+			   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+				 function () {
+				 document.location = url;
+				 }
+			   });
+			}
+			</script> 
+            <!--End of Google Analytics-->
+
+            <script type="text/javascript" src="/Scripts/jquery-1.11.0.min.js"></script>
+            <script async src="/Scripts/less-1.3.3.min.js" type="text/javascript"></script>
+        </head>
+
+        <body>
+    
+            <form method="post" action="/parking,-travel-roads/parking-in-eastleigh/residents-parking.aspx" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWAmYPZBYCZg9kFgJmD2QWAgIHEGRkFgICCQ9kFgJmD2QWAmYPZBYKAgEPDxYCHgRUZXh0ZWRkAgMPDxYEHgtOYXZpZ2F0ZVVybAU2aHR0cHM6Ly9teS5lYXN0bGVpZ2guZ292LnVrL215LWFjY291bnQvbXktZGV0YWlscy5hc3B4HgdWaXNpYmxlaGRkAgUPDxYCHwEFOmh0dHBzOi8vbXkuZWFzdGxlaWdoLmdvdi51ay9NZW1iZXItUmVnaXN0cmF0aW9uL2xvZ2luLmFzcHhkZAIHDw8WAh8CaGRkAgkPDxYCHwEFNGh0dHBzOi8vbXkuZWFzdGxlaWdoLmdvdi51ay9NZW1iZXItUmVnaXN0cmF0aW9uLmFzcHhkZGTTCAP/MRhNf2H52r0wSOKvhQeutw==" />
+</div>
+
+                <div id="header" class="body">
+                    <h1>
+                        <a href="/">
+                            <img src="/media/core/eastleigh-logo.gif" alt="Eastleigh Borough Council" />
+                        </a>
+                    </h1>
+                    
+        <ul class="toolbar">
+
+				<li class=""><a href="/tools/cookies.aspx">Cookies</a></li>
+				<li class=""><a href="/tools/accessibility.aspx">Accessibility</a></li>
+				<li class=""><a href="/tools/contact-us.aspx">Contact Us</a></li>
+				<li class=""><a href="/tools/site-map.aspx">Site Map</a></li>
+				<li class=""><a href="/tools/a-to-z.aspx">A to Z</a></li>
+				<li class="last"><a href="/tools/help.aspx">Help</a></li>
+		</ul>
+
+
+                    <script type="text/javascript">
+    function doSearch() { var a = $("#searchstring").val(); return "" != a && (window.location = "/tools/search.aspx?searchtext=" + a), !1 }
+</script>
+
+<div id="search">
+    <label for="searchstring" class="hidden">site search</label>
+    <input type="text" id="searchstring" name="searchstring" class="formField" placeholder="Search..." title="Search" maxlength="50" autocomplete="Off" />
+    
+    <label for="searchBtn" class="hidden">search</label>       
+    <button type="button" class="searchBtn" id="searchBtn" name="searchBtn" onclick="doSearch();"></button>
+    
+    <div id="searchresults" class="search-results mecontent">
+    </div>
+</div>
+           
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+        var content = $('#searchstring').val();
+        $('#searchstring').keyup(function (e) {
+
+            if ($('#searchstring').val() != content) {
+                content = $('#searchstring').val();
+                $.ajax({
+                    type: "POST",
+                    url: "/searchresults",
+                    data: "searchstring=" + content,
+                    success: function(msg){
+                        $('#searchresults').html(msg);
+                    }
+                });
+            }
+
+            if (e.keyCode == 13) {
+                var searchText = $("#searchstring").val();
+                //alert(searchText);
+
+                window.location = "https://www.eastleigh.gov.uk/tools/search.aspx?searchtext=" + searchText;
+                //window.location.replace("/tools/search.aspx?searchtext=" + searchText);
+            }
+        });
+    });
+
+</script>
+
+                </div>
+
+                <dl class="breadcrumbs clearFix">
+                    <dt class="hidden">You are here</dt>
+                    <dd class="body">
+
+                        
+
+<ul class="breadcrumb">
+	
+	        <li class="normalpagelink"><a href="/">Home</a></li>
+	        <li class="normalpagelink"><a href="/parking,-travel-roads.aspx">Parking, Travel &amp; Roads</a></li>
+	        <li class="normalpagelink"><a href="/parking,-travel-roads/parking-in-eastleigh.aspx">Parking in Eastleigh</a></li>
+	    <li class="active">Residents&#39; Parking</li>
+    
+</ul>
+                        <div class="logindetails">
+                            <div id="ContentPlaceHolderDefault_UserDetails_5_divLoginDetails">
+    <span id="ContentPlaceHolderDefault_UserDetails_5_lblUserInfo"></span>
+    
+    
+    <a id="ContentPlaceHolderDefault_UserDetails_5_HypLogon" class="linkbutton" href="https://my.eastleigh.gov.uk/Member-Registration/login.aspx">Log In</a>
+    |
+    
+    <a id="ContentPlaceHolderDefault_UserDetails_5_HypRegister" class="linkbutton" href="https://my.eastleigh.gov.uk/Member-Registration.aspx">Create Account</a>
+</div> 
+                        </div>
+                    </dd>
+                </dl>
+
+                <div id="wrapper">
+        
+                    
+        <div id="content" class="body clearFix">
+            <div id="leftCol">
+				
+
+<div class="box MainMenu widget">
+    <a id="MainMenuHeader" class="MenuHead widget-head" href="#">
+        <h2>
+            Main Menu
+            <span></span>
+        </h2>
+    </a>
+    
+
+
+    <div class="box-content widget-content">
+
+
+		<nav id="MainMenu" class="nodisplay"> 
+                <ul>
+            <li class="level-2"> <!--id="My Eastleigh"-->
+                <a href="https://my.eastleigh.gov.uk/">My Eastleigh</a>
+            </li>
+            <li class="level-2"> <!--id="The Council"-->
+                <a href="/the-council.aspx">The Council</a>
+            </li>
+            <li class="level-2"> <!--id="Planning &amp; Building"-->
+                <a href="/planning-building.aspx">Planning &amp; Building</a>
+            </li>
+            <li class="level-2"> <!--id="Council Tax, Benefits &amp; Business Rates"-->
+                <a href="/council-tax,-benefits-business-rates.aspx">Council Tax, Benefits &amp; Business Rates</a>
+            </li>
+            <li class="level-2"> <!--id="Housing"-->
+                <a href="/housing.aspx">Housing</a>
+            </li>
+            <li class="level-2"> <!--id="Waste, Recycling &amp; Environment"-->
+                <a href="/waste,-recycling-environment.aspx">Waste, Recycling &amp; Environment</a>
+            </li>
+            <li class="level-2"> <!--id="Energy &amp; Climate Change"-->
+                <a href="/energy-climate-change.aspx">Energy &amp; Climate Change</a>
+            </li>
+            <li class="level-2"> <!--id="Parking, Travel &amp; Roads"-->
+                <a href="/parking,-travel-roads.aspx">Parking, Travel &amp; Roads</a>
+            </li>
+            <li class="level-2"> <!--id="Sport, Countryside, Parks &amp; Culture"-->
+                <a href="/sport,-countryside,-parks-culture.aspx">Sport, Countryside, Parks &amp; Culture</a>
+            </li>
+            <li class="level-2"> <!--id="Licensing"-->
+                <a href="/licensing.aspx">Licensing</a>
+            </li>
+            <li class="level-2"> <!--id="Business"-->
+                <a href="/business.aspx">Business</a>
+            </li>
+            <li class="level-2"> <!--id="Our Community"-->
+                <a href="/our-community.aspx">Our Community</a>
+            </li>
+    </ul>
+
+        </nav>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        $(function () { var n = $("#MainMenuHeader"), e = $("#MainMenu"); $(n).on("click", function (n) { n.preventDefault(), e.slideToggle() }) });
+    </script>
+
+
+
+
+				
+
+
+
+
+
+<div class="box sectionNav widget">
+    <div class="box-content">
+        
+        <a id="SectionMenuHead" class="MenuHead widget-head" href="#">
+            <h2>
+                Parking, Travel &amp; Roads
+                <span></span>
+            </h2>
+        </a>
+
+            <nav id="sectionNav">
+                <ul>
+
+                        <li  class="parent">
+                                <a href="/parking,-travel-roads/public-transport.aspx">Public Transport</a>
+                        </li>
+                        <li  class="parent">
+                                <a class="parent" href="/parking,-travel-roads/parking-in-eastleigh.aspx">Parking in Eastleigh</a>
+                                    <ul>
+                                        
+                                            <li>
+
+                                                <a class="" href="/parking,-travel-roads/parking-in-eastleigh/pay-a-pcn.aspx">Pay a PCN</a>
+                                            </li>
+                                            <li>
+
+                                                <a class=" active" href="/parking,-travel-roads/parking-in-eastleigh/residents-parking.aspx">Residents&#39; Parking</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/parking,-travel-roads/parking-in-eastleigh/disabled-parking-in-eastleigh.aspx">Disabled Parking in Eastleigh</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/parking,-travel-roads/parking-in-eastleigh/parking-locations,-charges-permits.aspx">Parking Locations, Charges &amp; Permits</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/parking,-travel-roads/parking-in-eastleigh/parking-in-hamble-le-rice.aspx">Parking in Hamble-le-Rice</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/parking,-travel-roads/parking-in-eastleigh/ringgo-pay-by-phone-parking.aspx">RingGo Pay by Phone Parking</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/parking,-travel-roads/parking-in-eastleigh/dropped-kerbs-and-h-bar-access-markings.aspx">Dropped Kerbs and H-bar Access Markings</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/parking,-travel-roads/parking-in-eastleigh/cctv.aspx">CCTV</a>
+                                            </li>
+                                    </ul>
+                        </li>
+                        <li  class="parent">
+                                <a href="/parking,-travel-roads/traffic-orders.aspx">Traffic Orders</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/parking,-travel-roads/travel-plans.aspx">Travel Plans</a>
+                        </li>
+                        <li  class="">
+                                <a href="/parking,-travel-roads/taxi-licensing.aspx">Taxi Licensing</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/parking,-travel-roads/cycling-and-walking.aspx">Cycling and Walking</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/parking,-travel-roads/highways-maintenance.aspx">Highways Maintenance</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/parking,-travel-roads/other-transport-services.aspx">Other Transport Services</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/parking,-travel-roads/street-naming-and-numbering.aspx">Street Naming and Numbering</a>
+                        </li>
+                        <li  class="">
+                                <a href="/parking,-travel-roads/pay-a-penalty-charge-notice-(pcn).aspx">Pay a Penalty Charge Notice (PCN)</a>
+                        </li>
+    
+                </ul>
+            </nav>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () { var e = $("#SectionMenuHead"), n = $("#sectionNav"); $(e).on("click", function (e) { e.preventDefault(), n.slideToggle() }) });
+</script>
+			</div>
+
+	        <div id="main" class="clearfix" >
+                <div class="main-head">
+                    <h2>
+                        Residents' Parking
+
+                    </h2>
+                    <div class="whoson">
+    <!-- Embedded WhosOn: Insert the script below at the point on your page where you want the Click To Chat link to appear -->
+        <script type='text/javascript' src='https://chat.eastleigh.gov.uk:443/include.js?domain=my.eastleigh.gov.uk'></script>
+        <script type='text/javascript' >
+        if (sWOTrackPage) sWOTrackPage();
+    </script>
+    <!-- End of embedded WhosOn -->
+</div>
+
+                </div>
+				<div class="main-intro">
+                    <p>
+                        
+                    </p>
+                </div>
+                
+                    
+				
+					<div id="main-content" class="clearFix">
+					    <p class="modifiedDate">
+					        Page last updated at 22 October 2015 at 16:29
+                        </p>
+						<h2>Residents' Parking in Eastleigh  <img width="250" height="187" src="/media/55016/ParkingEastleigh_m.jpg" alt="Parkingeastleigh M" style="width: 212px; height: 170px; float: right;"/></h2>
+<ul>
+<li><a href="#applyforapermit" title="How to apply">How Do I Apply For Or Renew A Permit?</a>     </li>
+<li><a href="#schemework" title="How Does The Scheme Work?">How Does The Scheme Work?</a></li>
+<li><a href="#visitors" title="Visitors and Trades Persons Parking">Visitors' and Trades Persons' Parking</a></li>
+<li><a href="#payments" title="Payments Refunds">Payments and Refunds</a></li>
+<li><a href="#enforce" title="Who Will Enforce The Scheme ">Who Will Enforce The Scheme </a> </li>
+<li><a href="/parking,-travel-roads/parking-in-eastleigh/parking-in-hamble-le-rice.aspx" title="Parking in Hamble-le-Rice">Hamble-le-Rice resident parking scheme</a></li>
+</ul>
+<h3><a name="applyforapermit"></a>How Do I Apply For A Permit?</h3>
+<p>Complete an application form for each permit, renewal or change of vehicle. Provide proof of ownership (or use of a company vehicle, for example) of the vehicle and proof that you currently live at an address within a parking zone. For visitors' permits complete an application form and produce documentation of proof of residency only. </p>
+<p>Application forms can be obtained in person from the Eastleigh House offices or by telephoning Customer Services on: 023 8068 8088 or downloaded here. Both word and pdf versions are provided, right click and <strong>"Save Target As..."</strong> to download.</p>
+<ul>
+<li><a href="/media/56037/Residents-Permit-Application-zone-1-9-zone-11-2015a.pdf" target="_blank" title="Residents app 2015">Resident Parking Permit Application Form</a> pdf</li>
+</ul>
+<p>All forms can be returned by post or taken to Eastleigh House, Upper Market Street together with the appropriate documentation. </p>
+<ul>
+<li><a href="/parking,-travel-roads/parking-in-eastleigh/parking-in-hamble-le-rice.aspx" title="Parking in Hamble-le-Rice">Hamble-le-Rice resident parking scheme</a></li>
+</ul>
+<p><strong>What Documents Do I Need To Obtain A Permit?</strong></p>
+<p>Confirmation of vehicle registration number e.g. Vehicle Registration document. A current &amp; valid Motor Insurance Certificate may be accepted. Please also provide proof of residential address (e.g. Driving Licence, Vehicle Registration document, Tenancy agreement). If you drive a company vehicle, please supply a letter from the company and/or vehicle owner, on company headed paper, with your application confirming that you are the driver. Photocopies may be accepted.</p>
+<p><strong>Applications &amp; Information</strong></p>
+<ul>
+<li><strong>Post:</strong> Customer Service Centre, Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh, SO50 9YN</li>
+<li><strong>Visit:</strong> Eastleigh House, Upper Market Street, Eastleigh. Opening times: Monday – Friday 8.30am to 5.00pm </li>
+</ul>
+<p><strong>When Should I Surrender My Permit</strong></p>
+<p>A permit may be surrendered at any time and <strong>must be</strong> surrendered if:</p>
+<ul>
+<li>The permit holder ceases to reside at the property or within the zone to which the permit relates</li>
+<li>The permit holder ceases to be the owner or operator of the vehicle for which the permit was issued</li>
+<li>The vehicle is adapted or used in such a way that it is no longer of a class for which a permit can be issued </li>
+</ul>
+<h3>How Do I Renew My Existing Permit?</h3>
+<p>If your vehicle details remain unchanged from the last time a permit was issued you can renew and pay for (if necessary) your permit:</p>
+<ul class="Normal">
+<li><strong>Online: </strong>Go to <strong><a href="https://my.eastleigh.gov.uk/apply/renew-residents-parking-permit.aspx" title="Renew Residents Parking Permit">My Eastleigh</a></strong> and select ‘<strong>Renew Residents Parking Permit</strong>’ in the <strong>‘Apply’ </strong>section. You will need to have your current permit number(s) and vehicle registration(s) when applying.</li>
+<li><strong>By Telephone:</strong> Telephone the Customer Service Centre at Eastleigh House on <strong>023 8068 8088.</strong> Where a payment is needed a valid debit or credit card will be required. Please note a surcharge may apply for credit card payments. </li>
+</ul>
+<p>If your vehicle details have changed from the last time a permit was issued you will need to renew your permit:</p>
+<ul class="Normal">
+<li><strong>In Person at</strong>: Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh SO50 9YN during office hours: Monday – Friday: 8.30am to 5.00pm</li>
+<li><strong>By Post from:</strong> Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh SO50 9YN </li>
+</ul>
+<h3><a name="schemework"></a>How Does The Scheme Work?</h3>
+<p>Permit Holders may park their vehicles in residents' parking bays within designated zones. The residents' bays are not subject to waiting restrictions and the scheme operates:</p>
+<p>Between 8.00am and 8.00pm Monday to Saturday (except Bank Holidays) in Zones 1 to 8;</p>
+<p>Between 8:00am and 6:00pm Monday to Friday (except Bank Holidays) in Zone 9; and</p>
+<p>Between 9:00am and 5:00pm Monday to Friday (except Bank Holidays) in Zone 11. </p>
+<p>Permits must be displayed on the vehicles front windscreen as set out in the scheme regulations. Permits can only be used for a single vehicle and are not transferable.</p>
+<p><strong>Who Is Entitled To A Residents' Parking Permit?</strong></p>
+<p>1) Residents who live within controlled zones, subject to <strong>General Exclusions</strong>, and who keep a passenger vehicle adapted to carry not more than twelve passengers or a goods vehicle with an unladen weight not exceeding 3.5 tonnes. Motorcycles will require a permit to be parked within the marked zones.</p>
+<p>2) Operators of businesses within the residents' parking zones.</p>
+<p>3) Professional 'Carers' e.g. doctors, home helps, social workers and others who regularly visit elderly or infirm residents within the zones (maximum stay 3 hours). </p>
+<p><strong>General Exclusions</strong></p>
+<p>All new housing developments (including the redevelopment of existing housing) within the Controlled Parking Zones are excluded from entitlement to any parking permits. </p>
+<p><strong>How Many Permits Can I Have?</strong></p>
+<p>Each household can apply for a maximum of two permits.  A third permit may be issued at the discretion of the Council if off street parking cannot be provided practically at the property. </p>
+<p><strong>Where Can I Park?</strong></p>
+<p>Permit Holders may park in designated residents' bays.</p>
+<p>Vehicles with or without permits may park in some designated sections of roads within the parking zones for up to two or four hours as indicated on the adjacent signs.</p>
+<p>Vehicles displaying a Disabled Person's badge may be left in a residents' parking bay.</p>
+<p>Vehicles displaying a Professional Carer's permit may be left in a residents' parking bay for up to three hours only.</p>
+<p>Vehicles must park within marked bays. </p>
+<p>The residents' parking scheme <strong>does not</strong> guarantee that space is always available in any parking bays. </p>
+<p><strong>Note:</strong> Outside of the scheme operating times the parking bays are available for all vehicles including those without permits. </p>
+<p><strong>Suspension Of Permit Holder Bays</strong></p>
+<p>Eastleigh Borough Council will occasionally need to suspend or partially suspend permit holders' parking bays for road works or other reasons.  Advanced warning notices will normally be put up a few days before any suspension starts, but for emergency works, advanced notice may not always be possible.  It is the Permit Holder's responsibility to ensure that the bay in which their vehicle is parked is not suspended.  If a vehicle is parked, or left, in a suspended parking bay, this may result in a Penalty Charge Notice (PCN) being issued. </p>
+<p><strong>Option of resident parking in town centre car parks</strong></p>
+<p>A resident may be entitled to purchase a half-price quarterly parking permit for parking a vehicle in designated town centre car parks. This concession is only available to a resident who resides in a residential property which is <strong>not</strong> within a residential parking zone but is located in the town centre. The resident <strong>must</strong> live in the property and have no off-road parking available. Vehicle registration and occupancy details must be supplied and verified by the council at the time of application. Please contact the Customer Service Centre at Eastleigh House for further information. </p>
+<h3><a name="visitors"></a>Visitors' Parking</h3>
+<p><strong>Visitor Permits</strong></p>
+<ul>
+<li>Allow parking all day in designated Residents' Parking Bays, but are <strong>not valid</strong> in Limited Waiting Bays</li>
+<li>The maximum number of Visitors' Permits each household (with or without a car) may receive per year is set out below</li>
+<li>Each permit will allow a visitor to park for one day in specific residents' parking bays; the permit must be displayed on any vehicle used by a visitor including motorcycles</li>
+<li>To qualify the household must be your sole or main residence </li>
+</ul>
+<p><strong>Zones 1 to 8</strong></p>
+<table border="1" summary="Zone8" style="width: 396px; height: 54px;">
+<thead>
+<tr><th scope="col">
+<p style="text-align: center;" dir="ltr" class="Normal ImmTextAlign_Center">Number of Adults Residing in Household aged 18 and Over</p>
+</th><th scope="col">
+<p style="text-align: center;" dir="ltr" class="Normal ImmTextAlign_Center">Number of Visitor Permits per Household</p>
+</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">1</p>
+</td>
+<td style="text-align: center;">
+<p dir="ltr" class="ImmTextAlign_Center">75</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">2</p>
+</td>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">100</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">3</p>
+</td>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">125</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;">
+<p dir="ltr" class="ImmTextAlign_Center">4</p>
+</td>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">150</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="ImmTextAlign_Left"> <strong>Zones 9 and 11</strong></p>
+<table border="1" class="ImmTS_Default" summary="zone9" style="width: 397px; height: 54px;">
+<thead>
+<tr><th scope="col">
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">Number of Adults Residing in Household aged 18 and Over</p>
+</th><th scope="col">
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">Number of Visitors Permits per Household</p>
+</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">1</p>
+</td>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">100</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">2</p>
+</td>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">125</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">3</p>
+</td>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">150</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">4</p>
+</td>
+<td>
+<p style="text-align: center;" dir="ltr" class="ImmTextAlign_Center">175</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="ImmTextAlign_Left"><strong>Temporary Visitor Permits</strong></p>
+<p class="ImmTextAlign_Left">Allow non-residents to park all day in designated Residents' Parking Bays in any zone, but are not valid in Limited Waiting Bays.  The charge for the permit is £42 for six days' parking. </p>
+<p>All permits should be <strong>completed in ink</strong> in each section with the vehicle registration number and the day and date the permit is being used. The zone number should be completed for Temporary Visitors' Permits only. Do not overwrite or re-use any section as this invalidates the permit.</p>
+<ul>
+<li><a href="/media/56028/Temporary-Visitor-Permit-Application-Final-2015a.doc" target="_blank" title="temp app form">Temporary visitor permit application form</a> Word version</li>
+</ul>
+<p>The Council reserves the right to refuse to issue visitors' permits in certain circumstances.</p>
+<p><strong>Carers' Permits</strong> </p>
+<p>Issued free of charge to infirm, disabled or housebound residents who receive help from regular visitors.  They allow your visitors unrestricted parking within your zone. Alternatively you may apply for additional visitors' permits. </p>
+<p>Businesses are not entitled to visitors' or carers' permits. </p>
+<p><strong>Professional Carers' Permits</strong></p>
+<p>Allows parking for up to 3 hours by doctors, home helps, social workers and others who regularly visit elderly or infirm residents. The permits are valid within all parking zones.</p>
+<ul>
+<li><a href="/media/56034/Professional-Carers-Permit-Application-Final-2014.pdf" target="_blank" title="prof carer">Professional Carer Permit Application Form pdf version</a>  </li>
+</ul>
+<p><strong>Plumbers, Builders etc</strong></p>
+<p>Trades people can use your visitors' permits. Alternatively non-residents may purchase temporary visitors' permits. </p>
+<h3><strong>Permit Charges</strong></h3>
+<ul>
+<li>1st Permit  - £30.00 (applies only to new residents moved into a property after 19th October 2011)</li>
+<li>2nd Permit - £60.00</li>
+<li>3rd Permit (if authorised) - £120.00 (For 3rd Permits, a £25.00 non-refundable inspection fee is also required. The inspection is to ensure the property does not have alternative off road parking. Please complete the <a href="/media/56022/Third-Permit-Application-2015a.doc" target="_blank" title="inspection">Inspection Application Form</a>)</li>
+<li>Visitors' Permits - No charge</li>
+<li>Carers' Permits - No charge</li>
+<li>Professional Carers' Permits - £60.00</li>
+<li>Temporary Visitors' Permits - £42.00 (valid for a 6 day period only). No refunds available</li>
+<li>1st Business Permit - £60.00</li>
+<li>2nd Business Permit - £120.00</li>
+<li>3rd Business Permit - £170.00 if permit authorised by the parking service</li>
+<li>4th Business Permit - £170.00 if permit authorised by the parking service </li>
+<li><a href="/parking,-travel-roads/parking-in-eastleigh/parking-in-hamble-le-rice.aspx" title="Parking in Hamble-le-Rice">Hamble-le-Rice resident parking scheme</a></li>
+</ul>
+<h3><a name="payments"></a>Payments And Refunds</h3>
+<p><strong>Discounted Charges</strong></p>
+<p>Permits issued six months after the annual renewal date will be discounted by 50% and by 83% if issued ten months after the annual permit renewal date.</p>
+<p><strong>Payments</strong></p>
+<p>Subject to 'Discounted Charges' above, charges apply from the annual renewal date irrespective of when the permit is issued. The correct charge must be submitted with each application, before a permit is issued.  Cheques, and Postal Orders should be made payable to Eastleigh Borough Council and crossed a/c payee. </p>
+<p><strong>Refunds</strong></p>
+<p>Residents moving out of the parking zone or disposing of their vehicle without replacement must return the permit to the Parking Office for cancellation. </p>
+<p>A refund of the total annual cost of the permit divided by twelve for any complete unused months will be made. Refunds of £5 or less will not be paid. </p>
+<p>A refund <strong>Can Only Be Made</strong> if the original permit is returned to the Council. Refunds will be made by cheque within 21 days of receipt of the application and returned permit.  There will be <strong>no refunds</strong> for temporary visitor permits. </p>
+<p><strong>Loss Or Change Of Permit</strong></p>
+<p>There is no charge to replace or to change the details of a permit. However a £5.00 fee may be charged if changes or replacements are required more than once a year. </p>
+<h3><a name="enforce"></a>Who Will Enforce The Scheme</h3>
+<p>Civil Enforcement Officers (CEOs) employed by Eastleigh Borough Council issue Penalty Charge Notices (PCNs) for:</p>
+<ul>
+<li>Parking on no waiting restrictions, such as yellow lines</li>
+<li>Parking in residents' and disabled parking bays where a valid permit or badge is not displayed</li>
+<li>Parking in taxi ranks where not authorised</li>
+<li>Parking outside marked bays</li>
+<li>Parking for too long in limited waiting areas</li>
+<li>Failing to pay and display a valid parking ticket where parking charges apply</li>
+<li>Parking across dropped kerbs</li>
+<li>Double parking (parking more than 50cm from the kerb) </li>
+</ul>
+<p>If you receive a PCN you can <a href="/parking,-travel-roads/parking-in-eastleigh.aspx" title="Parking in Eastleigh">appeal to the Council</a>. If the appeal is refused an Independent Adjudicator can hear unresolved disputes between the Council and motorists.  For more information please visit:<a href="http://www.trafficpenaltytribunal.gov.uk/" title="Parking appeals">http://www.trafficpenaltytribunal.gov.uk</a> </p>
+<p>A copy of the Traffic Order for the Parking Scheme may be inspected at Eastleigh House, Upper Market Street, Eastleigh. </p>
+<h3 id="documents" class="col2 first">Documents</h3>
+<div class="col2 first">
+<ul class="linkList">
+<li><a href="/media/56037/Residents-Permit-Application-zone-1-9-zone-11-2015a.pdf" target="_blank" title="Residents permit application 2015">Resident Parking Permit Application Form</a> pdf</li>
+</ul>
+</div>
+<div class="col3">
+<h3>Related Links</h3>
+<ul class="linkList">
+<li><a href="http://www.trafficpenaltytribunal.gov.uk/" title="Parking appeals">Parking Appeals Website</a></li>
+<li><a href="/parking,-travel-roads/parking-in-eastleigh/parking-in-hamble-le-rice.aspx" title="Parking in Hamble-le-Rice">Hamble-le-Rice resident parking scheme</a></li>
+</ul>
+</div>
+                    </div>
+				
+
+                
+                <div id="main-footer">
+                    <p>
+                        
+                    </p>
+                    
+                </div>
+            </div>
+	    </div>
+        
+	
+                </div>
+
+                <div id="footer">
+                    <div class="body">
+                        <address>
+                            <strong>Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh, SO50 9YN.</strong><br />
+                            Telephone: 023 8068 8068, Fax: 023 8064 3952, Text: 07797 877001
+                        </address>
+
+                        
+        <ul class="toolbar">
+
+				<li class=""><a href="/legal/use-of-cookies.aspx">Use of Cookies</a></li>
+				<li class=""><a href="/legal/legal-disclaimer.aspx">Legal Disclaimer</a></li>
+				<li class=""><a href="/legal/site-feedback.aspx">Site Feedback</a></li>
+				<li class=""><a href="/legal/privacy-statement.aspx">Privacy Statement</a></li>
+				<li class="last"><a href="/legal/social-media-policy.aspx">Social Media Policy</a></li>
+		</ul>
+
+
+
+                        <p class="smallprint">
+                            &copy; Copyright 2014 Eastleigh Borough Council. Designed and developed by Merchant Marketing Group
+                        </p>
+                        <a href="https://www.gov.uk/" class="externalLink directGov">
+                            <img src="/media/core/govuk.png"  alt="Link to Gov.Uk - public services all in one place" />
+                        </a>
+                    </div>
+                </div>
+                <!-- end #footer -->
+                
+                
+
+
+<div class="sitemap"> 
+        <div class="buttonstrip GreenAndBlacks">
+        <ul class="body">
+            <li>
+                <a href="https://www.eastleigh.gov.uk">
+<img src="/media/1776/home.png" alt="Home" height="25px" width="25px" />
+
+                    <span>Home</span>
+                </a>
+            </li>
+
+
+                <li id="button_1">
+                    <a href="https://my.eastleigh.gov.uk/pay.aspx">
+
+                        <img src="/media/1760/pay.png" alt="Pay" height="25" width="25" />
+                        <span>Pay</span>
+                    </a>
+                </li>
+                <li id="button_2">
+                    <a href="https://my.eastleigh.gov.uk/report.aspx">
+
+                        <img src="/media/1769/report.png" alt="Report" height="25" width="25" />
+                        <span>Report</span>
+                    </a>
+                </li>
+                <li id="button_3">
+                    <a href="https://my.eastleigh.gov.uk/apply.aspx">
+
+                        <img src="/media/1772/apply.png" alt="Apply" height="25" width="25" />
+                        <span>Apply</span>
+                    </a>
+                </li>
+                <li id="button_4">
+                    <a href="https://my.eastleigh.gov.uk/book.aspx">
+
+                        <img src="/media/1773/book.png" alt="Book" height="25" width="25" />
+                        <span>Book</span>
+                    </a>
+                </li>
+                <li id="button_5">
+                    <a href="https://my.eastleigh.gov.uk/find-out.aspx">
+
+                        <img src="/media/1774/find.png" alt="Find Out" height="25" width="25" />
+                        <span>Find Out</span>
+                    </a>
+                </li>
+                <li id="button_6">
+                    <a href="https://my.eastleigh.gov.uk/have-your-say.aspx">
+
+                        <img src="/media/1770/say.png" alt="Have your say" height="25" width="25" />
+                        <span>Have your say</span>
+                    </a>
+                </li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                <script async src="/Scripts/EBC.js" type="text/javascript"></script>
+            
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div></form>
+        </body>
+
+    </html>

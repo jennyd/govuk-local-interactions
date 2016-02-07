@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta content="Apache Tapestry Framework (version 5.3.7)" name="generator"/><meta content="chrome=1" http-equiv="X-UA-Compatible"/><link rel="shortcut icon" href="/client/assets/4.5.03/ctx/favicon.ico" type="image/vnd.mircrosoft.icon" id="favicon"/><script src="/client/assets/4.5.03/stack/en_GB/core.js" type="text/javascript"></script><script src="/client/assets/4.5.03/stack/en_GB/CoreSearchStack.js" type="text/javascript"></script><script src="/client/assets/4.5.03/stack/en_GB/HomepageStack.js" type="text/javascript"></script><script src="/client/assets/4.5.03/stack/en_GB/BaseToolbarStack.js" type="text/javascript"></script><script src="/client/assets/4.5.03/stack/en_GB/SearchTemplateStack.js" type="text/javascript"></script><script async="true" src="/client/assets/4.5.03/ctx/js/google-preview.js" type="text/javascript"></script><script async="true" src="https://encrypted.google.com/books/api.js?hl=en" type="text/javascript"></script><title>Home Room</title><script type="text/javascript" id="com_sirsi_ent_widgets">
+
+var com_sirsi_ent_widgets = {
+  "URLS" : {
+    "baseUrl" : "client/en_GB/default",
+    "eRC" : {
+      "emailHoldUrl" : "/client/en_GB/default/index.template.widgetsplatform:emailhold",
+      "placeHoldUrl" : "/client/en_GB/default/index.template.widgetsplatform:placehold",
+      "getEResourceUrl" : "/client/en_GB/default/index.template.widgetsplatform:geteresource",
+      "titleInfoUrl" : "/client/en_GB/default/index.template.widgetsplatform:gettitlesinfo",
+      "accountsUrl" : "/client/en_GB/default/index.template.widgetsplatform:getaccounts"
+    },
+    "clcd" : {
+      "clcdInfoUrl" : "/client/en_GB/default/index.template.widgetsplatform:clcdinfo"
+    },
+    "proxy" : "client/"
+  }
+};
+
+</script><link type="text/css" rel="stylesheet" href="/client/assets/4.5.03/core/default.css"/><link type="text/css" rel="stylesheet" href="/client/assets/4.5.03/core/tapestry-console.css"/><link type="text/css" rel="stylesheet" href="/client/assets/4.5.03/core/t5-alerts.css"/><link type="text/css" rel="stylesheet" href="/client/assets/4.5.03/core/tree.css"/><link type="text/css" rel="stylesheet" href="/client/assets/4.5.03/ctx/css/jquery-ui-1.8.12.custom.css"/><link type="text/css" rel="stylesheet" href="/client/assets/4.5.03/ctx/css/jquery-selectable.custom.css"/><link type="text/css" rel="stylesheet" href="/client/assets/4.5.03/ctx/css/vse/css/Discovery_base.css"/><link type="text/css" rel="stylesheet" href="/client/assets/4.5.03/ctx/css/format-types.css"/><link type="text/css" rel="stylesheet" href="/client/assets/4.5.03/app/components/search/suggest.css"/><link type="text/css" rel="stylesheet" href="/client/assets/4.5.03/ctx/css/vse/open.css"/></head><body><input value="false" id="fbAvailableHidden" type="hidden"></input><div class="header"><div class="headerWrapper"><div class="header_container" id="header"><div id="mainMenu"><div id="mainMenuContainer"><div id="libInfoContainer"><div class="loginLink"><a tabIndex="1" class="loginLink" onclick="com_sirsi_ent_login.loginFirst();">Log In</a></div><div class="pipeSeparator-light">|</div><div class="menuLink"><a tabIndex="2" onclick="com_sirsi_ent_login.loginFirst('https://emlib.ent.sirsidynix.net.uk/client/en_GB/default/search/account?')" class="loginLink" href="#">My Account</a></div><div class="pipeSeparator-light">|</div><div class="menuLink"><a tabIndex="3" href="/client/en_GB/default/search/mylists?">My Lists</a></div></div><div id="languageSelector" class="menuLink"></div><div class="pipeSeparator-light">|</div><span id="adaModeDiv"><a title="Enable ADA Mode" tabIndex="4" class="ada_link" href="/client/en_GB/default/index.template.header.mainmenu_0.adamode?"><i alt="Enable ADA Mode" class="fa fa-wheelchair"></i></a></span><div class="pipeSeparator-light">|</div><a tabIndex="5" target="_blank" class="patron_help" id="patronHelp" href="/client/help/user-help_en_US"><i alt="Help" title="Help" class="fa fa-question-circle"></i></a><div title="Security Reminder:" style="display: none;" id="logoutWarning" class="modalBody">Remember to clear the cache and close the browser window.</div></div></div><div id="logo_container" class="logo_container"><span><div class="logoContainer"><div style="position: absolute; width: 760px; height: 20px; top: 50px; left: 150px; border: #ffffff 0px solid; padding: 1px; background-color: #ffffff;"><span style="color: grey; font-family: 'agency fb'; font-size: 48px;"><strong><b>Trying to Renew? Please Select Your Authority: </strong></span></b></div></div></span></div></div></div></div><div id="searchBoxWrapper"><div id="searchBox"><div id="searchBoxCentered"><div class="basicSearch" id="basicSearch"><div id="searchBoxHomeLink"><a TABINDEX="6" href="/client/en_GB/default/?"><i alt="Home" title="Home" class="fa fa-home"></i></a></div><div id="searchBoxStyleDiv" style=""><div id="searchBoxesWrapper"><form name="limitForm" class="searchBoxSection" onsubmit="javascript:return Tapestry.waitForPage(event);" action="/client/en_GB/default/index.template.header.searchbox_0.form?" method="post" id="form"><div class="t-invisible"><input value="sDuy2sVbEq9g4pcTev3yTYFrDZ4=:H4sIAAAAAAAAAKWOsUrEQBCGx4OrrlP0CbTdszAoZ3VwCEIQMWgrk90xWdlk19nJJTY+ik8gvsQVdr6DD2BrZWHuFCxFrhvmh+/7nt5h2B5Cclob6iZCVXAopEpCQ6wiIesy9931/s/tbGXFsA/Gt3VkSDwXCgPqkpRgoCh8nyjtmZzNVY6R1DTvn6jlxJIzuxlJE/YuF6O37ZfPAWykMNK+FvbuDCsS2ExvcY5jh3UxzoRtXRx3QWDrW58u9bNeP+v163RP/9t9zl5TjFmTVzZG6+vFszm4+Xh8HQB0oZ3A0d8p7H0VeemyWnrEHF3TM+/gAUBgZzVf/M5Xq3kd9JI8/AKTQdGT4wEAAA==" name="t:formdata" type="hidden"></input></div><label for="searchLimitDropDown" class="hidden">Search Limit</label><select title="Select Search Limit" TABINDEX="7" class="dropDown searchLimitDropDown" onchange="javascript:sboxRstManager.onChange()" id="searchLimitDropDown" name="searchLimitDropDown"><option value="">Everything</option><optgroup label="----------"><option value="BS-RECORDS">Local Studies Library, Derbyshire Record Office</option></optgroup></select><img id="searchLimitDropDown_icon" class="t-error-icon t-invisible" alt="" src="/client/assets/4.5.03/core/spacer.gif"/><label for="roomsRestrictionValues" class="hidden">Rooms Restriction Values</label><select aria-hidden="true" class="hidden" id="roomsRestrictionValues" name="roomsRestrictionValues"><option value="">All Fields</option><option value="false|||AUTHOR|||Author">Author</option><option value="true|||AUTHOR|||Author">Keyword in Author headings</option><option value="false|||TITLE|||Title">Title</option><option value="false|||SUBJECT|||Subject">Subject</option><option value="true|||SUBJECT|||Subject">Keyword in Subject headings</option><option value="false|||SERIES|||Series">Series</option><option value="false|||ISBN|||ISBN">ISBN</option></select><img id="roomsRestrictionValues_icon" class="t-error-icon t-invisible" alt="" src="/client/assets/4.5.03/core/spacer.gif"/></form><div class="hidden" id="rTabIndex">8</div><div class="searchBoxSection t-zone" id="restrictionZone"><form name="selectForm" onsubmit="javascript:return Tapestry.waitForPage(event);" action="/client/en_GB/default/index.template.header.searchbox_0.form_0?" method="post" id="form_0"><div class="t-invisible"><input value="VBlREmy4h3fVJ+JTonaQ/U+OQnU=:H4sIAAAAAAAAAKXOMUoEQRAF0HLBaDPFG2jaa+AguNHCIgiLCIOxVHeXM730dDXVte54GU8gXmIDM+/gAUyNDGwzUzH9fP77zx+wvz2H5ip5Gi+UhhxRyfSEnsQUQnG95fHu1AgVleA0cPLC2fM2FYGGpTOY0fVkFPNP57ExjoVisMZiIbOwNUSnl4GiP25JN/nkdjd9P3r9msDeCqaOkwrHaxxI4WC1xgecRUzdrK1g6uZjVjj8xS8rv6z8f34v/vr7RthRKe3GDqGUOrZ78Wf3n09vE4AxfwPcO0Z9RwEAAA==" name="t:formdata" type="hidden"></input></div><label for="restrictionDropDown" class="hidden">Search Field</label><select title="Select Search Field" class="dropDown restrictionDropDown" onchange="javascript:sboxRstManager.onRestrictionChange(this.value);" id="restrictionDropDown" name="restrictionDropDown"><option value="_PLACEHOLDER_">All Fields</option></select><img id="restrictionDropDown_icon" class="t-error-icon t-invisible" alt="" src="/client/assets/4.5.03/core/spacer.gif"/></form></div><form name="searchForm" class="searchBoxSection" onsubmit="javascript:return Tapestry.waitForPage(event);" action="/client/en_GB/default/index.template.header.searchbox_0.searchform?" method="post" id="searchForm"><div class="t-invisible"><input value="0jd7/HEYgdznXUtTs6SGrbtjP8k=:H4sIAAAAAAAAAJ2SvUoDQRDHJ4GAGAsRLKw1nW6CJI02RkEQggiHtrK3N15W9m4vu3PJ2Vj5EjY+gVjpE6Sw8x18ABsLKwvvI4If4Jl0u/Px//+GmdsXqI2asHEQephsEQaR4oSsj9xDwyxyI/quTk5bjLjxkYZcxWgNdLTxGY+46GOaidCSuegwoQ0q6TKXW2RdNw1yQfsSlbfmIMVR43hcf15+fK9CpQd1oUMyWh3yAAmWeud8yJuKh37TISNDfzuJCOqF7UlmOwtnd1rOI6MFWuvEbiCtlToc33nts7ebpypAEo0YrJcjKBnICcEALgEI5vNQMcWUEplCbdSGzfImk40nBaXU39wXvyQKhpnkCpIGrJa3Dj6tK4N/NhTiLWDltZN3TKTDdMU7f65Y6CDSIYZkWb5T+r3ha+d15eH+aq8K1R7MCSXT6gMvA8quFBUGaSC70jyUXeVCgbCbI/z4fgBOWmxKUgMAAA==" name="t:formdata" type="hidden"></input></div><label for="targetValue" class="hidden">Target Value</label><input class="hidden targetValue" value="ILS:DIRECT" id="targetValue" name="targetValue" type="text"></input><img id="targetValue_icon" class="t-error-icon t-invisible" alt="" src="/client/assets/4.5.03/core/spacer.gif"/><label for="limitValue" class="hidden">Limit Value</label><input class="hidden limitValue" value="S-RECORDS" id="limitValue" name="limitValue" type="text"></input><img id="limitValue_icon" class="t-error-icon t-invisible" alt="" src="/client/assets/4.5.03/core/spacer.gif"/><label for="restrictionValue" class="hidden">Restriction Value</label><input class="hidden restrictionValue" value="" id="restrictionValue" name="restrictionValue" type="text"></input><img id="restrictionValue_icon" class="t-error-icon t-invisible" alt="" src="/client/assets/4.5.03/core/spacer.gif"/><div id="dropDown" class="dropDownHidden"></div><div class="normalSearchBoxDiv" id="searchField"><label for="q" class="hidden">Search For:</label><input title="Search For:" autofocus="false" accessKey="s" maxlength="256" TABINDEX="9" autocomplete="off" size="100" id="q" name="q" type="text"></input><img id="q_icon" class="t-error-icon t-invisible" alt="" src="/client/assets/4.5.03/core/spacer.gif"/></div><div id="buttonsWrapper"><input title="Search" value="Search" TABINDEX="10" class="button" id="searchButton" name="searchButton" type="submit"></input></div></form></div><div id="searchBoxAdvancedLink"><a title="Advanced Search" TABINDEX="11" href="/client/en_GB/default/search/advanced?">Advanced Search</a></div></div></div></div></div></div><div class="quicksearchWrapper" id="quicksearchWrapper"><div class="quicksearchBar" id="quicksearchBar"></div></div><div id="content" class=""><div class="columns_container"><div class="column pct100"><span><div class="content_container"><div class="content"><style>
+#searchBoxWrapper {
+display: none;
+}
+
+#libInfoContainer {
+display: none;
+}
+#mainMenuContainer {
+display: none;
+}
+#adaModeDiv {
+display: none;
+}
+#patronHelp {
+display: none;
+}
+
+
+body {
+background-image: url("http://emlib.ent.sirsidynix.net.uk/custom/web/content/bg.png");
+background-color: white;
+background-repeat: no-repeat;
+background-size:cover;
+}
+.content_container{
+//background-image: url("/custom/web/content/Sutton in Ashfield2.png");
+border: 0px;
+background-size:cover;
+background:transparent;
+}
+#grow {
+    opacity: 1.0;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    border-radius:15px;
+/*
+-webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+*/
+}
+#grow img:hover {
+    opacity: 1.0;
+    box-shadow: 10px 10px 10px #007976; 
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    
+}
+#grow img{
+    height: 112px;
+    width: 220px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow img:hover {
+  width: 230px;
+  height: 122px;
+}
+
+
+
+#grow1 {
+    opacity: 1.0;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    border-radius:15px;
+/*
+-webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+*/
+}
+#grow1 img:hover {
+    opacity: 1.0;
+    box-shadow: 10px 10px 10px #007700; 
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    
+}
+
+
+#grow1 img{
+    height: 112px;
+    width: 260px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow1 img:hover {
+  width: 270px;
+  height: 122px;
+}
+
+
+#grow1 {
+    opacity: 1.0;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    border-radius:15px;
+/*
+-webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+*/
+}
+#grow2 img:hover {
+    opacity: 1.0;
+    box-shadow: 10px 10px 10px #6f346e; 
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    
+}
+#grow2 img{
+    height: 112px;
+    width: 220px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow2 img:hover {
+  width: 230px;
+  height: 122px;
+}
+
+#grow2 img{
+    height: 112px;
+    width: 220px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow2 img:hover {
+  width: 230px;
+  height: 122px;
+}
+
+
+
+
+
+
+#grow3 img:hover {
+    opacity: 1.0;
+    box-shadow: 10px 10px 10px #347239; 
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    
+}
+#grow3 img{
+    height: 112px;
+    width: 220px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow3 img:hover {
+  width: 230px;
+  height: 122px;
+}
+
+#grow3 img{
+    height: 112px;
+    width: 220px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow3 img:hover {
+  width: 230px;
+  height: 122px;
+}
+
+
+
+
+
+#grow4 img:hover {
+    opacity: 1.0;
+    box-shadow: 10px 10px 10px #F7C708; 
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    
+}
+#grow4 img{
+    height: 112px;
+    width: 220px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow4 img:hover {
+  width: 230px;
+  height: 122px;
+}
+
+#grow4 img{
+    height: 112px;
+    width: 220px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow4 img:hover {
+  width: 230px;
+  height: 122px;
+}
+
+
+
+
+
+
+
+#grow5 img:hover {
+    opacity: 1.0;
+    box-shadow: 10px 10px 10px #519942; 
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    
+}
+#grow5 img{
+    height: 112px;
+    width: 260px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow5 img:hover {
+  width: 270px;
+  height: 122px;
+}
+
+#grow5 img{
+    height: 112px;
+    width: 260px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow5 img:hover {
+  width: 270px;
+  height: 122px;
+}
+
+
+
+
+
+#grow6 img:hover {
+    opacity: 1.0;
+    box-shadow: 10px 10px 10px #BCD12C; 
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    
+}
+#grow6 img{
+    height: 112px;
+    width: 220px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow6 img:hover {
+  width: 230px;
+  height: 122px;
+}
+
+#grow6 img{
+    height: 112px;
+    width: 220px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+#grow6 img:hover {
+  width: 230px;
+  height: 122px;
+}
+</style>
+
+<!-- DERBY -->
+<div id=grow style="position: absolute; width: 180px; height: 90px; top: 50px; left: 110px; border: #c0c0c0 0px solid;border-radius: 0px; padding: 0px;background-color: #ffffff"><a title="Derby" href="https://emlib.ent.sirsidynix.net.uk/client/en_GB/derby/?"target="_blank"><span name ="eb" style="display:none;position: absolute;padding-top: 10px; padding-left:5px;padding-right: 5px; color: #000080; font: 14px arial; color: #ffffff; top: 5px; left: 5px;"><b>Our compilation of the best comedy movies: good for a laugh.</b></span></a>
+<p style="position: absolute; color: #000080; font-size: 10px; top: 40px; margin-right: 4px; left: 105px;"><eBooks></p><a title="Derby" href="https://emlib.ent.sirsidynix.net.uk/client/en_GB/derby/?"target="_blank"><img style="background: transparent 0 0 no-repeat;border-radius: 0px;" title="Derby" src="https://emlib.ent.sirsidynix.net.uk/custom/web/content/2derby.PNG?width=200" alt="Derby" width="180" height="90" /></a></div>
+
+
+<!-- DERBYSHIRE-->
+<div id=grow2 style="position: absolute; width: 180px; height: 90px; top: 50px; left: 410px; border: #c0c0c0 0px solid;border-radius: 0px; padding: 0px;background-color: #ffffff"><a title="Derbyshire" href="https://emlib.ent.sirsidynix.net.uk/client/en_GB/derbyshire/"target="_blank"><span style="display:none;position: absolute;padding-top: 5px; padding-left:5px;padding-right: 5px; color: #000080; font: 14px arial; color: #ffffff; top: 10px; left: 5px;"><b>Take a trip into movie wonderland with these fantasy selections.</b></span></a>
+<p style="position: absolute; color: #000080; font-size: 10px; top: 40px; margin-right: 4px; left: 105px;"><!----></p>
+<a title="Derbyshire" href="https://emlib.ent.sirsidynix.net.uk/client/en_GB/derbyshire/"target="_blank"><img style="background: transparent 0 0 no-repeat;border-radius: 0px;" title="Derbyshire" src="https://emlib.ent.sirsidynix.net.uk/custom/web/content/derbyshire.PNG?width=200" alt="Derbyshire" width="180" height="90" /></a></div>
+
+
+<!-- LEICS -->
+<div id=grow3 style="position: absolute; width: 180px; height: 90px; top: 50px; left: 710px; border: #c0c0c0 0px solid;border-radius: 0px; padding: 0px;background-color: #ffffff"><a title="Leicestershire" href="http://www.leics.gov.uk/libraries/"target="_blank"><span name ="eb" style="display:none;position: absolute;padding-top: 10px; padding-left:5px;padding-right: 5px; color: #000080; font: 14px arial; color: #ffffff; top: 5px; left: 5px;"><b>Love is all you need. Check out our romantic films list.</b></span></a>
+<p style="position: absolute; color: #000080; font-size: 10px; top: 40px; margin-right: 4px; left: 105px;"><eBooks></p><a title="Leicestershire" href="http://www.leics.gov.uk/libraries/"target="_blank"><img style="background: transparent 0 0 no-repeat;border-radius: 0px;" title="Leicestershire" src="https://emlib.ent.sirsidynix.net.uk/custom/web/content/leics.PNG?width=200" alt="Leicestershire" width="180" height="90" /></a></div>
+
+
+<!-- RUTLAND-->
+<div id=grow4 style="position: absolute; width: 180px; height: 90px; top: 200px; left: 710px; border: #c0c0c0 0px solid;border-radius: 0px; padding: 0px;background-color: #ffffff"><a title="Rutland" href="https://emlib.ent.sirsidynix.net.uk/client/en_GB/rutland/"target="_blank"><span style="display:none;position: absolute; padding-top: 10px; padding-left:5px;padding-right: 5px;color: #000080; font: 14px arial; color: #ffffff; top: 5px; left: 5px;"><b>High octane cinematic thrills for the discerning action fan.</b></span></a>
+<p style="position: absolute; color: #000080; font-size: 10px; top: 40px; margin-right: 4px; left: 105px;"></p>
+<a title="Rutland" href="https://emlib.ent.sirsidynix.net.uk/client/en_GB/rutland/"target="_blank"><img style="background: transparent 0 0 no-repeat;border-radius: 0px;" title="Rutland" src="https://emlib.ent.sirsidynix.net.uk/custom/web/content/1rutland.PNG" alt="Rutland" width="180" height="90" /></a></div>
+
+
+<!-- NOTTS -->
+
+<div id=grow5 style="position: absolute; width: 240px; height: 90px; top: 200px; left: 385px; border: #c0c0c0 0px solid;border-radius: 0px; padding: 0px;background-color: #ffffff"><a title="Nottinghamshire" href="https://emlib.ent.sirsidynix.net.uk/client/en_GB/nelib/?"target="_blank"><span style="display:none;position: absolute; padding-top: 10px; padding-left:5px;padding-right: 5px;color: #000080; font: 14px arial; color: #ffffff; top: 5px; left: 5px;"><b>Like to be scared? View our recommended horror list.</b></span></a>
+<p style="position: absolute; color: #000080; font-size: 10px; top: 40px; margin-right: 4px; left: 105px;"></p>
+<a title="Nottinghamshire" href="https://emlib.ent.sirsidynix.net.uk/client/en_GB/nelib/?"target="_blank"><img style="background: transparent 0 0 no-repeat;border-radius: 0px;" title="Nottinghamshire" src="https://emlib.ent.sirsidynix.net.uk/custom/web/content/us.PNG" alt="Nottinghamshire" width="240" height="90" /></a></div>
+
+<!-- CITY -->
+<div id=grow6 style="position: absolute; width: 200px; height: 100px; top: 200px; left: 110px; border: #c0c0c0 0px solid;border-radius: 0px; padding: 0px;background-color: #ffffff"><a title="Nottingham" href="https://emlib.ent.sirsidynix.net.uk/client/en_GB/nottcity"target="_blank"><span style="display:none;position: absolute; padding-top: 10px; padding-left:5px;padding-right: 5px;color: #000080; font: 14px arial; color: #ffffff; top: 5px; left: 5px;"><b>Like to be scared? View our recommended horror list.</b></span></a>
+<p style="position: absolute; color: #000080; font-size: 10px; top: 40px; margin-right: 4px; left: 105px;"></p>
+<a title="Nottingham" href="https://emlib.ent.sirsidynix.net.uk/client/en_GB/nottcity"target="_blank"><img style="background: transparent 0 0 no-repeat;border-radius: 0px;" title="Nottingham" src="https://emlib.ent.sirsidynix.net.uk/custom/web/content/1city.PNG" alt="Nottingham" width="180" height="90" /></a></div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p></div></div></span></div></div><!--COLUMNS BLOCK ELEMENTS--><!--INDIVIDUAL COLUMN BLOCK ELEMENTS--><!--BLOCK ELEMENTS--><div class="clear"></div></div><div class="footer_container" id="footer"><span></span><div><div id="copyright">Copyright 2015
+<span class="sdCopyrightLink"><a title="SirsiDynix" href="http://www.sirsidynix.com">SirsiDynix</a></span>
+- Portfolio Version 4.5 (34816)
+</div></div></div><script type="text/javascript">
+var fbAvailable = false;
+if(fbAvailable)
+{
+window.fbAsyncInit = function() {
+FB.init({appId: '', status: true, cookie: true, logging: false, xfbml: true});
+if(typeof FacebookLike !== 'undefined') {
+jQuery.each(FacebookLike.buttons, function(key, value) {
+FacebookLike.buildFacebookButton(key);
+});
+}
+};
+//append a script tag containing the facebook javascript to the page.
+//doing it here ensures that it won't be loaded before the above function is defined.
+var e = document.createElement('script'); e.async = true;
+e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+document.getElementById('fb-root').appendChild(e);
+}
+var googlePreviewEnabled = true;
+</script><script type="text/javascript">Tapestry.onDOMLoaded(function() {
+Tapestry.init({"formEventManager":[{"formId":"form","validate":{"submit":true,"blur":true}},{"formId":"form_0","validate":{"submit":true,"blur":true}},{"formId":"searchForm","validate":{"submit":true,"blur":true}}]});
+window.com_sirsi_ent_page = {searchSession: "",friendlyUrl: "default",casLoginEnabled: false,casLogin: "/client/en_GB/default/search/casrequest/https:$002f$002femlib.ent.sirsidynix.net.uk$002fclient$002fen_GB$002fdefault$002fsearch$002fredirectafterlogin$003f?",loginIFrameDimensions:{height:225,width:380},localeCode: "en_GB"};
+com_sirsi_ent_login.isLoggedIn = false;
+var ajax = new AjaxHandler(null, 'https://emlib.ent.sirsidynix.net.uk/client/en_GB/default/index.template.header.searchbox_0:suggest?', null, sboxLink.handleData, sboxLink.jsContextProvider, true,sboxLink);
+var sbox = new SuggestBox({
+textInputBox: document.getElementById('q'),
+dropDown: document.getElementById('dropDown'),
+closeLinkText : 'Close',
+dataFetch : sboxLink.getData.bind(sboxLink),
+submit : sboxLink.doSubmit.bind(sboxLink),
+bindingObject : sboxLink});
+sboxLink.ajaxHandler = ajax;
+sboxLink.sbox = sbox;
+sboxRstManager.link = '/client/en_GB/default/index.template.header.searchbox_0:updaterestrictionzone?';
+sboxRstManager.rstPlaceholderVal = '_PLACEHOLDER_';
+sboxRstManager.singleRoomTargetValue = 'ILS:DIRECT';
+sboxRstManager.setupExistingValues('','');
+$('restrictionZone').observe(Tapestry.ZONE_UPDATED_EVENT, function() { sboxRstManager.checkRestrictionValues(); });
+$J(function() { setTimeout(function() { $J('#q').focus().select(); }, 10); });
+createSpinnersForSelector($J('*[name="searchingGif"]'));
+createSpinnersForSelector($J('*[name="smallSearchingGif"]'), smallSpinnerOptions);
+MessageCatalog.register('search.SearchPage.NothingSelected', 'Please select an item');
+Tapestry.init({"activate":["targetValue"],"linkSelectToZone":[{"url":"/client/en_GB/default/index.template.header.searchbox_0.searchlimitdropdown:change?","selectId":"searchLimitDropDown","zoneId":"restrictionZone"}],"zone":[{"update":"show","element":"restrictionZone","show":"show"}]});
+$J(function () {
+	var i, config={}, context='', url='https://emlib.ent.sirsidynix.net.uk/client/en_GB/default/index.template:loadrss?ic=true', hookBeforeAjax=getRSSContext;
+
+	if('function' === typeof hookBeforeAjax) hookBeforeAjax(config);
+
+	if(config.urlContext
+	        && config.urlContext.length > 0) {
+	    for(i = 0; i < config.urlContext.length; i++) {
+	        context += '/' + encodeAsTapestry(config.urlContext[i]);
+	    }
+	    url = addPathParams(url, context);
+	}
+
+	(new AjaxHandler(null, url, null, handleRSSReturn, null, true)).invokeAjax();
+});
+});
+</script></body></html>

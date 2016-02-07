@@ -1,0 +1,480 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!--[if IE 6]><html class="ie6"><![endif]-->
+<!--[if IE 7]><html class="ie7"><![endif]-->
+<head>
+
+	<!-- #BeginEditable "doctitle" -->
+<title>Simple Search</title>
+<!-- #EndEditable -->
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	
+	<link href="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/styles/nottingham/editor.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/styles/nottingham/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/styles/nottingham/colours.css" rel="stylesheet" type="text/css" media="all" />
+	<!--[if lte IE 6]><link href="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/styles/nottingham/ie6.css" rel="stylesheet" type="text/css" media="all" /><![endif]-->
+	<!--[if IE 7]><link href="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/styles/nottingham/ie7.css" rel="stylesheet" type="text/css" media="all" /><![endif]-->
+	<link href="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/styles/nottingham/styleprint.css" rel="stylesheet" type="text/css" media="print" />
+				
+    <link rel="stylesheet" href="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/styles/screen.css" type="text/css" media="screen,projection" />
+    <!--[if lte IE 7]><link href="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/styles/ie.css" rel="stylesheet" type="text/css" media="screen, projection" /><![endif]-->
+	<link rel="stylesheet" href="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/styles/print.css" type="text/css" media="print" />
+    
+	<script type="text/javascript" src="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/scripts/jquery-1.3.2.min.js"></script>
+
+	<script src="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/scripts/nottingham/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+	<script src="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/scripts/nottingham/search.js" type="text/javascript"></script>
+	<script src="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/scripts/nottingham/jquery.corner.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/scripts/nottingham/javascripts.js"></script>
+	
+    <script type="text/javascript" src="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/scripts/jquery.toolbar.idox.min.js"></script>
+    <script type="text/javascript" src="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/scripts/common.js"></script>
+    
+    <script type="text/javascript">
+	$('html').addClass('js');
+    </script>
+    
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-20820983-1']);
+		_gaq.push(['_setDomainName', '.toptasks.gov.uk']);
+		_gaq.push(['_setAllowHash', false]);
+		
+				_gaq.push(['_setCustomVar', 1, 'L1', 'Homepage ', 3]);
+			
+				_gaq.push(['_setCustomVar', 2, 'L2', 'Contact Us', 3]);
+			
+			
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+    <!-- #BeginEditable "head" --><!-- #EndEditable -->
+    <!-- #BeginEditable "webapp" --><!-- #EndEditable -->
+
+</head>
+<body onload="pageLoaded();">
+	<div id="pagewrapper">
+		<div id="toputilnav">
+			<div id="toputilnav_container">
+				<ul>
+					<li class="top_nav_link">
+						<a href="http://www.nottinghamcity.gov.uk/article/22783/Cookie-policy">Cookie policy</a>
+					</li>
+					<li class="top_nav_link">
+						<a href="http://www.nottinghamcity.gov.uk/article/22784/Site-Map">Site Map</a>
+					</li>
+					<li class="top_nav_link">
+						<a href="http://www.nottinghamcity.gov.uk/article/23721/Accessibility">Accessibility</a>
+					</li>
+					<li class="top_contact_us_btn">
+						<a href="http://www.nottinghamcity.gov.uk/article/22795/Contact-us">Contact us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="toplevel">
+			<div id="toplevel_container">
+				<div id="toplogo">
+					<a href="http://www.nottinghamcity.gov.uk/article/22778/nottstoptasks-Home-Page" title="Home" >
+						<img src="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/images/nottingham/notts_logo.png" border="0" class="main_logo_img"/>
+						<p class="logo_caption">A safe, clean, ambitious Nottingham. <strong>A city we're all proud of</strong></p>
+					</a>
+				</div>
+            
+				<div id="toplevelsearch">
+					<div id="search_container" class="corner">
+						<div id="search_form_container">
+							<form action="http://www.nottinghamcity.gov.uk/article/22785/Search" method="get">
+								<fieldset>
+									<legend>Search site</legend>
+									<label for="q"><span>Search</span></label>
+									<input type="text" name="q" id="q" class="searchkeyword" value="Search"
+										   onfocus="focustextfield(this,'Search')" onblur="blurtextfield(this,'Search')"/>
+									<input type="submit" name="go" id="go" value="" title="Search for entered keyword" class="btntext"/>
+								</fieldset>
+							</form>
+						</div>
+						<ul class="search_services_links">
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=a">A</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=b">B</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=c">C</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=d">D</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=e">E</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=f">F</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=g">G</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=h">H</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=i">I</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=j">J</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=k">K</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=l">L</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=m">M</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=n">N</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=o">O</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=p">P</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=q">Q</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=r">R</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=s">S</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=t">T</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=u">U</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=v">V</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=w">W</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=x">X</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=y">Y</a></li> 
+							<li><a href="http://gossweb.nottinghamcity.gov.uk/toptask/atoz/view.asp?letter=z">Z</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		<div id="header_bar"></div>
+				
+		<div id="breadcrumb_container">
+			<div id="breadcrumb">
+				<div class="label">You are here </div>
+				<span class="grey_arrow">&nbsp;</span>
+				<a href="http://www.nottinghamcity.gov.uk/article/22779/Homepage">Homepage </a>
+				<span class="green_arrow">&nbsp;</span>
+				<a href="http://www.nottinghamcity.gov.uk/planningandbuildngcontrol">Planning and Building Control</a>
+				<span class="green_arrow">&nbsp;</span>
+				<a href="http://www.nottinghamcity.gov.uk/article/23398/Planning-Applications">Planning Applications</a>
+				<span class="green_arrow">&nbsp;</span>
+				<span>View and Comment on Planning Applications</span>
+			</div>
+		</div>
+		
+		<div id="maincolumnwrapper">
+			<div id="contentwrap">
+				<div id="centrecolumn">
+						
+					<!-- IDOX PA START -->
+					<div id="idox">
+						<div id="pa">
+							<div class="container">
+								<div id="toolbar" class="nojs">
+									<ul>	
+										<li id="search" class="main"><span>Search</span>
+											<ul>
+												<li id="planBasicSearch"><a href="http://publicaccess.nottinghamcity.gov.uk/online-applications/search.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=simple&amp;searchType=Application">Simple Search</a></li>
+												<li id="planAdvancedSearch"><a href="http://publicaccess.nottinghamcity.gov.uk/online-applications/search.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=advanced&amp;searchType=Application">Advanced Search</a></li>
+												<li id="planListSearch"><a href="http://publicaccess.nottinghamcity.gov.uk/online-applications/search.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=weeklyList&amp;searchType=Application">Weekly/Monthly Lists</a></li>
+												<li id="planPropertySearch"><a href="http://publicaccess.nottinghamcity.gov.uk/online-applications/search.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=property&amp;type=custom">Property Search</a></li>
+												<!-- #BeginLibraryItem "/Library/mapPlanningNavItem.lbi" -->
+
+
+
+
+
+
+
+    <li id="planMapsearch">
+        
+        <a href="/online-applications/spatialDisplay.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=display&amp;searchType=Application">Map Search</a>
+    </li>
+<!-- #EndLibraryItem -->		
+											</ul>
+										</li>
+										<!-- #BeginEditable "applicationForms" -->
+
+
+
+
+
+   
+<!-- #EndEditable -->   				
+										<li id="myprofile" class="main"><span>My Profile</span>
+											<ul>
+											  <!-- #BeginLibraryItem "/Library/consulteeInTrayNavItem.lbi" -->
+
+
+
+
+
+
+    <!-- #EndLibraryItem -->
+												<li><a href="http://publicaccess.nottinghamcity.gov.uk/online-applications/registered/displayUserDetails.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550">Profile Details</a></li>
+												<li><a href="http://publicaccess.nottinghamcity.gov.uk/online-applications/registered/savedSearch.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=display">Saved Searches</a></li>
+												<li><a href="http://publicaccess.nottinghamcity.gov.uk/online-applications/registered/userAdmin.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=showNotifiedApplications">Notified Applications</a></li>
+												<li><a href="http://publicaccess.nottinghamcity.gov.uk/online-applications/registered/trackedApplication.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=display">Tracked Applications</a></li>
+												<!-- #BeginEditable "formSubmissions" -->
+
+
+
+
+
+
+
+
+<!-- #EndEditable -->    	
+											</ul>
+										</li>
+										<li id="loginLink" class="main"><!-- #BeginEditable "loginlogout" -->
+
+
+
+
+
+
+
+
+
+
+	<a href="/online-applications/registered/userAdmin.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550">Login</a>
+<!-- #EndEditable --></li>
+										<!-- #BeginEditable "register" -->
+
+
+
+
+
+
+
+
+   
+
+
+	<li id="register">
+        <a href="/online-applications/registrationWizard.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=start">Register</a>
+	</li>
+
+<!-- #EndEditable -->
+									</ul>
+								</div>
+								
+								<div id="pageheading">
+									<h2><strong>Planning</strong> &raquo; <!-- #BeginEditable "pageheading" -->Simple Search <!-- #EndEditable --></h2>
+									<!-- #BeginEditable "helplink" --><!-- #EndEditable -->
+								</div>
+								
+								<!-- START WAM CONTENT -->
+								<div class="content">
+									<!-- #BeginEditable "errormsg" -->
+  
+    
+    
+
+    
+    
+<!-- #EndEditable -->
+									<!-- #BeginEditable "pagehead" -->
+    <p>
+        Search for Planning Applications and Appeals by keyword, application reference, postcode or by a single line of an address.
+    </p>
+<!-- #EndEditable -->
+									<!-- #BeginEditable "tabs" -->
+    
+        
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<ul class="tabs">
+
+    
+    <li>
+        <a href="/online-applications/search.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=simple" class="active">Simple</a>
+    </li>
+
+    
+    <li>
+        <a href="/online-applications/search.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=advanced" class="">Advanced</a>
+        
+    </li>
+
+    
+        
+        <li>
+            <a href="/online-applications/search.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=weeklyList" class="">Weekly / Monthly Lists</a>
+            
+        </li>
+    
+
+    
+    <li>
+        <a href="/online-applications/search.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=property&amp;type=custom" class="">Property</a>
+        
+    </li>
+
+    
+    
+        <li>
+            
+            <a href="/online-applications/spatialDisplay.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=display&amp;searchType=Application" class="">Map</a>
+        </li>
+    
+
+</ul>
+
+<!-- #EndEditable -->
+									<!-- #BeginEditable "tabsubnav" --><!-- #EndEditable -->
+									<!-- #BeginEditable "pagebody" -->
+<div class="tabcontainer toplevel" id="simpleSearch">
+    <form name="searchCriteriaForm" method="post" action="/online-applications/simpleSearchResults.do;jsessionid=4662CD593AA3E6B6ECD3A7A83830A550?action=firstPage" id="simpleSearchForm">
+
+<div class="row1">
+    <span id="searchfor">
+        Search for:
+    </span>
+
+    
+    
+        <label for="Application">
+            <input type="radio" name="searchType" value="Application" checked="checked" id="Application" />
+            Applications
+            
+            
+        </label>
+    
+	
+</div>
+
+<div class="row2">
+    <label for="simpleSearchString">
+        
+            Enter a <strong>keyword</strong>, <strong>reference number</strong>, <strong>postcode</strong> or <strong>single line of an address</strong>.
+        
+        
+    </label>
+</div>
+
+<div class="row3">
+    <span class="fieldhelp">
+        
+            <a href="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/help/fieldhelp/simpleSearchString.htm" target="_blank" rel="external">
+                <img src="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/images/help.gif" alt="Help with Simple Search (opens in a new window)" title="Help with Simple Search (opens in a new window)" width="16" height="16" class="helpicon" />
+            </a>
+        
+        
+    </span>
+    <input type="text" name="searchCriteria.simpleSearchString" maxlength="255" value="" onblur="javascript:this.value=this.value.replace(/^\s+|\s+$/g,'')" onfocus="javascript:this.value=this.value.replace(/^\s+|\s+$/g,'')" class="text" id="simpleSearchString" />
+
+    <input type="hidden" name="searchCriteria.simpleSearch" value="true" />
+    <input type="submit" value="Search" class="button primary" />
+		
+    </div>
+
+    </form>
+</div>
+<!-- #EndEditable -->
+									<!-- #BeginEditable "pagefoot" --><!-- #EndEditable -->
+								</div>
+								<!-- END WAM CONTENT -->
+								
+								<p id="poweredBy">
+									<a target="_blank" href="http://www.idoxgroup.com/">
+										<img alt="an idox solution (opens in a new window)" title="Go to the Idox website (opens in a new window)" src="http://publicaccess.nottinghamcity.gov.uk/online-applications-skin/images/idox.gif"/>
+									</a>
+								</p>
+							</div>
+						</div>    
+					</div>  
+					<!-- IDOX PA END -->    
+
+				</div>
+			</div>
+		</div>
+				
+		<div id="footer" class="active-tab0 active-tab0-first"></div>
+		
+		<div id="feedback_container_background_wrapper">
+			<div id="feedback_container" class="rating">
+				<span class="feedback_text">Was this page helpful?</span>
+				<a class="yes"> Yes</a>
+				<a class="ok"> OK</a>
+				<a class="no"> No</a>
+			</div>
+		</div>
+		<div id="feedback_wrapper">
+			<div id="feedback_inner">
+				<div id="feedback_form_container" class="corner">
+					<button id="feedback_form_close" class="feedback_close"></button>
+					<p class="feedback_text">Was this page helpful?</p>
+					<p class="feedback_text">You said:<span class="rating">
+						<span class="yes">Yes</span>
+						<span class="ok">OK</span>
+						<span class="no">No</span>
+						</span>
+					</p>
+					<form id="feedback_form" action="http://gossweb.nottinghamcity.gov.uk/toptask/site-feedback/site-feedback-send.asp" method="post">
+						<fieldset>
+						<input type="hidden" name="subject" value="Website feedback" />    
+						<input type="hidden" name="Page_rating" value="" />
+						<input type="hidden" name="recipient" value="783" />
+						<input type="hidden" name="Page_title" value="" />Idox planning applications
+						<input type="hidden" name="page_id" value="idox" />
+						
+						<label for="name">Your name.</label> <input id="name" class="text corner" />
+						<label for="email">Your email address.</label> <input id="email" class="text corner" />
+						<label for="comment">Your comment.</label> <textarea id="comment" class="text corner"></textarea>
+						<input type="hidden" name="feedback_level" id="feedback_level" value="" />
+						<button class="feedback_send corner">Send</button>
+						</fieldset>
+					</form>
+					
+				</div>
+			</div>
+		</div>
+		<div id="feedback_thanks">
+			<button id="feedback_thanks_close" class="feedback_close"></button>
+			<span class="green_tick"></span>
+			<p>Thank you for<br />your feedback</p>
+		</div>
+		
+	</div>	
+
+</body>
+</html>
+

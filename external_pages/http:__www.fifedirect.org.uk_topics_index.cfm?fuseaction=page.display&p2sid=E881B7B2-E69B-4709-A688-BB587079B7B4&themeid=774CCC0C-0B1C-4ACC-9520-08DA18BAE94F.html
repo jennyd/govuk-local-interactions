@@ -1,0 +1,157 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+	<style type="text/css">
+	#message {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: small;
+		text-align: center;
+		padding: 10px;
+		border: 1px solid #003366;
+		margin-top: 30px;
+		color: #003366;
+		margin-right: 20%;
+		margin-left: 20%;
+		margin-bottom: 10%;
+	}
+
+	#message h1 {
+		font-size: x-large;
+		font-weight: normal;
+	}
+
+	fieldset {
+		text-align:center;
+		border: 1px solid #003366;
+		background-color: #D6F1FD;
+		margin-left:20px;
+		margin-right:20px;
+	}
+
+	legend {
+		border: 1px solid #003366;
+		background-color: #FFFFFF;
+		text-align:center;
+		padding: 5px;
+		margin-left:20%;
+		margin-right:20%;
+		width: 60%;
+	}
+
+	#links {
+	}
+
+	#links ul {
+		padding: 0px;
+		margin-right: 20px;
+		margin-left: 20px;
+		list-style-position: inside;
+	}
+
+	#links li {
+		display: inline;
+		padding-right: 10px;
+		padding-left: 10px;
+		list-style-position: inside;
+		line-height: 20px;
+	}
+	</style>
+	<META NAME="ROBOTS" CONTENT="NOINDEX">
+	<title>Don't Worry...</title>
+	<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+</head>
+
+<script type="text/javascript">
+	function Homepage(){
+	// in real bits, urls get returned to our script like this:
+	// res://shdocvw.dll/http_404.htm#http://www.DocURL.com/bar.htm
+
+		//For testing use DocURL = "res://shdocvw.dll/http_404.htm#https://www.microsoft.com/bar.htm"
+		DocURL = document.URL;
+
+		//this is where the http or https will be, as found by searching for :// but skipping the res://
+		protocolIndex=DocURL.indexOf("://",4);
+
+		//this finds the ending slash for the domain server
+		serverIndex=DocURL.indexOf("/",protocolIndex + 3);
+
+			//for the <a href, we need a valid URL to the domain. We search for the # symbol to find the begining
+		//of the true URL, and add 1 to skip it - this is the BeginURL value. We use serverIndex as the end marker.
+		//urlresult=DocURL.substring(protocolIndex - 4,serverIndex);
+		BeginURL=DocURL.indexOf("#",1) + 1;
+
+		urlresult=DocURL.substring(BeginURL,serverIndex);
+
+		//for display, we need to skip after http://, and go to the next slash
+		displayresult=DocURL.substring(protocolIndex + 3 ,serverIndex);
+
+		InsertElementAnchor(urlresult, displayresult);
+	}
+
+	function HtmlEncode(text)
+	{
+		return text.replace(/&/g, '&amp').replace(/'/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	}
+
+	function TagAttrib(name, value)
+	{
+		return ' '+name+'="'+HtmlEncode(value)+'"';
+	}
+
+	function PrintTag(tagName, needCloseTag, attrib, inner){
+		document.write( '<' + tagName + attrib + '>' + HtmlEncode(inner) );
+		if (needCloseTag) document.write( '</' + tagName +'>' );
+	}
+
+	function URI(href)
+	{
+		IEVer = window.navigator.appVersion;
+		IEVer = IEVer.substr( IEVer.indexOf('MSIE') + 5, 3 );
+
+		return (IEVer.charAt(1)=='.' && IEVer >= '5.5') ?
+			encodeURI(href) :
+			escape(href).replace(/%3A/g, ':').replace(/%3B/g, ';');
+	}
+
+	function InsertElementAnchor(href, text)
+	{
+		PrintTag('A', true, TagAttrib('<a href', URI(href)), text);
+	}
+</script>
+<body>
+
+	
+		<div id="message">
+			<h1><A href="http://www.fifedirect.org.uk"><strong>fife</strong>direct.org.uk</A></h1>
+			<p>The page you are looking for cannot be found.</p>
+			<form name="Search" action="/atoz/index.cfm?fuseaction=search.list" method="post">
+	<fieldset>
+		<legend>Please try our site search:</legend>
+		<label for="globalsearch">Search</label>
+		<input name="GlobalSearch" size="15" id="globalsearch" type="text">
+		<input name="Submit" value="GO" class="submitbutton" type="submit">
+	</fieldset>
+</form>
+<p>or alternatively browse:</p>
+<div id="links">
+	 
+		<ul>
+			<li><a href="http://www.fifedirect.org.uk">Homepage</a></li>
+			<li><a href="/topics/index.cfm">Subjects</a></li>
+			<li><a href="/orgs/index.cfm">Organisations</a></li>
+			<li><a href="/yourtown/index.cfm">Your Town</a></li>
+			<li><a href="/doitonline/index.cfm">Do it Online</a></li>
+			<li><a href="/news/index.cfm">News</a></li>
+			<li><a href="/events/index.cfm">What's On</a></li>
+			<li><a href="/atoz/index.cfm">A to Z</a></li>
+			<li><a href="/atoz/index.cfm?fuseaction=sitemap.display">Sitemap</a></li>
+			<li><a href="/privacy">Privacy Policy</a></li>
+		</ul>
+	
+</div>
+		</div>
+	
+</body>
+</html>

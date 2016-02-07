@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js">
+<head>
+<meta charset="utf-8" />
+
+  
+  
+  
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <meta name="keywords" content="Equipment to help you at home" />
+    
+    <meta name="dcterms.available" content="2015-04-01T13:56:01Z" />
+    <meta name="dc.type" content="Content Page" />
+  
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="google-translate-customization" content="c891ed76c3b0235-832d37a42e0942b1-gafa62815664b2abd-11" />
+<title>Equipment to help you at home - barnet.gov.uk</title>
+
+<!--
+TODO: shortcut icon needs setting. Don't re-enable with href="#" as it causes another GET request to be triggered by Chrome.
+<link rel="shortcut icon" type="image/ico" href="#" />
+-->
+
+<link rel="stylesheet" href="/docroot/css/leaflet.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/docroot/css/chosen.min.css" />
+<link rel="stylesheet" href="/docroot/css/jquery.mCustomScrollbar.min.css" />
+
+
+<link rel="stylesheet" href="/docroot/css/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="/docroot/js/jquery-1.11.0.min.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="/docroot/js/jquery-ui.js"></script>
+<script src="/docroot/js/date-picker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/styles.css" media="screen, print" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.date.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.time.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/print.css" media="print" />
+
+
+<script src="/docroot/js/plugins/rem.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+  <script src="/docroot/js/plugins/nwmatcher-1.2.5.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/selectivizr.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/docroot/css/ie8.css" />
+<![endif]-->
+
+<!--[if ! lte IE 6]><!-->
+
+
+<!-- #TODO CBSCH-261 Fixing Foundation Javascript error -->
+<style type="text/css">
+meta.foundation-data-attribute-namespace {
+    font-family: false;
+}
+</style>
+
+<script src="/docroot/js/leaflet.js"></script>
+<script src="/docroot/js/leaflet.markercluster-src.js"></script>
+<script src="/docroot/js/leaflet.markercluster.js"></script>
+
+<script src="/docroot/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/init-behaviour.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.placeholder.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.accordion.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.tab.js" type="text/javascript"></script>
+
+<script src="/docroot/js/scroll.js" type="text/javascript"></script>
+
+<script src="/docroot/js/classie.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery-truncate/jquery.truncate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/modernizr.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/fastclick.js" type="text/javascript"></script>
+
+<script src="/docroot/js/iframeResizer.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.reveal.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/additional-methods.min.js" type="text/javascript"></script>
+
+<script src="https://www.browsealoud.com/plus/scripts/ba.js" type="text/javascript"></script>
+
+<script src="/docroot/js/browse-aloud.js" type="text/javascript"></script>
+
+
+<!--<![endif]-->
+<script>
+    /*<![CDATA[*/
+    (function (BCP) {
+        BCP.registerAjaxUrl = '/citizen-home/register/content/column1/singleton.html';
+        BCP.loginAjaxUrl = '/citizen-home/login/content/column1/singleton.html';
+    })(BCP);
+    /*]]>*/
+</script>
+
+<!-- Clickjacking prevention for legacy browsers that don't support X-Frame-Options header -->
+  
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+  
+
+<script>
+
+    /*<![CDATA[*/
+    jQuery(document).ready(function() {
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        var TP_GA = {
+            gaTrackerId : 'UA-60148629-1',
+            auth : false,
+            authDimensionName : 'dimension1'
+        }
+
+        ga('create', TP_GA.gaTrackerId, 'auto');
+        ga('set', 'forceSSL', true);
+
+        if (TP_GA.authDimensionName != '') {
+            ga('set', TP_GA.authDimensionName, TP_GA.auth.toString());
+        }
+
+        ga('send', 'pageview');
+    });
+    /*]]>*/
+</script>
+  
+ 
+
+</head>
+<body id="citizen-content-pg" class="nav-col">
+      
+    <div class="header">
+        <header>
+            <div id="skiptocontent">
+                <a href="#contentskip">Skip to content</a>
+            </div>
+             <span class="barnet-logo column small-3">
+                <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                    Barnet</a>
+                <img class="print-only" src="/docroot/img/barnet-logo-green.png" />
+            </span> 
+             <form class="global-search search-controls service-search large-6 large-offset-1 column" method="GET" action="/citizen-home/search.html">
+                <div class="global-search-input">
+                    <input type="search" name="keywords" title="main-search" />
+                </div>
+                <div class="global-search-submit">
+                    <button type="submit" class="button expand">Search</button>
+                </div>
+            </form> 
+              
+            <div class="user-section">
+                 <div id="129fae96-207a-4482-963b-0578a901db3b">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/branding/user/singleton';
+        var target = '#' + '129fae96-207a-4482-963b-0578a901db3b';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                                {
+                                    pageLanguage : 'en',
+                                    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+                                },
+                                'google_translate_element');
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+            </div>
+              
+            <div class="mobile-nav">
+                <i class="iconfontello-search"></i>
+                <i class="iconfontello-menu"></i>
+            </div>
+        </header>
+    </div>
+      
+      
+      
+    
+      
+      
+      
+    <div class="content">
+        
+              
+<nav id="nav" class="side-nav side-nav-off medium-4 large-3 column">
+    <!-- TODO: Why do we need a LI wrapping the nav? This means our level has to start at 2! -->
+    <ul class="nav-level-1" style="display: block">
+        <li class="open">
+              
+            <ul class="nav-level-2" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/adult-social-care.html">
+                        <i></i>
+                        <span class="menu-item">Adult social care</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/adult-social-care/support-at-home.html">
+                        <i></i>
+                        <span class="menu-item">Support at home</span>
+                    </a>
+                      
+            <ul class="nav-level-4" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-at-home/alarm-services.html">
+                        <i></i>
+                        <span class="menu-item">Alarm services in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-at-home/adapting-your-home.html">
+                        <i></i>
+                        <span class="menu-item">Adapting your home</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li class="open active">
+                    <a href="/citizen-home/adult-social-care/support-at-home/equipment-to-help-you-at-home.html">
+                        <i></i>
+                        <span class="menu-item">Equipment to help you at home</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-at-home/home-care.html">
+                        <i></i>
+                        <span class="menu-item">Home care</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-at-home/Help-with-meals.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Help with meals</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-at-home/short-term-support.html">
+                        <i></i>
+                        <span class="menu-item">Short term support</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-at-home/support-in-the-community.html">
+                        <i></i>
+                        <span class="menu-item">Support in the community </span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+        </li>
+    </ul>
+</nav>
+  
+            <div class="large-9 medium-8 small-12 column main-content">
+                 <nav id="breadcrumb-nav">
+        <div id="breadcrumb" class="breadcrumb-panel">
+            <ul class="breadcrumbs">
+                  
+                
+                <li>
+                    <a href="/citizen-home.html">Home</a>
+                </li>
+                 
+                  
+                <li class="service-nav">
+                    <select onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="Our services">Our services</option>
+                        <option value="/citizen-home/business.html">Business Support in Barnet</option>
+                        <option value="/citizen-home/environmental-health.html">Environmental Health and Trading Standards</option>
+                        <option value="/citizen-home/libraries.html">Libraries</option>
+                        <option value="/citizen-home/regeneration.html">Regeneration</option>
+                        <option value="/citizen-home/public-health.html">Public Health </option>
+                        <option value="/citizen-home/adult-social-care.html">Adult social care</option>
+                        <option value="/citizen-home/council-and-democracy.html">Council and democracy</option>
+                        <option value="/citizen-home/housing-and-community.html">Housing and community</option>
+                        <option value="/citizen-home/schools-and-education.html">Schools and education</option>
+                        <option value="/citizen-home/parks-sport-and-leisure.html">Parks, sport and leisure</option>
+                        <option value="/citizen-home/council-tax-and-benefits.html">Council Tax and Benefits</option>
+                        <option value="/citizen-home/parking-roads-and-pavements.html">Parking, roads and pavements</option>
+                        <option value="/citizen-home/rubbish-waste-and-recycling.html">Rubbish, waste and recycling</option>
+                        <option value="/citizen-home/children-young-people-and-families.html">Children, young people and families</option>
+                        <option value="/citizen-home/births-deaths-marriages-and-nationality.html">Births, deaths, marriages and nationality</option>
+                        <option value="/citizen-home/planning-conservation-and-building-control.html">Planning, Conservation and Building Control</option>
+                        <option value="/citizen-home/news.html">News and features</option>
+                        <option value="/citizen-home/directories.html">Directories</option>
+                        <option value="/citizen-home/events.html">Events List</option>
+                        <option value="/citizen-home/pledgebank.html">Pledges</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="/citizen-home/adult-social-care.html">Adult social care</a>
+                </li>
+                 
+                  
+                
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-at-home.html">Support at home</a>
+                </li>
+                 
+                  
+                
+                
+                  
+            </ul>
+        </div>
+    </nav> 
+                  
+                <span class="skip-anchor" id="contentskip"></span>
+                 <main id="main" role="main">
+                    
+                  
+                <div id="intro" class="content-page-intro">
+
+                      
+                    <div class="small-12 columns left flush-left">
+                    
+                        <h1>Equipment to help you at home</h1>
+                          
+                        <ul>
+                            <li>
+                                
+                                    <small>Adult social care</small>
+                                
+                            </li>
+                        </ul>
+                        
+                       
+                          
+                          
+                       
+                    </div>
+
+                    
+                    
+                    
+                    
+                      
+                     
+                </div>
+                  
+                 
+            <div class="row">
+                 
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>If you or someone you care for is unable to carry out everyday tasks such as bathing, washing or dressing without support, there is a range of specially designed equipment available to help you live independently in your own home.</p>
+
+<h4><strong>Types of equipment available</strong></h4>
+
+<ul>
+	<li>equipment to help you get in and out of bed safely such as bed levers, pillow lifts, mattress lifters</li>
+	<li>specialist chairs</li>
+	<li>grab rails, raised toilet seats, commodes</li>
+	<li>hearing impairment equipment&nbsp;such as amplified doorbells and phones</li>
+	<li>visual impairment equipment such as talking clocks, large-button phones</li>
+	<li>standing and mobile hoists</li>
+	<li>household items such as kitchen equipment</li>
+	<li>bath boards, seats</li>
+	<li>telecare equipment such as heat detectors, voice alert, flood detectors</li>
+</ul>
+
+<p>Equipment to help you at home&nbsp;can be&nbsp;purchased independently, or with funding from the council if you are eligible.&nbsp; See our <a href="/citizen-home/directories/Directories.html?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3852c84ae7c2872584b6e" title="equipment directory">online directory</a> for details of local equipment providers.</p>
+
+<h4><strong>How&nbsp;to get equipment in Barnet&nbsp;</strong></h4>
+
+<p>To get equipment from us you will have to have an assessment of your needs to see if you qualify for support from us.</p>
+
+<p>To find out if you qualify for equipment and support from us,&nbsp;speak&nbsp;to your allocated occupational therapist or social worker who will carry out an occupational therapy assessment. If you do not have allocated&nbsp;occupational therapist or social worker, contact <strong>Social Care Direct </strong>Tel 020 8359 5000.</p>
+
+<p><strong>How to get equipment </strong></p>
+
+<p>You can get equipment from us in two ways:</p>
+
+<p><strong>1. Prescriptions</strong></p>
+
+<p>If your equipment costs less than&nbsp;&pound;100 you will be given a prescription, which you can take to one of the local accredited equipment suppliers&nbsp;who will be able to provide the equipment free of charge. Details of participating equipment suppliers can be found in our directory.</p>
+
+<p>The supplier will have trained staff who will be able to demonstrate the equipment and give&nbsp;any information, help or advice that you need.</p>
+
+<p>If you decide that you would like the item&nbsp;you have been prescribed in a different brand or colour, you will need to pay any difference in cost. You will own the equipment that has been prescribed to you.</p>
+
+<p><strong>2. Medequip </strong></p>
+
+<p>If your equipment costs more than &pound;100, we will arrange for&nbsp;the&nbsp;equipment to be delivered to you through Medequip.</p>
+
+<p>Unlike&nbsp;equipment issued to you through prescriptions,&nbsp;equipment issued to you through&nbsp;Medequip&nbsp;is on a loan basis and therefore must be returned once you have&nbsp;no&nbsp;further use of it.&nbsp;</p>
+
+<h4><strong>What to do when you have finished with the equipment</strong></h4>
+
+<p>If you no longer need equipment you have been prescribed&nbsp;you can <strong>recycle </strong>it&nbsp;at&nbsp; the <strong>Civic Amenity Recycling Centre</strong>.</p>
+
+<p>If you have been provided with&nbsp;equipment&nbsp; through Medequip you must return it.&nbsp;To arrange a collection for equipment, please call <strong>Medequip, </strong>Tel: 020 8438 2920.</p>
+
+</div>
+<section class="contacts-widget widget">
+                    <h2>Contacts</h2>
+                      
+                    <div class="contacts-widget-wrapper clearfix">
+                          
+                        <div>
+                            <ul class="contact-info">
+                                <li class="text-strong">Social Care Direct</li>
+                                <li>Barnet House, 1255 High Road N20 0EJ<br/>Tel: 020 8359 5000 <br/>Email: socialcaredirect@barnet.gov.uk<br/>SMS: 07506 693707(for text messages only)<br/></li>
+                                <li>&nbsp;</li>
+                                
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                        
+                          
+                    </div> 
+                    <div class="contacts-widget-wrapper clearfix">
+                          
+                        <div>
+                            <ul class="contact-info">
+                                <li class="text-strong">Medequip Equipment Collection</li>
+                                <li>020 8438 2920</li>
+                                <li>&nbsp;</li>
+                                
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                        
+                          
+                    </div> 
+                    <div class="contacts-widget-wrapper clearfix">
+                          
+                        <div>
+                            <ul class="contact-info">
+                                <li class="text-strong">Civic Amenity and Recycling Centre</li>
+                                <li>Summers Lane<br/>London N12 0RF</li>
+                                <li>&nbsp;</li>
+                                
+                                
+                                
+                                <li>
+                                    <span class="text-strong">Email: </span>
+                                    <span>020 8362 0752</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                          
+                    </div>
+                    
+                    
+                      
+                </section><section class="links-widget widget">
+            <h2>What do you want to do next?</h2>
+            <div>
+                <ul class="links-list">
+                      
+                    <li>
+                         
+                    <a class="button" href="/citizen-home/council-and-democracy/forms/Comments--compliments-and-complaints.html">Comments, compliments and complaints</a>
+                     
+                    </li>
+                    
+                    
+                    
+                    
+                      
+                </ul>
+            </div>
+        </section> 
+    <section class="documents-widget widget">
+        <h2>Download documents</h2>
+        <div class="documents-widget-wrapper clearfix">
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:cdb511ed-4c62-4bf3-ae29-43279d7b752e/SAH02_Equipment.pdf">Factsheet: Equipment to help you at home</a>
+                <span>0.15 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:91dc195d-7306-4a54-9a81-0f5465383d03/SAH06_Prescriptions_for_community_equipment.pdf">Factsheet: Prescriptions for community equipment</a>
+                <span>0.12 MB</span>
+                  
+
+                  
+            </div>
+
+              
+        </div>
+    </section>
+      
+            </div>
+         
+                </main> 
+                
+                 <div class="row">
+                    <div class="panel">
+                          
+                <section class="gm_sidebar row">
+                    <div class="gm-container">
+                        <div class="rate-page">
+                            <i class="iconfontello-thumbs-up"></i>
+                            <p>Rate this page</p>
+                        </div>
+                        <div class="rating-options">
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=3" target="_blank" title="rate this page as GOOD" rel="nofollow">
+                                <img src="/docroot/img/govmetric/smiling.png" alt="green smiley (good)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=2" target="_blank" title="rate this page as AVERAGE" rel="nofollow">
+                                <img src="/docroot/img/govmetric/indifferent.png" alt="orange smiley (average)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=4" target="_blank" title="rate this page as POOR" rel="nofollow">
+                                <img src="/docroot/img/govmetric/sad.png" alt="red smiley (poor)" />
+                            </a>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+                    <script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+                    <script type="text/javascript" src="//hitcounter.govmetric.com/982"></script>
+                </section>
+                  
+                    </div>
+                </div> 
+                
+            </div>
+        
+        
+          
+    </div>
+      
+      
+    <footer>
+          
+          
+        <nav class="footer-nav clearfix row">
+            <ul class="footer-links left">
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html" class="internal-link">Contact us</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/copyright.html" class="internal-link">Copyright</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/privacy.html" class="internal-link">Privacy notice</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" class="internal-link">Accessibility</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Disclaimer.html" class="internal-link">Disclaimer</a>
+                            
+                            
+                            
+                             </li>
+                
+                
+                
+                
+                
+                
+            </ul>
+            <ul class="social-icons right">
+                <li><a href="https://www.gov.uk/"><img height="18" width="90" src="/docroot/img/gov-uk-logo.png" alt="gov uk logo" /></a></li>
+                <li><a href="https://www.flickr.com/photos/barnetcouncil"><i class="flaticon-flickr"></i></a></li>
+                <li><a href="https://twitter.com/barnetcouncil"><i class="flaticon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/BarnetCouncil"><i class="flaticon-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/user/Barnetcouncil1"><i class="flaticon-youtube"></i></a></li>
+                <li class="browse-aloud-icon"><a id="show-browsealoud" title="Listen with BrowseAloud"><img src="/docroot/img/browse-aloud-logo.png" alt="Listen with BrowseAloud" /></a></li>
+            </ul>
+        </nav>
+        <div class="site-footer">
+            <div class="row">
+                <span class="barnet-logo right">
+                    <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                        Barnet</a>
+                </span>
+            </div>
+        </div>
+          
+    </footer>
+      
+    <script src="/docroot/js/plugins/retina.min.js" type="text/javascript"></script>
+    <script src="/docroot/js/plugins/chosen.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery("#ordering-download-form select").chosen();
+    jQuery(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+</body>
+</html>

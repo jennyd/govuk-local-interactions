@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js">
+<head>
+<meta charset="utf-8" />
+
+  
+  
+  
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <meta name="keywords" content="Care Act" />
+    
+    <meta name="dcterms.available" content="2015-03-11T13:51:16Z" />
+    <meta name="dc.type" content="Content Page" />
+  
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="google-translate-customization" content="c891ed76c3b0235-832d37a42e0942b1-gafa62815664b2abd-11" />
+<title>Care Act - barnet.gov.uk</title>
+
+<!--
+TODO: shortcut icon needs setting. Don't re-enable with href="#" as it causes another GET request to be triggered by Chrome.
+<link rel="shortcut icon" type="image/ico" href="#" />
+-->
+
+<link rel="stylesheet" href="/docroot/css/leaflet.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/docroot/css/chosen.min.css" />
+<link rel="stylesheet" href="/docroot/css/jquery.mCustomScrollbar.min.css" />
+
+
+<link rel="stylesheet" href="/docroot/css/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="/docroot/js/jquery-1.11.0.min.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="/docroot/js/jquery-ui.js"></script>
+<script src="/docroot/js/date-picker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/styles.css" media="screen, print" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.date.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.time.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/print.css" media="print" />
+
+
+<script src="/docroot/js/plugins/rem.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+  <script src="/docroot/js/plugins/nwmatcher-1.2.5.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/selectivizr.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/docroot/css/ie8.css" />
+<![endif]-->
+
+<!--[if ! lte IE 6]><!-->
+
+
+<!-- #TODO CBSCH-261 Fixing Foundation Javascript error -->
+<style type="text/css">
+meta.foundation-data-attribute-namespace {
+    font-family: false;
+}
+</style>
+
+<script src="/docroot/js/leaflet.js"></script>
+<script src="/docroot/js/leaflet.markercluster-src.js"></script>
+<script src="/docroot/js/leaflet.markercluster.js"></script>
+
+<script src="/docroot/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/init-behaviour.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.placeholder.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.accordion.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.tab.js" type="text/javascript"></script>
+
+<script src="/docroot/js/scroll.js" type="text/javascript"></script>
+
+<script src="/docroot/js/classie.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery-truncate/jquery.truncate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/modernizr.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/fastclick.js" type="text/javascript"></script>
+
+<script src="/docroot/js/iframeResizer.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.reveal.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/additional-methods.min.js" type="text/javascript"></script>
+
+<script src="https://www.browsealoud.com/plus/scripts/ba.js" type="text/javascript"></script>
+
+<script src="/docroot/js/browse-aloud.js" type="text/javascript"></script>
+
+
+<!--<![endif]-->
+<script>
+    /*<![CDATA[*/
+    (function (BCP) {
+        BCP.registerAjaxUrl = '/citizen-home/register/content/column1/singleton.html';
+        BCP.loginAjaxUrl = '/citizen-home/login/content/column1/singleton.html';
+    })(BCP);
+    /*]]>*/
+</script>
+
+<!-- Clickjacking prevention for legacy browsers that don't support X-Frame-Options header -->
+  
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+  
+
+<script>
+
+    /*<![CDATA[*/
+    jQuery(document).ready(function() {
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        var TP_GA = {
+            gaTrackerId : 'UA-60148629-1',
+            auth : false,
+            authDimensionName : 'dimension1'
+        }
+
+        ga('create', TP_GA.gaTrackerId, 'auto');
+        ga('set', 'forceSSL', true);
+
+        if (TP_GA.authDimensionName != '') {
+            ga('set', TP_GA.authDimensionName, TP_GA.auth.toString());
+        }
+
+        ga('send', 'pageview');
+    });
+    /*]]>*/
+</script>
+  
+ 
+
+</head>
+<body id="citizen-content-pg" class="nav-col">
+      
+    <div class="header">
+        <header>
+            <div id="skiptocontent">
+                <a href="#contentskip">Skip to content</a>
+            </div>
+             <span class="barnet-logo column small-3">
+                <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                    Barnet</a>
+                <img class="print-only" src="/docroot/img/barnet-logo-green.png" />
+            </span> 
+             <form class="global-search search-controls service-search large-6 large-offset-1 column" method="GET" action="/citizen-home/search.html">
+                <div class="global-search-input">
+                    <input type="search" name="keywords" title="main-search" />
+                </div>
+                <div class="global-search-submit">
+                    <button type="submit" class="button expand">Search</button>
+                </div>
+            </form> 
+              
+            <div class="user-section">
+                 <div id="129fae96-207a-4482-963b-0578a901db3b">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/branding/user/singleton';
+        var target = '#' + '129fae96-207a-4482-963b-0578a901db3b';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                                {
+                                    pageLanguage : 'en',
+                                    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+                                },
+                                'google_translate_element');
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+            </div>
+              
+            <div class="mobile-nav">
+                <i class="iconfontello-search"></i>
+                <i class="iconfontello-menu"></i>
+            </div>
+        </header>
+    </div>
+      
+      
+      
+    
+      
+      
+      
+    <div class="content">
+        
+              
+<nav id="nav" class="side-nav side-nav-off medium-4 large-3 column">
+    <!-- TODO: Why do we need a LI wrapping the nav? This means our level has to start at 2! -->
+    <ul class="nav-level-1" style="display: block">
+        <li class="open">
+              
+            <ul class="nav-level-2" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/adult-social-care.html">
+                        <i></i>
+                        <span class="menu-item">Adult social care</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/About-adult-social-care.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">About adult social care </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/advice-and-support.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Advice and support</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li class="open active">
+                    <a href="/citizen-home/adult-social-care/the-care-act.html">
+                        <i></i>
+                        <span class="menu-item">Care Act</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/carers-in-barnet.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Carers in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/comments-and-complaints-adult-social-care.html">
+                        <i></i>
+                        <span class="menu-item">Comments and Complaints (Adult Social Care)</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/Events-Calendar--Adults-.html">
+                        <i></i>
+                        <span class="menu-item">Events Calendar (Adults)</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/get-involved.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Get involved</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/Information-for-providers.html">
+                        <i></i>
+                        <span class="menu-item">Information for providers</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/keeping-people-safe-safeguarding-adults.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Keeping people safe </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/Learning-Disabilities-in-Barnet.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Learning Disabilities and Autism in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/mental-health.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Mental Health in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/Publications-and-factsheets.html">
+                        <i></i>
+                        <span class="menu-item">Publications and factsheets</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/registering-your-disability.html">
+                        <i></i>
+                        <span class="menu-item">Registering your disability </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/social-care-connect.html">
+                        <i></i>
+                        <span class="menu-item">Social Care Connect</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-from-the-council.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Support from the council</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-for-deaf-people.html">
+                        <i></i>
+                        <span class="menu-item">Support for deaf people</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-at-home.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Support at home</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/supported-housing-choices.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Supported housing </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/Silver-Sunday-2015.html">
+                        <i></i>
+                        <span class="menu-item">Silver Sunday 2015</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+        </li>
+    </ul>
+</nav>
+  
+            <div class="large-9 medium-8 small-12 column main-content">
+                 <nav id="breadcrumb-nav">
+        <div id="breadcrumb" class="breadcrumb-panel">
+            <ul class="breadcrumbs">
+                  
+                
+                <li>
+                    <a href="/citizen-home.html">Home</a>
+                </li>
+                 
+                  
+                <li class="service-nav">
+                    <select onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="Our services">Our services</option>
+                        <option value="/citizen-home/business.html">Business Support in Barnet</option>
+                        <option value="/citizen-home/environmental-health.html">Environmental Health and Trading Standards</option>
+                        <option value="/citizen-home/libraries.html">Libraries</option>
+                        <option value="/citizen-home/regeneration.html">Regeneration</option>
+                        <option value="/citizen-home/public-health.html">Public Health </option>
+                        <option value="/citizen-home/adult-social-care.html">Adult social care</option>
+                        <option value="/citizen-home/council-and-democracy.html">Council and democracy</option>
+                        <option value="/citizen-home/housing-and-community.html">Housing and community</option>
+                        <option value="/citizen-home/schools-and-education.html">Schools and education</option>
+                        <option value="/citizen-home/parks-sport-and-leisure.html">Parks, sport and leisure</option>
+                        <option value="/citizen-home/council-tax-and-benefits.html">Council Tax and Benefits</option>
+                        <option value="/citizen-home/parking-roads-and-pavements.html">Parking, roads and pavements</option>
+                        <option value="/citizen-home/rubbish-waste-and-recycling.html">Rubbish, waste and recycling</option>
+                        <option value="/citizen-home/children-young-people-and-families.html">Children, young people and families</option>
+                        <option value="/citizen-home/births-deaths-marriages-and-nationality.html">Births, deaths, marriages and nationality</option>
+                        <option value="/citizen-home/planning-conservation-and-building-control.html">Planning, Conservation and Building Control</option>
+                        <option value="/citizen-home/news.html">News and features</option>
+                        <option value="/citizen-home/directories.html">Directories</option>
+                        <option value="/citizen-home/events.html">Events List</option>
+                        <option value="/citizen-home/pledgebank.html">Pledges</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="/citizen-home/adult-social-care.html">Adult social care</a>
+                </li>
+                 
+                  
+                
+                
+                  
+            </ul>
+        </div>
+    </nav> 
+                  
+                <span class="skip-anchor" id="contentskip"></span>
+                 <main id="main" role="main">
+                    
+                  
+                <div id="intro" class="content-page-intro">
+
+                      
+                    <div class="small-12 columns left flush-left">
+                    
+                        <h1>Care Act</h1>
+                          
+                        <ul>
+                            <li>
+                                
+                                    <small>Adult social care</small>
+                                
+                            </li>
+                        </ul>
+                        
+                       
+                          
+                          
+                       
+                    </div>
+
+                    
+                    
+                    
+                    
+                      
+                     
+                </div>
+                  
+                 
+            <div class="row">
+                 
+    <iframe src="https://player.vimeo.com/video/108552705?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>The Care Act came into effect in England on 1 April 2015. It aims to make care and support more consistent across the country.</p>
+
+<p>We provide a high standard of care and support in Barnet. &nbsp;The Care Act gives us an opportunity to build on and improve the care and support that we deliver, by making it more focused on the individual, their needs and their wellbeing.</p>
+
+<p>&nbsp;</p>
+
+<h4><strong>What has changed?</strong></h4>
+
+<p>The&nbsp;Care Act introduced:</p>
+
+<ul>
+	<li>a new nationally set level of care and support needs that all councils will consider when we assess what help we can give you</li>
+	<li>new support for carers</li>
+	<li>deferred payments agreements for care costs</li>
+</ul>
+
+<p><strong>Note</strong>:&nbsp; Anyone who received&nbsp;care and support from adult social care in Barnet before 1 April 2015 is&nbsp;still eligible for this care. You don&#39;t need to do anything as a result of the Care Act.</p>
+
+<h4>&nbsp;</h4>
+
+<h4><strong>Needs and eligibility</strong></h4>
+
+<p>Under the Care Act, the way care and support needs are assessed in England has changed&nbsp;for the better, meaning that decisions made about the help you receive consider your wellbeing and what is important to you and your family.</p>
+
+<p>For the first time, there is&nbsp;a national level of care and support needs that all councils will consider when we assess what help we can give to you. Whatever your level of need, we are&nbsp;able to put you in touch with the right organisation to support your wellbeing and help you remain independent for longer.</p>
+
+<p>In Barnet we already provided care and support for people that broadly mirrors the new national eligibility criteria. We will continue to provide care and support for everyone that is currently receiving a service. We may look at ways to improve the care and support we provide by making it more focused on the individual and their wellbeing.</p>
+
+<h4><strong>Support for carers&nbsp;</strong></h4>
+
+<p>Thousands&nbsp;of people in Barnet provide unpaid care or support to an adult family member or friend, either in their own home or somewhere else.</p>
+
+<p>Caring for someone covers lots of different things, like helping with their washing, dressing or eating, taking them to regular appointments or keeping them company.</p>
+
+<p>The Care Act changes&nbsp;mean that, if you are a carer, you may be able to get more help so that you can carry on caring and look after your own wellbeing.</p>
+
+<p>For&nbsp; information about the&nbsp;support available for carers in Barnet, visit:</p>
+
+<ul>
+	<li><a href="/citizen-home/adult-social-care/carers-in-barnet/support-for-carers.html">Support for Carers in Barnet</a></li>
+	<li><a href="http://www.barnetcarers.org/adult-carers-2/">Barnet Carers Centre</a></li>
+</ul>
+
+<h4><strong>Deferred payment agreements&nbsp;</strong></h4>
+
+<p>Under the Care Act all councils in England are required to offer deferred payment agreements. This follows national guidance set by the Department of Health.</p>
+
+<p>This means that people should not have to sell their homes to pay for care, as they have sometimes had to do in the past.</p>
+
+<p>A deferred payment agreement is an arrangement with the council that will enable some people to use the value of their homes to pay for their care.</p>
+
+<p>We have introduced a new deferred payment scheme in Barnet and,if you are eligible, we will help to pay the care home bills on your behalf. You can delay repaying us until you choose to sell your home, or until after your&nbsp;death.</p>
+
+<p>To find out about charging, you can read our <a href="/dam/jcr:c3755400-56e6-4d49-95ad-9599e98cc60d/Barnet%20Fairer%20Contributions%20Policy%202015-16.pdf">Fairer Contributions Policy Booklet</a> for our current care charges.</p>
+
+<h4>&nbsp;</h4>
+
+<h4><strong>Find out more about the care act</strong></h4>
+
+<p>The Department of&nbsp;Health has produced a series&nbsp;of&nbsp;<a href="https://www.gov.uk/government/publications/care-act-2014-part-1-factsheets">factsheets</a>&nbsp;which explain in more detail the duties and powers local authorities will have in the future.</p>
+
+<ul>
+	<li>The&nbsp;<a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/366104/43380_23902777_Care_Act_Book.pdf" title="DH guidance">Final Care Act Guidance for Part 1</a> has been published. An <a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/365345/Making_Sure_the_Care_Act_Works_EASY_READ.pdf" title="easyread dh guidance">easy read version</a> is also available.</li>
+	<li><a href="/dam/jcr:6ce6e801-07f9-4058-84e4-55ea2407b364/Barnet_Response_140814.pdf">Barnet Response to Care Act - August 2014</a></li>
+	<li><a href="/dam/jcr:8fafdbf1-ee16-4559-82ca-121ae4d1ef00/Care%20Act%20Policies%20-%20EqA%2020150310%20v0.6.pdf">Care Act Policies - Equality Impact Assessment (EqA)</a></li>
+	<li><a href="/dam/jcr:980121cb-2615-4a46-be8c-87748c1772d0/Responses%20to%20the%20Care%20Act%20Consultation%2020150227%20v0.5.pdf">Care Act Responses to Consultation March 2015</a></li>
+</ul>
+
+</div>
+ 
+    <section class="documents-widget widget">
+        <h2>Download documents</h2>
+        <div class="documents-widget-wrapper clearfix">
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:8607d46b-4237-4f2b-b7dc-b9df1e9d911d/Care%20Act%20Leaflet%20-%20Web.pdf">Barnet Care Act Leaflet - April 2015</a>
+                <span>0.85 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:563bc2d5-7988-4d04-a418-fec516177537/LBB%20Assessment%20Eligibility%20Policy%20(Adults%20in%20Need)%20Final_March%202015.pdf">LBB Assessment Eligibility Policy Adults in Need</a>
+                <span>0.26 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:c1bb0d5a-36bb-4e7e-a7fd-c2547eaae33d/LBB%20Assessment%20Eligibility%20Policy%20(Carers)%20Final_March%202015.pdf">LBB Assessment Eligibility Policy Carers</a>
+                <span>0.24 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:91b43c3c-0102-4b1b-843f-6776057dade5/LBB%20Provider%20Failure%20Policy%20Final_March%202015.pdf">LBB Provider Failure Policy </a>
+                <span>0.14 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:f4eac71e-f3e6-4ffc-b276-8ac7cf794cab/LBB%20Information%20Advice%20Advocacy%20Policy%20Final_March%202015.pdf">LBB Information Advice Advocacy Policy</a>
+                <span>0.16 MB</span>
+                  
+
+                  
+            </div>
+
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:2bf27823-2443-4b78-ac5d-cf9a46bc8f4a/LBB%20Prevention%20Policy%20Final_March%202015.pdf">LBB Prevention Policy</a>
+                <span>0.21 MB</span>
+                  
+
+                  
+            </div>
+
+              
+        </div>
+    </section>
+     <section class="contacts-widget widget">
+                    <h2>Contacts</h2>
+                      
+                    <div class="contacts-widget-wrapper clearfix">
+                          
+                        <div>
+                            <ul class="contact-info">
+                                <li class="text-strong">Care Act Project Team </li>
+                                <li>Adults and Communities, <br/>Barnet House, 1255 High Road N20 0EJ<br/>Tel: 020 8359 5000 <br/>Email: careact@barnet.gov.uk <br/></li>
+                                <li>&nbsp;</li>
+                                
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                        
+                          
+                    </div>
+                    
+                    
+                      
+                </section> 
+            </div>
+         
+                </main> 
+                
+                 <div class="row">
+                    <div class="panel">
+                          
+                <section class="gm_sidebar row">
+                    <div class="gm-container">
+                        <div class="rate-page">
+                            <i class="iconfontello-thumbs-up"></i>
+                            <p>Rate this page</p>
+                        </div>
+                        <div class="rating-options">
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=3" target="_blank" title="rate this page as GOOD" rel="nofollow">
+                                <img src="/docroot/img/govmetric/smiling.png" alt="green smiley (good)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=2" target="_blank" title="rate this page as AVERAGE" rel="nofollow">
+                                <img src="/docroot/img/govmetric/indifferent.png" alt="orange smiley (average)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=4" target="_blank" title="rate this page as POOR" rel="nofollow">
+                                <img src="/docroot/img/govmetric/sad.png" alt="red smiley (poor)" />
+                            </a>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+                    <script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+                    <script type="text/javascript" src="//hitcounter.govmetric.com/982"></script>
+                </section>
+                  
+                    </div>
+                </div> 
+                
+            </div>
+        
+        
+          
+    </div>
+      
+      
+    <footer>
+          
+          
+        <nav class="footer-nav clearfix row">
+            <ul class="footer-links left">
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html" class="internal-link">Contact us</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/copyright.html" class="internal-link">Copyright</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/privacy.html" class="internal-link">Privacy notice</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" class="internal-link">Accessibility</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Disclaimer.html" class="internal-link">Disclaimer</a>
+                            
+                            
+                            
+                             </li>
+                
+                
+                
+                
+                
+                
+            </ul>
+            <ul class="social-icons right">
+                <li><a href="https://www.gov.uk/"><img height="18" width="90" src="/docroot/img/gov-uk-logo.png" alt="gov uk logo" /></a></li>
+                <li><a href="https://www.flickr.com/photos/barnetcouncil"><i class="flaticon-flickr"></i></a></li>
+                <li><a href="https://twitter.com/barnetcouncil"><i class="flaticon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/BarnetCouncil"><i class="flaticon-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/user/Barnetcouncil1"><i class="flaticon-youtube"></i></a></li>
+                <li class="browse-aloud-icon"><a id="show-browsealoud" title="Listen with BrowseAloud"><img src="/docroot/img/browse-aloud-logo.png" alt="Listen with BrowseAloud" /></a></li>
+            </ul>
+        </nav>
+        <div class="site-footer">
+            <div class="row">
+                <span class="barnet-logo right">
+                    <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                        Barnet</a>
+                </span>
+            </div>
+        </div>
+          
+    </footer>
+      
+    <script src="/docroot/js/plugins/retina.min.js" type="text/javascript"></script>
+    <script src="/docroot/js/plugins/chosen.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery("#ordering-download-form select").chosen();
+    jQuery(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+</body>
+</html>

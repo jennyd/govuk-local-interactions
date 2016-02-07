@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="js/jquery.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.23.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.multiselect.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.multiselect.filter.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.cookie.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.masked.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.form.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.wireframeUtils.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/slider.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/common.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/textOnly.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.cycle.js" charset="utf-8"></script>
+
+
+<script type="text/javascript" src="js/nhs.js"></script>
+			<script type="text/javascript">
+				//<![CDATA[		
+					$(document).ready(function(){
+						$('#nhs_widget').fsNHSWidget([1, 2, 3]);
+					});
+				//]]>
+			</script>
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Social Care Info Point - Search Results</title>
+		<link rel="SHORTCUT ICON" href="images/customer/WB_Icon.gif" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="SHORTCUT ICON" href="includes/images/WB_Icon.gif" />
+<meta name="description" content="" />
+<meta name="robots" content="noindex, follow" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<meta name="google-translate-customization" content="d240b22895fc45f6-9b56e87519f2cfc8-g2e52fba4d474e41b-38"></meta>
+<link href="css/customer.css" rel="stylesheet"  type="text/css" media="screen, projection" />
+<link href="css/jquery-ui-1.8.23.css" type="text/css" media="screen, projection" rel="stylesheet" />
+
+<link href="css/customer-print.css" type="text/css" media="print" rel="stylesheet" />
+<link id="textonly" href="css/customer-textonly.css"  rel="alternate" type="text/css" media="screen, projection" />
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]><link  href="css/customer-ie.css" type="text/css" media="screen, projection" rel="stylesheet" /><![endif]-->
+<!--[if IE 6]>
+  <link  href="css/customer-ie6.css" type="text/css" media="screen, projection" rel="stylesheet"/>
+<![endif]-->
+<!--[if IE 7]>
+  <link  href="css/customer-ie7.css" type="text/css" media="screen, projection" rel="stylesheet"/>
+<![endif]-->
+<!--[if IE 8]>
+  <link  href="css/customer-ie8.css" type="text/css" media="screen, projection" rel="stylesheet"/>
+<![endif]-->
+
+<script>
+	(function(i,s,o,g,r,a,m){
+		i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)
+		},i[r].l=1*new 
+		Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];
+		a.async=1;a.src=g;
+		m.parentNode.insertBefore(a,m)
+	})
+
+	(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-48440595-9', 'auto');
+	ga('create', 'UA-48440595-3', 'auto', { 'name': 'newTracker' });
+	ga('send', 'pageview');
+	ga('newTracker.send', 'pageview');
+</script></head>
+	<body id="results" class="results_page">
+		<div id="header" class="clearfix append-bottom">			
+					<div id="topofpage" style="float:left;">
+						<div class="skipnav">
+							<a href="#SkipNavigation" accesskey="s" title="Skip Navigation">Skip Navigation</a><a id="topofpage">top of page</a>
+						</div>
+					</div>
+					<div id="toputil" class="noprint transparentbackground">
+						<ul>
+							<li>&nbsp;<a href="sign_in.page">&nbsp;&#9658;&nbsp;Sign In</a>&nbsp;</li>
+									<li>&nbsp;<a href="register.page">&nbsp;&#9658;&nbsp;Register</a></li>
+								<li><a href="http://www.westberks.gov.uk" title="Contact the Council">&nbsp;&#9658;&nbsp; Council's Main Website</a></li>
+						</ul>
+					</div>
+					<br style="clear: both" />
+					<div class="toptable">
+						<div class="transparentbackground rounded-right-8" id="headerimage">  
+							<a href="http://www.westberks.gov.uk/index.aspx?articleid=295">
+							</a>
+						</div>
+					</div>
+					<div id="imageBanner">
+					</div>
+				</div>
+				
+				<div id="layout-wrapper" class="container">					
+					<div class="right" id="shortlist-badge">
+					
+						<a id="shortlist_link" class="btn btn-inverse shortlist_ul" href="shortlist.page" title="Your shortlist contains 0&nbsp;items"><i class="icon-list"></i>&nbsp;Shortlist (<span id="shortlist_count">0&nbsp;items</span>)</a>
+					</div>		
+						<div id="navigation" class="navbar clearfix">
+						<div class="navbar-inner">
+	<ul class="nav">
+		<li><a href="home.page"><i class="icon-home"></i>Home</a></li>
+		<li class="dropdown active">
+					<a data-toggle="dropdown" class="dropdown-toggle " href="home.page?adultchannel=0">Categories&nbsp;<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="adult.page?adultchannel=8">Advice and information</a></li>
+						<li><a href="adult.page?adultchannel=2">Community support & care at home</a></li>
+						<li><a href="adult.page?adultchannel=3">Money matters</a></li>
+						<li><a href="adult.page?adultchannel=7">Things to do</a></li>
+						<li><a href="adult.page?adultchannel=5">Health, recovery & wellbeing</a></li>
+						<li><a href="adult.page?adultchannel=6">Getting around</a></li>
+						<li><a href="adult.page?adultchannel=1">Care homes and housing choices</a></li>
+						<li><a href="adult.page?adultchannel=4">Learning, working and volunteering</a></li>
+						</ul>
+				</li>
+			<li>
+			<a href="a_to_z.page">A-Z List</a>
+		</li>
+		<li>
+			<a href="contact.page">Contact Us</a>
+		</li>	
+		<li class="translate">
+			<div id="google_translate_element"></div>
+		</li>	
+		<li>
+			<div><a class="feedback feedback_sc clear btn btn-primary append-bottom" href="feedback.page">Give Your Feedback</a></div>
+		</li>
+	</ul>
+</div></div>
+					<div id="content" class="clearfix prepend-top append-bottom">
+						<div id="search-box" class="span-48 right" >
+	<form action="results.page" class="navbar-inner well well-small" method="get">
+		<label class="adultLabel" for="adultchannel">Search</label>
+		<select name="adultchannel" id="adultchannel" class="searchField">
+			<option value="0">All Categories </option>
+			<option value="8" >Advice and information</option>
+				<option class="subcategory" value="8a" >-&nbsp;&nbsp;Information & advice groups</option>
+				<option class="subcategory" value="8b" >-&nbsp;&nbsp;Carers</option>
+				<option class="subcategory" value="8c" >-&nbsp;&nbsp;Keeping people safe</option>
+				<option value="2" >Community support & care at home</option>
+				<option class="subcategory" value="2a" >-&nbsp;&nbsp;Care providers</option>
+				<option class="subcategory" value="2b" >-&nbsp;&nbsp;Equipment</option>
+				<option class="subcategory" value="2c" >-&nbsp;&nbsp;Adaptations</option>
+				<option class="subcategory" value="2d" >-&nbsp;&nbsp;Meals</option>
+				<option class="subcategory" value="2e" >-&nbsp;&nbsp;Charities & voluntary organisations</option>
+				<option value="3" >Money matters</option>
+				<option class="subcategory" value="3a" >-&nbsp;&nbsp;Paying for care</option>
+				<option class="subcategory" value="3b" >-&nbsp;&nbsp;Welfare & benefits</option>
+				<option class="subcategory" value="3c" >-&nbsp;&nbsp;Legal & financial advice</option>
+				<option value="7" >Things to do</option>
+				<option value="5" >Health, recovery & wellbeing</option>
+				<option class="subcategory" value="5a" >-&nbsp;&nbsp;Healthy living</option>
+				<option class="subcategory" value="5b" >-&nbsp;&nbsp;Going into hospital</option>
+				<option class="subcategory" value="5c" >-&nbsp;&nbsp;Hospital discharge</option>
+				<option class="subcategory" value="5d" >-&nbsp;&nbsp;NHS Choices</option>
+				<option value="6" >Getting around</option>
+				<option class="subcategory" value="6a" >-&nbsp;&nbsp;Public transport</option>
+				<option class="subcategory" value="6b" >-&nbsp;&nbsp;Community transport</option>
+				<option class="subcategory" value="6c" >-&nbsp;&nbsp;Concessions</option>
+				<option class="subcategory" value="6d" >-&nbsp;&nbsp;Blue badges</option>
+				<option value="1" >Care homes and housing choices</option>
+				<option class="subcategory" value="1a" >-&nbsp;&nbsp;Nursing & residential care homes</option>
+				<option class="subcategory" value="1b" >-&nbsp;&nbsp;Supporting living & sheltered accommodation</option>
+				<option class="subcategory" value="1c" >-&nbsp;&nbsp;Housing advice</option>
+				<option value="4" >Learning, working and volunteering</option>
+				<option class="subcategory" value="4a" >-&nbsp;&nbsp;Learning</option>
+				<option class="subcategory" value="4b" >-&nbsp;&nbsp;Working</option>
+				<option class="subcategory" value="4c" >-&nbsp;&nbsp;Volunteering</option>
+				</select>	
+		<label class="comm" for="qt">by</label>
+		<input type="text" id="qt" name="qt" class="hide_text" value="meals" data-title="Find a service..." placeholder="Keyword(s)" title="Search for an activity, service or organisation"/>
+		<label class="comm" for="loc">and</label>
+		<input type="text" id="loc" name="term" class="hide_text" value="" data-title="In location" placeholder="Location" title="Search for a location using postcode, place name or postal outcode" />	
+		<input type="submit" value="Search" class="btn btn-primary searchBtn searchField sub" />
+		<input type="reset" value="Clear" class="btn searchField res  result-reset" />
+	</form>
+</div>
+<div id="resultcontent" class="span-35 append-1">
+	<div class="page-header"><h1>Your search results</h1></div>
+	<div class="results-tabs">
+	<ul>
+		<li class="active_tab">Directory (48 results)</li>
+			<!-- Removed Request #26758
+		<li><a href="advice_results.page?adultchannel=0&amp;qt=meals&amp;term=">Information &amp; Guidance (2 articles)</a></li>
+			
+		-->
+		<li><a href="help.page?adultchannel=0&amp;qt=meals&amp;term=">Search Help</a></li>
+			</ul>
+</div><div class="results-filters">
+	<div id="sortby" class="btn-group">
+		<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Sort By<span class="caret"></span>
+		</a>
+		<ul class="sortby dropdown-menu">
+				<li><a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;sorttype=relevance" title="Best match" class="sort-selected">Best match</a></li>
+				<li><a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;sorttype=field&amp;sortfield=title" title="A - Z">A - Z</a></li>
+				</ul>
+		</div>
+	
+	<div id="actions" class="right">
+		<a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;slaction=ADD&amp;itemid=iZWsRXJ4HlZjet79nf5z0wLUaSWxaq0QBF2T2TIH&amp;itemid=2f3p0FofA7pDZO1mqk1TXQUJS1I3wtDc1dQsVeS4&amp;itemid=mJUynzYDlHriBJBeRbT4tIiBAUg2hfElzOImTLat&amp;itemid=uxQ3HlwDNVX2uRqebRRz0d4R8CEQMnEDxqx0ctqL&amp;itemid=hTg7pGonRHlNXQ0p9qGQOBhlW2NRUx61AlU-a_ha&amp;itemid=nNf3neQL_DZ_U-rSRFG5WSk7cykhfSVl7UdQWVYv&amp;itemid=j_pvTcjYqe9PKNXrt4Cls3hQ4yAsFFKt7HTjqaS8&amp;itemid=hxKy0qo8F0IjFK-hvhke00V28tmdxwpGt-4xSwww&amp;itemid=qUhyp9K1fC5-THNDKOQNh8KpU5lW1VRL6xs5dpnv&amp;itemid=nhDcF4mrzezfB5x--GuuT-peeK1kjwvkUMXD2LCq" title="Add these 10 records to your shortlist" class="shortlist-link shortlist-addall">Add these 10 records to your shortlist</a></div>
+	<div class="clear"></div>
+</div><div id="search-hits">
+		<!-- One Hit Start -->
+<div id="hit-aSaYEFjwfy4" class="onehit clearfix prepend-1 append-1 append-bottom">
+	<div class="onehit-inner border-bottom">
+			
+		<!-- One Hit Header Start -->
+		<div class="header clearfix">		
+			<h3><a href="service.page?id=aSaYEFjwfy4">Oakhouse Foods - frozen meals and groceries delivered</a></h3>		
+			</div>
+		<!-- One Hit Header End -->
+		
+		<!-- One Hit Body -->
+		<div class="section clearfix">
+			<span class="description">
+							Special dietary requirements catered for. Variable portion sizes also available.&nbsp;&nbsp; A range of easy order packs available. Delivery is available 52 weeks of the year on an agreed delivery day.&nbsp; Drivers are familiar with using keysafes. Groceries and a range of homewares also delivered.</span>
+					<div class="telephone-area">
+						<span class="telephone">0845 643 2009</span>
+								</div>
+			</div>
+		<!-- One Hit End -->
+		
+		<!-- One Hit Footer -->		
+		<div class="footer clearfix">
+			<div class="left">
+				<a href="service.page?id=aSaYEFjwfy4">Read more...</a>
+			</div>
+			<div class="right">
+				<a class="oo-icon-website" target="_blank" href="http://www.oakhousefoods.co.uk/meals-and-desserts.html?gclid=CIyqha3opbACFQwjfAodpS6qZw">Visit Website</a>&nbsp;
+				<a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;slaction=ADD&amp;itemid=iZWsRXJ4HlZjet79nf5z0wLUaSWxaq0QBF2T2TIH" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+		</div>
+		<!-- One Hit Footer End -->		
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-1wWdSbM91Ss" class="onehit clearfix prepend-1 append-1 append-bottom">
+	<div class="onehit-inner border-bottom">
+			
+		<!-- One Hit Header Start -->
+		<div class="header clearfix">		
+			<h3><a href="service.page?id=1wWdSbM91Ss">Hot meals delivered 365 days in Pangbourne and Purley on Thames</a></h3>		
+			</div>
+		<!-- One Hit Header End -->
+		
+		<!-- One Hit Body -->
+		<div class="section clearfix">
+			<span class="description">
+							Meals delivered by qualified experienced carer. Prior to arrangement being put in place we will meet with recipient and family/friends to confirm details.</span>
+					<div class="telephone-area">
+						<span class="telephone">077194 72100</span>
+								</div>
+			</div>
+		<!-- One Hit End -->
+		
+		<!-- One Hit Footer -->		
+		<div class="footer clearfix">
+			<div class="left">
+				<a href="service.page?id=1wWdSbM91Ss">Read more...</a>
+			</div>
+			<div class="right">
+				<a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;slaction=ADD&amp;itemid=2f3p0FofA7pDZO1mqk1TXQUJS1I3wtDc1dQsVeS4" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+		</div>
+		<!-- One Hit Footer End -->		
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-psPtL4ArXKM" class="onehit clearfix prepend-1 append-1 append-bottom">
+	<div class="onehit-inner border-bottom">
+			
+		<!-- One Hit Header Start -->
+		<div class="header clearfix">		
+			<h3><a href="service.page?id=psPtL4ArXKM">Meals delivered (frozen) - Wiltshire Farm Foods</a></h3>		
+			</div>
+		<!-- One Hit Header End -->
+		
+		<!-- One Hit Body -->
+		<div class="section clearfix">
+			<span class="description">
+							We can offer the perfect way for you or a relative to eat well, many of our customers have special dietary needs, and so we work hard to make sure our frozen meals and desserts meet the best nutritional standards. Getting the right daily nutrition&#8230;</span>
+					<div class="telephone-area">
+						<span class="telephone">01635 298044 Mon-Fri 9.00am-5.00pm</span>
+								</div>
+			</div>
+		<!-- One Hit End -->
+		
+		<!-- One Hit Footer -->		
+		<div class="footer clearfix">
+			<div class="left">
+				<a href="service.page?id=psPtL4ArXKM">Read more...</a>
+			</div>
+			<div class="right">
+				<a class="oo-icon-website" target="_blank" href="http://www.wiltshirefarmfoods.com/">Visit Website</a>&nbsp;
+				<a class="oo-icon-email" data-external-id="newbury@wiltshirefarmfoods.co.uk" href="mailto:newbury@wiltshirefarmfoods.co.uk" title="Email newbury@wiltshirefarmfoods.co.uk">Email</a>&nbsp;
+				<a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;slaction=ADD&amp;itemid=mJUynzYDlHriBJBeRbT4tIiBAUg2hfElzOImTLat" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+		</div>
+		<!-- One Hit Footer End -->		
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-SB6YNJP-So4" class="onehit clearfix prepend-1 append-1 append-bottom">
+	<div class="onehit-inner border-bottom">
+			
+		<!-- One Hit Header Start -->
+		<div class="header clearfix">		
+			<h3><a href="service.page?id=SB6YNJP-So4">Meals (Delivered hot)  Fair Close Day Centre – Age Concern Newbury & District</a></h3>		
+			</div>
+		<!-- One Hit Header End -->
+		
+		<!-- One Hit Body -->
+		<div class="section clearfix">
+			<span class="description">
+							Hot meals delivered to the door for weekdays,&nbsp; frozen meals for weekends and bank holidays. NEWBURY area&nbsp;(including Speen and Turnpike) also to some parts of Thatcham.&nbsp;&nbsp;Currently&nbsp;able to cover Alice Bye Court and immediate surrounding areas Park Avenue etc also from Henwick Lane along the A4&#8230;</span>
+					<div class="telephone-area">
+						<span class="telephone">01635 40488</span>
+								</div>
+			</div>
+		<!-- One Hit End -->
+		
+		<!-- One Hit Footer -->		
+		<div class="footer clearfix">
+			<div class="left">
+				<a href="service.page?id=SB6YNJP-So4">Read more...</a>
+			</div>
+			<div class="right">
+				<a class="oo-icon-website" target="_blank" href="http://www.fairclosedaycentre.org.uk/page1.php">Visit Website</a>&nbsp;
+				<a class="oo-icon-email" data-external-id="fc-ageconcern@btconnect.com" href="mailto:fc-ageconcern@btconnect.com" title="Email fc-ageconcern@btconnect.com">Email</a>&nbsp;
+				<a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;slaction=ADD&amp;itemid=uxQ3HlwDNVX2uRqebRRz0d4R8CEQMnEDxqx0ctqL" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+		</div>
+		<!-- One Hit Footer End -->		
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-mZ_Sn48EkTI" class="onehit clearfix prepend-1 append-1 append-bottom">
+	<div class="onehit-inner border-bottom">
+			
+		<!-- One Hit Header Start -->
+		<div class="header clearfix">		
+			<h3><a href="service.page?id=mZ_Sn48EkTI">Royal Voluntary Service - Berkshire, help at home, hot meals delivered</a></h3>		
+			</div>
+		<!-- One Hit Header End -->
+		
+		<!-- One Hit Body -->
+		<div class="section clearfix">
+			<span class="description">
+							Royal Voluntary Service is a volunteer organisation that enriches the lives of older people and their families across Britain. We support older people by giving time and practical help to help them get the best from life. Our volunteers &ndash; ordinary men and women of&#8230;</span>
+					<div class="telephone-area">
+						<span class="telephone">01628 636098</span>
+								</div>
+			</div>
+		<!-- One Hit End -->
+		
+		<!-- One Hit Footer -->		
+		<div class="footer clearfix">
+			<div class="left">
+				<a href="service.page?id=mZ_Sn48EkTI">Read more...</a>
+			</div>
+			<div class="right">
+				<a class="oo-icon-website" target="_blank" href="http://www.royalvoluntaryservice.org.uk/service/1460-berkshire">Visit Website</a>&nbsp;
+				<a class="oo-icon-email" data-external-id="berkshirehub@royalvoluntaryservice.org.uk" href="mailto:berkshirehub@royalvoluntaryservice.org.uk" title="Email berkshirehub@royalvoluntaryservice.org.uk">Email</a>&nbsp;
+				<a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;slaction=ADD&amp;itemid=hTg7pGonRHlNXQ0p9qGQOBhlW2NRUx61AlU-a_ha" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+		</div>
+		<!-- One Hit Footer End -->		
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-tXY4ACrdpas" class="onehit clearfix prepend-1 append-1 append-bottom">
+	<div class="onehit-inner border-bottom">
+			
+		<!-- One Hit Header Start -->
+		<div class="header clearfix">		
+			<h3><a href="service.page?id=tXY4ACrdpas">Lunch Club at Audrey Needham House, Newbury</a></h3>		
+			</div>
+		<!-- One Hit Header End -->
+		
+		<!-- One Hit Body -->
+		<div class="section clearfix">
+			<span class="description">
+							Held Monday to Friday from 12.30pm. 2 course meal &pound;6.10. 48 hours notice is required</span>
+					<div class="telephone-area">
+						<span class="telephone">01635 47559</span>
+								</div>
+			</div>
+		<!-- One Hit End -->
+		
+		<!-- One Hit Footer -->		
+		<div class="footer clearfix">
+			<div class="left">
+				<a href="service.page?id=tXY4ACrdpas">Read more...</a>
+			</div>
+			<div class="right">
+				<a class="oo-icon-website" target="_blank" href="http://a2dominion.co.uk/rte.asp?id=9">Visit Website</a>&nbsp;
+				<a class="oo-icon-email" data-external-id="julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk" href="mailto:julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk" title="Email julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk">Email</a>&nbsp;
+				<a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;slaction=ADD&amp;itemid=nNf3neQL_DZ_U-rSRFG5WSk7cykhfSVl7UdQWVYv" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+		</div>
+		<!-- One Hit Footer End -->		
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-gky_gbjZUBo" class="onehit clearfix prepend-1 append-1 append-bottom">
+	<div class="onehit-inner border-bottom">
+			
+		<!-- One Hit Header Start -->
+		<div class="header clearfix">		
+			<h3><a href="service.page?id=gky_gbjZUBo">Scrabble at Audrey Needham House, Newbury</a></h3>		
+			</div>
+		<!-- One Hit Header End -->
+		
+		<!-- One Hit Body -->
+		<div class="section clearfix">
+			<span class="description">
+							Held every Thursday in the lounge from 2.00pm&nbsp; FREE Have a 2 course meal beforehand for &pound;6.10 (48 hr notice required for meal)</span>
+					<div class="telephone-area">
+						<span class="telephone">01635 47559</span>
+								</div>
+			</div>
+		<!-- One Hit End -->
+		
+		<!-- One Hit Footer -->		
+		<div class="footer clearfix">
+			<div class="left">
+				<a href="service.page?id=gky_gbjZUBo">Read more...</a>
+			</div>
+			<div class="right">
+				<a class="oo-icon-website" target="_blank" href="http://a2dominion.co.uk/rte.asp?id=9">Visit Website</a>&nbsp;
+				<a class="oo-icon-email" data-external-id="julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk" href="mailto:julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk" title="Email julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk">Email</a>&nbsp;
+				<a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;slaction=ADD&amp;itemid=j_pvTcjYqe9PKNXrt4Cls3hQ4yAsFFKt7HTjqaS8" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+		</div>
+		<!-- One Hit Footer End -->		
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-o4Oa4WQyYT4" class="onehit clearfix prepend-1 append-1 append-bottom">
+	<div class="onehit-inner border-bottom">
+			
+		<!-- One Hit Header Start -->
+		<div class="header clearfix">		
+			<h3><a href="service.page?id=o4Oa4WQyYT4">Can Do It Club</a></h3>		
+			</div>
+		<!-- One Hit Header End -->
+		
+		<!-- One Hit Body -->
+		<div class="section clearfix">
+			<span class="description">
+							The Can Do It Club is held in Theale for people with physical disabilities.&nbsp; Speakers are arranged, along with occasional outings.&nbsp; A meal is provided and some transport.&nbsp; &nbsp;</span>
+					<div class="telephone-area">
+						<span class="telephone">0118 945 4209</span>
+								</div>
+			</div>
+		<!-- One Hit End -->
+		
+		<!-- One Hit Footer -->		
+		<div class="footer clearfix">
+			<div class="left">
+				<a href="service.page?id=o4Oa4WQyYT4">Read more...</a>
+			</div>
+			<div class="right">
+				<a class="oo-icon-website" target="_blank" href="http://www.readingcrossroads.org">Visit Website</a>&nbsp;
+				<a class="oo-icon-email" data-external-id="maryjacobs@readingcrossroads.org" href="mailto:maryjacobs@readingcrossroads.org" title="Email maryjacobs@readingcrossroads.org">Email</a>&nbsp;
+				<a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;slaction=ADD&amp;itemid=hxKy0qo8F0IjFK-hvhke00V28tmdxwpGt-4xSwww" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+		</div>
+		<!-- One Hit Footer End -->		
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-AYjSGkrbo-A" class="onehit clearfix prepend-1 append-1 append-bottom">
+	<div class="onehit-inner border-bottom">
+			
+		<!-- One Hit Header Start -->
+		<div class="header clearfix">		
+			<h3><a href="service.page?id=AYjSGkrbo-A">Exercise or games club at Audrey Needham House, Newbury</a></h3>		
+			</div>
+		<!-- One Hit Header End -->
+		
+		<!-- One Hit Body -->
+		<div class="section clearfix">
+			<span class="description">
+							Held every Monday&nbsp;in the lounge from 2.00pm&nbsp;(for approx 1 - 1.5 hours) &pound;3 per person Have a 2 course meal beforehand for &pound;6.10 (48 hr notice required for meal)</span>
+					<div class="telephone-area">
+						<span class="telephone">01635 47559</span>
+								</div>
+			</div>
+		<!-- One Hit End -->
+		
+		<!-- One Hit Footer -->		
+		<div class="footer clearfix">
+			<div class="left">
+				<a href="service.page?id=AYjSGkrbo-A">Read more...</a>
+			</div>
+			<div class="right">
+				<a class="oo-icon-website" target="_blank" href="http://a2dominion.co.uk/rte.asp?id=9">Visit Website</a>&nbsp;
+				<a class="oo-icon-email" data-external-id="julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk" href="mailto:julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk" title="Email julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk">Email</a>&nbsp;
+				<a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;slaction=ADD&amp;itemid=qUhyp9K1fC5-THNDKOQNh8KpU5lW1VRL6xs5dpnv" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+		</div>
+		<!-- One Hit Footer End -->		
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-vjhWiV32ck8" class="onehit clearfix prepend-1 append-1 append-bottom">
+	<div class="onehit-inner border-bottom">
+			
+		<!-- One Hit Header Start -->
+		<div class="header clearfix">		
+			<h3><a href="service.page?id=vjhWiV32ck8">Singing for fun at Audrey Needham House, Newbury</a></h3>		
+			</div>
+		<!-- One Hit Header End -->
+		
+		<!-- One Hit Body -->
+		<div class="section clearfix">
+			<span class="description">
+							Held every Wednesday in the lounge from 2.00pm&nbsp; &pound;3 per person Have a 2 course meal beforehand for &pound;6.10 (48 hr notice required for meal)</span>
+					<div class="telephone-area">
+						<span class="telephone">01635 47559</span>
+								</div>
+			</div>
+		<!-- One Hit End -->
+		
+		<!-- One Hit Footer -->		
+		<div class="footer clearfix">
+			<div class="left">
+				<a href="service.page?id=vjhWiV32ck8">Read more...</a>
+			</div>
+			<div class="right">
+				<a class="oo-icon-website" target="_blank" href="http://a2dominion.co.uk/rte.asp?id=9">Visit Website</a>&nbsp;
+				<a class="oo-icon-email" data-external-id="julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk" href="mailto:julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk" title="Email julie.maidment@a2dominion.co.uk or wendy.jury@a2dominion.co.uk">Email</a>&nbsp;
+				<a href="/kb5/westberkshire/asch/results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;slaction=ADD&amp;itemid=nhDcF4mrzezfB5x--GuuT-peeK1kjwvkUMXD2LCq" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+		</div>
+		<!-- One Hit Footer End -->		
+	</div>
+</div>
+<!-- One Hit End --></div>
+	<div id="pagination" class="center prepend-top">
+		<ul class="pagination"><li><span class="first-page-off">&laquo;</span></li>
+<li><span class="previous-page-off">&lsaquo;</span></li>
+<li><span class="page-selected">1</span></li><li><a class="page" href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;sr=10&amp;nh=10">2</a></li><li><a class="page" href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;sr=20&amp;nh=10">3</a></li><li><a class="page" href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;sr=30&amp;nh=10">4</a></li><li><a class="page" href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;sr=40&amp;nh=10">5</a></li><li><a class="next-page" href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;sr=10&amp;nh=10" title="Next Page">&rsaquo;</a></li>
+<li><a class="last-page" href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;sr=40&amp;nh=10" title="Last Page">&raquo;</a></li>
+</ul></div>
+	<div class="right">powered by <a href="http://www.openobjects.com">open objects</a></div>
+</div>
+<div id="facet_column" class="span-12-last">
+	<div id="selectedFacets" class="facet well well-small">
+		<h3 class="facet_heading">Selected filters</h3>
+		<div class="selectedfacet"><span class="facettitle">Category</span><a href="http://scip.westberks.gov.uk/kb5/westberkshire/asch/core/../results.action?qt=meals&amp;term=" title="Categories">Categories<span class="removelink">Remove</span></a><input type="hidden" name="adultchannel" value="0"/></div></div>
+<div id="facets" class="facet well well-small">
+	<h3 class="facet_heading">Filter by</h3>
+	<span class="facettitle">Category:</span>
+		<div class="channel adultchannel"><span class="facettitle"></span><ul class="0-cats"><li><a href="/kb5/westberkshire/asch/core/../results.action?qt=meals&amp;term=&amp;adultchannel=8" title="Advice and information">Advice and information</a> <span>(6)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?qt=meals&amp;term=&amp;adultchannel=1" title="Care homes and housing choices">Care homes and housing choices</a> <span>(3)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?qt=meals&amp;term=&amp;adultchannel=2" title="Community support &amp; care at home">Community support &amp; care at home</a> <span>(42)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?qt=meals&amp;term=&amp;adultchannel=6" title="Getting around">Getting around</a> <span>(2)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?qt=meals&amp;term=&amp;adultchannel=5" title="Health, recovery &amp; wellbeing">Health, recovery &amp; wellbeing</a> <span>(6)</span></li><li class="hiddenfacet"><a href="/kb5/westberkshire/asch/core/../results.action?qt=meals&amp;term=&amp;adultchannel=4" title="Learning, working and volunteering">Learning, working and volunteering</a> <span>(1)</span></li><li class="hiddenfacet"><a href="/kb5/westberkshire/asch/core/../results.action?qt=meals&amp;term=&amp;adultchannel=7" title="Things to do">Things to do</a> <span>(21)</span></li></ul></div><div class="channel"><span class="facettitle">Age Range</span><ul class="nullcats"><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;agerange=1" title="18-49">18-49</a> <span>(6)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;agerange=2" title="50-64">50-64</a> <span>(5)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;agerange=3" title="65-74">65-74</a> <span>(4)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;agerange=4" title="75+">75+</a> <span>(3)</span></li></ul></div>
+<div class="channel"><span class="facettitle">Offering services to:</span><ul class="nullcats"><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;services=3" title="Adults">Adults</a> <span>(39)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;services=5" title="Carers">Carers</a> <span>(1)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;services=0" title="No specific age">No specific age</a> <span>(3)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;services=4" title="Older people">Older people</a> <span>(12)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;services=2" title="Young people">Young people</a> <span>(7)</span></li></ul></div>
+<div class="channel"><span class="facettitle">Supporting people with:</span><ul class="nullcats"><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;supporting=7" title="Dementia">Dementia</a> <span>(5)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;supporting=3" title="Hearing impairment">Hearing impairment</a> <span>(1)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;supporting=8" title="Learning disabilities">Learning disabilities</a> <span>(6)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;supporting=6" title="Long-term conditions">Long-term conditions</a> <span>(4)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;supporting=4" title="Mental health conditions">Mental health conditions</a> <span>(1)</span></li><li class="hiddenfacet"><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;supporting=1" title="Physical impairment">Physical impairment</a> <span>(6)</span></li><li class="hiddenfacet"><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;supporting=2" title="Visual impairment">Visual impairment</a> <span>(2)</span></li></ul></div>
+<div class="channel"><span class="facettitle">Days of the Week</span><ul class="nullcats"><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;date_activity_period__weekday=2" title="Monday">Monday</a> <span class="facetcount">(1)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;date_activity_period__weekday=4" title="Wednesday">Wednesday</a> <span class="facetcount">(1)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;date_activity_period__weekday=5" title="Thursday">Thursday</a> <span class="facetcount">(1)</span></li></ul></div>
+<div class="channel"><span class="facettitle">Time of Day</span><ul class="nullcats"><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;timeofday=2" title="Afternoon">Afternoon</a> <span>(1)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;timeofday=3" title="Evening">Evening</a> <span>(1)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;timeofday=1" title="Morning">Morning</a> <span>(1)</span></li></ul></div>
+<div class="channel"><span class="facettitle">Postal location:</span><ul class="nullcats"><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;location_postcode__outcode=EX31" title="EX31">EX31</a> <span>(1)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;location_postcode__outcode=RG1" title="RG1">RG1</a> <span>(7)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;location_postcode__outcode=RG14" title="RG14">RG14</a> <span>(6)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;location_postcode__outcode=RG17" title="RG17">RG17</a> <span>(2)</span></li><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;location_postcode__outcode=RG18" title="RG18">RG18</a> <span>(1)</span></li><li class="hiddenfacet"><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;location_postcode__outcode=RG19" title="RG19">RG19</a> <span>(2)</span></li><li class="hiddenfacet"><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;location_postcode__outcode=RG30" title="RG30">RG30</a> <span>(2)</span></li><li class="hiddenfacet"><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;location_postcode__outcode=RG7" title="RG7">RG7</a> <span>(1)</span></li><li class="hiddenfacet"><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;location_postcode__outcode=SS3" title="SS3">SS3</a> <span>(1)</span></li></ul></div>
+<div class="channel"><span class="facettitle">Other filters:</span><ul class="nullcats"><li><a href="/kb5/westberkshire/asch/core/../results.action?adultchannel=0&amp;qt=meals&amp;term=&amp;attributes=1" title="Service/Activity is Free">Service/Activity is Free</a> <span>(2)</span></li></ul></div>
+</div></div>
+
+</div>
+				</div>
+				<div id="footer" class="clearfix append-bottom border-top">
+
+					<div id="partners footer_r" class="span-48-last left prepend-1 footer_txt center">
+						<h4>Family Information Service directory (FISd)</h4>
+						<div class="span-48 center">	
+							If you would like to search for Childcare or Family Services <b><a href="http://fis.westberks.gov.uk/kb5/westberkshire/fsd/home.page">click here to access the Family Information Service Directory (FISd)</a></b> 
+						</div>	
+					</div>
+					<div class="clear" id="customerFooter" style="float: right;">
+						<div id="bottombox" style="text-align: left;">
+							<div id="bottomutils" class="noprint" style="text-align: right; float: right;">
+								<ul class="killpadding">
+									<li class="bottompipe"><a href="#topofpage" class="abottomlink" accesskey="t" title="Link to Jump to the top of this page">&#9658;&nbsp;Top of Page |</a> </li>
+								</ul>
+							</div>
+						</div>
+					</div>	
+				</div>
+			<script type="text/javascript">
+				function googleTranslateElementInit() {
+				new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+				}
+		</script>
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+		</script>
+	</body>
+</html>

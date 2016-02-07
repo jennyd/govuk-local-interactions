@@ -1,0 +1,4552 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js">
+<head>
+<meta charset="utf-8" />
+
+  
+  
+<!-- BME-327 - Specify a different document mode but only for the Report a problem page template -->
+<!--[if IE 9]>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<![endif]-->
+  
+  
+  
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <meta name="keywords" content="Report a problem" />
+    
+    <meta name="dcterms.available" content="2015-03-06T09:50:01Z" />
+    <meta name="dc.type" content="Report a problem" />
+  
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="google-translate-customization" content="c891ed76c3b0235-832d37a42e0942b1-gafa62815664b2abd-11" />
+<title>Report a problem - barnet.gov.uk</title>
+
+<!--
+TODO: shortcut icon needs setting. Don't re-enable with href="#" as it causes another GET request to be triggered by Chrome.
+<link rel="shortcut icon" type="image/ico" href="#" />
+-->
+
+<link rel="stylesheet" href="/docroot/css/leaflet.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/docroot/css/chosen.min.css" />
+<link rel="stylesheet" href="/docroot/css/jquery.mCustomScrollbar.min.css" />
+
+
+<link rel="stylesheet" href="/docroot/css/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="/docroot/js/jquery-1.11.0.min.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="/docroot/js/jquery-ui.js"></script>
+<script src="/docroot/js/date-picker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/styles.css" media="screen, print" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.date.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.time.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/print.css" media="print" />
+
+
+<script src="/docroot/js/plugins/rem.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+  <script src="/docroot/js/plugins/nwmatcher-1.2.5.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/selectivizr.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/docroot/css/ie8.css" />
+<![endif]-->
+
+<!--[if ! lte IE 6]><!-->
+
+
+<!-- #TODO CBSCH-261 Fixing Foundation Javascript error -->
+<style type="text/css">
+meta.foundation-data-attribute-namespace {
+    font-family: false;
+}
+</style>
+
+<script src="/docroot/js/leaflet.js"></script>
+<script src="/docroot/js/leaflet.markercluster-src.js"></script>
+<script src="/docroot/js/leaflet.markercluster.js"></script>
+
+<script src="/docroot/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/init-behaviour.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.placeholder.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.accordion.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.tab.js" type="text/javascript"></script>
+
+<script src="/docroot/js/scroll.js" type="text/javascript"></script>
+
+<script src="/docroot/js/classie.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery-truncate/jquery.truncate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/modernizr.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/fastclick.js" type="text/javascript"></script>
+
+<script src="/docroot/js/iframeResizer.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.reveal.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/additional-methods.min.js" type="text/javascript"></script>
+
+<script src="https://www.browsealoud.com/plus/scripts/ba.js" type="text/javascript"></script>
+
+<script src="/docroot/js/browse-aloud.js" type="text/javascript"></script>
+
+<script src="/docroot/js/maps.js" type="text/javascript"></script>
+<script src="/docroot/js/plugins/select2.min.js" type="text/javascript"></script>
+<!--<![endif]-->
+<script>
+    /*<![CDATA[*/
+    (function (BCP) {
+        BCP.registerAjaxUrl = '/citizen-home/register/content/column1/singleton.html';
+        BCP.loginAjaxUrl = '/citizen-home/login/content/column1/singleton.html';
+    })(BCP);
+    /*]]>*/
+</script>
+
+<!-- Clickjacking prevention for legacy browsers that don't support X-Frame-Options header -->
+  
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+  
+
+<script>
+
+    /*<![CDATA[*/
+    jQuery(document).ready(function() {
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        var TP_GA = {
+            gaTrackerId : 'UA-60148629-1',
+            auth : false,
+            authDimensionName : 'dimension1'
+        }
+
+        ga('create', TP_GA.gaTrackerId, 'auto');
+        ga('set', 'forceSSL', true);
+
+        if (TP_GA.authDimensionName != '') {
+            ga('set', TP_GA.authDimensionName, TP_GA.auth.toString());
+        }
+
+        ga('send', 'pageview');
+    });
+    /*]]>*/
+</script>
+  
+ 
+
+</head>
+<body id="reportaproblem-pg" class="nav-col">
+      
+    <div class="header">
+        <header>
+            <div id="skiptocontent">
+                <a href="#contentskip">Skip to content</a>
+            </div>
+             <span class="barnet-logo column small-3">
+                <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                    Barnet</a>
+                <img class="print-only" src="/docroot/img/barnet-logo-green.png" />
+            </span> 
+             <form class="global-search search-controls service-search large-6 large-offset-1 column" method="GET" action="/citizen-home/search.html">
+                <div class="global-search-input">
+                    <input type="search" name="keywords" title="main-search" />
+                </div>
+                <div class="global-search-submit">
+                    <button type="submit" class="button expand">Search</button>
+                </div>
+            </form> 
+              
+            <div class="user-section">
+                 <div id="129fae96-207a-4482-963b-0578a901db3b">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/branding/user/singleton';
+        var target = '#' + '129fae96-207a-4482-963b-0578a901db3b';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                                {
+                                    pageLanguage : 'en',
+                                    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+                                },
+                                'google_translate_element');
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+            </div>
+              
+            <div class="mobile-nav">
+                <i class="iconfontello-search"></i>
+                <i class="iconfontello-menu"></i>
+            </div>
+        </header>
+    </div>
+      
+      
+      
+    
+      
+      
+      
+    <div class="content">
+        
+              
+<nav id="nav" class="side-nav side-nav-off medium-4 large-3 column">
+    <!-- TODO: Why do we need a LI wrapping the nav? This means our level has to start at 2! -->
+    <ul class="nav-level-1" style="display: block">
+        <li class="open">
+              
+            <ul class="nav-level-2" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home.html">
+                        <i></i>
+                        <span class="menu-item">Home</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/jobs-and-careers.html">
+                        <i></i>
+                        <span class="menu-item">Jobs and Careers</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">News and features</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/news/Residents-provide-feedback-on-revised-Grahame-Park-plans.html">
+                        <i></i>
+                        <span class="menu-item">Residents provide feedback on revised Grahame Park plans</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Voting-begins-for-four-new-faces-of-Youth-Parliament.html">
+                        <i></i>
+                        <span class="menu-item">Voting begins for four new faces of Youth Parliament</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-s-Wingfield-Children-s-Centre-showcases-new-health-programme.html">
+                        <i></i>
+                        <span class="menu-item">Barnet’s Wingfield Children’s Centre showcases new health programme</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Argent-Related-recommended-as-Development-Partner-for-Brent-Cross-South.html">
+                        <i></i>
+                        <span class="menu-item">Argent Related recommended as Development Partner for Brent Cross South</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/DofE-Gold-Award-winners-receive-Royal-recognition-for-their--outstanding-achievements-.html">
+                        <i></i>
+                        <span class="menu-item">DofE Gold Award winners receive Royal recognition for their ‘outstanding achievements’</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Council-and-partners-launch-Traffweb.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Council and partners launch Traffweb</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-proposes--20-million-rebuilding-of-Copthall-and-Church-Farm-leisure-centres--Finchley-Lido-and-Hendon-Centre-to-follow.html">
+                        <i></i>
+                        <span class="menu-item">Council proposes £20 million rebuilding of Copthall and Church Farm leisure centres, Finchley Lido and Hendon Centre to follow</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Don-t-lose-your-chance-to-vote.html">
+                        <i></i>
+                        <span class="menu-item">Don&#039;t lose your chance to vote</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Residents-asked-for-views-on-planning-consultation-process.html">
+                        <i></i>
+                        <span class="menu-item">Residents asked for views on planning consultation process</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-CAB-awarded-new-information--advice-and-advocacy-contract-.html">
+                        <i></i>
+                        <span class="menu-item">Barnet CAB awarded new information, advice and advocacy contract</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/council-tax-freeze.html">
+                        <i></i>
+                        <span class="menu-item">Council tax frozen for another 12 months</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Proposed-changes-to-bus-routes-serving-Abbey-Road-and-Finchley-Road.html">
+                        <i></i>
+                        <span class="menu-item">Proposed changes to bus routes serving Abbey Road and Finchley Road</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Resident-led-local-projects-set-to-benefit-from-council-funding.html">
+                        <i></i>
+                        <span class="menu-item">Resident led local projects set to benefit from council funding</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-young-people-celebrate-National-Apprenticeship-Week-.html">
+                        <i></i>
+                        <span class="menu-item">Barnet young people celebrate National Apprenticeship Week </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Commonwealth-athletes-come-to-Barnet-.html">
+                        <i></i>
+                        <span class="menu-item">Commonwealth athletes come to Barnet </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Council-to-launch-Air-Quality-Project.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Council to launch Air Quality Project</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/-New-Lanacre-Avenue-officially-opened.html">
+                        <i></i>
+                        <span class="menu-item">New Lanacre Avenue officially opened</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/15th-Annual-Barnet-Civic-Awards-winners-named-.html">
+                        <i></i>
+                        <span class="menu-item">15th Annual Barnet Civic Awards winners named </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Budget-confirms-new-overground-station-for-Brent-Cross.html">
+                        <i></i>
+                        <span class="menu-item">Budget confirms new overground station for Brent Cross</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Garden-Suburb-ward---Notice-of-Casual-Vacancy.html">
+                        <i></i>
+                        <span class="menu-item">Garden Suburb Ward - Notice of Casual Vacancy</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-to-provide-dedicated-Pesach-collection-service-.html">
+                        <i></i>
+                        <span class="menu-item">Council to provide dedicated Pesach collection service </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/11-000-students-appoint-four-new-UKYP-members---.html">
+                        <i></i>
+                        <span class="menu-item">11,000 students appoint four new UKYP members  </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Care-and-support-and-you.html">
+                        <i></i>
+                        <span class="menu-item">Care and support and you</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Notices-of-election-published.html">
+                        <i></i>
+                        <span class="menu-item">Notice of election published for Garden Suburb</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/New-Polling-Stations-in-Barnet.html">
+                        <i></i>
+                        <span class="menu-item">New Polling Stations in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Civic-News.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Civic News</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Persons-nominated---Parliamentary-and-By-elections.html">
+                        <i></i>
+                        <span class="menu-item">Persons nominated - Parliamentary and By-elections</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Annual-Civic-Service.html">
+                        <i></i>
+                        <span class="menu-item">Annual Civic Service</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Pub-landlady-brought-before-the-court-for-housing-and-benefit-fraud0.html">
+                        <i></i>
+                        <span class="menu-item">Pub landlady brought before the court for housing and benefit fraud</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Street-Parties-to-Celebrate-VE-Day.html">
+                        <i></i>
+                        <span class="menu-item">Street Parties to Celebrate VE Day</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-announces-end-of-Gritting-season.-.html">
+                        <i></i>
+                        <span class="menu-item">Council announces end of gritting season. </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/A-primary-school-place-for-every-child-whose-parent-applied-on-time.html">
+                        <i></i>
+                        <span class="menu-item">Primary school places </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Election-results-in-Barnet.html">
+                        <i></i>
+                        <span class="menu-item">Election results in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-re-launches-Books-on-Prescription-scheme.html">
+                        <i></i>
+                        <span class="menu-item">Council re-launches books on prescription scheme</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Mayor-lights-Barnet-Beacon-for-VE-Day-celebrations.html">
+                        <i></i>
+                        <span class="menu-item">Mayor lights Barnet Beacon for VE Day celebrations</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/51st-Mayor-of-Barnet-sworn-into-office.html">
+                        <i></i>
+                        <span class="menu-item">51st Mayor of Barnet sworn into office</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-and-Saracens-sponsor-Team-Barnet.html">
+                        <i></i>
+                        <span class="menu-item">Council and Saracens Sponsor Team Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Free-15-hours-a-week-of-childcare---.html">
+                        <i></i>
+                        <span class="menu-item">Free 15 hours a week of childcare  </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-expands-Barnet-dementia-support-services.html">
+                        <i></i>
+                        <span class="menu-item">Council expands Barnet dementia support services</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-seeks-new-brownfield-sites---.html">
+                        <i></i>
+                        <span class="menu-item">Council seeks new brownfield sites   </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-publishes-proposals-to-move-to-Grahame-Park.html">
+                        <i></i>
+                        <span class="menu-item">Council publishes proposals to move to Grahame Park</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/48-council-homes-recovered-.html">
+                        <i></i>
+                        <span class="menu-item">48 council homes recovered </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-publishes-its-strategy-to-2020-.html">
+                        <i></i>
+                        <span class="menu-item">Council publishes its Corporate Plan to 2020 </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Contaminated-palm-oil-seized-from-shop-shelves.html">
+                        <i></i>
+                        <span class="menu-item">Contaminated palm oil seized from shop shelves</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Council-staff-take-up-the-London-Cycle-Challenge.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Council staff take up the London Cycle Challenge</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Public-Health-introduce-new-health-sessions-for-families.html">
+                        <i></i>
+                        <span class="menu-item">Public Health introduce new health sessions for families</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Council-welcomes-Carers-Week-2015.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Council welcomes Carers Week 2015</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Proposals-to-keep-traffic-moving-go-before-Environment-Committee-.html">
+                        <i></i>
+                        <span class="menu-item">Proposals to keep traffic moving go before Environment Committee </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Council-supports-national-Falls-Awareness-Week-.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Council supports national Falls Awareness Week </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Care-Homes-welcome-public-through-their-doors.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Care Homes welcome public through their doors</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/-Landlord-prosecution-leads-to-amnesty.html">
+                        <i></i>
+                        <span class="menu-item">Landlord prosecution leads to amnesty</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Fairer-system-of-council-rents-to-fund-new-homes.html">
+                        <i></i>
+                        <span class="menu-item">Fairer system of council rents to fund new homes</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Golders-Green-demonstration-Saturday-4-July-.html">
+                        <i></i>
+                        <span class="menu-item">Golders Green demonstration Saturday 4 July </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Fraudster-jailed-for--30-000-stolen-cheques-scam-.html">
+                        <i></i>
+                        <span class="menu-item">Fraudster jailed for £30,000 stolen cheques scam </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Armed-Forces-Day-this-Sunday.html">
+                        <i></i>
+                        <span class="menu-item">Armed Forces Day this Sunday</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Copthall-school-s-brand-new--3.4-m-extension-opens-its-doors.html">
+                        <i></i>
+                        <span class="menu-item">Copthall school’s brand new £3.4m extension opens its doors</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-youngsters-shortlisted-for-national-film-competition.html">
+                        <i></i>
+                        <span class="menu-item">Barnet youngsters shortlisted for national film competition</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Armed-Forces-Day-2015.html">
+                        <i></i>
+                        <span class="menu-item">Armed Forces Day 2015</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Statement-on-Golders-Green-demonstration-.html">
+                        <i></i>
+                        <span class="menu-item">Statement on Golders Green demonstration </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Green-light-given-to-unlock-investment-in-Brent-Cross-Cricklewood-parks-and-open-spaces.html">
+                        <i></i>
+                        <span class="menu-item">Two Brent Cross parks set to be transformed</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-triumph-at-national-film-awards-.html">
+                        <i></i>
+                        <span class="menu-item">Barnet triumph at national film awards </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/New-library-extended-hours-pilot-begins-.html">
+                        <i></i>
+                        <span class="menu-item">New library extended hours pilot begins </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Three-new-outdoor-gyms-give-Barnet-parks-a-boost.html">
+                        <i></i>
+                        <span class="menu-item">Three new outdoor gyms give Barnet parks a boost</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Proposed-Additional-Licencing-Scheme-for-Houses-in-Multiple-Occupation.html">
+                        <i></i>
+                        <span class="menu-item">Proposed Additional Licencing Scheme for Houses in Multiple Occupation</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Mayor-of-Barnet-attends-7-7-commemorations.html">
+                        <i></i>
+                        <span class="menu-item">Mayor of Barnet attends 7/7 commemorations</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Consultation-begins-on-leisure-centre-plans.html">
+                        <i></i>
+                        <span class="menu-item">Consultation begins on leisure centre plans</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/-Get-Ready-for-a-Record-Breaking-Summer.html">
+                        <i></i>
+                        <span class="menu-item">Get Ready for a Record Breaking Summer</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Tarling-Road-Community-Centre-proposals-go-on-display.html">
+                        <i></i>
+                        <span class="menu-item">Tarling Road Community Centre (Old Barn) proposals go on display</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Plans-submitted-for-Barnet-Council-s-proposed-new-vehicle-depot-.html">
+                        <i></i>
+                        <span class="menu-item">Plans submitted for Barnet Council’s proposed new vehicle depot </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-invests--50m-on-roads-and-pavements.-.html">
+                        <i></i>
+                        <span class="menu-item">Barnet invests £50m on roads and pavements. </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/-Young-Barnet-resident-sits-on-national-committee.html">
+                        <i></i>
+                        <span class="menu-item">Young Barnet resident sits on national committee</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Life-chances-in-Burnt-Oak-get-a-BOOST.html">
+                        <i></i>
+                        <span class="menu-item">Life chances in Burnt Oak get a BOOST</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Healthy-Schools-Awards.html">
+                        <i></i>
+                        <span class="menu-item">Healthy Schools Awards</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Deadline-for-views-on-plans-for-proposed-vehicle-depot-extended.html">
+                        <i></i>
+                        <span class="menu-item">Deadline for views on plans for proposed vehicle depot extended</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Resident-satisfaction-remains-high.html">
+                        <i></i>
+                        <span class="menu-item">Resident satisfaction remains high</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Burnt-Oak-residents-receive-a-massive-BOOST.html">
+                        <i></i>
+                        <span class="menu-item">Burnt Oak residents receive a massive BOOST</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Library-Service-consultation-feedback-published.html">
+                        <i></i>
+                        <span class="menu-item">Library Service consultation feedback published</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-tenant-convicted-of-fraud.html">
+                        <i></i>
+                        <span class="menu-item">Council tenant convicted of fraud</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Help-shape-the-future-of-Barnet-s-parks.html">
+                        <i></i>
+                        <span class="menu-item">Help shape the future of Barnet&#039;s parks</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Make-sure-you-can-vote-for-the-next-Mayor-of-London.html">
+                        <i></i>
+                        <span class="menu-item">Make sure you can vote for the next Mayor of London</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-shows-an-array-of-impressive-A-level-results-2015.html">
+                        <i></i>
+                        <span class="menu-item">Barnet shows an array of impressive A level results 2015</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Businesses-to-get-superfast-broadband-boost-.html">
+                        <i></i>
+                        <span class="menu-item">Businesses to get superfast broadband boost </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Pupils-praised-for-GCSE-exam-success.html">
+                        <i></i>
+                        <span class="menu-item">Pupils praised for GCSE exam success</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Positive-feedback-for-increased-access-to-library-service-.html">
+                        <i></i>
+                        <span class="menu-item">Positive feedback for increased access to library service </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Mad-Hatter-s-Tea-Party-and-prom-for-children-in-care.html">
+                        <i></i>
+                        <span class="menu-item">Mad Hatter’s Tea Party and prom for children in care</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-receives--45-000-to-help-improve-flood-defences-.html">
+                        <i></i>
+                        <span class="menu-item">Barnet receives £45,000 to help improve flood defences </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Library-proposals-to-be-discussed-at-special-CELS-Committee.html">
+                        <i></i>
+                        <span class="menu-item">Library proposals to be discussed at special CELS Committee</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-gives-green-light-for-an-OnSide-Youth-Zone.html">
+                        <i></i>
+                        <span class="menu-item">Barnet gives green light for an OnSide Youth Zone</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Council-is-extending-the-additional-licensing-scheme-consultation-period.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Council is extending the additional licensing ccheme consultation period</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/New-primary-schools-open-their-doors-to-pupils.html">
+                        <i></i>
+                        <span class="menu-item">New primary schools open their doors to pupils</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-community-leaders-sign-up-to-new-Faith-Covenant.html">
+                        <i></i>
+                        <span class="menu-item">Leaders sign new faith covenant </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/-Barnet-to-offer-free-HIV-testing-kits.html">
+                        <i></i>
+                        <span class="menu-item">Barnet to offer free HIV testing kits</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Have-your-say-on-new-leisure-centres.html">
+                        <i></i>
+                        <span class="menu-item">Have your say on new leisure centres</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Fraudster-who-used-six-different-aliases-convicted-of--80k-benefit-scam-.html">
+                        <i></i>
+                        <span class="menu-item">Fraudster convicted of £80k benefit scam </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Children-s-Health-Programme-extended-in-Barnet-.html">
+                        <i></i>
+                        <span class="menu-item">Children’s Health Programme extended in Barnet </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Sweets-Way-Update.html">
+                        <i></i>
+                        <span class="menu-item">Sweets Way Update</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-to-celebrate-Silver-Sunday-.html">
+                        <i></i>
+                        <span class="menu-item">Barnet to celebrate Silver Sunday </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Planning-Committee-to-decide-on-council-vehicle-depot-plans0.html">
+                        <i></i>
+                        <span class="menu-item">Planning Committee to decide on council vehicle depot plans</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Supporting-Syrian-refugees-in-Barnet-.html">
+                        <i></i>
+                        <span class="menu-item">Support for Syrian refugees </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Final-few-weeks-of-HMO-consultation-left.html">
+                        <i></i>
+                        <span class="menu-item">Final few weeks of HMO consultation left</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Oakleigh-Road-vehicle-depot-gets-go-ahead-.html">
+                        <i></i>
+                        <span class="menu-item">Oakleigh Road vehicle depot gets go ahead </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/New-proposals-to-maintain-14-libraries-in-Barnet-to-be-discussed-at-special-CELS-Committee-.html">
+                        <i></i>
+                        <span class="menu-item">New proposals to maintain 14 libraries in Barnet to be discussed at special CELS Committee </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Green-light-given-for-council-s-new-Colindale-HQ.html">
+                        <i></i>
+                        <span class="menu-item">Green light given for council&#039;s new Colindale HQ</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Keeping-well-and-promoting-independence-in-Barnet.html">
+                        <i></i>
+                        <span class="menu-item">Keeping well and promoting independence in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-introduces-new-electronic-parking-permit.html">
+                        <i></i>
+                        <span class="menu-item">Barnet introduces new electronic parking permit</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Let-s-talk-about-dementia-.html">
+                        <i></i>
+                        <span class="menu-item">Let’s talk about dementia </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-s-strategy-for-housing-in-the-borough-.html">
+                        <i></i>
+                        <span class="menu-item">Council’s strategy for housing in the borough </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/2-000-students-to-attend-safe-driving-event---.html">
+                        <i></i>
+                        <span class="menu-item">2,000 students to attend safe driving event  </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Cross-party-motion-on-commitment-to-resettle-refugees.html">
+                        <i></i>
+                        <span class="menu-item">Motion on commitment to resettle refugees</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Parents--views-on-childcare-sought.html">
+                        <i></i>
+                        <span class="menu-item">Parents’ views on childcare sought</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Residents-invited-to-Tarling-Road-Community-Centre-event-.html">
+                        <i></i>
+                        <span class="menu-item">Residents invited to Tarling Road Community Centre event </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-and-Southgate-College-celebrates-Topping-Out-of-New-Campus.html">
+                        <i></i>
+                        <span class="menu-item">College celebrates Topping Out of New Campus</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-councillors-unanimously-agree-to-resettle-50-Syrian-refugees.html">
+                        <i></i>
+                        <span class="menu-item">Agreement to resettle 50 refugees</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Have-your-say-on-revised-libraries-proposals.html">
+                        <i></i>
+                        <span class="menu-item">Have your say on revised libraries proposals</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Servicemen-and-women-to-be-remembered-across-the-borough.html">
+                        <i></i>
+                        <span class="menu-item">Servicemen and women to be remembered across the borough</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Businesses-encouraged-to-take-part-in-healthy-catering-scheme-.html">
+                        <i></i>
+                        <span class="menu-item">The Barnet Healthier Catering Commitment</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-calling-for-young-community-reporters--.html">
+                        <i></i>
+                        <span class="menu-item">Barnet calling for young community reporters </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Proposals-for-the-future-of-education-services-in-Barnet.html">
+                        <i></i>
+                        <span class="menu-item">Proposals for the future of education services in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet--Job-Shop--celebrates-double-success-.html">
+                        <i></i>
+                        <span class="menu-item">Barnet ‘Job Shop’ celebrates double success </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Six-Barnet-schools-receive--school-of-excellence--commendation-from-Transport-for-London-.html">
+                        <i></i>
+                        <span class="menu-item">Schools receive ‘school of excellence’ award</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Weekend-Christmas-parking-in-Barnet-.html">
+                        <i></i>
+                        <span class="menu-item">Weekend Christmas parking in Barnet </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Secretary-of-State-confirms-West-Hendon-CPO.html">
+                        <i></i>
+                        <span class="menu-item">Secretary of State confirms West Hendon CPO</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Communities-Together-Network-statement.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Communities Together Network statement</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-House-car-park-open-to-public-at-weekends.html">
+                        <i></i>
+                        <span class="menu-item">Car-park open to public at weekends</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Domestic-Violence-Awareness-Week.html">
+                        <i></i>
+                        <span class="menu-item">Domestic Violence Awareness Week</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Tarling-Road-Community-Hub-proposals-submitted.html">
+                        <i></i>
+                        <span class="menu-item">Tarling Road Community Hub proposals submitted</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Free-festive-parking.html">
+                        <i></i>
+                        <span class="menu-item">Free Festive Parking</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/-Have-your-say-on-health-facilities-in-West-Hendon-and-Colindale.html">
+                        <i></i>
+                        <span class="menu-item">Health facilities in West Hendon and Colindale</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-sets-a-20-000-SmartWater-target-to-keep-homes-safe.html">
+                        <i></i>
+                        <span class="menu-item">Help us keep burglary down</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-wins-gold-at-national-Social-Worker-Awards-.html">
+                        <i></i>
+                        <span class="menu-item">Barnet wins gold at national Social Worker Awards </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Youth-Zone-location-confirmed-.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Youth Zone location confirmed </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Volunteer-for-the-Grit-my-Street-initiative-.html">
+                        <i></i>
+                        <span class="menu-item">Volunteer for the Grit my Street initiative </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/In-search-of-2016-Civic-Award-winners-.html">
+                        <i></i>
+                        <span class="menu-item">In search of 2016 Civic Award winners </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Council-piloting-parking-app---0.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Council piloting parking app  </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Proposals-agreed-for-future-of-education-services-.html">
+                        <i></i>
+                        <span class="menu-item">Proposals agreed for future of education services </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Hundreds-of-Barnet-businesses-give-their-broadband-a-boost.html">
+                        <i></i>
+                        <span class="menu-item">Businesses give their broadband a boost</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-proposes-to-build-new-state-of-the-art-leisure-centre.html">
+                        <i></i>
+                        <span class="menu-item">Council proposes to build new leisure centre</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/CCTV-upgrade-nears-completion.html">
+                        <i></i>
+                        <span class="menu-item">CCTV upgrade nears completion</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/-Council-launches-new-green-car-scheme.html">
+                        <i></i>
+                        <span class="menu-item">Council launches new electric car scheme</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Views-sought-on-2016-17-budget.html">
+                        <i></i>
+                        <span class="menu-item">Views sought on 2016/17 budget</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Holocaust-Memorial-Day-2016.html">
+                        <i></i>
+                        <span class="menu-item">Holocaust Memorial Day 2016</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/What-to-do-with-your-real-Christmas-tree--.html">
+                        <i></i>
+                        <span class="menu-item">What to do with your real Christmas tree? </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Committee-to-discuss-Barnet-draft-parks-strategy-.html">
+                        <i></i>
+                        <span class="menu-item">Committee to discuss Barnet draft parks strategy </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Council-set-to-discuss-new-long-term-recycling-and-waste-strategy-.html">
+                        <i></i>
+                        <span class="menu-item">Committee set to discuss draft recycling  strategy </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Parliamentarians-of-the-future-sought.html">
+                        <i></i>
+                        <span class="menu-item">Parliamentarians of the future sought</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Sign-up-to-My-Account-and-enter-an-iPad-competition-.html">
+                        <i></i>
+                        <span class="menu-item">Sign up to My Account </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Schools-strike-gold-for-health0.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Schools strike gold for health</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Consultation-underway-to-help-keep-Barnet-safe.html">
+                        <i></i>
+                        <span class="menu-item">Consultation underway to help keep Barnet safe</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Entrepreneurial-Barnet-competition-launched.html">
+                        <i></i>
+                        <span class="menu-item">Entrepreneurial Barnet competition launched</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-marks-Holocaust-Memorial-Day-2016.html">
+                        <i></i>
+                        <span class="menu-item">Barnet marks Holocaust Memorial Day 2016</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Views-sought-on-future-of-customer-services.html">
+                        <i></i>
+                        <span class="menu-item">Views sought on the future of customer services</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Benefit-cheat-ordered-to-pay--90-000.html">
+                        <i></i>
+                        <span class="menu-item">Benefit cheat ordered to pay £90,000</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Showcasing-teaching-in-Barnet.html">
+                        <i></i>
+                        <span class="menu-item">Showcasing teaching in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/news/Barnet-Libraries-Festival-2016.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Libraries Festival 2016</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/pledgebank.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Pledges</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/pledgebank/suggest-a-pledge.html">
+                        <i></i>
+                        <span class="menu-item">Suggest a pledge</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/pledgebank/adopt-a-place.html">
+                        <i></i>
+                        <span class="menu-item">Adopt a place</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/pledgebank/grit-my-school.html">
+                        <i></i>
+                        <span class="menu-item">Grit my school</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/pledgebank/grit-my-street.html">
+                        <i></i>
+                        <span class="menu-item">Grit my street</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/foi-requests.html">
+                        <i></i>
+                        <span class="menu-item">Freedom of Information (FOI) Requests</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Business Support in Barnet</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/business/business-rates.html">
+                        <i></i>
+                        <span class="menu-item">Business Rates</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/licences-permits-and-registrations.html">
+                        <i></i>
+                        <span class="menu-item">Licences, Permits and Registrations</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/Business-competition.html">
+                        <i></i>
+                        <span class="menu-item">Business Competition</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/How-to-sell-to-the-council-and-council-contracts.html">
+                        <i></i>
+                        <span class="menu-item">How to sell to the council and council contracts</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/commercial-property-for-sale-and-rent.html">
+                        <i></i>
+                        <span class="menu-item">Commercial property for sale and rent</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/Thinking-of-starting-a-business.html">
+                        <i></i>
+                        <span class="menu-item">Thinking of starting a business</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/Growing-your-business.html">
+                        <i></i>
+                        <span class="menu-item">Growing your business</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/Business-networking.html">
+                        <i></i>
+                        <span class="menu-item">Business networking</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/Funding-for-your-business.html">
+                        <i></i>
+                        <span class="menu-item">Funding for your business</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/Taking-on-an-apprentice.html">
+                        <i></i>
+                        <span class="menu-item">Taking on an apprentice</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/Thinking-of-moving-your-business-to-Barnet.html">
+                        <i></i>
+                        <span class="menu-item">Thinking of moving your business to Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/Entrepreneurial-Barnet.html">
+                        <i></i>
+                        <span class="menu-item">Entrepreneurial Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/business/forms.html">
+                        <i></i>
+                        <span class="menu-item">Applications and forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/environmental-health.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Environmental Health and Trading Standards</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/environmental-health/food-safety-and-standards.html">
+                        <i></i>
+                        <span class="menu-item">Food Safety in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/environmental-health/noise.html">
+                        <i></i>
+                        <span class="menu-item">Noise</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/environmental-health/pollution.html">
+                        <i></i>
+                        <span class="menu-item">Pollution</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/environmental-health/health-and-safety-at-work.html">
+                        <i></i>
+                        <span class="menu-item">Health and Safety at Work</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/environmental-health/emergencies.html">
+                        <i></i>
+                        <span class="menu-item">Emergencies</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/environmental-health/consumer-advice.html">
+                        <i></i>
+                        <span class="menu-item">Consumer Advice and Trading Standards</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/environmental-health/Rodents-and-Insects.html">
+                        <i></i>
+                        <span class="menu-item">Rodents and Insects</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Libraries</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/libraries/renew-your-books.html">
+                        <i></i>
+                        <span class="menu-item">Renew your books</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/library-opening-times.html">
+                        <i></i>
+                        <span class="menu-item">Library opening times</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/find-your-local-library.html">
+                        <i></i>
+                        <span class="menu-item">Find your local library</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/e-books-and-e-audio.html">
+                        <i></i>
+                        <span class="menu-item">Barnet ebooks and audiobooks</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/online-resources.html">
+                        <i></i>
+                        <span class="menu-item">Online resources</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/reserve-an-item.html">
+                        <i></i>
+                        <span class="menu-item">Reserve an item</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/request-a-library-card.html">
+                        <i></i>
+                        <span class="menu-item">Request a library card</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/barnet-book-club.html">
+                        <i></i>
+                        <span class="menu-item">Barnet book club</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/childrens-library-services.html">
+                        <i></i>
+                        <span class="menu-item">Children&#039;s library services</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/computers-and-the-internet-public-wifi-and-usage-policy.html">
+                        <i></i>
+                        <span class="menu-item">Computers and the internet (public wi-fi and usage policy)</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/fines-charges-and-hall-hire.html">
+                        <i></i>
+                        <span class="menu-item">Fines, charges and hall hire</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/home-library-service.html">
+                        <i></i>
+                        <span class="menu-item">Home library service</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/library-events.html">
+                        <i></i>
+                        <span class="menu-item">Library events</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/library-membership.html">
+                        <i></i>
+                        <span class="menu-item">Library membership</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/library-volunteers.html">
+                        <i></i>
+                        <span class="menu-item">Library volunteers</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/local-studies-and-archives.html">
+                        <i></i>
+                        <span class="menu-item">Local studies and archives</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/mobile-library.html">
+                        <i></i>
+                        <span class="menu-item">Mobile Library</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/recommendations.html">
+                        <i></i>
+                        <span class="menu-item">Recommendations</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/school-libraries-resources-service.html">
+                        <i></i>
+                        <span class="menu-item">School Libraries Resources Service </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/special-collections.html">
+                        <i></i>
+                        <span class="menu-item">Vocal score sets and playsets</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/teenage-library-services.html">
+                        <i></i>
+                        <span class="menu-item">Teenage library services</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/what-you-can-borrow.html">
+                        <i></i>
+                        <span class="menu-item">What you can borrow</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/libraries/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/regeneration.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Regeneration</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/regeneration/compulsory-purchase-order---a-schedule-of-properties.html">
+                        <i></i>
+                        <span class="menu-item">Compulsory purchase order - a schedule of properties</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/regeneration/demolition-notices.html">
+                        <i></i>
+                        <span class="menu-item">Demolition notices</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/regeneration/regeneration-projects.html">
+                        <i></i>
+                        <span class="menu-item">Regeneration projects</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/regeneration/brent-cross-cricklewood-development.html">
+                        <i></i>
+                        <span class="menu-item">Brent Cross Cricklewood development</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Public Health </span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/public-health/public-health-events.html">
+                        <i></i>
+                        <span class="menu-item">Public Health News</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health/health-advice.html">
+                        <i></i>
+                        <span class="menu-item">Health advice</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health/pharmaceutical-needs-assessment.html">
+                        <i></i>
+                        <span class="menu-item">Pharmaceutical Needs Assessment</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health/fit-and-active-barnet.html">
+                        <i></i>
+                        <span class="menu-item">Fit and Active Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health/healthy-eating.html">
+                        <i></i>
+                        <span class="menu-item">Healthy eating</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health/Self-Harm-Suicide-Prevention-Training.html">
+                        <i></i>
+                        <span class="menu-item">Self-Harm and Suicide Prevention Training </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health/stop-smoking-support.html">
+                        <i></i>
+                        <span class="menu-item">Stop Smoking Support </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health/Children-s-Health-.html">
+                        <i></i>
+                        <span class="menu-item">Children&#039;s public health services </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health/Drugs-and-substance-misuse.html">
+                        <i></i>
+                        <span class="menu-item">Drug and alcohol misuse</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health/NHS-Health-Checks.html">
+                        <i></i>
+                        <span class="menu-item">NHS Health Checks</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health/Joint-Health-and-Wellbeing-Strategy-2015-2020.html">
+                        <i></i>
+                        <span class="menu-item">Joint-Health-and-Wellbeing-Strategy-2015-2020</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/public-health/Sexual-Health-Services.html">
+                        <i></i>
+                        <span class="menu-item">Sexual health</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Adult social care</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/About-adult-social-care.html">
+                        <i></i>
+                        <span class="menu-item">About adult social care </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/advice-and-support.html">
+                        <i></i>
+                        <span class="menu-item">Advice and support</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/the-care-act.html">
+                        <i></i>
+                        <span class="menu-item">Care Act</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/carers-in-barnet.html">
+                        <i></i>
+                        <span class="menu-item">Carers in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/comments-and-complaints-adult-social-care.html">
+                        <i></i>
+                        <span class="menu-item">Comments and Complaints (Adult Social Care)</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/Events-Calendar--Adults-.html">
+                        <i></i>
+                        <span class="menu-item">Events Calendar (Adults)</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/get-involved.html">
+                        <i></i>
+                        <span class="menu-item">Get involved</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/Information-for-providers.html">
+                        <i></i>
+                        <span class="menu-item">Information for providers</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/keeping-people-safe-safeguarding-adults.html">
+                        <i></i>
+                        <span class="menu-item">Keeping people safe </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/Learning-Disabilities-in-Barnet.html">
+                        <i></i>
+                        <span class="menu-item">Learning Disabilities and Autism in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/mental-health.html">
+                        <i></i>
+                        <span class="menu-item">Mental Health in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/Publications-and-factsheets.html">
+                        <i></i>
+                        <span class="menu-item">Publications and factsheets</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/registering-your-disability.html">
+                        <i></i>
+                        <span class="menu-item">Registering your disability </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/social-care-connect.html">
+                        <i></i>
+                        <span class="menu-item">Social Care Connect</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-from-the-council.html">
+                        <i></i>
+                        <span class="menu-item">Support from the council</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-for-deaf-people.html">
+                        <i></i>
+                        <span class="menu-item">Support for deaf people</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/support-at-home.html">
+                        <i></i>
+                        <span class="menu-item">Support at home</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/supported-housing-choices.html">
+                        <i></i>
+                        <span class="menu-item">Supported housing </span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/adult-social-care/Silver-Sunday-2015.html">
+                        <i></i>
+                        <span class="menu-item">Silver Sunday 2015</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Council and democracy</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/governance.html">
+                        <i></i>
+                        <span class="menu-item">Governance</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/council-and-community.html">
+                        <i></i>
+                        <span class="menu-item">Council and community</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/ward-profiles.html">
+                        <i></i>
+                        <span class="menu-item">Ward profiles</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/report-it-now.html">
+                        <i></i>
+                        <span class="menu-item">Report it now</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/apply-for-it-now.html">
+                        <i></i>
+                        <span class="menu-item">Apply for it now</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/pay-for-it-now.html">
+                        <i></i>
+                        <span class="menu-item">Pay for it now</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/General-information0.html">
+                        <i></i>
+                        <span class="menu-item">General information</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/democracy-and-elections.html">
+                        <i></i>
+                        <span class="menu-item">Democracy and elections</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/data-protection-and-freedom-of-information.html">
+                        <i></i>
+                        <span class="menu-item">Data protection and freedom of information</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/one-barnet-transformation-programme.html">
+                        <i></i>
+                        <span class="menu-item">One Barnet transformation programme</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/policy-and-performance.html">
+                        <i></i>
+                        <span class="menu-item">Policy and performance</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/finance-and-funding.html">
+                        <i></i>
+                        <span class="menu-item">Finance and funding</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/transparency-and-open-data.html">
+                        <i></i>
+                        <span class="menu-item">Transparency and Open Data</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/re-regional-enterprise-limited.html">
+                        <i></i>
+                        <span class="menu-item">Re (Regional Enterprise) limited</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/barnet-works.html">
+                        <i></i>
+                        <span class="menu-item">Working together for Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/housing-and-community.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Housing and community</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/housing-and-community/low-cost-home-ownership.html">
+                        <i></i>
+                        <span class="menu-item">Low cost home ownership</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/housing-and-community/community-safety.html">
+                        <i></i>
+                        <span class="menu-item">Community safety</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/housing-and-community/housing-strategy-and-policies.html">
+                        <i></i>
+                        <span class="menu-item">Housing strategy and policies</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/housing-and-community/private-housing.html">
+                        <i></i>
+                        <span class="menu-item">Private housing</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/housing-and-community/council-housing.html">
+                        <i></i>
+                        <span class="menu-item">Council housing</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/housing-and-community/strategic-assessment-summary-2014.html">
+                        <i></i>
+                        <span class="menu-item">Strategic Assessment Summary 2014</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/housing-and-community/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Schools and education</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/free-travel-to-school.html">
+                        <i></i>
+                        <span class="menu-item">Free travel to school</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/schools-and-colleges.html">
+                        <i></i>
+                        <span class="menu-item">Schools and colleges in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/school-transport.html">
+                        <i></i>
+                        <span class="menu-item">School transport</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/school-admissions.html">
+                        <i></i>
+                        <span class="menu-item">School admissions</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/Schools-Admissions-Terms-and-Conditions.html">
+                        <i></i>
+                        <span class="menu-item">Schools Admissions Terms and Conditions</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parks-sport-and-leisure.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Parks, sport and leisure</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/parks-sport-and-leisure/sports-clubs-and-facilities.html">
+                        <i></i>
+                        <span class="menu-item">Sports clubs and facilities</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parks-sport-and-leisure/parks-and-open-spaces.html">
+                        <i></i>
+                        <span class="menu-item">Parks and open spaces</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parks-sport-and-leisure/arts-and-entertainment.html">
+                        <i></i>
+                        <span class="menu-item">Arts and entertainment</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parks-sport-and-leisure/activities-for-young-people.html">
+                        <i></i>
+                        <span class="menu-item">Activities for young people</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parks-sport-and-leisure/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-tax-and-benefits.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Council Tax and Benefits</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/council-tax-and-benefits/housing-benefit-and-council-tax-support.html">
+                        <i></i>
+                        <span class="menu-item">Housing Benefit and Council Tax Support</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-tax-and-benefits/grants-and-funding.html">
+                        <i></i>
+                        <span class="menu-item">Grants and funding</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-tax-and-benefits/council-tax.html">
+                        <i></i>
+                        <span class="menu-item">Council Tax</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-tax-and-benefits/welfare-reform.html">
+                        <i></i>
+                        <span class="menu-item">Welfare Reform</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-tax-and-benefits/council-tax-support.html">
+                        <i></i>
+                        <span class="menu-item">Council tax support</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-tax-and-benefits/Universal-Credits.html">
+                        <i></i>
+                        <span class="menu-item">Universal Credits</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-tax-and-benefits/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parking-roads-and-pavements.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Parking, roads and pavements</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/parking-roads-and-pavements/parking.html">
+                        <i></i>
+                        <span class="menu-item">Parking</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parking-roads-and-pavements/sustainable-travel.html">
+                        <i></i>
+                        <span class="menu-item">Sustainable travel</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parking-roads-and-pavements/abandoned-vehicles.html">
+                        <i></i>
+                        <span class="menu-item">Abandoned vehicles</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parking-roads-and-pavements/Roads-and-Pavements.html">
+                        <i></i>
+                        <span class="menu-item">Roads and Pavements in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parking-roads-and-pavements/street-care-and-cleaning.html">
+                        <i></i>
+                        <span class="menu-item">Street care and cleaning in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parking-roads-and-pavements/road-safety.html">
+                        <i></i>
+                        <span class="menu-item">Road Safety and Driving in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/parking-roads-and-pavements/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Rubbish, waste and recycling</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling/household-recycling-and-waste.html">
+                        <i></i>
+                        <span class="menu-item">Household recycling and waste</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling/reduce-and-reuse-for-barnet.html">
+                        <i></i>
+                        <span class="menu-item">Reduce and reuse for Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling/recycling-sites-in-barnet.html">
+                        <i></i>
+                        <span class="menu-item">Recycling sites in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling/recycling-in-schools.html">
+                        <i></i>
+                        <span class="menu-item">Recycling in schools</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling/commercial-recycling-and-waste.html">
+                        <i></i>
+                        <span class="menu-item">Commercial recycling and waste</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling/Proposed-Council-Depot--Abbots-Depot-site.html">
+                        <i></i>
+                        <span class="menu-item">Proposed council vehicle depot - Abbots Depot site</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling/Report-a-problem-service-commitments.html">
+                        <i></i>
+                        <span class="menu-item">Report a problem service commitments</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/rubbish-waste-and-recycling/Pesach-collection-service.html">
+                        <i></i>
+                        <span class="menu-item">Pesach collection service</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Children, young people and families</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare.html">
+                        <i></i>
+                        <span class="menu-item">Childcare</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/fyi-families-and-young-peoples-information-service.html">
+                        <i></i>
+                        <span class="menu-item">FYi (families and young people&#039;s information service)</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/directme.html">
+                        <i></i>
+                        <span class="menu-item">DirectMe</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/workforce-development.html">
+                        <i></i>
+                        <span class="menu-item">Workforce development</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/youth-support.html">
+                        <i></i>
+                        <span class="menu-item">Youth support in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/parental-support.html">
+                        <i></i>
+                        <span class="menu-item">Parental support</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/key-strategic-documents-and-plans.html">
+                        <i></i>
+                        <span class="menu-item">Key strategic documents and plans</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/Safeguarding-children.html">
+                        <i></i>
+                        <span class="menu-item">Safeguarding children</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/fostering-adopting-and-looked-after-children.html">
+                        <i></i>
+                        <span class="menu-item">Fostering, adopting and looked after children</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/children-and-young-people-with-disabilities.html">
+                        <i></i>
+                        <span class="menu-item">Children and young people with disabilities</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/comments-compliments-and-complaints---childrens-service.html">
+                        <i></i>
+                        <span class="menu-item">Comments, compliments and complaints - Children&#039;s Service</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/barnet-educational-training-support-beets.html">
+                        <i></i>
+                        <span class="menu-item">Barnet Education, Employment and Training Support (BEETS) Careers Advice Service</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/the-local-offer-and-special-educational-needs.html">
+                        <i></i>
+                        <span class="menu-item">The Local Offer and Special Educational Needs</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/births-deaths-marriages-and-nationality.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Births, deaths, marriages and nationality</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/births-deaths-marriages-and-nationality/births.html">
+                        <i></i>
+                        <span class="menu-item">Births</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/births-deaths-marriages-and-nationality/citizenship-and-nationality.html">
+                        <i></i>
+                        <span class="menu-item">Citizenship and nationality</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/births-deaths-marriages-and-nationality/deaths-funerals-and-cremations.html">
+                        <i></i>
+                        <span class="menu-item">Deaths, funerals and cremations</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/births-deaths-marriages-and-nationality/marriages-and-civil-partnerships.html">
+                        <i></i>
+                        <span class="menu-item">Marriages and civil partnerships</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/births-deaths-marriages-and-nationality/registrars.html">
+                        <i></i>
+                        <span class="menu-item">Registrars</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/births-deaths-marriages-and-nationality/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Planning, Conservation and Building Control</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control/planning-consultations.html">
+                        <i></i>
+                        <span class="menu-item">Planning consultations</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control/planning-enforcement.html">
+                        <i></i>
+                        <span class="menu-item">Planning Enforcement</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control/planning-policies-and-further-information.html">
+                        <i></i>
+                        <span class="menu-item">Planning policies and further information</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control/supplementary-planning-documents.html">
+                        <i></i>
+                        <span class="menu-item">Supplementary Planning Documents</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control/building-control.html">
+                        <i></i>
+                        <span class="menu-item">Building control service</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control/conservation.html">
+                        <i></i>
+                        <span class="menu-item">Conservation and Heritage</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control/land-charges.html">
+                        <i></i>
+                        <span class="menu-item">Local Land Charges</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control/submit-a-planning-application.html">
+                        <i></i>
+                        <span class="menu-item">Submit a Planning Application</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control/town-centre-frameworks.html">
+                        <i></i>
+                        <span class="menu-item">Town Centre Frameworks</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control/unitary-development-plan.html">
+                        <i></i>
+                        <span class="menu-item">Unitary Development Plan</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/planning-conservation-and-building-control/forms.html">
+                        <i></i>
+                        <span class="menu-item">Forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/Downloads.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Downloads</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/Downloads/application-to-reregister-a-childs-birth.html">
+                        <i></i>
+                        <span class="menu-item">Application to Re-register a Child&#039;s Birth</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/directories.html">
+                        <i></i>
+                        <span class="menu-item">Directories</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/Useful-forms.html">
+                        <i></i>
+                        <span class="menu-item">Useful forms</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li class="open active">
+                    <a href="/citizen-home/report-a-problem.html">
+                        <i></i>
+                        <span class="menu-item">Report a problem</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/events.html">
+                        <i></i>
+                        <span class="menu-item">Events List</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+        </li>
+    </ul>
+</nav>
+  
+            <div class="large-9 medium-8 small-12 column main-content">
+                 <nav id="breadcrumb-nav">
+        <div id="breadcrumb" class="breadcrumb-panel">
+            <ul class="breadcrumbs">
+                  
+                
+                <li>
+                    <a href="/citizen-home.html">Home</a>
+                </li>
+                 
+                  
+                <li class="service-nav">
+                    <select onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="Our services">Our services</option>
+                        <option value="/citizen-home/business.html">Business Support in Barnet</option>
+                        <option value="/citizen-home/environmental-health.html">Environmental Health and Trading Standards</option>
+                        <option value="/citizen-home/libraries.html">Libraries</option>
+                        <option value="/citizen-home/regeneration.html">Regeneration</option>
+                        <option value="/citizen-home/public-health.html">Public Health </option>
+                        <option value="/citizen-home/adult-social-care.html">Adult social care</option>
+                        <option value="/citizen-home/council-and-democracy.html">Council and democracy</option>
+                        <option value="/citizen-home/housing-and-community.html">Housing and community</option>
+                        <option value="/citizen-home/schools-and-education.html">Schools and education</option>
+                        <option value="/citizen-home/parks-sport-and-leisure.html">Parks, sport and leisure</option>
+                        <option value="/citizen-home/council-tax-and-benefits.html">Council Tax and Benefits</option>
+                        <option value="/citizen-home/parking-roads-and-pavements.html">Parking, roads and pavements</option>
+                        <option value="/citizen-home/rubbish-waste-and-recycling.html">Rubbish, waste and recycling</option>
+                        <option value="/citizen-home/children-young-people-and-families.html">Children, young people and families</option>
+                        <option value="/citizen-home/births-deaths-marriages-and-nationality.html">Births, deaths, marriages and nationality</option>
+                        <option value="/citizen-home/planning-conservation-and-building-control.html">Planning, Conservation and Building Control</option>
+                        <option value="/citizen-home/news.html">News and features</option>
+                        <option value="/citizen-home/directories.html">Directories</option>
+                        <option value="/citizen-home/events.html">Events List</option>
+                        <option value="/citizen-home/pledgebank.html">Pledges</option>
+                    </select>
+                </li>
+                
+                  
+            </ul>
+        </div>
+    </nav> 
+                  
+                <span class="skip-anchor" id="contentskip"></span>
+                 <main id="main" role="main">
+                    
+                  
+                 
+            <div class="row">
+                 <body>
+
+<h2>Report a problem</h2>
+
+<p>This form will allow you to report any environmental problem affecting council-owned
+   property such as roads, pavements, parks and buildings.</p>
+
+<p>Please click the map to tell us the exact location of the problem. This will create a pin to mark the spot. If you
+    cannot see the location on this map, please click on ⌖ to zoom into your location. You may need to switch on your
+    device's location services. You can also type the nearest street name in the search box below before choosing the
+    exact location on the map.</p>
+<!--[if IE 9]>
+    <style>
+        .select2-display-none  {
+            display: none;
+            margin-top: -60px;
+            z-index: 1;
+        }
+        .select2-drop-active {
+            background-color: white;
+            display: inline-block;
+            float:left;
+            margin-top:-18890px!important;
+            position: relative;
+            z-index: 100000;
+        }
+        .select2-results {
+            background-color: white;
+        }
+        
+        
+    </style>
+<![endif]-->
+
+<form id="reportproblem-form" action="/citizen-home/report-a-problem/form.html" method="GET">
+    <div class="field">
+        <div class="field report-container">
+            <input type="text" class="js-reportproblem-streetsearch" />
+        </div>
+        
+        <input type="hidden" id="lat" name="lat" class="js-reportproblem-lat" />
+        <input type="hidden" id="lng" name="lng" class="js-reportproblem-lng" />
+        <input type="hidden" id="streetId" name="streetId" class="js-street-id" />
+        <div id="mapdiv" class="smallmap"></div>
+    </div>
+
+    <div class="field">
+        <label for="location-landmark">The problem is close to:</label>
+        <input type="text" id="location-landmark" name="location-landmark" maxlength="200" placeholder="House no. / building / landmark / other information e.g. next to lamppost." />
+    </div>
+
+    <button type="submit" class="button">Next: Describe the problem</button>
+
+</form>
+<script>
+    /*<![CDATA[*/
+    var imageLoc = '/docroot/img/leaflet';
+    var apiURL = '/api/street/';
+    var geocodeURL = '/api/geocoding/';
+
+    var reverseGeoFailing = false;
+
+    var isElementVisible = function(elementToBeChecked) {
+        var topView = jQuery(window).scrollTop();
+        var botView = topView + jQuery(window).height();
+        var topElement = jQuery(elementToBeChecked).offset().top;
+        var botElement = topElement + jQuery(elementToBeChecked).height();
+        return ((botElement <= botView) && (topElement >= topView));
+    };
+
+    var map;
+
+    jQuery(document).ready(function() {
+
+        var dragEndListener = function (event) {
+            updateLocationFields(event.target.getLatLng());
+        };
+
+
+        map = BCP.map('mapdiv', imageLoc);
+        var startLat = 51.63599916562382;
+        var startLon = -0.1487445831298828;
+        var icon = new BCP.pinIcon({iconUrl: imageLoc + '/marker-icon.png'});
+        map.setView(L.latLng(startLat, startLon), 12);
+
+        var marker = L.marker();
+        marker.on('dragend', dragEndListener);
+
+        var onMapClick = function (e) {
+            var latLng = e.latlng;
+            updateLocationFields(latLng);
+            marker.setLatLng(latLng);
+            marker.setIcon(icon);
+            marker.addTo(map);
+            marker.dragging.enable();
+        };
+
+        map.on('click', onMapClick);
+
+        var locateMeControl = L.control({position: 'topright'});
+        locateMeControl.onAdd = function (map) {
+            var locateMeContainer = L.DomUtil.create('div', 'locate-me');
+
+            var button = jQuery('<a href="#" class="locate-me-button">Current location</a>').click(function() {
+                map.locate({setView: true, maxZoom: 16, enableHighAccuracy: true});
+                return false;
+            });
+
+            jQuery(locateMeContainer).append(button);
+            return locateMeContainer;
+        };
+
+        map.addControl(locateMeControl);
+
+
+        jQuery('.js-reportproblem-streetsearch').select2({
+            placeholder: 'Enter street name...',
+            minimumInputLength: 3,
+            ajax: {
+                url: function (term) {
+                    return apiURL + 'summary/' + term
+                },
+                quietMillis: 500,
+                results: function (data) {
+                    return {results: data}
+                },
+                cache: true
+            },
+            formatResult: function (data) {
+                return data.description;
+            },
+            formatSelection: function (data) {
+                return data.description;
+            },
+            formatNoMatches: function () {
+                return 'No matches found.  You can only search for streets within the Barnet borough.'
+            }
+        }).on('select2-selecting', function (e) {
+            var addressId = e.choice.id;
+            jQuery.ajax({
+                type: 'get',
+                url: apiURL + addressId
+            }).done(function (data) {
+                if (data) {
+                    var southWest = L.latLng(data.southWestLat, data.southWestLng);
+                    var northEast = L.latLng(data.northEastLat, data.northEastLng);
+                    var bounds = L.latLngBounds(southWest, northEast);
+                    map.fitBounds(bounds, {maxZoom: 17});
+                    jQuery('#streetId').val(data.usrn);
+                }
+            });
+        });
+
+
+        jQuery('#reportproblem-form').validate({
+            ignore: null,
+            focusInvalid: false,
+
+            rules: {
+                'lat': {
+                    required: true
+                },
+                'streetId': {
+                    //we only put up the validation message for the streetId in the event that reverse geocoding
+                    //isn't working, thereby asking the user to search for a street.
+                    required: function() {return reverseGeoFailing;}
+                },
+                'location-landmark': {
+                    required: true
+                }
+            },
+
+            messages: {
+                'lat': {
+                    'required': 'Please tell us where the problem is located'
+                },
+                'streetId': {
+                    'required': 'Please enter a street name'
+                },
+                'location-landmark': {
+                    'required': 'Please describe location of the problem'
+                }
+            },
+
+            showErrors: function () {
+                this.defaultShowErrors();
+                var firstFieldMessaging = jQuery('.field-messaging').first();
+                if (firstFieldMessaging.length > 0 && !isElementVisible(firstFieldMessaging)) {
+                    jQuery('html, body').animate({
+                        scrollTop: firstFieldMessaging.offset().top - jQuery('.header').height()
+                    }, 'fast');
+                }
+            }
+
+        });
+
+        var updateLocationFields = function(latlng) {
+            jQuery('.js-reportproblem-lat').val(latlng.lat);
+            jQuery('.js-reportproblem-lng').val(latlng.lng);
+
+            if(!reverseGeoFailing) {
+
+                jQuery.ajax({
+                    type: 'get',
+                    url: geocodeURL + latlng.lat + '/' + latlng.lng + '/'
+                })
+                .always(function() {
+                    var chosenLocationDiv = jQuery('.js-chosen-location');
+                    if(chosenLocationDiv.length > 0) {
+                        chosenLocationDiv.remove();
+                    }
+                }).done(function (data) {
+                    if (data) {
+                        jQuery('#streetId').val(data.properties.usrn);
+                        jQuery('#mapdiv').parent('div').append("<div class='field js-chosen-location'><dl><dt>Nearest road to your selected location:</dt><dd>" + data.properties.streetName + "</dd></dl></div>");
+                    }
+                })
+                .error(function(jqXHR, textStatus, errorThrown) {
+                    var notFound = errorThrown == 'Not Found';
+                    if(notFound) {
+                        jQuery('#mapdiv').parent('div').append('<div class="field js-chosen-location field-error"><ul class="field-messaging"><li>You can only select a location within Barnet and surrounding boroughs.</li></ul></div>');
+                        //unset the lat to ensure we can't progress
+                        jQuery('.js-reportproblem-lat').val('');
+                    } else {
+                        reverseGeoFailing = true;
+                    }
+                });
+
+            }
+        };
+   });
+    /*]]>*/
+</script>
+
+</body> 
+            </div>
+         
+                </main> 
+                
+                 <div class="row">
+                    <div class="panel">
+                          
+                <section class="gm_sidebar row">
+                    <div class="gm-container">
+                        <div class="rate-page">
+                            <i class="iconfontello-thumbs-up"></i>
+                            <p>Rate this page</p>
+                        </div>
+                        <div class="rating-options">
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=3" target="_blank" title="rate this page as GOOD" rel="nofollow">
+                                <img src="/docroot/img/govmetric/smiling.png" alt="green smiley (good)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=2" target="_blank" title="rate this page as AVERAGE" rel="nofollow">
+                                <img src="/docroot/img/govmetric/indifferent.png" alt="orange smiley (average)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=4" target="_blank" title="rate this page as POOR" rel="nofollow">
+                                <img src="/docroot/img/govmetric/sad.png" alt="red smiley (poor)" />
+                            </a>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+                    <script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+                    <script type="text/javascript" src="//hitcounter.govmetric.com/982"></script>
+                </section>
+                  
+                    </div>
+                </div> 
+                
+            </div>
+        
+        
+          
+    </div>
+      
+      
+    <footer>
+          
+          
+        <nav class="footer-nav clearfix row">
+            <ul class="footer-links left">
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html" class="internal-link">Contact us</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/copyright.html" class="internal-link">Copyright</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/privacy.html" class="internal-link">Privacy notice</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" class="internal-link">Accessibility</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Disclaimer.html" class="internal-link">Disclaimer</a>
+                            
+                            
+                            
+                             </li>
+                
+                
+                
+                
+                
+                
+            </ul>
+            <ul class="social-icons right">
+                <li><a href="https://www.gov.uk/"><img height="18" width="90" src="/docroot/img/gov-uk-logo.png" alt="gov uk logo" /></a></li>
+                <li><a href="https://www.flickr.com/photos/barnetcouncil"><i class="flaticon-flickr"></i></a></li>
+                <li><a href="https://twitter.com/barnetcouncil"><i class="flaticon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/BarnetCouncil"><i class="flaticon-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/user/Barnetcouncil1"><i class="flaticon-youtube"></i></a></li>
+                <li class="browse-aloud-icon"><a id="show-browsealoud" title="Listen with BrowseAloud"><img src="/docroot/img/browse-aloud-logo.png" alt="Listen with BrowseAloud" /></a></li>
+            </ul>
+        </nav>
+        <div class="site-footer">
+            <div class="row">
+                <span class="barnet-logo right">
+                    <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                        Barnet</a>
+                </span>
+            </div>
+        </div>
+          
+    </footer>
+      
+    <script src="/docroot/js/plugins/retina.min.js" type="text/javascript"></script>
+    <script src="/docroot/js/plugins/chosen.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery("#ordering-download-form select").chosen();
+    jQuery(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+</body>
+</html>

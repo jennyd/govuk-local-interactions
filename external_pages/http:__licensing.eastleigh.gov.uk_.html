@@ -1,0 +1,1055 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Eastleigh Borough Council - Alcohol and Entertainment</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Copyright" content="Copyright 2010 Eastleigh Borough Council" />
+    <meta name="Author" content="Eastleigh Borough Council - CSICT Development Team" />
+<!--[if IE]><link href="/includes/css/ie.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+    <link href="/includes/css/system2011.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/includes/css/system.js.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/Styles/mCustomStyle.css" rel="stylesheet" type="text/css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="/includes/js/jquery-ui/css/ui-lightness/jquery.ui.css" />
+    <link type="text/css" rel="stylesheet" href="/includes/js/jquery/jquery.countdown.css" />
+    
+    <script type="text/javascript" src="/includes/js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/includes/js/jquery/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="/includes/js/jquery-ui/jquery.ui.js"></script>
+    <script type="text/javascript" src="/includes/js/cufon-yui.js"></script>
+    <script type="text/javascript" src="/includes/js/common.js"></script>
+    <script type="text/javascript" src="/includes/js/jquery-1.4.3-combined.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sessionTimerDisplay').countdown({ until: +1200, compact: true, format: 'MS' });
+
+			// Array of day names
+			var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+
+			// Array of month Names
+			var monthNames = new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+
+			var now = new Date();
+
+			$("#search").html("Today: "+ dayNames[now.getDay()] + ", " + monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear());
+        });
+    </script>
+</head>
+<body>
+<form id="Form1" runat="server">
+	<div id="header" class="body">
+		<h1><span style="display: none;">Eastleigh Borough Council</span><a href="http://www.eastleigh.gov.uk""><img src="/Styles/corp/eastleigh-logo.gif" alt="Eastleigh Borough Council" width="140" height="42" /></a></h1>
+		<ul id="toolbar">
+		  <li><a href="http://www.eastleigh.gov.uk/tools/cookies.aspx">Cookies</a></li>
+          <li><a href="http://www.eastleigh.gov.uk/tools/accessibility.aspx" target="_blank">Accessibility</a></li>
+          <li><a href="http://www.eastleigh.gov.uk/tools/contact-us.aspx" target="_blank">Contact us</a></li>
+          <li><a href="http://www.eastleigh.gov.uk/tools/a-to-z.aspx" target="_blank">A to Z</a></li>
+          <li class="last"><a href="http://www.eastleigh.gov.uk/tools/help.aspx" target="_blank">Help</a></li>
+		</ul>
+		<!-- end #toolbar -->
+<ul id="fonts"> 
+			
+			<li class="sma"><a href="/business/taxi-licensing.aspx?StyleType=sma&amp;StyleClass=fontsizer" title="Small text size"><span class="hidden">Small font size </span>A</a></li>
+
+			
+			<li class="med"><a href="/business/taxi-licensing.aspx?StyleType=med&amp;StyleClass=fontsizer" title="Medium font size"><span class="hidden">Medium font size </span>A</a></li>
+			
+			<li class="lar"><a href="/business/taxi-licensing.aspx?StyleType=lar&amp;StyleClass=fontsizer" title="Large font size"><span class="hidden">Large font size </span>A</a></li>
+			
+			</ul>
+
+        <div id="search" style="background-image: url(/styles/corp/headerbox.png); background-repeat: no-repeat; height: 32px; width: 300px; color: #004000; font-size: 1.8em; padding-top: 5px;">
+<fieldset id="search">
+    <label for="Template_ctl21_TextBox1" class="hidden">Search</label>
+
+	<input name="Template$ctl21$TextBox1" type="text" value="I'm looking for..." id="Template_ctl21_TextBox1" class="formField" onblur="if(this.value=='') this.value=&quot;I'm looking for...&quot;;" onfocus="if(this.value==&quot;I'm looking for...&quot;) this.value='';" />
+	<input type="image" name="Template$ctl21$ImageButton1" id="Template_ctl21_ImageButton1" class="searchBtn" src="/styles/corp/search-btn.gif" style="border-width:0px;" />	
+</fieldset>	
+
+</div>
+
+    </div>
+	<!-- end #header -->
+
+
+<!-- SLIDESHOW NAV -->
+	<div id="slideshow">
+		<div class="slides-nav clearFix">
+			<ul class="body clearFix">
+	            <li id="pay"><a href="#slide-one" onClick="_gaq.push(['_trackEvent', 'Shortcuts', 'Slider', 'PayHome']);">Pay for it<span></span></a></li>
+	            <li id="report"><a href="#slide-two" onClick="_gaq.push(['_trackEvent', 'Shortcuts', 'Slider', 'ReportHome']);">Report it<span></span></a></li>
+	            <li id="apply"><a href="#slide-three" onClick="_gaq.push(['_trackEvent', 'Shortcuts', 'Slider', 'ApplyHome']);">Apply for it<span></span></a></li>
+
+	            <li id="find"><a href="#slide-four" onClick="_gaq.push(['_trackEvent', 'Shortcuts', 'Slider', 'FindHome']);">Find out about<span></span></a></li>
+	            <li id="yoursay"><a href="#slide-five" onClick="_gaq.push(['_trackEvent', 'Shortcuts', 'Slider', 'SayHome']);">Have your say<span></span></a></li>
+	        </ul>
+	    </div>   
+        <div id="slides" class="slides body">
+            <ul>
+                <li id="slide-one">
+                    <img src="/styles/corp/pay.png" alt="Pay" width="140" height="110" class="floatLeft" />
+
+                    <div class="slideContent">
+	                    <h2>Pay for it</h2>
+	                    <p>
+	                        Pay for services using your debit or credit card. (Please note there may be a surcharge for using a credit card).
+	                    </p>
+	                </div>
+                    <div id="linkBlock1" class="linkBlock">
+                    	<div class="container">
+                    		
+		<ul>
+
+		
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/pay/business-rates.aspx">Business Rates</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/pay/council-invoices.aspx">Council Invoices</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/pay/council-tax.aspx">Council Tax</a></li>
+        
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/pay/garden-waste-existing-customer.aspx">Garden Waste Existing Customer</a></li>
+
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/pay/parking-fines.aspx">Parking Fines</a></li>
+        
+
+		</ul>
+		
+
+	                    </div>
+	                    <div class="linkBlockFooter"></div>
+                    </div>
+                </li>
+                <li id="slide-two">
+                	<img src="/styles/corp/report.png" alt="Report" width="140" height="110" class="floatLeft" />
+
+                	<div class="slideContent">
+                    <h2>Report it</h2>
+                    <p>
+                        Report a problem or make a complaint
+                    </p>
+                    </div>
+                    <div id="linkBlock2" class="linkBlock clearFix">
+                    	<div class="container">
+	                    	
+		<ul>
+
+		
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/missed-bin-collection.aspx">Missed bin collection</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/abandoned-trolley.aspx">Abandoned trolley</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/abandoned-vehicle.aspx">Abandoned vehicle</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/complaints-and-compliments.aspx">Complaints and Compliments</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/streetlamp-fault.aspx">Streetlamp fault</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/pot-hole.aspx">Pot hole</a></li>
+
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/change-of-address.aspx">Change of address</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/dog-waste.aspx">Dog waste</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/flytipping.aspx">Flytipping</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/graffiti.aspx">Graffiti</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/food-complaint.aspx">Food complaint</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/noise-complaint.aspx">Noise nuisance</a></li>
+
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/traffic-order-objection.aspx">Traffic order objection</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/planning-breach.aspx">Planning Breach</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/suspected-benefit-fraud.aspx">Suspected benefit fraud</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/flooding--blocked-drains.aspx">Flooding &amp; blocked drains</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/fraud--corruption-probity.aspx">Fraud  Corruption Probity</a></li>
+
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/taxi-complaint.aspx">Taxi Complaint</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/report/damaged-or-stolen-wheelie-bin.aspx">Damaged or stolen wheelie bin</a></li>
+        
+		</ul>
+		
+
+	                    </div>
+	                     <div class="linkBlockFooter"></div>
+                    </div>              
+                </li>   
+                <li id="slide-three">
+
+                	<img src="/styles/corp/apply.png" alt="Apply" width="140" height="110" class="floatLeft" />
+                	<div class="slideContent">
+                    <h2>Apply for it</h2>
+                    <p>
+                        Please use one of these electronic forms to apply for our services
+                    </p>
+                    </div>
+                    <div id="linkBlock3" class="linkBlock">
+                    	<div class="container">
+
+	                    	
+		<ul>
+		
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/a-job-at-ebc.aspx">A Job at EBC</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/register-to-vote.aspx">Register to vote</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/housing-or-council-tax-benefit.aspx">Housing or Council Tax Benefit</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/garden-waste-new-customer.aspx" onclick="window.open(this.href, '_blank'); return false;" onkeypress="if (event.keyCode==13) {window.open(this.href, '_blank'); return false;}">Garden Waste New Customer</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/garden-waste-renewal.aspx" onclick="window.open(this.href, '_blank'); return false;" onkeypress="if (event.keyCode==13) {window.open(this.href, '_blank'); return false;}">Garden Waste Renewal</a></li>
+
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/housing-register.aspx">Housing Register</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/council-tax-discounts.aspx">Council tax discounts</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/invite-the-mayor.aspx">Invite the Mayor</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/planning-permission.aspx">Planning permission</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/large-item-collection.aspx">Large item collection</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/parking-permit.aspx">Parking permit</a></li>
+
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/an-allotment.aspx">An allotment</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/disabled-parking-bay.aspx">Disabled parking bay</a></li>
+        
+			<li><a href="http://www.eastleigh.gov.uk/apply/road-closure.aspx">Road Closure</a></li>
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/waste-and-recycling-bags.aspx">Waste and recycling bags</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/land-charges-search.aspx">Land charges search</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/a-sports-pitch-booking.aspx">A sports pitch booking</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/apply/freedom-of-information.aspx">Freedom of Information</a></li>
+
+			<li><a href="http://www.eastleigh.gov.uk/apply/h-bar-access-markings.aspx">H-bar Access Markings</a></li>
+
+		</ul>
+		
+
+	                    </div>
+						
+	                    <div class="linkBlockFooter"></div>
+                    </div>
+                </li>  
+                <li id="slide-four">
+                	<img src="/styles/corp/find.png" alt="Find" width="140" height="110" class="floatLeft" />
+                	<div class="slideContent">
+                    <h2>Find out about</h2>
+
+                    <p>
+                        Quick access to the most popular sections of this website
+                    </p>
+                    </div>
+                    <div id="linkBlock4" class="linkBlock">
+                    	<div class="container">
+	                    	
+		<ul>
+		
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/jobs-at-ebc.aspx">Jobs at EBC</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/council-tax-enquiries.aspx">Council Tax Enquiries</a></li>
+
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/your-councillors.aspx">Your Councillors</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/planning-applications.aspx">Planning Applications</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/renting-a-home.aspx">Renting a Home</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/maps.aspx">Maps</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/bus-pass.aspx">Bus Pass</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/recycling-your-waste.aspx">Recycling your waste</a></li>
+
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/garden-waste-collection.aspx">Garden Waste Collection</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/housing-benefit.aspx">Housing Benefit</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/cemetery-burial-records.aspx">Cemetery Burial Records</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/find/parking-permits.aspx">Parking Permits</a></li>
+        
+
+		</ul>
+		
+
+	                    </div>
+	                    <div class="linkBlockFooter"></div>
+
+                    </div>
+                </li>
+                <li id="slide-five">
+                	<img src="/styles/corp/yoursay.png" alt="Your say" width="140" height="110" class="floatLeft" />
+                	<div class="slideContent">
+                    <h2>Have your say</h2>
+                    <p>
+                        The Council frequently seeks the views of residents and businesses on issues. These are the current consultations.
+                    </p>
+
+                    </div>
+                    <div id="linkBlock5" class="linkBlock">
+                    	<div class="container">
+	                    	
+		<ul>
+		
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/have-your-say/customer-feedback.aspx">Customer Feedback</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/have-your-say/complain-or-compliment.aspx">Complain or Compliment</a></li>
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/have-your-say/local-plan-consultation.aspx">Local Plan Consultation</a></li>
+
+        
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/have-your-say/traffic-consultations.aspx">Traffic Consultations</a></li>
+  
+
+        	
+         	<li><a href="http://www.eastleigh.gov.uk/have-your-say/citizens-panel.aspx">Citizens Panel</a></li>
+        
+
+		</ul>
+		
+
+	                    </div>
+	                    <div class="linkBlockFooter"></div>
+                    </div>
+
+                </li>                             
+            </ul>         
+        </div>         
+	</div>
+	<script type="text/javascript">
+		// Hide slider before page is rendered
+		var sliderId = "slides";
+		document.getElementById(sliderId).style.position = "absolute";
+		document.getElementById(sliderId).style.left = "-9999em";
+		document.getElementById("slideshow").className = "shut";
+	</script>
+
+	<!-- end #slideshow -->
+
+
+    <dl id="breadcrumbs" class="clearFix">
+    	<dt class="hidden">You are here</dt>
+    	<dd class="body">
+            <table cellpadding="0" cellspacing="0" border="0" style="width: 100%">
+                <tr>
+                    <td>
+    		            <ul>
+                            <li class="home"><a href="http://www.eastleigh.gov.uk/"><strong>Home</strong></a></li>
+                            <li><a href="http://www.eastleigh.gov.uk/licensing.aspx">Licensing</a></li>
+                            <li><a href="/">Alcohol and Entertainment</a></li>
+                            <li>Alcohol and Entertainment</li>
+                        </ul>
+                    </td>
+                    <td align="right" style="font-size: 11px; vertical-align: middle"></td>
+                </tr>
+            </table>
+    	</dd>
+    </dl>
+     <!-- end #breadcrumbs -->
+
+     <div id="wrapper">
+		<div id="content" class="body clearFix">
+			<div id="leftCol">
+<div id="MainMenu" class="box">
+
+					<h2>Main Menu <span></span></h2>
+					<div class="box-content">	
+						
+      <ul>
+	      <li>
+	      	<a accesskey="1" href="http://www.eastleigh.gov.uk/default.aspx" >Home</a>
+	     </li>
+    <li><a href="http://www.eastleigh.gov.uk/the-council.aspx" >The Council</a></li> 
+    
+<li><a href="http://www.eastleigh.gov.uk/planning--building-control.aspx" >Planning &amp; Building Control</a></li> 
+    
+
+<li><a href="http://www.eastleigh.gov.uk/council-tax-and-benefits.aspx" >Council Tax and Benefits</a></li> 
+    
+<li><a href="http://www.eastleigh.gov.uk/housing.aspx" >Housing</a></li> 
+    
+<li><a href="http://www.eastleigh.gov.uk/waste-recycling-environment.aspx" >Waste, Recycling, Environment</a></li> 
+    
+<li><a href="http://www.eastleigh.gov.uk/parking-travel--roads.aspx" >Parking, Travel &amp; Roads</a></li> 
+    
+<li><a href="http://www.eastleigh.gov.uk/sport-leisure-and-culture.aspx" >Sport, Leisure and Culture</a></li> 
+    
+<li><a href="http://www.eastleigh.gov.uk/business.aspx" >Business</a></li> 
+    
+<li><a href="http://www.eastleigh.gov.uk/licensing.aspx" class="active">Licensing</a></li> 
+    
+<li class="last"><a href="http://www.eastleigh.gov.uk/our-community.aspx" >Our Community</a></li> 
+    
+
+      </ul> 
+    
+					</div>
+
+					<div class="box-footer"></div>
+				</div>
+
+
+
+				<div id="sectionNav" class="box">
+					<h2>In This Section</h2>
+					<div class="box-content">
+
+	<ul>
+      <li class="parent ">
+	  <a href="http://www.eastleigh.gov.uk/licensing.aspx">Licences</a>
+    <ul>
+
+      <li class="parent ">
+	  <a href="/" class="active">Alcohol and Entertainment</a>
+    <ul>
+      <li class="  ">
+      <a href="/ebc2913">Premises</a>
+      </li>
+      <li class="  ">
+      <a href="/ebc2916">Club Premises</a>
+      </li>
+<li class="  ">
+      <a href="/ebc2915">Personal Licence</a>
+      </li>
+<li class="  ">
+      <a href="/ebc2910">Temporary Events</a>
+      </li>
+<li class="  ">
+      <a href="/ebc2907">Representations</a>
+      </li>
+<li class="  ">
+      <a href="/ebc2912">Reviews</a>
+      </li>
+<li class="  ">
+      <a href="/ebc2908">Public Registers</a>
+      </li>
+<li class="  ">
+      <a href="/ebc2917">Licensing Act Policy</a>
+      </li>
+	</ul>
+					</div>
+					<div class="box-footer"></div>
+
+				</div>
+			</div>
+			<!-- End #leftCol -->
+			<div id="main" class="clearFix">
+				<a name="top"></a>
+				<div id="main-head">
+					<h1>Licensing</h1>
+				</div>
+				<!-- End #main-head -->
+				<div id="main-content" class="clearFix">
+<p class="modifiedDate">Page Last Updated at : Tuesday, August, 11, 2015</p>
+<h1>Alcohol, Entertainment and Late Night Refreshment Licensing</h1><p>The Licensing Act 2003 requires anyone selling or supplying alcohol, providing regulated entertainment or late night refreshment to hold a premises licence or club premises certificate. In addition, anyone authorising alcohol sales must hold a personal licence. Application forms, guidance notes and other information are available on these pages.</p><h2>Details of service:</h2><h3>Background</h3><p>The Licensing Act 2003 provides a regime for the control of the sale or supply of alcohol, regulated entertainment and late night refreshment.
+<br />
+The Government's Home Office has responsibility for this legislation, which is published at legislation.gov.uk â please see the links below to their web sites.</p><h3>Implementation</h3><p>The legislation became fully operational on 24th November 2005 (the second appointed day), when all previous licences and certificates ceased to have effect.
+<br />
+A full list of the legislation repealed and amended by the Licensing Act 2003 is contained in schedule 7 to the Act.</p><h3>Guidance and Forms</h3><p>Detailed information and copies of forms for applications for premises licences, personal licences and club premises certificates and our guidance notes are available from the individual page links to the left. Please note that all forms are prescribed by law, and the Council has no control or discretion over their format. Microsoft WordÂ® forms capable of completion electronically appear in those pages. Online application is available through the link below.</p><p>Important information about the additional Mandatory Conditions imposed on premises licences and club premises certificates by the Government with effect from 6th April and 1st October 2010 are contained in the Premises Licences and Club Premises Certificates pages.</p><h3>Fees</h3><p>Fees for applications for premises licences and club premises certificates, again set by the Home Office, are calculated on the Non-Domestic Rateable Value of the premises. You can obtain the NDRV for your premises from your business rates bill or from the Valuation Office Agency via their web site (see below) or by telephoning the VOA on 023 8053 8500.
+<br />
+Notes of the fees are contained in each set of premises or personal licence guidance notes. A link to a full list appears below.
+<br />
+Sections 55 and 92 of the Licensing Act 2003, as amended, provide that failure to pay annual fees when they are due will result in suspension of the premises licence or club premises certificate.</p><h3>Penalties</h3><p>The sale or supply of alcohol, provision of regulated entertainment or late night refreshment must be authorised by a premises licence, club premises certificate or temporary event notice. The penalty for not doing so is severe - a maximum Â£20,000 fine and/or up to six months imprisonment. In addition, anyone authorising alcohol sales must hold a personal licence (or have given a temporary event notice).</p><h3>Other Licences and Permissions</h3><p>Please note that holding a premises licence or a club premises certificate will not dispense with the need for the premises to have permission from the owner of any copyright work to perform or reproduce recorded sound or video.
+<br />
+Follow the links below to the Performing Rights Society and Mechanical Copyright Protection Society, Phonographic Performance Ltd. and Video Performance Ltd., who deal with these matters on behalf of the owners of the copyright works.
+<br />
+You will need authority under the Licensing Act 2003 (premises licence, club premises certificate or temporary event notice) to sell alcohol, but you may also need to be licensed by HM Revenues &amp; Customs, if you want to <a title="HMRC" href="http://customs.hmrc.gov.uk/channelsPortalWebApp" onclick="target='_blank';" onkeypress="target='_blank';">brew alcohol</a> or <a title="HMRC" href="http://customs.hmrc.gov.uk/channelsPortalWebApp/channelsPortalWebApp.portal?_nfpb=true&amp;_pageLabel=pageVAT_ShowContent&amp;id=HMCE_CL_000245&amp;propertyType=document#P59_3526" onclick="target='_blank';" onkeypress="target='_blank';">distil alcohol</a> and duty may need to be paid on any alcohol that you produce. In such circumstances you should also contact <a title="EHO" href="http://www.eastleigh.gov.uk/waste-recycling-environment/environmental--health/food/food-premises-registration.aspx" onclick="target='_blank';" onkeypress="target='_blank';">Environmental Health</a> and <a title="Trading Standards" href="http://www3.hants.gov.uk/tradingstandards" onclick="target='_blank';" onkeypress="target='_blank';">Trading Standards</a> for advice.</p><p>For information about licensing of gambling activities, including casinos, betting, bingo, gaming machines and lotteries, please see our <a title="Gambling licensing" href="http://www.southampton.gov.uk/business-licensing/licensing/gambling-act-2005/default.aspx" target="_blank">Southampton and Eastleigh Licensing Partnership gambling licensing webpages</a> (hosted by Southampton City Council)</p><h3>General Information</h3><p>Links to general guidance appear below. Please note that these functions are administered by Southampton City Council's licensing team on behalf of Eastleigh Borough Council.
+<br /></p><br/><h3>Contacting the Licensing Team</h3><p>Email:  <a href="mailto:liquor.licence@eastleigh.gov.uk">liquor.licence@eastleigh.gov.uk</a><br />
+Telephone: 023 8083 3002 (option 4, then option 1) 
+<br />
+Fax: 023 8083 4061</p><p><strong>Postal address:</strong></p><p>Licensing Team
+<br />
+Southampton and Eastleigh Licensing Partnership
+<br />
+PO Box 1767
+<br />
+Southampton
+<br />
+SO18 9LA</p><p><strong>Personal callers:</strong></p><p>Licensing Team
+<br />
+Southampton and Eastleigh Licensing Partnership
+<br />
+Civic Centre
+<br />
+Southampton
+<br />
+SO14 7LY</p><p>Document Exchange: DX 115710 Southampton 17</p><p><strong>Opening hours<a title="Find parking" href="http://www.southampton.gov.uk/s-environment/parking/parkingmaps.aspx" target="_blank"><img style="WIDTH: 155px; FLOAT: right; HEIGHT: 75px" title="Find parking" alt="Find parking" width="155" height="75" src="/Images/find-parking-image_tcm55-334367.png"/></a>:</strong></p><p>Members of the Licensing Team are normally available on weekdays at the Civic Centre, Southampton, from 09:00 to 12:00 and from 14:00 to 16:00 to assist personal callers. We may be available at other times by prior appointment.</p>					<a href="#main-content" id="top">Back to top</a>
+				</div>
+				<!-- End #main-content -->
+
+
+				<div id="articleFooter" class="lightgreen clearFix">	
+					
+					
+					
+						
+						
+
+										
+											<div class="col2"><h3 id="documents">Documents</h3>
+											<ul class="linkList">
+												<li><a href='/Images/LA03-Guidance_Responsible_Authorities_EBC_tcm55-181903.pdf'  onclick="target='_blank';" onkeypress="target='_blank';"  >Guidance - Responsible Authorities</a></li>
+<li><a href='/Images/LA03%20-%20Guidance%20-%20Fees%20-%20EBC_tcm55-181902.pdf'  onclick="target='_blank';" onkeypress="target='_blank';"  >Guidance - Fees</a></li>
+<li><a href='/Images/LA03-Guidance_Regulated_Entertainment_tcm55-373854.pdf'  onclick="target='_blank';" onkeypress="target='_blank';"  >Guidance - Regulated Entertainment</a></li>
+<li><a href='/Images/LA03%20-%20Guidance%20-%20Children%20Criteria%20-%20EBC_tcm55-181900.pdf'  onclick="target='_blank';" onkeypress="target='_blank';"  >Guidance - Children Criteria</a></li>
+<li><a href='/Images/LA03-Guidance_EHO_requirements-EBC_tcm55-181901.pdf'  onclick="target='_blank';" onkeypress="target='_blank';"  >Guidance - EHO requirements</a></li>
+<li><a href='/Images/LA03%20-%20Guidance%20-%20Vessels%20-%20EBC_tcm55-181904.pdf'  onclick="target='_blank';" onkeypress="target='_blank';"  >Guidance - Vessels</a></li>
+	
+											</ul>
+											</div>
+										
+
+										
+											<div class="col3"><h3 id="relatedlinks">Related Links</h3>
+											<ul class="linkList">
+												<li><a href="http://www.southampton.gov.uk/business-licensing/licensing/licensing-act-2003/applications-conditions-of-use.aspx" onclick="target='_blank';" onkeypress="target='_blank';" >Online Applications - Licensing Act 2003 </a></li> 
+<li><a href="http://www.southampton.gov.uk/business-licensing/licensing/licensing-act-2003/public-access-conditions-search.aspx" onclick="target='_blank';" onkeypress="target='_blank';" >Public Access - Licensing Act 2003 Registers</a></li> 
+
+ <!-- Ends: Internal Links --><li><a href="http://www.eastleigh.gov.uk/meetings/ieListMeetings.aspx?CId&#61;356&amp;Year&#61;2014" onclick="target='_blank';" onkeypress="target='_blank';" >Licensing Panel Hearings</a></li> 
+<li><a href="https://www.gov.uk/government/publications/revised-guidance-issued-under-section-182-of-the-licensing-act-2003" onclick="target='_blank';" onkeypress="target='_blank';" >Licensing Act 2003 Statutory Guidance - Home Office</a></li> 
+<li><a href="https://www.gov.uk/government/publications/banning-the-sale-of-alcohol-below-the-cost-of-duty-plus-vat" onclick="target='_blank';" onkeypress="target='_blank';" >Home Office - Guidance - Mandatory Condition prohibiting the sale of alcohol at a price below the total of duty plus VAT</a></li> 
+<li><a href="https://www.gov.uk/alcohol-licensing" onclick="target='_blank';" onkeypress="target='_blank';" >Home Office</a></li> 
+<li><a href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/98157/guidance.pdf" onclick="target='_blank';" onkeypress="target='_blank';" >Home Office - Minor Variation Guidance</a></li> 
+<li><a href="http://www.hse.gov.uk/pubns/priced/hsg195.pdf" onclick="target='_blank';" onkeypress="target='_blank';" >HSE Event Safety Guide</a></li> 
+<li><a href="http://www.disclosurescotland.co.uk/basicdisclosureonline/index.htm" onclick="target='_blank';" onkeypress="target='_blank';" >Disclosure Scotland</a></li> 
+<li><a href="http://www.voa.gov.uk/" onclick="target='_blank';" onkeypress="target='_blank';" >Valuation Office Agency</a></li> 
+<li><a href="http://www.legislation.gov.uk/" onclick="target='_blank';" onkeypress="target='_blank';" >UK Legislation</a></li> 
+<li><a href="http://www.prsformusic.com/" onclick="target='_blank';" onkeypress="target='_blank';" >Performing Rights Society</a></li> 
+<li><a href="http://www.ppluk.com" onclick="target='_blank';" onkeypress="target='_blank';" >Phonographic Performance Ltd.</a></li> 
+
+ <!-- Ends: Internal Links -->											</ul>
+											</div>
+										
+						
+					
+						
+					
+					
+					<dl id="socialBookmarks" class="clearFix">
+						<dt>Share on (<a title="explanation of social bookmarking" href="http://www.eastleigh.gov.uk/default.aspx?page=1574">What's this?</a>):</dt>
+						<dd>
+							<ul>
+								<li class="delicious"><a href="http://del.icio.us/post?url=http%3a%2f%2fwww.eastleigh.gov.uk%2ffooter%2fprivacy-statement.aspx" title="Share this page on Del.icio.us">Del.icio.us</a></li>
+
+								<li class="stumbleupon"><a href="http://www.stumbleupon.com/submit?url=http%3a%2f%2fwww.eastleigh.gov.uk%2ffooter%2fprivacy-statement.aspx" title="Share this page on StumbleUpon">StumbleUpon</a></li>
+								<li class="digg"><a href="http://digg.com/submit?url=http%3a%2f%2fwww.eastleigh.gov.uk%2ffooter%2fprivacy-statement.aspx" title="Share this page on Digg">Digg</a></li>
+								<li class="facebook"><a href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.eastleigh.gov.uk%2ffooter%2fprivacy-statement.aspx" title="Share this page on Facebook">Facebook</a></li>
+								<li class="twitter"><a href="http://twitter.com/home?status=Currently reading http%3a%2f%2fwww.eastleigh.gov.uk%2ffooter%2fprivacy-statement.aspx"  title="Share this page on Twitter">Twitter</a></li>
+							</ul>
+						</dd>
+					</dl>
+
+				</div>
+				<!-- End #articleFooter -->
+				<div id="main-footer"></div>
+			</div>
+			<!-- End #main -->
+		</div>
+		<!-- End #content -->
+		<div id="siteContents" class="clearFix">
+		    
+	<ul class="body">
+    
+      <li class="clearBoth"><h3><a href="http://www.eastleigh.gov.uk/quick-links/advice--benefits.aspx">Advice &amp; Benefits</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/advice--benefits/benefits.aspx">Benefits</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/advice--benefits/emergencies.aspx">Emergencies</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/advice--benefits/travel-concessions.aspx">Travel Concessions</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+      <li class=""><h3><a href="http://www.eastleigh.gov.uk/quick-links/education--learning.aspx">Education &amp; Learning</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/education--learning/school-holiday-dates.aspx">School Holiday Dates</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/education--learning/adult-learning.aspx">Adult Learning</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/education--learning/post-16-education.aspx">Post-16 Education</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+      <li class=""><h3><a href="http://www.eastleigh.gov.uk/quick-links/jobs-and-careers.aspx">Jobs and Careers</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/jobs-and-careers/search-for-jobs.aspx">Search for Jobs</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/jobs-and-careers/working-at-eastleigh.aspx">Working at Eastleigh</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+      <li class="clearBoth"><h3><a href="http://www.eastleigh.gov.uk/quick-links/business-support.aspx">Business Support</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/business-support/waste-collection.aspx">Waste Collection</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/business-support/licensing.aspx">Licensing</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/business-support/rates-non-domestic-rates.aspx">Business Rates (non-domestic rates)</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/business-support/property.aspx">Property</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+      <li class=""><h3><a href="http://www.eastleigh.gov.uk/quick-links/environment.aspx">Environment</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/environment/waste-and-recycling.aspx">Waste and Recycling</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/environment/commercial-waste.aspx">Commercial Waste</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/environment/food-hygiene.aspx">Food Hygiene</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/environment/noise-nuisance.aspx">Noise nuisance</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/environment/street-cleaning.aspx">street cleaning</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+      <li class=""><h3><a href="http://www.eastleigh.gov.uk/quick-links/leisure-and-culture.aspx">Leisure and Culture</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/leisure-and-culture/parks-and-play-areas.aspx">Parks and Play Areas</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/leisure-and-culture/country-parks.aspx">Country Parks</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/leisure-and-culture/sports-and-active-lifestyle.aspx">Sports and Active Lifestyle</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+      <li class="clearBoth"><h3><a href="http://www.eastleigh.gov.uk/quick-links/community--living.aspx">Community &amp; Living</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/community--living/advice-and-support.aspx">Advice and Support</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/community--living/child-care.aspx">Child-Care</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/community--living/ethnic-minorities.aspx">Ethnic Minorities</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/community--living/grants.aspx">Grants</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/community--living/halls-and-community-centres.aspx">Halls and Community Centres</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+      <li class=""><h3><a href="http://www.eastleigh.gov.uk/quick-links/health--social-care.aspx">Health &amp; Social Care</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/health--social-care/health-and-wellbeing.aspx">Health and Wellbeing</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/health--social-care/handy-person-scheme.aspx">Handy Person Scheme</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/health--social-care/hampshire-health-care.aspx">Hampshire health care</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+      <li class=""><h3><a href="http://www.eastleigh.gov.uk/quick-links/planning-and-building.aspx">Planning and Building</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/planning-and-building/building-control-service.aspx">Building Control Service</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/planning-and-building/view-planning-applications.aspx">View Planning Applications</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/planning-and-building/trees.aspx">Trees</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+      <li class="clearBoth"><h3><a href="http://www.eastleigh.gov.uk/quick-links/council--democracy.aspx">Council &amp; Democracy</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/council--democracy/councillors.aspx">Councillors</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/council--democracy/mayor.aspx">Mayor</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/council--democracy/elections.aspx">Elections</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/council--democracy/benefits-and-council-tax.aspx">Benefits and Council Tax</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/council--democracy/council-meetings.aspx">Council Meetings</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+      <li class=""><h3><a href="http://www.eastleigh.gov.uk/quick-links/housing-advice.aspx">Housing Advice</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/housing-advice/housing-benefits.aspx">Housing Benefits</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/housing-advice/homechoice-register.aspx">Finding a Home</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/housing-advice/energy-saving.aspx">Energy Saving</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+      <li class=""><h3><a href="http://www.eastleigh.gov.uk/quick-links/transport--streets.aspx">Transport &amp; Streets</a></h3>
+       
+    
+
+    <ul>
+    
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/transport--streets/cycle-maps.aspx">Cycle Maps</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/transport--streets/bus-services.aspx">Bus Services</a>, 
+      
+      </li> 
+    
+
+      <li><a href="http://www.eastleigh.gov.uk/quick-links/transport--streets/car-parking.aspx">Car Parking</a>
+      
+      </li> 
+    
+
+    </ul>
+    </li>
+    
+	</ul>
+    
+		</div>
+		<!-- end #siteContents -->
+	</div>
+	<!-- end #wrapper -->
+	<div id="footer">
+
+		<div class="body">
+			<address><strong>Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh, SO50 9YN.</strong><br/>Telephone: 023 8068 8068, Fax: 023 8064 3952, Text: 07797 877001</address >
+			<ul>
+				
+          <li><a href="http://www.eastleigh.gov.uk/legal/use-of-cookies.aspx">Use of Cookies</a></li> 
+        
+
+          <li><a href="http://www.eastleigh.gov.uk/legal/legal-disclaimer.aspx">Legal disclaimer</a></li> 
+        
+
+          <li><a href="http://www.eastleigh.gov.uk/legal/site-feedback.aspx">Site feedback</a></li> 
+        
+
+          <li><a href="http://www.eastleigh.gov.uk/legal/privacy-statement.aspx">Privacy Statement</a></li> 
+        
+
+          <li class="last"><a href="http://www.eastleigh.gov.uk/legal/social-media-policy.aspx">Social Media Policy</a></li> 
+
+			</ul>
+			<p class="smallprint">&copy; Copyright 2011 Eastleigh Borough Council. Designed and developed by Merchant Marketing Group</p>
+
+			
+			<a href="http://www.eastleigh.gov.uk/waste-recycling-environment/tackling-climate-change.aspx" class="externalLink beacon"><img src="../../styles/corp/beacon-authority.gif" alt="Link to Beacon Authority website" width="186" height="76" /></a> 
+			<a href="http://www.direct.gov.uk?CID=LA/" class="externalLink directGov"><img src="../../styles/corp/directgov.gif" width="140" height="76" alt="Link to Directgov - public services all in one place" /></a>
+		</div>
+	</div>
+	<!-- end #footer -->
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+</form>
+
+</body>
+</html>

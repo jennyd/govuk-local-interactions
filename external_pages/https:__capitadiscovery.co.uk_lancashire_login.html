@@ -1,0 +1,451 @@
+<!doctype html>
+<html>
+<head>
+	<title>Login</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+			<base href="https://capitadiscovery.co.uk/lancashire/"><!--[if IE]></base><![endif]-->
+		<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+	<link rel="stylesheet" type="text/css" href="assets/ef265138f656b042f72b7760f508183ab05081e3/merged.css"/>
+		<link rel="icon" href="//capitadiscovery.co.uk/favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="//capitadiscovery.co.uk/favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="//capitadiscovery.co.uk/favicon.ico" type="image/vnd.microsoft.icon"/>
+			<link rel="apple-touch-icon" href="assets/-/start_icon.jpg"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		</head>
+<!--[if lt IE 7 ]>
+<body id="login" class="ie6 oldie en-gb live">
+<![endif]-->
+<!--[if IE 7 ]>
+<body id="login" class="ie7 oldie en-gb live">
+<![endif]-->
+<!--[if IE 8 ]>
+<body id="login" class="ie8 en-gb live">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<body id="login" class="en-gb live">
+<!--<![endif]-->
+<div id="page" class="showgrid">
+	<span id="skiplink" class="visuallyHidden focusable">
+		<a href="#pageContent" title="Skip to Content">Skip to Content</a>
+	</span>
+
+	<div id="pageContainer">
+		<div id="headerFragment"><!--header-->
+
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="logo span4">
+                <a href="http://www.lancashire.gov.uk">
+                    <img src="assets/-/images/lcc.gif" alt="Lancashire County Council Logo">
+                </a>
+            </div>   
+            <div id="tagline" class="span8">
+                <h3><a class="under" href="http://www.lancashire.gov.uk/libraries-and-archives">Lancashire Libraries</a></h3>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">       
+        <div class="span12">         
+            <h1 class="siteTitle">Library Catalogue</h1>
+        </div>
+    </div>
+</div>
+
+<!--header--></div>
+		<div id="headerLinks">
+			<ul class="accessibilityLinks appLinks posAbs navList">
+				
+<!-- Header Links Content -->
+<!-- This webpart is appended to the .accessibilityLinks ul -->
+<li><a href="home" title="Home">Catalogue Home</a></li>
+<li class="mobile"><a href="feedback" title="Feedback">Feedback</a></li>
+<!-- end of headerlinks.html -->				<li class="last">
+					<a href="searchhelp">Help</a>
+				</li>
+			</ul>
+			<ul class="userLinks posAbs navList">
+												<li><a href="https://capitadiscovery.co.uk/lancashire/account" id="account-link">My Account</a></li>
+
+								<li><a href="lists" id="lists-link">My Lists </a></li>
+
+							</ul>
+		</div>
+		<div id="pageHeader">
+			<h1 id="appTitle" class="hidden"><a href="http://capitadiscovery.co.uk/lancashire/" title="  Prism">  Prism</a></h1>
+						<div id="searchBox">
+						<form id="searchform" action="items" method="get" autocomplete="off">
+			<div class="formElement">
+				<label id="jslabel" for="s" class="visuallyHidden">Enter an author, title, keyword, ISBN etc</label>
+
+				<input type="text" id="s" name="query" maxlength="1000" value="" placeholder="Enter an author, title, keyword, ISBN etc" class="search-input" autocomplete="off"/>
+
+				
+				<input type="submit" id="searchsubmit" value="Search"/>
+
+				<a href="advancedsearch" class="visuallyHidden" id="advancedSearchFallback">More search options</a>
+				<a href="advancedsearch" id="advanced-search-link">Build Search</a>
+			</div>
+		</form>
+					</div>
+		</div>
+
+		
+		<div id="pageContent" >
+				<h1 class="title">You must login for access to borrower services</h1>
+
+
+
+
+<form id="borrowerServices" action="https://capitadiscovery.co.uk/lancashire/sessions" method="post" class="genericForm loginForm uiDeskHalf posLeft uiDeskPushOne">
+	<div id="barcodeEntry">
+		<p class="login-p">For your borrower number, type in the number only, leaving out any preceding letters.</p>
+
+		<div class="formElement singleLine">
+			<label class="login-label" for="borrowerBarcodeTextBox">Borrower Number</label>
+			<input id="borrowerBarcodeTextBox" type="text" name="barcode" value=""/>
+		</div>
+	</div>
+
+	<div id="institutionIdEntry" class="hidden ">
+		<p class="login-p">Enter your id</p>
+
+		<div class="formElement singleLine">
+			<label class="login-label" for="institutionIdTextBox">Institution ID</label>
+			<input id="institutionIdTextBox" type="text" name="institutionId" value=""/>
+		</div>
+	</div>
+
+			<p class="login-p">Enter your PIN</p>
+		<div class="formElement singleLine">
+			<label class="login-label" for="pinTextBox">PIN</label>
+			<input id="pinTextBox" type="password" name="pin" value="" autocomplete="off"/>
+		</div>
+
+		<div class="formElement singleLine">
+			<label class="fogottenpin-label" for="ResetPinLink">Forgotten your PIN?</label>
+			<a href="login?auth_reset=true" id="ResetPinLink" title="ResetPin">Reset your PIN.</a>
+		</div>
+	
+	<div class="formELement singleLine confirm">
+		<input type="submit" name="borrowerLoginButton" value="Login"/>
+		<input id="pageAfterLogin" type="hidden" name="referer" value="https://capitadiscovery.co.uk/lancashire/account"/>
+	</div>
+</form>		</div>
+
+		<div id="pageFooter">
+			<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0062)file://\\corpdata01\LCCUsers3$\hspencer002\Desktop\footer.html -->
+<!-- saved from url=(0097)file://\\corpdata01\LCCUsers3$\hspencer002\My Documents\Prism admin\footer revisions Nov2014.html --><!--footer--><!-- greybox --><HTML><HEAD><META 
+content="IE=5.0000" http-equiv="X-UA-Compatible">
+
+<META content=IE=5.0000 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 10.00.9200.16521"></HEAD>
+<BODY>
+<DIV class=grey-fill>
+<DIV class=container>
+<DIV class=row>
+<DIV class=span3>
+<H3>Libraries</H3>
+<UL>
+  <LI><A 
+  href="http://new.lancashire.gov.uk/libraries-and-archives/libraries/join-a-library">Join 
+  the library</A> 
+  <LI><A 
+  href="http://new.lancashire.gov.uk/libraries-and-archives/libraries/find-a-library">Find 
+  a library</A> 
+  <LI><A href="http://lancashire.lib.overdrive.com/">eBook library</A> 
+  <LI><A 
+  href="http://new.lancashire.gov.uk/libraries-and-archives/libraries/digital-library">Digital 
+  library</A> </LI></UL></DIV>
+<DIV class=span3>
+<H3>Borrowers</H3>
+<UL>
+  <LI><A 
+  href="http://new.lancashire.gov.uk/libraries-and-archives/libraries/renew-your-book">Renew 
+  your items</A> 
+  <LI><A 
+  href="http://eforms2.lancashire.gov.uk/default.aspx/RenderForm/?F.Name=UtnU5bFW7Ho">Request 
+  an item</A> 
+  <LI><A 
+  href="http://new.lancashire.gov.uk/libraries-and-archives/libraries/library-charges">Library 
+  charges</A> 
+  <LI><A href="https://www.libraryelf.org/">Library ELF reminders</A> 
+  <LI><A href="https://lccsecure.lancashire.gov.uk/corporate/questionnaires/runQuestionnaire.asp?qid=488780">Update your details</A> 
+</LI></UL></DIV>
+<DIV class=span3>
+<H3>Help</H3>
+<UL>
+  <LI><A 
+  href="http://new.lancashire.gov.uk/libraries-and-archives/libraries/ask-a-librarian">Ask 
+  a Librarian</A> 
+  <LI><A 
+  href="http://capitadiscovery.co.uk/lancashire/feedback">Feedback</A> 
+
+  <LI><A 
+  href="http://capitadiscovery.co.uk/lancashire/accessibility">Accessibility</A> 
+  </LI></UL></DIV>
+<DIV class=span3>
+<H3>Get involved</H3>
+<UL>
+  <LI><A href="https://twitter.com/lancspublib">Follow us on Twitter</A> 
+  <LI><A 
+  href="http://www.eventbrite.co.uk/o/lancashire-libraries-4290799811">What's on 
+  in libraries</A> </LI></UL></DIV></DIV>
+<DIV class=row>
+<DIV class="span12 text-right"><A class=back-to-top style="DISPLAY: inline" 
+href="javascript:scrollTo(0,0)">Back to top <IMG alt="Top of Page" src="assets/-/images/chevron-up.gif"></A> 
+</DIV></DIV></DIV></DIV><!-- /greybox --><!-- blackstrip -->
+<DIV class=footer-top></DIV>
+<DIV class=footer>
+<DIV class=container>
+<DIV class=row>
+<DIV class=span6>
+<P class=copyright>&copy; 2014, Lancashire County Council</P></DIV>
+<DIV class="find-us span6">
+<UL class=social-media>
+  <LI class=find-us-on><A>Find us on</A> 
+  <LI><A class=facebook href="http://www.facebook.com/lancashirecc">Facebook</A> 
+
+  <LI><A class=twitter href="http://twitter.com/lancashirecc">Twitter</A> 
+  <LI><A class=flickr href="http://www.flickr.com/lancashirecc/">Flickr</A> 
+  <LI><A class=youtube href="http://www.youtube.com/lancashirecc">YouTube</A> 
+  </LI></UL></DIV></DIV></DIV></DIV><!-- /blackstrip --><!--/footer--><!-- GoogleAnalytics -->
+<SCRIPT>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12444051-6', 'capitadiscovery.co.uk');
+  ga('send', 'pageview');
+
+</SCRIPT>
+<!-- /GoogleAnalytics --></BODY></HTML>
+		</div>
+
+		<div id="pageFooterMobile" class="mobile">
+			<ul class="menu">
+				<li><a href="advancedsearch">More search options</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- end pageContainer -->
+</div>
+<!-- End #page -->
+<div id="responsiveMarker"></div>
+<script type="text/javascript">
+	var tr = {
+		'expandall': "Expand All",
+		'collapseall': "Collapse All",
+		'lists_saving': "Saving...",
+		'lists_done': "Done!",
+		'lists_error': "An error occured. Please try again.",
+		'close_dialog': "Close dialog",
+		'show_facets': "Show facets",
+		'next': "Next >",
+		'previous': "< Prev",
+		'rating_saving': "Saving your rating...",
+		'rating_save_error': "Could not save rating at this time.",
+		'rating_saved_by': "from {{users}} users",
+		'rated_by_one': "from 1 user",
+		'rating_saved': "Your rating was saved!",
+		'search_term_needed': "Please enter a term in the search box.",
+		'account_renewaction': "Renew",
+		'account_renewaction_renewing': "Renewing...",
+		'account_renewaction_successful': "Renewed!",
+		'account_renewaction_failed': "Renewal Failed",
+		'account_renewaction_error': "An error has occured. Please try again.",
+		'account_error_connect': "Could not connect to library system due to a temporary issue.",
+		'account_error_loan_title': "Could not renew {title}",
+		'account_success_loan_title': "Successfully renewed {title}",
+		'account_renew_all': "Renew all",
+		'item_enrichments_expand': "Expand",
+		'item_enrichments_collapse': "Collapse",
+		'more_tags': "More Tags",
+		'less_tags': "Less Tags",
+		'recently_added': "Recently added tags",
+		'tag_moderated': "These may be moderated",
+		'tag_saving': "Saving...",
+		'tag_success': "Successfully added the tags:",
+		'edit_tag_button': "Change your tags",
+		'autocomplete_author': "Author",
+		'autocomplete_subject': "Subject",
+		'autocomplete_title': "Title",
+		'autocomplete_nature': "Nature",
+		'autocomplete_genre': "Genre",
+		'content_found_title': "Found alternative content"
+	};
+
+	var PRISM = {
+		'base_url': 'https://capitadiscovery.co.uk/lancashire/',
+		'cache_duration_search': 1200,
+		'account_message_delay': 60000,
+		'fade_messages': true,
+		'displayRecommendations': 3,
+		'actions': ['searchDefault', 'alternateScript', 'advancedSearch', 'searchBuffer', 'setUp', 'checkSize'],
+		'initial_query':"",
+		'initial_terms': {},
+		'use_new_format_facet': false,
+		'page': 'login',
+		'locale': 'en-gb',
+		'search_builder_shift': -40,
+		'ip': '86.15.33.80',
+		'reviews_max_length':500,
+		'bib_id': null,
+		'target': 'catalogue',
+		'config': {
+			'mobile': true,
+			'html5': true,
+			'ratings': true,
+			'tags': 'true',
+			'enhanced_lists':true,
+			'auth':false,
+			'multiple_langs':false,
+			'requires_pin': true,
+			'locale': 'en-gb',
+			'moderation': 'false',
+			'suggestion_desktop': '5',
+			'suggestion_mobile': '1',
+			'suggestion_max': '7'
+		},
+		'borrower_barcode': null,
+		'borrower_type': null	};
+		PRISM.actions.push('suggest');
+											</script>
+<script id="tmpl-lists-dialog" type="text/x-prism-template">
+	<div class="dialog listdialog modal uiShadow" role="dialog" tabindex="-1" aria-labeledby="ldtitle{{id}}">
+		<h2 id="ldtitle{{id}}">Save to My Lists</h2>
+
+		<h3>Add {{title}} to list</h3>
+
+		<form>
+			<div class="formElement" {{hidelist}}>
+				<label for="list-id-{{id}}">Existing list:</label>
+				<select id="list-id-{{id}}" name="list_id">{{lists}}</select>
+			</div>
+			<div class="formElement">
+				<label for="list-title-{{id}}">New list</label>
+				<input type="text" name="list_title" id="list-title-{{id}}" value=""/>
+			</div>
+			<div>
+				<input type="submit" name="add" value="Save to My Lists" id="list-save-{{id}}" class="save"/>
+				<input type="hidden" name="action" value="add"/><input type="hidden" name="bib_id" value="{{bib_id}}"/>
+			</div>
+		</form>
+		<h3 class="export">Export</h3>
+
+		<div class="citationExport uiBox uiBorder uiIconPre">
+			<ul>
+				<li><a href="https://www.myendnoteweb.com/EndNoteWeb.html?func=directExport&amp;partnerName=Prism&amp;dataIdentifier=1&amp;dataRequestUrl={{url}}.ris">Endnote Web</a></li>
+				<li><a href="{{url}}.enw">Endnote Desktop</a></li>
+				<li><a href="http://www.refworks.com/express/expressimport.asp?vendor=Talis+Prism+3&amp;filter=RefWorks+Tagged+Format&amp;url={{url}}.refworks">Refworks</a></li>
+				<li><a href="{{url}}.ris">RIS</a></li>
+			</ul>
+		</div>
+		<a href="#" class="close"><img alt="Close dialog" src="/images/remove.png"></a>
+	</div>
+</script>
+
+<script id="tmpl-search-dd" type="text/x-prism-template">
+	<div class="dropMenu" id="advanced" aria-live="polite" aria-relevant="additions removals" tabindex="0" aria-role="dialog" aria-labelledby="advanced_header" aria-describedby="advancedSearchForm">
+		<h2 id="advanced_header">Build Search</h2>
+
+		<form class="genericForm" action="items" id="advancedSearchForm">
+			<div class="formElement buildSearch" role="group" tabindex="0">
+				<label for="adv_s2">Search for:</label>
+
+				<div class="search-input uiBorder" id="adv_s" tabindex="0" role="textbox"><span class="search-builder"><span class="last">{{query}}</span></span></div>
+				<input class="search-input uiBorder" id="adv_s2" name="query" value="{{query}}" type="text" style="display:none" placeholder="Add a term"/><input
+					type="submit" value="Search" aria-label="Search" class="submit"/>
+			</div>
+		</form>
+		<p class="note de-em">You can access the <a href="advancedsearch?target=catalogue">old advanced search</a>.</p>
+		<a href="#" class="close"><img alt="Close dialog" src="/images/remove.png"></a>
+	</div>
+</script>
+
+<script type="text/x-prism-template" id="tmpl-search-group">
+	<div class="runOn formElement groupPin" role="group" id="qb-grp-{{id}}" aria-label="search group" tabindex="0">
+		<select class="connector" aria-label="connector">
+			<option value="AND">AND</option>
+			<option value="OR">OR</option>
+			<option value="AND NOT">NOT</option>
+		</select>
+		<label for="qb-dd-{{id}}">with</label>
+		<select id="qb-dd-{{id}}" class="choose">{{select}}</select>
+		<input id="qb-txt-{{id}}" type="text" name="author"/>
+		<label class="visuallyHidden" for="qb-txt-{{id}}">{{label}}</label>
+		<input class="smallButton remove" type="button" value="-" aria-label="Remove"/>
+		<input class="smallButton add" type="button" value="+" aria-label="Add" aria-controls="qb-grp-{{id}}"/>
+		<label class="helpText" for="qb-txt-{{id}}">{{help}}</label>
+	</div>
+</script>
+
+<script type="text/javascript" src="/js/prism.37.min.js"></script>
+<script type="text/javascript" src="options/js/en-gb"></script>
+
+	<script type="text/x-prism-template" id="tmpl-tour-dialog">
+
+		<div class="tourModal tourElem uiShadow" id="tourHelp" aria-role="dialog" aria-labelledby="tourLabel" aria-describedby="tourText" tabindex="0">
+			<h2 id="tourLabel" class="visuallyHidden"></h2>
+
+			<p id="tourText"></p>
+
+			<div class="hidden timer"><span class="timerIcon">Loading next tour page</span></div>
+			<button type="button" value="Close Tour" class="tourButton tourClose uiButton posRight">Close Tour</button>
+			<button type="button" value="Next" class="tourButton tourNext uiButton posRight">Next</button>
+			<button type="button" value="Previous" class="tourButton tourPrev uiButton posRight">Previous</button>
+			<button type="button" class="visuallyHidden tourButton tourGotoStep">Go to this part of the page</button>
+
+			<span id="tourArrow"></span>
+		</div>
+	</script>
+
+	<script type="text/x-prism-template" id="tmpl-tour-menu">
+		<div id="tourMenu" class="tourElem">
+			<span class="intro posLeft">You are currently taking the catalogue tour.<span class="step"></span></span>
+			<button type="button" class="visuallyHidden tourButtontourGotoDialog">Go to tour dialog</button>
+			<button value="close tour" class="uiButton tourButton tourClose posRight">Close Tour</button>
+			<button value="Restart" class="uiButton tourButton tourRestart posRight">Restart</button>
+		</div>
+	</script>
+
+	<script type="text/javascript">
+		PRISM.TOUR.demoSearchterm = 'Step-by-step dance class';
+		PRISM.TOUR.demoItem = '1299668';
+		PRISM.TOUR.buttonLocation = 'body';
+	</script>
+	<script type="text/javascript" src="assets/-/js/tour.en-gb.js"></script>
+<script type="text/javascript">
+//use PRISM jQuery object
+$=jquery=PRISM.jquery;
+</script>
+
+<script type="text/javascript">
+$(function(){
+	if($("#unReservable li:contains('This item cannot normally be loaned on your membership. Please complete the form at http://bit.ly/askforabook')")){
+		$('#unReservable li:contains("This item cannot normally be loaned on your membership. Please complete the form at http://bit.ly/stockrequest")').html('This item cannot normally be loaned on your membership. Please complete the form at <a href="http://bit.ly/askforabook">http://bit.ly/askforabook</a>');
+	}
+	$('#resetpin #barcodeEntry .login-p').html('Enter your library card number.  The automated pin re-set is only available if we already have your email address.  To tell us your email and ask for a PIN re-set please complete our <a href="https://lccsecure.lancashire.gov.uk/corporate/questionnaires/runQuestionnaire.asp?qid=488780"> Keep In Touch form </a>');
+	if($("#resetpin #pageContent p:contains('Sorry, we cannot reset your pin as you do not have an email address configured, please contact the library for further assistance.')")){
+		$('#resetpin #pageContent p:contains("Sorry, we cannot reset your pin as you do not have an email address configured, please contact the library for further assistance.")').html('Sorry, we cannot reset your PIN as we do not have your email address. To tell us your email and ask for a PIN re-set please complete our Keep In Touch form at <a href="http://bit.ly/keepintouchwithus"> http://bit.ly/keepintouchwithus </a>or telephone  0300 123 6703 Monday to Friday 9.00am-6.00pm, Saturday and Sunday 9.00am-4.00pm.');
+	}
+	if(($("#renderitem").length > 0) || ($("#searchaction").length > 0)){
+		var warning = $('<div id="userInfo"><span>It is advisable to check with the library before making a journey to collect an item showing as "available" on the catalogue. <a href="http://www.lancashire.gov.uk/libraries-and-archives/libraries/find-a-library"> http://www.lancashire.gov.uk/libraries-and-archives/libraries/find-a-library </a><p> You can request books not in stock or "not reservable" <a href="http://bit.ly/askforabook"> http://bit.ly/askforabook </a><p>To update your account details please complete our Keep In Touch form at <a href="http://bit.ly/keepintouchwithus"> http://bit.ly/keepintouchwithus </a></span></div>').hide();
+			$('#pageContent').prepend(warning);
+			$('#pageContent #userInfo').slideDown();
+	}
+	if($("#login h1.title:contains('Sorry, we were unable to log you on at this time. Please contact your local branch for more information.')")){
+		$('#login h1.title:contains("Sorry, we were unable to log you on at this time. Please contact your local branch for more information.")').html('You cannot login as you have entered your PIN incorrectly 3 times.  Please complete our Keep In Touch form at <a href="http://bit.ly/keepintouchwithus">http://bit.ly/keepintouchwithus</a> and ask for a PIN re-set or telephone  0300 123 6703 Monday to Friday 9.00am-6.00pm, Saturday and Sunday 9.00am-4.00pm.');
+	}
+});
+</script></body>
+</html>

@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="js/jquery.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.23.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.multiselect.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.multiselect.filter.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.cookie.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.masked.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.form.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.wireframeUtils.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/slider.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/common.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/textOnly.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/jquery.cycle.js" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+  	//<![CDATA[
+			$(document).ready(function(){
+			 	$('.more-information').hide();
+				var pdflink = $('a.pdf').attr("href");
+			 	$('.show_all_details').toggle(function() {
+					$('.more-information').slideDown('fast');
+					$(this).text('Hide full details');
+					$(this).removeClass('icon-open');
+					$(this).addClass('icon-close');
+					$('a.pdf').attr("href",pdflink + "&fulldetails=true");
+			    }, function() {
+					$('.more-information').slideUp('fast');
+					$(this).text('Show full details');
+					$(this).removeClass('icon-close');
+					$(this).addClass('icon-open');
+					$('a.pdf').attr("href",pdflink);
+				});
+			});
+	  //]]>
+	  </script>
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Social Care Info Point - Public Shortlist</title>
+		<link rel="SHORTCUT ICON" href="images/customer/WB_Icon.gif" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="SHORTCUT ICON" href="includes/images/WB_Icon.gif" />
+<meta name="description" content="" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<meta name="google-translate-customization" content="d240b22895fc45f6-9b56e87519f2cfc8-g2e52fba4d474e41b-38"></meta>
+<link href="css/customer.css" rel="stylesheet"  type="text/css" media="screen, projection" />
+<link href="css/jquery-ui-1.8.23.css" type="text/css" media="screen, projection" rel="stylesheet" />
+
+<link href="css/customer-print.css" type="text/css" media="print" rel="stylesheet" />
+<link id="textonly" href="css/customer-textonly.css"  rel="alternate" type="text/css" media="screen, projection" />
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]><link  href="css/customer-ie.css" type="text/css" media="screen, projection" rel="stylesheet" /><![endif]-->
+<!--[if IE 6]>
+  <link  href="css/customer-ie6.css" type="text/css" media="screen, projection" rel="stylesheet"/>
+<![endif]-->
+<!--[if IE 7]>
+  <link  href="css/customer-ie7.css" type="text/css" media="screen, projection" rel="stylesheet"/>
+<![endif]-->
+<!--[if IE 8]>
+  <link  href="css/customer-ie8.css" type="text/css" media="screen, projection" rel="stylesheet"/>
+<![endif]-->
+
+<script>
+	(function(i,s,o,g,r,a,m){
+		i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)
+		},i[r].l=1*new 
+		Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];
+		a.async=1;a.src=g;
+		m.parentNode.insertBefore(a,m)
+	})
+
+	(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-48440595-9', 'auto');
+	ga('create', 'UA-48440595-3', 'auto', { 'name': 'newTracker' });
+	ga('send', 'pageview');
+	ga('newTracker.send', 'pageview');
+</script></head>
+	<body id="publicshortlist" class="publicshortlist_page">
+		<div id="header" class="clearfix append-bottom">			
+					<div id="topofpage" style="float:left;">
+						<div class="skipnav">
+							<a href="#SkipNavigation" accesskey="s" title="Skip Navigation">Skip Navigation</a><a id="topofpage">top of page</a>
+						</div>
+					</div>
+					<div id="toputil" class="noprint transparentbackground">
+						<ul>
+							<li>&nbsp;<a href="sign_in.page">&nbsp;&#9658;&nbsp;Sign In</a>&nbsp;</li>
+									<li>&nbsp;<a href="register.page">&nbsp;&#9658;&nbsp;Register</a></li>
+								<li><a href="http://www.westberks.gov.uk" title="Contact the Council">&nbsp;&#9658;&nbsp; Council's Main Website</a></li>
+						</ul>
+					</div>
+					<br style="clear: both" />
+					<div class="toptable">
+						<div class="transparentbackground rounded-right-8" id="headerimage">  
+							<a href="http://www.westberks.gov.uk/index.aspx?articleid=295">
+							</a>
+						</div>
+					</div>
+					<div id="imageBanner">
+					</div>
+				</div>
+				
+				<div id="layout-wrapper" class="container">					
+					<div class="right" id="shortlist-badge">
+					
+						<a id="shortlist_link" class="btn btn-inverse shortlist_ul" href="shortlist.page" title="Your shortlist contains 0&nbsp;items"><i class="icon-list"></i>&nbsp;Shortlist (<span id="shortlist_count">0&nbsp;items</span>)</a>
+					</div>		
+						<div id="navigation" class="navbar clearfix">
+						<div class="navbar-inner">
+	<ul class="nav">
+		<li><a href="home.page"><i class="icon-home"></i>Home</a></li>
+		<li class="dropdown ">
+					<a data-toggle="dropdown" class="dropdown-toggle " href="home.page?adultchannel=0">Categories&nbsp;<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="adult.page?adultchannel=8">Advice and information</a></li>
+						<li><a href="adult.page?adultchannel=2">Community support & care at home</a></li>
+						<li><a href="adult.page?adultchannel=3">Money matters</a></li>
+						<li><a href="adult.page?adultchannel=7">Things to do</a></li>
+						<li><a href="adult.page?adultchannel=5">Health, recovery & wellbeing</a></li>
+						<li><a href="adult.page?adultchannel=6">Getting around</a></li>
+						<li><a href="adult.page?adultchannel=1">Care homes and housing choices</a></li>
+						<li><a href="adult.page?adultchannel=4">Learning, working and volunteering</a></li>
+						</ul>
+				</li>
+			<li>
+			<a href="a_to_z.page">A-Z List</a>
+		</li>
+		<li>
+			<a href="contact.page">Contact Us</a>
+		</li>	
+		<li class="translate">
+			<div id="google_translate_element"></div>
+		</li>	
+		<li>
+			<div><a class="feedback feedback_sc clear btn btn-primary append-bottom" href="feedback.page">Give Your Feedback</a></div>
+		</li>
+	</ul>
+</div></div>
+					<div id="content" class="clearfix prepend-top append-bottom">
+						<h1 id="shortlist_title">Your Shortlist</h1>
+<div class="span-36">
+	<div id="search-hits">
+		<div class="shortlist_service_list">
+				<h2>Directory</h2>
+				<!-- One Hit Start -->
+<div id="hit-XU-BqXvFRmM" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=XU-BqXvFRmM">Day Service - Mobile Crafting in Lambourn</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						Creative activities for a range of users from the elderly to adults with various degrees of disabilities. &nbsp;</div>
+				<div class="more-information ">
+					Creative activities for a range of users from the elderly to adults with various degrees of disabilities.  <div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Mark Tribe</dd>
+					<dt>Position</dt><dd>Business Development</dd>
+					<dt>Telephone</dt>
+						<dd>
+							01635 299201 / 07710 084039<br/>or Theresa on 07503249870</dd>
+					<dt>Email</dt><dd><a href="mailto:marktribe@btinternet.com">marktribe@btinternet.com</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Lambourn British Legion</dd>
+					<dt>Venue address</dt>
+						<dd>
+							Big Lane&nbsp;Lambourn<br/>
+							Berkshire<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG17 8QD</dd>
+					<dt>Additional Notes</dt><dd><p>The venue has a very large room with plenty of seating and quiet space available.</p></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>When is it On?</h2>
+		<dl>
+			<dt>Date &amp; Time Information</dt><dd>Held every Tues, Wed and Thurs</dd>
+			</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>&pound;55.00 per session which includes transport (pick up and drop off) and any 1:1 requirements</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">01635 299201 / 07710 084039</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=XU-BqXvFRmM">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-email" data-external-id="marktribe@btinternet.com" href="mailto:marktribe@btinternet.com" title="Email marktribe@btinternet.com">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=sAIAxPQ4BM9QrW7THzmMDGoQvukb1BfciP5E2cbq" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-d-6XcDEh3lE" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=d-6XcDEh3lE">Day activities for people with learning disabilities and/or autism - The Yume Project</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						The Yume Project offers a wide range of day activities and services tailored to meet the needs of adults with learning disabilities and/or autism.&nbsp;</div>
+				<div class="more-information ">
+					The Yume Project offers a wide range of day activities and services tailored to meet the needs of adults with learning disabilities and/or autism. <div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Shelley Nardini</dd>
+					<dt>Position</dt><dd>Project Worker/Director</dd>
+					<dt>Telephone</dt>
+						<dd>
+							Shelley 07951972420 or Claudio 07884495428</dd>
+					<dt>Email</dt><dd><a href="mailto:hello@theyumeproject.org.uk">hello@theyumeproject.org.uk</a></dd>
+					<dt>Website</dt><dd><a href="http://www.theyumeproject.org.uk">The Yume Project</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Various community venues across Berkshire</dd>
+					<dt>Additional Notes</dt><dd><p>The Yume Project currently operates from a variety of accessible and well suited venues. These include Community Halls in Newbury, The Slater Centre at New Greenham Park and Coral Reef in Bracknell.</p></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Age Range</dt>
+					<dd>
+					18-49,&nbsp;50-64,&nbsp;65-74</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">Shelley 07951972420 or Claudio 07884495428</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=d-6XcDEh3lE">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://www.theyumeproject.org.uk">Visit Website</a>
+			<a class="oo-icon-email" data-external-id="hello@theyumeproject.org.uk" href="mailto:hello@theyumeproject.org.uk" title="Email hello@theyumeproject.org.uk">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=jHtaTTCmcecOqZ71CnPPO01aE79chRdn7qvRzFLD" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-Z5CjwrPY1mA" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=Z5CjwrPY1mA">Day Centre Services - Compton</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="right">
+						<img src="https://search3.openobjects.com/mediamanager/westberks/enterprise/images/care_at_home_newbury_limited_png/care_at_home_newbury_limited_thumb.png" alt="" title=""/></div>
+				<div class="short-description">
+						The Downland Day Centre provides a vital local facility for the elderly living in rural West Berkshire, who for various reasons now find themselves less able to get out unaccompanied but still have the desire to enjoy a day out, share a lunch and join&#8230;</div>
+				<div class="more-information ">
+					The Downland Day Centre provides a vital local facility for the elderly living in rural West Berkshire, who for various reasons now find themselves less able to get out unaccompanied but still have the desire to enjoy a day out, share a lunch and join in the activities of the centre which will in turn provide the opportunity for you to spend quality time with others.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Wayne Welch</dd>
+					<dt>Position</dt><dd>Director</dd>
+					<dt>Telephone</dt>
+						<dd>
+							0800 014 8729</dd>
+					<dt>Email</dt><dd><a href="mailto:info@careathomeltd.co.uk">info@careathomeltd.co.uk</a></dd>
+					<dt>Website</dt><dd><a href="http://www.careathomenewbury.co.uk/day-centre.html">Care @ Home Newbury Limited</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Compton Day Centre</dd>
+					<dt>Venue address</dt>
+						<dd>
+							Burrell Road (situated behind the Village Hall)&nbsp;Compton<br/>
+							Nr Newbury<br/>
+							Berkshire</dd>
+					<dt>Postcode</dt><dd>RG20 6NP</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>Cost for the Day Centre &pound;30.00 Meal &pound;5.00 Transport &pound;5.00</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">0800 014 8729</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=Z5CjwrPY1mA">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://www.careathomenewbury.co.uk/day-centre.html">Visit Website</a>
+			<a class="oo-icon-email" data-external-id="info@careathomeltd.co.uk" href="mailto:info@careathomeltd.co.uk" title="Email info@careathomeltd.co.uk">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=sv_z63Q-0uTimgr59dIMrdf7ctSc_eqPzq6DnSV0" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-vlYN0skbju8" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=vlYN0skbju8">Carnation Day Care Services</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						Our service is for elderly care service users and service users with dementia. We provide a wide range of activities to suit service users' individual needs.&nbsp; We have in-house entertainment and provide a range of outings. &nbsp;</div>
+				<div class="more-information ">
+					Our service is for elderly care service users and service users with dementia. We provide a wide range of activities to suit service users' individual needs.  We have in-house entertainment and provide a range of outings.  <div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Gloria Bund</dd>
+					<dt>Position</dt><dd>Manager</dd>
+					<dt>Telephone</dt>
+						<dd>
+							07880 617365</dd>
+					<dt>Email</dt><dd><a href="mailto:gloriabund@btinternet.com">gloriabund@btinternet.com</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Alice Bye Court</dd>
+					<dt>Venue address</dt>
+						<dd>
+							Bluecoats&nbsp;Thatcham<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG18 4AE</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>Please call 07880 617365 to discuss your options, half days considered</dd>
+				<dt>Age Range</dt>
+					<dd>
+					75+</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">07880 617365</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=vlYN0skbju8">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-email" data-external-id="gloriabund@btinternet.com" href="mailto:gloriabund@btinternet.com" title="Email gloriabund@btinternet.com">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=nhaK6lZGJhQVbyFlvRuZpad57PtmTk-l5WhVHG47" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-BmuKC-6J7g4" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=BmuKC-6J7g4">Day opportunities for people with a learning disability - Prospects</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						Prospects, a Christian&nbsp;organisation,&nbsp;provide individualised support packages in Reading offering people with learning disabilities the chance to: gain practical life skills find supported employment and volunteering opportunities go to college learn about arts and crafts get involved in the life of the community</div>
+				<div class="more-information ">
+					Prospects, a Christian organisation, provide individualised support packages in Reading offering people with learning disabilities the chance to:  gain practical life skills find supported employment and volunteering opportunities go to college learn about arts and crafts get involved in the life of the community<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Telephone</dt>
+						<dd>
+							0118 950 8781</dd>
+					<dt>Email</dt><dd><a href="mailto:info@prospects.org.uk">info@prospects.org.uk</a></dd>
+					<dt>Website</dt><dd><a href="http://www.prospects.org.uk/">Prospects</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Prospects,</dd>
+					<dt>Venue address</dt>
+						<dd>
+							69&nbsp;Honey End Lane<br/>
+							Reading<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG30 4EL</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<iframe class="cqc-widget"  title="CQC Widget for Day opportunities for people with a learning disability - Prospects" src="https://www.cqc.org.uk/widget_r/There are no reports available" width="100%" height="auto" border="0" frameborder="0">
+		<p><a href="https://www.cqc.org.uk/directory/There are no reports available?referer=widget3">Care Quality Commission page on Day opportunities for people with a learning disability - Prospects</a></p>
+	</iframe>
+	<script type="text/javascript" src="https://www.cqc.org.uk/sites/all/themes/cqc/js/cqc-widget-responsive.js"></script>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">0118 950 8781</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=BmuKC-6J7g4">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://www.prospects.org.uk/">Visit Website</a>
+			<a class="oo-icon-email" data-external-id="info@prospects.org.uk" href="mailto:info@prospects.org.uk" title="Email info@prospects.org.uk">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=qnfxACNJxQBc1okbG1oUE6MiLAMdg_IRbtko05cd" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-eZMD6FNnLtA" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=eZMD6FNnLtA">Day Services for adults with learning disabilities - Purley Park Trust</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						Day Services for adults with learning disabilities are provided to give a wide range of activities which are beneficial to the mind and body.&nbsp; These may be social activities in large or small groups or on a 1-1 basis depending on needs.&nbsp; Activities may take&#8230;</div>
+				<div class="more-information ">
+					Day Services for adults with learning disabilities are provided to give a wide range of activities which are beneficial to the mind and body.  These may be social activities in large or small groups or on a 1-1 basis depending on needs.  Activities may take place on our residential site at Purley Park, a day centre, in the Service Users own home or in the community. As a registered Domiciliary Care Agency during the day, domiciliary care services staff can also support Service Users with personal care needs and support with medication requirements.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Neil Carr</dd>
+					<dt>Position</dt><dd>Service Manager</dd>
+					<dt>Telephone</dt>
+						<dd>
+							0118 9427 608</dd>
+					<dt>Email</dt><dd><a href="mailto:neilc@purleyparktrust.org">neilc@purleyparktrust.org</a></dd>
+					<dt>Website</dt><dd><a href="http://www.purleyparktrust.org/">Purley Park Trust</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Purley Park Trust</dd>
+					<dt>Venue address</dt>
+						<dd>
+							Office:&nbsp;12 Huckleberry Close<br/>
+							Purley On Thames<br/>
+							Reading<br/>
+							Berkshire</dd>
+					<dt>Postcode</dt><dd>RG8 8EH</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>Charges will be based on an individual basis following a full assessment of needs.<br/><br/>The Trust is happy to accept referrals from Local authorities, those with a personal / individual budget or privately funded.</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+<iframe class="cqc-widget"  title="CQC Widget for Day Services for adults with learning disabilities - Purley Park Trust" src="https://www.cqc.org.uk/widget_r/1-111256451" width="100%" height="auto" border="0" frameborder="0">
+		<p><a href="https://www.cqc.org.uk/directory/1-111256451?referer=widget3">Care Quality Commission page on Day Services for adults with learning disabilities - Purley Park Trust</a></p>
+	</iframe>
+	<script type="text/javascript" src="https://www.cqc.org.uk/sites/all/themes/cqc/js/cqc-widget-responsive.js"></script>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">0118 9427 608</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=eZMD6FNnLtA">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://www.purleyparktrust.org/">Visit Website</a>
+			<a class="oo-icon-email" data-external-id="neilc@purleyparktrust.org" href="mailto:neilc@purleyparktrust.org" title="Email neilc@purleyparktrust.org">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=jShSaF8SVZKCiWOnEB-X-_B2NFNYxZ0A1Ax2M6-J" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-Nrwd8S_X6l4" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=Nrwd8S_X6l4">Day Services - Tanzanite, Theale</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						This is a care service which provides quality services for people with: Physical disabilities and head injury&nbsp; Dementia Parkinsons Neurological condition Our aim is to offer practical and emotional support to clients, through providing a range of engaging activities and opportunity to interact. The activities&#8230;</div>
+				<div class="more-information ">
+					This is a care service which provides quality services for people with:  Physical disabilities and head injury  Dementia Parkinsons Neurological condition  Our aim is to offer practical and emotional support to clients, through providing a range of engaging activities and opportunity to interact. The activities are categorised as follows - Gentle physical exercise - chair exercise, moto med and walking; memory exercise - brain games, quizzes, crosswords, board games, puzzles etc;  Creativity - art and crafts, IT, card making, flower arranging, sketching, painting, etc; Social interaction i.e. pub lunches, shopping, cinema, personal profiles, one to one sessions etc and music in singing and relaxation.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Zephaniah or Alice Mwanyalala</dd>
+					<dt>Position</dt><dd>Proprietor</dd>
+					<dt>Telephone</dt>
+						<dd>
+							01189 622 498 or 07708626533<br/>Kathryn Ilott 01635 253757    07799701309     07757875597</dd>
+					<dt>Email</dt><dd><a href="mailto:tdservice@live.com">tdservice@live.com</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>John Cumber Hall</dd>
+					<dt>Venue address</dt>
+						<dd>
+							38a High Street,&nbsp;Theale<br/>
+							Berkshire<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG7 5AN</dd>
+					<dt>Additional Notes</dt><dd><p>Other facilities are implemented &nbsp;to facilitate the need of our clients.</p></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>Our service cost is a package of &pound;55 per day  (this includes day service and transport) and we have a one to one support charge of &pound;15.50 per hour.</dd>
+				<dt>Age Range</dt>
+					<dd>
+					18-49,&nbsp;50-64,&nbsp;65-74,&nbsp;75+</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">01189 622 498 or 07708626533</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=Nrwd8S_X6l4">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-email" data-external-id="tdservice@live.com" href="mailto:tdservice@live.com" title="Email tdservice@live.com">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=piOBwZ2khUrhckiHAsB3P689RwgIvh1sw-dY0udB" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-iJwatina7IE" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=iJwatina7IE">ME Project (Mencap Enables) - day activity in Reading</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						&quot;ME&quot; (Mencap Enables) is an exciting&nbsp;day activity service run by the members of the &quot;ME&quot; project. &nbsp;ME members are enabled to make their own decisions and choices by building on their strengths and encouraging each other to become stronger. The Members plan their own activities&#8230;</div>
+				<div class="more-information ">
+					"ME" (Mencap Enables) is an exciting day activity service run by the members of the "ME" project.  ME members are enabled to make their own decisions and choices by building on their strengths and encouraging each other to become stronger. The Members plan their own activities which range from yoga to football, swimming or cooking, out and about in the community attending events or just a day out in the country. The service runs on Tuesday, Wednesday and Friday from 9.30am to 3.30pm.  The Tuesday group is specially for 18 to 30 year olds.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Telephone</dt>
+						<dd>
+							0118 9662518 during office hours 9.30 to 1.30<br/> Monday to Friday.</dd>
+					<dt>Website</dt><dd><a href="http://www.readingmencap.org.uk/services/me-project">Reading Mencap - ME project</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Venue address</dt>
+						<dd>
+							21&nbsp;Alexandra Road<br/>
+							Reading<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG1 5PE</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>When is it On?</h2>
+		<dl>
+			<dt>Date &amp; Time Information</dt><dd>9.30am to 3.30pm</dd>
+			</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">0118 9662518 during office hours 9.30 to 1.30</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=iJwatina7IE">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://www.readingmencap.org.uk/services/me-project">Visit Website</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=gRHq7kzGA6hpcirK1ap4pKW716_Ea7xoiZRO0M3r" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-O1M65wLq7Lc" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=O1M65wLq7Lc">Greenfield House Resource Centre - West Berkshire Council</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						The Centre provides services for adults with learning disabilities, physical disabilities and for those with frailty and dementia. Our programme of occupational activities is constantly evolving according to the wants and choices that our customers make.</div>
+				<div class="more-information ">
+					The Centre provides services for adults with learning disabilities, physical disabilities and for those with frailty and dementia. Our programme of occupational activities is constantly evolving according to the wants and choices that our customers make.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Mel Blatchley</dd>
+					<dt>Position</dt><dd>Resource Centre Manager</dd>
+					<dt>Telephone</dt>
+						<dd>
+							0118 943 2074</dd>
+					<dt>Email</dt><dd><a href="mailto:greenfieldhouseresourcecentre@westberks.gov.uk">greenfieldhouseresourcecentre@westberks.gov.uk</a></dd>
+					<dt>Website</dt><dd><a href="http://info.westberks.gov.uk/index.aspx?articleid=29674">Greenfield House Resource Centre</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Greenfield Resource Centre</dd>
+					<dt>Venue address</dt>
+						<dd>
+							Highview<br/>Calcot<br/>
+							Reading<br/>
+							Berkshire</dd>
+					<dt>Postcode</dt><dd>RG31 4XD</dd>
+					<dt>Additional Notes</dt><dd><p>Car parking is by arrangement only.&nbsp;&nbsp; Full wheelchair access.&nbsp;</p>
+<p>&nbsp;</p></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>Day opportunities are &pound;40.00 per day. Door to door transport is &pound;10.00 per day.<br/>Half days available - transport could be available if the person can fit in with the transport times.<br/>Meal prices vary at each Resource Centre up to a maximum of &pound;5.00 per meal.</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">0118 943 2074</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=O1M65wLq7Lc">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://info.westberks.gov.uk/index.aspx?articleid=29674">Visit Website</a>
+			<a class="oo-icon-email" data-external-id="greenfieldhouseresourcecentre@westberks.gov.uk" href="mailto:greenfieldhouseresourcecentre@westberks.gov.uk" title="Email greenfieldhouseresourcecentre@westberks.gov.uk">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=px02-ej9YNWrWyKYxKq-YDtjoMUwj-5GMNWM-xe1" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-vQKY9TEj3Rs" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=vQKY9TEj3Rs">Day Centre - Anderson Hill Blands Court, Burghfield Common</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						Held every Wednesday and Friday between 10.00am and 2.00pm for residents of Burghfield Common and Mortimer.&nbsp; Friendly group run by volunteers.&nbsp; Morning tea/coffee&nbsp;&amp; biscuits.&nbsp;&nbsp;2 course lunch&nbsp;provided for &pound;2.50.&nbsp;&nbsp;Transport can be arranged - must be booked. Wheelchair users considered. For further information please contact Ann Howlett.&#8230;</div>
+				<div class="more-information ">
+					Held every Wednesday and Friday between 10.00am and 2.00pm for residents of Burghfield Common and Mortimer.  Friendly group run by volunteers.  Morning tea/coffee & biscuits.  2 course lunch provided for £2.50.  Transport can be arranged - must be booked. Wheelchair users considered. For further information please contact Ann Howlett.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Telephone</dt>
+						<dd>
+							01189 833 664</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Blands Court</dd>
+					<dt>Venue address</dt>
+						<dd>
+							Burghfield Common<br/>
+							Reading<br/>
+							Berkshire</dd>
+					<dt>Postcode</dt><dd>RG7 3BZ</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Age Range</dt>
+					<dd>
+					18-49,&nbsp;50-64,&nbsp;65-74,&nbsp;75+</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">01189 833 664</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=vQKY9TEj3Rs">Read more...</a>
+		</div>
+		<div class="right">
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=nisO_AEzbZoecTT-65e0y-HOtg6-dBk0bS8ltArW" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-J1GCxy2wPM4" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=J1GCxy2wPM4">Hungerford Resource Centre - West Berkshire Council</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						The Hungerford Resource Centre (HRC) offers excellent facilities with a calm atmosphere and highly trained, experienced and caring staff. It's open&nbsp;five days a week from Monday to Friday and can&nbsp;support up to&nbsp;20&nbsp;people per day.&nbsp; The Centre provides services and&nbsp;occupational activities&nbsp;for adults with learning disabilities, physical&#8230;</div>
+				<div class="more-information ">
+					The Hungerford Resource Centre (HRC) offers excellent facilities with a calm atmosphere and highly trained, experienced and caring staff. It's open five days a week from Monday to Friday and can support up to 20 people per day.  The Centre provides services and occupational activities for adults with learning disabilities, physical disabilities and for those with frailty and dementia.  Our friendly and welcoming centre has spaces and facilities which we use to set up activities that our customers choose or need.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Diana Ivanova</dd>
+					<dt>Position</dt><dd>Centre Manager</dd>
+					<dt>Telephone</dt>
+						<dd>
+							01488 682601</dd>
+					<dt>Email</dt><dd><a href="mailto:hungerfordresourcecentre@westberks.gov.uk">hungerfordresourcecentre@westberks.gov.uk</a></dd>
+					<dt>Website</dt><dd><a href="http://info.westberks.gov.uk/index.aspx?articleid=29673">Hungerford Resource Centre</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Hungerford Resource Centre</dd>
+					<dt>Venue address</dt>
+						<dd>
+							Ramsbury Drive&nbsp;Hungerford<br/>
+							Berkshire<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG17 0EE</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>Day opportunities are &pound;40.00 per day. Door to door transport is &pound;10.00 per day.<br/>Meal prices vary at each Resource Centre up to a maximum of &pound;5.00 per meal.</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">01488 682601</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=J1GCxy2wPM4">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://info.westberks.gov.uk/index.aspx?articleid=29673">Visit Website</a>
+			<a class="oo-icon-email" data-external-id="hungerfordresourcecentre@westberks.gov.uk" href="mailto:hungerfordresourcecentre@westberks.gov.uk" title="Email hungerfordresourcecentre@westberks.gov.uk">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=oky7uN6Sz8BQ4wzW1wc6olpAAYhMkCmHYkOvl2JQ" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-K9OtPHyoKu4" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=K9OtPHyoKu4">Day Care Club (Hazelwood) for pre-retirement people diagnosed with short term memory loss</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="right">
+						<img src="https://search3.openobjects.com/mediamanager/westberks/enterprise/images/crossroads-reading-logo_png/crossroads-reading-logo_thumb.png" alt="" title=""/></div>
+				<div class="short-description">
+						Day care for pre-retirement people who have been given a diagnosis of short term memory loss.&nbsp; The club meets on a weekly basis for peer support and to help people who suffer from short term memory loss/dementia to retain some of their cognition and independence.&nbsp;&#8230;</div>
+				<div class="more-information ">
+					Day care for pre-retirement people who have been given a diagnosis of short term memory loss.  The club meets on a weekly basis for peer support and to help people who suffer from short term memory loss/dementia to retain some of their cognition and independence.  It is also a chance for carers to take a well deserved break. The club meets Wednesdays 9.30am - 3.30pm. (this is grant funded) and for people with higher level care needs an additional club meets on Tuesdays 9.30am - 2.30pm, but this has to be part of a funded care package or funded privately.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Mary Jacobs</dd>
+					<dt>Position</dt><dd>CEO</dd>
+					<dt>Telephone</dt>
+						<dd>
+							0118 945 4209 (office hours)<br/>0118 945 4218 (out of hours)</dd>
+					<dt>Email</dt><dd><a href="mailto:maryjacobs@readingcrossroads.org">maryjacobs@readingcrossroads.org</a></dd>
+					<dt>Website</dt><dd><a href="http://www.readingcrossroads.org">Crossroads - Reading</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Hazelwood Day Hospital</dd>
+					<dt>Venue address</dt>
+						<dd>
+							c/o Prospect Park Hospital&nbsp;Honey End Lane<br/>
+							Reading<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG30 4EJ</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>The Wednesday club is grant funded, but we ask for &pound;5.00 per week to cover costs of outings, meals out etc.<br/>The Tuesday club can be part of a funded care package or funded privately.</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">0118 945 4209 (office hours)</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=K9OtPHyoKu4">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://www.readingcrossroads.org">Visit Website</a>
+			<a class="oo-icon-email" data-external-id="maryjacobs@readingcrossroads.org" href="mailto:maryjacobs@readingcrossroads.org" title="Email maryjacobs@readingcrossroads.org">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=o1t_aT7Kh6b6zfZLnjZFZzYtiEW0NZ80cCcckKFf" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-qGLMsN-HT5k" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=qGLMsN-HT5k">Day Centre - Fair Close run by Age Concern Newbury and District</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						Facilities suitable for elderly people but there are no on-site carers.&nbsp; Meet old friends and make new ones, drop in for coffee or enjoy a delicious freshly cooked hot lunch (&pound;3.50 for Members, &pound;4.50 for non Members) Entertainment and activities organised in the centre, also&#8230;</div>
+				<div class="more-information ">
+					Facilities suitable for elderly people but there are no on-site carers.  Meet old friends and make new ones, drop in for coffee or enjoy a delicious freshly cooked hot lunch (£3.50 for Members, £4.50 for non Members) Entertainment and activities organised in the centre, also day trips to the coast or sightseeing, theatre trips to a London show, lunch or shopping. Two holidays a year arranged - collection from the centre. Hairdressing salon open Mon to Fri 8.00-5.00pm, Sat 8.00-4.00pm at a special price for members. Salon telephone number 01635 551808 for appointment<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Telephone</dt>
+						<dd>
+							01635 41294 or<br/>01635 40488</dd>
+					<dt>Website</dt><dd><a href="http://www.fairclosedaycentre.org.uk/page1.php">Fair Close Day Centre</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Fair Close Day Centre</dd>
+					<dt>Venue address</dt>
+						<dd>
+							Newtown Road&nbsp;Newbury<br/>
+							Berkshire<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG14 7BH</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>Annual membership &pound;12.00 and this entitles you to all services.<br/>Transport both ways &pound;3.00</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">01635 41294 or</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=qGLMsN-HT5k">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://www.fairclosedaycentre.org.uk/page1.php">Visit Website</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=meeZLQovqeoCCryDkb8cYD7JGumPUB7M5IVc13ds" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-8SnxEw8os2I" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=8SnxEw8os2I">The Phoenix Resource Centre, Newbury - West Berkshire Council</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						The&nbsp;resource&nbsp;centre is open&nbsp;5 days a week from Monday to&nbsp;Friday.&nbsp;&nbsp;Supporting up to 30&nbsp;people per day.&nbsp; We provide services for adults with learning disabilities, physical disabilities and for those with frailty and dementia.&nbsp; The spacious and well equipped centre&nbsp;has a&nbsp;variety&nbsp;of rooms and facilities which&nbsp;are used to provide&nbsp;occupational&#8230;</div>
+				<div class="more-information ">
+					The resource centre is open 5 days a week from Monday to Friday.  Supporting up to 30 people per day.  We provide services for adults with learning disabilities, physical disabilities and for those with frailty and dementia.  The spacious and well equipped centre has a variety of rooms and facilities which are used to provide occupational activities that are based on the choices and needs of our customers.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Mary Wells</dd>
+					<dt>Position</dt><dd>Resource Centre Manager</dd>
+					<dt>Telephone</dt>
+						<dd>
+							01635 520150</dd>
+					<dt>Email</dt><dd><a href="mailto:phoenixresourcecentre@westberks.gov.uk">phoenixresourcecentre@westberks.gov.uk</a></dd>
+					<dt>Website</dt><dd><a href="http://info.westberks.gov.uk/index.aspx?articleid=29672">The Phoenix Resource Centre</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>The Phoenix Resource Centre</dd>
+					<dt>Venue address</dt>
+						<dd>
+							Newtown Road&nbsp;Newbury<br/>
+							Berkshire<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG14 7EB</dd>
+					<dt>Additional Notes</dt><dd><p>Car parking is by arrangement only.&nbsp;&nbsp; Full wheelchair access.&nbsp;</p>
+<p>Regarding pets - PAT scheme in operation</p>
+<p>&nbsp;</p></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>Day opportunities are &pound;44.20 per day, &pound;22.10 per half day.<br/>Door to door transport is &pound;7.95 each way.<br/>Lunch &pound;4.70, includes tea/coffee, squash and biscuits<br/>Shower rental  - &pound;7.70</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">01635 520150</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=8SnxEw8os2I">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://info.westberks.gov.uk/index.aspx?articleid=29672">Visit Website</a>
+			<a class="oo-icon-email" data-external-id="phoenixresourcecentre@westberks.gov.uk" href="mailto:phoenixresourcecentre@westberks.gov.uk" title="Email phoenixresourcecentre@westberks.gov.uk">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=0IKAmo7yQZsyEdr3-lSB7Hl81u4CLuLMvSp7HBex" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-En1esPwc3d8" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=En1esPwc3d8">Able Active Friends Mortimer - Woodley Age Concern</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="right">
+						<img src="https://search3.openobjects.com/mediamanager/westberks/enterprise/images/age_concern_2__gif/age_concern_2__thumb.gif" alt="" title=""/></div>
+				<div class="short-description">
+						Able Active Friends Group in Mortimer provides a mobile day service for lonely, isolated older people living in Mortimer and surrounding areas.&nbsp; The group is run by Woodley Age Concern, a locally based charity specialising in care and running activity clubs for older people. The&#8230;</div>
+				<div class="more-information ">
+					Able Active Friends Group in Mortimer provides a mobile day service for lonely, isolated older people living in Mortimer and surrounding areas.  The group is run by Woodley Age Concern, a locally based charity specialising in care and running activity clubs for older people. The group enables older people to forge friendships and take part in activities in the community.  Our friendly staff are always on hand to make sure you are transported safely and have an enjoyable day. Activities and Outings We run a variety of activities and outings in a small group setting every Friday for residents of Mortimer, Burghfield and the surrounding areas. Outings could include visiting National Trust Houses, having pub lunches and taking part in activities in the community, such as floristry, drama, guest speakers and much more.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Sian Laflin</dd>
+					<dt>Position</dt><dd>Able Active Friends Mortimer - Co-ordinator</dd>
+					<dt>Telephone</dt>
+						<dd>
+							0118 969 1471</dd>
+					<dt>Email</dt><dd><a href="mailto:enquiries@ageconcernwoodley.org.uk">enquiries@ageconcernwoodley.org.uk</a></dd>
+					<dt>Website</dt><dd><a href="http://www.woodleyageconcern.org.uk/">Able Active Friends Mortimer - Age Concern Woodley</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Venue address</dt>
+						<dd>
+							Community Hall&nbsp;Reading Road<br/>
+							Burghfield Common<br/>
+							Reading<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG7 3EN</dd>
+					<dt>Additional Notes</dt><dd><p>This venue will be used as a meeting place on a Friday morning for the group to gather together before starting the activity or outing planned for the day.</p></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>We ask for an individual contribution of &pound;10 towards the cost of the day; to contribute to all the transport, meal, staff and other costs of organising each day's activities.</dd>
+				<dt>Age Range</dt>
+					<dd>
+					65-74</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">0118 969 1471</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=En1esPwc3d8">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://www.woodleyageconcern.org.uk/">Visit Website</a>
+			<a class="oo-icon-email" data-external-id="enquiries@ageconcernwoodley.org.uk" href="mailto:enquiries@ageconcernwoodley.org.uk" title="Email enquiries@ageconcernwoodley.org.uk">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=rXcr3YUz844quWG4qZpuwALsTlaYUeMV8GNnT7Qw" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-QJiVhIAqGnE" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=QJiVhIAqGnE">Enablement - Diamond Quality Care Services</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						Our Newbury based Enablement Unit provides our members with opportunities to build friendships and participate in varied life skill activities. The well-equipped gym is managed by our experienced staff with specialist knowledge in helping with disabilities and improving mobility. Technology, Food preparation, Art Therapy, Photography&#8230;</div>
+				<div class="more-information ">
+					Our Newbury based Enablement Unit provides our members with opportunities to build friendships and participate in varied life skill activities. The well-equipped gym is managed by our experienced staff with specialist knowledge in helping with disabilities and improving mobility. Technology, Food preparation, Art Therapy, Photography and other therapeutic leisure activities are available for our members to enjoy group learning and increase social awareness and develop new skills. We provide a flexible choice of support for members both at the Enablement Unit or at home or in the community. We also provide respite care giving carers additional support.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Ali Tait</dd>
+					<dt>Position</dt><dd>Manager</dd>
+					<dt>Telephone</dt>
+						<dd>
+							01635 523410</dd>
+					<dt>Email</dt><dd><a href="mailto:info@diamondqualitycare.com">info@diamondqualitycare.com</a></dd>
+					<dt>Website</dt><dd><a href="http://www.trumper-computing.co.uk/">Diamond Quality Care Enablement Service</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Diamond Enablement Unit</dd>
+					<dt>Venue address</dt>
+						<dd>
+							105&nbsp;Greenham Business Park<br/>
+							Newbury<br/>
+							Berkshire</dd>
+					<dt>Postcode</dt><dd>RG19 6HN</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>Our service charges vary.  Please contact us to discuss your needs.</dd>
+				<dt>Age Range</dt>
+					<dd>
+					18-49,&nbsp;50-64</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+<iframe class="cqc-widget"  title="CQC Widget for Enablement - Diamond Quality Care Services" src="https://www.cqc.org.uk/widget_r/1-449060138" width="100%" height="auto" border="0" frameborder="0">
+		<p><a href="https://www.cqc.org.uk/directory/1-449060138?referer=widget3">Care Quality Commission page on Enablement - Diamond Quality Care Services</a></p>
+	</iframe>
+	<script type="text/javascript" src="https://www.cqc.org.uk/sites/all/themes/cqc/js/cqc-widget-responsive.js"></script>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">01635 523410</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=QJiVhIAqGnE">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://www.trumper-computing.co.uk/">Visit Website</a>
+			<a class="oo-icon-email" data-external-id="info@diamondqualitycare.com" href="mailto:info@diamondqualitycare.com" title="Email info@diamondqualitycare.com">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=uQL43QJ0B-npMoWq3cmo-rCWPHujruK8lS51ckds" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-iICoba-Qk-8" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=iICoba-Qk-8">Day Services, support packages - Voyage Options</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						Voyage has been supporting people who have learning disabilities, autism, head and spinal injuries and other complex disabilities for over 20 years.&nbsp; Any amount of support can be provided at anytime that you need it. You can choose the people you want to support you.&#8230;</div>
+				<div class="more-information ">
+					Voyage has been supporting people who have learning disabilities, autism, head and spinal injuries and other complex disabilities for over 20 years.  Any amount of support can be provided at anytime that you need it. You can choose the people you want to support you. Current services available:  Supported living Pre-independent living Residential services Respite services Brain injury rehabilitation<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Sarah Canning</dd>
+					<dt>Position</dt><dd>Service Manager</dd>
+					<dt>Telephone</dt>
+						<dd>
+							01189305288</dd>
+					<dt>Email</dt><dd><a href="mailto:referrals@voyagecare.com">referrals@voyagecare.com</a></dd>
+					<dt>Website</dt><dd><a href="http://www.voyagecare.com/page.php?identity=contact">Voyage Care</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Venue address</dt>
+						<dd>
+							5&nbsp;The Green<br/>
+							Theale<br/>
+							Reading<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG7 5DR</dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">01189305288</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=iICoba-Qk-8">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-website" target="_blank" href="http://www.voyagecare.com/page.php?identity=contact">Visit Website</a>
+			<a class="oo-icon-email" data-external-id="referrals@voyagecare.com" href="mailto:referrals@voyagecare.com" title="Email referrals@voyagecare.com">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=gRLlMR_2XTg76ZVqGQupeA3JpjHK5UhIuJcD8uJA" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --><!-- One Hit Start -->
+<div id="hit-55RMFDXGoUU" class="onehit clearfix prepend-top border-bottom">	
+			
+	<!-- One Hit Header Start -->
+	<div class="header prepend-1 append-1 clearfix">
+		<h3><a href="service.page?id=55RMFDXGoUU">Gardening activity - New Leaf Horticultural Therapy</a></h3>		
+		</div>
+	<!-- One Hit Header End -->
+	
+	<!-- One Hit Body -->
+	<div class="section prepend-1 append-1 clearfix">
+		<div class="short-description">
+						New Leaf Horticulural Therapy is based on an allotment site less than two miles from Newbury town centre. I have managed this project for the last seven years with the Newbury Community Mental Health Team.&nbsp;I have since June 2011 taken it on as a self&#8230;</div>
+				<div class="more-information ">
+					New Leaf Horticulural Therapy is based on an allotment site less than two miles from Newbury town centre. I have managed this project for the last seven years with the Newbury Community Mental Health Team. I have since June 2011 taken it on as a self employed service provider under contract to West Berkshire Council. The project aims to promote a feeling of greater social inclusion and self esteem through the activity of raising and tending to vegetables and flowers through the seasons. From sowing, nurturing, planting and maintaining the crops until their eventual harvesting and sharing. Throughout this cycle teamwork develops and is strengthened week in and week out by our emphasis on rest breaks, conversation  and group participation. We also have frequent soup (own produce) sessions, monthly outings, and BBQ's in the season. We also meet throughout the winter months to carry out small projects and maintenance needs and also more valuably, just to spend time together. The group size for any session is limited due to the scope of our plots (about  4 - 5) and understandably attendances can be erratic but enquiries are most welcome throughout the year.<div class="block">
+		<h2>Who to Contact</h2>
+		<dl>
+			<dt>Name</dt><dd>Frank Knott</dd>
+					<dt>Position</dt><dd>New Leaf Manager</dd>
+					<dt>Telephone</dt>
+						<dd>
+							07722566515</dd>
+					<dt>Email</dt><dd><a href="mailto:fdgknott@gmail.com">fdgknott@gmail.com</a></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Where to Go</h2>
+		<dl>
+			<dt>Name of venue</dt><dd>Parsons Close</dd>
+					<dt>Venue address</dt>
+						<dd>
+							Braunfels Walk&nbsp;Newbury<br/>
+							</dd>
+					<dt>Postcode</dt><dd>RG14 5NQ</dd>
+					<dt>Additional Notes</dt><dd><p>New Leaf is responsible for about three and a half joined plots on an established Newbury District Council allotment. It is a superbly peaceful location. We have a large meeting/tea shed, tool shed and of course a large polytunnel 38' x 18' and plans to erect a new one imminently. There is a small chemical toilet.</p></dd>
+					</dl>
+	</div>
+	<div class="clear"></div>
+<div class="block">
+		<h2>Other Details</h2>
+			<dl>
+				<dt>Other Costs</dt><dd>There are three sessions per week. Each session lasts for 3 hours and the charge per session is &pound;27. 88p.<br/>Additional to this are tea, coffee, biscuits costs of 50p per session. Also there are monthly outings (optional) for which there is a charge towards petrol and venue entry. Occasional BBQ's ( usually &pound;2. 50 per head )</dd>
+				</dl>
+	</div>
+	<div class="clear"></div>
+</div>
+				<div class="telephone-area">
+					<span class="telephone">07722566515</span>
+							</div>
+		</div>
+	<!-- One Hit End -->
+	
+	<!-- One Hit Footer -->		
+	<div class="footer prepend-1 append-1 clearfix">
+		<div class="left">
+			<a href="service.page?id=55RMFDXGoUU">Read more...</a>
+		</div>
+		<div class="right">
+			<a class="oo-icon-email" data-external-id="fdgknott@gmail.com" href="mailto:fdgknott@gmail.com" title="Email fdgknott@gmail.com">Email</a>
+			<a href="/kb5/westberkshire/asch/public_shortlist.action?publicid=ayZm7qHW2iw&amp;slaction=ADD&amp;itemid=3Tz8_L9yYbhNdUlUQAEGK_hgTrnpvMLEGxjSf2lX" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a></div>
+	</div>
+</div>
+<!-- One Hit End --></div>
+		</div>
+</div>
+<div id="shortlist_actions" class="span-12-last ">
+	<div class="actions">
+		<h3>Shortlist Actions</h3>
+		<ul id="record_actions">
+			<li><a class="oo-icon-clear" href="shortlist.page?slaction=CLEAR">Clear Shortlist</a></li>
+			<li><a class="show_all_details oo-icon-open" href="#">Show full details</a></li>
+			<li><a class="oo-icon-print pdf" href="shortlist.pdf" target="_blank">Print Shortlist</a></li>
+			<li><a target="_blank" class="oo-icon-print" href="core/public_shortlist.jsp?id=&amp;print=large">Print Shortlist (large print)</a></li>
+			<li><a class="oo-icon-email dialog_control" href="#">Email Shortlist</a></li>
+		</ul>
+		<form id="shortlist_email" method="post" class="dialog" action="shortlist_email.page" title="Email Your Shortlist">
+			<label>Your Name</label>
+			<input class="text" type="text" name="emailsendername" id="emailsendername" />
+			<label>Email shortlist to (email address)</label>
+			<input class="text" type="text" name="emailfrom" id="emailfrom" />
+			<label>Message</label>
+			<textarea class="text" name="emailmessage">Message</textarea>
+			<button value="Submit" class="btn btn-info" type="submit">Send</button>
+		</form>
+	</div>
+</div>
+<div id="no-shortlist" class="hide"><h1>Your shortlist is currently empty</h1>
+<h2>Using shortlists</h2>
+
+<p>As you browse around this website you can build up your own personal shortlist of services and activities to display here. Using shortlists is a bit like using the shopping basket function on online shopping sites. Shortlists provide a good way of collecting together information about services which may be of interest to you. When you are viewing your shortlist, you can display a summary version or a detailed version of the shortlist by selecting the appropriate link. You can also send the shortlist to your printer to get a printed version of your list.</p>
+
+<p>You can add items to your shortlist by clicking the <strong>'Add to shortlist'</strong> button displayed alongside each item on your search hit lists or when viewing the details of an item. Items are removed by selecting <strong>'Remove from shortlist'</strong> alongside that item.</p>
+
+<p>Your shortlist information is stored in a temporary part of your browser, so if you close down your browser the shortlist will be cleared. You can also clear the shortlist at anytime by going to the shortlist and selecting <strong>'Clear shortlist'</strong> from the onscreen options.</p></div></div>
+				</div>
+				<div id="footer" class="clearfix append-bottom border-top">
+
+					<div id="partners footer_r" class="span-48-last left prepend-1 footer_txt center">
+						<h4>Family Information Service directory (FISd)</h4>
+						<div class="span-48 center">	
+							If you would like to search for Childcare or Family Services <b><a href="http://fis.westberks.gov.uk/kb5/westberkshire/fsd/home.page">click here to access the Family Information Service Directory (FISd)</a></b> 
+						</div>	
+					</div>
+					<div class="clear" id="customerFooter" style="float: right;">
+						<div id="bottombox" style="text-align: left;">
+							<div id="bottomutils" class="noprint" style="text-align: right; float: right;">
+								<ul class="killpadding">
+									<li class="bottompipe"><a href="#topofpage" class="abottomlink" accesskey="t" title="Link to Jump to the top of this page">&#9658;&nbsp;Top of Page |</a> </li>
+								</ul>
+							</div>
+						</div>
+					</div>	
+				</div>
+			<script type="text/javascript">
+				function googleTranslateElementInit() {
+				new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+				}
+		</script>
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+		</script>
+	</body>
+</html>

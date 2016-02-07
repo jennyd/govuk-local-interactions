@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+ 
+<html lang="en-gb">
+<head>
+<meta charset="utf-8">
+<title>
+	Report a dangerous structure form
+</title><meta name="GENERATOR" content="Contensis CMS Version 8.2" /><link href="/SiteElements/css/ldc.css?version=6816" rel="stylesheet" type="text/css" />
+		<script  type="text/javascript" src="/WebResource.axd?d=swW6KHNnsHWDkClwnaLfMsbhZVVllYZR6K6bdPQ58X86-lOnbx4ixVEzMACrjbPvprM3t00KZGmM4fUhS_NIyQSTxSw5H--J3FRMEb5d3BzByjF0um_ehoIsgdOmj7t10&amp;t=635748044063049182&amp;build=821754"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+if (typeof(window.$j) == 'undefined') { window.$j = $; }
+window.$j.register = function(name) {if (!this._components){this._components = {};} this._components[name] = true;};
+window.$j.isRegistered = function(name) { if (!this._components) { return false; } return !!(this._components[name]); };
+window.$j.requires = function(name) { if (!this.isRegistered(name)) { alert('JQuery Extension " ' + name + '" not registered'); }};
+if (typeof(jQuery.fn.setArray) == 'undefined') { jQuery.fn.setArray = function( elems ) { this.length = 0; jQuery.fn.push.apply(this, elems); return this; }};
+//]]>
+</script>
+		<script  type="text/javascript" src="/SiteElements/js/ldc.min.js?build=821754"></script>
+		<script  type="text/javascript" src="/WebResource.axd?d=MqoD2PCKYz1on7ShcBfSIQ3qOj3dAbPwSY-g6YjXzxQTGFugpSoE6aRSXvuFzmTgS9_8d9PTcQkDLnVrBZndnrow_5C9LEfRT6BTqtA-JQEnazCWkJHYUxYOGWz4_0yn0&amp;t=635748044063049182&amp;build=821754"></script>
+		<script  type="text/javascript" src="/WebResource.axd?d=hhfhkuSbVdJNlM-6gvSK6OXcen_VwdWlgYKUE7AYojtrOatnAD6mw4_3GvEYD0WHPaipzcZaJ-4friRrhXfhe3xZJTuAiTYqi5BnRU7UcWZlztFoKP9O-XSD4JpJQ0Cn0&amp;t=635748044063049182&amp;build=821754"></script>
+		<script  type="text/javascript" src="/WebResource.axd?d=s3OTdr6uMkyypFys5WoaTGmFG7-WsV9VPTuknozxa43cdcQM6tANRo0SpbB4FlHy7ONH1yY2Y1HUPdApXbK8pU3uNmjMOnCOdQaJfW4UPn6G9JfdpIxMlcfNfP5r2WH6rH1h9DCUWAPnuKQhY9gkbMZFg6BSEgBMXERbkekqWrvaX5QBgowTi-y3ydsKW4o44Y5wz6aN_SZLm7C0FMvUxg2&amp;t=635748044069612167&amp;build=821754"></script>
+		<script  type="text/javascript" src="/WebResource.axd?d=XSybNunLL00o9y_HzjvKQAhnImvPZIDvl1hc1eeJKRllGliltSxujW16j2oGJLg48SamCZhk5q6rF9p7Ya5P7q59jHeUOwHv_6nkMgNnEbxojfMzG0p8XwRzBFPcWs_gXFY80LRUEbGNFspARK21srpZRe0TArd1b7JxYjcoHMvTFv_ISBl5TQPYhLOyBQr70&amp;t=635748044069612167&amp;build=821754"></script>
+		<script  type="text/javascript" src="/WebResource.axd?d=dljj9s3rB4WrHLDATbJ9Ik7TlSK-awjdICfwQgtdDhP4qQY15pJtl6MorUAATrXwNJBVW5Qi30B886Qch7lasBQabTFDXShMgxk1jW2Tj0FzR7CN3ZKiwjK2A2bPyL31xqAhwtTgM0ILqsEXUgUhRVyFP0CR3dq-NZ_kvNQbLzbO9_2SwO3nel5u3AQgyjBKSieYJhs05PqNN_AiST8DcA2&amp;t=635748044069612167&amp;build=821754"></script>
+		<script  type="text/javascript" src="/WebResource.axd?d=KB_e7a985SJ5W5KWZhBxp0t34dHy7Kj5ffhbNV6zrJxT8Ipx1wxU01QnO_aTDFDMmCGB8cuJ6ztRcexaGKOLWSvcm_32emnfquCjhGLSFRt9oijsEkTZ4tu7BadaGsh0jkNXy926Lv19k0ttaC3BQA27fv-QjuSSvfQt2FYT-_XLqyfjdz8IRaBPHbcZ8owcJtEgCj_PDU5ngS2MhBnziw2&amp;t=635748044069612167&amp;build=821754"></script>
+		<script  type="text/javascript" src="/WebResource.axd?d=FqQ0yGFiQDmP6tLesuflLVfxGHwS7PEnLD06s1xHfEWC1RM_GrSdngmFEgNo3s3M17a9Ll-kD2tTOZIHQq2ExvvkWtAcDmCn_fOJt59Wt6MbyaY2c2k7ED6xbuHa-iECxLNdnOlmVQw-hF7s0U2EyBysQqGMMuH95FwGKpwxLJE3aApGwXvrnbrAgWSet_9q0&amp;t=635748044069612167&amp;build=821754"></script>
+		<script  type="text/javascript" src="/WebResource.axd?d=i6pbtIypD9af2jG3yPaY4bvobTSmuR8NHqZBqHxbOlNFYPGi5P87u4jYinEsgT6GBfJwQTgI-5h_L1R_aaqEieobbClB3NRn53IYPE9k9bA2vR6yj_udSylrHc9ozAfMPIiwOK1bM6ndu9cIDJEAwUrGWBSeTU1HimHcVmb20FBBJhtXqWjvEWHs9I3erlQX0&amp;t=635748044069612167&amp;build=821754"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+		(function() {Contensis = Contensis || {}; Contensis.currentUser = { Id: 0}; Contensis.currentContext = {}; Contensis.currentContext.page = { languageId: 1 }}());
+		(function() {(function ($) {
+ $(document).ready(function () {
+     
+     $('#form1').validate({
+         onsubmit: false,
+         focusInvalid: true,
+         errorClass: 'sys_cms-form-error',
+         showErrors: function(errorMap, errorList) {
+             $.each(errorList, function(name, value) {
+                 var element = $(value.element);
+                 var msgLabel = '';
+                 if ($(element).is(':checkbox') || $(element).is(':radio')) {
+                     msgLabel = $(element).parent().parent().prev().text();
+                 }
+                 else if ($(element).hasClass('tiny') || $(element).hasClass('address')) {
+                     msgLabel = $(element).parent().children(0).children(0).text();
+                 }
+                 else if ($(element).hasClass('timeval')) {
+                     msgLabel = $(element).parent().parent().prev().text();
+                 }
+                 else {
+                     msgLabel = $(element).parent().prev().text();
+                 }
+                 this.message = msgLabel.replace('*', '') + " " + this.message;
+                 this.message = this.message.replace('This field', '');
+             });
+             this.defaultShowErrors();
+         },
+         errorPlacement: function (error, element) {
+             if (element.rules().mincheckbox > 0) {
+                 var $p = $(element).parent().parent();
+                 if ($p.siblings().hasClass('sys_cms-form-error') == false) {
+                     if (($p).children('label').length == 0) {
+                         error.insertBefore(($p).children(':first'));
+                     }
+                 }
+             }
+             else if ($(element).hasClass('timeval')) {
+                 var $p = $(element).parent().parent();
+                 $p.children('label').remove();
+                 if (($p).children('label').length == 0) {
+                     error.insertBefore(($p).children(':first'));
+                 }
+             }
+             else if ($(element).is('input[type=radio]')) {
+                 var $p = $(element).parent().parent();
+                 if (($p).children('label').length == 0) {
+                     error.insertBefore(($p).children(':first'));
+                 }
+             }
+             else {
+                 error.insertBefore(element);
+             }
+         },
+         rules: {
+'ctrl_11-6962-f19023': { 
+ minwords: 1, maxwords: 1000 } }
+
+         , groups: {
+ }
+
+     });
+ });
+})(jQuery);
+}());
+
+//]]>
+</script><meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/SiteElements/css/ie8.css" />
+<![endif]-->
+<!--
+ControlID:Ctrle1fcda7d9430446a85e760a4575f329f of type CMS_API.WebUI.WebControls.RazorView has set the maximum duration to 600 seconds
+ControlID:Ctrl47c30731ca1d4b97ba878d28c86e2b09 of type CMS_API.WebUI.WebControls.RazorView has set the maximum duration to 600 seconds
+ControlID:Ctrl3b97878b972146d581b1da863fbeb6de of type CMS_API.WebUI.WebControls.RazorView has set the maximum duration to 600 seconds
+ControlID:Ctrl4186d42b92be47ffb0b4b2b73aa3baa4 of type CMS_API.WebUI.WebControls.RazorView has set the maximum duration to 600 seconds
+ControlID:__Page of type ASP.council_report_it_report_a_dangerous_structure_form_aspx has set the maximum duration to 600 seconds
+Cache Enabled using rule ControlID:Ctrle1fcda7d9430446a85e760a4575f329f of type CMS_API.WebUI.WebControls.RazorView has set the maximum duration to 600 seconds
+Cache Page Render Time 07/02/2016 03:04:54
+Cache Host Z-LICH-WEB1
+
+-->
+<script type="text/javascript">
+//<![CDATA[
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', "UA-511839-1"]);
+_gaq.push(['_trackPageview']);
+_gaq.push(['_trackPageLoadTime']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+//]]>
+</script>
+</head>
+<body>
+    <form method="post" action="/Council/Report-it/Report-a-dangerous-structure-form.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="ScriptManager_HiddenField" id="ScriptManager_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY2NDU1OTA0N2RkqIqdprO4hwuHHuLnoat8u9ygCkD9T4DxVCXKfRuuDy0=" />
+</div>
+
+
+<script src="/ScriptResource.axd?d=jHcnBRDUmSqt77UP2Ehx4VTmy9BXVC-bjzxnCgyrj5m7d9Z4hH1F9mCCf9QmqcuQr29Qh-hDqLTtaW3XX3sq6gDv2yz4572mSiWvxGi_xtMYoPju0r8pjurkt53SrZNecMU7zSm7T1oH8s1uIdl9dJrGOz79gzv97Cu3kbtXhlw1&amp;t=ffffffff805766b3" type="text/javascript"></script>
+          
+
+
+
+
+<div id="wrapper" class="wrapper section2">
+<!-- Main navigation --><header class="row collapse mainHeader">
+<div class="medium-2 columns"><a class="mainLogo" href="/"><img alt="logo" height="48" width="125" src="/SiteElements/Images/logo.png" /></a><a class="button right secondary hide-for-medium-up menuButton" data-target=".navCol" data-toggle="collapse" href="#"><span class="glyphicon-show_lines"></span>Menu</a></div>
+<div class="medium-10 columns ">
+
+
+
+
+<nav class="mainNav">
+	<ul class="button-group even-4">
+                    <li class="section3">
+                      	<a href="http://www.lichfielddc.gov.uk/Residents/Residents.aspx" class="button mainNav_button mainNav_button--section3 ">Resident</a>
+                  	</li>
+                    <li class="section4">
+                      	<a href="http://www.lichfielddc.gov.uk/Business/Business.aspx" class="button mainNav_button mainNav_button--section4 ">Business</a>
+                  	</li>
+                    <li class="section1">
+                      	<a href="http://www.lichfielddc.gov.uk/Visitors/Visitors.aspx" class="button mainNav_button mainNav_button--section1 ">Visitors</a>
+                  	</li>
+                    <li class="section2">
+                      	<a href="http://www.lichfielddc.gov.uk/Council/Council.aspx" class="button mainNav_button mainNav_button--section2 mainNav_button--active"><span class="hide-for-small hide-for-medium">Council info</span><span class="hide-for-large-up">Council</span></a>
+                  	</li>
+
+    </ul>
+</nav>
+      
+    
+</div>
+</header><!-- End Main navigation -->
+
+<!-- Header -->
+<div class="landingBanner">
+<div class="row">
+<div class="medium-4 columns medium-push-8">
+<div class="row collapse">
+  	<div id="searchContainer" class="searchContainer">
+
+    			<label for="Query" class="sr-only">Search this site</label>
+    			<input type="text" placeholder="Search Lichfield District Council..." name="query" id="Query" autocomplete="off" class="searchBox" onkeypress="ContensisSubmitFromTextbox(event,'submit')">
+
+    			<button class="button postfix searchButton" name="submit" id="submit" value="Submit">
+      				<span class="sr-only">Search</span>
+      				<span class="glyphicon-search"></span>
+      			</button>
+
+    </div>
+<script>  
+  $(function()
+  {
+      $searchContainer = $('#searchContainer');
+      $searchInput = $('#Query');
+
+      // build live results container
+      $($searchContainer).append(
+          $("<div/>", {
+              'id' : "liveSearch",
+              'class' : "liveSearch"
+          })
+      );
+
+
+      $liveSearchContainer = $('#liveSearch');
+
+      // build live results list
+      $($liveSearchContainer).append(
+          $("<ul/>", {
+              'class' : "liveSearch__results"
+          })
+      );
+
+      $liveSearchList = $('.liveSearch__results');
+
+      $($searchInput).attr('autocomplete', 'off').keyup(function (event)
+      {      
+          // if the user has hit the enter key
+          if(event.keyCode == 13)
+          {
+              // Stop the form from submitting
+              $('#form1').on('submit', function (event)
+              {
+                  event.preventDefault();
+              });
+          }
+          // if the search box isn't empty
+          if($searchInput.val() !== '' && $searchInput.val() != 'Enter Keywords' && $searchInput.val().length > 3)
+          {
+              // query
+            var query = Contensis.Search.Query.whereFullTextContains($searchInput.val(), [ { columnName : 'Property_Title', weight : 100 }, { columnName : 'SC_Content', weight : 10 } , { columnName : 'MD_Description', weight : 50 } , { columnName : 'MD_Keywords', weight : 100 } ]);
+
+              // returned nodes
+              var nodes = Contensis.Search.NodeFinder.find(query, { start: 0, resultCount: 10 }, function (result)
+              {
+                  // clear current results
+                  $liveSearchList.empty();
+
+                  if(result.nodes.length < 1 || $searchInput.val() === '' || $searchInput.val() == 'Enter Keywords')
+                  {
+                      $liveSearchList.hide();
+                  }
+                  else
+                  {
+                      $liveSearchList.show();
+                  }
+
+                  // show results if we have some                
+                  for (var i = 0; i < 10; i++)
+                  {
+                      // data
+                      var node = result.nodes[i];
+                      var title = node.title;
+                      var url = node.path;
+
+                      // render
+                      $('<li class="liveSearch__resultsItem">').html('<a href="' + url + '">' + title + '</a>').appendTo($liveSearchList);
+                   }
+              });
+          }
+          else
+          {
+              // if the search input has something in it, empty it          
+              $liveSearchList.empty();
+              $liveSearchList.hide();
+          }
+      });
+  });  
+</script>
+
+</div>
+</div>
+<div class="medium-8 columns medium-pull-4"></div>
+</div>
+</div>
+
+	
+
+<div class="row show-for-medium-up">
+            
+                  <div class="small-6 medium-3 columns">
+                    <a href="https://ip.e-paycapita.com/AIP/itemSelectionPage.do?link=showItemSelectionPage&amp;siteId=333&amp;languageCode=EN&amp;source=AIP" class="button button-icon expand">     
+                    <span class="glyphicon-gbp">
+                    </span>
+                    Pay for it
+                    </a>
+                  </div>
+                  <div class="small-6 medium-3 columns">
+                    <a href="http://www.lichfielddc.gov.uk/Council/Apply-for-it/Apply-for-it.aspx" class="button button-icon expand">     
+                    <span class="glyphicon-ok-2">
+                    </span>
+                    Apply for it
+                    </a>
+                  </div>
+                  <div class="small-6 medium-3 columns">
+                    <a href="http://www.lichfielddc.gov.uk/Council/Report-it/Report-it.aspx" class="button button-icon expand">     
+                    <span class="glyphicon-pen">
+                    </span>
+                    Report it
+                    </a>
+                  </div>
+                  <div class="small-6 medium-3 columns">
+                    <a href="https://www.lichfielddc.gov.uk/Council/Voice-it/Voice-it.aspx" class="button button-icon expand">     
+                    <span class="glyphicon-chat">
+                    </span>
+                    Voice it
+                    </a>
+                  </div>
+
+</div>
+  
+  
+  
+
+
+      
+
+  			<div class="row">
+				<ul class="breadcrumbs">
+
+          
+
+  				                            <li>
+                                    <a href="/" class="breadcrumbs__home glyphicon-home">
+                                        <span class="sr-only">Home</span>
+                                    </a>
+                            </li>
+                            <li>
+                                      	<a href="/Council/">Council</a>
+                            </li>
+                            <li>
+                                      	<a href="/Council/Report-it/">Report it</a>
+                            </li>
+                            <li>
+Report a dangerous structure form                            </li>
+    
+
+  			
+  				</ul>
+ 			</div>
+
+<!-- End Header -->
+<!-- Main Content 2 col -->
+<div class="row">
+<div id="secNav" class="medium-3 columns navCol">
+
+
+<ul class="secondaryNav">
+
+
+               	<li><a href="/Council/Report-it/Report-a-breach-of-planning-control-form.aspx">Report a breach of planning control form</a></li> 
+               	<li><a href="/Council/Report-it/Report-a-broken-or-damaged-street-nameplate.aspx">Report a broken or damaged street nameplate</a></li> 
+            <li><a class="secondaryNav__active" href="/Council/Report-it/Report-a-dangerous-structure-form.aspx">Report a dangerous structure form</a></li> 
+               	<li><a href="/Council/Report-it/Report-a-food-hygiene-issue-in-a-local-business-form.aspx">Report a food hygiene issue in a local business form</a></li> 
+               	<li><a href="/Council/Report-it/Report-a-grounds-maintenance-query.aspx">Report a grounds maintenance query</a></li> 
+               	<li><a href="/Council/Report-it/Report-a-health-and-safety-complaint.aspx">Report a health and safety complaint</a></li> 
+               	<li><a href="/Council/Report-it/Report-a-lost-or-found-dog-form.aspx">Report a lost or found dog form</a></li> 
+               	<li><a href="/Council/Report-it/Report-a-problem-not-listed-on-Report-It-form.aspx">Report a problem not listed on Report It form</a></li> 
+               	<li><a href="/Council/Report-it/Report-a-refuse-collection-problem-form.aspx">Report a refuse collection problem form</a></li> 
+               	<li><a href="/Council/Report-it/Report-a-street-cleansing-issue-form.aspx">Report a street cleansing issue form</a></li> 
+               	<li><a href="/Council/Report-it/Report-an-abandoned-vehicle-form.aspx">Report an abandoned vehicle form</a></li> 
+               	<li><a href="/Council/Report-it/Report-an-environmental-protection-issue-form.aspx">Report an environmental protection issue form</a></li> 
+               	<li><a href="/Council/Report-it/Report-internal-fraud-within-the-council.aspx">Report internal fraud within the council</a></li> 
+               	<li><a href="/Council/Report-it/Report-littering-online-form.aspx">Report littering online form</a></li> 
+               	<li><a href="/Council/Report-it/Report-moving-home-for-council-tax-purposes.aspx">Report moving home (for council tax purposes)</a></li> 
+               	<li><a href="/Council/Report-it/Report-noise-pollution-form.aspx">Report noise pollution form</a></li> 
+               	<li><a href="/Council/Report-it/Report-public-conveniences-issues-form.aspx">Report public conveniences issues form</a></li> 
+               	<li><a href="/Council/Report-it/Reporting-a-dead-animal-form.aspx">Reporting a dead animal form</a></li> 
+</ul>
+
+
+  	<div class="row hide-for-medium-up">   	
+				<div class="small-6 medium-3 columns">
+ 					<a href="https://ip.e-paycapita.com/AIP/itemSelectionPage.do?link=showItemSelectionPage&amp;siteId=333&amp;languageCode=EN&amp;source=AIP" class="button button-icon expand">     
+                  		<span class="glyphicon-gbp"></span>
+                  
+                    	Pay for it
+                    </a>
+            	</div>
+				<div class="small-6 medium-3 columns">
+ 					<a href="http://www.lichfielddc.gov.uk/Council/Apply-for-it/Apply-for-it.aspx" class="button button-icon expand">     
+                  		<span class="glyphicon-ok-2"></span>
+                  
+                    	Apply for it
+                    </a>
+            	</div>
+				<div class="small-6 medium-3 columns">
+ 					<a href="http://www.lichfielddc.gov.uk/Council/Report-it/Report-it.aspx" class="button button-icon expand">     
+                  		<span class="glyphicon-pen"></span>
+                  
+                    	Report it
+                    </a>
+            	</div>
+				<div class="small-6 medium-3 columns">
+ 					<a href="https://www.lichfielddc.gov.uk/Council/Voice-it/Voice-it.aspx" class="button button-icon expand">     
+                  		<span class="glyphicon-chat"></span>
+                  
+                    	Voice it
+                    </a>
+            	</div>
+	</div>
+
+</div><article id="pageContent" class="medium-9 columns mainContent">
+<h1>Report a dangerous structure form</h1>
+<div id="formwrapperJS6962" class="sys_cms-form-control sys_labels-top">
+	<div id="formpage_0-6962" class="sys_cms-form-page sys_cms-form-page_0">
+		<ul id="formpagelist_0-6962" class="sys_cms-form-body">
+			<li id="Form_item_0_1" class="sys_cms-form-item sys_sectionbreak"><span id="sectionheader_1-6962" class="sys_sectionbreak-header"></span><div id="sectiondescription_1-6962" class="sys_sectionbreak-text">
+				Please use this form to report an instance of a dangerous building or structure. In an emergency please call Building Control on 01543 308157 during office hours or 01543 308000 outside of office hours.
+			</div></li><li id="Form_item_0_20" class="sys_cms-form-item sys_sectionbreak"><span id="sectionheader_20-6962" class="sys_sectionbreak-header">Your details</span><div id="sectiondescription_20-6962" class="sys_sectionbreak-text">
+				Please provide us with your details. If would prefer to report it anonymously, please leave the name fields blank
+			</div></li><li id="Form_item_0_3" class="sys_cms-form-item sys_name"><div class="sys_legend">
+				
+			</div><div class="sys_fieldcontent">
+				<div class="sys_namesubelement">
+					<div>
+						<label for="ctrl_3_first-6962-f19020">First name</label>
+					</div><input name="ctrl_3_first-6962-f19020" type="text" id="ctrl_3_first-6962-f19020" class="tiny" />
+				</div><div class="sys_namesubelement sys_lastnamesubelement">
+					<div>
+						<label for="ctrl_3_surname-6962-f19021">Last name</label>
+					</div><input name="ctrl_3_surname-6962-f19021" type="text" id="ctrl_3_surname-6962-f19021" class="tiny" />
+				</div>
+			</div><div style="clear:both;">
+				
+			</div></li><li id="Form_item_0_19" class="sys_cms-form-item sys_sectionbreak"><span id="sectionheader_19-6962" class="sys_sectionbreak-header">Location of dangerous structure</span><div id="sectiondescription_19-6962" class="sys_sectionbreak-text">
+				
+			</div></li><li id="Form_item_0_21" class="sys_cms-form-item sys_multiline"><label for="ctrl_21-6962-f19022" class="sys_fieldlabel">If known, please enter the address of the dangerous building or structure. If you don&#39;t know the full address, please describe the location in as much detail as possible</label><div class="sys_fieldcontent">
+				<textarea name="ctrl_21-6962-f19022" id="ctrl_21-6962-f19022" cols="40" rows="8" class="sys_medium required"></textarea>
+			</div><div id="instructions_21-6962" class="sys_instructions" style="display:none">
+				Mandatory field 
+			</div></li><li id="Form_item_0_15" class="sys_cms-form-item sys_sectionbreak"><span id="sectionheader_15-6962" class="sys_sectionbreak-header">The issue</span><div id="sectiondescription_15-6962" class="sys_sectionbreak-text">
+				Please give us as much detail as possible about the issue/danger. 
+			</div></li><li id="Form_item_0_11" class="sys_cms-form-item sys_textbox"><label for="ctrl_11-6962-f19023" class="sys_fieldlabel">Please give us all the information you can about the threat posed.</label><div class="sys_fieldcontent">
+				<input name="ctrl_11-6962-f19023" type="text" id="ctrl_11-6962-f19023" class="sys_large required" />
+			</div><div id="instructions_11-6962" class="sys_instructions" style="display:none">
+				Mandatory field 
+			</div></li><li id="Form_item_0_16" class="sys_cms-form-item sys_sectionbreak"><span id="sectionheader_16-6962" class="sys_sectionbreak-header">Do you want to be notified?</span><div id="sectiondescription_16-6962" class="sys_sectionbreak-text">
+				Please enter your email address if you want to be notified below.
+			</div></li><li id="Form_item_0_17" class="sys_cms-form-item sys_email"><label for="ctrl_17-6962-f19024" class="sys_fieldlabel">Your email address (not required)</label><div class="sys_fieldcontent">
+				<input name="ctrl_17-6962-f19024" type="text" id="ctrl_17-6962-f19024" class="sys_medium email" />
+			</div></li><li class="sys_cms-form-item sys_buttons"><button id="btnSubmitForm_6962" class="sys_form-submit" type="submit">Submit form</button></li>
+		</ul>
+	</div><div id="sys_cms-form-confirmation_6962" style="display:none;">
+		<div class="sys_cms-form-confirmation-top">
+			<div class="sys_cms-form-confirmation-left-corner">
+				
+			</div><div class="sys_cms-form-confirmation-right-corner">
+				
+			</div>
+		</div><div class="sys_cms-form-confirmation-content">
+			
+		</div><div class="sys_cms-form-confirmation-bottom">
+			<div class="sys_cms-form-confirmation-left-corner">
+				
+			</div><div class="sys_cms-form-confirmation-right-corner">
+				
+			</div>
+		</div>
+	</div>
+</div><input type="hidden" name="hdPageContent6962" id="hdPageContent6962" value="1156" /><input type="hidden" name="hdCurrentProject6962" id="hdCurrentProject6962" value="1" /><input type="hidden" name="hdPageNav6962" id="hdPageNav6962" /><input type="hidden" name="hdPageRules6962" id="hdPageRules6962" value="{&quot;FormPageRules&quot;:&quot;[]&quot;}" /><input type="hidden" name="hdActionUrl6962" id="hdActionUrl6962" value="/REST/UI/FormsModule/postform/" /><input type="hidden" name="hdValUrl6962" id="hdValUrl6962" value="Please enter a valid URL including http://" /><input type="hidden" name="hdValFileType6962" id="hdValFileType6962" value="Please choose a file of the following type ({0})" /><input type="hidden" name="hdValIsDuplicate6962" id="hdValIsDuplicate6962" value="This value has already been added, please enter a different value." /><input type="hidden" name="hdValLessThan6962" id="hdValLessThan6962" value="Please enter a value less than {0}." /><input type="hidden" name="hdValMinWords6962" id="hdValMinWords6962" value="Please enter at least {0} words." /><input type="hidden" name="hdValMaxWords6962" id="hdValMaxWords6962" value="Please enter no more than {0} words." /><input type="hidden" name="hdValMinCheckbox6962" id="hdValMinCheckbox6962" value="Please select at least {0} option." />
+</article>
+</div>
+<!-- End Main Content 2 col -->
+<div class="row hide-for-medium-up">
+<div class="columns small-12">
+
+    	<h2>More on Report it</h2>
+    	<ul class="audienceNav small-block-grid-1 medium-block-grid-4">
+
+                  		<li><a href="/Council/Report-it/Report-a-breach-of-planning-control-form.aspx">Report a breach of planning control form</a></li> 
+                  		<li><a href="/Council/Report-it/Report-a-broken-or-damaged-street-nameplate.aspx">Report a broken or damaged street nameplate</a></li> 
+                  		<li><a href="/Council/Report-it/Report-a-food-hygiene-issue-in-a-local-business-form.aspx">Report a food hygiene issue in a local business form</a></li> 
+                  		<li><a href="/Council/Report-it/Report-a-grounds-maintenance-query.aspx">Report a grounds maintenance query</a></li> 
+                  		<li><a href="/Council/Report-it/Report-a-health-and-safety-complaint.aspx">Report a health and safety complaint</a></li> 
+                  		<li><a href="/Council/Report-it/Report-a-lost-or-found-dog-form.aspx">Report a lost or found dog form</a></li> 
+                  		<li><a href="/Council/Report-it/Report-a-problem-not-listed-on-Report-It-form.aspx">Report a problem not listed on Report It form</a></li> 
+                  		<li><a href="/Council/Report-it/Report-a-refuse-collection-problem-form.aspx">Report a refuse collection problem form</a></li> 
+                  		<li><a href="/Council/Report-it/Report-a-street-cleansing-issue-form.aspx">Report a street cleansing issue form</a></li> 
+                  		<li><a href="/Council/Report-it/Report-an-abandoned-vehicle-form.aspx">Report an abandoned vehicle form</a></li> 
+                  		<li><a href="/Council/Report-it/Report-an-environmental-protection-issue-form.aspx">Report an environmental protection issue form</a></li> 
+                  		<li><a href="/Council/Report-it/Report-internal-fraud-within-the-council.aspx">Report internal fraud within the council</a></li> 
+                  		<li><a href="/Council/Report-it/Report-littering-online-form.aspx">Report littering online form</a></li> 
+                  		<li><a href="/Council/Report-it/Report-moving-home-for-council-tax-purposes.aspx">Report moving home (for council tax purposes)</a></li> 
+                  		<li><a href="/Council/Report-it/Report-noise-pollution-form.aspx">Report noise pollution form</a></li> 
+                  		<li><a href="/Council/Report-it/Report-public-conveniences-issues-form.aspx">Report public conveniences issues form</a></li> 
+                  		<li><a href="/Council/Report-it/Reporting-a-dead-animal-form.aspx">Reporting a dead animal form</a></li> 
+  		</ul>
+
+  
+  
+
+</div>
+</div>
+
+
+<!-- Footer --><footer class="mainFooter">
+<section class="row"><hr />
+<div class="small-12 columns">
+<h3 class="left">Services A - Z</h3>
+<a class="right arrowLink servicesLink" href="/Site-map.aspx">See all services <span class="arrowLinkIcon"></span></a></div>
+
+
+      	<ul class="azNav">
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=a" title="48 results to display">A</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=b" title="51 results to display">B</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=c" title="87 results to display">C</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=d" title="22 results to display">D</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=e" title="33 results to display">E</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=f" title="40 results to display">F</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=g" title="13 results to display">G</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=h" title="58 results to display">H</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=i" title="19 results to display">I</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=j" title="4 results to display">J</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=k" title="11 results to display">K</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=l" title="70 results to display">L</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=m" title="20 results to display">M</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=n" title="10 results to display">N</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=o" title="29 results to display">O</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=p" title="57 results to display">P</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=q" title="1 results to display">Q</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=r" title="61 results to display">R</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=s" title="72 results to display">S</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=t" title="32 results to display">T</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=u" title="7 results to display">U</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=v" title="7 results to display">V</a>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=w" title="41 results to display">W</a>
+          		</li>
+          		<li>
+                      	<span>X</span>
+          		</li>
+          		<li>
+                  		<a href="/a-z-of-council-services.aspx?letter=y" title="3 results to display">Y</a>
+          		</li>
+          		<li>
+                      	<span>Z</span>
+          		</li>
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<div class="row">
+<div class="medium-8 columns mainFooter__contact">
+  
+
+            <h3>Get in touch or visit...</h3>
+<p><a title="Council location" href="/Council/Council-location.aspx">Our location and travel details >></a></p>
+<p>Phone our contact centre: 01543 308 000<br />District Council House, Frog Lane, Lichfield, Staffs, WS13 6YY</p>
+<p>If you need to contact a team direct, please visit our <a title="Key council contacts" href="/Council/Council-contacts.aspx" class="sys_0 sys_t47">contacts</a> page.</p>            <h3>Opening times</h3>
+<p>Our main reception at Frog Lane in Lichfield is open Monday - Friday, 8.45am - 5.15pm.</p>
+
+
+</div>
+<div class="medium-4 columns">
+  	<script type="text/javascript" src="/SiteElements/js/twttr.js" ></script>  
+	<script>
+    	var config1 = 
+        {
+           "id": '433601336802684929',
+           "domId": 'twtr_feed',
+           "maxTweets": 2,
+           "enableLinks": true,  
+           "showUser": true,
+           "showTime": true,
+		   "showRetweet": true,
+           "showInteraction": false     
+        };  
+    	twitterFetcher.fetch(config1);
+	</script>
+    <noscript>
+    	<p>
+            Browser does not support script.
+        </p>
+    </noscript>     
+    <div id="twtr_feed" class="twitterFeed"></div>
+	<div class="small-12 columns">
+		<span class="socialLink"><span class="icon-twitter"></span><a class="socialLink" title="Licfield DC on Twitter" href="https://twitter.com/lichfield_dc"><span class="socialLink">Follow &commat;Lichfield_DC</span></a></span>
+	</div>
+	<div class="small-12 columns">
+		<span class="socialLink "><span class="icon-facebook"></span><a class="socialLink" title="Lichfield DC on Facebook" href="https://www.facebook.com/lichfielddc"><span class="socialLink">Find us on Facebook</span></a></span>
+	</div>
+
+
+
+
+
+
+</div>
+</div>
+</footer>
+<div class="row">
+<div class="medium-12 columns">
+<p class="text-center">&copy; Copyright 2015 Lichfield District Council</p>
+</div>
+</div>
+<!-- End Footer -->
+
+
+<!--[if lt IE 9]>
+	<script src="/SiteElements/js/respond.min.js"></script>
+  	<script src="/SiteElements/js/rem.min.js"></script>
+<![endif]-->
+</div>
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="72BC978A" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdABLU5hhudCsGOn1ijR+yFyfI0ZnQHv9NI2SR7cVw2FV6xZfzt6LZol5HFhD/HgXt3LvrrIE8WDLsbfNvVB26kkRhNg+VvmrLiUJi1r1mX+hDSbBo7pFXIKSXpDdAWJTOwdnzqSRwk9WULumTTSfjdFlcAZdxEVHVVY0sqay6Kpech+ZB8h0gTUyVFGMk1yK/vzfIL2AHiWc15fW2Qeo4KhARTa4DrwfMMwnGg6WOB+96U8z1sTxTeKcDM7GjOaCwaYp4TOZf7knN4wyhnlRPwAJAHakx0HWUQbVYrLCXEmixFq/u7DSkL7tHdK/lVps/opKDs0mbTKcwlXL5S7moNAFMRlyfcPIvXMJBqLd/PWtBmfv6KGV99thDu8OdFb5C6iFfg79rZ/xvt9UHk/OAHyEuijzYvG/F9JF2HnKirT/Hug==" />
+</div>
+</form>
+</body>
+</html>

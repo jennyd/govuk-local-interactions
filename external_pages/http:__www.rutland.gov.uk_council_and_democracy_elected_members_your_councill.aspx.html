@@ -1,0 +1,741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1' /><meta name="DC.title"  content="Your Councillors"/>
+<meta name="DC.description"  content="The currently elected Councillors representing your views at this council"/>
+<meta name="DC.date" scheme="W3CDTF"  content="2016-02-07"/>
+<meta name="DC.subject" scheme="eGMS.IPSV"  content="Government, politics and public administration"/>
+<meta name="DC.subject" scheme="eGMS.IPSV"  content="Local government"/>
+<meta name="DC.subject" scheme="eGMS.IPSV"  content="Decision making"/>
+<meta name="DC.subject" scheme="eGMS.IPSV"  content="Councillors"/>
+
+<link type="text/css" href="jquery-ui/css/Smoothness/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" /> 
+<link type="text/css" href="jquery-ui/Add-ons/mg.jqueryaddons.css" rel="stylesheet" /> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta http-equiv="Content-Style-Type" content="text/css"><link href="SiteSpecific/WebResource.css" type="text/css" rel="stylesheet"><meta http-equiv="Content-Script-Type" content="text/javascript"><title>
+	Your Councillors
+</title><link href="SiteSpecific/style.css" type="text/css" rel="stylesheet">
+<!--[if IE 6]>
+	<link rel="stylesheet" href="templates/default/style/ie6.css" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+	<link rel="stylesheet" href="templates/default/style/ie7.css" type="text/css" />
+<![endif]-->
+<link href="SiteSpecific/print.css" type="text/css" rel="stylesheet" media="print"><link href="SiteSpecific/default.css" type="text/css" rel="stylesheet"><meta name="GENERATOR" content="Immediacy .NET CMS - Licensed To : Auros Limited"><meta name="keywords" content="council,democracy"><meta name="description" content="Information about council and democracy"><script src="SiteSpecific/ga.js" async="" type="text/javascript"></script><script src="SiteSpecific/gm_intro.js"></script><link href="SiteSpecific/modal.css" type="text/css" rel="stylesheet">
+
+	<link href="sitespecific/ssMgStyles.css" rel="stylesheet" type="text/css" />
+	<link href="sitespecific/ssWordStyles.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+<div>
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWBAIBD2QWAgIMDxYCHgRocmVmBSN+L3RlbXBsYXRlcy9kZWZhdWx0L2Nzcy9kZWZhdWx0LmNzc2QCAw9kFgQCCQ8WAh4JY3VyUGFnZU5vAgEWCAIBD2QWAmYPFQMMSUxJTkt8ODM0NSx8MkhpZ2h3YXlzIE5vdGljZTogU3VyZmFjZSBEcmVzc2luZyBvbiBSdXRsYW5kIFJvYWRzMkhpZ2h3YXlzIE5vdGljZTogU3VyZmFjZSBEcmVzc2luZyBvbiBSdXRsYW5kIFJvYWRzZAICD2QWAmYPFQMMSUxJTkt8ODM0NCx8MkRlbWVudGlhIEF3YXJlbmVzcyBXZWVrOiBTcGVjaWFsIEluZm9ybWF0aW9uIEV2ZW50MERlbWVudGlhIEF3YXJlbmVzcyBXZWVrOiBJbmZvcm1hdGlvbiBhbmQgU3VwcG9ydGQCAw9kFgJmDxUDDElMSU5LfDgzNDMsfDRKb2luIGluIFdpdGggUnV0bGFuZCdzIFNpeHRoIEFubnVhbCBXYWxraW5nIEZlc3RpdmFsNEpvaW4gaW4gV2l0aCBSdXRsYW5kJ3MgU2l4dGggQW5udWFsIFdhbGtpbmcgRmVzdGl2YWxkAgQPZBYCZg8VAwxJTElOS3w4MzQxLHwqRWxlY3Rpb24gMjAxNTogRnVsbCBMb2NhbCBFbGVjdGlvbiBSZXN1bHRzKkVsZWN0aW9uIDIwMTU6IEZ1bGwgTG9jYWwgRWxlY3Rpb24gUmVzdWx0c2QCCg8WAh8BAgEWBgIBD2QWAmYPFQMqaHR0cDovL3d3dy5iYmMuY28udWsvd2VhdGhlci8yNjQxMTI4P2RheT0wKmh0dHA6Ly93d3cuYmJjLmNvLnVrL3dlYXRoZXIvMjY0MTEyOD9kYXk9MG9Nb25kYXk6IEhlYXZ5IFJhaW4gU2hvd2VyLCBNYXhpbXVtIFRlbXBlcmF0dXJlOiAxMyYjMTc2O0MgKDU1JiMxNzY7RikgTWluaW11bSBUZW1wZXJhdHVyZTogNiYjMTc2O0MgKDQzJiMxNzY7RilkAgIPZBYCZg8VAypodHRwOi8vd3d3LmJiYy5jby51ay93ZWF0aGVyLzI2NDExMjg/ZGF5PTEqaHR0cDovL3d3dy5iYmMuY28udWsvd2VhdGhlci8yNjQxMTI4P2RheT0xblR1ZXNkYXk6IFRodW5kZXJ5IFNob3dlciwgTWF4aW11bSBUZW1wZXJhdHVyZTogMTEmIzE3NjtDICg1MiYjMTc2O0YpIE1pbmltdW0gVGVtcGVyYXR1cmU6IDUmIzE3NjtDICg0MSYjMTc2O0YpZAIDD2QWAmYPFQMqaHR0cDovL3d3dy5iYmMuY28udWsvd2VhdGhlci8yNjQxMTI4P2RheT0yKmh0dHA6Ly93d3cuYmJjLmNvLnVrL3dlYXRoZXIvMjY0MTEyOD9kYXk9MnJXZWRuZXNkYXk6IExpZ2h0IFJhaW4gU2hvd2VyLCBNYXhpbXVtIFRlbXBlcmF0dXJlOiAxNCYjMTc2O0MgKDU3JiMxNzY7RikgTWluaW11bSBUZW1wZXJhdHVyZTogNiYjMTc2O0MgKDQzJiMxNzY7RilkZE7WFxtmUeOdG5A4v562yA6KDHNP" type="hidden">
+</div>
+
+<div>
+
+	<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+	<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAgLk7O7JCgLm45qtARZpx/nl5oM+J1vhF/mrhf7eewmE" type="hidden">
+</div>
+
+
+
+<div><a name="top"></a></div>
+<div id="skip"><a href="http://www.rutland.gov.uk/mainContent">Skip to main content</a></div>
+
+<div id="everything">
+	<div id="header">
+	<div class="inner floatHolder">
+		
+		<h1>
+		<a href="http://www.rutland.gov.uk/default.aspx?page=0">
+		
+			<img src="SiteSpecific/h1.jpg" alt="My Rutland">
+		
+		
+		</a></h1>
+		<div id="logo"><a href="http://www.rutland.gov.uk/default.aspx?page=0"><img src="SiteSpecific/logo.jpg" alt="Rutland County Council"></a></div>
+	</div>		
+	<div class="navWrapper floatHolder">
+		
+	<div id="dropNav">
+		
+				<ul><li class="home"><a title="Home" href="http://www.rutland.gov.uk/default.aspx">Home</a></li>
+			<li class="first">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/election_2015.aspx" title="Election 2015">Election 2015</a></li>
+<li class="first">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/find_council_services.aspx" title="Find Council Services" class="drop">Find Council Services<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/find_council_services/search_by_a-z.aspx" title="Search by A-Z">Search by A-Z</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/find_council_services/search_by_most_popular.aspx" title="Search by Most Popular">Search by Most Popular</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/find_council_services/search_by_council_department.aspx" title="Search by Council Department">Search by Council Department</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/find_council_services/search_by_key_life_events.aspx" title="Search by Key Life Events">Search by Key Life Events</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/do_it_online.aspx" title="Do it Online" class="drop">Do it Online<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/do_it_online/make_a_payment.aspx" title="Make a Payment">Make a Payment</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/do_it_online/missed_bin_collection.aspx" title="Missed Bin Collection">Missed Bin Collection</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/do_it_online/pay_parking_fine.aspx" title="Pay Parking Fine">Pay Parking Fine</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/do_it_online/request_ca_site_permit.aspx" title="Request CA Site Permit">Request CA Site Permit</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/do_it_online/view_planning_applications.aspx" title="View Planning Applications">View Planning Applications</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/your_councillor.aspx" title="Your Councillor">Your Councillor</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/contact_us.aspx" title="Contact Us" class="drop">Contact Us<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/contact_us/customer_services.aspx" title="Customer Services">Customer Services</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/contact_us/online_contact_form.aspx" title="Online Contact Form">Online Contact Form</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/contact_us/visitor_parking.aspx" title="Visitor Parking">Visitor Parking</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/contact_us/map_and_directions.aspx" title="Map and Directions">Map and Directions</a></li>
+<li class="">
+			<a href="http://www.rutland.gov.uk/system_pages/top_navigation/contact_us/customer_care_standards.aspx" title="Customer Care Standards">Customer Care Standards</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			
+				</ul>
+			
+
+		<div id="search">
+			<div id="searchBox">
+	<label for="Template_topNav_searchBox_quickSearch" accesskey="s">Search </label><input name="Template$topNav$searchBox$quickSearch" value="Search" id="Template_topNav_searchBox_quickSearch" onfocus="clearText('Template_topNav_searchBox_quickSearch','Search');" onkeypress="return clickOnEnterMultiBrowser(event, 'Template_topNav_searchBoxdosearch');" style="height:20px;width:110px;" type="text"><img src="SiteSpecific/1.gif" alt="" title="" height="0" width="0"><a class="Button" href="javascript:__doPostBack('Template$topNav$searchBox','goSearch')" title="Search"><img id="Template_topNav_searchBoxdosearch" src="SiteSpecific/go.gif" alt="Search"></a>
+</div>
+		</div>
+	</div>
+
+<div class="gm_sidebar gm_sidebar_rh"> 
+      <a href="http://websurveys.govmetric.com/theme/gm/1534" target="_blank" class="gm_sidebar_anchor" title="please rate this page" rel="nofollow"> 
+            <img src="SiteSpecific/rh.png" alt="rating button"> 
+      </a> 
+</div> 
+<link rel="stylesheet" type="text/css" href="SiteSpecific/gm_sidebar_rh.css"> 
+<script type="text/javascript" src="SiteSpecific/gm_sidebar.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+	</div>
+	<div class="navInstructions"><div class="inner">
+<p>Use the links above to reach key areas of our site.</p></div></div>
+	</div>
+	<div id="main" class="floatHolder col3">
+		<div id="subNav">
+			
+					<div class="heading selected">Council and Democracy</div>
+					
+				
+				
+
+				
+
+				
+
+				
+
+					<ul>
+			<li><a href="mgCalendarMonthView.aspx?GL=1&amp;bcr=1" title="Link to calendar of meetings">Calendar</a></li>											
+			<li><a href="mgListCommittees.aspx?bcr=1" title="Link to committee structure">Committees</a></li>
+		<li><a href="http://www.rutland.gov.uk/council_and_democracy/councillors_and_democracy/council_constitution.aspx" title="Link to Council Constitution">Constitution</a></li>
+			<li><a href="mgConsultationListDisplay.aspx?bcr=1" title="Link to list of consultations">Consultations</a></li>
+			<li><a href="mgDelegatedDecisions.aspx?bcr=1&amp;DM=0&amp;DS=2&amp;K=0&amp;DR=&amp;V=0" title="Link to register of decisions">Decisions</a></li>
+			<li><a href="mgManageElectionResults.aspx?bcr=" title="Link to election results">Election results</a></li>
+			<li><a href="http://www.rutland.gov.uk/council_meetings/cabinet/forward_plan.aspx" title="Link to Forward Plans">Forward Plans</a></li>
+			<li><a href="ecCatDisplay.aspx?bcr=1&amp;sch=doc" title="Link to library of standard documents">Library</a></li>
+			<li><a href="ieDocHome.aspx?bcr=1" title="Link to information about committee meetings">Meetings</a></li>
+			<li><a href="mgListOutsideBodies.aspx?bcr=1" title="Link to Outside Bodies">Outside bodies and working groups</a></li>
+			<li><a href="mgParishCouncilDetails.aspx?bcr=1" title="Link to parish council details">Parish councils</a></li>
+			<li><a href="ieDocSearch.aspx?bcr=1" title="Link to free text search">Search documents</a></li>
+			<li><a href="mgRegisterKeywordInterest.aspx?bcr=1" title="Link to Subscribe to Updates">Subscribe to updates</a></li>
+			<li><a href="mgMemberIndex.aspx?bcr=1" title="Link to your councillors">Your councillors</a></li>
+			<li><a href="mgMemberIndexMP.aspx?bcr=1" title="Link to your MPs">Your MPs</a></li>
+			<li><a href="mgMemberIndexMEP.aspx?bcr=1" title="Link to your MEPs">Your MEPs</a></li>
+			<li><a href="mgWhatsNew.aspx?bcr=1" title="Link to what's new">What's new</a></li>
+
+					</ul>
+				
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+					
+				
+		</div>
+		<div class="mainWrapper">
+		<div id="crumbtrail">
+			
+					
+				
+					<a href="http://www.rutland.gov.uk/default.aspx">Home</a> &gt;
+				
+
+						 Your Councillors
+				
+
+					
+				
+		</div>
+		<div id="mainContent">
+	<div id="modgov">
+	<div class="mgHeader"><h2>Your Councillors</h2></div>
+<p>Local Councillors are elected by the community to decide how the
+council should carry out its various activities. They represent
+public interest as well as individuals living within the ward in
+which he or she has been elected to serve a term of office.</p>
+<p>They have regular contact with the general public through
+council meetings, telephone calls or surgeries. Surgeries provide
+an opportunity for any ward resident to go and talk their
+councillor face to face and these take place on a regular
+basis.</p>
+<p>Councillors are not paid a salary for their work, but they do
+receive allowances. By law, all members of the Council are required
+to complete a declaration of interest form, the details of which
+are published annually.</p>
+<p>To find your councillor please use the below links:</p>
+<div class="mgLinks" >
+	
+	
+	<ul  class="mgActionList" >
+		<li><a  href="mgFindMember.aspx"  title="Link&#32;to&#32;find&#32;councillors">Find your councillor</a></li>
+
+		<li><a  href="mgMemberIndex.aspx?FN=ALPHA&amp;VW=LIST&amp;PIC=0"  title="Link to display councillors alphabetically"> Your councillors alphabetically</a></li>
+  	<li><a  href="mgMemberIndex.aspx?FN=PARTY&amp;VW=LIST&amp;PIC=0"  title="Link to display councillors by political party">Your councillors by political party</a></li>
+		<li><a  href="mgMemberIndex.aspx?FN=WARD&amp;VW=LIST&amp;PIC=0"  title="Link&#32;to&#32;display&#32;councillors&#32;by&#32;ward">Your councillors by ward</a></li>
+
+		<li><a  href="mgCommitteeMailingList.aspx?ID=0"  title="Link to full list of contact details">Full list of contact details</a></li>
+			<li><a  href="mgUserAttendanceSummary.aspx"  title="Link to member attendance summary" >Councillor attendance summary</a></li>
+			<li><a  href="mgMemberIndex.aspx?VW=TABLE&amp;PIC=1&amp;FN="  title="Link&#32;to&#32;table&#32;of&#32;councillors" >View councillors in a table</a></li>
+	</ul>
+
+</div>
+<div class="mgContent" >
+
+		<div  class="mgThumbsList" >
+
+<ul >
+		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=132"  >
+			<img  class="mgCouncillorImages"   src="UserData/2/3/1/Info00000132/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Edward&#32;Baines" /><br />Mr Edward Baines</a>
+			
+			<p>Martinsthorpe</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=133"  >
+			<img  class="mgCouncillorImages"   src="UserData/3/3/1/Info00000133/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Oliver&#32;Bird" /><br />Mr Oliver Bird</a>
+			
+			<p>Oakham South West</p>
+			
+			<p>The Independent Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=135"  >
+			<img  class="mgCouncillorImages"   src="UserData/5/3/1/Info00000135/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Kenneth&#32;Bool" /><br />Mr Kenneth Bool</a>
+			
+			<p>Normanton</p>
+			
+			<p>Conservative Group</p>
+				
+				
+				<p>Chairman of the Council</p>
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=136"  >
+			<img  class="mgCouncillorImages"   src="UserData/6/3/1/Info00000136/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Miss&#32;Rachel&#32;Burkitt" /><br />Miss Rachel Burkitt</a>
+			
+			<p>Uppingham</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=151"  >
+			<img  class="mgCouncillorImages"   src="UserData/1/5/1/Info00000151/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Ben&#32;Callaghan" /><br />Mr Ben Callaghan</a>
+			
+			<p>Oakham South East</p>
+			
+			<p>The Independent Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=134"  >
+			<img  class="mgCouncillorImages"   src="UserData/4/3/1/Info00000134/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Richard&#32;Clifton" /><br />Mr Richard Clifton</a>
+			
+			<p>Oakham South West</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=123"  >
+			<img  class="mgCouncillorImages"   src="UserData/3/2/1/Info00000123/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Gary&#32;Conde" /><br />Mr Gary Conde</a>
+			
+			<p>Ketton</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=140"  >
+			<img  class="mgCouncillorImages"   src="UserData/0/4/1/Info00000140/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;William&#32;Cross" /><br />Mr William Cross</a>
+			
+			<p>Braunston and Belton</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=141"  >
+			<img  class="mgCouncillorImages"   src="UserData/1/4/1/Info00000141/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Jeff&#32;Dale" /><br />Mr Jeff Dale</a>
+			
+			<p>Oakham North East</p>
+			
+			<p>Independent</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=143"  >
+			<img  class="mgCouncillorImages"   src="UserData/3/4/1/Info00000143/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Richard&#32;Foster" /><br />Mr Richard Foster</a>
+			
+			<p>Cottesmore</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=145"  >
+			<img  class="mgCouncillorImages"   src="UserData/5/4/1/Info00000145/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Richard&#32;Gale" /><br />Mr Richard Gale</a>
+			
+			<p>Oakham North West</p>
+			
+			<p></p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=147"  >
+			<img  class="mgCouncillorImages"   src="UserData/7/4/1/Info00000147/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Oliver&#32;Hemsley" /><br />Mr Oliver Hemsley</a>
+			
+			<p>Langham</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=124"  >
+			<img  class="mgCouncillorImages"   src="UserData/4/2/1/Info00000124/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Terry&#32;King" /><br />Mr Terry King</a>
+			
+			<p>Exton</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=119"  >
+			<img  class="mgCouncillorImages"   src="UserData/9/1/1/Info00000119/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;James&#32;Lammie" /><br />Mr James Lammie</a>
+			
+			<p>Lyddington</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=149"  >
+			<img  class="mgCouncillorImages"   src="UserData/9/4/1/Info00000149/smallpic.jpg"  width="90" height="124" 
+			alt="link to details of Mrs&#32;Diana&#32;MacDuff" /><br />Mrs Diana MacDuff</a>
+			
+			<p>Ketton</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=146"  >
+			<img  class="mgCouncillorImages"   src="UserData/6/4/1/Info00000146/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Alastair&#32;Mann" /><br />Mr Alastair Mann</a>
+			
+			<p>Oakham North West</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=150"  >
+			<img  class="mgCouncillorImages"   src="UserData/0/5/1/Info00000150/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Tony&#32;Mathias" /><br />Mr Tony Mathias</a>
+			
+			<p>Oakham South East</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=137"  >
+			<img  class="mgCouncillorImages"   src="UserData/7/3/1/Info00000137/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Marc&#32;Oxley" /><br />Mr Marc Oxley</a>
+			
+			<p>Uppingham</p>
+			
+			<p>The Independent Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=152"  >
+			<img  class="mgCouncillorImages"   src="UserData/2/5/1/Info00000152/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Chris&#32;Parsons" /><br />Mr Chris Parsons</a>
+			
+			<p>Ryhall and Casterton</p>
+			
+			<p>The Independent Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=138"  >
+			<img  class="mgCouncillorImages"   src="UserData/8/3/1/Info00000138/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mrs&#32;Lucy&#32;Stephenson" /><br />Mrs Lucy Stephenson</a>
+			
+			<p>Uppingham</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=144"  >
+			<img  class="mgCouncillorImages"   src="UserData/4/4/1/Info00000144/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Andrew&#32;Stewart" /><br />Mr Andrew Stewart</a>
+			
+			<p>Cottesmore</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=325"  >
+			<img  class="mgCouncillorImages"   src="mgimages/missingsmallmug.gif"  
+			alt="link to details of VACANCY" /><br />VACANCY</a>
+			
+			<p>Whissendine</p>
+			
+			<p></p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=120"  >
+			<img  class="mgCouncillorImages"   src="UserData/0/2/1/Info00000120/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Miss&#32;&#32;Gale&#32;Waller" /><br />Miss  Gale Waller</a>
+			
+			<p>Normanton</p>
+			
+			<p>Liberal Democrats</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=142"  >
+			<img  class="mgCouncillorImages"   src="UserData/2/4/1/Info00000142/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;Alan&#32;Walters" /><br />Mr Alan Walters</a>
+			
+			<p>Oakham North East</p>
+			
+			<p>The Independent Group</p>
+				
+	
+	</li>		
+	<li>
+			<a  href="mgUserInfo.aspx?UID=153"  >
+			<img  class="mgCouncillorImages"   src="UserData/3/5/1/Info00000153/smallpic.jpg"  width="90" height="135" 
+			alt="link to details of Mr&#32;David&#32;Wilby" /><br />Mr David Wilby</a>
+			
+			<p>Ryhall and Casterton</p>
+			
+			<p>Conservative Group</p>
+				
+	
+	</li>
+</ul>
+
+		</div>
+</div>
+<div class="mgFooter" >		
+
+	<p>&nbsp;</p>
+
+<input type="hidden" value="false" id="hidIsExtLinkNewWindow" name="hidIsExtLinkNewWindow"/>
+
+
+    <script src="edit-doc-activex.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="jquery-ui/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.10.2.custom.min.js"></script>
+
+    <script type="text/javascript">
+	var mgJQuery = jQuery.noConflict(true);
+        var thisFormValidator;
+    </script>
+
+    <script type="text/javascript" src="jquery-ui/json/json2.js"></script>
+    <script type="text/javascript" src="jquery-ui/Add-ons/mg.jqueryaddons.min.js"></script>
+    <script type="text/javascript" src="mgAjaxScripts.js"></script> 
+          
+    <script type="text/javascript">
+        function CommonAjaxInit()
+        {
+            Common_DocumentReady(false, 629272640462387);
+        }
+
+        mgJQuery(document).ready(CommonAjaxInit);
+
+    </script>  
+</div>
+
+
+	</div>		</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="infoNav">
+			<div class="inner">
+			<h2>Go straight to information about...</h2>
+			
+					<ul class="floatHolder">
+				<li><a href="http://www.rutland.gov.uk/advice_and_benefits.aspx" title="Advice and benefits"><span>Advice and benefits</span></a></li>
+<li><a href="http://www.rutland.gov.uk/business.aspx" title="Business"><span>Business</span></a></li>
+<li><a href="http://www.rutland.gov.uk/community_and_living.aspx" title="Community and Living"><span>Community and Living</span></a></li>
+<li><a href="http://www.rutland.gov.uk/council_and_democracy.aspx" title="Council and Democracy"><span>Council and Democracy</span></a></li>
+<li><a href="http://www.rutland.gov.uk/council_meetings.aspx" title="Council Meetings"><span>Council Meetings</span></a></li>
+<li><a href="http://www.rutland.gov.uk/education_and_learning.aspx" title="Education and learning"><span>Education and learning</span></a></li>
+<li><a href="http://www.rutland.gov.uk/environment_and_planning.aspx" title="Environment and Planning"><span>Environment and Planning</span></a></li>
+<li><a href="http://www.rutland.gov.uk/health_and_social_care.aspx" title="Health and Social Care"><span>Health and Social Care</span></a></li>
+<li><a href="http://www.rutland.gov.uk/housing.aspx" title="Housing"><span>Housing</span></a></li>
+<li><a href="http://www.rutland.gov.uk/jobs_and_careers.aspx" title="Jobs and Careers"><span>Jobs and Careers</span></a></li>
+<li><a href="http://www.rutland.gov.uk/leisure_and_culture.aspx" title="Leisure and culture"><span>Leisure and culture</span></a></li>
+<li><a href="http://www.rutland.gov.uk/transport_and_streets.aspx" title="Transport and streets"><span>Transport and streets</span></a></li>
+<li><a href="http://www.rutland.gov.uk/rutland_together.aspx" title="Rutland Together"><span>Rutland Together</span></a></li>
+<li><a href="http://www.rutland.gov.uk/development_control.aspx" title="Development Control"><span>Development Control</span></a></li>
+<li><a href="http://www.rutland.gov.uk/local_plan.aspx" title="Local Plan"><span>Local Plan</span></a></li>
+<li><a href="http://www.rutland.gov.uk/rutland_library_service.aspx" title="Rutland Library Service"><span>Rutland Library Service</span></a></li>
+<li><a href="http://www.rutland.gov.uk/rutland_county_museum.aspx" title="Rutland County Museum"><span>Rutland County Museum</span></a></li>
+<li><a href="http://www.rutland.gov.uk/licensing_information.aspx" title="Licensing Information"><span>Licensing Information</span></a></li>
+<li><a href="http://www.rutland.gov.uk/oakham_castle.aspx" title="Oakham Castle"><span>Oakham Castle</span></a></li>
+<li><a href="http://www.rutland.gov.uk/climate_change.aspx" title="Climate Change"><span>Climate Change</span></a></li>
+<li><a href="http://www.rutland.gov.uk/digital_rutland.aspx" title="Digital Rutland"><span>Digital Rutland</span></a></li>
+<li><a href="http://www.rutland.gov.uk/customer_services.aspx" title="Customer Services"><span>Customer Services</span></a></li>
+<li><a href="http://www.rutland.gov.uk/waste_and_recycling.aspx" title="Waste and Recycling"><span>Waste and Recycling</span></a></li>
+<li><a href="http://www.rutland.gov.uk/safer_rutland.aspx" title="Safer Rutland"><span>Safer Rutland</span></a></li>
+<li><a href="http://www.rutland.gov.uk/people_first.aspx" title="People First"><span>People First</span></a></li>
+<li><a href="http://www.rutland.gov.uk/care_and_support_in_rutland.aspx" title="Care And Support In Rutland"><span>Care And Support In Rutland</span></a></li>
+
+					</ul>
+				
+			</div>
+		</div>
+		<div class="floatHolder">
+			<div id="copyright">
+				
+<p>© Copyright 2011 Rutland County Council, Catmose, Oakham, Rutland, LE15 6HP</p>
+			</div>
+			<div id="utilitylinks">
+				<ul>
+					<li><a href="http://www.rutland.gov.uk/system_pages/utility_links/site_map.aspx">Site Map</a>
+&nbsp;|&nbsp;</li><li><a href="http://www.rutland.gov.uk/system_pages/utility_links/terms__conditions.aspx">Terms &amp; Conditions</a>
+&nbsp;|&nbsp;</li><li><a href="http://www.rutland.gov.uk/system_pages/utility_links/contractor_login.aspx">Contractor Login</a>
+&nbsp;|&nbsp;</li><li><a href="http://www.rutland.gov.uk/system_pages/utility_links/privacy.aspx">Privacy</a>
+&nbsp;|&nbsp;</li><li><a href="http://www.rutland.gov.uk/system_pages/utility_links/cookies.aspx">Cookies</a>
+&nbsp;|&nbsp;</li>
+					
+					<li><a href="http://www.rutland.gov.uk/council_and_democracy.aspx?theme=textonly">Text Only</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<!-- WebMetric snippet starts here -->
+		
+			<form action="https://www.govmetric.com/WebMetric/websatisfaction.aspx" method="post"><div class="ratePage">
+			<input name="organisationid" value="3" type="hidden">
+
+			<!-- uncomment this to enable the sentence to replace the comments box -->
+			<!-- <input type="hidden" name="displaysentence" value="If you would like to leave additional comments, please follow the Feedback Form link on the homepage." />-->
+
+			<input src="SiteSpecific/med-greenface.gif" alt="Rate as Good" name="metric1" value="1" type="image">
+			<input src="SiteSpecific/med-orangeface.gif" alt="Rate as Average" name="metric2" value="2" type="image">
+
+			<input src="SiteSpecific/med-redface.gif" alt="Rate as Poor" name="metric3" value="3" type="image">
+
+				<p class="inst"><img src="SiteSpecific/rateThisPage.gif" alt="It's your Rutland. Please rate this page."></p>
+</div>
+			<!-- WebMetric snippet ends here -->
+		
+
+			<script src="SiteSpecific/jquery-1.js" type="text/javascript"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+
+</form>		
+		
+		<div class="extLinks">
+			<div class="inner">
+				<a href="http://www.gov.uk/" rel="external"><img src="SiteSpecific/gov logo.jpg" alt="gov" height="41"></a>
+				<a href="http://www.browsealoud.com/downloads.asp?dl=bl" rel="external"><img src="SiteSpecific/dlbl.gif" alt="download Browsealoud"></a>
+			</div>
+		</div>
+<!-- Javascript at the bottom for fast page loading -->
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+		
+	<script type="text/javascript" src="SiteSpecific/jquery.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+	<script type="text/javascript" src="SiteSpecific/pluginCheck.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+	&nbsp;
+	<script type="text/javascript" src="SiteSpecific/script.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8488195-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<noscript><div>Browser does not support script.</div></noscript>
+ 
+
+				
+
+
+</body></html>

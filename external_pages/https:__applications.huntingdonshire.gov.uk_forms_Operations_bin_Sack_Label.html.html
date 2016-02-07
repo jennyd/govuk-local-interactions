@@ -1,0 +1,255 @@
+ï»¿<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Bin, Sack or Label Request Form</title>
+    <meta content="New Bin" name="Bin, Sack and Label Request Form<">
+    <meta content="Huntigdonshire District Council" name="author">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <link href="../hdcSmall.css" rel="stylesheet" type="text/css" />
+    <link href="../formElements.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="bin_sack_label.css" rel="stylesheet" />
+    <link href="../images/favicon.ico" rel="shortcut icon" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/HDC.js"></script>
+    
+    <script type="text/javascript" src="../../js/jsValidation/validate.js"></script>
+    <script type="text/javascript" src="../../js/jsValidation/additional-methods.js"></script>
+    <script type="text/javascript" src="bin_sack_label.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-4719716-2', 'auto');
+          ga('send', 'pageview');
+
+    </script>
+    <!--[if lt IE 9]>
+    	<script src="../../js/html5.js">
+    	</script>
+    <![endif]-->
+    </head>
+    <body>
+    <div id="all">
+      <ul class="hide" id="skip">
+        <li> <a href="#content">Skip to main content</a> </li>
+        <li> <a href="#snav">Skip to navigation</a> </li>
+      </ul>
+      <div id="header">
+        <div id="logo"> <a href="http://www.huntingdonshire.gov.uk"><img alt="Huntingdonshire District Council" src="../images/HDC_Logo_Colour_65mm_A4.jpg"></a> </div>
+      </div>
+      <div id="breadcrumb">
+        <h2>You are in:</h2>
+        <ul>
+          <li>Household Bin, Sack or Label Request Form</li>
+        </ul>
+      </div>
+      <div id="con">
+        <div id="con2">
+          <div id="rColumn"> &nbsp; </div>
+          <div id="posCon" >
+            <div id="content" >
+                <form id="HDC-form" method="POST" action="../../Applications/FormProcessornew/afp.aspx?formid=235" name="Contact us">
+                    <p>This form is for requesting bins, sacks or labels for your household. Please note sacks can only be provided if you do not have a wheeled bin.</p>
+                    <p>Useful Links:</p>
+                    <ul>
+                        <li><a href="http://applications.huntingdonshire.gov.uk/applications/RefuseCalendar/RefuseCollection.html" target="_blank">Refuse Collection Calendar </a>to find out your collection dates.</li>
+                    </ul>
+                    <br />
+                    <label>What item do you need?<span class="required">*</span></label>
+                    <div class="radioGroup thirds">
+                        <label for="needBin" id="binNeeded">
+                            <input type="radio" name="TypeNeeded" id="needBin" value="Bin" />
+                            Bin
+                        </label>
+                        <label for="needLabel" id="labelNeeded">
+                            <input type="radio" name="TypeNeeded" id="needLabel" value="Label" />
+                            Label
+                        </label>
+                        <label for="needSack" id="sackNeeded">
+                            <input type="radio" name="TypeNeeded" id="needSack" value="Sack" />
+                            Sack
+                        </label>
+                    </div>
+                    <div id="requestedItem">
+                        <label for="requesting">What do you need?<span class="required">*</span></label>
+                        <select name="Requesting" id="requesting">
+                            <option value="" selected>Please select</option>
+                            <option value="Additional bin">Additional bin</option>  <!--bin only-->
+                            <option value="Replacement bin">Replacement bin (broken/damaged/stolen)</option>  <!--bin only-->
+                            <option value="New bin">New bin (new build house/ just moved into a house and there are no bins)</option>    <!--bin only-->
+                            <option value="Replacement address labels">New address labels</option> <!--labels only-->
+                            <option value="Replacement assisted collection labels">New assisted collection labels</option> <!--labels only-->
+                            <option value="Replacement 2nd green bin labels">Replacement 2nd green bin labels</option> <!--labels only-->
+                        </select>
+                    </div>
+                    <div id="newBuildFields">
+                        <label for="newBuild" class="newbinfield">Are you moving to a new build property?<span class="required">*</span></label>
+                        <div class="radioGroup">
+                            <label for="newBuildYes">Yes
+                                <input type="radio" name="newBuild" id="newBuildYes" value="Yes" />
+                            </label>
+                            <label for="newBuildNo">No
+                                <input type="radio" name="newBuild" id="newBuildNo" value="No" />
+                            </label>
+                        </div>
+                        <div id="newInfoHide">
+                            <label for="newInfo" class="newBinField">If no, why are you requesting a new bin?<span class="required">*</span></label>
+                            <textarea name="Not new house Info" id="newInfo" placeholder="Please explain why you are requesting a new bin i.e. you have just moved house and there are no bins there"></textarea>
+                        </div>
+                        <label for="movingDate" class="newBinField">When are you moving into your new property?<span class="required">*</span></label>
+                        <input type="date" name="Moving Date" id="movingDate" placeholder="Moving Date" class="txtinput" />
+                    </div>
+                    <div id="brokenBinOptions">
+                        <label for="whatHappenedBin">What has happended to the bin?<span class="required">*</span></label>
+                        <select name="What happened to bin" id="whatHappenedBin">
+                            <option value="" selected>Please select</option>        
+                            <option value="Broken or Damaged">Broken or damaged (incl accidental fire)</option>
+                            <option value="Stolen">Stolen or arson</option>
+                        </select>
+                        <div id="howDamaged">
+                            <label for="binDamaged">Where is the bin broken or damaged?<span class="required">*</span></label>
+                            <select name="Bin Damaged" id="binDamaged">
+                                <option value="" selected>Please select</option>
+                                <option value="Body">Body</option>
+                                <option value="Lid">Lid</option>
+                                <option value="Wheels">Wheels</option>
+                            </select>
+                         </div>
+                    </div>
+                    <div id="wasteType">
+                        <label for="type" class="newBinField additionalBinField replacementBinField">Waste type?<span class="required">*</span></label>
+                        <select placeholder="" name="Type" id="type">
+                            <option value="" selected>Please select</option>
+                            <option value="Domestic Waste" class="newBinView binView sackView">Domestic Waste</option>  <!--Bin and sacks only-->
+                            <option value="Dry Recycling" class="newBinView binView sackView">Dry Recycling</option>    <!--Bin and sacks only-->
+                            <option value="Garden Waste" class="newBinView binView">Garden</option>    <!--Bins only-->
+                            <option value="Clinical Waste" class="sackView">Clinical Waste</option> <!--Sacks only-->
+                            <option value="All 3 Bins" class="newBinView stolenBinView">All 3 Bins - waste, recycling and garden waste</option> <!--New Bins and Stolen or Arson-->
+                        </select>
+                    </div>
+                    <div id="additionalBinInfo">
+                        <div id="clinicalSackInfo">
+                            <h2>Clinical Waste</h2>
+                            <p>Please note, that via this form, we can only process requests for additional bags for collections that are already set up. If you want to set up a new clinical waste collection please call us on 01480 388640.</p>
+                        </div>
+                        <div id="additionalBinDomesticInfo">
+                            <!--Only show when Requesting = Additional Bin and type = Domestic Waste -->
+                            <h2>Additional Domestic Waste</h2>
+                            <p>Each household is entitled to one domestic waste bin. However, you may be entitled to an additional bin in some circumstances, such as:
+                                <ul>
+                                    <li>there are six or more permanent residents in the household, and excessive waste cannot be recycled</li>
+                                    <li>there are five permanent residents in the household including children in full time nappies</li>
+                                    <li>there are four permanent residents in the household with more than one child in full time nappies</li>
+                                    <li>a resident within the household has any special circumstances creating an unusual amount of waste to be produced on a regular basis</li>
+                                    <li>any resident who can prove that after using all possible measures (recycling and composting as much as possible, determined by an officer carrying out a waste audit), they still have more waste than can be contained in a standard 240ltr wheeled bin.</li>
+                                </ul>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <p class="highlight">***Please do not continue with this form. Instead you need to complete this <a href="https://applications.huntingdonshire.gov.uk/forms/operations/additional-waste-bin.html" target="_blank">application form</a> so we can assess your eligibility for an additional domestic waste bin.***</p>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+
+                        </div>
+                        <div id="additionalBinGardenInfo">
+                            <!--Only show when Requesting = Additional Bin and type = Garden Waste-->
+                            <h2>Additional Garden Waste</h2><p>This is a chargeable service. Each residential property can have one garden waste bin. You can request up to a maximum of two extra garden bins and there is a charge of Â£40 per extra bin per year (July-June). Please submit this form if you wish to continue and we will contact you by post with payment instructions. Once payment has been received your additional garden waste bin(s) will be delivered within 10 working days. If you need any further information please visit our <a href="http://www.huntingdonshire.gov.uk/bins-waste/additional-garden-waste-bin-and-composting/ " target="_blank">Garden Waste page</a> for updated information on this service.</p>
+                        </div>
+                    </div>
+                    <div class="radioGroup full">
+                        <label for="cTax">
+                            <input type="checkbox" name="C Tax Declaration" id="cTax" value="I confirm" data-msg-required="Please confirm" required />
+                                For anything to be ordered you must be registered for council tax. Please tick the box to confirm you have registered for council tax. <span class="required">*</span>
+                        </label>
+                        </div>
+                    <div id="comments">
+                        <textarea name="Additional Info" id="anyAdditionalInfo" placeholder="Any additional information that will support your request?"></textarea>
+                    </div>
+                    <h2>Contact Details</h2>
+                    <select placeholder="Enter your Title" name="Title" id="title">
+                        <option value="" selected>Please select</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <label for="firstName">First name:<span class="required">*</span></label>
+                        <input name="First Name" placeholder="Enter first name" type="text" id="firstName" class="txtinput" data-msg-required="Enter first name" required />
+                    <label for="lastName">Surname:<span class="required">*</span></label>
+                        <input name="Last Name" placeholder="Enter surname" type="text" id="lastName" class="txtinput" data-msg-required="Enter surname" required />
+                    <div class="addressPicker">
+                        <label>What is your address?</label>
+                        <p>Please enter your postcode below, then click search and select the addresss. If you do not know your postcode please just enter your address in the 'Your Address' box below.</p>
+                        <input placeholder="Enter postcode" type="text" name="Applicant Postcode Search" id="applicantPostcodeSearch" class="txtinput inlineField postcodeField" />
+                        <input type="button" class="inlineButton goSearch" value="Search for an address" />
+                        <select id="applicantAddressResults" class="floatClear addressResults">
+                            <option selected>Please select your address</option>
+                        </select>
+                        <input type="hidden" name="applicant UPRN" class="hiddenUPRN" id="applicantUPRN"/>
+                        <label for="applicantAddress" class="floatClear">Your address<span class="required">*</span>
+                    </label>
+                        <textarea name="Applicant Address" class="address" id="applicantAddress" placeholder="Your address" required></textarea>
+                    </div>
+                    <label for="email">Email address:<span class="required">*</span></label>
+                    <input name="email" placeholder="Your email address" type="email" id="email" class="txtinput" data-msg-required="Enter e-mail" required/>
+
+                    <label for="email_confirm">Confirm email Address:<span class="required">*</span></label>
+                    <input name="email_confirm" placeholder="Your email address" type="email" id="email_confirm" class="txtinput" data-msg-required="Confirm e-mail" required/>
+
+                    <label for="telephone">Phone number:</label>
+                    <input name="Phone Number" placeholder="Your phone number" type="text" id="telephone" class="txtinput"/>
+
+                    <input type="submit" id="submit" name="Submit" value="Submit form" class="HDCbutton"/>
+                </form>
+            </div>
+          </div>
+          <div class="cleaner"> &nbsp; </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerContent">
+          <div>
+            <h2 class="hide">Site information</h2>
+            <p>&copy; Huntingdonshire District Council</p>
+            <ul>
+                        <li>
+                            <a href="http://www.huntingdonshire.gov.uk/council-democracy/our-website/" target="_blank">Our website content</a>
+                        </li>
+                        <li>
+                            <a href="http://www.huntingdonshire.gov.uk/council-democracy/council-open-data-and-information/data-protection/" target="_blank">Data protection</a>
+                        </li>
+                        <li>
+                            <a href="http://www.huntingdonshire.gov.uk/council-democracy/council-open-data-and-information/data-matching/" target="_blank">Data matching</a>
+                        </li>
+                        <li>
+                            <a href="http://www.huntingdonshire.gov.uk/council-democracy/have-your-say/complaints-and-feedback/" target="_blank">Complaints</a>
+                        </li>
+                        <li>
+                            <a href="http://www.huntingdonshire.gov.uk/council-democracy/our-website/accessibility" target="_blank">Accessibility</a>
+                        </li>
+                        <li class="last">
+                            <a href="http://www.huntingdonshire.gov.uk/contact-us/" target="_blank">Contact us</a>
+                        </li>
+                    </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,495 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- PageID 18106 - published by Open Text Web Solutions 10 - 10.0.1.51 - 29448 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="Title" content="Blaenau Gwent County Borough Council - Appetite for Life" />
+    <meta name="Description" content="Blaenau Gwent County Borough Council" />
+    <meta name="Author" content="Blaenau Gwent County Borough Council" />
+    <meta name="DC.Title" content="Blaenau Gwent County Borough Council: - Appetite for Life" />
+    <meta name="DC.Coverage" content="Blaenau Gwent, South Wales, UK" lang="ENG" xml:lang="ENG" />
+    <meta name="DC.Identifier" scheme="URI" content="/education/18106.asp" />
+    <meta name="DC.Date.Created" scheme="W3CDTF" content="30/04/2012" />
+    <meta name="DC.Date.Issued" scheme="W3CDTF" content="04/11/2015 15:14:39" />
+    <meta name="DC.Date.Modified" scheme="W3CDTF" content="04 November 2015" />
+    <meta name="DC.Format" content="text/html" />
+    <meta name="DC.Creator" content="Blaenau Gwent County Borough Council: Sally Williams" />
+    <meta name="DC.publisher" content="Blaenau Gwent County Borough Council, Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB, Tel (01495) 350555, http://www.blaenau-gwent.gov.uk" />
+    <meta name="DC.Contributor" content="Governance" />
+    <meta name="DC.Language" scheme="ISO 639-2" content="ENG" />
+    <meta name="DC.Subject" scheme="IPSV" content="" />
+    <meta name="DC.Rights" content="http://www.blaenau-gwent.gov.uk/copyright" />
+    <meta name="eGMS.accessibility" content="Double-A" scheme="WCAG" />
+    <meta name="eGMS.subject.category.identifier" scheme="LNGL" content="" />
+    <meta name="eGMS.subject.category" scheme="IPSV" content="" />
+    <meta name="keywords" content="school, dinner, menu, primary, secondary, free, meals, apply, application" />
+    <title>
+      Blaenau Gwent County Borough Council - Appetite for Life
+    </title>
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" src="/scripts/jquery-1.3.2.min.js">
+</script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image1 .desc").show(); //Show Banner
+            $(".main_image1 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb1 ul li:first").addClass('active');
+            $(".image_thumb1 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image1").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image1 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image1 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image1 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb1 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse1").click(function () {
+                $(".main_image1 .block").slideToggle();
+                $("a.collapse1").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image2 .desc").show(); //Show Banner
+            $(".main_image2 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb2 ul li:first").addClass('active');
+            $(".image_thumb2 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image2").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image2 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image2 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image2 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb2 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse2").click(function () {
+                $(".main_image2 .block").slideToggle();
+                $("a.collapse2").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        function f(n) {
+            document.getElementById('body').style.fontSize = n
+        }
+    //]]>
+    </script><!-- IE6 STYLE OVERRIDES --><!--[if lte IE 6]>
+        <link href="" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- IE7 STYLE OVERRIDES -->
+    <!--[if IE 7]>
+           <link href=""  rel="stylesheet" type="text/css" />
+    <![endif]-->
+  </head>
+  <body id="body">
+    <a name="Top" id="Top"></a> <!-- HEADER -->
+     <!-- ************************************** -->
+     <!-- HEADER  (grey bar, white bar, red bar) -->
+     <!-- ************************************** -->
+    <div id="header">
+      <!-- HEADER TOP BAR( grey ) -->
+      <div id="header-toplinks-outer">
+        <div id="header-toplinks-inner">
+          <!-- SEARCH BOX -->
+          <div id="header-search">
+            
+              <form name="kbs" method="get" action="http://search3.openobjects.com/kb5/gwent/search/en/results.page" id="kbs">
+                <input name="qt" class="searchbox" type="text" maxlength="50" value="Search" onfocus="this.value=''" id="query" /> <input class="searchbutton" type="submit" value="" />
+              </form>
+            </form>
+          </div><!-- TOP HEADER LINKS -->
+          <div id="header-toplinks">
+            <ul>
+              <li class="first">
+                 <a href="/CYM/education/18106.asp" title="Cymraeg" accesskey="l">Cymraeg</a> 
+              </li>
+              <li>
+                <a href="/council/69.asp" title="Accessibility" accesskey="a">Accessibility</a>
+              </li>
+              <li>
+                <a href="/help.asp" title="Help" accesskey="h">Help</a>
+              </li>
+              <li>
+                <a href="/ContactUs.asp" title="Contact Us" accesskey="c">Contact Us</a>
+              </li>
+              <li>
+                <a href="/council/1838.asp" title="News Centre" accesskey="m">News Centre</a>
+              </li>
+              <li>
+                <a href="http://www.blaenau-gwent.gov.uk/19002.asp" title="Cookies" accesskey="v">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- HEADER COUNCIL LOGO ( tag line set in css )-->
+      <div id="header-mast-outer">
+        <!-- Begin Logo -->
+        <div id="logo">
+          <a href="/index.asp"><img src="/images/logo.jpg" alt="Blaenau Gwent County Borough Council - Cyngor Bwrdeisdref Sirol Blaenau Gwent" /></a>
+        </div><!-- End Logo --><!-- Begin Hour -->
+        <div id="hour-ENG"></div><!-- End Hour -->
+        <!-- Begin Tagline -->
+        <div id="tagline"></div><!-- End Tagline -->
+      </div><!-- HEADER BOTTOM BAR ( red ) -->
+      <div id="header-bottomlinks-outer">
+        <div id="header-bottomlinks-inner">
+          <!-- LINKS LIST -->
+          <div id="header-bottomlinks">
+            <ul>
+              <li class="first">
+                <a href="/index.asp" title="Home" accesskey="h">Home</a>
+              </li>
+              <li>
+                <a href="/jobs/262.asp" title="Jobs" accesskey="j">Jobs</a>
+              </li>
+              <li>
+                <a href="/onlineServices/forms.asp" title="Online Forms" accesskey="o">Online Forms</a>
+              </li>
+              <li>
+                <a href="/faqs/faq.asp" title="FAQ's" accesskey="5">FAQ's</a>
+              </li>
+              <li>
+                <a href="/sitemap.asp" title="Sitemap" accesskey="3">Sitemap</a>
+              </li>
+              <li>
+                <a href="/A-Z.asp" title="A-Z" accesskey="z">A-Z</a>
+              </li>
+              <li>
+                <a href="/news/2487.asp" title="News" accesskey="n">News</a>
+              </li>
+              <li>
+                <a href="/whatsOn/6775.asp" title="What's On" accesskey="w">What's On</a>
+              </li>
+            </ul>
+          </div><!-- TEXT SIZE CHOOSER -->
+          <div id="header-textsize">
+            <span>Enlarge Screen Text Here:</span> <span class="small-text"><a href="javascript:f('0.6em');">A</a></span> <span class="medium-text"><a href="javascript:f('0.8em');">A</a></span> <span class="large-text"><a href="javascript:f('1.2em');">A</a></span>
+          </div><!-- CLEAR DIV ( alloew red background to extend with text size ) -->
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div><!-- SPACER ( few pixels light blue spacer ) -->
+    <div id="header-spacer"></div><!-- // HEADER -->
+    <!-- PAGE CONTENT -->
+    <div id="main-content-body-outer">
+      <div id="main-content-valley">
+        <!-- MAIN PAGE CONTENT - WHITE BOX -->
+        <div class="white-box-top"></div>
+        <div class="white-box-body body-content">
+          <div style="text-align: center; height: 100px; position: relative; left: 13%;">
+            <script type="text/javascript">
+//<![CDATA[
+            document.write('\x3Cscript type="text/javascript" src="//can.capacitygrid.com/code/blaenaugwentcbc/leaderboard/public">\x3C/script>');
+            //]]>
+            </script>
+          </div>
+          <div id="left-column">
+            <!-- Begin Online Services -->
+            <div id="online-services">
+              <span>What would you like to do?</span> <a href="/onlineServices/15981.asp" id="payforit" name="payforit">Pay for it</a> <a href="/onlineServices/15980.asp" id="reportit" name="reportit">Report it</a> <a href="/onlineServices/15979.asp" id="requestit" name="requestit">Request it</a> <a href="/onlineServices/15978.asp" id="sayit" name="sayit">Say It</a> <a href="/onlineServices/15982.asp" id="findit" name="findit">Find It</a>
+            </div><!-- LEFT NAVIGATION -->
+            <div class="side-box-container no-border">
+              <h2 class="red-heading">
+                Browse by Service:
+              </h2>
+              <ul class="navigation-list">
+                
+                <li class="level-0">
+                  <a href="/index.asp">Home</a>
+                </li>
+                <li class="level-0 up">
+                  <a href="/education.asp" title="Education &amp; Learning">Education &amp; Learning</a>
+                </li>
+                <li class="level-2">
+                  <a href="/education/18066.asp" title="Schools">Schools</a>
+                </li>
+                <li class="level-3 up">
+                  <a href="/education/18069.asp" title="Parent Information">Parent Information</a>
+                </li>
+                <li class="level-3">
+                  <a href="/education/18106.asp" title="Appetite for Life">Appetite for Life</a>
+                </li>
+              </ul>
+            </div><!-- // LEFT NAVIGATION -->
+          </div><!-- CONTENT MIDDLE COLUMN -->
+          
+            <div id="three-column-middle">
+              
+              <h1 class="green-heading" style="display: ;">
+                Appetite for Life
+              </h1>
+              <div class="no-border page-content">
+                <p>
+                  <img src="/images/Images_Children/Lord_Mayor_all_mascots2_rdax_380x297.JPG" alt="Mayor and Mascots" />
+                </p>
+                <p>
+                  <strong>What is Appetite for Life?</strong>
+                </p>
+                <p align="left">
+                  Appetite for Life is the Welsh Government&rsquo;s plan for improving the food and drink provided in schools in Wales.
+                </p><img style="MARGIN-LEFT: 5px" hspace="5" src="/images/Images_Logos/appetite_for_life_logo.jpg" align="right" />
+                <p style="TEXT-ALIGN: justify">
+                  It sets new food, drink and nutrient standards that mean food provided in school will be healthy and well balanced and snack foods and drinks with little or no nutritional value will not be available.<br />
+                  &nbsp;&nbsp;<br />
+                  The food and drink based standards apply across the school day including breakfast clubs, mid morning break, tuck shops, vending machines, lunch time provision and after school clubs.&nbsp; The nutrient based standards apply to the food served at lunch times.
+                </p>
+                <p>
+                  <strong>What are the &ldquo;nutrient based standards&rdquo;?</strong>
+                </p>
+                <p style="TEXT-ALIGN: justify">
+                  The nutrient based standards list a maximum amount of fat, saturated fat, added sugars and salt and minimum amount for vitamins and minerals for an average school lunch.&nbsp;<br />
+                  There are also calorie limits which mean that the average school lunch contains energy which is right for the needs of children and young people.&nbsp;
+                </p>
+                <p style="TEXT-ALIGN: justify">
+                  All the food provided by Blaenau Gwent Catering Team at lunchtimes has been nutritionally analysed against the nutrient based standards to ensure your child can choose from a healthy balanced variety of foods at lunch time.
+                </p>
+                <p>
+                  <strong>What sort of foods will be on offer?</strong>
+                </p>
+                <p align="justify">
+                  Although there are some restrictions, a large variety of foods including desserts can still be served under Appetite for Life recommendations including favourites such as chocolate and orange muffins, chilli con carne, oaty apple crumble, carrot cake, and homemade pizza.
+                </p>
+                <p align="justify">
+                  School lunches must also include a portion of fruit and a portion of vegetables for every pupil every day.<br />
+                  The lunch time provision is generally planned in advance and menus showing the meals that your child can choose should be available from your child&rsquo;s school or your local authority.
+                </p>
+                <p align="justify">
+                  In secondary schools the range of food on offer tends to be wider and more varied than in primary schools. Most secondary schools offer a wide range of options such as traditional hot dishes and meal deals &ndash; offering good value for money, salad bars, and jacket potatoes with fillings, sandwiches, baguettes, rolls and healthy drinks.
+                </p>
+                <p align="justify">
+                  <br />
+                  <strong>Can my child still have a snack at break time?</strong><br />
+                  Yes, snacks should still be available in schools but individual school policies will vary.&nbsp; Appetite for Life recommends that food and drinks served across the school day must have a clear nutritional benefit.&nbsp;<br />
+                  &nbsp;<br />
+                  In primary schools, recommended break time snacks and drinks are fruit, vegetables, water and milk.&nbsp; <img style="MARGIN-LEFT: 5px" hspace="5" src="/images/Images_Miscellaneous/eatwellplatesml.jpg" align="right" />
+                </p>
+                <p align="justify">
+                  In secondary schools, recommended break time snacks include bread products, fruit, vegetables, and yoghurts.&nbsp; Fizzy drinks high in added sugars and sweeteners are being replaced with plain water, milk and fruit juice drinks.
+                </p>
+                <p align="justify">
+                  Many schools are working together with the Welsh National Healthy Schools Scheme to promote fruit and vegetable snacks and encourage water drinking.&nbsp; Contact your child&rsquo;s school to find out what snack foods and drinks are available.
+                </p>
+                <p align="justify">
+                  Through the work of Appetite for Life, we are also running bush tucker trials through Primary Schools with a focus on healthy eating and healthy snacks, introducing pupils to unusual healthy foods to encourage healthy snacks. Schools are also holding Healthy Days/Weeks covering subjects around health and wellbeing to encourage healthy habits from a young age.
+                </p>
+                <p align="justify">
+                  <strong>&nbsp;&nbsp;&nbsp;&nbsp;<br />
+                  My child isn&rsquo;t sure that they will like the food on offer on the new menu?</strong>
+                </p>
+                <p align="justify">
+                  Blaenau Gwent Catering offers taster portions of new foods at lunchtimes for pupils to try to help establish new favourites.&nbsp;
+                </p>
+                <p align="justify">
+                  Taster sessions are planned throughout the year for pupils in secondary schools to try new foods inline with the new standards that are appealing to there age group.&nbsp;<br />
+                  Taster sessions are also held at parent&rsquo;s evenings in both primary and secondary for parents to see and try the new foods on offer.&nbsp; Contact your child&rsquo;s school/local authority for more information on planned taster sessions.
+                </p>
+                <p align="justify">
+                  <img src="/images/Images_Logos/AfL_Strapline_sml.JPG" /><br />
+                </p>
+                <p align="justify">
+                  <strong>Want to know more about school meals?</strong>
+                </p>
+                <p align="justify">
+                  Contact <a title="Email Claire Edmunds" href="mailto:claire.edmunds@blaenau-gwent.gov.uk">Claire Edmunds</a> &ndash; Catering Manager on 01495 355310
+                </p>
+                <p align="justify">
+                  Any further information regarding work currently taking place in schools or further information on Appetite for Life, please contact <a title="Email Libby McIntosh" href="mailto:elizabeth.mcintosh@blaenau-gwent.gov.uk">Libby McIntosh</a> on 01495 355312.
+                </p>
+                <p align="justify">
+                  The Appetite for Life Action Plan can be downloaded along with further information on the recommended guidelines for food, drink and nutrient based standards, from the:<br />
+                  Welsh Assembly Government website:
+                </p>
+                <p align="justify">
+                  <br />
+                  <a href="http://wales.gov.uk/topics/educationandskills/schoolshome/foodanddrink/appetiteforlife/?lang=en">http://wales.gov.uk/topics/educationandskills/schoolshome/foodanddrink/appetiteforlife/?lang=en</a>
+                </p>
+                <p align="justify">
+                  If you think your child may be eligible for free school meals, contact C2BG contact centre on 01495 311556 find out more information.
+                </p>
+                <p align="justify">
+                  <a href="/documents/Documents_Environment/AW2014_(Read-Only).pdf"></a>
+                </p>
+                <div class="Top" style="display: none;">
+                  <a href="/education/18106.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" width="8" height="8" alt="Return to top of page" /></a>
+                  <div style="clear:both;"></div>
+                </div>
+              </div><script language="JavaScript" type="text/javascript">
+//<![CDATA[
+              var win = null;
+              function newWindow(mypage,myname,w,h,features) {
+              var winl = (screen.width-w)/2;
+              var wint = (screen.height-h)/2;
+              if (winl < 0) winl = 0;
+              if (wint < 0) wint = 0;
+              var settings = 'height=' + h + ',';
+              settings += 'width=' + w + ',';
+              settings += 'top=' + wint + ',';
+              settings += 'left=' + winl + ',';
+              settings += features;
+              win = window.open(mypage,myname,settings);
+              win.window.focus();
+              }
+              //]]>
+              </script>
+              <div class="box-container related-documents">
+                <h1 class="green-heading">
+                  Related Documents
+                </h1>
+                <ul>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Primary_RC_Menu_(web).pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Primary_RC_Menu_(web).pdf">Primary School - RC Menu 2015/2016</a> - <img src="/documents/Primary_RC_Menu_(web)_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />3123.10kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Primary_Two_Choice_Menu_(web).pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Primary_Two_Choice_Menu_(web).pdf">Primary School - Two Choice Menu 2015/2016</a> - <img src="/documents/Primary_Two_Choice_Menu_(web)_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />3404.05kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Primary_Salad_Bar_Menu_(web).pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Primary_Salad_Bar_Menu_(web).pdf">Primary School - Salad Bar Menu 2015/2016</a> - <img src="/documents/Primary_Salad_Bar_Menu_(web)_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />3136.38kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Week_1_Comp(2).pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Week_1_Comp(2).pdf">Secondary School Menu 2015 - Week 1</a> - <img src="/documents/Week_1_Comp(2)_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />130.36kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Week_2_Comp.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Week_2_Comp.pdf">Secondary School Menu 2015 - Week 2</a> - <img src="/documents/Week_2_Comp_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />130.09kb<br />
+                  </li>
+                  <li class="genericbox_onlineforms_title">
+                    <a href="javascript:void(0);" onclick="newWindow('/documents/Week_3_Comp.pdf','','650','500','resizable,scrollbars,status,toolbar')" title="link to Week_3_Comp.pdf">Secondary School Menu 2015 - Week 3</a> - <img src="/documents/Week_3_Comp_Thumbnail_100x100.jpg" alt=" Icon" class="onlineforms_icon" />129.84kb<br />
+                  </li>
+                </ul>
+              </div>
+              <div class="Top" style="display: none;">
+                <a href="/education/18106.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div><!-- // CONTENT MIDDLE COLUMN -->
+              
+            </div><!-- RIGHT COLUMN -->
+            <div id="right-column">
+              <span class="hide"><a name="rightcol" id="rightcol">Right Content Area</a></span> <!-- RIGHT IMAGE -->
+              <div class="side-box-container">
+                <img src="/images/Images_Children/IMAG0028_rdax_180x300.JPG" alt="Eat healthy" class="imgPanel" /><br />
+                
+              </div><!-- // RIGHT IMAGE -->
+              <!-- UTILITY LINKS RIGHT -->
+              <div class="side-box-container">
+                <form name="PageFeedback" method="post" action="/5431.asp" target="_self" id="PageFeedback">
+                  <input type="hidden" name="PageID" value="18106" /> <input type="hidden" name="Headline" value="Appetite for Life" /> <input type="hidden" name="PageURL" value="/education/18106.asp" />
+                  <ul class="utility-list">
+                    <li class="printer-friendly">
+                      <a href="JavaScript:window.print()">Print friendly<br />
+                      version</a>
+                    </li>
+                    <li class="page-feedback">
+                      <a href="JavaScript:document.PageFeedback.submit();">Feedback<br />
+                      on this page</a>
+                    </li>
+                  </ul>
+                </form>
+                <div class="clear"></div>
+              </div><!-- //UTILITY LINKS RIGHT -->
+              
+            </div><!-- //RIGHT COLUMN --><!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div><!-- FOOTER -->
+          <!-- PAGE FOOTER - WHITE BOX -->
+          <div class="white-box-top"></div>
+          <div class="white-box-body footer-content">
+            <!-- start of footer content -->
+            <a href="/about/5639.asp"><img src="/images/find-us.jpg" alt="Find Us" /></a> <a href="/council/5413.asp"><img src="/images/service-buddy.jpg" alt="Children's Complaints Service" /></a> <a href="/5515.asp"><img src="/images/connect-to-bg.jpg" alt="C2BG" /></a> <!-- <a href="http://www.direct.gov.uk"><img src="/images/directgov.jpg" alt="Direct Gov" /></a> -->
+             <a href="https://www.gov.uk/"><img src="/images/directgov.jpg" alt="GOV UK" /></a> <!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div>
+          <div id="footer-contact">
+            <address>
+              Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB Tel: 01495 311556 E-mail:&nbsp;<a href="mailto:info@blaenau-gwent.gov.uk">info@blaenau-gwent.gov.uk</a>
+            </address>
+          </div><!--RDExecute=ASP-->
+          <script type="text/javascript">
+//<![CDATA[
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-17447558-1', 'blaenau-gwent.gov.uk');
+          ga('require', 'displayfeatures'); 
+          ga('send', 'pageview');
+          //]]>
+          </script> <script type="text/javascript">
+//<![CDATA[
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-17447558-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+          //]]>
+          </script> <!-- // FOOTER -->
+        </div>
+      </div><!-- iBar Code -->
+      <script type="text/javascript">
+//<![CDATA[
+      document.write('\x3Cscript type="text/javascript" src="//can.capacitygrid.com/code/blaenaugwentcbc/ibar/public">\x3C/script>');
+      //]]>
+      </script> 
+    </div>
+  </body>
+</html>

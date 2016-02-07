@@ -1,0 +1,395 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="ctl00_htmlRootElement" xmlns="http://www.w3.org/1999/xhtml" lang="en-gb">
+<head id="ctl00_Head1"><title>
+	Sign In
+</title><link id="ctl00_Link1" rel="SHORTCUT ICON" href="favicon.ico" /><link id="ctl00_Link2" rel="search" type="application/opensearchdescription+xml" title="Axiell Virtual Library" href="openSearch-description.xml" /><link href="App_Themes/Default/Basic.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/MockUps.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/NavigationMenu.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/Outline.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/Style.css" type="text/css" rel="stylesheet" /><link href="App_Themes/Default/zz_dudley.css" type="text/css" rel="stylesheet" /><link href="App_Themes_FontSizes/Default/Medium.css" rel="stylesheet" type="text/css" /><link href="App_Themes_Print/Default/Print.css" rel="stylesheet" type="text/css" media="print" /></head>
+<body>
+    <!--<ul id="top">
+        <li id="skipNav"><a href="#OutlineColumn" id="ctl00_SkipTooNavLink">Skip to navigation</a></li>
+        <li><a href="#main" id="ctl00_SkipTooContentLink" accesskey="S">Skip to content</a></li>
+    </ul>-->
+    <form name="aspnetForm" method="post" action="00_002_login.aspx?returnUrl=%2f01_YourAccount%2f01_002_YourLoans.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE3OTM4MDY0Ng9kFgJmD2QWAgIBDxYCHgRsYW5nBQVlbi1nYhYGAgMPFgIeCWlubmVyaHRtbAUSU2tpcCB0byBuYXZpZ2F0aW9uZAIFDxYCHwEFD1NraXAgdG8gY29udGVudGQCBw9kFhgCAQ8PFhYeDkNsZWFyQnV0dG9uVGlwBRFDbGVhciB0aGVzZSBpdGVtcx4YUmVzZXJ2YXRpb25JdGVtc1Bvc3RUZXh0BREgaXRlbShzKSBzZWxlY3RlZB4KU2hvd0RldGFpbGgeDk5vUmVzZXJ2YXRpb25zBRlZb3UgaGF2ZSAwIGl0ZW1zIHNlbGVjdGVkHhtSZW1vdmVGcm9tQmFza2V0UG9zdEFsdFRleHQFDCBmcm9tIEJhc2tldB4QUmVzZXJ2ZUJ1dHRvblRpcAUTUmVzZXJ2ZSB0aGVzZSBpdGVtcx4RUmVzZXJ2ZUJ1dHRvblRleHQFB1Jlc2VydmUeD0NsZWFyQnV0dG9uVGV4dAUFQ2xlYXIeF1Jlc2VydmF0aW9uQmFza2V0SGVhZGVyBQ5TRUxFQ1RFRCBJVEVNUx4XUmVtb3ZlRnJvbUJhc2tldEFsdFRleHQFB1JlbW92ZSAeF1Jlc2VydmF0aW9uSXRlbXNQcmVUZXh0BQlZb3UgaGF2ZSBkZAIDDxYCHgRUZXh0BRgKICAgICAgUGFnZSBPcHRpb25zCiAgICBkAgcPDxYCHg1MYW5ndWFnZUxhYmVsBQ9TaXRlIExhbmd1YWdlOiBkZAIJDw8WEh4SRm9udFN3aXRjaGVyU3R5bGUyZx4QRGVjcmVhc2VMaW5rVGV4dAU5PGltZyBzcmM9Ii9pbWFnZXMvRm9udExhcmdlLmdpZiIgYWx0PSJMYXJnZSBGb250IFNpemUiIC8+HhZGb250U2l6ZUxhcmdlc3RUb29sVGlwBRtDaGFuZ2UgZm9udCBzaXplIHRvIGxhcmdlc3QeFUZvbnRTaXplTWVkaXVtVG9vbFRpcAUaQ2hhbmdlIGZvbnQgc2l6ZSB0byBtZWRpdW0eD0RlZmF1bHRMaW5rVGV4dAU2PGltZyBzcmM9Ii9pbWFnZXMvRm9udC5naWYiIGFsdD0iRGVmYXVsdCBGb250IFNpemUiIC8+HhpGb250U3dpdGNoZXJTdHlsZTJQb3N0VGV4dGUeEEluY3JlYXNlTGlua1RleHQFQDxpbWcgc3JjPSIvaW1hZ2VzL0ZvbnRYTGFyZ2UuZ2lmIiBhbHQ9IkV4dHJhIExhcmdlIEZvbnQgU2l6ZSIgLz4eGUZvbnRTd2l0Y2hlclN0eWxlMlByZVRleHRlHhRGb250U2l6ZUxhcmdlVG9vbFRpcAUZQ2hhbmdlIGZvbnQgc2l6ZSB0byBsYXJnZWRkAgsPDxYOHhJTdHlsZUxhYmVsTGlua1RleHRlHhRTdHlsZURlZmF1bHRMaW5rVGV4dAUHRGVmYXVsdB4UU3R5bGVOb1N0eWxlTGlua1RleHQFCE5vIFN0eWxlHhNEZWZhdWx0U3R5bGVUb29sVGlwBRtTd2l0Y2ggdG8gZGVmYXVsdCBDU1Mgc3R5bGUeDk5vU3R5bGVUb29sVGlwBRZTd2l0Y2ggb2ZmIENTUyBzdHlsaW5nHghDc3NDbGFzcwUWU3R5bGVTd2l0Y2hlckNvbnRhaW5lch4EXyFTQgICZGQCDQ8PFgoeC0hlYWRpbmdUZXh0BasCQm9vayBKYWNrZXQgSW1hZ2VzOgogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgDQogICAgICAgICAgICAmbmJzcDseBk9uVGV4dAUCT24eB09mZlRleHQFA09mZh8dBRVOaWVsc2VuSW1hZ2VzU3dpdGNoZXIfHgICZGQCDw8PFgofHwX+AVBhZ2UgVXBkYXRlczoKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIA0KICAgICAgICAgICAgJm5ic3A7HyAFG0R5bmFtaWNhbGx5IHVwZGF0ZSB0aGUgcGFnZR8hBSJEbyBub3QgZHluYW1pY2FsbHkgdXBkYXRlIHRoZSBwYWdlHx0FFkR5bmFtaWNVcGRhdGVzU3dpdGNoZXIfHgICZGQCEQ8PFgweEExvZ091dEJ1dHRvblRleHQFCFNpZ24gT3V0HhBMb2dpbmxpbmtQcmVUZXh0ZR4RTG9naW5saW5rUG9zdFRleHRlHg1Mb2dpbmxpbmtUZXh0BQdTaWduIEluHg1Mb2dlZEluQXNUZXh0BQ5TaWduZWQgaW4gYXM6IB4PTG9nZWRJblBvc3RUZXh0ZWRkAhcPDxYEHhFTYXZlZFNlYXJjaEhlYWRlcgUOU2F2ZWQgU2VhcmNoZXMeFlNhdmVkU2VhcmNoQWxsTGlua1RleHQFEkFsbCBTYXZlZCBTZWFyY2hlc2RkAh8PDxYCHgdWaXNpYmxlaGRkAiEPZBYIAgEPFgIfDQUQPGgxPlNpZ24gSW48L2gxPmQCAw8WAh8NBZYTPHA+CgkJCQlTaWduIGluIHRvIHZpZXcgeW91ciBwZXJzb25hbCByZWNvcmQsIHJlbmV3IGJvb2tzLCBtYWtlIHJlc2VydmF0aW9ucy4gCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgIDxwPgogICAgICAgIAogICAgICAgIAogICAgICAgIEVudGVyIHlvdXIgbGlicmFyeSBjYXJkIG51bWJlciAod2l0aCBubyBzcGFjZXMpIGFuZCB5b3VyIFBlcnNvbmFsIElkZW50aWZpY2F0aW9uIE51bWJlciAoUElOKS4KCQkJCUlmIHlvdSBkb27igJl0IGtub3cgeW91ciBQSU4gY29udGFjdCBhbnkgb2Ygb3VyIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgICA8YSBocmVmPSJodHRwOi8vd3d3LmR1ZGxleS5nb3YudWsvcmVzaWRlbnQvbGlicmFyaWVzLWFyY2hpdmVzL2xpYnJhcmllcy9maW5kLWEtbGlicmFyeS8iPm91ciBsaWJyYXJpZXMuPC9hPm9yIHVzZSBvdXI8YSBocmVmPSJodHRwczovL2xpYmNhdC5kdWRsZXkuZ292LnVrLzAwXzAwM19Db250YWN0VXMuYXNweCI+IG9ubGluZSBjb250YWN0IGZvcm0uPC9hPjxiciAvPjwvcD48dWw+PGxpPklmIHlvdSBoYXZlIGp1c3Qgam9pbmVkIER1ZGxleSBMaWJyYXJpZXMgb25saW5lIHlvdSBjYW4gdXNlIHlvdXIgdGVtcG9yYXJ5IFVOUkVHWFhYWFhYWCBsaWJyYXJ5IGNhcmQgbnVtYmVyIGFuZCB0aGUgNCBkaWdpdCBQSU4geW91IAogICAgICAgICAgY2hvc2Ugd2hlbiBqb2luaW5nLjwvbGk+PGxpPklmIHlvdSBhcmUgYW4gZXhpc3RpbmcgbGlicmFyeSB1c2VyIGVudGVyIAogICAgICAgICAgeW91ciBsaWJyYXJ5IGNhcmQgbnVtYmVyIGFuZCB0aGUgUElOICh0aGUgbGFzdCA0IHBhcnRzIG9mIHlvdXIgcG9zdGNvZGUgZm9yIGV4YW1wbGUgRFkxIDFIUj0gMTFIUikuPC9saT48bGk+T25jZSB5b3UgaGF2ZSBsb2dnZWQgaW4geW91IGNhbiBjaGFuZ2UgeW91ciBQSU4gb24gdGhlIAogICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgICAgICAgICA8YSBocmVmPSJodHRwOi8vbGliY2F0LmR1ZGxleS5nb3YudWsvMDFfWW91ckFjY291bnQvMDFfMDI4X1lvdXJQZXJzb25hbERldGFpbHMuYXNweCI+WW91ciBQZXJzb25hbCBEZXRhaWxzPC9hPiBwYWdlLgogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgICA8L2xpPjxsaT5JZiB5b3UgY2FuIG5vdCBsb2cgaW4gc3VjY2Vzc2Z1bGx5IHBsZWFzZSAgCiAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgICAgIDxhIGhyZWY9Imh0dHA6Ly93d3cuZHVkbGV5Lmdvdi51ay9yZXNpZGVudC9saWJyYXJpZXMtYXJjaGl2ZXMvbGlicmFyaWVzL2ZpbmQtYS1saWJyYXJ5Ij5jb250YWN0IHlvdXIgbmVhcmVzdCBsaWJyYXJ5PC9hPjwvbGk+PC91bD48L3A+ZAIFDw8WAh4MR3JvdXBpbmdUZXh0BQdTaWduIEluZBYCAgEPDxYGHhVVc2VybmFtZU1hbmRhdG9yeVRleHQFPjxzcGFuIGNsYXNzPSJlcnJvciI+ICEgTGlicmFyeSBjYXJkIG51bWJlciBpcyByZXF1aXJlZC48L3NwYW4+HhVQYXNzd29yZE1hbmRhdG9yeVRleHQFLjxzcGFuIGNsYXNzPSJlcnJvciI+ICEgUElOIGlzIHJlcXVpcmVkLjwvc3Bhbj4eEEludmFsaWRMb2dpblRleHQFkQE8c3BhbiBjbGFzcz0iZXJyb3IiPgogICAgICAgICEgWW91ciBzaWduIGluIGF0dGVtcHQgd2FzIG5vdCBzdWNjZXNzZnVsLCBwbGVhc2UgdHJ5IGFnYWluLiBSZW1lbWJlciB0aGF0IHlvdXIgUElOIGlzIGNhc2Utc2Vuc2l0aXZlLgogICAgICA8L3NwYW4+ZBYCZg9kFgZmD2QWAmYPZBYCZg8PFgIfDQUUTGlicmFyeSBjYXJkIG51bWJlcjpkZAIBD2QWAmYPZBYCZg8PFgIfDQUVUElOIChjYXNlLXNlbnNpdGl2ZSk6ZGQCAw9kFgICAQ9kFgICAQ8PFgIfDQUHU2lnbiBpbmRkAgcPFgIfDWVkAicPFgIfAQWLATxsaT48YSBocmVmPScjdG9wJyB0aXRsZT0nUmV0dXJuIHRvIHRoZSB0b3Agb2YgdGhlIHBhZ2UnPnRvcDxpbWcgc3JjPScvQXBwX1RoZW1lcy9EZWZhdWx0L2ltYWdlcy91cF9hcnJvdy5naWYnIGJvcmRlcj0nMCcgYWx0PScnLz48L2E+PC9saT5kGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBQ1jdGwwMCR0dndNZW51L+k3HBR8KhrTg6An3jP3Z+ARxrk=" />
+
+
+<script src="/JavaScript/AdapterUtils.js" type="text/javascript"></script>
+<script src="/JavaScript/TreeViewAdapter.js" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CAB8BFBF" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDwLW3bSqBAKWk6ehBALnzoDhAgKq7rPMCwLi1Mo2AvnIoKEHAunMprYPAsXX1eEFAtONqJMKAtONwJMKAq+5jPICAvqEr/IBAsWcttcFArH7j6oGAvShrvUBSMSS/RiqdpldMWjZ6NTd4PRYSd8=" />
+        <div class="header" id="top">
+            <!--<div class="resbasket">-->
+                    <div id="ctl00_ReservationBasketDisplay1">
+	<div id="BasketContainer" class="resbasket"><div class="basketTitle"><div class="basketTitleImage">&nbsp;</div><span class="basketTitleText">SELECTED ITEMS</span></div><div id="BasketItemsContainer">You have 0 items selected</div></div>
+</div>       
+            <!--</div>-->
+        </div>
+        <div id="headerMenu" > <!--class="floatcontainer"> -->
+            <!--<div id="optionsContainer"><a href="javascript:toggleLayer('PageOptions','ctl00_optionsImage');">
+                
+      Page Options
+    
+                <img src="images/i_info_1.gif" id="ctl00_optionsImage" alt=" " />
+            </a> -->
+            <div id="PageOptions">
+            <!-- <div id="ctl00_languageSelector">
+	<div id="ctl00_languageContainer" class="LanguageSelectorContainer">
+		Site Language: <ul><li><a title="English" href="javascript:__doPostBack('ctl00$ctl15','')"><img src="/images/gb.gif" alt="English" /></a></li><li><a title="Welsh" href="javascript:__doPostBack('ctl00$ctl18','')"><img src="/images/cy.gif" alt="Welsh" /></a></li><li><a title="French" href="javascript:__doPostBack('ctl00$ctl21','')"><img src="/images/fr.gif" alt="French" /></a></li></ul>
+	</div>
+</div>-->
+                <div id="ctl00_fontSizeSwitcher">
+	<div id="ctl00_FontSizeSwitcherContainer" class="FontSizeSwitcherContainer">
+		<ul><li><input type="submit" name="ctl00$btnMediumFont" value="A" id="ctl00_btnMediumFont" title="Change font size to medium" class="fontMedium" /></li><li><input type="submit" name="ctl00$btnLargeFont" value="A" id="ctl00_btnLargeFont" title="Change font size to large" class="fontLarger" /></li><li><input type="submit" name="ctl00$btnLargestFont" value="A" id="ctl00_btnLargestFont" title="Change font size to largest" class="fontLargest" /></li></ul>
+	</div>
+</div>
+                <div class="pageOptionSeperator">|</div>
+                <div id="ctl00_StyleSwitcher" class="StyleSwitcherContainer">
+	<ul><li><input type="submit" name="ctl00$ctl32" value="No Style" title="Switch off CSS styling" class="linkButton" /></li></ul>
+</div>
+                <!-- <div id="ctl00_ImagesSwitcher" class="NielsenImagesSwitcher">
+	Book Jacket Images:
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            &nbsp;<ul><li><a href="javascript:__doPostBack('ctl00$ImagesSwitcher$ctl02','')">On</a></li><li><a href="javascript:__doPostBack('ctl00$ImagesSwitcher$ctl04','')">Off</a></li></ul>
+</div> 
+                <div id="ctl00_DynamicUpdatesSwitcher" class="DynamicUpdatesSwitcher">
+	Page Updates:
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            &nbsp;<ul><li><a href="javascript:__doPostBack('ctl00$DynamicUpdatesSwitcher$ctl02','')">Do not dynamically update the page</a></li></ul>
+</div>-->
+            </div>
+            <div class="login">
+                <div id="ctl00_LoginInfoControl1">
+	<input type="submit" name="ctl00$LogInButton" value="Sign In" id="ctl00_LogInButton" class="logInButton" />
+</div>
+                <div class="loginIcon">&nbsp;</div>
+            </div>
+         </div>
+            
+         <!--<div id="headerlinks">
+            <div class="navheader">
+                <div class="toplink-text">Navigation</div>
+            </div>
+            <div class="homelink">
+                <div class="toplink-button">
+                    <a href="http://libcat.dudley.gov.uk/accessdenied.asp">E-resources</a>
+                </div>
+            </div>
+            <div class="homelink">
+                <div class="toplink-button">
+                    <a href="/06_SelfRegistration/06_001_YourDetails.aspx">Register</a>
+                </div>
+            </div>
+            <div class="homelink">
+                <div class="toplink-button">
+                    <a href="/Default.aspx">Home</a>
+                </div>
+            </div>
+        </div>-->
+        <div class="site">
+            <div id="OutlineColumn3">
+                
+<div class="AspNet-TreeView" id="ctl00_tvwMenu">
+		<ul id="ctl00_tvwMenu_UL">
+			<li class="AspNet-TreeView-Root"><div class="menuicon1">&nbsp;</div><div class="menulink">
+				<div class="collapsemenu" onclick="ExpandCollapse__AspNetTreeView(this)" onkeypress="ExpandCollapse__AspNetTreeView(this)">&nbsp;</div>
+				<a class="menuitem" href="/02_Catalogue/02_001_Search.aspx" title="Search the Catalogue">
+					Search the Catalogue</a>
+				<ul>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/02_Catalogue/02_001_Search.aspx?" title="Keyword Search">
+							Keyword Search</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/02_Catalogue/02_001_Search.aspx?searchType=0" title="Author Search">
+							Author Search</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/02_Catalogue/02_001_Search.aspx?searchType=1" title="Title Search">
+							Title Search</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/02_Catalogue/02_001_Search.aspx?searchType=5" title="ISBN Search">
+							ISBN Search</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/02_Catalogue/02_002_AdvancedSearch.aspx" title="Advanced Search">
+							Advanced Search</a></div>
+					</li>
+				</ul></div>
+			</li>
+			<li class="AspNet-TreeView-Root"><div class="menuicon2">&nbsp;</div><div class="menulink">
+				<div class="collapsemenu" onclick="ExpandCollapse__AspNetTreeView(this)" onkeypress="ExpandCollapse__AspNetTreeView(this)">&nbsp;</div>
+				<a class="menuitem" href="/01_YourAccount/01_001_AccountDetails.aspx" title="Personal Record">
+					Personal Record</a>
+				<ul>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_002_YourLoans.aspx" title="Your Loans">
+							Your Loans</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_006_YourReservations.aspx" title="Your Reservations">
+							Your Reservations</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_009_YourAccount.aspx" title="Your Account">
+							Your Account</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_028_YourPersonalDetails.aspx" title="Your Personal Details">
+							Your Personal Details</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_020_YourWishlist.aspx" title="Your Wishlist">
+							Your Wishlist</a></div>
+					</li>
+					<li class="AspNet-TreeView-Leaf"><div class="submenulink">
+						<a class="menuitem" href="/01_YourAccount/01_031_YourSavedSearches.aspx" title="Your Saved Searches">
+							Your Saved Searches</a></div>
+					</li>
+				</ul></div>
+			</li>
+			<li class="AspNet-TreeView-Root AspNet-TreeView-Leaf"><div class="menuicon3">&nbsp;</div><div class="menulink">
+				<span class="spacemenu">&nbsp;</span>
+				<a class="menuitem" href="/03_Reviews/03_004_ViewTitlesReviews.aspx" title="Recently Reviewed Titles">
+					Recently Reviewed Titles</a></div>
+			</li>
+			<li class="AspNet-TreeView-Root AspNet-TreeView-Leaf"><div class="menuicon4">&nbsp;</div><div class="menulink">
+				<span class="spacemenu">&nbsp;</span>
+				<a class="menuitem" href="/05_ReadingLists/05_001_BrowseReadingLists.aspx" title="Browse Reading Lists">
+					Browse Reading Lists</a></div>
+			</li>
+			<li class="AspNet-TreeView-Root AspNet-TreeView-Leaf"><div class="menuicon5">&nbsp;</div><div class="menulink">
+				<span class="spacemenu">&nbsp;</span>
+				<a class="menuitem" href="/06_SelfRegistration/06_001_YourDetails.aspx" title="Join The Library">
+					Join The Library</a></div>
+			</li>
+			<li class="AspNet-TreeView-Root AspNet-TreeView-Leaf"><div class="menuicon6">&nbsp;</div><div class="menulink">
+				<span class="spacemenu">&nbsp;</span>
+				<a class="menuitem" href="http://libcat.dudley.gov.uk/onlineresources.asp" title="Online Resources">
+					Online Resources</a></div>
+			</li>
+		</ul>
+
+</div>
+                
+                <div>
+                    
+                    
+
+                </div>
+                
+                
+            </div>
+            
+            <div id="headerlinks">
+                <ul class="headerlinkslist">
+                    <!-- <div class="navheader"><div class="toplink-text">Navigation</div></div> -->
+                    <li>
+                        <div class="homelink">
+                            <div class="toplink-button">
+                                <a href="/Default.aspx">Home</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="registerlink">
+                            <div class="toplink-button">
+                                <a href="/06_SelfRegistration/06_001_YourDetails.aspx">Join the Library</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="eresourcelink">
+                            <div class="toplink-button">
+                                <a href="http://libcat.dudley.gov.uk/accessdenied.asp">Online Resources</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="main">
+                <div class="content">
+                    
+                    
+    <h1>Sign In</h1>
+    <p>
+				Sign in to view your personal record, renew books, make reservations. 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                 
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <p>
+        
+        
+        Enter your library card number (with no spaces) and your Personal Identification Number (PIN).
+				If you don’t know your PIN contact any of our 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a href="http://www.dudley.gov.uk/resident/libraries-archives/libraries/find-a-library/">our libraries.</a>or use our<a href="https://libcat.dudley.gov.uk/00_003_ContactUs.aspx"> online contact form.</a><br /></p><ul><li>If you have just joined Dudley Libraries online you can use your temporary UNREGXXXXXXX library card number and the 4 digit PIN you 
+          chose when joining.</li><li>If you are an existing library user enter 
+          your library card number and the PIN (the last 4 parts of your postcode for example DY1 1HR= 11HR).</li><li>Once you have logged in you can change your PIN on the 
+          
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="http://libcat.dudley.gov.uk/01_YourAccount/01_028_YourPersonalDetails.aspx">Your Personal Details</a> page.
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    </li><li>If you can not log in successfully please  
+          
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="http://www.dudley.gov.uk/resident/libraries-archives/libraries/find-a-library">contact your nearest library</a></li></ul></p>
+    <div id="ctl00_ContentPlaceCenterContent_loginPanel">
+	
+    <div class="fieldsetspacer">&nbsp;</div>
+
+        <div id="ctl00_ContentPlaceCenterContent_login2">
+		<div>
+			<div id="ctl00_ContentPlaceCenterContent_login2_ctl01" class="row">
+				<div class="label">
+					<label for="ctl00_ContentPlaceCenterContent_login2_username">Library card number:</label>
+				</div><div class="field">
+					<input name="ctl00$ContentPlaceCenterContent$login2$username" type="text" id="ctl00_ContentPlaceCenterContent_login2_username" />
+				</div>
+			</div><div id="ctl00_ContentPlaceCenterContent_login2_ctl07" class="row">
+				<div class="label">
+					<label for="ctl00_ContentPlaceCenterContent_login2_password">PIN (case-sensitive):</label>
+				</div><div class="field">
+					<input name="ctl00$ContentPlaceCenterContent$login2$password" type="password" maxlength="4" size="4" id="ctl00_ContentPlaceCenterContent_login2_password" />
+				</div>
+			</div><div id="ctl00_ContentPlaceCenterContent_login2_ctl14" class="row">
+				<div class="label">
+
+				</div><div class="field">
+					&nbsp;<input type="submit" name="ctl00$ContentPlaceCenterContent$login2$LoginButton" value="Sign in" id="ctl00_ContentPlaceCenterContent_login2_LoginButton" class="button" />
+				</div>
+			</div><div class='fieldsetspacer'>&nbsp;</div>
+		</div>
+	</div>
+    
+</div>
+    
+
+                    <div id="OutlineColumn2"> 
+                        
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!--<div class="searchrecent">                     
+                    <div class="recent">
+                        <div class= "history">
+                            <div id="ctl00_RecommendationsContainer">
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            
+            <div class="toplink">
+                <ul id="ctl00_topLink" style="float: right;"><li><a href='#top' title='Return to the top of the page'>top<img src='/App_Themes/Default/images/up_arrow.gif' border='0' alt=''/></a></li></ul>
+            </div>
+            
+            <div id="footer">
+                <ul> 
+                    <li>
+                        Quick Links:
+                    </li>
+                    <li>   
+                        <a href="SiteMap.aspx" id="ctl00_A4" title="Footer Site Map">Site Map</a>
+                    </li>
+                    <li>
+                        <a href="00_003_ContactUs.aspx" id="ctl00_A3" title="Footer Contact Us">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="00_005_Accessibility.aspx" id="ctl00_AccessibilityLink" title="Accessibility">Accessibility</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="dsfooter">
+                Powered by <a href="http://www.axiell.co.uk" class="footerlink">Axiell ViewPoint</a><span> v3.0.4.1 &copy; 2008</span>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

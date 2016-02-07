@@ -1,0 +1,3175 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Aspire Web-Forms</title>
+	<link rel="stylesheet" type="text/css" href="../StyleSheets/dynFF.css">
+	<style type="text/css">
+		.css_NS_hidePrompt {visibility:hidden;height:0px;}
+		.css_IE_hidePrompt {display:none;}
+	</style>
+	
+<script language="JavaScript">
+//****************************************************************************************************
+// THIS PAGE HAS BEEN ADDED TO PROVIDE ADDITIONAL CLIENT-SIDE VALIDATION PRIOR TO A FF SERVICE REQUEST
+// SUBMISSION.
+// THIS PAGE NEEDS TO BE ADDED AS AN INCLUDE IN ServiceRequest_Web.asp.
+//****************************************************************************************************
+
+function validateSRForm(){
+	//------------------------------------------------------------------------------------------------
+	// validateForm() is called just prior to submitting a FF Service Request (via DynFFClientSide.htm)
+	// Any ADDITIONAL Client-Side validation could be added in this function. 
+	// To cancel the Form Submit return boolean false. 
+	//------------------------------------------------------------------------------------------------
+	try {
+		var strType = ""
+		var AXIS_PT_PAYMENT = "1"
+		if (strType==AXIS_PT_PAYMENT){
+			//alert('validating Payment')
+			return validateAXISPayment()
+		}	
+	}
+	catch (e) 
+	{
+		alert(e.description)
+		return true
+	}	
+}
+
+
+
+//------------------------------------------------------------------------------------------------
+function validateAXISPayment(){
+	var AXIS_REQUID			= "AXISREQUID"
+	var AXIS_FUND_CODE		= "AXISFUNDCODE"
+	var AXIS_FUND_NAME		= "AXISFUNDNAME"
+	var AXIS_REF			= "AXISREF"
+	var AXIS_AMT			= "AXISAMT"
+	var AXIS_SOURCE			= "AXISSOURCE"					
+	var AXIS_RURL			= "AXISRURL"
+	var AXIS_VATCODE		= "AXISVATCODE"
+	var AXIS_CUSTEMAIL		= "AXISCUSTEMAIL"
+	
+	var strMsg = ""
+	var intCount = 0
+	
+	try {
+			if (document.getElementById(AXIS_AMT).value ==""){
+				intCount = intCount + 1
+				strMsg = strMsg + "\n" + intCount + ". Payment Amount"
+				if (isVarHidden(AXIS_AMT)==true){
+					strMsg = strMsg + " [Hidden]"
+				}
+				if (intCount==1){
+					strFocusOnText = AXIS_AMT
+				}
+			}
+	
+	
+			if (document.getElementById(AXIS_FUND_CODE).value ==""){
+				intCount = intCount + 1
+				strMsg = strMsg + "\n" + intCount + ". Fund Code"
+				if (isVarHidden(AXIS_FUND_CODE)==true){
+					strMsg = strMsg + " [Hidden]"
+				}
+				if (intCount==1){
+					strFocusOnText = AXIS_FUND_CODE
+				}
+			}
+
+			if (document.getElementById(AXIS_FUND_NAME).value ==""){
+				intCount = intCount + 1
+				strMsg = strMsg + "\n" + intCount + ". Fund Name"
+				if (isVarHidden(AXIS_FUND_NAME)==true){
+					strMsg = strMsg + " [Hidden]"
+				}
+				if (intCount==1){
+					strFocusOnText = AXIS_FUND_NAME
+				}
+			}
+
+			if (document.getElementById(AXIS_REF).value ==""){
+				intCount = intCount + 1
+				strMsg = strMsg + "\n" + intCount + ". Fund Reference"
+				if (isVarHidden(AXIS_REF)==true){
+					strMsg = strMsg + " [Hidden]"
+				}
+				if (intCount==1){
+					strFocusOnText = AXIS_REF
+				}
+			}
+
+
+			if (document.getElementById(AXIS_VATCODE).value ==""){
+				intCount = intCount + 1
+				strMsg = strMsg + "\n" + intCount + ". VAT Code"
+				if (isVarHidden(AXIS_VATCODE)==true){
+					strMsg = strMsg + " [Hidden]"
+				}
+				if (intCount==1){
+					strFocusOnText = AXIS_VATCODE
+				}
+			}
+
+
+			/*
+			if (document.getElementById(AXIS_CUSTEMAIL).value ==""){
+				intCount = intCount + 1
+				strMsg = strMsg + "\n" + intCount + ". E-Mail for Payment Confirmation"
+				if (isVarHidden(AXIS_CUSTEMAIL)==true){
+					strMsg = strMsg + " [Hidden]"
+				}
+				if (intCount==1){
+					strFocusOnText = AXIS_CUSTEMAIL
+				}
+			}
+			*/
+			
+
+			if (document.getElementById(AXIS_SOURCE).value ==""){
+				intCount = intCount + 1
+				strMsg = strMsg + "\n" + intCount + ". AXIS Source"
+				if (isVarHidden(AXIS_SOURCE)==true){
+					strMsg = strMsg + " [Hidden]"
+				}
+				if (intCount==1){
+					strFocusOnText = AXIS_SOURCE
+				}
+			}
+
+
+			if (intCount > 0){
+				//Validation Failed - Set focus to first failed field
+				//if ((document.getElementById(strFocusOnText).style.display != "none") && (document.getElementById(strFocusOnText).disabled==false)){
+				
+                if (isVarHidden(strFocusOnText)==true){
+					strMsg = "MANDATORY DATA MISSING\n" + strMsg
+					alert(strMsg)
+				}
+				else {
+					strMsg = "MANDATORY DATA MISSING\n" + strMsg
+					alert(strMsg)
+					document.getElementById(strFocusOnText).focus()
+					document.getElementById(strFocusOnText).select()
+				}				
+				//Return validation failure
+				return false
+			}
+			else {
+				//Validation succeeded
+				return true
+			}
+	}
+	catch (e){alert(e.description)}
+}
+
+
+//-------------------------------------------------------------------------------------------------------------
+function isVarHidden(strTextID){
+    //*********************************************************************************************************
+    // For a given text box or FF Var of the Service Request form
+    // will determine whether that box is being displayed or hidden on the form
+    // by inspecting its parent (ID begining with 'ChildDiv..' which controls this, 
+    // via the 'style.display' attribute.
+    //*********************************************************************************************************
+	var objEl = document.getElementById(strTextID)
+	var i = 0
+	var blnRetVal = false
+	while (objEl != null)
+	{
+	  try {
+			objEl = objEl.parentElement
+			i = i + 1
+			//alert(i + " : " + objEl.id + "\n")
+			//alert(objEl.id.substring(0,8))
+			if (objEl.id.substring(0,8).toUpperCase()=="CHILDDIV"){
+				if (objEl.style.display.toUpperCase()=="NONE"){
+					//Text Box is hidden by its parent (ChildDivxxx : xxx=numeric id)
+					blnRetVal = true
+				}
+			}
+	  }
+	  catch (e) {}
+	}
+	return blnRetVal		
+}
+
+</script>
+
+</head>
+
+<body bgcolor="D1D8ED">
+
+   
+
+
+<form action="ServiceRequest_Web.asp?Id=1583&CompleteRequest=True&SessionID=&ContactRef=EXTC00111130&Anon=0" method="post" id="form1" name="form1"> <script LANGUAGE="javascript">
+<!--
+
+//********************************************************************************
+// MODULE: FFClient_Script.htm
+//
+// PURPOSE: New Aspire System.
+// This Javascript is included within the main Service Request asp page.
+// It enables clients to create their own script such as functions which will be
+// referenced within FF forms.
+//
+// CREATED: LYNX plc
+// Release Date: 28/05/2003  1.0.0.0
+//
+// CHANGE HISTORY & VERSION CONTROL:
+// DATE       BY         VERSION    COMMENT
+// 06/12/2002 LYNX plc   3.0.0      New release for High Peak
+//********************************************************************************
+//
+
+function test()
+{
+//	window.open("http://gis-nt/website/csc_live?ActiveLayer=1&query=POSTCODE=%22%22&QueryZoom=Yes")
+}
+-->
+</script>
+
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;">
+	<tr>
+	  <td class="cssLCTFormLBL" style="font-size:12pt; font-weight:bold;" align="center">Report damaged street furniture</td>
+	</tr>
+	<tr id="schrow_date">
+	  <td class="formLbl" align="center"> . .,       </td>
+	</tr> 
+</table>
+
+<!-- SERVICE REQUEST HEADING -->
+
+<div id="LoadDiv" align="center"><br><img src="../images/gifs/loading.gif" /></div>
+
+
+
+<div name="lynxct_FormMode" id="lynxct_FormMode" class="cssLCTTitleBar"></div>
+
+<div name="parentdiv" id="parentdiv"  class="cssLCTFormBG"></div>
+<div name="AttachDiv" id="AttachDiv"  class="cssLCTFormBG"></div>
+
+<!-- Override Mandatory Question(s) option screen -->
+<div id="lynxctOverRidePrompt" name="lynxctOverRidePrompt" style="visibility:hidden">
+	<table border="0" width="100%" cellSpacing="0" cellPadding="0">
+		<tr>
+		  <td width="50%"> 
+				<span id="strLynxCTNotes_Prompt" name="strLynxCT_NotesPrompt">Prompt</span> 
+		  </td>
+		</tr>
+		<tr>
+		  <td>
+		    <label for="LynxCT_Notes"></label>
+				<textarea name="LynxCT_Notes" ID="LynxCT_Notes" cols="50" rows="9"> </textarea>
+				<input class="ESButton" value="Back" type="Button" onclick="Toggle_OverRidePrompt();" onkeypress="" id="ButOR" name="ButOR">
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<!-- Action Buttons-->
+<input id="SubmitID" name="FF_Action" type="button" value="Submit Request" style="top:0px; LEFT: 125px; WIDTH: 120px; POSITION: relative; HEIGHT: 28px; visibility:hidden;" size="40" onClick="ValidateForm();" onkeypress=""> 
+<input id="RejectID" name="FF_Action" type="button" value="Reject" onclick="if(this.value.toUpperCase()=='BACK'){history.back()} else {document.all.lynxct_frmAction.value = 'Reject';document.all.form1.submit()};" onkeypress="" style="top:0px; Z-INDEX: 107; LEFT: 130px; WIDTH: 120px; POSITION: relative;  HEIGHT: 28px; visibility:hidden;">
+
+<!-- Hidden Controls needed by Fulfilment Object-->
+<input id="lynxct_CtrIndex"      name="lynxct_CtrIndex"		   type="hidden" size="50">
+<input id="lynxct_Data"          name="lynxct_Data"          type="hidden">
+<input id="lynxct_History"       name="lynxct_History"       type="hidden" value="lynxct_History">
+<input id="lynxct_frmAction"     name="lynxct_frmAction"     type="hidden">
+<input id="lynxct_NewTemplateID" name="lynxct_NewTemplateID" type="hidden"> 
+<input id="lynxct_ScrollTrack"   name="lynxct_ScrollTrack"   type="hidden"> 
+<script language="javascript" type="text/javascript">
+<!--
+
+/* Version 1.2  16/07/2003c */
+
+var currentTemplateID = 1583;
+var cShowHidden = "";
+var NotInAspire = 1;
+var bDisplayStatusBar;
+
+//Browser Info
+var cIE			= "IE";
+var cNS			= "Netscape";
+var BrowserType = "Not Mozilla";
+
+//Validation Array Indexes 
+var cFormMode;
+var cNewFormSaved = 1;
+var cFormAmended = 2;
+var cRead_NewForm  = 3;
+var cRead_ReadOnly = 4;
+var cRead_Edit = 5;
+
+var cVIndexVarName = 0;
+var cVIndexPrompt = 1;
+var cVIndexDataSize = 2;
+var cVIndexDataType = 3;
+var cVIndexMinValue = 4;
+var cVIndexMaxValue = 5;
+var cVIndexFlags = 6;
+var cVIndexDefault = 7;
+
+var bShowFirstTime =false;
+var bColumn;
+var bValidated;
+var bRequired;
+var bOverRideMand;
+var bAsterFound;
+var OverRideArray;
+var bNewInstance;
+var bFormatted;
+
+var bDebug =false;
+var EnterKeyAction = 2;
+
+//Quest Array Indexes
+var cVarname		= 1;
+var cVarID			= 2;
+var cNextVarID		= 3;
+var cHTML			= 4;
+var cDataType		= 5;
+var cDefaultValue	= 6;
+var cHelp			= 7;
+var cLinkValue		= 8;
+var cLinkType		= 9;
+var cPriority		= 10;
+var cLink			= 11;
+var cLinkTemplateID = 12;
+var cHelpStatus		= 13;
+
+var cStoreValue1   = 14;  // Stored control Value
+var cStoreValue2   = 15;  // Misc fields: store _VaddValue, _NewTxt hidden controls
+var cStoreValue3   = 16;  // store NextVarID
+var cStoreValue4   = 17;  /* Flag referenced in Function ExtractStoredValues() to determine
+						     if form control is to be populated from QuestArray[StoreValue1]	
+						     flag value = "1": Default setting: do not re-populate 
+						     flag value = "": populate
+						  */
+						 	 
+//DataTypes
+var cdtCaption		= "1";
+var cdtString		= "2";
+var cdtTextArea		= "3";
+var cdtDropDown		= "4";
+var cdtCheckBox		= "5";
+var cdtSeparator	= "6";
+var cdtDate			= "7";
+var cdtTable		= "8";
+var cdtEditDropDown = "9";
+var cdtInteger		= "10";
+var cdtDecimal		= "11";
+var cdtTime			= "12";
+var cdtCurrency		= "13";
+var cdtRadio		= "14";
+var cdtYesNo		= "15";
+var cdtVDropDown	= "16";
+
+var QuestArray = new Array;
+var bStopExecute = false;
+var attach_content = "";
+var attach_OptContent = "";
+var LinkTemplateHistory = new Array();
+
+//Dynamic TemplateID change variables
+var optAttachArray  = new Array();	//HTML of attachments/slave temps/slave attachments
+var tempRecArray;					//temporary
+var tempFieldArray;					//temporary
+var iRecCount = 0;
+var iCtrMax = 0;
+var iFieldCount = 0;
+
+//set appropriate stylesheet class to lynxct_OverRidePrompt
+if (BrowserType == cIE){
+	var ccsHidePrompt = "css_IE_hidePrompt";
+}
+else
+{
+	var ccsHidePrompt = "css_NS_hidePrompt";
+}
+document.getElementById("lynxctOverRidePrompt").className =ccsHidePrompt;
+
+//Server Side 
+document.getElementById('lynxct_CtrIndex').value = 'LOGGEDDATEtodays date0200407/02/2016TOWNSelect the Town where the problem exists040065STREETNAMEEnter the street where the problem exists502001ENQLOCATIONPlease describe, as accurately as you can, the location of the problem.150038050ORIGINALDESCPlease describe, as accurately as you can,  the problem, and any other comments which may help us.150038050CUSTTITLETitle04000Mr|Mr;Mrs|Mrs;Miss|Miss;Ms|MsCUSTFIRSTNAMEForename302000.CUSTSECONDNAMESurname502000.PROPERTYADDRESSHouse name/number502000STREETDESCRIPTIONStreet502000TOWNNAMETown402000POSTCODEPostcode402000CUSTPHONETelephone Number302000ALTPHONEAlternative or Mobile Telephone Number302000CUSTEMAILADDRESSPlease provide your email address. If you do not have an email address please type in the word none.502001ATTRIBUTE1Do you require an officer to contact you regarding this enquiry?04000Yes|YES;No|NODPACK<label for = "disclaimer"><b>I accept that the information provided on this form will be processed and stored in accordance with the principles of the Act for the purpose of this Service Request by the East Riding of Yorkshire Council..</b></label>05001Please tickENQSERVICECONFIRM ENQSERVICE02004HIGHENQSUBJECTCONFIRM ENQSUBJECT02004HSFUCUSTREFCONFIRM CUSTREF02004EXTC00111130CUSTTYPECONFIRM CUSTTYPE02004ASPIPOINTOFCONTACTCONFIRM POINTOFCONTACT02004ONREENQREFCONFIRM ENQREF02004-1STATUSNOTESCONFIRM STATUSNOTES02004ENQL';
+document.getElementById('lynxct_Data').value = '0';
+document.getElementById('lynxct_History').value = '';
+for (iCount=0;iCount <=32; iCount++){
+	QuestArray[iCount] = new Array(17);
+}
+QuestArray[0][cVarname]      = "LOGGEDDATE";
+QuestArray[0][cVarID]      = "36683";
+QuestArray[0][cHTML]             = '_HIDE<table id="LOGGEDDATE_BGTable" name="LOGGEDDATE_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder36683" name="lynxct_holder36683">todays date<br><input type="text" name="LOGGEDDATE" id="LOGGEDDATE" value="07/02/2016" readonly ><input type="text" name="LOGGEDDATE_OVERRIDE" id="LOGGEDDATE_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36683"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36683_Help"  name="36683_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[0][cNextVarID]    = "36686";
+QuestArray[0][cDefaultValue]  = '07/02/2016';
+QuestArray[0][cDataType]     = cdtString;
+QuestArray[0][cLinkValue]    = "";
+QuestArray[0][cLinkType]     = "";
+QuestArray[0][cPriority]     = "";
+QuestArray[0][cLink]         = "";
+QuestArray[0][cLinkTemplateID] = "";
+QuestArray[0][cHelp]                 = '';
+QuestArray[0][cHelpStatus]           = "";
+QuestArray[0][cStoreValue1]         = '';
+QuestArray[0][cStoreValue2]         = '';
+QuestArray[0][cStoreValue3]         = '';
+QuestArray[0][cStoreValue4]         = '1';
+QuestArray[1][cVarname]      = "HELPLINK";
+QuestArray[1][cVarID]      = "36686";
+QuestArray[1][cHTML]             = '<table id="HELPLINK_BGTable" name="HELPLINK_BGTable" border="0" width="99%"><tr> <td valign="top" class="cssLCTDivCaption"><div id="lynxct_holder36686" name="lynxct_holder36686"><b><a href="http://www2.Eastriding.Gov.Uk/Council/Website-And-Accessibility-Help/Using-Website/Using-Forms/" onclick="popUp(this.href,\'Elastic\',600,500);return false;"><img src="../../images/pop-up.gif" class="icon" alt="This link loads a pop-up window" />Click here for Online Form help</a><br></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36686"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36686_Help"  name="36686_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[1][cNextVarID]    = "36685";
+QuestArray[1][cDefaultValue]  = '<b><a href="http://www2.Eastriding.Gov.Uk/Council/Website-And-Accessibility-Help/Using-Website/Using-Forms/" onclick="popUp(this.href,\'Elastic\',600,500);return false;"><img src="../../images/pop-up.gif" class="icon" alt="This link loads a pop-up window" />Click here for Online Form help</a>';
+QuestArray[1][cDataType]     = cdtCaption;
+QuestArray[1][cLinkValue]    = "";
+QuestArray[1][cLinkType]     = "";
+QuestArray[1][cPriority]     = "";
+QuestArray[1][cLink]         = "";
+QuestArray[1][cLinkTemplateID] = "";
+QuestArray[1][cHelp]                 = '';
+QuestArray[1][cHelpStatus]           = "";
+QuestArray[1][cStoreValue1]         = '';
+QuestArray[1][cStoreValue2]         = '';
+QuestArray[1][cStoreValue3]         = '';
+QuestArray[1][cStoreValue4]         = '1';
+QuestArray[2][cVarname]      = "HEADER";
+QuestArray[2][cVarID]      = "36685";
+QuestArray[2][cHTML]             = '<table id="HEADER_BGTable" name="HEADER_BGTable" border="0" width="99%"><tr> <td valign="top" class="cssLCTDivCaption"><div id="lynxct_holder36685" name="lynxct_holder36685"><b><font size = 3 color = teal> STREET FURNITURE </font></b><br></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36685"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36685_Help"  name="36685_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[2][cNextVarID]    = "36691";
+QuestArray[2][cDefaultValue]  = '<b><font size = 3 color = teal> STREET FURNITURE </font></b>';
+QuestArray[2][cDataType]     = cdtCaption;
+QuestArray[2][cLinkValue]    = "";
+QuestArray[2][cLinkType]     = "";
+QuestArray[2][cPriority]     = "";
+QuestArray[2][cLink]         = "";
+QuestArray[2][cLinkTemplateID] = "";
+QuestArray[2][cHelp]                 = '';
+QuestArray[2][cHelpStatus]           = "";
+QuestArray[2][cStoreValue1]         = '';
+QuestArray[2][cStoreValue2]         = '';
+QuestArray[2][cStoreValue3]         = '';
+QuestArray[2][cStoreValue4]         = '1';
+QuestArray[3][cVarname]      = "SLCAPTION1";
+QuestArray[3][cVarID]      = "36691";
+QuestArray[3][cHTML]             = '<table id="SLCAPTION1_BGTable" name="SLCAPTION1_BGTable" border="0" width="99%"><tr> <td valign="top" class="cssLCTDivCaption"><div id="lynxct_holder36691" name="lynxct_holder36691"><b><font size = 2 color = teal>Please use this form below to report a problem or make a request regarding street furniture in the East Riding of Yorkshire </font></b><br></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36691"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36691_Help"  name="36691_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[3][cNextVarID]    = "37336";
+QuestArray[3][cDefaultValue]  = '<b><font size = 2 color = teal>Please use this form below to report a problem or make a request regarding street furniture in the East Riding of Yorkshire </font></b>';
+QuestArray[3][cDataType]     = cdtCaption;
+QuestArray[3][cLinkValue]    = "";
+QuestArray[3][cLinkType]     = "";
+QuestArray[3][cPriority]     = "";
+QuestArray[3][cLink]         = "";
+QuestArray[3][cLinkTemplateID] = "";
+QuestArray[3][cHelp]                 = '';
+QuestArray[3][cHelpStatus]           = "";
+QuestArray[3][cStoreValue1]         = '';
+QuestArray[3][cStoreValue2]         = '';
+QuestArray[3][cStoreValue3]         = '';
+QuestArray[3][cStoreValue4]         = '1';
+QuestArray[4][cVarname]      = "TOWN";
+QuestArray[4][cVarID]      = "37336";
+QuestArray[4][cHTML]             = '<table id="TOWN_BGTable" name="TOWN_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37336" name="lynxct_holder37336">Select the Town where the problem exists&nbsp;&nbsp;&nbsp;&nbsp<IMG alt="Mandatory" src="../images/gifs/mandatory.gif"><br><NOBR><select name=TOWN_DROPDOWN id=TOWN_DROPDOWN style= "position:relative;z-index:3"  OnChange ="Process_DropDown(this.id,false)"><option value=""></option><option  value="ADLINGFLEET">ADLINGFLEET </option><option  value="ADLINGFLEET GRANGE">ADLINGFLEET GRANGE </option><option  value="AIKE">AIKE </option><option  value="AIRMYN">AIRMYN </option><option  value="ALDBROUGH">ALDBROUGH </option><option  value="ALLERTHORPE">ALLERTHORPE </option><option  value="ANLABY">ANLABY </option><option  value="ANLABY COMMON">ANLABY COMMON </option><option  value="ARNOLD">ARNOLD </option><option  value="ARRAM">ARRAM </option><option  value="ARRAM HALL">ARRAM HALL </option><option  value="ASSELBY">ASSELBY </option><option  value="ATWICK">ATWICK </option><option  value="AUGHTON">AUGHTON </option><option  value="BAINTON">BAINTON </option><option  value="BALKHOLME">BALKHOLME </option><option  value="BARMBY MOOR">BARMBY MOOR </option><option  value="BARMBY ON THE MARSH">BARMBY ON THE MARSH </option><option  value="BARMSTON">BARMSTON </option><option  value="BASWICK LANDING">BASWICK LANDING </option><option  value="BEEFORD">BEEFORD </option><option  value="BEMPTON">BEMPTON </option><option  value="BEMPTON CLIFFS">BEMPTON CLIFFS </option><option  value="BENNETLAND">BENNETLAND </option><option  value="BENTLEY">BENTLEY </option><option  value="BESSINGBY">BESSINGBY </option><option  value="BESWICK">BESWICK </option><option  value="BEVERLEY">BEVERLEY </option><option  value="BEWHOLME">BEWHOLME </option><option  value="BIELBY">BIELBY </option><option  value="BILTON">BILTON </option><option  value="BISHOP BURTON">BISHOP BURTON </option><option  value="BISHOP WILTON">BISHOP WILTON </option><option  value="BISHOPSOIL">BISHOPSOIL </option><option  value="BLACKTOFT">BLACKTOFT </option><option  value="BOLTON">BOLTON </option><option  value="BOOTHFERRY">BOOTHFERRY </option><option  value="BOYNTON">BOYNTON </option><option  value="BRACKEN">BRACKEN </option><option  value="BRANDESBURTON">BRANDESBURTON </option><option  value="BRANTINGHAM">BRANTINGHAM </option><option  value="BREIGHTON">BREIGHTON </option><option  value="BRIDLINGTON">BRIDLINGTON </option><option  value="BRIGHAM">BRIGHAM </option><option  value="BRIND">BRIND </option><option  value="BROOMFLEET">BROOMFLEET </option><option  value="BROUGH">BROUGH </option><option  value="BUBWITH">BUBWITH </option><option  value="BUCKTON">BUCKTON </option><option  value="BUGTHORPE">BUGTHORPE </option><option  value="BURNBY">BURNBY </option><option  value="BURSEA">BURSEA </option><option  value="BURSHILL">BURSHILL </option><option  value="BURSTWICK">BURSTWICK </option><option  value="BURTON AGNES">BURTON AGNES </option><option  value="BURTON CONSTABLE">BURTON CONSTABLE </option><option  value="BURTON FLEMING">BURTON FLEMING </option><option  value="BURTON PIDSEA">BURTON PIDSEA </option><option  value="CAMERTON">CAMERTON </option><option  value="CARNABY">CARNABY </option><option  value="CATFOSS">CATFOSS </option><option  value="CATTON FIELD">CATTON FIELD </option><option  value="CATWICK">CATWICK </option><option  value="CAVIL">CAVIL </option><option  value="CHERRY BURTON">CHERRY BURTON </option><option  value="CONISTON">CONISTON </option><option  value="COTTAM">COTTAM </option><option  value="COTTAM WARREN">COTTAM WARREN </option><option  value="COTTINGHAM">COTTINGHAM </option><option  value="COTTINGWITH">COTTINGWITH </option><option  value="COWDEN">COWDEN </option><option  value="COWICK">COWICK </option><option  value="DALTON HOLME">DALTON HOLME </option><option  value="DANTHORPE">DANTHORPE </option><option  value="DRIFFIELD">DRIFFIELD </option><option  value="DRINGHOE">DRINGHOE </option><option  value="DUNNINGTON">DUNNINGTON </option><option  value="DUNSWELL">DUNSWELL </option><option  value="EASINGTON">EASINGTON </option><option  value="EAST COTTINGWITH">EAST COTTINGWITH </option><option  value="EAST COWICK">EAST COWICK </option><option  value="EAST END">EAST END </option><option  value="EAST NEWTON">EAST NEWTON </option><option  value="EAST RIDING OF YORKSHIRE">EAST RIDING OF YORKSHIRE </option><option  value="EASTRINGTON">EASTRINGTON </option><option  value="ELLERBY">ELLERBY </option><option  value="ELLERKER">ELLERKER </option><option  value="ELLERTON">ELLERTON </option><option  value="ELLERTON COMMON">ELLERTON COMMON </option><option  value="ELLOUGHTON">ELLOUGHTON </option><option  value="ELSTRONWICK">ELSTRONWICK </option><option  value="EPPLEWORTH">EPPLEWORTH </option><option  value="ETHERDWICK">ETHERDWICK </option><option  value="ETTON">ETTON </option><option  value="EVERINGHAM">EVERINGHAM </option><option  value="EVERTHORPE">EVERTHORPE </option><option  value="FANGFOSS">FANGFOSS </option><option  value="FAXFLEET">FAXFLEET </option><option  value="FIMBER">FIMBER </option><option  value="FITLING">FITLING </option><option  value="FLAMBOROUGH">FLAMBOROUGH </option><option  value="FLINTON">FLINTON </option><option  value="FOGGATHORPE">FOGGATHORPE </option><option  value="FORDON">FORDON </option><option  value="FOSTON">FOSTON </option><option  value="FRAISTHORPE">FRAISTHORPE </option><option  value="FRIDAYTHORPE">FRIDAYTHORPE </option><option  value="FULL SUTTON">FULL SUTTON </option><option  value="GANSTEAD">GANSTEAD </option><option  value="GANSTEAD EAST">GANSTEAD EAST </option><option  value="GANSTEAD WEST">GANSTEAD WEST </option><option  value="GARDHAM">GARDHAM </option><option  value="GARROWBY HALL">GARROWBY HALL </option><option  value="GARTON">GARTON </option><option  value="GARTON ON THE WOLDS">GARTON ON THE WOLDS </option><option  value="GEMBLING">GEMBLING </option><option  value="GILBERDYKE">GILBERDYKE </option><option  value="GIVENDALE">GIVENDALE </option><option  value="GOODMANHAM">GOODMANHAM </option><option  value="GOOLE">GOOLE </option><option  value="GOOLE FIELDS">GOOLE FIELDS </option><option  value="GOWDALL">GOWDALL </option><option  value="GOWTHORPE">GOWTHORPE </option><option  value="GOWTHORPE FIELD">GOWTHORPE FIELD </option><option  value="GOXHILL">GOXHILL </option><option  value="GRANSMOOR">GRANSMOOR </option><option  value="GREAT COWDEN">GREAT COWDEN </option><option  value="GREAT GIVENDALE">GREAT GIVENDALE </option><option  value="GREAT HATFIELD">GREAT HATFIELD </option><option  value="GREAT KELK">GREAT KELK </option><option  value="GREEN OAK">GREEN OAK </option><option  value="GRIBTHORPE">GRIBTHORPE </option><option  value="GRIMSTON">GRIMSTON </option><option  value="GRINDALE">GRINDALE </option><option  value="HAISTHORPE">HAISTHORPE </option><option  value="HALDENBY COMMON">HALDENBY COMMON </option><option  value="HALSHAM">HALSHAM </option><option  value="HALTEMPRICE">HALTEMPRICE </option><option  value="HARLTHORPE">HARLTHORPE </option><option  value="HARPHAM">HARPHAM </option><option  value="HARSWELL">HARSWELL </option><option  value="HATFIELD">HATFIELD </option><option  value="HAVENSIDE">HAVENSIDE </option><option  value="HAYTON">HAYTON </option><option  value="HEDON">HEDON </option><option  value="HEMPHOLME">HEMPHOLME </option><option  value="HESSLE">HESSLE </option><option  value="HIGH CATTON">HIGH CATTON </option><option  value="HIGH FOSHAM">HIGH FOSHAM </option><option  value="HIGH HUNSLEY">HIGH HUNSLEY </option><option  value="HILSTON">HILSTON </option><option  value="HIVE">HIVE </option><option  value="HOLLYM">HOLLYM </option><option  value="HOLME ON THE WOLDS">HOLME ON THE WOLDS </option><option  value="HOLME UPON SPALDING MOOR">HOLME UPON SPALDING MOOR </option><option  value="HOLMPTON">HOLMPTON </option><option  value="HOOK">HOOK </option><option  value="HORNSEA">HORNSEA </option><option  value="HOTHAM">HOTHAM </option><option  value="HOTHAM CARRS">HOTHAM CARRS </option><option  value="HOUGHTON MOOR">HOUGHTON MOOR </option><option  value="HOWDEN">HOWDEN </option><option  value="HOWDENDYKE">HOWDENDYKE </option><option  value="HUGGATE">HUGGATE </option><option  value="HUMBLETON">HUMBLETON </option><option  value="HUTTON">HUTTON </option><option  value="HUTTON CRANSWICK">HUTTON CRANSWICK </option><option  value="KELK">KELK </option><option  value="KELLEYTHORPE">KELLEYTHORPE </option><option  value="KEXBY">KEXBY </option><option  value="KEYINGHAM">KEYINGHAM </option><option  value="KILHAM">KILHAM </option><option  value="KILNSEA">KILNSEA </option><option  value="KILNWICK">KILNWICK </option><option  value="KILNWICK PERCY">KILNWICK PERCY </option><option  value="KILPIN">KILPIN </option><option  value="KILPIN PIKE">KILPIN PIKE </option><option  value="KIPLINGCOTES">KIPLINGCOTES </option><option  value="KIRBY UNDERDALE">KIRBY UNDERDALE </option><option  value="KIRK ELLA">KIRK ELLA </option><option  value="KIRKBURN">KIRKBURN </option><option  value="KNEDLINGTON">KNEDLINGTON </option><option  value="LANGHAM">LANGHAM </option><option  value="LANGTOFT">LANGTOFT </option><option  value="LAXTON">LAXTON </option><option  value="LAYTHAM">LAYTHAM </option><option  value="LECONFIELD">LECONFIELD </option><option  value="LELLEY">LELLEY </option><option  value="LEVEN">LEVEN </option><option  value="LEVEN CARRS">LEVEN CARRS </option><option  value="LISSETT">LISSETT </option><option  value="LITTLE DRIFFIELD">LITTLE DRIFFIELD </option><option  value="LITTLE HATFIELD">LITTLE HATFIELD </option><option  value="LITTLE KELK">LITTLE KELK </option><option  value="LITTLE LEVEN">LITTLE LEVEN </option><option  value="LITTLE WEIGHTON">LITTLE WEIGHTON </option><option  value="LOCKINGTON">LOCKINGTON </option><option  value="LONDESBOROUGH">LONDESBOROUGH </option><option  value="LONG RISTON">LONG RISTON </option><option  value="LOW CATTON">LOW CATTON </option><option  value="LOWTHORPE">LOWTHORPE </option><option  value="LUND">LUND </option><option  value="MAPPLETON">MAPPLETON </option><option  value="MARKET WEIGHTON">MARKET WEIGHTON </option><option  value="MARTON">MARTON </option><option  value="MELBOURNE">MELBOURNE </option><option  value="MELTON">MELTON </option><option  value="MELTONBY">MELTONBY </option><option  value="MIDDLETON ON THE WOLDS">MIDDLETON ON THE WOLDS </option><option  value="MIDDLETON WOLD">MIDDLETON WOLD </option><option  value="MILLINGTON">MILLINGTON </option><option  value="MILLINGTON HEIGHTS">MILLINGTON HEIGHTS </option><option  value="MILLINGTON PASTURES">MILLINGTON PASTURES </option><option  value="MOLESCROFT">MOLESCROFT </option><option  value="MOOR END">MOOR END </option><option  value="NAFFERTON">NAFFERTON </option><option  value="NAFFERTON CARRS">NAFFERTON CARRS </option><option  value="NEW ARRAM">NEW ARRAM </option><option  value="NEW BRIDGE">NEW BRIDGE </option><option  value="NEW ELLERBY">NEW ELLERBY </option><option  value="NEWLAND">NEWLAND </option><option  value="NEWPORT">NEWPORT </option><option  value="NEWSHOLME">NEWSHOLME </option><option  value="NEWTON ON DERWENT">NEWTON ON DERWENT </option><option  value="NORTH CAVE">NORTH CAVE </option><option  value="NORTH CLIFFE">NORTH CLIFFE </option><option  value="NORTH DALTON">NORTH DALTON </option><option  value="NORTH FERRIBY">NORTH FERRIBY </option><option  value="NORTH FRODINGHAM">NORTH FRODINGHAM </option><option  value="NORTH NEWBALD">NORTH NEWBALD </option><option  value="NORTH SKIRLAUGH">NORTH SKIRLAUGH </option><option  value="NUNBURNHOLME">NUNBURNHOLME </option><option  value="NUNKEELING">NUNKEELING </option><option  value="OCTON">OCTON </option><option  value="OLD ELLERBY">OLD ELLERBY </option><option  value="OLD GOOLE">OLD GOOLE </option><option  value="OTTRINGHAM">OTTRINGHAM </option><option  value="OUBROUGH">OUBROUGH </option><option  value="OUSEFLEET">OUSEFLEET </option><option  value="OUT NEWTON">OUT NEWTON </option><option  value="OWSTWICK">OWSTWICK </option><option  value="PAINSTHORPE">PAINSTHORPE </option><option  value="PATRINGTON">PATRINGTON </option><option  value="PATRINGTON HAVEN">PATRINGTON HAVEN </option><option  value="PAULL">PAULL </option><option  value="POCKLINGTON">POCKLINGTON </option><option  value="POLLINGTON">POLLINGTON </option><option  value="PORTINGTON">PORTINGTON </option><option  value="PRESTON">PRESTON </option><option  value="RAWCLIFFE">RAWCLIFFE </option><option  value="RAWCLIFFE BRIDGE">RAWCLIFFE BRIDGE </option><option  value="RAYWELL">RAYWELL </option><option  value="REEDNESS">REEDNESS </option><option  value="RIMSWELL">RIMSWELL </option><option  value="RIPLINGHAM">RIPLINGHAM </option><option  value="RISE">RISE </option><option  value="ROLSTON">ROLSTON </option><option  value="ROOS">ROOS </option><option  value="ROTSEA">ROTSEA </option><option  value="ROUTH">ROUTH </option><option  value="ROUTH CARRS">ROUTH CARRS </option><option  value="ROWLEY">ROWLEY </option><option  value="RUDSTON">RUDSTON </option><option  value="RUDSTON GRANGE">RUDSTON GRANGE </option><option  value="RUSTON PARVA">RUSTON PARVA </option><option  value="RYEHILL">RYEHILL </option><option  value="SALTEND">SALTEND </option><option  value="SALTMARSHE">SALTMARSHE </option><option  value="SANCTON">SANCTON </option><option  value="SAND HOLE">SAND HOLE </option><option  value="SANDFIELD">SANDFIELD </option><option  value="SANDHOLME">SANDHOLME </option><option  value="SCORBOROUGH">SCORBOROUGH </option><option  value="SEATON">SEATON </option><option  value="SEATON ROSS">SEATON ROSS </option><option  value="SEWERBY">SEWERBY </option><option  value="SHEFFIELD">SHEFFIELD </option><option  value="SHIPTONTHORPE">SHIPTONTHORPE </option><option  value="SIGGLESTHORNE">SIGGLESTHORNE </option><option  value="SKEFFLING">SKEFFLING </option><option  value="SKELTON">SKELTON </option><option  value="SKERNE">SKERNE </option><option  value="SKIDBY">SKIDBY </option><option  value="SKIPSEA">SKIPSEA </option><option  value="SKIPSEA BROUGH">SKIPSEA BROUGH </option><option  value="SKIPSEA SANDS">SKIPSEA SANDS </option><option  value="SKIRLAUGH">SKIRLAUGH </option><option  value="SKIRPENBECK">SKIRPENBECK </option><option  value="SLEDMERE">SLEDMERE </option><option  value="SNAITH">SNAITH </option><option  value="SOUTH CAVE">SOUTH CAVE </option><option  value="SOUTH CLIFFE">SOUTH CLIFFE </option><option  value="SOUTH DALTON">SOUTH DALTON </option><option  value="SOUTH NEWBALD">SOUTH NEWBALD </option><option  value="SOUTHBURN">SOUTHBURN </option><option  value="SPALDINGTON">SPALDINGTON </option><option  value="SPITTAL">SPITTAL </option><option  value="SPROATLEY">SPROATLEY </option><option  value="STADDLETHORPE">STADDLETHORPE </option><option  value="STAMFORD BRIDGE">STAMFORD BRIDGE </option><option  value="STORWOOD">STORWOOD </option><option  value="SUNDERLANDWICK">SUNDERLANDWICK </option><option  value="SUNK ISLAND">SUNK ISLAND </option><option  value="SUNTHORPE">SUNTHORPE </option><option  value="SUTTON UPON DERWENT">SUTTON UPON DERWENT </option><option  value="SWANLAND">SWANLAND </option><option  value="SWINE">SWINE </option><option  value="SWINEFLEET">SWINEFLEET </option><option  value="TANSTERNE">TANSTERNE </option><option  value="THIRTLEBY">THIRTLEBY </option><option  value="THORNGUMBALD">THORNGUMBALD </option><option  value="THORNHOLME">THORNHOLME </option><option  value="THORNTON">THORNTON </option><option  value="THORPE LE STREET">THORPE LE STREET </option><option  value="THWING">THWING </option><option  value="TIBTHORPE">TIBTHORPE </option><option  value="TICKTON">TICKTON </option><option  value="TOWTHORPE">TOWTHORPE </option><option  value="TUNSTALL">TUNSTALL </option><option  value="TWIN RIVERS">TWIN RIVERS </option><option  value="ULROME">ULROME </option><option  value="WALKINGTON">WALKINGTON </option><option  value="WANSFORD">WANSFORD </option><option  value="WARTER">WARTER </option><option  value="WATER END">WATER END </option><option  value="WATTON">WATTON </option><option  value="WAULDBY">WAULDBY </option><option  value="WAWNE">WAWNE </option><option  value="WAXHOLME">WAXHOLME </option><option  value="WEEL">WEEL </option><option  value="WEETON">WEETON </option><option  value="WELTON">WELTON </option><option  value="WELWICK">WELWICK </option><option  value="WEST COWICK">WEST COWICK </option><option  value="WEST ELLA">WEST ELLA </option><option  value="WEST NEWTON">WEST NEWTON </option><option  value="WETWANG">WETWANG </option><option  value="WHITGIFT">WHITGIFT </option><option  value="WHITGIFT COMMON">WHITGIFT COMMON </option><option  value="WILBERFOSS">WILBERFOSS </option><option  value="WILLERBY">WILLERBY </option><option  value="WILLITOFT">WILLITOFT </option><option  value="WILSTHORPE">WILSTHORPE </option><option  value="WINESTEAD">WINESTEAD </option><option  value="WITHERNSEA">WITHERNSEA </option><option  value="WITHERNWICK">WITHERNWICK </option><option  value="WOLD NEWTON">WOLD NEWTON </option><option  value="WOODMANSEY">WOODMANSEY </option><option  value="WRESSLE">WRESSLE </option><option  value="WYTON">WYTON </option><option  value="YAPHAM">YAPHAM </option><option  value="YOKEFLEET">YOKEFLEET </option><option  value="YOULTHORPE">YOULTHORPE </option></select><textarea name=TOWN id=TOWN style="visibility: hidden; height: 1px; width: 1px"></textarea></nobr><input type="text" name="TOWN_OVERRIDE" id="TOWN_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"><input type="text" id=TOWN_VDDVALUE NAME=TOWN_VDDVALUE  style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37336"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37336_Help"  name="37336_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[4][cNextVarID]    = "37335";
+QuestArray[4][cDefaultValue]  = '';
+QuestArray[4][cDataType]     = cdtDropDown;
+QuestArray[4][cLinkValue]    = "";
+QuestArray[4][cLinkType]     = "";
+QuestArray[4][cPriority]     = "";
+QuestArray[4][cLink]         = "";
+QuestArray[4][cLinkTemplateID] = "";
+QuestArray[4][cHelp]                 = '';
+QuestArray[4][cHelpStatus]           = "";
+QuestArray[4][cStoreValue1]         = '';
+QuestArray[4][cStoreValue2]         = '';
+QuestArray[4][cStoreValue3]         = '';
+QuestArray[4][cStoreValue4]         = '1';
+QuestArray[5][cVarname]      = "STREETNAME";
+QuestArray[5][cVarID]      = "37335";
+QuestArray[5][cHTML]             = '<table id="STREETNAME_BGTable" name="STREETNAME_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37335" name="lynxct_holder37335">Enter the street where the problem exists&nbsp;&nbsp;&nbsp;&nbsp<IMG alt="Mandatory" src="../images/gifs/mandatory.gif"><br><input type="text" name="STREETNAME" id="STREETNAME" maxlength=50 size=75 value=""><input type="text" name="STREETNAME_OVERRIDE" id="STREETNAME_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37335"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37335_Help"  name="37335_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[5][cNextVarID]    = "36689";
+QuestArray[5][cDefaultValue]  = '';
+QuestArray[5][cDataType]     = cdtString;
+QuestArray[5][cLinkValue]    = "";
+QuestArray[5][cLinkType]     = "";
+QuestArray[5][cPriority]     = "";
+QuestArray[5][cLink]         = "";
+QuestArray[5][cLinkTemplateID] = "";
+QuestArray[5][cHelp]                 = '';
+QuestArray[5][cHelpStatus]           = "";
+QuestArray[5][cStoreValue1]         = '';
+QuestArray[5][cStoreValue2]         = '';
+QuestArray[5][cStoreValue3]         = '';
+QuestArray[5][cStoreValue4]         = '1';
+QuestArray[6][cVarname]      = "ENQLOCATION";
+QuestArray[6][cVarID]      = "36689";
+QuestArray[6][cHTML]             = '<table id="ENQLOCATION_BGTable" name="ENQLOCATION_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder36689" name="lynxct_holder36689">Please describe, as accurately as you can, the location of the problem.<br><textarea  name="ENQLOCATION" id="ENQLOCATION" cols="80" rows="5" style=""></textarea><input type="text" name="ENQLOCATION_OVERRIDE" id="ENQLOCATION_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36689"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36689_Help"  name="36689_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[6][cNextVarID]    = "36690";
+QuestArray[6][cDefaultValue]  = '';
+QuestArray[6][cDataType]     = cdtTextArea;
+QuestArray[6][cLinkValue]    = "";
+QuestArray[6][cLinkType]     = "";
+QuestArray[6][cPriority]     = "";
+QuestArray[6][cLink]         = "";
+QuestArray[6][cLinkTemplateID] = "";
+QuestArray[6][cHelp]                 = '';
+QuestArray[6][cHelpStatus]           = "";
+QuestArray[6][cStoreValue1]         = '';
+QuestArray[6][cStoreValue2]         = '';
+QuestArray[6][cStoreValue3]         = '';
+QuestArray[6][cStoreValue4]         = '1';
+QuestArray[7][cVarname]      = "ORIGINALDESC";
+QuestArray[7][cVarID]      = "36690";
+QuestArray[7][cHTML]             = '<table id="ORIGINALDESC_BGTable" name="ORIGINALDESC_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder36690" name="lynxct_holder36690">Please describe, as accurately as you can,  the problem, and any other comments which may help us.<br><textarea  name="ORIGINALDESC" id="ORIGINALDESC" cols="80" rows="5" style=""></textarea><input type="text" name="ORIGINALDESC_OVERRIDE" id="ORIGINALDESC_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36690"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36690_Help"  name="36690_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[7][cNextVarID]    = "36679";
+QuestArray[7][cDefaultValue]  = '';
+QuestArray[7][cDataType]     = cdtTextArea;
+QuestArray[7][cLinkValue]    = "";
+QuestArray[7][cLinkType]     = "";
+QuestArray[7][cPriority]     = "";
+QuestArray[7][cLink]         = "";
+QuestArray[7][cLinkTemplateID] = "";
+QuestArray[7][cHelp]                 = '';
+QuestArray[7][cHelpStatus]           = "";
+QuestArray[7][cStoreValue1]         = '';
+QuestArray[7][cStoreValue2]         = '';
+QuestArray[7][cStoreValue3]         = '';
+QuestArray[7][cStoreValue4]         = '1';
+QuestArray[8][cVarname]      = "CUSTDET";
+QuestArray[8][cVarID]      = "36679";
+QuestArray[8][cHTML]             = '<table id="CUSTDET_BGTable" name="CUSTDET_BGTable" border="0" width="99%"><tr> <td valign="top" class="cssLCTDivCaption"><div id="lynxct_holder36679" name="lynxct_holder36679"><b>Please provide your details</b><br></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36679"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36679_Help"  name="36679_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[8][cNextVarID]    = "36695";
+QuestArray[8][cDefaultValue]  = '<b>Please provide your details</b>';
+QuestArray[8][cDataType]     = cdtCaption;
+QuestArray[8][cLinkValue]    = "";
+QuestArray[8][cLinkType]     = "";
+QuestArray[8][cPriority]     = "";
+QuestArray[8][cLink]         = "";
+QuestArray[8][cLinkTemplateID] = "";
+QuestArray[8][cHelp]                 = '';
+QuestArray[8][cHelpStatus]           = "";
+QuestArray[8][cStoreValue1]         = '';
+QuestArray[8][cStoreValue2]         = '';
+QuestArray[8][cStoreValue3]         = '';
+QuestArray[8][cStoreValue4]         = '1';
+QuestArray[9][cVarname]      = "CUSTTITLE";
+QuestArray[9][cVarID]      = "36695";
+QuestArray[9][cHTML]             = '<table id="CUSTTITLE_BGTable" name="CUSTTITLE_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder36695" name="lynxct_holder36695">Title<br><NOBR><select name=CUSTTITLE_DROPDOWN id=CUSTTITLE_DROPDOWN style= "position:relative;z-index:3"  OnChange ="Process_DropDown(this.id,false)"><option value=""></option><option  value="Mr">Mr </option><option  value="Mrs">Mrs </option><option  value="Miss">Miss </option><option  value="Ms">Ms </option></select><textarea name=CUSTTITLE id=CUSTTITLE style="visibility: hidden; height: 1px; width: 1px"></textarea></nobr><input type="text" name="CUSTTITLE_OVERRIDE" id="CUSTTITLE_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"><input type="text" id=CUSTTITLE_VDDVALUE NAME=CUSTTITLE_VDDVALUE  style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36695"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36695_Help"  name="36695_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[9][cNextVarID]    = "36684";
+QuestArray[9][cDefaultValue]  = 'Mr|Mr;Mrs|Mrs;Miss|Miss;Ms|Ms';
+QuestArray[9][cDataType]     = cdtDropDown;
+QuestArray[9][cLinkValue]    = "";
+QuestArray[9][cLinkType]     = "";
+QuestArray[9][cPriority]     = "";
+QuestArray[9][cLink]         = "";
+QuestArray[9][cLinkTemplateID] = "";
+QuestArray[9][cHelp]                 = '';
+QuestArray[9][cHelpStatus]           = "";
+QuestArray[9][cStoreValue1]         = '';
+QuestArray[9][cStoreValue2]         = '';
+QuestArray[9][cStoreValue3]         = '';
+QuestArray[9][cStoreValue4]         = '1';
+QuestArray[10][cVarname]      = "CUSTFIRSTNAME";
+QuestArray[10][cVarID]      = "36684";
+QuestArray[10][cHTML]             = '<table id="CUSTFIRSTNAME_BGTable" name="CUSTFIRSTNAME_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder36684" name="lynxct_holder36684">Forename<br><input type="text" name="CUSTFIRSTNAME" id="CUSTFIRSTNAME" maxlength=30 size=45 value="."><input type="text" name="CUSTFIRSTNAME_OVERRIDE" id="CUSTFIRSTNAME_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36684"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36684_Help"  name="36684_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[10][cNextVarID]    = "36693";
+QuestArray[10][cDefaultValue]  = '.';
+QuestArray[10][cDataType]     = cdtString;
+QuestArray[10][cLinkValue]    = "";
+QuestArray[10][cLinkType]     = "";
+QuestArray[10][cPriority]     = "";
+QuestArray[10][cLink]         = "";
+QuestArray[10][cLinkTemplateID] = "";
+QuestArray[10][cHelp]                 = '';
+QuestArray[10][cHelpStatus]           = "";
+QuestArray[10][cStoreValue1]         = '';
+QuestArray[10][cStoreValue2]         = '';
+QuestArray[10][cStoreValue3]         = '';
+QuestArray[10][cStoreValue4]         = '1';
+QuestArray[11][cVarname]      = "CUSTSECONDNAME";
+QuestArray[11][cVarID]      = "36693";
+QuestArray[11][cHTML]             = '<table id="CUSTSECONDNAME_BGTable" name="CUSTSECONDNAME_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder36693" name="lynxct_holder36693">Surname<br><input type="text" name="CUSTSECONDNAME" id="CUSTSECONDNAME" maxlength=50 size=75 value="."><input type="text" name="CUSTSECONDNAME_OVERRIDE" id="CUSTSECONDNAME_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36693"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36693_Help"  name="36693_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[11][cNextVarID]    = "37340";
+QuestArray[11][cDefaultValue]  = '.';
+QuestArray[11][cDataType]     = cdtString;
+QuestArray[11][cLinkValue]    = "";
+QuestArray[11][cLinkType]     = "";
+QuestArray[11][cPriority]     = "";
+QuestArray[11][cLink]         = "";
+QuestArray[11][cLinkTemplateID] = "";
+QuestArray[11][cHelp]                 = '';
+QuestArray[11][cHelpStatus]           = "";
+QuestArray[11][cStoreValue1]         = '';
+QuestArray[11][cStoreValue2]         = '';
+QuestArray[11][cStoreValue3]         = '';
+QuestArray[11][cStoreValue4]         = '1';
+QuestArray[12][cVarname]      = "PROPERTYADDRESS";
+QuestArray[12][cVarID]      = "37340";
+QuestArray[12][cHTML]             = '<table id="PROPERTYADDRESS_BGTable" name="PROPERTYADDRESS_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37340" name="lynxct_holder37340">House name/number<br><input type="text" name="PROPERTYADDRESS" id="PROPERTYADDRESS" maxlength=50 size=75 value=""><input type="text" name="PROPERTYADDRESS_OVERRIDE" id="PROPERTYADDRESS_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37340"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37340_Help"  name="37340_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[12][cNextVarID]    = "37339";
+QuestArray[12][cDefaultValue]  = '';
+QuestArray[12][cDataType]     = cdtString;
+QuestArray[12][cLinkValue]    = "";
+QuestArray[12][cLinkType]     = "";
+QuestArray[12][cPriority]     = "";
+QuestArray[12][cLink]         = "";
+QuestArray[12][cLinkTemplateID] = "";
+QuestArray[12][cHelp]                 = '';
+QuestArray[12][cHelpStatus]           = "";
+QuestArray[12][cStoreValue1]         = '';
+QuestArray[12][cStoreValue2]         = '';
+QuestArray[12][cStoreValue3]         = '';
+QuestArray[12][cStoreValue4]         = '1';
+QuestArray[13][cVarname]      = "STREETDESCRIPTION";
+QuestArray[13][cVarID]      = "37339";
+QuestArray[13][cHTML]             = '<table id="STREETDESCRIPTION_BGTable" name="STREETDESCRIPTION_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37339" name="lynxct_holder37339">Street<br><input type="text" name="STREETDESCRIPTION" id="STREETDESCRIPTION" maxlength=50 size=75 value=""><input type="text" name="STREETDESCRIPTION_OVERRIDE" id="STREETDESCRIPTION_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37339"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37339_Help"  name="37339_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[13][cNextVarID]    = "37338";
+QuestArray[13][cDefaultValue]  = '';
+QuestArray[13][cDataType]     = cdtString;
+QuestArray[13][cLinkValue]    = "";
+QuestArray[13][cLinkType]     = "";
+QuestArray[13][cPriority]     = "";
+QuestArray[13][cLink]         = "";
+QuestArray[13][cLinkTemplateID] = "";
+QuestArray[13][cHelp]                 = '';
+QuestArray[13][cHelpStatus]           = "";
+QuestArray[13][cStoreValue1]         = '';
+QuestArray[13][cStoreValue2]         = '';
+QuestArray[13][cStoreValue3]         = '';
+QuestArray[13][cStoreValue4]         = '1';
+QuestArray[14][cVarname]      = "TOWNNAME";
+QuestArray[14][cVarID]      = "37338";
+QuestArray[14][cHTML]             = '<table id="TOWNNAME_BGTable" name="TOWNNAME_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37338" name="lynxct_holder37338">Town<br><input type="text" name="TOWNNAME" id="TOWNNAME" maxlength=40 size=60 value=""><input type="text" name="TOWNNAME_OVERRIDE" id="TOWNNAME_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37338"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37338_Help"  name="37338_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[14][cNextVarID]    = "37337";
+QuestArray[14][cDefaultValue]  = '';
+QuestArray[14][cDataType]     = cdtString;
+QuestArray[14][cLinkValue]    = "";
+QuestArray[14][cLinkType]     = "";
+QuestArray[14][cPriority]     = "";
+QuestArray[14][cLink]         = "";
+QuestArray[14][cLinkTemplateID] = "";
+QuestArray[14][cHelp]                 = '';
+QuestArray[14][cHelpStatus]           = "";
+QuestArray[14][cStoreValue1]         = '';
+QuestArray[14][cStoreValue2]         = '';
+QuestArray[14][cStoreValue3]         = '';
+QuestArray[14][cStoreValue4]         = '1';
+QuestArray[15][cVarname]      = "POSTCODE";
+QuestArray[15][cVarID]      = "37337";
+QuestArray[15][cHTML]             = '<table id="POSTCODE_BGTable" name="POSTCODE_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37337" name="lynxct_holder37337">Postcode<br><input type="text" name="POSTCODE" id="POSTCODE" maxlength=40 size=60 value=""><input type="text" name="POSTCODE_OVERRIDE" id="POSTCODE_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37337"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37337_Help"  name="37337_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[15][cNextVarID]    = "36694";
+QuestArray[15][cDefaultValue]  = '';
+QuestArray[15][cDataType]     = cdtString;
+QuestArray[15][cLinkValue]    = "";
+QuestArray[15][cLinkType]     = "";
+QuestArray[15][cPriority]     = "";
+QuestArray[15][cLink]         = "";
+QuestArray[15][cLinkTemplateID] = "";
+QuestArray[15][cHelp]                 = '';
+QuestArray[15][cHelpStatus]           = "";
+QuestArray[15][cStoreValue1]         = '';
+QuestArray[15][cStoreValue2]         = '';
+QuestArray[15][cStoreValue3]         = '';
+QuestArray[15][cStoreValue4]         = '1';
+QuestArray[16][cVarname]      = "CUSTPHONE";
+QuestArray[16][cVarID]      = "36694";
+QuestArray[16][cHTML]             = '<table id="CUSTPHONE_BGTable" name="CUSTPHONE_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder36694" name="lynxct_holder36694">Telephone Number<br><input type="text" name="CUSTPHONE" id="CUSTPHONE" maxlength=30 size=45 value=""><input type="text" name="CUSTPHONE_OVERRIDE" id="CUSTPHONE_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36694"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36694_Help"  name="36694_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[16][cNextVarID]    = "36678";
+QuestArray[16][cDefaultValue]  = '';
+QuestArray[16][cDataType]     = cdtString;
+QuestArray[16][cLinkValue]    = "";
+QuestArray[16][cLinkType]     = "";
+QuestArray[16][cPriority]     = "";
+QuestArray[16][cLink]         = "";
+QuestArray[16][cLinkTemplateID] = "";
+QuestArray[16][cHelp]                 = '';
+QuestArray[16][cHelpStatus]           = "";
+QuestArray[16][cStoreValue1]         = '';
+QuestArray[16][cStoreValue2]         = '';
+QuestArray[16][cStoreValue3]         = '';
+QuestArray[16][cStoreValue4]         = '1';
+QuestArray[17][cVarname]      = "ALTPHONE";
+QuestArray[17][cVarID]      = "36678";
+QuestArray[17][cHTML]             = '<table id="ALTPHONE_BGTable" name="ALTPHONE_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder36678" name="lynxct_holder36678">Alternative or Mobile Telephone Number<br><input type="text" name="ALTPHONE" id="ALTPHONE" maxlength=30 size=45 value=""><input type="text" name="ALTPHONE_OVERRIDE" id="ALTPHONE_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36678"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36678_Help"  name="36678_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[17][cNextVarID]    = "36682";
+QuestArray[17][cDefaultValue]  = '';
+QuestArray[17][cDataType]     = cdtString;
+QuestArray[17][cLinkValue]    = "";
+QuestArray[17][cLinkType]     = "";
+QuestArray[17][cPriority]     = "";
+QuestArray[17][cLink]         = "";
+QuestArray[17][cLinkTemplateID] = "";
+QuestArray[17][cHelp]                 = '';
+QuestArray[17][cHelpStatus]           = "";
+QuestArray[17][cStoreValue1]         = '';
+QuestArray[17][cStoreValue2]         = '';
+QuestArray[17][cStoreValue3]         = '';
+QuestArray[17][cStoreValue4]         = '1';
+QuestArray[18][cVarname]      = "CUSTEMAILADDRESS";
+QuestArray[18][cVarID]      = "36682";
+QuestArray[18][cHTML]             = '<table id="CUSTEMAILADDRESS_BGTable" name="CUSTEMAILADDRESS_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder36682" name="lynxct_holder36682">Please provide your email address. If you do not have an email address please type in the word none.&nbsp;&nbsp;&nbsp;&nbsp<IMG alt="Mandatory" src="../images/gifs/mandatory.gif"><br><input type="text" name="CUSTEMAILADDRESS" id="CUSTEMAILADDRESS" maxlength=50 size=75 value=""><input type="text" name="CUSTEMAILADDRESS_OVERRIDE" id="CUSTEMAILADDRESS_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36682"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36682_Help"  name="36682_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[18][cNextVarID]    = "45236";
+QuestArray[18][cDefaultValue]  = '';
+QuestArray[18][cDataType]     = cdtString;
+QuestArray[18][cLinkValue]    = "";
+QuestArray[18][cLinkType]     = "";
+QuestArray[18][cPriority]     = "";
+QuestArray[18][cLink]         = "";
+QuestArray[18][cLinkTemplateID] = "";
+QuestArray[18][cHelp]                 = '';
+QuestArray[18][cHelpStatus]           = "";
+QuestArray[18][cStoreValue1]         = '';
+QuestArray[18][cStoreValue2]         = '';
+QuestArray[18][cStoreValue3]         = '';
+QuestArray[18][cStoreValue4]         = '1';
+QuestArray[19][cVarname]      = "ATTRIBUTE1";
+QuestArray[19][cVarID]      = "45236";
+QuestArray[19][cHTML]             = '<table id="ATTRIBUTE1_BGTable" name="ATTRIBUTE1_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder45236" name="lynxct_holder45236">Do you require an officer to contact you regarding this enquiry?<br><NOBR><select name=ATTRIBUTE1_DROPDOWN id=ATTRIBUTE1_DROPDOWN style= "position:relative;z-index:3"  OnChange ="Process_DropDown(this.id,false)"><option value=""></option><option  value="YES">Yes </option><option  value="NO">No </option></select><textarea name=ATTRIBUTE1 id=ATTRIBUTE1 style="visibility: hidden; height: 1px; width: 1px"></textarea></nobr><input type="text" name="ATTRIBUTE1_OVERRIDE" id="ATTRIBUTE1_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"><input type="text" id=ATTRIBUTE1_VDDVALUE NAME=ATTRIBUTE1_VDDVALUE  style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help45236"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="45236_Help"  name="45236_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[19][cNextVarID]    = "36681";
+QuestArray[19][cDefaultValue]  = 'Yes|YES;No|NO';
+QuestArray[19][cDataType]     = cdtDropDown;
+QuestArray[19][cLinkValue]    = "";
+QuestArray[19][cLinkType]     = "";
+QuestArray[19][cPriority]     = "";
+QuestArray[19][cLink]         = "";
+QuestArray[19][cLinkTemplateID] = "";
+QuestArray[19][cHelp]                 = '';
+QuestArray[19][cHelpStatus]           = "";
+QuestArray[19][cStoreValue1]         = '';
+QuestArray[19][cStoreValue2]         = '';
+QuestArray[19][cStoreValue3]         = '';
+QuestArray[19][cStoreValue4]         = '1';
+QuestArray[20][cVarname]      = "DPPROMPT";
+QuestArray[20][cVarID]      = "36681";
+QuestArray[20][cHTML]             = '<table id="DPPROMPT_BGTable" name="DPPROMPT_BGTable" border="0" width="99%"><tr> <td valign="top" class="cssLCTDivCaption"><div id="lynxct_holder36681" name="lynxct_holder36681"><b><label for = "data protection">Data Protection Act 1998.  For the purposes of the Data Protection Act 1998, the Data Controller in relation to any personal data you supply is East Riding of Yorkshire Council.</label></b><br></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36681"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36681_Help"  name="36681_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[20][cNextVarID]    = "36687";
+QuestArray[20][cDefaultValue]  = '<b><label for = "data protection">Data Protection Act 1998.  For the purposes of the Data Protection Act 1998, the Data Controller in relation to any personal data you supply is East Riding of Yorkshire Council.</label></b>';
+QuestArray[20][cDataType]     = cdtCaption;
+QuestArray[20][cLinkValue]    = "";
+QuestArray[20][cLinkType]     = "";
+QuestArray[20][cPriority]     = "";
+QuestArray[20][cLink]         = "";
+QuestArray[20][cLinkTemplateID] = "";
+QuestArray[20][cHelp]                 = '';
+QuestArray[20][cHelpStatus]           = "";
+QuestArray[20][cStoreValue1]         = '';
+QuestArray[20][cStoreValue2]         = '';
+QuestArray[20][cStoreValue3]         = '';
+QuestArray[20][cStoreValue4]         = '1';
+QuestArray[21][cVarname]      = "LINE1";
+QuestArray[21][cVarID]      = "36687";
+QuestArray[21][cHTML]             = '<HR> '; 
+QuestArray[21][cNextVarID]    = "36680";
+QuestArray[21][cDefaultValue]  = '';
+QuestArray[21][cDataType]     = cdtSeparator;
+QuestArray[21][cLinkValue]    = "";
+QuestArray[21][cLinkType]     = "";
+QuestArray[21][cPriority]     = "";
+QuestArray[21][cLink]         = "";
+QuestArray[21][cLinkTemplateID] = "";
+QuestArray[21][cHelp]                 = '';
+QuestArray[21][cHelpStatus]           = "";
+QuestArray[21][cStoreValue1]         = '';
+QuestArray[21][cStoreValue2]         = '';
+QuestArray[21][cStoreValue3]         = '';
+QuestArray[21][cStoreValue4]         = '1';
+QuestArray[22][cVarname]      = "DPACK";
+QuestArray[22][cVarID]      = "36680";
+QuestArray[22][cHTML]             = '<table id="DPACK_BGTable" name="DPACK_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder36680" name="lynxct_holder36680"><label for = "disclaimer"><b>I accept that the information provided on this form will be processed and stored in accordance with the principles of the Act for the purpose of this Service Request by the East Riding of Yorkshire Council..</b></label>&nbsp;&nbsp;&nbsp;&nbsp<IMG alt="Mandatory" src="../images/gifs/mandatory.gif"><br><table><tr style="display:none"> <td><input type="checkbox" name="DPACK_CHECK" id="DPACK_CHECK"></td></tr><tr><td><input type="checkbox" name="DPACK_CHECK" id="DPACK_CHECK" value="Please tick" onclick="Process_Selection(this.id)">Please tick<textarea id=DPACK name=DPACK style="visibility: hidden; height: 1px; width: 1px"></textarea><input type="text" name="DPACK_OVERRIDE" id="DPACK_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></td></tr></table></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36680"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36680_Help"  name="36680_Help"  src="../images/gifs/help_up.gif" onclick="ShowHelp(36680)">  </td> </tr></table> '; 
+QuestArray[22][cNextVarID]    = "36688";
+QuestArray[22][cDefaultValue]  = 'Please tick';
+QuestArray[22][cDataType]     = cdtCheckBox;
+QuestArray[22][cLinkValue]    = "";
+QuestArray[22][cLinkType]     = "";
+QuestArray[22][cPriority]     = "";
+QuestArray[22][cLink]         = "";
+QuestArray[22][cLinkTemplateID] = "";
+QuestArray[22][cHelp]                 = 'Please tick the box to acknowledge that you understand and accept the Data Protection information.';
+QuestArray[22][cHelpStatus]           = "";
+QuestArray[22][cStoreValue1]         = '';
+QuestArray[22][cStoreValue2]         = '';
+QuestArray[22][cStoreValue3]         = '';
+QuestArray[22][cStoreValue4]         = '1';
+QuestArray[23][cVarname]      = "LINE2";
+QuestArray[23][cVarID]      = "36688";
+QuestArray[23][cHTML]             = '<HR> '; 
+QuestArray[23][cNextVarID]    = "36692";
+QuestArray[23][cDefaultValue]  = '';
+QuestArray[23][cDataType]     = cdtSeparator;
+QuestArray[23][cLinkValue]    = "";
+QuestArray[23][cLinkType]     = "";
+QuestArray[23][cPriority]     = "";
+QuestArray[23][cLink]         = "";
+QuestArray[23][cLinkTemplateID] = "";
+QuestArray[23][cHelp]                 = '';
+QuestArray[23][cHelpStatus]           = "";
+QuestArray[23][cStoreValue1]         = '';
+QuestArray[23][cStoreValue2]         = '';
+QuestArray[23][cStoreValue3]         = '';
+QuestArray[23][cStoreValue4]         = '1';
+QuestArray[24][cVarname]      = "SUBMIT";
+QuestArray[24][cVarID]      = "36692";
+QuestArray[24][cHTML]             = '<table id="SUBMIT_BGTable" name="SUBMIT_BGTable" border="0" width="99%"><tr> <td valign="top" class="cssLCTDivCaption"><div id="lynxct_holder36692" name="lynxct_holder36692"><b><font size = 3 color = teal> Please click SUBMIT</font></b><br></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help36692"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="36692_Help"  name="36692_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[24][cNextVarID]    = "37334";
+QuestArray[24][cDefaultValue]  = '<b><font size = 3 color = teal> Please click SUBMIT</font></b>';
+QuestArray[24][cDataType]     = cdtCaption;
+QuestArray[24][cLinkValue]    = "";
+QuestArray[24][cLinkType]     = "";
+QuestArray[24][cPriority]     = "";
+QuestArray[24][cLink]         = "";
+QuestArray[24][cLinkTemplateID] = "";
+QuestArray[24][cHelp]                 = '';
+QuestArray[24][cHelpStatus]           = "";
+QuestArray[24][cStoreValue1]         = '';
+QuestArray[24][cStoreValue2]         = '';
+QuestArray[24][cStoreValue3]         = '';
+QuestArray[24][cStoreValue4]         = '1';
+QuestArray[25][cVarname]      = "ENQSERVICE";
+QuestArray[25][cVarID]      = "37334";
+QuestArray[25][cHTML]             = '_HIDE<table id="ENQSERVICE_BGTable" name="ENQSERVICE_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37334" name="lynxct_holder37334">CONFIRM ENQSERVICE<br><input type="text" name="ENQSERVICE" id="ENQSERVICE" value="HIGH" readonly ><input type="text" name="ENQSERVICE_OVERRIDE" id="ENQSERVICE_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37334"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37334_Help"  name="37334_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[25][cNextVarID]    = "37333";
+QuestArray[25][cDefaultValue]  = 'HIGH';
+QuestArray[25][cDataType]     = cdtString;
+QuestArray[25][cLinkValue]    = "";
+QuestArray[25][cLinkType]     = "";
+QuestArray[25][cPriority]     = "";
+QuestArray[25][cLink]         = "";
+QuestArray[25][cLinkTemplateID] = "";
+QuestArray[25][cHelp]                 = '';
+QuestArray[25][cHelpStatus]           = "";
+QuestArray[25][cStoreValue1]         = '';
+QuestArray[25][cStoreValue2]         = '';
+QuestArray[25][cStoreValue3]         = '';
+QuestArray[25][cStoreValue4]         = '1';
+QuestArray[26][cVarname]      = "ENQSUBJECT";
+QuestArray[26][cVarID]      = "37333";
+QuestArray[26][cHTML]             = '_HIDE<table id="ENQSUBJECT_BGTable" name="ENQSUBJECT_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37333" name="lynxct_holder37333">CONFIRM ENQSUBJECT<br><input type="text" name="ENQSUBJECT" id="ENQSUBJECT" value="HSFU" readonly ><input type="text" name="ENQSUBJECT_OVERRIDE" id="ENQSUBJECT_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37333"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37333_Help"  name="37333_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[26][cNextVarID]    = "37332";
+QuestArray[26][cDefaultValue]  = 'HSFU';
+QuestArray[26][cDataType]     = cdtString;
+QuestArray[26][cLinkValue]    = "";
+QuestArray[26][cLinkType]     = "";
+QuestArray[26][cPriority]     = "";
+QuestArray[26][cLink]         = "";
+QuestArray[26][cLinkTemplateID] = "";
+QuestArray[26][cHelp]                 = '';
+QuestArray[26][cHelpStatus]           = "";
+QuestArray[26][cStoreValue1]         = '';
+QuestArray[26][cStoreValue2]         = '';
+QuestArray[26][cStoreValue3]         = '';
+QuestArray[26][cStoreValue4]         = '1';
+QuestArray[27][cVarname]      = "CUSTREF";
+QuestArray[27][cVarID]      = "37332";
+QuestArray[27][cHTML]             = '_HIDE<table id="CUSTREF_BGTable" name="CUSTREF_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37332" name="lynxct_holder37332">CONFIRM CUSTREF<br><input type="text" name="CUSTREF" id="CUSTREF" value="EXTC00111130" readonly ><input type="text" name="CUSTREF_OVERRIDE" id="CUSTREF_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37332"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37332_Help"  name="37332_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[27][cNextVarID]    = "37331";
+QuestArray[27][cDefaultValue]  = 'EXTC00111130';
+QuestArray[27][cDataType]     = cdtString;
+QuestArray[27][cLinkValue]    = "";
+QuestArray[27][cLinkType]     = "";
+QuestArray[27][cPriority]     = "";
+QuestArray[27][cLink]         = "";
+QuestArray[27][cLinkTemplateID] = "";
+QuestArray[27][cHelp]                 = '';
+QuestArray[27][cHelpStatus]           = "";
+QuestArray[27][cStoreValue1]         = '';
+QuestArray[27][cStoreValue2]         = '';
+QuestArray[27][cStoreValue3]         = '';
+QuestArray[27][cStoreValue4]         = '1';
+QuestArray[28][cVarname]      = "CUSTTYPE";
+QuestArray[28][cVarID]      = "37331";
+QuestArray[28][cHTML]             = '_HIDE<table id="CUSTTYPE_BGTable" name="CUSTTYPE_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37331" name="lynxct_holder37331">CONFIRM CUSTTYPE<br><input type="text" name="CUSTTYPE" id="CUSTTYPE" value="ASPI" readonly ><input type="text" name="CUSTTYPE_OVERRIDE" id="CUSTTYPE_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37331"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37331_Help"  name="37331_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[28][cNextVarID]    = "37330";
+QuestArray[28][cDefaultValue]  = 'ASPI';
+QuestArray[28][cDataType]     = cdtString;
+QuestArray[28][cLinkValue]    = "";
+QuestArray[28][cLinkType]     = "";
+QuestArray[28][cPriority]     = "";
+QuestArray[28][cLink]         = "";
+QuestArray[28][cLinkTemplateID] = "";
+QuestArray[28][cHelp]                 = '';
+QuestArray[28][cHelpStatus]           = "";
+QuestArray[28][cStoreValue1]         = '';
+QuestArray[28][cStoreValue2]         = '';
+QuestArray[28][cStoreValue3]         = '';
+QuestArray[28][cStoreValue4]         = '1';
+QuestArray[29][cVarname]      = "POINTOFCONTACT";
+QuestArray[29][cVarID]      = "37330";
+QuestArray[29][cHTML]             = '_HIDE<table id="POINTOFCONTACT_BGTable" name="POINTOFCONTACT_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37330" name="lynxct_holder37330">CONFIRM POINTOFCONTACT<br><input type="text" name="POINTOFCONTACT" id="POINTOFCONTACT" value="ONRE" readonly ><input type="text" name="POINTOFCONTACT_OVERRIDE" id="POINTOFCONTACT_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37330"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37330_Help"  name="37330_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[29][cNextVarID]    = "37329";
+QuestArray[29][cDefaultValue]  = 'ONRE';
+QuestArray[29][cDataType]     = cdtString;
+QuestArray[29][cLinkValue]    = "";
+QuestArray[29][cLinkType]     = "";
+QuestArray[29][cPriority]     = "";
+QuestArray[29][cLink]         = "";
+QuestArray[29][cLinkTemplateID] = "";
+QuestArray[29][cHelp]                 = '';
+QuestArray[29][cHelpStatus]           = "";
+QuestArray[29][cStoreValue1]         = '';
+QuestArray[29][cStoreValue2]         = '';
+QuestArray[29][cStoreValue3]         = '';
+QuestArray[29][cStoreValue4]         = '1';
+QuestArray[30][cVarname]      = "ENQREF";
+QuestArray[30][cVarID]      = "37329";
+QuestArray[30][cHTML]             = '_HIDE<table id="ENQREF_BGTable" name="ENQREF_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37329" name="lynxct_holder37329">CONFIRM ENQREF<br><input type="text" name="ENQREF" id="ENQREF" value="-1" readonly ><input type="text" name="ENQREF_OVERRIDE" id="ENQREF_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37329"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37329_Help"  name="37329_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[30][cNextVarID]    = "37328";
+QuestArray[30][cDefaultValue]  = '-1';
+QuestArray[30][cDataType]     = cdtString;
+QuestArray[30][cLinkValue]    = "";
+QuestArray[30][cLinkType]     = "";
+QuestArray[30][cPriority]     = "";
+QuestArray[30][cLink]         = "";
+QuestArray[30][cLinkTemplateID] = "";
+QuestArray[30][cHelp]                 = '';
+QuestArray[30][cHelpStatus]           = "";
+QuestArray[30][cStoreValue1]         = '';
+QuestArray[30][cStoreValue2]         = '';
+QuestArray[30][cStoreValue3]         = '';
+QuestArray[30][cStoreValue4]         = '1';
+QuestArray[31][cVarname]      = "STATUSNOTES";
+QuestArray[31][cVarID]      = "37328";
+QuestArray[31][cHTML]             = '_HIDE<table id="STATUSNOTES_BGTable" name="STATUSNOTES_BGTable" border="0" width="99%"><tr> <td valign="top" width="50%"><div id="lynxct_holder37328" name="lynxct_holder37328">CONFIRM STATUSNOTES<br><input type="text" name="STATUSNOTES" id="STATUSNOTES" value="ENQL" readonly ><input type="text" name="STATUSNOTES_OVERRIDE" id="STATUSNOTES_OVERRIDE" style="visibility: hidden; height: 1px; width: 1px"></div> </td>  <td></td>  <td align="right">   <div align="left" id="Help37328"></div>  </td>  <td width="1px" align="right" valign="middle">   &nbsp;<img id="37328_Help"  name="37328_Help"  src="../images/gifs/help_disabled.gif">  </td> </tr></table> '; 
+QuestArray[31][cNextVarID]    = "0";
+QuestArray[31][cDefaultValue]  = 'ENQL';
+QuestArray[31][cDataType]     = cdtString;
+QuestArray[31][cLinkValue]    = "";
+QuestArray[31][cLinkType]     = "";
+QuestArray[31][cPriority]     = "";
+QuestArray[31][cLink]         = "";
+QuestArray[31][cLinkTemplateID] = "";
+QuestArray[31][cHelp]                 = '';
+QuestArray[31][cHelpStatus]           = "";
+QuestArray[31][cStoreValue1]         = '';
+QuestArray[31][cStoreValue2]         = '';
+QuestArray[31][cStoreValue3]         = '';
+QuestArray[31][cStoreValue4]         = '1';
+bDisplayStatusBar = '0';cFormMode = cRead_NewForm;
+document.getElementById('LynxCT_Notes').value ='* Mandatory. You are required to answer these question. ThankYou';
+document.getElementById('strLynxCTNotes_Prompt').innerHTML ='Foot Note for Mandatory Questions';
+
+
+//Set Default TemplateID
+document.getElementById("lynxct_NewTemplateID").value ="1583";
+
+var PathArray = new Array;
+
+if (!bStopExecute){
+	// SERVER-SIDE
+	// Embed client with Attachment/Template Info
+	attach_OptContent = '1628/1<input name="LYNXCT_ATTACHMENTLIST" id="LYNXCT_ATTACHMENTLIST" value="*" style="visibility: hidden; height: 1px; width: 1px"><input name="LYNXCT_TEMPLATEGROUP" id="LYNXCT_TEMPLATEGROUP" value="*" style="visibility: hidden; height: 1px; width: 1px"><input name="LYNXCT_SLAVEATTACHMENTLIST" id="LYNXCT_SLAVEATTACHMENTLIST" value="*" style="visibility: hidden; height: 1px; width: 1px">/21583/1<input name="LYNXCT_ATTACHMENTLIST" id="LYNXCT_ATTACHMENTLIST" value="*" style="visibility: hidden; height: 1px; width: 1px"><div style="visibility:hidden;height:0px;"><div name="lynxct_AttachTempDiv_1" id="lynxct_AttachTempDiv_1" class="cssLCTAttachTemplate" style="display:block;">&nbsp<img src="../images/gifs/slavetemplate.gif" title="Template"><input type="checkbox" name="LYNXCT_TEMPLATEGROUP_CHECK" id="LYNXCT_TEMPLATEGROUP_CHECK_1" OnClick="click_SlaveTemplate(this,\'1\');" value="1584~1~Report damaged street furniture confirmation" disabled  checked >Report damaged street furniture confirmation</div><div name="lynxct_SlaveAttachDiv_1" id="lynxct_SlaveAttachDiv_1" class="cssLCTAttachSlave" style="display:block;">No Attachments</div></div><input name="LYNXCT_TEMPLATEGROUP" id="LYNXCT_TEMPLATEGROUP" value="1584," style="visibility: hidden; height: 1px; width: 1px"><input name="LYNXCT_SLAVEATTACHMENTLIST" id="LYNXCT_SLAVEATTACHMENTLIST"  style="visibility: hidden; height: 1px; width: 1px" value="*">/21584/1<input name="LYNXCT_ATTACHMENTLIST" id="LYNXCT_ATTACHMENTLIST" value="*" style="visibility: hidden; height: 1px; width: 1px"><input name="LYNXCT_TEMPLATEGROUP" id="LYNXCT_TEMPLATEGROUP" value="*" style="visibility: hidden; height: 1px; width: 1px"><input name="LYNXCT_SLAVEATTACHMENTLIST" id="LYNXCT_SLAVEATTACHMENTLIST" value="*" style="visibility: hidden; height: 1px; width: 1px">';
+attach_content = '<input name="LYNXCT_ATTACHMENTLIST" id="LYNXCT_ATTACHMENTLIST" value="*" style="visibility: hidden; height: 1px; width: 1px"><div style="visibility:hidden;height:0px;"><div name="lynxct_AttachTempDiv_1" id="lynxct_AttachTempDiv_1" class="cssLCTAttachTemplate" style="display:block;">&nbsp<img src="../images/gifs/slavetemplate.gif" title="Template"><input type="checkbox" name="LYNXCT_TEMPLATEGROUP_CHECK" id="LYNXCT_TEMPLATEGROUP_CHECK_1" OnClick="click_SlaveTemplate(this,\'1\');" value="1584~1~Report damaged street furniture confirmation" disabled  checked >Report damaged street furniture confirmation</div><div name="lynxct_SlaveAttachDiv_1" id="lynxct_SlaveAttachDiv_1" class="cssLCTAttachSlave" style="display:block;">No Attachments</div></div><input name="LYNXCT_TEMPLATEGROUP" id="LYNXCT_TEMPLATEGROUP" value="1584," style="visibility: hidden; height: 1px; width: 1px"><input name="LYNXCT_SLAVEATTACHMENTLIST" id="LYNXCT_SLAVEATTACHMENTLIST"  style="visibility: hidden; height: 1px; width: 1px" value="*">';
+
+	
+	document.getElementById("AttachDiv").innerHTML = attach_content
+	
+	bShowFirstTime = true;
+	manage_displayArray(QuestArray[0][cVarID],0); //Params [Initial VarID],[0] (N/A reserved from selected link)
+	
+	if (document.getElementById("lynxct_History").value != ""){
+		Update_NextVarIds();
+	}
+	display_Form();
+	//another Netscape thingy: will not populate TextAreas
+	Populate_TextArea();
+	
+	//store of all possible attachments/slave templates/slave attachments for applicable templates
+	if (attach_OptContent !="") {
+		tempRecArray = attach_OptContent.split("/2");
+		iCtrMax = tempRecArray.length-1;
+
+		for (iRecCount = 0;iRecCount <= iCtrMax; iRecCount++){
+			optAttachArray [iRecCount] = new Array();
+		}
+
+		for (iRecCount = 0;iRecCount <= iCtrMax; iRecCount++){
+			tempFieldArray = tempRecArray[iRecCount].split("/1");
+	
+			for (iFieldCount = 0;iFieldCount <= tempFieldArray.length-1;iFieldCount++){
+				optAttachArray [iRecCount][iFieldCount]= tempFieldArray[iFieldCount];
+			} 
+		}
+	}
+}
+
+if (bDisplayStatusBar == "0" && cFormMode == cRead_NewForm){
+	document.getElementById("lynxct_FormMode").className = ccsHidePrompt;
+}
+
+document.getElementById("lynxct_FormMode").innerHTML = "Form Mode: New Entry";
+
+// enable/disable Submit Button
+if (cFormMode == cRead_ReadOnly){
+	document.getElementById("lynxct_FormMode").innerHTML = "Form Mode: Read Only";
+	document.getElementById("SubmitID").disabled = true;
+	document.getElementById("RejectID").value = "Back";	
+}
+
+//Submit Button Captions
+//TestMode
+if (parseInt(document.getElementById("lynxct_Data").value,10) < 0){
+	document.getElementById("lynxct_FormMode").innerHTML = "Form Mode: Test Mode";
+	document.getElementById("SubmitID").value = "Test";
+	document.getElementById("RejectID").style.visibility = "hidden";
+}
+
+//is Form being reviewed in Admin, hide back/reject button
+if ("" == "1"){
+	document.getElementById("RejectID").style.visibility = "hidden";
+}
+
+//Edit Mode
+if (cFormMode == cRead_Edit ){
+	document.getElementById("lynxct_FormMode").innerHTML = "Form Mode: Edit";
+	document.getElementById("SubmitID").value = "Amend";
+}
+
+bShowFirstTime = false;
+
+if (BrowserType != cIE){
+	addEventListeners();
+}
+
+//******************   FUNCTIONS   ***********************************
+
+// Server Side
+// NetScape Only
+// Object will insert EventListeners/javascript functions responsible for handling events 
+// of all form controls
+function addEventListeners(){
+if(document.getElementById("lynxct_holder36683")) document.getElementById("lynxct_holder36683").addEventListener("keypress",hnd36683,true);
+if(document.getElementById("lynxct_holder37335")) document.getElementById("lynxct_holder37335").addEventListener("keypress",hnd37335,true);
+if(document.getElementById("lynxct_holder36684")) document.getElementById("lynxct_holder36684").addEventListener("keypress",hnd36684,true);
+if(document.getElementById("lynxct_holder36693")) document.getElementById("lynxct_holder36693").addEventListener("keypress",hnd36693,true);
+if(document.getElementById("lynxct_holder37340")) document.getElementById("lynxct_holder37340").addEventListener("keypress",hnd37340,true);
+if(document.getElementById("lynxct_holder37339")) document.getElementById("lynxct_holder37339").addEventListener("keypress",hnd37339,true);
+if(document.getElementById("lynxct_holder37338")) document.getElementById("lynxct_holder37338").addEventListener("keypress",hnd37338,true);
+if(document.getElementById("lynxct_holder37337")) document.getElementById("lynxct_holder37337").addEventListener("keypress",hnd37337,true);
+if(document.getElementById("lynxct_holder36694")) document.getElementById("lynxct_holder36694").addEventListener("keypress",hnd36694,true);
+if(document.getElementById("lynxct_holder36678")) document.getElementById("lynxct_holder36678").addEventListener("keypress",hnd36678,true);
+if(document.getElementById("lynxct_holder36682")) document.getElementById("lynxct_holder36682").addEventListener("keypress",hnd36682,true);
+if(document.getElementById("lynxct_holder37334")) document.getElementById("lynxct_holder37334").addEventListener("keypress",hnd37334,true);
+if(document.getElementById("lynxct_holder37333")) document.getElementById("lynxct_holder37333").addEventListener("keypress",hnd37333,true);
+if(document.getElementById("lynxct_holder37332")) document.getElementById("lynxct_holder37332").addEventListener("keypress",hnd37332,true);
+if(document.getElementById("lynxct_holder37331")) document.getElementById("lynxct_holder37331").addEventListener("keypress",hnd37331,true);
+if(document.getElementById("lynxct_holder37330")) document.getElementById("lynxct_holder37330").addEventListener("keypress",hnd37330,true);
+if(document.getElementById("lynxct_holder37329")) document.getElementById("lynxct_holder37329").addEventListener("keypress",hnd37329,true);
+if(document.getElementById("lynxct_holder37328")) document.getElementById("lynxct_holder37328").addEventListener("keypress",hnd37328,true);
+}
+
+function hnd36683(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37335(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd36684(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd36693(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37340(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37339(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37338(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37337(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd36694(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd36678(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd36682(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37334(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37333(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37332(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37331(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37330(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37329(e){
+     Check_KeyPress('2',e);
+}
+
+function hnd37328(e){
+     Check_KeyPress('2',e);
+}
+
+
+//End Server-side
+
+function Get_History(){
+	var iQuestCount;
+	var iPathCount;
+	var sHistory;
+	var sCtrValue;
+	
+	sHistory = "";
+
+	for (iPathCount = 0;iPathCount <= PathArray.length-1; iPathCount++){
+		sHistory += PathArray[iPathCount] + ",";
+	}
+
+	return sHistory.substring(0,sHistory.length-1);
+}
+
+function Process_DropDown(sSelectName,bEditable){
+	var objSelect;
+	var sValue ="";
+	var sPrintResult="";	
+	var bOther;
+	var sCtrName ="";
+	var sSelectionItem="";
+
+	//At present bit 8 activates formatting when TRUE
+	PrintResult ="";
+	objSelect = document.getElementById(sSelectName);
+	sCtrName = sSelectName.substring(0,sSelectName.search("_"));
+
+	//VDROPDOWN
+	if (document.getElementById(sCtrName + "_VDDVALUE")){
+		var oDropDownText = document.getElementById(sCtrName + "_DROPDOWN");
+		document.getElementById(sCtrName + "_VDDVALUE").value= oDropDownText.options[oDropDownText.selectedIndex].value 
+	}
+
+	if (bEditable){
+		if (Trim(document.getElementById(sCtrName + "_NewTxt").value) == ""){ 
+			bEditable = false;
+		}
+	}
+	
+	for(iCheckCount=1;iCheckCount <=objSelect.length-1 ;iCheckCount++){
+		sValue = objSelect.options[iCheckCount].text;
+		
+		if (bEditable){
+			sValue = "[  ]  " + sValue; 
+		}
+		else
+		{
+			if (objSelect.options[iCheckCount].selected){ 
+				sSelectionItem = sValue;
+				sValue = "[x]  " + sValue;
+			}
+			else 
+			{
+				sValue = "[  ]  " + sValue ;
+			}	
+		}
+		sPrintResult += sValue + '\r\n';
+	}
+
+	if (bEditable){
+		if (bFormatted){ 
+			sSelectionItem  =  document.getElementById(sCtrName + "_NewTxt").value;
+		}
+		 
+		sPrintResult += "[x]  " + document.getElementById(sCtrName + "_NewTxt").value;
+	}
+	
+	if (bFormatted){ 
+		document.getElementById(sCtrName).value = sSelectionItem  
+	}
+	else 
+	{
+		document.getElementById(sCtrName).value = sPrintResult;
+	}
+} 
+
+function Trim(strValue)
+{
+	strValue = LTrim(strValue);
+	strValue = RTrim(strValue);
+	
+	return strValue;
+}
+
+function LTrim(strString)
+{
+	while( '' + strString.charAt(0)== ' ')
+	strString = strString.substring(1, strString.length);
+
+	return strString;
+}
+
+function RTrim(strString)
+{
+	while('' + strString.charAt(strString.length-1)==' ')
+	strString = strString.substring(0,strString.length-1);
+
+	return strString;
+}
+
+function Process_Float(sCtrName){
+	var sCtr;	
+	var sFormat;
+	
+	sCtr = document.getElementById(sCtrName);
+	sFormat = parseInt(document.getElementById(sCtrName + "_FLTFORMAT").value); 
+	
+	if (!isNaN (sCtr.value) && sCtr.value !="") 
+		sCtr.value = formatnumber(sCtr.value,sFormat)
+}
+
+function formatnumber(val, precision)
+{
+	var result;
+	
+	val = parseFloat(val);
+	result = val * Math.pow(10, precision);
+	result = Math.round(result);
+	result = result / Math.pow(10, precision);
+	
+	return fncPadZeros(result, precision);
+}
+
+function fncPadZeros(value, iDps)
+{
+	var sValue;
+	var iDecLoc;
+	
+	sValue = value.toString();
+	//locate the decimal point
+	iDecLoc = sValue.indexOf(".");
+
+	//decimal point exists?
+	if(iDecLoc == -1)
+	{    
+		iDp_length = 0;
+		//if decimal_places is greater than zero, tack on a decimal point
+		sValue += iDps > 0 ? "." : "";
+	}
+	else
+	{
+		//if yes, then only the extra decimal places will be padded with 0s
+		iDp_length = sValue.length - iDecLoc - 1;
+	}
+    
+	//calculate the number of decimal places that need to be padded with 0s
+	var pad_total = iDps - iDp_length;
+	
+	if (pad_total > 0)
+	{    
+		//pad the string with 0s
+		for (var iLoop = 1; iLoop <= pad_total; iLoop++) 
+        {
+			sValue += "0";
+		}
+	}
+	
+	return sValue;
+}
+
+function isTime(ctlName){
+	var strTime;
+	var strUnit;
+
+	strTime = document.getElementById(ctlName).value
+
+	if (strTime.length != 5)
+		return false;
+	
+	if (strTime.charAt(2) != ":")
+		return false; 
+
+	strUnit =strTime.substring(0,2);
+	if (isNaN(strUnit))
+		return false;
+	
+	if (parseInt(strUnit,10) > 23  || parseInt(strUnit,10) < 0 ) 
+		return false;
+
+	strUnit =strTime.substring(3,5);
+	
+	if (isNaN(strUnit))
+		return false;
+		
+	if (parseInt(strUnit,10) > 59  || parseInt(strUnit,10) < 0 ) 
+		return false;
+	return true;
+}
+	
+function Process_Currency(sCtrName){
+
+	sCtr = document.getElementById(sCtrName);
+
+	if (!isNaN (sCtr.value) && sCtr.value !="" ) 
+		sCtr.value = formatnumber(sCtr.value,2)
+}
+
+function Get_Flags(iFlag){
+	bRequired = false;
+	bOverRideMand = false;
+	bFormatted = false;
+
+	if ((1 & iFlag) > 0) 
+		bRequired = true;
+	
+	if ((16 & iFlag) > 0) 
+		bOverRideMand = true;
+	
+	if ((32 & iFlag) > 0) 
+		bColumn = true;
+	
+	if ((128 & iFlag) > 0)
+		bFormatted = false
+	else
+		bFormatted = true;
+		
+	//Bit 5 can only be set if Bit 1 is set
+	if (bOverRideMand && !bRequired)
+		bOverRideMand = false;
+} 
+
+function Set_OverRide(sCtrName,bOverRideMand){
+	
+	if (bOverRideMand){
+		if (document.getElementById(sCtrName + "_OVERRIDE").value != "I"){
+			if (document.getElementById(sCtrName + "_OVERRIDE").value != "E") {
+				document.getElementById(sCtrName + "_OVERRIDE").value = "*"
+			}
+		}
+	}
+} 
+
+function Display_Error(sVarID,sPrompt,sErr){
+	var nChrMax = 35;
+
+	if (sPrompt.length > nChrMax)
+		sPrompt =  Trim(sPrompt.substring(0,nChrMax)) + "..."; 
+	
+	sPrompt = '\"' + sPrompt + '\"';
+	alert(Validate_Prompt(sPrompt) + '\r\n' + '\r\n'+ sErr); 
+	
+	toTop(sVarID);
+	bValidated = false;
+} 
+
+function OverRideAllowed(iDataType,sVarName,sPrompt){
+	//Returns False = Re-Enter Mandatory
+	//Returns true =  Ignore Mandatory
+	var nChrMax = 45;
+	var sMsg;
+	var sReply;
+	var sResult;
+	var sCtrName = "";
+	var bStatus;
+
+	//Default to overRide Mandatory Field
+	bStatus = true;
+	
+	sMsg = "If you choose to ignored this field, a prompt will be generated" + '\r\n';
+	sMsg += " on the customer form indicating a response is required";
+	sMsg +=  '\r\n' + '\r\n';
+	sMsg +=  "Press OK to ignore this question?";
+	
+	switch (iDataType) {
+		case cdtDropDown:
+		case cdtEditDropDown:
+		case cdtVDropDown:
+			sCtrName = sVarName + "_DROPDOWN";
+			sResult = Trim(document.getElementById(sCtrName).value);
+			
+			if (iDataType == cdtEditDropDown && sResult ==""){
+				sResult = Trim(document.getElementById(sVarName + "_NewTxt").value);
+			}
+		break;
+		
+		case cdtString: 
+		case cdtTextArea:
+		case cdtDate:
+		case cdtTime: 
+		case cdtInteger:
+		case cdtDecimal: 
+		case cdtCurrency: 
+		case cdtYesNo:
+
+			sCtrName = sVarName;
+			sResult = Trim(document.getElementById(sCtrName).value);
+		break;
+		
+		case cdtCheckBox:
+		case cdtRadio:
+			sCtrName = sVarName;
+
+			if (bFormatted) {
+				if (document.getElementById(sVarName).value == "")
+					sResult = ""
+				else
+					sResult = "Selected";
+			}
+			else
+			{
+				if (document.getElementById(sVarName).value.search("[x]") < 0 )
+					sResult = ""
+				else
+					sResult = "Selected";
+			}
+	} //end switch
+	
+	//OverRide Allowed Logic *****
+	if (sResult !=  "") 
+		document.getElementById(sVarName + "_OVERRIDE").value == "E";
+	
+	if (sResult == "" && document.getElementById(sVarName + "_OVERRIDE").value != "I")  
+		document.getElementById(sVarName + "_OVERRIDE").value = "*";
+	
+	if (document.getElementById(sVarName + "_OVERRIDE").value == "*"){
+		
+		if (sResult == "") { 
+			//YesNo CONFIRMATION
+			if (sPrompt.length > nChrMax)
+				sPrompt =  Trim(sPrompt.substring(0,nChrMax)) + "..." ;
+				
+			sReply = confirm(sPrompt+ '\r\n' + '\r\n'  + sMsg);
+			
+			//YES, IGNORE MANATORY FIELD/NOTIFY ON FORM
+			if (sReply)
+				document.getElementById(sVarName + "_OVERRIDE").value = "I"
+			else  
+			{	
+				bStatus = false;
+				toTop(Find_VarID(sVarName));
+				
+				bValidated = false;
+				return bStatus;
+			}
+		}
+		else
+		{
+			document.getElementById(sVarName + "_OVERRIDE").value = "E"
+			return bStatus;
+		}
+	}
+
+	if (document.getElementById(sVarName + "_OVERRIDE").value != "E")
+		bAsterFound = true;		
+	
+	return bStatus;
+} 
+
+function ValidateForm() {
+
+	var RecArray = new Array;
+	var FieldArray = new Array;
+	var IndexArray = new Array;
+
+	var iDataType;
+	var sPrompt;
+	var sCtrName;
+	var sCtrValue;
+	var DisplayString;
+	var iRecCount;
+	var iFieldCount;
+
+	var iCtrMax;
+	var iCtrCount;
+	var iCheckCount;
+	var iCheckSum;
+	var nDataSize;
+	var MinValue;
+	var MaxValue;
+	var sDefaultValue;
+	var sMsg="";
+	var sIndex;
+	var sSelectType;
+	var DropDown_Note;
+	var myRegExp;
+
+	// Store Question Path
+	document.getElementById("lynxct_History").value = Get_History();
+	sIndex = document.getElementById("lynxct_CtrIndex").value;
+
+	if (sIndex  == '') 
+		return;
+
+	sIndex = sIndex.substring(0,sIndex.length-1);
+	RecArray = sIndex.split("\2");
+	iCtrMax = RecArray.length-1;
+
+	for (iRecCount=0;iRecCount <= iCtrMax; iRecCount++){
+		IndexArray[iRecCount] = new Array();
+	}
+
+	for (iRecCount=0;iRecCount <= iCtrMax; iRecCount++){
+		fieldArray = RecArray[iRecCount].split("\1");
+		
+		for (iFieldCount = 0;iFieldCount <= fieldArray.length;iFieldCount++){
+			IndexArray[iRecCount][iFieldCount]= fieldArray[iFieldCount];
+			
+		} 
+	} 
+	
+	document.getElementById("lynxct_frmAction").value = "";
+	bValidated = true;
+	bAsterFound = false;
+
+	//Cycle through each control and validate
+	OutOfCtrLoop:
+
+	for(iCtrCount = 0;iCtrCount <= iCtrMax;iCtrCount ++){
+		sPrompt			= IndexArray[iCtrCount][cVIndexPrompt];
+		nDataSize		= IndexArray[iCtrCount][cVIndexDataSize];
+		sCtrName		= IndexArray[iCtrCount][cVIndexVarName];
+		iDataType		= IndexArray[iCtrCount][cVIndexDataType];
+		sDefaultValue	= IndexArray[iCtrCount][cVIndexDefault];
+		MinValue		= IndexArray[iCtrCount][cVIndexMinValue];
+		MaxValue		= IndexArray[iCtrCount][cVIndexMaxValue];
+		
+		Get_Flags(parseInt(IndexArray[iCtrCount][cVIndexFlags],10));
+	
+		//Does Control currently Exist on Page
+		if (eval(document.getElementById(IndexArray[iCtrCount][cVIndexVarName]))){
+			sCtrValue = document.getElementById(IndexArray[iCtrCount][cVIndexVarName]).value;
+
+			switch (iDataType){
+				case cdtYesNo: 
+					Set_OverRide(sCtrName,bOverRideMand);
+								
+					if (bOverRideMand) {
+						if (OverRideAllowed(iDataType,sCtrName,sPrompt)) { 
+							if (document.getElementById(sCtrName + "_OVERRIDE").value != "E"){
+								document.getElementById(sCtrName + "_YN").value = "* Yes/No"
+							}
+						}
+						else
+							break;
+					}
+									
+					if (bRequired && !bOverRideMand) {
+						if (document.getElementById(sCtrName).value == "") {
+							sMsg = "Selection is mandatory";
+							Display_Error(Find_VarID(sCtrName),sPrompt,sMsg);
+							break OutOfCtrLoop;
+						}
+					}
+								
+					if (!bOverRideMand) {
+						if (Trim(sCtrValue) == "") 
+							document.getElementById(sCtrName).selectedindex = 2;
+					}
+
+				break;
+								
+				case cdtString:
+				case cdtTextArea:	
+				case cdtDate:
+				case cdtTime:	
+					Set_OverRide (sCtrName,bOverRideMand);
+								
+					if (bOverRideMand) {
+						if (OverRideAllowed(iDataType,sCtrName,sPrompt)){  
+							if (document.getElementById(sCtrName + "_OVERRIDE").value == "I"){  
+								document.getElementById(sCtrName).value = "*";
+							}
+										
+							if (document.getElementById(sCtrName).value == "*") { 
+								document.getElementById(sCtrName + "_OVERRIDE").value = "I";
+								bAsterFound = true;
+							}
+						}
+						else
+							break;	
+					}
+
+					if (bRequired && !bOverRideMand) {
+						if (Trim(sCtrValue) == "") {
+							sMsg = "This is a mandatory field";
+							Display_Error(Find_VarID(sCtrName),sPrompt,sMsg);
+							break OutOfCtrLoop;
+						}
+					}
+								
+					
+					if (bRequired && !bOverRideMand){
+						if (iDataType == cdtDate) {
+							//if (Trim(sCtrValue) != ""  && !isDate(sCtrValue)) {
+							if (!XDate_ValidateDate(document.getElementById(sCtrName), sPrompt+ "\n\n")){
+								toTop(Find_VarID(sCtrName))
+								bValidated = false;
+								break OutOfCtrLoop;
+							}
+						}
+					}
+
+					if (bRequired && !bOverRideMand){
+						if (iDataType == cdtTime) {
+							if (Trim(sCtrValue) != "" && !isTime(sCtrName)) {
+								sMsg = "Invalid time format (hh:mm)";
+								Display_Error (Find_VarID(sCtrName),sPrompt,sMsg);
+								break OutOfCtrLoop;
+							}
+						}
+					}
+
+				break;
+	
+				case cdtDropDown:		
+				case cdtEditDropDown:
+				case cdtVDropDown:	
+					Set_OverRide(sCtrName,bOverRideMand);
+									
+					sSelectType = sCtrName + "_DROPDOWN";
+	
+					if (iDataType == cdtDropDown || iDataType == cdtVDropDown) 
+						Process_DropDown (sSelectType,false)
+					else
+						Process_DropDown (sSelectType,true);
+								
+					if (bOverRideMand) {
+						if (OverRideAllowed(iDataType,sCtrName,sPrompt)) { 
+							if (document.getElementById(sCtrName + "_OVERRIDE").value != "E") {
+								DropDown_Note = document.getElementById(sCtrName).value;
+								// define pattern to replace all '['
+								myRegExp = /\[/g;
+								DropDown_Note = DropDown_Note.replace(myRegExp,"  [");
+								DropDown_Note = "*" + DropDown_Note.substring(2);
+								document.getElementById(sCtrName).value = DropDown_Note;
+							}
+						}
+						else
+							break;	
+					}
+									
+					if (bRequired && !bOverRideMand) {
+						if (iDataType == cdtDropDown || iDataType == cdtVDropDown) { 
+							if (document.getElementById(sSelectType).value == ""){
+								sMsg = "Selection is mandatory";
+								Display_Error(Find_VarID(sCtrName),sPrompt,sMsg);
+								break OutOfCtrLoop;
+							}
+						}
+						else {
+										
+							if (document.getElementById(sSelectType).value == "" && Trim(document.getElementById(sCtrName + "_NewTxt").value) == ""  ) {
+								sMsg = "Selection is mandatory";
+								Display_Error(Find_VarID(sCtrName),sPrompt,sMsg);
+								break OutOfCtrLoop;
+							}
+						}
+					}
+								
+					break;
+
+				case cdtCheckBox:
+				case cdtRadio:
+					Set_OverRide(sCtrName,bOverRideMand);
+									
+					if (iDataType == cdtCheckBox) 
+						sSelectType = sCtrName + "_CHECK"
+					else
+						sSelectType = sCtrName + "_RADIO";
+								
+					Process_Selection(sSelectType);
+								
+					if (bOverRideMand){
+						if (OverRideAllowed(iDataType,sCtrName,sPrompt)) { 
+							if (document.getElementById(sCtrName + "_OVERRIDE").value != "E") {
+								DropDown_Note = document.getElementById(sCtrName).value;
+											
+								// define pattern to replace all '['
+								myRegExp = /\[/g;
+											
+								DropDown_Note = DropDown_Note.replace(myRegExp,"  [");
+								DropDown_Note = "*" + DropDown_Note.substring(2);
+								document.getElementById(sCtrName).value = DropDown_Note;
+							}
+						}	
+						else
+							break;
+									
+					}
+
+					if (bRequired && !bOverRideMand){
+						sCtrValue  = document.getElementById(sCtrName).value;
+						if ((sCtrValue.search("[x]") == -1 && !bFormatted) || (sCtrValue== "" && bFormatted)){
+							sMsg = "At least one checkbox must be selected";
+							Display_Error(Find_VarID(sCtrName),sPrompt,sMsg);
+							//Display_Error(sSelectType + "(1)",sPrompt,sMsg);
+							break OutOfCtrLoop;
+						}
+					}		
+
+				break;
+								
+				case cdtInteger:
+				case cdtDecimal:
+				case cdtCurrency:
+					Set_OverRide(sCtrName,bOverRideMand);
+									
+					if (bOverRideMand) {
+						if (OverRideAllowed(iDataType,sCtrName,sPrompt)) { 
+							if (document.getElementById(sCtrName + "_OVERRIDE").value == "I"){
+								document.getElementById(sCtrName).value = "*";
+							}
+										
+							if (document.getElementById(sCtrName).value == "*") { 
+								document.getElementById(sCtrName + "_OVERRIDE").value = "I";
+								bAsterFound = true;
+							}
+						}
+						else
+							break;
+					}	
+								
+					if (bRequired && !bOverRideMand) {
+						if (Trim(sCtrValue) == "") {
+							sMsg = "This is a mandatory field";
+							Display_Error(Find_VarID(sCtrName), sPrompt, sMsg);
+							break OutOfCtrLoop;
+						}
+					}
+								
+					if (Trim(sCtrValue) == "*" && bRequired) 
+						{}
+					else
+					{
+						if (Trim(sCtrValue) != "") { 
+							if (isNaN(Trim(sCtrValue))) {
+								sMsg = "Field requires a numeric value";
+								Display_Error(Find_VarID(sCtrName), sPrompt ,sMsg);
+								break OutOfCtrLoop;
+							}
+
+							switch (iDataType) {   
+										
+								case cdtInteger:
+									if (iDataType == cdtInteger && sCtrValue.search(".") > 0) {
+										sMsg = "Field requires a integer value";
+										Display_Error(Find_VarID(sCtrName),sPrompt,sMsg);
+										break OutOfCtrLoop;
+									}
+											
+									sCtrValue	= parseInt(sCtrValue,10);
+									MinValue	= parseInt(MinValue,10);
+									MaxValue	= parseInt(MaxValue,10);
+								break;
+											
+								case cdtDecimal:
+								case cdtCurrency:
+									sCtrValue	= parseFloat(sCtrValue);
+									MinValue	= parseFloat(MinValue);
+									MaxValue	= parseFloat(MaxValue);
+							}  //end switch
+
+							if (MinValue > 0 || MaxValue > 0) {
+								if (!(sCtrValue <= MaxValue && sCtrValue >= MinValue)) {
+									sMsg +=  "Value must be in the range of " + MinValue + "..." + MaxValue;
+									Display_Error(Find_VarID(sCtrName),sPrompt,sMsg);
+									break OutOfCtrLoop;
+								}
+							}
+									
+							if (iDataType == cdtCurrency) 
+								Process_Currency(sCtrName);	
+										
+						}
+					break;
+
+				}//end else
+			} //End switch
+		}//End If (Ctr Exists)
+	} //end For
+		
+	if (parseInt(document.getElementById("lynxct_Data").value,10) != -2){ 
+		Process_Temps_attachments();
+	}
+	
+	document.getElementById("lynxct_frmAction").value = "LOADED";
+
+	if (bNewInstance == ""){ 
+		bNewInstance = "1";
+	}
+
+	if (bValidated){
+		
+		var ctrOverRidePrompt = document.getElementById("lynxctOverRidePrompt");
+		if (bAsterFound && ctrOverRidePrompt.className == ccsHidePrompt){
+			Toggle_OverRidePrompt();
+		}
+		else
+		{
+			document.getElementById("lynxct_frmAction").value = "SUBMIT";
+
+			//if not in test mode
+			if (parseInt(document.getElementById("lynxct_Data").value,10) >= 0) { 
+				
+				document.getElementById("lynxct_NewTemplateID").value =Get_LinkTemplateID();
+				document.getElementById("SubmitID").disabled=true
+				document.getElementById("RejectID").disabled=true
+				
+				//*** ADDED BY MK - START: FOR CLIENT-SIDE VALIDATION OF AXIS WEB PAYMENT
+				//    validateForm() function is taken from a Client-Side Include (DynFFClientSidePLUGIN.asp)
+				
+				try {
+					if (validateSRForm()==false){
+						//Validation failed - Abort Form Subission and Re-enable 'Submit' and 'Reject' buttons
+						document.getElementById("SubmitID").disabled=false
+						document.getElementById("RejectID").disabled=false
+						return
+					}
+				}
+				catch (e) {}	
+				//*** ADDED BY MK - END:
+				
+				document.getElementById("form1").submit();
+			}	
+			else
+			{	
+				alert("Form Validation Test Successful");
+			}
+		} 
+	}
+} 
+
+
+//------------------------------------------------------------------------------------------------------------------------------------
+function EvalSubString(sValue,sPattern,sLinkType){
+	var bStatus;
+	var r;
+	var x=0;
+	var re= new RegExp(sPattern,"ig");
+	var sExpr;
+	var param1;
+	var param2;
+	var Op1;
+	var Op2;
+		
+	switch(sLinkType){
+		case "9":  //inc between
+		case "10":  //ex between
+			//Between Compare
+			if (sLinkType == 9){
+				Op1 = " >= ";
+				Op2 = " <= ";
+			}
+			else{
+				Op1 = " > ";
+				Op2 = "< ";
+			}
+			
+			param1 = sPattern.substring(0,sPattern.indexOf(';'));
+			param2 = sPattern.substr(sPattern.indexOf(';')+1);
+	
+			sExpr = sValue+ Op1 + param1 + " && " + sValue + Op2 + param2;
+			bStatus = eval(sExpr);
+			break;
+
+		case "2":// Begins with
+		case "3":// Ends with
+		case "4":// contains
+			r= re.exec(sValue);
+
+			if (r==null){
+				bStatus =false;
+				}
+			else{
+					bStatus = true;
+				
+					if (bStatus){
+						
+						switch (parseInt(sLinkType,10)){
+					
+							//begins with
+							case 2:
+							if (r.index != 0)
+								bStatus = false ;
+							break;
+							
+							//Ends With
+							case 3:
+							re= new RegExp(sPattern,"ig");
+							while ((r = re.exec(sValue,"ig")) != null){
+								x = r.lastIndex;
+							}
+
+							if (x != (sValue.length)){
+								bStatus = false;
+							} 
+							break;
+						}//end switch
+					} //end if
+				}// end if
+				break;
+		
+		case "11":
+			
+			var PatternArray = sPattern.split(";");
+			for (iCount = 0; iCount <= PatternArray.length-1 ; iCount++){			
+				
+				if (sValue.toUpperCase() == PatternArray[iCount].toUpperCase()){
+					bStatus = true;
+					break;
+				}	
+				else
+				{
+					bStatus = false;
+				}
+			}
+
+		}
+	return bStatus;
+}
+
+function Get_AttachContent(templateID){
+// change to templateID
+//
+	var iTemplateIndex=0;
+	var iHTMLIndex = 1;
+	var iIndexMax =0;
+	var iRecCount =0;
+
+	iIndexMax = optAttachArray.length-1;
+
+	for (iRecCount=0;iRecCount <= iIndexMax; iRecCount++){
+		if (optAttachArray [iRecCount][iTemplateIndex]== templateID){
+			return optAttachArray [iRecCount][iHTMLIndex]
+		}
+	}
+	return "<font color=red>Error: " +"Changed to Template:" + templateID + " but HTML for Attachments not found</font>"
+}
+
+function Get_LinkTemplateID(){
+//grab latest element (TemplateID) in LinkTemplateHistory Array	
+	var strElement;
+
+	if (LinkTemplateHistory.length >0){
+		strElement = LinkTemplateHistory[LinkTemplateHistory.length-1]
+		return  strElement.substr(strElement.indexOf(",")+1);
+	}
+	else
+	{
+		return document.getElementById("lynxct_NewTemplateID").value
+	}
+}
+
+function Update_LinkTemplateHistory(varID,LinkTemplate){
+//record history of changing of templates
+	
+	var iCount =0;
+	var strResult ="";
+	var sResult;
+	var tempLinkTemplate;
+	var tempLinkVarID;
+	
+	//if paassed VarID exists in array then slice and update element
+	for (iCount = 0; iCount <= LinkTemplateHistory.length-1 ; iCount++){	
+		
+		tempLinkVarID = LinkTemplateHistory[iCount].substring(0,LinkTemplateHistory[iCount].indexOf(","))
+		
+		if (tempLinkVarID == varID){
+			LinkTemplateHistory = LinkTemplateHistory.slice(0,iCount)
+		}
+	}
+	
+	if (LinkTemplate == "-1"){
+		//have to search previous elements for last valid TemplateID
+		for (iCount = LinkTemplateHistory.length-1; iCount >= 0 ; iCount--){	
+			tempLinkTemplate = LinkTemplateHistory[iCount].substr(LinkTemplateHistory[iCount].indexOf(",")+1);
+			
+			if (tempLinkTemplate != "-1") {
+				LinkTemplate = tempLinkTemplate
+				break;
+			}
+		}
+		
+		// if no previous elements have not a TemplateID then use Current TemplateID in URL
+		if (LinkTemplate == "-1")
+			LinkTemplate = document.getElementById("lynxct_NewTemplateID").value;
+	}
+		
+	//append element to array
+	//sResult = LinkTemplateHistory.push(varID + "," + LinkTemplate);
+	sResult = LinkTemplateHistory[LinkTemplateHistory.length]= varID + "," + LinkTemplate;
+}
+
+
+/*****************************************************************
+ * amended XBrowser Functions
+ *****************************************************************/
+ 
+function Populate_TextArea(){
+	for (var iPathCount=0;iPathCount <= PathArray.length; iPathCount++){
+		var iQuestIndex = Find_QuestIndex(PathArray[iPathCount])
+		
+		if (QuestArray[iQuestIndex][cDataType] == cdtTextArea){
+			re= /\\n/g;
+			QuestArray[iQuestIndex][cStoreValue1] = QuestArray[iQuestIndex][cStoreValue1].replace(re, "\n");
+			document.getElementById(QuestArray[iQuestIndex][cVarname]).value= QuestArray[iQuestIndex][cStoreValue1];
+		}
+	}
+} 
+ 
+function Toggle_OverRidePrompt(){
+
+	var ctrOverRidePrompt = document.getElementById("lynxctOverRidePrompt");
+	var ctrForm = document.getElementById("parentdiv");
+	var ctrAttach = document.getElementById("AttachDiv");
+	
+	if (ctrForm.className == ccsHidePrompt){
+		ctrForm.className = "cssLCTFormBG";
+		
+		if (BrowserType == cIE){
+			ctrAttach.style.display = "block";
+		}
+		else
+		{
+			ctrAttach.className = "cssLCTFormBG"
+		}
+		ctrOverRidePrompt.className = ccsHidePrompt;
+	}
+	else
+	{
+		
+		if (BrowserType == cIE){
+			ctrAttach.style.display = "none";
+		}
+		else
+		{
+			ctrAttach.className = ccsHidePrompt;
+		}
+		ctrForm.className = ccsHidePrompt;
+		ctrOverRidePrompt.className = "cssLCTDivControl";
+	}
+}
+
+function TimeBlur(ctrTime){
+	var x
+	var re;
+	var min;
+	var strValue = document.getElementById(ctrTime).value;
+	 
+	if (strValue ==""){
+		return;
+	}
+	 
+	re= /:/g;
+	x = strValue.search(re);
+	 
+	if (x < 0){
+		document.getElementById(ctrTime).value =""
+	}
+	else
+	{
+		min= strValue.substring(3)
+	  
+		if (min.length ==0){
+			min = "00"
+		}
+		else
+		{
+		if (min.length !=2)
+			min = "0" + min;
+		}
+	  
+		document.getElementById(ctrTime).value  = strValue.substring(0,3) + min
+	 }
+}
+
+function TimeKeyUp(ctrTime){
+ 
+	var re;
+	var strValue = document.getElementById(ctrTime).value;
+	var min; 
+	 
+	if (BrowserType ==cIE){
+		if (event.keyCode ==9){
+			return;
+		}
+	}
+	
+	re= /:/g;
+	strValue = strValue.replace(re, "");
+	 
+	if (strValue.length > 2){
+		strValue = strValue.substring(0,2) + ":" + strValue.substr(2)
+	 
+	 if (parseInt(strValue.substring(0,2)) >23){
+		strValue ="";
+	 }
+	 
+	 min= strValue.substring(3)
+	  
+	 if (parseInt(min)>59)
+		min ="";
+	  
+		strValue = strValue.substring(0,3) + min;
+	}
+	 
+	document.getElementById(ctrTime).value = strValue;
+}
+ 
+function checkSlaveTempNode(id){
+//when attachment is checked, make sure parent template is checked
+//	
+	objChkbox =document.getElementById("LYNXCT_TEMPLATEGROUP_CHECK_" + id)
+	if (!objChkbox.checked){
+		objChkbox.checked=true;
+	}
+}
+
+function click_SlaveTemplate(ctr,id){
+//Click event handler for SlaveTemplate Div
+//
+	if (document.getElementsByName("lynxct_SlaveAttachDiv_" + id).length <1){
+		return;
+	}
+	
+	if (document.getElementById("lynxct_SlaveAttachDiv_" + id).style.display != "none" && !ctr.checked){
+		var DisplayState = "none";
+	}
+	else
+	{ var DisplayState = "block";}
+		
+	//hide attachments
+	for (var iCheckCount = 0; iCheckCount <= document.getElementsByName("lynxct_SlaveAttachDiv_" + id).length-1 ; iCheckCount++){
+		document.getElementsByName("lynxct_SlaveAttachDiv_" + id)[iCheckCount].style.display = DisplayState;
+		
+	}
+}
+
+function Process_Temps_attachments() {
+//format and store Attachment/Template selections to the appropriate hidden controls
+//
+	var intSlaveAttach =3;
+	var iCheckCount;
+	var sCtrName;
+	var sValue;
+	var sPrintResult;
+	var iCtrCount;
+	var chkStatus;
+	
+	for (iCtrCount = 1;iCtrCount <=3;iCtrCount++){
+		switch(iCtrCount) {
+			case 1:
+				sCtrName = "LYNXCT_ATTACHMENTLIST";
+			break;
+			
+			case 2:
+				sCtrName = "LYNXCT_TEMPLATEGROUP";
+			break;
+			
+			case 3:
+				sCtrName = "LYNXCT_SLAVEATTACHMENTLIST";
+			break;
+		} 
+		
+		if (document.getElementById(sCtrName).value.substring(0,1) != "*") {
+			sPrintResult = "";
+			
+			for (iCheckCount = 0; iCheckCount <= document.getElementsByName(sCtrName + "_CHECK").length -1;iCheckCount++){
+				sValue = document.getElementsByName(sCtrName + "_CHECK")[iCheckCount].value;
+				chkStatus =""	
+				
+				if (iCtrCount == intSlaveAttach){
+					//check the display status of checkbox
+					var SlvAttachID =document.getElementsByName(sCtrName + "_CHECK")[iCheckCount].id;
+					SlvAttachID =SlvAttachID.substr(SlvAttachID.lastIndexOf("_")+1)
+							
+					//if not rendered that set to Uncheck status
+					if(document.getElementById("lynxct_SlaveAttachDiv_" + SlvAttachID).style.display=='none'){
+						chkStatus = "unChecked~";
+					}
+				}
+					
+				if (chkStatus == ""){	
+					if (document.getElementsByName(sCtrName + "_CHECK")[iCheckCount].checked) {
+						if (document.getElementsByName(sCtrName + "_CHECK")[iCheckCount].disabled){ 
+							chkStatus = "Mandatory~"; 
+						}
+						else
+						{	
+							chkStatus = "Checked~";
+						}
+					}	 
+					else {
+						chkStatus = "unChecked~";
+					}
+				}
+				sPrintResult = sPrintResult + chkStatus + sValue + ",";
+				
+			} //End For Loop
+
+			//alert("sPrintResult=" + sPrintResult);
+			document.getElementById(sCtrName).value = sPrintResult; 
+		} //End If
+	} //End For Loop
+} 
+
+function Check_Length(sCtr,areaLength){
+//check length of Textarea upon each keypress
+//	
+	if (document.getElementById(sCtr).value.length >= areaLength){
+		if (BrowserType == cIE) {
+			event.keyCode = "";
+		} 
+		else 
+		{
+			e.preventDefault();
+		}
+	}
+} 
+ 
+ function Process_Selection(sCheckName){
+	var iCheckCount;
+	var sCtrName;
+	var sValue;
+	var sPrintResult;
+	
+	sPrintResult = "";
+	sCtrName = sCheckName.substring(0,sCheckName.search("_"));
+	sFormat = "";
+	
+	if (bFormatted){
+		for (iCheckCount =1;iCheckCount<= document.getElementsByName(sCheckName).length -1;iCheckCount++){
+			sValue = document.getElementsByName(sCheckName)[iCheckCount].value;
+			
+			if (document.getElementsByName(sCheckName)[iCheckCount].checked){
+				sPrintResult +=  sValue + ";"; 
+			}
+		}
+		sPrintResult = sPrintResult.substring(0,(sPrintResult.length-1));
+	}
+	else
+	{
+		for (iCheckCount = 1;iCheckCount<= document.getElementsByName(sCheckName).length -1;iCheckCount++){
+			sValue = document.getElementsByName(sCheckName)[iCheckCount].value;
+			
+			if (document.getElementsByName(sCheckName)[iCheckCount].checked){
+				sValue = "[x]  " + sValue; 
+			}
+			else
+			{
+				sValue = "[  ]  " + sValue;
+			}
+			
+			sPrintResult +=  sValue + '\r\n';
+		}
+	}
+	document.getElementById(sCtrName).value = sPrintResult;
+} 
+ 
+function EdDropDown_LostFocus(sCtrName){
+
+	if (document.getElementById(sCtrName + "_NewTxt").value != ""){
+		document.getElementById(sCtrName+"_DROPDOWN")[0].selected =true
+		return;
+	}
+}
+
+function EdDropDown_close_Combo(ctr){
+	
+	var objNewTxt = document.getElementById(ctr + "_NewTxt");
+	var objCombo = document.getElementById(ctr);
+	if (objNewTxt.style.visibility == "visible" && objCombo.value !="" ){
+		objNewTxt.style.visibility = "hidden";
+		objNewTxt.value = "";
+		}
+	objNewTxt.value = "";
+}
+
+function ToggleEditVisibilty(strCtr){
+// Show/hide option textbox for EditDropDown Controls
+//
+	var objNewText = document.getElementById(strCtr.concat("_NewTxt"))
+	
+	if (objNewText.style.visibility == "hidden"){ 
+		objNewText.style.visibility = "visible";
+		objNewText.style.width = "120px";
+		objNewText.focus();
+	}
+	else 
+	{
+		objNewText.value = "";
+		objNewText.style.visibility = "hidden";
+		objNewText.style.width = "1px";
+	}
+} 
+
+function Update_NextVarIds(){
+// Display History field
+//
+	var sPath = document.getElementById("lynxct_History").value;
+	PathArray = sPath.split(",");
+	
+	for (var iPathCount=0;iPathCount <= PathArray.length; iPathCount++){
+		if (QuestArray[Find_QuestIndex(PathArray[iPathCount])][cLink] =="Y"){
+			QuestArray[Find_QuestIndex(PathArray[iPathCount])][cStoreValue3]= PathArray[iPathCount+1]
+		}
+	}
+	//display_Form();
+}
+
+function Check_KeyPress(strType,e){
+// X-browser function to validate character upon key Press
+//
+	var bIE = false;
+
+	if (BrowserType == cIE){
+		var bIE = true;
+	}
+		
+	if (bIE){
+		var keypress = String.fromCharCode(event.keyCode);
+		var srcElement = event.srcElement;
+	}
+	else
+	{
+	    var keypress = String.fromCharCode(e.which);
+	    var srcElement = e.target;	
+	    
+	    if (e.which < 13){
+			return; 
+		}
+	}
+
+	var re;
+	var x = 0;
+	var r;	
+	
+	switch (strType){
+	
+		case cdtInteger:
+			if ((isNaN(keypress) || keypress == " ")){
+				if (bIE) {event.keyCode = ""} else {e.preventDefault()};
+			}
+			break;
+		
+		case cdtDecimal:
+		case cdtCurrency:
+			re= /\./i;
+			if ((isNaN(keypress) || keypress == " ") && keypress != "." ){
+				if (bIE) {event.keyCode = ""} else {e.preventDefault()};
+			}
+			if (keypress == "." && srcElement.value.search(re) != -1){
+				if (bIE) {event.keyCode = ""} else {e.preventDefault()};
+			}
+			break;
+		
+		case cdtTime:
+			re= /\:/i;
+			if ((isNaN(keypress)||keypress ==" ")&& keypress !=":" ){
+				if (bIE) {event.keyCode = ""} else {e.preventDefault()};
+			}
+			if (keypress ==":" && srcElement.value.search(re)!= -1){
+				if (bIE) {event.keyCode = ""} else {e.preventDefault()};
+			}
+			break;
+		
+		case cdtDate:
+			re= /\//i;
+			if ((isNaN(keypress)||keypress ==" ")&& keypress !="/" ){
+				if (bIE) {event.keyCode = ""} else {e.preventDefault()};
+			}
+
+			re= new RegExp("/","ig");
+			while ((r = re.exec(srcElement.value,"ig")) != null){
+				x = x+1
+			}
+
+			if (keypress == "/" && x == 2){
+				if (bIE) {event.keyCode = ""} else {e.preventDefault()};
+			}
+			break;
+	}
+}
+
+function Eval_Result(varName,VarID){
+// Evaluate selection from a decision control
+//
+	var iCount;
+	var iQuestCount;
+	var ResultArray = new Array;
+	var ResultCount =0;
+	var DefaultIndex;
+	var iCheckCount;
+	var CtrValue;
+	var bEvalResult;
+	var re;
+
+	// variables used for *LinkTypes
+	var sValue="";
+	var sType="";
+	var sCtrValue ="";
+	
+	//Find Index
+	iQuestCount =Find_QuestIndex(VarID);
+	
+	//mark control as used
+	QuestArray[iQuestCount][cStoreValue4] = ""; 
+
+	//alert(QuestArray[iQuestCount][cLinkType]);
+	var typeArray = QuestArray[iQuestCount][cLinkType].split("\2")
+	
+	//var typeArray = QuestArray[iQuestCount][cLinkType].split(","); SR
+	var valueArray = QuestArray[iQuestCount][cLinkValue].split(",");
+	var PriorityArray = QuestArray[iQuestCount][cPriority].split(",");
+	var LinkTemplateArray = QuestArray[iQuestCount][cLinkTemplateID].split(",");
+	
+	if (QuestArray[iQuestCount][cNextVarID] == 0)
+		return;
+	
+	//valid decision controls
+	switch (QuestArray[iQuestCount][cDataType])
+	{
+		case cdtInteger:
+		case cdtDecimal:
+		case cdtCurrency:
+			
+			CtrValue = document.getElementById(varName).value ;
+			break;
+		
+		case cdtEditDropDown:
+			var sCtrName = varName.substring(0,varName.search("_"));
+
+			if (document.getElementById(sCtrName+"_DROPDOWN").value == "" && document.getElementById(sCtrName + "_NewTxt").style.visibility == "hidden")
+				return;
+			
+			if (document.getElementById(sCtrName+"_DROPDOWN").value == "" && document.getElementById(sCtrName + "_NewTxt").value == "")
+				return;
+			
+			if (document.getElementById(sCtrName + "_NewTxt").value != ""){
+				document.getElementById(sCtrName+"_DROPDOWN")[0].selected =true
+			}
+			
+			if (document.getElementById(sCtrName+"_DROPDOWN").value != ""){
+				document.getElementById(sCtrName + "_NewTxt").value ="";
+				CtrValue = "'" + document.getElementById(sCtrName+"_DROPDOWN").value + "'";
+			}
+
+			if (document.getElementById(sCtrName + "_NewTxt").value != ""){
+				CtrValue = "'" + document.getElementById(sCtrName + "_NewTxt").value + "'";
+			}
+			break;
+		
+		case cdtDropDown:
+		case cdtVDropDown:
+			var oDropDownText = document.getElementById(varName);
+			CtrValue = "'" +oDropDownText.options[oDropDownText.selectedIndex].text + "'";
+			break;
+		
+		case cdtYesNo:
+			if (varName.substring(0,varName.search("_"))== "")
+				CtrValue = "'" + Trim(document.getElementById(varName).value) + "'";
+			else
+				CtrValue = "'" + Trim(document.getElementById(varName.substring(0,varName.search("_"))).value) + "'";
+			break;
+			
+		case cdtRadio:
+			for (iCheckCount =0;iCheckCount<= document.getElementsByName(varName).length -1;iCheckCount++){
+				if (document.getElementsByName(varName)[iCheckCount].checked){
+					CtrValue = "'" + document.getElementsByName(varName)[iCheckCount].value + "'";
+					break;
+				}
+			}
+			break;
+	
+		default:
+			CtrValue = "'" + Trim(document.getElementById(varName).value) + "'";
+			//eliminate any CRs
+			var myRegExp;
+			myRegExp = /\r\n/g;
+			CtrValue = CtrValue.replace(myRegExp,"");
+	}
+	
+	//Exit upon no entry and empty selection
+	if (CtrValue =="" || CtrValue == "\'\'")
+		return;
+	
+	//loop through all expressions link to this Ctr
+	for (iCount=0;iCount <= valueArray.length-1; iCount++){
+		
+		//Record Default
+		if (PriorityArray[iCount]==1)
+			DefaultIndex = iCount;
+		
+		//Evaluate all expressions
+		
+		CtrValue =CtrValue.toUpperCase();
+
+		if (typeArray[iCount].substring(0,1)== "$"){
+			alert("LinkType [" + typeArray[iCount].substring(1,typeArray[iCount].indexOf(' ')) +"] Not yet Implemented");
+			return;
+		}
+		
+		if (typeArray[iCount].substring(0,1)== "*"){
+			re = /'/g; 
+			
+			sCtrValue = CtrValue;
+			//Get Link Type
+			sType = typeArray[iCount].substring(1,typeArray[iCount].indexOf(' '));
+  
+			//Get Compare String
+			sValue =typeArray[iCount].substr(typeArray[iCount].indexOf(' ')+1)
+			sValue =sValue.replace(re,'');
+			sCtrValue = sCtrValue.replace(re,'');
+			bEvalResult = EvalSubString(sCtrValue,sValue,sType)
+		}
+		else
+		{
+			//alert(CtrValue + " " + typeArray[iCount]);
+			re = /'/g;
+			CtrValue = "'" + CtrValue.replace(re,"")+ "'";
+			bEvalResult =eval(CtrValue + " " + typeArray[iCount]);
+		}
+		
+		 if (bEvalResult){	
+			//Store all true Expressions in ResultArray
+			ResultArray[ResultCount]= new Array(4);
+			ResultArray[ResultCount][0] = PriorityArray[iCount];
+			ResultArray[ResultCount][1] = QuestArray[iQuestCount][cVarID];
+			ResultArray[ResultCount][2] = valueArray[iCount];
+			ResultArray[ResultCount][3] = LinkTemplateArray[iCount];
+			ResultCount +=1;
+		}
+	}
+
+	//Loop until ResultArray item with highest priority found
+	// 1 = highest
+	for (iCount=1;iCount <= 10; iCount++){
+		
+		for (ResultCount=0;ResultCount <= ResultArray.length-1; ResultCount++){
+			
+			if (ResultArray[ResultCount][0] == iCount){
+				// highest priority found in ResultArray
+				Update_LinkTemplateHistory(QuestArray[iQuestCount][cVarID],ResultArray[ResultCount][3]);
+				
+				//Store the calculated NextVarID
+				QuestArray[iQuestCount][cStoreValue3] = ResultArray[ResultCount][2];
+				SaveCtrValues();
+				manage_displayArray(ResultArray[ResultCount][1],ResultArray[ResultCount][2]);
+				//alert(PathArray.join(","));
+				display_Form();
+				ReadCtrValues();
+				
+				if (BrowserType != cIE){
+					addEventListeners();
+				}
+	
+				setTimeout("toTop(" + ResultArray[ResultCount][2]+ ")",200);
+				return;
+			}
+		}
+	}
+	
+	//Default Links update, record templateID with a value of -1
+	Update_LinkTemplateHistory(QuestArray[iQuestCount][cVarID],"-1");
+	
+	// Ok, No true Expression, use default 
+	
+	//Store the default NextVarID
+	QuestArray[iQuestCount][cStoreValue3] = QuestArray[iQuestCount][cNextVarID]
+	SaveCtrValues();
+	manage_displayArray(QuestArray[iQuestCount][cVarID],QuestArray[iQuestCount][cNextVarID]);
+	display_Form();
+	ReadCtrValues();
+	
+	if (BrowserType != cIE){
+		addEventListeners();
+	}
+	setTimeout("toTop(" + QuestArray[iQuestCount][cNextVarID]+ ")",200);
+}
+
+
+function display_Form(){
+// Build and display Service Request form  
+// Each question row is contained within a child DIV
+// All child DIVs are contained within one Parent DIV
+
+	var strInnerHTML ="";
+	var strClass = "";
+	var strChildDiv ="";
+	var bHidden = false;
+	var strQuestHTML ="";
+	
+	for (var iCount=0;iCount <= PathArray.length-1; iCount++){
+		
+		var QuestIndex = Find_QuestIndex(PathArray[iCount]);
+		strQuestHTML = QuestArray[QuestIndex][cHTML]
+		
+		//Default stylesheet class for Child DIV
+		strClass = " class=\"cssLCTDivControl\"";
+		bHidden = false;
+		
+		if (QuestArray[QuestIndex][cHTML].substr(0,5) == '_HIDE'){
+			if (cShowHidden == '1'){
+				//alert("setting hide class");
+				//StyleSheet class for displaying hidden controls
+				
+				strClass = " class=\"cssLCTDivControlHidden\"";
+				strQuestHTML = "Hidden" + QuestArray[QuestIndex][cHTML].substr(5);
+			}
+			else
+			{
+				bHidden = true;
+				strQuestHTML = QuestArray[QuestIndex][cHTML].substr(5); 
+			}
+		}
+
+		strChildDiv = "<div id=\"ChildDiv" + QuestArray[QuestIndex][cVarID] + "\"";
+		strChildDiv += " name=\"ChildDiv" + QuestArray[QuestIndex][cVarID] + "\"" + strClass ;
+		
+		if (BrowserType == cIE){
+			if (bHidden){
+				strChildDiv += ' style="display:none"';
+			}
+			else
+			{
+				strChildDiv += ' style="display:block"';
+			}
+		}
+		strChildDiv += ">"
+		strChildDiv += strQuestHTML + "</div>";
+
+		//Form background styleSheet
+		var strFormBG="<div class=\"cssLCTFormBG\"></div>";
+	
+		//Anchor point (reference to scroll to)
+		var strAnchor="<a id=\"anchor" + QuestArray[QuestIndex][cVarID] + "\" name=\"anchor" + QuestArray[QuestIndex][cVarID] + "\"></a>";
+		
+		if (BrowserType != cIE && bHidden){
+			strInnerHTML += '<div id="ChildDiv"' + QuestArray[QuestIndex][cVarID] + '"';
+			strInnerHTML += ' name="ChildDiv"' + QuestArray[QuestIndex][cVarID] + '"';
+			strInnerHTML += '<div style="visibility:hidden;width:0px;height:0px">' +  strAnchor + strQuestHTML + "</div>"
+		}
+		else
+		{
+			strInnerHTML += strFormBG + strAnchor+ strChildDiv;
+		}
+
+	}
+
+	document.getElementById("parentdiv").innerHTML =  strInnerHTML;
+	
+	//Enable/disable Submit Button
+	if (QuestArray[QuestIndex][cNextVarID] == "0" && QuestArray[QuestIndex][cLink] != "Y"){
+		
+		//applicable only with URL variable &Data=-2
+		if (parseInt(document.getElementById("lynxct_Data").value,10) != -2){
+			if (bShowFirstTime){
+				Get_AttachContent(Get_LinkTemplateID())
+			}
+			else 
+			{
+				if (Get_LinkTemplateID() != currentTemplateID){
+					currentTemplateID = Get_LinkTemplateID();
+					document.getElementById("AttachDiv").innerHTML = Get_AttachContent(Get_LinkTemplateID());
+				}
+			}
+		}	
+		document.getElementById("AttachDiv").style.display="block";
+		document.getElementById("SubmitID").disabled = false;
+	}
+	else
+	{
+		document.getElementById("AttachDiv").style.display="none";
+		document.getElementById("SubmitID").disabled = true;
+	}	
+}
+
+function manage_displayArray(VarID,NextVarID){
+/* 
+ Create & manage PathArray items representing display order of form controls
+ VarID:		ID of Control
+ NextVarID: parameter USED only when called from Conditional link (fnc Eval_Result())
+*/
+	if (VarID==0 && NextVarID==0){
+		return;
+	}
+	
+	var intIndex= Find_QuestIndex(VarID);
+	var intPathIndex = Find_PathIndex(VarID);
+	
+	//Flag control as used
+	if (bShowFirstTime){
+	   QuestArray[intIndex][cStoreValue4] ="";
+	 }
+	
+	if (intPathIndex == -1){
+		//Add VarID to PathArray
+		PathArray[PathArray.length] = VarID;
+	}
+	else
+	{
+		//Slice (truncate) PathArray
+		PathArray = PathArray.slice(0,intPathIndex);
+		PathArray[PathArray.length] = VarID
+	}
+
+	//Normal iliteration or from Descision node
+	if(NextVarID ==0){
+		//Normal iliteration
+		if (QuestArray[intIndex][cLink]!="Y" && QuestArray[intIndex][cNextVarID]!='0'){
+			manage_displayArray(QuestArray[intIndex][cNextVarID],0);
+		}
+		else
+		{
+			if(QuestArray[intIndex][cLink] == "Y"){
+				manage_displayArray(QuestArray[intIndex][cStoreValue3],0);
+			}
+		}
+	}
+	else
+	{
+		//Descision Node Physical selection
+		PathArray[PathArray.length] = NextVarID;
+		manage_displayArray(NextVarID,0);
+	}
+	return;
+}
+
+function save_RadioCheckContent(CtrName,strSavedContent,action){
+// Save/read content of Radio/checkbox selections 
+//
+	var cSave = 0;
+	
+	if (action == cSave){
+		strSavedContent ="";
+		for (var iCheckCount =0;iCheckCount<= document.getElementsByName(CtrName).length -1;iCheckCount++){
+			if (document.getElementsByName(CtrName)[iCheckCount].checked){
+				strSavedContent += (document.getElementsByName(CtrName)[iCheckCount].value + ",");
+			}
+			else
+			{
+				strSavedContent += "~";
+				//strSavedContent += ","; SR
+			}
+		}
+		strSavedContent= strSavedContent.substring(0,(strSavedContent.length-1))
+		return strSavedContent;
+	}
+	else
+	{
+		var ContentArray = strSavedContent.split("~");
+		//var ContentArray = strSavedContent.split(",");SR
+			
+		for (var iCheckCount = 0;iCheckCount <= ContentArray.length-1 ;iCheckCount++){
+			//alert(ContentArray[iCheckCount]);
+				
+			if (ContentArray[iCheckCount] !=""){
+				document.getElementsByName(CtrName)[iCheckCount].checked =true;
+			}
+			else
+			{
+				document.getElementsByName(CtrName)[iCheckCount].checked =false;
+			}
+		}
+	}
+}
+
+function SaveCtrValues(){
+// Save all control values currently displayed on screen
+//
+	var cSave = 0;
+	//alert("saving: " + PathArray.join(",") );
+	for (iPathCount=0;iPathCount < PathArray.length; iPathCount++){
+		var iQuestIndex = Find_QuestIndex(PathArray[iPathCount]);
+  
+		if(QuestArray[iQuestIndex][cVarID] == PathArray[iPathCount]){
+			switch (QuestArray[iQuestIndex][cDataType]){
+   
+			case cdtRadio:
+				QuestArray[iQuestIndex][cStoreValue1] = save_RadioCheckContent(QuestArray[iQuestIndex][cVarname] + "_RADIO","",cSave)
+			break;
+			
+			case cdtCheckBox:
+				QuestArray[iQuestIndex][cStoreValue1] = save_RadioCheckContent(QuestArray[iQuestIndex][cVarname] + "_CHECK","",cSave)
+			break;
+			
+			case cdtYesNo:
+				QuestArray[iQuestIndex][cStoreValue1] = document.getElementById(QuestArray[iQuestIndex][cVarname]).value ;
+			break;
+			
+			case cdtDropDown:
+			case cdtVDropDown:
+				QuestArray[iQuestIndex][cStoreValue1] = document.getElementById(QuestArray[iQuestIndex][cVarname]+"_DROPDOWN").value ;
+			
+				if (document.getElementById(QuestArray[iQuestIndex][cVarname] + "_VDDVALUE")){
+					QuestArray[iQuestIndex][cStoreValue2] = document.getElementById(QuestArray[iQuestIndex][cVarname] + "_VDDVALUE").value ;
+				}
+			break;
+
+			case cdtEditDropDown:
+				QuestArray[iQuestIndex][cStoreValue1] = document.getElementById(QuestArray[iQuestIndex][cVarname]+"_DROPDOWN").value ;
+				QuestArray[iQuestIndex][cStoreValue2] = document.getElementById(QuestArray[iQuestIndex][cVarname]+"_NewTxt").value
+			break;
+			
+			case cdtTextArea:
+			case cdtString:
+			case cdtDate:
+			case cdtTime:
+			case cdtInteger:		
+			case cdtDecimal:
+				//alert("Saving: VarName:" + QuestArray[iQuestIndex][cVarname] +" value:" +document.getElementById(QuestArray[iQuestIndex][cVarname]).value)
+				QuestArray[iQuestIndex][cStoreValue1] = document.getElementById(QuestArray[iQuestIndex][cVarname]).value;
+			break;
+   
+			}
+		}
+	}
+}
+
+function ReadCtrValues(){
+// Netscape needs a time to render form before setting control values
+//
+	//alert("populating:" + PathArray.join(","));
+	setTimeout("ExtractStoredValues()",200);
+}
+
+function ExtractStoredValues(){
+// Re-populated values to form controls
+//
+	var cRead =1;
+	
+	for(var iPathCount=0;iPathCount<PathArray.length; iPathCount++){
+		var iQuestIndex = Find_QuestIndex(PathArray[iPathCount])
+  
+		if(QuestArray[iQuestIndex][cVarID] == PathArray[iPathCount]){
+ 
+			if (cFormMode == cRead_Edit)
+				QuestArray[iQuestIndex][cStoreValue4] = "";
+			
+				
+			if (QuestArray[iQuestIndex][cDataType] == cdtTextArea){
+				document.getElementById(QuestArray[iQuestIndex][cVarname]).value= QuestArray[iQuestIndex][cStoreValue1];
+			}
+			
+			if (QuestArray[iQuestIndex][cStoreValue4] == ""){
+				switch (QuestArray[iQuestIndex][cDataType]){
+					case cdtRadio:
+						save_RadioCheckContent(QuestArray[iQuestIndex][cVarname] + "_RADIO",QuestArray[iQuestIndex][cStoreValue1],cRead)
+					break;
+			
+					case cdtCheckBox:
+						save_RadioCheckContent(QuestArray[iQuestIndex][cVarname] + "_CHECK",QuestArray[iQuestIndex][cStoreValue1],cRead)
+					break;
+			
+					case cdtYesNo:
+						document.getElementById(QuestArray[iQuestIndex][cVarname]).value = QuestArray[iQuestIndex][cStoreValue1];
+					break;
+			
+					case cdtDropDown:
+						document.getElementById(QuestArray[iQuestIndex][cVarname]+"_DROPDOWN").value = QuestArray[iQuestIndex][cStoreValue1];
+					break;
+			
+					case cdtVDropDown:
+						document.getElementById(QuestArray[iQuestIndex][cVarname]+"_DROPDOWN").value = QuestArray[iQuestIndex][cStoreValue1];
+						document.getElementById(QuestArray[iQuestIndex][cVarname]+"_VDDVALUE").value =  QuestArray[iQuestIndex][cStoreValue2] 
+						//alert("read" + QuestArray[iQuestIndex][cStoreValue2]);
+					break;
+    
+					case cdtEditDropDown:
+						//alert("populating EditDropdown" + QuestArray[iQuestIndex][cStoreValue1]);
+						document.getElementById(QuestArray[iQuestIndex][cVarname]+"_DROPDOWN").value = QuestArray[iQuestIndex][cStoreValue1];
+						document.getElementById(QuestArray[iQuestIndex][cVarname]+"_NewTxt").value = QuestArray[iQuestIndex][cStoreValue2];
+						
+						if (document.getElementById(QuestArray[iQuestIndex][cVarname]+"_NewTxt").value !=""){
+							ToggleEditVisibilty(QuestArray[iQuestIndex][cVarname]);
+						}
+					break;
+    
+					case cdtTextArea:
+					case cdtString:
+					case cdtDate:
+					case cdtTime:
+					case cdtInteger:		
+					case cdtDecimal:
+						document.getElementById(QuestArray[iQuestIndex][cVarname]).value= QuestArray[iQuestIndex][cStoreValue1];
+					break;
+				}
+			}
+    
+			QuestArray[iQuestIndex][cStoreValue4] = "";
+			//alert("end read")
+				
+			//Re-display Help
+			if (QuestArray[iQuestIndex][cHelpStatus] != ""){
+				ShowHelp(QuestArray[iQuestIndex][cVarID]);
+			}
+		}
+	}
+}
+
+function Find_VarID(VarName){
+// Search for matching VarID via VarName
+//	
+	for(var iArrayCount=0;iArrayCount<QuestArray.length;iArrayCount++){
+		if(QuestArray[iArrayCount][cVarname] == VarName){
+			return QuestArray[iArrayCount][cVarID];
+		}
+	}
+	alert("Error in Find_QuestIndex: VarName not found")
+}
+
+function Find_QuestIndex(VarID){
+// Search for matching VarID within QuestArray & return Index
+//	
+	for(var iArrayCount=0;iArrayCount<QuestArray.length;iArrayCount++){
+		if(QuestArray[iArrayCount][cVarID] == VarID){
+			return iArrayCount;
+		}
+	}
+	alert("Error in Find_QuestIndex: VarID not found")
+}
+
+function Find_PathIndex(VarID){
+// Search for matching VarID within PathArray & return Index
+//			
+	for(var iPathCount=0;iPathCount<PathArray.length;iPathCount++){
+		
+		if(PathArray[iPathCount] == VarID){
+			return iPathCount;
+		}
+	}
+	return -1;
+}
+
+function ShowHelp(varID){
+// Toggle visibility of related Help window
+// 
+	var objHelp = document.getElementById("Help" + varID);
+	
+	if (objHelp.className == "cssLCTDivHelp"){
+		objHelp.innerHTML = "";
+		objHelp.className = "";
+		QuestArray[Find_QuestIndex(varID)][cHelpStatus] = "";
+		document.getElementById(varID + "_Help").src = "../images/gifs/help_up.gif"; 
+	}
+	else
+	{
+		objHelp.innerHTML = QuestArray[Find_QuestIndex(varID)][cHelp];  
+		QuestArray[Find_QuestIndex(varID)][cHelpStatus] = "Y";
+		objHelp.className = "cssLCTDivHelp";
+		document.getElementById(varID + "_Help").src ="../images/gifs/help_down.gif"; 
+	}
+}
+
+function toTop(varID){
+// Scroll down to the Control related to varID 
+//
+	
+	// disable following line if with a webForm
+	if (NotInAspire != 1){
+		window.location.href = "#anchor" + varID;
+	}
+	
+	try {	
+		switch (QuestArray[Find_QuestIndex(varID)][cDataType]){
+			
+			case cdtRadio:
+				document.getElementsByName(QuestArray[Find_QuestIndex(varID)][cVarname]+"_RADIO")[1].focus();
+			break;
+			
+			case cdtCheckBox:
+				document.getElementsByName(QuestArray[Find_QuestIndex(varID)][cVarname]+"_CHECK")[1].focus();
+			break;
+			
+			case cdtYesNo:
+			case cdtTextArea:
+			case cdtString:
+			case cdtDate:
+			case cdtCurrency:	
+			case cdtDecimal:
+			case cdtInteger:
+				document.getElementById(QuestArray[Find_QuestIndex(varID)][cVarname]).focus();
+			break;
+			
+			case cdtVDropDown:
+			case cdtDropDown:
+			case cdtEditDropDown:
+				document.getElementById(QuestArray[Find_QuestIndex(varID)][cVarname]+"_DROPDOWN").focus();
+			break;
+		}
+	}
+	catch(e){
+		//alert("cannot Focus");
+	}
+}
+
+function Validate_Prompt(strPrompt){
+	var bTagBegin = false;
+	var strResult ="";
+	
+	for (var iChar = 0;iChar < strPrompt.length; iChar++){
+		var strChar = strPrompt.substr(iChar,1);
+		
+		if (strChar == "<"){
+			bTagBegin = true;
+		}
+	
+		if (!bTagBegin){
+			strResult += strChar;
+		}
+		
+		if (strChar == ">"){
+			bTagBegin = false;
+		}
+	}
+	
+	if (strResult !="")
+		return strResult
+	else
+		return strPrompt;
+}
+
+//-->
+</script>
+
+
+<script LANGUAGE="javascript">
+<!--
+
+var dtCh= "/";
+var minYear=1900;
+var maxYear=2100;
+var daysInMonth = new Array(12);
+
+function XDate_isInteger(s){
+	var i;
+    for (i = 0; i < s.length; i++){   
+        // Check that current character is number.
+        var c = s.charAt(i);
+        if (((c < "0") || (c > "9"))) return false;
+    }
+    // All characters are numbers.
+    return true;
+}
+
+function XDate_stripCharsInBag(s, bag){
+	var i;
+    var returnString = "";
+    // Search through string's characters one by one.
+    // If character is not in bag, append to returnString.
+    for (i = 0; i < s.length; i++){   
+        var c = s.charAt(i);
+        if (bag.indexOf(c) == -1) returnString += c;
+    }
+    return returnString;
+}
+
+function XDate_daysInFebruary (year){
+	// February has 29 days in any year evenly divisible by four,
+    // EXCEPT for centurial years which are not also divisible by 400.
+    return (((year % 4 == 0) && ( (!(year % 100 == 0)) || (year % 400 == 0))) ? 29 : 28 );
+}
+
+function XDate_DaysArray(n) {
+	for (var i = 1; i <= n; i++) {
+		daysInMonth[i] = 31
+		if (i == 4 || i == 6 || i == 9 ||  i== 11) {
+			daysInMonth[i] = 30
+		}
+		if (i==2){
+			daysInMonth[i] = 29
+		}
+	} 
+ }
+
+function XDate_isDate(dt,dtStr,strPrompt){
+	
+	XDate_DaysArray(12)
+	
+	var pos1=dtStr.indexOf(dtCh)
+	var pos2=dtStr.indexOf(dtCh,pos1 + 1)
+	var strDay=dtStr.substring(0,pos1)
+	var strMonth=dtStr.substring(pos1 +1 ,pos2)
+	var strYear=dtStr.substring(pos2 +1)
+	strYr=strYear
+	if (strDay.charAt(0) == "0" && strDay.length  >1) strDay = strDay.substring(1)
+	if (strMonth.charAt(0) == "0" && strMonth.length > 1) strMonth = strMonth.substring(1)
+	for (var i = 1; i <= 3; i++) {
+		if (strYr.charAt(0 )== "0" && strYr.length > 1) strYr = strYr.substring(1)
+	}
+	month=parseInt(strMonth)
+	day=parseInt(strDay)
+	year=parseInt(strYr)
+	
+	if (pos1 == -1 || pos2 == -1){
+		alert(strPrompt + "The date format should be : dd/mm/yyyy")
+		return false
+	}
+	if (strMonth.length < 1 || month < 1 || month > 12){
+		alert(strPrompt + "Please enter a valid month")
+		return false
+	}
+	if (strDay.length <1 || day < 1 || day > 31 || (month == 2 && day > XDate_daysInFebruary(year)) || day > daysInMonth[month]){
+		alert(strPrompt + "Please enter a valid day")
+		return false
+	}
+	if (strYear.length != 4 || year == 0 || year < minYear || year > maxYear){
+		alert(strPrompt + "Please enter a valid 4 digit year between "+ minYear + " and " + maxYear)
+		return false
+	}
+	if (dtStr.indexOf(dtCh,pos2 + 1)!= -1 || XDate_isInteger(XDate_stripCharsInBag(dtStr, dtCh)) == false){
+		alert(strPrompt + "Please enter a valid date")
+		return false
+	}
+	
+	if (strDay.length < 2)   {strDay = "0" + strDay}
+	if (strMonth.length < 2) {strMonth = "0" + strMonth}
+
+	dt.value= strDay + dtCh + strMonth + dtCh + strYear;
+return true
+}
+
+function XDate_ValidateDate(dt,strPrompt){
+	
+	if (dt.value!=""){
+		if (XDate_isDate(dt,dt.value,strPrompt) == false){
+			if (BrowserType == cIE) {
+				dt.focus();
+				dt.select();
+			}
+			return false;
+		}
+	} 
+	return true;
+}
+
+//-->
+</script>
+</form> 
+
+<script language="javascript">
+  document.getElementById('LoadDiv').style.visibility='hidden';
+  document.getElementById('lynxctOverRidePrompt').style.visibility='visible';
+  document.getElementById('SubmitID').style.visibility='visible';
+  document.getElementById('RejectID').style.visibility='visible';
+</script>
+
+</body>
+</html>

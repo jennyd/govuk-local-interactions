@@ -1,0 +1,120 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="eng">
+<head>
+<title>Plymouth City Council Online Planning - Welcome</title>
+<link rel="stylesheet" type="text/css" href="config/styles.css">
+<style type="text/css">
+A.button
+{
+	width: 120px;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+<form name="SearchForm" method="post" action="results.asp">
+<h1></h1>
+
+<!-- This file is used to control the display order of the items on the welcome screen -->
+
+<h2>Search</h2>
+<table cellSpacing="1" cellPadding="1" width="70%" border="0" align="center">
+  <tr>
+    <!-- <td><strong><a href="search.asp">If you do not know exact details of the
+      planning application you require or wish to search in other ways please
+      click here:</a></strong>
+    </td> -->
+<td>
+Our online planning system allows you to monitor the progress of applications, view decisions, view documents and directly comment on specific applications.<br /><br />
+If you dont know the planning application number or site address try our <strong><a href="search.asp">advanced search.</a></strong>
+</td>
+    <!-- <td align="right"><a href="search.asp" class="button">Search</a></td> -->
+  </tr>
+</table><h2>Quick search</h2>
+<p>If you already know the planning application number or address of the property please fill this in below then click on the type of search you want to run.</p>
+<p>If you need help with searching please visit our <a href="help.asp" target="_blank" title="Opens in a new window">help</a> page.</p>
+
+<table cellSpacing="1" cellPadding="1" width="70%" border="0" align="center">
+  <tr>
+    <td>
+<table cellSpacing="1" cellPadding="1" border="0">
+  <tr>
+    <td></td>
+    <td><label for="ApplicationNumber">Planning application number:</label></td>
+    <td><input style="WIDTH: 250px" size="43" id="ApplicationNumber" name="ApplicationNumber"></td></tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td><b>OR</b>&nbsp;</td></tr>
+  <tr>
+    <td></td>
+    <td><label for="AddressPrefix">Site address (first Line):</label></td>
+    <td><input value style="WIDTH: 250px" id="AddressPrefix" name="AddressPrefix"></td></tr></table>    
+    </td>
+    <td align="right"></td></tr>
+  <tr>
+    <td><img src="images/bullit.gif" align="middle" alt="*"> <a href="javascript:document.SearchForm.submit1.click();">Search and view current applications</a></td>
+    <td>
+		<p class="RightAlign"><input id="submit1" type="submit" class="button" value="Go" name="submit1"></p></td></tr>
+  <tr>
+    <td><img src="images/bullit.gif" align="middle" alt="*"> <a href="javascript:document.SearchForm.submit2.click();">Search and view applications decided</a></td>
+    <td>
+      <p class="RightAlign"><input id="submit2" type="submit" class="button" value="Go" name="submit2"></p></td></tr>
+  <tr>
+    <td><img src="images/bullit.gif" align="middle" alt="*"> <a href="javascript:document.SearchForm.submit3.click();">View the progress of an application</a></td>
+    <td>
+      <p class="RightAlign"><input id="submit3" type="submit" class="button" value="Go" name="submit3"></p></td></tr>
+  <tr>
+    <td><img src="images/bullit.gif" align="middle" alt="*"> <a href="javascript:document.SearchForm.submit4.click();">Comment on a current application</a></td>
+    <td>
+      <p class="RightAlign"><input id="submit4" type="submit" class="button" value="Go" name="submit4"></p></td></tr>
+  <tr>
+    <td><img src="images/bullit.gif" align="middle" alt="*"> <a href="javascript:document.SearchForm.submit5.click();">Search and view current appeals</a></td>
+    <td>
+		<p class="RightAlign"><input id="submit5" type="submit" class="button" value="Go" name="submit5"></p></td></tr>
+</table><h2>Weekly lists</h2>
+<table cellSpacing="1" cellPadding="1" width="70%" border="0" align="center">
+  <tr>
+    <td><a href="http://www.plymouth.gov.uk/planningweeklylist">View the most recent Weekly List of Applications received</a></td>
+    <!--<td align="center"><a href="weeklylistapp.asp">View the most recent Weekly List of Applications received</a></td>-->
+    <!--<td align="right"><a href="weeklylistapp.asp" class="button" title="View the most recent Weekly List of Applications received">Go</a></td>-->
+  </tr>
+  <tr>
+    <td><a href="weeklylistdec.asp">View the most recent Weekly List of Decisions made</a></td>
+    <!--<td align="right"><a href="weeklylistdec.asp" class="button" title="View the most recent Weekly List of Decisions made">Go</a></td>-->
+  </tr>
+ <!-- <tr>
+    <td align="center"><a href="weeklylisthist.asp">View a Historic Weekly List</a></td>
+    <td align="right"><a href="weeklylistdec.asp" class="button" title="View the most recent Weekly List of Decisions made">Go</a></td>
+  </tr> -->
+</table><p>Plans, drawings and material submitted to
+the Council are protected by the Copyright Acts (Section 47, 1988 Act). You may
+only use material which is downloaded and/or printed for consultation purposes, to compare current
+applications with previous schemes and to check whether developments have been completed
+in accordance with approved plans. Further copies must not be made
+without the prior permission of the copyright owner. You are required
+to agree to this statement before you are able to proceed.
+</p>
+<h3>
+Ordnance Survey Statement
+</h3>
+<p>
+Some of the mapping on this website has been extracted from Ordnance Survey material. Ordnance Survey maps and maps created from Ordnance Survey material are subject to Crown copyright. Users of our website are limited to viewing and downloading the mapping for private and non-commercial purposes only.
+</p>
+<p>© Crown Copyright. Plymouth City Council License No. 100018633<br />
+Map extracts have been produced for the sole purpose of providing you with reference information only. No further copies can be made. Unauthorised reproduction infringes Crown Copyright and may lead to prosecution.
+</p>
+</form>
+<script type="text/javascript"> 
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); 
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); 
+	</script> 
+	<script type="text/javascript"> 
+	try { 
+	var pageTracker = _gat._getTracker("UA-9162158-1"); 
+	pageTracker._trackPageview(); 
+	} catch(err) {}</script> 
+</body>
+</html>

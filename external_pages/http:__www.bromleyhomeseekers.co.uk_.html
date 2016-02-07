@@ -1,0 +1,826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head> 
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"><link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<title>Bromley Homeseekers</title>
+
+<link rel="stylesheet" type="text/css" href="balloontip.css">
+<link rel="StyleSheet" href="pb_forms.css" type="text/css">
+
+<script language="javascript" type="text/javascript" src="validation.js"></script>
+<script type="text/javascript" src="balloontip.js"></script>
+<script type="text/javascript">
+
+
+function changeCssfile(size , check12){
+		var pageName = "";
+		graphicalmode="graphical";
+		textOnlyMode= "textual";
+		var cssName="";	
+		var selectedTab = "null";
+		var locationSearch = location.search;
+		var locationPathname = location.pathname;
+		if(locationPathname =="/Bromley/CFEACMPortal.jsp"){
+				locationPathname = location.pathname+"?selectedLeftMenu="+selectedTab;
+			}
+		/*Graphics Mode*/
+		if(size=="12" && check12==graphicalmode)
+		{
+             cssName="redoa.css";
+		}
+		else if(size=="13"  && check12==graphicalmode)
+		{
+             cssName="redoaa.css";
+		}
+		else if(size=="14"  && check12==graphicalmode)
+		{
+             cssName="redoaaa.css";
+		}
+		/*TextOnly Css*/
+	    else if(size=="12" && check12==textOnlyMode)
+		{
+		     cssName="redoa.css";
+		}
+		else if(size=="13"  && check12==textOnlyMode)
+		{
+             cssName="redoaa.css";
+		}
+		else if(size=="14"  && check12==textOnlyMode)
+		{
+             cssName="redoaaa.css";
+		}
+
+		if(check12==graphicalmode){
+
+			document.cfeMenuForm.websiteformat.value = "graphical";
+		}
+		else{
+				document.cfeMenuForm.websiteformat.value = "textual";
+		}
+		document.cfeMenuForm.changeCss.value = cssName;
+		
+		if(location.pathname!="" && location.pathname.indexOf('.')>=0){
+			document.cfeMenuForm.action = locationPathname;
+		}
+		else{
+			if(document.getElementById("showPageName")!=null){
+				pageName=document.getElementById("showPageName").value;
+			}
+			document.cfeMenuForm.action = "/Bromley"+pageName;
+		}
+		document.cfeMenuForm.submit();
+		return false;  
+	}
+
+
+function textOnlyClick(){
+		var pageName = "";
+		var selectedTab = "null";
+		document.cfeMenuForm.websiteformat.value = "textual";
+		document.cfeMenuForm.changeCss.value = "CFE.css";
+		if(location.pathname!="" && location.pathname.indexOf('.')>=0){
+			//alert(location.pathname);
+             var abcd="";
+			 if(location.pathname=="/"+"Bromley/CFEHome.jsp"){
+			  abcd="Home";
+		     }  
+			else if(location.pathname=="/"+"Bromley/CFELogin.jsp"){
+			  abcd="Login";
+		     }  
+			 else if(location.pathname=="/"+"Bromley/CFELanguages.jsp"){
+			  abcd="Languages";
+		     }  
+			 else if(location.pathname=="/"+"Bromley/CFEAboutUs.jsp"){
+			  abcd="About Us";
+		     }
+			 else if(location.pathname=="/"+"Bromley/CFEContactUs.jsp"){
+			  abcd="Contact Us";
+		     }
+			 else if(location.pathname=="/"+"Bromley/CFEListProperty.jsp"){
+				abcd="List Property";
+			 }
+			 else if(location.pathname=="/"+"Bromley/CFESiteMap.jsp"){
+				abcd="SiteMap";
+			 }
+			 else if(location.pathname=="/"+"Bromley/HousingOption.jsp"){
+				abcd="Housing Options";
+			 }
+			 else if(location.pathname=="/"+"Bromley/CFEAccessKey.jsp"){
+				abcd="Accessibility";
+			 }
+			 else if(location.pathname=="/"+"Bromley/pb_ListAdvert.jsp"){
+				abcd="List Advert";
+			 }
+			 else if(location.pathname=="/"+"Bromley/CFELogout.jsp"){
+				abcd="Logout";
+			 }
+			 else if(location.pathname=="/"+"Bromley/PrivacyStatement.jsp"){
+				abcd="Privacy Statement";
+			 }
+			 else if(location.pathname=="/"+"Bromley/CFETerms.jsp"){
+				abcd="Terms";
+			 }
+			 else if(location.pathname=="/"+"Bromley/CFEViewPropertyDetails.jsp"){
+				abcd="List Property";
+				
+			 }
+			 else if(location.pathname=="/"+"Bromley/CFESeeMorePropertyImages.jsp"){
+				abcd="List Property";
+				
+			 }
+			 else if(location.pathname=="/"+"Bromley/CFEViewRentDetails.jsp"){
+				abcd="List Property";
+				
+			 }
+			 else if(location.pathname=="/"+"Bromley/CFEViewSelfDetails.jsp"){
+				abcd="List Property";
+				
+			 }
+			 else if(location.pathname=="/"+"Bromley/CFESystemGuide.jsp"){
+				abcd="System Guide";
+				
+			 }
+
+			var locationSearch = location.search;
+			if(locationSearch==null || locationSearch=="")
+			{
+				locationSearch="?selectedLeftMenu=null"
+			}
+			var siteFormat = document.cfeMenuForm.websiteformat.value;
+			if(locationSearch.indexOf("graphical")!=-1 && siteFormat=="textual") {
+					locationSearch=locationSearch.replace("graphical","textual");
+			}
+
+			document.cfeMenuForm.action = location.pathname + locationSearch;
+			document.cfeMenuForm.selectedMenu.value=abcd;
+		}else{
+			if(document.getElementById("showPageName")!=null){
+			pageName=document.getElementById("showPageName").value;
+			}
+			document.cfeMenuForm.action = "/Bromley"+pageName;
+		}
+		document.cfeMenuForm.submit();
+		return false;  
+	}
+	 
+
+function graphicClick(){ 
+		var pageName = "";
+		var selectedTab = "null";
+		fileName=location.pathname;
+		if(fileName!="" && fileName.indexOf('/')==0){
+			fileName=fileName.substring((fileName.lastIndexOf('/')+1),fileName.length);
+			
+		}
+		document.cfeMenuForm.websiteformat.value = "graphical";
+		document.cfeMenuForm.colorSchemeText.value = "1";
+		document.cfeMenuForm.changeCss.value = "CFE.css";
+
+		var locationSearch = location.search;
+		if(locationSearch==null || locationSearch=="")
+		{
+			locationSearch="?selectedLeftMenu=null"
+		}
+		var siteFormat = document.cfeMenuForm.websiteformat.value;
+		if(locationSearch.indexOf("textual")!=-1 && siteFormat=="graphical") {
+			locationSearch=locationSearch.replace("textual","graphical");
+		}
+		document.cfeMenuForm.action = location.pathname + locationSearch;
+		if(fileName=="CFEListProperty.jsp"){
+			if(location.pathname!="" && location.pathname.indexOf('.')>=0){
+				document.cfeMenuForm.action = location.pathname + locationSearch;
+			}
+        }
+		else{
+			if(location.pathname!="" && location.pathname.indexOf('.')>=0){
+				document.cfeMenuForm.action = location.pathname + locationSearch;
+			}
+			else{
+				if(pageName=="CFEListProperty.jsp"){
+					document.cfeMenuForm.action = "/Bromley"+pageName+"?selectedMenu=List Property";
+				}else{
+					document.cfeMenuForm.action = "/Bromley"+pageName;
+				}
+			}
+		}
+		document.cfeMenuForm.submit();
+		return false;  
+	}
+
+
+
+	function changeColor(){
+		var pageName = "";
+		document.cfeMenuForm.colorSchemeText.value = document.cfeMenuForm.colorScheme.options[document.cfeMenuForm.colorScheme.selectedIndex].value;
+		document.cfeMenuForm.action = location.pathname;
+		var locationSearch = location.search;
+		var locationPathname = location.pathname;
+		var selectedTab = "null";
+		if(location.pathname =="/Bromley/CFEACMPortal.jsp"){
+				locationPathname = location.pathname+"?selectedLeftMenu="+selectedTab;
+			}
+		if(location.pathname!="" && location.pathname.indexOf('.')>=0){
+			document.cfeMenuForm.action = locationPathname;
+		}
+		else{
+			document.cfeMenuForm.action = "/Bromley"+pageName;
+		}
+		document.cfeMenuForm.submit();
+ 	}
+	function navigate(filePath , obj){
+        document.cfeMenuForm.action = "/Bromley/"+filePath;
+		document.cfeMenuForm.submit();
+		return;
+		
+
+		if(obj.id=="home")
+		{
+			document.getElementById("home").src="images/home_2.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="login")
+		{
+           
+			document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login_2.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="logout")
+		{ 
+			 
+	   	    document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="languages")
+		{
+
+    		document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages_2.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="aboutus")
+		{
+			
+    		document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us_2.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="contactus")
+		{
+			
+    		document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us_2.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+
+		else if(obj.id=="logout")
+		{
+			
+    		document.getElementById("home").src="images/home.gif";
+			document.getElementById("login").src="images/login.gif";
+			document.getElementById("languages").src="images/languages.gif";
+			document.getElementById("aboutus").src="images/about_us.gif";
+			document.getElementById("contactus").src="images/contact_us.gif";
+			document.getElementById("logout").src="images/logout.gif";
+		}
+		return false;
+	}
+
+	function navigate(filePath){
+        //document.cfeMenuForm.changeCss.value = cssName;
+		if((filePath.search("CFELogout.jsp")!=-1)&&(false))
+		{
+			value=confirm("Have you set your bids in preferred order- press OK to close the window or Cancel to go back and set your preferences");
+			if(!value)
+			{
+				document.cfeMenuForm.action = "/Bromley/"+"CFEViewSelfDetails.jsp";
+				document.cfeMenuForm.submit();
+				return false;
+			}
+		}
+		document.cfeMenuForm.action = "/Bromley/"+filePath;
+		document.cfeMenuForm.submit();
+		return false;
+	}
+	function defaultColorValue(){
+		var format = "graphical";
+		if(format=="textual")
+		{
+			
+			document.cfeMenuForm.colorScheme.value = "1";
+		}
+	}
+
+
+/* Unused methods
+function changeImage(obj)
+{
+  return
+  var temp = new Array();
+  var abctemp=document.getElementById(obj.id).src;
+  
+ if(obj.id=="home")
+	{
+		
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+
+		if (imagename!="home_2.gif")
+			{
+			   document.getElementById("home").src="images/home_1.gif";
+			}
+	}
+
+   else if(obj.id=="login")
+	{
+	   temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+
+		if (imagename!="login_2.gif")
+			{
+				document.getElementById("login").src="images/login_1.gif";
+			}
+	}
+
+	else if(obj.id=="languages")
+	{     
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+			if (imagename!="languages_2.gif")
+				{
+					document.getElementById("languages").src="images/languages_1.gif";
+				}
+	}
+
+	else if(obj.id=="aboutus")
+	{
+		 temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+		if (imagename!="about_us_2.gif")
+		{
+    		document.getElementById("aboutus").src="images/about_us_1.gif";
+		}
+	}
+	else if(obj.id=="contactus")
+	{
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+		if (imagename!="contact_us_2.gif")
+		{
+    		document.getElementById("contactus").src="images/contact_us_1.gif";
+		}
+			
+	}
+	else if(obj.id=="logout")
+	{
+	
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];
+		if (imagename!="logout_2.gif")
+		{
+    		document.getElementById("logout").src="images/logout_1.gif";
+		}
+	}
+}
+*/
+
+/* Unused methods
+function backImage(obj)
+{
+   return;
+  var temp = new Array();
+  var   abctemp=abctemp=document.getElementById(obj.id).src;;
+  
+if(obj.id=="home")
+	{ 
+		
+	    temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];	
+		if (imagename!="home_2.gif")
+			{
+			document.getElementById("home").src="images/home.gif";
+			}
+	}
+else if(obj.id=="login")
+		{
+	           
+			temp = abctemp.split('/'); 
+	        var imagename=temp[temp.length-1];	
+             if (imagename!="login_2.gif")
+			{
+			document.getElementById("login").src="images/login.gif";
+			}
+		}
+
+ else if(obj.id=="languages")
+	{
+		 temp = abctemp.split('/'); 
+	     var imagename=temp[temp.length-1];	
+		 if (imagename!="languages_2.gif")
+		{
+		document.getElementById("languages").src="images/languages.gif";
+		}
+	}
+    
+ else if(obj.id=="aboutus")
+	{
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];	
+		if (imagename!="about_us_2.gif")
+		{
+			document.getElementById("aboutus").src="images/about_us.gif";
+		}
+	}
+ else if(obj.id=="contactus")
+	{
+    	    temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];	
+        if (imagename!="contact_us_2.gif")
+		{
+		  document.getElementById("contactus").src="images/contact_us.gif";
+		}
+	}
+else if(obj.id=="logout")
+	{
+		temp = abctemp.split('/'); 
+        var imagename=temp[temp.length-1];	
+        if (imagename!="logout_2.gif")
+		{
+		  document.getElementById("logout").src="images/logout.gif";
+		}
+	}
+  
+  
+}
+*/
+</script>
+
+<link rel="StyleSheet" href="/Bromley/styles/redo.css" type="text/css">
+	<link rel="StyleSheet" href="/Bromley/styles/compose.css" type="text/css">
+</head>
+
+ <body style="font-size:100%"  class="bdTpWhite">
+ 
+<div id="container" class="bdTpWhite">
+<!-- CBL Refactored - commented code removeed -->
+ <!-- Code to show Bid countdown indicator-->
+<!--
+<SCRIPT type="text/javascript">
+var xmlhttp;
+var JStimeDiff;
+var JSbeginOrEnd="";
+var month = '*';     //  '*' for next month, '0' for this month or 1 through 12 for the month 
+var day = '1';       //  Offset for day of month day or + day  
+var hour = 0;        //  0 through 23 for the hours of the day
+var tz = -5;         //  Offset for your timezone in hours from UTC
+var lab = 'tzcd';    //  The id of the page entry where the timezone countdown is to show
+
+window.document.onload = start();
+
+
+	function getTimeDiff()
+	{
+		xmlhttp=GetXmlHttpObject();
+		if (xmlhttp==null)
+		{
+			alert ("Your browser does not support AJAX!");
+			return;
+		}
+		var url="/Bromley/CFECountDownTimeCalculator.jsp?partnerId=1005";
+		xmlhttp.onreadystatechange=stateChanged;
+		xmlhttp.open("GET",url,true);
+		xmlhttp.send(null);
+	}
+
+	function stateChanged()
+	{
+		if (xmlhttp.readyState==4)
+		{
+			var text=xmlhttp.responseText.split(":");
+			JStimeDiff=text[0];
+			JSbeginOrEnd=text[1];
+			// condition added to not to display NaN if there is no data in DB for INDICATOR
+			if(!isNaN(JStimeDiff)){
+				displayTZCountDown(JStimeDiff,lab);
+			}
+		}
+	}
+
+	function start() 
+	{
+		getTimeDiff();
+	}
+
+	function displayTZCountDown(countdown,lab) 
+	{
+
+		var secs = countdown % 60; 
+		if (secs < 10)
+		{
+			secs = '0'+secs;
+		}
+		var countdown1 = (countdown - secs) / 60;
+		var mins = countdown1 % 60; 
+		if (mins < 10){
+			mins = '0'+mins;
+		}
+		countdown1 = (countdown1 - mins) / 60;
+		var hours = countdown1 % 24;
+		if (hours < 10){
+			hours = '0'+hours;
+		}
+		var days = (countdown1 - hours) / 24;
+
+		if(days<10)
+		{
+			//RT-3563
+			document.getElementById('tzcd').innerHTML = '<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">DAYS</td><td align="center">:</td><td align="center" width="10%">HH</td><td align="center">:</td><td align="center">MM</td><td align="center">:</td><td align="center">SS</td><td></td></tr><tr><td align="center">'+days+'</td><td align="center">:</td><td align="center">'+hours+'</td><td align="center">:</td><td align="center">'+mins+'</td><td align="center">:</td><td align="center">'+secs+'s '+'</td><td align="left">'+JSbeginOrEnd+'</td></tr></table>';
+		/*
+		document.getElementById('tzcd').innerHTML = 'DAYS : HH : MM : SS <br>0'+days+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : '+hours+ ' : ' +mins+ ' : '+secs+'s '+JSbeginOrEnd;*/
+		}
+		else
+		{
+			//RT-3563
+			document.getElementById('tzcd').innerHTML = '<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">DAYS</td><td align="center">:</td><td align="center" width="10%">HH</td><td align="center">:</td><td align="center">MM</td><td align="center">:</td><td align="center">SS</td><td></td></tr><tr><td align="center">'+days+'</td><td align="center">:</td><td align="center">'+hours+'</td><td align="center">:</td><td align="center">'+mins+'</td><td align="center">:</td><td align="center">'+secs+'s '+'</td><td align="left">'+JSbeginOrEnd+'</td></tr></table>';
+		/*
+		document.getElementById('tzcd').innerHTML = 'DAYS : HH : MM : SS <br>'+days +'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : '+hours+ ' : '+mins+' : '+secs+'s '+JSbeginOrEnd;*/
+		}
+
+		if(countdown==0)
+		{
+			setTimeout('start()',999);
+			return;
+		}
+
+		if((countdown-1) >= 0)
+		{
+			setTimeout('displayTZCountDown('+(countdown-1)+',\''+lab+'\');',999);
+		}
+}
+	
+
+
+	function GetXmlHttpObject()
+	{
+		if (window.XMLHttpRequest)
+		{
+		 // code for IE7+, Firefox, Chrome, Opera, Safari
+		 return new XMLHttpRequest();
+		 }
+		if (window.ActiveXObject)
+		 {
+			 // code for IE6, IE5
+		 return new ActiveXObject("Microsoft.XMLHTTP");
+		 }
+		return null;
+	}
+
+</SCRIPT>
+-->
+ <form name = "cfeMenuForm" method="post" action="">
+	<div id="header">
+	<h1 id="selections" title="Bromley Homeseekers"><span></span></h1>
+			
+		</div>
+		<div id="menu" class="bdTpWhite">
+			<!--<h2 id="slogan"><span></span>it's your move</h2>-->
+			<!-- Bid countdown Indicator
+		<span id="tzcd" style="font-size:12px;"></span>
+		-->
+			<ul id="menu_accessibility" class="bdTpWhite">
+				<li class="firstitem">
+				<span class="options">
+				text size: </span>
+						<a href="#" class="size1" onClick='changeCssfile("12","graphical")'>A</a>
+						<a href="#" class="size2" onClick='changeCssfile("13","graphical")'>A</a> 
+						<a href="#" class="size3" onClick='changeCssfile("14","graphical")'>A</a>
+				</li>
+				<li class="menutextlinks">
+				<a href="" onClick='return textOnlyClick()' class="textwhite">
+		text only</a></li>
+				<li class="menutextlinks"><a href="" onClick='return graphicClick()' class="textwhite">
+		graphical</a></li>
+				<li class="menutextlinks"><a href="CFESiteMap.jsp" onClick='return navigate("CFESiteMap.jsp?selectedMenu=SiteMap")' class="textwhite" accesskey="3">sitemap</a></li>
+				<li class="menutextlinks"><a href="CFEAccessKey.jsp" onClick='return navigate("CFEAccessKey.jsp?selectedMenu=Accessibility")' class="textwhite" accesskey="0">site accessibility</a></li>
+			</ul>
+			<ul id="menu_righthoriz" class="bdTpWhite">
+				<li class="menutextlinks"><a href="CFELanguages.jsp" onClick='return navigate("CFELanguages.jsp?selectedMenu=Language")' class="textwhite">languages</a></li>
+				<li class="menutextlinks"><a href="CFEAboutUs.jsp" onClick='return navigate("CFEAboutUs.jsp?selectedMenu=AboutUs")' class="textwhite" accesskey="a">about us</a></li>
+				<li class="menutextlinks"><a href="CFEContactUs.jsp" onClick='return navigate("CFEContactUs.jsp?selectedMenu=ContactUs")' class="textwhite">contact us</a></li>
+			</ul>
+	</div>
+<input type="hidden" name="websiteformat" value="graphical">
+<input type="hidden" name="monthsInterval" id="backMonths" value="">  
+<input type="hidden" name="hiddenApplicantId" value="">
+<input type="hidden" name="propertyId" value="" /> 
+<input type="hidden" name="applicantId" value="null" /> 
+<!-- <input type="hidden" name="isWithDrawBid" value="0" /> -->
+<input type="hidden" name="colorSchemeText" value="1" /> 
+<input type="hidden" name="hiddenBedroom"  value=""/>
+<input type="hidden" name="withOutLoginViewProperties" value=""/>
+<input type="hidden" name="bidPeriodId" value="" /> 
+<input type="hidden" name="changeCss" value="CFE.css"/> 
+<input type="hidden" name="selectedMenu" value="null" /> 
+   <input type="hidden" name="property_id" id="property_id" value="null" />
+<div id="balloon2" class="balloonstyle" style="width: 750px;">
+This page gives you quick information on the Choice Based Lettings Scheme and has links to take you to pages where you can view properties, check your details and bid for properties.<br><br>&#8220;Login&#8221; button takes you to the page where you enter your Password to see your details and bid on properties &#8211; NOTE &#8211; to Log in you must be a registered user of the site.<br><br>&#8220;See All Properties&#8221; &#8211;  takes you to a page where you can look at the properties on the site&#8211; any one can use this facility but you cannot bid on any properties unless you login (see above)<br><br>&#8220;Housing Options&#8221; &#8211; takes you to a page with details on other ways of finding housing and meeting housing need.<br><br>&#8220;This week&#8217;s advert and results&#8221; &#8211; takes you to a page where adverts for properties are stored.<br><br>&#8220;Languages&#8221; &#8211; takes you to a page where you can change the language the key information on the site is displayed in<br><br>&#8220;Contact Us&#8221; &#8211; takes you to a page where you can get details of how to contact us.<br><br><h3>ACCESSIBILITY AND DISPLAY OPTIONS</h3>The links at the top of the page let you change the size and colour layout of the site to suit your needs and move around the site quickly via the sitemap if this suits you.<br><br>The Accessibility link gives you more information about features on the site to help visually impaired users use the site. </div>
+   </form>
+   
+<div id="column_container" class="bdTpWhite">
+<form name="cfeHomeForm" id="cfeHomeForm" method="post" action="">
+<div id="leftmenu" class="bar" >
+    <ul>
+<li class="menuitem">
+		<a href="" onClick='return navigate("CFEHome.jsp?selectedMenu=Home")' accesskey="1" >Home </a>
+    </li>   
+   <li class="menuitem">
+				<a href="" onClick='return navigate("CFELogin.jsp?selectedMenu=Login")' accesskey="l" >Login</a>
+				</li>				
+				
+				<li class="menuitem">
+		   	<a href="" onClick='return navigate("CFEListProperty.jsp?withOutLoginViewProperties=999&amp;availableFlag=true&amp;menuFlag=true&amp;selectedMenu=List Property")' accessKey="p" >See All Properties</a>
+			</li>
+				  <li class="menuitem">
+<a href="" onClick='return navigate("CFEHousingOption.jsp?selectedMenu=Housing Options")' accessKey="h" >Housing Options</a>
+			</li>	
+		<li class="menuitem">
+		   	<a href="" onClick='return navigate("CFEListAdvert.jsp?selectedMenu=List Advert")' accesskey="w" >This week's advert and results hyperlink</a>
+			</li>
+	</ul>
+<table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td><img src="../../Bromley/images/shim.gif" alt="" border="0" width="1" height="3" /></td></tr></tbody></table><!--  			   <a href="" onClick='return navigate("CFEListAdvert.jsp?selectedMenu=List Advert")' accessKey="w"><img src="/Bromley/images/DESIGN5.jpg"  class="bdBtWhite" border="0"   alt=""></a>--><table border="0" cellspacing="0" cellpadding="0" width="100%"><tbody><tr><td><img src="../../Bromley/images/shim.gif" alt="" border="0" width="1" height="25" /></td></tr></tbody></table><!--<a href="http://www.direct.gov.uk/" ><img src="/Bromley/images/dg_4016022.gif" width="133" class="bdBtWhite" border="0"   alt="Directgov-Public services all in one place"></a>      			  				<a href="http://www.yourlondon.gov.uk" ><img src="/Bromley/images/your_london.jpg" width="133" class="bdBtWhite" border="0"   alt="Your London"></a>--><div id="webinfo" >
+    <a href="http://www.adobe.com"><img src="/Bromley/images/get_acrobat.gif"  alt="Get Adobe Reader" /></a> 
+    <p>
+        you will need Adobe Reader to view documents on this site
+    </p>
+</div>
+</div>
+<div id="main_content" class="bdTpWhite" >
+	<!-- ISI_LISTEN_START -->
+		<p><img src="../../../Bromley/images/home.jpeg" alt="Bromley Homeseekers" width="637" height="215" border="0" /></p>
+<div>&nbsp;</div>
+<h3 style="text-align: center;"><!-- ISI_LISTEN_START --></h3>
+<h3 style="text-align: center;"><span style="font-size: medium;">Welcome&nbsp;to Bromley Homeseekers</span></h3>
+<p>&nbsp;</p>
+<table style="border: 1px solid #000000; width: 637px;" cellpadding="6" align="center">
+<tbody>
+<tr>
+<td>
+<p><strong style="font-family: arial, helvetica, sans-serif; font-size: small;"><span style="background-color: #ff0000;">IMPORTANT NOTICE</span> 5/2/16 </strong></p>
+<p><strong style="font-family: arial, helvetica, sans-serif; font-size: small;">The Council is currently experiencing technical problems with&nbsp;our systems&nbsp;and this may mean that you are not able to contact us at the moment.</strong></p>
+<p><strong style="font-family: arial, helvetica, sans-serif; font-size: small;">&nbsp;We are working&nbsp;hard to resume normal service. We are sorry for any inconvenience.</strong></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong style="font-family: arial, helvetica, sans-serif; font-size: small;">NEW APPLICATIONS</strong></p>
+<p>&nbsp;</p>
+<p><span style="font-size: small;">Please be aware that about 70% of people who apply to Bromley Homeseekers are not included on the Housing Register. Just because you apply it does <strong><span style="text-decoration: underline;">not</span></strong> mean you will receive a User ID and PIN.&nbsp; We strongly recommend you read the Housing Allocation&nbsp;Scheme to find out if you are likely to be included and able to bid. See advice about bidding below.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: small;">At present it is taking approximately&nbsp;12 weeks for applications to be looked at. If your application is more complicated it can take longer than this. As soon as we have made a decision we will write to you to inform you of the outcome. If you have been included on the Housing Register we will give you your User ID and PIN in this letter.</span></p>
+<p>&nbsp;</p>
+<hr style="height: 1px;" size="1" />
+<p>&nbsp;</p>
+<div><span style="font-size: small;"><span style="font-size: small;"><strong>Bidding Advice</strong></span></span></div>
+<div class="MsoNormal" style="background: white; margin: 0cm 0cm 0pt; line-height: 13.5pt;">
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;"><span style="font-size: small;">Please ensure that you read the adverts carefully as priority is given to different groups on each advert. If you would like any advice, please contact us by phone or e-mail. Our contact details can be found by clicking "Contact Us" at the top right of this page.</span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;">&nbsp;</p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;"><span style="font-size: small;">When you log in to bid,&nbsp;please ensure you are aware of your Banding Code. This was given to you in the letter that contained your login details. The first part represents your Band (E,1,2,3, or 4) the second part (H, T, or R) indicates whether the council recognises you as Homeless (H), as an Affinity Sutton Tenant with an assured tenancy (T), or a general housing register applicant (R). This information will be used in adverts. Please see examples below:</span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;">&nbsp;</p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;"><span style="font-size: small;"><em><strong>Bids from Band E will be considered first. If none are received, priority will be given to Bands 1T, 2T, &amp; 3T</strong>. </em>This means that if no one in the Emergency category places a bid, then applicants who are Affinity Sutton tenants (with an assured tenancy) in Bands 1, 2 or 3 will be given priority. If you have a code containing H or R you are not likely to be successful and may wish to bid for another property.</span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;">&nbsp;</p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;"><span style="font-size: small;"><em><strong>Bids from Band E will be considered first. If none are received, priority will be given to Bands 1H, 1R, 2H, 2R, 3H, 3R</strong>. </em>This means that if no one in the Emergency category places a bid, then applicants the council recognises as homeless, and general housing register applicants, in Bands 1, 2, or 3 will be given priority. If you have a code containing T you are not likely to be successful and may wish to bid for another property.</span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;">&nbsp;</p>
+<hr style="height: 1px;" size="1" />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;">&nbsp;</p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt;">&nbsp;</p>
+<div class="columns">
+<h4>What is Bromley Homeseekers?</h4>
+<p><strong>Instead of people being 'offered' accommodation, Bromley Homeseekers&nbsp;advertises properties on a website each week. It has been used successfully by many other local authorities and is designed to give more choice to people who are in housing need. If you want to be considered for any of the homes, you will need to register with Bromley Homeseekers.&nbsp;If you are registered and if you&nbsp;meet the criteria, then you can choose properties that you are interested in. We call this making a 'bid'. You can only do this if we have accepted you onto the Register and given you log in details to use the system.&nbsp;You can 'bid' for the property you choose either online, by text or by phone.&nbsp;Each property&nbsp;will then be allocated to the person or family with the highest need. Once the property has been let, Bromley Homeseekers will publicise how long the successful applicant had been waiting and what&nbsp;banding they had. This is to help you make realistic decisions about the homes you apply for and the options you pursue.</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div class="columns">
+<h4>How do I use Bromley Homeseekers?</h4>
+<p><strong>If you aren&rsquo;t registered with us you will be able to view the properties that are available as well as look at the results of previous allocations. You&rsquo;ll also be able to look at the housing options we provide. If you aren&rsquo;t registered but would like to use Bromley Homeseekers and think that you have a housing need you will need to make an application. We will then assess your application.&nbsp; If you are accepted onto the register we will&nbsp;write to you, giving details of your banding, and will include a Homeseekers Pack telling you how to use the system.</strong></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<div id="lastcolumn" class="columns">
+<h4>What if I have an emergency housing need?</h4>
+<p><strong>We will&nbsp;give you advice if you are homeless, threatened with homelessness or suffering from domestic violence or harassment. You should contact the Housing&nbsp;Needs Helpline on <span class="skype_tb_injection"><span class="skype_tb_injectionIn"><span class="skype_tb_innerText">020&nbsp;8313&nbsp;4098</span></span></span>. In cases of domestic violence you can also contact the Community Safety Unit on <span class="skype_tb_injection"><span class="skype_tb_injectionIn"><span class="skype_tb_innerText">020&nbsp;8284&nbsp;8760 or for more information please see Bromley Council's <a href="http://www.bromley.gov.uk/info/200036/domestic_violence/" target="_blank">domestic violence help pages</a></span></span></span>. If you are an existing housing association tenant who has an emergency you should contact your housing officer for advice.</strong></p>
+</div>
+<div id="lastcolumn" class="columns">
+<h4>What do I do if I am having difficulty using this site or have a question?</h4>
+<p><strong>First, please make sure that you've read the Homeseekers Pack. The answer to your question may be there.&nbsp;If it isn't or you have a question relating to your application you can:</strong></p>
+<ul>
+<li><strong>email&nbsp;us using the </strong><a href="../../../Bromley/CFEContactUs.jsp?selectedMenu=ContactUs"><strong>contact&nbsp;us page</strong></a><strong>&nbsp;or telephone the Housing Needs Helpline on 0208 313 4098.</strong></li>
+<li><strong>Write to us at the Housing Register Team,&nbsp;2nd Floor North Block, Civic Centre, Stockwell Close, Bromley, BR1 3UH.</strong></li>
+</ul>
+</div>
+</div><!-- ISI_LISTEN_STOP -->
+</div>
+<input type="hidden" name="colorSchemeText" id="colorSchemeText" value="1" /> 
+<input type="hidden" name="selectedMenu" id="selectedMenu" value="null" /> 
+<div id="right_column" class="bdTpWhite">
+   <div id="validation2">
+	<a href="http://asp.readspeaker.net/cgi-bin/homeconnectionsrsone?customerid=1003372&amp;url=http://www.homeconnections.org.uk//Bromley/CFEHome.jsp?partnerName=Bromley"  target="rs" >
+	<img src="/Bromley/images/sayit.gif" class="padme" alt="Say it"/></a>
+	<a href="#" rel="balloon2" >
+	<img src="/Bromley/images/info.gif" alt="information" onmouseover='ShowLayer()' onmouseout='HideLayer()'/></a>
+	</div>
+	<!-- ISI_LISTEN_START -->
+		<p>&nbsp;</p>
+<hr class="dashed" />
+<p><a href="https://homeseekers.bromley.gov.uk/apply/"><img class="center" title="Apply" src="../../../../../Bromley/images/apply.png" alt="Apply" width="130" height="58" /></a></p>
+<p class="center">&nbsp;</p>
+<p><a title="Housing Allocation Scheme 2015 Revision" href="../../../../../Bromley/PDF/Housing_Allocation_Scheme_2015_Revision.pdf" target="_blank">The Allocation Scheme</a></p>
+<p>&nbsp;</p>
+<p><a title="Housing Allocation Scheme Summary 2015" href="../../../../../Bromley/PDF/Housing_Allocation_Scheme_Summary_2015.pdf" target="_blank">The Allocation Scheme Summary</a></p>
+<p>&nbsp;</p>
+<p><a title="Bromley Homeseekers User Guide" href="../../../../../Bromley/PDF/Bromley_Homeseekers_User_Guide_2015.pdf" target="_blank">Bromley Homeseekers User Guide</a></p>
+<p>&nbsp;</p>
+<p><a title="Right to Move Scheme" href="../../../../../Bromley/PDF/right_to_move.pdf" target="_blank">The Right to Move Scheme</a></p>
+<p>&nbsp;</p>
+<p style="text-align: right;"><a title="Bromley Council logo links" href="http://www.bromley.gov.uk" target="_blank"><img src="../../../../../Bromley/images/BromleyLogo1.gif" alt="Bromley Logo" width="149" height="91" border="0" /></a></p>
+<p style="text-align: right;">&nbsp;</p>
+<p style="text-align: right;"><a title="Broomleigh HA logo links" href="http://www.affinitysutton.com" target="_blank"><img style="border: 0px;" title="Broomleigh Logo" src="../../../../../Bromley/images/new_affinity_sutton_logo_colour_09.jpg" alt="Broomleigh Logo" width="150" height="38" /></a></p>
+<p style="text-align: right;">&nbsp;</p>
+<div style="text-align: right;"><a title="Rent 4 Less" href="http://www.affinitysutton.com/en/rent-a-home/rent4less/" target="_blank"><img src="../../../Bromley/images/rent4less.PNG" alt="Rent 4 Less" width="126" height="50" border="0" /></a></div>
+<div style="text-align: right;">&nbsp;</div>
+<div style="text-align: right;">&nbsp;</div>
+<div style="text-align: right;">&nbsp;</div>
+<div style="text-align: right;">&nbsp;</div>
+<p style="text-align: right;">&nbsp;<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="../../../../../Bromley/images/wc3_css.gif" alt="wc3_css" width="59" height="21" border="0" /></a> <a href="http://validator.w3.org/check/referer"><img src="../../../../../Bromley/images/wc3_html.gif" alt="wc3_html" width="60" height="21" border="0" /></a></p><!-- ISI_LISTEN_STOP -->
+</div>
+</form>
+</div>
+<script type="text/javascript">
+function submitLink(target){
+	document.forms[0].action = target;
+	document.forms[0].submit();
+}
+
+</script>
+<div id="footer">
+			<ul >
+				<li><a accesskey="8" href="#" class="hyperlinkcolor" onclick="submitLink('/Bromley/CFEPrivacyStatement.jsp')">Privacy statement and cookie policy</a></li>
+				<li><a href="#" class="hyperlinkcolor" onclick="submitLink('/Bromley/CFETerms.jsp')">terms@home connections 2002-2014</a></li>
+<!--				<li><a href="mailto:help@home-connections.co.uk" class="hyperlinkcolor">webmaster</a></li>-->
+				<li><a href="http://www.home-connections.co.uk" class="hyperlinkcolor">Powered by Home Connections</a></li>
+				  <li>
+				  <a href="#" class="hyperlinkcolor">Ver: 5.15.GA.190116 S</a>
+						
+				  </li>
+			</ul>
+</div></div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-2665539-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script></body>
+</html>
+
+
+
+

@@ -1,0 +1,416 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+  	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>EBCS | Elmbridge Building Control Services</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://ebcsltd.co.uk/wordpress/wp-content/themes/ebcs/style.css" />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="pingback" href="http://ebcsltd.co.uk/wordpress/xmlrpc.php" />
+    
+    <script src="http://ebcsltd.co.uk/bower_components/modernizr/modernizr.js"></script>
+    
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <link rel="alternate" type="application/rss+xml" title="EBCS &raquo; Feed" href="http://ebcsltd.co.uk/feed/" />
+<link rel="alternate" type="application/rss+xml" title="EBCS &raquo; Comments Feed" href="http://ebcsltd.co.uk/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"wpemoji":"http:\/\/ebcsltd.co.uk\/wordpress\/wp-includes\/js\/wp-emoji.js?ver=4.3.3","twemoji":"http:\/\/ebcsltd.co.uk\/wordpress\/wp-includes\/js\/twemoji.js?ver=4.3.3"}};
+			( function( window, document, settings ) {
+	var src, ready;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple" or "flag" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' );
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		if ( type === 'flag' ) {
+			/*
+			 * This works because the image will be one of three things:
+			 * - Two empty squares, if the browser doesn't render emoji
+			 * - Two squares with 'G' and 'B' in them, if the browser doesn't render flag emoji
+			 * - The British flag
+			 *
+			 * The first two will encode to small images (1-2KB data URLs), the third will encode
+			 * to a larger image (4-5KB data URL).
+			 */
+			context.fillText( String.fromCharCode( 55356, 56812, 55356, 56807 ), 0, 0 );
+			return canvas.toDataURL().length > 3000;
+		} else {
+			/*
+			 * This creates a smiling emoji, and checks to see if there is any image data in the
+			 * center pixel. In browsers that don't support emoji, the character will be rendered
+			 * as an empty square, so the center pixel will be blank.
+			 */
+			context.fillText( String.fromCharCode( 55357, 56835 ), 0, 0 );
+			return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	settings.supports = {
+		simple: browserSupportsEmoji( 'simple' ),
+		flag:   browserSupportsEmoji( 'flag' )
+	};
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='woocommerce-layout-css'  href='//ebcsltd.co.uk/wordpress/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=2.4.7' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-nyp-css'  href='http://ebcsltd.co.uk/wordpress/wp-content/plugins/woocommerce-name-your-price/assets/css/name-your-price.css?ver=2.3.3' type='text/css' media='all' />
+<script type='text/javascript' src='http://ebcsltd.co.uk/wordpress/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://ebcsltd.co.uk/wordpress/wp-includes/js/jquery/jquery-migrate.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://ebcsltd.co.uk/wordpress/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://ebcsltd.co.uk/wordpress/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.3.3" />
+<meta name="generator" content="WooCommerce 2.4.7" />
+<link rel='canonical' href='http://ebcsltd.co.uk/' />
+<link rel='shortlink' href='http://ebcsltd.co.uk/' />
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+  </head>
+  <body class="home page page-id-18 page-template-default">
+  	<div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        <nav class="tab-bar right hide-for-medium-up">
+          <section class="right-small">
+            <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+          </section>
+        </nav>
+    
+        <aside class="right-off-canvas-menu">
+          <ul class="off-canvas-list">
+          <ul id="menu-mobile" class="menu"><li id="menu-item-208" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-18 current_page_item menu-item-208"><a href="http://ebcsltd.co.uk/">Homepage</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10"><a href="http://ebcsltd.co.uk/about/">About</a></li>
+<li id="menu-item-210" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-210"><a href="http://ebcsltd.co.uk/domestic-building-control/">Domestic Building Control</a></li>
+<li id="menu-item-209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-209"><a href="http://ebcsltd.co.uk/commercial-building-control/">Commercial Building Control</a></li>
+<li id="menu-item-918" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-918"><a href="http://ebcsltd.co.uk/faqs/">FAQs</a></li>
+<li id="menu-item-211" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-211"><a href="http://ebcsltd.co.uk/apply-online/">Apply Online</a></li>
+<li id="menu-item-212" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-212"><a href="http://ebcsltd.co.uk/building-control-charges-calculator/">Building Control Charges Calculator</a></li>
+<li id="menu-item-213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-213"><a href="http://ebcsltd.co.uk/dangerous-structure/">Dangerous Structure</a></li>
+<li id="menu-item-214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214"><a href="http://ebcsltd.co.uk/inspection-request/">Inspection Request</a></li>
+<li id="menu-item-215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-215"><a href="http://ebcsltd.co.uk/new-home-warranty/">New Home Warranty</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a href="http://ebcsltd.co.uk/contact/">Contact Us</a></li>
+</ul>          </ul>
+        </aside>
+    
+        <section class="main-section">
+          <header class="main row">
+          	<div class="header__left small-10 medium-5 large-3 columns">
+          	  <h1><a class="header__logo" href="/">EBCS</a></h1>
+          	</div>
+          	  
+            <div class="header__right small-7 large-9 columns show-for-medium-up">
+              <p class="header__telephone show-for-large-up">01372 474779</p>
+              
+              <nav class="main hide-for-small"><ul id="menu-header" class="menu"><li id="menu-item-193" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-193"><a href="http://ebcsltd.co.uk/">Home</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-9"><a href="http://ebcsltd.co.uk/about/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-292"><a href="http://ebcsltd.co.uk/vacancies/">Vacancies</a></li>
+	<li id="menu-item-445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-445"><a href="http://ebcsltd.co.uk/news/">News</a></li>
+</ul>
+</li>
+<li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5"><a href="/building-control/">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-231" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-231"><a href="http://ebcsltd.co.uk/building-control/">Building Control</a></li>
+	<li id="menu-item-186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186"><a href="http://ebcsltd.co.uk/domestic-building-control/">Domestic</a></li>
+	<li id="menu-item-185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-185"><a href="http://ebcsltd.co.uk/commercial-building-control/">Commercial</a></li>
+	<li id="menu-item-644" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-644"><a href="http://emaps.elmbridge.gov.uk/ebc_buildcon.aspx?requesttype=parseTemplate&#038;template=BCSimpleSearch.tmplt">Application Search</a></li>
+	<li id="menu-item-911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-911"><a href="http://ebcsltd.co.uk/faqs/">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-118"><a href="http://ebcsltd.co.uk/apply-online/">Apply Online</a>
+<ul class="sub-menu">
+	<li id="menu-item-197" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-197"><a href="http://ebcsltd.co.uk/apply-online/">Application Forms</a></li>
+	<li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="http://ebcsltd.co.uk/inspection-request/">Inspection Request</a></li>
+	<li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="http://ebcsltd.co.uk/building-control-charges-calculator/">Charges Calculator</a></li>
+	<li id="menu-item-198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198"><a href="http://ebcsltd.co.uk/wordpress/wp-content/uploads/2015/08/ChargesRegs2013feesheets20VATAmendedDec2013.pdf">Fees &#038; Charges</a></li>
+	<li id="menu-item-126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126"><a href="http://ebcsltd.co.uk/dangerous-structure/">Dangerous Structure</a></li>
+	<li id="menu-item-183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183"><a href="http://ebcsltd.co.uk/new-home-warranty/">New Home Warranty</a></li>
+	<li id="menu-item-722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-722"><a href="http://ebcsltd.co.uk/product/ebcs-payment/">Pay Online</a></li>
+</ul>
+</li>
+<li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6"><a href="http://ebcsltd.co.uk/contact/">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-444" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-444"><a href="http://ebcsltd.co.uk/inspectors-map/">Inspectors Map</a></li>
+	<li id="menu-item-914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-914"><a href="http://ebcsltd.co.uk/faqs/">FAQs</a></li>
+</ul>
+</li>
+</ul></nav>              
+              <a class="header__email right show-for-large-up" href="mailto:&#97;&#100;&#109;&#105;&#110;&#64;&#101;&#98;&#99;&#115;&#108;&#116;&#100;&#46;&#99;&#111;&#46;&#117;&#107;">&#97;&#100;&#109;&#105;&#110;&#64;&#101;&#98;&#99;&#115;&#108;&#116;&#100;&#46;&#99;&#111;&#46;&#117;&#107;</a>
+        	  </div>
+        	  
+        	        	  
+        	              
+            <div class="header-title small-12 columns">
+              <p>Better<br><span class="green">Building</span> <span class="grey">Together</span></p>
+                            <a class="button" href="https://play.google.com/store/apps/details?id=uk.mindseye.ebcsinspection">Download APP - Android</a>
+                            <a class="button" href="https://itunes.apple.com/us/app/elmbridge-bc-inspection-request/id1038411502?ls=1&amp;mt=8">iphone APP</a>
+                            
+              <div class="header-content-link">
+                <a class="header-link-to-content" href="#content">Jump to main content</a>
+              </div>
+            </div>
+        	</header>
+        	
+        	<section id="content" class="">  
+  <article class="row">
+            <div class="callout-panel">
+      <div class="callout-buttons">
+                        <a class="callout-button-1 small-12 medium-6 columns" href="/domestic-building-control/">
+          <div>
+            <span>Domestic <br>Buildings</span>
+          </div>
+        </a>
+                        <a class="callout-button-2 small-12 medium-6 columns" href="/commercial-building-control/">
+          <div>
+            <span>Commercial <br>Buildings</span>
+          </div>
+        </a>
+                        <a class="callout-button-3 small-12 medium-6 columns" href="/building-control/">
+          <div>
+            <span>Building <br>Regulations</span>
+          </div>
+        </a>
+                        <a class="callout-button-4 small-12 medium-6 columns" href="/apply-online/">
+          <div>
+            <span>Apply <br>Online</span>
+          </div>
+        </a>
+                      </div>
+    </div>
+        
+            <div class="homepage-panel">
+      <p>Enquire with us today</p>
+      <div class="homepage-buttons">
+                <a class="small-12 medium-4 columns" href="/inspection-request/">
+          <div>
+            <span>Request a Site Visit</span>
+          </div>
+        </a>
+                <a class="small-12 medium-4 columns" href="/new-home-warranty/">
+          <div>
+            <span>New Home Warranty</span>
+          </div>
+        </a>
+                <a class="small-12 medium-4 columns" href="/dangerous-structure/">
+          <div>
+            <span>Report Dangerous Structures</span>
+          </div>
+        </a>
+              </div>
+    </div>
+        
+                <div class="main-content small-12 columns">
+        
+            	          
+        <h2 class="page-title"><span class="green">Better</span><br><span class="grey">Building</span> Together</h2>
+        
+                        <img class="article-image" src="http://ebcsltd.co.uk/wordpress/wp-content/uploads/2015/07/construction.jpg" alt="" />
+                
+        <p>EBCS, formerly Elmbridge Borough Council Building Control, is the first Building Control Mutual in the country. We are a staff owned company set up to provide the building control service on behalf of Elmbridge Borough Council. The company was created with support and finance from the Cabinet Office and is staffed by the same team that worked for the Authority.</p>
+<p>Key to the success of our business is the intention that our customers will see no reduction in the level or quality of service that we provide. We intend to introduce innovative ways to support our customers and improve our level of service delivery such as the introduction of a smart phone App making inspection requests easier and quicker.</p>
+<p>If there is anything else we can do to help you or if you have any comments on the service we provide do not hesitate to contact us, our details can be found on the ‘Contact’ page.</p>
+        
+      </div>
+        
+            
+              
+    
+          <div class="testimonials small-12 columns">
+                  <p class="testimonial small-12 medium-7 large-8 columns">I would just like to place on record our appreciation of the fantastic service you are giving us on our new build on the above site. Your  service is second to none and your colleague Mariusz, who does the site inspections is most knowledgeable and helpful. It is a real pleasure working with professionals who want to help.</p>
+                              <p class="testimonial-meta"><span class="name">August 2015</span> <span class="company"></span></p>
+              </div>
+            
+    
+            
+    
+    
+        <div class="homepage-news" data-equalizer>
+                <div class="news-item small-12 medium-6 columns" data-equalizer-watch>
+          <span>News Article</span><time datetime="2015-11-11">11/11/2015</time>
+          <div class="news-item__content">
+            <h4>LABC Awards &#8211; Grand Final Winners Announced</h4>
+            <p class="news-pod__excerpt">Best in construction celebrated at LABC Building Excellence Awards Grand Final Outstanding construction was celebrated last night (10 November) as nearly 700 UK building industry professionals gathered for the Grand Finals of the 2015 LABC&hellip;</p>
+          </div>
+          <a class="button" href="http://ebcsltd.co.uk/2015/11/11/labc-awards-grand-final-winners-announced/">READ POST</a>
+        </div>
+                <div class="news-item small-12 medium-6 columns" data-equalizer-watch>
+          <span>News Article</span><time datetime="2015-11-09">09/11/2015</time>
+          <div class="news-item__content">
+            <h4>Guide to extending your home</h4>
+            <p class="news-pod__excerpt">Your home is likely to be one of your biggest assets. Over the course of your occupancy your home will have to adapt to the changing needs of you and your family. This guide will&hellip;</p>
+          </div>
+          <a class="button" href="http://ebcsltd.co.uk/2015/11/09/guide-to-extending-your-home/">READ POST</a>
+        </div>
+            </div>
+          </article>
+    
+          </section>
+          
+          <footer class="footer-container">
+            <div class="row" data-equalizer>
+              <div class="footer-contact small-12 medium-5 columns">
+                <address>
+                  Elmbridge Building Control Services Ltd.<br>
+                  Civic Centre<br>
+                  High Street<br>
+                  Esher<br>
+                  Surrey, KT10 9SD  
+                </address>
+                <p class="footer-contact__telephone">01372 474779</p>
+                <p class="footer-contact__email"><a href="mailto:&#97;&#100;&#109;&#105;&#110;&#64;&#101;&#98;&#99;&#115;&#108;&#116;&#100;&#46;&#99;&#111;&#46;&#117;&#107;">&#97;&#100;&#109;&#105;&#110;&#64;&#101;&#98;&#99;&#115;&#108;&#116;&#100;&#46;&#99;&#111;&#46;&#117;&#107;</a></p>
+                <p class="footer-contact__copyright">&copy; 2015 Elmbridge Building Control Services Ltd - <a href="/terms-of-service/">Terms of Service</a> - <a href="/privacy-policy/">Privacy Policy</a> - <a href="http://www.plugandplaydesign.co.uk/farnham/" target="_blank">Web Design Farnham | Plug and Play Design</a></p>
+              </div>
+              <div class="footer-newsletter small-12 medium-6 columns" data-equalizer-watch>
+                <h4>Newsletter Sign-up</h4>
+                <p>Receive the latest news when you sign-up</p>
+                <!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup">
+                  <form action="//ebcsltd.us11.list-manage.com/subscribe/post?u=6b2c9e0ad992a5012249da55c&amp;id=255bdd6f70" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                      <div id="mc_embed_signup_scroll">
+                  	
+                  <div class="mc-field-group">
+                  	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                  </div>
+                  	<div id="mce-responses" class="clear">
+                  		<div class="response" id="mce-error-response" style="display:none"></div>
+                  		<div class="response" id="mce-success-response" style="display:none"></div>
+                  	</div>
+                      <div style="position: absolute; left: -5000px;"><input type="text" name="b_6b2c9e0ad992a5012249da55c_255bdd6f70" tabindex="-1" value=""></div>
+                      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                      </div>
+                  </form>
+                </div>
+                
+                <!--End mc_embed_signup-->
+              </div>
+              
+              <div class="footer-back-to-top small-12 medium-1 columns hide-for-small" data-equalizer-watch>
+                <a href="#top">Back to the top of the webpage</a>
+              </div>
+              
+              <div class="footer-social-media small-12 medium-7 columns">
+                <ul class="small-block-grid-4">
+                  <li class="twitter"><a href="#">Twitter</a></li>
+                  <li class="facebook"><a href="#">Facebook</a></li>
+                  <li class="googleplus"><a href="#">Google+</a></li>
+                  <li class="youtube"><a href="#">Youtube</a></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+        </section>
+    
+        <a class="exit-off-canvas" href="#"></a>
+    
+      </div>
+    </div>
+    <script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View Basket","cart_url":"http:\/\/ebcsltd.co.uk\/basket\/","is_cart":"","cart_redirect_after_add":"yes"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//ebcsltd.co.uk/wordpress/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.js?ver=2.4.7'></script>
+<script type='text/javascript' src='//ebcsltd.co.uk/wordpress/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.js?ver=2.70'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//ebcsltd.co.uk/wordpress/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.js?ver=2.4.7'></script>
+<script type='text/javascript' src='//ebcsltd.co.uk/wordpress/wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wordpress\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","fragment_name":"wc_fragments"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//ebcsltd.co.uk/wordpress/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.js?ver=2.4.7'></script>
+<script type='text/javascript' src='http://ebcsltd.co.uk/bower_components/foundation/js/foundation.min.js?ver=1'></script>
+<script type='text/javascript' src='http://ebcsltd.co.uk/wordpress/wp-content/themes/ebcs/js/jquery.qtip.min.js?ver=1'></script>
+<script type='text/javascript' src='http://ebcsltd.co.uk/wordpress/wp-content/themes/ebcs/js/app.js?ver=1'></script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-68782283-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

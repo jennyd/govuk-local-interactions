@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<!-- Meta & Page Information -->
+				<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /><link href="assets/images/presence/favicon.ico" rel="shortcut icon"/>
+<title>Services 4 Me&nbsp;-&nbsp;Carelink</title><!-- Stylesheets -->
+				<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="assets/css/presence.min.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="//search3.openobjects.com/cdn/formvalidation/0.6.0/formvalidation.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="//search3.openobjects.com/cdn/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="assets/css/theme-highcontrast.min.css" rel="alternate stylesheet" type="text/css" media="all" title="High contrast" disabled="disabled" />
+<link href="assets/css/theme-bluecontrast.min.css" rel="alternate stylesheet" type="text/css" media="all" title="Blue contrast" disabled="disabled" />
+<link href="assets/css/theme-creamcontrast.min.css" rel="alternate stylesheet" type="text/css" media="all" title="Cream contrast" disabled="disabled" />
+<link href="assets/css/print.min.css" rel="stylesheet" type="text/css" media="print" />
+<link href="app.proxy?app=/frontdoorscreening/v2/assets/css/app.css" rel="stylesheet" type="text/css" media="screen, projection" /> 
+
+<!-- IE Specific Assets -->
+				<!--[if lte IE 9]>
+	<link href="assets/css/ie.min.css" rel="stylesheet" type="text/css" media="all" />
+	<script src="//search3.openobjects.com/cdn/html5shiv/3.7.2.min.js"></script>
+	<script src="//search3.openobjects.com/cdn/placeholder/3.0.2.min.js"></script>
+	<script src="//search3.openobjects.com/cdn/respond/1.4.2.min.js"></script>
+	<script src="assets/js/ie.min.js" type="text/javascript"></script>
+<![endif]--></head>
+			<body id="service_page" class="core_page service_page">
+				<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
+				<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+				<!-- Header -->
+				<div id="vertical_header">
+					<header id="header">
+						<div id="header_left_side" class="header_group">
+							<section id="header_title">
+								<a href="home.page" title="Home page">
+									<img src="assets/images/presence/headerlogo.png" alt="Services 4 Me logo" />
+									<span>Services 4 Me</span>
+								</a>
+							</section>
+						</div>
+						<div id="header_right_side" class="header_group">
+							<section id="header_shortlist">
+								<a href="shortlist.page" class="btn btn-shortlist">My Shortlist&nbsp;<span class="shortlist_count badge">0</span></a>
+							</section>
+							<section id="apps">
+								<section id="kbauth-links" class="authentication-app authentication-app-currentuser">
+  
+    <a href="sign_in.page" class="btn btn-link">My account</a>
+  
+</section></section>								
+						</div>
+					</header><!-- End Header -->
+					<nav id="primary_nav" class="navbar navbar-default" role="navigation">
+	<div class="fluid-container primary-navbar-wrapper">
+		<div class="navbar-header">
+			<div id="ham" class="collapsed_menu_item">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-navbar">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="brand" class="collapsed_menu_item">
+				<a class="navbar-brand" href="home.page" title="Home page">
+					<img src="assets/images/presence/headerlogo.png" alt="Services 4 Me logo" />
+					<span>Services 4 Me</span>
+				</a>
+			</div>
+			<div id="social" class="collapsed_menu_item">
+				<a href="https://www.facebook.com/Services4Me" target="_blank" title="Services4Me on Facebook"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/services4me1" target="_blank" title="Services4Me on Twitter"><i class="fa fa-twitter"></i></a>
+			</div>			
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="primary-navbar">
+			<form class="navbar-form" role="search" id="search-navbar" novalidate action="results.page">
+			  	<div class="form-group has-feedback">
+					<label class="sr-only" for="navbarQT">Search for</label>
+					<input type="text" class="form-control" name="qt" id="navbarQT" placeholder="Search (i.e. Dementia)" size="25" value=""/>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<label class="sr-only" for="navbarTerm">in location</label>
+						<input type="text" class="form-control" name="term" id="navbarTerm" placeholder="Location (i.e DN31)" size="25" value="" />
+						<div class="input-group-btn">
+							<button type="button" id="location_lookup_trigger" title="Use my current location">
+								<i class="fa fa-crosshairs"></i><span class="sr-only">Use my current location</span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="form-group" id="search-navbar-channel">
+				  		<select class="form-control" name="adultchannel" data-name="adultchannel">
+				  			<option value="0" selected="selected">Directory</option>
+				  				<option value="1" >&nbsp;&nbsp;Help at Home</option>
+				  					<option value="1a" >&nbsp;&nbsp;&nbsp;&nbsp;Home care agencies</option>
+					  				<option value="1b" >&nbsp;&nbsp;&nbsp;&nbsp;Mobility aids &amp; Equipment</option>
+					  				<option value="9" >&nbsp;&nbsp;Carers</option>
+				  					<option value="2" >&nbsp;&nbsp;Health &amp; Wellbeing</option>
+				  					<option value="2a" >&nbsp;&nbsp;&nbsp;&nbsp;Health Conditions</option>
+					  				<option value="2b" >&nbsp;&nbsp;&nbsp;&nbsp;Advice and information</option>
+					  				<option value="2c" >&nbsp;&nbsp;&nbsp;&nbsp;GP Surgeries / Medical centres</option>
+					  				<option value="2d" >&nbsp;&nbsp;&nbsp;&nbsp;Pharmacies</option>
+					  				<option value="2e" >&nbsp;&nbsp;&nbsp;&nbsp;Dentists</option>
+					  				<option value="3" >&nbsp;&nbsp;Getting Around</option>
+				  					<option value="4" >&nbsp;&nbsp;Help Managing Your Money</option>
+				  					<option value="7" >&nbsp;&nbsp;Housing Options and Care Homes</option>
+				  					<option value="7a" >&nbsp;&nbsp;&nbsp;&nbsp;Care homes</option>
+					  				<option value="7b" >&nbsp;&nbsp;&nbsp;&nbsp;Advice and information</option>
+					  				<option value="6" >&nbsp;&nbsp;Work &amp; Learning</option>
+				  					<option value="8" >&nbsp;&nbsp;Staying Safe</option>
+				  					<option value="8a" >&nbsp;&nbsp;&nbsp;&nbsp;Home adaptations &amp; Equipment</option>
+					  				<option value="8b" >&nbsp;&nbsp;&nbsp;&nbsp;Abuse / Violence</option>
+					  				<option value="8c" >&nbsp;&nbsp;&nbsp;&nbsp;Help/Advice/Advocacy</option>
+					  				<option value="8d" >&nbsp;&nbsp;&nbsp;&nbsp;Drugs/Alcohol</option>
+					  				</select>
+				  	</div>
+			  	<div class="form-group">
+					<input type="hidden" name="sorttype" value=""/>
+					<button type="submit"><span>Search</span></button>
+				</div>
+				<div id="map_search">
+					<a href="map_search.page" title="Map Search page">
+						<img src="assets/images/presence/map_icon.png" alt="North East Lincolnshire map" />
+						<span class="map_link">Search via map</span>
+						<span class="ward_link">Search via ward</span>
+					</a>
+				</div>
+			</form>
+			<section class="collapsed_menu_item" id="apps">
+				<section id="kbauth-links" class="authentication-app authentication-app-currentuser">
+  
+    <a href="sign_in.page" class="btn btn-link">My account</a>
+  
+</section></section>			
+			<ul id="menu_list">
+				<li ><a title="About" href="about.page">About</a></li>
+				<li ><a title="Disclaimer" href="disclaimer.page">Disclaimer</a></li>	
+				<li class="active" role="presentation"><a href="adult.page?adultchannel=0" title="Directory">Directory</a></li>
+					<li ><a title="What's On" href="whats_on.page">What's On</a></li>
+				<li ><a title="Contact" href="contact.page">Contact</a></li>
+				<li ><a title="Video Tutorials" href="video.page">Video Tutorials</a></li>
+				<li class="collapsed_menu_item" id="menu_shortlist"><a title="My Shortlist" href="shortlist.page">My Shortlist&nbsp;<span class="shortlist_count badge">0</span></a></li>
+			</ul>
+			<div id="menu_contact">
+				<div id="social">
+					<a href="https://www.facebook.com/Services4Me" target="_blank" title="Services4Me on Facebook"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/services4me1" target="_blank" title="Services4Me on Twitter"><i class="fa fa-twitter"></i></a>
+				</div>
+			</div>
+			<div id="menu_footer">
+				<ul>
+					<li><a href="accessibility.page" title="Accessibility page"><i class="fa fa-plus-circle"></i><i class="fa fa-user">&nbsp;</i>Accessibility</a></li>
+					<li><a href="help.page" title="Help page"><i class="fa fa-lightbulb-o">&nbsp;</i>Help</a></li>
+				</ul>
+				<ul>
+					<li><em><i class="fa fa-copyright">&nbsp;</i>2015 services4me</em></li>
+				</ul>
+				<div id="google_translate_element"></div>
+				<script type="text/javascript">
+					function googleTranslateElementInit() {
+					  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+					}
+				</script>
+				<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>				
+			</div>
+		</div>
+	</div>
+</nav></div>
+				<div id="content_holder">
+					<!-- Breadcrumb -->
+					<!-- End Breadcrumb -->
+					<!-- Content -->
+					<div id="content"><h1>Carelink</h1>
+<div id="page_content">
+	<div id="main_content">
+		<img src="assets/images/presence/folder_edge_sharp.png" alt="styling" />
+		<div class="border">		
+			<article class="field_section service_description">
+		<aside class="main_logo">
+				<div class="image_holder" id="logo_image">
+						<img src="https://search3.openobjects.com/mediamanager/nelincs/asch/images/carelinkdawn_jpg/carelinkdawn_display.jpg" alt="" title=""/></div>
+				<div class="image_holder" id="logo_image">
+						<img src="https://search3.openobjects.com/mediamanager/nelincs/asch/images/carelinkuse_jpg/carelinkuse_display.jpg" alt="" title=""/></div>
+				<div class="image_holder" id="logo_image">
+						<img src="https://search3.openobjects.com/mediamanager/nelincs/asch/images/lifelineworks_jpg/lifelineworks_display.jpg" alt="" title=""/></div>
+				</aside>
+		<section class="description_text"><p>Carelink is a 24hr service providing telephone response to alerts received from 'lifeline' alarm equipment. This type of equipment is widely known as 'telecare' and anyone can benefit from the additional support that it provides.</p>
+<ul>
+<li>Older people who may be vulnerable due to age, illness, isolation;</li>
+<li>People who are at risk due to disability or long term illness;</li>
+<li>Those prone to falls;</li>
+<li>People with learning difficulty or mental health issues;</li>
+<li>Victims of crime, domestic violence or abuse;</li>
+<li>Anyone who feels vulnerable for whatever reason.</li>
+</ul>
+<p>If you are funding your alarm service you do not need to be assessed for eligibility as our service is open to all.</p>
+<h2>Where is Carelink?</h2>
+<p>There are many telecare control centres around the country, some are run by the local authority or housing associations and some like ourselves, are &lsquo;not for profit&rsquo; organisations.</p>
+<p>Our control centre is based in Grimsby and we cover the county of North East Lincolnshire. Unlike many telecare centres we are staffed by local people who are familiar with the area you live in and we are audited on a yearly basis by the Telecare Services Association to ensure that we are compliant with stringent quality standards.</p>
+<p><strong>Partnership working</strong><br />Carelink work closely with many other organisations including the NHS, Social Services and Humberside Police.</p>
+<h2>Benefits of Telecare</h2>
+<p>You could delay a move to residential care and continue to live independently and safely in your home.</p>
+<p>You could be discharged from hospital sooner following illness or accident, especially if you live alone.</p>
+<p>Those at risk from crime or domestic violence can be given alarm protection quickly and easily.</p>
+<p>Your family and friends will be reassured knowing that you can easily summon help, at the touch of a button, if you need it, 24 hours a day every day of the year.</p>
+<p>Telecare can be used to help carers in their role, by providing additional support and in some cases the lifeline can be programmed to call the carer direct instead of coming through the control centre.</p>
+<h2>What does it cost to have Carelink installed?</h2>
+<p>As a charity we do our best to keep our costs as low as possible and some people may be eligible for the service free of charge. Funding may be provided via Supporting People if you fit their criteria and are in receipt of Housing Benefit. You may also get the service as part of a care package from Social Services (you would need to undergo assessment).</p>
+<p><strong>If you are not eligible for funding the basic alarm costs are as follows:</strong></p>
+<p>Installation of Lifeline alarm unit and pendant &pound;30.00 &nbsp;This is a one off payment due at the time of fitting.</p>
+<p>Monthly rental cost for equipment and monitoring &pound;12.00 This can be paid by Standing Order through your bank or we can invoice you monthly, quarterly or annually ( there is a discount available for those who choose to pay annually).</p>
+<p>Your rental is due in advance and your first payment is usually made to the telecare fitter who installs your equipment.&nbsp;</p>
+<p>All calls made via your alarm unit are charged to you at the normal rate.</p></section>
+		</article>
+<section class="field_section service_contact">
+		<h2>Who to contact</h2>
+		<dl class="dl-horizontal">
+			<dt>Telephone</dt>
+				<dd>
+					01472 312312</dd>
+			<dt>E-mail</dt>
+				<dd><a href="mailto:enquire@care-link.org.uk" title="enquire@care-link.org.uk">enquire@care-link.org.uk</a></dd>
+			<dt>Website</dt>
+				<dd>
+					<a href="http://www.care-link.org.uk/" rel="external" target="_blank" title="www.care-link.org.uk">www.care-link.org.uk</a>
+				</dd>
+			<dt>Notes</dt><dd class="unformat-wysiwyg"><p>Fax: 01472 312209</p></dd>
+			</dl>
+	</section>
+<section class="field_section service_venue">
+			<h2>Where to go</h2>
+			<dl>
+				<dt>Address</dt>
+					<dd>
+						<span>Second Avenue Resource Centre</span><br/>
+						<span>Second Avenue</span><br/>
+						<span>Grimsby</span><br/>
+						<span>North East Lincolnshire</dd>
+				<dt>Postcode</dt><dd><span>DN33 1NU</span></dd>
+				</dl>
+		</section>
+	<section class="field_section service_event">
+		<h2>Time / Date Details</h2>
+		<dl>
+			<dt>When is it on</dt>
+				<dd>Carelink Control Centre is manned 24hrs a day!</dd>
+			<dt>Session Information</dt>
+				<dd>
+					To talk to us about Carelink or have any other query the best time to call is between 9am and 5pm Mon – Fri.<br/>
+					</dd>
+			</dl>
+	</section>
+<!-- CQC Widget -->
+			<div id="reviews" data-service-id="ilZVWxO91VQ">
+	<div class="review_head">
+		<h3>Reviews</h3>
+		<h4>
+			<small><a href="sign_in.page">Sign in</a> to write a review</small></h4>
+	</div>
+	</div>
+</div>
+	</div>
+	<div id="side_content">
+		<img src="assets/images/presence/folder_edge_sharp.png" alt="styling" />
+		<h3><i class="fa fa-play">&nbsp;</i>Actions</h3>
+		<aside class="related_section actions">
+			<div class="btn-group-justified btn-group" role="group" aria-label="Service actions">
+				<a href="#reviews" title="Reviews">
+						
+								Be the first to write a review
+							</a>
+				<a href="#" onclick="javascript:print();"><i class="fa fa-print">&nbsp;</i>Print</a>
+				<div class="shortlist_link_holder"><a href="/kb5/nelincs/asch/service.action?id=ilZVWxO91VQ&amp;adultchannel=0&amp;slaction=ADD&amp;itemid=gTeTC94TntWAArI6E6ZTlzD-EPavUfQ$" title="Add to My Shortlist" class="shortlist-link shortlist-add">Add to My Shortlist</a></div>
+				</div>
+		</aside>
+		<img src="assets/images/presence/folder_edge_sharp.png" alt="styling" />
+		<h3><i class="fa fa-share">&nbsp;</i>Share</h3>
+		<aside class="related_section share_links">
+			<ul class="nav nav-pills nav-justified" role="tablist">
+				<li role="presentation" class="active" ><a role="tab" aria-controls="sms_service"  data-toggle="pill" href="#sms_service">SMS</a></li><li role="presentation" ><a role="tab" aria-controls="share_service" data-toggle="pill" href="#share_service">Social</a></li>
+			</ul>
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="sms_service">
+						<form role="form" method="get" action="send_text.page">
+							<label for="control_honey_pot" class="hidden">Please do not change the value of the following field. It is used to detect spam and changing its value may result in your submission being rejected</label><input type="text" class="hidden" id="control_honey_pot" name="control_honey_pot" value=""/><label for="control_time_elapsed" class="hidden">Please do not change the value of the following field. It is used to detect spam and changing its value may result in your submission being rejected</label><input type="text" class="hidden" id="control_time_elapsed" name="control_time_elapsed" value="1454810866947"/><div class="form-group">
+								<label class="sr-only">Please enter a mobile number to send details of Carelink to</label>
+								<input type="tel" maxlength="11" minlength="11" pattern="07[0-9]{9}" required name="sms_recipient" title="Please enter a mobile number to send details of Carelink to" placeholder="Mobile number" class="form-control" data-fv-regexp-message="Please use a UK mobile phone number starting 07" data-fv-stringlength-message="Mobile phone numbers should be 11 numbers long"  />
+								<input type="hidden" name="id" value="ilZVWxO91VQ" />
+								<input type="hidden" name="__skey" value="p6CY8dSESLY" />
+								<button type="submit" disabled>Send SMS</button>
+							</div>
+						</form>
+					</div>
+				<div role="tabpanel" class="tab-pane text-center " id="share_service">
+					<div class="fb-like" style="margin-bottom:5px;" data-show-faces="false" data-share="false" data-layout="button"></div><br/>
+					<a class="twitter-share-button" data-count="none" href="https://twitter.com/share">Tweet</a><br/>
+					<script type="text/javascript">
+					window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+					</script>
+					<script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+					<script type="IN/Share"></script>
+				</div>
+			</div>
+		</aside>
+		<img src="assets/images/presence/folder_edge_sharp.png" alt="styling" />
+			<h3><i class="fa fa-location-arrow">&nbsp;</i>Directions</h3>
+			<aside id="service_map" class="related_section">
+				<img class="google-map center" src="//maps.googleapis.com/maps/api/staticmap?center=DN33+1NU&amp;zoom=14&amp;size=250x250&amp;maptype=roadmap&amp;markers=color:blue|DN33+1NU&amp;sensor=true" alt="Map of DN33 1NU"/>
+				<a target="_blank" title="Get directions to DN33 1NU (opens in a new window)" href="http://maps.google.co.uk/?hl=en&amp;saddr=&amp;daddr=DN33+1NU">Get directions to DN33 1NU</a>
+			</aside>
+		<img src="assets/images/presence/folder_edge_sharp.png" alt="styling" />
+			<h3><i class="fa fa-download">&nbsp;</i>Downloads</h3>
+			<aside class="related_section downloads">
+				<ul>
+					<li><a target="blank" href="https://search3.openobjects.com/mediamanager/nelincs/asch/documents/telecare_booklet.pdf"></a></li>
+					</ul>
+			</aside>
+		</div>
+</div></div>
+					<!-- WebMetric snippet starts here -->
+						<div class="govmetric_sidebar">
+							<p>Please rate this information/advice on this page</p>
+							<div id="faceRatingContainer">
+								<a href="https://websurveys.govmetric.com/theme/sm/1691?Q_RATINGID=3" class="gm_sidebar_anchor" title="Please rate this page" target="_blank" rel="nofollow">
+									<img src="https://wsstatic.servmetric.com/imgs/smileys/medium/good.png" title="Rate as Good" alt="Rate as Good" />
+								</a>
+								<a href="https://websurveys.govmetric.com/theme/sm/1691?Q_RATINGID=2" class="gm_sidebar_anchor" title="Please rate this page" target="_blank" rel="nofollow">
+									<img src="https://wsstatic.servmetric.com/imgs/smileys/medium/average.png" title="Rate as Average" alt="Rate as Average" />
+								</a> 
+								<a href="https://websurveys.govmetric.com/theme/sm/1691?Q_RATINGID=4" class="gm_sidebar_anchor" title="Please rate this page" target="_blank" rel="nofollow">
+									<img src="https://wsstatic.servmetric.com/imgs/smileys/medium/poor.png" title="Rate as Poor" alt="Rate as Poor" />
+								</a>
+							</div>
+						</div>
+						<link rel="stylesheet" type="text/css" href="https://wsstatic.servmetric.com/css/client/gm_sidebar.css" />
+						<script type="text/javascript" src="https://wsstatic.servmetric.com/js/client/gm_sidebar.js"></script>
+						<script type="text/javascript" src="https://hitcounter.servmetric.com/1116"></script>
+						<!-- WebMetric snippet ends here -->
+					<a href="#" class="back-to-top" title="Link to the top of the page">Back to top</a>
+					<!-- End Content -->
+					<!-- Footer -->
+					<footer id="footer">
+						<div id="menu_footer" class="container">
+							<ul>
+								<li><a href="accessibility.page" title="Accessibility page"><i class="fa fa-plus-circle"></i><i class="fa fa-user">&nbsp;</i>Accessibility</a></li>
+								<li><a href="help.page" title="Help page"><i class="fa fa-lightbulb-o">&nbsp;</i>Help</a></li>
+							</ul>
+							<small><em><i class="fa fa-copyright">&nbsp;</i>2015 services4me</em></small>
+						</div>						
+					</footer><!-- End Footer -->
+				</div>
+				<!-- JavaScript -->
+				<script src="//search3.openobjects.com/cdn/jquery/1.11.2.min.js" type="text/javascript"></script>
+<script src="//search3.openobjects.com/cdn/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="//search3.openobjects.com/cdn/formvalidation/0.6.0/formvalidation.min.js" type="text/javascript"></script>
+<script src="//search3.openobjects.com/cdn/formvalidation/0.6.0/framework/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/script.min.js" type="text/javascript"></script>
+<script src="//search3.openobjects.com/cdn/tinymce/4.1.7/tinymce.min.js" type="text/javascript"></script>
+    		<script src="assets/js/reviews.min.js" type="text/javascript"></script>
+    	<script src="app.proxy?app=/frontdoorscreening/v2/assets/js/app.js" ></script><script type="text/javascript">
+	$('body').on("click", '#Toolbar #toolbar li a[href="contact_log.page"]', function(e){
+		e.preventDefault();
+		window.open("contact_log.page", "_blank", "directories=no,titlebar=no,toolbar=no,location=no,menubar=no,status=no,scrollbars=1,resizable=yes,top=200,left=200,width=1000,height=500");
+	});
+</script></body>
+		</html>
+	

@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js">
+<head>
+<meta charset="utf-8" />
+
+  
+  
+  
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <meta name="keywords" content="Breakfast, After school and Holiday Clubs" />
+    
+    <meta name="dcterms.available" content="2015-03-04T16:45:26Z" />
+    <meta name="dc.type" content="Content Page" />
+  
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="google-translate-customization" content="c891ed76c3b0235-832d37a42e0942b1-gafa62815664b2abd-11" />
+<title>Breakfast, After school and Holiday Clubs - barnet.gov.uk</title>
+
+<!--
+TODO: shortcut icon needs setting. Don't re-enable with href="#" as it causes another GET request to be triggered by Chrome.
+<link rel="shortcut icon" type="image/ico" href="#" />
+-->
+
+<link rel="stylesheet" href="/docroot/css/leaflet.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/docroot/css/chosen.min.css" />
+<link rel="stylesheet" href="/docroot/css/jquery.mCustomScrollbar.min.css" />
+
+
+<link rel="stylesheet" href="/docroot/css/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="/docroot/js/jquery-1.11.0.min.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="/docroot/js/jquery-ui.js"></script>
+<script src="/docroot/js/date-picker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/styles.css" media="screen, print" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.date.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.time.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/print.css" media="print" />
+
+
+<script src="/docroot/js/plugins/rem.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+  <script src="/docroot/js/plugins/nwmatcher-1.2.5.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/selectivizr.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/docroot/css/ie8.css" />
+<![endif]-->
+
+<!--[if ! lte IE 6]><!-->
+
+
+<!-- #TODO CBSCH-261 Fixing Foundation Javascript error -->
+<style type="text/css">
+meta.foundation-data-attribute-namespace {
+    font-family: false;
+}
+</style>
+
+<script src="/docroot/js/leaflet.js"></script>
+<script src="/docroot/js/leaflet.markercluster-src.js"></script>
+<script src="/docroot/js/leaflet.markercluster.js"></script>
+
+<script src="/docroot/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/init-behaviour.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.placeholder.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.accordion.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.tab.js" type="text/javascript"></script>
+
+<script src="/docroot/js/scroll.js" type="text/javascript"></script>
+
+<script src="/docroot/js/classie.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery-truncate/jquery.truncate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/modernizr.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/fastclick.js" type="text/javascript"></script>
+
+<script src="/docroot/js/iframeResizer.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.reveal.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/additional-methods.min.js" type="text/javascript"></script>
+
+<script src="https://www.browsealoud.com/plus/scripts/ba.js" type="text/javascript"></script>
+
+<script src="/docroot/js/browse-aloud.js" type="text/javascript"></script>
+
+
+<!--<![endif]-->
+<script>
+    /*<![CDATA[*/
+    (function (BCP) {
+        BCP.registerAjaxUrl = '/citizen-home/register/content/column1/singleton.html';
+        BCP.loginAjaxUrl = '/citizen-home/login/content/column1/singleton.html';
+    })(BCP);
+    /*]]>*/
+</script>
+
+<!-- Clickjacking prevention for legacy browsers that don't support X-Frame-Options header -->
+  
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+  
+
+<script>
+
+    /*<![CDATA[*/
+    jQuery(document).ready(function() {
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        var TP_GA = {
+            gaTrackerId : 'UA-60148629-1',
+            auth : false,
+            authDimensionName : 'dimension1'
+        }
+
+        ga('create', TP_GA.gaTrackerId, 'auto');
+        ga('set', 'forceSSL', true);
+
+        if (TP_GA.authDimensionName != '') {
+            ga('set', TP_GA.authDimensionName, TP_GA.auth.toString());
+        }
+
+        ga('send', 'pageview');
+    });
+    /*]]>*/
+</script>
+  
+ 
+
+</head>
+<body id="citizen-content-pg" class="nav-col">
+      
+    <div class="header">
+        <header>
+            <div id="skiptocontent">
+                <a href="#contentskip">Skip to content</a>
+            </div>
+             <span class="barnet-logo column small-3">
+                <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                    Barnet</a>
+                <img class="print-only" src="/docroot/img/barnet-logo-green.png" />
+            </span> 
+             <form class="global-search search-controls service-search large-6 large-offset-1 column" method="GET" action="/citizen-home/search.html">
+                <div class="global-search-input">
+                    <input type="search" name="keywords" title="main-search" />
+                </div>
+                <div class="global-search-submit">
+                    <button type="submit" class="button expand">Search</button>
+                </div>
+            </form> 
+              
+            <div class="user-section">
+                 <div id="129fae96-207a-4482-963b-0578a901db3b">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/branding/user/singleton';
+        var target = '#' + '129fae96-207a-4482-963b-0578a901db3b';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                                {
+                                    pageLanguage : 'en',
+                                    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+                                },
+                                'google_translate_element');
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+            </div>
+              
+            <div class="mobile-nav">
+                <i class="iconfontello-search"></i>
+                <i class="iconfontello-menu"></i>
+            </div>
+        </header>
+    </div>
+      
+      
+      
+    
+      
+      
+      
+    <div class="content">
+        
+              
+<nav id="nav" class="side-nav side-nav-off medium-4 large-3 column">
+    <!-- TODO: Why do we need a LI wrapping the nav? This means our level has to start at 2! -->
+    <ul class="nav-level-1" style="display: block">
+        <li class="open">
+              
+            <ul class="nav-level-2" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/children-young-people-and-families.html">
+                        <i></i>
+                        <span class="menu-item">Children, young people and families</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/children-young-people-and-families/childcare.html">
+                        <i></i>
+                        <span class="menu-item">Childcare</span>
+                    </a>
+                      
+            <ul class="nav-level-4" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare/free-childcare-for-2-3-and-4-year-olds.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Free childcare for 2, 3 and 4 year olds</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare/early-education.html">
+                        <i></i>
+                        <span class="menu-item">Early education</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare/careers-in-childcare.html">
+                        <i></i>
+                        <span class="menu-item">Careers in childcare</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare/choosing-childcare.html">
+                        <i></i>
+                        <span class="menu-item">Choosing childcare in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare/childminders-in-barnet.html">
+                        <i></i>
+                        <span class="menu-item">Childminders in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare/childrens-centres.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Children&#039;s centres in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare/daycare.html">
+                        <i></i>
+                        <span class="menu-item">Daycare</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li class="open active">
+                    <a href="/citizen-home/children-young-people-and-families/childcare/breakfast-after-school-and-holiday-clubs.html">
+                        <i></i>
+                        <span class="menu-item">Breakfast, After school and Holiday Clubs</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare/other-childcare-options.html">
+                        <i></i>
+                        <span class="menu-item">Other childcare options</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare/childcare-sufficiency-assessment.html">
+                        <i></i>
+                        <span class="menu-item">Childcare Sufficiency Assessment</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+        </li>
+    </ul>
+</nav>
+  
+            <div class="large-9 medium-8 small-12 column main-content">
+                 <nav id="breadcrumb-nav">
+        <div id="breadcrumb" class="breadcrumb-panel">
+            <ul class="breadcrumbs">
+                  
+                
+                <li>
+                    <a href="/citizen-home.html">Home</a>
+                </li>
+                 
+                  
+                <li class="service-nav">
+                    <select onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="Our services">Our services</option>
+                        <option value="/citizen-home/business.html">Business Support in Barnet</option>
+                        <option value="/citizen-home/environmental-health.html">Environmental Health and Trading Standards</option>
+                        <option value="/citizen-home/libraries.html">Libraries</option>
+                        <option value="/citizen-home/regeneration.html">Regeneration</option>
+                        <option value="/citizen-home/public-health.html">Public Health </option>
+                        <option value="/citizen-home/adult-social-care.html">Adult social care</option>
+                        <option value="/citizen-home/council-and-democracy.html">Council and democracy</option>
+                        <option value="/citizen-home/housing-and-community.html">Housing and community</option>
+                        <option value="/citizen-home/schools-and-education.html">Schools and education</option>
+                        <option value="/citizen-home/parks-sport-and-leisure.html">Parks, sport and leisure</option>
+                        <option value="/citizen-home/council-tax-and-benefits.html">Council Tax and Benefits</option>
+                        <option value="/citizen-home/parking-roads-and-pavements.html">Parking, roads and pavements</option>
+                        <option value="/citizen-home/rubbish-waste-and-recycling.html">Rubbish, waste and recycling</option>
+                        <option value="/citizen-home/children-young-people-and-families.html">Children, young people and families</option>
+                        <option value="/citizen-home/births-deaths-marriages-and-nationality.html">Births, deaths, marriages and nationality</option>
+                        <option value="/citizen-home/planning-conservation-and-building-control.html">Planning, Conservation and Building Control</option>
+                        <option value="/citizen-home/news.html">News and features</option>
+                        <option value="/citizen-home/directories.html">Directories</option>
+                        <option value="/citizen-home/events.html">Events List</option>
+                        <option value="/citizen-home/pledgebank.html">Pledges</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families.html">Children, young people and families</a>
+                </li>
+                 
+                  
+                
+                <li>
+                    <a href="/citizen-home/children-young-people-and-families/childcare.html">Childcare</a>
+                </li>
+                 
+                  
+                
+                
+                  
+            </ul>
+        </div>
+    </nav> 
+                  
+                <span class="skip-anchor" id="contentskip"></span>
+                 <main id="main" role="main">
+                    
+                  
+                <div id="intro" class="content-page-intro">
+
+                      
+                    <div class="small-12 columns left flush-left">
+                    
+                        <h1>Breakfast, After school and Holiday Clubs</h1>
+                          
+                        <ul>
+                            <li>
+                                
+                                    <small>Children, young people and families</small>
+                                
+                            </li>
+                        </ul>
+                        
+                       
+                          
+                          
+                       
+                    </div>
+
+                    
+                    
+                    
+                    
+                      
+                     
+                </div>
+                  
+                 
+            <div class="row">
+                 
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>If you are looking for a breakast, club, after school club or holiday playscheme, you can search online using our <a href="/citizen-home/children-young-people-and-families/childcare/childcare-directories.html">childcare directory</a> or contact <a href="/citizen-home/children-young-people-and-families/fyi-families-and-young-peoples-information-service.html" title="FYi">FYi</a> for futher information.</p>
+
+<h3>Breakfast clubs</h3>
+
+<table summary="breakfast clubs">
+	<caption>
+	<p>Breakfast clubs explained</p>
+	</caption>
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>What is a breakfast club?</strong></p>
+			</td>
+			<td>
+			<p>Breakfast clubs are usually held in a school and often breakfast is available. Breakfast clubs can operate in a community hall/centre.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Age groups</strong></p>
+			</td>
+			<td>
+			<p>4 - 16 years</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Hours available</strong></p>
+			</td>
+			<td>
+			<p>They operate during term time only and are generally open from 8am until the start of the school day.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Staff ratios</strong></p>
+
+			<p><strong>(staff:children)</strong></p>
+			</td>
+			<td>
+			<p>1:8 for children aged 3 to 8 years.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Are they registered with Ofsted?</strong></p>
+			</td>
+			<td>
+			<p>Breakfast clubs are generally not required to register with Ofsted as most operate for less than two hours a day.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Activities offered</strong></p>
+			</td>
+			<td>
+			<p>Breakfast and activities before school starts, sometimes including quizzes and games.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Cost (average in Barnet)</strong></p>
+			</td>
+			<td>
+			<p>&pound;1.50 - &pound;4 per session.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Can you pay with childcare vouchers or Working Tax Credits?</strong></p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Can the offer the Free Entitlement to Early Education?</strong></p>
+			</td>
+			<td>
+			<p>No</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Why choose a breakfast club?</strong></p>
+			</td>
+			<td>
+			<ul>
+				<li>
+				<p>Some families where both parents work need a safe place for their children to go early in the morning.</p>
+				</li>
+				<li>
+				<p>Families who have a long journey to school may leave home too early for breakfast.</p>
+				</li>
+				<li>
+				<p>Breakfast clubs offer children an opportunity to socialise with others before school starts.</p>
+				</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>After school clubs</h3>
+
+<table summary="after school clubs">
+	<caption>
+	<p>After school clubs explained</p>
+	</caption>
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>What is an after school club?</strong></p>
+			</td>
+			<td>
+			<p>These can be held in a variety of venues including schools and community centres or halls.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Age groups</strong></p>
+			</td>
+			<td>
+			<p>4 - 16 years</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Hours available</strong></p>
+			</td>
+			<td>
+			<p>They often serve several schools in the same area and are open from the end of the school day until 6 pm term time only.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Staff ratios</strong></p>
+			</td>
+			<td>
+			<p>1:8 for children aged 3 to 8 years.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Are they registered with Ofsted?</strong></p>
+			</td>
+			<td>
+			<p>If the after school club is run by the school they do not need a separate registration as they can use the schools registeration.</p>
+
+			<p>If an after school club operates for more than two hours a day and looks after children under the age of eight they are required to register with Ofsted, if they operate under two hours and/or look after children over the age of eight they are not required registration with Ofsted.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Activities offered</strong></p>
+			</td>
+			<td>
+			<p>They offer a variety of activities including arts and crafts, sports or games. Some clubs will operate a school pickup service.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Cost (average in Barnet)</strong></p>
+			</td>
+			<td>
+			<p>&pound;6 - &pound;8 per session</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Can you pay with childcare vouchers or Working Tax Credits?</strong></p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Can the offer the Free Entitlement to Early Education?</strong></p>
+			</td>
+			<td>
+			<p>No</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Why choose an after school</strong> <strong>club?</strong></p>
+			</td>
+			<td>
+			<ul>
+				<li>
+				<p>some families where both parents work need a safe place for their children to go after school</p>
+				</li>
+				<li>
+				<p>after school club within the school means that children do not have to travel and are familiar with the building and staff operating the service.</p>
+				</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>Holiday playschemes</h3>
+
+<table summary="Holiday playschemes ">
+	<caption>
+	<p>Holiday playschemes explained</p>
+	</caption>
+	<tbody>
+		<tr>
+			<td>
+			<p><strong>What is a holiday playscheme?</strong></p>
+			</td>
+			<td>
+			<p>Holiday playschemes can take place in a variety of venues such as schools, community centres or halls.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Age groups</strong></p>
+			</td>
+			<td>
+			<p>In general most holiday play schemes care for children from four years upwards.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Hours available</strong></p>
+			</td>
+			<td>
+			<p>Most operate during the summer holidays varying from four to six weeks, while some operate during all school holidays and half terms.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Staff ratios</strong></p>
+			</td>
+			<td>
+			<p>1:8 for children aged 3 to 8 years.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Are they registered with Ofsted?</strong></p>
+			</td>
+			<td>
+			<p>They are only registered with Ofsted if they are open for more than two hours and take children below the age of eight.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Activities offered</strong></p>
+			</td>
+			<td>
+			<p>Sports, arts and crafts and sometimes outings.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Cost (average in Barnet)</strong></p>
+			</td>
+			<td>
+			<p>&pound;112 per week</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Can you pay with childcare vouchers or Working Tax Credits?</strong></p>
+			</td>
+			<td>
+			<p>Yes</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Can the offer the Free Entitlement to Early Education?</strong></p>
+			</td>
+			<td>
+			<p>No</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><strong>Why choose a <strong>holiday play scheme</strong>? </strong></p>
+			</td>
+			<td>
+			<ul>
+				<li>
+				<p>provide childcare for parents who are working</p>
+				</li>
+				<li>
+				<p>children can play and socialise in a safe and caring environment</p>
+				</li>
+				<li>
+				<p>opportunity for children to engage in a range of activities that are fun and age appropriate</p>
+				</li>
+				<li>
+				<p>many schemes will arrange visits and day trips.</p>
+				</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+</div>
+<section class="contacts-widget widget">
+                    <h2>Contacts</h2>
+                      
+                    <div class="contacts-widget-wrapper clearfix">
+                          
+                        <div>
+                            <ul class="contact-info">
+                                <li class="text-strong">FYi</li>
+                                <li>North London Business Park (NLBP), Oakleigh Road South, London N11 1NP</li>
+                                <li>&nbsp;</li>
+                                
+                                <li>
+                                    <span class="text-strong">Tel: </span>
+                                    <span>0800 389 8312 </span>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                        <div class="hours">
+                            <ul>
+                                <li class="text-strong">Opening hours</li>
+                                <li>Families and Young People's Information Service.<br /><br />Enquiries: <a href="/citizen-home/children-young-people-and-families/forms/FYi-general-enquiries">Contact us online</a><br /><br /><br />9am - 5.15pm Monday to Thursday9am - 5pm on Fridays</li>
+                            </ul>
+                        </div>
+                          
+                    </div>
+                    
+                    
+                      
+                </section> 
+    <section class="documents-widget widget">
+        <h2>Download documents</h2>
+        <div class="documents-widget-wrapper clearfix">
+              
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:ab345251-40b1-416f-a73f-cebeff57114f/Childcare_Explained.pdf">Childcare Information</a>
+                <span>0.55 MB</span>
+                  
+
+                  
+            </div>
+
+              
+        </div>
+    </section>
+      
+            </div>
+         
+                </main> 
+                
+                 <div class="row">
+                    <div class="panel">
+                          
+                <section class="gm_sidebar row">
+                    <div class="gm-container">
+                        <div class="rate-page">
+                            <i class="iconfontello-thumbs-up"></i>
+                            <p>Rate this page</p>
+                        </div>
+                        <div class="rating-options">
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=3" target="_blank" title="rate this page as GOOD" rel="nofollow">
+                                <img src="/docroot/img/govmetric/smiling.png" alt="green smiley (good)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=2" target="_blank" title="rate this page as AVERAGE" rel="nofollow">
+                                <img src="/docroot/img/govmetric/indifferent.png" alt="orange smiley (average)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=4" target="_blank" title="rate this page as POOR" rel="nofollow">
+                                <img src="/docroot/img/govmetric/sad.png" alt="red smiley (poor)" />
+                            </a>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+                    <script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+                    <script type="text/javascript" src="//hitcounter.govmetric.com/982"></script>
+                </section>
+                  
+                    </div>
+                </div> 
+                
+            </div>
+        
+        
+          
+    </div>
+      
+      
+    <footer>
+          
+          
+        <nav class="footer-nav clearfix row">
+            <ul class="footer-links left">
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html" class="internal-link">Contact us</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/copyright.html" class="internal-link">Copyright</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/privacy.html" class="internal-link">Privacy notice</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" class="internal-link">Accessibility</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Disclaimer.html" class="internal-link">Disclaimer</a>
+                            
+                            
+                            
+                             </li>
+                
+                
+                
+                
+                
+                
+            </ul>
+            <ul class="social-icons right">
+                <li><a href="https://www.gov.uk/"><img height="18" width="90" src="/docroot/img/gov-uk-logo.png" alt="gov uk logo" /></a></li>
+                <li><a href="https://www.flickr.com/photos/barnetcouncil"><i class="flaticon-flickr"></i></a></li>
+                <li><a href="https://twitter.com/barnetcouncil"><i class="flaticon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/BarnetCouncil"><i class="flaticon-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/user/Barnetcouncil1"><i class="flaticon-youtube"></i></a></li>
+                <li class="browse-aloud-icon"><a id="show-browsealoud" title="Listen with BrowseAloud"><img src="/docroot/img/browse-aloud-logo.png" alt="Listen with BrowseAloud" /></a></li>
+            </ul>
+        </nav>
+        <div class="site-footer">
+            <div class="row">
+                <span class="barnet-logo right">
+                    <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                        Barnet</a>
+                </span>
+            </div>
+        </div>
+          
+    </footer>
+      
+    <script src="/docroot/js/plugins/retina.min.js" type="text/javascript"></script>
+    <script src="/docroot/js/plugins/chosen.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery("#ordering-download-form select").chosen();
+    jQuery(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+</body>
+</html>

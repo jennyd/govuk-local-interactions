@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Online Form | Newcastle-Under-Lyme Borough Council
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        @import url("bootstrap/css/bootstrap.css");
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/Main.css" />
+
+    <script src="/sites/all/themes/NULBCv1/js/nulbc.js" type="text/javascript"></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+        function searchTriggered(event) {
+            if (event.keyCode == 13) {
+                //alert(document.getElementById('ctl00_txtmainsearch').value);
+                //searchRedirect();
+            }
+            else {
+                //var searchElement = document.getElementById('ctl00_txtmainsearch');
+                //alert(String.fromCharCode(event.keyCode));
+                //searchElement.value += String.fromCharCode(event.keyCode);
+            }
+        }
+        
+        function searchRedirect() {
+            var searchTerm = document.getElementById('ctl00_txtmainsearch').value;
+            //alert("reached search: " + searchTerm);
+            window.location("/search?search_api_views_fulltext=" + searchTerm);
+        }
+
+        function showhideDivision(what) {
+
+            try {
+                var division = document.getElementById(what);
+                if (division.style.display == "none" || division.style.display == "") {
+                    division.style.display = "block";
+                }
+                else {
+                    division.style.display = "none";
+                }
+            }
+            catch (err) {
+                alert("Error " + what + ": " + err.message);
+            }
+        }
+    
+    </script>
+    <form name="aspnetForm" method="post" action="default.aspx?id=17" id="aspnetForm">
+<input type="hidden" name="_TSM_HiddenField_" id="_TSM_HiddenField_" value="gw7jpIJ8LMgM7u8gLjQBxxbgFlVTP1p_vIL8EuJVw1w1" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTIzMTYzODUyOQ9kFgJmD2QWAgIBD2QWAgIFD2QWCAIDDw8WAh4EVGV4dAUvUmVxdWVzdCBhIFJlcGxhY2VtZW50IFdhc3RlIG9yIEdhcmRlbiBXYXN0ZSBCaW5kZAIFDw8WAh8ABS9SZXF1ZXN0IGEgUmVwbGFjZW1lbnQgV2FzdGUgb3IgR2FyZGVuIFdhc3RlIEJpbmRkAgsPDxYCHwAFqgU8cD5Vc2UgdGhlIGZvcm0gYmVsb3cgdG8gcmVxdWVzdCBhIHJlcGxhY2VtZW50IHdhc3RlIG9yIGdhcmRlbiB3YXN0ZSBiaW48L3A+DQo8dWw+DQo8bGk+UGxlYXNlIG5vdGUgdGhhdCB0aGUgYmlucyByZW1haW4gcHJvcGVydHkgb2YgdGhlIGNvdW5jaWwgYXQgYWxsIHRpbWVzIGFuZCBhZGRpdGlvbmFsIGdhcmRlbiB3YXN0ZSBiaW5zIGNhbiBiZSBjaGFyZ2VhYmxlLjwvbGk+IA0KPGxpPklmIHlvdSBkbyBub3QgbmVlZCBhIHN0YW5kYXJkIDE4MEwgYmluLCBvciBmaW5kIGl0IGRpZmZpY3VsdCB0byBzdG9yZSwgYSBzbWFsbGVyIDE0MEwgYmluIGlzIGF2YWlsYWJsZSB1cG9uIHJlcXVlc3QuPC9saT4NCjxsaT5Ib3VzZWhvbGRzIHdpdGggNiBvciBtb3JlIHBlcm1hbmVudCByZXNpZGVudHMgYXJlIGVudGl0bGVkIHRvIGEgbGFyZ2VyIDI0MEwgYmluIHVwb24gcmVxdWVzdC4gUGxlYXNlIG5vdGUgdGhhdCBhIGZvcm1hbCBhcHBsaWNhdGlvbiBoYXMgdG8gYmUgbWFkZS48L2xpPg0KPC91bD4NCjxwPlBsZWFzZSBjb21wbGV0ZSB0aGUgZm9ybSBiZWxvdyBhbmQgYSBDdXN0b21lciBTZXJ2aWNlcyBBZ2VudCB3aWxsIGNvbnRhY3QgeW91IHRvIGRpc2N1c3MgdGhlIGRldGFpbHMgb2YgeW91ciByZXF1ZXN0LiAgQWx0ZXJuYXRpdmVseSwgeW91IGNhbiBjYWxsIHVzIG9uIDAxNzgyIDcxNzcxNy48L3A+ZGQCDQ8PFgQeCENzc0NsYXNzBQhmb3JtaWQxNx4EXyFTQgICZGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgQFLGN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2xzdGdlbmVyYWx3YXN0ZSQwBSxjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNsc3RnZW5lcmFsd2FzdGUkMAUrY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjbHN0Z2FyZGVud2FzdGUkMAUrY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjbHN0Z2FyZGVud2FzdGUkMDmFF9WB3liow8kC2+AaEbm/5eSs" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = '{"name":"en-GB","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"£","NaNSymbol":"NaN","CurrencyNegativePattern":1,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"Infinity","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"AM","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":2,"FullDateTimePattern":"dd MMMM yyyy HH:mm:ss","LongDatePattern":"dd MMMM yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"dd MMMM","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"ShortestDayNames":["Su","Mo","Tu","We","Th","Fr","Sa"],"DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"IsReadOnly":true,"NativeCalendarName":"Gregorian Calendar","AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""]}}';//]]>
+</script>
+
+<script src="/online-form/ScriptResource.axd?d=MGCj4_XfCUE_mtST8kwsQpphg-l6Zy_cpUsqm1YwGjmdbUBfwOI6d9GV9i4CI0nJ6MTOjSnFmRGMz8O5bndK7cqw1UxC_FRoQ9HbNDOPxHkFKAMk0&amp;t=ffffffffcda035a6" type="text/javascript"></script>
+<script src="/online-form/default.aspx?_TSM_CombinedScripts_=True&amp;v=gw7jpIJ8LMgM7u8gLjQBxxbgFlVTP1p_vIL8EuJVw1w1&amp;_TSM_Bundles_=&amp;cdn=False" type="text/javascript"></script>
+<script src="/online-form/ScriptResource.axd?d=TwkYihEfYMVpaxZHWLp1wLl9EFTyJo1TIIyZgYUiaUjUW2aO8E4PyoEfxawPa92SJi39L-zqY5mktM2W2ED7DkWJCTxONeAQW7XgqtUOXBqcQHh0tY2rhgh9bndNtxdYLKiE4Q2&amp;t=ffffffffcda035a6" type="text/javascript"></script>
+<script src="/online-form/ScriptResource.axd?d=OJ59TS-9bcr5zP2mWiRYC46CysvyeKXwdNsZlYEmCq1di2E9IuWsMnWNJkNDDVPA7XQBnzoD5VOYU_CyDLi5aGLTguXMjFUsHMSBxxbWUN-o60jZ648QK8Q5mzHbjNuKZvqP9Q2&amp;t=ffffffffcda035a6" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D92B1380" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWJAK8nuLRAQLt58SDDAL9n+COAgK62rCyCAKJhLnVCgK8hceHBgKpw9AHAsDZt/wIAt3mm78HAuvmgJ4KAtm025wEAsyDyJEIAsyDjKMCAu+DrKkIAu+D4LgCAu+DqKgIAu+D7LsCAu+DtKsIAu+D6LoCAu+DsKoIAu+D9L0CAu+DvK0IAu+D8LwCAu+DuKwIAu+D/L8CAu+DhK8IAu+D+L4CAtuMvr8LArTDuJoNApyf3IAEApuf3IAEApqf3IAEApGdzG8C1J6d0gECmqvFoAMCrpDzwglxcuq6GRiY0T1PO7aSKRF1jKoplw==" />
+    <div class="">
+    
+    
+        
+        
+        <header>
+            <nav class="navbar navbar-default navbar-static-top nbcNavBgWhite nbcNavBar">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span> 
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1 class="hidden">
+					        <a class="name navbar-brand" href="/" title="Home">Newcastle-under-Lyme Borough Council</a>
+                        </h1>
+								        <a class="navbar-brand" href="/" title="Home">
+				        <img src="/sites/all/themes/NULBCv1/logo.png" alt="Home" class="hidden-xs" />
+				        <span class="visible-xs" style="white-space: nowrap;">Newcastle-under-Lyme Borough Council</span> 
+				        </a>
+				                    </div>
+                    <div class="collapse navbar-collapse">
+                        <div class="navbar-form nbc-navbar-form navbar-right" role="search">
+                        <div id="search-form" role="search" action="/search" method="get">
+                            <div class="form-group">
+                                <div class="form-group" id="prefetch">
+                                    <input name="ctl00$txtmainsearch" type="text" id="ctl00_txtmainsearch" name="keys" type="text" class="form-control" placeholder="Search" onkeypress="javascript: searchTriggered(event); return true;" />
+                                </div>
+                                <div class="form-group">
+                                    <a onclick="javascript: searchRedirect(); return false;" id="ctl00_btnSearch" class="btn nbc-btn form-control" href="javascript:__doPostBack('ctl00$btnSearch','')">&nbsp;<span class="glyphicon glyphicon-search"></span>&nbsp;<span class="hidden"> Search</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                            <ul class="nav navbar-nav navbar-right ">
+                                <li>
+                                    <a accesskey="1" href="/">Home</a>
+                                </li>
+                                <li>
+                                    <a accesskey="2" href="/a-to-z-of-services">A to Z</a>
+                                </li>
+                                <li>
+                                    <a accesskey="3" href="/accessibility" class="hidden-xs">Accessibility</a>
+                                </li>
+                                <li>
+                                    <a accesskey="4" href="/contact-us" class="hidden-sm">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a accesskey="5" class="hidden-sm" href="/all-services">All Services</a>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>   
+<!--
+<header id="navbar" role="banner" class="navbar navbar-static-top navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="logo navbar-btn pull-left" href="/" title="Home">
+                <img src="http://svcms/sites/all/themes/NULBCv1/logo.png" alt="Home" />
+            </a>
+          
+          
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <nav role="navigation">
+                <ul class="menu nav navbar-nav">
+                    <li class="first leaf">
+                    <li class="leaf"><a href="/yourcouncil">Your Council</a></li>
+                    <li class="last leaf"><a href="/allservices">All Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+-->
+
+        
+    
+    <div class="main-container container">
+        <div class="easy-breadcrumb"><a href="/">Home</a> &gt; <a href="/online-forms">Online Forms</a> &gt; <span id="ctl00_ContentPlaceHolder1_lblFormBreadcrumb">Request a Replacement Waste or Garden Waste Bin</span></div>
+        <h1><span id="ctl00_ContentPlaceHolder1_lblFormTitle">Request a Replacement Waste or Garden Waste Bin</span>
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hfldFormID" id="ctl00_ContentPlaceHolder1_hfldFormID" value="17" />
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hfldSessionID" id="ctl00_ContentPlaceHolder1_hfldSessionID" value="7063c501-67ed-4227-9bbd-c431821e102c" />
+        </h1>
+        
+        <div style="padding:10px;border: solid 1px #ccc;background-color: White; margin:10px auto;">
+            <p><span id="ctl00_ContentPlaceHolder1_lblFormDescription"><p>Use the form below to request a replacement waste or garden waste bin</p>
+<ul>
+<li>Please note that the bins remain property of the council at all times and additional garden waste bins can be chargeable.</li> 
+<li>If you do not need a standard 180L bin, or find it difficult to store, a smaller 140L bin is available upon request.</li>
+<li>Households with 6 or more permanent residents are entitled to a larger 240L bin upon request. Please note that a formal application has to be made.</li>
+</ul>
+<p>Please complete the form below and a Customer Services Agent will contact you to discuss the details of your request.  Alternatively, you can call us on 01782 717717.</p></span></p>
+            <div id="ctl00_ContentPlaceHolder1_pnlForm" class="formid17">
+	
+            
+            <div id="ctl00_ContentPlaceHolder1_pnlsection52" class="formsection">
+		<span id="ctl00_ContentPlaceHolder1_lblsection52">Which bin do you need replacing</span>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlgeneralwaste" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lblclstgeneralwaste" class="formlabel "></span><span id="ctl00_ContentPlaceHolder1_clstgeneralwaste" class="formfield formfield_RemoveMargin col-xs-12  col-sm-4" style="display:inline-block;"><input id="ctl00_ContentPlaceHolder1_clstgeneralwaste_0" type="checkbox" name="ctl00$ContentPlaceHolder1$clstgeneralwaste$0" /><label for="ctl00_ContentPlaceHolder1_clstgeneralwaste_0"><img src="img/waste/180_ltr.jpg"  title="General waste bin" /></label></span>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlgardenwaste" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lblclstgardenwaste" class="formlabel "></span><span id="ctl00_ContentPlaceHolder1_clstgardenwaste" class="formfield formfield_RemoveMargin col-xs-12  col-sm-4" style="display:inline-block;"><input id="ctl00_ContentPlaceHolder1_clstgardenwaste_0" type="checkbox" name="ctl00$ContentPlaceHolder1$clstgardenwaste$0" /><label for="ctl00_ContentPlaceHolder1_clstgardenwaste_0"><img src="img/waste/garden_bin.jpg"  title="Garden waste bin" /></label></span>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlsection53" class="formsection formsection_forcetopmargin">
+		<span id="ctl00_ContentPlaceHolder1_lblsection53">Reason for replacement requst</span>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlreason" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lblddreason" class="formlabel formfieldblock">Please choose the most suitable reason for your replacement request</span><select name="ctl00$ContentPlaceHolder1$ddreason" id="ctl00_ContentPlaceHolder1_ddreason" class="formfield mandatory">
+			<option selected="selected" value="Please select">Please select</option>
+			<option value="Original container is damaged">Original container is damaged</option>
+			<option value="Original container is lost/stolen">Original container is lost/stolen</option>
+			<option value="Additional or larger container required">Additional or larger container required</option>
+
+		</select>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlsection54" class="formsection">
+		<span id="ctl00_ContentPlaceHolder1_lblsection54">When is the best time to contact you?</span>
+	</div><div id="ctl00_ContentPlaceHolder1_pnltime" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lblddtime" class="formlabel formfieldblock">A customer services agent will need to call to discuss your individual request.  Please let us know the best time for us to call you.</span><select name="ctl00$ContentPlaceHolder1$ddtime" id="ctl00_ContentPlaceHolder1_ddtime" class="formfield mandatory">
+			<option value="09:00">09:00</option>
+			<option value="09:30">09:30</option>
+			<option value="10:00">10:00</option>
+			<option value="10:30">10:30</option>
+			<option value="11:00">11:00</option>
+			<option value="11:30">11:30</option>
+			<option value="12:00">12:00</option>
+			<option value="12:30">12:30</option>
+			<option value="13:00">13:00</option>
+			<option value="13:30">13:30</option>
+			<option value="14:00">14:00</option>
+			<option value="14:30">14:30</option>
+			<option value="15:00">15:00</option>
+			<option value="15:30">15:30</option>
+			<option value="16:00">16:00</option>
+			<option value="16:30">16:30</option>
+
+		</select>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlcomments" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtcomments" class="formlabel formfieldblock">Additional information</span><textarea name="ctl00$ContentPlaceHolder1$txtcomments" rows="3" cols="20" id="ctl00_ContentPlaceHolder1_txtcomments" class="formfield formfieldblock" autocomplete="off" placeholder=""></textarea>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlsection55" class="formsection formsection_forcetopmargin">
+		<span id="ctl00_ContentPlaceHolder1_lblsection55">Your details</span>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlname" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtname" class="formlabel formfieldblock">Your name</span><input name="ctl00$ContentPlaceHolder1$txtname" type="text" id="ctl00_ContentPlaceHolder1_txtname" class="formfield mandatory" autocomplete="off" placeholder="" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnladdress1" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtaddress1" class="formlabel formfieldblock">Address</span><input name="ctl00$ContentPlaceHolder1$txtaddress1" type="text" id="ctl00_ContentPlaceHolder1_txtaddress1" class="formfield mandatory" autocomplete="off" placeholder="Address line 1" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnladdress2" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtaddress2" class="formlabel formfieldblock"></span><input name="ctl00$ContentPlaceHolder1$txtaddress2" type="text" id="ctl00_ContentPlaceHolder1_txtaddress2" class="formfield mandatory" autocomplete="off" placeholder="Address line 2" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnladdress3" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtaddress3" class="formlabel formfieldblock"></span><input name="ctl00$ContentPlaceHolder1$txtaddress3" type="text" id="ctl00_ContentPlaceHolder1_txtaddress3" class="formfield " autocomplete="off" placeholder="Address line 3" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnlpostcode" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtpostcode" class="formlabel formfieldblock">Postcode</span><input name="ctl00$ContentPlaceHolder1$txtpostcode" type="text" id="ctl00_ContentPlaceHolder1_txtpostcode" class="formfield mandatory" autocomplete="off" placeholder="" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnlemail" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtemail" class="formlabel formfieldblock">Email</span><input name="ctl00$ContentPlaceHolder1$txtemail" type="text" id="ctl00_ContentPlaceHolder1_txtemail" class="formfield mandatory mandatoryEmail" autocomplete="off" placeholder="" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnltelephone" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxttelephone" class="formlabel formfieldblock">Telephone</span><input name="ctl00$ContentPlaceHolder1$txttelephone" type="text" id="ctl00_ContentPlaceHolder1_txttelephone" class="formfield mandatory " autocomplete="off" placeholder="" border="1" />
+	</div>
+</div>
+            <input type="submit" name="ctl00$ContentPlaceHolder1$btnRun" value="Submit" id="ctl00_ContentPlaceHolder1_btnRun" />
+            
+            <span id="ctl00_ContentPlaceHolder1_Label1"></span>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+
+        
+      
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<div>&nbsp;</div>
+
+<div id="footerAtoZ" class="container-fluid footer">
+	<div class="container containerfooterAtoZ">
+	  <div class="region region-footer-generic-pre">
+    <section id="block-block-13" class="block block-block clearfix">
+
+      
+  <div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-2 h4"><a href="/a-to-z-of-services">Services A-Z</a></div>
+<div class="col-sm-12 col-md-9 h4 text-left-sm text-right-md text-right-lg pull-right">
+<div class="hidden-xs">
+<ul class="list-nobullet list-inline hidden-xs"><li><a href="/a-to-z-of-services/a">A</a></li>
+<li><a href="/a-to-z-of-services/b">B</a></li>
+<li><a href="/a-to-z-of-services/c">C</a></li>
+<li><a href="/a-to-z-of-services/d">D</a></li>
+<li><a href="/a-to-z-of-services/e">E</a></li>
+<li><a href="/a-to-z-of-services/f">F</a></li>
+<li><a href="/a-to-z-of-services/g">G</a></li>
+<li><a href="/a-to-z-of-services/h">H</a></li>
+<li><a href="/a-to-z-of-services/i">I</a></li>
+<li><a href="/a-to-z-of-services/j">J</a></li>
+<li><a href="/a-to-z-of-services/k">K</a></li>
+<li><a href="/a-to-z-of-services/l">L</a></li>
+<li><a href="/a-to-z-of-services/m">M</a></li>
+<li><a href="/a-to-z-of-services/n">N</a></li>
+<li><a href="/a-to-z-of-services/o">O</a></li>
+<li><a href="/a-to-z-of-services/p">P</a></li>
+<li class="a-to-z-muted">Q</li>
+<li><a href="/a-to-z-of-services/r">R</a></li>
+<li><a href="/a-to-z-of-services/s">S</a></li>
+<li><a href="/a-to-z-of-services/t">T</a></li>
+<li><a href="/a-to-z-of-services/u">U</a></li>
+<li><a href="/a-to-z-of-services/v">V</a></li>
+<li><a href="/a-to-z-of-services/w">W</a></li>
+<li class="a-to-z-muted">X</li>
+<li><a href="/a-to-z-of-services/y">Y</a></li>
+<li class="a-to-z-muted">Z</li>
+</ul></div>
+</div>
+<div class="visible-xs">
+<select class="dropdown" id="dd_a-to-z" name="todecide" onchange="javascript:atozPost(this);"><option value="-">-</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option><option value="I">I</option><option value="J">J</option><option value="K">K</option><option value="L">L</option><option value="M">M</option><option value="N">N</option><option value="O">O</option><option value="P">P</option><option value="-">Q</option><option value="R">R</option><option value="S">S</option><option value="T">T</option><option value="U">U</option><option value="V">V</option><option value="W">W</option><option value="-">X</option><option value="Y">Y</option><option value="-">Z</option></select></div>
+</div>
+</div>
+<p> </p>
+
+</section> <!-- /.block -->
+  </div>
+	</div>
+</div>
+
+<footer id="footer" class="footer container-fluid">
+	
+	  <div class="region region-footer-generic">
+    <section id="block-block-2" class="block block-block clearfix">
+
+      
+<div class="container">
+<div class="col-sm-6 col-md-4">
+<p>Newcastle-under-Lyme Borough Council<br />
+			Merrial Street<br />
+			Newcastle<br />
+			ST5 2AG<br />
+			01782 717717</p>
+<p>			© Newcastle-under-Lyme Borough Council 2015</p>
+</div>
+<div class="col-sm-6 col-md-3">
+<p><a href="/all-services/cookies-policy">Cookies Policy</a><br /><a href="/all-services/privacy-policy">Privacy Policy</a><br /><a href="/all-services/general-disclaimer">General Disclaimers</a></p>
+</div>
+<div class="col-sm-6 col-md-2">Follow us on:
+<p>		<a href="http://www.facebook.com/pages/Newcastle-Under-Lyme-United-Kingdom/Newcastle-under-Lyme/121899634498998?ref=sgm" target="_blank" title="facebook"><span class="social_facebook"> </span></a> <a href="http://twitter.com/NewsNBC" target="_blank" title="Twitter"><span class="social_twitter"> </span></a></p>
+<div class="clearBoth"> </div>
+</div>
+<div class="col-sm-12 col-md-3 awards"><a alt="Plain English" href="http://www.plainenglish.co.uk" title="Plain English"><img src="/sites/all/themes/NULBCv1/img/footer/crystalmark.png" title="Plain English Mark" /></a> <a alt="Investors in People" href="https://www.investorsinpeople.com/" title="Investors in People"><img src="/sites/all/themes/NULBCv1/img/footer/iip_silver.png" title="Investors in People" /></a> <a alt="Gov.uk" href="https://www.gov.uk/" title="Gov.uk"><img src="/sites/all/themes/NULBCv1/img/footer/gov_uk.png" title="Gov.uk logo" /></a></div>
+<div class="clearBoth"> </div>
+</div>
+
+</section> <!-- /.block -->
+  </div>
+</footer>
+<div id="back-top" class="back-top" style="display: none;">
+	<a href="#"><span class="">Back to the top of the page</span></a>
+</div>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script type="text/javascript" src="/sites/all/themes/NULBCv1/bootstrap/js/nbc.js"></script>  
+<script type="text/javascript" src="/sites/all/themes/bootstrap/js/bootstrap.js?ntfe6d"></script>
+
+
+    </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

@@ -1,0 +1,326 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-GB">
+<head>
+<title>Surrey County Council Internet Booking System</title>
+        <meta name="description" content="User Log In - Enter your log in details to access the user area." >
+<meta name="keywords" content="Insight, Borough, Libraries, user, account, detail, computer, access">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="STYLESHEET" type="text/css" href="specific/style_home.css">
+<!--[if IE 7]><link rel="STYLESHEET" type="text/css" href="specific/ie7.css"><![endif]-->
+</head>
+<body>
+
+<script type="text/javascript">
+<!--
+var N=(document.layers)?true:false;
+var I=(document.all)?true:false;
+var M=(document.addEventListener)?true:false;
+var DOM = ((document.getElementById)&&(!I))?true:false;
+function cookiecheck()
+{
+if ((I||M)&&(!N)) {
+if (document.cookie.length > 0){
+document.frmLogin.cookieexists.value ="true";
+}
+else{
+alert("Cookies need to be enabled!");
+document.frmLogin.cookieexists.value ="false"}
+}
+else if (N) {
+if (document.cookie.length > 0){
+document.cookieexists.value ="true"}
+else{
+alert("Cookies need to be enabled!");
+document.cookieexists.value ="false"}
+}
+else if (DOM) {
+if (document.cookie.length > 0){
+document.getElementById('cookieexists') ="true"}
+else{
+alert("Cookies need to be enabled!");
+document.getElementById('cookieexists')="false"}
+}
+}
+//-->
+</script>
+<script type="text/javascript">
+<!--
+var submit_source='';
+var submitbutton=0;
+var editbutton=0;
+var cancelbutton=0;
+function goDate(Selected) {
+	var newDate = Selected.options[Selected.selectedIndex].value ;
+	if (newDate!=" ") {
+		var newurl= "booking.asp?selectDaysAvail="+newDate;
+		document.location.href = newurl;
+	}
+}
+function goDateAdmin(Selected) {
+	var newDate = Selected.options[Selected.selectedIndex].value ;
+	if (newDate!=" ") {
+		var newurl= "admin.asp?selectDaysAvail="+newDate;
+		document.location.href = newurl;
+	}
+}
+function goSite(Selected) {
+	var newSite = Selected.options[Selected.selectedIndex].text ;
+	if (newSite!=" ") {
+		var newurl= "booking.asp?selectedsite="+newSite;
+		document.location.href = newurl;
+ }
+}
+function goSiteAdmin(Selected) {
+	var newSite = Selected.options[Selected.selectedIndex].text ;
+	if (newSite!=" ") {
+		var newurl= "admin.asp?selectedsite="+newSite;
+		document.location.href = newurl;
+ }
+}
+function imagemapsetsite(siteidx) {
+ 	window.document.frmLogin.selectedsite.selectedIndex=siteidx;
+}
+function bfg(machineidx,bookingtime,machinetext) {
+ 	window.document.frmMakeBooking.selectmachine.selectedIndex=machineidx;
+	window.document.frmMakeBooking.StartTimeHr.selectedIndex=bookingtime.substring(0,2);
+	window.document.frmMakeBooking.StartTimeMin.selectedIndex=(bookingtime.substring(3,5)/15);
+	window.document.frmMakeBooking.selectDuration.focus;
+	setstatus("start time changed - please choose duration");
+}
+function bfga(machineidx,bookingtime) {
+	window.document.frmMakeBooking.selectmachine.selectedIndex=machineidx;
+	window.document.frmMakeBooking.StartTimeHr.selectedIndex=bookingtime.substring(0,2);
+	window.document.frmMakeBooking.StartTimeMin.selectedIndex=(bookingtime.substring(3,5)/15);
+	window.document.frmMakeBooking.selectDuration.focus;
+	setstatus("start time changed - please choose duration");
+}
+function confirmDelete(vardeleteid,varaccountdebit,varsite) {
+ if (cancelbutton==1) {
+	alert("Already submitted, please wait.");
+	return false;
+ }
+ window.document.frmDeleteBooking.deleteid.value=vardeleteid;
+ window.document.frmDeleteBooking.accountdebit.value=varaccountdebit;
+ window.document.frmDeleteBooking.site.value=varsite;
+ window.document.frmDeleteBooking.non_js.value="false";
+ 
+// alert ( window.document.frmDeleteBooking.deleteid.value);
+// alert('confirm');
+ 
+ var agree=confirm("Are you sure you want to cancel this booking?");
+ if (agree){
+	cancelbutton=1;
+	return true;
+	} else {
+	return false;
+	}
+ }
+function ltrim(str){
+                while(""+str.charAt(0)==" "){
+                str=str.substring(1,str.length)
+                }
+}
+function validate(form) {
+	//alert( "validate:" + submit_source );	
+	
+	if( submit_source != '' ) {
+		switch ( submit_source ) {
+			case 'update_pc_list':
+				//if it's false return validation error, else carry on
+				if ( !dontrequirepin() ) return false;
+			  break;
+			
+			case 'book_with_pin':
+				if ( !(requirepin()&&clickonce_s()) ) return false;
+				//if ( !book() ) return false;
+			  break;		
+			  
+			case 'book_without_pin':
+				if ( !clickonce_s() ) return false;
+			  break;
+		}
+	}
+	
+	setSubmitSource(''); 
+
+
+	for (i=0;i<form.elements.length;i++){
+		if ((form.elements[i].getAttribute("required")=="yes") && ((form.elements[i].value)=="")){
+			alert('Please complete required field: '+form.elements[i].getAttribute("title"));
+			form.elements[i].focus();
+			form.elements[i].select();
+                        form.elements[i].className=form.elements[i].getAttribute("class") +" required";
+			
+			submitbutton=0;
+			editbutton=0;
+			cancelbutton=0;
+                        
+			return false;
+			break
+		}
+	}
+	return true;
+}
+function submitonce(form){
+if (document.all||document.getElementById){
+  for (i=0;i<form.length;i++){
+    var temp=form.elements[i]
+    if(temp.type.toLowerCase()=="submit"){
+        temp.disabled=true
+    }
+  }
+}
+}
+
+function requirepin(){
+  if (window.document.frmMakeBooking.PINconfirm.getAttribute("required")=="no"){
+      window.document.frmMakeBooking.PINconfirm.setAttribute("required","yes");
+  }
+  return true;
+}
+
+function dontrequirepin(){
+  // Disabled trying to query a non existant PIN confirmation box.
+  //var reqd = window.document.frmMakeBooking.PINconfirm.getAttribute("required");
+  //if (reqd=="yes"){
+  //    window.document.frmMakeBooking.PINconfirm.setAttribute("required","no");
+  //}
+  return true;
+}
+
+
+function clickonce_s(){
+	if (submitbutton==1) {
+		 alert("Already submitted, please wait.");
+		 return false;
+	}
+	submitbutton=1;
+	return true;
+}
+function clickonce_e(){
+	if (editbutton==1) {
+		 alert("Already submitted, please wait.");
+		 return false;
+	}
+	editbutton=1;
+	return true;
+}
+function clickonce_c(){
+	if (cancelbutton==1) {
+		 alert("Already submitted, please wait.");
+		 return false;
+	}
+	cancelbutton=1;
+	return true;
+}
+function setstatus(s) {
+	top.status=s;
+}
+function setfocus(obj) {
+	obj.focus();
+}
+function book() {
+	return requirepin()&&clickonce_s();
+}
+function na() {;}
+
+function jt_validate() {
+	alert('wibble');
+}
+
+function setSubmitSource( source ) {
+	submit_source = source;
+}
+
+
+// -->
+</script>
+
+
+<div id="site_header">
+	<div id="header_logo_full">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr bgcolor="#339999">
+<td align="left">
+<a href="http://www.surreycc.gov.uk/"><img alt="logo" border="0" src="images/scc_logo.gif"></a>
+</td>
+</table>
+
+    </div>
+    
+
+
+
+  
+	<div class="clear"><!-- --></div>    	
+</div>
+
+		<h2>
+		Welcome to Surrey Libraries online computer booking facility
+
+		</h2>
+		<p>
+		We reserve the right to change, amend or cancel your bookings.
+Computer usage is subject to the Authority Stated <a href="specific/t&amp;c.htm" title="terms and conditions">terms and conditions.</a>
+
+		</p>
+		<p>
+		
+If you encounter any problems please contact <a href="http://new.surreycc.gov.uk/people-and-community/libraries/your-library/find-your-nearest-library" title="your local library">your local library.</a>
+
+		</p>
+
+<div class="menu2">
+	<ul>
+    	<li class="first"><a rel="help" href="help.asp" target="_blank">Help</a></li>
+	</ul>
+    <div class="clear"><!-- clearing div --></div>
+</div>
+
+
+
+<form name="frmLogin" method="post" action="booking.asp" onSubmit="return validate(this);"> 
+<fieldset id="login_fieldset">
+<legend accesskey="0">Login</legend>
+
+<input type="hidden" name="cookieexists" id="cookieexists" value="false">
+
+<div class="row">
+	<label class="access_label" for="selectedsite" accesskey="1">Please select your Library: </label>
+    <span class="formw">
+    <select name="selectedsite" id="selectedsite">
+      <option>Addlestone</option><option>Ash</option><option>Ashford</option><option>Ashtead</option><option>Bagshot</option><option>Banstead</option><option>Bookham</option><option>Bramley</option><option>Byfleet</option><option>Camberley</option><option>Caterham Hill</option><option>Caterham Valley</option><option>Chertsey</option><option>Cobham</option><option>Cranleigh</option><option>Dittons</option><option>Dorking</option><option>Egham</option><option>Epsom</option><option>Esher</option><option>Ewell</option><option>Ewell Court</option><option>Farnham</option><option>Frimley Green</option><option>Godalming</option><option>Guildford</option><option>Haslemere</option><option>Hersham</option><option>Horley</option><option>Horsley</option><option>Knaphill</option><option>Leatherhead</option><option>Lightwater</option><option>Lingfield</option><option>Merstham</option><option>Molesey</option><option>New Haw</option><option>Oxted</option><option>Performing Arts</option><option>Redhill</option><option>Reigate</option><option>Shepperton</option><option>Staines</option><option>Stanwell</option><option>Stoneleigh</option><option>Sunbury</option><option>Surrey History Centre</option><option>Tattenhams</option><option>Virginia Water</option><option>Walton</option><option>Warlingham</option><option>West Byfleet</option><option>Weybridge</option><option>Woking</option><option>Z-Test Site</option>
+    </select>
+    </span>
+</div>
+
+<div class="row">
+	<label class="access_label" for="idnumber" accesskey="2">Please enter your <acronym title="Identification Number">ID</acronym> Number: </label>
+      <span class="formw"><input type="text" value="" name="IDNumber" maxlength="20" size="20" title="ID Number" id="idnumber"></span>
+</div>
+
+<div class="row">
+	<label accesskey="3" class="access_label" for="password">Please enter your PIN: </label>
+      <span class="formw"><input type="password" title="PIN" name="PIN" maxlength="4" size="4" value="" id="password">
+      </span>
+
+</div>
+
+
+
+
+<div class="row">
+      <span class="label"><input type="submit" class="go" name="Submit" value="Continue"></span>
+</div>
+</fieldset>
+</form>
+
+<!--<img src='images/librarymap.gif' alt='image map to choose site' width='320' height='240' usemap='#site' border='0' /><map name='site'>  <area shape='circle' coords='80,89,12' alt='site1' href='javascript:na()' onClick='imagemapsetsite(1); return false;' />  <area shape='circle' coords='203,50,14' alt='site2' href='javascript:na()' onClick='imagemapsetsite(0); return false;' />  <area shape='circle' coords='234,174,15' alt='site3' href='javascript:na()' onClick='imagemapsetsite(3); return false;' /></map>-->
+<script type="text/javascript">
+ <!--
+cookiecheck();
+//-->
+</script>
+</body>
+</html>

@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Signs and bollards | Westminster City Council</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style type="text/css" media="all">
+@import url("https://www.westminster.gov.uk/modules/system/system.base.css?o22y31");
+@import url("https://www.westminster.gov.uk/modules/system/system.menus.css?o22y31");
+@import url("https://www.westminster.gov.uk/modules/system/system.messages.css?o22y31");
+@import url("https://www.westminster.gov.uk/modules/system/system.theme.css?o22y31");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.button.min.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.resizable.min.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.dialog.min.css?o22y31");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.westminster.gov.uk/modules/comment/comment.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/date/date_api/date.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/date/date_popup/themes/datepicker.1.7.css?o22y31");
+@import url("https://www.westminster.gov.uk/modules/field/theme/field.css?o22y31");
+@import url("https://www.westminster.gov.uk/modules/node/node.css?o22y31");
+@import url("https://www.westminster.gov.uk/modules/search/search.css?o22y31");
+@import url("https://www.westminster.gov.uk/modules/user/user.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_collections_management/css/wcc_collections_management.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_frontpage/css/wcc_frontpage.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_guide/css/guide.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_planning/css/wcc_planning.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_reportit/css/styles.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/extlink/extlink.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/views/css/views.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/ckeditor/css/ckeditor.css?o22y31");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/apachesolr_autocomplete/apachesolr_autocomplete.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/apachesolr_autocomplete/jquery-autocomplete/jquery.autocomplete.css?o22y31");
+@import url("https://www.westminster.gov.uk/profiles/acquia/modules/ctools/css/ctools.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/panels/css/panels.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/fivestar/css/fivestar.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/features/wcc_feedback/wcc_feedback_styles.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/all/libraries/fontawesome/css/font-awesome.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/webform/css/webform.css?o22y31");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/css/normalize.min.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/css/icons.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/foundation-icons/foundation-icons.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/css/collapse.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/css/reportit.css?o22y31");
+</style>
+<style type="text/css" media="(min-width: 1px)">
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/css/grid.css?o22y31");
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/css/main-sm.css?o22y31");
+</style>
+<style type="text/css" media="(min-width: 45.063em)">
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/css/main-md.css?o22y31");
+</style>
+<style type="text/css" media="(min-width: 60.063em)">
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/css/main-lg.css?o22y31");
+</style>
+<style type="text/css" media="(min-width: 2px)">
+@import url("https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/css/main-final.css?o22y31");
+</style>
+    <!--[if lt IE 9]>
+      <link href="/sites/www.westminster.gov.uk/themes/wcc/css/main-ie.css" rel="stylesheet" type="text/css">    
+    <![endif]-->
+    <script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/jquery/1.7/jquery.min.js?v=1.7.2"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/misc/drupal.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.button.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.position.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.resizable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.dialog.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/misc/form.js?v=7.41"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/misc/ajax.js?v=7.41"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/jquery_update/js/jquery_update.js?v=0.0.1"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/cookiecontrol/js/cookieControl-5.1.min.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_collections_management/js/wcc_collections_management.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_frontpage/js/wcc_frontpage.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_planning/js/wcc_planning.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_reportit/js/reportit_init.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/extlink/extlink.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/js/wcc_apachesolr_autocomplete.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/apachesolr_autocomplete/jquery-autocomplete/jquery.autocomplete.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/all/libraries/colorbox/jquery.colorbox-min.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/all/modules/contrib/colorbox/js/colorbox.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/panels/js/panels.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_reportit/jqueryupload/js/vendor/jquery.ui.widget.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_reportit/jqueryupload/js/jquery.iframe-transport.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_reportit/jqueryupload/js/jquery.fileupload.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_reportit/jqueryupload/js/jquery.fileupload-image.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_reportit/js/reportit_engine.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_reportit/js/reportit_controllers.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_reportit/js/reportit_validation.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_reportit/js/jstelnumbers.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/misc/progress.js?v=7.41"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/fivestar/js/fivestar.ajax.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/fivestar/js/fivestar.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/profiles/acquia/modules/ctools/js/collapsible-div.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/webform_conditional/webform_conditional.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/google_analytics/googleanalytics.js?o22y31"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-47051004-1", {"cookieDomain":"auto"});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MVJJRB');ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/misc/collapse.js?v=7.41"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/misc/autocomplete.js?v=7.41"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/misc/textarea.js?v=7.41"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/contrib/webform/js/webform.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/modules/wcc/wcc_reportit/js/reportit_redirect.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/js/plugins.js?o22y31"></script>
+<script type="text/javascript" src="https://www.westminster.gov.uk/sites/www.westminster.gov.uk/themes/wcc/js/main.js?o22y31"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"wcc","theme_token":"fkxUOdaSci1J7WItahkKVI7-vrrWittiHzrbi8oExUc","jquery_version":"1.7","js":{"0":1,"1":1,"2":1,"3":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.button.min.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.mouse.min.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.draggable.min.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.position.min.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.resizable.min.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.dialog.min.js":1,"misc\/form.js":1,"misc\/ajax.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/cookiecontrol\/js\/cookieControl-5.1.min.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_collections_management\/js\/wcc_collections_management.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_frontpage\/js\/wcc_frontpage.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_planning\/js\/wcc_planning.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_reportit\/js\/reportit_init.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/extlink\/extlink.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/apachesolr_autocomplete\/apachesolr_autocomplete.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/apachesolr_autocomplete\/jquery-autocomplete\/jquery.autocomplete.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/panels\/js\/panels.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_reportit\/jqueryupload\/js\/vendor\/jquery.ui.widget.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_reportit\/jqueryupload\/js\/jquery.iframe-transport.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_reportit\/jqueryupload\/js\/jquery.fileupload.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_reportit\/jqueryupload\/js\/jquery.fileupload-image.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_reportit\/js\/reportit_engine.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_reportit\/js\/reportit_controllers.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_reportit\/js\/reportit_validation.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_reportit\/js\/jstelnumbers.js":1,"misc\/progress.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/fivestar\/js\/fivestar.ajax.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/fivestar\/js\/fivestar.js":1,"profiles\/acquia\/modules\/ctools\/js\/collapsible-div.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/webform_conditional\/webform_conditional.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"4":1,"misc\/collapse.js":1,"misc\/autocomplete.js":1,"misc\/textarea.js":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/webform\/js\/webform.js":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_reportit\/js\/reportit_redirect.js":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/js\/plugins.js":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"modules\/comment\/comment.css":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_collections_management\/css\/wcc_collections_management.css":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_frontpage\/css\/wcc_frontpage.css":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_guide\/css\/guide.css":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_planning\/css\/wcc_planning.css":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_reportit\/css\/styles.css":1,"sites\/www.westminster.gov.uk\/modules\/wcc\/wcc_sa\/wcc_sa.css":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/extlink\/extlink.css":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/views\/css\/views.css":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/apachesolr_autocomplete\/apachesolr_autocomplete.css":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/apachesolr_autocomplete\/jquery-autocomplete\/jquery.autocomplete.css":1,"profiles\/acquia\/modules\/ctools\/css\/ctools.css":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/fivestar\/css\/fivestar.css":1,"sites\/www.westminster.gov.uk\/modules\/features\/wcc_feedback\/wcc_feedback_styles.css":1,"sites\/all\/libraries\/fontawesome\/css\/font-awesome.css":1,"sites\/www.westminster.gov.uk\/modules\/contrib\/webform\/css\/webform.css":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/css\/normalize.min.css":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/css\/icons.css":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/foundation-icons\/foundation-icons.css":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/css\/collapse.css":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/css\/reportit.css":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/css\/grid.css":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/css\/main-sm.css":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/css\/main-md.css":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/css\/main-lg.css":1,"sites\/www.westminster.gov.uk\/themes\/wcc\/css\/main-final.css":1}},"apachesolr_autocomplete":{"path":"\/apachesolr_autocomplete"},"colorbox":{"opacity":"0.85","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","maxWidth":"98%","maxHeight":"98%","fixed":true,"mobiledetect":true,"mobiledevicewidth":"480px"},"webform_conditional_webform_client_form_11471":{"fields":{"signs_and_bollards_subcategs":{"css_id":"webform-component-signs-and-bollards--signs-and-bollards-subcategs","dependent_fields":{"bollard_damaged":{"type":"fieldset","monitor_cid":"253","monitor_field_key":"signs_and_bollards_subcategs","monitor_field_value":["bollard_damaged"],"monitor_field_trigger":"","operator":"=","default_value":"","css_id":"webform-component-signs-and-bollards--bollard-damaged"},"bollard_light_not_working":{"type":"fieldset","monitor_cid":"253","monitor_field_key":"signs_and_bollards_subcategs","monitor_field_value":["bollard_light_not_working"],"monitor_field_trigger":"","operator":"=","default_value":"","css_id":"webform-component-signs-and-bollards--bollard-light-not-working"},"other_signs_and_bollards_fault":{"type":"fieldset","monitor_cid":"253","monitor_field_key":"signs_and_bollards_subcategs","monitor_field_value":["other_signs_and_bollards_fault"],"monitor_field_trigger":"","operator":"=","default_value":"","css_id":"webform-component-signs-and-bollards--other-signs-and-bollards-fault"},"street_nameplate_missing":{"type":"fieldset","monitor_cid":"253","monitor_field_key":"signs_and_bollards_subcategs","monitor_field_value":["street_nameplate_missing"],"monitor_field_trigger":"","operator":"=","default_value":"","css_id":"webform-component-signs-and-bollards--street-nameplate-missing"},"traffic_sign_damaged":{"type":"fieldset","monitor_cid":"253","monitor_field_key":"signs_and_bollards_subcategs","monitor_field_value":["traffic_sign_damaged","traffic_sign_light_not_working"],"monitor_field_trigger":"","operator":"=","default_value":"","css_id":"webform-component-signs-and-bollards--traffic-sign-damaged"},"custom_message":{"type":"markup","monitor_cid":"253","monitor_field_key":"signs_and_bollards_subcategs","monitor_field_value":["a_boards","bollard_damaged","bollard_light_not_working","other_signs_and_bollards_fault","street_nameplate_missing","traffic_sign_damaged","traffic_sign_light_not_working","obstructions_caused_by"],"monitor_field_trigger":"","operator":"=","default_value":"\u003Cdiv class=\u0022signs-problem-message\u0022\u003E\r\n\u003Cp\u003EIf you think that the issue you are reporting presents a danger to the public, please contact us immediately on 0207 641 2000.\u003C\/p\u003E\r\n\r\n\u003Cdiv\u003E\u003Cinput class=\u0022button signs-report-submit fullw-mobile\u0022 readonly=\u0022readonly\u0022 style=\u0022\u0022 type=\u0022button\u0022 value=\u0022Report this issue online\u0022 \/\u003E\u003C\/div\u003E\r\n\u003C\/div\u003E\r\n","css_id":"webform-component-signs-and-bollards--custom-message"},"a_boards":{"type":"fieldset","monitor_cid":"253","monitor_field_key":"signs_and_bollards_subcategs","monitor_field_value":["a_boards"],"monitor_field_trigger":"","operator":"=","default_value":"","css_id":"webform-component-signs-and-bollards--a-boards"},"obstructions_caused_by":{"type":"fieldset","monitor_cid":"253","monitor_field_key":"signs_and_bollards_subcategs","monitor_field_value":["obstructions_caused_by"],"monitor_field_trigger":"","operator":"=","default_value":"","css_id":"webform-component-signs-and-bollards--obstructions-caused-by"}}}},"nid":"11471","showSpeed":null},"ajax":{"edit-vote--2":{"callback":"fivestar_ajax_submit","event":"change","url":"\/system\/ajax","submit":{"_triggering_element_name":"vote"}},"edit-webform-ajax-submit-14966":{"callback":"webform_ajax_callback","wrapper":"webform-ajax-wrapper-14966","progress":{"message":"","type":"throbber"},"event":"click","url":"\/system\/ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":"Submit"}}},"urlIsAjaxTrusted":{"\/system\/ajax":true,"\/report-it-signs-and-bollards":true,"\/sitewide-feedback-form":true},"webform_conditional_webform_client_form_14966":{"fields":{"please_select_the_relevant_department":{"css_id":"webform-component-please-select-the-relevant-department","dependent_fields":{"please_specify_a_department":{"type":"textfield","monitor_cid":"6","monitor_field_key":"please_select_the_relevant_department","monitor_field_value":["other_key"],"monitor_field_trigger":"","operator":"=","default_value":"","css_id":"webform-component-please-specify-a-department"}}}},"nid":"14966","showSpeed":null},"extlink":{"extTarget":"_blank","extClass":"ext","extSubdomains":0,"extExclude":"","extInclude":"","extCssExclude":".twitter-tab-content, #twitter_tab_content","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":"mailto"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});
+//--><!]]>
+</script>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="/sites/www.westminster.gov.uk/themes/wcc/favicon.ico">
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-11471 node-type-report-it">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MVJJRB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;j.type='text/javascript';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MVJJRB');</script>
+<!-- End Google Tag Manager -->
+
+      
+    
+<div class="wrapper">
+  <header role="banner">
+    
+<div class="mobile-overlay"></div>
+<div class="top-bar">
+  <div class="row">
+    <div class="inner cf">
+
+      <div class="medium-5 medium-offset-3 large-4 large-offset-4 medium-push-4 columns">
+        <div class="search-box search-box-small">
+                      <div class="region region-search-box">
+    <div id="block-search-23656b6b7fa6c8a7" class="block block-search">
+
+    
+  <div class="content">
+    <form action="/report-it-signs-and-bollards" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+  <h2 class="element-invisible">Search form</h2>
+  <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." class="apachesolr-autocomplete unprocessed form-text" placeholder="What would you like to do?" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="40" maxlength="128" />
+</div>
+ <label class="form-actions form-wrapper" id="edit-actions--2"><input title="Search" type="submit" id="edit-submit--2" name="op" value="GO!" class="form-submit"/><span class='report-inactive'>Westminster City Council Search</span></label> <label><span class="report-inactive">Form Build Id</span><input type="hidden" name="form_build_id" value="form-GHDD5q-KNfiw1fAs6zMY-KbtC78y7ZEvDwTXxNabTBI" />
+</label><label><span class="report-inactive">Form Id</span><input type="hidden" name="form_id" value="search_block_form" />
+</label></div>
+</div></form>  </div>
+</div>
+  </div>
+                  </div>
+        <div class="time-wrap">
+                </div>
+      </div>
+
+      <div class="column hide-md-up">
+        <ul class="mobile-menu">
+          <li>
+            <a href="/#w0">Most searched</a>
+          </li>
+          <li>
+            <a href="/#w2">Useful information</a>
+          </li>
+          <li>
+            <a href="/#w3">Our services</a>
+          </li>
+          <li>
+            <a href="/#w4">Westminster news</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="medium-4 medium-pull-8 columns">
+        <div class="logo-wrap">
+          <a href="/" title="Home" class="logo icon-logo"></a>
+          <div class="switch icon-arrow-down hide-md-up"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  </header>
+
+      
+  
+    <div class="region region-content">
+    <div id="block-system-25156b6b7fa6f7e9" class="block block-system">
+
+    
+  <div class="content">
+    
+<div id="node-11471" class="node node-report-it">
+    <div class="row">
+        <div class="column">
+            <div class="inner-content simple-page">
+
+                <div class="sp-breadcrumbs">
+                  <a href="https://www.westminster.gov.uk">Home</a>                </div>
+
+                <div class="sp-head-wrap">
+                  <div class="sp-head">
+                    <a href="/" class="go-up icon-arrow-left"></a>
+                      <h1>Report It!</h1>
+                  </div>
+              </div>
+
+                <div class="content-wrap">
+
+                    <div class="content sp-content ">
+                      <form action="/report-it-signs-and-bollards" method="post" id="deeplink-node-view-form" accept-charset="UTF-8"><div><label><span class="report-inactive">Form Build Id</span><input type="hidden" name="form_build_id" value="form-1G8nueVzPiZLjyOedvYvZabrIjepdB3cBpwSnQBZKiI" />
+</label><label><span class="report-inactive">Form Id</span><input type="hidden" name="form_id" value="deeplink_node_view_form" />
+</label></div></form><form class="webform-client-form report-it-webform node-webform" enctype="multipart/form-data" action="/report-it-signs-and-bollards" method="post" id="webform-client-form-11471" accept-charset="UTF-8"><div><div class="form-item webform-component webform-component-radios" id="webform-component-recipient">
+  <label class="element-invisible" for="edit-submitted-recipient">Recipient </label>
+ <div id="edit-submitted-recipient" class="form-radios report-inactive"><div class="form-item form-type-radio form-item-submitted-recipient">
+ <input class="report-inactive form-radio" type="radio" id="edit-submitted-recipient-1" name="submitted[recipient]" value="missjhewitt+noise@googlemail.com" />  <label class="option" for="edit-submitted-recipient-1">noise </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-recipient">
+ <input class="report-inactive form-radio" type="radio" id="edit-submitted-recipient-2" name="submitted[recipient]" value="missjhewitt+roads@googlemail.com" />  <label class="option" for="edit-submitted-recipient-2">roads </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-recipient">
+ <input class="report-inactive form-radio" type="radio" id="edit-submitted-recipient-3" name="submitted[recipient]" value="missjhewitt+waste@googlemail.com" />  <label class="option" for="edit-submitted-recipient-3">waste </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-recipient">
+ <input class="report-inactive form-radio" type="radio" id="edit-submitted-recipient-4" name="submitted[recipient]" value="missjhewitt+antisocial@googlemail.com" />  <label class="option" for="edit-submitted-recipient-4">antisocial behaviour </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-recipient">
+ <input class="report-inactive form-radio" type="radio" id="edit-submitted-recipient-5" name="submitted[recipient]" value="missjhewitt+animal@googlemail.com" />  <label class="option" for="edit-submitted-recipient-5">animal nuisance </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-recipient">
+ <input class="report-inactive form-radio" type="radio" id="edit-submitted-recipient-6" name="submitted[recipient]" value="missjhewitt+planning@googlemail.com" />  <label class="option" for="edit-submitted-recipient-6">planning </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-recipient">
+ <input class="report-inactive form-radio" type="radio" id="edit-submitted-recipient-7" name="submitted[recipient]" value="missjhewitt+lighting@googlemail.com" />  <label class="option" for="edit-submitted-recipient-7">street lighting </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-recipient">
+ <input class="report-inactive form-radio" type="radio" id="edit-submitted-recipient-8" name="submitted[recipient]" value="missjhewitt+cleaning@googlemail.com" />  <label class="option" for="edit-submitted-recipient-8">street cleaning </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-recipient">
+ <input class="report-inactive form-radio" type="radio" id="edit-submitted-recipient-9" name="submitted[recipient]" value="missjhewitt+bollard@googlemail.com" />  <label class="option" for="edit-submitted-recipient-9">signs and bollards </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-recipient">
+ <input class="report-inactive form-radio" type="radio" id="edit-submitted-recipient-10" name="submitted[recipient]" value="missjhewitt+advertising@googlemail.com" />  <label class="option" for="edit-submitted-recipient-10">advertising and trading </label>
+
+</div>
+</div>
+</div>
+<fieldset class="webform-component-fieldset webform report-it-menu icon-reportit-signs form-wrapper" id="webform-component-signs-and-bollards"><legend><span class="fieldset-legend">Signs and bollards</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-radios" id="webform-component-signs-and-bollards--signs-and-bollards-subcategs">
+  <label class="element-invisible" for="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs">Signs and bollards (subcategs) </label>
+ <div id="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs" class="form-radios webform"><div class="form-item form-type-radio form-item-submitted-signs-and-bollards-signs-and-bollards-subcategs">
+ <input class="webform form-radio" type="radio" id="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-1" name="submitted[signs_and_bollards][signs_and_bollards_subcategs]" value="other_signs_and_bollards_fault" />  <label class="option" for="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-1">General sign or bollard fault </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-signs-and-bollards-signs-and-bollards-subcategs">
+ <input class="webform form-radio" type="radio" id="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-2" name="submitted[signs_and_bollards][signs_and_bollards_subcategs]" value="traffic_sign_damaged" />  <label class="option" for="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-2">Traffic sign damaged </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-signs-and-bollards-signs-and-bollards-subcategs">
+ <input class="webform form-radio" type="radio" id="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-3" name="submitted[signs_and_bollards][signs_and_bollards_subcategs]" value="a_boards" />  <label class="option" for="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-3">Sandwich board </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-signs-and-bollards-signs-and-bollards-subcategs">
+ <input class="webform form-radio" type="radio" id="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-4" name="submitted[signs_and_bollards][signs_and_bollards_subcategs]" value="bollard_damaged" />  <label class="option" for="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-4">Damaged bollard </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-signs-and-bollards-signs-and-bollards-subcategs">
+ <input class="webform form-radio" type="radio" id="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-5" name="submitted[signs_and_bollards][signs_and_bollards_subcategs]" value="traffic_sign_light_not_working" />  <label class="option" for="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-5">Traffic sign light not working </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-signs-and-bollards-signs-and-bollards-subcategs">
+ <input class="webform form-radio" type="radio" id="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-6" name="submitted[signs_and_bollards][signs_and_bollards_subcategs]" value="street_nameplate_missing" />  <label class="option" for="edit-submitted-signs-and-bollards-signs-and-bollards-subcategs-6">Street nameplate missing </label>
+
+</div>
+</div>
+</div>
+<div class="form-item webform-component webform-component-markup" id="webform-component-signs-and-bollards--custom-message">
+ <div class="signs-problem-message">
+<p>If you think that the issue you are reporting presents a danger to the public, please contact us immediately on 0207 641 2000.</p>
+<div><input class="button signs-report-submit fullw-mobile" readonly="readonly" style="" type="button" value="Report this issue online" /></div>
+</div>
+
+</div>
+<fieldset class="webform-component-fieldset  form-wrapper" id="webform-component-signs-and-bollards--bollard-damaged"><div class="fieldset-wrapper"><fieldset class="webform-component-fieldset report-inactive form-wrapper" id="webform-component-signs-and-bollards--bollard-damaged--details"><legend><span class="fieldset-legend">Details</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-textfield" id="webform-component-signs-and-bollards--bollard-damaged--details--street">
+  <label for="edit-submitted-signs-and-bollards-bollard-damaged-details-street">Street </label>
+ <input class="webform required form-text form-autocomplete" type="text" id="edit-submitted-signs-and-bollards-bollard-damaged-details-street" name="submitted[signs_and_bollards][bollard_damaged][details][street]" value="" size="60" maxlength="128" /><input type="hidden" id="edit-submitted-signs-and-bollards-bollard-damaged-details-street-autocomplete" value="https://www.westminster.gov.uk/?q=wcc-reportit-street-autocomplete" disabled="disabled" class="autocomplete" />
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--bollard-damaged--details--can-we-have-more-detail-please">
+  <label for="edit-submitted-signs-and-bollards-bollard-damaged-details-can-we-have-more-detail-please">Please indicate the number of the property this problem is closest to, as well as any additional information i.e is it close to a shop, road junction or other landmark </label>
+ <div class="form-textarea-wrapper resizable"><textarea class="webform required form-textarea" id="edit-submitted-signs-and-bollards-bollard-damaged-details-can-we-have-more-detail-please" name="submitted[signs_and_bollards][bollard_damaged][details][can_we_have_more_detail_please]" cols="60" rows="5"></textarea></div>
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--bollard-damaged--details--please-describe-the-problem">
+  <label for="edit-submitted-signs-and-bollards-bollard-damaged-details-please-describe-the-problem">Please describe the problem </label>
+ <div class="form-textarea-wrapper resizable"><textarea class="last_element form-textarea" id="edit-submitted-signs-and-bollards-bollard-damaged-details-please-describe-the-problem" name="submitted[signs_and_bollards][bollard_damaged][details][please_describe_the_problem]" cols="60" rows="5"></textarea></div>
+</div>
+</div></fieldset>
+</div></fieldset>
+<fieldset class="webform-component-fieldset  form-wrapper" id="webform-component-signs-and-bollards--a-boards"><div class="fieldset-wrapper"><fieldset class="webform-component-fieldset report-inactive form-wrapper" id="webform-component-signs-and-bollards--a-boards--details"><legend><span class="fieldset-legend">Details</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-textfield" id="webform-component-signs-and-bollards--a-boards--details--street">
+  <label for="edit-submitted-signs-and-bollards-a-boards-details-street">Street </label>
+ <input class="required form-text form-autocomplete" type="text" id="edit-submitted-signs-and-bollards-a-boards-details-street" name="submitted[signs_and_bollards][a_boards][details][street]" value="" size="60" maxlength="128" /><input type="hidden" id="edit-submitted-signs-and-bollards-a-boards-details-street-autocomplete" value="https://www.westminster.gov.uk/?q=wcc-reportit-street-autocomplete" disabled="disabled" class="autocomplete" />
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--a-boards--details--can-we-have-more-detail-please">
+  <label for="edit-submitted-signs-and-bollards-a-boards-details-can-we-have-more-detail-please">Please indicate the number of the property this problem is closest to, as well as any additional information i.e is it close to a shop, road junction or other landmark </label>
+ <div class="form-textarea-wrapper resizable"><textarea class="required form-textarea" id="edit-submitted-signs-and-bollards-a-boards-details-can-we-have-more-detail-please" name="submitted[signs_and_bollards][a_boards][details][can_we_have_more_detail_please]" cols="60" rows="5"></textarea></div>
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--a-boards--details--please-describe-the-problem">
+  <label for="edit-submitted-signs-and-bollards-a-boards-details-please-describe-the-problem">Please describe the problem </label>
+ <div class="form-textarea-wrapper resizable"><textarea class=" form-textarea" id="edit-submitted-signs-and-bollards-a-boards-details-please-describe-the-problem" name="submitted[signs_and_bollards][a_boards][details][please_describe_the_problem]" cols="60" rows="5"></textarea></div>
+</div>
+</div></fieldset>
+</div></fieldset>
+<fieldset class="webform-component-fieldset  form-wrapper" id="webform-component-signs-and-bollards--obstructions-caused-by"><div class="fieldset-wrapper"><fieldset class="webform-component-fieldset report-inactive form-wrapper" id="webform-component-signs-and-bollards--obstructions-caused-by--details"><legend><span class="fieldset-legend">Details</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-textfield" id="webform-component-signs-and-bollards--obstructions-caused-by--details--street">
+  <label for="edit-submitted-signs-and-bollards-obstructions-caused-by-details-street">Street </label>
+ <input class="required form-text form-autocomplete" type="text" id="edit-submitted-signs-and-bollards-obstructions-caused-by-details-street" name="submitted[signs_and_bollards][obstructions_caused_by][details][street]" value="" size="60" maxlength="128" /><input type="hidden" id="edit-submitted-signs-and-bollards-obstructions-caused-by-details-street-autocomplete" value="https://www.westminster.gov.uk/?q=wcc-reportit-street-autocomplete" disabled="disabled" class="autocomplete" />
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--obstructions-caused-by--details--can-we-have-more-detail-please">
+  <label for="edit-submitted-signs-and-bollards-obstructions-caused-by-details-can-we-have-more-detail-please">Please indicate the number of the property this problem is closest to, as well as any additional information i.e is it close to a shop, road junction or other landmark </label>
+ <div class="form-textarea-wrapper resizable"><textarea class="required form-textarea" id="edit-submitted-signs-and-bollards-obstructions-caused-by-details-can-we-have-more-detail-please" name="submitted[signs_and_bollards][obstructions_caused_by][details][can_we_have_more_detail_please]" cols="60" rows="5"></textarea></div>
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--obstructions-caused-by--details--do-you-have-any-information-that-may-identify-the-buiders-who-are-working-on-the-site">
+  <label for="edit-submitted-signs-and-bollards-obstructions-caused-by-details-do-you-have-any-information-that-may-identify-the-buiders-who-are-working-on-the-site">Do you have any information that may identify the builders who are working on the site? </label>
+ <div class="form-textarea-wrapper resizable"><textarea class=" form-textarea" id="edit-submitted-signs-and-bollards-obstructions-caused-by-details-do-you-have-any-information-that-may-identify-the-buiders-who-are-working-on-the-site" name="submitted[signs_and_bollards][obstructions_caused_by][details][do_you_have_any_information_that_may_identify_the_buiders_who_are_working_on_the_site]" cols="60" rows="5"></textarea></div>
+</div>
+</div></fieldset>
+</div></fieldset>
+<fieldset class="webform-component-fieldset  form-wrapper" id="webform-component-signs-and-bollards--bollard-light-not-working"><div class="fieldset-wrapper"><fieldset class="webform-component-fieldset report-inactive form-wrapper" id="webform-component-signs-and-bollards--bollard-light-not-working--details"><legend><span class="fieldset-legend">Details</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-textfield" id="webform-component-signs-and-bollards--bollard-light-not-working--details--street">
+  <label for="edit-submitted-signs-and-bollards-bollard-light-not-working-details-street">Street </label>
+ <input class="webform required form-text form-autocomplete" type="text" id="edit-submitted-signs-and-bollards-bollard-light-not-working-details-street" name="submitted[signs_and_bollards][bollard_light_not_working][details][street]" value="" size="60" maxlength="128" /><input type="hidden" id="edit-submitted-signs-and-bollards-bollard-light-not-working-details-street-autocomplete" value="https://www.westminster.gov.uk/?q=wcc-reportit-street-autocomplete" disabled="disabled" class="autocomplete" />
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--bollard-light-not-working--details--can-we-have-more-detail-please">
+  <label for="edit-submitted-signs-and-bollards-bollard-light-not-working-details-can-we-have-more-detail-please">Please indicate the number of the property this problem is closest to, as well as any additional information i.e is it close to a shop, road junction or other landmark </label>
+ <div class="form-textarea-wrapper resizable"><textarea class="webform required form-textarea" id="edit-submitted-signs-and-bollards-bollard-light-not-working-details-can-we-have-more-detail-please" name="submitted[signs_and_bollards][bollard_light_not_working][details][can_we_have_more_detail_please]" cols="60" rows="5"></textarea></div>
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--bollard-light-not-working--details--please-describe-the-problem">
+  <label for="edit-submitted-signs-and-bollards-bollard-light-not-working-details-please-describe-the-problem">Please describe the problem </label>
+ <div class="form-textarea-wrapper resizable"><textarea class="webform required form-textarea" id="edit-submitted-signs-and-bollards-bollard-light-not-working-details-please-describe-the-problem" name="submitted[signs_and_bollards][bollard_light_not_working][details][please_describe_the_problem]" cols="60" rows="5"></textarea></div>
+</div>
+<div class="form-item webform-component webform-component-textfield" id="webform-component-signs-and-bollards--bollard-light-not-working--details--please-tell-us-the-number-of-the-bollard-if-there-is-one">
+  <label for="edit-submitted-signs-and-bollards-bollard-light-not-working-details-please-tell-us-the-number-of-the-bollard-if-there-is-one">Please tell us the number of the bollard if there is one </label>
+ <input class="webform required form-text" type="text" id="edit-submitted-signs-and-bollards-bollard-light-not-working-details-please-tell-us-the-number-of-the-bollard-if-there-is-one" name="submitted[signs_and_bollards][bollard_light_not_working][details][please_tell_us_the_number_of_the_bollard_if_there_is_one]" value="" size="60" maxlength="128" />
+</div>
+</div></fieldset>
+</div></fieldset>
+<fieldset class="webform-component-fieldset  form-wrapper" id="webform-component-signs-and-bollards--other-signs-and-bollards-fault"><div class="fieldset-wrapper"><fieldset class="webform-component-fieldset report-inactive form-wrapper" id="webform-component-signs-and-bollards--other-signs-and-bollards-fault--details"><legend><span class="fieldset-legend">Details</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-textfield" id="webform-component-signs-and-bollards--other-signs-and-bollards-fault--details--street">
+  <label for="edit-submitted-signs-and-bollards-other-signs-and-bollards-fault-details-street">Street </label>
+ <input class="webform required form-text form-autocomplete" type="text" id="edit-submitted-signs-and-bollards-other-signs-and-bollards-fault-details-street" name="submitted[signs_and_bollards][other_signs_and_bollards_fault][details][street]" value="" size="60" maxlength="128" /><input type="hidden" id="edit-submitted-signs-and-bollards-other-signs-and-bollards-fault-details-street-autocomplete" value="https://www.westminster.gov.uk/?q=wcc-reportit-street-autocomplete" disabled="disabled" class="autocomplete" />
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--other-signs-and-bollards-fault--details--can-we-have-more-detail-please">
+  <label for="edit-submitted-signs-and-bollards-other-signs-and-bollards-fault-details-can-we-have-more-detail-please">Please indicate the number of the property this problem is closest to, as well as any additional information i.e is it close to a shop, road junction or other landmark </label>
+ <div class="form-textarea-wrapper resizable"><textarea class="webform required form-textarea" id="edit-submitted-signs-and-bollards-other-signs-and-bollards-fault-details-can-we-have-more-detail-please" name="submitted[signs_and_bollards][other_signs_and_bollards_fault][details][can_we_have_more_detail_please]" cols="60" rows="5"></textarea></div>
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--other-signs-and-bollards-fault--details--please-describe-the-problem">
+  <label for="edit-submitted-signs-and-bollards-other-signs-and-bollards-fault-details-please-describe-the-problem">Please describe the problem </label>
+ <div class="form-textarea-wrapper resizable"><textarea class=" form-textarea" id="edit-submitted-signs-and-bollards-other-signs-and-bollards-fault-details-please-describe-the-problem" name="submitted[signs_and_bollards][other_signs_and_bollards_fault][details][please_describe_the_problem]" cols="60" rows="5"></textarea></div>
+</div>
+<div class="form-item webform-component webform-component-textfield" id="webform-component-signs-and-bollards--other-signs-and-bollards-fault--details--please-tell-us-the-number-of-the-bollard-if-there-is-one">
+  <label for="edit-submitted-signs-and-bollards-other-signs-and-bollards-fault-details-please-tell-us-the-number-of-the-bollard-if-there-is-one">Please tell us the number of the bollard if there is one </label>
+ <input class="webform required form-text" type="text" id="edit-submitted-signs-and-bollards-other-signs-and-bollards-fault-details-please-tell-us-the-number-of-the-bollard-if-there-is-one" name="submitted[signs_and_bollards][other_signs_and_bollards_fault][details][please_tell_us_the_number_of_the_bollard_if_there_is_one]" value="" size="60" maxlength="128" />
+</div>
+</div></fieldset>
+</div></fieldset>
+<fieldset class="webform-component-fieldset  form-wrapper" id="webform-component-signs-and-bollards--street-nameplate-missing"><div class="fieldset-wrapper"><fieldset class="webform-component-fieldset report-inactive form-wrapper" id="webform-component-signs-and-bollards--street-nameplate-missing--details"><legend><span class="fieldset-legend">Details</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-textfield" id="webform-component-signs-and-bollards--street-nameplate-missing--details--street">
+  <label for="edit-submitted-signs-and-bollards-street-nameplate-missing-details-street">Street </label>
+ <input class="webform required form-text form-autocomplete" type="text" id="edit-submitted-signs-and-bollards-street-nameplate-missing-details-street" name="submitted[signs_and_bollards][street_nameplate_missing][details][street]" value="" size="60" maxlength="128" /><input type="hidden" id="edit-submitted-signs-and-bollards-street-nameplate-missing-details-street-autocomplete" value="https://www.westminster.gov.uk/?q=wcc-reportit-street-autocomplete" disabled="disabled" class="autocomplete" />
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--street-nameplate-missing--details--can-we-have-more-detail-please">
+  <label for="edit-submitted-signs-and-bollards-street-nameplate-missing-details-can-we-have-more-detail-please">Please indicate the number of the property this problem is closest to, as well as any additional information i.e is it close to a shop, road junction or other landmark </label>
+ <div class="form-textarea-wrapper resizable"><textarea class="webform required form-textarea" id="edit-submitted-signs-and-bollards-street-nameplate-missing-details-can-we-have-more-detail-please" name="submitted[signs_and_bollards][street_nameplate_missing][details][can_we_have_more_detail_please]" cols="60" rows="5"></textarea></div>
+</div>
+</div></fieldset>
+<fieldset class="webform-component-fieldset report-inactive form-wrapper" id="webform-component-signs-and-bollards--street-nameplate-missing--describe-the-status-of-the-nameplate"><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-radios" id="webform-component-signs-and-bollards--street-nameplate-missing--describe-the-status-of-the-nameplate--which-of-the-following-best-describes-the-status-of-the-nameplate">
+  <label for="edit-submitted-signs-and-bollards-street-nameplate-missing-describe-the-status-of-the-nameplate-which-of-the-following-best-describes-the-status-of-the-nameplate">Which of the following best describes the status of the nameplate? </label>
+ <div id="edit-submitted-signs-and-bollards-street-nameplate-missing-describe-the-status-of-the-nameplate-which-of-the-following-best-describes-the-status-of-the-nameplate" class="form-radios last_element"><div class="form-item form-type-radio form-item-submitted-signs-and-bollards-street-nameplate-missing-describe-the-status-of-the-nameplate-which-of-the-following-best-describes-the-status-of-the-nameplate">
+ <input class="last_element form-radio" type="radio" id="edit-submitted-signs-and-bollards-street-nameplate-missing-describe-the-status-of-the-nameplate-which-of-the-following-best-describes-the-status-of-the-nameplate-1" name="submitted[signs_and_bollards][street_nameplate_missing][describe_the_status_of_the_nameplate][which_of_the_following_best_describes_the_status_of_the_nameplate]" value="damaged" />  <label class="option" for="edit-submitted-signs-and-bollards-street-nameplate-missing-describe-the-status-of-the-nameplate-which-of-the-following-best-describes-the-status-of-the-nameplate-1">Damaged </label>
+
+</div>
+<div class="form-item form-type-radio form-item-submitted-signs-and-bollards-street-nameplate-missing-describe-the-status-of-the-nameplate-which-of-the-following-best-describes-the-status-of-the-nameplate">
+ <input class="last_element form-radio" type="radio" id="edit-submitted-signs-and-bollards-street-nameplate-missing-describe-the-status-of-the-nameplate-which-of-the-following-best-describes-the-status-of-the-nameplate-2" name="submitted[signs_and_bollards][street_nameplate_missing][describe_the_status_of_the_nameplate][which_of_the_following_best_describes_the_status_of_the_nameplate]" value="missing" />  <label class="option" for="edit-submitted-signs-and-bollards-street-nameplate-missing-describe-the-status-of-the-nameplate-which-of-the-following-best-describes-the-status-of-the-nameplate-2">Missing </label>
+
+</div>
+</div>
+</div>
+</div></fieldset>
+</div></fieldset>
+<fieldset class="webform-component-fieldset  form-wrapper" id="webform-component-signs-and-bollards--traffic-sign-damaged"><div class="fieldset-wrapper"><fieldset class="webform-component-fieldset report-inactive form-wrapper" id="webform-component-signs-and-bollards--traffic-sign-damaged--details"><legend><span class="fieldset-legend">Details</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-textfield" id="webform-component-signs-and-bollards--traffic-sign-damaged--details--street">
+  <label for="edit-submitted-signs-and-bollards-traffic-sign-damaged-details-street">Street </label>
+ <input class="webform required form-text form-autocomplete" type="text" id="edit-submitted-signs-and-bollards-traffic-sign-damaged-details-street" name="submitted[signs_and_bollards][traffic_sign_damaged][details][street]" value="" size="60" maxlength="128" /><input type="hidden" id="edit-submitted-signs-and-bollards-traffic-sign-damaged-details-street-autocomplete" value="https://www.westminster.gov.uk/?q=wcc-reportit-street-autocomplete" disabled="disabled" class="autocomplete" />
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--traffic-sign-damaged--details--can-we-have-more-detail-please">
+  <label for="edit-submitted-signs-and-bollards-traffic-sign-damaged-details-can-we-have-more-detail-please">Please indicate the number of the property this problem is closest to, as well as any additional information i.e is it close to a shop, road junction or other landmark </label>
+ <div class="form-textarea-wrapper resizable"><textarea class="webform required form-textarea" id="edit-submitted-signs-and-bollards-traffic-sign-damaged-details-can-we-have-more-detail-please" name="submitted[signs_and_bollards][traffic_sign_damaged][details][can_we_have_more_detail_please]" cols="60" rows="5"></textarea></div>
+</div>
+<div class="form-item webform-component webform-component-textarea" id="webform-component-signs-and-bollards--traffic-sign-damaged--details--please-describe-the-problem">
+  <label for="edit-submitted-signs-and-bollards-traffic-sign-damaged-details-please-describe-the-problem">Please describe the problem </label>
+ <div class="form-textarea-wrapper resizable"><textarea class=" form-textarea" id="edit-submitted-signs-and-bollards-traffic-sign-damaged-details-please-describe-the-problem" name="submitted[signs_and_bollards][traffic_sign_damaged][details][please_describe_the_problem]" cols="60" rows="5"></textarea></div>
+</div>
+<div class="form-item webform-component webform-component-textfield" id="webform-component-signs-and-bollards--traffic-sign-damaged--details--please-tell-us-the-number-of-the-sign-if-there-is-one">
+  <label for="edit-submitted-signs-and-bollards-traffic-sign-damaged-details-please-tell-us-the-number-of-the-sign-if-there-is-one">Please tell us the number of the sign if there is one </label>
+ <input class="webform required form-text" type="text" id="edit-submitted-signs-and-bollards-traffic-sign-damaged-details-please-tell-us-the-number-of-the-sign-if-there-is-one" name="submitted[signs_and_bollards][traffic_sign_damaged][details][please_tell_us_the_number_of_the_sign_if_there_is_one]" value="" size="60" maxlength="128" />
+</div>
+</div></fieldset>
+</div></fieldset>
+</div></fieldset>
+<fieldset class="webform-component-fieldset report-inactive form-wrapper" id="webform-component-your-details"><div class="fieldset-wrapper"><fieldset class="webform-component-fieldset  form-wrapper" id="webform-component-your-details--upload-field-wrapper"><legend><span class="fieldset-legend">Upload a photo</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-markup" id="webform-component-your-details--upload-field-wrapper--upload-field">
+ <!-- The file input field used as target for the file upload widget --><p>        <input id="fileupload" type="file" name="files[]" multiple="multiple" /><br /></p>
+<!-- The global progress bar --><div id="progress" class="progress">
+<div class="progress-bar progress-bar-success"></div>
+</div>
+<!-- The container for the uploaded files --><div id="files" class="files"></div>
+
+</div>
+<input class="" type="hidden" name="submitted[your_details][upload_field_wrapper][photo]" value="" />
+</div></fieldset>
+<fieldset class="webform-component-fieldset  form-wrapper" id="webform-component-your-details--your-details-wrapper"><legend><span class="fieldset-legend">Your Details</span></legend><div class="fieldset-wrapper"><div class="form-item webform-component webform-component-markup" id="webform-component-your-details--your-details-wrapper--custom-message">
+ <p>If you want us to work with you on fixing this problem, please provide your details.</p>
+
+<p>Please be advised that for enquiries relating to assets not owned or maintained by Westminster City Council, we may need to pass on your contact details and information about the enquiry to the owning organisation.</p>
+
+</div>
+<div class="form-item webform-component webform-component-select webform-container-inline" id="webform-component-your-details--your-details-wrapper--title">
+  <label for="edit-submitted-your-details-your-details-wrapper-title">Title </label>
+ <select class="webform form-select" id="edit-submitted-your-details-your-details-wrapper-title" name="submitted[your_details][your_details_wrapper][title]"><option value="ms">Ms</option><option value="miss">Miss</option><option value="mr" selected="selected">Mr</option><option value="mrs">Mrs</option></select>
+</div>
+<div class="form-item webform-component webform-component-textfield webform-container-inline" id="webform-component-your-details--your-details-wrapper--first-name">
+  <label for="edit-submitted-your-details-your-details-wrapper-first-name">First Name </label>
+ <input class="webform required form-text" type="text" id="edit-submitted-your-details-your-details-wrapper-first-name" name="submitted[your_details][your_details_wrapper][first_name]" value="" size="60" maxlength="128" />
+</div>
+<div class="form-item webform-component webform-component-textfield webform-container-inline" id="webform-component-your-details--your-details-wrapper--last-name">
+  <label for="edit-submitted-your-details-your-details-wrapper-last-name">Last Name </label>
+ <input class="webform required form-text" type="text" id="edit-submitted-your-details-your-details-wrapper-last-name" name="submitted[your_details][your_details_wrapper][last_name]" value="" size="60" maxlength="128" />
+</div>
+<div class="form-item webform-component webform-component-email webform-container-inline" id="webform-component-your-details--your-details-wrapper--e-mail">
+  <label for="edit-submitted-your-details-your-details-wrapper-e-mail">E-mail </label>
+ <input class="email webform required no-jump form-text form-email" type="email" id="edit-submitted-your-details-your-details-wrapper-e-mail" name="submitted[your_details][your_details_wrapper][e_mail]" size="200" />
+</div>
+<div class="form-item webform-component webform-component-textfield webform-container-inline" id="webform-component-your-details--your-details-wrapper--phone">
+  <label for="edit-submitted-your-details-your-details-wrapper-phone">Phone </label>
+ <input class="webform required no-jump form-text" type="text" id="edit-submitted-your-details-your-details-wrapper-phone" name="submitted[your_details][your_details_wrapper][phone]" value="" size="60" maxlength="128" />
+</div>
+<div class="form-item webform-component webform-component-textfield webform-container-inline" id="webform-component-your-details--your-details-wrapper--address">
+  <label for="edit-submitted-your-details-your-details-wrapper-address">Your address </label>
+ <input class="webform form-text" type="text" id="edit-submitted-your-details-your-details-wrapper-address" name="submitted[your_details][your_details_wrapper][address]" value="" size="60" maxlength="128" />
+</div>
+<div class="form-item webform-component webform-component-textfield webform-container-inline" id="webform-component-your-details--your-details-wrapper--city-town">
+  <label for="edit-submitted-your-details-your-details-wrapper-city-town">City/Town </label>
+ <input class="webform form-text" type="text" id="edit-submitted-your-details-your-details-wrapper-city-town" name="submitted[your_details][your_details_wrapper][city_town]" value="" size="60" maxlength="128" />
+</div>
+<div class="form-item webform-component webform-component-textfield webform-container-inline" id="webform-component-your-details--your-details-wrapper--postal-code">
+  <label for="edit-submitted-your-details-your-details-wrapper-postal-code">Postal Code </label>
+ <input class="webform form-text" type="text" id="edit-submitted-your-details-your-details-wrapper-postal-code" name="submitted[your_details][your_details_wrapper][postal_code]" value="" size="60" maxlength="128" />
+</div>
+</div></fieldset>
+</div></fieldset>
+<input type="hidden" name="details[sid]" />
+<input type="hidden" name="details[page_num]" value="1" />
+<input type="hidden" name="details[page_count]" value="1" />
+<input type="hidden" name="details[finished]" value="0" />
+<label><span class="report-inactive">Form Build Id</span><input type="hidden" name="form_build_id" value="form-mJagxYU0z7f7d-qjKNFQNQJ_ITNRkh1YoEAHorWpXms" />
+</label><label><span class="report-inactive">Form Id</span><input type="hidden" name="form_id" value="webform_client_form_11471" />
+</label><div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Submit" class="form-submit" /></div></div></form>                    </div>
+
+                </div>
+                <div class="last-updated">
+                <br>Last updated: 4 February 2016</font></br>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  </div>
+</div>
+<div id="none56b6b7fa6f8f5" class="block block-cck-blocks">
+
+    
+  <div class="content">
+    <div class="field field-name-field-rating field-type-fivestar field-label-inline clearfix"><div class="field-label">Rate this page:&nbsp;</div><div class="field-items"><div class="field-item even"><form class="fivestar-widget" action="/report-it-signs-and-bollards" method="post" id="fivestar-custom-widget" accept-charset="UTF-8"><div><div  class="clearfix fivestar-average-stars fivestar-form-item fivestar-default"><div class="form-item form-type-fivestar form-item-vote">
+ <div class="form-item form-type-select form-item-vote">
+ <select id="edit-vote--2" name="vote" class="form-select"><option value="-">Select rating</option><option value="20">Give it 1/5</option><option value="40">Give it 2/5</option><option value="60">Give it 3/5</option><option value="80">Give it 4/5</option><option value="100">Give it 5/5</option></select>
+</div>
+
+</div>
+</div><input class="fivestar-submit form-submit" type="submit" id="edit-fivestar-submit" name="op" value="Rate" /><label><span class="report-inactive">Form Build Id</span><input type="hidden" name="form_build_id" value="form-gLXW0SWods0Yl0WzumPztpOQXLBPQvWNjVwyrVBWWx8" />
+</label><label><span class="report-inactive">Form Id</span><input type="hidden" name="form_id" value="fivestar_custom_widget" />
+</label></div></form></div></div></div>  </div>
+</div>
+<div id="none56b6b7fa6f9d6" class="block block-webform">
+
+    
+  <div class="content">
+    <div id="webform-ajax-wrapper-14966"><div class="wcc-feedback ctools-collapsible-container ctools-collapsed"><div class="ctools-collapsible-handle">Report a problem with this page</div><div class="ctools-collapsible-content"><form class="webform-client-form" enctype="multipart/form-data" action="/sitewide-feedback-form" method="post" id="webform-client-form-14966" accept-charset="UTF-8"><div><div class="form-item webform-component webform-component-markup" id="webform-component-intro-text">
+ <h2>Help us improve westminster.gov.uk</h2>
+
+<p>Assist us with improving this page by providing feedback. Please don't include any personal or financial information, for example your contact details or credit card number. We are unable to provide responses via this form.</p>
+</div>
+<div class="form-item webform-component webform-component-select" id="webform-component-please-select-the-relevant-department">
+  <label for="edit-submitted-please-select-the-relevant-department">Please select the relevant department <span class="form-required" title="This field is required.">*</span></label>
+ <select class=" form-select required" id="edit-submitted-please-select-the-relevant-department" name="submitted[please_select_the_relevant_department]"><option value="" selected="selected">- Select -</option><option value="adult_key">Adult services and vulnerable people</option><option value="arts_key">Arts and special events</option><option value="birth_key">Births and deaths</option><option value="business_key">Business and business rates</option><option value="child_key">Children, young people and families</option><option value="citizenship_key">Citizenship</option><option value="contact_key">Contact us page</option><option value="electoral_key">Electoral services</option><option value="health_key">Health and food safety</option><option value="housing_key">Housing and council tax</option><option value="lib_key">Libraries, community and volunteering</option><option value="licensing_key">Licensing</option><option value="litter_key">Litter and fly-tipping</option><option value="marriage_key">Marriage and civil partnership</option><option value="noise_key">Noise, air and water pollution</option><option value="parking_key">Parking</option><option value="pest_key">Pest control and animal nuisance</option><option value="planning_key">Planning, land registry and construction</option><option value="public_key">Public spaces and parks</option><option value="roads_key">Roads, highways and streets</option><option value="schools_key">Schools and teaching</option><option value="sports_key">Sports and leisure</option><option value="waste_key">Waste and recycling</option><option value="other_key">Other</option></select>
+</div>
+<div class="form-item webform-component webform-component-textfield" id="webform-component-please-specify-a-department">
+  <label for="edit-submitted-please-specify-a-department">Please specify a department <span class="form-required" title="This field is required.">*</span></label>
+ <input class=" form-text required" type="text" id="edit-submitted-please-specify-a-department" name="submitted[please_specify_a_department]" value="" size="60" maxlength="128" />
+</div>
+<div class="form-item webform-component webform-component-textfield" id="webform-component-what-you-were-doing">
+  <label for="edit-submitted-what-you-were-doing">What were you trying to do? <span class="form-required" title="This field is required.">*</span></label>
+ <input class=" form-text required" type="text" id="edit-submitted-what-you-were-doing" name="submitted[what_you_were_doing]" value="" size="60" maxlength="200" />
+</div>
+<div class="form-item webform-component webform-component-textfield" id="webform-component-what-went-wrong">
+  <label for="edit-submitted-what-went-wrong">What problems did you have with this page? <span class="form-required" title="This field is required.">*</span></label>
+ <input class=" form-text required" type="text" id="edit-submitted-what-went-wrong" name="submitted[what_went_wrong]" value="" size="60" maxlength="200" />
+</div>
+<input type="hidden" name="details[sid]" />
+<input type="hidden" name="details[page_num]" value="1" />
+<input type="hidden" name="details[page_count]" value="1" />
+<input type="hidden" name="details[finished]" value="0" />
+<label><span class="report-inactive">Form Build Id</span><input type="hidden" name="form_build_id" value="form-64dQ4fi4v7alD8l2PYrJsOWL-kPe4zfJfdqSLWYQeHY" />
+</label><label><span class="report-inactive">Form Id</span><input type="hidden" name="form_id" value="webform_client_form_14966" />
+</label><input type="hidden" name="webform_ajax_wrapper_id" value="webform-ajax-wrapper-14966" />
+<div class="form-actions form-wrapper" id="edit-actions--3"><input class="button form-submit" type="submit" id="edit-webform-ajax-submit-14966" name="op" value="Submit" /></div></div></form></div><!-- .ctools-collapsible-content --></div><!-- .ctools-collapsible-container --></div>  </div>
+</div>
+  </div>
+
+  <footer role="contentinfo">
+            <div class="region region-footer">
+    <div id="block-wcc_frontpage-34656b6b7fa6fb6e" class="block block-wcc-frontpage">
+
+    
+  <div class="content">
+    
+        <!--<a href="mailto:websitefeedback@westminster.gov.uk" class="feedback-button mobile" id="feedback-collector-mobile">Give us feedback</a>
+        <a href="#" class="feedback-button desktop" id="feedback-collector">Send us feedback</a>-->
+        <div class="main-footer">
+          <div class="pre-cont">
+            <div class="row">
+              <!--<div class="medium-6 columns">
+                <a href="#" id="feedback-collector">How can we improve this page?</a>
+              </div>-->
+              <div class="column">
+                <div id="google_translate_element"></div><script type="text/javascript">
+				              function googleTranslateElementInit() {
+					                   new google.translate.TranslateElement({pageLanguage: "en", gaTrack: true, gaId: "UA-47051004-1"}, "google_translate_element");
+				              }
+					                 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="row">
+              <div class="column">
+                <h2>Explore Westminster</h2>
+                <ul class="small-block-grid-2 large-block-grid-4">
+                  <li>
+                    <a href="/contact">Contact us</a>
+                  </li>
+                  <li>
+                    <a href="/counciltax">Council tax</a>
+                  </li>
+                  <li>
+                    <a href="/licensing">Licensing</a>
+                  </li>
+                  <li>
+                    <a href="/planning">Planning</a>
+                  </li>
+                  <li>
+                    <a href="/births-deaths-marriages-and-citizenship">Births, deaths and marriages</a>
+                  </li>
+                  <li>
+                    <a href="/libraries">Libraries</a>
+                  </li>
+                  <li>
+                    <a href="/parking">Parking</a>
+                  </li>
+                  <li>
+                    <a href="/household-recycling-rubbish-and-waste">Recycling, rubbish and waste</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="post-cont">
+            <div class="row">
+              <div class="column">
+                <ul class="f-links cf">
+                  <li>
+                    <a target="_blank" href="/disclaimer/">Disclaimer</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/website-privacy-policy">Privacy</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/freedom-of-information">Freedom of Information</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/copyright">Copyright</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/accessibility">Accessibility</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/terms-and-conditions-text-message-services">Terms and Conditions</a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="/stay-informed-westminster-newsletter">Newsletter</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="last-bar">
+            <div class="row">
+              <div class="inner">
+                <div class="medium-6 columns">
+                  <div class="logo icon-brand-logo"></div>
+                </div>
+                <div class="medium-6 columns">
+                  <div class="copyright">
+                    &copy; Westminster City Council
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+</div>
+  </div>
+      </footer>
+
+</div>
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+    jQuery(document).ready(function($) {
+    cookieControl({
+        introText: '<p>This site uses cookies to store information on your computer.</p>',
+        fullText: '<p>Some cookies on this site are essential, and the site won\'t work as expected without them. These cookies are set when you submit a form, login or interact with the site by doing something that goes beyond clicking on simple links.</p><p>We also use some non-essential cookies to anonymously track visitors or enhance your experience of the site. If you\'re not happy with this, we won\'t set these cookies but some nice features of the site may be unavailable.</p><p>By using our site you accept the terms of our <a href="/website-privacy-policy">Privacy Policy</a>.',
+        theme: 'dark',
+        html: '<div id="cccwr"><div id="ccc-state" class="ccc-pause"><div id="ccc-icon"><button><span>Cookie Control</span></button></div><div class="ccc-widget"><div class="ccc-outer"><div class="ccc-inner"><h2>Cookie Control</h2><div class="ccc-content"><p class="ccc-intro"></p><div class="ccc-expanded"></div><div id="ccc-cookies-switch" style="background-position-x: 0;"><a id="cctoggle" href="#" style="background-position-x: 0;" name="cctoggle"><span id="cctoggle-text">Cookies test</span></a></div><div id="ccc-implicit-warning">(One cookie will be set to store your preference)</div><div id="ccc-explicit-checkbox"><label><input id="cchide-popup" type="checkbox" name="ccc-hide-popup" value="Y" /> Do not ask me again<br /></label> (Ticking this sets a cookie to hide this popup if you then hit close. This will not store any personal information)</div><p class="ccc-about"><small><a href="http://www.civicuk.com/cookie-law" target="_blank">About this tool</a></small></p><a class="ccc-icon" href="http://www.civicuk.com/cookie-law" target="_blank" title="About Cookie Control">About Cookie Control</a><button class="ccc-close">Close</button></div></div></div><button class="ccc-expand">read more</button></div></div></div>',
+        position: 'left',
+        shape: 'triangle',
+        startOpen: true,
+        autoHide: 60000,
+        onAccept: function(cc){cookiecontrol_accepted(cc)},
+        onReady: function(){},
+        onCookiesAllowed: function(cc){cookiecontrol_cookiesallowed(cc)},
+        onCookiesNotAllowed: function(cc){cookiecontrol_cookiesnotallowed(cc)},
+        countries: '',
+        subdomains: true,
+        cookieName: 'westminster-city-council_cookiecontrol',
+        iconStatusCookieName: 'ccShowCookieIcon',
+        consentModel: 'implicit'
+        });
+      });
+    
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+function cookiecontrol_accepted(cc) {
+cc.setCookie('ccShowCookieIcon', 'no');jQuery('#ccc-icon').hide();
+}
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+function cookiecontrol_cookiesallowed(cc) {
+
+}
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+function cookiecontrol_cookiesnotallowed(cc) {
+
+}
+//--><!]]>
+</script>
+
+  <!-- Agilisys Engage -->
+  <script language='javascript'>
+    if(location.protocol=="https:") {
+      var dplat = "https://westminstercore.logo-net.co.uk/Delivery/TBURT.php";
+    } else {
+      var dplat = "http://westminstercore.logo-net.co.uk/Delivery/TBURT.php";
+    }
+    var strPURL = parent.document.URL;
+    strPURL = strPURL.replace(/&/g, "^");
+    strPURL = strPURL.toLowerCase();
+    strPURL = strPURL.replace(/</g, "-1");
+    strPURL = strPURL.replace(/>/g, "-2");
+    strPURL = strPURL.replace(/%3c/g, "-1");
+    strPURL = strPURL.replace(/%3e/g, "-2");
+    var T = new Date();
+    var cMS = T.getTime();
+    var src = dplat + '?SDTID=156&PURL=' + strPURL + '&CMS='+cMS;
+    var headID = document.getElementsByTagName("head")[0];
+    var newScript = document.createElement('script');
+    newScript.type = 'text/javascript';
+    newScript.src = src;
+    headID.appendChild(newScript);
+  </script>
+
+  <!-- JIRA issue collector -->
+  <script type="text/javascript" src="https://westminstergov.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e/en_USy616hp-1988229788/6211/8/1.4.5/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=89d7d23d"></script>
+</body>
+<!-- end -->
+</html>

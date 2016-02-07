@@ -1,0 +1,1070 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/><title>Benefit Calculator</title>
+
+<!-- v. 03.12 "extra plain" version for immediate upload. No images, no tables, no flashy text gimmicks - this version is so plain it should 
+     be AAA and is Valid XHTML 1.0 Strict ;  validator.w3.org/check    -->
+<!--  We can't stop anyone taking this client-side code, but the contents will rapidly go "out of date" as legislative changes 
+     render older versions dangerously obsolete. And our subscription is modest, so why to go to the trouble of replicating it !   -->
+<!-- Tech notes March 2011 - To assist user customisation we've completely vanila-ized the WBC file and standardised on -->
+<!-- one Arial font - to change it just alter the <body style="font-family:> statement near the file start. Similarly, to change all the  -->
+<!-- cell colors etc., just alter the <style type="text/css"> statements few lines below.  -->
+<!-- Viewing with MS Internet Explorer 5.5 / Netscape 6.0 / Firefox 1.0 or higher is recommended.   -->
+<!-- Now in 2012, the "WebBenCalc" comes in more exciting flavours with the "so cool" PHP server side versions of the wbc is 
+    now available as an upgrade for those folk who just don't like old-fashioned JavaScript - often citing Accessibility issues. 
+    If prefer a server side solution then we can supply the PHP option. Contact us via the ovaltech.ltd.uk Web site. -->
+
+<style type="text/css"> 
+	
+	body { font-family: Arial, Helvetica, sans-serif; font-size: 100%; }
+
+    div.row_wrapper { width: 90%; margin: 10px auto; padding: 0px; clear:both; border: 1px solid #ccc; }
+	
+	div.question { width: 80%; float:left; padding: 5px 5px 10px 5px;}
+	div.question p { width: 90%; margin: 5px 0px; padding: 5px 5px 10px 5px; background:#fff; }
+	
+	div.answer { width: 13%; float:right; margin: 4px; padding: 0px 5px 0px 15px  ; background:#eee; }
+    div.answer p { margin: 0; padding: 3px;  }	
+	div.answer input { margin: 0 auto; padding: 2px; }
+	div.answer select { margin: 0 auto; padding: 2px; border: 1px solid #ccc; }
+	div.answer option { margin: 0 auto; padding: 2px; }
+
+	hr.spacer { clear:both; border-width:0px; height: 1px; padding: 0px; margin: 0px; visibility: hidden; }
+	div.ernieQ { width: 60%; float:left; }
+    div.ernieQ p { width: 90%; margin: 5px 0px; padding: 5px 5px 10px 5px; background:#fff; }
+
+    div.ndepQ { width: 40%; float:left; }
+    div.ndepQ p { text-align: right;  width: 90%; margin: 5px 0px; padding: 5px 5px 10px 5px; background:#fff; }
+    div.ansndep { width: 7%; float:left; margin: 4px; background:#eee; }
+    
+    div.esaQ {  float:left;    width: 95%;  }
+    div.esaQ p { text-align: left;  width: 99%; margin: 0px 0px; padding: 5px 5px 5px 5px; background:#fff; }
+    div.ansesa { width: 25%;   float:left;  margin: 5px 5px  5px  25px; padding: 0px 0px 5px 20px;  background:#eee; }
+
+   .finalbox { 
+   border:1px solid #C0C0C0;
+   background-color:#FFFF99;
+   color:black; 
+   font-weight: bold;     
+       } 
+
+    .cyanbox { 
+    border:1px solid #C0C0C0; 
+    background-color:#CCFFFF; 
+    color:black;
+    font-weight: bold;     
+        } 
+
+	<!--	.bigblue { 	color:#0066FF;  font-weight: bold; 	font-size: 1.5em;  	} -->
+
+   .lgfont { color:lightgrey } 
+
+</style>
+
+</head>
+<body   > 
+<!--    <body onload="self.focus();document.getElementById("BAAFC1").focus()"   >  -->
+<noscript>
+<p><strong>This webpage can't calculate any benefits because Javascript is switched off or blocked in your web browser !</strong></p></noscript>
+
+ <h1> <span style = "color:blue;" >Council Tax Support and Housing Benefit Calculator </span> </h1>  
+<!--  span tag is allowed inside H tags - so deleted bigblue class   -->
+<!-- <div><strong>The Web Benefits Calculator - simply fill out this form for an instant on-line  estimate.</strong> </div> -->
+
+<p>Fill out this simple form for an instant on-line estimate - this calculation is only an estimate and is based on the 
+  information you supply. For a full evaluation make a formal claim asap. 
+  Usually Benefit / Support will only start from the Monday after the Council receive your form. </p> 
+
+ <p><strong>Check how many bedrooms you are entitled to</strong> using our <a href="Room_Number.htm">Room Rate Calculator</a> (opens in new window).</p>
+ <hr>  
+ 
+
+<p>
+  <!--   ******************             Start of form 1   .... could use   <span class="bigblue">Step 1: Rent  </span>  -->
+ </p>
+<form action=" "  id="wbcForm1">
+   
+  <div><span style = "color:blue;" > <strong> Preliminary Step </strong></span> - for claimant (or partner) in <strong> receipt 
+ of Universal Credit</strong> - all others go straight to Step 1</div>
+  <div class="row_wrapper">
+    <div class="question">
+     <label for="UCfield01">Are you (or you partner) on Universal Credit and you have the figures per month off the UC award notification 
+	 for entry below ? A "Yes" can skip the income steps 7, 8 and 9. </label>
+     </div>
+    <div class="answer" id="ucF1">
+        <select name="ListUC" id="UCfield01" size="2" onfocus="hilite('ucF1')" onblur="lolite('ucF1')" 
+        onclick ="KillStep1()" onkeypress ="KillStep1()"  onchange = "UClocker()" >
+          <option selected="selected">No</option>
+          <option>Yes</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+     <div class="ndepQ" >
+       <p>  <label for="UCfield02">First, enter your UC allowance and elements Amount</label> </p>
+    </div>
+    <div class="ansndep" id="ucF2">
+        <input type="text" size="2" name="BoxUCmaxAw" id="UCfield02" value="0" 
+		onchange="bounds(this)" onkeyup = "UClocker()" onfocus="hilite('ucF2')" onblur="lolite('ucF2')"  />
+     </div>
+  <div class="ndepQ" >
+     <p> <label for="UCfield03">And then any take-home pay in this assessment period</label> </p>
+    </div>
+   <div class="ansndep" id="ucF3" >
+          <input type="text" size="2" name="BoxUCtakepay" value="0" id="UCfield03"
+        onchange="bounds(this)" onkeyup = "UClocker()" onfocus="hilite('ucF3')" onblur="lolite('ucF3')"  />
+    </div>
+  <div class="ndepQ" >
+       <p>  <label for="UCfield04">Next, any non-work income and other benefits taken off</label> </p>
+    </div>
+    <div class="ansndep" id="ucF4">
+        <input type="text" size="2" name="BoxUCunearned" id="UCfield04" value="0" 
+		onchange="bounds(this)" onkeyup = "UClocker()" onfocus="hilite('ucF4')" onblur="lolite('ucF4')"  />
+     </div>
+   <div class="ndepQ" >
+     <p> <label for="UCfield05">And enter the actual Universal Credit monthly payment</label> </p>
+    </div>
+   <div class="ansndep" id="ucF5" >
+          <input type="text" size="2" name="BoxUCaward" value="0" id="UCfield05"
+        onchange="bounds(this)" onkeyup = "UClocker()" onfocus="hilite('ucF5')" onblur="lolite('ucF5')"  />
+    </div>
+   <hr class="spacer" />
+  </div>
+
+
+<h2><span style = "color:blue;" >Step 1: Rent </span></h2>
+   <div> This section requests <strong>rent</strong> details for a Housing Benefit Claim ( skip 
+     if you are on Universal Credit or just want help with your 
+     Council Tax bill )</div>
+
+  <div class="row_wrapper">
+	<div class="question">
+        <label for="BAAFC1" id="LabelHB1" > Enter your actual "contract" rent. Warning - excessive amounts may be restricted 
+        for claim purposes. Do not include charges for ineligible services such as meals and heating.</label>
+    </div>
+    <div class="answer" id="F1">
+      £<input type="text" id="BAAFC1" size="7" name="rambox" value="0.00" onchange="bounds(this)" onfocus="hilite('F1')" 
+        onblur= "lolite('F1')"  />
+    </div>
+    <hr class="spacer" />
+  </div>
+  
+  <div class="row_wrapper">
+    <div class="question">
+          <label for="BAAFC2" id="LabelHB2" >Select the &quot;rent period&quot; (how often the contract rent is paid). 
+        Fortnightly and monthly figures are automatically converted to weekly amounts.</label>
+      </div>
+    <div class="answer" id="F2">
+          <select name="ramperlist" id="BAAFC2" size="3" onfocus = "hilite('F2')" onblur="lolite('F2')"  >
+          <option selected="selected">weekly</option>
+          <option>fortnightly</option>
+          <option>monthly</option>
+        </select>
+      </div>
+    <hr class="spacer" />
+  </div>
+  
+  <div class="row_wrapper">
+    <div class="question">   <label for="BAAFC3" id = LabelHB3 >
+    Enter the number of rent free weeks (if any) in your rent year. Council tenants often have 2 or 4, so check locally.</label>
+      </div>
+    <div class="answer" id="F3">
+          <input type="text" size="2" name="frewksbox" id="BAAFC3" value="0" onchange="bounds(this), NoDec(this), valit(this, 0, 52)" 
+         onfocus="hilite('F3')" onblur="lolite('F3')"  />
+      </div>
+    <hr class="spacer" />
+  </div>  
+
+<div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC3a" id="LabelHB4" >
+   Is your property rented from a RSL (a Housing Association, Council or similar) and 'under occupied' because of spare bedrooms ? 
+   If you are below State Pension age (see Step 3), the rent eligible for your housing benefit is cut by 14% if your 
+   accommodation is considered to be 'under occupied' by one extra bedroom and 25% if you have two or more spare bedrooms. 
+   There will be many and varied exemptions from these cuts - contact the council for specific advice. If your 
+  property is not rented from a RSL please select No Spare in the box.
+
+  </label>
+    </div>
+    <div class="answer" id="F3a">
+          <select name="sparebedslist" id="BAAFC3a" size="3" onfocus = "hilite('F3a')" onblur="lolite('F3a')"  >
+          <option selected="selected">No spare</option>
+          <option>One spare</option>
+          <option>Two or more</option>
+        </select>
+      </div>
+    <hr class="spacer" />
+  </div>
+
+  <div class="row_wrapper">
+	<div class="question">
+        <label for="BAAFC1a"  id="LabelHB5" > 
+      And, if applicable, <strong><span style = "color:blue;" >enter your weekly Local Housing Allowance</span></strong>. 
+  So if this fresh rent claim is from a private landlord (not a Housing Association or similar) then use the  
+  Local Housing Allowance figure. Weekly LHA rates are on the local council's website - they depend on the area and the number 
+  of bedrooms appropriate for the claim. N.B. the Shared Room Rate will apply to your claim if you are under 35 and single.
+       </label>
+    </div>
+    <div class="answer" id="F1a">
+      £<input type="text" id="BAAFC1a" size="7" name="LHAbox" value="0.00" onchange="bounds(this)" onfocus="hilite('F1a')" 
+        onblur= "lolite('F1a')"  />
+    </div>
+    <hr class="spacer" />
+  </div>
+
+<h2><span style = "color:blue;" >Step 2: Council Tax </span></h2>
+<div>This section requests your <strong>Council Tax details</strong> (skip this stage if you do not want help with your Council Tax bill)</div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC4">Enter your actual Annual Council Tax bill ( without taking off any Council Tax Support you already get ).</label>
+    </div>
+    <div class="answer" id="F4">
+     £
+        <input type="text" size="7" name="CTbillbox" id="BAAFC4" value="0.00" onchange="bounds(this)" onfocus="hilite('F4')" 
+         onblur= "lolite('F4')"  />
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC5">Has this Council Tax bill already been discounted ?</label>
+    </div>
+    <div class="answer" id="F7">
+        <select name="revdiscolist" id="BAAFC5" size="3" onfocus = "hilite('F7')" onblur="lolite('F7')"   >
+          <option selected="selected">No</option>
+          <option>25% off</option>
+          <option>50% off</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+
+<h2><span style = "color:blue;" >Step 3: General</span></h2>
+  <div> This section requests some <strong>General Information</strong> about you. If you answer &quot;Yes&quot; to this 
+  first question you can skip all the income questions (steps 7 to 11) because your income will be entirely disregarded 
+  for the purposes of this calculation.</div>
+  <div class="row_wrapper">
+    <div class="question">
+     <label for="BAAFC6">Are you (the claimant) on Income Support, Income-based Jobseeker's Allowance,
+	Income-related Employment and Support Allowance or Pension Guarantee Credit?</label>
+     </div>
+    <div class="answer" id="F8">
+        <select name="incsuplist" id="BAAFC6" size="2" onfocus="hilite('F8')" onblur="lolite('F8')"  >
+          <option selected="selected">No</option>
+          <option>Yes</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC7">Are you single or living with a partner as a couple ?</label>
+    </div>
+    <div class="answer" id="F9">
+        <select name="statuslist" id="BAAFC7" size="2" onchange="lock30bet(), LabSLPhider(), singleESA()" 
+        onfocus="hilite('F9')" onblur="lolite('F9')" >
+          <option>single</option>
+          <option selected="selected">couple</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC8">Enter your age (or the age of the oldest person in a couple)</label>
+    </div>
+    <div class="answer" id="F10">
+       <input type="text" size="2" name="agebox" id="BAAFC8" value="45" onchange="bounds(this), NoDec(this)" 
+       onkeyup=" knownPClock(), DoBFYslotlocker() " onfocus= "hilite('F10')" onblur="lolite('F10')"  />
+         </div>
+    <hr class="spacer" />
+  </div>
+
+<!--     SPAge  insert        -->
+ <div class="row_wrapper">
+    <div class="ernieQ">  <p><label for="BAAFC8sp1" id="LabelDoB"  class= "lgfont"  >
+      Because you (or your partner) are aged 62, you could reach the State Pension qualifying age in this financial year.
+      So select the actual date of birth slot - it can make a huge difference to your claim.
+     </label>  </p>
+     </div>
+   <div class="ansesa" id="F10aa">
+        <select name="DoB_list" id="BAAFC8sp1" size="4" onchange = "DoBFYslotlocker()" onfocus="hilite('F10aa')" 
+         onblur="lolite('F10aa')"  >
+
+  <option selected  = "selected">Before 6th Oct 1952</option>
+        <option>6 Oct 1952 to 5 Nov 1952</option>
+		<option>6 Nov 1952 to 5 Dec 1952</option>
+		<option>6 Dec 1952 to 5 Jan 1953</option>
+		<option>6 Jan 1953 to 5 Feb 1953</option>			
+		<option>6 Feb 1953 to 5 March 1953</option>
+		<option>6 March 1953 to 5 April 1953</option>
+		<option>after 5 April 1953</option>
+           </select>
+    </div>
+ 
+    <div class="ernieQ">  <p><label for = "BAAFC8sp2" id="LabelFYslot" class= "lgfont" >
+   And then select a start date slot for this claim estimate "run" in the current financial year (April 2015 to the 
+   following April). Again, different start date slots could produce very different results.    
+       </label>  </p>
+     </div>
+   <div class="ansesa" id="F10ba">
+        <select   name="FYslot_list" id="BAAFC8sp2" size="4" onchange = "DoBFYslotlocker()" onfocus="hilite('F10ba')" 
+         onblur="lolite('F10ba')"  >
+
+	<option selected = "selected">Before 6th of May 2015</option>
+	        <option >6 May 2015 to 5 July 2015</option>
+              <option>6 July 2015 to 5 September</option>
+				<option>6 September to 5 November</option>
+				<option>6 November to 5 January 2016</option>
+				<option>6 January to 5 March 2016</option>			
+				<option>6 March to 5 April 2016</option>       
+           </select>
+   </div>
+    <hr class="spacer" />
+  </div>
+<!--     end SPAge  insert        -->
+
+<h2><span style = "color:blue;" >Step 4: Capacities and Disabilities </span></h2>
+  <div> This section looks for claimant (and partner) <strong>work capacity / health / disability issues or carer 
+    functions</strong> (if any) - otherwise skip this step. Should you be one of the few Permitted Work earners (on the 
+    higher monetary limit) then you are likely to be awarded substantial benefit so do apply asap.  
+    Be sure to <span style = "color:purple;" > enter any Employment and Support Allowance payments down at Step 8 </span>
+    as other unearned income. Where a partner gets the (higher) ESA support component, a couple might want to swap claim 
+    roles to increase potential HB/CTS.
+   </div>
+  <div class="row_wrapper">
+    <div class="esaQ" >
+       <p><label for="BAAFC8a"> If applicable, enter your (the HB/CTS claimant's) Employment and 
+ 			Support Allowance details for ESA Phase,</label> 
+               <label for="BAAFC8b">ESA element</label> and <label for="BAAFC8c">ESA component</label>. </p>
+   </div>
+    <div class="ansesa" id="F10a">
+	<select name="ESAlist1" id="BAAFC8a" size="3" onchange="lockDSQs(), chkdis()" onfocus = "hilite('F10a')"  
+	onblur= "lolite('F10a')" />
+       <option selected="selected">No ESA claim made</option>
+       <option>Assessment Phase</option>
+	   <option>Main Phase ESA</option>
+	   </select>
+    </div>
+    <div class="ansesa" id="F10b">
+	<select name="ESAlist2" id="BAAFC8b" size="3" onfocus = "hilite('F10b')"  onblur= "lolite('F10b')"  />
+       <option selected="selected">No ESA element</option>
+       <option>(IR) income-related</option>
+	   <option>(C) Contribution based</option>
+	   <option>NI credits element</option>
+	   </select>
+    </div>
+    <div class="ansesa" id="F10c">
+	<select name="ESAlist3" id="BAAFC8c" size="3" onfocus = "hilite('F10c')"  onblur= "lolite('F10c')"  >
+       <option selected="selected">No ESA component</option>
+       <option>Work-related activity</option>
+	   <option>Support component</option>
+	   </select>
+    </div>
+ <!-- No..... <hr class="spacer" />    -->
+  </div>
+
+  <div class="row_wrapper">
+     <div class="esaQ" >
+     <p><label for="BAAFC8d" id="Label_pESA" > And your partner's Employment and Support Allowance details for ESA phase,</label>  
+	<label for="BAAFC8e">element</label> and <label for="BAAFC8f">component</label>, if applicable.  </p>
+     </div>
+    <div class="ansesa" id="F10d">
+	<select name="ESAlist4" id="BAAFC8d" size="3" onchange="lockDSQs(), chkdis(), singleESA()" onfocus = "hilite('F10d')"  
+	onblur= "lolite('F10d')"  >
+       <option selected="selected">No ESA claim made</option>
+       <option>Assessment Phase</option>
+	   <option>Main Phase ESA</option>
+	   </select>
+    </div>
+    <div class="ansesa" id="F10e">
+	<select name="ESAlist5" id="BAAFC8e" size="3"  onfocus = "hilite('F10e')" onblur= "lolite('F10e')"  >
+       <option selected="selected">No ESA element</option>
+       <option>(IR) income-related</option>
+	   <option>(C) Contribution based</option>
+	   <option>NI credits element</option>
+	   </select>
+    </div>
+    <div class="ansesa" id="F10f">
+	<select name="ESAlist6" id="BAAFC8f" size="3"  onfocus = "hilite('F10f')" onblur= "lolite('F10f')"  >
+       <option selected="selected">No ESA component</option>
+       <option>Work-related activity</option>
+	   <option>Support component</option>
+	   </select>
+    </div>
+ <!-- No..... <hr class="spacer" />    -->
+  </div>
+
+  <div class="row_wrapper">
+    <div class="question">
+     
+        <label for="BAAFC9"><span style = "color:purple;" ><strong>
+        Disability applies if you (or partner) can match one of these qualifying conditions:-</strong></span></label>
+           <br/>
+        <strong>You</strong> get Attendance or Constant Attendance Allowance, Disability Living Allowance, 
+     Personal Independence Payment, Invalid 
+        Vehicle Scheme or Motability, War Pensioners' Mobility Supplement, Severe Disablement Allowance, Incapacity Benefit 
+        (paid at the long term rate) or you are registered blind (or regained your sight in the last 28 weeks)?
+      <br/>
+      <strong>Or you</strong> (the claimant only) have been off work sick for at least 52 weeks (28 if terminally 
+        ill) with medical evidence / sick notes ? 
+    </div>
+    <div class="answer" id="F11">
+        <select name="dsablelist" id="BAAFC9" size="2" onchange="lockDSQs(), chkdis(), lock30bet()" 
+        onfocus="hilite('F11')"  onblur="lolite('F11')"    >
+          <option selected="selected">No</option>
+          <option>Yes</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC10" id="LabeladDLA" class="lgfont">
+         Do you (or your partner) get the highest rate of the DLA care component or the 
+             PIP enhanced rate daily living component ?
+        </label>
+    </div>
+    <div class="answer" id="F12">
+        <select name="hrccdlalist" size="2" id="BAAFC10" onchange="chkdis()" onfocus="hilite('F12')" onblur="lolite('F12')"  >
+          <option selected="selected">No</option>
+          <option>Yes</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+		<div id="LabelSDP1"  class="lgfont">
+        <label for="BAAFC11">Do these two statements apply to you ? (only say &quot;yes&quot; if both of them apply)</label>
+         <ol>  
+        <li> You (and partner) get care component of DLA (middle/high rate) or the PIP daily living component or Attendance 
+        / Constant Attendance Allowance&nbsp; (or partner blind and you get one), and  </li>
+        <li> No other adult lives in your home except your partner, other than disabled persons, your carer, landlord or other tenants, </li>
+       </ol>  </div>
+    </div>
+    <div class="answer" id="F13">
+        <select name="dissevlist" id="BAAFC11" size="2" onchange="chkdis()" onfocus="hilite('F13')" onblur="lolite('F13')" >
+          <option selected="selected">No</option>
+          <option>Yes</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+   </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC11a"  id="LabelSDP2"  class= "lgfont"  >
+    Is someone getting (or entitled to) a Carer's Allowance for looking after one of you or your partner, or both of you ?</label>
+    </div>
+    <div class="answer" id="F13a">
+        <select name="CAlist" id="BAAFC11a" size="3" onchange="chkdis()" onfocus="hilite('F13a')" onblur="lolite('F13a')" >
+                <option selected="selected">No</option>
+                <option>One</option>
+                <option>Both</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC12"  id="LabeladDSwrk"  class= "lgfont" >
+        Does the person who is disabled or on ESA (you or your partner) work an average of 16 hours or more a week ?</label>
+    </div>
+    <div class="answer" id="F14">
+        <select name="DisWkWkhourslist" id="BAAFC12" size="2" onchange="chkdis()" onfocus="hilite('F14')" onblur="lolite('F14')" >
+          <option selected="selected">No</option>
+          <option>Yes</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+
+  <div class="row_wrapper">
+    <div class="ernieQ">  <p><label for="BAAFC13">Are you, your partner, or both of you, being paid (or entitled to be paid) 
+     a Carer's Allowance for looking after someone ?</label>  </p>
+    </div>
+    <div class="ansesa" id="F16">
+        <select name="invcalist" id="BAAFC13" size="3" onchange = "CAsafenet()" onfocus="hilite('F16')" onblur="lolite('F16')"  >
+        <option selected="selected">No CA is payable</option>
+        <option>Both of us get a CA</option>
+	<option>I work and get CA</option>
+	<option>Partner works &amp; gets CA</option>
+	<option>I get CA but don't work</option>			
+	<option>Partner has CA, not work</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+
+ <h2><span style = "color:blue;" >Step 5: Children and Young Persons</span></h2>
+  <div> This section requests details of your <strong>children and young persons</strong> for whom child benefit is paid.</div>
+
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC14">How many children aged under 16 do you or your partner get child benefit for? </label>
+    </div>
+    <div class="answer" id="F17">
+        <input type="text" id="BAAFC14" size="2" name="sub16box" value="0" onchange="bounds(this), NoDec(this)" onkeyup="Labbabyhider(), 
+        Labdskidhider(), LabSLPhider(), Labkcarehider(), kcarelock(), lock30bet()" onfocus="hilite('F17')" onblur="lolite('F17')" 
+         />
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC16"> How many young adults aged 16 to 19 years old do you or your partner get child benefit for?</label>
+    </div>
+    <div class="answer" id="F19">
+        <input type="text" id ="BAAFC16"  size="2" name="sub18box" value="0"
+        onchange="bounds(this), NoDec(this)" onkeyup="Labdskidhider(), LabSLPhider()" 
+        onfocus="hilite('F19')" onblur="lolite('F19')"  />
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC17" id="LabelDSk" class= "lgfont" >
+        How many children included above are disabled and receiving DLA or a PIP or are registered blind?</label>
+    </div>
+    <div class="answer" id="F20">
+        <input type="text" id ="BAAFC17" size="2" name="diskidsbox" value="0"
+        onchange="bounds(this), NoDec(this), chkdskds()" onfocus="hilite('F20')" onblur="lolite('F20')"  />
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC18" id="LabelDSkEN" class= "lgfont" >
+        How many of those children are getting DLA (highest care rate) or the enhanced rate daily living 
+            component of a PIP ? </label>
+    </div>
+    <div class="answer" id="F21">
+        <input type="text" id ="BAAFC18" size="2" name="EnhDPkidsbox" value="0"
+        onchange="bounds(this), NoDec(this), chkEnhDPkids()" onfocus="hilite('F21')" onblur="lolite('F21')"  />
+    </div>
+    <hr class="spacer" />
+  </div>
+
+ <h2><span style = "color:blue;" >Step 6: Single Lone Parent </span></h2>
+  <div>This section requests details for <strong>single lone parents</strong> only - otherwise skip this step</div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC19" id="LabelSLP1" class= "lgfont">
+        Have you been receiving Housing/Council Tax Benefit without a break since 5th April 1998?</label>
+    </div>
+    <div class="answer" id="F22">
+        <select name="lpplist" id="BAAFC19" size="2" onchange="chklpp()" onfocus="hilite('F22')" onblur="lolite('F22')" >
+          <option selected="selected">No</option>
+          <option>Yes</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+<!--    *****             End of form 1   ************************   -->
+ <h2><span style = "color:blue;" >Step 7: Earnings </span></h2>
+  <div>This section requests your <strong>earnings</strong> details. As mentioned at Step 3, skip to step 12 if you are on Income 
+  Support, Income-based JSA, Income-related ESA or PGC. Give figures for the claimant (and partner). Include average earnings 
+  from employment and self employment. Be sure to <strong>enter weekly figures in the Weekly column only</strong> and Monthly 
+  figures in the Monthly column only.</div>
+ <div class="row_wrapper">
+  <div class="ernieQ">
+      <p>       </p>
+    </div>
+   <div class="answer" >
+      <p> £ Weekly
+      </p>
+    </div>
+   <div class="answer" >
+      <p> £ Monthly
+      </p>
+    </div>
+   <div class="ernieQ">
+      <p><label for="BAAFC22">How much do you and your partner earn (before deductions)?</label>
+        <label for="BAAFC23">(Do not count expenses paid by your employer)</label>
+      </p>
+    </div>
+   <div class="answer" id="F25">
+      <p>
+       <input type="text" id="BAAFC22" size="7" name="empcashboxw" value="0.00"
+            onchange="bounds(this)" onkeyup="nojob()" onfocus="hilite('F25')" onblur="lolite('F25')"  />
+      </p>
+    </div>
+   <div class="answer" id="F26">
+      <p>
+	<input type="text" id="BAAFC23" size="7" name="empcashboxm" value="0.00"
+            onchange="bounds(this)" onkeyup="nojob()" onfocus="hilite('F26')" onblur="lolite('F26')"  />
+      </p>
+    </div>
+
+   <div class="ernieQ">
+      <p> <label for="BAAFC24"> If you work as a childminder how much do you earn from this?</label>
+        <label for="BAAFC25">(Any earnings from childminding need to be counted separately from other earnings)</label>
+      </p>
+    </div>
+   <div class="answer" id="F27">
+      <p><input type="text" id="BAAFC24" size="7" name="minderboxw" value="0.00"
+            onchange="bounds(this)" onfocus="hilite('F27')" onblur="lolite('F27')"  />
+      </p>
+    </div>
+   <div class="answer" id="F28">
+      <p><input type="text" id="BAAFC25" size="7" name="minderboxm" value="0.00"
+            onchange="bounds(this)" onfocus="hilite('F28')"  onblur="lolite('F28')" />
+      </p>
+    </div>
+ 
+   <div class="ernieQ">
+      <p><label for="BAAFC26"> How much Income Tax </label>
+        <label for="BAAFC27">and National Insurance is deducted ? </label>
+      </p>
+    </div>
+   <div class="answer" id="F29" >
+      <p><input type="text" id="BAAFC26" size="7" name="taxniboxw" value="0.00"
+            onchange="bounds(this)" onfocus="hilite('F29')" onblur="lolite('F29')" />
+      </p>
+    </div>
+   <div class="answer" id="F30">
+      <p><input type="text" id="BAAFC27" size="7" name="taxniboxm" value="0.00"
+            onchange="bounds(this)" onfocus="hilite('F30')" onblur="lolite('F30')"  />
+      </p>
+    </div>
+ 
+   <div class="ernieQ">
+      <p><label for="BAAFC28"> How much do you pay</label>
+        <label for="BAAFC29"> towards a pension scheme ?</label>
+      </p>
+    </div>
+   <div class="answer" id="F31" >
+      <p><input type="text" id="BAAFC28" size="7" name="penconboxw" value="0.00"
+            onchange="bounds(this)" onfocus="hilite('F31')" onblur="lolite('F31')"  />
+      </p>
+    </div>
+   <div class="answer" id="F32" >
+      <p><input type="text" id ="BAAFC29" size="7" name="penconboxm" value="0.00"
+            onchange="bounds(this)" onfocus="hilite('F32')" onblur="lolite('F32')"  />
+      </p>
+    </div>
+     <hr class="spacer" />
+ </div>
+
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC30">How many hours are you (or your partner) each working in an average week? Select the highest.</label>
+    </div>
+    <div class="answer" id="F33">
+        <select name="wkwklist" id="BAAFC30" size="3" 
+        onchange="lock30bet(), kcarelock(), Labkcarehider()" onfocus="hilite('F33')" onblur="lolite('F33')"  >
+          <option selected="selected">30 or more</option>
+          <option>16 to 30</option>
+          <option>under 16</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+
+ <h2><span style = "color:blue;" >Step 8: Unearned Income </span></h2>
+  <div>This section requests your <strong>Unearned income</strong> figures for you (and your partner). Please make them weekly. </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC33">Rent from non-family sub-tenants (meals not included).</label> Do subtract a £20.00 disregard 
+        from the weekly rent received from each one.
+    </div>
+    <div class="answer" id="F35">
+      £
+        <input type="text" id="BAAFC33" size="7" name="subtenincbox" value="0.00"
+        onchange="bounds(this)" onfocus="hilite('F35')" onblur="lolite('F35')"  />
+      
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+      
+        <label for="BAAFC34"> Income from non-family boarders (meals included). Do subtract £20.00 from each one.</label>
+      
+    </div>
+    <div class="answer" id="F36">
+      £
+        <input type="text" id="BAAFC34" size="7" name="brdsumbox" value="0.00"
+            onchange="bounds(this)" onfocus="hilite('F36')" onblur="lolite('F36')"  />
+      
+    </div>
+    <hr class="spacer" />
+  </div>
+
+
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC36">
+   Maintenance received from a former partner ? Child support/maintenance payments are disregarded so do not 
+   include them.
+        </label>
+    </div>
+    <div class="answer" id="F38">
+      £
+        <input type="text" id="BAAFC36" size="7" name="maintincbox" value="0.00"
+        onchange="bounds(this)" onfocus="hilite('F38')" onblur="lolite('F38')"  />
+      
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div>We do not count War Pensions, charitable payments or payments made as a result of personal injury as income. 
+     So do not enter them below. </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC37"><strong>Unearned income from all other sources each week</strong>. Include Universal Credit, Retirement 
+         Pensions, monies from annuities, Incapacity Benefit, Maternity or Carer's or Severe Disablement or Contribution-based 
+         Jobseeker's or Contributory Employment and Support Allowances. But <strong>do not include</strong> any
+         <span style = "color:purple;" ><strong> Child Benefit</strong></span>
+         , Tax/Pension/Return to Work Credits, interest 
+         on savings or Attendance, Disability Living, PIP, Mobility and Fostering Allowances or Community Care Payments.</label>
+    </div>
+    <div class="answer" id="F39">
+      £
+        <input type="text" size="7" id="BAAFC37"  name="otherunincbox" value="0.00"
+        onchange="bounds(this)" onfocus="hilite('F39')" onblur="lolite('F39')"  />
+      
+    </div>
+    <hr class="spacer" />
+  </div>
+
+ <h2><span style = "color:blue;" >Step 9: Savings </span></h2>
+  <div>This section requests your <strong>Savings, Investments and other assets</strong> (claimant and partner). 
+  You cannot qualify for any Housing Benefit if you and any partner have £16,000 or more in savings and investments.
+  For most working age applicants, you cannot qualify for any Council Tax Support if you and any partner have £6,000 or 
+  more - but that limit is £16,000 if you are of pension age. The home you live in and personal 
+  possessions do not count.
+  </div>
+  <div class="row_wrapper">
+    <div class="question"> <label for="BAAFC38">
+    How much is the value of all cash, savings, bank deposits, ISA's, building society accounts, Unit Trusts, Tax Credit 
+    arrears etc. and all &quot;liquid assets&quot;.</label>
+    </div>
+    <div class="answer" id="F40">
+      £
+        <input type="text" id="BAAFC38" size="7" name="capabox" value="0.00"
+        onchange="bounds(this)" onfocus="hilite('F40')"  onblur="lolite('F40')"  />
+      
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+      
+        <label for="BAAFC39"> How much is the value of &quot;fixed&quot; or non liquid assets and investments - shares, buildings and land (but not the house you are living in). Deduct 10% of the value to cover cost of sale.</label>
+      
+    </div>
+    <div class="answer" id="F41">
+      £
+        <input type="text" id="BAAFC39" size="7" name="capbbox" value="0.00"
+        onchange="bounds(this)" onfocus="hilite('F41')" onblur="lolite('F41')"  />
+      
+    </div>
+    <hr class="spacer" />
+  </div>
+
+ <h2><span style = "color:blue;" >Step 10: Childcare </span></h2>
+  <div>This section requests your eligible <strong>childcare charges </strong>(up to £175 p/w for 1 child or £300 for more) and 
+   student expenses. Charges for registered or approved childcare can be deducted from the income of couples or lone parents in 
+    remunerative work or on Statutory Sick, Maternity, Paternity or Adoption Pay or a similar benefit (up to 28 weeks).
+    Each parent must be working at least 16 hours a week - but couples still qualify if one works and the partner is 
+    incapacitated, in hospital or prison. N.B. costs of childcare in the child's own home by a close relative are excluded.            
+            </div>
+  <div class="row_wrapper">
+    <div class="question">
+      
+        <label for="BAAFC40" id="Labelkcare" class= "lgfont" >
+        Enter the weekly childcare charges paid. Children count up to the September following their 15th birthday (or 16th if disabled).</label>
+      
+    </div>
+    <div class="answer" id="F42">
+      £
+        <input type="text" id="BAAFC40" size="7" name="kcarebox" value="0.00" 
+        onchange="bounds(this)" onkeyup="kcarelock()" onfocus="hilite('F42')" onblur="lolite('F42')"  />
+      
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+      
+        <label for="BAAFC41">Enter the weekly student loan or grant contribution which can also be set off against claimant (and partner) income.</label>
+      
+    </div>
+    <div class="answer" id="F43">
+      £
+        <input type="text" id="BAAFC41" size="7" name="studigcbox" value="0.00"
+        onchange="bounds(this)" onfocus="hilite('F43')"  onblur="lolite('F43')"  />
+      
+    </div>
+    <hr class="spacer" />
+  </div>
+<!--   ****** End of form 2 ****** -->
+  <h2><span style = "color:blue;" >Step 11: Tax and Pension Credits </span></h2>
+  <div>This section looks for <strong>Tax and Pension Credits</strong> - income for (nearly) everyone from the Government! They get added to claim income.</div>
+  <div class="row_wrapper">
+    <div class="question">
+    <label for="BAAFC43">If you do get them, enter weekly Working Tax Credit and (unless you or partner have reached 
+    State Pension age) Child Tax Credit here.</label>
+    </div>
+    <div class="answer" id="F45" >
+      £
+        <input type="text" id="BAAFC43" size="7" name="knownTCbox" value="0.00" onchange="bounds(this)" onfocus="hilite('F45')" 
+        onblur="lolite('F45')"  />
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC44" id="LabelknownPC" class= "lgfont">
+        If you already know your Credits then enter your weekly Pension Credit figure here.</label>
+    </div>
+    <div class="answer" id="F45a">
+      £
+        <input type="text" id="BAAFC44" size="7" name="knownPCbox" value="0.00" onchange="bounds(this)" onkeyup="knownPClock()" 
+         onfocus="hilite('F45a')" onblur="lolite('F45a')"  />
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+         <label for="BAAFC42">
+     If you are not actually being paid any Credits, there is no such income so you should skip the rest of this step. But 
+     if you really want an auto estimate then the program can do one, &quot;check&quot; this box and it might just need to know 
+     the extra details below. </label>
+       </div>
+    <div class="answer" id="F44">
+    <input type="checkbox" name="CHKTC"  value="off" id="BAAFC42" onfocus="hilite('F44')" onblur="lolite('F44')" />
+       </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC45" id="Label30bet" class= "lgfont">
+        Between you and your partner, in an average week how many hours are you working ?
+        Only select "24 to 30" if one is working 16 hrs or more a week.</label>
+    </div>
+    <div class="answer" id="F34">
+        <select name="List30bet" id="BAAFC45" size="2" onchange="lock30bet()" onfocus="hilite('F34')" onblur="lolite('F34')" />
+          <option selected="selected">under 24</option>
+          <option>24 to 30</option>
+          <option>30 or more</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC45a" id="LabelIPH" class= "lgfont">
+        Are you or your partner working 16 hours or more p/w while the other is incapacitated, in prison, or hospital inpatient ? </label>
+    </div>
+    <div class="answer" id="F34a">
+        <select name="InprishospList" id="BAAFC45a" size="2" onchange="lock30bet()" onfocus="hilite('F34a')" onblur= "lolite('F34a')"  />
+          <option selected="selected">No</option>
+          <option>Yes</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+        <label for="BAAFC46" id="LabelDsAAHR" class= "lgfont">
+        Are you (or your partner) a disabled adult on High Rate Attendance Allowance, DLA or a PIP ?</label>
+    </div>
+    <div class="answer" id="F47">
+        <select name="DsAAHRList" id="BAAFC46" size="2" onchange="chkdis()" onfocus="hilite('F47')" onblur= "lolite('F47')"  />
+          <option selected="selected">No</option>
+          <option>Yes</option>
+        </select>
+    </div>
+    <hr class="spacer" />
+  </div>
+  <!--    Step 12  start    -->
+  <h2><span style = "color:blue;" >Step 12: Non Rent Paying Adults </span></h2>
+  <div>This section looks for other <strong>adults who live with you</strong> but pay no rent (often grown-up children) - but 
+  don't count your partner, students  or or members of the armed forces away on operations. These so called "non-dependants" are 
+   assumed to be contributing to the household income so a deduction is made from any benefit for each one. So do enter the 
+   number of non-dependants in each of these Income Categories (working non-dependants may now be receiving Universal Credit as well).
+   But skip this step if you (or your partner) is disabled due to 
+   blindness, or are receiving a DLA care / PIP living component or Attendance Allowance has been awarded.
+  </div>
+  
+  <div class="row_wrapper">
+ 
+   <div class="ndepQ" >
+       <p>  <label for="BAAFC47"> in the Top Earnings Category (£408+ p/w gross)</label> </p>
+    </div>
+    <div class="ansndep" id="F48">
+        <input type="text" size="2" name="TopRatebox" id="BAAFC47" value="0" 
+		onchange="bounds(this), NoDec(this)" onfocus="hilite('F48')" onblur="lolite('F48')"  />
+     </div>
+   <div class="ndepQ" >
+     <p> <label for="BAAFC48">between £328 and £407.99 p/w gross earnings</label> </p>
+    </div>
+   <div class="ansndep" id="F49" >
+          <input type="text" size="2" name="Fifthbox" value="0" id="BAAFC48"
+        onchange="bounds(this), NoDec(this)" onfocus="hilite('F49')" onblur="lolite('F49')"  />
+    </div>
+
+  <div class="ndepQ" >
+       <p>  <label for="BAAFC49">between £246 and £327.99 p/w gross earnings</label> </p>
+    </div>
+    <div class="ansndep" id="F50">
+        <input type="text" size="2" name="Fourthbox" id="BAAFC49" value="0" 
+		onchange="bounds(this), NoDec(this)" onfocus="hilite('F50')" onblur="lolite('F50')"  />
+     </div>
+   <div class="ndepQ" >
+     <p> <label for="BAAFC49a">between  £243 and £245.99 p/w gross earnings</label> </p>
+    </div>
+   <div class="ansndep" id="F50a" >
+          <input type="text" size="2" name="ThreeA1box" value="0" id="BAAFC49a"
+        onchange="bounds(this), NoDec(this)" onfocus="hilite('F50a')" onblur="lolite('F50a')"  />
+    </div>
+
+  <div class="ndepQ" >
+       <p>  <label for="BAAFC50">between £189 and  £242.99 p/w gross earnings</label> </p>
+    </div>
+    <div class="ansndep" id="F51">
+        <input type="text" size="2" name="Thirdbox" id="BAAFC50" value="0" 
+		onchange="bounds(this), NoDec(this)" onfocus="hilite('F51')" onblur="lolite('F51')"  />
+     </div>
+   <div class="ndepQ" >
+     <p> <label for="BAAFC50a">between  £187 and £188.99 p/w gross earnings</label> </p>
+    </div>
+   <div class="ansndep" id="F51a" >
+          <input type="text" size="2" name="TwoA1box" value="0" id="BAAFC50a"
+        onchange="bounds(this), NoDec(this)" onfocus="hilite('F51a')" onblur="lolite('F51a')"  />
+    </div>
+  <div class="ndepQ" >
+       <p>  <label for="BAAFC51">between £129 and  £186.99 p/w p/w gross earnings</label> </p>
+    </div>
+    <div class="ansndep" id="F52">
+        <input type="text" size="2" name="Secondbox" id="BAAFC51" value="0" 
+		onchange="bounds(this), NoDec(this)" onfocus="hilite('F52')" onblur="lolite('F52')"  />
+     </div>
+   <div class="ndepQ" >
+     <p> <label for="BAAFC52">under £129 p/w gross but works at least 16 hours</label> </p>
+    </div>
+   <div class="ansndep" id="F53" >
+          <input type="text" size="2" name="Lowestbox" value="0" id="BAAFC52"
+        onchange="bounds(this), NoDec(this)" onfocus="hilite('F53')" onblur="lolite('F53')"  />
+    </div>
+   <hr class="spacer" />
+  </div>
+
+  <div class="row_wrapper">
+    <div class="question">
+           <label for="BAAFC53"> The number of non-dependants (<strong>working or otherwise</strong>) in receipt of <strong>any Pension Credit</strong> at all </label>
+       </div>
+    <div class="answer" id="F53a" >
+           <input type="text" size="3" name="AnyWPCbox" value="0" id="BAAFC53" 
+		onchange="bounds(this), NoDec(this)" onfocus="hilite('F53a')" onblur="lolite('F53a')"  />
+       </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question">
+       <label for="BAAFC53b">Number of non-dependants (any age) on Employment and Support Allowance Contribution-based (C)</label>
+       </div>
+    <div class="answer" id="F53b" >
+           <input type="text" size="3" name="esa_Cbox" value="0" id="BAAFC53b" 
+		onchange="bounds(this), NoDec(this)" onfocus="hilite('F53b')" onblur="lolite('F53b')"  />
+       </div>
+    <hr class="spacer" />
+   </div>
+         
+   <div class="row_wrapper">
+    <div class="question">
+   <label for="BAAFC54"><strong>Not</strong> on Income Support, Jobseekers Allowance (I.B.), ESA or any
+         Pension Credit <strong>and not working</strong> at least 16 hours p/w.
+    Or on <strong>Universal Credit</strong> and either working less than 16 hours or not working but aged 25 or over.
+     </label>
+
+    </div>
+    <div class="answer" id="F54" >
+        <input type="text" size="3" name="Residualbox" value="0" id="BAAFC54"
+        onchange="bounds(this), NoDec(this)" onfocus="hilite('F54')" onblur="lolite('F54')"  />
+    </div>
+    <hr class="spacer" />
+   </div>
+  <div class="row_wrapper">
+    <div class="question"> <label for="BAAFC55">
+     Non-dependants who are under 25 and <strong>are on</strong> IS, JSA, assessment phase income-related ESA(IR)
+         or <strong>Universal Credit</strong> (no earnings).           </label>
+    </div>
+    <div class="answer" id="F55">
+        <input type="text" size="3" name="Issub25box" value="0" id="BAAFC55"
+        onchange="bounds(this), NoDec(this)" onfocus="hilite('F55')" onblur="lolite('F55')"   />
+    </div>
+    <hr class="spacer" />
+  </div>
+  <div class="row_wrapper">
+    <div class="question"><label for="BAAFC56">Non-dependants who are 25 or over and <strong>are on</strong> 
+      IS, income-related ESA (IR) or JSA: Or under 25 and on main phase income-related ESA(IR).</label>
+    </div>
+    <div class="answer" id="F56" >
+        <input type="text" size="3" name="Isplus25box" value="0" id="BAAFC56"
+        onchange="bounds(this), NoDec(this)" onfocus="hilite('F56')" onblur="lolite('F56')"   />
+    </div>
+    <hr class="spacer" />
+  </div>
+<!--    Step 12  end    -->
+
+  <h2><span style = "color:blue;" >
+   That's all you need to do!&nbsp;&nbsp; Click
+    <input type="button" value="Calculate" onclick="Calcfunc()" onkeypress="Calcfunc()"  />
+    and let the program work it out.</span></h2>
+  <p>
+    <label for="BAAFC57">The total Applicable Amount figure is:</label>
+    <input type="text" size="6" name="aabox" value="0.00" id="BAAFC57" class="cyanbox"  readonly="readonly"  />
+    (automatically calculated)</p>
+  <p>
+    <label for="BAAFC58">The total Net Weekly Income figure is </label>
+    <input type="text" size="6" name="nwibox" value="0.00" id="BAAFC58" class="cyanbox"  readonly="readonly"  />
+    <label for="BAAFC59">(automatically calculated) including</label>
+    <input type="text" size="6" name="TCbox" value="0.00" id="BAAFC59" class="cyanbox"  readonly="readonly"  />
+    Tax / Pension Credits p/w</p>
+  
+  <p><strong>How your benefit is worked out.</strong> <em> If the Total Applicable Amount is higher
+   than Net Weekly Income, Maximum Benefit is awarded. But if Net Weekly Income is higher than the Total Applicable Amount
+   <label id="LabelHBCTexpo" >, 65% 
+   f the &quot;excess income&quot; is deducted from Maximum HB to find the award.</label> 
+   For Council Tax Support a 20% of the &quot;excess income&quot; taper is deducted from the maximum award. 
+   NB Non-dependant deductions are also taken off at this stage.</em></p>
+  
+  <h2><span style = "color:blue;" >
+      <label for="BAAFC60" id="LabelHBres" >Weekly Housing Benefit Award:</label>
+    <input type="text" size="6" name="hbbox" value="0.00" id="BAAFC60"
+	class="finalbox"  readonly="readonly"  />&nbsp;&nbsp;
+    <label for="BAAFC61">Weekly Main Council tax Support is:</label>
+    <input type="text" size="6"  name="ctbbox" value="0.00" id="BAAFC61" class="finalbox"  readonly="readonly"  />
+  </span></h2>
+ 
+  <p>A cap may now be put on the total amount of Benefits you can get, one of which is Housing Benefit. To find out whether the 
+  Benefit Cap will be applied to you, go to www.direct.gov.uk/benefitcap. You will need to make a note of how much HB is shown 
+  here. No cap will apply to Council Tax Support.</p>
+ 
+  <p>Alternative Council Tax Support is often called Second Adult Rebate. It is based on the 
+    income of the non-dependants. The program calculates if you are better off with an award based on your circumstances or your 
+    non-dependants.
+    <label for="BAAFC62"><strong>Alternative Result is:</strong></label>
+    <input type="text" size="6" id ="BAAFC62" name="sarbox" value="0.00" class="finalbox"  readonly="readonly"  />
+    Second adult rebate weekly CT Support. </p>
+  <p>And finally you can use the browser Print button to launch a print or change your figures to calculate again or
+    <input type="reset" value="reset" onclick="Resetfunc()" onkeypress ="Resetfunc()" style="vertical-align: middle" name="reseter" />
+    the whole lot.</p>
+</form>
+<!--  ********** End of form 3 ********** End of form 3 ********** -->
+<p><small>Valid April 2015 through March 2016 - Copyright www.ovaltech.ltd.uk</small></p>
+
+<script type="text/javascript" src="calc.js"></script>
+  
+    </div>
+  
+    </label>
+  
+<!-- ************************************** -->
+</body>
+</html>

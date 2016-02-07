@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Refuse Collection Details - Rushcliffe Borough Council</title>
+
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="DC.date.created" scheme="W3CDTF" content="" />
+<meta name="DC.date.issued" scheme="W3CDTF" content="" />
+<meta name="DC.description" content="" />
+<meta name="DC.identifier" scheme="URI" content="" />
+<meta name="DC.title" content="" />
+<meta name="eGMS.subject.category" scheme="IPSV" content="" /><!-- navigation object : Meta Tags (Dynamic) -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="Rushcliffe Borough Council, editor@rushcliffe.gov.uk" />
+<meta name="language" content="en" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+<meta name="DC.coverage.spatial" scheme="TGN" content="Rushcliffe Borough, Nottingham United Kingdom" />
+<meta name="DC.creator" content="Rushcliffe Borough Council, editor@rushcliffe.gov.uk" />
+<meta name="DC.format.medium" scheme="IMT" content="html/text" />
+<meta name="DC.language" scheme="ISO 639-2/T" content="eng" />
+<meta name="DC.publisher" content=" Rushcliffe Borough Council, Civic Centre, Pavilion Road, West Bridgford, Nottingham, NG2 5FE, UK. Website http://www.rushcliffe.gov.uk E-mail mailto:editor@rushcliffe.gov.uk, Telephone 0115 981 9911" />
+<meta name="DC.rights.copyright" content="Copyright (C) Rushcliffe Borough Council, http://www.rushcliffe.gov.uk" />
+<meta name="eGMS.copyright" content="Copyright Rushcliffe Borough Council http://www.rushcliffe.gov.uk" />
+<meta name="eGMS.accessibility" scheme="EGMS.WCAG10" content="Triple-A" />
+<! Getty Thesaurus of Geographic Names (TGN) metadata >
+<meta name="tgn.id" content="1031047" />
+<meta name="tgn.name" content="West Bridgford" />
+<meta name="tgn.nation" content="United Kingdom" />
+<! GeoTag metadata ->
+<meta name="geo.position" content="52.938378, -1.134902" />
+<meta name="geo.placename" content="Rushcliffe, Nottinghamshire" />
+<meta name="geo.country" content="gb" />
+<meta name="geo.region" content="UK" />
+<! eo GeoTag metadata -><!-- navigation object : Meta Tags (Static) -->
+		<link rel="stylesheet" type="text/css" media="screen" href="../css/style.css" />
+		<!--[if IE]>
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/ie.css" />
+		<![endif]-->
+		<!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/ie7.css" />
+		<![endif]-->
+		<script type="text/javascript" src="../includes/resizer.js"></script>
+
+
+
+
+<script type="text/javascript" language="javascript">
+function setFocus(){
+	document.postcode_search.postcode.focus();
+}
+
+function isValidPostcode(p) {
+    var p = document.postcode_search.postcode.value;
+    p = checkPostCode(p);
+	if (p) {
+		document.postcode_search.postcode.value = p;
+	} 
+	else{
+		alert("Postcode has invalid format");
+		setFocus();
+	}
+}
+
+function checkPostCode (toCheck) {
+  // Permitted letters depend upon their position in the postcode.
+  var alpha1 = "[abcdefghijklmnoprstuwyz]";                       // Character 1
+  var alpha2 = "[abcdefghklmnopqrstuvwxy]";                       // Character 2
+  var alpha3 = "[abcdefghjkpmnrstuvwxy]";                         // Character 3
+  var alpha4 = "[abehmnprvwxy]";                                  // Character 4
+  var alpha5 = "[abdefghjlnpqrstuwxyz]";                          // Character 5
+  
+  // Array holds the regular expressions for the valid postcodes
+  var pcexp = new Array ();
+
+  // Expression for postcodes: AN NAA, ANN NAA, AAN NAA, and AANN NAA
+  pcexp.push (new RegExp ("^(" + alpha1 + "{1}" + alpha2 + "{1}" + "?[0-9]{1,2})(\\s*)([0-9]{1}" + alpha5 + "{2})$","i"));
+  
+  // Expression for postcodes: ANA NAA
+  //pcexp.push (new RegExp ("^(" + alpha1 + "{1}[0-9]{1}" + alpha3 + "{1})(\\s*)([0-9]{1}" + alpha5 + "{2})$","i"));
+
+  // Expression for postcodes: AANA  NAA
+  //pcexp.push (new RegExp ("^(" + alpha1 + "{1}" + alpha2 + "{1}" + "?[0-9]{1}" + alpha4 +"{1})(\\s*)([0-9]{1}" + alpha5 + "{2})$","i"));
+  
+ 
+
+  // Load up the string to check
+  var postCode = toCheck;
+
+  // Assume we're not going to find a valid postcode
+  var valid = false;
+  
+  // Check the string against the types of post codes
+  for ( var i=0; i<pcexp.length; i++) {
+    if (pcexp[i].test(postCode)) {
+    
+      // The post code is valid - split the post code into component parts
+      pcexp[i].exec(postCode);
+      
+      // Copy it back into the original string, converting it to uppercase and inserting a space 
+      // between the inward and outward codes
+      postCode = RegExp.$1.toUpperCase() + " " + RegExp.$3.toUpperCase();
+      
+    
+      // Load new postcode back into the form element
+      valid = true;
+      
+      // Remember that we have found that the code is valid and break from loop
+      break;
+    }
+  }
+  
+  // Return with either the reformatted valid postcode or the original invalid postcode
+  if (valid) {return postCode;} else return false;
+}
+
+</script>
+
+</head>
+<body>
+
+<div id="mainContainer">
+			<div id="header"><a href="http://www.rushcliffe.gov.uk" title="Link to Rushcliffe Borough Council Homepage"><div id="logo"><img src="../images/logo.gif" alt="Rushliffe Logo" style="width : 334px; height : 70px; " /></div></a>
+
+				<div id="headerLinks">
+					<ul>
+						<li><a href="javascript:decreaseFontSize();"><span class="onea">A</span></a>
+						<a href="javascript:increaseFontSize();"><span class="twoa"> A</span></a>
+						<a href="javascript:increaseFontSizeTwo();"><span class="threea"> A</span></a></li>
+					</ul>
+				</div>
+				<div class="clearing"></div>
+			</div>
+
+			<div id="contentContainer">
+				<div id="mainContent2colRightSidebar">
+
+
+	  <h1 class="catmast">Refuse Collection Details</h1>
+	  <div class="catsummary"> 
+		<p>Find out on what weekday your refuse is collected, and when you need to put out your grey, green and blue bins. Or print out a refuse collection calendar for your area.</p>
+	  </div>
+
+	  <h2>What you need to do</h2>
+	  <p>To find out when your bins will next be collected, simply enter your postcode in the box below then select 'Next'. 
+	  Once you have completed a postcode search, you will be asked to select your address from a list of addresses for your postcode.</p>
+	  <h2>What we will do</h2>
+	  <p>We will tell you:</p>
+	  <ul>
+		<li>On what weekday your refuse is collected.</li>
+		<li>The next collection day for both the grey bin, and green and blue 
+		  bins.</li>
+	  </ul>
+	  <p> You will also be able to view an online refuse collection calender for your area, which you can download and print out. This calendar shows refuse collection dates for your area, and which colour bin you should put out each week.</p>
+
+	<br />
+
+<div id="errMess"></div>
+	<form name="postcode_search" method="post" action="address.asp">
+		<label for="postcode"><b>Postcode:</b></label>
+		<input type="text" id="postcode" name="postcode" value="" tabindex="1" onchange="javascript:isValidPostcode();"/>
+		<div class="button_right">
+            <input type="submit" name="fm_next" tabindex="2" value="NEXT" class="rbc_button" style="font-size: 12pt; " />
+		</div>
+	</form>
+
+<script type="text/javascript" language="javascript">
+setFocus();
+
+</script>
+
+		</div>
+                                  <div id="mainContent2colLeftSidebar class="bordered">
+                                  <!-- navigation object : Right Side Boxes -->
+                                </div>
+                                <div class="clearing"></div>
+			</div> <!-- End of contentContainer div -->
+
+
+			<div id="footer">
+				<div id="footerLinks">
+<!-- navigation object : Footer Social Icons --><div id="socialMediaLinks" class="bordered">
+  <a href="http://www.facebook.com/rushcliffe"><img alt="Link: to the Rushcliffe Facebook page" title="Link: to the Rushcliffe Facebook page" src="../images/facebookIcon.jpg" /></a>
+  <a href="https://twitter.com/Rushcliffe"><img alt="Link: to the Rushcliffe Twitter page" title="Link: to the Rushcliffe Twitter page" src="../images/twitterIcon.jpg" /></a>
+  <a href="http://www.youtube.com/user/RushcliffeBC"><img alt="Link: to the Rushcliffe YouTube channel" title="Link: to the Rushcliffe YouTube channel" src="../images/youtubeIcon.jpg" /></a>
+  <a href="http://www.flickr.com/photos/rushcliffe/sets/"><img alt="Link: to the Rushcliffe Flickr page" title="Link: to the Rushcliffe Flickr page" src="../images/flickrIcon.jpg" /></a>
+  <a href="#"><img alt="rss icon Text and hover to do" src="../images/rssIcon.jpg" /></a>
+</div>
+
+<!-- navigation object : Footer Details --><div id="footerContactDetails" class="bordered">
+						<img src="../images/footerMap.jpg" />
+						<ul>
+							<li id="footerTel">
+								<label for="telephone">Telephone Number</label>
+								0115 981 9911
+							</li>
+							<li id="footerEmail">
+								<label for="email">Email Address</label>
+								<a href="mailto:customerservices@rushcliffe.gov.uk" title="Send an email to Rushcliffe Borough Council">customerservices@rushcliffe.gov.uk</a>
+							</li>
+						</ul>
+					</div>
+
+<!-- navigation object : Footer Links --><a name="d.en.2174"></a>
+
+<p></p>
+<p><div class="bordered" id="footerNavigation">
+<ul>
+<li class="first">Copyright &copy; 2011</li>
+<li><a href="/privacy/">Privacy Policy</a></li>
+<li><a href="/disclaimer/">Disclaimer</a></li>
+<li>Sitemap</li>
+<li>Accessibility</li>
+</ul>
+</div></p>
+				</div>
+				<div class="clearing"></div>
+				<div id="footerTagline"></div>
+			</div>
+		</div>
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" >
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb">
+<head id="page_Head1">
+<title>Shepway ePayments</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=yes" />
+<meta  name="generator" content="GOSS iCM - Intelligent Content Management" />
+<meta  name="DC.format.medium" content="html/text" />
+<meta  name="DC.date.created" content="2015-05-15T16:54:20+01:00" scheme="W3CDTF" />
+<meta  name="DC.date.issued" content="2015-05-15T16:31:04+01:00" scheme="W3CDTF" />
+<meta  name="DC.date.modified" content="2015-05-15T17:10:51+01:00" scheme="W3CDTF" />
+<meta  name="DC.date.disposal.review" content="2114-05-15T16:31:04+01:00" scheme="W3CDTF" />
+<meta  name="eGMS.accessibility" content="double-a" scheme="eGMS.WCAG20" />
+<meta  name="DC.title" content="Shepway ePayments" />
+<meta  name="DC.description" content="Shepway ePayments" />
+<meta  name="description" content="Shepway ePayments" />
+<meta  name="DC.identifier" content="http://www.shepway.gov.uk/capitapay" scheme="DCTERMS.URI" />
+<meta  name="DC.language" content="EN" scheme="ISO 639-3/T" />
+<meta  name="DC.rights.copyright" content="Copyright 2015 Shepway District Council" />
+<meta  name="DC.type" content="standard" scheme="eGMS.TES" />
+<meta  name="DC.Audience" content="" />
+<meta  name="DC.contributor" content="Civic Centre, Castle Hill Avenue, Folkestone, Kent, CT20 2QY, United Kingdom" />
+<meta  name="DC.creator" content="Civic Centre, Castle Hill Avenue, Folkestone, Kent, CT20 2QY, United Kingdom" />
+<meta  name="DC.publisher" content="Civic Centre, Castle Hill Avenue, Folkestone, Kent, CT20 2QY, United Kingdom" />
+
+<script type="text/javascript">
+							var cookieUrl = "http://www.shepway.gov.uk/article/4357/Cookies";
+						</script>
+<link href="http://www.shepway.gov.uk/themes/shepway/css/editor.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.shepway.gov.uk/themes/shepway/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.shepway.gov.uk/themes/shepway/css/colours.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.shepway.gov.uk/themes/shepway/css/cookiecuttr.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://www.shepway.gov.uk/themes/shepway/css/styleprint.css" rel="stylesheet" type="text/css" media="print" />
+<!--[if IE 8]>
+<link href="http://www.shepway.gov.uk/themes/shepway/css/iefallback.css" rel="stylesheet" type="text/css" media="all" />
+ <![endif]-->
+<!--[if IE 7]>
+<link href="http://www.shepway.gov.uk/themes/shepway/css/ie7.css" rel="stylesheet" type="text/css" media="all" />
+ <![endif]-->
+<!--[if IE 9]>
+<link href="http://www.shepway.gov.uk/themes/shepway/css/ie9.css" rel="stylesheet" type="text/css" media="all" />
+ <![endif]-->
+<link href="http://www.shepway.gov.uk/themes/shepway/css/mobile.css" rel="stylesheet" type="text/css" media="screen and (max-width: 1000px)" />
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/jquery/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/json.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/jquery/json-rpc.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/menu.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/search.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/analytics.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/jquery/jquery.jpanelmenu.min.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/jRespond.min.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/nav.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/jquery.cookiecuttr.js"></script>
+<script type="text/javascript" src="http://www.shepway.gov.uk/themes/shepway/scripts/javascripts.js"></script>
+
+</head>
+
+<body class="active-tab0 active-tab0-first">
+
+<!--  Google Tag Manager  -->
+<noscript>
+<iframe src="//www.googletagmanager.com/ns.html?id=GTM-P3W554"
+						height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>	(function (w, d, s, l, i) {
+								w[l] = w[l] || []; w[l].push({ 'gtm.start':
+						new Date().getTime(), event: 'gtm.js'
+								}); var f = d.getElementsByTagName(s)[0],
+						j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+						'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+							})(window, document, 'script', 'dataLayer', 'GTM-P3W554');</script>
+<!--  End Google Tag Manager  -->
+<div id="responsivecheck"></div>
+<div id="topheader">
+  <div id="topcontainer">
+    <div id="topbanner">
+      <div id="toplogo"> <a href="http://www.shepway.gov.uk/" title="Link to homepage" > <img id="headerlogo" alt="Link to homepage" src="http://www.shepway.gov.uk/themes/shepway/images/toplogo.png" /> </a>
+        <div class="mobileTitle">Shepway.gov.uk</div>
+      </div>
+      <div id="toputilnav">
+        <ul>
+          <li id="smallsearchicon"> <img src="http://www.shepway.gov.uk/themes/shepway/images/mag-white.png" alt="search" /> <span>Search</span> </li>
+          <li class="even"> <img src="http://www.shepway.gov.uk/media/toputil_icon/7/f/Contact-Icon1.png" alt="<!--#(container).DataItem.ArticleHeading" /> <a href="http://www.shepway.gov.uk/ways-to-contact">Ways to contact</a> </li>
+          <li class="odd last"> <img src="http://www.shepway.gov.uk/media/toputil_icon/q/8/my-shepway.png" alt="<!--#(container).DataItem.ArticleHeading" /> <a href="http://www.shepway.gov.uk/my-shepway">My Shepway</a> </li>
+        </ul>
+      </div>
+      <div id="toplevelsearch">
+        <form action="article/1699/Search" method="get" onsubmit="return searchpagevalidate(this.q.value, 'Search');">
+          <fieldset>
+            <legend>Search site</legend>
+            <label for="q">Search</label>
+            <input type="text" name="q" id="q" class="searchkeyword" value="Search" onclick="this.value='';" onfocus="focustextfield(this,'Search')" onblur="blurtextfield(this,'Search')" />
+            <input type="submit" name="go" id="go" value="." title="Search for entered keyword" class="btntext" />
+            <img src="http://www.shepway.gov.uk/themes/Shepway/images/slidenavigationtoggle.png" class="hamburger" alt="menuicon" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!--id=topbanner closing div -->
+  </div>
+  <div id="toplevel">
+    <div id="toplevelnav">
+      <ul>
+        <li class="active-tab0 active-tab0-first "> <a href="http://www.shepway.gov.uk/" accesskey="1">Residents</a> </li>
+        <li class="tab1 tab1 "> <a href="http://www.shepway.gov.uk/business">Business</a> </li>
+        <li class="tab2 tab2 "> <a href="http://www.shepway.gov.uk/your-council">Your Council</a> </li>
+        <li class="tab3 tab3-last "> <a href="http://www.shepway.gov.uk/article/2025/A-Z">A-Z </a> </li>
+        <div class="toplevelrightlinks"> <span class="even first"> <a href="http://www.shepway.gov.uk/article/2077/Accessibility">Accessibility</a> </span> <span class="odd last"> <a href="http://www.shepway.gov.uk/article/2078/Site-map">Site map</a> </span> </div>
+        <li class="even mobileTopUtils"> <a href="http://www.shepway.gov.uk/ways-to-contact">Ways to contact</a> </li>
+        <li class="odd last mobileTopUtils"> <a href="http://www.shepway.gov.uk/my-shepway">My Shepway</a> </li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+	//atoz tab hide/show...
+	$('#toplevelnav ul li.tab3').click(function () {
+		if ($('#responsivecheck').css("z-index") == "1") {
+			if ($(this).hasClass('atoztab')) {
+				$('.atoztab').prev().find('a').css('background-image', 'url(themes/shepway/images/seperator.png)').css('background-position', 'right 50%').css('background-repeat', 'no-repeat');
+				$(this).removeClass('atoztab');
+				$('#topatoznav').css('display', 'none');
+				return false;
+			}
+			else {
+				$(this).addClass('atoztab');
+				$(this).find('a').attr('href');
+				$('#topatoznav').css('display', 'block');
+				$('.atoztab').prev().find('a').css('background', 'url()');
+				return false;
+			}
+		}
+	});
+</script>
+    <script type="text/javascript">
+	//display background on screens
+	$(function () {
+		if ($('#responsivecheck').css("z-index") == "1" && !$(this).hasClass('selected')) {
+			$('#toplevelnav ul li').each(function () {
+				$(this).find('a').css('background-image', 'url(themes/shepway/images/seperator.png)').css('background-position', 'right 50%').css('background-repeat', 'no-repeat');
+				for (var i = 0; i < 10; i++) {
+                if($(this).hasClass("active-tab"+i))
+                {
+					$(this).prev().find('a').css('background', 'white url()');
+                }
+            }
+
+			});
+		}
+	});
+
+	//display menu on click for smaller screens
+	$('.hamburger').on('click', function () {
+		$('#toplevelnav').toggle();
+	});
+
+	//display search bar on smaller screens
+	$('#smallsearchicon').on('click', function () {
+		$('#toplevelsearch').toggle();
+	});
+
+</script>
+  </div>
+</div>
+<div id="pagewrapper">
+  <ul id="topatoznav">
+    <li class="even first"> <a href="http://www.shepway.gov.uk/a">A</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/b">B</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/c">C</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/article/1645/D">D</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/article/1809/E">E</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/article/1810/F">F</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/article/1646/G">G</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/article/1811/H">H</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/article/1812/I">I</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/article/1813/J">J</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/article/1814/K">K</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/article/1815/L">L</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/article/1816/M">M</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/article/1817/N">N</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/article/1818/O">O</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/article/1819/P">P</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/article/1820/Q">Q</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/article/1821/R">R</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/article/1822/S">S</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/article/1823/T">T</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/article/1824/U">U</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/article/1825/V">V</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/article/1826/W">W</a> </li>
+    <li class="odd"> <a href="http://www.shepway.gov.uk/article/1827/X">X</a> </li>
+    <li class="even"> <a href="http://www.shepway.gov.uk/article/1828/Y">Y</a> </li>
+    <li class="odd last"> <a href="http://www.shepway.gov.uk/article/1829/Z">Z</a> </li>
+  </ul>
+  <div id="breadcrumb"> <a href="/" class="home-link">Home</a>
+    <ol>
+      <li> You are here:&nbsp; </li>
+      <li> <span>Shepway ePayments</span> </li>
+    </ol>
+  </div>
+  <div id="maincolumnwrapper">
+    <div class="parentitem"> <a class="rightHeader" href="http://www.shepway.gov.uk/capitapay"> <span>Shepway ePayments</span> </a> </div>
+    <div id="contentwrap">
+      <div id="contentfullwidth">
+        <div id="centrecolumn">
+          <div id="headingtext"><h1>Shepway ePayments</h1></div>
+          <div class="textblock ">
+            <div id="bodytext">
+
+			<script src="http://www.shepway.gov.uk/capitapay/js/disable_autocomplete.js"></script>
+			<style>
+			error { margin-top:10px; padding:3px; border: 1px solid #ff0000; font-weight:bold; color:#ff0000}
+			#outcome { padding:5px; border:2px solid #666; background:#DFFFDF; color:#000; font-weight:bold;}
+			#paymentPending { margin-top:5px; padding:5px; border:2px solid #666; background:#CCC; color:#000; font-weight:bold;}
+			</style>
+    <form action="index.php" method="post">
+
+        <h1>Penalty Charge Notice</h1>
+
+        Please complete the required fields
+        <h2>Penalty Charge Notice Reference: </h2>
+
+        Please enter your PCN number and click lookup to retrieve your detail <br/><br/>
+
+        <input name="reference" value="" type="text" size="20" maxlength="16">
+
+        
+            <input name="submit" type="submit" value="lookup" class="blue_btn"/>
+
+            </form>
+
+
+        <br/><br/>
+
+    <p>Clicking continue  will transfer you to our payment providers website for the secure processing of your payment.</p>
+    <p>No money will be deducted from your card until you confirm the payment. Up until that point you will be perfectly safe if you simply cancel the transaction or close this window.</p>
+    <p>Credit card transactions (with the exception of Penalty Charge Notices) will incur a 1.5% surcharge.</p>
+    <p>It is quicker and easier to pay your Council Tax and Business Rates via Direct Debit. To make arrangements  contact our Revenues and Benefits Service on 01303 853555.</p>
+
+</div>
+          </div>
+          <script type="text/javascript">
+	$(document).ready(function () {
+		$('body').addClass('defaultpage');
+
+		if ($('#related').height() > 20) {
+			//decrease main content size, add menu to right
+			$('#centrecolumn').css('width', '67.5%');
+
+			//add menu
+			var detach = $('#related').detach();
+			detach.appendTo('#contentfullwidth');
+
+		}
+		else {
+			$('#centrecolumn').css('width', '100%');
+			$('#related').css('display','none');
+		}
+
+	});
+</script>
+          <div id="related">
+            <div class="defaultrelated"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="green" />
+  <div id="footer" class="active-tab0 active-tab0-first">
+    <ul id="iconlinks">
+      <li> <a href="http://www.facebook.com/shepwaydistrictcouncil" title="facebook"> <img class="normal" src="http://www.shepway.gov.uk/media/icon_link/r/f/facebook.png" alt="facebook" /> <img class="highlight" src="http://www.shepway.gov.uk/media/icon_link/r/d/facebook1.png" alt="facebook" /> </a> </li>
+      <li> <a href="http://www.twitter.com/shepwaydc" title="twitter"> <img class="normal" src="http://www.shepway.gov.uk/media/icon_link/r/4/twitter.png" alt="twitter" /> <img class="highlight" src="http://www.shepway.gov.uk/media/icon_link/r/7/twitter1.png" alt="twitter" /> </a> </li>
+      <li> <a href="" title="googleplus"> <img class="normal" src="http://www.shepway.gov.uk/media/icon_link/s/q/googleplus1.png" alt="googleplus" /> <img class="highlight" src="http://www.shepway.gov.uk/media/icon_link/s/s/googleplus2.png" alt="googleplus" /> </a> </li>
+      <li> <a href="" title="youtube"> <img class="normal" src="http://www.shepway.gov.uk/media/icon_link/p/s/youtube2.png" alt="youtube" /> <img class="highlight" src="http://www.shepway.gov.uk/media/icon_link/n/o/youtube3.png" alt="youtube" /> </a> </li>
+      <li> <a href="https://www.flickr.com/photos/shepway/" title="Flickr"> <img class="normal" src="http://www.shepway.gov.uk/media/icon_link/t/l/flickr.png" alt="Flickr" /> <img class="highlight" src="http://www.shepway.gov.uk/media/icon_link/t/9/flickr1.png" alt="Flickr" /> </a> </li>
+    </ul>
+    <div class="shepaddress"> <span class="sheptitle">Shepway District Council</span><br />
+      Civic Centre, Castle Hill Avenue, <br />
+      Folkestone, Kent CT20 2QY<br />
+      <label>01303 853000</label>
+    </div>
+    <div class="navandlinks">
+      <div id="bottomutilnav">
+        <ul>
+			<li class="even first"><a href="http://www.shepway.gov.uk/article/6912/Interactive-Map">Interactive Map</a></li>
+			<li class="odd"><a href="http://www.shepway.gov.uk/article/1700/Accessibility">Accessibility</a></li>
+			<li class="even"><a href="http://www.shepway.gov.uk/terms-and-conditions">Terms and conditions</a></li>
+			<li class="odd last"><a href="http://www.shepway.gov.uk/cookies">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="container ">
+        <div id="footerlinks">
+          <ul>
+            <li class="even first"> <a rel="external" href="https://www.gov.uk/">Gov.uk</a> </li>
+            <li class="odd"> <a rel="external" href="http://www.kenthomechoice.org.uk/choice/">Kent Home Choice</a> </li>
+            <li class="even last"> <a rel="external" href="http://www.kent.gov.uk/">Kent.gov.uk</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="powered"> <span>Copyright 2015 Shepway District Council</span> </div>
+  </div>
+</div>
+</body>
+</html>

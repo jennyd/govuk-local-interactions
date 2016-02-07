@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-gb">
+    <head><title>
+	Council tax payment by debit card
+</title><link href="css/Colours.css" rel="stylesheet" type="text/css" /><link href="css/Fonts.css" rel="stylesheet" type="text/css" /><link href="css/Misc.css" rel="stylesheet" type="text/css" /><link href="css/LeedsGovStyles.css" rel="stylesheet" type="text/css" /><link href="css/LeedsCardStyles.css" rel="stylesheet" type="text/css" /><link href="css/default.css" rel="stylesheet" type="text/css" /><link href="structure.css" rel="stylesheet" type="text/css" />
+            
+            
+            <script type="text/javascript">
+            
+                function MaskOn() {
+    			
+				    var a = document.getElementById('ProcessingMessage');
+				    var b = document.getElementById('ScreenMask');
+    					
+				    if (a!=null) a.className = 'ProcessingMessage' ;
+				    if (b!=null) b.className = 'ScreenMask' ;
+    				
+			    }
+            
+            </script>
+            
+    </head>
+    <body>
+    
+        <div id="corpMiniHeader">
+            <div id="corpMiniHeaderLeft">
+                <a id="corpMiniHeader1_hplHomeLink" href="./default.aspx">
+                    <img id="corpMiniHeader1_corpSmallLogo" class="corpSmallLogo" style="border-width: 0px;"
+                        alt="Leeds City Council" src="graphics/Internet2007/corpSmallLogo.gif" />
+                </a>
+            </div>
+            <div id="leedsGovUkLinks">
+                <!--<a id="leedsGovUkLink" href="http://www.leeds.gov.uk"><span class="linkArrows">» </span>
+                    leeds.gov.uk </a>-->
+            </div>
+            <br style="clear:both;" />
+        </div>
+                
+        <div id="corpCoreNavigation" class="coreNavigation">
+            <ul id="corpCoreNavigation1_blCorpCoreNavLinks">
+                <li><a href="http://www.leeds.gov.uk/council/Pages/Pay.aspx">Home</a></li>
+                <li><a href="JAVASCRIPT:window.close();">Close</a></li>
+            </ul>
+        </div>
+                                                             
+        <form name="aspnetForm" method="post" action="ctax.aspx" id="aspnetForm" style="margin-left:50px;margin-right:50px;">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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ZHkkbV9jdHJsV2l6YXJkJEZpbmlzaE5hdmlnYXRpb25UZW1wbGF0ZUNvbnRhaW5lcklEJEZpbmlzaFByZXZpb3VzSW1hZ2VCdXR0b24FV2N0bDAwJGN0bDAwJG1fcGhCb2R5JG1fY3RybFdpemFyZCRGaW5pc2hOYXZpZ2F0aW9uVGVtcGxhdGVDb250YWluZXJJRCRGaW5pc2hJbWFnZUJ1dHRvbgVXY3RsMDAkY3RsMDAkbV9waEJvZHkkbV9jdHJsV2l6YXJkJEZpbmlzaE5hdmlnYXRpb25UZW1wbGF0ZUNvbnRhaW5lcklEJENhbmNlbEltYWdlQnV0dG9uBVtjdGwwMCRjdGwwMCRtX3BoQm9keSRtX2N0cmxXaXphcmQkU3RlcE5hdmlnYXRpb25UZW1wbGF0ZUNvbnRhaW5lcklEJFN0ZXBQcmV2aW91c0ltYWdlQnV0dG9uBVdjdGwwMCRjdGwwMCRtX3BoQm9keSRtX2N0cmxXaXphcmQkU3RlcE5hdmlnYXRpb25UZW1wbGF0ZUNvbnRhaW5lcklEJFN0ZXBOZXh0SW1hZ2VCdXR0b24FVWN0bDAwJGN0bDAwJG1fcGhCb2R5JG1fY3RybFdpemFyZCRTdGVwTmF2aWdhdGlvblRlbXBsYXRlQ29udGFpbmVySUQkQ2FuY2VsSW1hZ2VCdXR0b24FIWN0bDAwJGN0bDAwJG1fcGhCb2R5JG1fY3RybFdpemFyZA8QZBQrAAFmZmQFMWN0bDAwJGN0bDAwJG1fcGhCb2R5JG1fY3RybFdpemFyZCRXaXphcmRNdWx0aVZpZXcPD2RmZAUjY3RsMDAkY3RsMDAkbV9waEhlbHAkbV9jdHJsSGVscFZpZXcPD2RmZOgF07/Rh9r58TytNG8A9lYTdNdj" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+
+            function processCancel() {
+                      
+                var r = confirm('Do you want to abandon your transaction and return to the home page?');
+                
+                if (r) {
+                    location.replace('http://www.leeds.gov.uk/council/Pages/Pay.aspx');
+                }
+               
+                return false;
+            
+            }//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="186F94E9" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQLWy9q0BAKys8CTAwLV2IDZBgLzxba1BwLFtpDlAq448t34ZNUzEgdf07GAQnYCc8d/" />
+                 
+
+            <div style="float:right; width:24%;">
+
+                <div id="basket" style="margin-bottom : 40px;">
+                    
+                </div>                
+
+                <div id="help">
+                    <h1>Help</h1>
+                    
+
+ 
+        
+
+        <p>The <b>'Reference number'</b> is the nine digit number starting with an 8, that appears on your bill.</p>
+
+        <p>The <b>'Amount to pay'</b> can be all or part of the amount your bill is for.</p>
+        
+        <p>Please note that you are unable to use credit cards to pay your council tax on this website. </p>
+                
+
+    
+
+
+                </div>
+                      
+                <div id="contacts">
+
+                    <h1>Contacts</h1>
+                    
+                       
+
+                    
+
+    <div id="ctl00_ctl00_m_phContacts_m_ContactsPanel">
+	
+        <span id="ctl00_ctl00_m_phContacts_lblTelephoneNumber" class="contactTel">0113 222 4404</span>
+        <span id="ctl00_ctl00_m_phContacts_lblEmail" class="contactEmail"><a href='mailto:council.tax@leeds.gov.uk'>Council Tax</a></span>
+    
+</div>
+
+    
+    
+   
+                    
+                    
+                        
+
+                </div>
+
+                <div id="contacts">
+                
+                    <h1>Security</h1>
+                
+                                        
+                    3D Secure is a new technical standard developed by Visa and MasterCard to further secure transactions over the Internet. 
+                    
+                    <br /><br />
+                    MasterCard brand their system as <a href="http://www.mastercard.com/securecode/" target="_blank" style="padding-left:10px;"><img border="0"
+                        title="Mastercard secure code" style="width:25%" src="images/msc_logo.gif" /></a>
+ and Visa call theirs <a href="http://www.visaeu.com/verified/" target="_blank"><img border="0"
+                        title="Verified by visa" style="width:25%" src="images/vbyvisa_blu.png" /></a>.
+                </div>
+                        
+                <div class="usefulLinks">
+                           
+                </div>
+                        
+            </div>
+
+            <div class="Content">
+
+                <div id="ctl00_pnlCrumbTrail" class="crumbTrail">
+                    <a href="http://www.leeds.gov.uk/council/Pages/Pay.aspx" title="pay online">pay online</a> 
+                </div>  
+
+
+                <h2>
+                    <span id="ctl00_ctl00_m_lblHeading">Council tax payment by debit card</span> 
+                </h2>
+             
+                
+
+
+    <table class="m_ctrlWizard" cellspacing="0" cellpadding="0" border="0" id="ctl00_ctl00_m_phBody_m_ctrlWizard">
+	<tr>
+		<td class="WizardSideBar" height="100%"><a href="#ctl00_ctl00_m_phBody_m_ctrlWizard_SkipLink"><img alt="Skip Navigation Links." height="0" width="0" src="/ePayments/WebResource.axd?d=SIDlMyC3YB95iuT9U9XZc_WrSV3IUdIH0_gV2qBM_Z5mti_ooH1PGDSYweGhOiVMlEGWgqJv_XUK62XoEns_NI9MM181&amp;t=635677936443351625" border="0" /></a>        
+            <table id="ctl00_ctl00_m_phBody_m_ctrlWizard_SideBarContainer_SideBarList" cellspacing="0" border="0">
+			<tr>
+				<td>                
+                    <img alt="step 1" src="images/invoiced/1.gif" />                
+                    <a id="ctl00_ctl00_m_phBody_m_ctrlWizard_SideBarContainer_SideBarList_ctl00_SideBarButton" disabled="disabled" class="SideBarButton">Reference and amount</a>                    
+                </td>
+			</tr><tr>
+				<td>                
+                    <img alt="step 2" src="images/invoiced/2g.gif" />                
+                    <a id="ctl00_ctl00_m_phBody_m_ctrlWizard_SideBarContainer_SideBarList_ctl01_SideBarButton" disabled="disabled" class="SideBarButton">Card details</a>                    
+                </td>
+			</tr><tr>
+				<td>                
+                    <img alt="step 3" src="images/invoiced/3g.gif" />                
+                    <a id="ctl00_ctl00_m_phBody_m_ctrlWizard_SideBarContainer_SideBarList_ctl02_SideBarButton" disabled="disabled" class="SideBarButton">Confirm</a>                    
+                </td>
+			</tr><tr>
+				<td>                
+                    <img alt="step 4" src="images/invoiced/4g.gif" />                
+                    <a id="ctl00_ctl00_m_phBody_m_ctrlWizard_SideBarContainer_SideBarList_ctl03_SideBarButton" disabled="disabled" class="SideBarButton">Receipt</a>                    
+                </td>
+			</tr>
+		</table>                
+        <a id="ctl00_ctl00_m_phBody_m_ctrlWizard_SkipLink"></a></td><td height="100%"><table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+			<tr>
+				<td valign="top">
+
+
+<fieldset id="ReferenceAndAmount">
+
+    <legend>Reference and amount</legend>
+
+    <div>           			
+			<label for="ctl00_ctl00_m_phBody_m_ctrlWizard_page1_m_txtReference" id="ctl00_ctl00_m_phBody_m_ctrlWizard_page1_m_labelReference">Reference number *</label>
+            <input name="ctl00$ctl00$m_phBody$m_ctrlWizard$page1$m_txtReference" type="text" maxlength="20" id="ctl00_ctl00_m_phBody_m_ctrlWizard_page1_m_txtReference" Autocomplete="off" />
+			<span id="ctl00_ctl00_m_phBody_m_ctrlWizard_page1_m_lblReferenceExample" class="Normal">EG. 818051591</span>
+    </div>
+    <div>
+
+			<label for="ctl00_ctl00_m_phBody_m_ctrlWizard_page1_m_txtAmount" id="ctl00_ctl00_m_phBody_m_ctrlWizard_page1_m_labelAmountToPay">Amount to pay&nbsp;(£) *</label>
+            <input name="ctl00$ctl00$m_phBody$m_ctrlWizard$page1$m_txtAmount" type="text" maxlength="20" id="ctl00_ctl00_m_phBody_m_ctrlWizard_page1_m_txtAmount" Autocomplete="off" />
+			<span id="ctl00_ctl00_m_phBody_m_ctrlWizard_page1_m_lblAmountExample" class="Normal">EG. 256</span>
+
+    </div>
+
+</fieldset>
+</td>
+			</tr><tr>
+				<td align="right"><table cellspacing="5" cellpadding="5" border="0">
+					<tr>
+						<td align="right"><input type="submit" name="ctl00$ctl00$m_phBody$m_ctrlWizard$StartNavigationTemplateContainerID$StartNextButton" value="Next" id="ctl00_ctl00_m_phBody_m_ctrlWizard_StartNavigationTemplateContainerID_StartNextButton" class="WizardNavButtons" /></td><td align="right"><input type="submit" name="ctl00$ctl00$m_phBody$m_ctrlWizard$StartNavigationTemplateContainerID$CancelButton" value="Cancel" onclick="JAVASCRIPT: return processCancel();" id="ctl00_ctl00_m_phBody_m_ctrlWizard_StartNavigationTemplateContainerID_CancelButton" class="WizardNavButtons" /></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+    
+    
+    
+
+
+
+            </div>
+
+            <div id="footer">
+            &copy; Leeds city council 2015 | <span id="ctl00_ctl00_m_lblVersionString">ePayments (2.4P)</span>
+            </div>
+                                        
+            </form> 
+
+       
+        <div id="ScreenMask" class="NoMask">
+         <br /><br /><br /><br />
+         
+          <div id="ProcessingMessage"><span>Your payment is being processed, which usually takes on few seconds. 
+            However, during busy periods this may take several minutes. Please be patient and do not close your browser or refresh the page.
+            <br /><img src="images\progress.gif" alt="Please wait"/></span>
+            </div>            
+    
+        </div>
+           
+                                        
+    </body>
+</html>
+

@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head><title>
+	Synergy FIS Online - Search By Route
+</title><link rel="stylesheet" type="text/css" href="css/reset.css" /><link rel="stylesheet" type="text/css" href="style.css" /><link rel="stylesheet" type="text/css" href="css/client.css" />
+<script type="text/javascript"  src="scripts/help.js"></script>
+<script type="text/javascript" src="scripts/cookies.js"></script><meta name="eGMS.accessibility" scheme="WCAG" content="Double-A" /><meta name="DC.creator" content="Tribal Ltd" /><meta name="DC.date.issued" scheme="W3CDTF" content="2005-09-29" /><meta name="DC.date" scheme="W3CDTF" content="2005-09-29" /><meta name="eGMS.subject.category" scheme="GCL" content="School Preferences" />
+<meta name="DC.title" content="Tribal Ltd Public Enquiries  "/>
+<meta name="CODE_LANGUAGE" content="C#" /><meta name="vs_defaultClientScript" content="JavaScript" /><meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5" /><link id="ctl00_Link1" rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link id="ctl00_Link2" rel="icon" href="favicon.ico" type="image/ico" /></head>
+
+<!-- SD 36792 Removed Hourglass. onbeforeunload is not a standard event
+    onunload doesn't seem to do anything in IE. In Firefox it only sets the cursor once the next page has loaded -->
+<!--AW 30938 Set Hourglass when unloading form-->
+<body onload="hide_all_help();">
+    <form method="post" action="./Search.aspx?searchID=454" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="VIEWSTATE" value="/wEPDwUKLTcwNDAwOTcyMg9kFgJmD2QWAgIDD2QWCAIFD2QWAgIFDxYCHgdWaXNpYmxlaGQCCQ8WAh8AaGQCCw9kFgZmDxYCHwBnFgYCAQ8PFgIeBFRleHQFASBkZAIDDw8WBB8BBQYmbmJzcDsfAGhkZAIFDxQrAA8PFgoeE1N0YXJ0TmV4dEJ1dHRvblRleHQFBlNlYXJjaB4SU3RlcE5leHRCdXR0b25UZXh0BQROZXh0HhZTdGVwUHJldmlvdXNCdXR0b25UZXh0BQRCYWNrHhhGaW5pc2hDb21wbGV0ZUJ1dHRvblRleHQFBlNlYXJjaB4YRmluaXNoUHJldmlvdXNCdXR0b25UZXh0BQRCYWNrZGRkZGRkZBYEHghDc3NDbGFzcwUVc2VhcmNoX3dpemFyZF9idXR0b25zHgRfIVNCAgIWBB8HBRVzZWFyY2hfd2l6YXJkX2J1dHRvbnMfCAICFgQfBwUVc2VhcmNoX3dpemFyZF9idXR0b25zHwgCAhYEHwcFFXNlYXJjaF93aXphcmRfYnV0dG9ucx8IAgIWBB8HBRVzZWFyY2hfd2l6YXJkX2J1dHRvbnMfCAICZGRoZAIBD2QWBgICD2QWBAIDDxBkZBYAZAIFDxBkZBYAZAIDD2QWAgIDDzwrABEAZAIED2QWBAIDDxBkZBYAZAIFDxBkZBYAZAIDD2QWAgIGDzwrABEAZAINDxYCHwBoZBgFBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WEwUyY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRXaXphcmQxJGN0bDAxJGNiTGlzdF8wJDAFMmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkV2l6YXJkMSRjdGwwMSRjYkxpc3RfMCQxBTJjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFdpemFyZDEkY3RsMDEkY2JMaXN0XzAkMgUyY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRXaXphcmQxJGN0bDAxJGNiTGlzdF8wJDMFMmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkV2l6YXJkMSRjdGwwMSRjYkxpc3RfMCQ0BTJjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFdpemFyZDEkY3RsMDEkY2JMaXN0XzAkNQUyY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRXaXphcmQxJGN0bDAxJGNiTGlzdF8wJDYFMmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkV2l6YXJkMSRjdGwwMSRjYkxpc3RfMCQ3BTJjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFdpemFyZDEkY3RsMDEkY2JMaXN0XzAkOAUyY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRXaXphcmQxJGN0bDAxJGNiTGlzdF8wJDkFMmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkV2l6YXJkMSRjdGwwMSRjYkxpc3RfMCQ5BVljdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFdpemFyZDEkU3RhcnROYXZpZ2F0aW9uVGVtcGxhdGVDb250YWluZXJJRCRTdGFydE5leHRJbWFnZUJ1dHRvbgVWY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRXaXphcmQxJFN0YXJ0TmF2aWdhdGlvblRlbXBsYXRlQ29udGFpbmVySUQkQ2FuY2VsSW1hZ2VCdXR0b24FX2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkV2l6YXJkMSRGaW5pc2hOYXZpZ2F0aW9uVGVtcGxhdGVDb250YWluZXJJRCRGaW5pc2hQcmV2aW91c0ltYWdlQnV0dG9uBVdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFdpemFyZDEkRmluaXNoTmF2aWdhdGlvblRlbXBsYXRlQ29udGFpbmVySUQkRmluaXNoSW1hZ2VCdXR0b24FV2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkV2l6YXJkMSRGaW5pc2hOYXZpZ2F0aW9uVGVtcGxhdGVDb250YWluZXJJRCRDYW5jZWxJbWFnZUJ1dHRvbgVbY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRXaXphcmQxJFN0ZXBOYXZpZ2F0aW9uVGVtcGxhdGVDb250YWluZXJJRCRTdGVwUHJldmlvdXNJbWFnZUJ1dHRvbgVXY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRXaXphcmQxJFN0ZXBOYXZpZ2F0aW9uVGVtcGxhdGVDb250YWluZXJJRCRTdGVwTmV4dEltYWdlQnV0dG9uBVVjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFdpemFyZDEkU3RlcE5hdmlnYXRpb25UZW1wbGF0ZUNvbnRhaW5lcklEJENhbmNlbEltYWdlQnV0dG9uBTFjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFdpemFyZDEkV2l6YXJkTXVsdGlWaWV3Dw9kZmQFNWN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkc2hvcHBpbmdCYXNrZXRQcm92aWRlcnNHcmlkD2dkBSNjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJEdyaWRWaWV3MQ9nZAUhY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRXaXphcmQxDxBkFCsBAWZmZDq1XcNxqfo6uzHL6prJOcztApMSEaVHC6fOUU7a61uy" />
+</div>
+
+    
+    <div class="master_outer_div">
+        <div id="header_bar" class="master_header_bar">
+        <div id="hccheader">
+	<span id="hcclogo" title="Hampshire County Council"></span>
+	<ul>
+		<li><a href="http://www.hants.gov.uk/" title="Hantsweb home">Hantsweb Home</a></li>
+		<li><a href="http://www3.hants.gov.uk/azindex">A-Z Services</a></li>
+		<li><a href="http://www.hants.gov.uk/contactus/">Contact us</a></li>
+		<li><a href="http://www3.hants.gov.uk/help/">Help</a></li>
+	</ul>
+	<a href="http://www.hants.gov.uk/" id="hantsweblogo" title="Hantsweb"></a>
+	<p>You are here: <a href="http://www.hants.gov.uk/">Home</a> &rarr; Hampshire FISO</p>
+</div>
+<div id="header">
+	<h1><span>Hampshire Family Information Directory</span></h1>
+</div>
+
+        </div>
+        
+        <div class="language_surround">
+	        <div class="inner_top_bar">
+                <div id="toolbar" class="languagetoolbar">
+                    
+
+    <div id="ctl00_toolbarContentPlaceHolder_searchpageToolbarDiv" class="toolbar_container"> </div>
+    
+    <div id="ManageBasketLink" class="manage_basket_container">
+        <a id="ctl00_toolbarContentPlaceHolder_A1" class="BasketScriptWarn"></a>
+    </div>
+    
+    
+
+                </div>
+            </div>
+        </div>
+        
+        <div id="major_div">
+            <div id="ctl00_top_links_box" class="top_links_box">
+	<P class=MsoNormal style="BACKGROUND: white; MARGIN: 0cm 0cm 0pt"><B><SPAN lang=EN style="COLOR: #333333; FONT-FAMILY: 'Trebuchet MS'; mso-ansi-language: EN; mso-bidi-font-family: Tahoma"><FONT color=#000000 size=4>Welcome to the childcare search page: use this page to search for different types of childcare in your area</FONT></SPAN></B></P>
+<P class=MsoNormal style="BACKGROUND: white; MARGIN: 0cm 0cm 0pt"><FONT size=3><B><SPAN lang=EN style="COLOR: #333333; FONT-FAMILY: 'Trebuchet MS'; mso-ansi-language: EN; mso-bidi-font-family: Tahoma"></SPAN></B></FONT>&nbsp;</P>
+<P class=MsoNormal style="BACKGROUND: white; MARGIN: 0cm 0cm 0pt"><FONT size=3><FONT color=#000000><B><SPAN lang=EN style="COLOR: #333333; FONT-FAMILY: 'Trebuchet MS'; mso-ansi-language: EN; mso-bidi-font-family: Tahoma">Before searching for Childcare you may want to look at the information contained on the following page:</SPAN></B><SPAN lang=EN style="COLOR: #333333; FONT-FAMILY: 'Trebuchet MS'; mso-ansi-language: EN; mso-bidi-font-family: Tahoma"><?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></FONT></FONT></P>
+<P class=MsoNormal style="BACKGROUND: white; MARGIN: 0cm 0cm 0pt"><B><SPAN lang=EN style="COLOR: #333333; FONT-FAMILY: 'Trebuchet MS'; mso-ansi-language: EN; mso-bidi-font-family: Tahoma"><A href="http://www3.hants.gov.uk/childrens-services/familyinformationdirectory/fid-faqs.htm"><U><FONT color=#800080 size=3>http://www3.hants.gov.uk/childrens-services/familyinformationdirectory/fid-faqs.htm</FONT></U></A></SPAN></B><SPAN lang=EN style="COLOR: #333333; FONT-FAMILY: 'Trebuchet MS'; mso-ansi-language: EN; mso-bidi-font-family: Tahoma"><o:p></o:p></SPAN></P>
+</div>
+            
+            
+            
+            <div id="main_content">
+                
+
+    <div id="ctl00_ContentPlaceHolder1_SearchContent">
+        
+        <span id="ctl00_ContentPlaceHolder1_info_messages" class="info_messages"> </span>
+        
+        
+        <table cellspacing="0" cellpadding="0" border="0" id="ctl00_ContentPlaceHolder1_Wizard1" style="border-collapse:collapse;">
+	<tr style="height:100%;">
+		<td><h1 class="search_page_progress_top">Childcare search -    'quick search'</h1><h2 class="section_header">Quick search <a class="help_text_link" onkeypress="show_hide('help_0_0_0_help');" onclick="show_hide('help_0_0_0_help');">Help?</a></h2><div class="section_help" id="help_0_0_0_help">Use the search option below to search for childcare services in your area.</div><div class="section_content"><div class="control_lcbl"><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0" class="control_lcbl_label">Type of provision (tick all that apply):</label><div class="control_lcbl_controls"><span id="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0"><input id="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_0" type="checkbox" name="ctl00$ContentPlaceHolder1$Wizard1$ctl01$cbList_0$0" /><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_0">After school club</label><br /><input id="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_1" type="checkbox" name="ctl00$ContentPlaceHolder1$Wizard1$ctl01$cbList_0$1" /><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_1">Breakfast club</label><br /><input id="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_2" type="checkbox" name="ctl00$ContentPlaceHolder1$Wizard1$ctl01$cbList_0$2" /><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_2">Childminder</label><br /><input id="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_3" type="checkbox" name="ctl00$ContentPlaceHolder1$Wizard1$ctl01$cbList_0$3" /><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_3">Creche</label><br /><input id="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_4" type="checkbox" name="ctl00$ContentPlaceHolder1$Wizard1$ctl01$cbList_0$4" /><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_4">Day nursery</label><br /><input id="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_5" type="checkbox" name="ctl00$ContentPlaceHolder1$Wizard1$ctl01$cbList_0$5" /><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_5">Hampshire county council nursery school</label><br /><input id="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_6" type="checkbox" name="ctl00$ContentPlaceHolder1$Wizard1$ctl01$cbList_0$6" /><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_6">Holiday playscheme</label><br /><input id="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_7" type="checkbox" name="ctl00$ContentPlaceHolder1$Wizard1$ctl01$cbList_0$7" /><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_7">Home childcarer</label><br /><input id="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_8" type="checkbox" name="ctl00$ContentPlaceHolder1$Wizard1$ctl01$cbList_0$8" /><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_8">Independent school nursery</label><br /><input id="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_9" type="checkbox" name="ctl00$ContentPlaceHolder1$Wizard1$ctl01$cbList_0$9" /><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl01_cbList_0_9">Pre-school or playgroup</label></span></div><div class="clear_floats"></div></div></div><h2 class="section_header">Location</h2><div class="section_content"><div class="control_ftsb"><label for="ctl00_ContentPlaceHolder1_Wizard1_ctl02_freeText_1" class="control_ftsb_label">Village/town where childcare is required (eg. Chandler's Ford):</label><div class="control_ftsb_controls"><input name="ctl00$ContentPlaceHolder1$Wizard1$ctl02$freeText_1" type="text" id="ctl00_ContentPlaceHolder1_Wizard1_ctl02_freeText_1" /><div class="clear_floats"></div></div></div></div><h1 class="search_page_progress_bottom">Childcare search -    'quick search'</h1></td>
+	</tr><tr>
+		<td align="right"><table cellspacing="5" cellpadding="5" border="0">
+			<tr>
+				<td align="right"><input type="submit" name="ctl00$ContentPlaceHolder1$Wizard1$StartNavigationTemplateContainerID$StartNextButton" value="Search" id="ctl00_ContentPlaceHolder1_Wizard1_StartNavigationTemplateContainerID_StartNextButton" class="search_wizard_buttons" /></td><td align="right"><input type="submit" name="ctl00$ContentPlaceHolder1$Wizard1$StartNavigationTemplateContainerID$CancelButton" value="Cancel" id="ctl00_ContentPlaceHolder1_Wizard1_StartNavigationTemplateContainerID_CancelButton" class="search_wizard_buttons" /></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+        
+    </div>
+     
+    
+    
+    
+    
+    
+
+   
+    <script type="text/javascript">
+        /*<![CDATA[*/
+
+         
+        
+        
+        
+        function GetCheckboxID(cbIDStr)
+        {
+            var sID = "";
+            var sIDStr = "|";
+        
+            var sCbIDStr = new String(cbIDStr);
+            var iPos = sCbIDStr.indexOf(sIDStr);
+            if(iPos != -1)
+                sID = sCbIDStr.substring(iPos + sIDStr.length);
+        
+            return sID;
+        }
+    
+            
+        function AddProvidersToBasket()
+        {
+            document.getElementById('itemsAddedId').innerText = "";
+        
+            
+            
+            var cb = document.getElementsByTagName("input");
+        
+            var sIDS = "";
+            var iCBS = 0;
+            var iCBSChecked = 0;
+            for(var j=0; j < cb.length; j++)
+            {
+                
+                if(cb[j].type == "checkbox")
+                {
+                    iCBS++;
+                
+                    if(cb[j].checked)
+                    {
+                        
+                        
+                        var sID = GetCheckboxID(cb[j].parentNode.className);
+
+                        iCBSChecked++;
+                    
+                        if(sIDS != "")
+                            sIDS += ",";
+                        sIDS += sID;
+                    }
+                }
+            }
+
+            
+            if (SaveCSVToCookie("PESearchCookie", sIDS) == true)
+            {
+                document.getElementById('itemsAddedId').innerText = "";
+            
+            
+            if (navigator.userAgent.indexOf('MSIE') == -1)
+            {
+                alert('');
+            }
+            
+        }
+        
+        return;
+    }
+    
+    
+    function AddProviderToBasket()
+    {   
+        document.getElementById('itemAddedId').innerText = "";
+        
+        var obj = document.getElementById("ctl00_ContentPlaceHolder1_hiddenCheckboxID");
+        if(obj != null)
+        {   
+            if(obj.length != 0)
+            {
+                var sId = obj.getAttribute("value");
+                
+                if (SaveCSVToCookie("PESearchCookie", sId) == true)
+                {
+                    document.getElementById('itemAddedId').innerText = "";
+                    
+                    
+                    if (navigator.userAgent.indexOf('MSIE') == -1)
+                    {
+                        alert('');
+                    }
+                }   
+            }
+        }
+        return;
+    }
+    
+    
+    function ReturnToResults()
+    {
+        var obj = document.getElementById("ctl00_ContentPlaceHolder1_hiddenPageHistory");
+        if(obj != null)
+        {
+            if(obj.length != 0)
+            { 
+                var iPages = obj.getAttribute("value");
+                
+                window.history.go(iPages * 1);
+            }
+        }
+    }
+
+    
+    
+    function GetProviders()
+    {
+        
+        
+        
+        
+        var cb = document.getElementsByTagName("input");
+
+        var sIDS = "";
+        var iCBS = 0;
+        var iCBSChecked = 0;
+        for (var j = 0; j < cb.length; j++)
+        {
+            
+            if (cb[j].type == "checkbox")
+            {
+                iCBS++;
+
+                if (cb[j].checked)
+                {
+                    
+                    
+                    var sID = GetCheckboxID(cb[j].parentNode.className);
+                    iCBSChecked++;
+
+                    if (sIDS != "")
+                        sIDS += ",";
+                    sIDS += sID;
+                }
+            }
+        }
+
+        
+        document.getElementById('ctl00_ContentPlaceHolder1_sbErrorMessage').innerHTML = "";
+        document.getElementById('ctl00_ContentPlaceHolder1_sbErrorMessage').style.display = 'none';
+
+        if (iCBSChecked == 0)
+        {
+            document.getElementById('ctl00_ContentPlaceHolder1_sbErrorMessage').innerHTML = '';
+            document.getElementById('ctl00_ContentPlaceHolder1_sbErrorMessage').style.display = '';
+            return false;
+        }
+        else if (iCBSChecked < 2)
+        {
+            document.getElementById('ctl00_ContentPlaceHolder1_sbErrorMessage').innerHTML = '';
+            document.getElementById('ctl00_ContentPlaceHolder1_sbErrorMessage').style.display = '';
+            return false;
+        }
+        else if (iCBSChecked > 3)
+        {
+            document.getElementById('ctl00_ContentPlaceHolder1_sbErrorMessage').innerHTML = '';
+            document.getElementById('ctl00_ContentPlaceHolder1_sbErrorMessage').style.display = '';
+            return false;
+        }
+
+    SaveCompareCookie(sIDS);
+
+    return true;
+    }
+         
+         
+        function OnlyDecimalInput(txtBox) {
+             
+            if (typeof txtBox === "undefined")
+                return;
+
+             
+            var invalidChars = /[^0-9.]/gi
+            if(invalidChars.test(txtBox.value)) {
+                txtBox.value = txtBox.value.replace(invalidChars,"");
+            }
+             
+            
+            var point1 = txtBox.value.indexOf(".");
+            var point2 = txtBox.value.indexOf(".", parseInt(point1+1));
+            if (point2 > 0)
+            {
+                 
+                var s = txtBox.value.substring(0, txtBox.value.length-1);
+                txtBox.value = s;
+            }
+        }
+
+        /*]]>*/
+    </script>
+        
+
+            </div>
+            
+            
+            
+            <div id="ctl00_bottom_links_box" class="bottom_links_box">
+	<P>Hampshire FID takes every reasonable step to ensure the validity of groups on the database but cannot guarantee the quality of services or activities offered. The inclusion of an organisation does not imply a recommendation or endorsement by Hampshire FID. Parents should make their own enquiries.</P>
+<P><STRONG>Return to the </STRONG><A href="http://www.fid.hants.gov.uk/">FID home</A><STRONG>&nbsp;page&nbsp;</STRONG></P>
+<P><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial">If you want to search for <STRONG>family services (including parent and toddler groups)</STRONG> click on this link: <A href="http://www.fid.hants.gov.uk/family"><U><STRONG>family services search</STRONG></U></A> <?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial">If you are a<SPAN style="mso-spacerun: yes">&nbsp;</SPAN>school looking for <STRONG>outdoor education providers</STRONG> click on this link: <A href="http://www.fid.hants.gov.uk/outdooreducation"><U><STRONG>outdoor education search</STRONG></U></A> <o:p></o:p></SPAN></P>
+<P><SPAN style="FONT-SIZE: 11pt; FONT-FAMILY: Arial; mso-ansi-language: EN-GB; mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: EN-GB; mso-bidi-language: AR-SA"><STRONG><EM>Please fill in the </EM></STRONG><A href="http://eforms-ext.hants.gov.uk/AF3/an/default.aspx/RenderForm/?F.Name=ID93BZt1eXs"><U><STRONG><EM>feedback form</EM></STRONG></U></A><STRONG><EM> to let us know what you think about the site.</EM></STRONG></SPAN></P>
+</div>
+        </div>
+        
+        <div id="footer_content">
+            <div id="hccfooter">
+	<p>
+		<a href="http://www.hants.gov.uk/help/" accesskey="0">Accessibility options</a>&nbsp; &nbsp;|
+		<a href="http://www.hants.gov.uk/disclaimer.html" accesskey="8">Disclaimer</a>&nbsp; &nbsp;|
+		<a href="http://www.hants.gov.uk/privacy.html">Privacy</a>&nbsp; &nbsp;|
+		<a href="http://www.hants.gov.uk/hantsweb/outages.html">Service availability</a>&nbsp; &nbsp;|
+		<a href="http://www3.hants.gov.uk/contactus/call-charges">Call charges</a>
+	</p>
+	<p>
+		Hampshire County Council, The Castle, Winchester, Hampshire, SO23 8ZB. 
+		&copy; <a href="http://www.hants.gov.uk/copyrite.html">Copyright</a> Hampshire County Council 2009. 
+	</p>
+</div>
+
+        </div>
+    </div>
+    
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="DB17385B" />
+	<input type="hidden" name="__EVENTVALIDATION" id="EVENTVALIDATION" value="/wEWDgLHgcvuDQL/+dfTBgL/+dPTBgL/+d/TBgL/+dvTBgL/+efTBgL/+ePTBgL/+e/TBgL/+evTBgL/+ffTBgL/+fPTBgLdqeq1DQKG4IqPDwLs1ozID1pg9oT9Rrradlpzbubzbpr25q8GNf3atyMPn1ZpTUov" />
+</div></form>
+</body>
+</html>

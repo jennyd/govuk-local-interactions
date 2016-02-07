@@ -1,0 +1,344 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+-->
+
+
+
+<html> 
+<head id="Head1" runat="server">
+    
+<link rel="stylesheet" type="text/css" href="https://webapp.halton.gov.uk/master/halton.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="tables.css" / >
+</head>
+<body>
+
+<script language="javascript" type="text/javascript">
+function form1_onsubmit() {
+  var dFrom = form1.DateApValFrom.value;
+  var dTo   = form1.DateApValTo.value;
+  dFrom = new Date(dFrom);
+  dTo   = new Date(dTo) ;
+
+  if (isNaN(dFrom) && form1.DateApValFrom.value != "") {
+      alert ('Illegal Date Format, Date From. The correct date format is dd/mm/yyyy')
+      return false ;
+  }
+
+  if (isNaN(dTo) && form1.DateApValTo.value != "") {
+        alert ('Illegal Date Format, Date To. The correct date format is dd/mm/yyyy')
+        return false ;
+  }
+  return true ;
+}
+
+
+function NeighConView(CaseNo) {
+
+    url = "http://hbcweb.halton-borough.gov.uk/planningAPPS/showNeighCon.asp?CaseNo=" + CaseNo
+	mywindow = window.open (url,"PlanningApplications","resizable=1,scrollbars=1,width=420,height=400");
+	//mywindow.moveTo(20,20);
+}
+
+function NeighConViewExt(CaseNo) {
+
+    url = "http://www.halton.gov.uk/planningapps/showNeighCon.asp?CaseNo=" + CaseNo
+	mywindow = window.open (url,"PlanningApplications","resizable=1,scrollbars=1,width=420,height=400");
+	//mywindow.moveTo(20,20);
+}
+
+function DNViewOld(CaseNo) {
+  var ss = CaseNo;
+  ss = ss.replace("/", "");
+  ss = ss.replace("/", "");
+	st = ss.substring(0,7);
+	tempstr = '/planningapps/' + ss + '/' + st + 'DN.pdf';
+	window.open('/planningapps/' + ss + '/' + st + 'DN.pdf');
+}
+
+function DNView(CaseNo,CaseNoFull) {
+	//tempstr = '/planningapps/' + CaseNo + '/' + CaseNo + 'DN.pdf';
+	window.open('/planningapps/' + CaseNoFull + '/' + CaseNo + 'DN.pdf');
+}
+
+function DNViewNewOld(CaseNo) {
+  var ss = CaseNo;
+  ss = ss.replace("/", "");
+  ss = ss.replace("/", "");
+	st = ss.substring(0,7);
+	tempstr = '/planningapps/' + ss + '/DN_' + st + '.pdf';
+	window.open('/planningapps/' + ss + '/DN_' + st + '.pdf');
+}
+
+function DNViewNew(CaseNo) {
+	//tempstr = '/planningapps/' + ss + '/DN_' + st + '.pdf';
+	window.open('/planningapps/' + CaseNo + '/DN_' + CaseNo + '.pdf');
+}
+
+function ADNView(CaseNoClean) {
+	//tempstr = '/planningapps/' + ss + '/ADN_' + CaseNoClean + '.pdf';
+	window.open('/planningapps/' + CaseNoClean + '/ADN_' + CaseNoClean + '.pdf');
+}
+
+function AppFormView(link) {
+	window.open('/planningapps/' + link);
+}
+
+function ShowAppealInfo(Item) {
+	document.getElementById("AppealHeader" + Item).style.display="none";
+	document.getElementById("AppealMain" + Item).style.display ="block";
+}
+
+
+function HideAppealInfo(Item){
+	document.getElementById("AppealHeader" + Item).style.display = "block";
+	document.getElementById("AppealMain" + Item).style.display = "none";
+}
+
+function ShowInquiryInfo(Item) {
+	document.getElementById("InquiryHeader" + Item).style.display="none";
+	document.getElementById("InquiryMain" + Item).style.display ="block";
+}
+
+
+function HideInquiryInfo(Item){
+	document.getElementById("InquiryHeader" + Item).style.display = "block";
+	document.getElementById("InquiryMain" + Item).style.display = "none";
+}
+
+function PopUpWindow(url){
+    Popup=window.open(url,'Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=400,left=20,top=20'); 
+}
+
+function ShowDocuments(Item){
+    document.getElementById("Documents" + Item).style.display = "block";
+    document.getElementById("Details" + Item).style.display = "none";
+    
+    //Activate Details Tab
+    document.getElementById("DetailsTab" + Item).style.borderLeftColor = "White";
+	document.getElementById("DetailsTab" + Item).style.borderTopColor= "White";
+	document.getElementById("DetailsTab" + Item).style.borderRightColor= "White";
+	document.getElementById("DetailsTab" + Item).style.borderBottomColor= "#666666";
+	
+	//Deactivate Documents Tab
+    document.getElementById("DocumentsTab" + Item).style.borderRightColor = "#666666";
+	document.getElementById("DocumentsTab" + Item).style.borderTopColor= "#666666";
+	document.getElementById("DocumentsTab" + Item).style.borderLeftColor= "#666666";
+	
+	//document.getElementById("DetailsTab" + Item).style.borderBottomStyle= "solid";
+	//document.getElementById("DocumentsTab" + Item).style.borderBottomStyle= "none";
+	
+	document.getElementById("topTableContentCell" + Item).style.borderTopStyle="none";
+	document.getElementById("topLeftHeaderCell" + Item).style.borderTopStyle="solid";
+	
+	//handle appeal information
+	// if it exists hide it
+	if (document.getElementById("AppealHeader"+Item) != null) {
+        document.getElementById("AppealHeader" + Item).style.display="none"
+        document.getElementById("AppealMain" + Item).style.display = "none";
+        }
+
+	//handle inquiry information
+	// if it exists hide it
+	if (document.getElementById("InquiryHeader"+Item) != null) {
+        document.getElementById("InquiryHeader" + Item).style.display="none"
+        document.getElementById("InquiryMain" + Item).style.display = "none";
+        }
+
+
+}
+
+function ShowDetails(Item){
+    document.getElementById("Documents" + Item).style.display = "none";
+    document.getElementById("Details" + Item).style.display = "block";
+    
+    document.getElementById("DocumentsTab" + Item).style.borderRightColor = "white";
+	document.getElementById("DocumentsTab" + Item).style.borderTopColor= "white";
+	document.getElementById("DocumentsTab" + Item).style.borderLeftColor= "white";
+	
+    document.getElementById("DetailsTab" + Item).style.borderLeftColor = "#666666";
+	document.getElementById("DetailsTab" + Item).style.borderTopColor= "#666666";
+	document.getElementById("DetailsTab" + Item).style.borderRightColor= "#666666";
+	
+	//document.getElementById("DetailsTab" + Item).style.borderBottomStyle= "none";
+	//document.getElementById("DocumentsTab" + Item).style.borderBottomStyle= "solid";
+	
+	document.getElementById("topTableContentCell" + Item).style.borderTopStyle="solid";
+	document.getElementById("topLeftHeaderCell" + Item).style.borderTopStyle="none";
+	
+	//handle appeal information
+	// if it exists reshow the appeal header element
+	if (document.getElementById("AppealHeader"+Item) != null) {
+        document.getElementById("AppealHeader" + Item).style.display="block"
+        }
+
+	//handle inquiry information
+	// if it exists reshow the inquiry header element
+	if (document.getElementById("InquiryHeader"+Item) != null) {
+        document.getElementById("InquiryHeader" + Item).style.display="block"
+        }
+
+}
+</script>
+
+
+<!-- GOOGLE ANALYTICS -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9717698-32']);
+  _gaq.push(['_setDomainName', 'halton.gov.uk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+
+
+<div class="hbc-top">
+                    <div class="hbc-header-container">
+                        <div class="hbc-header">
+                            <div class="hbc-logo"><a href="http://www4.halton.gov.uk/pages/home.aspx"><img src="https://webapp.halton.gov.uk/master/hbc_logo.png" alt="" /></a></div>
+                            <div class="hbc-header-text">Municipal Building, Kingsway, Widnes, WA8 7QF <br>T. 0303 333 4300</div>
+
+                        </div>
+                    </div>
+                    <div class="hbc-main-container">
+                        <div class="hbc-main">
+
+
+<form method="post" action="index.asp" id="form1" onsubmit="javascript:return form1_onsubmit();">
+  <table width="100%" cellspacing="3" cellpadding="1" border="0">
+    <tr>
+      <td width="55%" colspan="2"><b>Planning Applications Search Criteria</b></td>
+      <td width="45%" colspan="3"><b>Description</b></td>
+    </tr>
+    <tr>
+		  <td width="55%" colspan="2"><hr /></td>
+			<td width="45%" colspan="3"><hr /></td>
+		</tr>
+    <tr>
+      <td width="20%">Case Number</td>
+      <td width="35%"><input class="textbox" name="CaseNo" size="10" tabindex="1" /><span class="bodytext"><b>(eg 04/00899/FUL)</b></span></td>
+      <td width="45%" rowspan="11" colspan="3" valign="top">Search for Planning Applications by entering as much information
+      as possible into the fields shown. <br /><br />Alternatively you may select a particular weekly list by selecting the appropriate
+      date from the drop down list.<br />
+
+      <br />You can receive the Weekly Application List by email.<a href="Register.asp"> Click here</a> to register.<br />
+			(<b>Please note:</b> We have plans available for Applications back to 1st April 2002 and database records back to 1st August 1991.)<br />
+      <br />Planning Application documents will be published within 5 days of receipt of a valid planning application. The information is updated daily but is a day behind the present day's date. Comments can be made electronically by using the Comments button available on the application search page or when viewing a particular application.
+     <br /><br />
+     Further planning information is available via the  <a href="http://www4.halton.gov.uk/Pages/planning/planningandenvironment.aspx">Planning and Environment</a> section of the website.
+       </td>
+    </tr>
+    <tr>
+      <td width="20%">Agent's name</td>
+      <td width="35%"><input class="textbox" name="Agtname" size="20" tabindex="2" /></td>
+    </tr>
+    <tr>
+      <td width="20%">Applicant's name</td>
+      <td width="35%"><input class="textbox" name="Appname" size="20" tabindex="3" /></td>
+    </tr>
+    <tr>
+      <td width="20%">Date valid (from)</td>
+      <td width="35%"><input class="textbox" name="DateApValFrom" size="10" tabindex="4" /><span class="bodytext">(dd/mm/yyyy)</span></td>
+    </tr>
+        <tr>
+      <td width="20%">Date valid (to)</td>
+      <td width="35%"><input class="textbox" name="DateApValTo" size="10" tabindex="5" /><span class="bodytext">(dd/mm/yyyy)</span></td>
+    </tr>
+    <tr>
+      <td width="20%">House Number (of site)</td>
+      <td width="35%"><input class="textbox" name="AdrsNo" size="10" tabindex="6" /></td>
+    </tr>
+    <tr>
+      <td width="20%">Street</td>
+      <td width="35%"><input class="textbox" name="Stname" size="20" tabindex="7" /></td>
+    </tr>
+    <tr>
+      <td width="20%">Town</td>
+      <td width="35%"><input class="textbox" name="StTown" size="20" tabindex="8" /></td>
+    </tr>
+    <tr>
+      <td width="20%">Select Week</td>
+      <td width="35%"><select class="selectbox" name="DropWeekDate"><option value="0">Select Week</option>
+     <option value='26-11-2015'>26-11-2015</option><option value='03-12-2015'>03-12-2015</option><option value='10-12-2015'>10-12-2015</option><option value='17-12-2015'>17-12-2015</option><option value='23-12-2015'>23-12-2015</option><option value='07-01-2016'>07-01-2016</option><option value='14-01-2016'>14-01-2016</option><option value='21-01-2016'>21-01-2016</option><option value='28-01-2016'>28-01-2016</option><option value='04-02-2016'>04-02-2016</option> </select></td>
+   </tr>
+	 <tr>
+	   <td colspan="2"><br /><b>Appeals Search Criteria</b></td>
+	 </tr>
+	 <tr>
+	   <td colspan="2"><hr /></td>
+	 </tr>
+	 <tr>
+	   <td width="20%">Appeal Status</td>
+     <td width="35%"><select class="selectbox" name="DropAppealStatus">
+			              <option value="0"> Select Appeal Status</option>
+										<option value="%">All Appeals</option>
+										<option value="ALLOW">Appeal Allowed</option>
+										<option value="WITHD">Appeal Withdrawn</option>
+										<option value="DISMIS">Appeal Dismissed</option>
+										<option value="INPROG">Appeal In Progress</option>
+										</select></td>
+			<td width="45%" colspan="3"></td>
+	 </tr>
+	 <tr>
+	  <td width="20%">Appeal Decision Date (from)</td>
+      <td width="35%"><input class="textbox" name="DateAppealValFrom" size="10" tabindex="4" /><span class="bodytext">(dd/mm/yyyy)</span></td>
+			<td width="45%" colspan="3"></td>
+	 </tr>
+	 <tr>
+	  <td width="20%">Appeal Decision Date (to)</td>
+      <td width="35%"><input class="textbox" name="DateAppealValTo" size="10" tabindex="5"><span class="bodytext" />(dd/mm/yyyy)</span></td>
+			<td width="15%" align="center"><input type="submit" value="Search" class="formbutton" name="Action" /></td>
+			<td width="15%" align="center"><input type="submit" value="Clear" class="formbutton" name="Clear" /></td>
+			<td width="15%" align="center"><input type="button" value="Comments" class="formbutton" name="Comments" onclick="window.location.href='sendemail_sql.asp?CaseNo=';" /></td>
+	 </tr>
+   <tr>
+      <td width="20%"></td>
+      <td width="35%"></td>
+      <td align="center" width="45%" colspan="3">
+		  &nbsp;
+     </td>
+	 </tr>
+   </table>
+The data was last updated on :-    07/02/2016 02:02:10
+<br />
+ 
+
+       </div>
+                    </div>
+                    <div class="hbc-footer-container">
+                        <div class="hbc-footer">
+                            <div class="hbc-social-buttons">
+                                <a href="http://www.facebook.com/haltonbc"><img src="https://webapp.halton.gov.uk/master/social_network-buttons_35.png" alt="" /></a>
+                                <a href="http://www.twitter.com/haltonbc"><img src="https://webapp.halton.gov.uk/master/social_network-buttons3_35.png" alt="" /></a>
+                                <a href="http://www.youtube.com/haltoncouncil"><img src="https://webapp.halton.gov.uk/master/social_network-buttons5_35.png" alt="" /></a>
+                                <a href="https://itunes.apple.com/gb/artist/halton-borough-council/id456194060"><img src="https://webapp.halton.gov.uk/master/social_network-buttons9_35.png" alt="" /></a>
+                                <a href="http://www4.halton.gov.uk/pages/cant-find-it.aspx"><img src="https://webapp.halton.gov.uk/master/social_network-buttons11_35.png" alt="" /></a>
+                            </div>
+                            <div class="hbc-footer-text"><a href="http://www4.halton.gov.uk/pages/cant-find-it.aspx">Can't Find It?</a></div>
+                            <div class="hbc-footer-image"><img src="https://webapp.halton.gov.uk/master/FooterCorner_100.png" alt="" /></div>
+                            <div class="hbc-footer-terms"><a href="http://www4.halton.gov.uk/pages/terms.aspx">Terms and Conditions</a></div>
+                            <div class="hbc-footer-copy">&#169; Halton Borough Council</div>
+
+                        </div>
+                    </div>
+</div>
+
+</form>
+ 
+
+
+<!-- </td></tr></table> -->
+<!-- </table> -->  
+</body>
+</html>

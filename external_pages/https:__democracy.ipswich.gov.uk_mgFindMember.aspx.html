@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv='X-UA-Compatible' content='IE=edge, chrome=1' /><meta name="DC.title"  content="Find Councillor"/>
+<meta name="DC.description"  content="Find your Councillor by name, party, ward, or other options"/>
+<meta name="DC.date" scheme="W3CDTF"  content="2016-02-07"/>
+<meta name="DC.subject" scheme="eGMS.IPSV"  content="Government, politics and public administration"/>
+<meta name="DC.subject" scheme="eGMS.IPSV"  content="Local government"/>
+<meta name="DC.subject" scheme="eGMS.IPSV"  content="Decision making"/>
+
+<link type="text/css" href="jquery-ui/css/Smoothness/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" /> 
+<link type="text/css" href="jquery-ui/Add-ons/mg.jqueryaddons.css" rel="stylesheet" /> 
+	<meta charset=utf-8>
+	
+	<link rel="stylesheet" href="SiteSpecific/ssMgStyles.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="SiteSpecific/ssWordStyles.css" type="text/css" media="all" />
+<title>Find Councillor | Democracy Online | Ipswich Borough Council</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<link rel="Shortcut Icon" type="image/vnd.microsoft.icon" href="//app.ipswich.gov.uk/favicon.ico"></link>
+	<link href="//app.ipswich.gov.uk/moderngov-template/css/generic-v4.css" media="all" rel="stylesheet" type="text/css">
+	<!--[if lte IE 8]>
+		<link href="//app.ipswich.gov.uk/moderngov-template/css/ie8.css" media="all" rel="stylesheet" type="text/css">
+	<![endif]-->
+	<!--[if lte IE 7]>
+		<link href="//app.ipswich.gov.uk/moderngov-template/css/ie7.css" media="all" rel="stylesheet" type="text/css">
+	<![endif]-->
+
+	<!--[if lte IE 9]>
+		<link href="//app.ipswich.gov.uk/moderngov-template/css/ie9-hidden-menu.css" media="all" rel="stylesheet" type="text/css">
+	<![endif]-->
+	
+	<link href="//app.ipswich.gov.uk/moderngov-template/css/moderngov.css" media="all" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="ibc-skip-link">
+		<a href="#ibc-main-content" class="ibc-element-invisible">Skip to main content</a>
+	</div>
+	<div class="ibc-headerbar">
+		<div class="ibc-wrapper-padding">
+			<div class="ibc-menu-left">
+				<ul>
+					<li class="ibc-first ibc-menu"><a class="ibc-menu" href="javascript:void(0);">Menu</a></li>
+					<li class="ibc-first ibc-menu-submenu"><a href="https://www.ipswich.gov.uk/">Home</a></li>
+					<li class="ibc-menu-submenu"><a href="https://www.ipswich.gov.uk/events-calendar/month">Events</a></li>
+					<li class="ibc-menu-submenu"><a href="https://www.ipswich.gov.uk/content/contact-council">Contact Us</a></li>
+					<li class="ibc-menu-submenu"><a href="https://www.ipswich.gov.uk/abc/a">A - Z</a></li>
+					<li><a class="ibc-services" href="https://www.ipswich.gov.uk/services-list">Services</a></li>
+				</ul>
+			</div>
+			<div class="ibc-menu-right"><a href="https://www.facebook.com/IpswichGov" title="Like us on Facebook"><img alt="" src="//app.ipswich.gov.uk/img/ibc-jdi/facebook.png"></a><a class="ibc-twitter" href="https://twitter.com/IpswichGov" title="Follow us on Twitter"><img alt="" src="//app.ipswich.gov.uk/img/ibc-jdi/twitter.png"></a><a href="http://www.ipswich.gov.uk/direct" title="Sign up for email alerts"><img alt="" src="//app.ipswich.gov.uk/img/ibc-jdi/email_black_small.gif"></a></div>
+			<span class="ibc-clear"></span>
+		</div>
+	</div>
+	<div class="ibc-hidden-menu">
+		<div class="ibc-wrapper-padding">
+			<ul class="ibc-menu-hidden-menu">
+				<li><a href="https://www.ipswich.gov.uk/">Home</a></li>
+				<li><a href="https://www.ipswich.gov.uk/events-calendar/month">Events</a></li>
+				<li><a href="https://www.ipswich.gov.uk/content/contact-council">Contact Us</a></li>
+				<li><a href="https://www.ipswich.gov.uk/abc/a">A - Z</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="ibc-logobar">
+		<div class="ibc-wrapper-padding">
+			<a class="ibc-ibc" href="https://www.ipswich.gov.uk/"><img alt="Ipswich Borough Council logo" src="//app.ipswich.gov.uk/img/ibc-jdi/logo.png"></a>
+			<h1 class="ibc-siteheading">ipswich.gov.uk</h1>
+		</div>
+	</div>
+	<div class="ibc-contentarea">
+		<div class="ibc-wrapper-padding">			
+			<div class="ibc-content ibc-right" id="ibc-main-content">
+				<h1>Find Councillor</h1>
+				<div class="ibc-pane">
+					<div class="ibc-breadcrumb"><h2>You are here:</h2> <a href="https://www.ipswich.gov.uk/">Home</a> &raquo; <a href="https://democracy.ipswich.gov.uk/">Democracy Online</a> &raquo;  Find Councillor</div>
+					<!-- START MODERN.GOV CONTENT -->
+					<div id="modgov"><h1 style="display: none;">Find Councillor</h1>
+<div class="mgContent" >
+
+
+	<form   action="mgFindMember.aspx"  method = "post" id="FormSelect" >
+	
+	
+	<div class="mgFormRow" >
+	
+	<label for="User">By name&#58;</label>
+	<select id="User" name="User" title="Select user"> 
+
+	<option value="0" >Please select a councillor</option>
+
+		<option value="156" >Cann,  Councillor Andrew Cann</option>
+
+		<option value="133" >Carnall,  Councillor John Carnall</option>
+
+		<option value="134" >Cenci,  Councillor Nadia Cenci</option>
+
+		<option value="135" >Chisholm,  Councillor Glen Chisholm</option>
+
+		<option value="136" >Clarke,  Councillor Hamil Clarke</option>
+
+		<option value="283" >Cook,  Councillor John Cook</option>
+
+		<option value="138" >Cook,  Councillor Martin Cook</option>
+
+		<option value="380" >Darwin,  Councillor Shelly Darwin</option>
+
+		<option value="140" >Debman,  Councillor George Debman</option>
+
+		<option value="338" >Elavalakan,  Councillor Elango Elavalakan</option>
+
+		<option value="141" >Ellesmere,  Councillor David Ellesmere</option>
+
+		<option value="142" >Fern,  Councillor Roger Fern</option>
+
+		<option value="337" >Gage,  Councillor Sandra Gage</option>
+
+		<option value="144" >Gardiner,  Councillor Peter Gardiner</option>
+
+		<option value="145" >Gibbs,  Councillor Julian Gibbs</option>
+
+		<option value="146" >Goldsmith,  Councillor David Goldsmith</option>
+
+		<option value="147" >Goonan,  Councillor Martin Goonan</option>
+
+		<option value="148" >Grant,  Councillor Albert Grant</option>
+
+		<option value="381" >Hall,  Councillor Bob Hall</option>
+
+		<option value="150" >Harsant,  Councillor Elizabeth Harsant</option>
+
+		<option value="335" >Hopgood,  Councillor Andi Hopgood</option>
+
+		<option value="377" >Hyde-Chambers,  Councillor Robin Hyde-Chambers</option>
+
+		<option value="379" >Ion,  Councillor Stephen Ion</option>
+
+		<option value="151" >Jones,  Councillor Carole Jones</option>
+
+		<option value="153" >Knowles,  Councillor Bill Knowles</option>
+
+		<option value="339" >Kreidewolf,  Councillor Colin Kreidewolf</option>
+
+		<option value="127" >Leeder,  Councillor Adam Leeder</option>
+
+		<option value="157" >Lockington,  Councillor Inga Lockington</option>
+
+		<option value="158" >Macartney,  Councillor Jeannette Macartney</option>
+
+		<option value="159" >MacDonald,  Councillor Neil MacDonald</option>
+
+		<option value="336" >Maguire,  Councillor Daniel Maguire</option>
+
+		<option value="162" >Meudec,  Councillor Sophie Meudec</option>
+
+		<option value="163" >Mowles,  Councillor John Mowles</option>
+
+		<option value="334" >Phillips,  Councillor Edward Phillips</option>
+
+		<option value="164" >Pope,  Councillor Richard Pope</option>
+
+		<option value="165" >Powell,  Councillor Jim Powell</option>
+
+		<option value="166" >Quinton,  Councillor Bill Quinton</option>
+
+		<option value="376" >Reynolds,  Councillor Lee Reynolds</option>
+
+		<option value="333" >Riley,  Councillor Jane Riley</option>
+
+		<option value="168" >Ross,  Councillor Alasdair Ross</option>
+
+		<option value="169" >Rudkin,  Councillor Bryony Rudkin</option>
+
+		<option value="170" >Smart,  Councillor Philip Smart</option>
+
+		<option value="171" >Stewart,  Councillor Chris Stewart</option>
+
+		<option value="172" >Stewart,  Councillor Pam Stewart</option>
+
+		<option value="177" >Vickery,  Councillor Robin Vickery</option>
+
+		<option value="340" >Whittall,  Councillor Hugh Whittall</option>
+
+		<option value="285" >Wright,  Councillor Colin Wright</option>
+
+		<option value="378" >Xhaferaj,  Councillor Erion Xhaferaj</option>
+	</select>
+<input  class="mgGoButton"  type="submit" name="SubmitCllr" value="Go" alt="Find by name" />
+	</div>
+	<div class="mgFormRow" ><label for="PartyId">By political party:</label>
+		<select id="PartyId" name="PartyId"> 
+
+			<option  value="0"  selected="selected" >Select a political party</option>
+			
+				    <option  value="24" >Labour</option>
+
+				    <option  value="23" >Conservative</option>
+
+				    <option  value="22" >Liberal Democrats</option>
+		</select> <input  class="mgGoButton"  type="submit" name="SubmitParty" value="Go"  alt="Find by party" />
+	    </div>
+	<div class="mgFormRow" >
+		<label for="WardId">or by ward:</label>
+		<select id="WardId" name="WardId"> 
+		 
+
+			<option  value="0"  selected="selected" >Select a ward</option>
+			
+				<option  value="12982 ">Alexandra</option>
+
+				<option  value="12974 ">Bixley</option>
+
+				<option  value="12984 ">Bridge</option>
+
+				<option  value="12983 ">Castle Hill</option>
+
+				<option  value="12971 ">Gainsborough</option>
+
+				<option  value="12979 ">Gipping</option>
+
+				<option  value="12972 ">Holywells</option>
+
+				<option  value="12973 ">Priory Heath</option>
+
+				<option  value="12978 ">Rushmere</option>
+
+				<option  value="12977 ">Sprites</option>
+
+				<option  value="12981 ">St John&#39;s</option>
+
+				<option  value="12987 ">St Margaret&#39;s</option>
+
+				<option  value="12976 ">Stoke Park</option>
+
+				<option  value="12985 ">Westgate</option>
+
+				<option  value="12975 ">Whitehouse</option>
+
+				<option  value="12980 ">Whitton</option>
+		</select> <input  class="mgGoButton"  type="submit" name="SubmitWard" value="Go" alt="Find&#32;by&#32;ward" />
+	</div>
+	<div class="mgFormRow" >
+		<label for="Postcode">or by postcode:</label>
+		<input id="Postcode" name="Postcode" size="16" class="mgInput"   value="Enter&#32;postcode"	 onfocus="if(this.value=='Enter&#32;postcode')this.value='';"  title="Enter a full postcode" />
+
+		<input  class="mgGoButton"  type="submit" name="SubmitPostcode" value="Go" alt="Find by postcode" />
+		<span  class="mgSmallTxt" >e.g.&#32;IP1&#32;1BJ</span>
+	</div>
+	
+	
+	
+	<div class="mgFormRow" ><label for="searchtext">or by part of their name:</label>
+		<input name="searchtext" id="searchtext" class="mgInput"   size="22" value="Enter&#32;name"  onfocus="if(this.value=='Enter&#32;name')this.value='';"  title="Enter search text here" />
+		<input  class="mgGoButton"  type="submit" name="SubmitName" value="Go" alt="Find by part of name" /> 
+	</div>
+<div class="mgHiddenField" >
+	<input type="hidden" value="" name="LastAction" id="LastAction" />
+	<input type="hidden" value="Enter&#32;name" name="LastSearch" id="LastSearch" />
+	<input type="hidden" value="Enter&#32;postcode" name="LastPostcode" id="LastPostcode" />
+	</div>
+	
+	
+	</form>
+
+<div  class="mgThumbsList" >
+
+</div>		
+<div class="mgHelpLine" >	
+
+</div>	
+</div>
+<div class="mgFooter" >		
+
+	<p>&nbsp;</p>
+
+<input type="hidden" value="false" id="hidIsExtLinkNewWindow" name="hidIsExtLinkNewWindow"/>
+
+
+    <script src="edit-doc-activex.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="jquery-ui/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.10.2.custom.min.js"></script>
+
+    <script type="text/javascript">
+	var mgJQuery = jQuery.noConflict(true);
+        var thisFormValidator;
+    </script>
+
+    <script type="text/javascript" src="jquery-ui/json/json2.js"></script>
+    <script type="text/javascript" src="jquery-ui/Add-ons/mg.jqueryaddons.min.js"></script>
+    <script type="text/javascript" src="mgAjaxScripts.js"></script> 
+          
+    <script type="text/javascript">
+        function CommonAjaxInit()
+        {
+            Common_DocumentReady(false, 629272640462387);
+        }
+
+        mgJQuery(document).ready(CommonAjaxInit);
+
+    </script>  
+</div>
+
+</div>					
+					<!-- END MODERN.GOV CONTENT -->
+				</div>
+			</div>
+			
+			<div class="ibc-sidebar ibc-left">
+				<div class="ibc-pane">
+					<h2>In this section</h2>
+					<!-- START MODERN.GOV SIDEBAR -->
+					<ul><li><a title="Link to calendar of meetings" href="mgCalendarMonthView.aspx?GL=1&amp;bcr=1">Calendar</a></li><li><a title="Link to committee structure" href="mgListCommittees.aspx?bcr=1">Committees</a></li><li><a title="Link to Community Right to Bid" href="mgGeneric.aspx?MD=righttobid&amp;bcr=1">Community Right to Bid</a></li><li><a title="Link to Constitution" href="ieListMeetings.aspx?CId=197&amp;info=1&amp;MD=constitution&amp;bcr=1">Constitution</a></li><li><a title="Link to register of decisions" href="mgDelegatedDecisions.aspx?bcr=1">Decisions</a></li><li><a title="Link to Forthcoming Decisions List" href="mgPlansHome.aspx?bcr=1">Forthcoming Decisions List</a></li><li><a title="Link to library of standard documents" href="ecCatDisplay.aspx?bcr=1&amp;sch=doc">Library</a></li><li><a title="Link to information about committee meetings" href="ieDocHome.aspx?categories=-13022&amp;bcr=1">Meetings</a></li><li><a title="Link to Outside Bodies" href="mgListOutsideBodies.aspx?bcr=1">Outside bodies</a></li><li><a title="Link to free text search" href="ieDocSearch.aspx?bcr=1">Search documents</a></li><li><a title="Link to Subscribe to Updates" href="mgRegisterKeywordInterest.aspx?bcr=1">Subscribe to updates</a></li><li><a title="Link to what's new" href="mgWhatsNew.aspx?bcr=1">What's new</a></li><li><a title="Link to your Councillors" href="mgMemberIndex.aspx?bcr=1">Your Councillors</a></li><li><a title="Link to your MEPs" href="mgMemberIndexMEP.aspx?bcr=1">Your MEPs</a></li><li><a title="Link to your MPs" href="mgMemberIndexMP.aspx?bcr=1">Your MPs</a></li></ul>
+					<!-- END MODERN.GOV SIDEBAR -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ibc-footer">
+		<div class="ibc-footerbar">
+			<div class="ibc-wrapper-padding">
+			</div>
+		</div>
+		<div class="ibc-wrapper-padding">
+			<div class="ibc-footer-left">
+				<a class="ibc-ibc" href="https://www.ipswich.gov.uk/"><img alt="Ipswich Borough Council logo" src="//app.ipswich.gov.uk/img/ibc-jdi/logo.png"></a>
+				<div class="ibc-footer-address">
+					<p class="ibc-footer-copyright">Ipswich Borough Council &copy; MMXIV</p>
+					<p>Ipswich Borough Council, Grafton House,<br>15-17 Russell Road, Ipswich IP1 2DE</p>
+				</div>
+			</div>
+			<div class="ibc-footer-right">
+				<a class="ibc-govuk" href="https://www.gov.uk/"><img alt="GOV.UK" src="//app.ipswich.gov.uk/img/ibc-jdi/govuk.png"></a>
+				<div class="ibc-footer-links">
+					<div class="ibc-left-block">
+						<ul>
+							<li><a href="https://www.ipswich.gov.uk/content/terms-and-disclaimer">Terms and disclaimer</a></li>
+							<li><a href="https://www.ipswich.gov.uk/content/privacy-policy">Privacy policy</a></li>
+						</ul>
+					</div>
+					<div class="ibc-right-block">
+						<ul>
+							<li><a href="https://www.ipswich.gov.uk/sitemap">Site Map</a></li>
+							<li><a href="https://www.ipswich.gov.uk/content/accessibility-statement">Accessibility statement</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<span class="ibc-clear"></span>
+		</div>
+	</div>
+	<script src="//app.ipswich.gov.uk/moderngov-template/js/ibc-jdi-helper-v2.js" type="text/javascript"></script>
+</body>
+</html>

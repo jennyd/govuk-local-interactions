@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <title>
+    Online FSM Application  </title>
+  <link href="/ofsm/hants/branding/hants/favicon.ico" type="image/x-icon" rel="icon" /><link href="/ofsm/hants/branding/hants/favicon.ico" type="image/x-icon" rel="shortcut icon" /><link rel="stylesheet" type="text/css" href="/ofsm/hants/css/bundle_21849b0fb76fe86d65bc4684307baffc89ef8f39.css" /><script type="text/javascript" src="/ofsm/hants/js/bundle_05e33f2dc876b2592ed0a5f5469a4f52c100f4c3.js"></script><script type="text/javascript">
+//<![CDATA[
+
+$(function(){
+  $("#ApplicationApplicantDob").mask("?99/99/9999");
+  $("#ApplicationReference")
+    .mask("?******")
+    .blur(function(){
+      this.value = this.value.toUpperCase();
+    });
+});
+
+//]]>
+</script></head>
+<body class="Apply-home">
+ <div id="wrap">
+  <div id="container" class="container_16">
+    <div id="header" class="clearfix">
+           <div id="headerTitle"><a href="/ofsm/hants/"><img src="/ofsm/hants/img/home_white.png" alt="Go to homepage" />Online Free School Meals Application - Hampshire Schools Only</a></div>
+      <h1>Online FSM Application</h1>
+    </div>
+    <div id="nav" class="clearfix"></div>
+    <div id="content">
+            
+
+<div class="text">
+
+<p>You will need to make a new application for each child but your 
+   information will be remembered to help you to complete multiple
+   applications quickly.
+</p>
+
+<p>You may apply for eligibility on behalf of a parent/carer if you
+   have permission to do so and their details.
+</p>
+</div>
+
+<h2 style="margin-top: 20px;">New application</h2>
+<p>Use this button if you are making a new claim for Free School Meals.</p><p>If your application concerns a Further Education College then please <a href="https://www.cloudforedu.org.uk/ofsm/fe-apply/">click here</a>.</p>
+
+<div class="submit"><input onclick="window.location.href=&#039;/ofsm/hants/apply/start&#039;" type="submit" value="Start" /></div>
+<h2 style="margin-top: 20px;">Previous application</h2><p>Use this button if you have a reference number and wish to continue with this (check eligibility status, un-apply, re-apply).  You will need your application reference and your date of birth.</p><p>If your application concerns a Further Education College then please <a href="https://www.cloudforedu.org.uk/ofsm/fe-apply/">click here</a>.</p>
+<form action="/ofsm/hants/" autocomplete="off" id="ApplicationHomeForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST" /><input type="hidden" name="data[_Token][key]" value="ec926a7bfe9fd2abba0c2f7ea95415f889185c43" id="Token1370966447" /></div><div class="clearfix section" style="padding-bottom: 0;"><div class="input text required"><input name="data[Application][reference]" type="text" maxlength="10" id="ApplicationReference" /><label for="ApplicationReference">Application Reference</label></div><div class="input fill"> and </div><div class="input date required"><input name="data[Application][applicant_dob]" type="text" id="ApplicationApplicantDob" /><label for="ApplicationApplicantDobMonth">Date of birth (DD/MM/YYYY)</label></div></div>
+<div class="submit"><input type="submit" value="Submit" /></div><div style="display:none;"><input type="hidden" name="data[_Token][fields]" value="f2eb3c6cde3c541ebb6842df64f6618f5fb8a433%3A" id="TokenFields1177590063" /></div></form>
+<p id="goto_la_link"><a href="http://www3.hants.gov.uk/hc3s/freeschoolmeals.htm" target="_blank" title="(new window)">Go to Hampshire County Council&#039;s web site</a></p>
+    </div>
+    <div id="footer">
+<p>Â© 2012-2014 Software for Data Analysis Limited
+ | <a href="/ofsm/privacy_policy.html" target="_blank">SDA Privacy policy</a>
+ | <a href="http://www3.hants.gov.uk/hc3s/freeschoolmeals.htm">Hampshire County Council</a></p>
+    </div>
+  </div>
+ </div>
+          <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29408196-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+    </script>
+  </body>
+</html>

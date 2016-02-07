@@ -1,0 +1,1173 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html lang="en" dir="ltr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="GENERATOR" content="Idc Content 10gR3" />
+	<title>Content Server Error</title>
+<link rel="SHORTCUT ICON" href="http://pubext/pub_livx/images/stellent/favicon.ico" />
+<!-- loading PublishedResources -->
+<!-- resources/layouts/idcBundle.js -->
+<script type="text/javascript" src="/pub_livx/resources/layouts/idcBundle.js"></script>
+	<script type="text/javascript">
+	idc.log.traceExecution = true;
+	idc.log.setTracingSections(new Array("system"));
+	// bootstrapping strings and flags for all users
+	var httpAdminCgiPath = "/pub_livx/idcplg/cs-admin/pxs";
+	var httpBrowserFullCgiPath = "http://www.crawley.gov.uk/pub_livx/idcplg";
+	var httpCgiPath = "/pub_livx/idcplg";
+	var httpCommonRoot = "/pub_livx/common/";
+	var httpEnterpriseCgiPath = "/pub_livx/idcplg";
+	var httpWebRoot = "/pub_livx/";
+	var HttpHelpRoot = "/pub_livx/help/";
+	var HttpSystemHelpRoot = "/pub_livx/help/";
+	var httpSchemaRoot = "/pub_livx/resources/schema/";
+	var instanceMenuLabel = "pub_livx";
+	var isContentRefineryPresent = false;
+	var isDynamicConverterEnabled = true;
+	var isFoldersEnabled = false;
+	var isJspServerEnabled = true;
+	var useCollaboration = false;
+	var searchIndexerEngineName = "ORACLETEXTSEARCH";
+	var searchEngineName = "ORACLETEXTSEARCH";
+	var dbSuffix = "<" + "$if IsOracle$>> 0<" + "$endif$>";
+	var allowIntranetUsers = false;
+	var coreContentOnly = false;
+	var hasHierarchicalBased = false;
+	var isUserPage = true;
+	var isProxiedServer = false;
+	var queryString = "IdcService=SS_GET_PAGE&nodeId=111";
+	var isPostRequest = 0;
+	var registerUsers = false;
+	var stdPageWidth = "";
+	var quickSearchQuery = "";
+	var hasHierarchicalBased = true;
+	var hasQueryBased = true;
+	var minPopupWidth = 150;
+	var httpSkinRoot = "/pub_livx/resources/layouts/CBCTopMenus/Development/";
+	var httpLayoutRoot = "/pub_livx/resources/layouts/CBCTopMenus/";
+	var lmSkinName = "Development";
+	var lmLayoutName = "CBCTopMenus";
+	var lcDirection = "ltr";
+	var groupVarList = new Object();
+
+	var quickSearchForm ="\t\u003cdiv style=\"text-align:right;\"\u003e\n\u003cform name=\"MINISEARCHFORMVARS\" style=\"display:inline;\"\u003e\n\t\u003cinput type=\"hidden\" name=\"ResultCount\" value=\"20\" /\u003e\n\u003c/form\u003e\n\n\u003cform target = \"_self\" name=\"MINISEARCHFORM\" method=\"GET\" action=\"/pub_livx/idcplg\" onSubmit=\"setMiniSearchQueryText(this)\" style=\"margin:0px;white-space:nowrap;vertical-align:middle;display:inline\" nowrap=\"nowrap\"\u003e\n\t\u003cinput type=\"hidden\" name=\"IdcService\" value=\"GET_SEARCH_RESULTS\" /\u003e\n\t\u003cinput type=\"hidden\" name=\"SortField\" value=\"dInDate\" /\u003e\n\t\u003cinput type=\"hidden\" name=\"SortOrder\" value=\"Desc\" /\u003e\n\t\u003cinput type=\"hidden\" name=\"ResultCount\" value=\"20\" /\u003e\n\t\u003cinput type=\"hidden\" name=\"QueryText\" value=\"\" /\u003e\n\t\u003cinput type=\"hidden\" name=\"listTemplateId\" value=\"\" /\u003e\n\t\u003cinput type=\"hidden\" name=\"ftx\" value=\"\" /\u003e\n\t\u003cinput type=\"hidden\" name=\"TargetedQuickSearchSelection\" value=\"\" /\u003e\n\n\t\u003cinput type=\"hidden\" name=\"SearchQueryFormat\" value=\"Universal\" /\u003e\n\t\t\u003cdiv class=\"xuiPopupContainer\" id=\"targetedQuickSearchContainer\" style=\"display:none; white-space:nowrap; z-index:99;\" nowrap=\"nowrap\"\u003e\n\t\t\t\u003ctable class=\"xuiPopupTable\" cellpadding=\"0\" cellspacing=\"0\" summary=\"\"\u003e\n\t\t\t\t\u003ctr\u003e\u003ctd class=\"xuiPopupHeader\" nowrap=\"nowrap\"\u003e\n\t\t\t\t\t\tTargeted Quick Searches\n\t\t\t\t\u003c/td\u003e\u003c/tr\u003e\n\n\t\t\t\t\t\t\u003ctr\u003e\u003ctd class=\"xuiPopupLink\" nowrap=\"nowrap\" onMouseOver=\"glowPopupRow(this, \'xuiPopupLink_over\', \'xuiPopupLink\')\" onMouseOut=\"fadePopupRow(this, \'xuiPopupLink\')\" onClick=\"linkItem_onclick(event, this);closePopups();\"\u003e\n\t\t\t\t\t\t\t\u003ca class=\"menuA_ChildLinkText\" href=\"javascript:setTargetedQuickSearchSelection(\'a\');\"\u003eAuthor\u003c/a\u003e\n\t\t\t\t\t\t\u003c/td\u003e\u003c/tr\u003e\n\t\t\t\t\t\t\u003ctr\u003e\u003ctd class=\"xuiPopupLink\" nowrap=\"nowrap\" onMouseOver=\"glowPopupRow(this, \'xuiPopupLink_over\', \'xuiPopupLink\')\" onMouseOut=\"fadePopupRow(this, \'xuiPopupLink\')\" onClick=\"linkItem_onclick(event, this);closePopups();\"\u003e\n\t\t\t\t\t\t\t\u003ca class=\"menuA_ChildLinkText\" href=\"javascript:setTargetedQuickSearchSelection(\'t\');\"\u003eTitle\u003c/a\u003e\n\t\t\t\t\t\t\u003c/td\u003e\u003c/tr\u003e\n\t\t\t\t\t\u003ctr\u003e\u003ctd class=\"xuiPopupSpacer\" nowrap=\"nowrap\"\u003e&nbsp;\u003c/td\u003e\u003c/tr\u003e\n\t\t\t\t\t\u003ctr\u003e\u003ctd class=\"xuiPopupLink\" nowrap=\"nowrap\" onMouseOver=\"glowPopupRow(this, \'xuiPopupLink_over\', \'xuiPopupLink\')\" onMouseOut=\"fadePopupRow(this, \'xuiPopupLink\')\" onClick=\"linkItem_onclick(event, this);closePopups();\"\u003e\n\t\t\t\t\t\t\u003ca class=\"menuA_ChildLinkText\" href=\"javascript:setTargetedQuickSearchSelection(\'\');\"\u003eClear Selection\u003c/a\u003e\n\t\t\t\t\t\u003c/td\u003e\u003c/tr\u003e\n\t\t\t\t\t\u003ctr\u003e\u003ctd class=\"xuiPopupSpacer\" nowrap=\"nowrap\"\u003e&nbsp;\u003c/td\u003e\u003c/tr\u003e\n\t\t\t\t\u003ctr\u003e\u003ctd class=\"xuiPopupLink\" nowrap=\"nowrap\" onMouseOver=\"glowPopupRow(this, \'xuiPopupLink_over\', \'xuiPopupLink\')\" onMouseOut=\"fadePopupRow(this, \'xuiPopupLink\')\" onClick=\"linkItem_onclick(event, this);closePopups();\"\u003e\n\t\t\t\t\t\u003ca class=\"menuA_ChildLinkText\" href=\"javascript:editTargetedQuickSearchesPage();\"\u003eEdit...\u003c/a\u003e\n\t\t\t\t\u003c/td\u003e\u003c/tr\u003e\n\t\t\t\u003c/table\u003e\n\t\t\u003c/div\u003e\n\t\t\u003cdiv style=\"float:right;\"\u003e\n\t\t\t\u003cspan style=\"position:absolute;top:-9999px;width:0px;height:0px;overflow:hidden;\"\u003e\u003clabel for=\"MiniSearchText\"\u003eQuick Search\u003c/label\u003e\u003c/span\u003e\n\t\t\t\u003cinput type=\"text\" name=\"MiniSearchText\" id=\"MiniSearchText\" value=\"\" style=\"font-size:8pt;line-height:8pt;vertical-align:middle\" /\u003e\n\t\t\t\u003cinput type=\"submit\" name=\"go\" value=\"Quick Search\" class=\"formButton\" style=\"vertical-align:middle\" /\u003e\n\t\t\u003c/div\u003e\n\t\t\u003cdiv style=\"float:right;margin-top:2px;margin-right:4px;margin-left:4px;height:100%;width:16px;\"\u003e\n\t\t\t\u003cimg id=\"targetedQuickSearchIcon\" alt=\"Targeted Quick Searches\" title=\"Targeted Quick Searches\" src=\"/pub_livx/resources/layouts/CBCTopMenus/Development/targetedQS.gif\" height=\"16\" width=\"16\" border=\"0\" onclick=\"showPopup(\'targetedQuickSearchContainer\', \'targetedQuickSearchIcon\', event, \'position=west\');\" /\u003e\n\t\t\u003c/div\u003e\n\t\t\u003cdiv style=\"float:right; margin-top:2px;\" id=\"targetedQuickSearchLabel\" class=\"targetedQSLabel\"\u003e\u003c/div\u003e\n\u003c/form\u003e\n\t\u003c/div\u003e\n"
+	var lastSortField = "dInDate";
+	var lastSortOrder = "Desc";
+	var lastResultCount = "20";
+	var isContributor = false;
+	var isSubAdmin = false;
+
+		var isLoggedIn = false;
+		var targetedQuickSearches = new Array();
+					targetedQuickSearches["a"] = new Array();
+					targetedQuickSearches["a"]["ResultCount"] = "20";
+					targetedQuickSearches["a"]["SortField"] = "dInDate";
+					targetedQuickSearches["a"]["SortOrder"] = "Desc";
+					targetedQuickSearches["a"]["QueryText"] = "\u003cusch\u003edDocAuthor \u003csubstring\u003e `#s`\u003c/usch\u003e";
+					targetedQuickSearches["a"]["QueryFullText"] = "";
+					targetedQuickSearches["a"]["SearchProviders"] = "";
+					targetedQuickSearches["a"]["Label"] = "wwAuthor";
+					targetedQuickSearches["a"]["SearchQueryFormat"] = "Universal";
+					targetedQuickSearches["a"]["listTemplateId"] = "";
+					targetedQuickSearches["t"] = new Array();
+					targetedQuickSearches["t"]["ResultCount"] = "20";
+					targetedQuickSearches["t"]["SortField"] = "dInDate";
+					targetedQuickSearches["t"]["SortOrder"] = "Desc";
+					targetedQuickSearches["t"]["QueryText"] = "\u003cusch\u003edDocTitle \u003csubstring\u003e `#s`\u003c/usch\u003e";
+					targetedQuickSearches["t"]["QueryFullText"] = "";
+					targetedQuickSearches["t"]["SearchProviders"] = "";
+					targetedQuickSearches["t"]["Label"] = "wwTitle";
+					targetedQuickSearches["t"]["SearchQueryFormat"] = "Universal";
+					targetedQuickSearches["t"]["listTemplateId"] = "";
+	function finishLayoutInit(navBuilder)
+	{
+	if (isLoggedIn && userIsAdmin)
+	{
+		navBuilder.addChildNodeTo('ADMINISTRATION', 'collection', 'id==ORACLE_QUERY_OPTIMIZER', 'label==' + lc('wwQueryTransformer'));
+		navBuilder.addChildNodeTo('ORACLE_QUERY_OPTIMIZER', 'item', 'id==GET_HINT_RULE', 'label==' + lc('wwEOHintRule'), 'url==' + httpCgiPath + '?IdcService=GET_OR_ADD_HINT_RULE');
+		navBuilder.addChildNodeTo('ORACLE_QUERY_OPTIMIZER', 'item', 'id==QUERY_CONVERTER', 'label==' + lc('wwEOQueryConverter'), 'url==' + httpCgiPath + '?IdcService=ADD_QUERY_HINT');
+		navBuilder.addChildNodeTo('ORACLE_QUERY_OPTIMIZER', 'item', 'id==HINT_CACHE_UPDATER', 'label==' + lc('wwEOCheckOrReplaceQueryHint'), 'url==' + httpCgiPath + '?IdcService=ADD_OR_REPLACE_QUERY_HINT_CACHE');
+
+	}
+	if (navBuilder)
+	{
+		if (isLoggedIn)
+		{
+			navBuilder.addChildNodeTo('ADMINISTRATION',
+				'item',
+				'id==GET_SOAP_WSDL_LIST',
+				'label=='+lc('wwSoapWsdls'),
+				'url=='+httpCgiPath+'?IdcService=GET_SOAP_WSDL_LIST');
+		}
+	}
+	if (isLoggedIn && userIsAdmin)
+	{
+	navBuilder.addChildNodeTo('ADMINISTRATION', 'item', 'id==GET_DBSEARCH_FIELDS', 'label==' + lc('wwDBSearchZoneConfig'), 'url==' + httpCgiPath + '?IdcService=DBSEARCH_GET_FIELDS');
+	}
+  if (isLoggedIn)
+  {
+    // basket urls
+    navBuilder.addChildNodeTo('MY_CONTENT', 'collection', 'id==MY_PERSONAL_BASKETS', 'label=='+lc('wwCpdMyPersonalBaskets'),
+      'url=='+httpCgiPath+'?IdcService=GET_PORTAL_PAGE&Action=GetTemplatePage&Page=PNE_BASKET_ADMIN',
+      'icon==folios/Basket.gif');
+
+    if (typeof pneContentBasketList != "undefined")
+    {
+      var activeBasketID = "";
+      for(var i=0; i<pneContentBasketList.length; i++)
+      {
+        var icon = "folios/Basket.gif";
+        var basketID = pneContentBasketList[i][0];
+        var basketLabel = pneContentBasketList[i][1];
+        if (basketID == activeBasketID)
+        {
+          basketLabel += " (Active) ";
+        icon = "folios/Basket_active.gif";
+        }
+        navBuilder.addChildNodeTo('MY_PERSONAL_BASKETS', 'item', 'id==MY_PERSONAL_BASKETS_'+(i+1),
+        'label=='+basketLabel,
+        'url=='+httpCgiPath+'?IdcService=GET_PORTAL_PAGE&Action=GetTemplatePage&Page=BASKET_PAGE&cpdBasketID='+basketID,
+        'icon==' + icon);
+      }
+    }
+  }
+
+  navBuilder.addChildNodeTo('MY_PERSONAL_BASKETS', 'item', 'id==MANAGE_PERSONAL_BASKETS',
+    'label==Manage Content Baskets',
+  'url=='+httpCgiPath+'?IdcService=GET_DOC_PAGE&amp;Action=GetTemplatePage&amp;Page=PNE_BASKET_ADMIN');
+
+	if (navBuilder)
+	{
+		// if (isLoggedIn)
+		{
+			// Build the websites menu
+			navBuilder.addChildNodeTo('NAVTREE', 'collection', 'id==SS_DISPLAY_WEBSITES', 'label=='+'Web Sites');
+
+			
+
+						navBuilder.addChildNodeTo('SS_DISPLAY_WEBSITES',
+							'item',
+							'id==SS_WEBSITE_0',
+							'label==WSP.Public1',
+							'url==/pub_livx/idcplg?IdcService=SS_GET_PAGE&siteId=25',
+							'icon==WebItem.gif');
+
+			// Ensure that the websites menu gets displayed
+	if (navBuilder)
+	{
+		var oldArray = null;
+
+		if( navBuilder.menuB && navBuilder.menuB.topLevelNodes )
+		{
+			oldArray = navBuilder.menuB.topLevelNodes;
+		}
+		if( navBuilder.trayA && navBuilder.trayA.topLevelNodes )
+		{
+			oldArray = navBuilder.trayA.topLevelNodes;
+		}
+
+		var newArray = new Array();
+		var iNew = 0;
+		for( iOld=0; oldArray && ( iOld < oldArray.length ); iOld++ )
+		{
+			if( oldArray[iOld] == 'BROWSE_CONTENT' )
+			{
+				newArray[iNew] = 'SS_DISPLAY_WEBSITES';
+				iNew++;
+			}
+
+			newArray[iNew] = oldArray[iOld];
+			iNew++;
+		}
+
+		if( navBuilder.menuB && navBuilder.menuB.topLevelNodes )
+		{
+			navBuilder.menuB.topLevelNodes = newArray;
+		}
+		if( navBuilder.trayA && navBuilder.trayA.topLevelNodes )
+		{
+			navBuilder.trayA.topLevelNodes = newArray;
+		}
+	}
+		}
+
+		if (isLoggedIn && userIsAdmin)
+		{
+			if (navBuilder.getNodeById('ADMINISTRATION') != null)
+			{
+				var imgSrc = "";
+				var otherNode = navBuilder.getNodeById('ADMIN_APPLETS');
+				if (otherNode != null)
+				{
+					imgSrc = otherNode.getAttribute("icon");
+				}
+
+
+				// This script creates a menu (collection) for Site Studio admin, with
+				// items for the various administration activities.
+
+				navBuilder.addChildNodeTo( 'ADMINISTRATION',
+					'collection',
+					'id==SS_ADMIN_LINKS',
+					'url=='+httpCgiPath+'?IdcService=SS_GET_ADMIN_PAGE',
+					'label==' + 'Site Studio Administration' );
+
+				navBuilder.addChildNodeTo('SS_ADMIN_LINKS',
+					'item',
+					'id==SS_GET_SITES_ADMIN_PAGE',
+					'label=='+'Manage Web Sites',
+					'url=='+httpCgiPath+'?IdcService=SS_GET_SITES_ADMIN_PAGE');
+				if( ( imgSrc != null ) && ( imgSrc.length > 0 ) )
+				{
+					navBuilder.setAttributeValue("SS_GET_SITES_ADMIN_PAGE", "icon", imgSrc);
+				}
+
+				navBuilder.addChildNodeTo('SS_ADMIN_LINKS',
+					'item',
+					'id==SS_GET_SITE_ADDRESSES_ADMIN_PAGE',
+					'label=='+'Manage Web Site Addresses',
+					'url=='+httpCgiPath+'?IdcService=GET_ADMIN_PAGE&Action=GetTemplatePage&Page=SS_ADMIN_SITE_ADDRESSES');
+				if( ( imgSrc != null ) && ( imgSrc.length > 0 ) )
+				{
+					navBuilder.setAttributeValue("SS_GET_SITE_ADDRESSES_ADMIN_PAGE", "icon", imgSrc);
+				}
+
+				navBuilder.addChildNodeTo('SS_ADMIN_LINKS',
+					'item',
+					'id==SS_GET_FRAGMENTS_ADMIN_PAGE',
+					'label=='+'Manage Fragment Libraries',
+					'url=='+httpCgiPath+'?IdcService=SS_GET_FRAGMENTS_ADMIN_PAGE');
+				if( ( imgSrc != null ) && ( imgSrc.length > 0 ) )
+				{
+					navBuilder.setAttributeValue("SS_GET_FRAGMENTS_ADMIN_PAGE", "icon", imgSrc);
+				}
+
+				navBuilder.addChildNodeTo('SS_ADMIN_LINKS',
+					'item',
+					'id==SS_ADMIN_GET_PROJECT_DEFAULT_METADATA',
+					'label=='+'Set Default Project Document Information',
+					'url=='+httpCgiPath+'?IdcService=SS_ADMIN_GET_PROJECT_DEFAULT_METADATA');
+				if( ( imgSrc != null ) && ( imgSrc.length > 0 ) )
+				{
+					navBuilder.setAttributeValue("SS_ADMIN_GET_PROJECT_DEFAULT_METADATA", "icon", imgSrc);
+				}
+
+				navBuilder.addChildNodeTo('SS_ADMIN_LINKS',
+					'item',
+					'id==SS_GET_SITE_MIGRATION_PAGE',
+					'label=='+'Manage Site Replication',
+					'url=='+httpCgiPath+'?IdcService=SS_GET_SITE_MIGRATION_PAGE');
+				if( ( imgSrc != null ) && ( imgSrc.length > 0 ) )
+				{
+					navBuilder.setAttributeValue("SS_GET_SITE_MIGRATION_PAGE", "icon", imgSrc);
+				}
+
+				navBuilder.addChildNodeTo('SS_ADMIN_LINKS',
+					'item',
+					'id==SS_ADMIN_MANAGE_SITE_BACKUPS',
+					'label=='+'Backup and Restore',
+					'url=='+httpCgiPath+'?IdcService=GET_ADMIN_PAGE&Action=GetTemplatePage&Page=SS_ADMIN_BACKUP_RESTORE');
+				if( ( imgSrc != null ) && ( imgSrc.length > 0 ) )
+				{
+					navBuilder.setAttributeValue("SS_ADMIN_MANAGE_SITE_BACKUPS", "icon", imgSrc);
+				}
+
+				navBuilder.addChildNodeTo('SS_ADMIN_LINKS',
+					'item',
+					'id==SS_GET_COMPONENT_ADMIN_PAGE',
+					'label=='+'General Component Information',
+					'url=='+httpCgiPath+'?IdcService=SS_GET_COMPONENT_ADMIN_PAGE');
+				if( ( imgSrc != null ) && ( imgSrc.length > 0 ) )
+				{
+					navBuilder.setAttributeValue("SS_GET_COMPONENT_ADMIN_PAGE", "icon", imgSrc);
+				}
+
+
+
+			}
+		}
+
+		
+		if (isContributor)
+		{
+			navBuilder.addChildNodeTo('CONTENT_MANAGEMENT',
+				'item',
+				'id==NEW_WEB_ASSET_CHECKIN',
+				'label=='+lc('wwSSNewWebAssetCheckIn'),
+				'url=='+httpCgiPath + '?IdcService=GET_DOC_PAGE&Action=GetTemplatePage&Page=SS_CREATE_WEB_ASSET',
+				'icon==folios/NewFolio.gif');
+		}
+	}
+	if (isLoggedIn && userIsAdmin)
+	{
+		navBuilder.deleteItem('TEMPLATE_CONVERSIONS');
+		navBuilder.addChildNodeTo('ADMINISTRATION', 'collection', 'id==TEMPLATE_CONVERSIONS_COLLECTION', 'label==' + lc('wwTemplateConversions'));
+		navBuilder.addChildNodeTo('TEMPLATE_CONVERSIONS_COLLECTION', 'item', 'id==GET_TEMPLATE_RULES', 'label==' + lc('wwDCTemplateRulesTitle'), 'url==' + httpCgiPath + '?IdcService=GET_TEMPLATE_RULES');
+		navBuilder.addChildNodeTo('TEMPLATE_CONVERSIONS_COLLECTION', 'item', 'id==DC_CHECKIN_NEW_FORM_TEMPLATE', 'label==' + lc('wwCheckinExistingTemplate'), 'url==' + httpCgiPath + '?IdcService=DC_CHECKIN_NEW_FORM&isTemplateCheckin=1');
+		navBuilder.addChildNodeTo('TEMPLATE_CONVERSIONS_COLLECTION', 'item', 'id==DC_CHECKIN_NEW_FORM_CONVERSION', 'label==' + lc('wwCheckinNewTemplate'), 'url==' + httpCgiPath + '?IdcService=DC_CHECKIN_NEW_FORM&isForNewConversionTemplate=1');
+		navBuilder.addChildNodeTo('TEMPLATE_CONVERSIONS_COLLECTION', 'item', 'id==GET_EDIT_TEMPLATE_PAGE', 'label==' + lc('wwDCEditTemplates'), 'url==' + httpCgiPath + '?IdcService=GET_EDIT_TEMPLATE_PAGE');
+		navBuilder.addChildNodeTo('TEMPLATE_CONVERSIONS_COLLECTION', 'item', 'id==GET_DC_CONFIG', 'label==' + lc('wwDCConfigSettings'), 'url==' + httpCgiPath + '?IdcService=GET_DC_CONFIG');
+	}
+	// Merge in link to navigation
+	navBuilder.addChildNodeTo("ADMINISTRATION", "item",
+		"id==FILESTORE_ADMIN", "label==File Store Administration",
+		"url==/pub_livx/idcplg?IdcService=GET_FILESTORE_INFO");
+	if (isLoggedIn && userIsAdmin && searchIndexerEngineName.toLowerCase() == 'oracletextsearch')
+	{
+		navBuilder.addChildNodeTo('ADMINISTRATION', 'item', 'id==ORACLE_TEXT_SEARCH', 'label==' + lc('wwOracleTextSearchAdmin'), 'url==' + httpCgiPath + '?IdcService=ORACLE_TEXT_SEARCH_ADMIN');
+		
+	}
+	if (navBuilder)
+	{
+		if (isLoggedIn && userIsAdmin)
+		{
+			if (navBuilder.getNodeById('ADMINISTRATION') != null)
+			{
+				var imgSrc = "";
+				var otherNode = navBuilder.getNodeById('ADMIN_APPLETS');
+				if (otherNode != null)
+				{
+					imgSrc = otherNode.getAttribute("icon");
+				}
+
+				navBuilder.addChildNodeTo('ADMINISTRATION',
+					'item',
+					'id==ES_GET_PAGE',
+					'label=='+'AtoZ Terms Administration',
+					'url=='+httpCgiPath+'?IdcService=CBC_AZ_ADMIN');
+
+				if( ( imgSrc != null ) && ( imgSrc.length > 0 ) )
+				{
+					navBuilder.setAttributeValue("ES_GET_PAGE", "icon", imgSrc);
+				}
+			}
+		}
+	}
+navBuilder.addChildNodeTo('ADMINISTRATION', 'collection', 'id==CMU_ADMIN', 
+'label=='+lc('wwCmuAdmin'),
+"url==" + httpCgiPath +"?IdcService=GET_SECURE_PAGE&Action=GetTemplatePage&Page=CMU_ADMIN_LINKS_PAGE");
+
+navBuilder.addChildNodeTo('CMU_ADMIN', 'item', 'id==CMU_UPLOAD', 
+'label=='+lc('wwCmuUpload'),
+"url==" + httpCgiPath +"?IdcService=GET_SECURE_PAGE&Action=GetTemplatePage&Page=CMU_UPLOAD_BUNDLE_PAGE");
+
+navBuilder.addChildNodeTo('CMU_ADMIN', 'item', 'id==CMU_IMPORT', 
+'label=='+lc('wwCmuImport'),
+'url=='+httpCgiPath+'?IdcService=CMU_GET_ALL_IMPORT_BUNDLES');
+
+navBuilder.addChildNodeTo('CMU_ADMIN', 'item', 'id==CMU_EXPORT', 
+'label=='+lc('wwCmuExport'),
+'url=='+httpCgiPath+'?IdcService=CMU_GET_ALL_EXPORT_TASKS');
+
+navBuilder.addChildNodeTo('CMU_ADMIN', 'item', 'id==CMU_LIST_ACTIVE_ACTIONS', 
+'label=='+lc('wwCmuActiveExport'),
+'url=='+httpCgiPath+'?IdcService=CMU_LIST_ACTIVE_ACTIONS');
+
+navBuilder.addChildNodeTo('CMU_ADMIN', 'item', 'id==CMU_LIST_ACTIONS_HISTORY', 
+'label=='+lc('wwCmuActionHistory'),
+'url=='+httpCgiPath+'?IdcService=CMU_LIST_ACTIONS_HISTORY');
+
+	// Merge in link to navigation
+	navBuilder.addChildNodeTo("CONTENT_MANAGEMENT", "item",
+		"id==FE_EDITOR_FORM", "label==Web Form Editor", "target==_blank",
+		"url==/pub_livx/idcplg?IdcService=GET_DOC_PAGE&Action=GetTemplatePage&Page=FE_EDITOR");
+	}
+	function finishPersonalCheckinLoadSequence(navBuilder)
+	{
+	}
+	function finishPersonalSearchLoadSequence(navBuilder)
+	{
+	}
+	function launchHelp()
+	{
+		var url;
+		if (!(typeof parent.contentFrame == "undefined") && !(typeof parent.contentFrame.isUserPage == "undefined"))
+		{
+			isUserPage = parent.contentFrame.isUserPage;
+		}
+		if (isUserPage)
+		{
+			url = HttpHelpRoot + "user_help/wh_start.htm";
+		}
+		else
+		{
+			url = HttpSystemHelpRoot + "wh_start.htm";
+		}
+		window.open(url, "IdcHelp");
+	}
+  /* Super the include inside this function to define custom images to be used as links to
+  popup menus (this function gets called within 'initActionImages()' in the common.js file).
+  Use the commented code block below as an example, and modify for your specific image,
+  replacing the image name and path strings as needed.
+  Note: There must be two images -- one for regular state, and one for 'over' state.
+  Naming convention: 'MyImage.gif' and 'MyImage_over.gif' */
+  function customActionImageInit()
+  {
+    //if (currentParentImage.src.indexOf("MyImage") != -1 && actionImage.src != currentParentImage.src)
+    //{
+    //	actionImage.src = httpSkinRoot + "MyImage.gif";
+    //	actionImageOver.src = httpSkinRoot + "MyImage_over.gif";
+    //}
+
+  if (currentParentImage.src.indexOf("actions_icon_2") != -1 && actionImage.src != currentParentImage.src)
+  {
+    actionImage.src = httpSkinRoot + "folios/actions_icon_2.gif";
+    actionImageOver.src = httpSkinRoot + "folios/actions_icon_2_over.gif";
+  }
+
+  if (currentParentImage.src.indexOf("space") != -1 && actionImage.src != currentParentImage.src)
+  {
+    actionImage.src = httpSkinRoot + "space.gif";
+    actionImageOver.src = httpSkinRoot + "space.gif";
+  }
+  }
+
+var searchEngineValueEscapeChars = "':''";
+var escapeCharMap = null;
+var escapableOperators = "|hasAsWord|equals|hasAsWordPrefix|beginsWith|endsWith|hasAsSubstring|notHasAsSubstring|notEquals|notHasAsWord|notHasAsWordPrefix|notBeginsWith|notEndsWith|fullText|quickSearch|equals[optimized]|beginsWith[optimized]|endsWith[optimized]|hasAsSubstring[optimized]|notEquals[optimized]|notEquals[andnot]|notEquals[optimized,andnot]|notHasAsWord[andnot]|notHasAsWordPrefix[andnot]|notBeginsWith[andnot]|";
+var disableEscapeSearchValue = "1";
+
+function escapeFieldValue(curOperator, text)
+{
+	if (disableEscapeSearchValue == true ||
+		searchEngineValueEscapeChars.length == 0 ||
+		escapableOperators.indexOf("|" + curOperator + "|") < 0  ||
+		text.length == 0)
+	{
+		return text;
+	}
+	else if (escapeCharMap == null)
+	{
+		var tmpEscapeCharMap = searchEngineValueEscapeChars.split(",");
+		escapeCharMap = new Array();
+		for (var i = 0; i < tmpEscapeCharMap.length; i ++)
+		{
+			var tmpArray = tmpEscapeCharMap[i].split(":");
+			if (tmpArray.length == 2)
+			{
+				escapeCharMap[tmpArray[0]] = tmpArray[1];
+			}
+		}
+	}
+	var result = "";
+	for (var i = 0; i < text.length; i ++)
+	{
+		var tmpValue = escapeCharMap[text.charAt(i)];
+		if (tmpValue == null)
+		{
+			tmpValue = text.charAt(i);
+		}
+		result += tmpValue;
+	}
+	return result;
+}
+	/* set the query text based on the search engine */
+	function setMiniSearchQueryText(frm)
+	{
+		var isTargetedQuickSearch = false;
+		var text = frm.MiniSearchText.value;
+		var queryText = "";
+		frm.ftx.value = "";
+
+		if (text != null && text.length > 0)
+		{
+			text = strTrim(text);
+			var tqsSelection = document.MINISEARCHFORM.TargetedQuickSearchSelection.value;
+			if (tqsSelection.length > 0)
+			{
+				text = tqsSelection + ' ' + text;
+			}
+
+			var index = text.indexOf(' ');
+			if (index > 0)
+			{
+				var firstWord = text.substring(0, index);
+				if (typeof targetedQuickSearches[firstWord] != "undefined")
+				{
+					isTargetedQuickSearch = true;
+				}
+			}
+
+			if (isTargetedQuickSearch)
+			{
+				text = text.substring(index);
+				text = strTrim(text);
+				queryText = targetedQuickSearches[firstWord]["QueryText"];
+				if (targetedQuickSearches[firstWord]["QueryFullText"].length > 0)
+				{
+					frm.ftx.value = "1";
+				}
+				frm.SortField.value = targetedQuickSearches[firstWord]["SortField"];
+				frm.SortOrder.value = targetedQuickSearches[firstWord]["SortOrder"];
+				frm.listTemplateId.value = targetedQuickSearches[firstWord]["listTemplateId"];
+				frm.ResultCount.value = targetedQuickSearches[firstWord]["ResultCount"];
+
+				if (targetedQuickSearches[firstWord]["SearchProviders"].length > 0)
+				{
+					var input = document.createElement('input');
+					input.type = "hidden";
+					input.name = "SearchProviders";
+					input.value = targetedQuickSearches[firstWord]["SearchProviders"];
+					frm.appendChild(input);
+				}
+
+				queryText = queryText.replace(/#s/g, text);
+			}
+			else
+			{
+				text = escapeFieldValue("quickSearch", text);
+
+					queryText = "\u003cqsch\u003e%V\u003c/qsch\u003e";
+					if (quickSearchQuery != null && quickSearchQuery.length > 0)
+					{
+						queryText = quickSearchQuery;
+					}
+					queryText = queryText.replace(/%V/g, text);
+				frm.ftx.value = "1";
+			}
+		}
+		frm.QueryText.value = queryText;
+		return true;
+	}
+	</script>
+
+		<script type="text/javascript" src="/pub_livx/resources/layouts/commonBundle.js"></script>
+		<script type="text/javascript" src="/pub_livx/resources/lang/en/ww_strings.js"></script>
+		<script type="text/javascript" src="/pub_livx/resources/wcm/base/lang/en/wcm.strings.js"></script>
+		<script type="text/javascript" src="/pub_livx/resources/yui/yahoo-dom-event/yahoo-dom-event.js"></script>
+		<link rel="stylesheet" type="text/css" href="/pub_livx/resources/yui/menu/assets/menu-core.css" />
+		<script type="text/javascript" src="/pub_livx/resources/yui/container/container-min.js"></script>
+		<script type="text/javascript" src="/pub_livx/resources/yui/menu/menu-min.js"></script>
+		<script type="text/javascript" src="/pub_livx/resources/layouts/idcMenuBundle.js"></script>
+		<script type="text/javascript" src="/pub_livx/resources/folios/util.js"></script>
+	<link href="/pub_livx/resources/layouts/CBCTopMenus/Development/skin.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/pub_livx/resources/layouts/CBCTopMenus/layout.js"></script>
+		<script type="text/javascript" src="/pub_livx/resources/layouts/CBCTopMenus/nav.js"></script>
+	<script type="text/javascript" src="/pub_livx/resources/layouts/idc_rounded.js"></script>
+
+	<script type="text/javascript">
+	</script>
+<script type="text/javascript" language="JavaScript">
+function checkOutAndOpen8( the_dDocName, the_dDocTitle, the_dExtension, the_dOriginalName )
+{
+	if (!navigator.javaEnabled())
+	{
+		alert("Java must be enabled for this feature.");
+		return;
+	}
+	var strTypeof = typeof(CheckoutAndOpenApplet_pub_livx);
+
+	if (strTypeof.toLowerCase() != "object")
+	{
+		var strObject = "<embed id='CheckoutAndOpenApplet_pub_livx' type='application/x-java-applet;version=1.4' code='com.stellent.checkoutandopen.CheckOutAndOpenApplet' java_codebase='/pub_livx/common' archive='checkoutandopen.jar' width='0' height='0' HSPACE='0' VSPACE='0' scriptable='true' pluginspage='http://java.sun.com/j2se/1.4/download.html' ></embed>";
+		var range = document.createRange();
+		range.setStartBefore(document.body.lastChild);
+		var docFrag = range.createContextualFragment(strObject);
+		document.body.appendChild(docFrag);
+	}
+	var applet =  document["CheckoutAndOpenApplet_pub_livx"];
+	if (applet != null)
+	{
+		var browser=navigator.appName;
+		var browser_version=parseInt(navigator.appVersion);
+		try	{ applet.setBrowser(browser, browser_version); } catch(e) { return; }
+		var cgiurl = "http://www.crawley.gov.uk/pub_livx/idcplg";
+		var canOpenOdma = false;
+
+		var fileTypeIsOdma = false;
+		try	
+		{ 
+			canOpenOdma = applet.canOpenOdma(cgiurl);
+			fileTypeIsOdma = applet.canOpenOdmaFileType( the_dExtension );
+		} 
+		catch(e) 
+		{
+			return; 
+		}
+		
+
+		if (applet.hasError())
+		{
+			alert("Check Out and Open failed.");
+			return;
+		}
+		var coao_flags = "";
+		if ( fileTypeIsOdma && canOpenOdma && coao_flags.indexOf("webdavonly") == -1)
+		{
+			var docname = "" + the_dDocName;
+			var isactivated = applet.openOdma2(cgiurl, docname, the_dExtension);
+			if (applet.hasError())
+			{
+				alert("Check Out and Open failed.");
+				return;
+			}
+			if (!isactivated)
+			{
+				alert("Unable to open the content item using ODMA.");
+			}
+		}
+		else if (coao_flags.indexOf("odmaonly") == -1)
+		{
+			var WebdavBaseUrl = "http://pubext/pub_livx/idcplg/webdav/core/tip";
+			if (WebdavBaseUrl != "")
+			{
+				if (WebdavBaseUrl.substr(WebdavBaseUrl.length - 1,1) != '/')
+				{
+					WebdavBaseUrl = WebdavBaseUrl + '/';
+				}
+				var webdavurl = WebdavBaseUrl + the_dDocName + "/" + the_dOriginalName;
+				var isactivated = applet.openWebdav(webdavurl);
+				if (applet.hasError())
+				{
+					alert("Check Out and Open failed.");
+					return;
+				}
+				if (!isactivated)
+				{
+					alert("Unable to open the content item using WebDAV.");
+				}
+			}
+			else
+			{
+				alert("Unable to open the content item using either ODMA or WebDAV.\nThe ODMA client may not be configured to use this server.\nThe 'webdavbaseurl' configuration variable is missing.");
+			}
+		}
+		else
+		{
+			alert("Unable to open the content item using ODMA.");
+		}
+	}
+	else
+	{
+		alert("Unable to find the CheckOutAndOpenInNative Applet.");
+	}
+}
+function checkOutAndOpenOnDocInfo()
+{
+}
+</script>
+
+<style TYPE="text/css">
+<!--
+-->
+</style>
+<script type="text/javascript">
+	function openChildWindow(childUrl, childParamStr)
+	{
+	  // Parse width/height values out of paremeter string
+	 	var winWidth = null;
+	  var winHeight = null;
+	  if (typeof childParamStr != "undefined")
+	  {
+		  var params = childParamStr.split(",");
+		  for (var i=0; i<params.length; i++)
+		  {
+		    if (params[i].split("=")[0] == "width")
+		      winWidth = parseInt(params[i].split("=")[1]);
+		    if (params[i].split("=")[0] == "height")
+		      winHeight = parseInt(params[i].split("=")[1]);
+		  }
+		}
+		else
+			childParamStr = "";
+
+	  // Set width/height defaults if no values provided in parameter string
+	  if (!winWidth)
+	  {
+	    winWidth = 500;
+	    childParamStr += ",width=" + winWidth;
+	  }
+	  if (!winHeight)
+	  {
+	    winHeight = 400;
+	    childParamStr += ",height=" + winHeight;
+	  }
+
+	  // Set additional default values if not provided in childParamStr
+	  if (childParamStr.indexOf("scrollbars") == -1)
+	  	childParamStr += ",scrollbars=yes";
+	  if (childParamStr.indexOf("status") == -1)
+	  	childParamStr += ",status=no";
+	  if (childParamStr.indexOf("resizable") == -1)
+	  	childParamStr += ",resizable=yes";
+
+	  // Calculate the child position relative to the parent browser client
+	  var winPosX = null;
+	  var winPosY = null;
+	  if (typeof window.screenX != "undefined") // W3C Mozilla branch
+	  {
+	    var clientXCenter = top.screenX + (top.outerWidth / 2);
+	    winPosX = clientXCenter - (winWidth / 2);
+	    winPosY = top.screenY + (top.outerHeight - top.innerHeight);
+	    childParamStr += ",left=" + winPosX + ",top=" + winPosY;
+	  }
+	  else if (typeof window.screenLeft != "undefined") // IE Branch
+	  {
+	    var clientXCenter = top.screenLeft + (top.document.body.clientWidth / 2);
+	    winPosX = clientXCenter - (winWidth / 2);
+	    winPosY = top.screenTop + 25;
+	    childParamStr += ",left=" + winPosX + ",top=" + winPosY;
+	  }
+
+	  if (typeof childWindow == "undefined" || childWindow.closed)
+	  {
+	    childWindow = window.open(childUrl, "childWin", childParamStr);
+	  }
+	  else
+	  {
+	    childWindow.resizeTo(winWidth + 10, winHeight + 25); // resizeTo seems to include chrome whereas initial sizing doesn't (hence the compensation values)
+	    if (winPosX != null && winPosY != null) childWindow.moveTo(winPosX, winPosY);
+	    childWindow.location = "about:blank"; // This instantaneously clears the window prior to load (only works in IE)
+	    childWindow.location = childUrl;
+	    childWindow.focus();
+	  }
+	}
+	var headerDescription = lc("wwHeaderProductName");
+
+	bname = navigator.appName;
+	bVer = parseInt(navigator.appVersion);
+    if ((bname == "Netscape" && bVer >= 3) ||
+        (bname == "Microsoft Internet Explorer" && bVer >= 4)) br = "n3";
+    else br = "n2";
+
+    // Context sensitive help Javascript to open help in new Windows
+	var newWindow;
+	function DoCancel(selectObject)
+	{
+		if (newWindow)
+		{
+			newWindow.close();
+		}
+		top.location=selectObject
+		top.location=selectObject
+	}
+
+	function QuickHelp(page, title)
+	{
+		newWindow = window.open("/pub_livx/help/" + page, title ,
+			"scrollbars,resizable");
+		if (window.focus)
+		{
+			newWindow.window.focus();
+		}
+	}
+function showHideMetaGroup(labelId)
+{
+	var rows = groupVarList[labelId].split(',');
+	for (var i = 0; i < rows.length; i++)
+	{
+		showHideTableRowById(rows[i]);
+	}
+
+	var label = document.getElementById(labelId);
+	if (label.innerHTML.indexOf("Show") == 0)
+	{
+		label.innerHTML = "Hide";
+	}
+	else
+	{
+		label.innerHTML = "Show";
+	}
+}
+
+function showHideTableRowById(id)
+{
+	var result = false;
+	var row = document.getElementById(id);
+	if (row == null || row.style == null)
+	{
+		return result;
+	}
+	if (row.style.display == "none")
+	{
+		if (its.ie)
+		{
+			row.style.display = "block";
+		}
+		else
+		{
+			row.style.display = "table-row";
+		}
+		result = true;
+	}
+	else
+	{
+		row.style.display = "none";
+	}
+	return result;
+}
+
+function hideGroupsOnPageLoad(groupBuddyStr)
+{
+	var groupBuddyArray = groupBuddyStr.split(':');
+	for (var i=0; i<groupBuddyArray.length-1; )
+	{
+		var groupLabel = groupBuddyArray[i++];
+		showHideMetaGroup(groupLabel);
+	}
+}
+</script>
+<script type="text/javascript">
+function schemaDefCallback()
+{
+	g_schemaDefinition.userLanguage = "en";
+	g_schemaDefinition.userLocale = "English-UK";
+	g_schemaDefinition.schemaLoaded = 1;
+	g_schemaDefinition.schemaBaseUrl = "/pub_livx/resources/schema/";
+
+	doCallbacks(g_schemaDefinition.initCallbacks, "initCallbacks");
+}
+function waitForSchema()
+{
+	var counter = 10;
+	while (!(g_schemaDefinition && g_schemaDefinition.schemaLoaded) && counter-- > 0)
+	{
+	}
+	if (counter <= 0)
+	{
+		idctrace("schema didn't load");
+		return 0;
+	}
+	return 1;
+}
+</script>
+<script type="text/javascript" src="/pub_livx/resources/schema/base.js"></script>
+<script type="text/javascript">
+</script>
+	<script language="javascript">
+	function doOptionAction(form)
+	{
+		var index = form.actionList.selectedIndex;
+		if (index >= 0)
+		{
+			var script = form.actionList[index].value;
+			form.actionList.selectedIndex = 0;
+			eval(script);
+		}
+	}
+	function doSubmit(form, action, checkExit, actionConfirmMsg)
+	{
+		if (actionConfirmMsg != null && actionConfirmMsg.length > 0)
+		{
+			if (!confirm(lc(actionConfirmMsg)))
+			{
+				return false;
+			}
+		}
+
+		if (checkExit)
+		{
+			if (taskModified)
+			{
+				if (!confirm("All changes will be lost. Continue?"))
+				{
+					return false;
+				}
+			}
+		}
+
+		var result = form.sectionItemList;
+		if (result)
+		{
+			result.value = "";
+		}
+		var elements = form.elements;
+
+		if (action == null)
+		{
+			action = "UPDATE_TASK_SECTION";
+		}
+		form.IdcService.value = action;
+
+		var previousElt = null;
+		for (var i = 0; i < elements.length; i++)
+		{
+			var elt = elements[i];
+			if ((elt.name.indexOf('cb_item_') == 0) && previousElt != null)
+			{
+				if (elt.name == 'cb_item_' + previousElt.name)
+				{
+					if (elt.checked)
+					{
+						if (result.value != null && result.value.length > 0)
+						{
+							result.value += ",";
+						}
+						result.value += previousElt.name;
+					}
+				}
+			}
+			previousElt = elt;
+		}
+		
+		form.submit();
+	}
+
+	function toggleCheckbox(item)
+	{
+		var isSelected = item.checked;
+		var form = item.form;
+		toggleEx(form, isSelected);
+	}
+
+	function toggleAll(formName, isSelected)
+	{
+		var form = parent.document.getElementById("ItemForm");
+		toggleEx(form, isSelected);
+	}
+
+	function toggleEx(form, isSelected)
+	{
+		var elements = form.elements;
+		for (var i = 0; i < elements.length; i++)
+		{
+			var obj = elements[i];
+			if (obj.name.indexOf('cb_item_') == 0)
+			{
+				obj.checked=isSelected;
+				registerChange();
+			}
+		}
+	}
+
+	var taskModified = false;
+	var pageChanged = false;
+	function registerChange()
+	{
+		pageChanged = true;
+	}
+
+	var tmpObj;
+	var tmpHref;
+	function checkForExit(obj)
+	{
+		if (taskModified || pageChanged)
+		{
+			if (!confirm("All changes will be lost. Continue?"))
+			{
+				tmpHref = obj.href;
+				tmpObj = obj;
+
+				obj.href="#";
+				setTimeout("setBack()", 500);
+			}
+		}
+		return true;
+	}
+
+	function setBack()
+	{
+		tmpObj.href = tmpHref;
+	}
+
+	function checkForChange(obj)
+	{
+		var originalUrl = document.location;
+		if (taskModified || pageChanged)
+		{
+			obj.href=obj.href + "&taskModified=1";
+		}
+		if (pageChanged)
+		{
+			document.ItemForm.RedirectUrl2.value=obj.href;
+			document.ItemForm.taskModified.value="1";
+			obj.href="#";
+			doSubmit(document.ItemForm, 'UPDATE_TASK_SECTION', false, '');
+		}
+	}
+
+	function toggleCmuTable(tableCounter)
+	{
+		var table = document.getElementById("table_" + tableCounter);
+		var showLabel = document.getElementById("tableShow_" + tableCounter);
+		var hideLabel = document.getElementById("tableHide_" + tableCounter);
+
+		if (table == null || showLabel == null || hideLabel == null)
+		{
+			return;
+		}
+
+		if (table.style.display == "none")
+		{
+			showLabel.style.display="none";
+			hideLabel.style.display="inline";
+			table.style.display = "table";
+		}
+		else
+		{
+			showLabel.style.display="inline";
+			hideLabel.style.display="none";
+			table.style.display = "none";
+		}
+	}
+
+	function registerCheckboxChange(cb)
+	{
+		var name = cb.name;
+		if (name.indexOf("cb_") < 0)
+		{
+			return;
+		}
+
+		var key = name.slice(3);
+		cb.form.elements[key].value = cb.checked ? "1" : "0";
+
+		registerChange();
+	}
+
+	function linkItem_onclick_confirm(msg, service)
+	{
+		if (confirm(msg))
+		{
+			window.location = service;
+		}
+	}
+	
+	function cmuAddOnLoadEvent(func)
+	{
+		var oldOnLoad = window.onload;
+		if (typeof window.onload != 'function')
+		{
+			window.onload = func;
+		}
+		else
+		{
+			window.onload = function()
+			{
+				oldOnLoad();
+				func();
+			}
+		}
+	}
+	</script>
+
+<script>
+try
+{
+	window.ext = window.top.opener.WCM.GetExternal(window.top);
+	window.ext.OnPopupPageLoading(window);
+}
+catch (e) { }
+</script>
+<script type="text/javascript">
+	var wcmIsDocLoaded = false;
+	function setIsDocumentLoaded()
+	{
+		wcmIsDocLoaded = true;
+	}
+
+	if (window.addEventListener)
+	{
+		window.addEventListener('load', setIsDocumentLoaded, false);
+	}
+	else if (window.attachEvent)
+	{
+		window.attachEvent('onload', setIsDocumentLoaded);
+	}
+	else
+	{
+		window['onload'] = setIsDocumentLoaded;
+	}
+
+	function wcmIsDocumentLoaded()
+	{
+		return wcmIsDocLoaded;
+	}
+</script>
+<script>
+	var isContentServerError = true;
+	var contentServerStatusCode = "-1";
+	var contentServerStatusMessage = "The Section \'(null)\' (Id=111) is not part of a SiteStudio Website.";
+	var contentServerErrorStackTrace = "intradoc.common.ServiceException: !csSSFailedSiteIdFromNodeId,(null),111\r\n\tat sitestudio.SSFileServiceHandler.doGetPageError(Unknown Source)\r\n\tat sitestudio.SSFileServiceHandler.getPage(Unknown Source)\r\n\tat sun.reflect.GeneratedMethodAccessor30.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)\r\n\tat java.lang.reflect.Method.invoke(Method.java:597)\r\n\tat intradoc.common.IdcMethodHolder.invokeMethod(ClassHelperUtils.java:617)\r\n\tat intradoc.common.ClassHelperUtils.executeMethodReportStatus(ClassHelperUtils.java:293)\r\n\tat intradoc.server.ServiceHandler.executeAction(ServiceHandler.java:79)\r\n\tat intradoc.server.Service.doCodeEx(Service.java:490)\r\n\tat intradoc.server.Service.doCode(Service.java:472)\r\n\tat intradoc.server.ServiceRequestImplementor.doAction(ServiceRequestImplementor.java:1360)\r\n\tat intradoc.server.Service.doAction(Service.java:452)\r\n\tat intradoc.server.ServiceRequestImplementor.doActions(ServiceRequestImplementor.java:1201)\r\n\tat intradoc.server.Service.doActions(Service.java:447)\r\n\tat intradoc.server.ServiceRequestImplementor.executeActions(ServiceRequestImplementor.java:1121)\r\n\tat intradoc.server.Service.executeActions(Service.java:433)\r\n\tat intradoc.server.ServiceRequestImplementor.doRequest(ServiceRequestImplementor.java:635)\r\n\tat intradoc.server.Service.doRequest(Service.java:1707)\r\n\tat intradoc.server.ServiceManager.processCommand(ServiceManager.java:359)\r\n\tat intradoc.server.IdcServerThread.run(IdcServerThread.java:197)\r\n";
+</script>
+</head>
+
+<!--Background image defined as part of body tag--->
+<body onload="if (self.checkValue != null) {checkValue()};" 	bgcolor="#FFFFFF"
+	link="#000000" vlink="#CE9A63" alink="#9C3000"
+	marginwidth="0" marginheight="0" topmargin="0" leftmargin="0"
+	id="idccs_pubext_pub_livx_ERROR_PAGE
+"
+	class="idccs 
+HttpServerAddress--pubext 
+IDC_Name--pub_livx 
+TemplateName--ERROR_PAGE
+"
+>
+<!-- Regardless of beginning of the page, provide a way to skip to the content. -->
+<div class="hidden"><a href="#skip_nav_bar_target">Skip navigation bar.</a></div>
+	<script type="text/javascript">
+		writeLayoutPageBegin();
+		layoutInitialize();
+	</script>
+	<noscript>
+<!-- only shown if scripting is disabled -->
+<h1>You currently have JavaScript disabled for this web site. You must enable scripting in your browser for the content server to function properly.</h1>
+	</noscript>
+<a name="skip_nav_bar_target"></a>
+	<!--Error Message--->
+	<table border="0" cellpadding="0" cellspacing="0" summary="">
+	<tr>
+		<td width="465" align="left">
+			<table border = "0" width="465" align="left" valign="middle" summary="">
+			<tr><td ><span class=errorMessage>Content Server Request Failed</span></td></tr>
+			<tr>
+				<td width=100%><span class=title>
+The Section '(null)' (Id=111) is not part of a SiteStudio Website.
+				</span></td>
+			</tr>
+			<tr><td style="height:3px;"></td></tr>
+			<tr>
+				<td width=100%>[ <a style="color:993333"
+				href="javascript:toggleElemDisplay('stackTrace')">Details</a> ]
+				<div id="stackTrace" style="display: none">
+				<xmp>intradoc.common.ServiceException: !csSSFailedSiteIdFromNodeId,(null),111
+	at sitestudio.SSFileServiceHandler.doGetPageError(Unknown Source)
+	at sitestudio.SSFileServiceHandler.getPage(Unknown Source)
+	at sun.reflect.GeneratedMethodAccessor30.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at intradoc.common.IdcMethodHolder.invokeMethod(ClassHelperUtils.java:617)
+	at intradoc.common.ClassHelperUtils.executeMethodReportStatus(ClassHelperUtils.java:293)
+	at intradoc.server.ServiceHandler.executeAction(ServiceHandler.java:79)
+	at intradoc.server.Service.doCodeEx(Service.java:490)
+	at intradoc.server.Service.doCode(Service.java:472)
+	at intradoc.server.ServiceRequestImplementor.doAction(ServiceRequestImplementor.java:1360)
+	at intradoc.server.Service.doAction(Service.java:452)
+	at intradoc.server.ServiceRequestImplementor.doActions(ServiceRequestImplementor.java:1201)
+	at intradoc.server.Service.doActions(Service.java:447)
+	at intradoc.server.ServiceRequestImplementor.executeActions(ServiceRequestImplementor.java:1121)
+	at intradoc.server.Service.executeActions(Service.java:433)
+	at intradoc.server.ServiceRequestImplementor.doRequest(ServiceRequestImplementor.java:635)
+	at intradoc.server.Service.doRequest(Service.java:1707)
+	at intradoc.server.ServiceManager.processCommand(ServiceManager.java:359)
+	at intradoc.server.IdcServerThread.run(IdcServerThread.java:197)
+</xmp></div></td>
+			</tr>
+			<tr><td style="height:3px;"></td></tr>
+			<tr>
+				<td id="idcBackButton" style="text-align:center;padding-top:3px;">
+					<input type="button" value="Back to previous page" onClick="history.go(-1)">
+				</td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+	
+	<script type="text/javascript">
+		if ((typeof history.length != "undefined") && history.length <= 1)
+		{
+			document.getElementById("idcBackButton").style.display = "none";
+		}
+	</script>
+	
+	<script type="text/javascript">
+		writeLayoutPageEnd();
+	</script>
+	<!--Debug report-->
+<script type="text/javascript">
+finalizeDisplay();
+</script>
+	</body>
+</html>

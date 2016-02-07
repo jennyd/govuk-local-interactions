@@ -1,0 +1,543 @@
+
+    <!DOCTYPE html>
+    <html lang="en-GB">
+        <head>
+	
+            <title>Eastleigh Borough Council</title>
+            <meta name="Copyright" content="Copyright 2014 Eastleigh Borough Council" />
+            <meta name="Author"    content="Eastleigh Borough Council - CSICT Development Team" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta charset="UTF-8" />
+            <meta name="description" content='Annual Canvass'>
+            <meta name="keywords" content='Annual Canvass'>
+            <meta name="author" content="Eastleigh Borough Council">
+
+                <!-- Styles -->
+            <link href="/css/master.less.css"    rel="stylesheet" type="text/css" />
+            		    <style type="text/css">
+    	    #wrapper {background: #BCB;}
+
+    	     @media( min-width: 1061px)
+    	     {
+    	         #wrapper 
+    	         {
+					background: #eaebec;
+    	            background: linear-gradient( rgba(200, 200, 200, 0.8), rgba(200, 200, 200, 0.8) ),url('/media/63544/Netley-Abbey.jpg');
+    	            background-size: cover;
+    	         }
+    	     }
+    	</style>
+      
+
+			<!--Start of Google Analytics-->
+            <script type="text/javascript">
+                !function (e, a, t, n, c, o, s) { e.GoogleAnalyticsObject = c, e[c] = e[c] || function () { (e[c].q = e[c].q || []).push(arguments) }, e[c].l = 1 * new Date, o = a.createElement(t), s = a.getElementsByTagName(t)[0], o.async = 1, o.src = n, s.parentNode.insertBefore(o, s) } (window, document, "script", "//www.google-analytics.com/analytics.js", "ga"), ga("create", "UA-20264814-1", "auto"), ga("send", "pageview");
+            </script>
+			
+			<script>
+			/**
+			* Function that tracks a click on an outbound link in Google Analytics.
+			* This function takes a valid URL string as an argument, and uses that URL string
+			* as the event label.
+			*/
+			var trackOutboundLink = function(url) {
+			   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+				 function () {
+				 document.location = url;
+				 }
+			   });
+			}
+			</script> 
+            <!--End of Google Analytics-->
+
+            <script type="text/javascript" src="/Scripts/jquery-1.11.0.min.js"></script>
+            <script async src="/Scripts/less-1.3.3.min.js" type="text/javascript"></script>
+        </head>
+
+        <body>
+    
+            <form method="post" action="/the-council/elections-register-to-vote/register-to-vote.aspx" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWAmYPZBYCZg9kFgJmD2QWAgIHEGRkFgICCQ9kFgJmD2QWAmYPZBYKAgEPDxYCHgRUZXh0ZWRkAgMPDxYEHgtOYXZpZ2F0ZVVybAU2aHR0cHM6Ly9teS5lYXN0bGVpZ2guZ292LnVrL215LWFjY291bnQvbXktZGV0YWlscy5hc3B4HgdWaXNpYmxlaGRkAgUPDxYCHwEFOmh0dHBzOi8vbXkuZWFzdGxlaWdoLmdvdi51ay9NZW1iZXItUmVnaXN0cmF0aW9uL2xvZ2luLmFzcHhkZAIHDw8WAh8CaGRkAgkPDxYCHwEFNGh0dHBzOi8vbXkuZWFzdGxlaWdoLmdvdi51ay9NZW1iZXItUmVnaXN0cmF0aW9uLmFzcHhkZGTTCAP/MRhNf2H52r0wSOKvhQeutw==" />
+</div>
+
+                <div id="header" class="body">
+                    <h1>
+                        <a href="/">
+                            <img src="/media/core/eastleigh-logo.gif" alt="Eastleigh Borough Council" />
+                        </a>
+                    </h1>
+                    
+        <ul class="toolbar">
+
+				<li class=""><a href="/tools/cookies.aspx">Cookies</a></li>
+				<li class=""><a href="/tools/accessibility.aspx">Accessibility</a></li>
+				<li class=""><a href="/tools/contact-us.aspx">Contact Us</a></li>
+				<li class=""><a href="/tools/site-map.aspx">Site Map</a></li>
+				<li class=""><a href="/tools/a-to-z.aspx">A to Z</a></li>
+				<li class="last"><a href="/tools/help.aspx">Help</a></li>
+		</ul>
+
+
+                    <script type="text/javascript">
+    function doSearch() { var a = $("#searchstring").val(); return "" != a && (window.location = "/tools/search.aspx?searchtext=" + a), !1 }
+</script>
+
+<div id="search">
+    <label for="searchstring" class="hidden">site search</label>
+    <input type="text" id="searchstring" name="searchstring" class="formField" placeholder="Search..." title="Search" maxlength="50" autocomplete="Off" />
+    
+    <label for="searchBtn" class="hidden">search</label>       
+    <button type="button" class="searchBtn" id="searchBtn" name="searchBtn" onclick="doSearch();"></button>
+    
+    <div id="searchresults" class="search-results mecontent">
+    </div>
+</div>
+           
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+        var content = $('#searchstring').val();
+        $('#searchstring').keyup(function (e) {
+
+            if ($('#searchstring').val() != content) {
+                content = $('#searchstring').val();
+                $.ajax({
+                    type: "POST",
+                    url: "/searchresults",
+                    data: "searchstring=" + content,
+                    success: function(msg){
+                        $('#searchresults').html(msg);
+                    }
+                });
+            }
+
+            if (e.keyCode == 13) {
+                var searchText = $("#searchstring").val();
+                //alert(searchText);
+
+                window.location = "https://www.eastleigh.gov.uk/tools/search.aspx?searchtext=" + searchText;
+                //window.location.replace("/tools/search.aspx?searchtext=" + searchText);
+            }
+        });
+    });
+
+</script>
+
+                </div>
+
+                <dl class="breadcrumbs clearFix">
+                    <dt class="hidden">You are here</dt>
+                    <dd class="body">
+
+                        
+
+<ul class="breadcrumb">
+	
+	        <li class="normalpagelink"><a href="/">Home</a></li>
+	        <li class="normalpagelink"><a href="/the-council.aspx">The Council</a></li>
+	        <li class="normalpagelink"><a href="/the-council/elections-register-to-vote.aspx">Elections &amp; Register to Vote</a></li>
+	    <li class="active">Register to Vote</li>
+    
+</ul>
+                        <div class="logindetails">
+                            <div id="ContentPlaceHolderDefault_UserDetails_5_divLoginDetails">
+    <span id="ContentPlaceHolderDefault_UserDetails_5_lblUserInfo"></span>
+    
+    
+    <a id="ContentPlaceHolderDefault_UserDetails_5_HypLogon" class="linkbutton" href="https://my.eastleigh.gov.uk/Member-Registration/login.aspx">Log In</a>
+    |
+    
+    <a id="ContentPlaceHolderDefault_UserDetails_5_HypRegister" class="linkbutton" href="https://my.eastleigh.gov.uk/Member-Registration.aspx">Create Account</a>
+</div> 
+                        </div>
+                    </dd>
+                </dl>
+
+                <div id="wrapper">
+        
+                    
+        <div id="content" class="body clearFix">
+            <div id="leftCol">
+				
+
+<div class="box MainMenu widget">
+    <a id="MainMenuHeader" class="MenuHead widget-head" href="#">
+        <h2>
+            Main Menu
+            <span></span>
+        </h2>
+    </a>
+    
+
+
+    <div class="box-content widget-content">
+
+
+		<nav id="MainMenu" class="nodisplay"> 
+                <ul>
+            <li class="level-2"> <!--id="My Eastleigh"-->
+                <a href="https://my.eastleigh.gov.uk/">My Eastleigh</a>
+            </li>
+            <li class="level-2"> <!--id="The Council"-->
+                <a href="/the-council.aspx">The Council</a>
+            </li>
+            <li class="level-2"> <!--id="Planning &amp; Building"-->
+                <a href="/planning-building.aspx">Planning &amp; Building</a>
+            </li>
+            <li class="level-2"> <!--id="Council Tax, Benefits &amp; Business Rates"-->
+                <a href="/council-tax,-benefits-business-rates.aspx">Council Tax, Benefits &amp; Business Rates</a>
+            </li>
+            <li class="level-2"> <!--id="Housing"-->
+                <a href="/housing.aspx">Housing</a>
+            </li>
+            <li class="level-2"> <!--id="Waste, Recycling &amp; Environment"-->
+                <a href="/waste,-recycling-environment.aspx">Waste, Recycling &amp; Environment</a>
+            </li>
+            <li class="level-2"> <!--id="Energy &amp; Climate Change"-->
+                <a href="/energy-climate-change.aspx">Energy &amp; Climate Change</a>
+            </li>
+            <li class="level-2"> <!--id="Parking, Travel &amp; Roads"-->
+                <a href="/parking,-travel-roads.aspx">Parking, Travel &amp; Roads</a>
+            </li>
+            <li class="level-2"> <!--id="Sport, Countryside, Parks &amp; Culture"-->
+                <a href="/sport,-countryside,-parks-culture.aspx">Sport, Countryside, Parks &amp; Culture</a>
+            </li>
+            <li class="level-2"> <!--id="Licensing"-->
+                <a href="/licensing.aspx">Licensing</a>
+            </li>
+            <li class="level-2"> <!--id="Business"-->
+                <a href="/business.aspx">Business</a>
+            </li>
+            <li class="level-2"> <!--id="Our Community"-->
+                <a href="/our-community.aspx">Our Community</a>
+            </li>
+    </ul>
+
+        </nav>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        $(function () { var n = $("#MainMenuHeader"), e = $("#MainMenu"); $(n).on("click", function (n) { n.preventDefault(), e.slideToggle() }) });
+    </script>
+
+
+
+
+				
+
+
+
+
+
+<div class="box sectionNav widget">
+    <div class="box-content">
+        
+        <a id="SectionMenuHead" class="MenuHead widget-head" href="#">
+            <h2>
+                Elections &amp; Register to Vote
+                <span></span>
+            </h2>
+        </a>
+
+            <nav id="sectionNav">
+                <ul>
+
+                        <li  class="parent">
+                                <a class="parent active" href="/the-council/elections-register-to-vote/register-to-vote.aspx">Register to Vote</a>
+                                    <ul>
+                                        
+                                            <li>
+
+                                                <a class="" href="/the-council/elections-register-to-vote/register-to-vote/register-to-vote-(link-to-govuk).aspx">Register to Vote (link to gov.uk)</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/the-council/elections-register-to-vote/register-to-vote/annual-canvass.aspx">Annual Canvass</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/the-council/elections-register-to-vote/register-to-vote/individual-electoral-registration.aspx">Individual Electoral Registration</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/the-council/elections-register-to-vote/register-to-vote/questions-about-electoral-registration.aspx">Questions about Electoral Registration</a>
+                                            </li>
+                                    </ul>
+                        </li>
+                        <li  class="parent">
+                                <a href="/the-council/elections-register-to-vote/voting-in-elections.aspx">Voting in Elections</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/the-council/elections-register-to-vote/borough-elections.aspx">Borough Elections</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/the-council/elections-register-to-vote/parliamentary-elections.aspx">Parliamentary Election Results for Eastleigh Constituency</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/the-council/elections-register-to-vote/county-elections.aspx">County Elections</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/the-council/elections-register-to-vote/parish-town-council-elections.aspx">Parish and Town Council Elections</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/the-council/elections-register-to-vote/european-election-results.aspx">European Election Results</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/the-council/elections-register-to-vote/police-and-crime-commissioner-elections.aspx">Police and Crime Commissioner Elections</a>
+                        </li>
+    
+                </ul>
+            </nav>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () { var e = $("#SectionMenuHead"), n = $("#sectionNav"); $(e).on("click", function (e) { e.preventDefault(), n.slideToggle() }) });
+</script>
+			</div>
+
+	        <div id="main" class="clearfix" >
+                <div class="main-head">
+                    <h2>
+                        Register to Vote
+
+                    </h2>
+                    <div class="whoson">
+    <!-- Embedded WhosOn: Insert the script below at the point on your page where you want the Click To Chat link to appear -->
+        <script type='text/javascript' src='https://chat.eastleigh.gov.uk:443/include.js?domain=my.eastleigh.gov.uk'></script>
+        <script type='text/javascript' >
+        if (sWOTrackPage) sWOTrackPage();
+    </script>
+    <!-- End of embedded WhosOn -->
+</div>
+
+                </div>
+				<div class="main-intro">
+                    <p>
+                        
+                    </p>
+                </div>
+                
+                    
+				
+					<div id="main-content" class="clearFix">
+					    <p class="modifiedDate">
+					        Page last updated at 23 December 2015 at 14:56
+                        </p>
+						<h2>The Electoral Registration team is responsible for compiling and maintaining the Register of Electors</h2>
+<p>To be able to vote at any election or referendum your name must appear on the Register of Electors.</p>
+<p>Registering to vote is quick and simple.  It will mean you have the right to vote at elections and being registered could also improve your credit rating. </p>
+<p>The registration system changed in June 2014. The new system is called ‘Individual Electoral Registration’.</p>
+<p>To register to vote online, please visit <a href="http://www.gov.uk/register-to-vote">www.gov.uk/register-to-vote.</a></p>
+<p>If you wish to vote by post or proxy at any future elections, you must be registered under Individual Electoral Registration.  Forms for these purposes can be downloaded here - <a href="/media/92766/ApplicationtoVotebyPost2015.doc">postal vote application </a>/ <a href="/media/92763/Proxy-Application-for-a-Particular-Election.docx">proxy application</a>.  <br /><br />The Register of Electors is updated every month. However, applications need to be received several weeks before publication to guarantee inclusion and these dates are shown below.  Once your application has been received, if there are no objections, we will write to tell you that your application has been allowed by the Electoral Registration Officer. Please note that in the run up to an election, you will only be able to vote in that election if your name has been added to the Register of Electors twelve working days before the election.</p>
+<p><strong>The Rolling Registration dates for 2015/2016 are:</strong></p>
+<table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+<tbody>
+<tr>
+<td valign="top">
+<p><strong>Publication Date</strong></p>
+</td>
+<td valign="top">
+<p><strong>Latest Application Date</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Monday 4 January 2016</p>
+</td>
+<td valign="top">
+<p>Friday 11 December 2015</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Monday 1 February 2016</p>
+</td>
+<td valign="top">
+<p>Friday 8 January 2016</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Tuesday 1 March 2016</p>
+</td>
+<td valign="top">
+<p>Monday 8 February 2016</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Friday 1 April 2016</p>
+</td>
+<td valign="top">
+<p>Thursday 10 March 2016</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Wednesday 1 June 2016</p>
+</td>
+<td valign="top">
+<p>Tuesday 10 May 2016</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Friday 1 July 2016</p>
+</td>
+<td valign="top">
+<p>Thursday 9 June 2016</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Monday 1 August 2016</p>
+</td>
+<td valign="top">
+<p>Friday 8 July 2016</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>Thursday 1 September 2016</p>
+</td>
+<td valign="top">
+<p>Wednesday 10 August 2016</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>A canvass takes place every year to ensure that the register is up-to-date. There are no monthly updates during October or November 2016 as a new register was published on 1 December 2016.</p>
+<p><strong>There are two registers. Why?</strong><br />Using information received from the public, registration officers keep two registers – the electoral register and the open register (also known as the edited register).<br /><br /><strong>The electoral register</strong><br />The electoral register lists the names and addresses of everyone who is registered to vote in public elections. The register is used for electoral purposes, such as making sure only eligible people can vote. It is also used for other limited purposes specified in law, such as: <br />• detecting crime (e.g. fraud)<br />• calling people for jury service<br />• checking credit applications.</p>
+<p><strong>The open register</strong><br />The open register is an extract of the electoral register, but is not used for elections. It can be bought by any person, company or organisation. For example, it is used by businesses and charities to confirm name and address details. Your name and address will be included in the open register unless you ask for them to be removed. Removing your details from the open register does not affect your right to vote.<br /><br />You can find more information about both registers and how they may be used at <a href="http://www.gov.uk/register-to-vote">www.gov.uk/register-to-vote</a>.</p>
+<p>Once an elector has opted out they don’t need to tell us again unless their circumstances change, such as re-registering at another address.</p>
+<p>Additionally individual electors can contact the electoral registration office at the address or email address below at any time to ask for their details to be taken out of the open register.  You will need to give us your name and address and confirm that you wish for your details to be excluded from the open register. Each person must do this individually – you cannot do this for other people. The request must be in writing, so you cannot do this by phone call.</p>
+<p>If you opt-out you can also change your mind and ask for your details to be included in the open register, by writing to us at the address or email address below.<br /><br /><strong>Your personal information</strong><br />We will only use the information you give us for electoral purposes. We will look after personal information securely and we will follow the Data Protection Act 1998. We will not give personal information about you and the other people in your household to anyone else or another organisation unless we have to by law.</p>
+<p>Please note that political parties and candidates are entitled to copies of the full Electoral Register prior to the elections, to assist them with their campaigns. There are strict rules regarding what they can do with the information contained within the register and are only entitled to use it for electoral purposes.</p>
+<p>If you are unsure as to whether you are registered or not, please contact Eastleigh Borough Council on the contact details below and we will be able to advise you.</p>
+<p>Eastleigh House, Upper Market Street, Eastleigh SO50 9YN</p>
+<p>Email: <a href="mailto:elections@eastleigh.gov.uk">elections@eastleigh.gov.uk</a><br />Telephone: 023 8068 8106 / 8026 </p>
+                    </div>
+				
+
+                
+                <div id="main-footer">
+                    <p>
+                        
+                    </p>
+                    
+                </div>
+            </div>
+	    </div>
+        
+	
+                </div>
+
+                <div id="footer">
+                    <div class="body">
+                        <address>
+                            <strong>Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh, SO50 9YN.</strong><br />
+                            Telephone: 023 8068 8068, Fax: 023 8064 3952, Text: 07797 877001
+                        </address>
+
+                        
+        <ul class="toolbar">
+
+				<li class=""><a href="/legal/use-of-cookies.aspx">Use of Cookies</a></li>
+				<li class=""><a href="/legal/legal-disclaimer.aspx">Legal Disclaimer</a></li>
+				<li class=""><a href="/legal/site-feedback.aspx">Site Feedback</a></li>
+				<li class=""><a href="/legal/privacy-statement.aspx">Privacy Statement</a></li>
+				<li class="last"><a href="/legal/social-media-policy.aspx">Social Media Policy</a></li>
+		</ul>
+
+
+
+                        <p class="smallprint">
+                            &copy; Copyright 2014 Eastleigh Borough Council. Designed and developed by Merchant Marketing Group
+                        </p>
+                        <a href="https://www.gov.uk/" class="externalLink directGov">
+                            <img src="/media/core/govuk.png"  alt="Link to Gov.Uk - public services all in one place" />
+                        </a>
+                    </div>
+                </div>
+                <!-- end #footer -->
+                
+                
+
+
+<div class="sitemap"> 
+        <div class="buttonstrip GreenAndBlacks">
+        <ul class="body">
+            <li>
+                <a href="https://www.eastleigh.gov.uk">
+<img src="/media/1776/home.png" alt="Home" height="25px" width="25px" />
+
+                    <span>Home</span>
+                </a>
+            </li>
+
+
+                <li id="button_1">
+                    <a href="https://my.eastleigh.gov.uk/pay.aspx">
+
+                        <img src="/media/1760/pay.png" alt="Pay" height="25" width="25" />
+                        <span>Pay</span>
+                    </a>
+                </li>
+                <li id="button_2">
+                    <a href="https://my.eastleigh.gov.uk/report.aspx">
+
+                        <img src="/media/1769/report.png" alt="Report" height="25" width="25" />
+                        <span>Report</span>
+                    </a>
+                </li>
+                <li id="button_3">
+                    <a href="https://my.eastleigh.gov.uk/apply.aspx">
+
+                        <img src="/media/1772/apply.png" alt="Apply" height="25" width="25" />
+                        <span>Apply</span>
+                    </a>
+                </li>
+                <li id="button_4">
+                    <a href="https://my.eastleigh.gov.uk/book.aspx">
+
+                        <img src="/media/1773/book.png" alt="Book" height="25" width="25" />
+                        <span>Book</span>
+                    </a>
+                </li>
+                <li id="button_5">
+                    <a href="https://my.eastleigh.gov.uk/find-out.aspx">
+
+                        <img src="/media/1774/find.png" alt="Find Out" height="25" width="25" />
+                        <span>Find Out</span>
+                    </a>
+                </li>
+                <li id="button_6">
+                    <a href="https://my.eastleigh.gov.uk/have-your-say.aspx">
+
+                        <img src="/media/1770/say.png" alt="Have your say" height="25" width="25" />
+                        <span>Have your say</span>
+                    </a>
+                </li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                <script async src="/Scripts/EBC.js" type="text/javascript"></script>
+            
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div></form>
+        </body>
+
+    </html>

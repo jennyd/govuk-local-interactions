@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Nuneaton and Bedworth Borough Council</title>
+	<!--<link href="/BT_NBBC_Planning/css/easysitePCNS.css" rel="stylesheet" type="text/css" /> -->
+	<link href="/BT_NBBC_Planning/StyleNuneaton/css/easysitePCNS.css" rel="stylesheet" type="text/css" />
+	<link href="/BT_NBBC_Planning/StyleNuneaton/css/" rel="stylesheet" type="text/css" />
+	<!-- <link href="/common/styles/foodmatters.css" rel="stylesheet" type="text/css" /> -->
+	<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />
+	<link rel="schema.eGMS" href="http://www.esd.org.uk/standards/egms/" />
+	<meta name="DC.Coverage" content="Nuneaton and Bedworth, UK" lang="en" />
+	<meta name="DC.Creator.FirstName" content=" " />
+	<meta name="DC.Creator.LastName" content=" " />
+	<meta name="DC.Date.Created" content="2008-07-01T00:00Z" />
+	<meta name="DC.Date.Modified" content="2008-07-01T00:00Z" />
+	<meta name="DC.Identifier" content="http:///bt_nbbc_planning/bt_nbbc_planning_disp.asp" />
+	<meta name="DC.Language" content="[ISO 639-2/B] Eng" />
+	<meta name="DC.Publisher" content="Nuneaton and Bedworth Borough Council, Town Hall, Coton Road, Nuneaton, Warwickshire, CV11 5AA, England, Phone 024 7637 6376, Fax 024 7637 6251, webmaster@nuneatonandbedworth.gov.uk" />
+	<meta name="DC.Rights" content="Reproduction by Permission Only" />
+	<meta name="DC.Rights.Copyright" content="All Copyright Nuneaton and Bedworth Borough Council" />
+	<meta name="DC.Title" content="Planning and Building Control Application Register" />
+	<meta name="DC.Type" content="Web Page" />
+	<meta name="eGMS.Accessibility" content="Double-A" scheme="WAI" />
+	<meta name="eGMS.Subject.Category" content="planning;building control;application;register;building" scheme="IPSV" lang="en" />
+	<meta name="Keywords" content="planning, building control, application, register, building" />
+	<meta name="Description" content="Search the Planning and Building Control Application Register" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<meta http-equiv="content-style-type" content="text/css" />
+	<link rel="meta" href="http:///labels.xml" type="application/rdf+xml" title="ICRA labels" />
+
+<div class="left" id="layout" class="logo" style="width: 745px">
+
+
+	<div id="header" class="clearfix">
+		<div><a href="http://www.nuneatonandbedworth.gov.uk" accesskey="1" title="Home"><img src="images/jaduwebheader.png" width="745" height="87" alt="Nuneaton and Bedworth Borough Council" /></a></div>
+	</div>
+
+</div>
+</head>
+
+<script language="JavaScript" type="text/javascript">
+// <![CDATA[
+
+	function clearApplicationReferenceForm() {
+		if (document.getElementById) {
+			document.getElementById('strApplicationReference').value = '';
+			document.getElementById('strRecordType1').selectedIndex = 0;
+			document.getElementById('dtmWeeklyList1').value = '';
+		}
+	}
+
+	function clearLocationDateForm() {
+		if (document.getElementById) {
+			document.getElementById('strStreetName').value = '';
+			document.getElementById('strPostcode').value = '';
+			document.getElementById('intFromDay').selectedIndex = 1;
+			document.getElementById('strFromMonth').selectedIndex = 11;
+			document.getElementById('intFromYear').selectedIndex = 24;
+			document.getElementById('intToDay').selectedIndex = 7;
+			document.getElementById('strToMonth').selectedIndex = 2;
+			document.getElementById('intToYear').selectedIndex = 25;
+			document.getElementById('strRecordType2').selectedIndex = 0;
+			document.getElementById('strApplicationStatus').selectedIndex = 0;
+			document.getElementById('dtmWeeklyList2').value = '';
+		}
+	}
+
+// ]]>
+</script>
+
+<form action="/BT_NBBC_Planning/BT_NBBC_Planning_applications.asp" method="post" name="frmSearchByApplicationReference" id="frmSearchByApplicationReference">
+	<fieldset>
+		<legend class="subheader">Search by application reference</legend>
+		<table border="0" cellpadding="4" cellspacing="0" class="nbbcTable">
+			<tr>
+				<td><label for="strApplicationReference">Application reference:</label></td>
+				<td><input type="text" name="strApplicationReference" id="strApplicationReference" value="" size="10" maxlength="10" /></td>
+			</tr>
+			<tr>
+				<td><label for="strRecordType1">Planning or building control?</label></td>
+				<td>
+					<select name="strRecordType" id="strRecordType1">
+						<option value="" selected="selected">Both types of application</option><option value="P">Planning only</option><option value="B">Building Control only</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" name="subSearchApplicationRegister" id="subSearchApplicationRegister1" value="Search Application Register" />
+					<input type="button" name="btnNewSearch" id="btnNewSearch1" value="New Search" onclick="clearApplicationReferenceForm();" />
+					<input type="hidden" name="dtmWeeklyList" id="dtmWeeklyList1" value="" />
+					<input type="hidden" name="strAction" id="strAction1" value="NewSearch" />
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+</form>
+<form action="/BT_NBBC_Planning/BT_NBBC_Planning_applications.asp" method="post" name="frmSearchByLocationDate" id="frmSearchByLocationDate">
+	<fieldset>
+		<legend class="subheader">Search by location and/or date</legend>
+		<table border="0" cellpadding="4" cellspacing="0" class="nbbcTable">
+			<tr>
+				<td><label for="strStreetName">Street name:</label></td>
+				<td><input type="text" name="strStreetName" id="strStreetName" value="" size="30" maxlength="50" /></td>
+			</tr>
+			<tr>
+				<td><label for="strPostcode">Postcode:</label></td>
+				<td><input type="text" name="strPostcode" id="strPostcode" value="" size="10" maxlength="10" /></td>
+			</tr>
+			<tr>
+				<td><label for="dtmFrom">Date from:</label></td>
+				<td><select name="intFromDay" id="intFromDay"><option value=""></option><option value="1" selected="selected">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select> <select name="strFromMonth" id="strFromMonth"><option value=""></option><option value="January">January</option><option value="February">February</option><option value="March">March</option><option value="April">April</option><option value="May">May</option><option value="June">June</option><option value="July">July</option><option value="August">August</option><option value="September">September</option><option value="October">October</option><option value="November" selected="selected">November</option><option value="December">December</option></select> <select name="intFromYear" id="intFromYear"><option value=""></option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015" selected="selected">2015</option><option value="2016">2016</option></select> </td>
+			</tr>
+			<tr>
+				<td><label for="dtmTo">Date to:</label></td>
+				<td><select name="intToDay" id="intToDay"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7" selected="selected">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select> <select name="strToMonth" id="strToMonth"><option value=""></option><option value="January">January</option><option value="February" selected="selected">February</option><option value="March">March</option><option value="April">April</option><option value="May">May</option><option value="June">June</option><option value="July">July</option><option value="August">August</option><option value="September">September</option><option value="October">October</option><option value="November">November</option><option value="December">December</option></select> <select name="intToYear" id="intToYear"><option value=""></option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option><option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option><option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option><option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016" selected="selected">2016</option></select> </td>
+			</tr>
+			<tr>
+				<td><label for="strRecordType2">Planning or building control?</label></td>
+				<td>
+					<select name="strRecordType" id="strRecordType2">
+						<option value="" selected="selected">Both types of application</option><option value="P">Planning only</option><option value="B">Building Control only</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="strApplicationStatus">Application status:</label></td>
+				<td>
+					<select name="strApplicationStatus" id="strApplicationStatus">
+						<option value="" selected="selected">Any status</option><option value="Received">Received</option><option value="In Progress">In Progress</option><option value="Recommendation Made">Recommendation Made</option><option value="Decision Made">Decision Made</option><option value="Appeal Made">Appeal Made</option><option value="Withdrawn">Withdrawn</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" name="subSearchApplicationRegister" id="subSearchApplicationRegister2" value="Search Application Register" />
+					<input type="button" name="btnNewSearch" id="btnNewSearch2" value="New Search" onclick="clearLocationDateForm();" />
+					<input type="hidden" name="dtmWeeklyList" id="dtmWeeklyList2" value="" />
+					<input type="hidden" name="strAction" id="strAction2" value="NewSearch" />
+				</td>
+			</tr>
+		</table>
+		<div>The date range applies to the date on which the application was accepted.<br/>
+		If you wish to search for dates of appeals, then select the Application status of Appeal Made and the date search will then relate to the Appeal Date.</div>
+	</fieldset>
+</form>
+
+
+<div>&nbsp;Alternatively view the <a href="/BT_NBBC_PLANNING/BT_NBBC_Planning_applications.asp?blnIsWeeklyList=True&strRecordType=P&strAction=NewSearch">weekly planning list</a>.</div>
+<div><p>&nbsp;</p></div>
+<div><p>&nbsp;</p></div>
+<div><p align="left">&nbsp; Copyright &copy; 2016 Nuneaton and Bedworth Borough Council. All Rights Reserved | <a href="http://www.nuneatonandbedworth.gov.uk/terms">Terms and Disclaimer</a></p></div>

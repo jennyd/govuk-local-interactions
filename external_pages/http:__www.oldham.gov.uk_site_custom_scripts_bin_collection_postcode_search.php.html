@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Rubbish and recycling - Collection days | Oldham Council</title>
+
+	
+<link rel="stylesheet" type="text/css" href="/site/styles/standard.css" media="screen" />
+ 
+
+
+
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+<!--[if IE 9]>
+        <link rel="stylesheet" type="text/css" href="/site/styles/generic/ie-nine.css">
+<![endif]-->
+<!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="/site/styles/generic/ie-eight.css">
+<![endif]-->
+<!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" href="/site/styles/generic/ie-seven.css">
+<![endif]-->    
+<link rel="stylesheet" type="text/css" href="/site/styles/generic/print.css" media="print" />
+<link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="ToC" href="http://www.oldham.gov.uk/site_map" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<base href="http://www.oldham.gov.uk/" />
+<script type="text/javascript" src="/site/javascript/swfobject.js"></script>
+<script type="text/javascript" src="/site/javascript/almond.min.js"></script>
+<script type="text/javascript" src="/site/javascript/util.min.js"></script>
+<script src="/site/javascript/modernizr-2.5.3.min.js"></script>
+
+
+    <script type="text/javascript">
+        function clearSearchBox() {
+            var searchBox = document.getElementById('SearchSite');
+            if(searchBox.value == 'Search') {
+                searchBox.value = '';
+            }else if(searchBox.value == '') {
+                searchBox.value = 'Search';
+            }
+        }
+        function clearServiceBox() {
+            var serviceBox = document.getElementById('searchText');
+            if(serviceBox.value == 'Search services') {
+                serviceBox.value = '';
+            }else if(serviceBox.value == '') {
+                serviceBox.value = 'Search services';
+            }
+        }
+        function clearFormBox() {
+            var formBox = document.getElementById('xforms_searchText');
+            if(formBox.value == 'Search forms') {
+                formBox.value = '';
+            }else if(formBox.value == '') {
+                formBox.value = 'Search forms';
+            }
+        }
+        function clearPostcodeBox() {
+            var postcodeBox = document.getElementById('postcode');
+            if(postcodeBox.value == 'Enter your postcode') {
+                postcodeBox.value = '';
+            }else if(postcodeBox.value == '') {
+                postcodeBox.value = 'Enter your postcode';
+            }
+        }
+    </script>
+		<link rel="search" type="application/opensearchdescription+xml" title="Oldham Council" href="http://www.oldham.gov.uk/site/scripts/opensearch.php" />
+
+	<!-- general metadata -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="http://www.jadu.net" />
+	<meta name="robots" content="index,follow" />
+	<meta name="author" content="Oldham Council" />
+
+
+	<!-- Dublin Core Metadata -->
+	<meta name="dcterms.creator" lang="en" content="Oldham Council" />
+	<meta name="dcterms.created" lang="en" content="2005-04-01" />
+	<meta name="dcterms.format" lang="en" content="text/html" />
+	<meta name="dcterms.language" content="en" />
+	<meta name="dcterms.publisher" lang="en" content="Oldham Council" />
+	<meta name="dcterms.dateCopyrighted" lang="en" content="Copyright Oldham Council" />
+	<meta name="dcterms.coverage" lang="en" content="Town, borough, county, country, worldwide" />
+	<meta name="dcterms.identifier" content="http://www.oldham.gov.uk/site/custom_scripts/bin_collection_postcode_search.php" />
+
+	<meta name="Keywords" content="bin, rubbish, collection, waste, " />
+	<meta name="Description" content="Find bin collection days within Oldham Council by postcode" />
+
+	<meta name="DC.title" lang="en" content="Oldham Council email a friend" />
+	<meta name="DC.description" lang="en" content="ind bin collection days within Oldham Council by a postcode" />
+
+	<meta name="DC.subject" lang="en" scheme="eGMS.IPSV" content="Local government;Government, politics and public administration" />
+	<meta name="DC.subject" lang="en" content="Council, government and democracy" />
+
+	<script type="text/javascript" language="javascript" src="site/javascript/prototype.js"></script>
+
+	<script type="text/javascript">
+
+		function getPremiseDetailsByPostCode() {
+
+			$('houses').style.display = 'none';
+			$('houses').innerHTML = '';
+			$('collectionDays').style.display = 'none';
+			$('collectionDays').innerHTML = '';
+			$('postcodeError').style.display = 'none';
+			$('noPropertiesError').style.display = 'none';
+			$('noCollectionsDaysError').style.display = 'none';
+		
+			var postcode = $('postcode').value;
+			
+			//Check if the postcode has been entered
+			if (postcode == '') {
+				$('postcodeError').style.display = '';
+				return false;
+			}
+			
+			var url = '/site/custom_scripts/bin_collection_postcode_search_functions.php';
+			var nonce = Math.floor(Math.random() * 100);
+			var params = 'nonce=' + nonce;
+			params += '&getPremiseDetailsByPostCode=true';
+			params += '&postcode=' + encodeURIComponent(postcode);
+			
+			new Ajax.Request(url, {
+				method: 'post',
+				parameters: params,
+				evalScripts: true,
+				asynchronous: false,
+				onSuccess:displayPremises
+			});
+
+			return true;
+		}
+		
+		function getPremiseDetailsByUniquePropertyReferenceNumber() {
+			
+			$('collectionDays').style.display = '';
+			$('collectionDays').innerHTML = '';
+			
+			var sel = $("selectPremises");
+			var propertyRefNo = sel.options[sel.selectedIndex].value;
+			
+			var url = '/site/custom_scripts/bin_collection_postcode_search_functions.php';
+			var nonce = Math.floor(Math.random() * 100);
+			var params = 'nonce=' + nonce;
+			params += '&getPremiseDetailsByUniquePropertyReferenceNumber=true';
+			params += '&propertyRefNo=' + encodeURIComponent(propertyRefNo);
+			
+			new Ajax.Request(url, {
+				method: 'post',
+				parameters: params,
+				evalScripts: true,
+				asynchronous: false,
+				onSuccess:displayCollectionDays
+			});
+
+			return true;
+		}
+		
+		function displayPremises (response) {
+
+			if (response.responseText != '-1') {
+				$('houses').style.display = '';
+				$('houses').innerHTML = response.responseText;
+				$('noPropertiesError').style.display = 'none';
+				$('instructions').style.display = '';
+			}
+			else {
+				$('houses').style.display = 'none';
+				$('noPropertiesError').style.display = '';
+			}
+		}
+		
+		function displayCollectionDays (response) {
+
+			if (response.responseText != '-1') {
+				$('collectionDays').style.display = '';
+				$('collectionDays').innerHTML = response.responseText;
+				$('noCollectionsDaysError').style.display = 'none';
+			}
+			else {
+				$('collectionDays').style.display = 'none';
+				$('noCollectionsDaysError').style.display = '';
+			}
+		}
+	</script>	
+</head>
+<body>
+<!-- ########## MAIN STRUCTURE ######### -->
+    <div class="header-links">
+        
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="button-holder">
+                    <button type="button" class="btn btn-searchbar" data-toggle="collapse" data-target=".search-collapse">
+                        <span class="icon-search"></span>
+                        <span class="visuallyhidden">Search</span>
+                    </button>
+                    <button type="button" class="btn btn-azbar" data-toggle="collapse" data-target=".az-collapse">
+                        <span class="icon-az">A-Z<span class="visuallyhidden"> services</span></span>
+                    </button>
+                </div>
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="visuallyhidden">Show or hide navigation</span>
+                </button>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="access">
+                            <a href="http://www.oldham.gov.uk/accessibility_settings">Accessibility</a>
+                        </li>
+                        <li class="help">
+                            <a href="http://www.oldham.gov.uk/contact">Contact</a>
+                        </li>
+                        <li class="help">
+                            		
+			<div class="account-access"><a href="https://myaccount.oldham.gov.uk/web/IL1_Login.aspx">Log in</a> | <a href="https://myaccount.oldham.gov.uk/web/PublicPages/IR1_Register.aspx">Create account</a>
+</div>
+                        </li>
+                    </ul>
+                </div>
+             </div>
+         </div>
+    </div>  
+    </div>
+     
+    <div id="container">
+        <!-- googleoff: index -->
+		
+		<header>
+		<div id="header">
+
+			<a href="http://www.oldham.gov.uk" class="logo"><img src="/site/images/logo.png" id="logo" alt="Oldham Council" /></a>
+
+
+
+
+
+
+		<div class="search-collapse collapse">
+			<form action="http://www.oldham.gov.uk/site/scripts/google_results.php" method="get" name="search" class="search-form">
+				<label for="SearchSite" class="hidden">Search this site</label>
+				<input type="text" size="18" maxlength="40" class="field" name="q" id="SearchSite" value="" /><input type="image" class="button" src="/site/images/search.png" alt="Search" />
+				<input type="hidden" class="field" name="sites[]" value="" />
+			</form>
+		</div>
+			
+			<div class="az-collapse collapse">
+                            <div class="services-az">
+                                <h2>A-Z of services</h2>
+                                <nav>
+                                    <ul>
+									<li><a href="http://www.oldham.gov.uk/a_to_z/A">A</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/B">B</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/C">C</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/D">D</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/E">E</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/F">F</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/G">G</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/H">H</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/I">I</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/J">J</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/K">K</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/L">L</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/M">M</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/N">N</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/O">O</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/P">P</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/Q">Q</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/R">R</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/S">S</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/T">T</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/U">U</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/V">V</a></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/W">W</a></li>
+	
+									<li><span>X</span></li>
+	
+									<li><a href="http://www.oldham.gov.uk/a_to_z/Y">Y</a></li>
+	
+									<li><span>Z</span></li>
+	
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+			
+		</div>
+		</header>
+<!-- googleon: index -->        
+                    <div id="breadcrumb">
+      
+                        <!-- Breadcrumb --><!-- googleoff:all -->
+                        <ul><li><a href="http://www.oldham.gov.uk/">Home</a></li>
+	
+	<li><a href="http://www.oldham.gov.uk/info/200281/rubbish_and_recycling">Rubbish and recycling</a></li>
+
+<li><span>Bin collection days</span></li></ul>
+                        <!-- END Breadcrumb --><!-- googleon:all -->
+                    </div>
+    <div id="main" role="main">
+                    <h1>Bin collection days</h1>
+<!-- ########################## -->
+        
+	<p>Enter your postcode to find your collection day.</p>
+    
+  
+    
+    
+	
+	<div id="postcodeError" name="postcodeError" style="display: none;">
+		<p>Please enter a Postcode</p>
+	</div>
+	
+	<div id="noPropertiesError" name="noPropertiesError" style="display: none;">
+		<!--<p>No properties where found at this postcode</p>-->
+
+<p>Due to the high number of queries at this time we are experiencing some technical difficulties with our bin collection search. </br></br>
+    
+    If you have any queries regarding your bin collection you can call the waste service on 0161 770 6644 or e-mail <a href= "mailto:waste@oldham.gov.uk">waste@oldham.gov.uk</a> 
+    
+   </br></br>
+   We apologise for any inconvenience caused and aim to have the service up and running soon.
+       </p>
+
+	</div>
+	
+	<div id="noCollectionsDaysError" name="noCollectionsDaysError" style="display: none;">
+		<p>No collection day information was found for the selected property</p>
+
+<p>We are currently experiencing some technical difficulties with our bin collection search. </br></br>
+    
+    If you have any queries regarding your bin collection you can call the waste service on 0161 770 6644 or e-mail <a href= "mailto:waste@oldham.gov.uk">waste@oldham.gov.uk</a> 
+    
+   </br></br>
+   We apologise for any inconvenience caused.
+       </p>
+	</div>
+	
+	<form class="basic_form">
+		<p>
+		<label for="postcode">Postcode</label>
+		<input id="postcode" type="text" name="postcode" size="3" value="" class="field" />
+		<input type="submit" value="Search" name="submit" class="button" onclick="return getPremiseDetailsByPostCode();" />
+		</p>
+		<p id="instructions" style="display:none;">Please select your address from the list below to see your collection dates.</p>
+		<p id="houses" style="display: none;">
+		</p>
+	
+		<p id="collectionDays" style="display: none;">
+		</p>
+	</form>
+	<script type="text/javascript">
+		var postcode = '';
+		if (postcode != '') {
+			$('postcode').value = postcode;
+			getPremiseDetailsByPostCode();
+		}
+	</script>
+<!-- ################ MAIN STRUCTURE ############ -->
+        </div><!-- end MAIN -->
+    </div><!-- end CONTAINER -->
+        
+	<!-- googleoff: index -->
+	<footer>
+	<div id="footer">
+		<div class="inner">
+			<div class="contact">
+				<img src="/site/images/roundel-logo.png" alt="Oldham Council logo" />
+				<div class="vcard">
+					<div class="org fn">Oldham Council</div>
+					<div class="adr">
+    					<p>Civic Centre, West Street, Oldham, OL1 1UT.  0161 770 3000<br />
+</p>
+					</div>
+ 
+					<div class="tel">
+        				<p> </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="lower-footer">
+		<div class="inner">
+			
+			<p class="social-media">
+				<a href="http://www.facebook.com/loveoldham"><img src="/site/images/facebook-lrg.png" alt="Facebook" /></a>
+				<a href="http://twitter.com/OldhamCouncil"><img src="/site/images/twitter-lrg.png" alt="Twitter" /></a>
+				<span class="clearfix"></span>
+			</p>
+			
+			<ul class="footer-links">
+				<li>&copy; Oldham Council 2016</li>
+				<li><a href="http://www.oldham.gov.uk/site_map">Site map</a></li>
+				<li><a href="http://www.oldham.gov.uk/terms">Terms &amp; Disclaimer</a></li>
+				<li><a href="/cookie_policy">Cookie Policy</a></li>
+				<li class="last"><a href="http://www.oldham.gov.uk/contact">Contact us</a></li>
+			</ul>
+			<p>Powered by Jadu <a href="http://www.jadu.net">content management</a>.</p>
+		</div>
+	</div>
+	</footer>
+	<!-- googleon: index -->
+<!-- #################################### -->
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="http://www.oldham.gov.uk/site/javascript/oldham.js"></script>
+
+
+<script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-16759362-1']);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();</script><script type="text/javascript">/*<![CDATA[*/(function() {var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;sz.src = '//uk1.siteimprove.com/js/siteanalyze_465863.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);})();/*]]>*/</script><script>  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');  ga('create', 'UA-43749672-1', 'oldham.gov.uk');  ga('send', 'pageview');</script><script language="javascript">if(location.protocol=="https:"){var dplat = "https://oldham.logo-net.co.uk/Delivery/TBURT.php";}else{var dplat = "http://oldham.logo-net.co.uk/Delivery/TBURT.php";}var strPURL = parent.document.URL;strPURL = strPURL.replace(/&/g, "^");strPURL = strPURL.toLowerCase();strPURL = strPURL.replace(/</g, "-1");strPURL = strPURL.replace(/>/g, "-2");strPURL = strPURL.replace(/%3c/g, "-1");strPURL = strPURL.replace(/%3e/g, "-2");var T = new Date();var cMS = T.getTime();var src = dplat + '?SDTID=141&PURL=' + strPURL + '&CMS='+cMS;var headID = document.getElementsByTagName("head")[0];var newScript = document.createElement('script');newScript.type = 'text/javascript';newScript.src = src;headID.appendChild(newScript);</script></body>
+</html>

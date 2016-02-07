@@ -1,0 +1,465 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HomeSwapper</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/Content/Images/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/Content/Images/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/Content/Images/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/Content/Images/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/Content/Images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/Content/Images/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/Content/Images/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/Content/Images/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Content/Images/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/Content/Images/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/Content/Images/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/Content/Images/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/Content/Images/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/Content/Images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/Content/Images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#653d7b">
+    <meta name="msapplication-TileImage" content="/Content/Images/favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#653d7b">
+    <!-- Favicons end -->
+    <link href="/content/styles/temporaryhomepage/bootstrap.min.css" rel="stylesheet">
+    <link href="/content/styles/temporaryhomepage/homepagestyles.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <link href="~/styles/temporaryhomepage/ie-styles.css" rel="stylesheet">
+        <script src="/Scripts/vendor/IE8Responsive/respond.min.js"></script>
+        <link href="/Content/Styles/InternetExplorer/IE8.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!--mixpanel reference here - needed as this page does not use AppLayout-->
+    <script type="text/javascript">
+    (function (f, b) {
+        if (!b.__SV) {
+            var a, e, i, g; window.mixpanel = b; b._i = []; b.init = function (a, e, d) {
+                function f(b, h) { var a = h.split("."); 2 == a.length && (b = b[a[0]], h = a[1]); b[h] = function () { b.push([h].concat(Array.prototype.slice.call(arguments, 0))) } } var c = b; "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel"; c.people = c.people || []; c.toString = function (b) { var a = "mixpanel"; "mixpanel" !== d && (a += "." + d); b || (a += " (stub)"); return a }; c.people.toString = function () { return c.toString(1) + ".people (stub)" }; i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+                for (g = 0; g < i.length; g++) f(c, i[g]); b._i.push([a, e, d])
+            }; b.__SV = 1.2; a = f.createElement("script"); a.type = "text/javascript"; a.async = !0; a.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; e = f.getElementsByTagName("script")[0]; e.parentNode.insertBefore(a, e)
+        }
+    })(document, window.mixpanel || []);
+    mixpanel.init('b1f736e184a5dddc83674714aeff1495');
+    </script>
+
+</head>
+<body class="home-page-styles">
+
+    <div id="cookie-container-id" class="home-page-styles">
+        <div id="cookie-partial-div">
+    <div class="col-sm-12 text-center container cookie-bar">
+        <div class="row cookie-text col-md-8 col-md-offset-2">
+            <span class="cookie-span">We use cookies to ensure you get the best experience on our website.  Your browser settings will either accept cookies or not.  This website uses cookies.  If your browser blocks cookies then your experience of our website will be degraded.</span>
+        </div>
+        <div class="row col-md-4 cookie-buttons col-md-offset-4">
+            <a href="/Cookie/Index" class="btn btn-link">More information</a>
+            <button id="AcceptPolicy" class="btn btn-link">Continue</button>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+
+    <div id="fb-root"></div>
+    <div id="wrapper" class="home-page-styles">
+
+        <div class="block homepage1">
+            <div class="container">
+                <div class="content">
+                    <a class="logo" href="#">
+                        <img class="hires" src="/content/images/homepage/homepagelogo.png" alt="homeswapper logo">
+                        <span class="sr-only">HomeSwapper</span>
+                    </a>
+
+                    <div class="menu">
+                        <a href="/Account/Register">Register</a>
+                        <a class="btn btn-orange" href="/Account/Login" id="signin-button">Log in</a>
+                    </div>
+
+                    
+
+                    <!-- Temporary Launch Helper Panel -->
+                    <div id="temp-launch-panel">
+                        Existing HomeSwapper user?<br/>
+                        Log in with your usual username and password
+                    </div>
+                    <!-- End Temp Launch Help -->
+
+                    <h1 class="margin-bottom30px white-text upper">Welcome to the NEW LOOK HomeSwapper</h1>
+                    <img class="backdrop hires" src="/content/images/homepage/homepage1.png" alt=""/>
+
+                    <img id="award" src="/Content/Images/HSAward.png" alt="Housing Excellence Awards 2015 Winner Best IT System or App"/>
+
+                    
+                    
+                    <h2 class="margin-bottom30px white-text lower"><div class="constrainer">The UK’s leading mutual exchange service</div></h2>
+                    <div class="cta">
+                        <a href="#search" class="btn btn-lg btn-paleblue margin-right10px">Get started</a>
+                        <a href="/Account/Register" class="btn btn-lg btn-green">Sign up now</a>
+                    </div>
+
+                    <div id="signin-panel" style="display: none;">
+<form action="/Account/Login" class="form-horizontal" method="post" name="quickLoginForm" role="form"><input name="__RequestVerificationToken" type="hidden" value="RTAi85auLYehBk8vH6n_eHHJX3ix_yZ_BbT0GwBEhrjr7JPxCciBmhO40rowLZ0qpGGCO_jupJQql2Zj9NZxWoreFILHZTl6iI_1Nicwnr41" /><div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>                            <div>
+                                <label class="control-label" for="LoginModel_Email">Email or username</label>
+                                <input autocorrect="off" class="form-control input" id="input-username" name="Email" spellcheck="false" type="text" value="" />
+                            </div>
+                            <div class="margin-bottom10px">
+                                <label class="control-label" for="LoginModel_Password">Password</label>                                
+                                <input class="form-control" id="Password" name="Password" type="password" />
+                                <small><a href="/Account/ForgotPassword">Forgotten your password?</a></small>
+                            </div>
+                            <div> </div>
+                            <div class="">
+                                <button id="submitButton" class="btn btn-orange margin-right20px" data-loading-text="Logging in">Log in</button>
+                            </div>
+</form>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="block homepage2">
+            <div class="container">
+                <div class="content">
+                    <h2>JOIN TODAY &ndash; It's <span class="free">FREE</span> to over 3.5 million social tenants&nbsp;<span class="asterisk">*</span></h2>
+                    <small>* A small fee is charged for tenants of non-partnering landlords from 7p per day.</small>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="block homepage3" id="search">
+            <div class="content">
+                <h3>Find your perfect home</h3>
+
+                <form class="clearfix">
+                    <div class="form-group location">
+                        <label for="location" class="control-label">Location</label>
+                        <input type="text" class="form-control" id="location" placeholder="Town or postcode">
+                        <input type="hidden" id="locationId" />
+                    </div>
+
+                    <div class="form-group beds">
+                        <label for="bedrooms" class="control-label">Bedrooms</label>
+                        <select class="form-control" id="bedrooms">
+                            <option>1</option>
+                            <option selected>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group rent">
+                        <label for="rent" class="control-label">Max. rent <small>(&pound; per month)</small></label>
+                        <select class="form-control width-auto" id="rent" name="rent"><option value="50">50</option>
+<option value="75">75</option>
+<option value="100">100</option>
+<option value="125">125</option>
+<option value="150">150</option>
+<option value="175">175</option>
+<option value="200">200</option>
+<option value="250">250</option>
+<option value="300">300</option>
+<option value="400">400</option>
+<option selected="selected" value="500">500</option>
+<option value="600">600</option>
+<option value="700">700</option>
+<option value="800">800</option>
+<option value="900">900</option>
+<option value="1000">1000</option>
+<option value="1250">1250</option>
+<option value="1500">1500</option>
+<option value="1750">1750</option>
+<option value="2000">2000</option>
+<option value="2250">2250</option>
+<option value="2500">2500</option>
+<option value="2750">2750</option>
+<option value="3000">3000</option>
+<option value="3250">3250</option>
+<option value="3500">3500</option>
+</select>
+                    </div>
+                    <div class="form-group button">
+                        <input class="btn btn-orange" type="submit" value="Search" onclick="return QuickSearch()">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="block homepage4">
+            <div class="container">
+                <div class="content">
+                    <h3>Why HomeSwapper?</h3>
+                    <div class="sub">
+                        <h4>Find exactly what you're looking for, or discover something new &ndash; it's up to you</h4>
+                        <p>Our advanced searching allows you to filter matches by location, home features, local amenities and urgency. So whether you have an image of your perfect home in mind or are happy to consider something different we will find you a match.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block homepage5">
+            <div class="container">
+                <div class="content">
+
+                    <h4>Wherever you’re moving, and whatever you’re looking for, we’ll have something for you.</h4>
+
+                    <p>
+                        Homeswapper has thousands of members throughout all regions the UK, with every type of property represented. Signing up with Homeswapper gives you the best possible chance of finding exactly the home you need.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="block homepage6">
+            <div class="container">
+                <div class="content">
+
+
+                    <div class="first">
+                        <div class="inner">Get immediate ‘Live’ matches for direct swaps</div>
+                    </div>
+
+
+                    <div class="second">
+                        <div class="inner">Where direct swaps aren’t available, use our unique multi-swap builder</div>
+                    </div>
+
+                    <div class="third">
+                        <div class="inner">Manage the homes you’re interested in with our powerful tools</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="block homepage7">
+            <div class="container">
+                <div class="content">
+                    <div class="quotes">
+<h3>Customer feedback</h3>
+
+                    </div>
+
+                    <div class="twitter-feed">
+                        <a href="https://twitter.com/HomeSwapperteam" target="_blank" title="Follow us on Twitter" class="tweet-header"><h3>Latest Tweets</h3></a>
+
+                        <div class="tweet">
+                            <a class="twitter-timeline" href="https://twitter.com/HomeSwapperteam" data-widget-id="520152809476345856" data-chrome="noheader nofooter noborders transparent" data-tweet-limit="4" data-show-replies="false"> Tweets by @HomeSwapperteam</a>
+                            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="container-fluid">
+            <div class="footer-content">
+
+                <div class="footer-item row col-xs-6">
+                    <a href="http://www.housingparters.co.uk" id="footer-logo"></a>
+                    <div class="smallprint">&copy; Housing Partners Ltd, 2014.</div>
+                </div>
+
+                <div class="footer-item row col-xs-12">
+                    
+                    <a href="https://www.facebook.com/HomeSwapperOfficial" target="_blank" class="social-button"><i class="fa fa-facebook-square social-icon"></i><span class="sr-only">Facebook</span></a>
+                    <a class="social-button" href="https://twitter.com/HomeSwapperteam" target="_blank"> <i class="fa fa-twitter social-icon"></i></a>
+                </div>
+
+                <div class="row hidden-print col-xs-12">
+                    <ul class="text-center footer-ul list-inline">
+                        <li><a href="/ContactUs">Contact Us</a></li>
+                        <li><span class="mobile-footer-span"> | </span></li>
+                        <li><a href="https://housingpartners.desk.com/?b_id=7383">Help</a></li>
+                        <li><span class="mobile-footer-span"> | </span></li>
+                        <li><a href="http://www.housingpartners.co.uk/about-us/" target="_blank">About Us</a></li>
+                        <li><span class="mobile-footer-span"> | </span></li>
+                        <li><a href="/Terms">Terms of use</a></li>
+                        <li><span class="mobile-footer-span"> | </span></li>
+                        <li><a href="/Privacy">Privacy</a></li>
+                        <li><span class="mobile-footer-span"> | </span></li>
+                        <li><a href="/Accessibility">Accessibility</a></li>
+                    </ul>
+                    <a id="mixpanel-logo" href="https://mixpanel.com/f/partner"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_light.png" alt="Mobile Analytics" /></a>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="/bundles/global?v=QPpHm53VQgLw97-QI5uZOck9cXE_bERSCcxpJ9M3cKA1"></script>
+
+    <script src="/Areas/Basic/Content/Scripts/MHAMTypeAhead.js"></script>
+    <script src="/Areas/Basic/Content/Scripts/FacebookSDK.js"></script>
+
+        <script src="/Scripts/global/EUCookie.js"></script>
+
+    <script>
+        $(function () {
+        $('a[href*=#]:not([href=#])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+
+    //TODO: for search
+    //$("#searchLink").click(function () {
+    //    var $locationId = $("#location").val();
+    //    var $rent = $("#rent").val();
+    //    $(this).attr("href", $(this).attr("href") + "?LocationId= " + $locationId + "maxBedroom =" + $maxBedrrom);
+    //});
+
+    function fbShare() {
+        var product_name = 'Home Swapper';
+        var description = 'Find council housing association HomeSwap. Go to www.homeswapper.co.uk.';
+        var share_image = '//Content/Images/logo.png';
+        var share_url = 'http://www.homeswapper.co.uk';
+        var share_capt = 'HomeSwapper';
+        FB.ui({
+            method: 'feed',
+            name: product_name,
+            link: share_url,
+            //picture: share_image,
+            //caption: share_capt,
+            description: description
+
+        }, function (response) {
+            if (response && response.post_id) { }
+            else { }
+        });
+    }
+
+
+    function QuickSearch() {
+        var beds = $('#bedrooms').find(":selected").text();
+        var location = $('#location').val();
+        var locationId = $('#locationId').val();
+        var rent = $('#rent').val();
+        if (rent == "") rent = "500";
+
+        //for mixpanel
+        var quickSearchOptions = {
+            Location: location,
+            Bedrooms: beds,
+            MaxRent: rent
+        };
+        sendEvent("Quick Search From Home Page Event Desktop", quickSearchOptions, null);
+
+        url = "/Search/Results/?BedroomsMin=" + beds + "&BedroomsMax=" + beds + "&locationName=" + location + "&locationId=" + locationId + "&rentMax=" + rent + "&distance=5.0";
+
+        window.location.href = url;
+        return false;
+    }
+
+    $(function () {
+        var detective = new Detector();
+        if (detective.detect('VAG Rounded Light')) {
+            $('body').css('font-size', '18px');
+        }
+
+        $('#phone-nav-btn').click(function () {
+            $('#phone-nav').toggleClass('open');
+        });
+
+
+        
+
+
+        $('#location').MHAMTypeAhead(
+{
+
+    itemSelected: function (selectedItem) {
+        $("#locationId").val(selectedItem.id);
+        $("#location").val(selectedItem.placeName);
+
+        return false;
+    },
+    hiddenElem: $("#locationId"),
+    showClearButton: false
+},
+{
+    remoteUrl: '/api/Geolocation?location=',
+    displayKey: 'Name',
+    hiddenElem: $("#locationId"),
+    suggestionTemplate: '<p><strong>{{placeName}}</strong>{{description}}</p>'
+}
+);
+
+
+
+
+        if (window.devicePixelRatio == 2) {
+
+            var images = $("img.hires");
+
+            // loop through the images and make them hi-res
+            for (var i = 0; i < images.length; i++) {
+
+                // create new image name
+                var imageType = images[i].src.substr(-4);
+                var imageName = images[i].src.substr(0, images[i].src.length - 4);
+                imageName += "@2x" + imageType;
+
+                //rename image
+                images[i].src = imageName;
+            }
+
+        }
+
+        $('#signin-button').click(function (e) {
+            $('#signin-panel').fadeToggle('fast');
+            setTimeout(function ()
+            { $('#input-username').focus() }, 300);
+            e.stopPropagation();
+            e.preventDefault();
+        });
+
+        $('.block').click(function () {
+            $('#signin-panel').fadeOut('fast');
+        }).find('#signin-panel').on('click', function (e) {
+            e.stopPropagation();
+        });
+
+        //$('#signin-panel').click(function () {
+        //    $('#signin-panel').fadeOut('fast');
+        //});
+
+    });
+
+    $('#quickLoginForm').submit(function () {
+        if ($(this).valid()) {
+            $("#submitButton").button('loading');
+        }
+    })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<META NAME="KEYWORDS"
+CONTENT="routes ahead, area prospectus, course, courses, training, school, schools, college, colleges, providers, provider, derby, derbyshire, buxton, chesterfield
+glossop, heanor, ilkeston, long eaton, matlock, bakewell, bolsover, swadlincote, alfreton, belper, stavely, newhall, woodville, learning, options, progression, subject, qualification, sixth form, Key Stage 4, 14, 19, post-16, courses in derbyshire, connexions, routes-ahead, routesahead, young, people, advice, problem, problems, practitioners, practitioner, employer, employers, parent, parents, carer, carers, performance table, ofsted, DCFS, family, children, families, child, education, vocational, diploma, GCSE, A-Level, qualifications, A Level, Level 1, Level 2, Level 3, Level 4, area of interest, title, learning, learn, community, teach, BTEC, exams, examination, exam, examinations, apprentice, apprenticeships, apprenticeship" />
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Derbyshire courses, Apprenticeships, training â Routes Ahead - Home Page</title>
+<link href="../css/ra_03a.css" rel="stylesheet" type="text/css" />
+<link href="../css/raprint_03.css" rel="stylesheet" type="text/css" media="print" />
+<script>
+var current_banner = 1;
+var total_banners = 0;
+var wait = 0;
+var wait2 = 0;
+var wait3 = 0;
+
+function banner_init()
+{
+	wait = setTimeout('nextBanner()',bannertime);
+
+	opacity('home_fade_box2', 100, 0, 1);
+	opacity('home_fade_box3', 100, 0, 1);
+	opacity('home_fade_box4', 100, 0, 1);
+
+	//stop banner change if mouse over one banner
+	elements = document.getElementById('home_fade').getElementsByTagName('div');
+	total_banners = elements.length;
+	for (var i = 0; i < elements.length; i++) 
+	{ 
+		elements[i].onmouseover = function () 
+		{
+
+			clearTimeout(wait);
+		}
+ 		elements[i].onmouseout = function () 
+		{
+
+			clearTimeout(wait);
+
+			wait = setTimeout('nextBanner()',bannertime);
+
+		}	
+	}
+} 
+
+
+function banner(nr)
+{
+	clearTimeout(wait);
+	elements = document.getElementById('home_fade').getElementsByTagName('div');
+	//hide all divs
+	
+	cr = (nr - 1);
+	if (cr == 0)
+	{
+		cr = total_banners;
+	}
+	opacity('home_fade_box'+cr, 100, 0, 1000);
+	elements[cr-1].style.zIndex=4;
+	elements[nr-1].style.display = "block";
+	elements[nr-1].style.zIndex=5;
+	opacity('home_fade_box'+nr, 0, 100, 1000);
+	wait = setTimeout('nextBanner()',bannertime);
+}
+
+function nextBanner() 
+{
+
+	if(current_banner < total_banners) 
+	{
+		current_banner ++; 
+	}
+
+	else
+	{	current_banner = 1;
+	}
+	banner(current_banner);
+}
+
+function opacity(id, opacStart, opacEnd, millisec) { 
+    //speed for each frame 
+    var speed = Math.round(millisec / 100); 
+    var timer = 0; 
+
+    //determine the direction for the blending, if start and end are the same nothing happens 
+    if(opacStart > opacEnd) { 
+        for(i = opacStart; i >= opacEnd; i--) { 
+            wait2 = setTimeout("changeOpac(" + i + ",'" + id + "')",(timer * speed)); 
+            timer++; 
+        } 
+    } else if(opacStart < opacEnd) { 
+        for(i = opacStart; i <= opacEnd; i++) 
+            { 
+            wait2 = setTimeout("changeOpac(" + i + ",'" + id + "')",(timer * speed)); 
+            timer++; 
+        } 
+    } 
+} 
+
+//change the opacity for different browsers 
+function changeOpac(opacity, id) { 
+    var object = document.getElementById(id).style; 
+    object.opacity = (opacity / 100); 
+    object.MozOpacity = (opacity / 100); 
+    object.KhtmlOpacity = (opacity / 100); 
+    object.filter = "alpha(opacity=" + opacity + ")"; 
+} 
+
+</script><script>
+var current_div = 1;
+var total_div = 0;
+var wait_div = 0;
+var cdiv;
+
+function div_init()
+{
+	elements = document.getElementById('news').getElementsByTagName('div');
+	total_div = elements.length;
+	for (var i = 0; i < elements.length; i++) 
+	{ 
+		elements[i].onmouseover = function () 
+		{
+
+			clearTimeout(wait_div);
+		}
+ 		elements[i].onmouseout = function () 
+		{
+
+			clearTimeout(wait_div);
+
+			wait_div = setTimeout('next_div()',divtime);
+
+		}	
+	}
+	show_div(current_div);
+}
+
+function show_div(cdiv)
+{
+	clearTimeout(wait_div);
+	
+	if(cdiv == 1)
+	{
+		prev_div = total_div;
+	}
+	else
+	{
+		prev_div = cdiv-1;
+	}
+	elements = document.getElementById('news').getElementsByTagName('div');
+	elements[prev_div-1].style.display='none';
+	elements[cdiv-1].style.display='block';
+	wait_div = setTimeout('next_div()',divtime);
+}
+
+function next_div()
+{
+	if(current_div < total_div) 
+	{
+		current_div ++; 
+	}
+
+	else
+	{
+		current_div = 1;
+	}
+	show_div(current_div);
+}
+
+</script>
+</head>
+
+
+
+<body>
+<div id="header">
+	<img src="../images/top02.jpg" />
+	<div id="top_nav">
+		<ul>
+			<li><a href="default.asp"><acronym title="Return to the homepage">Home</acronym></a></li>
+			<li>
+
+			<a href="ra_logging_in.asp"><acronym title="See your saved courses, saved searches and account details">My account</acronym></a>
+			</li>
+			<li><a href="ra_events_all.asp"><acronym title="View all upcoming events">Events</acronym></a></li>
+			<li><a href="ra_about.asp"><acronym title="What is Routes Ahead?">About us</acronym></a></li>
+			<li><a href="ra_contact_us.asp"><acronym title="Telephone numbers and email addresses for general help and information">Contact us</acronym></a></li>
+			<li><a href="ra_site_map.asp"><acronym title="A map of all the pages on Routes Ahead">Site map</acronym></a></li>
+			<li><a href="ra_links.asp"><acronym title="Useful links">Links</acronym></a></li>
+			<li><a href="ra_glossary01.asp"><acronym title="Explanation of some of the words and terms used on Routes Ahead">Glossary</acronym></a></li>
+			<li><a href="ra_addcomment01.asp"><acronym title="Tell us what you think of Routes Ahead">Feedback</acronym></a></li>
+			<li><a href="ra_help.asp"><acronym title="Help, hints and tips on using Routes Ahead">Help</acronym></a></li>
+		</ul>
+	</div>
+</div>
+
+<br />
+<div id="middle">
+	<div id="left">
+        <div id="content_home">
+	        <div id="print_header" align="center">
+    	    	<img src="../images/ra_print_header.jpg" />
+			</div>
+			<img src="../images/routes_ahead_home_big_arrows.jpg" alt="Welcome to Routes Ahead" border="0" />
+			<br />
+			<div id='news'><div id='news1' style='display:none'>&nbsp<br /><br />&nbsp;</div></div>
+			<div id="home_fade">
+				<div id="home_fade_box1">
+					<a href="http://www.connexions-derbyshire.org/a/OtherSections/VideoRoom/VideoHome.asp" target="_blank"><img src="../images/ra_homepage_video_top.gif" alt="Video room. Watch our podcasts including interviews with celebs and advice from employers" border="0"/><img src="../images/ra_homepage_video_bottom.jpg" alt="Video room. Watch our podcasts including interviews with celebs and advice from employers" border="0"/></a>
+				</div>
+				<div id="home_fade_box2">
+					<a href="http://www.connexions-derbyshire.org/a/wp.asp?pid=872" target="_blank"><img src="../images/ra_homepage_wow_top.gif" alt="Find out about the local job market and get advice on applying for jobs and interview skills" border="0"/><img src="../images/ra_homepage_wow_bottom.jpg" alt="World of work" border="0"/></a>
+				</div>
+				<div id="home_fade_box3">
+					<a href="http://www.apprenticeships.org.uk/" target="_blank"><img src="../images/ra_homepage_apprentice_top.gif" alt="Find out more about Apprenticeships and apply for vacancies" border="0"/><img src="../images/ra_homepage_apprentice_bottom.jpg" alt="Find out more about Apprenticeships and apply for vacancies" border="0"/></a>
+				</div>
+			</div>
+        </div>
+    </div>
+    <div id="right">
+    	<div id="right_pad">
+			<style type="text/css">
+<!--
+.style1 {font-size: 9px}
+-->
+</style>
+<script type="text/javascript">
+function switchTo(num) 
+{ 
+	if (num)
+  	{ 
+		document.getElementById('swapper').innerHTML="<input type='password' name='password' size='15' id='password' value='' />";
+		document.getElementById('password').focus(); 
+  	}
+}
+
+function swap_focus()
+{
+	document.getElementById('password').focus(); 
+}
+
+function send_me()
+{
+	window.open("https://vault1.secured-url.com/cap/pages/default.asp","mynewin", "toolbar=yes, location=no, status=no");
+	var a = window.setTimeout("document.frmlogin.submit();",500);
+}
+</script>
+
+<div id="logo_area">
+	<img src="../images/cnx_logo.gif" alt="Connexions Derbyshire Logo" />
+</div>
+
+
+
+<!-- ----------------- LOGIN BIT ------------------- -->
+
+<div align="center"><img src="../images/log_in_box_header.gif" alt="Log in" /></div>
+<div id="log_in_box">
+   	<form name="frmlogin" method="post" action="https://vault1.secured-url.com/cap/pages/ra_login01.asp?act=login">
+       	<input name="txtuser" type="text" value="Email address" size="19" onfocus="this.value='';return false;" />
+		<script type="text/javascript">document.write("<input name='hidurl' type='hidden' value='" + location.href + "' />")</script>
+        <span id="swapper"><input type="text" name="password" size="19" id="password" value="Password" onfocus="switchTo(1);swap_focus();" /></span><br />
+        <a href="#" onclick="document.frmlogin.submit();"><img src="../images/go_arrow_black.gif" border="0" /></a><br />
+	</form>
+   	<a href="https://vault1.secured-url.com/cap/pages/ra_login01.asp"><acronym title="If you haven't done so yet, click here to register">Not registered yet? </acronym></a><br />
+    <a href="ra_login_reminder.asp"><acronym title="Forgotten your password? Click here to be sent a reminder.">Forgot your password?</acronym></a>
+</div>
+<div align="center"><img src="../images/log_in_box_footer.gif" /></div>
+<br />
+
+
+<!-- ----------------------  SEARCH -------------------------- -->
+
+<div id="advanced_search">
+	<a href="ra_search_basic.asp"><img src="../images/advanced_search_button.gif" alt="Search" border="0" /></a>
+</div>
+<div align="center">
+	<a href="ra_probbuster01.asp"><img src="../images/get_advice.gif" alt="Help with making option choices, money and so on." border="0" /></a><br /><br />
+</div>
+<div id="privacy">
+	<acronym title="Click here to view our privacy statement"><a href="../ra_privacy.asp" target="_blank">Privacy statement</a></acronym>
+</div>
+<br /><br />
+
+	<img src="../images/home_logos.jpg" alt="Derby City Council and Derbyshire County Council Logos" />
+
+        </div>
+    </div>
+</div>
+<div id="footer">
+   	<div id="footer_yellow">
+   		<div id="footer_pad">
+			<a href="ra_practitioners01.asp"><img src="../images/practitioners_button.gif" alt="Practitioners" border="0" align="left" /></a>
+            <a href="ra_parent01.asp"><img src="../images/parents_button.gif" alt="Parents and carers" border="0" align="right" /></a>
+      	</div>
+    </div>
+    <div id="footer_pink">
+		<div id="footer_pad">
+    		<a href="ra_contact_us.asp"><img src="../images/contact_bar.gif" alt="Contact us" border="0" /></a>
+    	</div>
+        <div id="footer_social_buttons">
+        
+            <a target="_blank" href="http://twitter.com/#!/Cnx_Derbyshire">
+            
+                <img src="../images/twitter.png" width="50" height="50" border="0" alt="Find us on Twitter" />
+            
+            </a>
+            
+            <a target="_blank" href="http://www.facebook.com/pages/Connexions-Derbyshire/248928971802767">
+            
+                <img src="../images/facebook.png" width="50" height="50" border="0" alt="Find us on Facebook" />
+            
+            </a>
+        
+        </div>
+    </div>
+</div>
+<script type="text/javascript">var bannertime = 5000;banner_init(); var divtime = 4000;div_init();</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5119136-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

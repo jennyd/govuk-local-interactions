@@ -1,0 +1,607 @@
+
+
+
+  
+  
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Results | Your Circle</title>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<meta name="robots" content="index, follow" />
+	
+	<meta name="description" content="This website is designed to help you find information and advice about the wide range of services and support for Adults and Older People available in Gloucestershire." />
+	<meta name="keywords" content="Adult Social Care, Gloucestershire" />
+	<meta name="Author" content="Open Objects Ltd, www.openobjects.com" />
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="includes/images/client/favicon.ico" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="includes/css/style.css" media="screen,projection" />
+	<link rel="stylesheet" type="text/css" href="includes/css/print.css" media="print" />
+	<link id="darkonlight" rel="stylesheet" href="includes/css/darkonlight.css" media="screen,projection" type="text/css" title="Dark Text on Light Background" />
+	<link id="lightondark" rel="alternate stylesheet" href="includes/css/lightondark.css" media="screen,projection" type="text/css" title="Light Text on Dark Background" />
+	
+	<!--[if lt IE 8]> <link rel="stylesheet" type="text/css" media="all" href="includes/css/ie6.css"/><![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="includes/css/yourcircle.css" media="screen,projection" />
+	<link rel="stylesheet" type="text/css" href="includes/css/jquery-ui-1.8.6.custom.css" media="screen,projection" />
+	
+	<!-- JavaScript -->
+	
+	<script type="text/javascript" src="includes/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="includes/js/jquery.cookies.js"></script>
+	<script type="text/javascript" src="includes/js/common.js"></script>
+  	<script type="text/javascript" src="includes/js/jquery.tooltip.min.js"></script>
+	<script type="text/javascript" src="includes/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="includes/js/jquery-ui-1.8.6.custom.min.js"></script>
+	
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.categorylist a').tooltip({
+				// split on the " - " string
+				showBody: " - ",
+				showURL: false,
+				fade: 250,
+				delay: 0
+			});
+			$('#resetbutton').tooltip({
+				showURL: false,
+				fade: 250,
+				delay: 0
+			});
+			
+			
+			if($.cookie('TEXT_SIZE')) {
+				$('body').addClass($.cookie('TEXT_SIZE'));
+			}
+			$('.resizer a').click(function() {
+				var textSize = $(this).parent().attr('class');
+				$('body').removeClass('small medium large contrast').addClass(textSize);
+				$.cookie('TEXT_SIZE',textSize, { path: '/', expires: 10000 });
+				return false;
+			});
+		});
+	</script>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-10559214-11']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+	<!--[if IE 6]><script type="text/javascript" src="includes/js/jquery.pngFix.js"></script>
+	<script type="text/javascript"> 
+		$(document).ready(function(){ 
+			$(document).pngFix();
+		}); 
+	</script>
+	<![endif]-->
+	
+</head>
+
+<body id="results" class="results red">
+    <div class="page_wrapper">
+      <p id="skip"><a href="#contentanchor">Skip to content</a></p>
+	  
+      <div id="header">
+        <div id="homelink"><a href="home.page" title="Home">Home</a></div>
+		
+		<ul class="resizer">
+			<li class="small"><a href="#" title="Set the font size to normal">A</a></li>
+			<li class="medium"><a href="#" title="Increase the font size">A</a></li>
+			<li class="large"><a href="#" title="Double the font size">A</a></li>
+			<li class="contrast"><a href="#" title="Set font contrast">A</a></li>
+		</ul>
+		
+		<a title="NHS Gloucestershire" target="_blank" href="http://www.nhsglos.nhs.uk/"><img class="partners" src="includes/images/client/nhsgloucestershire.gif" alt="NHS Gloucestershire"/></a>
+		<a title="Gloucestershire County Council" target="_blank" href="http://www.gloucestershire.gov.uk/"><img class="partners" src="includes/images/client/gcc.gif" alt="Gloucestershire County Council"/></a>
+
+		<ul id="navigation">
+          <li class="smallspot1"><a href="home.page" title="Home">Home</a></li>
+		  <li class="smallspot2"><a href="addentry.page" title="Add Entry">Add Entry</a></li>
+          <li class="smallspot3"><a href="help.page" title="How to use this website">How To Use This Website</a></li>
+		  <!--<li class="smallspot4"><a href="feedback.page" title="Feedback Form">Feedback Form</a></li>-->
+		  <li class="smallspot4"><a href="about.page" title="About Your Circle">About Your Circle</a></li>
+          <li class="smallspot2"><a href="category.page?category=4" title="Contact">Contact</a></li>
+		  <li class="smallspot3"><a href="accessibility.page" title="Accessibility Options">Accessibility Options</a></li>
+			
+			
+								
+				
+				
+					<li class="smallspot5">Not logged in - <a href="login.page">Your Account</a></li>
+						
+			
+			
+			
+		</ul>
+
+      </div>
+      <div id="content">
+	  
+	  <div id="lhs">
+		<ul class="categorylist">
+			<li><a title="Help at Home - Information and ideas to help you maintain your independence" href="category.page?category=1&amp;sortfield=facet_category__rating__1" id="helpathome">Help at Home</a></li>
+			<li><a title="Things to Do - Social and leisure activities available locally" href="category.page?category=2&amp;sortfield=facet_category__rating__2" id="thingstodo">Things to Do</a></li>
+			<li><a title="Somewhere to Live - Information on the right home for your needs" href="category.page?category=3&amp;sortfield=facet_category__rating__3" id="somewheretolive">Somewhere to Live</a></li>
+			<li><a title="Travel - Travel &amp; Transport" href="category.page?category=5&amp;sortfield=facet_category__rating__5" id="traveltransport">Travel &amp; Transport</a></li>
+			<li><a title="Keeping Well - Information and ideas to help you stay fit and healthy" href="category.page?category=6&amp;sortfield=facet_category__rating__6" id="keepingwell">Keeping Well</a></li>
+			<li><a title="Money Matters - Information about the cost of care and financial help that might be available" href="category.page?category=7&amp;sortfield=facet_category__rating__7" id="moneymatters">Money Matters</a></li>
+			<li><a title="Hearing and Sight - " href="category.page?category=13&amp;sortfield=facet_category__rating__13" id="hearingandsight">Hearing and Sight</a></li>
+			<li><a title="Carers - Information and support specifically for carers" href="category.page?category=9&amp;sortfield=facet_category__rating__9" id="carers">Carers</a></li>
+			<li><a title="Keeping Safe - " href="category.page?category=11&amp;sortfield=facet_category__rating__11" id="keepingsafe">Keeping Safe</a></li>
+			<li><a title="Working and Learning - Information and ideas on what's available" href="category.page?category=8&amp;sortfield=facet_category__rating__8" id="workingandlearning">Working and Learning</a></li>
+			<li><a title="About Social Care - " href="category.page?category=10&amp;sortfield=facet_category__rating__10" id="aboutsocialcare">About Social Care</a></li>
+			<li><a title="More Help &amp; Advice - Extra help to find the right solution for your needs" href="category.page?category=4&amp;sortfield=facet_category__rating__4" id="morehelpandadvice">More Help &amp; Advice</a></li>
+			<li><a title="Tools for organisations - " href="category.page?category=12&amp;sortfield=facet_category__rating__12" id="toolsfororganisations">Tools for organisations</a></li>
+		</ul>
+		
+	  </div>
+	    <a name="contentanchor"></a>
+		
+		<div id="flash"></div>
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+  <div class="content_main">
+
+	
+	
+  
+	
+	
+  
+	<div class="resultsfilters">	
+		<div class="selectedFacets">
+		<label>Filtered by:</label>
+			<div>
+			
+				
+				
+					<strong>No filters selected</strong><br/>(use the section on the right to select filters)
+				
+			
+			</div>
+		</div>
+		
+		<p class="sortby"><label>Sorted by:</label> <span>Relevance</span>&nbsp;|&nbsp;<a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;amp;loc=&amp;amp;category=&amp;amp;sortfield=title&amp;amp;sorttype=field" title="Title">Title</a>
+</p>
+
+		
+			
+		
+		
+		<p class="filter-links">
+			<a class="newsearch" href="results.page">Clear filters</a>&nbsp;|&nbsp;
+			<a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;slaction=ADD&amp;itemid=h3-lO6WHwriF2jE$&amp;itemid=sGdK1RMP25BOvoQ$&amp;itemid=nMefWe2VCw3PWyk$&amp;itemid=mND9KV4OVvN-yhs$&amp;itemid=r8w2NDm1Z9HhJsw$&amp;itemid=iYDXW0TdWsIdAYw$&amp;itemid=gA4djf20YVR_zmc$&amp;itemid=nOQFdsuv1OV4FGE$&amp;itemid=piOB1yOzL6tYSOo$&amp;itemid=sA9p7r2DcYbkFfY$" title="Add all to shortlist" class="shortlist-link shortlist-addall">Add all to shortlist</a>&nbsp;|&nbsp;
+			<a class="help" href="help.page">Help with searching</a>
+		</p>
+
+	</div>
+	
+	
+	<p class="helplink">Didn't find what you want, try narrowing your search using the categories on the right.<br/>
+	For more help on how to search <a href="help.page" title="Help with searching">see our help page</a>.</p>
+
+    
+      <div class="onehit" id="oY-u6lTkO00">
+        <h3><a href="view.page?record=oY-u6lTkO00">Chinese Elderly Group - Gloucestershire Chinese Community Group</a></h3>
+		
+		
+        <p title="Rated 0 out of 5 stars by users"
+          class="rating star-0">
+          User Rating: 0 out of 5 stars
+        </p>
+        
+        <p>
+			
+				
+				<p class="description">Club for elderly and disabled.&nbsp; Meets every Monday, Tuesday and Wednesday at Hatherley Road Day Centre.&nbsp; Transport can be provided.</p>
+			
+		</p>
+        <dl>
+          
+        </dl>
+        <a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;slaction=ADD&amp;itemid=h3-lO6WHwriF2jE$" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a>
+		
+		
+      </div>
+    
+      <div class="onehit" id="X03CdH71DBE">
+        <h3><a href="view.page?record=X03CdH71DBE">Gloucestershire Chinese Resource Centre - Elderly Group</a></h3>
+		
+		
+        <p title="Rated 0 out of 5 stars by users"
+          class="rating star-0">
+          User Rating: 0 out of 5 stars
+        </p>
+        
+        <p>
+			
+				
+				<p class="description">The elders activities group runs on Mondays from 10:30am to 4:30pm and offers a social and stimulating environment for all who attends. Mah-jong and various craft activities are available through<a href="view.page?record=X03CdH71DBE" title="Show More">&nbsp;More&#8230;</a></p>
+			
+		</p>
+        <dl>
+          
+        </dl>
+        <a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;slaction=ADD&amp;itemid=sGdK1RMP25BOvoQ$" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a>
+		
+		
+      </div>
+    
+      <div class="onehit" id="tH9E3iedmw0">
+        <h3><a href="view.page?record=tH9E3iedmw0">Minchinhampton Centre for the Elderly Ltd.</a></h3>
+		
+		
+        <p title="Rated 0 out of 5 stars by users"
+          class="rating star-0">
+          User Rating: 0 out of 5 stars
+        </p>
+        
+        <p>
+			
+				
+				<p class="description">As a local charity, Minchinhampton Centre for the Elderly at Horsfall House is a registered Care Home offering general and dementia nursing care, including respite. The purpose-built accommodation comprises forty-four<a href="view.page?record=tH9E3iedmw0" title="Show More">&nbsp;More&#8230;</a></p>
+			
+		</p>
+        <dl>
+          
+			
+			<dt>Website:</dt>
+			<dd>
+				<a href="http://www.horsfallhouse.co.uk" target="_blank">
+					
+						http://www.horsfallhouse.co.uk
+						
+					
+				</a>
+			</dd>
+          
+        </dl>
+        <a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;slaction=ADD&amp;itemid=nMefWe2VCw3PWyk$" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a>
+		
+		
+      </div>
+    
+      <div class="onehit" id="p67kUAmDhvM">
+        <h3><a href="view.page?record=p67kUAmDhvM">Wotton-under-Edge Day Centre</a></h3>
+		
+		
+        <p title="Rated 0 out of 5 stars by users"
+          class="rating star-0">
+          User Rating: 0 out of 5 stars
+        </p>
+        
+        <p>
+			
+				
+				<p class="description">Wotton-under-Edge Day Centre meets at the Civic Centre on Thursdays from 10:00am until 1:45pm. Refreshments and a lunch are served during the day. Members meet for a chat and numerous<a href="view.page?record=p67kUAmDhvM" title="Show More">&nbsp;More&#8230;</a></p>
+			
+		</p>
+        <dl>
+          
+        </dl>
+        <a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;slaction=ADD&amp;itemid=mND9KV4OVvN-yhs$" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a>
+		
+		
+      </div>
+    
+      <div class="onehit" id="GPqpJtx2Fos">
+        <h3><a href="view.page?record=GPqpJtx2Fos">Chipping Campden Day Centre</a></h3>
+		
+		
+        <p title="Rated 0 out of 5 stars by users"
+          class="rating star-0">
+          User Rating: 0 out of 5 stars
+        </p>
+        
+        <p>
+			
+				
+				<p class="description">They welcome any elderly person who feels the need of company; it is not necessary to be physically disabled or housebound. They are willing to take in new members from<a href="view.page?record=GPqpJtx2Fos" title="Show More">&nbsp;More&#8230;</a></p>
+			
+		</p>
+        <dl>
+          
+        </dl>
+        <a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;slaction=ADD&amp;itemid=r8w2NDm1Z9HhJsw$" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a>
+		
+		
+      </div>
+    
+      <div class="onehit" id="aFpKMbMFpcs">
+        <h3><a href="view.page?record=aFpKMbMFpcs">Age UK Gloucestershire: Engage (Springbank Centre)</a></h3>
+		
+		
+        <p title="Rated 0 out of 5 stars by users"
+          class="rating star-0">
+          User Rating: 0 out of 5 stars
+        </p>
+        
+        <p>
+			
+				
+				<p class="description">Engage offers Day Care with a difference for older people living in Gloucestershire and runs at the GL3 Community Hub in Churchdown, Gloucester and the Springbank Centre in Cheltenham. A<a href="view.page?record=aFpKMbMFpcs" title="Show More">&nbsp;More&#8230;</a></p>
+			
+		</p>
+        <dl>
+          
+			
+			<dt>Website:</dt>
+			<dd>
+				<a href="http://www.ageuk.org.uk/gloucestershire" target="_blank">
+					
+						http://www.ageuk.org.uk/gloucestershire
+						
+					
+				</a>
+			</dd>
+          
+        </dl>
+        <a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;slaction=ADD&amp;itemid=iYDXW0TdWsIdAYw$" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a>
+		
+		
+      </div>
+    
+      <div class="onehit" id="hUDrG03wzqA">
+        <h3><a href="view.page?record=hUDrG03wzqA">Three Ashes Day Care Services</a></h3>
+		
+		
+        <p title="Rated 0 out of 5 stars by users"
+          class="rating star-0">
+          User Rating: 0 out of 5 stars
+        </p>
+        
+        <p>
+			
+				
+				<p class="description">Three Ashes Care Home welcome day centre visitors to join them for lunch, fun activities and companionship. You may wish to take part in some of their varied activities such<a href="view.page?record=hUDrG03wzqA" title="Show More">&nbsp;More&#8230;</a></p>
+			
+		</p>
+        <dl>
+          
+			
+			<dt>Website:</dt>
+			<dd>
+				<a href="http://www.threeashescare.co.uk" target="_blank">
+					
+						http://www.threeashescare.co.uk
+						
+					
+				</a>
+			</dd>
+          
+        </dl>
+        <a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;slaction=ADD&amp;itemid=gA4djf20YVR_zmc$" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a>
+		
+		
+      </div>
+    
+      <div class="onehit" id="tkKpR_1NPrk">
+        <h3><a href="view.page?record=tkKpR_1NPrk">Dursley and District Old Peoples Welfare Committee</a></h3>
+		
+		
+        <p title="Rated 0 out of 5 stars by users"
+          class="rating star-0">
+          User Rating: 0 out of 5 stars
+        </p>
+        
+        <p>
+			
+				
+				<p class="description">Social. Committee meets every three months. Organises day centre and general welfare for the elderly. Tea Coffe etc biscuits, toast etc sold. Centre works like a Pop-in</p>
+			
+		</p>
+        <dl>
+          
+        </dl>
+        <a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;slaction=ADD&amp;itemid=nOQFdsuv1OV4FGE$" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a>
+		
+		
+      </div>
+    
+      <div class="onehit" id="NrwrAogy7c0">
+        <h3><a href="view.page?record=NrwrAogy7c0">Bledington Care Committee</a></h3>
+		
+		
+        <p title="Rated 0 out of 5 stars by users"
+          class="rating star-0">
+          User Rating: 0 out of 5 stars
+        </p>
+        
+        <p>
+			
+				
+				<p class="description">The Bledington Care Committee provides a voluntary car service which takes mainly elderly and disabled people, but also people who have no means of transport, living in Bledington to surrounding<a href="view.page?record=NrwrAogy7c0" title="Show More">&nbsp;More&#8230;</a></p>
+			
+		</p>
+        <dl>
+          
+        </dl>
+        <a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;slaction=ADD&amp;itemid=piOB1yOzL6tYSOo$" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a>
+		
+		
+      </div>
+    
+      <div class="onehit" id="XX6U8Z8Sdy8">
+        <h3><a href="view.page?record=XX6U8Z8Sdy8">Dean Healthcare Southwest</a></h3>
+		
+		
+        <p title="Rated 0 out of 5 stars by users"
+          class="rating star-0">
+          User Rating: 0 out of 5 stars
+        </p>
+        
+        <p>
+			
+				
+				<p class="description">Dean Healthcare is a specialist agency that provides services to vulnerable people to enable them to remain independent in their own home. Supporting the elderly, people with learning and physical<a href="view.page?record=XX6U8Z8Sdy8" title="Show More">&nbsp;More&#8230;</a></p>
+			
+		</p>
+        <dl>
+          
+			
+			<dt>Website:</dt>
+			<dd>
+				<a href="http://www.deanhealthcare.co.uk" target="_blank">
+					
+						http://www.deanhealthcare.co.uk
+						
+					
+				</a>
+			</dd>
+          
+        </dl>
+        <a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;slaction=ADD&amp;itemid=sA9p7r2DcYbkFfY$" title="Add to shortlist" class="shortlist-link shortlist-add">Add to shortlist</a>
+		
+		
+      </div>
+    
+
+    <ul class="pagination"><li><span class="first-page-off">&laquo; First</span></li>
+<li><span class="previous-page-off">&lsaquo; Previous</span></li>
+<li><span class="page-selected">1</span></li><li><a class="page" href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;sr=10&amp;nh=10">2</a></li><li><a class="next-page" href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;sr=10&amp;nh=10" title="Next Page">Next &rsaquo;</a></li>
+<li><a class="last-page" href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;sr=10&amp;nh=10" title="Last Page">Last &raquo;</a></li>
+</ul>
+  </div>
+  <div class="content_sec">
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	<form action="results.page" method="get" id="pageForm">
+	<ul>
+	  <li>
+		<label for="qt">Search for <a title="Help with keyword searching" href="help.page#keyword">?</a>:</label>
+		<input type="text" id="qt" name="qt" value="day centres elderly" />
+	  </li>
+	  <p>Search from the homepage to return information from the whole of Your Circle.</p>
+	  <li>
+		<label for="loc">location <a title="Help with location searching" href="help.page#placename">?</a>:</label>
+		<input type="text" id="loc" name="loc" value="" />
+	  </li>
+	  <li>
+		<button id="searchbutton" type="submit" value="search">Search</button>
+		
+			<button id="resetbutton" type="reset" title="Clear any category, keyword or location you may have selected and show all results" value="reset" onclick="window.location.href='results.page'">Reset</button>
+			<a id="reset-help" href="help.page#reset-help" title="Help with reset button">?</a>
+				
+	  </li>
+	</ul>
+	<input type="hidden" name="category" value="" />
+	</form>
+	
+	<button id="shortlistbutton" type="reset" title="" value="Your Shortlist" onclick="window.location.href='shortlist.page'">Your Shortlist</button>
+
+    <div class="searchfacets">
+      <h5>Click here to narrow your search:</h5>
+      <div class="facet"><span class="facettitle">Group support focus</span><ul class="nullcats"><li><a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;supporting=6" title="Physical disability">Physical disability</a> <span>(1)</span></li></ul></div>
+
+      
+	  
+      <div class="facet"><span class="facettitle">Age range</span><ul class="nullcats"><li><a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;services=9" title="Older people">Older people</a> <span>(2)</span></li><li><a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;services=8" title="Retired">Retired</a> <span>(1)</span></li><li><a href="/kb5/gloucs/yourcircle/results.action?qt=day+centres+elderly&amp;loc=&amp;category=&amp;services=7" title="50+">50+</a> <span>(1)</span></li></ul></div>
+
+      
+    </div>
+  </div>
+</div>
+  
+  
+
+		
+	  	<div class="results red-lhs-image">&nbsp;</div>
+
+		<p id="address1">
+			Gloucestershire<br/>
+			County Council<br/>
+			Shire Hall<br/>
+			Westgate Street<br/>
+			Gloucester<br/>
+			Gloucestershire GL1 2TG
+		</p>
+		<p id="address2">
+			T: 01452 426868<br/>
+			E: <a href="mailto:yourcircle@gloucestershire.gov.uk" title="email yourcircle@gloucestershire.gov.uk">yourcircle@<br/>gloucestershire.gov.uk</a><br/>
+			www.yourcircle.org.uk
+		</p>
+		
+      </div>
+      <div id="footer">
+	  <img src="includes/images/client/footer.gif" alt="T:01452 426868 / E:yourcircle@gloucestershire.gov.uk" id="contactimg" />
+        <ul>
+          <li class="leftspace"><a href="disclaimer.page" title="Disclaimer">Disclaimer</a></li>
+		  <li class="leftspace rightspace"><a href="http://ww3.gloucestershire.gov.uk/Complaints/" title="Comments Form" target="_blank">Compliments &amp; Complaints</a></li>
+          <li class="leftspace rightspace"><a href="partners.page" title="Partners">Partners</a></li>
+        </ul>
+      </div>
+    </div>
+  
+  
+</body>
+</html>

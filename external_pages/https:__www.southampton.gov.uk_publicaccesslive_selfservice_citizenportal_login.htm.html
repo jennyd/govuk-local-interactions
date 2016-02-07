@@ -1,0 +1,706 @@
+
+
+
+
+
+
+
+
+	
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+
+	
+	
+	<title>Sign In</title>
+	
+	
+	<meta name="viewport" content="user-scalable=yes,
+width=device-width,
+minimum-scale=1,
+maximum-scale=2">
+<meta name="viewport" content="user-scalable=yes,
+width=device-width,
+minimum-scale=1,
+maximum-scale=2">
+<meta http-equiv="Content-Type" content="text/html;
+charset=UTF-8">
+	
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="email=no" />
+
+
+
+
+	<!-- 
+	<link rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/ui/jquery-ui-1.8.6.custom.css"/>
+	<link rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/ui/jquery.ui.datepicker.css"/>
+	 -->
+	 
+	<link rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/ui/jquery-ui.min.css"/>
+	<link rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/ui/jquery-ui.structure.min.css"/>
+	<link rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/ui/jquery-ui.theme.min.css"/>
+	
+	 
+
+
+<!-- Cap-Wrapper version of Bootstrap -->
+<link type="text/css" rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/css/bootstrap-for-connect.css"/>
+
+
+	<link type="text/css" rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/css/circle.css"  >
+	<link type="text/css" rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jqPlot/jquery.jqplot.min.css">
+	<link type="text/css" rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/joyride/joyride-2.1.css"/>
+
+
+<!-- Connect overrides for Bootstrap -->
+<link type="text/css" rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/css/connect_bootstrap.min.css"/>
+<link type="text/css" rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/css/connect_bootstrap_extended.css"/>
+<link type="text/css" rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/css/capitastyles.css"/>
+<link type="text/css" rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/css/twitter-styles.css"/>  
+<link type="text/css" rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/css/capitaprint.css" media="print"/>
+
+
+	
+		<script type="text/javascript" src="//use.typekit.net/rhw2hni.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<style>
+.cap-wrapper{font-family: "franklin-gothic-urw",sans-serif;}
+.breadcrumb{background-color:transparent}
+.cap-wrapper .register-account p.login-desc {text-align: left;}
+.cap-wrapper a {
+font-weight:normal;
+}
+.cap-wrapper .formelement label {
+font-weight:normal;
+}
+.cap-wrapper ul#con-progress-bar li {
+width:inherit;
+}
+.cap-wrapper input.btn-primary, .cap-wrapper a.btn-primary, .cap-wrapper .btn-primary {
+  background-color: green;
+  background-image: none;
+  background-repeat: repeat-x;
+}
+.cap-wrapper input.btn-primary:hover, .cap-wrapper a.btn-primary-small:hover, .cap-wrapper .btn-primary:hover {
+  background-image: none;
+  box-shadow: none;
+  text-decoration: none;
+}
+.cap-wrapper .ks-icon, .cap-wrapper .con-dropdown .nav_profile_heading span, .cap-wrapper .con-dropdown ul li.profile-child a span{color:#DC0050}
+.cap-wrapper .con-dropdown li:hover a, .cap-wrapper .con-dropdown-services li:hover a {
+  color: #DC0050;
+}
+.cap-wrapper ul.cap-tab-index li.cap-selected a, .cap-wrapper ul.cap-five-tabs-index li.cap-selected a, .cap-wrapper h3.cap-important, .cap-wrapper #cap-infobar div h2, .cap-wrapper h1, .cap-wrapper #cap-other-srv h2 {color:#DC0050}
+.cap-wrapper ul.cap-five-tabs-index li, .cap-wrapper table{
+  border-color:#DC0050
+}
+.cap-wrapper ul.cap-tab-index li, .cap-wrapper ul.cap-five-tabs-index li {
+  background-color:#DC0050;
+}
+.cap-wrapper .register-account .register-button, #modal-content .cap-wrapper .tour-button, .cap-wrapper .service-box-inner .register-button, .cap-wrapper #myservice_modules .register-button {
+    background-color: green;
+    background-image: linear-gradient(to bottom, #62c462, green);
+}
+.cap-wrapper div.detail-type {
+  border-bottom: 1px solid #dc0050;
+  color: #dc0050;
+  font-size: 1em;
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+}
+.cap-wrapper .ss-prev.cycle-prev span, .cap-wrapper .ss-next.cycle-next span {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  color: #dc0050;
+  font-size: 32px;
+  height: 32px;
+  opacity: 0.4;
+  width: 32px;
+}
+.cap-wrapper .key-services.ks-uptop ul li a {
+  background-repeat: no-repeat;
+  color: #dc0050;
+  display: table;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  vertical-align: middle;
+  width: auto;
+}
+.cap-wrapper span.toptasks-icon, .cap-wrapper span.icon{
+  color: #00193C;
+}
+
+.cap-wrapper .con-dropdown .nav_profile_heading span, .cap-wrapper .con-dropdown-services .nav_profile_heading, .map-button-icon, .cap-wrapper .con-dropdown ul li.profile-child a span, .cap-wrapper .con-dropdown-services ul li.profile-child a span, .cap-wrapper .ks-icon, .capita-icons {
+  color: #dc0050;
+}
+
+.cap-wrapper h1{
+  color: #002E6F;
+}
+
+.cap-wrapper .register-account p.login-desc {
+  font-style: normal;
+
+}
+.cap-wrapper ul#con-progress-bar.dd-progress li.widthUpTo5Steps {
+  width: 140px;
+}
+.cap-wrapper ul#con-progress-bar.dd-progress li.pb-first-step {
+  width: 140px;
+}
+.cap-wrapper ul#con-progress-bar li {
+  font-size: 0.8em;
+}
+.cap-wrapper .continue-without-registering{margin-top:2em}
+.cap-wrapper .continue-without-registering a{
+	background-color: #00193C;
+	background-image: linear-gradient(to bottom, #3E597F, #00193C);
+	background-repeat: repeat-x;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	color: #ffffff;
+	font-size: 16px !important;
+	margin: 0;
+	padding: 15px 25px !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	border-radius: 3px;
+	
+}
+.cap-wrapper .continue-without-registering a:hover{
+	background-image: linear-gradient(to bottom, #546C8E, #3E597F);
+	text-decoration:none;
+}
+.cap-wrapper .register-account p.login-desc{text-align:center;margin:0}
+</style>
+
+
+
+
+<!-- Housing Online 2014 Style Sheets -->
+<link type="text/css" rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/css/housingonline.css"/>
+
+	
+	<link type="text/css" rel="stylesheet" href="https://www.southampton.gov.uk/publicaccesslive/webresources/css/capitacustomised.css"/>
+
+
+<!-- Stylesheet for mobile browsers -->
+
+
+<!-- Connect and Serve Style Sheets -->
+
+
+<!--[if lt IE 9]>
+	<script src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/html5shiv.js"></script>
+	<script src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/respond.min.js"></script>
+<![endif]-->
+
+
+	<script type="text/javascript" src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery.min.js"></script>
+	<!--	The $connect variable releases the reference to a $ sign so that the $ reference can be used by a customer's jQuery library
+			without any conflict. For the library used by Google maps, there is another variable declared - $map. As it is declared straight after 
+			the Google jQuery library is loaded, it is used by the Google maps. 	
+	 -->
+	<script type="text/javascript">
+		var $connect = jQuery.noConflict();
+	</script>
+	
+	
+	<script type="text/javascript" src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/twitterfeed.js"></script>
+	<script type="text/javascript" src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/housing.js"></script>
+
+	
+	
+	<!--
+	<script type='text/javascript' src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/ui/jquery.ui.core.min.js"></script>
+	<script type='text/javascript' src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/ui/jquery.ui.widget.min.js"></script>
+	<script type='text/javascript' src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/ui/jquery.ui.datepicker.min.js"></script>
+	-->
+	<script type='text/javascript' src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/ui/jquery-ui.min.js"></script>
+	
+	<script src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/bootstrap.min.js"></script>
+	
+	<!-- Carousal swipe plugin -->
+	<script type="text/javascript" src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery.mobile.custom.min.js"></script>
+	
+	<script type="text/javascript" src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/cap-scripts.js"></script>
+	
+	<script type="text/javascript" src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/bootstrap-accessibility.js"></script>
+
+	<!-- MyService cycle widget -->
+	<script type='text/javascript' src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/cycle/cycle2.min.js"></script>
+	
+	<!-- Joyride -->
+	<script type='text/javascript' src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/joyride/jquery.joyride-2.1.js"></script>
+	
+	<!-- Superfish -->
+	<script type='text/javascript' src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/superfish/jquery.hoverIntent.minified.js"></script>
+	<script type='text/javascript' src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/superfish/superfish.min.js"></script>
+	
+	<!-- Modernizr -->
+	<script type='text/javascript' src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/modernizr/modernizr.mq.js"></script>
+	
+	<script type="text/javascript">
+		var appendThirdPartyLinkId = "";
+		if(!validateString(appendThirdPartyLinkId)){
+			appendThirdPartyLinkId = "";
+		}
+		var appendChatGroupId = "";
+		if(!validateString(appendChatGroupId)){
+			appendChatGroupId = "";
+		}		
+		var connectURL = "https://www.southampton.gov.uk/publicaccesslive";
+	</script>
+	<script type="text/javascript"  id="capita-myservices" src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/widget/connectwidget.js" >
+
+	</script>
+	
+	<!--  for dashboard and carousel widget -->
+	<script type="text/javascript" src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/respond.min.js"></script>
+	
+	<!-- Watermark -->
+	<script type='text/javascript' src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/watermark/jquery.watermark-1.1.1.min.js"></script>
+	
+	<!-- Lightbox pop up DIVs -->
+	<script type='text/javascript' src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jquery/plugins/lightboxme/jquery.lightbox_me.js"></script>
+	
+	<!-- Totals gage -->
+	<script src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/progress-circle.js"></script>
+	
+	<!-- jqPlot reports -->
+	<script type="text/javascript" src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jqPlot/jquery.jqplot.min.js"></script>
+	<script type="text/javascript" src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jqPlot/jqplot.barRenderer.min.js"></script>
+	<script type="text/javascript" src="https://www.southampton.gov.uk/publicaccesslive/webresources/javascript/jqPlot/jqplot.categoryAxisRenderer.min.js"></script>
+	
+	
+
+
+
+
+
+
+	
+
+	
+	
+</head>
+
+
+	
+	
+		<body>
+	
+
+
+
+	
+				<header class="header-main">
+			<div class="container">
+				<div class="site-logo"><a href="http://www.southampton.gov.uk">Southampton City Council<img src="//newsitetest.southampton.gov.uk/img/logo-whiteout.png" alt=""></a></div>
+				
+			</div>
+		</header>
+		<main class="main-content" id="main-content">
+			<div class="top-strip">
+				<div class="container">
+					<div class="breadcrumb">
+						<ol>
+							<li><a href="http://www.southampton.gov.uk">Home</a></li>
+							<li><a href="https://www.southampton.gov.uk/publicaccesslive/selfservice/dashboard.htm">My Southampton</a></li>
+							
+						</ol>
+					</div>
+					<header>
+						<h1>My Southampton</h1>
+					</header>
+				</div>
+			</div>
+			<div class="wrapper wrap-content">
+				<div class="container">
+					<div class="page-body">
+	
+
+
+
+			
+
+
+	<div class="cap-wrapper">
+	
+		<div class="container-fluid">
+			
+			
+			
+						
+				
+
+
+
+
+
+
+
+
+
+<div id="headerlinks_headerlinks" class="headerlinks">
+	
+		
+		
+			
+				
+				
+				
+				<!-- 				<p>My profile widget turned on</p> -->
+				
+				
+				
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar--connect">
+	
+		
+		
+			
+			
+				
+				
+			
+		
+		
+
+
+
+
+
+
+
+<div class="container-fluid simulate-xs">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-connect3" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+		</button>
+		<div id="cap-mobile-header">
+			<a class="navbar-brand visible-xs-block" href="#"> <img src="https://www.southampton.gov.uk/publicaccesslive/webresources/images/mobilelogo.png" alt="Header image" /> <!-- <img class="logo" src="https://presales.capita-software.co.uk/publicaccesslive/webresources/images/logo-inc_text-v2.png" alt="Manvers Borough Council" title="Manvers Borough Council"> <img alt="Brand" src="..."> -->
+			</a>
+		</div>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-connect3">
+		<ul class="nav navbar-nav nav-pills" id="capita-myprofile-widget-container-mobile">
+			
+				
+					
+						
+
+
+
+
+
+
+
+
+	
+		
+		
+			<li role="presentation" class=""><a href="https://www.southampton.gov.uk/publicaccesslive/selfservice/dashboard.htm">Dashboard<span class="icon-arrow-right17 pull-right visible-xs-block"></span></a></li>
+		
+	
+
+
+					
+				
+			
+			
+				
+					
+						
+							
+
+
+
+
+
+
+
+						
+						<noscript>
+							
+							
+								
+
+
+
+
+
+
+
+							
+						</noscript>
+					
+					
+				
+				
+					
+
+
+
+
+
+
+
+
+
+
+				
+			
+		</ul>
+		<ul class="nav navbar-nav navbar-right hidden-xs" id="capita-myprofile-widget-container">
+			
+				
+					
+						
+							
+
+
+
+
+
+
+
+						
+						<noscript>
+							
+							
+								
+
+
+
+
+
+
+
+							
+						</noscript>
+					
+					
+				
+				
+					
+
+
+
+
+
+
+
+
+
+
+				
+			
+		</ul>
+	</div>
+</div>
+	
+	
+	
+</nav>
+				
+			
+		
+	
+</div>
+	
+			
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="citizenportal_login" class="citizenportal">
+
+	
+	
+	
+
+	
+	
+	
+	<div class="row">
+		
+		
+		
+		
+		
+		
+			
+				<div class="col-xs-12 col-sm-5" id="sign-in-account">
+					<div class="panel-body">
+						
+						
+						<!-- Display notifications conditional on where link from -->
+						
+							
+							
+						
+						
+						<h2>
+							Sign In
+						</h2>
+						
+						<p class="visible-xs"><a href="#register-account">Register an account below</a></p>
+						
+						<form id="login_form" action="login.htm?action=login" method="post">
+						
+							<div class="form-group">
+								<label for="username-input">Username</label>
+								<input id="username-input" name="username" class="form-control" type="text" value="" size="35" autocomplete="off"/>
+								
+							</div>
+							
+								<div class="form-group">
+									<label for="password-input">Password</label>
+									<input id="password-input" name="password" class="form-control" type="password" value="" autocomplete="off"/>
+									
+								</div>
+							
+							
+							<div class="form-group">
+								<input type="submit" value="Sign in" name="_login" class="btn btn-primary" id="submitBtnSignIn" />
+							</div>
+							
+							<hr>
+							
+						<input type="hidden" name="ABCToken" value="138e5789-6440-4154-a94a-f9ed3c46fd03" />
+</form>
+						
+						<div class="form-group small">
+							<a href="forgottenusername.htm?redirect_url=">I forgot my username</a>
+						</div>
+						<div class="form-group small">
+							<a href="forgottenpassword.htm?redirect_url=">I forgot my password</a>
+						</div>
+						
+						<hr>
+						
+						<!-- Social Login -->
+						
+						
+						
+						
+						
+						
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-sm-6 col-sm-offset-1">
+					<div class="form-connect" id="register-account">
+						
+						
+
+						<h1 class="h2">
+							Register
+						</h1>
+
+						<p>
+							Register an account in a few simple steps
+						</p>
+						
+						
+						
+						
+						
+							<!-- Button to register  -->
+							<div class="submitBtnReg">
+								<form id="registration_form" action="login.htm?action=register" method="post">
+									<input class="btn btn-primary btn-lg" type="submit" value="Register Now" name="_register" />
+									
+								<input type="hidden" name="ABCToken" value="138e5789-6440-4154-a94a-f9ed3c46fd03" />
+</form>
+							</div>
+							
+							<hr>
+							
+							<h3>Reasons to register an account</h3>
+							
+							<p>
+								Registering an account will enable you to access information or make payments for local authority services such as:
+							</p>
+
+							<ul>
+								
+							</ul>
+						
+						
+					</div>
+				</div>
+
+		
+		
+	</div>
+</div>
+
+		</div>
+	</div>
+	
+
+
+	
+		</div>
+					<div class="sidebar__content">
+						<ul class="item-list item-list__rich">
+							<li><strong>Within this section</strong></li>
+							<li>
+							  <a href="/atoz/">A-Z of Services</a>
+							</li>
+							<li>
+							  <a href="/my-southampton/got-a-question.aspx">Got a question?</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>			
+			</div>
+		</main>
+		<footer class="footer-main">
+			<div class="container">
+				<nav class="footer-links">
+					<p><a href="http://www.southampton.gov.uk/atoz/">A-Z</a>, <a href="http://www.southampton.gov.uk/news/">News & Events</a>, <a href="http://www.southampton.gov.uk/contact-us/accessibility.aspx">Accessibility</a>, <a href="http://www.southampton.gov.uk/contact-us/">Contact Us</a>, <a href="http://www.southampton.gov.uk/jobs/">Jobs</a></p>
+					<p class="social"><a class="icon-twitter" href="https://twitter.com/southamptoncc">Twitter</a>
+					<a class="icon-facebook" href="https://www.facebook.com/SotonCC/">Facebook</a>
+					<a class="icon-youtube" href="https://www.youtube.com/SouthamptonNews">Youtube</a></p>
+				</nav>
+				<a href="https://public.govdelivery.com/accounts/UKSOUTHAMPTON/subscriber/new"><img src="//www.southampton.gov.uk/img/stay-connected.png" alt="" class="stay-connected"></a>
+				<p class="address">Southampton City Council,<br />Civic Centre,<br />Southampton,<br />SO14 7LY</p>
+			</div>
+		</footer>
+
+	
+
+
+</body>
+</html>

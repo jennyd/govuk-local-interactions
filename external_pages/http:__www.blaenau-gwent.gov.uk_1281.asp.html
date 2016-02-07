@@ -1,0 +1,512 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- PageID 1281 - published by Open Text Web Solutions 10 - 10.0.1.51 - 29448 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="Title" content="Blaenau Gwent County Borough Council - Dog Warden Service" />
+    <meta name="Description" content="Blaenau Gwent County Borough Council" />
+    <meta name="Author" content="Blaenau Gwent County Borough Council" />
+    <meta name="DC.Title" content="Blaenau Gwent County Borough Council: - Dog Warden Service" />
+    <meta name="DC.Coverage" content="Blaenau Gwent, South Wales, UK" lang="ENG" xml:lang="ENG" />
+    <meta name="DC.Identifier" scheme="URI" content="/1281.asp" />
+    <meta name="DC.Date.Created" scheme="W3CDTF" content="18/08/2006" />
+    <meta name="DC.Date.Issued" scheme="W3CDTF" content="01/09/2014 15:03:54" />
+    <meta name="DC.Date.Modified" scheme="W3CDTF" content="28 March 2014" />
+    <meta name="DC.Format" content="text/html" />
+    <meta name="DC.Creator" content="Blaenau Gwent County Borough Council: Joanne Welsh" />
+    <meta name="DC.publisher" content="Blaenau Gwent County Borough Council, Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB, Tel (01495) 350555, http://www.blaenau-gwent.gov.uk" />
+    <meta name="DC.Contributor" content="Resources" />
+    <meta name="DC.Language" scheme="ISO 639-2" content="ENG" />
+    <meta name="DC.Subject" scheme="IPSV" content="Dog warden schemes; Stray animals" />
+    <meta name="DC.Rights" content="http://www.blaenau-gwent.gov.uk/copyright" />
+    <meta name="eGMS.accessibility" content="Double-A" scheme="WCAG" />
+    <meta name="eGMS.subject.category.identifier" scheme="LNGL" content="2695;2591" />
+    <meta name="eGMS.subject.category" scheme="IPSV" content="Dog warden schemes; Stray animals" />
+    <meta name="keywords" content="dog warden, straying dog, lost dog, found dog, dog kennels," /><meta name="robots" content="noindex,nofollow" />
+    <title>
+      Blaenau Gwent County Borough Council - Dog Warden Service
+    </title>
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" src="/scripts/jquery-1.3.2.min.js">
+</script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image1 .desc").show(); //Show Banner
+            $(".main_image1 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb1 ul li:first").addClass('active');
+            $(".image_thumb1 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image1").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image1 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image1 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image1 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb1 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse1").click(function () {
+                $(".main_image1 .block").slideToggle();
+                $("a.collapse1").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image2 .desc").show(); //Show Banner
+            $(".main_image2 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb2 ul li:first").addClass('active');
+            $(".image_thumb2 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image2").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image2 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image2 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image2 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb2 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse2").click(function () {
+                $(".main_image2 .block").slideToggle();
+                $("a.collapse2").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        function f(n) {
+            document.getElementById('body').style.fontSize = n
+        }
+    //]]>
+    </script><!-- IE6 STYLE OVERRIDES --><!--[if lte IE 6]>
+        <link href="" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- IE7 STYLE OVERRIDES -->
+    <!--[if IE 7]>
+           <link href=""  rel="stylesheet" type="text/css" />
+    <![endif]-->
+  </head>
+  <body id="body">
+    <a name="Top" id="Top"></a> <!-- HEADER -->
+     <!-- ************************************** -->
+     <!-- HEADER  (grey bar, white bar, red bar) -->
+     <!-- ************************************** -->
+    <div id="header">
+      <!-- HEADER TOP BAR( grey ) -->
+      <div id="header-toplinks-outer">
+        <div id="header-toplinks-inner">
+          <!-- SEARCH BOX -->
+          <div id="header-search">
+            
+              <form name="kbs" method="get" action="http://search3.openobjects.com/kb5/gwent/search/en/results.page" id="kbs">
+                <input name="qt" class="searchbox" type="text" maxlength="50" value="Search" onfocus="this.value=''" id="query" /> <input class="searchbutton" type="submit" value="" />
+              </form>
+            </form>
+          </div><!-- TOP HEADER LINKS -->
+          <div id="header-toplinks">
+            <ul>
+              <li class="first">
+                 <a href="/CYM/1281.asp" title="Cymraeg" accesskey="l">Cymraeg</a> 
+              </li>
+              <li>
+                <a href="/council/69.asp" title="Accessibility" accesskey="a">Accessibility</a>
+              </li>
+              <li>
+                <a href="/help.asp" title="Help" accesskey="h">Help</a>
+              </li>
+              <li>
+                <a href="/ContactUs.asp" title="Contact Us" accesskey="c">Contact Us</a>
+              </li>
+              <li>
+                <a href="/council/1838.asp" title="News Centre" accesskey="m">News Centre</a>
+              </li>
+              <li>
+                <a href="http://www.blaenau-gwent.gov.uk/19002.asp" title="Cookies" accesskey="v">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- HEADER COUNCIL LOGO ( tag line set in css )-->
+      <div id="header-mast-outer">
+        <!-- Begin Logo -->
+        <div id="logo">
+          <a href="/index.asp"><img src="/images/logo.jpg" alt="Blaenau Gwent County Borough Council - Cyngor Bwrdeisdref Sirol Blaenau Gwent" /></a>
+        </div><!-- End Logo --><!-- Begin Hour -->
+        <div id="hour-ENG"></div><!-- End Hour -->
+        <!-- Begin Tagline -->
+        <div id="tagline"></div><!-- End Tagline -->
+      </div><!-- HEADER BOTTOM BAR ( red ) -->
+      <div id="header-bottomlinks-outer">
+        <div id="header-bottomlinks-inner">
+          <!-- LINKS LIST -->
+          <div id="header-bottomlinks">
+            <ul>
+              <li class="first">
+                <a href="/index.asp" title="Home" accesskey="h">Home</a>
+              </li>
+              <li>
+                <a href="/jobs/262.asp" title="Jobs" accesskey="j">Jobs</a>
+              </li>
+              <li>
+                <a href="/onlineServices/forms.asp" title="Online Forms" accesskey="o">Online Forms</a>
+              </li>
+              <li>
+                <a href="/faqs/faq.asp" title="FAQ's" accesskey="5">FAQ's</a>
+              </li>
+              <li>
+                <a href="/sitemap.asp" title="Sitemap" accesskey="3">Sitemap</a>
+              </li>
+              <li>
+                <a href="/A-Z.asp" title="A-Z" accesskey="z">A-Z</a>
+              </li>
+              <li>
+                <a href="/news/2487.asp" title="News" accesskey="n">News</a>
+              </li>
+              <li>
+                <a href="/whatsOn/6775.asp" title="What's On" accesskey="w">What's On</a>
+              </li>
+            </ul>
+          </div><!-- TEXT SIZE CHOOSER -->
+          <div id="header-textsize">
+            <span>Enlarge Screen Text Here:</span> <span class="small-text"><a href="javascript:f('0.6em');">A</a></span> <span class="medium-text"><a href="javascript:f('0.8em');">A</a></span> <span class="large-text"><a href="javascript:f('1.2em');">A</a></span>
+          </div><!-- CLEAR DIV ( alloew red background to extend with text size ) -->
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div><!-- SPACER ( few pixels light blue spacer ) -->
+    <div id="header-spacer"></div><!-- // HEADER -->
+    <!-- PAGE CONTENT -->
+    <div id="main-content-body-outer">
+      <div id="main-content-valley">
+        <!-- MAIN PAGE CONTENT - WHITE BOX -->
+        <div class="white-box-top"></div>
+        <div class="white-box-body body-content">
+          <div id="left-column">
+            <!-- Begin Online Services -->
+            <div id="online-services">
+              <span>What would you like to do?</span> <a href="/onlineServices/15981.asp" id="payforit" name="payforit">Pay for it</a> <a href="/onlineServices/15980.asp" id="reportit" name="reportit">Report it</a> <a href="/onlineServices/15979.asp" id="requestit" name="requestit">Request it</a> <a href="/onlineServices/15978.asp" id="sayit" name="sayit">Say It</a> <a href="/onlineServices/15982.asp" id="findit" name="findit">Find It</a>
+            </div><!-- LEFT NAVIGATION -->
+            <div class="side-box-container no-border">
+              <h2 class="red-heading">
+                Browse by Service:
+              </h2>
+              <ul class="navigation-list">
+                
+                <li class="level-0">
+                  <a href="/index.asp">Home</a>
+                </li>
+                <li class="level-0 up">
+                  <a href="/community.asp" title="Community &amp; Living">Community &amp; Living</a>
+                </li>
+                <li class="level-1 up">
+                  <a href="/community/108.asp" title="Animal Health &amp; Welfare">Animal Health &amp; Welfare</a>
+                </li>
+              </ul>
+            </div><!-- // LEFT NAVIGATION -->
+          </div><!-- CONTENT MIDDLE COLUMN -->
+          
+            <div id="three-column-middle">
+              
+              <h1 class="green-heading" style="display: ;">
+                Dog Warden Service
+              </h1>
+              <div class="no-border page-content">
+                <p>
+                  Our dog wardens' patrol the borough and respond to complaints about straying dogs.&nbsp; On average we seize 350 stray dogs per year.&nbsp; We have a policy&nbsp;that all dogs that are not claimed by their owners are re-homed through national re-homing centres.&nbsp; We only put to sleep dogs that are seriously ill or injured or cannot be re-homed due to their age or for behavioural reasons.&nbsp; The Authority uses local kennels to keep the dogs prior to re-homing or re-uniting with their owners.
+                </p>
+                <p>
+                  <strong>If you lose a dog:</strong>
+                </p>
+                <p>
+                  Call us on (01495) 357813 and we will register your details and the details of the dog.&nbsp; We will cross match these details with those dogs we have already seized.&nbsp; You should also contact local vets or the Police.&nbsp; It is also important to spread the word in your local area so that there are many sets of eyes looking for your lost dog.
+                </p>
+                <p>
+                  If we have your dog in our possession you will have to pay a fee for its release.&nbsp; The current fees are as follows:
+                </p>
+                <table style="BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-COLLAPSE: collapse; BORDER-TOP: medium none; BORDER-RIGHT: medium none" border="1" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: black 0.75pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: black 0.75pt solid; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          <b>Number of Days in kennel</b>
+                        </p>
+                      </td>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: black 0.75pt solid; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          <b>Fee</b>
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: black 0.75pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          Up to 24 hours after impounding
+                        </p>
+                      </td>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          &pound;80
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: black 0.75pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          2&nbsp;days
+                        </p>
+                      </td>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          &pound;87
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: black 0.75pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          3 days
+                        </p>
+                      </td>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          &pound;94
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: black 0.75pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          4 days
+                        </p>
+                      </td>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          &pound;101
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: black 0.75pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          5 days
+                        </p>
+                      </td>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          &pound;108
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: black 0.75pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          6 days
+                        </p>
+                      </td>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          &pound;115
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: black 0.75pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          7 days
+                        </p>
+                      </td>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: medium none; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; WIDTH: 223.65pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" width="298">
+                        <p>
+                          &pound;122
+                        </p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="BORDER-BOTTOM: black 0.75pt solid; BORDER-LEFT: black 0.75pt solid; PADDING-BOTTOM: 0cm; PADDING-LEFT: 5.4pt; PADDING-RIGHT: 5.4pt; BORDER-TOP: medium none; BORDER-RIGHT: black 0.75pt solid; PADDING-TOP: 0cm" valign="top" colspan="2">
+                        <p>
+                          &nbsp;&nbsp;<br />
+                          Vet Treatment &ndash; Any additional charges incurred as a result of treatment is to be added onto the above charges<br />
+                          &nbsp;&nbsp;
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p>
+                  From time to time we can identify the owners of stray dogs if the animal has been micro-chipped or is wearing i.d tags. In these cases, we will seize the dog as normal and take it to our kennels. We will then attempt to contact the owner to inform them about the seizure. In these cases, the release fee will be discounted by 50% if the dog is collected within the first 24 hours, otherwise normal charges will apply.<br />
+                  &nbsp;<br />
+                  You will need to pay the release fee at our offices.&nbsp; We will then give you a release form to take to the kennels to claim your dog.<br />
+                  &nbsp;<br />
+                  <strong>If you find a dog<br /></strong><br />
+                  Phone us with as much information as possible.&nbsp; We will the either collect the dog if you have it in your possession or attempt to locate and catch the dog should it still be straying. Outside of office hours, between 6:00am and 12 midnight the Authority has a reception centre where finders of stray dogs can take animals they have found. Please telephone our contact centre on 01495 311556 and the address and details of this centre will be provided.&nbsp;&nbsp;<br />
+                  &nbsp;<br />
+                  <strong>Unwanted Dogs<br /></strong> &nbsp;<br />
+                  Under certain circumstances we will take an unwanted pet from you.&nbsp; We will charge you a fee of &pound;40 to cover our kenneling and other costs.&nbsp; Please contact us for more information.&nbsp; This service is only available to residents of Blaenau Gwent.&nbsp; We may ask you to prove that the dog is yours and for proof of address.<br />
+                </p>
+                <div class="Top" style="display: none;">
+                  <a href="/1281.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" width="8" height="8" alt="Return to top of page" /></a>
+                  <div style="clear:both;"></div>
+                </div>
+              </div>
+              <div class="box-container text-box">
+                <h1 class="green-heading">
+                  Contact Information
+                </h1>
+                <p>
+                  For further information please contact
+                </p>
+                <p>
+                  (01495) 357813
+                </p>
+                <p>
+                  Outside Office Hours between 6:00am and 12 midnight&nbsp; - Please call (01495) 311556
+                </p>
+                <p>
+                  To pay a release fee you will need to visit us at
+                </p>
+                <p>
+                  Environmental Health Section<br />
+                  Blaenau Gwent Council County Borough Council<br />
+                  Anvil Court<br />
+                  Church Street<br />
+                  Abertillery<br />
+                  NP13 1DB<br />
+                </p>
+                <p>
+                  Email : <a href='mailto:&#101;&#110;&#118;&#105;&#114;&#111;&#110;&#109;&#101;&#110;&#116;&#97;&#108;&#46;&#104;&#101;&#97;&#108;&#116;&#104;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#111;&#118;&#46;&#117;&#107;'>&#101;&#110;&#118;&#105;&#114;&#111;&#110;&#109;&#101;&#110;&#116;&#97;&#108;&#46;&#104;&#101;&#97;&#108;&#116;&#104;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#111;&#118;&#46;&#117;&#107;</a>
+                </p>
+              </div>
+              <div style="clear: both;"></div>
+              <div class="Top" style="display: none;">
+                <a href="/1281.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div>
+              <div class="box-container text-box">
+                <h1 class="green-heading">
+                  Links
+                </h1>
+                <blockquote>
+                  Dogs Trust&nbsp; <span style="FONT-SIZE: 12pt; COLOR: blue; FONT-FAMILY: Arial; mso-bidi-font-size: 10.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-GB; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><a href="http://www.dogstrust.org.uk/">www.dogstrust.org.uk/</a></span>
+                </blockquote>
+              </div>
+              <div class="Top" style="display: none;">
+                <a href="/1281.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div><!-- // CONTENT MIDDLE COLUMN -->
+              
+            </div><!-- RIGHT COLUMN -->
+            <div id="right-column">
+              <span class="hide"><a name="rightcol" id="rightcol">Right Content Area</a></span>  <!-- UTILITY LINKS RIGHT -->
+              <div class="side-box-container">
+                <form name="PageFeedback" method="post" action="/5431.asp" target="_self" id="PageFeedback">
+                  <input type="hidden" name="PageID" value="1281" /> <input type="hidden" name="Headline" value="Dog Warden Service" /> <input type="hidden" name="PageURL" value="/1281.asp" />
+                  <ul class="utility-list">
+                    <li class="printer-friendly">
+                      <a href="JavaScript:window.print()">Print friendly<br />
+                      version</a>
+                    </li>
+                    <li class="page-feedback">
+                      <a href="JavaScript:document.PageFeedback.submit();">Feedback<br />
+                      on this page</a>
+                    </li>
+                  </ul>
+                </form>
+                <div class="clear"></div>
+              </div><!-- //UTILITY LINKS RIGHT -->
+              
+            </div><!-- //RIGHT COLUMN --><!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div><!-- FOOTER -->
+          <!-- PAGE FOOTER - WHITE BOX -->
+          <div class="white-box-top"></div>
+          <div class="white-box-body footer-content">
+            <!-- start of footer content -->
+            <a href="/about/5639.asp"><img src="/images/find-us.jpg" alt="Find Us" /></a> <a href="/council/5413.asp"><img src="/images/service-buddy.jpg" alt="Children's Complaints Service" /></a> <a href="/leisure/3865.asp"><img src="/images/Life.jpg" alt="life. Membership" /></a> <a href="/5515.asp"><img src="/images/connect-to-bg.jpg" alt="C2BG" /></a> <!-- <a href="http://www.direct.gov.uk"><img src="/images/directgov.jpg" alt="Direct Gov" /></a> -->
+             <a href="https://www.gov.uk/"><img src="/images/directgov.jpg" alt="GOV UK" /></a> <!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div>
+          <div id="footer-contact">
+            <address>
+              Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB Tel: 01495 311556 E-mail:&nbsp;<a href="mailto:info@blaenau-gwent.gov.uk">info@blaenau-gwent.gov.uk</a>
+            </address>
+          </div><!--RDExecute=ASP-->
+          <script type="text/javascript">
+//<![CDATA[
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-17447558-1', 'blaenau-gwent.gov.uk');
+          ga('send', 'pageview');
+          //]]>
+          </script> <script type="text/javascript">
+//<![CDATA[
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-17447558-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+          //]]>
+          </script> <!-- // FOOTER -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

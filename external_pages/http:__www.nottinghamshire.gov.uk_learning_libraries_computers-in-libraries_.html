@@ -1,0 +1,751 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="We have computers which can be booked by members of the public in all our libraries">
+    <meta name="author" content="Nottinghamshire County Council">
+	<meta property="og:description" content="We have computers which can be booked by members of the public in all our libraries" />
+	<meta property="og:title" content="Computers in libraries" />
+	<meta property="og:url" content="http://www.nottinghamshire.gov.uk/whats-on/libraries/computers-in-libraries/"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Nottinghamshire County Council"/>
+    <meta property="og:image" content="http://www.nottinghamshire.gov.uk/media/111049/social-sharing-graphic.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="&#64;NottsCC" />
+	<meta name="twitter:creator" content="&#64;NottsCC" />
+    <link rel="icon" href="/favicon.ico">
+    <title>Computers in libraries | Nottinghamshire County Council</title>
+
+    <link href="/css/grid.min.css" rel="stylesheet">
+    <link href="/css/notts-col-fonts.css" rel="stylesheet">
+    <link href="/css/template.css" rel="stylesheet">
+    <link href="/css/template-additions.css" rel="stylesheet">
+    <link href="/css/NCC-print.css" rel="stylesheet">
+    <link href="/css/jquery.bxslider.css" rel="stylesheet">
+    <link href="/css/bootstrap-table.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:400,700,300" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,300,700,100" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/scripts/jquery.fastLiveFilter.js"></script>
+    <script src="/scripts/modernizer.js"></script>
+    <script src="/scripts/jquery.bxslider.min.js"></script>
+    <script src="/scripts/jquery.fitvids.js"></script>
+    <script src="/scripts/jquery.cookie.js"></script>
+    <script src="/scripts/jquery.popupoverlay.js"></script>
+    <script src="/scripts/moment.min.js"></script>
+    <script src="/scripts/emailme.js"></script>
+		
+	
+    
+	
+		
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--Please add some classes to the body tag, specifically, the template name, and the page name-->
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MHTNPH"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+(function (w, d, s, l, i) {
+w[l] = w[l] || []; w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+}); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-MHTNPH');</script>
+    <!-- End Google Tag Manager -->
+
+    <div id="popup_overlay">
+
+        <h2>Sign up for free email updates from Nottinghamshire County Council</h2>
+
+        <img src="/css/images/emailmelogo-trans.png" alt="Email me logo" class="logo" />
+
+        <p>With <strong>email me</strong> you can receive regular updates about council services straight into your inbox including:</p>
+        <ul>
+            <li>Winter weather and gritting</li>
+            <li>Job vacancies</li>
+            <li>What's On and events</li>
+        </ul>
+
+        <!-- Add an optional button to close the popup -->
+        <a href="#" target="_blank" class="beta_emailme">Sign up</a>
+        <button class="beta_info_close"><i class="fa fa-times"></i> Close and don't show me this again</button>
+
+    </div>
+
+    <div class="top-message">
+        We've made some changes to our website. You may find some areas still in development. <a href="/global-content/digital-design-manual/project-phases/live/" title="Information about our new website site">Read more about this work.</a>
+    </div>
+
+
+    <!-- Begin Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9 col-sm-5">
+                    <a class="header-home-link" href="/" title="Nottinghamshire County Council Homepage">
+                        <img src="/css/images/ncclogo.png" alt="Nottinghamshire County Councl" class="logo">
+                    </a>
+                </div>
+                <div class="col-xs-3 col-sm-7">
+                    <!--<div class="mobile-controls visible-xs-block">
+                        <i class="fa fa-bars"></i> Menu
+                    </div>-->
+                    <div class="header-controls hidden-xs">
+                        <!-- <span class="alerts"><i class="fa fa-exclamation-triangle"></i> Alerts</span> -->
+                        <span class="search">
+                            <!-- EZ Search -->
+                            
+                            <!-- / EZ Search -->
+                            <!-- Semaphore -->
+                            <form action="http://ssearch.nottinghamshire.gov.uk/scripts/semaphoreserver.exe" role="search" method="get" id="search">
+                                    <input type="text" class="search_input" name="QUERY00" id="header-search" placeholder="Search for something...">
+                                    <input type="hidden" name="SAVEDB" value="nottingham" />
+                                    <input type="hidden" name="SAVESTYPE" value="simple" />
+                                    <input type="hidden" name="CMD" value="search.run" />
+                                    <input type="hidden" name="B" value="THTML" />
+                                    <input type="hidden" name="QUERY07" value="MUSCOPYCGI:QUERY00" />
+                                    <input type="hidden" name="PROP07" value="t=p,z=on,p=I9,s=none" />
+                                    <button type="submit" class="search_submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </form>
+                            <!-- /Semaphore -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- /Header -->
+    <!-- Content Body -->
+    <!-- Content Body -->
+    	
+
+
+
+<section id="page_body">
+		<div class="breadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">				    
+					<ul>
+							<li>
+								<a href="http://www.nottinghamshire.gov.uk/" title="Home" class="inactive">
+									Home <i class="fa fa-caret-right"></i>
+								</a>
+							</li>
+							<li>
+								<a href="http://www.nottinghamshire.gov.uk/whats-on/" title="What&#39;s on" class="inactive">
+									What&#39;s on <i class="fa fa-caret-right"></i>
+								</a>
+							</li>
+							<li>
+								<a href="http://www.nottinghamshire.gov.uk/whats-on/libraries/" title="Libraries" class="inactive">
+									Libraries <i class="fa fa-caret-right"></i>
+								</a>
+							</li>
+						<li><a href="http://www.nottinghamshire.gov.uk/whats-on/libraries/computers-in-libraries/" title="" class="active">Computers in libraries</a></li>
+					</ul>													
+				</div>
+			</div>
+		</div>		
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">	
+				<div class="content">
+					<div class="row">
+						<div class="col-md-8">						
+							<h1>Computers in libraries</h1>
+							<h2><span>Book online</span></h2>
+<div class="ContentEditor">
+<p>You can <a href="http://newlinc.nottscc.gov.uk/" title="Book PC online" class="oLinkExternal">book sessions on library PCs online</a>. </p>
+<p>You will need both<strong> <br /> </strong></p>
+<ul>
+<li>library card number (capital D, then first eight numbers without spaces eg D12345678)</li>
+<li>PIN code.</li>
+</ul>
+</div>
+<h2><span>What's available </span></h2>
+<p>We have computers which can be booked by members of the public in all Nottinghamshire public libraries.</p>
+<p>In larger libraries there may be separate computers for children under 14 and adults</p>
+<p>From library computers you can access the internet including web based email such as Yahoo and Outlook. Computers also have word processing and desktop publishing software installed.</p>
+<p>The Council has subscriptions to a number of <a href="http://www.nottinghamshire.gov.uk/learning/libraries/computers-in-libraries/subscriptions/" title="Subscriptions" class="oLinkInternal">online reference resources</a> which can be accessed by people using computers in libraries. These include ancestry and archive services.</p>
+<p>WiFi is available in selected libraries.</p>
+<h3>Accessibility</h3>
+<ul>
+<li>all PCs have <a href="http://www.bbc.co.uk/accessibility/guides/magnify/computer/win/xp/index.shtml" title="Screen magnification software" class="oLinkExternal">screen magnification software</a></li>
+<li>other adaptive hardware is available. Please ask a member of staff</li>
+<li>some libraries have height adjusted desks.</li>
+</ul>
+<h2><span>Booking</span></h2>
+<p>Most PCs are bookable up to three weeks in advance. In larger libraries we also have 30 minute drop-in machines.</p>
+<p>When you book, you can select the library, the date, the time and the length of your session. You will need your library card number and your PIN code.</p>
+<p>Sessions can be booked: <a href="http://newlinc.nottscc.gov.uk/login.aspx?ReturnUrl=%2fDefault.aspx"> <br /></a></p>
+<ul>
+<li><a href="http://newlinc.nottscc.gov.uk/login.aspx?ReturnUrl=%2fDefault.aspx">Online</a><ol>
+<li>enter library card number with no spaces, first eight numbers only</li>
+<li>enter PIN code</li>
+<li>go to Reservations button and select the library you need</li>
+<li>if there is an arrow to the right of the library name select Adult or Junior PC.</li>
+<li>follow on-screen instructions.</li>
+</ol></li>
+<li>from a library computer</li>
+<li>on a self-service kiosk in one of the following libraries
+<ul>
+<li><a href="http://www.nottinghamshire.gov.uk/whats-on/libraries/find-a-library/arnold-library/" title="Arnold Library" class="oLinkInternal">Arnold </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64386" title="Find a Library" class="oLinkInternal">Beeston </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64419" title="Find a Library" class="oLinkInternal">Mansfield</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64422" title="Find a Library" class="oLinkInternal">Newark </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64427" title="Find a Library" class="oLinkInternal">Retford </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64434" title="Find a Library" class="oLinkInternal">Sutton-in-Ashfield </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64439" title="Find a Library" class="oLinkInternal">West Bridgford </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64441" title="Find a Library" class="oLinkInternal">Worksop</a></li>
+</ul>
+</li>
+<li>via the <a href="#" title="Contact the council">Customer Service Centre</a> telephone: 0300 500 80 80</li>
+<li>in person by asking a member of staff.</li>
+</ul>
+<p>If you do not have a PIN, or have forgotten yours, please contact <a href="mailto:systems.library@nottscc.gov.uk">systems.library@nottscc.gov.uk</a>.</p>
+<h2><span>Time</span></h2>
+<p>You can book sessions of 30 or 60 minutes depending on availability.</p>
+<p>Each day you can use a PC for up to two hours. Maximum three sessions a day.</p>
+<p>At our largest libraries you can use three hours in a day. Ask staff for details.</p>
+<h2><span>Using your own laptop</span></h2>
+<p>You should be able to bring your own laptop and power it in the library. Please ask a member of staff for a circuit breaker before plugging in.</p>
+<p>Unfortunately laptops can not be plugged into the internet via a data cable but we do have WiFi at several of our libraries.</p>
+<h3>WiFi<a id="WiFi"></a>  </h3>
+<p>WiFi is available in some of our larger libraries:</p>
+<ul>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64383" title="Find a Library" class="oLinkInternal">Arnold </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64388" title="Find a Library" class="oLinkInternal">Bingham</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64386" title="Find a Library" class="oLinkInternal">Beeston </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64408" title="Find a Library" class="oLinkInternal">Hucknall</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64414" title="Find a Library" class="oLinkInternal">Kirkby</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64419" title="Find a Library" class="oLinkInternal">Mansfield</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64418" title="Find a Library" class="oLinkInternal">Mansfield Woodhouse</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64422" title="Find a Library" class="oLinkInternal">Newark </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64427" title="Find a Library" class="oLinkInternal">Retford</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64431" title="Find a Library" class="oLinkInternal">Southwell</a> </li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64432" title="Find a Library" class="oLinkInternal">Stapleford</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64434" title="Find a Library" class="oLinkInternal">Sutton-in-Ashfield </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64439" title="Find a Library" class="oLinkInternal">West Bridgford </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64441" title="Find a Library" class="oLinkInternal">Worksop</a></li>
+</ul>
+<p>You will need a library card to access this service. Unfortunately we do not have WiFi printing capability.</p>
+<h2><span>Saving and downloading information</span></h2>
+<p>You can save your information to a CD (CD-R or CD-RW) or to a USB flash drive. Some of our PCs still have floppy disc drives but these are being phased out.</p>
+<p>Anything saved on the computers is wiped between sessions for your security.</p>
+<h3>Memory sticks for sale</h3>
+<p>USB Memory sticks (1GB) are available at £5 each</p>
+<h2><span>Printing</span></h2>
+<p>All libraries have their PCs linked to at least one colour printer. Printers are set up to automatically print in black and white and double sided. But you can choose other options.</p>
+<p>Unfortunately it is not possible to print over WiFi. </p>
+<p><a href="http://www.nottinghamshire.gov.uk/whats-on/libraries/charges-and-concessions/" title="Charges and concessions" class="oLinkInternal">Charges for printing</a> <span style="line-height: 1.7em;"> </span></p>
+<h2><span>Scanners</span></h2>
+<p>Scanners are available at the libraries below. Please ask when booking as scanners may need to be used on specific machines.</p>
+<ul>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64383" title="Find a Library" class="oLinkInternal">Arnold </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64386" title="Find a Library" class="oLinkInternal">Beeston</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64388" title="Find a Library" class="oLinkInternal">Bingham </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64389" title="Find a Library" class="oLinkInternal">Bircotes </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64394" title="Find a Library" class="oLinkInternal">Carlton in Lindrick </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64398" title="Find a Library" class="oLinkInternal">Cotgrave</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64401" title="Find a Library" class="oLinkInternal">Eastwood </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64408" title="Find a Library" class="oLinkInternal">Hucknall </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64414" title="Find a Library" class="oLinkInternal">Kirkby-in-Ashfield </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64419" title="Find a Library" class="oLinkInternal">Mansfield</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64418" title="Find a Library" class="oLinkInternal">Mansfield Woodhouse </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64422" title="Find a Library" class="oLinkInternal">Newark </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64423" title="Find a Library" class="oLinkInternal">Ollerton</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64427" title="Find a Library" class="oLinkInternal">Retford</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64429" title="Find a Library" class="oLinkInternal">Selston</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64431" title="Find a Library" class="oLinkInternal">Southwell</a> </li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64432" title="Find a Library" class="oLinkInternal">Stapleford</a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64434" title="Find a Library" class="oLinkInternal">Sutton-in-Ashfield </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64439" title="Find a Library" class="oLinkInternal">West Bridgford </a></li>
+<li><a href="http://www.nottinghamshire.gov.uk/learning/libraries/find-a-library/?entryid36=64441" title="Find a Library" class="oLinkInternal">Worksop</a></li>
+</ul>	
+							
+   
+
+							
+							<div class="socialshare">
+								<h4>Share this page?</h4>
+								<!-- AddToAny BEGIN -->
+								<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+								<a class="a2a_button_facebook"></a>
+								<a class="a2a_button_twitter"></a>
+								<a class="a2a_button_print"></a>
+								<a class="a2a_button_email"></a>
+								</div>
+								<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+								<!-- AddToAny END -->			
+							</div>	
+						</div>
+						<div class="col-md-4">						
+							<aside id="sidebar">
+							    <h2>Read it</h2>
+    <ul class="inthissection">
+                    <li><a href="http://www.nottinghamshire.gov.uk/whats-on/libraries/computer-skills/">Computer skills and internet training</a></li>
+                    <li><a href="http://www.nottinghamshire.gov.uk/whats-on/libraries/find-a-library/">Find a library</a></li>
+            </ul>
+						
+													
+							</aside>
+						</div>												
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
+
+<section id="additional">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-lg-4">	
+				
+	<div class="news">
+		<h2>News and updates</h2>
+		<ul>
+			
+			
+					<li>
+						<a href="http://www.nottinghamshire.gov.uk/latest-news/were-in-the-stonewall-top-100/" title="We&#39;re in the Stonewall Top 100">
+						<div class="row no-gutters">
+							<div class="col-xs-3 col-lg-4">	
+									<img src="/media/111562/stonewall-top-100-celebration.jpg?anchor=center&amp;mode=crop&amp;width=112&amp;height=75&amp;rnd=130976916880000000" alt="We&#39;re in the Stonewall Top 100" />
+							</div>
+							<div class="col-xs-9 col-lg-8">		
+								<span>We&#39;re in the Stonewall Top 100</span>
+							</div>							
+						</div>	
+						</a>	
+					</li>
+					<li>
+						<a href="http://www.nottinghamshire.gov.uk/latest-news/gritters-out-over-a-snowy-weekend/" title="Gritters out over a snowy weekend">
+						<div class="row no-gutters">
+							<div class="col-xs-3 col-lg-4">	
+									<img src="/media/111517/gritterforweb.jpg?anchor=center&amp;mode=crop&amp;width=112&amp;height=75&amp;rnd=130976915340000000" alt="Gritters out over a snowy weekend" />
+							</div>
+							<div class="col-xs-9 col-lg-8">		
+								<span>Gritters out over a snowy weekend</span>
+							</div>							
+						</div>	
+						</a>	
+					</li>
+					<li>
+						<a href="http://www.nottinghamshire.gov.uk/latest-news/you-can-help-others-to-get-online-in-2016/" title="You can help others to get online in 2016">
+						<div class="row no-gutters">
+							<div class="col-xs-3 col-lg-4">	
+									<img src="/media/111483/digital-champion-joe-bonser.jpg?anchor=center&amp;mode=crop&amp;width=112&amp;height=75&amp;rnd=130976915340000000" alt="You can help others to get online in 2016" />
+							</div>
+							<div class="col-xs-9 col-lg-8">		
+								<span>You can help others to get online in 2016</span>
+							</div>							
+						</div>	
+						</a>	
+					</li>
+					<li>
+						<a href="http://www.nottinghamshire.gov.uk/latest-news/have-your-say-on-proposed-social-care-company/" title="Have your say on proposed social care company">
+						<div class="row no-gutters">
+							<div class="col-xs-3 col-lg-4">	
+									<img src="/media/111352/0004__wfp09825.jpg?crop=0,0,0,0.035096747632770792&amp;cropmode=percentage&amp;width=112&amp;height=75&amp;rnd=130976915340000000" alt="Have your say on proposed social care company" />
+							</div>
+							<div class="col-xs-9 col-lg-8">		
+								<span>Have your say on proposed social care company</span>
+							</div>							
+						</div>	
+						</a>	
+					</li>
+		</ul>
+		<a href="/latest-news/" title="More News and updates" class="more-button-inline">
+			<i class="fa fa-newspaper-o fa-fw"></i> See all our news and updates
+		</a>
+	</div>			
+
+			</div>
+		    <div class="col-md-6 col-lg-4">
+				
+				<div class="events">
+		            <h2>What's on in Nottinghamshire</h2>
+		            <ul>
+<li>
+
+
+        <a href="/events/777/fragments-in-time">
+            <div class="row">
+                <div class="col-xs-2 col-lg-3">
+                    <div class="datebox datebox-multiple">
+                        <div class="day">
+                            18-31
+                        </div>
+                        <div class="month">
+                            Jan/Dec
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-lg-9">
+                    <div class="description">
+                        <div class="title">
+                            Fragments in Time
+                        </div>
+                        <div class="time">
+                            Time: 10am
+                        </div>
+                        <div class="location">
+                            Rufford Abbey Country Park
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li>
+
+
+        <a href="/events/897/exhibition-by-st-anns-allotment-heritage-group">
+            <div class="row">
+                <div class="col-xs-2 col-lg-3">
+                    <div class="datebox datebox-multiple">
+                        <div class="day">
+                            01-27
+                        </div>
+                        <div class="month">
+                            Feb
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-lg-9">
+                    <div class="description">
+                        <div class="title">
+                            Exhibition by St Anns Allotment Heritage Group
+                        </div>
+                        <div class="time">
+                            Time: 9am
+                        </div>
+                        <div class="location">
+                            Arnold Library
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li>
+
+
+        <a href="/events/200/exhibition-in-synthesis">
+            <div class="row">
+                <div class="col-xs-2 col-lg-3">
+                    <div class="datebox datebox-multiple">
+                        <div class="day">
+                            02-28
+                        </div>
+                        <div class="month">
+                            Feb
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-lg-9">
+                    <div class="description">
+                        <div class="title">
+                            Exhibition: In Synthesis
+                        </div>
+                        <div class="time">
+                            Time: 9am
+                        </div>
+                        <div class="location">
+                            Mansfield Central Library
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li>
+
+
+        <a href="/events/936/pop-up-museum-display-on-mansfield-brewery">
+            <div class="row">
+                <div class="col-xs-2 col-lg-3">
+                    <div class="datebox datebox-multiple">
+                        <div class="day">
+                            04-03
+                        </div>
+                        <div class="month">
+                            Feb/Mar
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-lg-9">
+                    <div class="description">
+                        <div class="title">
+                            Pop Up Museum Display On Mansfield Brewery
+                        </div>
+                        <div class="time">
+                            Time: 9.30am
+                        </div>
+                        <div class="location">
+                            Mansfield Woodhouse Library
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>		            </ul>
+		            <a href="/Events" title="Events" class="more-button-inline">
+		                <i class="fa fa-calendar fa-fw"></i> See all events in Nottinghamshire
+		            </a>
+		        </div>
+				
+		       
+
+		    </div>
+			<div class="col-md-12 col-lg-4">
+				<div class="social">
+					<h2>Talk to us</h2>
+					<div class="row no-gutters">
+						<div class="col-md-6 col-lg-12">
+							<div class="twitter_stream">
+							<!-- LW 04/02/16 - New Twitter Widget without replies -->
+<a class="twitter-timeline" href="https://twitter.com/NottsCC" width="400" data-widget-id="695172620250144768" data-height="480px" data-tweet-limit="3" data-chrome="noborders nofooter">Tweets by @NottsCC</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>				
+							</div>
+							<a href="https://twitter.com/intent/tweet?screen_name=NottsCC" title="Tweet to Nottinghamshire County Council" class="more-button-inline hidden-lg">
+								<i class="fa fa-twitter fa-fw"></i> Tweet us
+							</a>							
+						</div>
+						<div class="col-md-6 col-lg-12">
+							<div class="contact_details hidden-lg">
+								<h3>Contact the Council</h3>
+								<p>Find and talk with us online or contact us directly by online form, email, telephone, post or in person at one of our offices.</p>
+								<span class="contact_facebook"><a href="https://www.facebook.com/nottinghamshire" target="_blank" title="Nottinghamshire County Council on Facebook"><i class="fa fa-facebook-official fa-fw"></i> Facebook.com/Nottinghamshire</a></span>
+								<span class="contact_twitter"><a href="https://www.twitter.com/nottscc" target="_blank" title="Nottinghamshire County Council on Twitter"><i class="fa fa-twitter fa-fw"></i> Twitter.com/NottsCC</a></span>
+								<span class="contact_online"><a href="/contact-and-complaints/contact-us/contact-us" title="Contact Nottinghamshire County Council using our online form"><i class="fa fa-desktop fa-fw"></i> Use our online form</a></span>
+								<span class="contact_person"><a href="/contact-and-complaints/contact-us/visit-us" title="Contact Nottinghamshire County Council at one of our Customer Service Points"><i class="fa fa-building-o fa-fw"></i> Visit us in person</a></span>
+								<span class="contact_phone"><i class="fa fa-phone fa-fw"></i> Call us on 0300 500 80 80</span>
+								<!-- <a href="/the-council-and-democracy/contact-the-council/" title="More ways to contact the Council" class="more-button-inline">
+									More ways to contact the Council
+								</a>-->							
+							</div>
+						</div>							
+					</div>
+					<a href="https://twitter.com/intent/tweet?screen_name=NottsCC" title="Tweet to Nottinghamshire County Council" class="more-button-bottom hidden-md">
+						<i class="fa fa-twitter fa-fw"></i> Tweet us
+					</a>					
+				</div>	
+                <!--  end of social div tag -->			
+			</div>
+							
+							
+		</div>
+		<div class="row">
+			<div class="col-lg-12">	
+				<div class="contact_details_large hidden-md">
+					<h3>Contact the Council</h3>
+					<p>Find and talk with us online or contact us directly by online form, email, telephone, post or in person at one of our offices.</p>
+					<span class="contact_facebook"><a href="https://www.facebook.com/nottinghamshire" target="_blank" title="Nottinghamshire County Council on Facebook"><i class="fa fa-facebook-official fa-fw"></i> Facebook.com/Nottinghamshire</a></span>
+					<span class="contact_twitter"><a href="https://www.twitter.com/nottscc" target="_blank" title="Nottinghamshire County Council on Twitter"><i class="fa fa-twitter fa-fw"></i> Twitter.com/NottsCC</a></span>
+					<span class="contact_online"><a href="/contact-and-complaints/contact-us/contact-us" title="Contact Nottinghamshire County Council using our online form"><i class="fa fa-desktop fa-fw"></i> Use our online form</a></span>
+					<span class="contact_person"><a href="/contact-and-complaints/contact-us/visit-us" title="Contact Nottinghamshire County Council at one of our Customer Service Points"><i class="fa fa-building-o fa-fw"></i> Visit us in person</a></span>
+					<span class="contact_phone"><i class="fa fa-phone fa-fw"></i> Call us on 0300 500 80 80</span>
+					
+					<!--<a href="/the-council-and-democracy/contact-us/contact-the-council/" title="More News and updates" class="more-button-inline">
+						More ways to contact the Council
+					</a>			-->
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">		
+				<div class="banner">
+					<a class="footer-banner" href="/council-and-democracy/get-involved/budget-consultation-201617" title="Budget Proposal - Have Your Say"><img alt="Budget Proposal Banner" src="http://www.nottinghamshire.gov.uk/media/110901/hp-banner.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
+
+
+
+
+    <!-- /Content Body -->
+    <!-- Footer -->
+    <footer id="global-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Nottinghamshire County Council 2015</span>
+                </div>
+                <div class="col-md-8">
+                    <ul class="footer_nav">
+                        <li>
+                            <a href="http://site.nottinghamshire.gov.uk/living/jobs/workingforthecouncil/staff/olvi/" title="OLVI">
+                                Access Online via the Internet (OLVI)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/global-content/accessibility/" title="Accessibility">
+                                Accessibility
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/global-content/privacy/" title="Privacy">
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/global-content/copyright/" title="Copyright">
+                                Copyright
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/global-content/cookies/" title="Cookies">
+                                How we use Cookies
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/global-content/digital-design-manual/" title="Digital design manual" class="last">
+                                Digital design manual
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+    <!-- Scroll to top script -->
+    <script src="/scripts/jquery.scrollUp.min.js"></script>
+    <script>
+        $(function () {
+            $.scrollUp();
+        });
+    </script>
+    <!-- Sortable table script -->
+    <script src="/scripts/bootstrap.dropdowns.js"></script>
+    <script src="/scripts/sp/bootstrap-table.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function ($) {
+
+            //Check if in 'BETA mode'
+
+            $(function () {
+                $(".toggle-icon").toggleClass("hide");
+                $.cookie('beta-toggle', 'on');
+                if ($.cookie('beta-toggle') == "on") {
+                    $(".toggle-icon").toggleClass("hide");
+                    $(".beta-inactive").toggleClass("toggled");
+                }
+                else {
+
+                }
+            });
+
+
+            $(".toggle-beta").on("click", function () {
+                $(".toggle-icon").toggleClass("hide");
+                $(".beta-inactive").toggleClass("toggled");
+                if ($.cookie('beta-toggle') == "on") {
+                    $.removeCookie("beta-toggle");
+                    $.cookie('beta-toggle', 'off');
+                }
+                else {
+                    $.cookie('beta-toggle', 'on');
+                }
+            });
+
+            $(".close-beta").on("click", function () {
+                $(".beta").toggle();
+            });
+
+            // End of BETA overlay code
+
+            $(".show_more_services").on("click", function () {
+                $(".all-services").toggleClass("show-inline");
+                $(this).toggleClass("button-active");
+                $(".trending_tasks_filter").toggleClass("filter-show");
+                $("#task_filter").toggleClass("filter-input-active");
+                $(".show_more_services_inactive").toggleClass("hide");
+                $(".show_more_services_active").toggleClass("show");
+            });
+
+            $(".show_steps").on("click", function (e) {
+                $(".show_steps_icon").toggleClass("hide");
+                $(".steps").toggle();
+            });
+
+            $(".switcher_browse, .switcher_tasks").on("click", function (e) {
+                e.preventDefault();
+                if ($(this).hasClass("active")) {
+
+                }
+                else {
+                    $(".trending_tasks_box").toggleClass("hide");
+                    $(".browse_box").toggleClass("hide");
+                    $(".switcher_browse, .switcher_tasks").toggleClass("active");
+                }
+            });
+
+            $(".transaction-requirement").on("click", function () {
+                $(this).children(".checked").toggleClass("hide");
+                $(this).children(".unchecked").toggleClass("hide");
+            });
+
+            $(function () {
+                var hash = window.location.hash;
+                if (hash == "#browsehome") {
+                    $(".trending_tasks_box").toggleClass("hide");
+                    $(".browse_box").toggleClass("hide");
+                    $(".switcher_browse, .switcher_tasks").toggleClass("active");
+                }
+            });
+
+            $(function () {
+                $('#task_filter').fastLiveFilter('.trending_tasks');
+            });
+
+            $(".content").fitVids();
+
+        });
+    </script>
+    <!-- Hotjar Tracking Code for www.nottinghamshire.gov.uk -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 78927, hjsv: 5 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <script>
+        // Bootstrap Table code
+        var $table = $('#councillor-table');
+        $(function () {
+        });
+    </script>							
+</body>
+</html>

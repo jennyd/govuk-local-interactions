@@ -1,0 +1,702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Style-Type" content="text/css" /><link href="/WebResource.axd?d=1ABG6gqGWoouXn-dwpmRGaQMiDMUOOzMDjIHqmN5zh19zmVZAPy0x8ZHXSGYp38GkXh58SEQvmJBuOhnQsIYGyo6Msv8K63bMrHzY4OgCvqjyTxiTwpjUIC3UZxbVraE8Vle0q71akhnbg8rPcgg41_YWY81&amp;t=635058696783408359" type="text/css" rel="stylesheet" /><meta http-equiv="Content-Script-Type" content="text/javascript" /><title>
+	Dropped Kerbs Crossover
+</title><link href="../../templates/default/style/style.css" type="text/css" rel="stylesheet" />
+<!--[if IE 6]>
+	<link rel="stylesheet" href="../../templates/default/style/ie6.css" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+	<link rel="stylesheet" href="../../templates/default/style/ie7.css" type="text/css" />
+<![endif]-->
+<link href="../../templates/default/style/print.css" type="text/css" rel="stylesheet" media="print" /><link href="../../templates/default/css/default.css" type="text/css" rel="stylesheet" /><meta name="GENERATOR" content="Immediacy .NET CMS - Licensed To : Auros Limited" /><meta name="keywords" content="dropped kerbs, crossover" /><meta name="description" content="Information about Dropped Kerbs/Crossover" /></head>
+<body>
+<form name="aspnetForm" method="post" action="dropped_kerbs_crossover.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWBAIBD2QWAgIMDxYCHgRocmVmBSN+L3RlbXBsYXRlcy9kZWZhdWx0L2Nzcy9kZWZhdWx0LmNzc2QCAw9kFgQCCQ8WAh4JY3VyUGFnZU5vAgEWCAIBD2QWAmYPFQMMSUxJTkt8ODU1OSx8PEZ1bmVyYWwgU2VydmljZSB0byBiZSBIZWxkIGZvciBDb3VuY2lsIExlYWRlciBSb2dlciBCZWd5IE9CRTxGdW5lcmFsIFNlcnZpY2UgdG8gYmUgSGVsZCBmb3IgQ291bmNpbCBMZWFkZXIgUm9nZXIgQmVneSBPQkVkAgIPZBYCZg8VAwxJTElOS3w4NTU1LHwpQ291bmNpbCBMZWFkZXIgUm9nZXIgQmVneSBoYXMgcGFzc2VkIGF3YXkpQ291bmNpbCBMZWFkZXIgUm9nZXIgQmVneSBoYXMgcGFzc2VkIGF3YXlkAgMPZBYCZg8VAwxJTElOS3w4NTU3LHw+Q29tbWVudCBvbiBwb3NzaWJsZSBjaGFuZ2VzIHRvIHNvY2lhbCBjYXJlIGNoYXJnaW5nIGluIFJ1dGxhbmQ+Q29tbWVudCBvbiBwb3NzaWJsZSBjaGFuZ2VzIHRvIHNvY2lhbCBjYXJlIGNoYXJnaW5nIGluIFJ1dGxhbmRkAgQPZBYCZg8VAwxJTElOS3w4NTUyLHwnTm90aWNlIG9mIEVsZWN0aW9uIGZvciBXaGlzc2VuZGluZSBXYXJkJ05vdGljZSBvZiBFbGVjdGlvbiBmb3IgV2hpc3NlbmRpbmUgV2FyZGQCCg8WAh8BAgEWBgIBD2QWAmYPFQMqaHR0cDovL3d3dy5iYmMuY28udWsvd2VhdGhlci8yNjQxMTI4P2RheT0wKmh0dHA6Ly93d3cuYmJjLmNvLnVrL3dlYXRoZXIvMjY0MTEyOD9kYXk9MG5TdW5kYXk6IExpZ2h0IFJhaW4gU2hvd2VyLCBNYXhpbXVtIFRlbXBlcmF0dXJlOiA3JiMxNzY7QyAoNDUmIzE3NjtGKSBNaW5pbXVtIFRlbXBlcmF0dXJlOiA0JiMxNzY7QyAoMzkmIzE3NjtGKWQCAg9kFgJmDxUDKmh0dHA6Ly93d3cuYmJjLmNvLnVrL3dlYXRoZXIvMjY0MTEyOD9kYXk9MSpodHRwOi8vd3d3LmJiYy5jby51ay93ZWF0aGVyLzI2NDExMjg/ZGF5PTFnTW9uZGF5OiBIZWF2eSBSYWluLCBNYXhpbXVtIFRlbXBlcmF0dXJlOiA3JiMxNzY7QyAoNDUmIzE3NjtGKSBNaW5pbXVtIFRlbXBlcmF0dXJlOiAyJiMxNzY7QyAoMzYmIzE3NjtGKWQCAw9kFgJmDxUDKmh0dHA6Ly93d3cuYmJjLmNvLnVrL3dlYXRoZXIvMjY0MTEyOD9kYXk9MipodHRwOi8vd3d3LmJiYy5jby51ay93ZWF0aGVyLzI2NDExMjg/ZGF5PTJpVHVlc2RheTogTGlnaHQgQ2xvdWQsIE1heGltdW0gVGVtcGVyYXR1cmU6IDYmIzE3NjtDICg0MyYjMTc2O0YpIE1pbmltdW0gVGVtcGVyYXR1cmU6IDImIzE3NjtDICgzNiYjMTc2O0YpZGSygwW3WkglxISOO0iwv4wWdiUnhg==" />
+
+
+<script src="/WebResource.axd?d=CukPLKNoS5iMIPa2qaiO75NFq53POAamgS20TSxHMqBwnh-tV3xBMmFNywxA6Nty3_t-d-dbKKJB2pcvZJrBuZoxCYcbbu-_geeMOG8fp8YOX9llvGJ1svZnHgGvPh-y3ZZFew2&amp;t=635058696779508159" type="text/javascript"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAgKpvbP4AwLm45qtAScbpr3Q7fyfSeDG4iji7DVT5DSQ" />
+
+
+
+<div><a name="top"></a></div>
+<div id="skip"><a href="mainContent">Skip to main content</a></div>
+
+
+<div id="cookieLink">
+
+	
+<H2>Cookies on the website</H2>
+<P>We use cookies to ensure that we give you the best experience on our website. If you continue without changing your settings, we'll assume that you are happy to receive all cookies on the website. However, if you would like to, you can disable cookies in your browser. <a href="/system_pages/utility_links/cookies.aspx">See more about cookies</A></P>
+	
+	<script type="text/javascript">
+	    var cookieURL = '/system_pages/cookiebannerpage.aspx';
+	    var cookieElement = 'mainContent';
+	    var closeText = 'Close this panel'; // Use PageUtil.GetPageTitle if/when installed
+
+	    // Hide if not already toggling a js class
+	    document.getElementById('cookieLink').style.display = 'none';
+	</script>
+
+	<noscript></noscript>
+</div>
+
+<div id="everything" >
+	<div id="header">
+	<div class="inner floatHolder">
+		
+		<h1>
+		<a href="/default.aspx?page=0">
+		
+			<img src="/templates/default/images/h1.jpg" alt="My Rutland" />
+		
+		
+		</a></h1>
+		<div id="logo"><a href="/default.aspx?page=0"><img src="/templates/default/images/logo.jpg" alt="Rutland County Council" /></a></div>
+	</div>		
+	<div class="navWrapper floatHolder">
+		
+	<div id="dropNav">
+		
+				<ul><li class="home"><a title="Home" href="/default.aspx">Home</a></li>
+			<li class="first">
+			<a href="/system_pages/top_navigation/find_council_services.aspx" title="Find Council Services" class="drop">Find Council Services<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_a-z.aspx" title="Search by A-Z" >Search by A-Z</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_most_popular.aspx" title="Search by Most Popular" >Search by Most Popular</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_council_department.aspx" title="Search by Council Department" >Search by Council Department</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_key_life_events.aspx" title="Search by Key Life Events" >Search by Key Life Events</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			<li class="">
+			<a href="/system_pages/top_navigation/do_it_online.aspx" title="Do it Online" class="drop">Do it Online<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="/system_pages/top_navigation/do_it_online/make_a_payment.aspx" title="Make a Payment" >Make a Payment</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/missed_bin_collection.aspx" title="Missed Bin Collection" >Missed Bin Collection</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/pay_parking_fine.aspx" title="Pay Parking Fine" >Pay Parking Fine</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/request_ca_site_permit.aspx" title="Request CA Site Permit" >Request CA Site Permit</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/view_planning_applications.aspx" title="View Planning Applications" >View Planning Applications</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			<li class="">
+			<a href="/system_pages/top_navigation/your_councillor.aspx" title="Your Councillor" >Your Councillor</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us.aspx" title="Contact Us" class="drop">Contact Us<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="/system_pages/top_navigation/contact_us/customer_services.aspx" title="Customer Services" >Customer Services</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/online_contact_form.aspx" title="Online Contact Form" >Online Contact Form</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/visitor_parking.aspx" title="Visitor Parking" >Visitor Parking</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/map_and_directions.aspx" title="Map and Directions" >Map and Directions</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/customer_care_standards.aspx" title="Customer Care Standards" >Customer Care Standards</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			
+				</ul>
+			
+
+		<div id="search">
+			<div id="searchBox">
+	<label for="Template_topNav_searchBox_quickSearch" accesskey="s">Search </label><input name="Template$topNav$searchBox$quickSearch" type="text" value="Search" id="Template_topNav_searchBox_quickSearch" onfocus="clearText('Template_topNav_searchBox_quickSearch','Search');" onkeypress="return clickOnEnterMultiBrowser(event, 'Template_topNav_searchBoxdosearch');" /><img src="../../images/1.gif" alt="" title="" width="0" height="0" /><a class="Button" href="javascript:__doPostBack('Template$topNav$searchBox','goSearch')" title="Search"><img id="Template_topNav_searchBoxdosearch" src="/templates/default/images/go.gif" alt="Search" /></a>
+</div>
+		</div>
+	</div>
+
+<div class="gm_sidebar gm_sidebar_rh"> 
+      <a 
+            href="//websurveys.govmetric.com/theme/gm/1534" 
+            target="_blank" 
+            class="gm_sidebar_anchor" 
+            title="please rate this page" 
+            rel="nofollow"> 
+            <img src="//wsstatic.govmetric.com/imgs/triggers/rh.png" alt="rating button" /> 
+      </a> 
+</div> 
+<link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar_rh.css" /> 
+<script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+ 
+<script type="text/javascript" src="//hitcounter.govmetric.com/1343"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+ 
+
+	</div>
+	<div class="navInstructions"><div class="inner">
+<P>Use the links above to reach key areas of our site.</P></div></div>
+	</div>
+	<div id="main" class="floatHolder col3">
+		<div id="subNav">
+			
+					<div class="heading" >Transport and streets</div>
+					
+				
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+					<ul>
+				
+					<li ><a href="/transport_and_streets/abandoned_vehicles.aspx" title="Abandoned vehicles"><span>Abandoned vehicles</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/community_transport_services.aspx" title="Community transport services"><span>Community transport services</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/local_sustainable_transport_f.aspx" title="Local Sustainable Transport Fund"><span>Local Sustainable Transport Fund</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/local_transport_plan.aspx" title="Local Transport Plan"><span>Local Transport Plan</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/parking.aspx" title="Parking"><span>Parking</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/public_transport.aspx" title="Public transport"><span>Public transport</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/public_rights_of_way.aspx" title="Public Rights of Way"><span>Public Rights of Way</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/road_safety.aspx" title="Road safety"><span>Road safety</span></a></li>
+				
+
+					<li  class='expanded'><a href="/transport_and_streets/roads,_highways_and_pavements.aspx" title="Roads, Highways and Pavements"><span>Roads, Highways and Pavements</span></a>
+				
+
+					<ul>
+				
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/abnormal_loads.aspx" title="Abnormal Loads"><span>Abnormal Loads</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/cycle_lanes_and_routes_-_road.aspx" title="Cycle Lanes and Routes - Road Markings and Signage"><span>Cycle Lanes and Routes - Road Markings and Signage</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/demonstrations_and_parades.aspx" title="Demonstrations and Parades"><span>Demonstrations and Parades</span></a></li>
+				
+
+					<li class="selected"><a href="/transport_and_streets/roads,_highways_and_pavements/dropped_kerbs_crossover.aspx" title="Dropped Kerbs Crossover"><span>Dropped Kerbs Crossover</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/flooding.aspx" title="Flooding"><span>Flooding</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/gritting.aspx" title="Gritting"><span>Gritting</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/licence_-_highway_projection.aspx" title="Licence - Section 50 &amp;Highway Projection"><span>Licence - Section 50 &amp;Highway Projection</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/licence_-_street_trading.aspx" title="Licence - Street Trading"><span>Licence - Street Trading</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/lighting_-_street_lights.aspx" title="Lighting - Street Lights"><span>Lighting - Street Lights</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/lighting_-_traffic_lights.aspx" title="Lighting - Traffic Lights"><span>Lighting - Traffic Lights</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/parking_information.aspx" title="Parking Information"><span>Parking Information</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/pavements_obstructions.aspx" title="Pavement Obstructions"><span>Pavement Obstructions</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/pavement_maintenance.aspx" title="Pavement Maintenance"><span>Pavement Maintenance</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/pavements_-_stolen_slabs.aspx" title="Pavements - Stolen Slabs"><span>Pavements - Stolen Slabs</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/ragwort_advice.aspx" title="Ragwort Advice"><span>Ragwort Advice</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_adoption_agreements.aspx" title="Roads - Adoption Agreements"><span>Roads - Adoption Agreements</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/road_safety_information.aspx" title="Road Safety Information"><span>Road Safety Information</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/road_signs.aspx" title="Road Signs"><span>Road Signs</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_approved_schemes.aspx" title="Roads - Approved Schemes"><span>Roads - Approved Schemes</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_bridges_general_infor.aspx" title="Roads - Bridges (General Information)"><span>Roads - Bridges (General Information)</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_closures_and_diversion.aspx" title="Roads - Closures and Diversions"><span>Roads - Closures and Diversions</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_enforcement.aspx" title="Roads - Enforcement"><span>Roads - Enforcement</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_flooding_-_drains_and.aspx" title="Roads - Flooding - Drains and Gullies"><span>Roads - Flooding - Drains and Gullies</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_maintenance_-_structur.aspx" title="Roads - Maintenance - Structural Surveys"><span>Roads - Maintenance - Structural Surveys</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_obstructions.aspx" title="Roads - Obstructions"><span>Roads - Obstructions</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_speed_limits.aspx" title="Roads - Speed Limits"><span>Roads - Speed Limits</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_weight_limits.aspx" title="Roads - Weight Limits"><span>Roads - Weight Limits</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_roadworks.aspx" title="Roads - Roadworks"><span>Roads - Roadworks</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_roadwork_summary.aspx" title="Roads - Roadwork Summary"><span>Roads - Roadwork Summary</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_snow_clearance.aspx" title="Roads - Snow Clearance"><span>Roads - Snow Clearance</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_speed_humps.aspx" title="Roads - Speed Humps"><span>Roads - Speed Humps</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_additional_funding.aspx" title="Roads - Additional Funding"><span>Roads - Additional Funding</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/street_furniture_-_provision_a.aspx" title="Street Furniture - Provision and Maintenance"><span>Street Furniture - Provision and Maintenance</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/street_name_plates.aspx" title="Street Name Plates"><span>Street Name Plates</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/street_trading_-_illegal.aspx" title="Street Trading - Illegal"><span>Street Trading - Illegal</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/taxi_rank_provision.aspx" title="Taxi Rank Provision"><span>Taxi Rank Provision</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/tourist_signs.aspx" title="Tourist Signs"><span>Tourist Signs</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/verge_maintenance.aspx" title="Verge Maintenance"><span>Verge Maintenance</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/wall_maintenance.aspx" title="Wall Maintenance"><span>Wall Maintenance</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/yellow_lines.aspx" title="Yellow Lines"><span>Yellow Lines</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/pavements_parking.aspx" title="Pavements (Parking)"><span>Pavements (Parking)</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/street_naming_and_numbering_-.aspx" title="Street naming and numbering - Statutory register"><span>Street naming and numbering - Statutory register</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/potholes.aspx" title="Potholes"><span>Potholes</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_skip_permits.aspx" title="Skip Permits"><span>Skip Permits</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_scaffold_permits.aspx" title="Scaffold Permits"><span>Scaffold Permits</span></a></li>
+				
+
+					</ul></li>
+				
+					<li ><a href="/transport_and_streets/street_care_and_cleaning.aspx" title="Street care and cleaning"><span>Street care and cleaning</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/taxis_and_minicabs.aspx" title="Taxis and minicabs"><span>Taxis and minicabs</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/travel_planning.aspx" title="Travel Planning"><span>Travel Planning</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/walking_and_cycling.aspx" title="Walking and Cycling"><span>Walking and Cycling</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/winter_services.aspx" title="Winter Services"><span>Winter Services</span></a></li>
+				
+
+					</ul>
+				
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+					
+				
+		</div>
+		<div class="mainWrapper">
+		<div id="crumbtrail">
+			
+					
+				
+					<a href="/default.aspx">Home</a> &gt;
+				
+
+					<a href="/transport_and_streets.aspx">Transport and streets</a> &gt;
+				
+
+					<a href="/transport_and_streets/roads,_highways_and_pavements.aspx">Roads, Highways and Pavements</a> &gt;
+				
+
+						Dropped Kerbs Crossover
+				
+
+					
+				
+		</div>
+		<div id="mainContent">
+			
+<H2>Dropped kerbs/crossover </H2>
+<P>&nbsp;</P>
+<P>Vehicle crossovers are sections of pavement with a lowered kerb connecting a private driveway to the highway. The installation of a vehicle access is paid for by residents but are maintained by the Council. They provide a designated area for residents to drive their cars legally over the footway to reach their driveway. </P>
+<P>&nbsp;</P>
+<P><STRONG>Legal considerations</STRONG></P>
+<P>Planning permission is not usually required for such work, but will be if:</P>
+<UL>
+<LI>The property involved has the frontage directly on to a classified road.<BR>
+<LI title=*>The property involved is a listed building.<BR>
+<LI title=*>The property involved is other than a house for a single family, e.g. Flat, Maisonette, Commercial or Industrial Premises.<BR></LI></UL>
+<P>If it appears that your property comes within one of the above classifications and planning permission is required you should contact the Council using the details above. Alternatively see our <STRONG><a title="planning permission information" href="/development_control/do_i_need_planning_permission.aspx">Planning Permission information</A></STRONG></P>
+<P>&nbsp;</P>
+<P><a title="Vehicular Access" href="/docs/VEHICULAR%20ACCESS%20APPLICATION%202015-16.doc">Vehicular Access Application form</A></P>
+<P>&nbsp;</P>
+<P><STRONG>Completed forms should then be sent to:</STRONG></P>
+<P>Rutland County Council </P>
+<P>Highways Department</P>
+<P>Catmose</P>
+<P>Oakham</P>
+<P>Rutland </P>
+<P>LE15 6HP</P>
+<P>&nbsp;</P>
+<P><STRONG>Important notice</STRONG></P>
+<P>The construction of a vehicle crossing does not give the occupier of the premises any particular rights, except to drive across the footway to gain access to his/her property with a private or light goods motor car, the crossing itself is part of the public highway. From the date that the Council accepts the completed crossing (the earliest date will be 12 months from construction), they will assume responsibility for its maintenance at no cost to the occupier, apart from any damage caused by illegal use by heavy vehicles, etc.</P>
+<P><STRONG>Conditions</STRONG></P>
+<P>The following is a list of conditions relevant to the construction and the use of a domestic vehicle crossing after it has been completed.</P>
+<P><STRONG>Permitted types of vehicles</STRONG></P>
+<P>A domestic vehicle crossing may only be used by a private light goods or similar vehicle. It may not be used by heavy goods vehicles or mechanical equipment. If a delivery, such as a skip, is made into the property, and in doing so the delivery damages the crossing, any repairs will be the responsibility of the occupier.</P>
+<P><STRONG>Size of the crossing</STRONG></P>
+<P>The width of a standard crossing is 2.44 metres at the back of the public footway. This increases to about 4.58 metres at the kerbline. Crossings up to twice that width or two separate crossings may be built where there is sufficient space to leave a continuous length of two metres of unused space at the kerbline. A crossing, which covers the full frontage, may not be permitted.</P>
+<P><STRONG>Shared access</STRONG></P>
+<P>Where the occupiers of two adjoining properties share a driveway, and wish to build a double width crossing to serve the two sites, one occupier should act on behalf of both parties.</P>
+<P><STRONG>Two crossings at the same property</STRONG></P>
+<P>Where a request is made for two crossings to serve the property and the space available means that the area between them is at or close to the minimum limits, i.e. two metres in width, a decision will have to be made as to the shape of the crossing. Where there is an existing crossing it may mean that this also will have to be modified.</P>
+<P><STRONG>Parking within your property</STRONG></P>
+<P>Your application will not be approved unless you are able to provide a suitable parking area within your property, this must be at least 4.8 metres long, measured from the front of your house to the boundary of your property and 2.44 metres wide. There must be enough space around this area for pedestrian access. If the width of your property is more than 8m these conditions may not apply.</P>
+<P>There may be instances where the above criteria are not met. In such cases approval may be given, subject to a site inspection by a Highway Inspector. The Highway Inspectors decision as to whether the application will be approved or refused is final.</P>
+<P>No part of a vehicle parked within your property may project on to or over the highway. The crossing may not be used as a parking area and no part of it is exempted for the purpose of footway parking.</P>
+<P><STRONG>Hardstandings</STRONG></P>
+<P>Where you are intending to use gravel or a similar loose material for your hardstanding, you should consider the problem of some being carried on to the highway by the movement of the vehicle. This is especially true where the surface comes up to the boundary. Where material of this type is used, concrete or blacktop should be laid in a 500mm strip from the boundary to the start of the gravelled area. This will help to reduce any problem. If the material is carried onto the highway it will be the responsibility of the occupier to remove it by sweeping etc.</P>
+<P><STRONG>Drainage</STRONG></P>
+<P>The parking area within your property must be built so that water does not drain from it across the footway. Suitable drainage must be provided within the boundaries of your property.</P>
+<P><STRONG>Street furniture</STRONG></P>
+<P>Where applicants have removed more of the wall or fence running along the boundary, than is required by the size of the crossing, it should be understood that an item of street furniture, i.e. lamp post, telegraph pole, traffic sign etc., may be erected at any time in the footway outside the area of a crossing, even though this may obstruct an area where there is no wall or similar feature.</P>
+<P><STRONG>Obstacles to construction</STRONG></P>
+<P>If the proposed position of the access is obstructed by a road sign, lamp post, or tree, etc. the location should be altered to avoid the obstacle. If this is not feasible, a decision will have to be made by the relevant section as to whether the item should be removed or relocated.</P>
+<P>If a statutory authority is required to carry out work by relocating a fire hydrant, telegraph pole etc. any charges for such work will be the responsibility of the applicant, who will be required to produce written proof of approval by the authority to the Highways Maintenance Section before a crossing can be built</P>
+<P>If an applicant wishes the crossing to be placed in a location other than that recommended by the Highways Maintenance Section and this requires the relocation of a lamp post or similar item, which would not otherwise be necessary, he/she will be required to pay the full cost of relocation.&nbsp;</P>
+<P><STRONG>Alterations to your vehicle crossover</STRONG></P>
+<P>The Council may need to alter the layout of your vehicle crossover at any time, due to modifications in the footway or verge. Every effort will be made to maintain access to your property and the occupier of premises so affected will be given adequate notice of such works.</P>
+<P><STRONG>Safety</STRONG></P>
+<P>Any application for the construction of a domestic crossing may be refused or modified on the grounds of safety. The applicant must ensure that adequate sight lines are maintained to allow safe access to their property.</P>
+<P><STRONG>Gates across vehicle entrance</STRONG></P>
+<P>Gates fitted across the vehicle entrance to your property may in no circumstances open outwards across the footpath or carriageway. ( Highways Act 1980 - Section 153)</P>
+<P><STRONG>Summary of conditions</STRONG></P>
+<P>The following items must be taken into account in respect of the construction of the proposed access.</P>
+<OL>
+<LI>The works must be executed by an approved contractor, who shall hold public liability insurance to the value of &#163;5,000,000 for any one claim, with no limit to the number of claims for the duration of the works. In granting permission to construct the access, it will be necessary for the County Council to see evidence of the contractor's certificate of public liability insurance, to indemnify Rutland County Council against all losses or claims, which shall also insure against any loss, damage or injury which may occur to any person or property, by, or arising out of, the execution of the works. 
+<LI>All works and traffic management must be agreed with to the Highways Maintenance Manager (or his representative) prior to commencement. 
+<LI>All sites must be made safe, at all times, and comply with the current legislation with regard to signing and guarding. Failure to do so could result in prosecution. A plan showing the proposed traffic management arrangements shall be supplied to the Highways Maintenance Manager (or his representative) for his approval, prior to the commencement of the works. 
+<LI>You must not cause any delays or obstructions to the travelling public. 
+<LI>If your application is to affect the frontage of an A,B or C class road, prior to any works commencing, planning permission from the Local Planning Authority will be required in advance of this application. 
+<LI>If your proposal involves the crossing of an existing ditch, a pipe with a minimum diameter of 225mm with headwalls will be required. 
+<LI>Proof of the contractor's qualifications (and those of his operatives) for working on the Highway are required with the application. 
+<LI>Risk. Should any of the above requirements not be complied with, you will be held responsible for the corrective measures, or for any costs that this Authority may incur, in any way, as a consequence of the works.</LI></OL>
+<P><STRONG>SPECIFICATION FOR CROSSINGS OVER HIGHWAY FOOTWAYS,GRASS VERGES OR OTHER HIGHWAY MARGINS BY FRONTAGERS</STRONG></P>
+<P><STRONG>General Requirements</STRONG></P>
+<P>(a) The following specification for work to be undertaken by frontagers requiring crossings over highway footways, grass verges or other highway margins are issued for the guidance of frontagers.</P>
+<P>(b) It is important to note that no works on any access crossing shall be commenced before the approval of to the Highways Maintenance Manager (or his representative) is received with respect to the specification to be adopted for the site in question.</P>
+<P>(c) Frontagers must, therefore, arrange for to the Highways Maintenance Manager (or his representative) to give his approval to any works intended to be constructed within the limits of the highway.</P>
+<P>(d) Your attention is drawn to the fact that statutory undertaker&amp;apos;s apparatus (e.g. underground pipes, cables, etc.) may be affected by your proposals, and the location of all such apparatus must be identified prior to your works commencing.</P>
+<P>You must liaise with the statutory undertakers to discuss any alterations to their apparatus which must be undertaken at your cost. (This clause is a condition of your permission to undertake the works, and is a Health and Safety requirement).</P>
+<P><STRONG>Crossings over Highway Footways and Kerbs</STRONG></P>
+<P>(a) Vehicle Crossings (residential)</P>
+<OL>
+<LI>The area of footway disturbed shall be excavated to the formation level required and a foundation of not less than 150mm (6&#8221;) of well compacted approved granular sub-base material provided. Where, in the opinion of to the Highways Maintenance Manager (or his representative), ground conditions make it necessary, this sub-base shall be laid on an additional foundation of approved material to a specified compacted thickness. 
+<LI>The surfacing shall consist of a 20mm (&#190;') compacted thickness of 6mm (&#188;') nominal size medium graded wearing course macadam BS4987, 1988 Clause 7.6 laid on a 40mm (1&#189;') compacted thickness of 20mm (&#190;') nominal size, open graded, basecourse macadam Clause 6.5. 
+<LI>The kerbs shall be laid on, and backed with, 150mm (6') of 6:3:1 mix concrete. The kerbs shall be laid in such a manner as to conform with the width of the access, to be flush with finished access surface level, and to show a 20mm (1&#188;') (maximum) upstand adjacent to the carriageway channel. The kerbs forming the extremities of the access shall be laid so as to conform in level and alignment with the existing highway kerbs and suitably ramped to meet the access level. New bull-nosed kerbs shall be provided across the width of the access, with purpose-made taper kerbs forming the extremities.</LI></OL>
+<P>(b) Commercial Vehicle Crossings</P>
+<P>In cases where any crossing is required at an access to industrial works, petrol filling station, or other premises attracting heavy traffic, the specification to be employed shall be specifically designed for the site conditions.</P>
+<P><STRONG>Crossings over Highway Margins and Verges</STRONG></P>
+<OL>
+<LI>The existing margin or verge shall be excavated to the formation level required and the whole excavation area sprayed with an approved total weedkiller. 
+<LI>The crossing shall be constructed in accordance with (a) (1) and (a) (2) above. 
+<LI>Where an access involves the lowering of kerbs, this shall be carried out in accordance with (a) (3) above.</LI></OL>
+<P><STRONG>Field Accesses in Rural and Non-built up Areas</STRONG></P>
+<P>In certain cases, where no paved footway exists, or is contemplated by the County Council in the foreseeable future, arrangements may be made with to the Highways Maintenance Manager (or his representative) for a minimum specification which will give, in his/her opinion, a firm running surface under the local conditions of subsoil, etc</P>
+<P><STRONG>Piping of a Ditch under Vehicular Access Crossing</STRONG></P>
+<P>Where the access crosses a roadside ditch, this shall be piped with (glazed stoneware/concrete) pipes on a carefully prepared bed, free of large stones, which shall conform to the gradient of the existing ditch. The pipes shall be properly jointed with 1:4 cement mortar and laid on, and surrounded with 150mm (6') concrete (6:3:1 mix). The pipes shall project 1 metre (3'0') on each side of the entrance and shall be laid to approved levels and appropriate headwalls shall be provided. In no case shall a pipe of less than 225mm diameter be used. The work shall not be commenced until the levels have been determined and pipes must not be covered until they have been inspected and approved by to the Highways Maintenance Manager (or his representative). For details of size of pipe, level and gradients, to the Highways Maintenance Manager (or his representative) must be contacted before any work is commenced, as the work involved may include a regrading of the ditch on each side of the access. All of the above requirements shall also be carried out in cases where drainage pipes are already located under the crossing.</P>
+<P><STRONG>Maintenance Period</STRONG></P>
+<P>Upon completion of the works, the owner shall, for a period of 12 months, be responsible for the rectification of any constructional faults which may appear.</P>
+<P><STRONG>What Next?</STRONG></P>
+<P>If planning consent is not required, send your completed application form to the address shown on the application form (often your contractor will fill-in the form for you if you ask). </P>
+<P>The viability of the proposal will be checked, you will be contacted and the footpath/kerbline with white paint to show the agreed location of the crossing. <BR>If planning consent is required &#8211; please obtain this first and then send in your application with your planning consent</P>
+		</div>
+		</div>
+		<div class="aside">
+			<div class="panel ad">
+				
+<img alt="Image Alt Text" src="/templates/default/images/img8.jpg"> 
+			</div>
+			<div class="panel">
+				
+						<h3>News</h3>
+						<ul class="newsArticles">
+					
+						<li>
+							<a href="/council_and_democracy/council_news/cllr_begy_funeral_service.aspx" title="Funeral Service to be Held for Council Leader Roger Begy OBE">Funeral Service to be Held for Council Leader Roger Begy OBE</a>
+						</li>
+					
+						<li>
+							<a href="/council_and_democracy/council_news/councillor_roger_begy.aspx" title="Council Leader Roger Begy has passed away">Council Leader Roger Begy has passed away</a>
+						</li>
+					
+						<li>
+							<a href="/council_and_democracy/council_news/charging_consultation.aspx" title="Comment on possible changes to social care charging in Rutland">Comment on possible changes to social care charging in Rutland</a>
+						</li>
+					
+						<li>
+							<a href="/council_and_democracy/council_news/whissendine_by-election.aspx" title="Notice of Election for Whissendine Ward">Notice of Election for Whissendine Ward</a>
+						</li>
+						
+						</ul>
+					
+			</div>
+			<div class="panel">
+				<h3>Weather</h3>
+				
+						<ul class="rssFeed">
+					
+						<li>
+							<a href="http://www.bbc.co.uk/weather/2641128?day=0" title="http://www.bbc.co.uk/weather/2641128?day=0">Sunday: Light Rain Shower, Maximum Temperature: 7&#176;C (45&#176;F) Minimum Temperature: 4&#176;C (39&#176;F)</a>
+						</li>
+					
+						<li>
+							<a href="http://www.bbc.co.uk/weather/2641128?day=1" title="http://www.bbc.co.uk/weather/2641128?day=1">Monday: Heavy Rain, Maximum Temperature: 7&#176;C (45&#176;F) Minimum Temperature: 2&#176;C (36&#176;F)</a>
+						</li>
+					
+						<li>
+							<a href="http://www.bbc.co.uk/weather/2641128?day=2" title="http://www.bbc.co.uk/weather/2641128?day=2">Tuesday: Light Cloud, Maximum Temperature: 6&#176;C (43&#176;F) Minimum Temperature: 2&#176;C (36&#176;F)</a>
+						</li>
+					
+						</ul>
+					
+			</div>
+			<div class="panel">
+				<div class="inner">
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="infoNav">
+			<div class="inner">
+			<h2>Go straight to information about...</h2>
+			
+					<ul class="floatHolder">
+				<li><a href="/advice_and_benefits.aspx" title="Advice and benefits"><span>Advice and benefits</span></a></li>
+<li><a href="/business.aspx" title="Business"><span>Business</span></a></li>
+<li><a href="/community_and_living.aspx" title="Community and Living"><span>Community and Living</span></a></li>
+<li><a href="/council_and_democracy.aspx" title="Council and Democracy"><span>Council and Democracy</span></a></li>
+<li><a href="/council_meetings.aspx" title="Council Meetings"><span>Council Meetings</span></a></li>
+<li><a href="/education_and_learning.aspx" title="Education and learning"><span>Education and learning</span></a></li>
+<li><a href="/environment_and_planning.aspx" title="Environment and Planning"><span>Environment and Planning</span></a></li>
+<li><a href="/health_and_social_care.aspx" title="Health and Social Care"><span>Health and Social Care</span></a></li>
+<li><a href="/housing.aspx" title="Housing"><span>Housing</span></a></li>
+<li><a href="/jobs_and_careers.aspx" title="Jobs and Careers"><span>Jobs and Careers</span></a></li>
+<li><a href="/leisure_and_culture.aspx" title="Leisure and culture"><span>Leisure and culture</span></a></li>
+<li><a href="/transport_and_streets.aspx" title="Transport and streets"><span>Transport and streets</span></a></li>
+<li><a href="/rutland_together.aspx" title="Rutland Together"><span>Rutland Together</span></a></li>
+<li><a href="/development_control.aspx" title="Development Control"><span>Development Control</span></a></li>
+<li><a href="/local_plan.aspx" title="Local Plan"><span>Local Plan</span></a></li>
+<li><a href="/rutland_library_service.aspx" title="Rutland Library Service"><span>Rutland Library Service</span></a></li>
+<li><a href="/rutland_county_museum.aspx" title="Rutland County Museum"><span>Rutland County Museum</span></a></li>
+<li><a href="/licensing_information.aspx" title="Licensing Information"><span>Licensing Information</span></a></li>
+<li><a href="/oakham_castle.aspx" title="Oakham Castle"><span>Oakham Castle</span></a></li>
+<li><a href="/energy_conservation.aspx" title="Energy Conservation"><span>Energy Conservation</span></a></li>
+<li><a href="/digital_rutland.aspx" title="Digital Rutland"><span>Digital Rutland</span></a></li>
+<li><a href="/customer_services.aspx" title="Customer Services"><span>Customer Services</span></a></li>
+<li><a href="/waste_and_recycling.aspx" title="Waste and Recycling"><span>Waste and Recycling</span></a></li>
+<li><a href="/safer_rutland.aspx" title="Safer Rutland"><span>Safer Rutland</span></a></li>
+<li><a href="/people_first.aspx" title="People First"><span>People First</span></a></li>
+
+					</ul>
+				
+			</div>
+		</div>
+		<div class="floatHolder">
+			<div id="copyright">
+				
+<P>&#169; Copyright 2011 Rutland County Council, Catmose, Oakham, Rutland, LE15 6HP</P>
+			</div>
+			<div id="utilitylinks">
+				<ul>
+					<li><a href="/system_pages/utility_links/site_map.aspx">Site Map</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/terms__conditions.aspx">Terms &amp; Conditions</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/contractor_login.aspx">Contractor Login</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/privacy.aspx">Privacy</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/cookies.aspx">Cookies</a>
+&nbsp;|&nbsp;</li>
+					
+					<li><a href="/transport_and_streets/roads,_highways_and_pavements/dropped_kerbs_crossover.aspx?theme=textonly">Text Only</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	</form>
+	<!-- WebMetric snippet starts here -->
+		
+			<form action="https://www.govmetric.com/WebMetric/websatisfaction.aspx" method="post"><div class="ratePage">
+			<input type="hidden" name="organisationid" value="3" />
+
+			<!-- uncomment this to enable the sentence to replace the comments box -->
+			<!-- <input type="hidden" name="displaysentence" value="If you would like to leave additional comments, please follow the Feedback Form link on the homepage." />-->
+
+			<input type="image" src="http://www.govmetric.com/images/med-greenface.gif" alt="Rate as Good" name="metric1" value="1" />
+			<input type="image" src="http://www.govmetric.com/images/med-orangeface.gif" alt="Rate as Average" name="metric2" value="2" />
+
+			<input type="image" src="http://www.govmetric.com/images/med-redface.gif" alt="Rate as Poor" name="metric3" value="3" />
+
+				<p class="inst"><img src="/templates/default/images/rateThisPage.gif" alt="It's your Rutland. Please rate this page." /></p>
+</div>
+			<!-- WebMetric snippet ends here -->
+		
+
+			<script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+			<script type="text/javascript">
+			<!--
+				$j = jQuery.noConflict();
+				$j(document).ready(function() {
+					var sBlock = document.createElement('script');
+					sBlock.type = 'text/javascript';
+					sBlock.src = 'http://snippets.govmetric.com/webhit/index/3';
+					$j('#footer').append(sBlock);
+				});
+			-->
+			</script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+</form>		
+		
+		<div class="extLinks">
+			<div class="inner">
+				<a href="http://www.gov.uk/" rel="external" ><img src="/templates/default/images/gov logo.jpg" height="41" alt="gov" /></a>
+				<a href="http://www.browsealoud.com/downloads.asp?dl=bl" rel="external" ><img src="/templates/default/images/dlbl.gif" alt="download Browsealoud" /></a>
+			</div>
+		</div>
+<!-- Javascript at the bottom for fast page loading -->
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+		
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+	<script type="text/javascript" src="/templates/default/scripts/pluginCheck.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+	 
+	<script type="text/javascript" src="/templates/default/scripts/script.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8488195-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<noscript><div>Browser does not support script.</div></noscript>
+ 
+
+				
+</body>
+</html>

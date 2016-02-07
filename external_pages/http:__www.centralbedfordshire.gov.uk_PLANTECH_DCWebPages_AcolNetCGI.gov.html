@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en-GB"><head><title>Central Bedfordshire Council Planning Pages</title><meta name="keywords" content="Central Bedfordshire Council, local government,local authority,council,borough council,planning,application" />
+<meta name="description" content="Central Bedfordshire Council,  UK - Community website" />
+<meta name="eGMS.title" content="Central Bedfordshire Council - Home" />
+<meta name="eGMS.description" content="" />
+<meta name="eGMS.Subject.Keywords" content="" />
+<meta name="eGMS.Subject.ProcessIdentifier" content="" />
+<meta name="eGMS.Subject.Category" content="Community, People and Living" />
+<meta name="eGMS.Creator" content="Plantech Ltd" />
+<meta name="eGMS.Date.Issued" content="2004-7-16 17:3" />
+<meta name="eGMS.Date.Created" content="2004-7-16 17:3" />
+<meta name="eGMS.Date.Valid" content="/" />
+<meta name="eGMS.Contributor" content="" />
+<meta name="eGMS.Audience" content="" />
+<meta name="eGMS.Disposal.Review" content="" />
+<meta name="eGMS.Disposal.Action" content="" />
+<meta name="eGMS.Coverage.Spatial" content="" />
+<meta name="eGMS.Coverage.Temporal" content="" />
+<meta name="eGMS.Type" content="Please Select" />
+<meta name="eGMS.Format.Medium" content="text/html" />
+<meta name="eGMS.Identifier" content="page-id-0" />
+<meta name="eGMS.Language" content="(SCHEME=ISO.693-1) en" />
+<meta name="eGMS.Publisher" content="Central Bedfordshire Council" />
+<meta name="eGMS.Copyright" content="Central Bedfordshire Council" />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="stylesheet" type="text/css" href="http://www.centralbedfordshire.gov.uk/Plantech/DCWebPages//css/cssstructure.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.centralbedfordshire.gov.uk/Plantech/DCWebPages//css/csscol1.css" title="standard"/>
+
+<link rel="stylesheet" type="text/css" href="http://www.centralbedfordshire.gov.uk/Plantech/DCWebPages//css/csscol1_simple.css" media="screen" title="print"/>
+
+<link rel="stylesheet" type="text/css" href="../CentralBedsStyle/css/main.css" />
+
+<script type="text/javascript" src="http://www.centralbedfordshire.gov.uk/Plantech/DCWebPages//js/styleswitcher.js"></script>
+<script src="http://www.centralbedfordshire.gov.uk/Plantech/DCWebPages//js/headdate.js" type="text/javascript"></script>
+<!--[if lte IE 6]><link rel="Stylesheet" type="text/css" href="../CentralBedsStyle/css/ie6.css"/><![endif]-->
+<!--[if IE 7]><link rel="Stylesheet" type="text/css" href="../CentralBedsStyle/css/ie7.css"/><![endif]-->
+<script type="text/javascript">
+//<![CDATA[
+// DHTML date validation script for dd/mm/yyyy.
+// Declaring valid date character, minimum year and maximum year
+var dtCh= "/";
+var minYear=1900;
+var maxYear=2100;
+
+
+
+function isInteger(s){
+	var i;
+    for (i = 0; i < s.length; i++){   
+        // Check that current character is number.
+        var c = s.charAt(i);
+        if (((c < "0") || (c > "9"))) return false;
+    }
+    // All characters are numbers.
+    return true;
+}
+
+function stripCharsInBag(s, bag){
+	var i;
+    var returnString = "";
+    // Search through string's characters one by one.
+    // If character is not in bag, append to returnString.
+    for (i = 0; i < s.length; i++){   
+        var c = s.charAt(i);
+        if (bag.indexOf(c) == -1) returnString += c;
+    }
+    return returnString;
+}
+
+function daysInFebruary (year){
+	// February has 29 days in any year evenly divisible by four,
+    // EXCEPT for centurial years which are not also divisible by 400.
+    return (((year % 4 == 0) && ( (!(year % 100 == 0)) || (year % 400 == 0))) ? 29 : 28 );
+}
+function DaysArray(n) {
+	for (var i = 1; i <= n; i++) {
+		this[i] = 31
+		if (i==4 || i==6 || i==9 || i==11) {this[i] = 30}
+		if (i==2) {this[i] = 29}
+   } 
+   return this
+}
+
+function isDate(dtStr){
+	var daysInMonth = DaysArray(12)
+	var pos1=dtStr.indexOf(dtCh)
+	var pos2=dtStr.indexOf(dtCh,pos1+1)
+	var strDay=dtStr.substring(0,pos1)
+	var strMonth=dtStr.substring(pos1+1,pos2)
+	var strYear=dtStr.substring(pos2+1)
+	strYr=strYear
+	if (strDay.charAt(0)=="0" && strDay.length>1) strDay=strDay.substring(1)
+	if (strMonth.charAt(0)=="0" && strMonth.length>1) strMonth=strMonth.substring(1)
+	for (var i = 1; i <= 3; i++) {
+		if (strYr.charAt(0)=="0" && strYr.length>1) strYr=strYr.substring(1)
+	}
+	month=parseInt(strMonth)
+	day=parseInt(strDay)
+	year=parseInt(strYr)
+	if (pos1==-1 || pos2==-1){
+		alert("The date format should be : dd/mm/yyyy")
+		return false
+	}
+	if (strMonth.length<1 || month<1 || month>12){
+		alert("Please enter a valid month")
+		return false
+	}
+	if (strDay.length<1 || day<1 || day>31 || (month==2 && day>daysInFebruary(year)) || day > daysInMonth[month]){
+		alert("Please enter a valid day")
+		return false
+	}
+	if (strYear.length != 4 || year==0 || year<minYear || year>maxYear){
+		alert("Please enter a valid 4 digit year between "+minYear+" and "+maxYear)
+		return false
+	}
+	if (dtStr.indexOf(dtCh,pos2+1)!=-1 || isInteger(stripCharsInBag(dtStr, dtCh))==false){
+		alert("Please enter a valid date")
+		return false
+	}
+return true
+}
+
+
+function ValidateAppNoSearch(){
+var casefullrefval=document.frmSearchByApplicationNumber.casefullref;
+if (casefullrefval.value=="" ) 
+            {                     
+                      alert("Please enter a search parameter");
+                      casefullrefval.focus();
+                      return false;
+             }
+    return true;
+}
+
+
+function ValidateAddressSearch(){
+var locaddress1val=document.frmSearchByAddress.locaddress1;
+if (locaddress1val.value=="" )
+                {                     
+                      alert("Please enter a search parameter");
+                      locaddress1val.focus();
+                      return false;
+                }
+    return true;
+}
+
+
+function  ValidateCommDateSearch(){
+   var commdateval=document.frmCommitteeDates.ComDate;     
+   var lencommdate = document.frmCommitteeDates.ComDate.options[document.frmCommitteeDates.ComDate.selectedIndex].value.length;
+   if (lencommdate==0)
+                {                      
+                      alert("Please enter a search parameter");
+                      commdateval.focus();
+                      return false;
+                }
+    return true;
+}
+
+
+function   ValidateWardSearch(){
+   var wardnameval=document.frmSearchByWard.wardname;     
+   var lenwardname = document.frmSearchByWard.wardname.options[document.frmSearchByWard.wardname.selectedIndex].value.length;  
+   var lenwklistdate = document.frmSearchByWard.WkListDate.options[document.frmSearchByWard.WkListDate.selectedIndex].value.length;
+   if (lenwardname==0 && lenwklistdate==0 )
+                {                      
+                      alert("Please enter a search parameter");
+                      wardnameval.focus();
+                      return false;
+                }
+    return true;
+}
+
+function  ValidateParishSearch(){
+   var parishnameval=document.frmSearchByParish.parishname;     
+   var lenparishname = document.frmSearchByParish.parishname.options[document.frmSearchByParish.parishname.selectedIndex].value.length;
+   var lenwklistdate = document.frmSearchByParish.WkListDate.options[document.frmSearchByParish.WkListDate.selectedIndex].value.length;
+   if (lenparishname==0 && lenwklistdate==0 )
+                {                      
+                      alert("Please enter a search parameter");
+                      parishnameval.focus();
+                      return false;
+                }
+    return true;
+}
+
+function  ValidateAllSearch(){
+   var wardnameval=document.frmSearchByAll.wardname;     
+   var lenwardname = document.frmSearchByAll.wardname.options[document.frmSearchByAll.wardname.selectedIndex].value.length;
+   var lenparishname = document.frmSearchByAll.parishname.options[document.frmSearchByAll.parishname.selectedIndex].value.length;
+   var lenwklistdate = document.frmSearchByAll.WkListDate.options[document.frmSearchByAll.WkListDate.selectedIndex].value.length;
+   var subareaval = document.frmSearchByAll.subarea;
+   var lensubarea = document.frmSearchByAll.subarea.options[document.frmSearchByAll.subarea.selectedIndex].value.length;
+   if (lenwardname==0 && lenparishname==0 && lenwklistdate==0 && lensubarea==0 )
+                {                      
+                      alert("Please enter a search parameter");
+                      wardnameval.focus();
+                      return false;
+                }
+    return true;
+}
+
+
+function ValidateSearch(){
+
+                    try {
+                      var lenparishname = document.frmSearchByParishOrWard.parishname.options[document.frmSearchByParishOrWard.parishname.selectedIndex].value.length
+                    } 
+                    catch(e) 
+                    {
+                      var lenparishname = 0
+                    } 
+
+                    try {
+                      var lenwardname = document.frmSearchByParishOrWard.wardname.options[document.frmSearchByParishOrWard.wardname.selectedIndex].value.length
+                    } 
+                    catch(e) 
+                    {
+                      var lenwardname = 0
+                    }
+
+                    try {
+                      var lenWkListDate = document.frmSearchByParishOrWard.WkListDate.options[document.frmSearchByParishOrWard.WkListDate.selectedIndex].value.length
+                    } 
+                    catch(e) 
+                    {
+                      var lenWkListDate = 0
+                    }                                   
+
+                if (lenparishname==0  && lenwardname == 0 && lenWkListDate == 0)
+                {        
+
+                      //document.frmSearch.edtappno.focus();
+                      alert("Please enter a search parameter");
+                      return false
+
+                }
+
+    return true
+
+ }
+
+function ValidateMineralWasteSearch()
+{
+	
+var casetypevalue = document.frmSearchByMineralWaste.casetype;
+
+	var casestatusvalue = document.frmSearchByMineralWaste.casestatus;
+	var lencasetypevalue = document.frmSearchByMineralWaste.casetype.options[document.frmSearchByMineralWaste.casetype.selectedIndex].value.length;
+	var lencasestatusvalue = document.frmSearchByMineralWaste.casestatus.options[document.frmSearchByMineralWaste.casestatus.selectedIndex].value.length;
+alert(lencasetypevalue);
+	if(lencasetypevalue ==0)
+	{
+		alert("Please choose a case type");
+		casetypevalue.focus();
+		return false;
+	}
+	if(lencasestatusvalue == 0)
+	{
+		alert("Please choose a case status");
+		casestatusvalue.focus();
+		return false;
+	}
+	return true;
+}
+
+function ValidateCountyWasteSearch()
+{
+	var casetypevalue = document.frmSearchByCountyWaste.casetype;
+	var casestatusvalue = document.frmSearchByCountyWaste.casestatus;
+	var lencasetypevalue = document.frmSearchByCountyWaste.casetype.options[document.frmSearchByCountyWaste.casetype.selectedIndex].value.length;
+	var lencasestatusvalue = document.frmSearchByCountyWaste.casestatus.options[document.frmSearchByCountyWaste.casestatus.selectedIndex].value.length;
+	if(lencasetypevalue ==0)
+	{
+		alert("Please choose a case type");
+		casetypevalue.focus();
+		return false;
+	}
+	if(lencasestatusvalue == 0)
+	{
+		alert("Please choose a case status");
+		casestatusvalue.focus();
+		return false;
+	}
+	return true;
+}
+
+
+function ValidateSubAreaSearch()
+{
+
+var subareaval = document.frmSearchBySubArea.subarea;
+var lensubarea = document.frmSearchBySubArea.subarea.options[document.frmSearchBySubArea.subarea.selectedIndex].value.length;
+var lenwklistdate = document.frmSearchBySubArea.WkListDate.options[document.frmSearchBySubArea.WkListDate.selectedIndex].value.length;
+if (lensubarea ==0 && lenwklistdate==0 )
+                {                      
+                      alert("Please enter a search parameter");
+                      subareaval.focus();
+                      return false;
+                }
+    return true;
+
+
+
+}
+//]]>
+</script></head>
+<body bgcolor="#FFFFFF"><a name="top"></a>
+
+
+
+    <div id="mainContianer">
+        <!-- Header starts here -->
+        <div id="header">
+            <div id="logo">
+                <a href="http://www.centralbedfordshire.gov.uk/default.aspx">
+                    <img src="img/logo.gif" alt="Central Bedfordshire Council"></a></div>
+            <div id="search">
+                <div id="welcome">
+                    Welcome to Central Bedfordshire Council</div>
+                <div id="find">
+                    <form id="searchform" method="get" action="http://www.centralbedfordshire.gov.uk/search">
+                    <ul>
+                        <li>
+                            <label for="search_box">
+                                Search</label>
+                        </li>
+                        <li id="searchinput">
+                            <input id="search_box" type="text" name="zoom_query" title="search">
+                        </li>
+                        <li>
+                            <input id="search_btn" type="submit" value="GO" accesskey="S"></li>
+                        <li id="accessibility"><a href="http://www.centralbedfordshire.gov.uk/contact-us/about-this-website/privacy.aspx">
+                            Accessibility</a></li>
+                        <li><a href="http://spoxy4.insipio.com/generator/en/www.centralbedfordshire.gov.uk/">
+                            <img src="img/speaker.gif" alt="accessibility assistance"></a></li>
+                    </ul>
+                    <div>
+                        <input name="zoom_per_page" value="20" type="hidden">
+                        <input name="zoom_and" value="0" type="hidden">
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Header ends here -->
+        <div id="simplecontent">
+<!-- START content here -->
+
+
+
+
+
+<!-- End header -->
+
+
+<div id="ACOLNET-PLANTECH">
+<!--start menu -->
+
+<div id="menucol">
+</div>
+<!-- end menu -->
+
+<div id="contentcol">
+
+<table cellspacing="0">
+ <tr>
+     <td class="col1"><a href="http://www.centralbedfordshire.gov.uk/environment-and-planning/planning/default.aspx">Return to planning home page</a></td>
+     <td class="col2"> </td>
+ </tr>
+</table>
+
+
+<table cellspacing="0" class="pagetitle"><tr><td class="col1">Planning applications and appeals - quick search page</td></tr></table>
+
+<p>These planning application search pages enable you to search for planning applications that have been registered and determined by <b>Central Bedfordshire Council</b>. 
+The data that is displayed on these pages is updated daily.</p>
+
+<ul>
+<li>If you know the application number (you will find this number on the correspondence that you have received from us) you can use the 'Application Quick Search'.  Please enter the number as shown precisely on the correspondence. 
+</li>
+<li>To search for a street name, town or postcode use 'Search by address'.</li>
+<li>For further search options, for example to search for an application type or agent's name, use the 'More search options'.</li>
+<li>The Council publishes a weekly list of all applications received in each Parish. To view one of these lists please select the Parish and a date from the 'Weekly list search'.</li>
+<li>Whilst viewing the details of a current application you are able to comment online by selecting the 'Consultation' tab.</li>
+</ul>
+
+<p>  Information about planning and the ability to submit an on-line application is also available through the <a href="http://www.planningportal.gov.uk/" target="_blank">Planning Portal</a>.  Any further enquiries contact Customer Services on 0300 300 8307, or email <a href="mailto:planning@centralbedfordshire.gov.uk"  class="lowercaselink">planning@centralbedfordshire.gov.uk</a>.</p>
+<br/>
+
+<div class="boxcontainer">
+     <div class="leftbox">
+                  <span class="menutitle">Application quick search</span>
+                  <br/>
+                  <div class="menutext">
+                  Type in the planning application number in the following format: YY/00000 to find the matching application. Please enter the number as shown on the correspondence that you have received from us.
+                  <form id="frmSearchByApplicationNumber" onsubmit="return ValidateAppNoSearch()" name="frmSearchByApplicationNumber" method="post" action="acolnetcgi.gov?ACTION=UNWRAP&amp;RIPSESSION=%7B%5B%2A%211D1A020B050304731D3C3D31617C041E28360020373B2D3A033A2131681B1102001216030D02040A06016F691120283F3A3606243629243A06176F7C7D7F71797B667777007E6D1D2A20212C2B20080A726A607D7C76797976636371%21%2A%5D%7D" enctype="multipart/form-data"><table class="frontpageformtable" summary="Search by Application Number">
+  <tr> 
+    <td class="column1"><label for="casefullref">Application Number</label>:</td>
+    <td>&#160;</td>
+  </tr>
+  <tr>    
+    <td class="column1"> <input class="ACOLNET-INPUT" type="text" name="casefullref" id="casefullref"  value="" size="26" /></td>
+    <td><input type="submit" value="Search" class="frontpageformelement1" /></td>
+  </tr>
+</table>
+
+
+
+
+</form>
+
+                  </div>
+     </div>
+      <div class="rightbox">
+                  <span class="menutitle">Search by address</span>
+                  <br/>
+                  <div class="menutext">
+                  Type in a full or partial address using commas, to find all matching planning applications. Please see example: 50 Any Street, Any Town, Postcode. If the search is unsuccessful, try road name, town or postcode only.
+                  <form id="frmSearchByAddress" onsubmit="return ValidateAddressSearch()" name="frmSearchByAddress" method="post" action="acolnetcgi.gov?ACTION=UNWRAP&amp;RIPSESSION=%7B%5B%2A%211D1A020B050304731D3C3D31617C041E28360020373B2D3A033A2131681B1102001216030D02040A06016F691120283F3A3606243629243A06176F7C7D7F71797B667777007F6D1D2A20212C2B20080A726A607D7C76797976636A71%21%2A%5D%7D" enctype="multipart/form-data"><table class="frontpageformtable" summary="Address">
+  <tr> 
+    <td><label for="locaddress1">Address:</label></td>
+    <td>&#160;</td>
+  </tr>
+  <tr>
+    <td> <input class="ACOLNET-INPUT" type="text" name="locaddress1"  id="locaddress1" value="" size="30" /></td>
+    <td><input type="submit" value="Search" class="frontpageformelement1" /></td>
+  </tr>
+</table>
+
+
+</form>
+
+                  </div>
+      </div>
+</div><!-- end menubox container -->
+
+
+<div class="boxcontainer">
+<div class="spanbox">
+<span class="menutitle">Weekly list search</span>
+                  <br/>
+                  <div class="menutext">
+                 Please select the parish and the weekly list date.                  
+                <form id="frmSearchByParish" onsubmit="return ValidateParishSearch()" name="frmSearchByParish" method="post" action="acolnetcgi.gov?ACTION=UNWRAP&amp;RIPSESSION=%7B%5B%2A%211D1A020B050304731D3C3D31617C041E28360020373B2D3A033A2131681B1102001216030D02040A06016F691120283F3A3606243629243A06176F7C7D7F71797B667777007C6D1D2A20212C2B20080A726A607D7C76797976626771%21%2A%5D%7D" enctype="multipart/form-data"><table class="frontpageformtable" border="0" summary="Search by Parish Weekly List">
+   <tr><th class="noline"><label for="parishname">Parish Name (e.g. Dunstable):</label></th>
+<td>
+<select name="parishname" id="parishname">
+<option value=""></option>
+<option value="Ampthill">Ampthill</option>
+<option value="Arlesey">Arlesey</option>
+<option value="Aspley Guise">Aspley Guise</option>
+<option value="Aspley Heath">Aspley Heath</option>
+<option value="Astwick">Astwick</option>
+<option value="Barton-Le-Clay">Barton-Le-Clay</option>
+<option value="Battlesden">Battlesden</option>
+<option value="Biggleswade">Biggleswade</option>
+<option value="Billington">Billington</option>
+<option value="Blunham">Blunham</option>
+<option value="Brogborough">Brogborough</option>
+<option value="Caddington">Caddington</option>
+<option value="Campton&#47;Chicksands">Campton&#47;Chicksands</option>
+<option value="Chalgrave">Chalgrave</option>
+<option value="Chalton">Chalton</option>
+<option value="Clifton">Clifton</option>
+<option value="Clophill">Clophill</option>
+<option value="Cranfield">Cranfield</option>
+<option value="Dunstable">Dunstable</option>
+<option value="Dunton">Dunton</option>
+<option value="Eaton Bray">Eaton Bray</option>
+<option value="Edworth">Edworth</option>
+<option value="Eggington">Eggington</option>
+<option value="Eversholt">Eversholt</option>
+<option value="Everton">Everton</option>
+<option value="External Partner Outside the District">External Partner Outside the District</option>
+<option value="Eyeworth">Eyeworth</option>
+<option value="Fairfield">Fairfield</option>
+<option value="Flitton&#47;Greenfield">Flitton&#47;Greenfield</option>
+<option value="Flitwick">Flitwick</option>
+<option value="Gravenhurst">Gravenhurst</option>
+<option value="Harlington">Harlington</option>
+<option value="Haynes">Haynes</option>
+<option value="Heath &amp; Reach">Heath &amp; Reach</option>
+<option value="Henlow">Henlow</option>
+<option value="Hockliffe">Hockliffe</option>
+<option value="Houghton Conquest">Houghton Conquest</option>
+<option value="Houghton Regis">Houghton Regis</option>
+<option value="Hulcote&#47;Salford">Hulcote&#47;Salford</option>
+<option value="Husborne Crawley">Husborne Crawley</option>
+<option value="Hyde">Hyde</option>
+<option value="Kensworth">Kensworth</option>
+<option value="Langford">Langford</option>
+<option value="Leighton-Linslade">Leighton-Linslade</option>
+<option value="Lidlington">Lidlington</option>
+<option value="Marston Moretaine">Marston Moretaine</option>
+<option value="Maulden">Maulden</option>
+<option value="Meppershall">Meppershall</option>
+<option value="Millbrook">Millbrook</option>
+<option value="Milton Bryan">Milton Bryan</option>
+<option value="Moggerhanger">Moggerhanger</option>
+<option value="Northill">Northill</option>
+<option value="Old Warden">Old Warden</option>
+<option value="Partner Application - Outside District">Partner Application - Outside District</option>
+<option value="Potsgrove">Potsgrove</option>
+<option value="Potton">Potton</option>
+<option value="Pulloxhill">Pulloxhill</option>
+<option value="Ridgmont">Ridgmont</option>
+<option value="Sandy">Sandy</option>
+<option value="Shefford">Shefford</option>
+<option value="Shillington">Shillington</option>
+<option value="Silsoe">Silsoe</option>
+<option value="Slip End">Slip End</option>
+<option value="Southill">Southill</option>
+<option value="Stanbridge">Stanbridge</option>
+<option value="Steppingley">Steppingley</option>
+<option value="Stondon">Stondon</option>
+<option value="Stotfold">Stotfold</option>
+<option value="Streatley">Streatley</option>
+<option value="Studham">Studham</option>
+<option value="Sundon">Sundon</option>
+<option value="Sutton">Sutton</option>
+<option value="Tempsford">Tempsford</option>
+<option value="Tilsworth">Tilsworth</option>
+<option value="Tingrith">Tingrith</option>
+<option value="Toddington">Toddington</option>
+<option value="Totternhoe">Totternhoe</option>
+<option value="Westoning">Westoning</option>
+<option value="Whipsnade">Whipsnade</option>
+<option value="Woburn">Woburn</option>
+<option value="Wrestlingworth&#47;Cockayne Hatley">Wrestlingworth&#47;Cockayne Hatley</option>
+<option value="X Other Authority Consultation X">X Other Authority Consultation X</option>
+
+</select>
+<!-- The above inserts a blank to the drop down (default) -->
+</td>
+</tr>
+
+ <tr><th class="noline"><label for="WkListDate">Weekly List Date:</label></th>
+<td>
+<select name="WkListDate" id="WkListDate">
+<option value=""></option>
+<option value="05/02/2016">05/02/2016</option><option value="29/01/2016">29/01/2016</option><option value="27/01/2016">27/01/2016</option><option value="22/01/2016">22/01/2016</option><option value="21/01/2016">21/01/2016</option><option value="15/01/2016">15/01/2016</option><option value="08/01/2016">08/01/2016</option><option value="07/01/2016">07/01/2016</option><option value="01/01/2016">01/01/2016</option><option value="25/12/2015">25/12/2015</option><option value="18/12/2015">18/12/2015</option><option value="11/12/2015">11/12/2015</option><option value="04/12/2015">04/12/2015</option><option value="27/11/2015">27/11/2015</option><option value="20/11/2015">20/11/2015</option><option value="13/11/2015">13/11/2015</option>
+</select>
+
+
+
+
+
+
+
+
+
+<!-- The above inserts a blank to the drop down (default) -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Search" /> 
+
+ </td>
+  </tr>
+</table>
+
+
+</form>
+
+                </div>
+</div>
+
+</div>
+<!-- end boxcontainer -->
+
+
+
+<div class="boxcontainer">
+
+<div class="spanbox">
+<span class="menutitle">Committee date search</span>
+                  <br/>
+                  <div class="menutext">
+
+                <form id="frmCommitteeDates" onsubmit="return ValidateCommDateSearch()" name="frmCommitteeDates" method="post" action="acolnetcgi.gov?ACTION=UNWRAP&amp;RIPSESSION=%7B%5B%2A%211D1A020B050304731D3C3D31617C041E28360020373B2D3A033A2131681B1102001216030D02040A06016F691120283F3A3606243629243A06176F7C7D7F71797B667777007A6D1D2A20212C2B20080A726A607D7C76797976616B71%21%2A%5D%7D" enctype="multipart/form-data" >Applications for discussion in next Committee Meeting: None scheduled<br/>
+Applications discussed at most recent Committee: <a id="lnkComDate2" href="acolnetcgi.gov?ACTION=UNWRAP&amp;RIPSESSION=%7B%5B%2A%212C3C3F21253A24737F607777027E736B7D15607575786D1C06031C04090B7C1C203C2660760B11292A01373631223502262026691120283F3A3606243629243A06176F7C7D7F71797B667777007D6D1D2A20212C2B20080A726A607D7C7679797E626B74%21%2A%5D%7D">03/02/2016</a>
+ <br/><br />
+<table class="frontpageformtable" border="0" summary="Search by Committe Date">
+<tr>
+<th><label for="ComDate">Committee Dates:</label></th>
+<td>
+<select name="ComDate" id="ComDate">
+<option value=""></option>
+<option value="03/02/2016">03/02/2016</option><option value="06/01/2016">06/01/2016</option><option value="09/12/2015">09/12/2015</option><option value="11/11/2015">11/11/2015</option><option value="14/10/2015">14/10/2015</option><option value="16/09/2015">16/09/2015</option><option value="19/08/2015">19/08/2015</option><option value="22/07/2015">22/07/2015</option><option value="24/06/2015">24/06/2015</option><option value="27/05/2015">27/05/2015</option><option value="08/04/2015">08/04/2015</option><option value="11/03/2015">11/03/2015</option><option value="11/02/2015">11/02/2015</option><option value="14/01/2015">14/01/2015</option><option value="17/12/2014">17/12/2014</option><option value="19/11/2014">19/11/2014</option><option value="22/10/2014">22/10/2014</option><option value="24/09/2014">24/09/2014</option><option value="27/08/2014">27/08/2014</option><option value="30/07/2014">30/07/2014</option><option value="21/07/2014">21/07/2014</option><option value="02/07/2014">02/07/2014</option><option value="04/06/2014">04/06/2014</option><option value="02/04/2014">02/04/2014</option><option value="05/03/2014">05/03/2014</option><option value="28/02/2014">28/02/2014</option><option value="05/02/2014">05/02/2014</option><option value="08/01/2014">08/01/2014</option><option value="04/12/2013">04/12/2013</option><option value="06/11/2013">06/11/2013</option><option value="09/10/2013">09/10/2013</option><option value="11/09/2013">11/09/2013</option><option value="04/09/2013">04/09/2013</option><option value="14/08/2013">14/08/2013</option><option value="17/07/2013">17/07/2013</option><option value="19/06/2013">19/06/2013</option><option value="22/05/2013">22/05/2013</option><option value="24/04/2013">24/04/2013</option><option value="27/03/2013">27/03/2013</option><option value="13/02/2013">13/02/2013</option><option value="16/01/2013">16/01/2013</option><option value="08/01/2013">08/01/2013</option><option value="12/12/2012">12/12/2012</option><option value="21/11/2012">21/11/2012</option><option value="17/10/2012">17/10/2012</option><option value="19/09/2012">19/09/2012</option><option value="15/08/2012">15/08/2012</option><option value="18/07/2012">18/07/2012</option><option value="27/06/2012">27/06/2012</option><option value="23/05/2012">23/05/2012</option><option value="25/04/2012">25/04/2012</option><option value="28/03/2012">28/03/2012</option><option value="14/03/2012">14/03/2012</option><option value="29/02/2012">29/02/2012</option><option value="01/02/2012">01/02/2012</option><option value="04/01/2012">04/01/2012</option><option value="07/12/2011">07/12/2011</option><option value="29/11/2011">29/11/2011</option><option value="09/11/2011">09/11/2011</option><option value="12/10/2011">12/10/2011</option><option value="14/09/2011">14/09/2011</option><option value="17/08/2011">17/08/2011</option><option value="20/07/2011">20/07/2011</option><option value="22/06/2011">22/06/2011</option><option value="25/05/2011">25/05/2011</option><option value="27/04/2011">27/04/2011</option><option value="30/03/2011">30/03/2011</option><option value="02/03/2011">02/03/2011</option><option value="02/02/2011">02/02/2011</option><option value="05/01/2011">05/01/2011</option><option value="08/12/2010">08/12/2010</option><option value="10/11/2010">10/11/2010</option><option value="13/10/2010">13/10/2010</option><option value="15/09/2010">15/09/2010</option><option value="18/08/2010">18/08/2010</option><option value="27/07/2010">27/07/2010</option><option value="21/07/2010">21/07/2010</option><option value="23/06/2010">23/06/2010</option><option value="26/05/2010">26/05/2010</option><option value="28/04/2010">28/04/2010</option><option value="14/04/2010">14/04/2010</option><option value="24/03/2010">24/03/2010</option><option value="17/02/2010">17/02/2010</option><option value="20/01/2010">20/01/2010</option><option value="16/12/2009">16/12/2009</option><option value="18/11/2009">18/11/2009</option><option value="04/11/2009">04/11/2009</option><option value="21/10/2009">21/10/2009</option><option value="23/09/2009">23/09/2009</option><option value="09/09/2009">09/09/2009</option><option value="26/08/2009">26/08/2009</option><option value="05/08/2009">05/08/2009</option><option value="22/07/2009">22/07/2009</option><option value="08/07/2009">08/07/2009</option><option value="24/06/2009">24/06/2009</option><option value="27/05/2009">27/05/2009</option><option value="13/05/2009">13/05/2009</option><option value="29/04/2009">29/04/2009</option><option value="13/04/2009">13/04/2009</option><option value="08/04/2009">08/04/2009</option><option value="11/03/2009">11/03/2009</option><option value="18/02/2009">18/02/2009</option><option value="11/02/2009">11/02/2009</option><option value="28/01/2009">28/01/2009</option><option value="14/01/2009">14/01/2009</option><option value="07/01/2009">07/01/2009</option><option value="10/12/2008">10/12/2008</option><option value="03/12/2008">03/12/2008</option><option value="19/11/2008">19/11/2008</option><option value="12/11/2008">12/11/2008</option><option value="29/10/2008">29/10/2008</option><option value="15/10/2008">15/10/2008</option><option value="08/10/2008">08/10/2008</option><option value="17/09/2008">17/09/2008</option><option value="10/09/2008">10/09/2008</option><option value="27/08/2008">27/08/2008</option><option value="13/08/2008">13/08/2008</option><option value="30/07/2008">30/07/2008</option><option value="16/07/2008">16/07/2008</option><option value="02/07/2008">02/07/2008</option><option value="11/06/2008">11/06/2008</option><option value="21/05/2008">21/05/2008</option><option value="07/05/2008">07/05/2008</option><option value="23/04/2008">23/04/2008</option><option value="09/04/2008">09/04/2008</option><option value="02/04/2008">02/04/2008</option><option value="12/03/2008">12/03/2008</option><option value="29/02/2008">29/02/2008</option><option value="20/02/2008">20/02/2008</option><option value="30/01/2008">30/01/2008</option><option value="18/01/2008">18/01/2008</option><option value="16/01/2008">16/01/2008</option><option value="09/01/2008">09/01/2008</option><option value="12/12/2007">12/12/2007</option><option value="21/11/2007">21/11/2007</option><option value="14/11/2007">14/11/2007</option><option value="31/10/2007">31/10/2007</option><option value="19/10/2007">19/10/2007</option><option value="10/10/2007">10/10/2007</option><option value="19/09/2007">19/09/2007</option><option value="12/09/2007">12/09/2007</option><option value="29/08/2007">29/08/2007</option><option value="15/08/2007">15/08/2007</option><option value="01/08/2007">01/08/2007</option><option value="11/07/2007">11/07/2007</option><option value="04/07/2007">04/07/2007</option><option value="13/06/2007">13/06/2007</option><option value="23/05/2007">23/05/2007</option><option value="25/04/2007">25/04/2007</option><option value="11/04/2007">11/04/2007</option><option value="04/04/2007">04/04/2007</option><option value="14/03/2007">14/03/2007</option><option value="21/02/2007">21/02/2007</option><option value="14/02/2007">14/02/2007</option><option value="31/01/2007">31/01/2007</option><option value="17/01/2007">17/01/2007</option><option value="10/01/2007">10/01/2007</option><option value="13/12/2006">13/12/2006</option><option value="22/11/2006">22/11/2006</option><option value="15/11/2006">15/11/2006</option><option value="01/11/2006">01/11/2006</option><option value="11/10/2006">11/10/2006</option><option value="20/09/2006">20/09/2006</option><option value="13/09/2006">13/09/2006</option><option value="30/08/2006">30/08/2006</option><option value="16/08/2006">16/08/2006</option><option value="02/08/2006">02/08/2006</option><option value="12/07/2006">12/07/2006</option><option value="05/07/2006">05/07/2006</option><option value="14/06/2006">14/06/2006</option><option value="24/05/2006">24/05/2006</option><option value="17/05/2006">17/05/2006</option><option value="19/04/2006">19/04/2006</option><option value="12/04/2006">12/04/2006</option><option value="11/04/2006">11/04/2006</option><option value="29/03/2006">29/03/2006</option><option value="15/03/2006">15/03/2006</option><option value="14/03/2006">14/03/2006</option><option value="08/03/2006">08/03/2006</option><option value="15/02/2006">15/02/2006</option><option value="14/02/2006">14/02/2006</option><option value="25/01/2006">25/01/2006</option><option value="24/01/2006">24/01/2006</option><option value="04/01/2006">04/01/2006</option><option value="21/12/2005">21/12/2005</option><option value="20/12/2005">20/12/2005</option><option value="14/12/2005">14/12/2005</option><option value="23/11/2005">23/11/2005</option><option value="16/11/2005">16/11/2005</option><option value="15/11/2005">15/11/2005</option><option value="02/11/2005">02/11/2005</option><option value="12/10/2005">12/10/2005</option><option value="11/10/2005">11/10/2005</option><option value="21/09/2005">21/09/2005</option><option value="20/09/2005">20/09/2005</option><option value="31/08/2005">31/08/2005</option><option value="16/08/2005">16/08/2005</option><option value="20/07/2005">20/07/2005</option><option value="13/07/2005">13/07/2005</option><option value="12/07/2005">12/07/2005</option><option value="06/07/2005">06/07/2005</option><option value="15/06/2005">15/06/2005</option><option value="14/06/2005">14/06/2005</option><option value="25/05/2005">25/05/2005</option><option value="11/05/2005">11/05/2005</option><option value="10/05/2005">10/05/2005</option><option value="27/04/2005">27/04/2005</option><option value="13/04/2005">13/04/2005</option><option value="12/04/2005">12/04/2005</option><option value="06/04/2005">06/04/2005</option><option value="16/03/2005">16/03/2005</option><option value="15/03/2005">15/03/2005</option><option value="23/02/2005">23/02/2005</option><option value="15/02/2005">15/02/2005</option><option value="02/02/2005">02/02/2005</option><option value="26/01/2005">26/01/2005</option><option value="25/01/2005">25/01/2005</option><option value="12/01/2005">12/01/2005</option><option value="22/12/2004">22/12/2004</option><option value="21/12/2004">21/12/2004</option><option value="15/12/2004">15/12/2004</option><option value="24/11/2004">24/11/2004</option><option value="23/11/2004">23/11/2004</option><option value="03/11/2004">03/11/2004</option><option value="27/10/2004">27/10/2004</option><option value="26/10/2004">26/10/2004</option><option value="13/10/2004">13/10/2004</option><option value="29/09/2004">29/09/2004</option><option value="28/09/2004">28/09/2004</option><option value="22/09/2004">22/09/2004</option><option value="01/09/2004">01/09/2004</option><option value="25/08/2004">25/08/2004</option><option value="24/08/2004">24/08/2004</option><option value="28/07/2004">28/07/2004</option><option value="27/07/2004">27/07/2004</option><option value="21/07/2004">21/07/2004</option><option value="30/06/2004">30/06/2004</option><option value="29/06/2004">29/06/2004</option><option value="02/06/2004">02/06/2004</option><option value="26/05/2004">26/05/2004</option><option value="25/05/2004">25/05/2004</option><option value="12/05/2004">12/05/2004</option><option value="21/04/2004">21/04/2004</option><option value="20/04/2004">20/04/2004</option><option value="31/03/2004">31/03/2004</option><option value="24/03/2004">24/03/2004</option><option value="23/03/2004">23/03/2004</option><option value="10/03/2004">10/03/2004</option><option value="25/02/2004">25/02/2004</option><option value="24/02/2004">24/02/2004</option><option value="18/02/2004">18/02/2004</option><option value="28/01/2004">28/01/2004</option><option value="27/01/2004">27/01/2004</option><option value="07/01/2004">07/01/2004</option><option value="23/12/2003">23/12/2003</option><option value="16/12/2003">16/12/2003</option><option value="10/12/2003">10/12/2003</option><option value="09/12/2003">09/12/2003</option><option value="25/11/2003">25/11/2003</option><option value="19/11/2003">19/11/2003</option><option value="11/11/2003">11/11/2003</option><option value="04/11/2003">04/11/2003</option><option value="29/10/2003">29/10/2003</option><option value="28/10/2003">28/10/2003</option><option value="14/10/2003">14/10/2003</option><option value="08/10/2003">08/10/2003</option><option value="30/09/2003">30/09/2003</option><option value="17/09/2003">17/09/2003</option><option value="16/09/2003">16/09/2003</option><option value="09/09/2003">09/09/2003</option><option value="03/09/2003">03/09/2003</option><option value="26/08/2003">26/08/2003</option><option value="12/08/2003">12/08/2003</option><option value="01/08/2003">01/08/2003</option><option value="29/07/2003">29/07/2003</option><option value="23/07/2003">23/07/2003</option><option value="15/07/2003">15/07/2003</option><option value="02/07/2003">02/07/2003</option><option value="01/07/2003">01/07/2003</option><option value="25/06/2003">25/06/2003</option><option value="24/06/2003">24/06/2003</option><option value="11/06/2003">11/06/2003</option><option value="10/06/2003">10/06/2003</option><option value="03/06/2003">03/06/2003</option><option value="27/05/2003">27/05/2003</option><option value="21/05/2003">21/05/2003</option><option value="20/05/2003">20/05/2003</option><option value="30/04/2003">30/04/2003</option><option value="29/04/2003">29/04/2003</option><option value="23/04/2003">23/04/2003</option><option value="22/04/2003">22/04/2003</option><option value="08/04/2003">08/04/2003</option><option value="01/04/2003">01/04/2003</option><option value="26/03/2003">26/03/2003</option><option value="25/03/2003">25/03/2003</option><option value="11/03/2003">11/03/2003</option><option value="05/03/2003">05/03/2003</option><option value="04/03/2003">04/03/2003</option><option value="12/02/2003">12/02/2003</option><option value="11/02/2003">11/02/2003</option><option value="04/02/2003">04/02/2003</option><option value="28/01/2003">28/01/2003</option><option value="22/01/2003">22/01/2003</option><option value="14/01/2003">14/01/2003</option><option value="08/01/2003">08/01/2003</option><option value="07/01/2003">07/01/2003</option><option value="17/12/2002">17/12/2002</option><option value="10/12/2002">10/12/2002</option><option value="04/12/2002">04/12/2002</option><option value="03/12/2002">03/12/2002</option><option value="19/11/2002">19/11/2002</option><option value="13/11/2002">13/11/2002</option><option value="12/11/2002">12/11/2002</option><option value="05/11/2002">05/11/2002</option><option value="23/10/2002">23/10/2002</option><option value="22/10/2002">22/10/2002</option><option value="15/10/2002">15/10/2002</option><option value="08/10/2002">08/10/2002</option><option value="02/10/2002">02/10/2002</option><option value="24/09/2002">24/09/2002</option><option value="17/09/2002">17/09/2002</option><option value="04/09/2002">04/09/2002</option><option value="27/08/2002">27/08/2002</option><option value="20/08/2002">20/08/2002</option><option value="13/08/2002">13/08/2002</option><option value="30/07/2002">30/07/2002</option><option value="24/07/2002">24/07/2002</option><option value="23/07/2002">23/07/2002</option><option value="16/07/2002">16/07/2002</option><option value="03/07/2002">03/07/2002</option><option value="02/07/2002">02/07/2002</option><option value="25/06/2002">25/06/2002</option><option value="12/06/2002">12/06/2002</option><option value="05/06/2002">05/06/2002</option><option value="28/05/2002">28/05/2002</option><option value="22/05/2002">22/05/2002</option><option value="21/05/2002">21/05/2002</option><option value="07/05/2002">07/05/2002</option><option value="01/05/2002">01/05/2002</option><option value="30/04/2002">30/04/2002</option><option value="24/04/2002">24/04/2002</option><option value="12/04/2002">12/04/2002</option><option value="09/04/2002">09/04/2002</option><option value="02/04/2002">02/04/2002</option><option value="29/03/2002">29/03/2002</option><option value="27/03/2002">27/03/2002</option><option value="15/03/2002">15/03/2002</option><option value="12/03/2002">12/03/2002</option><option value="06/03/2002">06/03/2002</option><option value="05/03/2002">05/03/2002</option><option value="01/03/2002">01/03/2002</option><option value="19/02/2002">19/02/2002</option><option value="15/02/2002">15/02/2002</option><option value="14/02/2002">14/02/2002</option><option value="13/02/2002">13/02/2002</option><option value="12/02/2002">12/02/2002</option><option value="05/02/2002">05/02/2002</option><option value="01/02/2002">01/02/2002</option><option value="23/01/2002">23/01/2002</option><option value="18/01/2002">18/01/2002</option><option value="15/01/2002">15/01/2002</option><option value="10/01/2002">10/01/2002</option><option value="09/01/2002">09/01/2002</option><option value="08/01/2002">08/01/2002</option><option value="04/01/2002">04/01/2002</option><option value="21/12/2001">21/12/2001</option><option value="19/12/2001">19/12/2001</option><option value="18/12/2001">18/12/2001</option><option value="07/12/2001">07/12/2001</option><option value="05/12/2001">05/12/2001</option><option value="04/12/2001">04/12/2001</option><option value="23/11/2001">23/11/2001</option><option value="20/11/2001">20/11/2001</option><option value="14/11/2001">14/11/2001</option><option value="09/11/2001">09/11/2001</option><option value="07/11/2001">07/11/2001</option><option value="26/10/2001">26/10/2001</option><option value="24/10/2001">24/10/2001</option><option value="23/10/2001">23/10/2001</option><option value="12/10/2001">12/10/2001</option><option value="09/10/2001">09/10/2001</option><option value="03/10/2001">03/10/2001</option><option value="02/10/2001">02/10/2001</option><option value="01/10/2001">01/10/2001</option><option value="28/09/2001">28/09/2001</option><option value="18/09/2001">18/09/2001</option><option value="14/09/2001">14/09/2001</option><option value="13/09/2001">13/09/2001</option><option value="12/09/2001">12/09/2001</option><option value="11/09/2001">11/09/2001</option><option value="31/08/2001">31/08/2001</option><option value="28/08/2001">28/08/2001</option><option value="22/08/2001">22/08/2001</option><option value="21/08/2001">21/08/2001</option><option value="17/08/2001">17/08/2001</option><option value="07/08/2001">07/08/2001</option><option value="03/08/2001">03/08/2001</option><option value="31/07/2001">31/07/2001</option><option value="25/07/2001">25/07/2001</option><option value="20/07/2001">20/07/2001</option><option value="17/07/2001">17/07/2001</option><option value="10/07/2001">10/07/2001</option><option value="06/07/2001">06/07/2001</option><option value="04/07/2001">04/07/2001</option><option value="26/06/2001">26/06/2001</option><option value="22/06/2001">22/06/2001</option><option value="19/06/2001">19/06/2001</option><option value="13/06/2001">13/06/2001</option><option value="08/06/2001">08/06/2001</option><option value="05/06/2001">05/06/2001</option><option value="29/05/2001">29/05/2001</option><option value="25/05/2001">25/05/2001</option><option value="23/05/2001">23/05/2001</option><option value="15/05/2001">15/05/2001</option><option value="11/05/2001">11/05/2001</option><option value="08/05/2001">08/05/2001</option><option value="27/04/2001">27/04/2001</option><option value="25/04/2001">25/04/2001</option><option value="24/04/2001">24/04/2001</option><option value="17/04/2001">17/04/2001</option><option value="13/04/2001">13/04/2001</option><option value="03/04/2001">03/04/2001</option><option value="30/03/2001">30/03/2001</option><option value="28/03/2001">28/03/2001</option><option value="27/03/2001">27/03/2001</option><option value="16/03/2001">16/03/2001</option><option value="13/03/2001">13/03/2001</option><option value="07/03/2001">07/03/2001</option><option value="06/03/2001">06/03/2001</option><option value="02/03/2001">02/03/2001</option><option value="20/02/2001">20/02/2001</option><option value="16/02/2001">16/02/2001</option><option value="14/02/2001">14/02/2001</option><option value="13/02/2001">13/02/2001</option><option value="05/02/2001">05/02/2001</option><option value="02/02/2001">02/02/2001</option><option value="31/01/2001">31/01/2001</option><option value="30/01/2001">30/01/2001</option><option value="24/01/2001">24/01/2001</option><option value="23/01/2001">23/01/2001</option><option value="19/01/2001">19/01/2001</option><option value="12/01/2001">12/01/2001</option><option value="09/01/2001">09/01/2001</option><option value="05/01/2001">05/01/2001</option><option value="03/01/2001">03/01/2001</option><option value="02/01/2001">02/01/2001</option><option value="22/12/2000">22/12/2000</option><option value="19/12/2000">19/12/2000</option><option value="12/12/2000">12/12/2000</option><option value="08/12/2000">08/12/2000</option><option value="06/12/2000">06/12/2000</option><option value="28/11/2000">28/11/2000</option><option value="24/11/2000">24/11/2000</option><option value="21/11/2000">21/11/2000</option><option value="15/11/2000">15/11/2000</option><option value="10/11/2000">10/11/2000</option><option value="07/11/2000">07/11/2000</option><option value="01/11/2000">01/11/2000</option><option value="31/10/2000">31/10/2000</option><option value="27/10/2000">27/10/2000</option><option value="25/10/2000">25/10/2000</option><option value="17/10/2000">17/10/2000</option><option value="13/10/2000">13/10/2000</option><option value="10/10/2000">10/10/2000</option><option value="04/10/2000">04/10/2000</option><option value="29/09/2000">29/09/2000</option><option value="26/09/2000">26/09/2000</option><option value="19/09/2000">19/09/2000</option><option value="15/09/2000">15/09/2000</option><option value="13/09/2000">13/09/2000</option><option value="05/09/2000">05/09/2000</option><option value="01/09/2000">01/09/2000</option><option value="29/08/2000">29/08/2000</option><option value="18/08/2000">18/08/2000</option><option value="17/08/2000">17/08/2000</option><option value="16/08/2000">16/08/2000</option><option value="15/08/2000">15/08/2000</option><option value="08/08/2000">08/08/2000</option><option value="04/08/2000">04/08/2000</option><option value="26/07/2000">26/07/2000</option><option value="25/07/2000">25/07/2000</option><option value="21/07/2000">21/07/2000</option><option value="19/07/2000">19/07/2000</option><option value="18/07/2000">18/07/2000</option><option value="07/07/2000">07/07/2000</option><option value="05/07/2000">05/07/2000</option><option value="04/07/2000">04/07/2000</option><option value="27/06/2000">27/06/2000</option><option value="23/06/2000">23/06/2000</option><option value="14/06/2000">14/06/2000</option><option value="13/06/2000">13/06/2000</option><option value="09/06/2000">09/06/2000</option><option value="06/06/2000">06/06/2000</option><option value="26/05/2000">26/05/2000</option><option value="24/05/2000">24/05/2000</option><option value="23/05/2000">23/05/2000</option><option value="16/05/2000">16/05/2000</option><option value="12/05/2000">12/05/2000</option><option value="08/05/2000">08/05/2000</option><option value="02/05/2000">02/05/2000</option><option value="26/04/2000">26/04/2000</option><option value="25/04/2000">25/04/2000</option><option value="24/04/2000">24/04/2000</option><option value="14/04/2000">14/04/2000</option><option value="11/04/2000">11/04/2000</option><option value="05/04/2000">05/04/2000</option><option value="04/04/2000">04/04/2000</option><option value="31/03/2000">31/03/2000</option><option value="21/03/2000">21/03/2000</option><option value="17/03/2000">17/03/2000</option><option value="16/03/2000">16/03/2000</option><option value="15/03/2000">15/03/2000</option><option value="14/03/2000">14/03/2000</option><option value="03/03/2000">03/03/2000</option><option value="29/02/2000">29/02/2000</option><option value="24/02/2000">24/02/2000</option><option value="23/02/2000">23/02/2000</option><option value="22/02/2000">22/02/2000</option><option value="18/02/2000">18/02/2000</option><option value="15/02/2000">15/02/2000</option><option value="08/02/2000">08/02/2000</option><option value="04/02/2000">04/02/2000</option><option value="02/02/2000">02/02/2000</option><option value="01/02/2000">01/02/2000</option><option value="21/01/2000">21/01/2000</option><option value="18/01/2000">18/01/2000</option><option value="13/01/2000">13/01/2000</option><option value="12/01/2000">12/01/2000</option><option value="11/01/2000">11/01/2000</option><option value="07/01/2000">07/01/2000</option><option value="31/12/1999">31/12/1999</option><option value="24/12/1999">24/12/1999</option><option value="21/12/1999">21/12/1999</option><option value="20/12/1999">20/12/1999</option><option value="17/12/1999">17/12/1999</option><option value="16/12/1999">16/12/1999</option><option value="15/12/1999">15/12/1999</option><option value="14/12/1999">14/12/1999</option><option value="06/12/1999">06/12/1999</option><option value="05/12/1999">05/12/1999</option><option value="30/11/1999">30/11/1999</option><option value="26/11/1999">26/11/1999</option><option value="24/11/1999">24/11/1999</option><option value="23/11/1999">23/11/1999</option><option value="12/11/1999">12/11/1999</option><option value="09/11/1999">09/11/1999</option><option value="04/11/1999">04/11/1999</option><option value="03/11/1999">03/11/1999</option><option value="02/11/1999">02/11/1999</option><option value="29/10/1999">29/10/1999</option><option value="26/10/1999">26/10/1999</option><option value="19/10/1999">19/10/1999</option><option value="15/10/1999">15/10/1999</option><option value="13/10/1999">13/10/1999</option><option value="12/10/1999">12/10/1999</option><option value="01/10/1999">01/10/1999</option><option value="28/09/1999">28/09/1999</option><option value="22/09/1999">22/09/1999</option><option value="21/09/1999">21/09/1999</option><option value="17/09/1999">17/09/1999</option><option value="07/09/1999">07/09/1999</option><option value="03/09/1999">03/09/1999</option><option value="02/09/1999">02/09/1999</option><option value="01/09/1999">01/09/1999</option><option value="31/08/1999">31/08/1999</option><option value="20/08/1999">20/08/1999</option><option value="17/08/1999">17/08/1999</option><option value="10/08/1999">10/08/1999</option><option value="09/08/1999">09/08/1999</option><option value="07/08/1999">07/08/1999</option><option value="06/08/1999">06/08/1999</option><option value="05/08/1999">05/08/1999</option><option value="04/08/1999">04/08/1999</option><option value="27/07/1999">27/07/1999</option><option value="26/07/1999">26/07/1999</option><option value="23/07/1999">23/07/1999</option><option value="14/07/1999">14/07/1999</option><option value="13/07/1999">13/07/1999</option><option value="09/07/1999">09/07/1999</option><option value="06/07/1999">06/07/1999</option><option value="25/06/1999">25/06/1999</option><option value="23/06/1999">23/06/1999</option><option value="22/06/1999">22/06/1999</option><option value="15/06/1999">15/06/1999</option><option value="11/06/1999">11/06/1999</option><option value="01/06/1999">01/06/1999</option><option value="28/05/1999">28/05/1999</option><option value="26/05/1999">26/05/1999</option><option value="25/05/1999">25/05/1999</option><option value="15/05/1999">15/05/1999</option><option value="14/05/1999">14/05/1999</option><option value="30/04/1999">30/04/1999</option><option value="29/04/1999">29/04/1999</option><option value="28/04/1999">28/04/1999</option><option value="27/04/1999">27/04/1999</option><option value="20/04/1999">20/04/1999</option><option value="16/04/1999">16/04/1999</option><option value="09/04/1999">09/04/1999</option><option value="08/04/1999">08/04/1999</option><option value="07/04/1999">07/04/1999</option><option value="06/04/1999">06/04/1999</option><option value="02/04/1999">02/04/1999</option><option value="30/03/1999">30/03/1999</option><option value="23/03/1999">23/03/1999</option><option value="19/03/1999">19/03/1999</option><option value="17/03/1999">17/03/1999</option><option value="16/03/1999">16/03/1999</option><option value="15/03/1999">15/03/1999</option><option value="09/03/1999">09/03/1999</option><option value="05/03/1999">05/03/1999</option><option value="24/02/1999">24/02/1999</option><option value="23/02/1999">23/02/1999</option><option value="19/02/1999">19/02/1999</option><option value="16/02/1999">16/02/1999</option><option value="05/02/1999">05/02/1999</option><option value="04/02/1999">04/02/1999</option><option value="03/02/1999">03/02/1999</option><option value="02/02/1999">02/02/1999</option><option value="26/01/1999">26/01/1999</option><option value="22/01/1999">22/01/1999</option><option value="13/01/1999">13/01/1999</option><option value="12/01/1999">12/01/1999</option><option value="08/01/1999">08/01/1999</option><option value="05/01/1999">05/01/1999</option><option value="30/12/1998">30/12/1998</option><option value="25/12/1998">25/12/1998</option><option value="17/12/1998">17/12/1998</option><option value="16/12/1998">16/12/1998</option><option value="15/12/1998">15/12/1998</option><option value="14/12/1998">14/12/1998</option><option value="11/12/1998">11/12/1998</option><option value="08/12/1998">08/12/1998</option><option value="27/11/1998">27/11/1998</option><option value="25/11/1998">25/11/1998</option><option value="24/11/1998">24/11/1998</option><option value="18/11/1998">18/11/1998</option><option value="17/11/1998">17/11/1998</option><option value="13/11/1998">13/11/1998</option><option value="05/11/1998">05/11/1998</option><option value="04/11/1998">04/11/1998</option><option value="03/11/1998">03/11/1998</option><option value="30/10/1998">30/10/1998</option><option value="27/10/1998">27/10/1998</option><option value="16/10/1998">16/10/1998</option><option value="15/10/1998">15/10/1998</option><option value="14/10/1998">14/10/1998</option><option value="13/10/1998">13/10/1998</option><option value="06/10/1998">06/10/1998</option><option value="02/10/1998">02/10/1998</option><option value="23/09/1998">23/09/1998</option><option value="22/09/1998">22/09/1998</option><option value="18/09/1998">18/09/1998</option><option value="15/09/1998">15/09/1998</option><option value="08/09/1998">08/09/1998</option><option value="04/09/1998">04/09/1998</option><option value="03/09/1998">03/09/1998</option><option value="02/09/1998">02/09/1998</option><option value="01/09/1998">01/09/1998</option><option value="25/08/1998">25/08/1998</option><option value="21/08/1998">21/08/1998</option><option value="12/08/1998">12/08/1998</option><option value="11/08/1998">11/08/1998</option><option value="10/08/1998">10/08/1998</option><option value="04/08/1998">04/08/1998</option><option value="24/07/1998">24/07/1998</option><option value="23/07/1998">23/07/1998</option><option value="22/07/1998">22/07/1998</option><option value="21/07/1998">21/07/1998</option><option value="14/07/1998">14/07/1998</option><option value="10/07/1998">10/07/1998</option><option value="02/07/1998">02/07/1998</option><option value="30/06/1998">30/06/1998</option><option value="26/06/1998">26/06/1998</option><option value="25/06/1998">25/06/1998</option><option value="24/06/1998">24/06/1998</option><option value="23/06/1998">23/06/1998</option><option value="12/06/1998">12/06/1998</option><option value="09/06/1998">09/06/1998</option><option value="02/06/1998">02/06/1998</option><option value="29/05/1998">29/05/1998</option><option value="28/05/1998">28/05/1998</option><option value="27/05/1998">27/05/1998</option><option value="19/05/1998">19/05/1998</option><option value="14/05/1998">14/05/1998</option><option value="12/05/1998">12/05/1998</option><option value="30/04/1998">30/04/1998</option><option value="29/04/1998">29/04/1998</option><option value="28/04/1998">28/04/1998</option><option value="21/04/1998">21/04/1998</option><option value="16/04/1998">16/04/1998</option><option value="10/04/1998">10/04/1998</option><option value="09/04/1998">09/04/1998</option><option value="08/04/1998">08/04/1998</option><option value="07/04/1998">07/04/1998</option><option value="02/04/1998">02/04/1998</option><option value="31/03/1998">31/03/1998</option><option value="21/03/1998">21/03/1998</option><option value="19/03/1998">19/03/1998</option><option value="18/03/1998">18/03/1998</option><option value="17/03/1998">17/03/1998</option><option value="10/03/1998">10/03/1998</option><option value="05/03/1998">05/03/1998</option><option value="26/02/1998">26/02/1998</option><option value="25/02/1998">25/02/1998</option><option value="24/02/1998">24/02/1998</option><option value="19/02/1998">19/02/1998</option><option value="17/02/1998">17/02/1998</option><option value="05/02/1998">05/02/1998</option><option value="04/02/1998">04/02/1998</option><option value="03/02/1998">03/02/1998</option><option value="27/01/1998">27/01/1998</option><option value="22/01/1998">22/01/1998</option><option value="15/01/1998">15/01/1998</option><option value="14/01/1998">14/01/1998</option><option value="13/01/1998">13/01/1998</option><option value="08/01/1998">08/01/1998</option><option value="06/01/1998">06/01/1998</option><option value="25/12/1997">25/12/1997</option><option value="17/12/1997">17/12/1997</option><option value="16/12/1997">16/12/1997</option><option value="11/12/1997">11/12/1997</option><option value="09/12/1997">09/12/1997</option><option value="01/12/1997">01/12/1997</option><option value="27/11/1997">27/11/1997</option><option value="26/11/1997">26/11/1997</option><option value="25/11/1997">25/11/1997</option><option value="18/11/1997">18/11/1997</option><option value="13/11/1997">13/11/1997</option><option value="06/11/1997">06/11/1997</option><option value="05/11/1997">05/11/1997</option><option value="04/11/1997">04/11/1997</option><option value="30/10/1997">30/10/1997</option><option value="28/10/1997">28/10/1997</option><option value="16/10/1997">16/10/1997</option><option value="15/10/1997">15/10/1997</option><option value="14/10/1997">14/10/1997</option><option value="07/10/1997">07/10/1997</option><option value="02/10/1997">02/10/1997</option><option value="25/09/1997">25/09/1997</option><option value="24/09/1997">24/09/1997</option><option value="23/09/1997">23/09/1997</option><option value="18/09/1997">18/09/1997</option><option value="16/09/1997">16/09/1997</option><option value="04/09/1997">04/09/1997</option><option value="03/09/1997">03/09/1997</option><option value="02/09/1997">02/09/1997</option><option value="26/08/1997">26/08/1997</option><option value="21/08/1997">21/08/1997</option><option value="12/08/1997">12/08/1997</option><option value="10/08/1997">10/08/1997</option><option value="07/08/1997">07/08/1997</option><option value="06/08/1997">06/08/1997</option><option value="05/08/1997">05/08/1997</option><option value="27/07/1997">27/07/1997</option><option value="24/07/1997">24/07/1997</option><option value="22/07/1997">22/07/1997</option><option value="17/07/1997">17/07/1997</option><option value="16/07/1997">16/07/1997</option><option value="15/07/1997">15/07/1997</option><option value="11/07/1997">11/07/1997</option><option value="10/07/1997">10/07/1997</option><option value="01/07/1997">01/07/1997</option><option value="26/06/1997">26/06/1997</option><option value="25/06/1997">25/06/1997</option><option value="24/06/1997">24/06/1997</option><option value="12/06/1997">12/06/1997</option><option value="10/06/1997">10/06/1997</option><option value="09/06/1997">09/06/1997</option><option value="05/06/1997">05/06/1997</option><option value="04/06/1997">04/06/1997</option><option value="03/06/1997">03/06/1997</option><option value="29/05/1997">29/05/1997</option><option value="21/05/1997">21/05/1997</option><option value="20/05/1997">20/05/1997</option><option value="15/05/1997">15/05/1997</option><option value="14/05/1997">14/05/1997</option><option value="13/05/1997">13/05/1997</option><option value="01/05/1997">01/05/1997</option><option value="29/04/1997">29/04/1997</option><option value="24/04/1997">24/04/1997</option><option value="23/04/1997">23/04/1997</option><option value="22/04/1997">22/04/1997</option><option value="17/04/1997">17/04/1997</option><option value="08/04/1997">08/04/1997</option><option value="03/04/1997">03/04/1997</option><option value="02/04/1997">02/04/1997</option><option value="01/04/1997">01/04/1997</option><option value="20/03/1997">20/03/1997</option><option value="18/03/1997">18/03/1997</option><option value="14/03/1997">14/03/1997</option><option value="13/03/1997">13/03/1997</option><option value="12/03/1997">12/03/1997</option><option value="11/03/1997">11/03/1997</option><option value="06/03/1997">06/03/1997</option><option value="25/02/1997">25/02/1997</option><option value="20/02/1997">20/02/1997</option><option value="19/02/1997">19/02/1997</option><option value="18/02/1997">18/02/1997</option><option value="06/02/1997">06/02/1997</option><option value="04/02/1997">04/02/1997</option><option value="03/02/1997">03/02/1997</option><option value="30/01/1997">30/01/1997</option><option value="29/01/1997">29/01/1997</option><option value="28/01/1997">28/01/1997</option><option value="23/01/1997">23/01/1997</option><option value="16/01/1997">16/01/1997</option><option value="15/01/1997">15/01/1997</option><option value="14/01/1997">14/01/1997</option><option value="09/01/1997">09/01/1997</option><option value="07/01/1997">07/01/1997</option><option value="26/12/1996">26/12/1996</option><option value="18/12/1996">18/12/1996</option><option value="17/12/1996">17/12/1996</option><option value="12/12/1996">12/12/1996</option><option value="10/12/1996">10/12/1996</option><option value="03/12/1996">03/12/1996</option><option value="28/11/1996">28/11/1996</option><option value="27/11/1996">27/11/1996</option><option value="26/11/1996">26/11/1996</option><option value="14/11/1996">14/11/1996</option><option value="12/11/1996">12/11/1996</option><option value="07/11/1996">07/11/1996</option><option value="06/11/1996">06/11/1996</option><option value="05/11/1996">05/11/1996</option><option value="31/10/1996">31/10/1996</option><option value="22/10/1996">22/10/1996</option><option value="17/10/1996">17/10/1996</option><option value="16/10/1996">16/10/1996</option><option value="15/10/1996">15/10/1996</option><option value="03/10/1996">03/10/1996</option><option value="01/10/1996">01/10/1996</option><option value="30/09/1996">30/09/1996</option><option value="26/09/1996">26/09/1996</option><option value="25/09/1996">25/09/1996</option><option value="24/09/1996">24/09/1996</option><option value="23/09/1996">23/09/1996</option><option value="19/09/1996">19/09/1996</option><option value="10/09/1996">10/09/1996</option><option value="05/09/1996">05/09/1996</option><option value="04/09/1996">04/09/1996</option><option value="03/09/1996">03/09/1996</option><option value="22/08/1996">22/08/1996</option><option value="20/08/1996">20/08/1996</option><option value="13/08/1996">13/08/1996</option><option value="08/08/1996">08/08/1996</option><option value="01/08/1996">01/08/1996</option><option value="31/07/1996">31/07/1996</option><option value="30/07/1996">30/07/1996</option><option value="25/07/1996">25/07/1996</option><option value="23/07/1996">23/07/1996</option><option value="12/07/1996">12/07/1996</option><option value="11/07/1996">11/07/1996</option><option value="09/07/1996">09/07/1996</option><option value="04/07/1996">04/07/1996</option><option value="03/07/1996">03/07/1996</option><option value="02/07/1996">02/07/1996</option><option value="27/06/1996">27/06/1996</option><option value="18/06/1996">18/06/1996</option><option value="13/06/1996">13/06/1996</option><option value="12/06/1996">12/06/1996</option><option value="11/06/1996">11/06/1996</option><option value="30/05/1996">30/05/1996</option><option value="28/05/1996">28/05/1996</option><option value="23/05/1996">23/05/1996</option><option value="22/05/1996">22/05/1996</option><option value="21/05/1996">21/05/1996</option><option value="17/05/1996">17/05/1996</option><option value="16/05/1996">16/05/1996</option><option value="07/05/1996">07/05/1996</option><option value="02/05/1996">02/05/1996</option><option value="30/04/1996">30/04/1996</option><option value="26/04/1996">26/04/1996</option><option value="18/04/1996">18/04/1996</option><option value="17/04/1996">17/04/1996</option><option value="16/04/1996">16/04/1996</option><option value="09/04/1996">09/04/1996</option><option value="04/04/1996">04/04/1996</option><option value="29/03/1996">29/03/1996</option><option value="28/03/1996">28/03/1996</option><option value="27/03/1996">27/03/1996</option><option value="22/03/1996">22/03/1996</option><option value="21/03/1996">21/03/1996</option><option value="13/03/1996">13/03/1996</option><option value="12/03/1996">12/03/1996</option><option value="08/03/1996">08/03/1996</option><option value="07/03/1996">07/03/1996</option><option value="06/03/1996">06/03/1996</option><option value="01/03/1996">01/03/1996</option><option value="22/02/1996">22/02/1996</option><option value="20/02/1996">20/02/1996</option><option value="14/02/1996">14/02/1996</option><option value="12/02/1996">12/02/1996</option><option value="09/02/1996">09/02/1996</option><option value="08/02/1996">08/02/1996</option><option value="30/01/1996">30/01/1996</option><option value="26/01/1996">26/01/1996</option><option value="25/01/1996">25/01/1996</option><option value="24/01/1996">24/01/1996</option><option value="22/01/1996">22/01/1996</option><option value="11/01/1996">11/01/1996</option><option value="10/01/1996">10/01/1996</option><option value="09/01/1996">09/01/1996</option><option value="01/01/1996">01/01/1996</option><option value="28/12/1995">28/12/1995</option><option value="19/12/1995">19/12/1995</option><option value="14/12/1995">14/12/1995</option><option value="13/12/1995">13/12/1995</option><option value="12/12/1995">12/12/1995</option><option value="09/12/1995">09/12/1995</option><option value="07/12/1995">07/12/1995</option><option value="04/12/1995">04/12/1995</option><option value="01/12/1995">01/12/1995</option><option value="30/11/1995">30/11/1995</option><option value="28/11/1995">28/11/1995</option><option value="22/11/1995">22/11/1995</option><option value="16/11/1995">16/11/1995</option><option value="07/11/1995">07/11/1995</option><option value="02/11/1995">02/11/1995</option><option value="01/11/1995">01/11/1995</option><option value="26/10/1995">26/10/1995</option><option value="19/10/1995">19/10/1995</option><option value="17/10/1995">17/10/1995</option><option value="11/10/1995">11/10/1995</option><option value="06/10/1995">06/10/1995</option><option value="05/10/1995">05/10/1995</option><option value="28/09/1995">28/09/1995</option><option value="27/09/1995">27/09/1995</option><option value="26/09/1995">26/09/1995</option><option value="22/09/1995">22/09/1995</option><option value="21/09/1995">21/09/1995</option><option value="20/09/1995">20/09/1995</option><option value="19/09/1995">19/09/1995</option><option value="12/09/1995">12/09/1995</option><option value="08/09/1995">08/09/1995</option><option value="07/09/1995">07/09/1995</option><option value="06/09/1995">06/09/1995</option><option value="05/09/1995">05/09/1995</option><option value="24/08/1995">24/08/1995</option><option value="18/08/1995">18/08/1995</option><option value="15/08/1995">15/08/1995</option><option value="10/08/1995">10/08/1995</option><option value="09/08/1995">09/08/1995</option><option value="08/08/1995">08/08/1995</option><option value="07/08/1995">07/08/1995</option><option value="03/08/1995">03/08/1995</option><option value="02/08/1995">02/08/1995</option><option value="28/07/1995">28/07/1995</option><option value="27/07/1995">27/07/1995</option><option value="25/07/1995">25/07/1995</option><option value="21/07/1995">21/07/1995</option><option value="19/07/1995">19/07/1995</option><option value="18/07/1995">18/07/1995</option><option value="13/07/1995">13/07/1995</option><option value="04/07/1995">04/07/1995</option><option value="29/06/1995">29/06/1995</option><option value="28/06/1995">28/06/1995</option><option value="23/06/1995">23/06/1995</option><option value="15/06/1995">15/06/1995</option><option value="13/06/1995">13/06/1995</option><option value="09/06/1995">09/06/1995</option><option value="07/06/1995">07/06/1995</option><option value="06/06/1995">06/06/1995</option><option value="02/06/1995">02/06/1995</option><option value="01/06/1995">01/06/1995</option><option value="31/05/1995">31/05/1995</option><option value="23/05/1995">23/05/1995</option><option value="18/05/1995">18/05/1995</option><option value="17/05/1995">17/05/1995</option><option value="16/05/1995">16/05/1995</option><option value="09/05/1995">09/05/1995</option><option value="05/05/1995">05/05/1995</option><option value="04/05/1995">04/05/1995</option><option value="03/05/1995">03/05/1995</option><option value="01/05/1995">01/05/1995</option><option value="25/04/1995">25/04/1995</option><option value="20/04/1995">20/04/1995</option><option value="19/04/1995">19/04/1995</option><option value="13/04/1995">13/04/1995</option><option value="10/04/1995">10/04/1995</option><option value="06/04/1995">06/04/1995</option><option value="04/04/1995">04/04/1995</option><option value="29/03/1995">29/03/1995</option><option value="28/03/1995">28/03/1995</option><option value="23/03/1995">23/03/1995</option><option value="22/03/1995">22/03/1995</option><option value="17/03/1995">17/03/1995</option><option value="14/03/1995">14/03/1995</option><option value="13/03/1995">13/03/1995</option><option value="09/03/1995">09/03/1995</option><option value="08/03/1995">08/03/1995</option><option value="03/03/1995">03/03/1995</option><option value="02/03/1995">02/03/1995</option><option value="01/03/1995">01/03/1995</option><option value="28/02/1995">28/02/1995</option><option value="24/02/1995">24/02/1995</option><option value="23/02/1995">23/02/1995</option><option value="21/02/1995">21/02/1995</option><option value="15/02/1995">15/02/1995</option><option value="14/02/1995">14/02/1995</option><option value="09/02/1995">09/02/1995</option><option value="06/02/1995">06/02/1995</option><option value="31/01/1995">31/01/1995</option><option value="26/01/1995">26/01/1995</option><option value="25/01/1995">25/01/1995</option><option value="12/01/1995">12/01/1995</option><option value="11/01/1995">11/01/1995</option><option value="10/01/1995">10/01/1995</option><option value="03/01/1995">03/01/1995</option><option value="29/12/1994">29/12/1994</option><option value="23/12/1994">23/12/1994</option><option value="22/12/1994">22/12/1994</option><option value="15/12/1994">15/12/1994</option><option value="14/12/1994">14/12/1994</option><option value="13/12/1994">13/12/1994</option><option value="12/12/1994">12/12/1994</option><option value="30/11/1994">30/11/1994</option><option value="29/11/1994">29/11/1994</option><option value="28/11/1994">28/11/1994</option><option value="24/11/1994">24/11/1994</option><option value="23/11/1994">23/11/1994</option><option value="22/11/1994">22/11/1994</option><option value="18/11/1994">18/11/1994</option><option value="17/11/1994">17/11/1994</option><option value="16/11/1994">16/11/1994</option><option value="15/11/1994">15/11/1994</option><option value="14/11/1994">14/11/1994</option><option value="11/11/1994">11/11/1994</option><option value="10/11/1994">10/11/1994</option><option value="09/11/1994">09/11/1994</option><option value="08/11/1994">08/11/1994</option><option value="03/11/1994">03/11/1994</option><option value="02/11/1994">02/11/1994</option><option value="01/11/1994">01/11/1994</option><option value="28/10/1994">28/10/1994</option><option value="27/10/1994">27/10/1994</option><option value="24/10/1994">24/10/1994</option><option value="20/10/1994">20/10/1994</option><option value="19/10/1994">19/10/1994</option><option value="18/10/1994">18/10/1994</option><option value="17/10/1994">17/10/1994</option><option value="14/10/1994">14/10/1994</option><option value="12/10/1994">12/10/1994</option><option value="11/10/1994">11/10/1994</option><option value="07/10/1994">07/10/1994</option><option value="06/10/1994">06/10/1994</option><option value="29/09/1994">29/09/1994</option><option value="28/09/1994">28/09/1994</option><option value="26/09/1994">26/09/1994</option><option value="23/09/1994">23/09/1994</option><option value="22/09/1994">22/09/1994</option><option value="21/09/1994">21/09/1994</option><option value="20/09/1994">20/09/1994</option><option value="16/09/1994">16/09/1994</option><option value="13/09/1994">13/09/1994</option><option value="12/09/1994">12/09/1994</option><option value="09/09/1994">09/09/1994</option><option value="07/09/1994">07/09/1994</option><option value="06/09/1994">06/09/1994</option><option value="05/09/1994">05/09/1994</option><option value="02/09/1994">02/09/1994</option><option value="30/08/1994">30/08/1994</option><option value="26/08/1994">26/08/1994</option><option value="22/08/1994">22/08/1994</option><option value="19/08/1994">19/08/1994</option><option value="18/08/1994">18/08/1994</option><option value="16/08/1994">16/08/1994</option><option value="15/08/1994">15/08/1994</option><option value="12/08/1994">12/08/1994</option><option value="10/08/1994">10/08/1994</option><option value="09/08/1994">09/08/1994</option><option value="04/08/1994">04/08/1994</option><option value="02/08/1994">02/08/1994</option><option value="28/07/1994">28/07/1994</option><option value="27/07/1994">27/07/1994</option><option value="26/07/1994">26/07/1994</option><option value="22/07/1994">22/07/1994</option><option value="20/07/1994">20/07/1994</option><option value="19/07/1994">19/07/1994</option><option value="18/07/1994">18/07/1994</option><option value="15/07/1994">15/07/1994</option><option value="11/07/1994">11/07/1994</option><option value="08/07/1994">08/07/1994</option><option value="06/07/1994">06/07/1994</option><option value="05/07/1994">05/07/1994</option><option value="01/07/1994">01/07/1994</option><option value="30/06/1994">30/06/1994</option><option value="29/06/1994">29/06/1994</option><option value="28/06/1994">28/06/1994</option><option value="26/06/1994">26/06/1994</option><option value="24/06/1994">24/06/1994</option><option value="22/06/1994">22/06/1994</option><option value="20/06/1994">20/06/1994</option><option value="17/06/1994">17/06/1994</option><option value="16/06/1994">16/06/1994</option><option value="15/06/1994">15/06/1994</option><option value="13/06/1994">13/06/1994</option><option value="08/06/1994">08/06/1994</option><option value="07/06/1994">07/06/1994</option><option value="06/06/1994">06/06/1994</option><option value="30/05/1994">30/05/1994</option><option value="27/05/1994">27/05/1994</option><option value="26/05/1994">26/05/1994</option><option value="25/05/1994">25/05/1994</option><option value="23/05/1994">23/05/1994</option><option value="19/05/1994">19/05/1994</option><option value="18/05/1994">18/05/1994</option><option value="17/05/1994">17/05/1994</option><option value="16/05/1994">16/05/1994</option><option value="12/05/1994">12/05/1994</option><option value="11/05/1994">11/05/1994</option><option value="10/05/1994">10/05/1994</option><option value="09/05/1994">09/05/1994</option><option value="06/05/1994">06/05/1994</option><option value="05/05/1994">05/05/1994</option><option value="03/05/1994">03/05/1994</option><option value="29/04/1994">29/04/1994</option><option value="28/04/1994">28/04/1994</option><option value="26/04/1994">26/04/1994</option><option value="25/04/1994">25/04/1994</option><option value="20/04/1994">20/04/1994</option><option value="19/04/1994">19/04/1994</option><option value="15/04/1994">15/04/1994</option><option value="14/04/1994">14/04/1994</option><option value="13/04/1994">13/04/1994</option><option value="12/04/1994">12/04/1994</option><option value="11/04/1994">11/04/1994</option><option value="08/04/1994">08/04/1994</option><option value="06/04/1994">06/04/1994</option><option value="05/04/1994">05/04/1994</option><option value="30/03/1994">30/03/1994</option><option value="29/03/1994">29/03/1994</option><option value="28/03/1994">28/03/1994</option><option value="26/03/1994">26/03/1994</option><option value="25/03/1994">25/03/1994</option><option value="24/03/1994">24/03/1994</option><option value="23/03/1994">23/03/1994</option><option value="17/03/1994">17/03/1994</option><option value="16/03/1994">16/03/1994</option><option value="15/03/1994">15/03/1994</option><option value="14/03/1994">14/03/1994</option><option value="09/03/1994">09/03/1994</option><option value="08/03/1994">08/03/1994</option><option value="07/03/1994">07/03/1994</option><option value="03/03/1994">03/03/1994</option><option value="02/03/1994">02/03/1994</option><option value="01/03/1994">01/03/1994</option><option value="28/02/1994">28/02/1994</option><option value="24/02/1994">24/02/1994</option><option value="22/02/1994">22/02/1994</option><option value="18/02/1994">18/02/1994</option><option value="16/02/1994">16/02/1994</option><option value="15/02/1994">15/02/1994</option><option value="14/02/1994">14/02/1994</option><option value="11/02/1994">11/02/1994</option><option value="10/02/1994">10/02/1994</option><option value="08/02/1994">08/02/1994</option><option value="03/02/1994">03/02/1994</option><option value="01/02/1994">01/02/1994</option><option value="28/01/1994">28/01/1994</option><option value="26/01/1994">26/01/1994</option><option value="24/01/1994">24/01/1994</option><option value="21/01/1994">21/01/1994</option><option value="20/01/1994">20/01/1994</option><option value="17/01/1994">17/01/1994</option><option value="14/01/1994">14/01/1994</option><option value="13/01/1994">13/01/1994</option><option value="11/01/1994">11/01/1994</option><option value="07/01/1994">07/01/1994</option><option value="06/01/1994">06/01/1994</option><option value="05/01/1994">05/01/1994</option><option value="04/01/1994">04/01/1994</option><option value="03/01/1994">03/01/1994</option><option value="01/01/1994">01/01/1994</option><option value="31/12/1993">31/12/1993</option><option value="30/12/1993">30/12/1993</option><option value="22/12/1993">22/12/1993</option><option value="21/12/1993">21/12/1993</option><option value="17/12/1993">17/12/1993</option><option value="16/12/1993">16/12/1993</option><option value="15/12/1993">15/12/1993</option><option value="14/12/1993">14/12/1993</option><option value="13/12/1993">13/12/1993</option><option value="09/12/1993">09/12/1993</option><option value="08/12/1993">08/12/1993</option><option value="03/12/1993">03/12/1993</option><option value="01/12/1993">01/12/1993</option><option value="30/11/1993">30/11/1993</option><option value="25/11/1993">25/11/1993</option><option value="24/11/1993">24/11/1993</option><option value="23/11/1993">23/11/1993</option><option value="18/11/1993">18/11/1993</option><option value="17/11/1993">17/11/1993</option><option value="15/11/1993">15/11/1993</option><option value="12/11/1993">12/11/1993</option><option value="11/11/1993">11/11/1993</option><option value="10/11/1993">10/11/1993</option><option value="08/11/1993">08/11/1993</option><option value="05/11/1993">05/11/1993</option><option value="03/11/1993">03/11/1993</option><option value="02/11/1993">02/11/1993</option><option value="01/11/1993">01/11/1993</option><option value="29/10/1993">29/10/1993</option><option value="28/10/1993">28/10/1993</option><option value="26/10/1993">26/10/1993</option><option value="22/10/1993">22/10/1993</option><option value="19/10/1993">19/10/1993</option><option value="15/10/1993">15/10/1993</option><option value="14/10/1993">14/10/1993</option><option value="13/10/1993">13/10/1993</option><option value="12/10/1993">12/10/1993</option><option value="08/10/1993">08/10/1993</option><option value="07/10/1993">07/10/1993</option><option value="04/10/1993">04/10/1993</option><option value="01/10/1993">01/10/1993</option><option value="30/09/1993">30/09/1993</option><option value="27/09/1993">27/09/1993</option><option value="24/09/1993">24/09/1993</option><option value="23/09/1993">23/09/1993</option><option value="22/09/1993">22/09/1993</option><option value="21/09/1993">21/09/1993</option><option value="20/09/1993">20/09/1993</option><option value="17/09/1993">17/09/1993</option><option value="15/09/1993">15/09/1993</option><option value="13/09/1993">13/09/1993</option><option value="09/09/1993">09/09/1993</option><option value="08/09/1993">08/09/1993</option><option value="07/09/1993">07/09/1993</option><option value="06/09/1993">06/09/1993</option><option value="03/09/1993">03/09/1993</option><option value="02/09/1993">02/09/1993</option><option value="01/09/1993">01/09/1993</option><option value="31/08/1993">31/08/1993</option><option value="27/08/1993">27/08/1993</option><option value="24/08/1993">24/08/1993</option><option value="20/08/1993">20/08/1993</option><option value="19/08/1993">19/08/1993</option><option value="18/08/1993">18/08/1993</option><option value="13/08/1993">13/08/1993</option><option value="11/08/1993">11/08/1993</option><option value="10/08/1993">10/08/1993</option><option value="05/08/1993">05/08/1993</option><option value="03/08/1993">03/08/1993</option><option value="02/08/1993">02/08/1993</option><option value="30/07/1993">30/07/1993</option><option value="29/07/1993">29/07/1993</option><option value="28/07/1993">28/07/1993</option><option value="27/07/1993">27/07/1993</option><option value="23/07/1993">23/07/1993</option><option value="22/07/1993">22/07/1993</option><option value="21/07/1993">21/07/1993</option><option value="20/07/1993">20/07/1993</option><option value="16/07/1993">16/07/1993</option><option value="14/07/1993">14/07/1993</option><option value="05/07/1993">05/07/1993</option><option value="01/07/1993">01/07/1993</option><option value="30/06/1993">30/06/1993</option><option value="28/06/1993">28/06/1993</option><option value="25/06/1993">25/06/1993</option><option value="24/06/1993">24/06/1993</option><option value="23/06/1993">23/06/1993</option><option value="22/06/1993">22/06/1993</option><option value="18/06/1993">18/06/1993</option><option value="17/06/1993">17/06/1993</option><option value="14/06/1993">14/06/1993</option><option value="10/06/1993">10/06/1993</option><option value="09/06/1993">09/06/1993</option><option value="08/06/1993">08/06/1993</option><option value="04/06/1993">04/06/1993</option><option value="01/06/1993">01/06/1993</option><option value="28/05/1993">28/05/1993</option><option value="24/05/1993">24/05/1993</option><option value="21/05/1993">21/05/1993</option><option value="20/05/1993">20/05/1993</option><option value="19/05/1993">19/05/1993</option><option value="18/05/1993">18/05/1993</option><option value="13/05/1993">13/05/1993</option><option value="11/05/1993">11/05/1993</option><option value="10/05/1993">10/05/1993</option><option value="07/05/1993">07/05/1993</option><option value="30/04/1993">30/04/1993</option><option value="29/04/1993">29/04/1993</option><option value="28/04/1993">28/04/1993</option><option value="27/04/1993">27/04/1993</option><option value="26/04/1993">26/04/1993</option><option value="23/04/1993">23/04/1993</option><option value="21/04/1993">21/04/1993</option><option value="20/04/1993">20/04/1993</option><option value="19/04/1993">19/04/1993</option><option value="15/04/1993">15/04/1993</option><option value="08/04/1993">08/04/1993</option><option value="06/04/1993">06/04/1993</option><option value="05/04/1993">05/04/1993</option><option value="02/04/1993">02/04/1993</option><option value="31/03/1993">31/03/1993</option><option value="29/03/1993">29/03/1993</option><option value="25/03/1993">25/03/1993</option><option value="23/03/1993">23/03/1993</option><option value="22/03/1993">22/03/1993</option><option value="19/03/1993">19/03/1993</option><option value="18/03/1993">18/03/1993</option><option value="16/03/1993">16/03/1993</option><option value="12/03/1993">12/03/1993</option><option value="10/03/1993">10/03/1993</option><option value="09/03/1993">09/03/1993</option><option value="04/03/1993">04/03/1993</option><option value="03/03/1993">03/03/1993</option><option value="01/03/1993">01/03/1993</option><option value="26/02/1993">26/02/1993</option><option value="25/02/1993">25/02/1993</option><option value="23/02/1993">23/02/1993</option><option value="18/02/1993">18/02/1993</option><option value="17/02/1993">17/02/1993</option><option value="15/02/1993">15/02/1993</option><option value="12/02/1993">12/02/1993</option><option value="08/02/1993">08/02/1993</option><option value="02/02/1993">02/02/1993</option><option value="01/02/1993">01/02/1993</option><option value="28/01/1993">28/01/1993</option><option value="27/01/1993">27/01/1993</option><option value="26/01/1993">26/01/1993</option><option value="22/01/1993">22/01/1993</option><option value="19/01/1993">19/01/1993</option><option value="15/01/1993">15/01/1993</option><option value="12/01/1993">12/01/1993</option><option value="11/01/1993">11/01/1993</option><option value="08/01/1993">08/01/1993</option><option value="07/01/1993">07/01/1993</option><option value="06/01/1993">06/01/1993</option><option value="05/01/1993">05/01/1993</option><option value="04/01/1993">04/01/1993</option><option value="24/12/1992">24/12/1992</option><option value="22/12/1992">22/12/1992</option><option value="16/12/1992">16/12/1992</option><option value="14/12/1992">14/12/1992</option><option value="11/12/1992">11/12/1992</option><option value="09/12/1992">09/12/1992</option><option value="08/12/1992">08/12/1992</option><option value="02/12/1992">02/12/1992</option><option value="01/12/1992">01/12/1992</option><option value="30/11/1992">30/11/1992</option><option value="27/11/1992">27/11/1992</option><option value="25/11/1992">25/11/1992</option><option value="24/11/1992">24/11/1992</option><option value="20/11/1992">20/11/1992</option><option value="19/11/1992">19/11/1992</option><option value="18/11/1992">18/11/1992</option><option value="17/11/1992">17/11/1992</option><option value="12/11/1992">12/11/1992</option><option value="11/11/1992">11/11/1992</option><option value="10/11/1992">10/11/1992</option><option value="09/11/1992">09/11/1992</option><option value="06/11/1992">06/11/1992</option><option value="04/11/1992">04/11/1992</option><option value="03/11/1992">03/11/1992</option><option value="02/11/1992">02/11/1992</option><option value="30/10/1992">30/10/1992</option><option value="28/10/1992">28/10/1992</option><option value="26/10/1992">26/10/1992</option><option value="20/10/1992">20/10/1992</option><option value="19/10/1992">19/10/1992</option><option value="16/10/1992">16/10/1992</option><option value="14/10/1992">14/10/1992</option><option value="13/10/1992">13/10/1992</option><option value="06/10/1992">06/10/1992</option><option value="05/10/1992">05/10/1992</option><option value="02/10/1992">02/10/1992</option><option value="29/09/1992">29/09/1992</option><option value="28/09/1992">28/09/1992</option><option value="23/09/1992">23/09/1992</option><option value="22/09/1992">22/09/1992</option><option value="21/09/1992">21/09/1992</option><option value="18/09/1992">18/09/1992</option><option value="14/09/1992">14/09/1992</option><option value="11/09/1992">11/09/1992</option><option value="09/09/1992">09/09/1992</option><option value="08/09/1992">08/09/1992</option><option value="04/09/1992">04/09/1992</option><option value="02/09/1992">02/09/1992</option><option value="01/09/1992">01/09/1992</option><option value="27/08/1992">27/08/1992</option><option value="26/08/1992">26/08/1992</option><option value="25/08/1992">25/08/1992</option><option value="24/08/1992">24/08/1992</option><option value="17/08/1992">17/08/1992</option><option value="12/08/1992">12/08/1992</option><option value="11/08/1992">11/08/1992</option><option value="07/08/1992">07/08/1992</option><option value="05/08/1992">05/08/1992</option><option value="04/08/1992">04/08/1992</option><option value="03/08/1992">03/08/1992</option><option value="31/07/1992">31/07/1992</option><option value="30/07/1992">30/07/1992</option><option value="29/07/1992">29/07/1992</option><option value="28/07/1992">28/07/1992</option><option value="24/07/1992">24/07/1992</option><option value="23/07/1992">23/07/1992</option><option value="22/07/1992">22/07/1992</option><option value="21/07/1992">21/07/1992</option><option value="20/07/1992">20/07/1992</option><option value="17/07/1992">17/07/1992</option><option value="16/07/1992">16/07/1992</option><option value="15/07/1992">15/07/1992</option><option value="14/07/1992">14/07/1992</option><option value="13/07/1992">13/07/1992</option><option value="09/07/1992">09/07/1992</option><option value="07/07/1992">07/07/1992</option><option value="06/07/1992">06/07/1992</option><option value="02/07/1992">02/07/1992</option><option value="01/07/1992">01/07/1992</option><option value="30/06/1992">30/06/1992</option><option value="29/06/1992">29/06/1992</option><option value="26/06/1992">26/06/1992</option><option value="25/06/1992">25/06/1992</option><option value="24/06/1992">24/06/1992</option><option value="23/06/1992">23/06/1992</option><option value="22/06/1992">22/06/1992</option><option value="20/06/1992">20/06/1992</option><option value="19/06/1992">19/06/1992</option><option value="17/06/1992">17/06/1992</option><option value="16/06/1992">16/06/1992</option><option value="12/06/1992">12/06/1992</option><option value="11/06/1992">11/06/1992</option><option value="10/06/1992">10/06/1992</option><option value="09/06/1992">09/06/1992</option><option value="08/06/1992">08/06/1992</option><option value="04/06/1992">04/06/1992</option><option value="03/06/1992">03/06/1992</option><option value="02/06/1992">02/06/1992</option><option value="22/05/1992">22/05/1992</option><option value="21/05/1992">21/05/1992</option><option value="20/05/1992">20/05/1992</option><option value="19/05/1992">19/05/1992</option><option value="15/05/1992">15/05/1992</option><option value="13/05/1992">13/05/1992</option><option value="05/05/1992">05/05/1992</option><option value="30/04/1992">30/04/1992</option><option value="29/04/1992">29/04/1992</option><option value="28/04/1992">28/04/1992</option><option value="27/04/1992">27/04/1992</option><option value="23/04/1992">23/04/1992</option><option value="21/04/1992">21/04/1992</option><option value="17/04/1992">17/04/1992</option><option value="16/04/1992">16/04/1992</option><option value="15/04/1992">15/04/1992</option><option value="14/04/1992">14/04/1992</option><option value="13/04/1992">13/04/1992</option><option value="09/04/1992">09/04/1992</option><option value="08/04/1992">08/04/1992</option><option value="07/04/1992">07/04/1992</option><option value="01/04/1992">01/04/1992</option><option value="31/03/1992">31/03/1992</option><option value="30/03/1992">30/03/1992</option><option value="25/03/1992">25/03/1992</option><option value="23/03/1992">23/03/1992</option><option value="20/03/1992">20/03/1992</option><option value="19/03/1992">19/03/1992</option><option value="17/03/1992">17/03/1992</option><option value="16/03/1992">16/03/1992</option><option value="13/03/1992">13/03/1992</option><option value="11/03/1992">11/03/1992</option><option value="10/03/1992">10/03/1992</option><option value="09/03/1992">09/03/1992</option><option value="06/03/1992">06/03/1992</option><option value="05/03/1992">05/03/1992</option><option value="04/03/1992">04/03/1992</option><option value="28/02/1992">28/02/1992</option><option value="25/02/1992">25/02/1992</option><option value="20/02/1992">20/02/1992</option><option value="19/02/1992">19/02/1992</option><option value="17/02/1992">17/02/1992</option><option value="14/02/1992">14/02/1992</option><option value="13/02/1992">13/02/1992</option><option value="12/02/1992">12/02/1992</option><option value="11/02/1992">11/02/1992</option><option value="10/02/1992">10/02/1992</option><option value="06/02/1992">06/02/1992</option><option value="05/02/1992">05/02/1992</option><option value="04/02/1992">04/02/1992</option><option value="03/02/1992">03/02/1992</option><option value="30/01/1992">30/01/1992</option><option value="29/01/1992">29/01/1992</option><option value="23/01/1992">23/01/1992</option><option value="22/01/1992">22/01/1992</option><option value="20/01/1992">20/01/1992</option><option value="14/01/1992">14/01/1992</option><option value="10/01/1992">10/01/1992</option><option value="08/01/1992">08/01/1992</option><option value="07/01/1992">07/01/1992</option><option value="06/01/1992">06/01/1992</option><option value="03/01/1992">03/01/1992</option><option value="31/12/1991">31/12/1991</option><option value="18/12/1991">18/12/1991</option><option value="17/12/1991">17/12/1991</option><option value="16/12/1991">16/12/1991</option><option value="12/12/1991">12/12/1991</option><option value="11/12/1991">11/12/1991</option><option value="05/12/1991">05/12/1991</option><option value="04/12/1991">04/12/1991</option><option value="03/12/1991">03/12/1991</option><option value="02/12/1991">02/12/1991</option><option value="29/11/1991">29/11/1991</option><option value="26/11/1991">26/11/1991</option><option value="22/11/1991">22/11/1991</option><option value="20/11/1991">20/11/1991</option><option value="18/11/1991">18/11/1991</option><option value="14/11/1991">14/11/1991</option><option value="07/11/1991">07/11/1991</option><option value="06/11/1991">06/11/1991</option><option value="05/11/1991">05/11/1991</option><option value="04/11/1991">04/11/1991</option><option value="31/10/1991">31/10/1991</option><option value="30/10/1991">30/10/1991</option><option value="29/10/1991">29/10/1991</option><option value="25/10/1991">25/10/1991</option><option value="24/10/1991">24/10/1991</option><option value="22/10/1991">22/10/1991</option><option value="17/10/1991">17/10/1991</option><option value="16/10/1991">16/10/1991</option><option value="15/10/1991">15/10/1991</option><option value="09/10/1991">09/10/1991</option><option value="08/10/1991">08/10/1991</option><option value="07/10/1991">07/10/1991</option><option value="30/09/1991">30/09/1991</option><option value="25/09/1991">25/09/1991</option><option value="24/09/1991">24/09/1991</option><option value="23/09/1991">23/09/1991</option><option value="20/09/1991">20/09/1991</option><option value="17/09/1991">17/09/1991</option><option value="13/09/1991">13/09/1991</option><option value="12/09/1991">12/09/1991</option><option value="11/09/1991">11/09/1991</option><option value="10/09/1991">10/09/1991</option><option value="06/09/1991">06/09/1991</option><option value="04/09/1991">04/09/1991</option><option value="30/08/1991">30/08/1991</option><option value="27/08/1991">27/08/1991</option><option value="22/08/1991">22/08/1991</option><option value="21/08/1991">21/08/1991</option><option value="20/08/1991">20/08/1991</option><option value="19/08/1991">19/08/1991</option><option value="14/08/1991">14/08/1991</option><option value="13/08/1991">13/08/1991</option><option value="09/08/1991">09/08/1991</option><option value="07/08/1991">07/08/1991</option><option value="31/07/1991">31/07/1991</option><option value="30/07/1991">30/07/1991</option><option value="25/07/1991">25/07/1991</option><option value="24/07/1991">24/07/1991</option><option value="22/07/1991">22/07/1991</option><option value="18/07/1991">18/07/1991</option><option value="16/07/1991">16/07/1991</option><option value="11/07/1991">11/07/1991</option><option value="10/07/1991">10/07/1991</option><option value="09/07/1991">09/07/1991</option><option value="08/07/1991">08/07/1991</option><option value="02/07/1991">02/07/1991</option><option value="28/06/1991">28/06/1991</option><option value="27/06/1991">27/06/1991</option><option value="26/06/1991">26/06/1991</option><option value="25/06/1991">25/06/1991</option><option value="19/06/1991">19/06/1991</option><option value="18/06/1991">18/06/1991</option><option value="13/06/1991">13/06/1991</option><option value="12/06/1991">12/06/1991</option><option value="11/06/1991">11/06/1991</option><option value="09/06/1991">09/06/1991</option><option value="07/06/1991">07/06/1991</option><option value="06/06/1991">06/06/1991</option><option value="04/06/1991">04/06/1991</option><option value="31/05/1991">31/05/1991</option><option value="30/05/1991">30/05/1991</option><option value="29/05/1991">29/05/1991</option><option value="28/05/1991">28/05/1991</option><option value="24/05/1991">24/05/1991</option><option value="22/05/1991">22/05/1991</option><option value="21/05/1991">21/05/1991</option><option value="16/05/1991">16/05/1991</option><option value="14/05/1991">14/05/1991</option><option value="13/05/1991">13/05/1991</option><option value="10/05/1991">10/05/1991</option><option value="08/05/1991">08/05/1991</option><option value="07/05/1991">07/05/1991</option><option value="30/04/1991">30/04/1991</option><option value="24/04/1991">24/04/1991</option><option value="23/04/1991">23/04/1991</option><option value="22/04/1991">22/04/1991</option><option value="19/04/1991">19/04/1991</option><option value="18/04/1991">18/04/1991</option><option value="17/04/1991">17/04/1991</option><option value="16/04/1991">16/04/1991</option><option value="15/04/1991">15/04/1991</option><option value="11/04/1991">11/04/1991</option><option value="10/04/1991">10/04/1991</option><option value="09/04/1991">09/04/1991</option><option value="08/04/1991">08/04/1991</option><option value="03/04/1991">03/04/1991</option><option value="02/04/1991">02/04/1991</option><option value="28/03/1991">28/03/1991</option><option value="27/03/1991">27/03/1991</option><option value="19/03/1991">19/03/1991</option><option value="14/03/1991">14/03/1991</option><option value="13/03/1991">13/03/1991</option><option value="12/03/1991">12/03/1991</option><option value="07/03/1991">07/03/1991</option><option value="06/03/1991">06/03/1991</option><option value="04/03/1991">04/03/1991</option><option value="27/02/1991">27/02/1991</option><option value="26/02/1991">26/02/1991</option><option value="22/02/1991">22/02/1991</option><option value="21/02/1991">21/02/1991</option><option value="19/02/1991">19/02/1991</option><option value="18/02/1991">18/02/1991</option><option value="14/02/1991">14/02/1991</option><option value="13/02/1991">13/02/1991</option><option value="12/02/1991">12/02/1991</option><option value="11/02/1991">11/02/1991</option><option value="07/02/1991">07/02/1991</option><option value="06/02/1991">06/02/1991</option><option value="05/02/1991">05/02/1991</option><option value="28/01/1991">28/01/1991</option><option value="16/01/1991">16/01/1991</option><option value="14/01/1991">14/01/1991</option><option value="09/01/1991">09/01/1991</option><option value="19/12/1990">19/12/1990</option><option value="12/12/1990">12/12/1990</option><option value="11/12/1990">11/12/1990</option><option value="28/11/1990">28/11/1990</option><option value="21/11/1990">21/11/1990</option><option value="14/11/1990">14/11/1990</option><option value="13/11/1990">13/11/1990</option><option value="31/10/1990">31/10/1990</option><option value="30/10/1990">30/10/1990</option><option value="17/10/1990">17/10/1990</option><option value="16/10/1990">16/10/1990</option><option value="03/10/1990">03/10/1990</option><option value="02/10/1990">02/10/1990</option><option value="26/09/1990">26/09/1990</option><option value="25/09/1990">25/09/1990</option><option value="12/09/1990">12/09/1990</option><option value="11/09/1990">11/09/1990</option><option value="01/09/1990">01/09/1990</option><option value="30/08/1990">30/08/1990</option><option value="29/08/1990">29/08/1990</option><option value="28/08/1990">28/08/1990</option><option value="01/08/1990">01/08/1990</option><option value="25/07/1990">25/07/1990</option><option value="11/07/1990">11/07/1990</option><option value="27/06/1990">27/06/1990</option><option value="26/06/1990">26/06/1990</option><option value="13/06/1990">13/06/1990</option><option value="12/06/1990">12/06/1990</option><option value="08/06/1990">08/06/1990</option><option value="06/06/1990">06/06/1990</option><option value="23/05/1990">23/05/1990</option><option value="22/05/1990">22/05/1990</option><option value="16/05/1990">16/05/1990</option><option value="04/05/1990">04/05/1990</option><option value="25/04/1990">25/04/1990</option><option value="11/04/1990">11/04/1990</option><option value="10/04/1990">10/04/1990</option><option value="04/04/1990">04/04/1990</option><option value="03/04/1990">03/04/1990</option><option value="01/04/1990">01/04/1990</option><option value="28/03/1990">28/03/1990</option><option value="27/03/1990">27/03/1990</option><option value="14/03/1990">14/03/1990</option><option value="12/03/1990">12/03/1990</option><option value="07/03/1990">07/03/1990</option><option value="14/02/1990">14/02/1990</option><option value="07/02/1990">07/02/1990</option><option value="06/02/1990">06/02/1990</option><option value="18/01/1990">18/01/1990</option><option value="17/01/1990">17/01/1990</option><option value="10/01/1990">10/01/1990</option><option value="01/01/1990">01/01/1990</option><option value="21/12/1989">21/12/1989</option><option value="20/12/1989">20/12/1989</option><option value="19/12/1989">19/12/1989</option><option value="13/12/1989">13/12/1989</option><option value="12/12/1989">12/12/1989</option><option value="22/11/1989">22/11/1989</option><option value="21/11/1989">21/11/1989</option><option value="15/11/1989">15/11/1989</option><option value="08/11/1989">08/11/1989</option><option value="25/10/1989">25/10/1989</option><option value="18/10/1989">18/10/1989</option><option value="04/10/1989">04/10/1989</option><option value="27/09/1989">27/09/1989</option><option value="20/09/1989">20/09/1989</option><option value="06/09/1989">06/09/1989</option><option value="05/09/1989">05/09/1989</option><option value="04/09/1989">04/09/1989</option><option value="23/08/1989">23/08/1989</option><option value="02/08/1989">02/08/1989</option><option value="01/08/1989">01/08/1989</option><option value="26/07/1989">26/07/1989</option><option value="25/07/1989">25/07/1989</option><option value="12/07/1989">12/07/1989</option><option value="11/07/1989">11/07/1989</option><option value="28/06/1989">28/06/1989</option><option value="15/06/1989">15/06/1989</option><option value="14/06/1989">14/06/1989</option><option value="13/06/1989">13/06/1989</option><option value="09/06/1989">09/06/1989</option><option value="08/06/1989">08/06/1989</option><option value="07/06/1989">07/06/1989</option><option value="18/05/1989">18/05/1989</option><option value="17/05/1989">17/05/1989</option><option value="16/05/1989">16/05/1989</option><option value="10/05/1989">10/05/1989</option><option value="06/05/1989">06/05/1989</option><option value="19/04/1989">19/04/1989</option><option value="12/04/1989">12/04/1989</option><option value="10/04/1989">10/04/1989</option><option value="29/03/1989">29/03/1989</option><option value="22/03/1989">22/03/1989</option><option value="16/03/1989">16/03/1989</option><option value="15/03/1989">15/03/1989</option><option value="06/03/1989">06/03/1989</option><option value="01/03/1989">01/03/1989</option><option value="15/02/1989">15/02/1989</option><option value="01/02/1989">01/02/1989</option><option value="25/01/1989">25/01/1989</option><option value="18/01/1989">18/01/1989</option><option value="17/01/1989">17/01/1989</option><option value="11/01/1989">11/01/1989</option><option value="21/12/1988">21/12/1988</option><option value="20/12/1988">20/12/1988</option><option value="08/12/1988">08/12/1988</option><option value="07/12/1988">07/12/1988</option><option value="01/12/1988">01/12/1988</option><option value="30/11/1988">30/11/1988</option><option value="17/11/1988">17/11/1988</option><option value="16/11/1988">16/11/1988</option><option value="09/11/1988">09/11/1988</option><option value="02/11/1988">02/11/1988</option><option value="12/10/1988">12/10/1988</option><option value="05/10/1988">05/10/1988</option><option value="15/09/1988">15/09/1988</option><option value="14/09/1988">14/09/1988</option><option value="07/09/1988">07/09/1988</option><option value="10/08/1988">10/08/1988</option><option value="03/08/1988">03/08/1988</option><option value="18/07/1988">18/07/1988</option><option value="13/07/1988">13/07/1988</option><option value="07/07/1988">07/07/1988</option><option value="07/06/1988">07/06/1988</option><option value="18/05/1988">18/05/1988</option><option value="27/04/1988">27/04/1988</option><option value="20/04/1988">20/04/1988</option><option value="12/04/1988">12/04/1988</option><option value="08/04/1988">08/04/1988</option><option value="06/04/1988">06/04/1988</option><option value="01/04/1988">01/04/1988</option><option value="30/03/1988">30/03/1988</option><option value="23/03/1988">23/03/1988</option><option value="20/03/1988">20/03/1988</option><option value="15/03/1988">15/03/1988</option><option value="09/03/1988">09/03/1988</option><option value="02/03/1988">02/03/1988</option><option value="10/02/1988">10/02/1988</option><option value="03/02/1988">03/02/1988</option><option value="20/01/1988">20/01/1988</option><option value="18/01/1988">18/01/1988</option><option value="13/01/1988">13/01/1988</option><option value="08/01/1988">08/01/1988</option><option value="06/01/1988">06/01/1988</option><option value="19/11/1987">19/11/1987</option><option value="11/11/1987">11/11/1987</option><option value="14/10/1987">14/10/1987</option><option value="07/10/1987">07/10/1987</option><option value="05/08/1987">05/08/1987</option><option value="15/07/1987">15/07/1987</option><option value="08/04/1987">08/04/1987</option><option value="25/03/1987">25/03/1987</option><option value="20/03/1987">20/03/1987</option><option value="13/03/1987">13/03/1987</option><option value="11/03/1987">11/03/1987</option><option value="04/03/1987">04/03/1987</option><option value="13/01/1987">13/01/1987</option><option value="29/10/1986">29/10/1986</option><option value="01/10/1986">01/10/1986</option><option value="06/08/1986">06/08/1986</option><option value="23/04/1986">23/04/1986</option><option value="02/04/1986">02/04/1986</option><option value="12/03/1986">12/03/1986</option><option value="18/12/1985">18/12/1985</option><option value="20/11/1985">20/11/1985</option><option value="30/10/1985">30/10/1985</option><option value="16/10/1985">16/10/1985</option><option value="10/07/1985">10/07/1985</option><option value="07/05/1985">07/05/1985</option><option value="30/01/1985">30/01/1985</option><option value="19/12/1984">19/12/1984</option><option value="07/11/1984">07/11/1984</option><option value="23/10/1984">23/10/1984</option><option value="17/10/1984">17/10/1984</option><option value="11/07/1984">11/07/1984</option><option value="28/06/1984">28/06/1984</option><option value="13/06/1984">13/06/1984</option><option value="29/02/1984">29/02/1984</option><option value="15/02/1984">15/02/1984</option><option value="08/02/1984">08/02/1984</option><option value="25/01/1984">25/01/1984</option><option value="18/01/1984">18/01/1984</option><option value="11/01/1984">11/01/1984</option><option value="21/12/1983">21/12/1983</option><option value="07/12/1983">07/12/1983</option><option value="30/11/1983">30/11/1983</option><option value="16/11/1983">16/11/1983</option><option value="09/11/1983">09/11/1983</option><option value="02/11/1983">02/11/1983</option><option value="19/10/1983">19/10/1983</option><option value="13/10/1983">13/10/1983</option><option value="12/10/1983">12/10/1983</option><option value="28/09/1983">28/09/1983</option><option value="21/09/1983">21/09/1983</option><option value="07/09/1983">07/09/1983</option><option value="24/08/1983">24/08/1983</option><option value="03/08/1983">03/08/1983</option><option value="13/07/1983">13/07/1983</option><option value="22/06/1983">22/06/1983</option><option value="14/06/1983">14/06/1983</option><option value="18/05/1983">18/05/1983</option><option value="19/04/1983">19/04/1983</option><option value="06/04/1983">06/04/1983</option><option value="23/03/1983">23/03/1983</option><option value="19/03/1983">19/03/1983</option><option value="16/03/1983">16/03/1983</option><option value="02/03/1983">02/03/1983</option><option value="16/02/1983">16/02/1983</option><option value="02/02/1983">02/02/1983</option><option value="19/01/1983">19/01/1983</option><option value="05/01/1983">05/01/1983</option><option value="22/12/1982">22/12/1982</option><option value="01/12/1982">01/12/1982</option><option value="03/11/1982">03/11/1982</option><option value="20/10/1982">20/10/1982</option><option value="22/09/1982">22/09/1982</option><option value="11/08/1982">11/08/1982</option><option value="09/06/1982">09/06/1982</option><option value="21/04/1982">21/04/1982</option><option value="20/01/1982">20/01/1982</option><option value="02/12/1981">02/12/1981</option><option value="07/10/1981">07/10/1981</option><option value="16/09/1981">16/09/1981</option><option value="30/07/1981">30/07/1981</option><option value="10/06/1981">10/06/1981</option><option value="08/04/1981">08/04/1981</option><option value="18/03/1981">18/03/1981</option><option value="04/03/1981">04/03/1981</option><option value="10/12/1980">10/12/1980</option><option value="29/10/1980">29/10/1980</option><option value="24/09/1980">24/09/1980</option><option value="20/08/1980">20/08/1980</option><option value="09/07/1980">09/07/1980</option><option value="16/04/1980">16/04/1980</option><option value="12/03/1980">12/03/1980</option><option value="05/09/1979">05/09/1979</option><option value="25/07/1979">25/07/1979</option><option value="04/04/1979">04/04/1979</option><option value="12/07/1978">12/07/1978</option><option value="19/04/1978">19/04/1978</option><option value="24/08/1977">24/08/1977</option><option value="15/12/1976">15/12/1976</option><option value="16/06/1976">16/06/1976</option><option value="07/04/1976">07/04/1976</option><option value="21/01/1976">21/01/1976</option><option value="12/11/1975">12/11/1975</option><option value="04/06/1975">04/06/1975</option><option value="30/04/1975">30/04/1975</option><option value="24/03/1975">24/03/1975</option>
+</select>
+<!-- The above inserts a blank to the drop down (default) -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Search" />
+</td>
+</tr>
+</table>
+</form>
+
+
+  <a href="http://www.centralbedfordshire.gov.uk/modgov/mgListCommittees.asp?bcr=1">For More Information on committees and agendas</a>
+              
+  </div>
+</div>
+</div><!-- end boxcontainer -->
+
+<!--
+<div class="spanbox">
+<span class="menutitle">UPRN search</span>
+                  <br/>
+                  <div class="menutext">
+
+                <form id="frmSearchByUPRN" name="frmSearchByUPRN" method="post" action="acolnetcgi.gov?ACTION=UNWRAP&amp;RIPSESSION=%7B%5B%2A%211D1A020B050304731D3C3D31617C041E28360020373B2D3A033A2131681B1102001216030D02040A06016F691120283F3A3606243629243A06176F7C7D7F71797B667777007B6D1D2A20212C2B20080A726A607D7C76797976606471%21%2A%5D%7D" enctype="multipart/form-data"><table class="frontpageformtable" summary="UPRN">
+  <tr> 
+    <td><label for="uprn">UPRN:</label></td>
+    <td>&#160;</td>
+  </tr>
+  <tr>
+    <td> <input class="ACOLNET-INPUT" type="text" name="uprn"  id="uprn" value="" size="30" /></td>
+    <td><input type="submit" value="Search" class="frontpageformelement1" /></td>
+  </tr>
+</table>
+
+
+</form>
+
+              
+  </div>
+</div>
+</div> 
+--><!-- end boxcontainer -->
+
+
+
+<div class="menubox">
+<span class="menutitle">More search options</span>
+<br/><a href="acolnetcgi.gov?ACTION=UNWRAP&amp;RIPNAME=Root.pgesearch">More search options</a><br/><br/>
+</div>
+
+
+
+<div class="menubox">
+<span class="menutitle">Useful information</span>
+<br/><a href="acolnetcgi.gov?ACTION=UNWRAP&amp;RIPNAME=Root.PgeMetaPlan">Background Information on planning data</a><br/><br/>
+</div>
+<div class="menubox">
+<span class="menutitle">Online applications</span>
+<table summary="Online application submission and guide">
+  <tr> 
+    <td> 
+          <a href="http://www.planningportal.gov.uk/" target="_blank" title="Planning Portal">Online application submission and guide</a> 
+    </td>
+    <td rowspan="3"> 
+           <a href="http://www.planningportal.gov.uk/" target="_blank" title="Planning Portal"><img src="http://www.centralbedfordshire.gov.uk/Plantech/DCWebPages//images/pplogo.gif" height="84" width="140" alt="Open in new window" border="0" /></a> 
+    </td>
+    <td rowspan="3">
+    </td>
+  </tr>
+
+  <tr> 
+    <td><a href="http://www.planning-inspectorate.gov.uk/pins/index.htm" target="_blank" title="Planning Portal">Planning 
+      Inspectorate web site - for general information on appeals</a></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.pcs.planningportal.gov.uk/pcsportal/casesearch.asp" target="_blank" title="Planning Portal">Planning Casework Service - for information on a specific appeal</a></td>
+  </tr>
+
+
+
+</table>
+<br/>
+</div>
+
+<table cellspacing="0" summary="Bottom Links">
+
+ <tr>
+     <td class="col1">
+                  <a href="http://www.centralbedfordshire.gov.uk/environment-and-planning/planning/default.aspx" title="Planning ">Return to planning home page</a></td>
+     <td class="col2">
+                    <a href="#top">Top of page</a>
+      </td>
+ </tr>
+</table>
+
+</div>
+<!-- this ends the menucol div -->
+</div>
+<!-- end ACOLNET-PLANTECH div -->
+
+
+
+<div id="Footer">
+<!-- END content here -->	
+		</div>
+        <!-- Footer starts here -->
+        <div id="footer">
+            <div id="links">
+                <ul>
+                    <li><a href="http://www.centralbedfordshire.gov.uk/your-council.aspx">Your council</a>
+                    </li>
+                    <li>| <a href="http://www.centralbedfordshire.gov.uk/whereyouare/whereyouare.aspx">Where you are</a></li>
+                    <li>| <a href="http://www.centralbedfordshire.gov.uk/life-events.aspx">Life events</a></li>
+                    <li>| <a href="http://www.centralbedfordshire.gov.uk/do-it-online.aspx">Do it online</a></li>
+                    <li>| <a href="http://www.centralbedfordshire.gov.uk/contact-us/default.aspx">Contact
+                        us</a></li>
+                    <li>| <a href="http://www.centralbedfordshire.gov.uk/contact-us/about-this-website/privacy.aspx">
+                        Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Footer ends here -->
+    </div>
+
+
+</div>
+</body>
+</html>

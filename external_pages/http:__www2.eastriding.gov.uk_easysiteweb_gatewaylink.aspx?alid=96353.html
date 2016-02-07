@@ -1,0 +1,626 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" /><title>
+	Bin Collections
+</title><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" /><meta name="author" />
+
+    <!-- Le styles -->
+    <link href="Content/Stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="Content/Stylesheets/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" /><link href="Content/Stylesheets/styles.css" rel="stylesheet" type="text/css" /><link href="Content/Stylesheets/responsive.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    
+   	<!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="Content/Stylesheets/ie7.css" />
+    <![endif]-->
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-15437865-26']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://ssl') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top hidden">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Project name</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></l>i
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div class="container">
+
+<div class="row visible-desktop">
+      	<div class="span2">
+          <a href="http://www2.eastriding.gov.uk/welcome/">Home</a> | <a href="http://www2.eastriding.gov.uk/council/contact-the-council/contact-us/">Contact Us</a>
+      	</div>
+        <div class="span6">
+          Skip to: <a href="#breadcrumb-outer">Content</a> | <a href="#menu-inner">Main navigation</a> | <a href="#left-inner">Page navigation</a> | <a href="#breadcrumb-outer">Breadcrumb</a>
+      	</div>
+        <div class="span4">
+          <a href="http://www2.eastriding.gov.uk/council/website-and-accessibility-help/website-accessibility/">Accessibility</a>
+      	</div>
+      </div>
+    <!-- ENDS top links -->
+	<div class="row">
+		<div class="span12" id="header-inner">
+           	<img class="pull-right visible-desktop" src="Content/Images/header_background-right.jpg">
+               <div id="logo-outer">
+               	<div id="logo-inner" class="pull-left"></div>
+                   <div id="menupanel2" class="pull-right">
+                       <map id="oSideNavigationMap">
+                           <select onchange="location = this.options[this.selectedIndex].value;">
+                               <option disabled="disabled">Other sections of the site</option>
+                               <option value="http://www2.eastriding.gov.uk/welcome/">East Riding Council home page</option>
+                               <option value="http://www2.eastriding.gov.uk/business/">:: Business</option>
+                               <option value="http://www2.eastriding.gov.uk/council/">:: Council</option>
+                               <option value="http://www2.eastriding.gov.uk/environment/">:: Environment</option>
+                               <option value="http://www2.eastriding.gov.uk/housing/">:: Housing</option>
+                               <option value="http://www2.eastriding.gov.uk/learning/">:: Learning</option>
+                               <option value="http://www2.eastriding.gov.uk/leisure/">:: Leisure</option>
+                               <option value="http://www2.eastriding.gov.uk/living/">:: Living</option>
+                         </select>
+        <!-- ENDS mobile nav -->
+                        </map>
+                    </div>
+                    <div id="search-trigger" class="pull-right">
+                        <a onclick="togglevisibility('searchpanel');" href="#" style="border:0px">
+                        	<span></span>
+                        </a>
+                    </div>
+                    <div id="searchpanel">
+                    <div id="search-panel-outer" class="pull-right">
+                        <div id="search-panel-inner">
+                            <form id="search-form" method="get" action="http://www2.eastriding.gov.uk/search/">
+                                <fieldset>
+                                <legend class="hide">Search our Site</legend>
+                                    <div id="search-form-outer">
+                                        <div id="search-form-inner">
+                                            <div class="oDataFormElement">
+                                                <span class="oDataSearchFormLabel">
+                                                    <label id="search-title" class="SearchLabel" for="search-keywords">Search our site</label>
+                                                </span>
+                                            </div>
+                                            <div class="oDataFormElement">
+                                                <span class="oDataSearchFormInputText">
+                                                    <input id="search-keywords" class="SearchKeywords" type="text" onfocus="if (this.value=='What are you looking for?') { this.value=''; };return true;" value="What are you looking for?" name="q">
+                                                </span>
+                                                <span class="oDataSearchFormButton">
+                                                    <input id="search-submit" class="SearchButton" type="submit" value="Search">
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="search-mobile-close" class="pull-right">
+                        <a onclick="togglevisibility('searchpanel');" href="#" style="border:0px">
+                        	<span> </span>
+                        </a>
+                    </div>
+                </div>
+                </div>
+			
+                
+          <div class="row no-margin">
+            <div class="span2 ask-bg" id="#menu-inner">
+            	<a href="http://www2.eastriding.gov.uk/" class="btn-block btn-link btn-ask">
+                    <div class="pull-left hidden-phone nav-sides">
+                    	<img src="Content/Images/tab-ask2_left.gif">
+                    </div>
+                    <span>Ask</span>
+                    <p class="nav-description">View popular questions</p>
+                    <div class="pull-right hidden-phone nav-sides">
+                    	<img src="Content/Images/tab-ask2_right.gif">
+                    </div>
+                </a>
+            </div>
+            <div class="span2 hidden-phone do-bg" style="">
+            	<a href="http://www2.eastriding.gov.uk/do/" class="btn-block btn-link btn-do">
+                    <div class="pull-left nav-sides">
+                    	<img src="Content/Images/tab-do2_left.gif">
+                    </div>
+                    <span>Do</span>
+                    <p class="nav-description">Pay, Apply, Book, Report</p>
+                    <div class="pull-right nav-sides">
+                    	<img src="Content/Images/tab-do2_right.gif">
+                    </div>
+                </a>
+            </div>
+            <div class="span2 do-bg visible-phone" style="">
+            	<a href="http://www2.eastriding.gov.uk/do-mobile/" class="btn-block btn-link btn-do">
+                    <div class="pull-left hidden-phone nav-sides">
+                    	<img src="Content/Images/tab-do2_left.gif">
+                    </div>
+                    <span>Do</span>
+                    <div class="pull-right hidden-phone nav-sides">
+                    	<img src="Content/Images/tab-do2_right.gif">
+                    </div>
+                </a>
+            </div>
+            <div class="span2 find-bg" style="">
+            	<a href="http://www2.eastriding.gov.uk/find-menu/" class="btn-block btn-link btn-find">
+                    <div class="pull-left hidden-phone nav-sides">
+                    	<img src="Content/Images/tab-find2_left.gif">
+                    </div>
+                    <span>Find</span>
+                    <p class="nav-description">Explore the website</p>
+                    <div class="pull-right hidden-phone nav-sides">
+                    	<img src="Content/Images/tab-find2_right.gif">
+                    </div>
+                </a>
+            </div>
+            <div class="span2 say-bg" style="">
+            	<a href="http://www2.eastriding.gov.uk/say/" class="btn-block btn-link btn-say">
+                    <div class="pull-left hidden-phone nav-sides">
+                    	<img src="Content/Images/tab-say_left.gif">
+                    </div>
+                    <span>Say</span>
+                    <p class="nav-description">Your views, our news</p>
+                    <div class="pull-right hidden-phone nav-sides">
+                    	<img src="Content/Images/tab-say_right.gif">
+                    </div>
+                </a>
+            </div>
+            
+            <div class="span2 mer-bg">
+            	<a href="http://www2.eastriding.gov.uk/myeastriding/" class="btn-block btn-link btn-mer">
+                    <div class="pull-left hidden-phone nav-sides">
+                    	<img src="Content/Images/tab-my-east-riding_left.gif">
+                    </div>
+                    <div class="mer-text hidden-phone"></div>
+                    <p class="nav-description">Set your location</p>
+                    <span class="visible-phone">myeastriding</span>
+                    <div class="pull-right hidden-phone nav-sides">
+                    	<img src="Content/Images/tab-my-east-riding_right.gif">
+                    </div>
+                </a>
+            </div>
+            
+          </div>
+
+<!-- ENDS main navigation -->
+          
+      	</div>
+      </div>
+
+<div class="row">
+      	<div class="span12">
+            <ul class="breadcrumb" id="breadcrumb-outer">
+                <li>You are here <span class="divider">/</span></li>
+                <li><a href="http://www2.eastriding.gov.uk/">Home</a> <span class="divider">/</span></li>
+                <li class="active"><a href="http://www2.eastriding.gov.uk/welcome/">Home (Ask)</a></li>
+            </ul>
+      	</div>
+      </div>
+
+<!-- ENDS Breadcrumb -->
+      
+    <div class="row">
+      	<div class="span10 offset1">
+            <div class="well">
+                 <form method="post" action="./SearchTrial_Routes.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE3MjQ5MDk0NjAPZBYEAgUPD2QPEBYBZhYBFgIeDlBhcmFtZXRlclZhbHVlZRYBZmRkAgcPFgIeC18hSXRlbUNvdW50Av////8PZGQccefuP5HuXsPZzSTuiaakmZZ0Zs0XOS4+bPWP1ZrXWA==" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="39320AC4" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAQgL9mABNwEg4FVSbRoITZ/1URusW/y1XQUz0eUJauv75wD6no3ldGSW23cl58/BVVHnc3k6NICF6bkbmOA+nrkCFatNVqv0Wz70YKGTouk12XyfUAHxVLfuWavKM+E94E=" />
+                    <fieldset>
+                    	<div class="row">
+           					<div class="span8 offset1 text-center">
+                                <p class="lead">Please enter your postcode and press 'Search'.</p>
+                       	 	</div>
+     					</div>
+                        
+                      	<div class="row">
+           					<div class="span6 offset2">
+                                <input name="textpostcode" type="text" id="textpostcode" class="input-block-level postcode-search" />
+                       	 	</div>
+     					</div>
+                                    <span id="footererror"></span>
+                        <div class="row">
+           					<div class="span6 offset2 postcode-buttons">
+                                <input type="submit" name="ButtonSearchTrial" value="Search" id="ButtonSearchTrial" class="btn pull-right" />
+                                <input type="submit" name="buttonreset" value="Reset" id="buttonreset" class="btn pull-right" />
+                       	 	</div>
+     					</div>
+                    </fieldset>
+                </form>
+            </div>
+      	</div>
+      </div>
+
+    
+          
+          
+    
+
+<!-- Footer -->
+
+
+    <div id="footer-outer" class="row">
+    <div id="footer-inner" class="span12">
+        <div id="footer-hills-and-sea"></div>
+        <div id="footer-alpha-outer">
+            <div id="footer-alpha-inner">
+                <div class="footer-links-outer">
+                    <div id="footer-links-left"> <span class="telephone">East Riding of Yorkshire Council</span>
+ <span class="email-address">
+                <a title="Send an email to East Riding of Yorkshire Council customer services" href="mailto:customer.services@eastriding.gov.uk">customer.services@eastriding.gov.uk</a>
+                </span>
+ <span class="telephone">(01482) 393939</span>
+
+                    </div>
+                    <div id="footer-links-right">
+                        <div class="footer-links">
+                            <ul class="footer-links" style="border-right: 1px solid #0c5c5c;">
+                                <li>	<a title="Link to contacting the council information" href="http://www2.eastriding.gov.uk/council/contact-the-council/contact-us/">Contact us</a>
+
+                                </li>
+                                <li>	<a title="Link to our maps and mapping service information" href="http://www2.eastriding.gov.uk/maps/">Maps</a>
+
+                                </li>
+                                <li>	<a title="Link to information on feedback" href="http://www2.eastriding.gov.uk/council/contact-the-council/tell-us-how-it-is-complaints-comments-and-compliments/">Feedback</a>
+
+                                </li>
+                            </ul>
+                            <ul class="footer-links" style="border-right: 1px solid #0c5c5c; border-left: 1px solid #74cfcf;">
+                                <li>	<a title="Link to information about jobs at the council" href="http://www2.eastriding.gov.uk/council/council-jobs-and-pensions/jobs-at-the-council/">Jobs</a>
+
+                                </li>
+                                <li>	<a title="Link to council news and features" href="http://www2.eastriding.gov.uk/say/">News</a>
+
+                                </li>
+                                <li>	<a title="Link to council events and booking" href="http://www2.eastriding.gov.uk/leisure/events/">Events</a>
+
+                                </li>
+                            </ul>
+                            <ul class="footer-links" style="border-left: 1px solid #74cfcf;">
+                                <li>	<a title="Link to council website and accessibility information" href="http://www2.eastriding.gov.uk/council/website-and-accessibility-help/">Website and accessibility help</a>
+
+                                </li>
+                                <li>	<a title="Link to council website privacy and cookies information" href="http://www2.eastriding.gov.uk/council/governance-and-spending/protecting-your-personal-information/privacy-and-cookie-information-page/">Privacy and cookies information</a>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-beta-outer" class="row">
+            <div id="footer-beta-inner" class="span12">
+                <!-- // Start mega-footer menus // -->
+                <div id="mega-footer-wrapper-outer" class="row">
+                    <div class="mega-footer-wrapper-inner span12">
+                        <div class="row accordion accordion2" id="">
+                            <!--BUSINESS-->
+                            <div class="mega-footer-menu-outer span3">
+                                <div class="mega-footer-menu-inner">
+                                    <div class="mega-footer-menu-title mega-footer-menu-title-business accordion-heading">
+                                        	<h2>
+                                	<a class="accordion-toggle hidden-phone" href="http://www.eastriding.gov.uk/business/">Business</a>
+                                	<a class="accordion-toggle visible-phone" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">Business</a>
+                                </h2>
+
+                                    </div>
+                                    <div id="collapseOne" class="mega-footer-menu-content mega-footer-menu-content-business accordion-body collapse">
+                                        <ul>
+                                            <li><a href="http://www2.eastriding.gov.uk/business/business-advice-and-support/">Business advice and support</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/business/licences-and-registrations/">Licences and registration</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/business/business-opportunities-with-the-council/">Business opportunities with the council</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/business/health-and-safety-at-work/">Health and safety at work</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/business/trading-standards/">Trading standards</a>
+                                            </li>
+                                            <li class="last-bullet"><a href="http://www2.eastriding.gov.uk/business/">View all in business...</a>
+                                            </li>
+                                            <!--<li><a href="#">Trading standards</a></li>
+                                        <li><a href="#">Economic development</a></li>-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--BUSINESS-->
+                            <!--COUNCIL-->
+                            <div class="mega-footer-menu-outer span3">
+                                <div class="mega-footer-menu-inner">
+                                    <div class="mega-footer-menu-title mega-footer-menu-title-council accordion-heading">
+                                        	<h2>
+                                	<a class="accordion-toggle hidden-phone" href="http://www.eastriding.gov.uk/council/">Council</a>
+                                	<a class="accordion-toggle visible-phone" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Council</a>
+                                </h2>
+
+                                    </div>
+                                    <div id="collapseTwo" class="mega-footer-menu-content mega-footer-menu-content-council accordion-body collapse">
+                                        <ul>
+                                            <li><a href="http://www2.eastriding.gov.uk/council/council-jobs-and-pensions/">Council jobs and pensions</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/council/committees/">Committees</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/council/councillors-and-members-of-parliament/">Councillors and members of Parliament</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/council/plans-and-policies/">Plans and policies</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/council/legal-issues-and-spending/">Legal issues and spending</a>
+                                            </li>
+                                            <li class="last-bullet"><a href="http://www2.eastriding.gov.uk/council/">View all in council...</a>
+                                            </li>
+                                            <!--<li><a href="#">Voting and elections</a></li>
+                                        <li><a href="#">Jobs and careers</a></li>-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--COUNCIL-->
+                            <!--ENVIRONMENT-->
+                            <div class="mega-footer-menu-outer span3">
+                                <div class="mega-footer-menu-inner">
+                                    <div class="mega-footer-menu-title mega-footer-menu-title-environment accordion-heading">
+                                         <h2>
+                                    	<a class="accordion-toggle hidden-phone" href="http://www.eastriding.gov.uk/environment/">Environment</a>
+                                        <a class="accordion-toggle visible-phone" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">Environment</a>
+                                    </h2>
+
+                                    </div>
+                                    <div id="collapseThree" class="mega-footer-menu-content mega-footer-menu-content-environment accordion-body collapse">
+                                        <ul>
+                                            <li><a href="http://www2.eastriding.gov.uk/environment/recycling-bins-and-rubbish/">Bins, rubbish and recycling</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/environment/planning-and-building/">Planning and building control</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/environment/roads-streets-traffic-and-parking/">Roads, streets, traffic and parking</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/environment/public-transport-travel/">Public transport</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/environment/pollution/">Pollution</a>
+                                            </li>
+                                            <li class="last-bullet"><a href="http://www2.eastriding.gov.uk/environment/">View all in environment...</a>
+                                            </li>
+                                            <!--<li><a href="#">Roads and parking</a></li>
+                                        <li>Transport and travel</li>-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--ENVIRONMENT-->
+                            <!--HOUSING-->
+                            <div class="mega-footer-menu-outer span3">
+                                <div class="mega-footer-menu-inner">
+                                    <div class="mega-footer-menu-title mega-footer-menu-title-housing accordion-heading">
+                                        	<h2>
+                                    	<a class="accordion-toggle hidden-phone" href="http://www.eastriding.gov.uk/housing/">Housing</a>
+                               			<a class="accordion-toggle visible-phone" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">Housing</a>
+                                    </h2>
+
+                                    </div>
+                                    <div id="collapseFour" class="mega-footer-menu-content mega-footer-menu-content-housing accordion-body collapse">
+                                        <ul>
+                                            <li><a href="http://www2.eastriding.gov.uk/housing/council-tax/">Council tax</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/housing/housing-and-council-tax-benefits/">Housing and council tax benefits</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/housing/council-tenants/">Council tenants</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/housing/housing-advice/">Housing advice</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/housing/private-housing-landlords/">Private housing landlords</a>
+                                            </li>
+                                            <li class="last-bullet"><a href="http://www2.eastriding.gov.uk/housing/">View all in housing...</a>
+                                            </li>
+                                            <!--<li><a href="#">Child care</a></li>
+                                        <li><a href="#">Community safety</a></li>-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--HOUSING-->
+                        </div>
+                        <div class="row accordion accordion2" id="">
+                            <!--LEARNING-->
+                            <div class="mega-footer-menu-outer span3">
+                                <div class="mega-footer-menu-inner">
+                                    <div class="mega-footer-menu-title mega-footer-menu-title-learning accordion-heading">
+                                         <h2>
+                                    	<a class="accordion-toggle hidden-phone" href="http://www.eastriding.gov.uk/learning/">Learning</a>
+                                        <a class="accordion-toggle visible-phone" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">Learning</a>
+                                    </h2>
+
+                                    </div>
+                                    <div id="collapseFive" class="mega-footer-menu-content mega-footer-menu-content-learning accordion-body collapse">
+                                        <ul>
+                                            <li><a href="http://www2.eastriding.gov.uk/learning/schools-colleges-and-academies/">Schools, colleges and academies</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/learning/adult-education/">Adult education</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/learning/finding-work/">Finding work</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/learning/schools-music-service/">Schools' music service</a>
+                                            </li>
+                                            <li class="last-bullet"><a href="http://www2.eastriding.gov.uk/learning/">View all in learning...</a>
+                                            </li>
+                                            <!--<li><a href="#">Youth groups</a></li>-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--LEARNING-->
+                            <!--LEISURE-->
+                            <div class="mega-footer-menu-outer span3">
+                                <div class="mega-footer-menu-inner">
+                                    <div class="mega-footer-menu-title mega-footer-menu-title-leisure accordion-heading">
+                                         <h2>
+                                    	<a class="accordion-toggle hidden-phone" href="http://www.eastriding.gov.uk/leisure/">Leisure</a>
+                                        <a class="accordion-toggle visible-phone" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">Leisure</a>
+                                    </h2>
+
+                                    </div>
+                                    <div id="collapseSix" class="mega-footer-menu-content mega-footer-menu-content-leisure accordion-body collapse">
+                                        <ul>
+                                            <li><a href="http://www2.eastriding.gov.uk/leisure/libraries/">Libraries</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/leisure/leisure-centres-and-other-sports-facilities/">Leisure centres and sports facilities</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/leisure/archives-family-and-local-history/">Archives, family and local history</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/leisure/museums-and-galleries/">Museums and galleries</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/leisure/tourism-and-attractions/">Tourism and attractions</a>
+                                            </li>
+                                            <li class="last-bullet"><a href="http://www2.eastriding.gov.uk/leisure/">View all in leisure...</a>
+                                            </li>
+                                            <!--<li><a href="#">Parks</a></li>
+                                        <li><a href="#">Tourism</a></li>-->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--LEISURE-->
+                            <!--LIVING-->
+                            <div class="mega-footer-menu-outer span3">
+                                <div class="mega-footer-menu-inner">
+                                    <div class="mega-footer-menu-title mega-footer-menu-title-living accordion-heading">
+                                         <h2>
+                                    	<a class="accordion-toggle hidden-phone" href="http://www.eastriding.gov.uk/living/">Living</a>
+                                        <a class="accordion-toggle visible-phone" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">Living</a>
+                                    </h2>
+
+                                    </div>
+                                    <div id="collapseSeven" class="mega-footer-menu-content mega-footer-menu-content-living accordion-body collapse">
+                                        <ul>
+                                            <li><a href="http://www2.eastriding.gov.uk/living/children-and-families/">Children and families</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/living/births/">Births</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/living/deaths/">Deaths</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/living/marriage-and-civil-partnerships/">Marriage and civil partnerships</a>
+                                            </li>
+                                            <li><a href="http://www2.eastriding.gov.uk/living/help-for-people-with-disabilities/">Help for people with disabilities</a>
+                                            </li>
+
+                                            <li class="last-bullet"><a href="http://www2.eastriding.gov.uk/living/">View all in living...</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--LIVING-->
+                            <div class="mega-footer-menu-outer span3">
+                                <div class="mega-footer-menu-inner">
+                                    <div class="mega-footer-menu-title mega-footer-menu-title-council accordion-heading">
+                                        	<h2>
+                                        	<a class="accordion-toggle" href="http://www2.eastriding.gov.uk/find-menu/a-z/" style="line-height:26px; margin-top:-8px;">A-Z of information</a>
+                                        	
+                                        </h2>
+
+                                    </div>
+                                    <!-- SOCIAL MEDIA FOOTER-->
+                                    <div id="social-outer" class="visible-desktop">
+                                        <div id="social-inner">
+                                            <!--TWITTER-->
+                                            <div class="social-button"> <a title="Twitter" href="http://www2.eastriding.gov.uk/say/social-media/"><img src="http://www2.eastriding.gov.uk/EasySiteWeb/EasySite/StyleData/Corporate_master/Images/twitter-icon-off.png" alt="Twitter Icon" name="Twitter" id="Twitter" onMouseOver="this.src='http://www2.eastriding.gov.uk/EasySiteWeb/EasySite/StyleData/Corporate_master/Images/twitter-icon-on.png';" onMouseOut="this.src='http://www2.eastriding.gov.uk/EasySiteWeb/EasySite/StyleData/Corporate_master/Images/twitter-icon-off.png';" /></a>
+
+                                                <div class="social-link"><a title="Twitter" href="http://www2.eastriding.gov.uk/say/social-media/">Twitter</a>
+                                                </div>
+                                            </div>
+                                            <!--FACEBOOK-->
+                                            <div class="social-button"> <a title="Facebook" href="http://www2.eastriding.gov.uk/say/social-media/"><img src="http://www2.eastriding.gov.uk/EasySiteWeb/EasySite/StyleData/Corporate_master/Images/facebook-icon-off.png" alt="Facebook Icon" name="Facebook" id="Facebook" onMouseOver="this.src='http://www2.eastriding.gov.uk/EasySiteWeb/EasySite/StyleData/Corporate_master/Images/facebook-icon-on.png';" onMouseOut="this.src='http://www2.eastriding.gov.uk/EasySiteWeb/EasySite/StyleData/Corporate_master/Images/facebook-icon-off.png';" /></a>
+
+                                                <div class="social-link"><a title="Facebook" href="http://www2.eastriding.gov.uk/say/social-media/">Facebook</a>
+                                                </div>
+                                            </div>
+                                            <!--FLICKR-->
+                                            <div class="social-button"> <a title="Flickr" href="http://www2.eastriding.gov.uk/say/social-media/"><img src="http://www2.eastriding.gov.uk/EasySiteWeb/EasySite/StyleData/Corporate_master/Images/flickr-icon-off.png" alt="Flickr Icon" name="Flickr" id="Flickr" onMouseOver="this.src='http://www2.eastriding.gov.uk/EasySiteWeb/EasySite/StyleData/Corporate_master/Images/flickr-icon-on.png';" onMouseOut="this.src='http://www2.eastriding.gov.uk/EasySiteWeb/EasySite/StyleData/Corporate_master/Images/flickr-icon-off.png';" /></a>
+
+                                                <div class="social-link"><a title="Flickr" href="http://www2.eastriding.gov.uk/say/social-media/">Flickr</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--social-inner END-->
+                                    </div>
+                                    <!--social-outer END-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-gamma-outer">
+        <div id="footer-gamma-inner" class="span12">
+            <div class="copyright">
+                <!--<a href="http://www2.eastriding.gov.uk/council/legal-issues-and-spending/protecting-your-personal-information/privacy-and-cookies/?locale=en">Privacy statement</a> | --><a href="/council/legal-issues-and-spending/protecting-your-personal-information/copyright-statement/">Copyright </a> - East Riding of Yorkshire Council 2013
+                <br /> <a href="/login/">Admin</a>
+
+            </div>
+            <div id="languages-help"><a href="http://www2.eastriding.gov.uk/council/website-and-accessibility-help/language-formats/#lithuanian" class="language-help">Pagalba</a> | <a href="http://www2.eastriding.gov.uk/council/website-and-accessibility-help/language-formats/#turkish" class="language-help">Yard&#305;m</a> | <a href="http://www2.eastriding.gov.uk/council/website-and-accessibility-help/language-formats/#russian" class="language-help">&#1055;&#1086;&#1084;&#1086;&#1097;&#1100;</a> | <a href="http://www2.eastriding.gov.uk/council/website-and-accessibility-help/language-formats/" class="language-help">Pal&#299;dz&#299;ba</a> | <a href="http://www2.eastriding.gov.uk/council/website-and-accessibility-help/language-formats/#polish" class="language-help">Pomoc</a> 
+            </div>
+        </div>
+    </div>
+
+<!-- ENDS footer -->
+    </div>
+        <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="Content/Scripts/jquery.js" type="text/javascript"></script>
+    <script src="Content/Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $('table').each(function () {
+                $(this).closest(".row").prev().addBack().wrapAll("<div class='table-wrapper' />");
+            });
+
+            $(".table-wrapper").hover(
+				function () {
+				    $("table").css("background", "#f5f5f5");
+				    $(this).addClass("hover-row");
+				    $(this).children(".row").children(".span3").hide();
+				}, function () {
+				    $("table").css("background", "none");
+				    $(this).removeClass("hover-row");
+				    $(this).children(".row").children(".span3").show();
+				}
+			);
+
+            if ($(window).width() < 767) {
+                $('.pdf-link').removeAttr('href').addClass('remove-link');
+            }
+
+            if ($(window).width() > 768) {
+                $('.mega-footer-menu-content').css('height', 'auto');
+            }
+
+        });
+
+	</script>
+</body>
+</html>

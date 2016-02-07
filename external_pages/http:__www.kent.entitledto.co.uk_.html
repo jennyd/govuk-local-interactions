@@ -1,0 +1,892 @@
+
+
+
+
+
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<html class="no-js" lang="en">
+<head id="pHead"><meta charset="UTF-8" /><meta name="google-site-verification" content="_mfZqPSDLrihyKyggoEaGeRAuoWroLdabVIis-LlFrA" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><title>
+	Your Details - Entitledto
+</title>
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="shortcut icon" type="image/x-icon" href="/e2sitecss/site29/assets/graphics/favicon.ico" data-norem="" /><link rel="apple-touch-icon" href="/e2sitecss/site29/assets/graphics/apple-touch-icon.png" data-norem="" /><link id="canonicalRel" rel="canonical" href="http://www.entitledto.co.uk/benefits-calculator/entitlementcalculator.aspx" />
+
+
+    <!-- Stylesheets -->
+    <link href="/e2sitecss/site29/assets/css/style.min.css" rel="stylesheet" media="screen, print" /><link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" data-norem="" />
+    <!-- IE7/8 support -->
+    <!--[if lt IE 9]>
+        <script src="/e2sitecss/site29/assets/js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" type="text/css" data-norem="" />
+    <!-- Modernizr -->
+    <script src="/e2sitecss/site29/assets/js/custom.modernizr.js"></script>
+    <script src="/e2sitecss/site29/assets/js/jquery-1.10.2.min.js"></script>
+
+
+
+
+
+     <link rel="stylesheet" type="text/css" media="all" href="/e2sitecss/accordion.css?v=1313" /><link type="text/css" rel="stylesheet" href="/e2sitecss/e2common.css?v=1313" /><link rel="stylesheet" type="text/css" href="/e2sitecss/site29/assets/css/e2KentCalc.css?v1313" /><link id="csse2calc" type="text/css" rel="stylesheet" href="/e2sitecss/hideaccordian.css" />
+
+    <script language="javascript" type="text/javascript">
+<!--
+    function clearField(obj) {
+        if ((obj.value == "0") || (obj.value == "0.0") || (obj.value == " "))
+            obj.value = "";
+    }
+
+    //-->
+    </script>
+    <script language="JavaScript" type="text/javascript">
+<!--
+    function initdata() {
+    }
+    // -->
+    </script>
+    <script type="text/javascript">
+<!--
+    function gotoPage(sPage) { window.location = sPage + ''; }
+        function gotoSitePage(sPage) { window.location = sPage + ''; }
+        // -->
+    </script>
+    <script language="JavaScript" type="text/javascript">
+<!--
+    function fnInit() {
+    }
+    // -->
+    </script>
+    
+    <script  src="js/vfctfuncs.js?v1212" type="text/javascript"></script>
+    <script  type="text/javascript">
+<!--
+    function validateCouple() {
+        changeShareHomeLabel();
+        if (document.getElementById("couple").value > 0) {
+            if (!isScreenReader()) {
+                if (document.getElementById("ResCareRow") != null) {
+                    document.getElementById("ResCareLbl").innerHTML = 'Are you or your partner in hospital/residential care or a full-time student?';
+                    document.getElementById("ImmigrationControlLbl").innerHTML = 'Are you or your partner a British or Irish citizen living in the UK?';
+                }
+            }
+            document.getElementById("coupleMsgRow").className = 'row show-grid e2display';
+            document.getElementById("coupleMsg").className = 'info';
+        }
+        else {
+            if (!isScreenReader()) {
+
+                if (document.getElementById("ResCareRow") != null) {
+                    document.getElementById("ResCareLbl").innerHTML = 'Are you in hospital/residential care, a prisoner, on strike, living abroad or a full-time student?';
+                    document.getElementById("ImmigrationControlLbl").innerHTML = 'Are you a British or Irish citizen living in the UK?';
+                }
+            }
+            document.getElementById("coupleMsg").className='e2hide';
+            document.getElementById("coupleMsgRow").className='row show-grid e2hide';
+        }
+    }
+
+    function validateResCare(oSrc, args) {
+        if ((document.getElementById("ResCaredd")!=null) && (document.getElementById("ResCaredd").value == "True")) {
+            if (args != null) args.IsValid = false;
+        }
+        else {
+            if (args != null) args.IsValid = true;
+        }
+    }
+
+    function coupleDefaultCheck(oSrc, args) {
+        if ((document.getElementById("couple")!=null) && (document.getElementById("couple").value == "-99")) {if (args != null) args.IsValid = false;}
+        else {if (args != null) args.IsValid = true;}
+    }
+
+    function sharesWithDrpDefaultCheck(oSrc, args) {
+        if ((document.getElementById("sharesWithDrp")!=null) && (document.getElementById("sharesWithDrp").value == "-99")) {if (args != null) args.IsValid = false;}
+        else {if (args != null) args.IsValid = true;}
+    }
+    function housingDefaultCheck(oSrc, args) {
+        if ((document.getElementById("housingStatus")!=null) && (document.getElementById("housingStatus").value == "-99")) {if (args != null) args.IsValid = false;}
+        else {if (args != null) args.IsValid = true;}
+    }
+    function ImmigrationControlDefaultCheck(oSrc, args) {
+        if ((document.getElementById("ImmigrationControldd")!=null) && (document.getElementById("ImmigrationControldd").value == "-99")) {if (args != null) args.IsValid = false;}
+        else {if (args != null) args.IsValid = true;}
+    }
+    function ResCareDefaultCheck(oSrc, args) {
+        if ((document.getElementById("ResCaredd") != null) && (document.getElementById("ResCaredd").value == "-99")) {if (args != null) args.IsValid = false;} 
+        else {if (args != null) args.IsValid = true;}
+    }
+
+    function ResCareChanged() {
+        if ((document.getElementById("ResCaredd") != null) && (document.getElementById("ResCaredd").value == "True")) {
+            document.getElementById("ResCareInfoMsgRow").style.display = '';
+            document.getElementById("ResCareInfoMsg").style.display = '';
+        } else {
+            document.getElementById("ResCareInfoMsgRow").style.display = 'none';
+            document.getElementById("ResCareInfoMsg").style.display = 'none';
+        }
+    }
+
+
+    function initdata() {
+        fnInit();
+        validateCouple();
+        validateResCare(null, null);
+        showImmagrationStatusInfo();
+        //        if (document.getElementById("niSite").value != "1")
+        showhousingStatusInfo();
+        ShareWithChanged();
+        ValidatePostcodePrivateTenant();
+        numChildrenChanged();
+        FiveYearResidencyChanged();
+        
+    }
+
+
+        function showImmagrationStatusInfo() {
+            if (document.getElementById("ImmigrationControlInfoRow") == null) return;
+            document.getElementById("ImmigrationControlInfoRow").style.display = 'none';
+            document.getElementById("ImmigrationControlInfoDiv").style.display = 'none';
+            if (document.getElementById("ImmigrationControldd").value == "False") {
+                document.getElementById("ImmigrationControlInfoRow").style.display = '';
+                document.getElementById("ImmigrationControlInfoDiv").style.display = '';
+            }
+        }
+
+
+        function showhousingStatusInfo() {
+            var housingStatusInner = '';
+            if (document.getElementById("housingStatusInfoDiv") == null) return;
+
+            document.getElementById("housingStatusInfoDiv").className = 'e2hide';
+            document.getElementById("housingStatusInfoRow").className = 'row show-grid e2hide';
+
+            if (document.getElementById("SelectYourCouncilLnk") != null) document.getElementById("SelectYourCouncilLnk").className = 'e2display';
+
+            // DG: set in config to hide postcodes
+            if (document.getElementById("hidePostcode").value == "1") {
+                document.getElementById("PostcodeTrimRow").className = 'e2hide';
+                document.getElementById("Postcode").className = 'e2hide';
+                document.getElementById("PostcodeTrim").className = 'e2hide';
+                if ((document.getElementById("housingStatus").value != "1") && (document.getElementById("housingStatus").value != "7")) {
+            if (true) {
+            document.getElementById("Postcode").value = '';
+        }
+    }
+}
+if (document.getElementById("housingStatus") != null) {
+    if (document.getElementById("housingStatusInfoRow") != null) {
+        if ((document.getElementById("housingStatus").value == "1") || (document.getElementById("housingStatus").value == "7")) {
+                document.getElementById("PostcodeTrimRow").className = 'e2display';
+                document.getElementById("Postcode").className = 'e2display';
+                document.getElementById("PostcodeTrim").className = 'e2display';
+                if (document.getElementById("SelectYourCouncilLnk") != null) document.getElementById("SelectYourCouncilLnk").className = 'e2hide';
+            } else if (document.getElementById("housingStatus").value == "3") {
+                housingStatusInner = "Out-of-work benefits can help meet some of the costs of your mortgage. But be aware that help with interest is restricted to 3.12%, capital repayments are not included, there is normally a limit on the loan of £200,000 and there is a two year time limit on some claims. We will calculate benefit entitlement including mortgage help but many claimants will need to make some payments themselves.";
+            } else if (document.getElementById("housingStatus").value == "6") {
+                        housingStatusInner = "Please note that if you select this option we will assume that you live in accommodation that is exempt from the benefits cap and under occupation rules. In order to meet the ‘exempt’ definition the care, support and supervision you receive must be more than minimal. If you are in doubt please read our information on <a href=\"javascript:gotoHelpPage('exemptaccommodation');\">supported exempt accommodation</a> and/or check with your landlord. If your accommodation is not exempt please instead select ‘tenant – social and voluntary’.";
+                    }
+            }
+        }
+        if ((housingStatusInner != '')&&(!isScreenReader())) {
+            document.getElementById("housingStatusInfoDiv").className = 'info';
+            document.getElementById("housingStatusInfoRow").className = 'row show-grid e2display';
+            document.getElementById("housingStatusInfoDiv").innerHTML = housingStatusInner;
+        }
+        }
+
+
+
+
+
+
+        function ShareWithChanged() {
+            var selectedValue = document.getElementById("sharesWithDrp").value;
+            var sharesWithMsgInner = '';
+            document.getElementById("sharesWithMsg").className = 'row show-grid e2hide';
+            document.getElementById("sharesWithMsgRow").className = 'row show-grid e2hide';
+
+            if (selectedValue > "-1") {
+        if (selectedValue == "0" || selectedValue == "1") {
+            //            relative or friend
+            if (document.getElementById("siteid").value == 57) {
+            } else if (document.getElementById("siteid").value == 102) {
+                sharesWithMsgInner = "Your benefit entitlement may be affected by rules on non-dependants.  Please tell us more about non-dependants who live with you on the next page";
+            } else {
+                sharesWithMsgInner = "Your benefit entitlement may be affected by rules on non-dependant deductions.  Please tell us more about non-dependants who live with you on the next page  ";
+            }
+        } else if (selectedValue == "2" || selectedValue == "3") {
+            //  If sub-tenant or lodger
+            if (document.getElementById("isBudgetMode").value == 0) {
+                if (document.getElementById("isUCMode").value == 0) {
+                    sharesWithMsgInner = "Please tell us about any income you receive from your sub-tenant or lodger on the 'income for benefits' page, and make sure they are correctly included if you are affected by the 'bedroom tax'. If you are claiming Universal Credit the rules in relation to sub-tenants and lodgers are very different. For more information see <a href=\"javascript:gotoHelpPage('Universal_Credit_Sub_Tenants');\">rules about sub-tenants and lodgers under Universal Credit</a>. ";
+                } else {
+                    sharesWithMsgInner = "Your sub-tenant or lodger will not be included as a member of your household when working out your bedroom entitlement if you are affected by the ‘bedroom tax’. We do not need to know about any income you receive from them. For more information see <a href=\"javascript:gotoHelpPage('Universal_Credit_Sub_Tenants');\">rules about sub-tenants and lodgers under Universal Credit</a>. ";
+                }
+            } else {
+                sharesWithMsgInner = "Please tell us about any income you receive from your lodger on the 'income for benefits' page, and make sure they are correctly included if you are affected by the 'bedroom tax'. If you are claiming Universal Credit the rules in relation to sub-tenants and lodgers are very different. For more information see <a href=\"javascript:gotoHelpPage('Universal_Credit_Sub_Tenants');\">rules about sub-tenants and lodgers under Universal Credit</a>. ";
+            }
+        } else if (selectedValue == "4") {
+                    //  If joint tenant
+                    sharesWithMsgInner = "Please get more information on benefit rules for <a href=\"javascript:gotoHelpPage('jointtenants');\">joint tenants</a>";
+                    sharesWithMsgInner = "If you rent privately and share some or all of the facilities in the property then help through Housing Benefit is normally calculated using the shared accommodation rate. The calculator will provide the maximum rent you can claim for and work out your entitlement. However, if you are a joint tenant who rents from your local council or a housing association, and you are affected by under occupation rules, you will need to get specialist advice. This is because the calculator does not correctly calculate how the reduction in benefit caused by having a spare room is split between joint tenants.";
+                } else if (selectedValue == "5") {
+                    //  If other
+                    if (document.getElementById("siteid").value == 57) {
+                    } else {
+                        sharesWithMsgInner = "You may need further advice to calculate your benefits. If you continue through the calculator we will not include the effect that the people who share your home may have on your entitlement.  ";
+                        sharesWithMsgInner = "Your benefit entitlement may be affected by rules on non-dependants.  Please tell us more about non-dependants who live with you on the next page";
+                        sharesWithMsgInner = "If you share your home with someone who is not your partner or a dependant child you should try to find out how they are defined in terms of benefit rules. To get a correct calculation you should normally select one of the other options.";
+                    }
+                }
+    }
+    if ((sharesWithMsgInner != '')&&(!isScreenReader())) {
+        document.getElementById("sharesWithMsg").className = 'info';
+        document.getElementById("sharesWithMsgRow").className = 'row show-grid e2display';
+        document.getElementById("sharesWithMsg").innerHTML = sharesWithMsgInner;
+    }
+}
+
+function numChildrenChanged() {
+    changeShareHomeLabel();
+    if ((document.getElementById("haveChildrenUnder5Row")) != null) {
+        if (document.getElementById("numChildren").value > 0) {
+            document.getElementById("haveChildrenUnder5Row").className = 'row show-grid e2display';
+        }
+        else {
+            document.getElementById("haveChildrenUnder5Row").className='row show-grid e2hide';
+        }
+    }
+}
+
+function FiveYearResidencyChanged() {
+    if (document.getElementById("HasFiveYearResidency")!=null)
+    {
+        if (document.getElementById("HasFiveYearResidency").value=="False") {
+            document.getElementById("FiveYearResidencyMsg").className = 'e2display';
+            document.getElementById("FiveYearResidencyMsg").className = 'info';
+        }
+        else {
+            document.getElementById("FiveYearResidencyMsg").className = 'info';
+        }
+    }
+}
+
+
+        
+
+function changeShareHomeLabel() {
+    if (isScreenReader()) return;
+    var txtA = 'Does anyone else live in your home?';
+    var txtB = 'Does anyone else live in your home? Do not include your partner';
+    var txtC = 'Does anyone else live in your home? Do not include your dependent children but do include grown-up children';
+    var txtD = 'Does anyone else live in your home? Do not include your partner or dependent children but do include grown-up children';
+
+    var sharesWithLbl = document.getElementById("sharesWithLbl");
+    sharesWithLbl.innerHTML = txtA;
+
+    if (document.getElementById("couple").value > 0) {
+        sharesWithLbl.innerHTML = txtB;
+        document.getElementById("calcUniversalCreditLbl").innerHTML = "Are you and your partner currently claiming Universal Credit?";
+    } else {
+        document.getElementById("calcUniversalCreditLbl").innerHTML = "Are you currently claiming Universal Credit?";
+    }
+    if(document.getElementById("numChildren").value > 0)        
+        sharesWithLbl.innerHTML = txtC;
+    if(document.getElementById("couple").value > 0 && document.getElementById("numChildren").value > 0)
+        sharesWithLbl.innerHTML = txtD;
+}
+
+function ValidatePostcodePrivateTenant(src, args) {         
+    if (document.getElementById("housingStatus")==null) return;
+    if ((document.getElementById("housingStatus").value == 1) || (document.getElementById("housingStatus").value == 7)) {
+                     if (document.getElementById("Postcode").value == "") {
+                 if (args != null) args.IsValid = false;
+         }
+         else {
+                 if (args != null) args.IsValid = true;
+         }  
+         }
+         }
+         -->
+    </script>
+    
+<!--[if !IE 7]><!-->
+    <link type="text/css" rel="stylesheet" href="/e2sitecss/hidefields.css" />
+<!--<![endif]-->
+<!--[if IE 7]><!-->
+    <link type="text/css" rel="stylesheet" href="/e2sitecss/ie7hidefields.css" />
+<!--<![endif]-->
+  <style>
+  .e2display input { visibility:visible; width: 70px;}
+  </style>
+
+<link rel="stylesheet" href="/e2sitecss/newmenuresp.css?v1316" /><link rel="stylesheet" href="css/e2respv3.css?v1313" />
+    
+<style>
+   
+    div.mentText, div.mentText_on, div.mentText_off {
+    height: 50px;
+            font-size: 14px;
+        width: 100px;
+    }
+</style>
+</head>
+<body id="frmBody" onload="initdata();">        
+ <input name="ctl00$titleSet" type="hidden" id="titleSet" value="1" />
+
+
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="skrollr-body">
+        <!-- Header -->
+        <header>
+            <div class="header">
+                <div class="row">
+                    <div class="skip-link">
+                        <a href="#main" title="Skip to page content">Skip to content</a>
+                    </div>
+                    <a href="/" class="logo">Kent County Council</a>
+                </div>
+                <div class="nav-bar">
+                    <div class="row">
+                        <div class="search">
+                            <form action="http://www.kent.gov.uk/search" method="get">
+                                <input type="hidden" value="results" name="mode">
+                                <label for="queries_keyword_query">Search</label><input type="text" onblur="if (this.value == '') { this.value=''; }" onfocus="if (this.value == '') { this.value = ''; }" id="queries_keyword_query" class="sq-form-field" size="5" value="" name="queries_keyword_query" placeholder="Search kent.gov.uk...">
+                                <input type="submit" value="Search" title="Search">
+                            </form>
+                        </div>
+                        <div id="search-suggestions"></div>
+                    </div>
+
+                    <div class="row">
+                        <a href="#" class="open-nav"><span class="icon icon-navigation"></span> Menu</a>
+                    </div>
+                    <nav class="nav">
+                        <div class="row">
+                            <div class="large-12 column">
+                                <p class="navtitle">Services and information</p>
+                                <!-- Menu nav -->
+
+
+                                <ul>
+                                    <li>
+                                        <span><a href="http://www.kent.gov.uk/education-and-children">Education and children</a></span>
+                                        <p>Includes <a href="http://www.kent.gov.uk/education-and-children/schools/school-places">school places</a>, <a href="http://www.kent.gov.uk/education-and-children/schools/term-dates">term dates</a>, <a href="http://www.kent.gov.uk/social-care-and-health/care-and-support/disability/learning-disability/special-educational-needs/school-information-for-special-educational-needs-sen/kent-test">Kent Test</a>, <a href="http://www.kent.gov.uk/education-and-children/schools/free-school-meals">free school meals</a>, <a href="http://www.kent.gov.uk/education-and-children/college-sixth-form-employment-and-training">college and sixth form</a></p>
+                                    </li>
+                                    <li>
+                                        <span><a href="http://www.kent.gov.uk/leisure-and-community">Leisure and community</a></span>
+                                        <p>Includes <a href="http://www.kent.gov.uk/leisure-and-community/libraries">libraries</a>, <a href="http://www.kent.gov.uk/leisure-and-community/parks-and-outdoor-activities">country parks</a>, <a href="http://www.kent.gov.uk/leisure-and-community/arts">arts</a>, <a href="http://www.kent.gov.uk/leisure-and-community/history-and-heritage">history and heritage</a>,&nbsp;<a href="http://www.kent.gov.uk/leisure-and-community/broadband">broadband</a>, <a href="http://www.kent.gov.uk/leisure-and-community/community-grants-and-funding">community grants</a>, <a href="http://www.kent.gov.uk/social-care-and-health/care-and-support/caring-for-other-people/volunteering">volunteering</a></p>
+                                    </li>
+                                    <li>
+                                        <span><a href="http://www.kent.gov.uk/roads-and-travel">Roads and travel</a></span>
+                                        <p>Includes <a href="http://www.kent.gov.uk/roads-and-travel/travelling-around-kent/bus-travel/bus-passes">bus passes</a>, <a href="http://www.kent.gov.uk/roads-and-travel/report-a-problem">report a problem</a>, <a href="http://www.kent.gov.uk/roads-and-travel/travelling-around-kent/parking/disabled-parking-blue-badge">disabled parking - Blue Badge</a>, <a href="http://www.kent.gov.uk/roads-and-travel/road-safety">road safety</a>,&nbsp; <a href="http://www.kent.gov.uk/roads-and-travel/what-we-look-after/roads/road-projects/willington-street-improvements">Willington Street improvements</a></p>
+                                    </li>
+                                    <li>
+                                        <span><a href="http://www.kent.gov.uk/jobs">Jobs</a></span>
+                                        <p>Includes <a href="http://www.kent.gov.uk/jobs/jobs-at-kent-county-council">jobs at Kent County Council</a>, <a href="http://www.kent.gov.uk/jobs/careers-with-us/careers-in-childrens-social-care">children's social work</a>, <a href="http://www.kent.gov.uk/jobs/careers-with-us/careers-in-adult-social-care">adult social care</a>,&nbsp;<a href="http://www.kent.gov.uk/jobs/starting-your-career/be-an-apprentice">apprenticeships</a></p>
+                                    </li>
+                                    <li>
+                                        <span><a href="http://www.kent.gov.uk/social-care-and-health">Social care and health</a></span>
+                                        <p>Includes <a href="http://www.kent.gov.uk/social-care-and-health/care-and-support/report-abuse">report abuse</a>, <a href="http://www.kent.gov.uk/education-and-children/adoption-and-fostering">adoption and fostering</a>, <a href="http://www.kent.gov.uk/social-care-and-health/care-and-support/housing-and-care-homes/care-homes">care homes</a>, <a href="http://www.kent.gov.uk/social-care-and-health/care-and-support">care and support</a>, <a href="http://www.kent.gov.uk/social-care-and-health/health">health</a></p>
+                                    </li>
+                                    <li>
+                                        <span><a href="http://www.kent.gov.uk/waste-planning-and-land">Waste, planning and land</a></span>
+                                        <p>Includes <a href="http://www.kent.gov.uk/waste-planning-and-land/rubbish-and-recycling">rubbish and recycling</a>, <a href="http://www.kent.gov.uk/waste-planning-and-land/planning-applications">planning applications</a>, <a href="http://www.kent.gov.uk/waste-planning-and-land/village-greens">village greens</a>, <a href="http://www.kent.gov.uk/waste-planning-and-land/public-rights-of-way">public rights of way</a>, <a href="http://www.kent.gov.uk/waste-planning-and-land/flooding-and-drainage">flooding and drainage</a></p>
+                                    </li>
+                                    <li>
+                                        <span><a href="http://www.kent.gov.uk/business">Business</a></span>
+                                        <p>Includes <a href="http://www.kent.gov.uk/business/business-loans-and-funding">loans and funding</a>, <a href="http://www.kent.gov.uk/waste-planning-and-land/rubbish-and-recycling/business-and-commercial-waste">business waste</a>, <a href="http://www.kent.gov.uk/business/trading-standards">trading standards</a></p>
+                                    </li>
+                                    <li>
+                                        <span><a href="http://www.kent.gov.uk/births-ceremonies-and-deaths">Births, ceremonies and deaths</a></span>
+                                        <p>Includes <a href="http://www.kent.gov.uk/births-ceremonies-and-deaths/Births">births</a>, <a href="http://www.kent.gov.uk/births-ceremonies-and-deaths/deaths">deaths</a>, <a href="http://www.kent.gov.uk/births-ceremonies-and-deaths/weddings-and-civil-partnerships">weddings and civil partnerships</a>, <a href="http://www.kent.gov.uk/births-ceremonies-and-deaths/other-ceremonies/citizenship-ceremony">citizenship ceremonies</a></p>
+                                    </li>
+                                    <li>
+                                        <span><a href="http://www.kent.gov.uk/about-the-council">About the council</a></span>
+                                        <p>Includes <a href="http://kccmediahub.net/">news</a>, <a href="http://www.kent.gov.uk/about-the-council/finance-and-budget/2015-16-budget">budget</a>, <a href="http://www.kent.gov.uk/about-the-council/have-your-say/consultations">consultations</a>, <a href="http://www.kent.gov.uk/about-the-council/how-the-council-works/committees-and-meetings">council meetings</a>, <a href="https://democracy.kent.gov.uk/mgMemberIndex.aspx?bcr=1">county councillors</a></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+
+                </div>
+                <div id="breadcrumb-container">
+
+                    <div class="breadcrumb">
+                        <div class="row">
+                            <ul>
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+
+
+
+
+
+                                <li>
+                                    <a href="http://www.kent.gov.uk/social-care-and-health">
+                                        Social care and health
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.kent.gov.uk/social-care-and-health/care-and-support">
+                                        Care and support
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.kent.gov.uk/social-care-and-health/care-and-support/benefits">
+                                        Benefits
+                                    </a>
+                                    
+
+                                </li>
+                                <li id="CurrentBreadCrumb">Benefits calculator</li>
+                                
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <form method="post" action="./entitlementcalculator.aspx" id="ctl15">
+<input type="hidden" name="SectionContents_ToolkitScriptManager1_HiddenField" id="SectionContents_ToolkitScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTMzOTU4ODY2DxYCHhRyYW5nZVZhbFZpZXdTdGF0ZUtleQUBMBYCZg9kFgQCAQ9kFgQCCA8WBB4EaHJlZgVKaHR0cDovL3d3dy5lbnRpdGxlZHRvLmNvLnVrL2JlbmVmaXRzLWNhbGN1bGF0b3IvZW50aXRsZW1lbnRjYWxjdWxhdG9yLmFzcHgeB1Zpc2libGVnZAISDxYCHwEFHC9lMnNpdGVjc3MvaGlkZWFjY29yZGlhbi5jc3NkAgMPFgIeBm9ubG9hZAULaW5pdGRhdGEoKTsWBAIDDxYCHglpbm5lcmh0bWwFE0JlbmVmaXRzIGNhbGN1bGF0b3JkAgUPZBYIAgEPFgIfBAUTQmVuZWZpdHMgY2FsY3VsYXRvcmQCAw8WAh4LXyFJdGVtQ291bnQCCBYQZg9kFgICAQ8PFgIeC05hdmlnYXRlVXJsBUx+L0VudGl0bGVtZW50Q2FsY3VsYXRvci5hc3B4P3NpZD0yOSZpZGs9OTIzMDI1NGMtNDE2Ny00YjFjLWJkZGQtODU1ZmQ4YWU4ZTkwZBYEZg8WAh4FY2xhc3MFGSBFbnRpdGxlbWVudENhbGN1bGF0b3Jfb25kAgEPFgIfBwUMIG1lbnRUZXh0X29uFgICAQ8VAQxZb3VyIERldGFpbHNkAgEPZBYCAgEPDxYCHwZlZBYEZg8WAh8HBRggQWdlRGlzYWJpbGl0eVN0YXR1c19vZmZkAgEPFgIfBwUNIG1lbnRUZXh0X29mZhYCAgEPFQEZQWdlIGFuZCBEaXNhYmlsaXR5IFN0YXR1c2QCAg9kFgICAQ8PFgIfBmVkFgRmDxYCHwcFECBCZWRDYWxjSE1SQ19vZmZkAgEPFgIfBwUNIG1lbnRUZXh0X29mZhYCAgEPFQESQmVkcm9vbSBDYWxjdWxhdG9yZAIDD2QWAgIBDw8WAh8GZWQWBGYPFgIfBwUZIE91dF9vZl93b3JrX2JlbmVmaXRzX29mZmQCAQ8WAh8HBQ0gbWVudFRleHRfb2ZmFgICAQ8VARRPdXQgb2YgV29yayBCZW5lZml0c2QCBA9kFgICAQ8PFgIfBmVkFgRmDxYCHwcFEyBjbGllbnRiZW5lZml0c19vZmZkAgEPFgIfBwUNIG1lbnRUZXh0X29mZhYCAgEPFQEUQmVuZWZpdHMgeW91IHJlY2VpdmVkAgUPZBYCAgEPDxYCHwZlZBYEZg8WAh8HBREgSG91c2luZ0Nvc3RzX29mZmQCAQ8WAh8HBQ0gbWVudFRleHRfb2ZmFgICAQ8VAR1Db3VuY2lsIFRheCBhbmQgSG91c2luZyBDb3N0c2QCBg9kFgICAQ8PFgIfBmVkFgRmDxYCHwcFDiBuZXRpbmNvbWVfb2ZmZAIBDxYCHwcFDSBtZW50VGV4dF9vZmYWAgIBDxUBCk5ldCBJbmNvbWVkAgcPZBYCAgEPDxYCHwZlZBYEZg8WAh8HBRQgQ2FsY1Jlc3VsdHMyMDEzX29mZmQCAQ8WAh8HBQ0gbWVudFRleHRfb2ZmFgICAQ8VAQdSZXN1bHRzZAIFDw8WAh4EVGV4dAUMWW91ciBEZXRhaWxzZGQCCw9kFkQCFw9kFgRmDxYCHhFSZXF1aXJlT3BlbmVkUGFuZWdkAgEPZBYEZg8PFgQeCENzc0NsYXNzBRJhY2NvcmRuSGRyU2VsZWN0ZWQeBF8hU0ICAmQWAgIBDxYCHwJoZAIBDw8WBB8KBQphY2NvcmRuQ250HwsCAhYCHgVzdHlsZQUOZGlzcGxheTpibG9jazsWBAIBD2QWBgIBDxYCHhJCb3VuZExpdGVyYWxTaXRlSUQCHWQCAw8WAh8CaGQCBQ9kFhQCAw8WAh8BBSFqYXZhc2NyaXB0OmdvdG9IZWxwUGFnZSgnQ291cGxlJylkAgUPFgIfAQUjamF2YXNjcmlwdDpnb3RvSGVscFBhZ2UoJ0NoaWxkcmVuJylkAgcPDxYCHwgFSSB3aGV0aGVyIGFueW9uZSBlbHNlIGxpdmVzIGluIHlvdXIgaG9tZSAoc3VjaCBhcyBhIHJlbGF0aXZlIG9yIGEgbG9kZ2VyKSBkZAIKDw8WAh8CZ2RkAgsPFgQfAQUoamF2YXNjcmlwdDpnb3RvSGVscFBhZ2UoJ0hvdXNpbmdTdGF0dXMnKR8CZ2QCDQ8PFgIfAmhkZAIPDxYCHwJoZAIRDxYCHwEFLGphdmFzY3JpcHQ6Z290b0hlbHBQYWdlKCdncm91cHNub3RpbmNsdWRlZCcpZAITDw8WAh8IBacEVGhpcyBjYWxjdWxhdG9yIHByb3ZpZGVzIGVzdGltYXRlcyBvZiB5b3VyIHBvdGVudGlhbCBiZW5lZml0cyBlbnRpdGxlbWVudCwgYmFzZWQgb24gdGhlIGluZm9ybWF0aW9uIHlvdSBzdXBwbHkuIFlvdSBjYW4gZ2V0IG1vcmUgaW5kaXZpZHVhbCBhZHZpY2UgYWJvdXQgdGhpcyBmcm9tIDxhIGhyZWY9J2h0dHA6Ly9hZHZpY2VmaW5kZXIudHVybjJ1cy5vcmcudWsvJyB0YXJnZXQ9J253Jz55b3VyIGxvY2FsIENpdGl6ZW5zIEFkdmljZSBidXJlYXUgYW5kIG90aGVyIHdlbGZhcmUgcmlnaHRzIG9yZ2FuaXNhdGlvbnMuPC9hPjxiciAvPjxiciAvPkJlbmVmaXQgYW5kIHRheCBjcmVkaXQgcmF0ZXMgY2hhbmdlIGV2ZXJ5IEFwcmlsLiBQbGVhc2Ugc2VsZWN0IHdoaWNoIHJhdGVzIHlvdSB3b3VsZCBsaWtlIHVzIHRvIHVzZS4gTW9yZSBpbmZvcm1hdGlvbiBpcyBhbHNvIGF2YWlsYWJsZSBvbiB0aGUgPGEgaHJlZj0iamF2YXNjcmlwdDpnb3RvSGVscFBhZ2UoJ2RhdGVyYXRlY2hhbmdlc3Rha2VlZmZlY3QnKTsiPmRhdGUgcmF0ZSBjaGFuZ2VzIHRha2UgZWZmZWN0PC9hPi5kZAIVDw8WAh8CZ2RkAgMPDxYCHwJoZBYGAgMPFgIfAQUhamF2YXNjcmlwdDpnb3RvSGVscFBhZ2UoJ2NvdXBsZScpZAIFDxYCHwEFI2phdmFzY3JpcHQ6Z290b0hlbHBQYWdlKCdjaGlsZHJlbicpZAIHDxYCHwEFLGphdmFzY3JpcHQ6Z290b0hlbHBQYWdlKCdncm91cHNub3RpbmNsdWRlZCcpZAIZDxYCHwJnZAIdDw8WAh8CaGRkAh8PZBYCAgEPDxYCHwJoFgIeB29uZm9jdXMFRXRyeXtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19MQVNURk9DVVMnKS52YWx1ZT10aGlzLmlkfSBjYXRjaChlKSB7fWQCIQ9kFgICAQ8PFgIeDEVycm9yTWVzc2FnZQVrPGEgaHJlZj1qYXZhc2NyaXB0Ok9uRXJyb3JDbGljaygnU2VjdGlvbkNvbnRlbnRzX1JlZklkJyk7PlBsZWFzZSBlbnRlciB5b3VyICdQcm9wZXJ0eSBSZWZlcmVuY2UgTnVtYmVyJzwvYT5kZAIlD2QWAgIBDxAPZBYEHw4FRXRyeXtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19MQVNURk9DVVMnKS52YWx1ZT10aGlzLmlkfSBjYXRjaChlKSB7fR4Ib25jaGFuZ2UFEXZhbGlkYXRlQ291cGxlKCk7ZGRkAicPZBYCAgEPDxYCHw8FXTxhIGhyZWY9amF2YXNjcmlwdDpPbkVycm9yQ2xpY2soJ2NvdXBsZScpOz5QbGVhc2Ugc2VsZWN0IGlmIHlvdSBhcmUgc2luZ2xlIG9yIGluIGEgY291cGxlPC9hPmRkAisPDxYCHwgFNU51bWJlciBvZiBkZXBlbmRlbnQgY2hpbGRyZW4sIGluY2x1ZGluZyBhbnkgZXhwZWN0ZWQ/ZGQCLQ9kFgICAQ8QD2QWBB8OBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge30fEAUVbnVtQ2hpbGRyZW5DaGFuZ2VkKCk7ZGRkAi8PZBYCAgMPZBYCAgEPEA9kFgIfDgVFdHJ5e2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdfX0xBU1RGT0NVUycpLnZhbHVlPXRoaXMuaWR9IGNhdGNoKGUpIHt9ZBYBZmQCMQ9kFgICAw9kFgICAQ8QD2QWBB8OBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge30fEAUTU2hhcmVXaXRoQ2hhbmdlZCgpOw8WB2YCAQICAgMCBAIFAgYWBxAFAm5vBQItMWcQBQhyZWxhdGl2ZQUBMGcQBQZmcmllbmQFATFnEAUKc3ViLXRlbmFudAUBMmcQBQZsb2RnZXIFATNnEAUMam9pbnQgdGVuYW50BQE0ZxAFBW90aGVyBQE1Z2RkAjMPZBYCAgEPDxYCHw8FZTxhIGhyZWY9amF2YXNjcmlwdDpPbkVycm9yQ2xpY2soJ3NoYXJlc1dpdGhEcnAnKTs+UGxlYXNlIHNlbGVjdCBpZiBhbnlvbmUgZWxzZSBsaXZlcyBpbiB5b3VyIGhvbWU8L2E+ZGQCNw9kFgICAw9kFgICAQ8QD2QWBB8OBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge30fEAUYc2hvd2hvdXNpbmdTdGF0dXNJbmZvKCk7ZGRkAjkPZBYCAgEPDxYCHw8FVzxhIGhyZWY9amF2YXNjcmlwdDpPbkVycm9yQ2xpY2soJ2hvdXNpbmdTdGF0dXMnKTs+UGxlYXNlIHNlbGVjdCB5b3VyIGhvdXNpbmcgc3RhdHVzPC9hPmRkAj0PZBYCAgMPEA9kFgIfDgVFdHJ5e2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdfX0xBU1RGT0NVUycpLnZhbHVlPXRoaXMuaWR9IGNhdGNoKGUpIHt9ZBYBZmQCPw9kFgICAw9kFgICAQ8QD2QWBB8OBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge30fEAUcc2hvd0ltbWFncmF0aW9uU3RhdHVzSW5mbygpO2RkZAJBD2QWAgIBDw8WAh8PBX08YSBocmVmPWphdmFzY3JpcHQ6T25FcnJvckNsaWNrKCdJbW1pZ3JhdGlvbkNvbnRyb2xkZCcpOz5QbGVhc2Ugc2VsZWN0IGFyZSB5b3Ugb3IgeW91ciBwYXJ0bmVyIGEgQnJpdGlzaCBvciBJcmlzaCBjaXRpemVuPC9hPmRkAkMPZBYCAgEPFgIfBAXgA0lmIHlvdSBhcmUgbm90IGEgQnJpdGlzaCBvciBJcmlzaCBuYXRpb25hbCB5b3UgbWF5IG5vdCBiZSBlbnRpdGxlZCB0byBiZW5lZml0cyBpbiB0aGUgVUssIGJ1dCBwbGVhc2Ugc2VlIG91ciBhZHZpY2UgcGFnZXMgb24gPGEgaHJlZj0iamF2YXNjcmlwdDpnb3RvSGVscFBhZ2UoJ05vdEJyaXRpc2hPcklyaXNoJyk7Ij5iZW5lZml0cyBpZiB5b3UgYXJlIG5vdCBhIEJyaXRpc2ggb3IgSXJpc2ggbmF0aW9uYWw8L2E+LiBJZiB5b3UgcmVhZCB0aGVzZSBhZHZpY2UgcGFnZXMgYW5kIGRlY2lkZSB0aGF0IHlvdSBhcmUgZnVsbHkgZW50aXRsZWQgdG8gYmVuZWZpdHMsIGUuZy4gYmVjYXVzZSB5b3UgYXJlIGFuIEVFQSAnd29ya2VyJyBvciB5b3UgaGF2ZSBhICdwZXJtYW5lbnQgcmlnaHQgdG8gcmVzaWRlJywgdGhlbiBwcm9jZWVkIHRocm91Z2ggdGhlIGNhbGN1bGF0b3IgYXMgaWYgeW91IHdlcmUgYSBCcml0aXNoIG9yIElyaXNoIG5hdGlvbmFsLmQCRQ9kFgICAw9kFgICAQ8QD2QWAh8OBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge31kZGQCSQ9kFgICAQ8PFgIfDwWkATxhIGhyZWY9amF2YXNjcmlwdDpPbkVycm9yQ2xpY2soJ1Jlc0NhcmVkZCcpOz5QbGVhc2Ugc2VsZWN0IGlmIHlvdSBhcmUgaW4gaG9zcGl0YWwvcmVzaWRlbnRpYWwgY2FyZSwgYSBwcmlzb25lciwgb24gc3RyaWtlLCBsaXZpbmcgYWJyb2FkIG9yIGEgZnVsbC10aW1lIHN0dWRlbnQ8L2E+ZGQCSw9kFgICAQ8PFgIfDwXeAUltcG9ydGFudDogVGhlIGNhbGN1bGF0b3IgZG9lcyBub3QgY2FsY3VsYXRlIGVudGl0bGVtZW50cyBhY2N1cmF0ZWx5IGZvciBhbnkgb2YgdGhlIGdyb3VwcyBsaXN0ZWQuIEZvciBtb3JlIGluZm9ybWF0aW9uIHNlZSA8YSBocmVmPSJqYXZhc2NyaXB0OmdvdG9IZWxwUGFnZSgnZ3JvdXBzbm90aW5jbHVkZWQnKTsiPmdyb3VwcyBub3QgaW5jbHVkZWQgaW4gdGhlIGNhbGN1bGF0b3IuPC9hPmRkAk0PZBYCAgMPZBYCAgEPEA9kFgQfDgVFdHJ5e2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdfX0xBU1RGT0NVUycpLnZhbHVlPXRoaXMuaWR9IGNhdGNoKGUpIHt9HxAFG0ZpdmVZZWFyUmVzaWRlbmN5Q2hhbmdlZCgpO2QWAQIBZAJRDw8WAh8CZ2RkAlMPZBYCAgEPEA8WAh8CZxYCHw4FRXRyeXtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19MQVNURk9DVVMnKS52YWx1ZT10aGlzLmlkfSBjYXRjaChlKSB7fQ8WA2YCAQICFgMQBQcyMDEzLzE0BQIxMGcQBQcyMDE0LzE1BQIxMWcQBQcyMDE1LzE2BQIxMmcWAQICZAJXD2QWAgIBDxAPZBYCHw4FRXRyeXtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19MQVNURk9DVVMnKS52YWx1ZT10aGlzLmlkfSBjYXRjaChlKSB7fWQWAWZkAlsPZBYEAgEPZBYCAgEPDxYCHw8FTjxhIGhyZWY9amF2YXNjcmlwdDpPbkVycm9yQ2xpY2soJ1Bvc3Rjb2RlJyk7PlBsZWFzZSBlbnRlciBhIHZhbGlkIHBvc3Rjb2RlPC9hPmRkAgMPZBYEAgEPD2QWAh8OBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge31kAgMPDxYCHwJoZGQCXQ8WAh8CaBYCAgEPDxYCHwJoZGQCXw8WAh8CZxYCAgMPEA8WBh4NRGF0YVRleHRGaWVsZAUGTEFOYW1lHg5EYXRhVmFsdWVGaWVsZAUHQ1RZTEFVQR4LXyFEYXRhQm91bmRnFgIfDgVFdHJ5e2RvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdfX0xBU1RGT0NVUycpLnZhbHVlPXRoaXMuaWR9IGNhdGNoKGUpIHt9EBUOJUVudGVyIHBvc3Rjb2RlIG9yIHNlbGVjdCBmcm9tIGxpc3QgPj4OTWVkd2F5IENvdW5jaWwXQXNoZm9yZCBCb3JvdWdoIENvdW5jaWwXQ2FudGVyYnVyeSBDaXR5IENvdW5jaWwQRGFydGZvcmQgQ291bmNpbBZEb3ZlciBEaXN0cmljdCBDb3VuY2lsGUdyYXZlc2hhbSBCb3JvdWdoIENvdW5jaWwZTWFpZHN0b25lIEJvcm91Z2ggQ291bmNpbBpTZXZlbm9ha3MgRGlzdHJpY3QgQ291bmNpbBhTaGVwd2F5IERpc3RyaWN0IENvdW5jaWwVU3dhbGUgQm9yb3VnaCBDb3VuY2lsF1RoYW5ldCBEaXN0cmljdCBDb3VuY2lsFVRvbmJyaWRnZSBhbmQgTWFsbGluZx9UdW5icmlkZ2UgV2VsbHMgQm9yb3VnaCBDb3VuY2lsFQ4ABDAwTEMEMjlVQgQyOVVDBDI5VUQEMjlVRQQyOVVHBDI5VUgEMjlVSwQyOVVMBDI5VU0EMjlVTgQyOVVQBDI5VVEUKwMOZ2dnZ2dnZ2dnZ2dnZ2dkZAJhDw8WAh8PBXA8YSBocmVmPWphdmFzY3JpcHQ6T25FcnJvckNsaWNrKCdQb3N0Y29kZScpOz5JZiB5b3UgYXJlIGEgcHJpdmF0ZSBzZWN0b3IgdGVuYW50IHlvdSBuZWVkIHRvIGVudGVyIGEgcG9zdGNvZGU8L2E+ZGQCcQ9kFgICAQ8PZBYCHw4FRXRyeXtkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnX19MQVNURk9DVVMnKS52YWx1ZT10aGlzLmlkfSBjYXRjaChlKSB7fWQCcw8PFgIfCAUIU3RhcnQgPj4WAh8OBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge31kAnUPD2QWAh8OBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge31kAncPD2QWAh8OBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge31kAnkPD2QWAh8OBUV0cnl7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ19fTEFTVEZPQ1VTJykudmFsdWU9dGhpcy5pZH0gY2F0Y2goZSkge31kZC8zx++Vf8YLZz9Iw0nRb44MpV6vwiGQK1pv4bKjfVPI" />
+
+<script type='text/Javascript'>/* <![CDATA[ */ function gotoHelpPage(sId){window.location = 'http://www.kent.entitledto.co.uk/help/viewhelp.aspx?ePage=EntitlementCalculator&helpfile='+ sId; }; function gotoPage(sPage) { window.location = sPage + ''; } 
+function gotoSitePage(sPage) { window.location = sPage + '?sid=29'; } 
+var fontprcnt = 100;  
+/* ]]> */</script>
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = {"name":"en-GB","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"£","NaNSymbol":"NaN","CurrencyNegativePattern":1,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"Infinity","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"AM","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":0,"FullDateTimePattern":"dd MMMM yyyy HH:mm:ss","LongDatePattern":"dd MMMM yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"dd MMMM","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"ShortestDayNames":["Su","Mo","Tu","We","Th","Fr","Sa"],"DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"IsReadOnly":true,"NativeCalendarName":"Gregorian Calendar","AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""]},"eras":[1,"A.D.",null,0]};//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=1yFkihcgj6W4AIrM21DyHzNLqSjIswyrDyfFlYLXAVjMgl53LL0GLDfEgFopynhZHvatOd25zyGnckCbt7Onihkrc28jEV8j32QfEZb96ZLAlq9nMw9sndsLGdzPmnS60&amp;t=3a1336b1" type="text/javascript"></script>
+<script src="/entitlementcalculator.aspx?_TSM_HiddenField_=SectionContents_ToolkitScriptManager1_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.51116.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3afd384f95-1b49-47cf-9b47-2fa2a921a36a%3a475a4ef5%3a5546a2b%3ad2e10b12%3aeffe2a26%3af3d989c9" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FEEC018B" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAD68houA5us7Q8UO0S2ayhnP0MsWWCgtqPweTelaXcb7JkcBtiWCf0Rm/OEYXAV/FgwGex3hO03+TGyedInZoDNVXXYjhIx/d+8st1gR3gn51jHP3h5BC+N9yTlWFImg27By/VYRn+gcQvjdnDXeINkBCbNMY3XCTShYa5ksqhEXWL8OYtZp8zz+qSeu4kF3ciifLZ6GkYRPMcudDHMJ7kHOP2RpV6XTc4CKZP+J5XWQ+r3nJRPLzOInT/+PmtTmKiLh2Uj8Y3g9yyIhpyH58nrbGU8KhWgYwaeS/g5TQIwYqYPsXYVM0P4xksXrOjOslWpCQKr2V0KaIqSmuLtS6G/QpEkGEFubLgmRT28Urwt2GT9a72VJoDoZirqkdqkVysVYuxc9PatxP3ADH94JbY4djd9vhHsfTe6DDMQ2dE7QtY0Ka4MvG473Bb26chD9/Fxn7eewDLgrgXD4I2TimB9ihcKzR2MwbB8HYAGmEXRoZ7D4XRbdawI0jbO2bIhkJ4Oj4YZ7qa7EM1D5ayfruwFypTpQ2sdu869kYDM7Bi6latBjVHlS7g4I/d3Lydp84QH7QdcM3GMPmUfJdFpbgILgG5IxcwKa4XOqSgoL+Z9LvamUfw5N1d6cLiUp7lwNsKPA0dacPhqvAIf2FsFmkO8f8O925p48sV58BaMXFGGu2wVps9U9wc6SxQQbh6XhYY6cyRG+nuDVYUduwBI0asfp20D6WhxSzf0wpydKGz7/d/hiy/LmBGIA6VrDrDYcY4ljV00ObWiqDw7g9qsL42tGFdg2Vz+3KIvYFE7LdCLhT9rO3gdjWTxdtafuT6WRVmd4ugB0tUnimB9GEQZ7+Bl+Kiclzw2nsNvMoOlOQQU/vgsiJYzud58D8UoEju3HJm8ySvIHwhlAOIbtHejSFfpIsOillAEjgP5cFQguIsuXNNUe0ZhcfMvi9RJ7ch9sbDLHBAIc/a/lJ+Zmdvgt2OW40Hq+/zGyQjnyyNtTVKsykUM3ypJ8r/VKh9+xq9ipoJcv7h+M/tIYQzYklazS8fvz313DXmy4xTYzWIpmYVOlDjfF+YbczzucpHTln2rkHE8A6025en9aoJBSTfM75kx9e0tNvLW5yXqTZTCkbcNFcboi0RuBCKfVe0Cins0EfmN/i2e3EkOZTMEAy3wsB39ZKsZeUzSEUbhYFA1KTt9OKD/IdHGQLIgwry2ZzmxKlDqZEQ5kjdLvzx4E5S/UmxObne8H4CTfiAD/Wn1u5aOLNS3UieIACJHNfloUxtJJuwiK8xn4xpylxBSyM55ZFuRQMhnN9K/9IiY6LGIerSAChbRT4gWEK5Ayoo0XTQGZKpCVJhcL5tUS6nnodGUFu7ty" />
+        <!-- Page contents -->
+        <a name="main"></a>
+        <div id="asset">
+
+<div class="row">
+<div class="large-12 column">
+
+                <h1 id="H1Title">Benefits calculator</h1>
+
+<div class="clearfix colelem e2calc_menu">
+
+<a id="dlTxtCalcSteps_calcLnk_0" class="nonblock nontext  menuLinkBtn" href="EntitlementCalculator.aspx?sid=29&amp;idk=9230254c-4167-4b1c-bddd-855fd8ae8e90"><div id="dlTxtCalcSteps_ClientDetailsImg_0" class=" EntitlementCalculator_on"></div><div id="dlTxtCalcSteps_Div2_0" class=" mentText_on"><p id="dlTxtCalcSteps_ClientDetailsStepNo_0"></p>Your Details</div></a>
+
+<a id="dlTxtCalcSteps_calcLnk_1" class="nonblock nontext  menuLinkBtn"><div id="dlTxtCalcSteps_ClientDetailsImg_1" class=" AgeDisabilityStatus_off"></div><div id="dlTxtCalcSteps_Div2_1" class=" mentText_off"><p id="dlTxtCalcSteps_ClientDetailsStepNo_1"></p>Age and Disability Status</div></a>
+
+<a id="dlTxtCalcSteps_calcLnk_2" class="nonblock nontext  menuLinkBtn"><div id="dlTxtCalcSteps_ClientDetailsImg_2" class=" BedCalcHMRC_off"></div><div id="dlTxtCalcSteps_Div2_2" class=" mentText_off"><p id="dlTxtCalcSteps_ClientDetailsStepNo_2"></p>Bedroom Calculator</div></a>
+
+<a id="dlTxtCalcSteps_calcLnk_3" class="nonblock nontext  menuLinkBtn"><div id="dlTxtCalcSteps_ClientDetailsImg_3" class=" Out_of_work_benefits_off"></div><div id="dlTxtCalcSteps_Div2_3" class=" mentText_off"><p id="dlTxtCalcSteps_ClientDetailsStepNo_3"></p>Out of Work Benefits</div></a>
+
+<a id="dlTxtCalcSteps_calcLnk_4" class="nonblock nontext  menuLinkBtn"><div id="dlTxtCalcSteps_ClientDetailsImg_4" class=" clientbenefits_off"></div><div id="dlTxtCalcSteps_Div2_4" class=" mentText_off"><p id="dlTxtCalcSteps_ClientDetailsStepNo_4"></p>Benefits you receive</div></a>
+
+<a id="dlTxtCalcSteps_calcLnk_5" class="nonblock nontext  menuLinkBtn"><div id="dlTxtCalcSteps_ClientDetailsImg_5" class=" HousingCosts_off"></div><div id="dlTxtCalcSteps_Div2_5" class=" mentText_off"><p id="dlTxtCalcSteps_ClientDetailsStepNo_5"></p>Council Tax and Housing Costs</div></a>
+
+<a id="dlTxtCalcSteps_calcLnk_6" class="nonblock nontext  menuLinkBtn"><div id="dlTxtCalcSteps_ClientDetailsImg_6" class=" netincome_off"></div><div id="dlTxtCalcSteps_Div2_6" class=" mentText_off"><p id="dlTxtCalcSteps_ClientDetailsStepNo_6"></p>Net Income</div></a>
+
+<a id="dlTxtCalcSteps_calcLnk_7" class="nonblock nontext  menuLinkBtn"><div id="dlTxtCalcSteps_ClientDetailsImg_7" class=" CalcResults2013_off"></div><div id="dlTxtCalcSteps_Div2_7" class=" mentText_off"><p id="dlTxtCalcSteps_ClientDetailsStepNo_7"></p>Results</div></a>
+            
+</div>          
+   <table id="e2CalcNavTbl" width="100%">
+                        <tr>
+                            <td>
+                                <h2>
+                                    <span id="HdrTitle">Your Details</span></h2>
+                            </td>
+                            <td align="right">
+                                
+                                
+                            </td>
+                        </tr>
+                    </table>
+                    
+    
+    
+    
+    <input name="ctl00$SectionContents$siteid" type="hidden" id="siteid" value="29" />    
+    
+    
+    <input name="ctl00$SectionContents$hidePostcode" type="hidden" id="hidePostcode" value="0" />
+    <input name="ctl00$SectionContents$calcIdentifier" type="hidden" id="calcIdentifier" />
+    <input name="ctl00$SectionContents$isScreenReader" type="hidden" id="isScreenReader" value="0" />
+    <input name="ctl00$SectionContents$isBudgetMode" type="hidden" id="isBudgetMode" value="0" />
+    <input name="ctl00$SectionContents$isUCMode" type="hidden" id="isUCMode" value="0" />
+
+
+    <div id="contentmain">
+        <div id="SectionContents_MyAccordion" class="ASPAccordion">
+	<input type="hidden" name="ctl00$SectionContents$MyAccordion_AccordionExtender_ClientState" id="SectionContents_MyAccordion_AccordionExtender_ClientState" value="-1" /><div id="SectionContents" class="accordnHdrSelected">
+		
+                        
+                    
+	</div><div id="SectionContents" class="accordnCnt" style="display:block;">
+		
+<div id="SectionContents_e2calc">
+			
+
+    
+    
+    <div id="SectionContents_originalIntroText">
+        
+        To work out your entitlement we need to know <a href="javascript:gotoHelpPage('Couple')" id="SectionContents_hlpCouple0_elnk">
+            whether you are single or in a couple</a>, how many children under 20 you have
+        (if in doubt see <a href="javascript:gotoHelpPage('Children')" id="SectionContents_hlpChildren0_elnk">when to include children</a>),
+        <span id="SectionContents_CTDescp"> whether anyone else lives in your home (such as a relative or a lodger) </span><span id="SectionContents_housingStatusDescp"></span><span id="SectionContents_defaultHousingStatusDescp">and your </span><a href="javascript:gotoHelpPage('HousingStatus')" id="SectionContents_hlpHousingStatus0_elnk">housing status</a>.
+
+
+        
+
+
+        
+        
+
+
+        <br /><br />
+        If you are a full-time student, aged under 18, in hospital/residential care, a prisoner or on strike, living abroad or not a British or Irish citizen our estimate may not be correct.
+        If you fall into one of these categories please see <a href="javascript:gotoHelpPage('groupsnotincluded')" id="SectionContents_hlpgroupsnotincluded0_elnk">groups not included in the calculator</a>.
+        <br /><br />
+        <span id="SectionContents_moreAdviceText">This calculator provides estimates of your potential benefits entitlement, based on the information you supply. You can get more individual advice about this from <a href='http://advicefinder.turn2us.org.uk/' target='nw'>your local Citizens Advice bureau and other welfare rights organisations.</a><br /><br />Benefit and tax credit rates change every April. Please select which rates you would like us to use. More information is also available on the <a href="javascript:gotoHelpPage('dateratechangestakeeffect');">date rate changes take effect</a>.</span>
+        <span id="SectionContents_LoadCalcText">&nbsp;If you are returning to a calculation you started earlier please retrieve your <a href="javascript:gotoSitePage('loadcalculation.aspx')">saved calculation.</a></span>
+    </div>
+
+		</div>
+
+
+                    
+	</div>
+</div>
+<div id="calcTable" class="bs-docs-grid">
+            
+<div id="SectionContents_startValidationRow"><div class="col-md-12">
+                                                            </div>
+</div>
+
+            <div class="row show-grid">
+                <div class="col-md-8">
+                    <input type="hidden" name="ctl00$SectionContents$niSite" id="niSite" value="0" />
+                    
+                </div>
+                <div id="RefIdTD" class="col-md-4">
+                    
+                </div>
+            </div>
+            
+   
+            
+            
+
+            <div class="row show-grid">
+                <div class="col-md-8">
+                    <label for="couple" id="SectionContents_coupleLbl">Are you single or in a couple?</label>
+                </div>
+                <div id="coupleTD" class="col-md-4">
+                    <select name="ctl00$SectionContents$couple" id="couple" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" onchange="validateCouple();">
+	<option value="0">single&#160;</option>
+	<option value="1">couple&#160;</option>
+
+</select>
+
+
+                </div>
+            </div>
+            
+            <div class="row show-grid e2hide" id="coupleMsgRow">
+                <div class="col-md-12">
+                    <div id="coupleMsg" class="e2hide">To work out your entitlement accurately we will need to ask questions about both you and your partner.</div>
+                </div>
+            </div>
+            <div class="row show-grid">
+                <div class="col-md-8">
+                    <label for="numChildren" id="SectionContents_numChildrenLbl">Number of dependent children, including any expected?</label>
+                </div>
+                <div id="numChildrenTD" class="col-md-4">
+                    <select name="ctl00$SectionContents$numChildren" id="numChildren" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" onchange="numChildrenChanged();">
+	<option value="0">none&#160;</option>
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+
+</select>
+                </div>
+            </div>
+            
+            <div id="SectionContents_sharesWithRow" class="row show-grid">
+                <div class="col-md-8">
+                    <label for="sharesWithDrp" id="SectionContents_sharesWithLblParent"><span id="sharesWithLbl" class="childBlock">Does anyone else live in your home? Do not include your partner or dependent children but do include grown-up children</span></label></div><div id="sharesWithTD" class="col-md-4">
+                    <select name="ctl00$SectionContents$sharesWithDrp" id="sharesWithDrp" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" onchange="ShareWithChanged();">
+	<option selected="selected" value="-1">no</option>
+	<option value="0">relative</option>
+	<option value="1">friend</option>
+	<option value="2">sub-tenant</option>
+	<option value="3">lodger</option>
+	<option value="4">joint tenant</option>
+	<option value="5">other</option>
+
+</select>
+                    
+                </div>
+            </div>
+            
+            <div id="sharesWithMsgRow" class="row show-grid e2hide">
+                <div class="col-md-12">
+                    <div id="sharesWithMsg" class="info"></div>
+                </div>
+            </div>
+
+            <div id="SectionContents_housingStatusRow" class="row show-grid">
+                <div id="SectionContents_housingStatusLblTD" class="col-md-8">
+                    <label for="housingStatus" id="SectionContents_housingStatusLblParent"><span id="SectionContents_housingStatusLbl" class="childBlock">What is your housing status?</span></label></div>
+    <div id="housingStatusTD" class="col-md-4">
+                    <select name="ctl00$SectionContents$housingStatus" id="housingStatus" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" onchange="showhousingStatusInfo();">
+	<option value="0">council or housing association tenant</option>
+	<option value="1">tenant - private sector</option>
+	<option value="2">mortgage or owned outright</option>
+	<option value="3">shared ownership</option>
+	<option value="4">living rent-free with family/friends</option>
+	<option value="7">boarder or lodger</option>
+	<option value="6">supported accommodation</option>
+	<option value="5">no fixed abode</option>
+	<option value="8">no housing costs</option>
+
+</select>
+                </div>
+            </div>
+            
+            <div id="housingStatusInfoRow" class="row show-grid e2hide">
+                <div class="col-md-12">
+                    <div class="info" id="housingStatusInfoDiv"></div>
+                </div>
+            </div>
+            
+            
+              
+            
+            
+
+<div id="SectionContents_ImmigrationControlRow" class="row show-grid">
+                <div class="col-md-8">
+                    <label for="ImmigrationControldd" id="SectionContents_ImmigrationControlLblParent"><span id="ImmigrationControlLbl" class="childBlock">Are you or your partner a British or Irish citizen?</span></label></div>
+    <div id="ImmigrationControlTD" class="col-md-4">
+                    <select name="ctl00$SectionContents$ImmigrationControldd" id="ImmigrationControldd" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" onchange="showImmagrationStatusInfo();">
+	<option value="False">no</option>
+	<option selected="selected" value="True">yes</option>
+
+</select>
+                </div>
+            </div>
+
+            
+
+<div id="ImmigrationControlInfoRow" class="row show-grid" style="display:none">
+    <div class="col-md-12">
+<div id="ImmigrationControlInfoDiv" class="info" style="display:none">If you are not a British or Irish national you may not be entitled to benefits in the UK, but please see our advice pages on <a href="javascript:gotoHelpPage('NotBritishOrIrish');">benefits if you are not a British or Irish national</a>. If you read these advice pages and decide that you are fully entitled to benefits, e.g. because you are an EEA 'worker' or you have a 'permanent right to reside', then proceed through the calculator as if you were a British or Irish national.</div>
+
+
+                </div>
+            </div>
+
+
+<div id="ResCareRow" class="row show-grid">
+                <div class="col-md-8">
+                    <label for="ResCaredd" id="SectionContents_ResCareLblParent"><span id="ResCareLbl" class="childBlock">Are you in hospital/residential care, a prisoner, on strike, living abroad or a full-time student?</span></label></div>
+    <div id="ResCareTD" class="col-md-4">
+                    <select name="ctl00$SectionContents$ResCaredd" id="ResCaredd" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}">
+	<option value="False">no</option>
+	<option value="True">yes</option>
+
+</select>
+ </div>
+</div>
+
+            
+
+            
+
+
+            <div id="SectionContents_ResCarMobErrorRow" class="row show-grid">
+                <div class="col-md-12">
+
+</div>
+            </div>            
+
+            
+
+            
+ 
+            <div class="row show-grid">
+                <div class="col-md-8">
+                    <label for="SectionContents_calcYeardd" id="SectionContents_calcYearLb">Work out my entitlements for year:&nbsp;</label>
+
+                </div>
+    <div id="calcYearTD" class="col-md-4">
+        <select name="ctl00$SectionContents$calcYeardd" id="SectionContents_calcYeardd" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}">
+	<option value="10">2013/14</option>
+	<option value="11">2014/15</option>
+	<option selected="selected" value="12">2015/16</option>
+
+</select>
+
+    </div>
+            </div>
+
+            <div class="row show-grid">
+                <div class="col-md-8">
+                    
+                    </div>
+                <div id="countryIdTD" class="col-md-4">
+                    
+                </div>
+            </div>
+            
+            
+            
+
+            <div id="PostcodeTrimRow" class="row show-grid">
+                <div class="col-md-8">
+                    <label for="Postcode" id="SectionContents_Label1"><span id="PostcodeTrim" class="childBlock">Your postcode:</span></label></div>
+                <div id="postcodeTD" class="col-md-4">
+                    <input name="ctl00$SectionContents$Postcode" type="text" maxlength="10" id="Postcode" class="infld" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" />
+                    </div>
+            </div>
+
+                       
+            
+           <div id="SectionContents_LocalAuthorityRow" class="row show-grid">
+                <div class="col-md-8">
+                    <label for="SectionContents_countryId" id="SectionContents_LocalAuthorityddLbl">Local authority:</label></div>
+               <div class="col-md-4">
+                    <select name="ctl00$SectionContents$LocalAuthoritydd" id="SectionContents_LocalAuthoritydd" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}">
+	<option value="">Enter postcode or select from list &gt;&gt;</option>
+	<option value="00LC">Medway Council</option>
+	<option value="29UB">Ashford Borough Council</option>
+	<option value="29UC">Canterbury City Council</option>
+	<option value="29UD">Dartford Council</option>
+	<option value="29UE">Dover District Council</option>
+	<option value="29UG">Gravesham Borough Council</option>
+	<option value="29UH">Maidstone Borough Council</option>
+	<option value="29UK">Sevenoaks District Council</option>
+	<option value="29UL">Shepway District Council</option>
+	<option value="29UM">Swale Borough Council</option>
+	<option value="29UN">Thanet District Council</option>
+	<option value="29UP">Tonbridge and Malling</option>
+	<option value="29UQ">Tunbridge Wells Borough Council</option>
+
+</select>
+</div></div>
+<div class="row show-grid" id="trPostcodePrivateTenantValidator">
+<div class="col-md-12">
+    
+</div></div>
+
+            
+            
+            
+            
+
+            <div class="row show-grid">
+                <div class="col-md-12">
+                   <span id="SectionContents_ErrMessage" class="hiderow"></span>
+                </div>
+            </div>
+            <div id="SectionContents_newCalcNoPostcodeRow" class="row show-grid">
+                <div class="navTDR col-md-12">
+                    
+                </div>
+            </div>
+            <div class="row show-grid">
+                <div class="navTDR col-md-12">
+                    <input type="submit" name="ctl00$SectionContents$nextBtn" value="Start >>" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$SectionContents$nextBtn&quot;, &quot;&quot;, true, &quot;ErrorValidationGroup&quot;, &quot;&quot;, false, false))" id="SectionContents_nextBtn" accesskey="N" title="Save and go to next page (Alt N)" class="btn rbtnalign" onfocus="try{document.getElementById(&#39;__LASTFOCUS&#39;).value=this.id} catch(e) {}" />
+                </div>
+            </div>
+ <div class="row show-grid">
+                <div class="col-md-8">
+                    
+                    
+                </div>
+                <div class="navTDR col-md-4">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div></div>
+       </div>
+        <footer id="footer">
+            <div>
+                <a href="#" class="icon icon-top back-to-top" title="Back to top">Back to top</a>
+                <div class="row">
+                    <div class="small-12 medium-7 columns">
+                        <ul class="footer-nav">
+                            <li><a href="http://www.kent.gov.uk/about-the-council/contact-us">Contact us</a></li>
+                            <li><a href="http://www.kent.gov.uk/about-the-council/about-the-website">About the website</a></li>
+                            <li><a href="http://www.kent.gov.uk/about-the-council/about-the-website/privacy-policy">Privacy statement</a></li>
+                            <li><a href="http://www.kent.gov.uk/sitemap">Site map</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="small-12 medium-4 columns right copy">
+                        <div class="icon icon-logo-full icon-logo-full-dims"></div>
+                        <p>&copy; Kent County Council 2015</p>
+                    </div>
+                </div>
+                <div class="social">
+                    <div class="row">
+                        <ul>
+                            <li class="social-twitter"><a href="https://twitter.com/kent_cc" class="icon-twitter"><span>KCC on Twitter</span></a></li>
+                            <li class="social-youtube"><a href="http://www.youtube.com/user/KentCountyCouncil" class="icon-youtube"><span>Find us on YouTube</span></a></li>
+                            <li class="social-mailing-list"><a href="http://eepurl.com/tOpo1" class="icon-email"><span>KCC Mailing List</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+<script type="text/javascript">
+//<![CDATA[
+window.setTimeout('DoFocus()', 1);
+    function DoFocus()
+    {
+        try {
+            document.getElementById('').focus();
+        } catch (ex) {}
+    }(function() {var fn = function() {$get("SectionContents_ToolkitScriptManager1_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.AccordionBehavior, {"ClientStateFieldID":"SectionContents_MyAccordion_AccordionExtender_ClientState","FramesPerSecond":40,"HeaderCssClass":"accordnHdr","HeaderSelectedCssClass":"accordnHdrSelected","SelectedIndex":-1,"id":"SectionContents_MyAccordion_AccordionExtender","suppressHeaderPostbacks":true}, null, null, $get("SectionContents_MyAccordion"));
+});
+//]]>
+</script>
+</form>
+    </div>
+    <!-- Javascript -->
+    <script src="/e2sitecss/site29/assets/js/vendor.min.js"></script>
+    <script src="/e2sitecss/site29/assets/js/main.min.js"></script>
+    <script src="/e2sitecss/site29/assets/js/xstats.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/e2sitecss/site29/assets/js/rem.js"></script>
+    <![endif]-->
+
+</body>
+</html>

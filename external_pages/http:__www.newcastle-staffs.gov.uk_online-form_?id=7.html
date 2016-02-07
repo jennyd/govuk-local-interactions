@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Online Form | Newcastle-Under-Lyme Borough Council
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        @import url("bootstrap/css/bootstrap.css");
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/Main.css" />
+
+    <script src="/sites/all/themes/NULBCv1/js/nulbc.js" type="text/javascript"></script>
+</head>
+<body>
+    <script type="text/javascript">
+
+        function searchTriggered(event) {
+            if (event.keyCode == 13) {
+                //alert(document.getElementById('ctl00_txtmainsearch').value);
+                //searchRedirect();
+            }
+            else {
+                //var searchElement = document.getElementById('ctl00_txtmainsearch');
+                //alert(String.fromCharCode(event.keyCode));
+                //searchElement.value += String.fromCharCode(event.keyCode);
+            }
+        }
+        
+        function searchRedirect() {
+            var searchTerm = document.getElementById('ctl00_txtmainsearch').value;
+            //alert("reached search: " + searchTerm);
+            window.location("/search?search_api_views_fulltext=" + searchTerm);
+        }
+
+        function showhideDivision(what) {
+
+            try {
+                var division = document.getElementById(what);
+                if (division.style.display == "none" || division.style.display == "") {
+                    division.style.display = "block";
+                }
+                else {
+                    division.style.display = "none";
+                }
+            }
+            catch (err) {
+                alert("Error " + what + ": " + err.message);
+            }
+        }
+    
+    </script>
+    <form name="aspnetForm" method="post" action="default.aspx?id=7" id="aspnetForm">
+<input type="hidden" name="_TSM_HiddenField_" id="_TSM_HiddenField_" value="gw7jpIJ8LMgM7u8gLjQBxxbgFlVTP1p_vIL8EuJVw1w1" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTIzMTYzODUyOQ9kFgJmD2QWAgIBD2QWAgIFD2QWCAIDDw8WAh4EVGV4dAURTWlzc2VkIENvbGxlY3Rpb25kZAIFDw8WAh8ABRFNaXNzZWQgQ29sbGVjdGlvbmRkAgsPDxYCHwAFjAVQbGVhc2UgdXNlIHRoaXMgZm9ybSB0byByZXBvcnQgYSBtaXNzZWQgY29sbGVjdGlvbiBvZiByZWZ1c2UsIGdhcmRlbiB3YXN0ZSBvciByZWN5Y2xpbmcgbWF0ZXJpYWxzLjxiciAvPg0KPGJyIC8+DQo8c3Ryb25nPk1pc3NlZCBjb2xsZWN0aW9ucyBzaG91bGQgYmUgcmVwb3J0ZWQgYnkgdGhlIG5leHQgd29ya2luZyBkYXkgb3RoZXJ3aXNlIGEgcmV0dXJuIHZpc2l0IGlzbuKAmXQgZ3VhcmFudGVlZC48L3N0cm9uZz48YnIgLz4NCjxiciAvPg0KSWYgeW91IGhhdmUgcmVjZWl2ZWQgYSBjYXJkIHNheWluZyB0aGF0IHlvdSBoYXZlIHJ1YmJsZSwgdW53cmFwcGVkIGdsYXNzLCB1bmJhZ2dlZCBwZXQgd2FzdGUgZXRjLiBpbiB5b3VyIGJpbiB5b3Ugd2lsbCBuZWVkIHRvIHJlbW92ZSB0aGlzIG1hdGVyaWFsIGFuZCB0aGUgQ291bmNpbCBtYXkgYmUgYWJsZSB0byByZXR1cm4gdG8gbWFrZSB0aGUgY29sbGVjdGlvbi4gDQpJZiB5b3UgaGF2ZSBub3QgYmVlbiBsZWZ0IGEgY2FyZCBhbmQgdGhlIG1pc3NlZCBjb2xsZWN0aW9uIHdhcyB0aGUgZmF1bHQgb2YgdGhlIENvdW5jaWwsIHdlIHdpbGwgcmV0dXJuIGFzIHNvb24gYXMgcG9zc2libGUuPGJyIC8+DQo8YnIgLz4NCllvdSB3aWxsIG5lZWQgdG8gcHJvdmlkZSBicmllZiBjb250YWN0IGRldGFpbHMuZGQCDQ8PFgQeCENzc0NsYXNzBQdmb3JtaWQ3HgRfIVNCAgJkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WBgUnY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjbHN0c2VydmljZSQwBSdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNsc3RzZXJ2aWNlJDEFJ2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2xzdHNlcnZpY2UkMgUnY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRjbHN0c2VydmljZSQzBSdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJGNsc3RzZXJ2aWNlJDQFJ2N0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkY2xzdHNlcnZpY2UkNPNwBxkxXvhHALeRRVCR9+VpL4Gz" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var __cultureInfo = '{"name":"en-GB","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":".","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":",","CurrencySymbol":"£","NaNSymbol":"NaN","CurrencyNegativePattern":1,"NumberNegativePattern":1,"PercentPositivePattern":0,"PercentNegativePattern":0,"NegativeInfinitySymbol":"-Infinity","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":".","NumberGroupSeparator":",","CurrencyPositivePattern":0,"PositiveInfinitySymbol":"Infinity","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":".","PercentGroupSeparator":",","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"AM","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402300799999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":"/","FirstDayOfWeek":1,"CalendarWeekRule":2,"FullDateTimePattern":"dd MMMM yyyy HH:mm:ss","LongDatePattern":"dd MMMM yyyy","LongTimePattern":"HH:mm:ss","MonthDayPattern":"dd MMMM","PMDesignator":"PM","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"dd/MM/yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"ShortestDayNames":["Su","Mo","Tu","We","Th","Fr","Sa"],"DayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"AbbreviatedMonthNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthNames":["January","February","March","April","May","June","July","August","September","October","November","December",""],"IsReadOnly":true,"NativeCalendarName":"Gregorian Calendar","AbbreviatedMonthGenitiveNames":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",""],"MonthGenitiveNames":["January","February","March","April","May","June","July","August","September","October","November","December",""]}}';//]]>
+</script>
+
+<script src="/online-form/ScriptResource.axd?d=MGCj4_XfCUE_mtST8kwsQpphg-l6Zy_cpUsqm1YwGjmdbUBfwOI6d9GV9i4CI0nJ6MTOjSnFmRGMz8O5bndK7cqw1UxC_FRoQ9HbNDOPxHkFKAMk0&amp;t=ffffffffcda035a6" type="text/javascript"></script>
+<script src="/online-form/default.aspx?_TSM_CombinedScripts_=True&amp;v=gw7jpIJ8LMgM7u8gLjQBxxbgFlVTP1p_vIL8EuJVw1w1&amp;_TSM_Bundles_=&amp;cdn=False" type="text/javascript"></script>
+<script src="/online-form/ScriptResource.axd?d=TwkYihEfYMVpaxZHWLp1wLl9EFTyJo1TIIyZgYUiaUjUW2aO8E4PyoEfxawPa92SJi39L-zqY5mktM2W2ED7DkWJCTxONeAQW7XgqtUOXBqcQHh0tY2rhgh9bndNtxdYLKiE4Q2&amp;t=ffffffffcda035a6" type="text/javascript"></script>
+<script src="/online-form/ScriptResource.axd?d=OJ59TS-9bcr5zP2mWiRYC46CysvyeKXwdNsZlYEmCq1di2E9IuWsMnWNJkNDDVPA7XQBnzoD5VOYU_CyDLi5aGLTguXMjFUsHMSBxxbWUN-o60jZ648QK8Q5mzHbjNuKZvqP9Q2&amp;t=ffffffffcda035a6" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D92B1380" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWGQKJyaehCALt58SDDAL9n+COAgK62rCyCAKJhLnVCgK0w7iaDQKcn9yABAKbn9yABAKan9yABAKRncxvApqrxaADAtSendIBAqCTjYQJAtjpz5QIAobn270DAvLhkBoC0KnclgYC65L6KwKa16DsAQK1wL6BDALkhOXBDQLd++joDAKdidirDwL/5vbEAwKukPPCCTCjXu47zHTllbAT3KIKn46MVoaB" />
+    <div class="">
+    
+    
+        
+        
+        <header>
+            <nav class="navbar navbar-default navbar-static-top nbcNavBgWhite nbcNavBar">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span> 
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1 class="hidden">
+					        <a class="name navbar-brand" href="/" title="Home">Newcastle-under-Lyme Borough Council</a>
+                        </h1>
+								        <a class="navbar-brand" href="/" title="Home">
+				        <img src="/sites/all/themes/NULBCv1/logo.png" alt="Home" class="hidden-xs" />
+				        <span class="visible-xs" style="white-space: nowrap;">Newcastle-under-Lyme Borough Council</span> 
+				        </a>
+				                    </div>
+                    <div class="collapse navbar-collapse">
+                        <div class="navbar-form nbc-navbar-form navbar-right" role="search">
+                        <div id="search-form" role="search" action="/search" method="get">
+                            <div class="form-group">
+                                <div class="form-group" id="prefetch">
+                                    <input name="ctl00$txtmainsearch" type="text" id="ctl00_txtmainsearch" name="keys" type="text" class="form-control" placeholder="Search" onkeypress="javascript: searchTriggered(event); return true;" />
+                                </div>
+                                <div class="form-group">
+                                    <a onclick="javascript: searchRedirect(); return false;" id="ctl00_btnSearch" class="btn nbc-btn form-control" href="javascript:__doPostBack('ctl00$btnSearch','')">&nbsp;<span class="glyphicon glyphicon-search"></span>&nbsp;<span class="hidden"> Search</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                            <ul class="nav navbar-nav navbar-right ">
+                                <li>
+                                    <a accesskey="1" href="/">Home</a>
+                                </li>
+                                <li>
+                                    <a accesskey="2" href="/a-to-z-of-services">A to Z</a>
+                                </li>
+                                <li>
+                                    <a accesskey="3" href="/accessibility" class="hidden-xs">Accessibility</a>
+                                </li>
+                                <li>
+                                    <a accesskey="4" href="/contact-us" class="hidden-sm">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a accesskey="5" class="hidden-sm" href="/all-services">All Services</a>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>   
+<!--
+<header id="navbar" role="banner" class="navbar navbar-static-top navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="logo navbar-btn pull-left" href="/" title="Home">
+                <img src="http://svcms/sites/all/themes/NULBCv1/logo.png" alt="Home" />
+            </a>
+          
+          
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <nav role="navigation">
+                <ul class="menu nav navbar-nav">
+                    <li class="first leaf">
+                    <li class="leaf"><a href="/yourcouncil">Your Council</a></li>
+                    <li class="last leaf"><a href="/allservices">All Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+-->
+
+        
+    
+    <div class="main-container container">
+        <div class="easy-breadcrumb"><a href="/">Home</a> &gt; <a href="/online-forms">Online Forms</a> &gt; <span id="ctl00_ContentPlaceHolder1_lblFormBreadcrumb">Missed Collection</span></div>
+        <h1><span id="ctl00_ContentPlaceHolder1_lblFormTitle">Missed Collection</span>
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hfldFormID" id="ctl00_ContentPlaceHolder1_hfldFormID" value="7" />
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hfldSessionID" id="ctl00_ContentPlaceHolder1_hfldSessionID" value="dd25b278-67cb-4043-8b8e-4888f6a281c0" />
+        </h1>
+        
+        <div style="padding:10px;border: solid 1px #ccc;background-color: White; margin:10px auto;">
+            <p><span id="ctl00_ContentPlaceHolder1_lblFormDescription">Please use this form to report a missed collection of refuse, garden waste or recycling materials.<br />
+<br />
+<strong>Missed collections should be reported by the next working day otherwise a return visit isn’t guaranteed.</strong><br />
+<br />
+If you have received a card saying that you have rubble, unwrapped glass, unbagged pet waste etc. in your bin you will need to remove this material and the Council may be able to return to make the collection. 
+If you have not been left a card and the missed collection was the fault of the Council, we will return as soon as possible.<br />
+<br />
+You will need to provide brief contact details.</span></p>
+            <div id="ctl00_ContentPlaceHolder1_pnlForm" class="formid7">
+	
+            
+            <div id="ctl00_ContentPlaceHolder1_pnlsection22" class="formsection">
+		<span id="ctl00_ContentPlaceHolder1_lblsection22">Personal details</span>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlname" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtname" class="formlabel formlabelBlock">Name</span><input name="ctl00$ContentPlaceHolder1$txtname" type="text" id="ctl00_ContentPlaceHolder1_txtname" class="formfield mandatory" autocomplete="off" placeholder="" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnladdress1" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtaddress1" class="formlabel formlabelBlock">Address</span><input name="ctl00$ContentPlaceHolder1$txtaddress1" type="text" id="ctl00_ContentPlaceHolder1_txtaddress1" class="formfield mandatory" autocomplete="off" placeholder="Address line 1" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnladdress2" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtaddress2" class="formlabel formlabelBlock"></span><input name="ctl00$ContentPlaceHolder1$txtaddress2" type="text" id="ctl00_ContentPlaceHolder1_txtaddress2" class="formfield mandatory" autocomplete="off" placeholder="Address line 2" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnladdress3" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtaddress3" class="formlabel formlabelBlock"></span><input name="ctl00$ContentPlaceHolder1$txtaddress3" type="text" id="ctl00_ContentPlaceHolder1_txtaddress3" class="formfield " autocomplete="off" placeholder="Address line 3" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnlpostcode" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtpostcode" class="formlabel formlabelBlock">Postcode</span><input name="ctl00$ContentPlaceHolder1$txtpostcode" type="text" id="ctl00_ContentPlaceHolder1_txtpostcode" class="formfield mandatory" autocomplete="off" placeholder="" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnltelephone" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxttelephone" class="formlabel formlabelBlock">Telephone</span><input name="ctl00$ContentPlaceHolder1$txttelephone" type="text" id="ctl00_ContentPlaceHolder1_txttelephone" class="formfield mandatory" autocomplete="off" placeholder="" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnlemail" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtemail" class="formlabel formlabelBlock">Email</span><input name="ctl00$ContentPlaceHolder1$txtemail" type="text" id="ctl00_ContentPlaceHolder1_txtemail" class="formfield " autocomplete="off" placeholder="" border="1" />
+	</div><div id="ctl00_ContentPlaceHolder1_pnlsection23" class="formsection">
+		<span id="ctl00_ContentPlaceHolder1_lblsection23">What's gone wrong</span>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlproblem" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lblddproblem" class="formlabel formlabelBlock">Please indicate what we have missed</span><select name="ctl00$ContentPlaceHolder1$ddproblem" id="ctl00_ContentPlaceHolder1_ddproblem" class="formfield mandatory ">
+			<option value="Missed collection">Missed collection</option>
+			<option value="Bin not completely emptied">Bin not completely emptied</option>
+			<option value="Missed street">Missed street</option>
+
+		</select>
+	</div><div id="ctl00_ContentPlaceHolder1_pnladdtxt" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lbltxtaddtxt" class="formlabel formfieldblock">Additional information</span><textarea name="ctl00$ContentPlaceHolder1$txtaddtxt" rows="3" cols="20" id="ctl00_ContentPlaceHolder1_txtaddtxt" class="formfield formfieldblock" autocomplete="off" placeholder=""></textarea>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlsection24" class="formsection">
+		<span id="ctl00_ContentPlaceHolder1_lblsection24">Type of service</span>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlservice" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lblclstservice" class="formlabel formlabelBlock">Please select the service affected</span><span id="ctl00_ContentPlaceHolder1_clstservice" class="formfield formfield_RemoveMargin mandatory  formfield_Radio" style="display:inline-block;"><input id="ctl00_ContentPlaceHolder1_clstservice_0" type="checkbox" name="ctl00$ContentPlaceHolder1$clstservice$0" /><label for="ctl00_ContentPlaceHolder1_clstservice_0">Refuse collection</label><br /><input id="ctl00_ContentPlaceHolder1_clstservice_1" type="checkbox" name="ctl00$ContentPlaceHolder1$clstservice$1" /><label for="ctl00_ContentPlaceHolder1_clstservice_1">Garden waste</label><br /><input id="ctl00_ContentPlaceHolder1_clstservice_2" type="checkbox" name="ctl00$ContentPlaceHolder1$clstservice$2" /><label for="ctl00_ContentPlaceHolder1_clstservice_2">Food waste</label><br /><input id="ctl00_ContentPlaceHolder1_clstservice_3" type="checkbox" name="ctl00$ContentPlaceHolder1$clstservice$3" /><label for="ctl00_ContentPlaceHolder1_clstservice_3">Recycling</label><br /><input id="ctl00_ContentPlaceHolder1_clstservice_4" type="checkbox" name="ctl00$ContentPlaceHolder1$clstservice$4" /><label for="ctl00_ContentPlaceHolder1_clstservice_4">Assisted collection</label></span>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlsection25" class="formsection">
+		<span id="ctl00_ContentPlaceHolder1_lblsection25">Notice given</span>
+	</div><div id="ctl00_ContentPlaceHolder1_pnlnotice" class="formsubpanel">
+		<span id="ctl00_ContentPlaceHolder1_lblrlstnotice" class="formlabel formlabelBlock">Have you received a card indicating the problem?</span><span id="ctl00_ContentPlaceHolder1_rlstnotice" class="formfield formfield_RemoveMargin mandatory  formfield_Radio" style="display:inline-block;"><input id="ctl00_ContentPlaceHolder1_rlstnotice_0" type="radio" name="ctl00$ContentPlaceHolder1$rlstnotice" value="Yes" /><label for="ctl00_ContentPlaceHolder1_rlstnotice_0">Yes</label><br /><input id="ctl00_ContentPlaceHolder1_rlstnotice_1" type="radio" name="ctl00$ContentPlaceHolder1$rlstnotice" value="No" /><label for="ctl00_ContentPlaceHolder1_rlstnotice_1">No</label></span>
+	</div>
+</div>
+            <input type="submit" name="ctl00$ContentPlaceHolder1$btnRun" value="Submit" id="ctl00_ContentPlaceHolder1_btnRun" />
+            
+            <span id="ctl00_ContentPlaceHolder1_Label1"></span>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+
+        
+      
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<div>&nbsp;</div>
+
+<div id="footerAtoZ" class="container-fluid footer">
+	<div class="container containerfooterAtoZ">
+	  <div class="region region-footer-generic-pre">
+    <section id="block-block-13" class="block block-block clearfix">
+
+      
+  <div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-2 h4"><a href="/a-to-z-of-services">Services A-Z</a></div>
+<div class="col-sm-12 col-md-9 h4 text-left-sm text-right-md text-right-lg pull-right">
+<div class="hidden-xs">
+<ul class="list-nobullet list-inline hidden-xs"><li><a href="/a-to-z-of-services/a">A</a></li>
+<li><a href="/a-to-z-of-services/b">B</a></li>
+<li><a href="/a-to-z-of-services/c">C</a></li>
+<li><a href="/a-to-z-of-services/d">D</a></li>
+<li><a href="/a-to-z-of-services/e">E</a></li>
+<li><a href="/a-to-z-of-services/f">F</a></li>
+<li><a href="/a-to-z-of-services/g">G</a></li>
+<li><a href="/a-to-z-of-services/h">H</a></li>
+<li><a href="/a-to-z-of-services/i">I</a></li>
+<li><a href="/a-to-z-of-services/j">J</a></li>
+<li><a href="/a-to-z-of-services/k">K</a></li>
+<li><a href="/a-to-z-of-services/l">L</a></li>
+<li><a href="/a-to-z-of-services/m">M</a></li>
+<li><a href="/a-to-z-of-services/n">N</a></li>
+<li><a href="/a-to-z-of-services/o">O</a></li>
+<li><a href="/a-to-z-of-services/p">P</a></li>
+<li class="a-to-z-muted">Q</li>
+<li><a href="/a-to-z-of-services/r">R</a></li>
+<li><a href="/a-to-z-of-services/s">S</a></li>
+<li><a href="/a-to-z-of-services/t">T</a></li>
+<li><a href="/a-to-z-of-services/u">U</a></li>
+<li><a href="/a-to-z-of-services/v">V</a></li>
+<li><a href="/a-to-z-of-services/w">W</a></li>
+<li class="a-to-z-muted">X</li>
+<li><a href="/a-to-z-of-services/y">Y</a></li>
+<li class="a-to-z-muted">Z</li>
+</ul></div>
+</div>
+<div class="visible-xs">
+<select class="dropdown" id="dd_a-to-z" name="todecide" onchange="javascript:atozPost(this);"><option value="-">-</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option><option value="I">I</option><option value="J">J</option><option value="K">K</option><option value="L">L</option><option value="M">M</option><option value="N">N</option><option value="O">O</option><option value="P">P</option><option value="-">Q</option><option value="R">R</option><option value="S">S</option><option value="T">T</option><option value="U">U</option><option value="V">V</option><option value="W">W</option><option value="-">X</option><option value="Y">Y</option><option value="-">Z</option></select></div>
+</div>
+</div>
+<p> </p>
+
+</section> <!-- /.block -->
+  </div>
+	</div>
+</div>
+
+<footer id="footer" class="footer container-fluid">
+	
+	  <div class="region region-footer-generic">
+    <section id="block-block-2" class="block block-block clearfix">
+
+      
+<div class="container">
+<div class="col-sm-6 col-md-4">
+<p>Newcastle-under-Lyme Borough Council<br />
+			Merrial Street<br />
+			Newcastle<br />
+			ST5 2AG<br />
+			01782 717717</p>
+<p>			© Newcastle-under-Lyme Borough Council 2015</p>
+</div>
+<div class="col-sm-6 col-md-3">
+<p><a href="/all-services/cookies-policy">Cookies Policy</a><br /><a href="/all-services/privacy-policy">Privacy Policy</a><br /><a href="/all-services/general-disclaimer">General Disclaimers</a></p>
+</div>
+<div class="col-sm-6 col-md-2">Follow us on:
+<p>		<a href="http://www.facebook.com/pages/Newcastle-Under-Lyme-United-Kingdom/Newcastle-under-Lyme/121899634498998?ref=sgm" target="_blank" title="facebook"><span class="social_facebook"> </span></a> <a href="http://twitter.com/NewsNBC" target="_blank" title="Twitter"><span class="social_twitter"> </span></a></p>
+<div class="clearBoth"> </div>
+</div>
+<div class="col-sm-12 col-md-3 awards"><a alt="Plain English" href="http://www.plainenglish.co.uk" title="Plain English"><img src="/sites/all/themes/NULBCv1/img/footer/crystalmark.png" title="Plain English Mark" /></a> <a alt="Investors in People" href="https://www.investorsinpeople.com/" title="Investors in People"><img src="/sites/all/themes/NULBCv1/img/footer/iip_silver.png" title="Investors in People" /></a> <a alt="Gov.uk" href="https://www.gov.uk/" title="Gov.uk"><img src="/sites/all/themes/NULBCv1/img/footer/gov_uk.png" title="Gov.uk logo" /></a></div>
+<div class="clearBoth"> </div>
+</div>
+
+</section> <!-- /.block -->
+  </div>
+</footer>
+<div id="back-top" class="back-top" style="display: none;">
+	<a href="#"><span class="">Back to the top of the page</span></a>
+</div>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script type="text/javascript" src="/sites/all/themes/NULBCv1/bootstrap/js/nbc.js"></script>  
+<script type="text/javascript" src="/sites/all/themes/bootstrap/js/bootstrap.js?ntfe6d"></script>
+
+
+    </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+</body>
+</html>

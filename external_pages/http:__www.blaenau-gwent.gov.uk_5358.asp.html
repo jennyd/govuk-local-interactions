@@ -1,0 +1,492 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- PageID 5358 - published by Open Text Web Solutions 10 - 10.0.1.51 - 29448 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="Title" content="Blaenau Gwent County Borough Council - Vision House Day Centre" />
+    <meta name="Description" content="Blaenau Gwent County Borough Council" />
+    <meta name="Author" content="Blaenau Gwent County Borough Council" />
+    <meta name="DC.Title" content="Blaenau Gwent County Borough Council: - Vision House Day Centre" />
+    <meta name="DC.Coverage" content="Blaenau Gwent, South Wales, UK" lang="ENG" xml:lang="ENG" />
+    <meta name="DC.Identifier" scheme="URI" content="/5358.asp" />
+    <meta name="DC.Date.Created" scheme="W3CDTF" content="06/11/2006" />
+    <meta name="DC.Date.Issued" scheme="W3CDTF" content="30/07/2014 13:50:39" />
+    <meta name="DC.Date.Modified" scheme="W3CDTF" content="04 November 2010" />
+    <meta name="DC.Format" content="text/html" />
+    <meta name="DC.Creator" content="Blaenau Gwent County Borough Council: Lee McDonald" />
+    <meta name="DC.publisher" content="Blaenau Gwent County Borough Council, Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB, Tel (01495) 350555, http://www.blaenau-gwent.gov.uk" />
+    <meta name="DC.Contributor" content="Social Services" />
+    <meta name="DC.Language" scheme="ISO 639-2" content="ENG" />
+    <meta name="DC.Subject" scheme="IPSV" content="" />
+    <meta name="DC.Rights" content="http://www.blaenau-gwent.gov.uk/copyright" />
+    <meta name="eGMS.accessibility" content="Double-A" scheme="WCAG" />
+    <meta name="eGMS.subject.category.identifier" scheme="LNGL" content="" />
+    <meta name="eGMS.subject.category" scheme="IPSV" content="" />
+    <meta name="keywords" content="vision house day centre, mental health, therapeutic service" />
+    <title>
+      Blaenau Gwent County Borough Council - Vision House Day Centre
+    </title>
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" src="/scripts/jquery-1.3.2.min.js">
+</script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image1 .desc").show(); //Show Banner
+            $(".main_image1 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb1 ul li:first").addClass('active');
+            $(".image_thumb1 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image1").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image1 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image1 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image1 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb1 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse1").click(function () {
+                $(".main_image1 .block").slideToggle();
+                $("a.collapse1").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image2 .desc").show(); //Show Banner
+            $(".main_image2 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb2 ul li:first").addClass('active');
+            $(".image_thumb2 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image2").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image2 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image2 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image2 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb2 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse2").click(function () {
+                $(".main_image2 .block").slideToggle();
+                $("a.collapse2").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        function f(n) {
+            document.getElementById('body').style.fontSize = n
+        }
+    //]]>
+    </script><!-- IE6 STYLE OVERRIDES --><!--[if lte IE 6]>
+        <link href="" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- IE7 STYLE OVERRIDES -->
+    <!--[if IE 7]>
+           <link href=""  rel="stylesheet" type="text/css" />
+    <![endif]-->
+  </head>
+  <body id="body">
+    <a name="Top" id="Top"></a> <!-- HEADER -->
+     <!-- ************************************** -->
+     <!-- HEADER  (grey bar, white bar, red bar) -->
+     <!-- ************************************** -->
+    <div id="header">
+      <!-- HEADER TOP BAR( grey ) -->
+      <div id="header-toplinks-outer">
+        <div id="header-toplinks-inner">
+          <!-- SEARCH BOX -->
+          <div id="header-search">
+            
+              <form name="kbs" method="get" action="http://search3.openobjects.com/kb5/gwent/search/en/results.page" id="kbs">
+                <input name="qt" class="searchbox" type="text" maxlength="50" value="Search" onfocus="this.value=''" id="query" /> <input class="searchbutton" type="submit" value="" />
+              </form>
+            </form>
+          </div><!-- TOP HEADER LINKS -->
+          <div id="header-toplinks">
+            <ul>
+              <li class="first">
+                 <a href="/CYM/5358.asp" title="Cymraeg" accesskey="l">Cymraeg</a> 
+              </li>
+              <li>
+                <a href="/council/69.asp" title="Accessibility" accesskey="a">Accessibility</a>
+              </li>
+              <li>
+                <a href="/help.asp" title="Help" accesskey="h">Help</a>
+              </li>
+              <li>
+                <a href="/ContactUs.asp" title="Contact Us" accesskey="c">Contact Us</a>
+              </li>
+              <li>
+                <a href="/council/1838.asp" title="News Centre" accesskey="m">News Centre</a>
+              </li>
+              <li>
+                <a href="http://www.blaenau-gwent.gov.uk/19002.asp" title="Cookies" accesskey="v">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- HEADER COUNCIL LOGO ( tag line set in css )-->
+      <div id="header-mast-outer">
+        <!-- Begin Logo -->
+        <div id="logo">
+          <a href="/index.asp"><img src="/images/logo.jpg" alt="Blaenau Gwent County Borough Council - Cyngor Bwrdeisdref Sirol Blaenau Gwent" /></a>
+        </div><!-- End Logo --><!-- Begin Hour -->
+        <div id="hour-ENG"></div><!-- End Hour -->
+        <!-- Begin Tagline -->
+        <div id="tagline"></div><!-- End Tagline -->
+      </div><!-- HEADER BOTTOM BAR ( red ) -->
+      <div id="header-bottomlinks-outer">
+        <div id="header-bottomlinks-inner">
+          <!-- LINKS LIST -->
+          <div id="header-bottomlinks">
+            <ul>
+              <li class="first">
+                <a href="/index.asp" title="Home" accesskey="h">Home</a>
+              </li>
+              <li>
+                <a href="/jobs/262.asp" title="Jobs" accesskey="j">Jobs</a>
+              </li>
+              <li>
+                <a href="/onlineServices/forms.asp" title="Online Forms" accesskey="o">Online Forms</a>
+              </li>
+              <li>
+                <a href="/faqs/faq.asp" title="FAQ's" accesskey="5">FAQ's</a>
+              </li>
+              <li>
+                <a href="/sitemap.asp" title="Sitemap" accesskey="3">Sitemap</a>
+              </li>
+              <li>
+                <a href="/A-Z.asp" title="A-Z" accesskey="z">A-Z</a>
+              </li>
+              <li>
+                <a href="/news/2487.asp" title="News" accesskey="n">News</a>
+              </li>
+              <li>
+                <a href="/whatsOn/6775.asp" title="What's On" accesskey="w">What's On</a>
+              </li>
+            </ul>
+          </div><!-- TEXT SIZE CHOOSER -->
+          <div id="header-textsize">
+            <span>Enlarge Screen Text Here:</span> <span class="small-text"><a href="javascript:f('0.6em');">A</a></span> <span class="medium-text"><a href="javascript:f('0.8em');">A</a></span> <span class="large-text"><a href="javascript:f('1.2em');">A</a></span>
+          </div><!-- CLEAR DIV ( alloew red background to extend with text size ) -->
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div><!-- SPACER ( few pixels light blue spacer ) -->
+    <div id="header-spacer"></div><!-- // HEADER -->
+    <!-- PAGE CONTENT -->
+    <div id="main-content-body-outer">
+      <div id="main-content-valley">
+        <!-- MAIN PAGE CONTENT - WHITE BOX -->
+        <div class="white-box-top"></div>
+        <div class="white-box-body body-content">
+          <div id="left-column">
+            <!-- Begin Online Services -->
+            <div id="online-services">
+              <span>What would you like to do?</span> <a href="/onlineServices/15981.asp" id="payforit" name="payforit">Pay for it</a> <a href="/onlineServices/15980.asp" id="reportit" name="reportit">Report it</a> <a href="/onlineServices/15979.asp" id="requestit" name="requestit">Request it</a> <a href="/onlineServices/15978.asp" id="sayit" name="sayit">Say It</a> <a href="/onlineServices/15982.asp" id="findit" name="findit">Find It</a>
+            </div><!-- LEFT NAVIGATION -->
+            <div class="side-box-container no-border">
+              <h2 class="red-heading">
+                Browse by Service:
+              </h2>
+              <ul class="navigation-list">
+                
+                <li class="level-0">
+                  <a href="/index.asp">Home</a>
+                </li>
+                <li class="level-0 up">
+                  <a href="/health.asp" title="Health &amp; Social Care">Health &amp; Social Care</a>
+                </li>
+                <li class="level-1 up">
+                  <a href="/health/235.asp" title="Mental Health">Mental Health</a>
+                </li>
+                <li class="level-2">
+                  <a href="/health/5358.asp" title="Vision House Day Centre">Vision House Day Centre</a>
+                </li>
+              </ul>
+            </div><!-- // LEFT NAVIGATION -->
+          </div><!-- CONTENT MIDDLE COLUMN -->
+          
+          <div id="two-column-middle">
+            
+              <h1 class="green-heading" style="display: ;">
+                Vision House Day Centre
+              </h1>
+              <div class="no-border page-content">
+                <p>
+                  <img style="MARGIN-LEFT: 5px" hspace="5" align="right" src="/images/Images_Buildings/Vision_House.JPG" width="320" height="240" />Vision House is a Centre catering for adults with mental health needs.&nbsp; Service users attend the Centre sessionally, daily or as needs require.
+                </p>
+                <p>
+                  The service provided covers the whole of Blaenau Gwent County Borough.
+                </p>
+                <p>
+                  Vision House is situated on the Garden Festival development in Ebbw Vale and is ideally situated for accessing facilities of the Borough.
+                </p>
+                <p>
+                  <strong>Vision House Facilities</strong><br />
+                  Our Service is delivered at ground floor level with wheelchair access and facilities and offers:
+                </p>
+                <ul>
+                  <li>Large lounge.
+                  </li>
+                  <li>Large craft / activity room.
+                  </li>
+                  <li>TV lounge with music centre and IT equipment.
+                  </li>
+                  <li>User friendly kitchen with microwave and laundry facilities to assist in developing basic living skills.
+                  </li>
+                  <li>Consulting room for the use of social workers/Community Psychiatric Nurses.
+                  </li>
+                  <li>Small lounge for therapeutic or educational skills.
+                  </li>
+                  <li>Dining room.
+                  </li>
+                  <li>Relaxation room.
+                  </li>
+                  <li>Enclosed outdoor area.
+                  </li>
+                </ul>
+                <p>
+                  <strong>Vision House Staff</strong>
+                </p>
+                <ul>
+                  <li>The team at Vision House consists of a Centre Manager, Community Options Officer and Support Workers.
+                  </li>
+                  <li>Staff receive training for the tasks they perform and have the opportunity to develop their skills in all aspects required for their work.
+                  </li>
+                  <li>Staff receive regular supervision.
+                  </li>
+                  <li>Staff are responsible for ensuring that each service user is treated as an individual.
+                  </li>
+                  <li>Staff will support and motivate service users in building existing abilities as well as developing new skills.
+                  </li>
+                  <li>Staff will encourage and motivate service users to maximise their social and emotional well-being.
+                  </li>
+                  <li>Staff will promote service user empowerment, decision making and independence.
+                  </li>
+                  <li>Staff are trained in therapeutic work based activities.
+                  </li>
+                  <li>Staff assist individuals to work from their homes.
+                  </li>
+                </ul>
+                <p>
+                  <strong>Vision House Services</strong><br />
+                  The aim of the Centre is to provide a flexible, therapeutic setting and to provide individuals with new opportunities and experiences to aid their integration within their local community and open employment with an emphasis on daily living skills.
+                </p>
+                <p>
+                  <strong>Vision House Activities</strong><br />
+                  Various activities take place on a daily basis and service users are supported to participate in whatever activities they choose.&nbsp; Individuals are also encouraged to try new or expand on old activities and this would be planned jointly with service users and staff.<br />
+                  <br />
+                  Services provided are continually reviewed in order to offer appropriate support to individuals as per their care plans.
+                </p>
+                <p>
+                  Current activities include:
+                </p>
+                <ul>
+                  <li>Living skills such as supported shopping etc.
+                  </li>
+                  <li>Assistance with housekeeping skills.
+                  </li>
+                  <li>Developing craft skills.
+                  </li>
+                  <li>Group therapy and counselling sessions in partnership with the Health Authority.
+                  </li>
+                  <li>Assistance in accessing community resources.
+                  </li>
+                  <li>Professional tuition provided by the Education Department for computer skills, cookery and gardening.
+                  </li>
+                </ul>
+                <p>
+                  <strong>Attendance Charges for the Centre</strong><br />
+                  The charge for attendance at Vision House is set according to the Local Authority&rsquo;s Policy.<br />
+                  <br />
+                  <strong>Aims of the Centre<br /></strong>Vision House aims to provide a flexible and support service to meet the assessed needs of service users and their families and to promote community based activities.<br />
+                  <br />
+                  <strong>Community Links</strong>
+                </p>
+                <ul>
+                  <li>Vision House seeks to have as much as possible involvement within the community.
+                  </li>
+                  <li>Students from local colleges and schools have received work experience.
+                  </li>
+                  <li>Good relationships with local adult education, libraries, leisure and voluntary services.
+                  </li>
+                  <li>Phoenix Project.
+                  </li>
+                </ul>
+                <div class="Top" style="display: none;">
+                  <a href="/5358.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" width="8" height="8" alt="Return to top of page" /></a>
+                  <div style="clear:both;"></div>
+                </div>
+              </div>
+              <div class="box-container text-box">
+                <h1 class="green-heading">
+                  Contact Information
+                </h1>
+                <p>
+                  For further information please contact
+                </p>
+                <p>
+                  C2BG<br />
+                  The Contact Centre<br />
+                  Municipal Offices<br />
+                  Civic Centre<br />
+                  Ebbw Vale<br />
+                  NP23 6XB
+                </p>
+                <p>
+                  <br />
+                  <span style="FONT-FAMILY:">Tel: (01495) 315700<br />
+                  Fax: (01495) 353350<br />
+                  Minicom: (01495) 355959<br />
+                  <br />
+                  For information enquiries:</span>
+                </p>
+                <p>
+                  Email : <a href='mailto:&#105;&#110;&#102;&#111;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#111;&#118;&#46;&#117;&#107;'>&#105;&#110;&#102;&#111;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#111;&#118;&#46;&#117;&#107;</a>
+                </p><br />
+                <br />
+                For referrals: 
+                <p>
+                  Email : <a href='mailto:&#68;&#117;&#116;&#121;&#84;&#101;&#97;&#109;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#99;&#115;&#120;&#46;&#103;&#111;&#118;&#46;&#117;&#107;'>&#68;&#117;&#116;&#121;&#84;&#101;&#97;&#109;&#64;&#98;&#108;&#97;&#101;&#110;&#97;&#117;&#45;&#103;&#119;&#101;&#110;&#116;&#46;&#103;&#99;&#115;&#120;&#46;&#103;&#111;&#118;&#46;&#117;&#107;</a>
+                </p><br />
+                <br />
+                Vision House Day Centre<br />
+                Unit 4 Gwent Court<br />
+                Victoria Business Park<br />
+                Festival Drive<br />
+                Ebbw Vale<br />
+                NP23 8AN
+                <p>
+                  Tel: (01495) 307390
+                </p><br />
+                <br />
+                Care &amp; Social Services Inspectorate Wales (CSSIW)<br />
+                Government Buildings<br />
+                Rhydycar Business Park<br />
+                Merthyr Tydfil<br />
+                CF48 1UZ
+                <p>
+                  Tel: 0300 062 8888
+                </p>
+              </div>
+              <div style="clear: both;"></div>
+              <div class="Top" style="display:">
+                <a href="/5358.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" alt="Return to top of page" /></a>
+                <div style="clear:both;"></div>
+              </div><!-- // CONTENT MIDDLE COLUMN -->
+              <!-- UTILITY LINKS CENTER -->
+              <div id="utility-bar" class="box-container" style="display: ;">
+                <form name="PageFeedback" method="post" action="/5431.asp" target="_self" id="PageFeedback">
+                  <input type="hidden" name="PageID" value="5358" /> <input type="hidden" name="Headline" value="Vision House Day Centre" /> <input type="hidden" name="PageURL" value="/5358.asp" />
+                </form>
+                <ul>
+                  <li class="printer-friendly">
+                    <a href="JavaScript:window.print()">Print friendly<br />
+                    version</a>
+                  </li>
+                  <li class="page-feedback">
+                    <a href="JavaScript:document.PageFeedback.submit();">Feedback<br />
+                    on this page</a>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div><!-- //UTILITY LINKS CENTER -->
+              
+            </div><!-- RIGHT COLUMN --><!-- //RIGHT COLUMN --><!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div><!-- FOOTER -->
+          <!-- PAGE FOOTER - WHITE BOX -->
+          <div class="white-box-top"></div>
+          <div class="white-box-body footer-content">
+            <!-- start of footer content -->
+            <a href="/about/5639.asp"><img src="/images/find-us.jpg" alt="Find Us" /></a> <a href="/council/5413.asp"><img src="/images/service-buddy.jpg" alt="Children's Complaints Service" /></a> <a href="/leisure/3865.asp"><img src="/images/Life.jpg" alt="life. Membership" /></a> <a href="/5515.asp"><img src="/images/connect-to-bg.jpg" alt="C2BG" /></a> <!-- <a href="http://www.direct.gov.uk"><img src="/images/directgov.jpg" alt="Direct Gov" /></a> -->
+             <a href="https://www.gov.uk/"><img src="/images/directgov.jpg" alt="GOV UK" /></a> <!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div>
+          <div id="footer-contact">
+            <address>
+              Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB Tel: 01495 311556 E-mail:&nbsp;<a href="mailto:info@blaenau-gwent.gov.uk">info@blaenau-gwent.gov.uk</a>
+            </address>
+          </div><!--RDExecute=ASP-->
+          <script type="text/javascript">
+//<![CDATA[
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-17447558-1', 'blaenau-gwent.gov.uk');
+          ga('send', 'pageview');
+          //]]>
+          </script> <script type="text/javascript">
+//<![CDATA[
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-17447558-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+          //]]>
+          </script> <!-- // FOOTER -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

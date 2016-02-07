@@ -1,0 +1,864 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Nottinghamshire County Council">
+	<meta property="og:description" content="" />
+	<meta property="og:title" content="Blue badge scheme" />
+	<meta property="og:url" content="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Nottinghamshire County Council"/>
+    <meta property="og:image" content="http://www.nottinghamshire.gov.uk/media/111049/social-sharing-graphic.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="&#64;NottsCC" />
+	<meta name="twitter:creator" content="&#64;NottsCC" />
+    <link rel="icon" href="/favicon.ico">
+    <title>Blue badge scheme | Nottinghamshire County Council</title>
+
+    <link href="/css/grid.min.css" rel="stylesheet">
+    <link href="/css/notts-col-fonts.css" rel="stylesheet">
+    <link href="/css/template.css" rel="stylesheet">
+    <link href="/css/template-additions.css" rel="stylesheet">
+    <link href="/css/NCC-print.css" rel="stylesheet">
+    <link href="/css/jquery.bxslider.css" rel="stylesheet">
+    <link href="/css/bootstrap-table.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Nunito:400,700,300" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,300,700,100" rel="stylesheet" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="/scripts/jquery.fastLiveFilter.js"></script>
+    <script src="/scripts/modernizer.js"></script>
+    <script src="/scripts/jquery.bxslider.min.js"></script>
+    <script src="/scripts/jquery.fitvids.js"></script>
+    <script src="/scripts/jquery.cookie.js"></script>
+    <script src="/scripts/jquery.popupoverlay.js"></script>
+    <script src="/scripts/moment.min.js"></script>
+    <script src="/scripts/emailme.js"></script>
+		
+	
+    
+	
+		
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--Please add some classes to the body tag, specifically, the template name, and the page name-->
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MHTNPH"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+(function (w, d, s, l, i) {
+w[l] = w[l] || []; w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+}); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-MHTNPH');</script>
+    <!-- End Google Tag Manager -->
+
+    <div id="popup_overlay">
+
+        <h2>Sign up for free email updates from Nottinghamshire County Council</h2>
+
+        <img src="/css/images/emailmelogo-trans.png" alt="Email me logo" class="logo" />
+
+        <p>With <strong>email me</strong> you can receive regular updates about council services straight into your inbox including:</p>
+        <ul>
+            <li>Winter weather and gritting</li>
+            <li>Job vacancies</li>
+            <li>What's On and events</li>
+        </ul>
+
+        <!-- Add an optional button to close the popup -->
+        <a href="#" target="_blank" class="beta_emailme">Sign up</a>
+        <button class="beta_info_close"><i class="fa fa-times"></i> Close and don't show me this again</button>
+
+    </div>
+
+    <div class="top-message">
+        We've made some changes to our website. You may find some areas still in development. <a href="/global-content/digital-design-manual/project-phases/live/" title="Information about our new website site">Read more about this work.</a>
+    </div>
+
+
+    <!-- Begin Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-9 col-sm-5">
+                    <a class="header-home-link" href="/" title="Nottinghamshire County Council Homepage">
+                        <img src="/css/images/ncclogo.png" alt="Nottinghamshire County Councl" class="logo">
+                    </a>
+                </div>
+                <div class="col-xs-3 col-sm-7">
+                    <!--<div class="mobile-controls visible-xs-block">
+                        <i class="fa fa-bars"></i> Menu
+                    </div>-->
+                    <div class="header-controls hidden-xs">
+                        <!-- <span class="alerts"><i class="fa fa-exclamation-triangle"></i> Alerts</span> -->
+                        <span class="search">
+                            <!-- EZ Search -->
+                            
+                            <!-- / EZ Search -->
+                            <!-- Semaphore -->
+                            <form action="http://ssearch.nottinghamshire.gov.uk/scripts/semaphoreserver.exe" role="search" method="get" id="search">
+                                    <input type="text" class="search_input" name="QUERY00" id="header-search" placeholder="Search for something...">
+                                    <input type="hidden" name="SAVEDB" value="nottingham" />
+                                    <input type="hidden" name="SAVESTYPE" value="simple" />
+                                    <input type="hidden" name="CMD" value="search.run" />
+                                    <input type="hidden" name="B" value="THTML" />
+                                    <input type="hidden" name="QUERY07" value="MUSCOPYCGI:QUERY00" />
+                                    <input type="hidden" name="PROP07" value="t=p,z=on,p=I9,s=none" />
+                                    <button type="submit" class="search_submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </form>
+                            <!-- /Semaphore -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- /Header -->
+    <!-- Content Body -->
+    <!-- Content Body -->
+    	
+
+
+<section id="page_body">
+		<div class="breadcrumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">				    
+					<ul>
+							<li>
+								<a href="http://www.nottinghamshire.gov.uk/" title="Home" class="inactive">
+									Home <i class="fa fa-caret-right"></i>
+								</a>
+							</li>
+							<li>
+								<a href="http://www.nottinghamshire.gov.uk/transport/" title="Transport" class="inactive">
+									Transport <i class="fa fa-caret-right"></i>
+								</a>
+							</li>
+							<li>
+								<a href="http://www.nottinghamshire.gov.uk/transport/parking/" title="Parking" class="inactive">
+									Parking <i class="fa fa-caret-right"></i>
+								</a>
+							</li>
+						<li><a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/" title="" class="active">Blue badge scheme</a></li>
+					</ul>													
+				</div>
+			</div>
+		</div>		
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">	
+				<div class="content">
+					<div class="row">
+						<div class="col-md-8">						
+							<h1>Blue badge scheme</h1>
+							<p>The blue badge scheme helps you park closer to your destination if you’re disabled.</p>	
+							<!-- Insert Partial Here -->
+							
+
+
+   <ul class="steps">
+       <li><a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/blue-badge-eligibility/"><i class="fa fa-angle-right"></i> Blue badge eligibility</a></li> 
+       <li><a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/apply-for-a-blue-badge/"><i class="fa fa-angle-right"></i> Apply for a blue badge</a></li> 
+       <li><a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/decision-making-process/"><i class="fa fa-angle-right"></i> Decision-making process</a></li> 
+       <li><a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/use-of-your-blue-badge/"><i class="fa fa-angle-right"></i> Use of your blue badge</a></li> 
+       <li><a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/renew-your-blue-badge/"><i class="fa fa-angle-right"></i> Renew your blue badge</a></li> 
+       <li><a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/initial-enquiry-support-service/"><i class="fa fa-angle-right"></i> Initial Enquiry Support Service</a></li> 
+   </ul>
+            <h2>Blue badge eligibility</h2>
+<p>You will be automatically qualify for a blue badge if you:</p>
+<ul>
+<li>receive the Higher Rate of the Mobility Component of Disability Living Allowance (HRMCDLA)</li>
+<li>receive eight points or more under the 'Moving Around' descriptor of the mobility component of the Personal Independence Payment (PIP)</li>
+<li>are registered blind (severely sight impaired)</li>
+<li>receive a War Pensioner’s Mobility Supplement</li>
+<li>have been awarded a lump sum benefit at tariff 1-8 of the Armed Forces Compensation Scheme and have been certified as having a permanent and substantial disability which causes inability to walk or very considerable difficulty in walking.</li>
+</ul>
+<p>You may be eligible for a badge if you:</p>
+<ul>
+<li>have a permanent and substantial disability that causes inability to walk or <br />very considerable difficulty in walking. In this case you may be asked to have an independent mobility assessment</li>
+<li>drive a vehicle regularly, have a severe disability in both arms and have considerable difficulty in operating all, or some, types of parking meter</li>
+<li>are aged under three years and have to be accompanied everywhere by bulky medical equipment</li>
+<li>are an organisation caring for disabled people meeting the eligibility criteria. This is entirely at our discretion.</li>
+</ul>		   <hr>
+           <nav role="navigation" aria-label="Pagination">
+                <ul class="group clearfix">
+                    <li class="next">
+                        <a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/apply-for-a-blue-badge/" rel="next" title="Navigate to next part">
+                            <span class="pagination-label">Next &gt;</span> <span class="pagination-part-title">Apply for a blue badge</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    <span class="show_steps visible-xs-block">
+			Show all sections of this page <span class="show_steps_icon"><i class="fa fa-chevron-down"></i></span><span class="show_steps_icon hide"><i class="fa fa-chevron-up"></i></span>
+                <h2>Blue badge eligibility</h2>
+<p>You will be automatically qualify for a blue badge if you:</p>
+<ul>
+<li>receive the Higher Rate of the Mobility Component of Disability Living Allowance (HRMCDLA)</li>
+<li>receive eight points or more under the 'Moving Around' descriptor of the mobility component of the Personal Independence Payment (PIP)</li>
+<li>are registered blind (severely sight impaired)</li>
+<li>receive a War Pensioner’s Mobility Supplement</li>
+<li>have been awarded a lump sum benefit at tariff 1-8 of the Armed Forces Compensation Scheme and have been certified as having a permanent and substantial disability which causes inability to walk or very considerable difficulty in walking.</li>
+</ul>
+<p>You may be eligible for a badge if you:</p>
+<ul>
+<li>have a permanent and substantial disability that causes inability to walk or <br />very considerable difficulty in walking. In this case you may be asked to have an independent mobility assessment</li>
+<li>drive a vehicle regularly, have a severe disability in both arms and have considerable difficulty in operating all, or some, types of parking meter</li>
+<li>are aged under three years and have to be accompanied everywhere by bulky medical equipment</li>
+<li>are an organisation caring for disabled people meeting the eligibility criteria. This is entirely at our discretion.</li>
+</ul>				<!--Added here -->
+				<nav role="navigation" aria-label="Pagination">
+				<ul class="group clearfix">
+										<li class="next">
+						<a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/apply-for-a-blue-badge/" rel="next" title="Navigate to next part">
+							<span class="pagination-label">Next &gt;</span> <span class="pagination-part-title">Apply for a blue badge</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+                <h2>Apply for a blue badge</h2>
+<h3>You can <a href="https://www.gov.uk/apply-blue-badge" title="Apply for a Blue Badge">apply online via GOV.UK</a>.</h3>
+<p>If you need help to complete the form, please ring us on 0300 500 80 80.</p>
+<p>When you complete the form on the GOV.UK website they will send the details to us so we can make a decision about your application.</p>
+<p>A blue badge costs £10. When you apply you will need to send a cheque or postal order to:</p>
+<p style="padding-left: 30px;">The Blue Badge Team<br />Nottinghamshire County Council<br />Customer Service Centre<br />PO Box 9320<br />Nottingham<br />NG15 5BL</p>
+<p>Please send this in with your proof of identity.</p>
+<p>The money will be returned if your application is not successful.</p>
+<h3>Post</h3>
+<p>If you are unable to apply online, you can download and print an application form.</p>
+<p>There are a number of different forms. Please make sure you use the one most appropriate for your circumstances.</p>
+<ul>
+<li><a href="/media/110034/bluebadgeautomaticqualificationapplication.docx" title="BlueBadgeAutomaticQualificationApplication.docx">automatic qualification application form [Word]</a> - use this form if you get a blue badge automatically because you get a certain benefit or are registered as blind</li>
+<li><a href="/media/110035/bluebadgefurtherassessmentapplication.docx" title="BlueBadgeFurtherAssessmentApplication.docx">further assessment application form [Word]</a> - use this form if you have a permanent and substantial disability that is likely to last at least three years and which means you cannot walk or have very considerable difficulties in walking</li>
+</ul>
+<p>You can find <a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/blue-badge-eligibility/" title="Blue badge eligibility">more information about who automatically qualifies for a blue badge</a> on the eligibility page.</p>
+<ul>
+<li><a href="/media/1875/bluebadgechildrenunder3application.pdf" title="BlueBadgeChildrenUnder3Application.pdf" class="oLinkAssetPdf">children under 3 application form [PDF]</a></li>
+<li><a href="/media/1877/bluebadgeseveredisabilitybotharmsapplication.pdf" title="BlueBadgeSevereDisabilityBothArmsApplication.pdf" class="oLinkAssetPdf">severe disability in both arms application form [PDF]</a></li>
+<li><a href="/media/1876/bluebadgeorganisationapplication.docx" title="BlueBadgeOrganisationApplication.docx" class="oLinkAssetPdf">organisation application form [Word]</a></li>
+</ul>
+<p>Send completed forms to:</p>
+<p style="padding-left: 30px;">The Blue Badge Team <br /> Nottinghamshire County Council <br /> Customer Service Centre<br /> PO Box 9320 <br /> Nottingham<br /> NG15 5BL</p>				<!--Added here -->
+				<nav role="navigation" aria-label="Pagination">
+				<ul class="group clearfix">
+					<li class="previous">
+						<a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/blue-badge-eligibility/" rel="prev" title="Navigate to previous part">
+							<span class="pagination-label">&lt; Previous </span> <span class="pagination-part-title">Blue badge eligibility</span>
+						</a>
+					</li>
+										<li class="next">
+						<a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/decision-making-process/" rel="next" title="Navigate to next part">
+							<span class="pagination-label">Next &gt;</span> <span class="pagination-part-title">Decision-making process</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+                <h2>Decision-making process</h2>
+<p>Your details will come to us whether you apply online through GOV.UK or complete a paper application form. We will then consider your application and make a decision about whether you are eligible for a badge or not.</p>
+<p>If you are automatically eligible, the badge will be sent to you by second class post within 14 working days of us receiving all the correct documents, photographs and payment of £10 from you.</p>
+<p>If you are not automatically eligible your application will require further assessment. We will aim to complete this assessment as quickly as possible, but please allow up to eight weeks for it to be processed. This includes renewal applications.</p>
+<p>Telephone 0300 500 80 80 if your badge does not arrive within these times.</p>
+<p>If we ask for an independent mobility assessment we will make an appointment for you to see an occupational therapist. They will do the assessment.</p>
+<h3>If you are not eligible</h3>
+<p>If you are not eligible for a badge we will write to you giving the reason. If you think the decision is wrong we will review it. To request a review, write to us explaining why you believe the decision was wrong:</p>
+<p style="padding-left: 30px;">The Blue Badge Team, <br />Nottinghamshire County Council, <br />Customer Service Centre, <br />PO Box 9320, <br />Nottingham<br />NG15 5BL</p>
+<p>You may be asked to have an independent mobility assessment with an occupational therapist as part of the review. If you have already had this assessment, you must provide new evidence about your difficulty in walking when you ask for the review.<br /><br /></p>				<!--Added here -->
+				<nav role="navigation" aria-label="Pagination">
+				<ul class="group clearfix">
+					<li class="previous">
+						<a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/apply-for-a-blue-badge/" rel="prev" title="Navigate to previous part">
+							<span class="pagination-label">&lt; Previous </span> <span class="pagination-part-title">Apply for a blue badge</span>
+						</a>
+					</li>
+										<li class="next">
+						<a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/use-of-your-blue-badge/" rel="next" title="Navigate to next part">
+							<span class="pagination-label">Next &gt;</span> <span class="pagination-part-title">Use of your blue badge</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+                <h2>Use of your blue badge</h2>
+<h3>Where you can use it</h3>
+<p>In general you can use your badge for parking:</p>
+<ul>
+<li>on single or double yellow lines for up to three hours, unless there is a ban on loading or unloading</li>
+<li>at 'on-street' parking meters and pay-and-display machines for free and for as long as you need to</li>
+<li>in disabled parking bays. You can find out which car parks have disabled parking bays by checking the car parks information on the relevant <a href="http://www.nottinghamshire.gov.uk/thecouncil/democracy/partnerships/local-councils/district-councils/" class="oLinkInternal">district council website</a>.</li>
+</ul>
+<h3>Displaying badge</h3>
+<p>Make sure the badge is facing upwards, so that the details on the front can be clearly seen. It should be placed on the dashboard.</p>
+<p>You will get a time clock with your badge This must also be displayed when you are parking on a parking restriction, such as a double or single yellow line. Many disabled bays also have time restrictions and you must check the signs before leaving your vehicle.</p>
+<p>Displaying the badge and clock on your dashboard helps the Enforcement Officers (traffic wardens) check that the badge is valid and that you have not exceeded the parking time.</p>
+<h3>Lost or stolen blue badge</h3>
+<p>If you lose your blue badge or time clock, or they are stolen, ring us on 0300 500 80 80.</p>
+<p>You will have to apply for a replacement badge. You will be asked to pay £10 for the replacement.</p>
+<h3>Misuse</h3>
+<p>A badge can be withdrawn if you misuse it or allow others to misuse it. You should only use your badge if you are travelling in the vehicle as a driver or a passenger. If you give it to someone else to use, this counts as misuse.</p>
+<p>You should report the misuse of a badge to 0300 500 80 80 or <a href="mailto:enquiries@nottscc.gov.uk" title="Email CSC">enquiries@nottscc.gov.uk</a>.</p>
+<p>You could also contact the police. It is a criminal offence to misuse a blue badge and could lead to a £1,000 fine.</p>
+<p>If you receive a letter saying that you have misused your badge and you disagree, contact us on 0300 500 80 80 or <a href="mailto:enquiries@nottscc.gov.uk" title="Email CSC">enquiries@nottscc.gov.uk</a>.</p>
+<h3>If the blue badge holder dies, what do I do with their badge?</h3>
+<p>You can take the badge to the register office when you register the death. We will then cancel the badge and update our records without you needing to do anything else.</p>
+<p>If you aren't able to return the badge at the registrar office you can post it back to:</p>
+<p style="padding-left: 30px;"><span>The Blue Badge Team</span><br /><span>Nottinghamshire County Council</span><br /><span>Customer Service Centre</span><br /><span>PO Box 9320</span><br /><span>Nottingham</span><br /><span>NG15 5BL</span></p>
+<p>Please include a letter letting us know the date of the badge holder's death. We will then cancel the badge and update our records for you.</p>				<!--Added here -->
+				<nav role="navigation" aria-label="Pagination">
+				<ul class="group clearfix">
+					<li class="previous">
+						<a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/decision-making-process/" rel="prev" title="Navigate to previous part">
+							<span class="pagination-label">&lt; Previous </span> <span class="pagination-part-title">Decision-making process</span>
+						</a>
+					</li>
+										<li class="next">
+						<a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/renew-your-blue-badge/" rel="next" title="Navigate to next part">
+							<span class="pagination-label">Next &gt;</span> <span class="pagination-part-title">Renew your blue badge</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+                <h2>Renew your blue badge</h2>
+<p>A letter reminding you to renew your blue badge will be sent to you about eight weeks before your badge expires.</p>
+<p>Please let us know if you move house, so that the letter goes to the right address.</p>
+<p>We will not automatically send you a new badge when your current one expires. It is your responsibility to re-apply for a new blue badge.</p>
+<h3>How to renew</h3>
+<p>To renew your blue badge you <a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/apply-for-a-blue-badge/" title="Apply for a Blue Badge">need to re-apply</a>.</p>
+<p>You will have to go through the same process as you would to apply for the first time. This is because:</p>
+<ul>
+<li>your situation (and what you are eligible for) might have changed</li>
+<li>the criteria for getting a blue badge might have changed. We need to assess your situation against the latest criteria so you need to fill out a new application and provide all of the evidence requested.</li>
+</ul>
+<h3>Changed address</h3>
+<p>If you are moving address, but are staying within Nottinghamshire, you should contact our Customer Service Centre on 0300 500 80 80 or <a href="mailto:enquiries@nottscc.gov.uk" title="Email CSC">enquiries@nottscc.gov.uk</a> to give them your new address. This will make sure that when we send you a reminder letter that your badge is about to expire it will go to the right address.</p>
+<p>If you are moving to another council area you can carry on using your badge until it is due to expire. Six weeks before the expiry date you need to apply for your badge again via your new council area, using your new address.</p>
+<p>For more advice ring the <a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/initial-enquiry-support-service/" title="More information" class="oLinkInternal">Initial Enquiry Support Service</a> for what you need to do.</p>
+<h3>Changed vehicle</h3>
+<p>If you have changed your vehicle you don't need to inform us. As the blue badge can be used in any vehicle, we don't need to have a record of your new registration number.</p>				<!--Added here -->
+				<nav role="navigation" aria-label="Pagination">
+				<ul class="group clearfix">
+					<li class="previous">
+						<a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/use-of-your-blue-badge/" rel="prev" title="Navigate to previous part">
+							<span class="pagination-label">&lt; Previous </span> <span class="pagination-part-title">Use of your blue badge</span>
+						</a>
+					</li>
+										<li class="next">
+						<a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/initial-enquiry-support-service/" rel="next" title="Navigate to next part">
+							<span class="pagination-label">Next &gt;</span> <span class="pagination-part-title">Initial Enquiry Support Service</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+                <h2>Initial Enquiry Support Service</h2>
+<p>The Blue Badge Initial Enquiry Support Service can answer general queries. For example:</p>
+<ul>
+<li>the use of the badge when travelling abroad</li>
+<li>what the toll concessions are for badge holders</li>
+<li>details of how to use the badge and where to report misuse.</li>
+</ul>
+<p> Contact them</p>
+<ul>
+<li>telephone: 0844 4630213 (Monday to Friday 8am to 6pm. Answerphone out of these hours)</li>
+<li>email: <a href="mailto:bluebadge@northgate-is.com%20?subject=Nottinghamshire%20Bue%20Badge%20enquiry" title="Blue badge support email" class="oLinkEmail">bluebadge@northgate-is.com </a></li>
+<li>post: Blue Badge Unit, Northgate Information Solutions, Wellington House, Wynyard Park, Billington TS22 5TB.</li>
+</ul>
+<p>The service does not deal with applications or appeals.</p>				<!--Added here -->
+				<nav role="navigation" aria-label="Pagination">
+				<ul class="group clearfix">
+					<li class="previous">
+						<a href="http://www.nottinghamshire.gov.uk/transport/parking/blue-badge-scheme/renew-your-blue-badge/" rel="prev" title="Navigate to previous part">
+							<span class="pagination-label">&lt; Previous </span> <span class="pagination-part-title">Renew your blue badge</span>
+						</a>
+					</li>
+									</ul>
+			</nav>
+	</span>
+
+							<!-- End Process Child Page -->
+							
+							<div class="socialshare">
+								<h4>Share this page?</h4>
+								<!-- AddToAny BEGIN -->
+								<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+								<a class="a2a_button_facebook"></a>
+								<a class="a2a_button_twitter"></a>
+								<a class="a2a_button_print"></a>
+								<a class="a2a_button_email"></a>
+								</div>
+								<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+								<!-- AddToAny END -->			
+							</div>	
+						</div>
+						<div class="col-md-4">						
+							<aside id="sidebar">
+								    <h2>Read it</h2>
+    <ul class="inthissection">
+                    <li><a href="http://www.nottinghamshire.gov.uk/transport/parking/special-access-schemes/">Special access schemes</a></li>
+            </ul>
+							
+								    <h2>Do it</h2>
+    <ul class="inthissection">
+                    <li><a href="http://www.nottinghamshire.gov.uk/contact-and-complaints/contact-us/contact-us/">Contact us</a></li>
+
+    </ul>
+								
+							</aside>
+						</div>												
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
+
+<section id="additional">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-lg-4">	
+				
+	<div class="news">
+		<h2>News and updates</h2>
+		<ul>
+			
+			
+					<li>
+						<a href="http://www.nottinghamshire.gov.uk/latest-news/were-in-the-stonewall-top-100/" title="We&#39;re in the Stonewall Top 100">
+						<div class="row no-gutters">
+							<div class="col-xs-3 col-lg-4">	
+									<img src="/media/111562/stonewall-top-100-celebration.jpg?anchor=center&amp;mode=crop&amp;width=112&amp;height=75&amp;rnd=130976916880000000" alt="We&#39;re in the Stonewall Top 100" />
+							</div>
+							<div class="col-xs-9 col-lg-8">		
+								<span>We&#39;re in the Stonewall Top 100</span>
+							</div>							
+						</div>	
+						</a>	
+					</li>
+					<li>
+						<a href="http://www.nottinghamshire.gov.uk/latest-news/gritters-out-over-a-snowy-weekend/" title="Gritters out over a snowy weekend">
+						<div class="row no-gutters">
+							<div class="col-xs-3 col-lg-4">	
+									<img src="/media/111517/gritterforweb.jpg?anchor=center&amp;mode=crop&amp;width=112&amp;height=75&amp;rnd=130976915340000000" alt="Gritters out over a snowy weekend" />
+							</div>
+							<div class="col-xs-9 col-lg-8">		
+								<span>Gritters out over a snowy weekend</span>
+							</div>							
+						</div>	
+						</a>	
+					</li>
+					<li>
+						<a href="http://www.nottinghamshire.gov.uk/latest-news/you-can-help-others-to-get-online-in-2016/" title="You can help others to get online in 2016">
+						<div class="row no-gutters">
+							<div class="col-xs-3 col-lg-4">	
+									<img src="/media/111483/digital-champion-joe-bonser.jpg?anchor=center&amp;mode=crop&amp;width=112&amp;height=75&amp;rnd=130976915340000000" alt="You can help others to get online in 2016" />
+							</div>
+							<div class="col-xs-9 col-lg-8">		
+								<span>You can help others to get online in 2016</span>
+							</div>							
+						</div>	
+						</a>	
+					</li>
+					<li>
+						<a href="http://www.nottinghamshire.gov.uk/latest-news/have-your-say-on-proposed-social-care-company/" title="Have your say on proposed social care company">
+						<div class="row no-gutters">
+							<div class="col-xs-3 col-lg-4">	
+									<img src="/media/111352/0004__wfp09825.jpg?crop=0,0,0,0.035096747632770792&amp;cropmode=percentage&amp;width=112&amp;height=75&amp;rnd=130976915340000000" alt="Have your say on proposed social care company" />
+							</div>
+							<div class="col-xs-9 col-lg-8">		
+								<span>Have your say on proposed social care company</span>
+							</div>							
+						</div>	
+						</a>	
+					</li>
+		</ul>
+		<a href="/latest-news/" title="More News and updates" class="more-button-inline">
+			<i class="fa fa-newspaper-o fa-fw"></i> See all our news and updates
+		</a>
+	</div>			
+
+			</div>
+		    <div class="col-md-6 col-lg-4">
+				
+				<div class="events">
+		            <h2>What's on in Nottinghamshire</h2>
+		            <ul>
+<li>
+
+
+        <a href="/events/777/fragments-in-time">
+            <div class="row">
+                <div class="col-xs-2 col-lg-3">
+                    <div class="datebox datebox-multiple">
+                        <div class="day">
+                            18-31
+                        </div>
+                        <div class="month">
+                            Jan/Dec
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-lg-9">
+                    <div class="description">
+                        <div class="title">
+                            Fragments in Time
+                        </div>
+                        <div class="time">
+                            Time: 10am
+                        </div>
+                        <div class="location">
+                            Rufford Abbey Country Park
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li>
+
+
+        <a href="/events/897/exhibition-by-st-anns-allotment-heritage-group">
+            <div class="row">
+                <div class="col-xs-2 col-lg-3">
+                    <div class="datebox datebox-multiple">
+                        <div class="day">
+                            01-27
+                        </div>
+                        <div class="month">
+                            Feb
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-lg-9">
+                    <div class="description">
+                        <div class="title">
+                            Exhibition by St Anns Allotment Heritage Group
+                        </div>
+                        <div class="time">
+                            Time: 9am
+                        </div>
+                        <div class="location">
+                            Arnold Library
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li>
+
+
+        <a href="/events/200/exhibition-in-synthesis">
+            <div class="row">
+                <div class="col-xs-2 col-lg-3">
+                    <div class="datebox datebox-multiple">
+                        <div class="day">
+                            02-28
+                        </div>
+                        <div class="month">
+                            Feb
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-lg-9">
+                    <div class="description">
+                        <div class="title">
+                            Exhibition: In Synthesis
+                        </div>
+                        <div class="time">
+                            Time: 9am
+                        </div>
+                        <div class="location">
+                            Mansfield Central Library
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+    <li>
+
+
+        <a href="/events/936/pop-up-museum-display-on-mansfield-brewery">
+            <div class="row">
+                <div class="col-xs-2 col-lg-3">
+                    <div class="datebox datebox-multiple">
+                        <div class="day">
+                            04-03
+                        </div>
+                        <div class="month">
+                            Feb/Mar
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-lg-9">
+                    <div class="description">
+                        <div class="title">
+                            Pop Up Museum Display On Mansfield Brewery
+                        </div>
+                        <div class="time">
+                            Time: 9.30am
+                        </div>
+                        <div class="location">
+                            Mansfield Woodhouse Library
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>		            </ul>
+		            <a href="/Events" title="Events" class="more-button-inline">
+		                <i class="fa fa-calendar fa-fw"></i> See all events in Nottinghamshire
+		            </a>
+		        </div>
+				
+		       
+
+		    </div>
+			<div class="col-md-12 col-lg-4">
+				<div class="social">
+					<h2>Talk to us</h2>
+					<div class="row no-gutters">
+						<div class="col-md-6 col-lg-12">
+							<div class="twitter_stream">
+							<!-- LW 04/02/16 - New Twitter Widget without replies -->
+<a class="twitter-timeline" href="https://twitter.com/NottsCC" width="400" data-widget-id="695172620250144768" data-height="480px" data-tweet-limit="3" data-chrome="noborders nofooter">Tweets by @NottsCC</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>				
+							</div>
+							<a href="https://twitter.com/intent/tweet?screen_name=NottsCC" title="Tweet to Nottinghamshire County Council" class="more-button-inline hidden-lg">
+								<i class="fa fa-twitter fa-fw"></i> Tweet us
+							</a>							
+						</div>
+						<div class="col-md-6 col-lg-12">
+							<div class="contact_details hidden-lg">
+								<h3>Contact the Council</h3>
+								<p>Find and talk with us online or contact us directly by online form, email, telephone, post or in person at one of our offices.</p>
+								<span class="contact_facebook"><a href="https://www.facebook.com/nottinghamshire" target="_blank" title="Nottinghamshire County Council on Facebook"><i class="fa fa-facebook-official fa-fw"></i> Facebook.com/Nottinghamshire</a></span>
+								<span class="contact_twitter"><a href="https://www.twitter.com/nottscc" target="_blank" title="Nottinghamshire County Council on Twitter"><i class="fa fa-twitter fa-fw"></i> Twitter.com/NottsCC</a></span>
+								<span class="contact_online"><a href="/contact-and-complaints/contact-us/contact-us" title="Contact Nottinghamshire County Council using our online form"><i class="fa fa-desktop fa-fw"></i> Use our online form</a></span>
+								<span class="contact_person"><a href="/contact-and-complaints/contact-us/visit-us" title="Contact Nottinghamshire County Council at one of our Customer Service Points"><i class="fa fa-building-o fa-fw"></i> Visit us in person</a></span>
+								<span class="contact_phone"><i class="fa fa-phone fa-fw"></i> Call us on 0300 500 80 80</span>
+								<!-- <a href="/the-council-and-democracy/contact-the-council/" title="More ways to contact the Council" class="more-button-inline">
+									More ways to contact the Council
+								</a>-->							
+							</div>
+						</div>							
+					</div>
+					<a href="https://twitter.com/intent/tweet?screen_name=NottsCC" title="Tweet to Nottinghamshire County Council" class="more-button-bottom hidden-md">
+						<i class="fa fa-twitter fa-fw"></i> Tweet us
+					</a>					
+				</div>	
+                <!--  end of social div tag -->			
+			</div>
+							
+							
+		</div>
+		<div class="row">
+			<div class="col-lg-12">	
+				<div class="contact_details_large hidden-md">
+					<h3>Contact the Council</h3>
+					<p>Find and talk with us online or contact us directly by online form, email, telephone, post or in person at one of our offices.</p>
+					<span class="contact_facebook"><a href="https://www.facebook.com/nottinghamshire" target="_blank" title="Nottinghamshire County Council on Facebook"><i class="fa fa-facebook-official fa-fw"></i> Facebook.com/Nottinghamshire</a></span>
+					<span class="contact_twitter"><a href="https://www.twitter.com/nottscc" target="_blank" title="Nottinghamshire County Council on Twitter"><i class="fa fa-twitter fa-fw"></i> Twitter.com/NottsCC</a></span>
+					<span class="contact_online"><a href="/contact-and-complaints/contact-us/contact-us" title="Contact Nottinghamshire County Council using our online form"><i class="fa fa-desktop fa-fw"></i> Use our online form</a></span>
+					<span class="contact_person"><a href="/contact-and-complaints/contact-us/visit-us" title="Contact Nottinghamshire County Council at one of our Customer Service Points"><i class="fa fa-building-o fa-fw"></i> Visit us in person</a></span>
+					<span class="contact_phone"><i class="fa fa-phone fa-fw"></i> Call us on 0300 500 80 80</span>
+					
+					<!--<a href="/the-council-and-democracy/contact-us/contact-the-council/" title="More News and updates" class="more-button-inline">
+						More ways to contact the Council
+					</a>			-->
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">		
+				<div class="banner">
+					<a class="footer-banner" href="/council-and-democracy/get-involved/budget-consultation-201617" title="Budget Proposal - Have Your Say"><img alt="Budget Proposal Banner" src="http://www.nottinghamshire.gov.uk/media/110901/hp-banner.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
+
+
+
+
+    <!-- /Content Body -->
+    <!-- Footer -->
+    <footer id="global-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Nottinghamshire County Council 2015</span>
+                </div>
+                <div class="col-md-8">
+                    <ul class="footer_nav">
+                        <li>
+                            <a href="http://site.nottinghamshire.gov.uk/living/jobs/workingforthecouncil/staff/olvi/" title="OLVI">
+                                Access Online via the Internet (OLVI)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/global-content/accessibility/" title="Accessibility">
+                                Accessibility
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/global-content/privacy/" title="Privacy">
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/global-content/copyright/" title="Copyright">
+                                Copyright
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/global-content/cookies/" title="Cookies">
+                                How we use Cookies
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/global-content/digital-design-manual/" title="Digital design manual" class="last">
+                                Digital design manual
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+    <!-- Scroll to top script -->
+    <script src="/scripts/jquery.scrollUp.min.js"></script>
+    <script>
+        $(function () {
+            $.scrollUp();
+        });
+    </script>
+    <!-- Sortable table script -->
+    <script src="/scripts/bootstrap.dropdowns.js"></script>
+    <script src="/scripts/sp/bootstrap-table.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function ($) {
+
+            //Check if in 'BETA mode'
+
+            $(function () {
+                $(".toggle-icon").toggleClass("hide");
+                $.cookie('beta-toggle', 'on');
+                if ($.cookie('beta-toggle') == "on") {
+                    $(".toggle-icon").toggleClass("hide");
+                    $(".beta-inactive").toggleClass("toggled");
+                }
+                else {
+
+                }
+            });
+
+
+            $(".toggle-beta").on("click", function () {
+                $(".toggle-icon").toggleClass("hide");
+                $(".beta-inactive").toggleClass("toggled");
+                if ($.cookie('beta-toggle') == "on") {
+                    $.removeCookie("beta-toggle");
+                    $.cookie('beta-toggle', 'off');
+                }
+                else {
+                    $.cookie('beta-toggle', 'on');
+                }
+            });
+
+            $(".close-beta").on("click", function () {
+                $(".beta").toggle();
+            });
+
+            // End of BETA overlay code
+
+            $(".show_more_services").on("click", function () {
+                $(".all-services").toggleClass("show-inline");
+                $(this).toggleClass("button-active");
+                $(".trending_tasks_filter").toggleClass("filter-show");
+                $("#task_filter").toggleClass("filter-input-active");
+                $(".show_more_services_inactive").toggleClass("hide");
+                $(".show_more_services_active").toggleClass("show");
+            });
+
+            $(".show_steps").on("click", function (e) {
+                $(".show_steps_icon").toggleClass("hide");
+                $(".steps").toggle();
+            });
+
+            $(".switcher_browse, .switcher_tasks").on("click", function (e) {
+                e.preventDefault();
+                if ($(this).hasClass("active")) {
+
+                }
+                else {
+                    $(".trending_tasks_box").toggleClass("hide");
+                    $(".browse_box").toggleClass("hide");
+                    $(".switcher_browse, .switcher_tasks").toggleClass("active");
+                }
+            });
+
+            $(".transaction-requirement").on("click", function () {
+                $(this).children(".checked").toggleClass("hide");
+                $(this).children(".unchecked").toggleClass("hide");
+            });
+
+            $(function () {
+                var hash = window.location.hash;
+                if (hash == "#browsehome") {
+                    $(".trending_tasks_box").toggleClass("hide");
+                    $(".browse_box").toggleClass("hide");
+                    $(".switcher_browse, .switcher_tasks").toggleClass("active");
+                }
+            });
+
+            $(function () {
+                $('#task_filter').fastLiveFilter('.trending_tasks');
+            });
+
+            $(".content").fitVids();
+
+        });
+    </script>
+    <!-- Hotjar Tracking Code for www.nottinghamshire.gov.uk -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 78927, hjsv: 5 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <script>
+        // Bootstrap Table code
+        var $table = $('#councillor-table');
+        $(function () {
+        });
+    </script>							
+</body>
+</html>

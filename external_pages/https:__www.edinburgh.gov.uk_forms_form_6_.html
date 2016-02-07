@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<!-- Copyright (C) 2000 Tivoli Systems, Inc. -->
+<!-- Copyright (C) 1999 IBM Corporation -->
+<!-- Copyright (C) 1998 Dascom, Inc. -->
+<!-- All Rights Reserved. -->
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>City Of Edinburgh Council</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+
+<BR>
+
+
+<BR><BR>
+
+
+<!--- DO NOT TRANSLATE OR MODIFY any part of the hidden parameter(s) --->
+
+<!---
+  The following block of code provides users with a warning message
+  if they do not have cookies configured on their browsers.  
+  If this environment does not use cookies to maintain login sessions, 
+  simply remove or comment out the block below.
+--->
+
+
+<!--- BEGIN Cookie check block --->
+<!---
+DO NOT TRANSLATE anything inside the SCRIPT tag except the quoted 
+string warningString and the first line of the JavaScript redirection 
+instruction beginning with "// Uncomment the following ..." 
+
+i.e.	var warningString = "Translate this string";
+--->
+<SCRIPT LANGUAGE=JavaScript>
+var warningString = "<B>WARNING:</B> To maintain your login session, make sure that your browser is configured to accept Cookies.";
+document.cookie = 'acceptsCookies=yes';
+if(document.cookie == ''){
+document.write(warningString);
+}
+else{
+
+var createCookie = function(name, value, ms) {
+    var expires;
+    if (ms) {
+        var date = new Date();
+        date.setTime(date.getTime() + ( 600000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    else {
+        expires = "";
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+document.cookie = 'acceptsCookies=yes; expires=Fri, 13-Apr-1970 00:00:00 GMT';
+// Uncomment the following line for JavaScript redirection
+ //document.cookie = 'ISAMOriginalURL=' + encodeURIComponent(window.location) + "; Path=/;";
+exp = 60*1000;
+url=window.location;
+createCookie("edi_redirect",url,exp);
+}
+//alert(document.referrer);
+window.location.href = "https://auth.edinburgh.gov.uk/sps/CAS/saml20/logininitial?RequestBinding=HTTPPost&ResponseBinding=HTTPPost&Target=https%3A%2F%2Fauth.edinburgh.gov.uk%2Fsps%2Fwhoami%2Fdetails"
+</SCRIPT>
+<NOSCRIPT>
+<B>WARNING:</B> To maintain your login session, make sure that<BR>
+your browser is configured to accept Cookies.
+</NOSCRIPT>
+
+<!--- END Cookie check block --->
+
+
+
+<BR>
+
+
+</BODY>
+</HTML>

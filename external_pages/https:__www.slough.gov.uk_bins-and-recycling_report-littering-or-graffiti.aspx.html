@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- noindex -->
+<!-- PageId: 6396 -->
+<!-- /noindex -->
+<!-- noindex -->
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif]-->
+    <link rel="dns-prefetch" href="//script.slough.gov.uk" /><link rel="dns-prefetch" href="//css.slough.gov.uk" /><link rel="dns-prefetch" href="//static.slough.gov.uk" /><link rel="dns-prefetch" href="//image.slough.gov.uk" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="Robots" content="INDEX, FOLLOW" /><meta name="dcterms.creator" content="Slough Borough Council" /><meta name="dcterms.publisher" content="Slough Borough Council" /><meta name="viewport" content="width=device-width; initial-scale=1.0;" /><link type="text/css" rel="stylesheet" href="/SBCMaster/css/iconsSBC.min.css" media="screen" /><link type="text/css" rel="stylesheet" href="/SBCMaster/css/foundation.min.css?q=1" media="screen" /><link type="text/css" rel="stylesheet" href="/SBCMaster/css/foundation_plus.min.css" media="screen and (min-device-width : 721px)" />
+    <!--[if !IEMobile&(lt IE 9)]>
+    <link type="text/css" rel="stylesheet" href="/SBCMaster/css/foundation_plus.css" media="screen" />
+    <![endif]-->
+    <!--[if !IEMobile&(IE)]>
+    <link type="text/css" rel="stylesheet" href="/SBCMaster/css/ie.min.css" media="screen" />
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="/SBCMaster/css/print.min.css" media="print" />
+
+
+    <script type="text/javascript" src="/ajax/libs/headjs/1.0.3/head.load.min.js"></script>
+    <script type="text/javascript" src="/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/ajax/libs/jquery.migrate/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript">
+    var cdn = (window.location.protocol === 'https:') ? '' : '//script.slough.gov.uk';
+    $(function() {
+        DelayedLoad();
+    });
+    function DelayedLoad() {
+        $(window).load(function () {
+            head.load(cdn + '/ajax/libs/jquery.hoverintent/2013.03.11/hoverintent.min.js', '/SBCMaster/scripts/megaMenus.min.js', function () { applyMegaMenus(); });
+            if ($('.slidesjs').length || $('#home_news_slider').length) {
+                head.load(cdn + '/ajax/libs/slidesjs/3.0/jquery.slides.edited.min.js', function () {
+                    $(".slidesjs").each(function () {
+                        var width = $(this).find('img').first().attr('width');
+                        var height = $(this).find('img').first().attr('height');
+                        $(this).find('img').each(function () {
+                            $(this).attr('width', '100%');
+                            $(this).removeAttr('height');
+                        });
+                        $(this).slidesjs({
+                            width: width,
+                            height: height,
+                            play: { active: false, auto: true, pauseOnHover: true },
+                            pagination: { active: true },
+                            navigation: { active: false }
+                        });
+                    });
+                    if ($('#home_news_slider').length) {
+                        $("#slides").slidesjs({ height: 235, width: 100, navigation: { active: true, effect: "slide" }, pagination: { active: false} });
+                    }
+                });
+            }
+            if ($('#DateCountdown').length) {
+                head.load(cdn + '/ajax/libs/countdown/TimeCircles.js', function () {
+                    $("#DateCountdown").TimeCircles({ circle_bg_color: "rgba(44,62,80 , 0.6 )", fg_width: 0.03, bg_width: 1 });
+                });
+            }         
+            if ($('#busTableRows').length) {
+                head.load(cdn + '/SbcServices/scripts/Sbc.TfS.min.js', function () {
+                    TfS.Bus.BusInit($('#busTableRows'));
+                    TfS.TfL.TubeInit($('#tubeStatus'));
+                    TfS.Train.TrainInit($('#trainTableRows'));
+                });
+            }
+            if ($('#twitterFeedHolder').length) { head.load('/SBCMaster/scripts/twWidget.min.js', '/SBCMaster/scripts/twitterWidget.min.js', function () { displayTwitterWidget(); }); }
+            if ($('.colorBox').length) { head.load('/SBCMaster/scripts/jflickrfeed.min.js', cdn + '/ajax/libs/jquery.colorbox/1.4.33/jquery.colorbox.min.js'); }
+
+            var EUcookie = getCookie("EUcookie");
+            if (EUcookie == null) {
+                $('body').prepend("<div class=\"cookieDiv\">"
+                    + "<p>Slough.gov.uk uses <a href=\"/help/cookies.aspx\">cookies</a>. "
+                    + "If you continue to use the site, we'll assume you're happy to accept the cookies. "
+                    + "<button onClick=\"setEUCookie();\" onKeyPress=\"if (event.which == 13) {setEUCookie();}\" >Ok</button></p>"
+                    + "</div>");
+            }
+
+            $(".content").each(function (i) {
+                $(this).find("a[href*='.pdf']").not("[class*='download']").addClass("downloadIcon pdf");
+                $(this).find("a[href*='.doc']").not("[class*='download']").addClass("downloadIcon doc");
+                $(this).find("a[href*='.xls']").not("[class*='download']").addClass("downloadIcon xls");
+                $(this).find("a[href*='.zip']").not("[class*='download']").addClass("downloadIcon zip");
+                $(this).find("a[href*='.txt']").not("[class*='download']").addClass("downloadIcon txt");
+                $(this).find("a[href*='.csv']").not("[class*='download']").addClass("downloadIcon csv");
+            });
+
+            head.load(
+                    '//www.google-analytics.com/analytics.js',
+                    ('https:' == document.location.protocol ? 'https://' : 'http://') + 'translate.google.com/translate_a/element.js?cb=googleTranslateElementInit',
+                    function () {
+                        ga('create', 'UA-25904134-1', 'auto');
+                        ga('send', 'pageview');
+                    });
+
+            /* track MegaMenu link clicks TODO: add 'MegaMenuLink' class */
+            $(".MegaMenuLink").each(function (index) {
+                addTracking(this, 'MegaMenu', 'Click', this.href);
+            });
+            /* track MegaMenu task clicks TODO: add 'MegaMenuTask' class */
+            $(".MegaMenuTask").each(function (index) {
+                addTracking(this, 'MegaMenu', 'Task', this.href);
+            });
+            /* callToActionButton */
+            $(".callToActionButton").each(function (index) {
+                addTracking(this, 'CallToAction', 'StraightTo', this.href);
+            });
+            /* callToAction */
+            $(".callToAction").each(function (index) {
+                addTracking(this, 'CallToAction', 'StraightTo', this.href);
+            });
+            /* Track external links */
+            $('a').each(function () {
+                if (this.host.indexOf('slough.gov.uk') == -1) {
+                    $(this).addClass('ExternalLink');
+                }
+            });
+            $(".ExternalLink").each(function (index) {
+                addTracking(this, 'ExternalLink', 'Click', this.href);
+            });
+            /* track downloads */
+            $(".downloadIcon").each(function (index) {
+                addTracking(this, 'Download', 'Click', this.getAttribute('href'));
+            });
+
+        });
+    }
+
+    function addTracking(link, category, action, label) {
+        $(link)
+                .on("click", function () {
+                    ga('send', 'event', category, action, label);
+                })
+                .on("keypress", function () {
+                    if (event.which == 13) {
+                        ga('send', 'event', category, action, label);
+                    }
+                });
+    }
+
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, gaTrack: true, gaId: 'UA-25904134-1' }, 'google_translate_element');
+    }
+    function setCookie(c_name, value, exdays) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + exdays);
+        var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString() + ";path=/;domain=.slough.gov.uk");
+        document.cookie = c_name + "=" + c_value;
+    }
+    function getCookie(c_name) {
+        var i, x, y, ARRcookies = document.cookie.split(";");
+        for (i = 0; i < ARRcookies.length; i++) {
+            x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+            y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+            x = x.replace(/^\s+|\s+$/g, "");
+            if (x == c_name) {
+                return unescape(y);
+            }
+        }
+    }
+    function setEUCookie() {
+        setCookie('EUcookie', 'true', 365);
+        $('.cookieDiv').remove();
+        return false;
+    }
+
+</script>
+
+
+     <!-- /noindex -->
+ 
+
+<title>
+	Report littering or graffiti - Slough Borough Council
+</title><meta name="dcterms.subject" content="Litter" />
+<meta name="dcterms.subject" content="Graffiti removal" />
+<meta name="dcterms.subject" content="Road cleaning" />
+<meta name="dcterms.title" content="Report littering or graffiti" /><meta name="keywords" content="graffiti, grafitti, grafiti, litter, street, cleaning, dead, animals, dogs, littering, Litter; Graffiti removal; Road cleaning" /><meta name="dcterms.date" content="27 March 2012 10:18" /><meta name="dcterms.identifier" content="/bins-and-recycling/report-littering-or-graffiti.aspx" /><meta name="description" content="How to report litter, dead animals, graffiti and other street cleaning issues." /><script type="text/javascript" src="//slough.firmstep.com/js/combined.js"></script><script src="//slough.firmstep.com/Branding/default/chromefade.js"></script>
+
+
+
+<!--[if IE 6]> <style type="text/css"> body .aftextinput, body .aftextarea { width: 98%; } .abscontainer { zoom:1; }</style> <![endif]--><style type="text/css">.osYvNUbzEyC .lM1rM2 .lM1rM2 {width: 99.98%}
+.osYvNUbzEyC .lM1rM2 {width:99.98%}
+.osYvNUbzEyC .lM1rM2 .lM3rM2 {width: 49.99%}
+.osYvNUbzEyC .lM1rM2 .lM1rM3 {width: 49.99%}
+.osYvNUbzEyC .lM3rM2 .lM3rM2 {width: 99.99%}</style><script type="text/javascript">function clearHelp()
+			{
+			 jQuery(".selectedfield").removeClass("selectedfield");
+			 jQuery(".richhelptext").hide();
+			}</script> <script type='text/javascript' src='//slough.firmstep.com/js/0.js' id='bwsjs'></script>
+		<link rel="stylesheet" type="text/css" href="//slough.firmstep.com/css/rrc.new/minimal.css"/><link rel="stylesheet" type="text/css" href="/ajax/libs/firmstep/css/afbasic.css"/></head>
+
+<!--[if lt IE 7 ]> <body class="ie6 ieA"> <![endif]-->
+<!--[if IE 7 ]>    <body class="ie7 ieA"> <![endif]-->
+<!--[if IE 8 ]>    <body class="ie8 ieA"> <![endif]-->
+<!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+<!--[if gt IE 9]>  <body>             <![endif]-->
+<!--[if !IE]><!--> <body>         <!--<![endif]-->
+
+
+<!-- noindex -->
+    <div id="outer" class="container_12">
+        <div class="container_12">
+            <div class="header">
+                <div class="mobileOnly">
+                    <a href="/" class="dotgovlogo" title="slough.gov.uk">slough.gov.uk</a>
+                    <div class="searchBox">
+                        <form method="get" id="mobileSearchForm" action="/search">
+                        <input type="text" title="Search text" name="q" placeholder="Enter Search Text" value="Enter Search Text"
+                            autocomplete="on" onfocus="JavaScript:if (this.value=='Enter Search Text')this.value=this.value.substring(0,0)" />
+                        <label class="hidden" for="mobileSearchButton">Search</label> <input id="mobileSearchButton" type="image" alt="search" src="/SBCMaster/images/srchbtn.gif" />
+                        </form>
+                    </div>
+                </div>
+                <div class="noMobile">
+                    <div class="grid_6">
+                        <div class="tools">
+                            <ul class="clean smallnav">
+                                <li><a href="/help/accessibility.aspx">Accessibility</a></li>
+                                <li><a href="/help/cookies.aspx">Cookies</a></li>
+                                <li><a href="/help/">Help</a></li>
+                            </ul>
+                        </div>
+                        <a href="/" class="dotgovlogo" title="slough.gov.uk">slough.gov.uk</a>
+                    </div>
+                    <div class="grid_6">
+                        <div class="logo noMobile">
+                            <a href="/" title="Slough Borough Council">
+                                <img src="/SBCMaster/images/sbc-logo.jpg" width="170" height="62" alt="SBC" /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+<!-- /noindex -->
+ 
+<!-- noindex -->
+    <div id="hiddenShortcuts">
+      <ul>
+        <li>
+          <a href="#skipToContent" title="Skip to content">Skip to content</a>
+        </li>
+        <li>
+          <a href="#txtsearch" title="Skip to search">Skip to search</a>
+        </li>
+      </ul>
+    </div>
+<!-- /noindex -->
+<!-- noindex -->
+
+            <div class="container_12" id="topbar">
+                <!-- Inter-Site Nav -->
+                <div class="nav grid_6" id="interSiteNav">
+                    <ul>
+
+                        <li class="selected"><a class="tab-citizen" href="/">Resident</a></li>
+            
+
+                        <li><a class="tab-business" href="/business/">Business</a></li>
+            
+
+                        <li><a class="tab-council" href="/council/">About the Council</a></li>
+            
+                    </ul>
+                </div>
+                <!-- Search -->
+                <div class="grid_6">
+
+                    <div class="searchBox noMobile">
+                        <form method="get" id="searchForm" action="/search">
+                        <input type="text" title="Search text" name="q" placeholder="Enter Search Text" value="Enter Search Text"
+                            autocomplete="on" onfocus="JavaScript:if (this.value=='Enter Search Text')this.value=this.value.substring(0,0)" />
+                        <label class="hidden" for="searchsubmit">Search</label> <input type="image" id="searchsubmit" alt="search" src="/SBCMaster/images/srchbtn.gif" />
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+ 
+<!-- Menu -->
+            <div class="clear">
+            </div>
+            <div class="container_12 citizenMenu" id="menucontainer">
+                <div id="menu" class="nav grid_12">
+                    <ul id="topnav">
+<li>
+<a href="/planning-and-building-control/" class="top"><span class="link">Planning &amp; building control</span></a>
+
+
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="/planning-and-building-control/householder-planning-permission.aspx" class="MegaMenuLink">A guide for householders</a></li><li><a href="/planning-and-building-control/building-regulations.aspx" class="MegaMenuLink">Building regulations</a></li><li><a href="/planning-and-building-control/make-a-planning-application.aspx" class="MegaMenuLink">Make a planning application</a></li><li><a href="/planning-and-building-control/search-track-and-comment-on-planning-applications.aspx" class="MegaMenuLink">Search &amp; track</a></li><li><a href="/planning-and-building-control/search-track-and-comment-on-planning-applications.aspx" class="MegaMenuLink">Comment on an application</a></li><li><a href="/business/planning-and-building-control/" class="MegaMenuLink">Planning for business</a></li>
+                                </ul>
+
+                                <ul class="featuredList">
+                                    <li class="image_right"><a class="MegaMenuTask" href="/planning-and-building-control/search-track-and-comment-on-planning-applications.aspx" title="">
+                                        <div class="lccicon48 i48lt-search"></div>
+                                        <span class="featuretitle">Search &amp; track</span>
+                                        <p>Search for applications online</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="http://www2.slough.gov.uk/swiftlg/apas/run/Wchweeklylist.displayPlanningLists" title="">
+                                        <div class="lccicon48 i48lt-date"></div>
+                                        <span class="featuretitle">Weekly lists</span>
+                                        <p>View most recent planning applications</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="/planning-and-building-control/make-a-planning-application.aspx" title="">
+                                        <div class="lccicon48 i48lt-apply"></div>
+                                        <span class="featuretitle">Apply</span>
+                                        <p>Apply online</p>
+                                    </a>
+ </li>
+                                </ul>
+
+                            </div>
+
+
+</li>
+ <li>
+<a href="/council-tax/" class="top"><span class="link">Council tax</span></a>
+
+
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="/council-tax/pay-council-tax.aspx" class="MegaMenuLink">How to pay</a></li><li><a href="/council-tax/valuation-bands.aspx" class="MegaMenuLink">Bands</a></li><li><a href="/council-tax/discounts-and-exemptions.aspx" class="MegaMenuLink">Discounts &amp; exemptions</a></li><li><a href="/benefits-and-money/council-tax-support.aspx" class="MegaMenuLink">Council tax support</a></li><li><a href="/council-tax/problems-paying.aspx" class="MegaMenuLink">Problems paying?</a></li><li><a href="/council-tax/who-should-pay.aspx" class="MegaMenuLink">Who should pay</a></li>
+                                </ul>
+
+                                <ul class="featuredList">
+                                    <li class="image_right"><a class="MegaMenuTask" href="https://selfservice.slough.gov.uk/publicaccesslive/selfservice/citizenportal/login.htm" title="">
+                                        <div class="lccicon48 i48lt-laptop"></div>
+                                        <span class="featuretitle">Self service</span>
+                                        <p>Sign in / register to view your council tax details online</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="https://www.civicaepay.co.uk/Slough/Webpay_Public/Webpay/Default.aspx" title="">
+                                        <div class="lccicon48 i48lt-buy"></div>
+                                        <span class="featuretitle">Pay online</span>
+                                        <p>Safe, secure and simple online payments</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="https://selfservice.slough.gov.uk/publicaccesslive/selfservice/services/changeofaddress/coastart.htm" title="">
+                                        <div class="lccicon48 i48lt-apply"></div>
+                                        <span class="featuretitle">Change of address</span>
+                                        <p>Notify us</p>
+                                    </a>
+ </li>
+                                </ul>
+
+                            </div>
+
+
+</li>
+ <li>
+<a href="/housing/" class="top"><span class="link">Housing</span></a>
+
+
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="/housing/council-tenants.aspx" class="MegaMenuLink">Council tenants</a></li><li><a href="/housing/private-housing.aspx" class="MegaMenuLink">Private housing</a></li><li><a href="/housing/homeless-or-at-risk.aspx" class="MegaMenuLink">Homeless or at risk</a></li><li><a href="/housing/low-cost-home-ownership-schemes.aspx" class="MegaMenuLink">Low cost home ownership</a></li><li><a href="/housing/leaseholders.aspx" class="MegaMenuLink">Leaseholders</a></li><li><a href="/housing/energy-efficiency.aspx" class="MegaMenuLink">Energy efficiency</a></li>
+                                </ul>
+
+                                <ul class="featuredList">
+                                    <li class="image_right"><a class="MegaMenuTask" href="/housing/applying-for-a-home.aspx" title="">
+                                        <div class="lccicon48 i48lt-tickhouse"></div>
+                                        <span class="featuretitle">Applying for a home</span>
+                                        <p>Get on the housing register</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="/benefits-and-money/housing-benefit.aspx" title="">
+                                        <div class="lccicon48 i48lt-calc"></div>
+                                        <span class="featuretitle">Housing benefit</span>
+                                        <p>Find out if you are eligible</p>
+                                    </a>
+ </li>
+                                    
+                                </ul>
+
+                            </div>
+
+
+</li>
+ <li>
+<a href="/schools-and-learning/" class="top"><span class="link">Schools &amp; learning</span></a>
+
+
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="/schools-and-learning/early-years-and-childcare.aspx" class="MegaMenuLink">Early years and childcare</a></li><li><a href="/schools-and-learning/term-dates.aspx" class="MegaMenuLink">Term dates</a></li><li><a href="/schools-and-learning/school-admissions.aspx" class="MegaMenuLink">School admissions</a></li><li><a href="/schools-and-learning/adult-learning.aspx" class="MegaMenuLink">Adult learning</a></li><li><a href="/schools-and-learning/travel-to-school.aspx" class="MegaMenuLink">Travel to school</a></li><li><a href="/schools-and-learning/educational-support-services.aspx" class="MegaMenuLink">Educational support services</a></li>
+                                </ul>
+
+                                <ul class="featuredList">
+                                    <li class="image_right"><a class="MegaMenuTask" href="/schools-and-learning/find-a-school.aspx" title="">
+                                        <div class="lccicon48 i48lt-findschool"></div>
+                                        <span class="featuretitle">Find a school</span>
+                                        <p>Find a school &amp; performance stats</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="/schools-and-learning/school-admissions.aspx" title="">
+                                        <div class="lccicon48 i48lt-apply"></div>
+                                        <span class="featuretitle">Online admissions</span>
+                                        <p>Apply for a school place for your child</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="/schools-and-learning/adult-learning.aspx" title="">
+                                        <div class="lccicon48 i48lt-openbook"></div>
+                                        <span class="featuretitle">Courses for adults</span>
+                                        <p>Learn something new</p>
+                                    </a>
+ </li>
+                                </ul>
+
+                            </div>
+
+
+</li>
+ <li>
+<a href="/parking-travel-and-roads/" class="top"><span class="link">Parking, roads &amp; travel</span></a>
+
+
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="/parking-travel-and-roads/cycling-in-slough.aspx" class="MegaMenuLink">Cycling information</a></li><li><a href="/parking-travel-and-roads/council-car-parks.aspx" class="MegaMenuLink">Council car parks</a></li><li><a href="/parking-travel-and-roads/planning-your-journey.aspx" class="MegaMenuLink">Public transport information</a></li><li><a href="/parking-travel-and-roads/road-safety.aspx" class="MegaMenuLink">Road safety</a></li><li><a href="/parking-travel-and-roads/roadworks.aspx" class="MegaMenuLink">Roadworks</a></li><li><a href="/parking-travel-and-roads/transport-for-slough.aspx" class="MegaMenuLink">TfS - live travel information</a></li><li><a href="/parking-travel-and-roads/winter-gritting.aspx" class="MegaMenuLink">Winter gritting &amp; route maps</a></li>
+                                </ul>
+
+                                <ul class="featuredList">
+                                    <li class="image_right"><a class="MegaMenuTask" href="/parking-travel-and-roads/parking-and-permits.aspx" title="">
+                                        <div class="lccicon48 i48lt-parkingsign"></div>
+                                        <span class="featuretitle">Parking and permits</span>
+                                        <p>Parking &amp; permits</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="/parking-travel-and-roads/parking-fines.aspx" title="">
+                                        <div class="lccicon48 i48lt-buy"></div>
+                                        <span class="featuretitle">Pay a parking fine</span>
+                                        <p>Pay within 14 days for a discount amount</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="/parking-travel-and-roads/report-an-issue.aspx" title="">
+                                        <div class="lccicon48 i48lt-alarm"></div>
+                                        <span class="featuretitle">Report an issue</span>
+                                        <p>Potholes, faulty streetlights and more</p>
+                                    </a>
+ </li>
+                                </ul>
+
+                            </div>
+
+
+</li>
+ <li>
+<a href="/bins-and-recycling/" class="top"><span class="link">Bins &amp; recycling</span></a>
+
+
+                            <div class="sub flip">
+                                <ul>
+                                    <li><a href="/bins-and-recycling/what-goes-in-my-bins.aspx" class="MegaMenuLink">What goes in my bins</a></li><li><a href="/bins-and-recycling/waste-and-recycling-sites.aspx" class="MegaMenuLink">Waste &amp; recycling sites</a></li><li><a href="/bins-and-recycling/garden-waste.aspx" class="MegaMenuLink">Green waste</a></li><li><a href="/bins-and-recycling/recycling-for-schools.aspx" class="MegaMenuLink">Recycling for schools</a></li>
+                                </ul>
+
+                                <ul class="featuredList">
+                                    <li class="image_right"><a class="MegaMenuTask" href="/bins-and-recycling/find-bin-collection-dates.aspx" title="">
+                                        <div class="lccicon48 i48lt-date"></div>
+                                        <span class="featuretitle">Bin collection dates</span>
+                                        <p>Find out when your bins are emptied</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="/bins-and-recycling/bulky-item-collections.aspx" title="">
+                                        <div class="lccicon48 i48lt-bulky"></div>
+                                        <span class="featuretitle">Bulky item collection</span>
+                                        <p>Collection of large household items</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="/bins-and-recycling/report-bins-and-waste-related-issues.aspx" title="">
+                                        <div class="lccicon48 i48lt-alarm"></div>
+                                        <span class="featuretitle">Report a bin issue</span>
+                                        <p>Missed collection, new bins &amp; flytipping</p>
+                                    </a>
+ </li>
+                                </ul>
+
+                            </div>
+
+
+</li>
+ <li>
+<a href="/libraries/" class="top"><span class="link">Libraries</span></a>
+
+
+                            <div class="sub flip">
+                                <ul>
+                                    <li><a href="/libraries/local-libraries-and-opening-times.aspx" class="MegaMenuLink">Find a library</a></li><li><a href="http://slough.spydus.co.uk/cgi-bin/spydus.exe/MSGTRN/OPAC/JOIN" class="MegaMenuLink">Join the library</a></li><li><a href="http://slough.spydus.co.uk" class="MegaMenuLink">Search the catalogue</a></li><li><a href="http://slough.spydus.co.uk/cgi-bin/spydus.exe/MSGTRN/OPAC/LOGINB" class="MegaMenuLink">Login to your account</a></li><li><a href="/schools-and-learning/community-learning-and-skills-service.aspx" class="MegaMenuLink">Community learning</a></li>
+                                </ul>
+
+                                <ul class="featuredList">
+                                    <li class="image_right"><a class="MegaMenuTask" href="/libraries/library-news-and-events.aspx" title="">
+                                        <div class="lccicon48 i48lt-date"></div>
+                                        <span class="featuretitle">News &amp; events</span>
+                                        <p>What’s going on at your library</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="/libraries/reading-ideas.aspx" title="">
+                                        <div class="lccicon48 i48lt-applylibrary"></div>
+                                        <span class="featuretitle">Reading</span>
+                                        <p>Reading ideas, groups and e-books</p>
+                                    </a>
+ </li>
+                                    <li class="image_right"><a class="MegaMenuTask" href="/libraries/learning.aspx" title="">
+                                        <div class="lccicon48 i48lt-laptop"></div>
+                                        <span class="featuretitle">Learn with the library</span>
+                                        <p>Find courses in person and online</p>
+                                    </a>
+ </li>
+                                </ul>
+
+                            </div>
+
+
+</li>
+ <li>
+<a href="/jobs/" class="top"><span class="link">Jobs</span></a>
+
+
+                            <div class="sub flip">
+                                <ul>
+                                    <li><a href="/jobs/general-vacancies.aspx" class="MegaMenuLink">General vacancies</a></li><li><a href="/jobs/benefits-of-working-for-us.aspx" class="MegaMenuLink">Benefits of working for us</a></li><li><a href="/jobs/help-finding-work.aspx" class="MegaMenuLink">Help finding work</a></li><li><a href="/jobs/volunteering-opportunities.aspx" class="MegaMenuLink">Volunteering opportunities</a></li>
+                                </ul>
+
+                            </div>
+
+
+</li>
+ 
+
+                        <li><a href="#" class="top"><span class="link">More&nbsp;&#x25bc;</span></a>
+                            <div class="sub flip">
+                                <ul>
+                                    <li><a href="/leisure-parks-and-events/">Leisure, parks &amp; events</a></li><li><a href="/health-and-social-care/">Health &amp; social care</a></li><li><a href="/births-marriage-deaths/">Births, marriages &amp; deaths</a></li><li><a href="/benefits-and-money/">Benefits &amp; money</a></li><li><a href="/pests-pollution-and-food-hygiene/">Pests, pollution &amp; food hygiene</a></li><li><a href="/crime-prevention-and-emergencies/">Crime prevention &amp; emergencies</a></li><li><a href="/business/regenerating-slough/">Regenerating Slough</a></li><li><a href="/consumer-advice/">Consumer advice</a></li><li><a href="/young-people/">Young people</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+ <!-- /noindex -->
+ 
+<!-- noindex -->
+        </div>
+<!-- /noindex -->
+
+<!-- noindex -->
+
+<!-- /noindex -->
+<!-- noindex --> 
+
+    <div class="container_12">
+    <div class="clear"></div>
+    <div class="grid_12">
+        <div class="nav">
+            <ul class="pageBreadCrumb">
+                
+          <li class="breadcrumbFolder"><a href="/">Home</a></li>
+      
+          <li class="breadcrumbFolder"><a href="/bins-and-recycling/">Bins & recycling</a></li>
+      
+          <li class="breadcrumbFolder"><a href="/bins-and-recycling/report-bins-and-waste-related-issues.aspx">Report bins and waste related issues</a></li>
+       
+          <li class="breadcrumbPage">Report littering or graffiti</li>
+       
+       
+       
+       
+            </ul>
+        </div>
+    </div>
+<!-- /noindex --> 
+
+        <div class="grid_12" id="skipToContent">
+            <div class="printOnly">
+                <img class="logo" src="/SBCMaster/images/sbc-logo.jpg" alt="SBC" height="62" width="170">
+            </div>
+            <h1>Report littering or graffiti</h1>
+        </div>
+        
+
+
+
+
+    
+        <div class="grid_9 page_Content">
+            
+<div>
+
+
+
+
+
+<!-- noindex -->
+<form method="post" action="./report-littering-or-graffiti.aspx" id="eForm" class="eForm" enctype="multipart/form-data">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE3MjM1NTY3MDcPZBYCAgMPFgIeB2VuY3R5cGUFE211bHRpcGFydC9mb3JtLWRhdGEWAgIBDw8WBB4KRm9ybUFjdGlvbgWGAS9SZW5kZXJGb3JtLz9JRD1CS0h2a1NveHRWVCZGLk5hbWU9cVFuNnF0VzNnM0omSGlkZVRvb2xiYXI9MSZmczJzPWNyMVdnY25QVlB1JkhpZGVUb29sYmFyPTEmZnMyYz1YOUU3RmlzUU5QWiZmczJzdnI9ZWMyLTQ2LTEzNy0xMTgtMTYwHghMYXN0UGFnZQUtL1JlbmRlckZvcm0vP0YuTmFtZT1xUW42cXRXM2czSiZIaWRlVG9vbGJhcj0xZGRk0I9e6FmRl59OkzC0U+98C7W4ToyXTyUvDIABwVrPVns=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1F524C93" />
+<div id="PlatformRenderControl1">
+	<!--FS2-Form-Begin--><div id="body"><!--FS2PS: Begin eRaYHA37tiq--><!--FS2PS: End eRaYHA37tiq--><!--FS2PS: Begin LMCF6ieTpck--><!--FS2PS: End LMCF6ieTpck--><!--FS2PS: Begin ZeiK3tE27Na--><!--FS2PS: End ZeiK3tE27Na--><div id="osYvNUbzEyC" class="formouter"><span class="corneroutertopleft"></span><span class="corneroutertopright"></span><!--FS2PS: Begin NWsm84WPMMg--><!--FS2PS: Begin mdBLp1dXHM7--><!--FS2PS: End mdBLp1dXHM7--><!--FS2PS: End NWsm84WPMMg--><script type="text/javascript">$bwsajat()</script><!--FS2PS: Begin s6Zd3dUT8da--><!--FS2PS: End s6Zd3dUT8da--><div class="renderdisplaytable osYvNUbzEyC section"><div class="renderbuttonstable"><span class="cornerinnertopleft"></span><span class="cornerinnertopright"></span><!--FS2PS: Begin bc4w4bfKLAd--><!--FS2PS: End bc4w4bfKLAd--><div class="enternosubmit"><!--FS2PS: Begin dgkhiuafSWR--><!--FS2PS: Begin hZP498P6Puj--><script type="text/javascript">var _gaq=_gaq||[];
+					_gaq.push(['_setAccount', 'UA-28883350-26']);
+					_gaq.push(['_trackPageview', '/Form/Street_Cleaning_Form/Section_1']);</script><!--FS2PS: End hZP498P6Puj--><input type="hidden" id="Avv4P3mXkt2" name="Avv4P3mXkt2"  value=""/><script type="text/javascript">$$("0~~~0~Avv4P3mXkt2")</script><script type="text/javascript">if(typeof clearHelp == 'function') { 
+						jQuery(":input").focus(clearHelp);
+						jQuery(":input").click(clearHelp);
+					}</script><div class="bws colspan clear lM1rM2"><!--FS2PS: Begin KAhwbHY1jUE--><div id="ijM4mztJsT1" class="bws colspan clear lM1rM2 "><div id="jWEsjKNh3e7" class=" nondatael"><h2>Street cleaning issues</h2></div></div><!--FS2PS: End KAhwbHY1jUE--><!--FS2PS: Begin YB8c11D4jwz--><div class="bws forceclear"></div><div id="NUC9AEs238s" class="bws colspan clear lM1rM2"><div id="KH3Qmu5mdzt" class=" nondatael"><p>This form is to report litter, graffiti etc on <strong>council owned land or public highways</strong>.</p>
+<p>You can also use this form to report a dead animal, such as a dog, on council owned roads or land.</p>
+<p>To report a problem with dog fouling please call 01753 875255 or go to the <a href="http://www.slough.gov.uk/pests-pollution-and-food-hygiene/report-dog-fouling-form.aspx">report dog fouling</a> page.</p>
+<p>To report other issues relating to roads or pavements please see the <a href="http://www.slough.gov.uk/parking-travel-and-roads/report-an-issue.aspx">report a road issue</a> page.</p>
+<p>To report problems to do with household waste collection please <a href="https://www.slough.gov.uk/contact-us/contact-amey.aspx">contact Amey</a>.</p>
+<p>Council tenants should <a href="https://www.slough.gov.uk/contact-us/contact-housing-services.aspx">contact the Housing Service</a>.</p></div></div><!--FS2PS: End YB8c11D4jwz--><!--FS2PS: Begin Pecw2S89djc--><div class="bws forceclear"></div><fieldset id="ERtTqGkLmDu" class="bws colspan subform clear lM1rM2"><legend> </legend><div class="subformel"><!--FS2PS: Begin KCKY2cAmzQk--><!--FS2PS: Begin d1VH5jK7rGG--><!--FS2PS: Begin kGUhSFVYDka--><!--FS2PS: End kGUhSFVYDka--><!--FS2PS: Begin j96QGiZjoDg--><div class="bws forceclear"></div><div id="mgibfxYzKfC" class="bws colspan clear lM1rM2 "><div class="datael"><div class="dataell bws colspan fieldlabel bws leftlabel clear lM1rM3"><label for="sX4PUnemyiJ" id="sLE29k4VXnd">First Name </label></div><div id="KGHE1KXRUKA" class="bws colspan lM3rM2 af-form-text"><div class="dataelr"><input type="text" class="aftextinput"  id="sX4PUnemyiJ" name="sX4PUnemyiJ" value=""/><div style="clear: both"><!--FS2PS: Begin UF7nTG662UX--><!--FS2PS: Begin oMcepHbhzvH--><!--FS2PS: End oMcepHbhzvH--><!--FS2PS: End UF7nTG662UX--></div></div></div></div></div><!--FS2PS: End j96QGiZjoDg--><!--FS2PS: Begin dtPW4Ae7Hdi--><div class="bws forceclear"></div><div id="BMJjncGuAAz" class="bws colspan clear lM1rM2 "><div class="datael"><div class="dataell bws colspan fieldlabel bws leftlabel clear lM1rM3"><label for="PR1gprZgNuJ" id="DrTg9TH6yxA">Surname </label></div><div id="nXZBcPVp1e6" class="bws colspan lM3rM2 af-form-text"><div class="dataelr"><input type="text" class="aftextinput"  id="PR1gprZgNuJ" name="PR1gprZgNuJ" value=""/><div style="clear: both"><!--FS2PS: Begin XFVXcm3Rg4y--><!--FS2PS: Begin hCBDDxRtrhE--><!--FS2PS: End hCBDDxRtrhE--><!--FS2PS: End XFVXcm3Rg4y--></div></div></div></div></div><!--FS2PS: End dtPW4Ae7Hdi--><!--FS2PS: Begin CuqpxuYsnk9--><div class="bws forceclear"></div><div id="q9T9ij4xfN9" class="bws colspan clear lM1rM2 "><div class="datael"><div class="dataell bws colspan fieldlabel bws leftlabel clear lM1rM3"><label for="SLHneQp2Hbv" id="E36uqD63Rs9">Address </label></div><div id="goFNCJjv9GS" class="bws colspan lM3rM2 af-form-text"><div class="dataelr"><input type="text" class="aftextinput"  id="SLHneQp2Hbv" name="SLHneQp2Hbv" value=""/><div style="clear: both"><!--FS2PS: Begin HidoSp5TkpC--><!--FS2PS: Begin Krb6p3VRLPk--><!--FS2PS: End Krb6p3VRLPk--><!--FS2PS: End HidoSp5TkpC--></div></div></div></div></div><!--FS2PS: End CuqpxuYsnk9--><!--FS2PS: Begin RQ6C6wcfkAQ--><div class="bws forceclear"></div><div id="p4Kfve9syAU" class="bws colspan clear lM1rM2 "><div class="datael"><div class="dataell bws colspan fieldlabel bws leftlabel clear lM1rM3"><label for="i4JZrmmDJi5" id="tPtkLSxiQ7X">Post Code </label></div><div id="PTctfs8p9V5" class="bws colspan lM3rM2 af-form-text"><div class="dataelr"><input type="text" class="aftextinput"  id="i4JZrmmDJi5" name="i4JZrmmDJi5" value=""/><div style="clear: both"><!--FS2PS: Begin n7q2AAiH99Q--><!--FS2PS: Begin kQ7fA8y6wKi--><!--FS2PS: End kQ7fA8y6wKi--><!--FS2PS: End n7q2AAiH99Q--></div></div></div></div></div><!--FS2PS: End RQ6C6wcfkAQ--><!--FS2PS: Begin tAfJ9egzirv--><div class="bws forceclear"></div><div id="nwPHWFzuVzt" class="bws colspan clear lM1rM2  "><div class="datael"><div class="dataell bws colspan fieldlabel bws leftlabel clear lM1rM3"><label for="okqe5ZDqEvG" id="dn36UM4EjcK">E-mail address <span style="color:red" title="This field is mandatory">*</span></label></div><div id="QQJ4gWZvY9n" class="bws colspan lM3rM2 af-form-text"><div class="dataelr"><input type="text" class="aftextinput"  id="okqe5ZDqEvG" name="okqe5ZDqEvG" value=""/><div style="clear: both"><!--FS2PS: Begin Jg45wR2TyAt--><!--FS2PS: Begin n53wBEYBhUs--><!--FS2PS: End n53wBEYBhUs--><!--FS2PS: End Jg45wR2TyAt--></div></div></div></div></div><!--FS2PS: End tAfJ9egzirv--><!--FS2PS: Begin GKKAJNNL2Ks--><div class="bws forceclear"></div><div id="mY4VY9Lfzdj" class="bws colspan clear lM1rM2 "><div class="datael"><div class="dataell bws colspan fieldlabel bws leftlabel clear lM1rM3"><label for="pJArLYErMFb" id="shpjFZ38t2y">Contact Tel. No.  </label></div><div id="k7cagsYJBxn" class="bws colspan lM3rM2 af-form-text"><div class="dataelr"><input type="text" class="aftextinput"  id="pJArLYErMFb" name="pJArLYErMFb" value=""/><div style="clear: both"><!--FS2PS: Begin ReNirdvzLob--><!--FS2PS: Begin nwgm4Ti9dd4--><!--FS2PS: End nwgm4Ti9dd4--><!--FS2PS: End ReNirdvzLob--></div></div></div></div></div><!--FS2PS: End GKKAJNNL2Ks--><!--FS2PS: End d1VH5jK7rGG--><!--FS2PS: End KCKY2cAmzQk--><!--FS2PS: Begin ngH7TTy2ZAk--><!--FS2PS: End ngH7TTy2ZAk--><!--FS2PS: Begin GPFsyJ99pkT--><!--FS2PS: End GPFsyJ99pkT--></div></fieldset><!--FS2PS: End Pecw2S89djc--><!--FS2PS: Begin iHxGGSGYUmf--><div class="bws forceclear"></div><div id="tcW6Cs2ajwZ" class="bws colspan clear lM1rM2  "><div class="datael"><div class="dataell bws colspan fieldlabel bws leftlabel clear lM1rM3"><label for="PFvXWrUkdR6" id="FDDn7cPyL2D">Nature of enquiry <span style="color:red" title="This field is mandatory">*</span></label></div><div id="YbfH5ZUwuMj" class="bws colspan lM3rM2 af-form-selectone"><div class="dataelr"><div class="bws control"><span class="nonbreaking"><select name="UYn2PxYYaqL" class="afselectbox" id="PFvXWrUkdR6" ><option selected="selected" value="-1">Please Select ...</option><option value="0">
+									Cleansing - bus station
+								</option><option value="1">
+									Cleansing - council car park
+								</option><option value="2">
+									Dead bird/animal collection
+								</option><option value="3">
+									Graffiti removal
+								</option><option value="4">
+									Leaf fall/blossom
+								</option><option value="5">
+									Litter removal from streets
+								</option><option value="6">
+									Mechanical sweeping of streets
+								</option><option value="7">
+									Other
+								</option></select></span><input type="text" class="hidefordom aftextinput"  id="fWJ1SXM4AP5" name="fWJ1SXM4AP5" value=""/><script type="text/javascript"><!--
+$$("3~UYn2PxYYaqL~7~fWJ1SXM4AP5")//--></script></div><div style="clear: both"><!--FS2PS: Begin hG5RHWx89S3--><!--FS2PS: Begin PFpXKgCtVry--><!--FS2PS: End PFpXKgCtVry--><!--FS2PS: End hG5RHWx89S3--></div></div></div></div></div><!--FS2PS: End iHxGGSGYUmf--><!--FS2PS: Begin kXHrLAP3TDA--><div class="bws forceclear"></div><div id="X8iRsJH3xFB" class="bws colspan clear lM1rM2  "><div class="datael"><div class="dataell bws colspan fieldlabel bws leftlabel clear lM1rM3"><label for="mC3eybCWkBw" id="tVEdwxUB1Yo">Details of the problem <span style="color:red" title="This field is mandatory">*</span></label></div><div id="SkjWf2Vf2Mz" class="bws colspan lM3rM2 af-form-textarea"><div class="dataelr"><textarea cols="40" name="tbTKFXzq99z" style="" rows="5" id="mC3eybCWkBw" class="aftextarea"></textarea><div style="clear: both"><!--FS2PS: Begin orBuWs31Tvk--><!--FS2PS: Begin UFGRajvvMgM--><!--FS2PS: End UFGRajvvMgM--><!--FS2PS: End orBuWs31Tvk--></div></div></div></div></div><!--FS2PS: End kXHrLAP3TDA--><!--FS2PS: Begin czXenFJKuef--><div class="bws forceclear"></div><div id="ks1UiQPCEp5" class="bws colspan clear lM1rM2 "><div class="datael"><div class="dataell bws colspan fieldlabel bws leftlabel clear lM1rM3"><label for="DTza5iF4uXA" id="BYx7BKG54jV">Location (please give as much information as possible) <span style="color:red" title="This field is mandatory">*</span></label></div><div id="Eh2FD9f4igs" class="bws colspan lM3rM2 af-form-textarea"><div class="dataelr"><textarea cols="40" name="gacxKnFWmh2" style="" rows="5" id="DTza5iF4uXA" class="aftextarea"></textarea><div style="clear: both"><!--FS2PS: Begin tkUdAsmANzD--><!--FS2PS: Begin rUPm5uLC4Uc--><!--FS2PS: End rUPm5uLC4Uc--><!--FS2PS: End tkUdAsmANzD--></div></div></div></div></div><!--FS2PS: End czXenFJKuef--><!--FS2PS: Begin JUsWiCbQHBo--><div class="bws forceclear"></div><div id="q1ESoXverpc" class="bws colspan clear lM1rM2  "><div class="datael"><div class="dataell bws colspan fieldlabel bws leftlabel clear lM1rM3"><label for="GWeJajmdKvX" id="HBYjUJrKHgt">If possible, please upload a photo of the instance you are reporting </label></div><div id="PiEbPX6327S" class="bws colspan lM3rM2 af-form-userupload"><div class="dataelr"><div class="repeatablescrollbar"><div class="repeatableouter"><!--FS2PS: Begin LFd2LffQLmg--><span id="P7kkep9X28Y"></span><input name="GWeJajmdKvX" id="GWeJajmdKvX" type="file" /><script type="text/javascript">$$("g~GWeJajmdKvX~CMBX1jg2ShM~P7kkep9X28Y~X")</script><!--FS2PS: End LFd2LffQLmg--> <div class="repeatablebutton"><input type="submit" name="m6Sz35FCGki" id="m6Sz35FCGki" value="Add" class="genericsubmit addrepeatablerow entersubmit"  /></div></div></div><div style="clear: both"><!--FS2PS: Begin sgWSbVk9Vvv--><!--FS2PS: Begin Va7rpzBTEV4--><!--FS2PS: End Va7rpzBTEV4--><!--FS2PS: End sgWSbVk9Vvv--></div></div></div></div></div><!--FS2PS: End JUsWiCbQHBo--></div><!--FS2PS: End dgkhiuafSWR--></div><!--FS2PS: Begin mbxqXawdRZB--><div style="clear: both;" class="afnavbuttons"><input value="0" name="current_section_index" type="hidden" /><input type="submit" name="UdB9d2KYAoy" id="UdB9d2KYAoy" value="Submit" class="genericsubmit navbuttons submitform"  /><input type="submit" name="irZgCQq2Jwe" id="irZgCQq2Jwe" value="Cancel" class="genericsubmit navbuttons cancelbutton" title='Cancel' /><script type="text/javascript">$$("0~~irZgCQq2Jwe~1")</script></div><!--FS2PS: End mbxqXawdRZB--><span class="cornerinnerbottomleft"></span><span class="cornerinnerbottomcenter"></span><span class="cornerinnerbottomright"></span></div><div style="clear: both;" class="eformstext"><a class="eformslink" href="http://www.firmstep.com/achieve_forms.html">eForms</a> by AchieveForms</div></div><span class="cornerouterbottomleft"></span><span class="cornerouterbottomright"></span><span class="niftyclear"></span></div><script type="text/javascript"><!--
+$$("0~~~W~~osYvNUbzEyC~osYvNUbzEyC")//--></script><script type="text/javascript">OnLoad(function(){
+						jQuery('.eformslink').click(function() {
+							window.open( 'http://www.firmstep.com/achieve_forms.html','_blank' );
+							if (window.event){event.returnValue = false;}
+							return false;} );
+						});</script><script type='text/javascript'><!--
+setTimeout('$_()',1);//--></script></div><!--FS2-Form-End--><script type="text/javascript">
+                                             <!--
+                                                window.hbloc = '/ajax/libs/firmstep/html/Popup.aspx/HB/?fs2hb=cr1WgcnPVPu';
+                                                if (false) window._ajaxmode='None';
+                                            // -->
+                                             </script>
+                                             <div style="margin:0;padding:0;display:inline">
+                                                <input type="hidden" name="FS2ActionUrl" value="/ajax/libs/firmstep/html/Popup.aspx/AJAX/?rrcreturn=%2fbins-and-recycling%2freport-littering-or-graffiti.aspx&amp;fs2s=cr1WgcnPVPu" />
+                                            </div><script type='text/javascript'>
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+	var _gaq = _gaq||[];
+	_gaq.push(['_setAccount','UA-28883350-26'], ['_setCustomVar',1,'Authentication','Anonymous']);</script>
+                            <!-- You are being served by ec2-46-137-118-160 -->
+                            <!-- StartTime: 04:36:02.105 -->
+                            <!-- FS2 took: 187ms -->
+                            <!-- Rest took: 0ms -->
+                        
+</div>
+</form>
+<!-- /noindex -->
+    
+</div>
+ 
+        </div>
+    
+        <div class="grid_3">
+            <!-- noindex -->
+
+
+<div class="relatedContentDetailHolder">
+    <div class="relatedContentDetail">
+        <h2>Related forms</h2>
+        <ul>
+            <li><a href="/contact-us/contact-amey.aspx">Contact Amey</a></li><li><a href="/contact-us/contact-housing-services.aspx">Contact Housing Services</a></li><li><a href="/bins-and-recycling/report-fly-tipping-form.aspx">Report Flytipping</a></li><li><a href="/parking-travel-and-roads/report-a-highways-issue.aspx">Report highways issue</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- /noindex -->
+        </div>
+    
+
+ 
+
+    
+<div class="grid_3 mobileOnly">
+<!-- noindex -->
+
+<!-- /noindex -->
+</div>
+
+
+    </div>
+    <div class="clear"></div>
+
+
+
+
+<!-- noindex -->
+<!-- Footer -->
+        <div class="footer container_12" id="sectionFooter">
+            <h2>a to z of services</h2>
+            <div class="nav" id="atoz">
+                <ul class="clean" id="az">
+                    <li><a href="/atoz/?letter=a">A</a></li>
+                    <li><a href="/atoz/?letter=b">B</a></li>
+                    <li><a href="/atoz/?letter=c">C</a></li>
+                    <li><a href="/atoz/?letter=d">D</a></li>
+                    <li><a href="/atoz/?letter=e">E</a></li>
+                    <li><a href="/atoz/?letter=f">F</a></li>
+                    <li><a href="/atoz/?letter=g">G</a></li>
+                    <li><a href="/atoz/?letter=h">H</a></li>
+                    <li><a href="/atoz/?letter=i">I</a></li>
+                    <li><a href="/atoz/?letter=j">J</a></li>
+                    <li><a href="/atoz/?letter=k">K</a></li>
+                    <li><a href="/atoz/?letter=l">L</a></li>
+                    <li><a href="/atoz/?letter=m">M</a></li>
+                    <li><a href="/atoz/?letter=n">N</a></li>
+                    <li><a href="/atoz/?letter=o">O</a></li>
+                    <li><a href="/atoz/?letter=p">P</a></li>
+                    <li><a href="/atoz/?letter=q">Q</a></li>
+                    <li><a href="/atoz/?letter=r">R</a></li>
+                    <li><a href="/atoz/?letter=s">S</a></li>
+                    <li><a href="/atoz/?letter=t">T</a></li>
+                    <li><a href="/atoz/?letter=u">U</a></li>
+                    <li><a href="/atoz/?letter=v">V</a></li>
+                    <li><a href="/atoz/?letter=w">W</a></li>
+                    <li><a href="/atoz/?letter=x">X</a></li>
+                    <li><a href="/atoz/?letter=y">Y</a></li>
+                    <li><a href="/atoz/?letter=z">Z</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer container_12" id="siteFooter">
+            <div class="nav" id="siteFooterNav">
+                <div class="grid_2 sitFooterNav">
+                    <ul>
+                        <li><a href="/sitemap/">sitemap</a></li><li><a href="/contact-us/">contact</a></li><li><a href="/news/">news</a></li>
+                    </ul>
+                </div>
+                <div class="grid_2 sitFooterNav">
+                    <div class="mobileOnly">
+                        <ul>
+                            <li><a href="/help/accessibility.aspx">accessibility</a></li><li><a href="/help/cookies.aspx">cookies</a></li><li><a href="/help/">help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_8">
+
+                <ul class="ftr-img-links">
+                    <li><a href="/help/translations.aspx">translations<div class="footerImage ftr-translate"></div></a></li>
+                    <li><a href="/help/">help<div class="footerImage ftr-help"></div></a></li>
+                    <li><a href="http://www.twitter.com/sloughcouncil">twitter<div class="footerImage ftr-twitter"></div></a></li>
+                    <li><a href="http://www.streetlife.com">street life<div class="footerImage ftr-streetlife"></div></a></li>
+                    <li><a href="/feeds/feeds.aspx">feeds<div class="footerImage ftr-feeds"></div></a></li>
+                </ul>
+
+
+            </div>
+        </div>
+<!-- /noindex -->
+    </div>
+</div>
+    <div id="google_translate_element" style="height:28px;"></div>
+
+</body>
+</html>
+ 
+ 

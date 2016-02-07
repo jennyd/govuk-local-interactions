@@ -1,0 +1,432 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html_tag" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="EN">
+	<head id="Head1"><title>
+	Allotments Payment - Civica AuthorityICON
+</title><meta http-equiv="Expires" content="Tue, 20 Aug 1996 14:25:27 GMT" /><meta http-equiv="Cache-Control" content="no-cache" /><meta http-equiv="Pragma" content="no-cache" /><meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR" /><meta content="Visual Basic .NET 7.1" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><link href="Accessible-styles.css" type="text/css" rel="stylesheet" /><link href="Styles.css" type="text/css" rel="stylesheet" /><link id="AdditionalAccessiblestyles" rel="stylesheet" type="text/css" /><link id="Additionalstyles" rel="stylesheet" type="text/css" /><link id="rtlstyles" rel="stylesheet" type="text/css" />
+        <style type="text/css"> body { display : block;} </style>
+      
+		<!-- Printable receipt page script -->
+		<script type="text/javascript">
+		    function DisableHelpTab() {
+		        var ModeLabel = document.getElementById('webpaymode')
+		        if (ModeLabel.value == 'public') {
+		            var PayPalLogo1 = document.getElementById('lnkPayPal');
+		            PayPalLogo1.href = '';
+		            PayPalLogo1.target = '';
+		            var PayPalLogo2 = document.getElementById('lnkPayPal2');
+		            PayPalLogo2.href = '';
+		            PayPalLogo2.target = '';
+		        }
+		    }
+
+		    function GetFormObject() {
+		        var theform;
+		        if (window.navigator.appName.toLowerCase().indexOf("microsoft") > -1) {
+		            
+		            theform = document.forms["WebpayForm"];
+		        }
+		        else {
+		            theform = document.forms.WebpayForm;
+		        }
+		        return theform;
+		    }
+
+		    function ActiveXError() {
+		        var theform;
+		        theForm = GetFormObject();
+		        theForm.submit();
+		    }
+
+		    function HandleError() {
+		        return true;
+		    }
+
+		    function PrintableReportPage() {
+		        window.showModalDialog('PrintableReportPage.aspx', '', 'dialogHeight:700px; dialogWidth:1000px; resizeable:yes;scroll:yes; help:no;edge:sunken;');
+		    }
+
+		    function PrinterDefaultsPage() {
+		        window.showModalDialog('PrinterDefaults.aspx', '', 'dialogHeight:170px; dialogWidth:315px; status:no;');
+		    }
+
+		    function GetCookieValue(tagName) {
+		        var strCook = document.cookie;
+		        if (strCook.indexOf(tagName) != -1) {
+		            var intS = strCook.indexOf(tagName);
+		            var intE = strCook.indexOf("~!");
+		            return strCook.substring(intS + (tagName.length + 3), intE);
+		        }
+		        else {
+		            return 0;
+		        }
+		    }
+
+
+		    function resetScrollPos(tagName) {
+		        if (document.getElementById(tagName) != null) {
+		            document.getElementById(tagName).scrollTop = GetCookieValue(tagName);
+		        }
+		    }
+
+		    function SetDivPosition(tagName) {
+		        var intY = document.getElementById(tagName).scrollTop;
+		        document.cookie = tagName + "=!~" + intY + "~!";
+		    }
+
+		    function ResetDivPosition(tagName) {
+		        if (document.getElementById(tagName) != null) {
+		            document.cookie = tagName + "=!~" + 0 + "~!";
+		        }
+		    }
+
+		    window.onload = function () {
+		        resetScrollPos("copywithscroll");
+		        resetScrollPos("failurewithscroll");
+		        resetScrollPos("paymentwithscroll");
+		        resetScrollPos("refundfailurewithscroll");
+		        resetScrollPos("refundwithscroll");
+		        resetScrollPos("receiptwithscroll");
+		        resetScrollPos("trackerWithScroll");
+		        resetScrollPos("VATwithscroll");
+		    }
+
+
+           </script>
+	</head>
+	<body onload="DisableHelpTab();">
+         <script type="text/javascript">
+
+             function showinframe() {
+                 var Frame = 'False';
+                 if (Frame == 'True' || self == top) {
+                     var theBody = document.getElementsByTagName('body')[0];
+                     theBody.style.display = "block";
+                 }
+             }
+</script>
+		<!-- This is to expire the page immediately -->
+		<div id="divTest" class="mainForm">
+			<div class="Alignleft" id="TopOfPage"></div>
+            <!--Include the header -->
+			<div id="page" class="page clearfix">
+	<div id="section-header" class="section section-header">
+		<div id="zone-header-wrapper" class="zone-wrapper zone-header-wrapper clearfix">  
+			<div id="zone-header" class="zone zone-header clearfix container-12">
+				<div id="menu-bar-background" class="container-12">
+				</div>
+				<div class="container-12 region region-branding" id="region-branding">
+					<div class="region-inner region-branding-inner">
+						<div class="block block-views block-banner-block block-views-banner-block odd block-without-title" id="block-views-banner-block">
+							<div class="block-inner clearfix">
+								<div class="content clearfix">
+									<div class="view view-banner view-id-banner view-display-id-block view-dom-id-db7b39365057a11fa1a3fa19ca97b6aa">
+										<div class="view-header">
+										</div>
+										<div class="view-content">
+											<div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+												<div>        
+													<span>
+														<div class="branding-banner-container">
+															<h1 id="bannerImageTitle">Online Payments</h1>
+														</div>
+													</span>  
+												</div> 
+											</div>
+										</div>
+									</div>    
+								</div>
+							</div>
+						</div>  
+					</div>
+				</div>
+
+				<div class="grid-2 region region-header-first alpha" id="region-header-first">
+					<div class="region-inner region-header-first-inner">
+						<div class="logo-img">
+							<a href="http://www.brighton-hove.gov.uk" rel="home" title=""><img src="images/customers/logo.png" alt="" id="logo" border="0"/></a>    
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mainarea">
+            <form method="post" action="./default.aspx" id="WebpayForm" class="WebpayForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIxMDYyMTgwNTkPFgIeClRyYW5zbGF0ZWRnFgICAQ8WBB4DZGlyBQNsdHIeBGxhbmcFAkVOFgICAQ9kFgRmDw8WAh4HVmlzaWJsZWhkZAIBD2QWCAIYDw8WAh4EVGV4dGVkZAIaD2QWAmYPZBZKAgEPDxYEHghDc3NDbGFzcwUSTUFJTk1FTlVURVhUSElMSVRFHgRfIVNCAgJkZAIDDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIFDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIHDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIJDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAILDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAINDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIPDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIRDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAITDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIVDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIXDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIZDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIbDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIdDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIfDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIhDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIjDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIlDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAInDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIpDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIrDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAItDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIvDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIxDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIzDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAI1Dw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAI3Dw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAI5Dw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAI7Dw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAI9Dw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAI/Dw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAJBDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAJDDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAJFDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAJHDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAJJDw8WBB8FBQ5NQUlOTUVOVU9QVElPTh8GAgJkZAIcDxYCHgVjbGFzcwULRGV0YWlsUGFuZWwWBGYPZBYCZg8PFhwfAGceFGJsblBvc3Rjb2RlTWFuZGF0b3J5aB4HU3RhcnJlZGceFFVzZXJNZXNzYWdlSGFzaFRhYmxlFxoFBVdQMTg5BXtQbGVhc2UgZG8gbm90IGNsb3NlIHRoZSBicm93c2VyIG9yIHByZXNzIHRoZSBiYWNrIGJ1dHRvbi4gWW91IHdpbGwgYmUgdGFrZW4gdG8gdGhlIG5leHQgc3RhZ2Ugb2YgdGhlIHBheW1lbnQgYXV0b21hdGljYWxseS4FBVdQMjEyBRJUcmFuc2FjdGlvbiBEYXRlICoFBVdQMTc2BRZBIHRvd24gbXVzdCBiZSBlbnRlcmVkBQVXUDE3NwUaQSBwb3N0Y29kZSBtdXN0IGJlIGVudGVyZWQFBVdQMTc0BRZBIE5hbWUgbXVzdCBiZSBlbnRlcmVkBQVXUDE3NQUYQSBzdHJlZXQgbXVzdCBiZSBlbnRlcmVkBQVXUDE5MwU0SW52YWxpZCBBbW91bnQgLSBHcmVhdGVyIHRoYW4gbWF4aW11bSBhbW91bnQgYWxsb3dlZAUFV1AxNzMFI0EgaG91c2UgbmFtZS9udW1iZXIgbXVzdCBiZSBlbnRlcmVkBQVXUDEzNwVCVW5hYmxlIHRvIHJldHJpZXZlIHRoZSBWQVQgY29kZSBmb3IgdGhpcyBmdW5kLCBjaGVjayB0aGUgZXZlbnQgbG9nBQVXUDEzNAUWSW52YWxpZCByZWZlcmVuY2UgZm9yIAUFV1AxMzUFQlVuYWJsZSB0byByZXRyaWV2ZSB0aGUgVkFUIGNvZGUgZm9yIHRoaXMgZnVuZCwgY2hlY2sgdGhlIGV2ZW50IGxvZwUFV1AxMzIFN1VuYWJsZSB0byByZXRyaWV2ZSB0aGUgYWNjb3VudCBkZXRhaWxzIGZvciBhY2NvdW50IHR5cGUFBVdQMTI2BSVZb3UgaGF2ZSBhbHJlYWR5IGVudGVyZWQgdGhhdCBwYXltZW50BQVXUDIyNAUYQSBjb3VudHkgbXVzdCBiZSBlbnRlcmVkBQVXUDE5OQVJUGxlYXNlIGNvbmZpcm0gdGhlIFJEIENoZXF1ZSBmb3IgdGhlIGl0ZW1zIGxpc3RlZCBhYm92ZSBmb3IgY2hlcXVlIFhYWFhYWAUFV1AyMjIFHEEgaG91c2UgbmFtZSBtdXN0IGJlIGVudGVyZWQFBVdQMjIzBRdBbiBhcmVhIG11c3QgYmUgZW50ZXJlZAUFV1AyMjEFHkEgaG91c2UgbnVtYmVyIG11c3QgYmUgZW50ZXJlZAUFV1AxODYFDFRvdGFsIEFtb3VudAUFV1AxODgFLFlvdSB3aWxsIGJlIHJlZGlyZWN0ZWQgdG8gdGhlIHBheW1lbnQgc3lzdGVtBQVXUDE0NQVIQW1vdW50IHJlc3RyaWN0aW9uIG9uIGFjY291bnQgdHlwZSwgc3lzdGVtIHByb3ZpZGVkIGFtb3VudCBub3Qgc3BlY2lmaWVkBQVXUDE5NAUxSW52YWxpZCBBbW91bnQgLSBMZXNzIHRoYW4gbWluaW11bSBhbW91bnQgYWxsb3dlZAUFV1AxMjUFG1RoYXQgYWNjb3VudCBkb2VzIG5vdCBleGlzdAUFV1AxMjIFG1BsZWFzZSBlbnRlciBhIHZhbGlkIGFtb3VudAUFV1AxMjMFHlBsZWFzZSBlbnRlciBhIHBvc2l0aXZlIGFtb3VudAUFV1AxMjEFGFBsZWFzZSBlbnRlciBhIHJlZmVyZW5jZR4VYmxuSG91c2VOYW1lTWFuZGF0b3J5aB4WYmxuRm91bmRBZGRyZXNzRGV0YWlsc2geF2JsbkhvdXNlTnVtYmVyTWFuZGF0b3J5aB4SYmxuQ291bnR5TWFuZGF0b3J5aB4QYmxuVG93bk1hbmRhdG9yeWgeGmJsbk5hbWVvZk9jY3VwYW50TWFuZGF0b3J5aB4RYmxuUG9zdGNvZGVMb29rdXBoHhBibG5BcmVhTWFuZGF0b3J5aB4TYmxuVmFsaWRhdGVQb3N0Y29kZWgeEmJsblN0cmVldE1hbmRhdG9yeWhkFhYCAw8PFgIfA2hkFgQCAQ8PFgIfBAUSVHJhbnNhY3Rpb24gRGF0ZSAqZGQCBQ8PFgIfBAUKMDcvMDIvMjAxNmRkAgUPFgIfA2gWAgIFDxBkDxYlZgIBAgICAwIEAgUCBgIHAggCCQIKAgsCDAINAg4CDwIQAhECEgITAhQCFQIWAhcCGAIZAhoCGwIcAh0CHgIfAiACIQIiAiMCJBYlEAUPNzAgLSBBbGxvdG1lbnRzBQ83MCAtIEFsbG90bWVudHNnEAUhNjggLSBCdWlsZGluZyBDb250cm9sIFBheSBJbnZvaWNlBSE2OCAtIEJ1aWxkaW5nIENvbnRyb2wgUGF5IEludm9pY2VnEAUjQlogLSBCdWlsZGluZyBSZWd1bGF0aW9uIE5vIEludm9pY2UFI0JaIC0gQnVpbGRpbmcgUmVndWxhdGlvbiBObyBJbnZvaWNlZxAFGjAyIC0gQnVzaW5lc3MgUmF0ZXMgKE5ORFIpBRowMiAtIEJ1c2luZXNzIFJhdGVzIChOTkRSKWcQBQ01MiAtIENhcmVsaW5rBQ01MiAtIENhcmVsaW5rZxAFFzM4IC0gQ0NUIC8gQkhDQyBJbnZvaWNlBRczOCAtIENDVCAvIEJIQ0MgSW52b2ljZWcQBRFBRSAtIENlcnRpZmljYXRlcwURQUUgLSBDZXJ0aWZpY2F0ZXNnEAUXVzMgLSBDaGFwZXJvbmUgVHJhaW5pbmcFF1czIC0gQ2hhcGVyb25lIFRyYWluaW5nZxAFI1NTIC0gQ2hpbGRjYXJlL0NoaWxkbWluZGVyIFRyYWluaW5nBSNTUyAtIENoaWxkY2FyZS9DaGlsZG1pbmRlciBUcmFpbmluZ2cQBRAwMSAtIENvdW5jaWwgVGF4BRAwMSAtIENvdW5jaWwgVGF4ZxAFHUJXIC0gRGF0YSBQcm90ZWN0aW9uIFJlcXVlc3RzBR1CVyAtIERhdGEgUHJvdGVjdGlvbiBSZXF1ZXN0c2cQBSJCWSAtIEVtZXJnZW5jeSBBY2NvbW1vZGF0aW9uIFJlbnRzBSJCWSAtIEVtZXJnZW5jeSBBY2NvbW1vZGF0aW9uIFJlbnRzZxAFHTYwIC0gSGFja25leSBDYXJyaWFnZSBMaWNlbmNlBR02MCAtIEhhY2tuZXkgQ2FycmlhZ2UgTGljZW5jZWcQBRBWViAtIEhNTyBMaWNlbmNlBRBWViAtIEhNTyBMaWNlbmNlZxAFHDE4IC0gSG91c2luZyBCZW5lZml0IEludm9pY2UFHDE4IC0gSG91c2luZyBCZW5lZml0IEludm9pY2VnEAUSMTQgLSBIb3VzaW5nIFJlbnRzBRIxNCAtIEhvdXNpbmcgUmVudHNnEAURNTEgLSBMZWFzZWhvbGRlcnMFETUxIC0gTGVhc2Vob2xkZXJzZxAFDVRUIC0gTGljZW5jZXMFDVRUIC0gTGljZW5jZXNnEAUXQUwgLSBMb2NhbCBMYW5kIENoYXJnZXMFF0FMIC0gTG9jYWwgTGFuZCBDaGFyZ2VzZxAFEkFHIC0gTWF5b3JzIEV2ZW50cwUSQUcgLSBNYXlvcnMgRXZlbnRzZxAFHDU5IC0gTXVzaWMgJiBQZXJmb3JtaW5nIEFydHMFHDU5IC0gTXVzaWMgJiBQZXJmb3JtaW5nIEFydHNnEAUdQUkgLSBQYXJraW5nIEJ1c2luZXNzIFBlcm1pdHMFHUFJIC0gUGFya2luZyBCdXNpbmVzcyBQZXJtaXRzZxAFHUFKIC0gUGFya2luZyBSZXNpZGVudCBQZXJtaXRzBR1BSiAtIFBhcmtpbmcgUmVzaWRlbnQgUGVybWl0c2cQBRxBSCAtIFBhcmtpbmcgVHJhZGVycyBQZXJtaXRzBRxBSCAtIFBhcmtpbmcgVHJhZGVycyBQZXJtaXRzZxAFGEFRIC0gUGFya2luZyBTdXNwZW5zaW9ucwUYQVEgLSBQYXJraW5nIFN1c3BlbnNpb25zZxAFFUFSIC0gUENOIFBheW1lbnQgUGxhbgUVQVIgLSBQQ04gUGF5bWVudCBQbGFuZxAFHUJUIC0gUGxhbm5pbmcgQnJpZ2h0b24gJiBIb3ZlBR1CVCAtIFBsYW5uaW5nIEJyaWdodG9uICYgSG92ZWcQBRU2MyAtIFJlc2lkZW50aWFsIENhcmUFFTYzIC0gUmVzaWRlbnRpYWwgQ2FyZWcQ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" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1C833614" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdADiZBOA4xiEuFLPR48q8Lvy28GMVZBzNZuEyYsjpMomkgtQiiz0vcTKXQ+/N9GnxSvBEuk6c84+JHwBYCle64zatheOgZszlupIW3oWkCOOPXFybB3ebCXqLvI5fWLeXED9lJNck1zyGCaZUYjR/dHgiM4DU72q/t8rENibrQ+9TMIfo0dnQpDevq1YbSAAV68mhH+s5x8ooraJWr6TsPEMyQ1tMVAwZvJMx+LrzgLJxqIHV1Yz/WGkwBm5qHBcLWLFBXLAK31/xd3/xCiOdEdqP8QuH+iV+tzowDTZVTpLF0Z0MVC1xiHBcfrhBs1PNy/UxWu+Fi3g4PUkbsuG6jKnY33rmVPIeq+M6gsMC2Vehts0j2XLhuPdixJODLTrs95RhUPLV+D/JoPimy9y1DXvshn0SrkYlg/PWAXuZn+6gP9s0rql/szhHBhIQ6hTl3Fd8Uu1OV0irzyBkfqsWim9xg+lDT8PKMijP4p8fo8gCwAeu30fClxqjKWjZsO9CrNGh71fE2VsxzNakt5JY9hZEg5efoalthPnOTJouyABTWn7VbC+JwRYrg7OYhVIz1tbJgLCJxe5o3DZOwfzZaEwPPlYqWCAGUEk0+3Xcbm0Aw2XAcilgrth1gVJ9Qx8CHJ37wjkmLDwVGPgUbx0lN4BbATLpBvRC2EHhMY27TTcwgKFUGcjzhkf8Rak+veVPVrXuxzquSUED50jGcoCQa/lOMefnHqtocHUYC0LCorMM3ohJDkGR+/nHnsvjBOhLDeGvxIjI12Y4VXIjO4n2a3bg+8K0aIVMfvAaVH0S9X9XeUDilQE/CjMXatT7coqeundgYmKYXH2j10bfPb67weJ67olqo7q7Zuzx3xcYJ+Jz+xU6nuAvQD2bogZJvbmfOBzGTDo0tQi9xvbFpeZC0UrN9cIxwkZc9gPBorOX6FzYwL5nMdNo08aRnr0xOZEN7wGUQytPS2L4nfbqem90iGmCyLTr0BeZL7J82uKu6+yPlquPsys/+ke+iHFjdAyi7STScsu6GPydIfsbmSJ/8RrGVrL/cADUAkNoFVWw0Hasm9Kyh9bP1snMYZU0xnmLDUPxv+5iUOom7zg6OjyuwTYSYByBLUKR001wnn9dQvRJA2OcQjqNOzDM6B7yhOiH9UOBjMqs14g02plbboZK13cJ3HSIYAymHXQ0lfqqX6SSQ3H0vI0/3yDNOp7/qb9fBHeDl1XBp9Sw09yF9xFW9zCD" />
+</div>
+                
+                <input name="ComputerName" type="hidden" id="ComputerName" />
+                <input name="PrinterNames" type="hidden" id="PrinterNames" />
+			    <input name="WindowsPrinter" type="hidden" id="WindowsPrinter" />
+                <input name="hidTimeoutValue" type="hidden" id="hidTimeoutValue" value="30" />
+                <input name="hidSingleSignOn" type="hidden" id="hidSingleSignOn" value="0" />
+                <input name="hidTimeoutUsed" type="hidden" id="hidTimeoutUsed" value="false" />
+                <input name="hidDownloadResult" type="hidden" id="hidDownloadResult" />
+                <input name="hidJavascriptCheck" type="hidden" id="hidJavascriptCheck" />
+                <input name="PageTimedOut" type="hidden" id="PageTimedOut" />
+                <input name="webpaymode" type="hidden" id="webpaymode" value="public" />
+                <div id="LinkPanel">
+	<h2 class="ShortCuts">Page shortcuts</h2><a tabindex="1" class="skip" href="#UserAreaPanel">Payment Entry</a><a tabindex="2" class="skip" href="#PaymentAreaPanel">Payment Review</a>
+</div><div id="HeaderPanel">
+	<h1 class="MainHeader">Allotments Payment</h1><span class="Normal">Please note - information on this page will time-out after  15 minutes of inactivity</span><div></div><label class="NORMAL">* = Mandatory Field</label>
+</div><div id="ErrorMessagePanel">
+
+</div><span id="lblError" class="ERRORMSG"></span>
+				<div id="DivMenuScroller" class="DivMenuScrollerNormal"><div id="MainMenuPanel" class="MainMenuPanelNormal">
+	<h2 id="webpaymm1" class="MAINMENUHEADER">Payment Type</h2><input type="submit" name="wpctrl2" value="Allotments" id="wpctrl2" tabindex="21" class="MAINMENUTEXTHILITE" /><br/><input type="submit" name="wpctrl4" value="Building Control Pay Invoice" id="wpctrl4" tabindex="22" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl6" value="Building Regulation No Invoice" id="wpctrl6" tabindex="23" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl8" value="Business Rates (NNDR)" id="wpctrl8" tabindex="24" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl10" value="Carelink" id="wpctrl10" tabindex="25" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl12" value="CCT / BHCC Invoice" id="wpctrl12" tabindex="26" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl14" value="Certificates" id="wpctrl14" tabindex="27" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl16" value="Chaperone Training" id="wpctrl16" tabindex="28" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl18" value="Childcare/Childminder Training" id="wpctrl18" tabindex="29" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl20" value="Council Tax" id="wpctrl20" tabindex="30" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl22" value="Data Protection Requests" id="wpctrl22" tabindex="31" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl24" value="Emergency Accommodation Rents" id="wpctrl24" tabindex="32" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl26" value="Hackney Carriage Licence" id="wpctrl26" tabindex="33" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl28" value="HMO Licence" id="wpctrl28" tabindex="34" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl30" value="Housing Benefit Invoice" id="wpctrl30" tabindex="35" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl32" value="Housing Rents" id="wpctrl32" tabindex="36" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl34" value="Leaseholders" id="wpctrl34" tabindex="37" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl36" value="Licences" id="wpctrl36" tabindex="38" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl38" value="Local Land Charges" id="wpctrl38" tabindex="39" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl40" value="Mayors Events" id="wpctrl40" tabindex="40" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl42" value="Music &amp; Performing Arts" id="wpctrl42" tabindex="41" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl44" value="Parking Business Permits" id="wpctrl44" tabindex="42" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl46" value="Parking Resident Permits" id="wpctrl46" tabindex="43" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl48" value="Parking Traders Permits" id="wpctrl48" tabindex="44" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl50" value="Parking Suspensions" id="wpctrl50" tabindex="45" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl52" value="PCN Payment Plan" id="wpctrl52" tabindex="46" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl54" value="Planning Brighton &amp; Hove" id="wpctrl54" tabindex="47" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl56" value="Residential Care" id="wpctrl56" tabindex="48" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl58" value="Revenues Enforcement" id="wpctrl58" tabindex="49" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl60" value="Royal Pavilion &amp; Museums" id="wpctrl60" tabindex="50" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl62" value="SDNPA Planning Applications" id="wpctrl62" tabindex="51" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl64" value="SDNPA Pre Application Fees" id="wpctrl64" tabindex="52" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl66" value="SDNPA Discharge of Conditions" id="wpctrl66" tabindex="53" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl68" value="SDNPA S106 &amp; Other" id="wpctrl68" tabindex="54" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl70" value="Seaside Homes" id="wpctrl70" tabindex="55" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl72" value="Sports Activities" id="wpctrl72" tabindex="56" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl74" value="White Return Lines (WRL)" id="wpctrl74" tabindex="57" class="MAINMENUOPTION" /><br/>
+</div><div id="ActionMenuPanel" class="ActionMenuPanel">
+
+</div></div>
+				<div id="DetailPanel" class="DetailPanel"><div id="UserAreaPanel" class="UserAreaPanel">
+	
+<!-- Add this to link in with the style sheet -->
+<div class="LeftTopAlign">
+	<h2 class="DividerAccessible"><span id="lblPaymentEntry" class="HEADER">Payment Entry</span></h2>
+	<!-- FIRST PAYMENT AREA-->
+    
+	<div class="LabelControlGroupAccessible"><span id="lblHeaderText" class="hiddenControl"></span></div>
+	<div class="LabelControlGroupAccessible"><div class="FieldLabelAccessible">
+			<div class="ErrorImageCol"></div><span id="lblPlease" class="NORMAL">Please 
+			enter the reference of the account you wish to pay</span></div>
+	</div>
+	<div class="LabelControlGroupAccessible">
+		<div class="FieldLabelAccessible">
+			<div class="ErrorImageCol"></div>
+			<label for="txtReference" id="lblReference" class="NORMAL">Reference *</label>
+		</div>
+		<div class="ControlAccessible">
+			<div class="ErrorImageCol"></div>
+            <input name="WEBPAY/STANDARDPAYMENT_ASCX$txtReference" type="text" maxlength="30" id="txtReference" tabindex="103" class="StandardField NORMALENTRY" />
+			&nbsp;
+            
+		</div>
+	</div>
+	
+    </div>
+	<div class="LabelControlGroupAccessible">
+		<div class="FieldLabelAccessible80">
+        
+			<div class="ErrorImageCol80"></div>
+           
+			 <div class="FieldLabelAccessible35"> <label for="txtAmount" id="lblAmount" class="NORMAL">Amount (Please include pence, eg 10.00) *</label> </div>
+			
+			 <div class="FieldLabelAccessible35"></div>
+		
+        </div>
+		&nbsp;
+		<div class="ControlAccessible">
+			<div class="ErrorImageCol"></div>
+			<input name="WEBPAY/STANDARDPAYMENT_ASCX$txtAmount" type="text" maxlength="20" id="txtAmount" tabindex="107" class="NORMALENTRY" /></div>
+	</div>
+	
+	
+	<!-- END ADDRESS AREA-->
+	<div class="FullWidthPlain2">&nbsp;
+		<div class="LabelControlGroupAccessible" id="buttons">
+            <div id="divASPbuttons">
+                <input type="submit" name="WEBPAY/STANDARDPAYMENT_ASCX$btnAdd" value="Add to List" id="btnAdd" tabindex="122" title="Adds the item to the payment list" class="MENUBUTTON" />
+                <input type="submit" name="WEBPAY/STANDARDPAYMENT_ASCX$btnCancel" value="Cancel" id="btnCancel" tabindex="123" title="Cancels the payment" class="MENUBUTTON" />
+                
+                <a class="BACKTOTOP" tabindex="125" href="#TopOfPage">Back To Top</a>
+            </div>
+ 
+            <input name="WEBPAY/STANDARDPAYMENT_ASCX$hidUnalteredRef" type="hidden" id="hidUnalteredRef" size="5" />
+			<input name="WEBPAY/STANDARDPAYMENT_ASCX$hidAlternativeRef" type="hidden" id="hidAlternativeRef" size="5" />
+			<input name="WEBPAY/STANDARDPAYMENT_ASCX$hidStopMessage" type="hidden" id="hidStopMessage" size="5" />
+		</div>
+	</div>
+
+</div><div id="PaymentAreaPanel" class="PaymentAreaPanel">
+	
+<!-- Add this to link in with the style sheet -->
+<div class="listControl">
+	<div>
+		&nbsp;&nbsp;
+		
+		<div id="pnlPaymentReview">
+		
+			<div>
+				<h2>
+					<span id="lblHeading" class="SectionHeadings">Payment Review</span></h2>
+				<div>
+					<span id="lblModifyPayment" class="NORMAL">To modify a payment click the Modify link. </span>
+					<span id="lblRemovePayment" class="NORMAL"> To remove a payment click the Delete link</span></div>
+				<div>
+					<span id="lblMakePayment" class="NORMAL"> To make a payment, click Pay. 
+		You will be redirected to a holding page while your request is processed. 
+		You will then be directed to the next step in the payment process</span></div>
+			</div>
+		
+	</div>
+		<div class="DataGridAccessible" id="paymentwithscroll">
+			<table class="FullWidthGrid" cellspacing="0" rules="all" border="1" id="dgPayments" style="border-collapse:collapse;">
+		<tr class="DATAHEADER DataGridLeftAlign">
+			<th class="DataGridLeftAlign" scope="col">Account Type</th><th class="DataGridRightAlign" scope="col">Amount (£)</th><th class="DataGridLeftAlign" scope="col">Description</th><th class="DataGridLeftAlign" scope="col">Reference</th><th class="DataGridLeftAlign" scope="col">VAT</th><th scope="col">&nbsp;</th><th scope="col">&nbsp;</th>
+		</tr>
+	</table>
+		</div>
+		<div class="FullWidthGridDiv">
+			<div class="FullWidthGridDiv1">
+				<div class="FullWidthGridDiv3">
+				</div>
+			</div>
+			<div class="FullWidthGridDiv4">&nbsp; <!--Add a blank space here so firefox will recognise this area and display it -->
+				<div class="FullWidthGridDiv3">
+				</div>
+			</div>
+			<div class="FullWidthGridDiv2">
+				<div class="FullWidthGridDiv3">
+					
+				</div>
+			</div>
+		</div>
+		<div id="pnlButtons">
+		
+                
+			<div class="paymentlistgrid">
+                <input type="submit" name="webpay/StandardPaymentList_ascx$btnPay" value="Pay" onclick="HidePayButtons();" id="btnPay" tabindex="212" class="CONFIRMBUTTON" />
+                
+				
+				
+                
+                
+				<a class="BACKTOTOP" tabindex="218" href="#TopOfPage">Back To Top</a></div>
+	    
+	</div>
+		<div>
+			<div id="paybuttons"></div>
+		</div>
+		<br/>
+		&nbsp;
+		<div>
+			<span id="lblFooterText" class="hiddenControl"></span>
+		</div>
+	</div>
+</div>
+</div></div>
+				<div class="AboutPannelDefaultPage"><div id="Panel1">
+	
+                       <div class="AboutPannelLeft">
+                            <a href="help/Payment.aspx" id="lnkHelp" class="MENUTEXTABOUT" target="_blank" tabindex="1000"><img class="noborder" alt="" src="images\point.gif"/>Help[link 
+								opens in new window]</a> <!-- This was asp linkbutton "lnAbout" -->
+                            <a href="about.aspx" id="lnkAbout" class="MENUTEXTABOUT" target="_blank" tabindex="1001"><img class="noborder" alt="" src="images\point.gif" />About[link 
+								opens in new window]</a>
+                            <img class="noborder" alt="" src="images\point.gif"/>
+							</div>
+						<div class="AboutPannelRight">
+							
+							
+							
+							
+							
+							
+							
+							</div>
+					
+</div></div>
+				<script type="text/javascript">
+
+
+				    var txtbox = document.getElementById('payment:txtReference');
+				    setTimeout(function () { if (txtbox != null) { txtbox.focus(); } }, 1000);
+
+				    function HideButton() {
+				        document.getElementById("btnPay").style.visibility = "hidden";
+				    }
+
+				    function ShowButton() {
+				        document.getElementById("btnPay").style.visibility = "visible";
+				    }
+
+				    function ShowHelpPopup() {
+				        window.open("https://www.paypal.com/uk/cgi-bin/webscr?cmd=xpt/cps/popup/OLCWhatIsPayPal-outside", "Help", "height=380,width=800,left=400,top=100");
+				    }
+					
+				</script>
+                
+			
+
+<script type="text/javascript">
+//<![CDATA[
+showinframe();//]]>
+</script>
+
+
+<script type="text/javascript">
+<!--
+var myForm;
+myForm=GetFormObject();
+myForm.hidJavascriptCheck.value = 'on';
+myForm.submit();
+// -->
+</script>
+<script type="text/javascript" > function HidePayButtons() { paybuttons.style.visibility = 'hidden'; }</script><script type="text/javascript" > function setDeleteMessage() { return confirm('This will delete all your entered payments, are you sure?'); }</script><script type="text/javascript" > function setDeleteOneLineMessage() { return confirm('This will delete the payment, are you sure?'); }</script></form>
+            <br />
+            <br />
+			<div class="footer">
+				</div> </div>
+
+
+<div id="section-footer" class="section section-footer">
+	<div id="zone-footer-wrapper" class="zone-wrapper zone-footer-wrapper clearfix">
+		<div id="zone-footer" class="zone zone-footer clearfix container-12">
+			<div class="inner-border clearfix">
+					
+<div id="region-footer-first" class="grid-3 region region-footer-first alpha"></div>
+			
+				<div class="grid-4 region region-footer-second" id="region-footer-second">
+					<div class="region-inner region-footer-second-inner">
+						<section class="block block-boxes block-boxes-simple block-bhcc-contact-address-footer block-boxes-bhcc-contact-address-footer odd"
+							id="block-boxes-bhcc-contact-address-footer">
+							<div class="block-inner clearfix">
+								<h2 class="block-title">Brighton &amp; Hove City Council</h2>
+								<div class="content clearfix">
+									<div id='boxes-box-bhcc_contact_address_footer' class='boxes-box'>
+										<div class="boxes-box-content">
+											<p>
+												Kings House<br />
+												Grand Avenue<br />
+												Hove<br />
+												BN3 2LS<br />
+												Tel: (01273) 290000<br />
+												<a href="mailto:banking@brighton-hove.gov.uk">banking@brighton-hove.gov.uk</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+				
+<div id="region-footer-third" class="grid-5 region region-footer-third omega"></div>			
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="CivicaFooter">
+		
+			<p class="photolink"><a href="http://www.civica.co.uk">Provided by Civica UK Limited</a></p>
+			<div class="sys_footer_row2_Bold">Data Protection Act 1998</div>
+			<div class="sys_footer_row2">
+				<span>Please note that your personal details supplied on this form will be held and/or computerised by Brighton and Hove City Council for the purposes of processing your payment. Some personal details will be disclosed to banks and other financial institutions in order to process the payment. Your personal details will be safeguarded and will not be divulged to any other individuals or organisations for any other 
+				purposes.</span>
+			</div>
+		
+	</div>
+	
+</div>
+
+			</div>
+		</div>
+	</body>
+</html>

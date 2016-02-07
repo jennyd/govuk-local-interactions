@@ -1,0 +1,571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Style-Type" content="text/css" /><link href="/WebResource.axd?d=1ABG6gqGWoouXn-dwpmRGaQMiDMUOOzMDjIHqmN5zh19zmVZAPy0x8ZHXSGYp38GkXh58SEQvmJBuOhnQsIYGyo6Msv8K63bMrHzY4OgCvqjyTxiTwpjUIC3UZxbVraE8Vle0q71akhnbg8rPcgg41_YWY81&amp;t=635058696783408359" type="text/css" rel="stylesheet" /><meta http-equiv="Content-Script-Type" content="text/javascript" /><title>
+	Electoral Register
+</title><link href="../../templates/default/style/style.css" type="text/css" rel="stylesheet" />
+<!--[if IE 6]>
+	<link rel="stylesheet" href="../../templates/default/style/ie6.css" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+	<link rel="stylesheet" href="../../templates/default/style/ie7.css" type="text/css" />
+<![endif]-->
+<link href="../../templates/default/style/print.css" type="text/css" rel="stylesheet" media="print" /><link href="../../templates/default/css/default.css" type="text/css" rel="stylesheet" /><meta name="GENERATOR" content="Immediacy .NET CMS - Licensed To : Auros Limited" /><meta name="keywords" content="electoral,registration" /><meta name="description" content="Information about electoral registration" /></head>
+<body>
+<form name="aspnetForm" method="post" action="electoral_register.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWBAIBD2QWAgIMDxYCHgRocmVmBSN+L3RlbXBsYXRlcy9kZWZhdWx0L2Nzcy9kZWZhdWx0LmNzc2QCAw9kFgQCCQ8WAh4JY3VyUGFnZU5vAgEWCAIBD2QWAmYPFQMMSUxJTkt8ODU1OSx8PEZ1bmVyYWwgU2VydmljZSB0byBiZSBIZWxkIGZvciBDb3VuY2lsIExlYWRlciBSb2dlciBCZWd5IE9CRTxGdW5lcmFsIFNlcnZpY2UgdG8gYmUgSGVsZCBmb3IgQ291bmNpbCBMZWFkZXIgUm9nZXIgQmVneSBPQkVkAgIPZBYCZg8VAwxJTElOS3w4NTU1LHwpQ291bmNpbCBMZWFkZXIgUm9nZXIgQmVneSBoYXMgcGFzc2VkIGF3YXkpQ291bmNpbCBMZWFkZXIgUm9nZXIgQmVneSBoYXMgcGFzc2VkIGF3YXlkAgMPZBYCZg8VAwxJTElOS3w4NTU3LHw+Q29tbWVudCBvbiBwb3NzaWJsZSBjaGFuZ2VzIHRvIHNvY2lhbCBjYXJlIGNoYXJnaW5nIGluIFJ1dGxhbmQ+Q29tbWVudCBvbiBwb3NzaWJsZSBjaGFuZ2VzIHRvIHNvY2lhbCBjYXJlIGNoYXJnaW5nIGluIFJ1dGxhbmRkAgQPZBYCZg8VAwxJTElOS3w4NTUyLHwnTm90aWNlIG9mIEVsZWN0aW9uIGZvciBXaGlzc2VuZGluZSBXYXJkJ05vdGljZSBvZiBFbGVjdGlvbiBmb3IgV2hpc3NlbmRpbmUgV2FyZGQCCg8WAh8BAgEWBgIBD2QWAmYPFQMqaHR0cDovL3d3dy5iYmMuY28udWsvd2VhdGhlci8yNjQxMTI4P2RheT0wKmh0dHA6Ly93d3cuYmJjLmNvLnVrL3dlYXRoZXIvMjY0MTEyOD9kYXk9MD9TYXR1cmRheTogTGlnaHQgUmFpbiwgTWluaW11bSBUZW1wZXJhdHVyZTogMyYjMTc2O0MgKDM3JiMxNzY7RilkAgIPZBYCZg8VAypodHRwOi8vd3d3LmJiYy5jby51ay93ZWF0aGVyLzI2NDExMjg/ZGF5PTEqaHR0cDovL3d3dy5iYmMuY28udWsvd2VhdGhlci8yNjQxMTI4P2RheT0xblN1bmRheTogTGlnaHQgUmFpbiBTaG93ZXIsIE1heGltdW0gVGVtcGVyYXR1cmU6IDcmIzE3NjtDICg0NSYjMTc2O0YpIE1pbmltdW0gVGVtcGVyYXR1cmU6IDQmIzE3NjtDICgzOSYjMTc2O0YpZAIDD2QWAmYPFQMqaHR0cDovL3d3dy5iYmMuY28udWsvd2VhdGhlci8yNjQxMTI4P2RheT0yKmh0dHA6Ly93d3cuYmJjLmNvLnVrL3dlYXRoZXIvMjY0MTEyOD9kYXk9MmdNb25kYXk6IEhlYXZ5IFJhaW4sIE1heGltdW0gVGVtcGVyYXR1cmU6IDcmIzE3NjtDICg0NSYjMTc2O0YpIE1pbmltdW0gVGVtcGVyYXR1cmU6IDImIzE3NjtDICgzNiYjMTc2O0YpZGRx8DDVkcVLR85UYUEbnTaCCk7ACw==" />
+
+
+<script src="/WebResource.axd?d=CukPLKNoS5iMIPa2qaiO75NFq53POAamgS20TSxHMqBwnh-tV3xBMmFNywxA6Nty3_t-d-dbKKJB2pcvZJrBuZoxCYcbbu-_geeMOG8fp8YOX9llvGJ1svZnHgGvPh-y3ZZFew2&amp;t=635058696779508159" type="text/javascript"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAgKDq+z6CwLm45qtAbbG58aHb2dREnmaNiC6Llo9HVUM" />
+
+
+
+<div><a name="top"></a></div>
+<div id="skip"><a href="mainContent">Skip to main content</a></div>
+
+
+<div id="cookieLink">
+
+	
+<H2>Cookies on the website</H2>
+<P>We use cookies to ensure that we give you the best experience on our website. If you continue without changing your settings, we'll assume that you are happy to receive all cookies on the website. However, if you would like to, you can disable cookies in your browser. <a href="/system_pages/utility_links/cookies.aspx">See more about cookies</A></P>
+	
+	<script type="text/javascript">
+	    var cookieURL = '/system_pages/cookiebannerpage.aspx';
+	    var cookieElement = 'mainContent';
+	    var closeText = 'Close this panel'; // Use PageUtil.GetPageTitle if/when installed
+
+	    // Hide if not already toggling a js class
+	    document.getElementById('cookieLink').style.display = 'none';
+	</script>
+
+	<noscript></noscript>
+</div>
+
+<div id="everything" >
+	<div id="header">
+	<div class="inner floatHolder">
+		
+		<h1>
+		<a href="/default.aspx?page=0">
+		
+			<img src="/templates/default/images/h1.jpg" alt="My Rutland" />
+		
+		
+		</a></h1>
+		<div id="logo"><a href="/default.aspx?page=0"><img src="/templates/default/images/logo.jpg" alt="Rutland County Council" /></a></div>
+	</div>		
+	<div class="navWrapper floatHolder">
+		
+	<div id="dropNav">
+		
+				<ul><li class="home"><a title="Home" href="/default.aspx">Home</a></li>
+			<li class="first">
+			<a href="/system_pages/top_navigation/find_council_services.aspx" title="Find Council Services" class="drop">Find Council Services<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_a-z.aspx" title="Search by A-Z" >Search by A-Z</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_most_popular.aspx" title="Search by Most Popular" >Search by Most Popular</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_council_department.aspx" title="Search by Council Department" >Search by Council Department</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_key_life_events.aspx" title="Search by Key Life Events" >Search by Key Life Events</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			<li class="">
+			<a href="/system_pages/top_navigation/do_it_online.aspx" title="Do it Online" class="drop">Do it Online<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="/system_pages/top_navigation/do_it_online/make_a_payment.aspx" title="Make a Payment" >Make a Payment</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/missed_bin_collection.aspx" title="Missed Bin Collection" >Missed Bin Collection</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/pay_parking_fine.aspx" title="Pay Parking Fine" >Pay Parking Fine</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/request_ca_site_permit.aspx" title="Request CA Site Permit" >Request CA Site Permit</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/view_planning_applications.aspx" title="View Planning Applications" >View Planning Applications</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			<li class="">
+			<a href="/system_pages/top_navigation/your_councillor.aspx" title="Your Councillor" >Your Councillor</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us.aspx" title="Contact Us" class="drop">Contact Us<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="/system_pages/top_navigation/contact_us/customer_services.aspx" title="Customer Services" >Customer Services</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/online_contact_form.aspx" title="Online Contact Form" >Online Contact Form</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/visitor_parking.aspx" title="Visitor Parking" >Visitor Parking</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/map_and_directions.aspx" title="Map and Directions" >Map and Directions</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/customer_care_standards.aspx" title="Customer Care Standards" >Customer Care Standards</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			
+				</ul>
+			
+
+		<div id="search">
+			<div id="searchBox">
+	<label for="Template_topNav_searchBox_quickSearch" accesskey="s">Search </label><input name="Template$topNav$searchBox$quickSearch" type="text" value="Search" id="Template_topNav_searchBox_quickSearch" onfocus="clearText('Template_topNav_searchBox_quickSearch','Search');" onkeypress="return clickOnEnterMultiBrowser(event, 'Template_topNav_searchBoxdosearch');" /><img src="../../images/1.gif" alt="" title="" width="0" height="0" /><a class="Button" href="javascript:__doPostBack('Template$topNav$searchBox','goSearch')" title="Search"><img id="Template_topNav_searchBoxdosearch" src="/templates/default/images/go.gif" alt="Search" /></a>
+</div>
+		</div>
+	</div>
+
+<div class="gm_sidebar gm_sidebar_rh"> 
+      <a 
+            href="//websurveys.govmetric.com/theme/gm/1534" 
+            target="_blank" 
+            class="gm_sidebar_anchor" 
+            title="please rate this page" 
+            rel="nofollow"> 
+            <img src="//wsstatic.govmetric.com/imgs/triggers/rh.png" alt="rating button" /> 
+      </a> 
+</div> 
+<link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar_rh.css" /> 
+<script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+ 
+<script type="text/javascript" src="//hitcounter.govmetric.com/1343"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+ 
+
+	</div>
+	<div class="navInstructions"><div class="inner">
+<P>Use the links above to reach key areas of our site.</P></div></div>
+	</div>
+	<div id="main" class="floatHolder col3">
+		<div id="subNav">
+			
+					<div class="heading" >Council and Democracy</div>
+					
+				
+				
+
+				
+
+				
+
+				
+
+					<ul>
+				
+					<li ><a href="/council_and_democracy/about_rutland_county_council.aspx" title="About Rutland County Council"><span>About Rutland County Council</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/births,_deaths,_marriages__ci.aspx" title="Births, Deaths and Marriages &amp; Civil Partnerships"><span>Births, Deaths and Marriages &amp; Civil Partnerships</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/births__deaths_-_tell_us_once.aspx" title="Tell Us Once"><span>Tell Us Once</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/council_budgets_and_spending.aspx" title="Council Budgets and Spending"><span>Council Budgets and Spending</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/council_news.aspx" title="Council News"><span>Council News</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/council__committee_meetings.aspx" title="Council &amp; Committee Meetings"><span>Council &amp; Committee Meetings</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/council_tax.aspx" title="Council Tax"><span>Council Tax</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/councillors_and_democracy.aspx" title="Councillors and Democracy"><span>Councillors and Democracy</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/customer_services.aspx" title="Customer Services"><span>Customer Services</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elected_members_your_councill.aspx" title="Elected Members (Your Councillor)"><span>Elected Members (Your Councillor)</span></a></li>
+				
+
+					<li  class='expanded'><a href="/council_and_democracy/elections__electoral_registra.aspx" title="Elections &amp; Electoral Registration"><span>Elections &amp; Electoral Registration</span></a>
+				
+
+					<ul>
+				
+					<li ><a href="/council_and_democracy/elections__electoral_registra/canvass_2015.aspx" title="Canvass 2015"><span>Canvass 2015</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/elections_2015.aspx" title="Elections 2015"><span>Elections 2015</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/community_governance_reviews.aspx" title="Community Governance Reviews"><span>Community Governance Reviews</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/review_of_polling_places.aspx" title="Review of Polling Places"><span>Review of Polling Places</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/current_county_councillor_vaca.aspx" title="Current County Councillor Vacancies"><span>Current County Councillor Vacancies</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/current_parish_councillor_vaca.aspx" title="Current Parish Councillor Vacancies"><span>Current Parish Councillor Vacancies</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/electoral_registration.aspx" title="Individual Electoral Registration"><span>Individual Electoral Registration</span></a></li>
+				
+
+					<li class="selected"><a href="/council_and_democracy/elections__electoral_registra/electoral_register.aspx" title="Electoral Register"><span>Electoral Register</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/electoral_nominations.aspx" title="Electoral Nominations"><span>Electoral Nominations</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/european_parliamentary_elect.aspx" title="European Parliamentary Election 2014"><span>European Parliamentary Election 2014</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/police_and_crime_commissioner.aspx" title="Police and Crime Commissioner Elections"><span>Police and Crime Commissioner Elections</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/postal_votes.aspx" title="Postal Votes"><span>Postal Votes</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/proxy_votes.aspx" title="Proxy Votes"><span>Proxy Votes</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/voting_information.aspx" title="Voting Information"><span>Voting Information</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/ward_boundaries.aspx" title="Ward Boundaries"><span>Ward Boundaries</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/elections__electoral_registra/2011_election_results.aspx" title="2011 Election Results"><span>2011 Election Results</span></a></li>
+				
+
+					</ul></li>
+				
+					<li ><a href="/council_and_democracy/equality_and_diversity.aspx" title="Equality and Diversity"><span>Equality and Diversity</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/emergency_planning_advice.aspx" title="Emergency Planning Advice"><span>Emergency Planning Advice</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/freedom_of_information.aspx" title="Freedom of Information"><span>Freedom of Information</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/grants_information.aspx" title="Grants Information"><span>Grants Information</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/jobs_at_the_council.aspx" title="Jobs at the Council"><span>Jobs at the Council</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/open_data_including_foi__dat.aspx" title="Open Data (including FOI &amp; Data Protection)"><span>Open Data (including FOI &amp; Data Protection)</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/performance.aspx" title="Performance"><span>Performance</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/statistics_and_census_informat.aspx" title="Statistics and Census Information"><span>Statistics and Census Information</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/tenders_and_contracts.aspx" title="Tenders and Contracts"><span>Tenders and Contracts</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/transparency_code.aspx" title="Transparency Code"><span>Transparency Code</span></a></li>
+				
+
+					<li ><a href="/council_and_democracy/the_rutland_lieutenancy.aspx" title="The Rutland Lieutenancy"><span>The Rutland Lieutenancy</span></a></li>
+				
+
+					</ul>
+				
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+					
+				
+		</div>
+		<div class="mainWrapper">
+		<div id="crumbtrail">
+			
+					
+				
+					<a href="/default.aspx">Home</a> &gt;
+				
+
+					<a href="/council_and_democracy.aspx">Council and Democracy</a> &gt;
+				
+
+					<a href="/council_and_democracy/elections__electoral_registra.aspx">Elections &amp; Electoral Registra</a> &gt;
+				
+
+						Electoral Register
+				
+
+					
+				
+		</div>
+		<div id="mainContent">
+			
+<H2>Electoral Register </H2>
+<P>You can add your name to the register of electors at any time throughout the year.&nbsp;&nbsp;You can only vote in elections if your name is on the Register of Electors at least 11 days before the date of the Poll.&nbsp; The way in which you can register has changed and details can be found on the <a href="/council_and_democracy/elections__electoral_registra/electoral_registration.aspx">Electoral Registration</A> page.</P>
+<P>&nbsp;</P>
+<P>The Register of Electors is published on 1st December of each year and monthly revisions are published on the 1st working day of the month from January to September each year. The Register published on the 1st September is used for all elections between 1st September and 30th November. The&nbsp;registration process from January to September can take from 2 to 6 weeks depending on when an application is made.&nbsp; Please see <a href="/pdf/Registration-Dates-2015-English.pdf">the list (pdf)</A> for the current qualification dates and deadlines.</P>
+<P>&nbsp;</P>
+<P>If you do not register then you cannot exercise your democratic right to vote in any election. It is also much harder to obtain credit if you are not on the Register as authorised credit reference agencies are allowed by law to purchase the register of electors to feed into their data-bases to carry out credit references etc.</P>
+<P>Registration in Britain is compulsory, although voting is at the elector's discretion.</P>
+<P>&nbsp;</P>
+<P>The Council is required to carry out an annual canvass each year between the 1st&nbsp;July and mid November.&nbsp; A&nbsp;Household Enquiry&nbsp;Form (HEF) will be sent to each property during this time and&nbsp;the HEF <STRONG>must</STRONG> be responded to.&nbsp;Legal proceedings can be taken against householders who fail to return their&nbsp;HEF's and the maximum fine is &#163;1,000. There are several options for responding to a HEF and these will be detailed on the form.</P>
+<P>&nbsp;</P>
+<P>The Electoral Registration Office on 01572 722577 can deal with queries relating to previous years Registers for an elector. Third party enquiries cannot be dealt with under the Data Protection and Election legislation.</P>
+<P>&nbsp;</P>
+<P>There are&nbsp;two types of Electoral Register, the Full Register and the Open Register.&nbsp;The full Revised Register contains the name and address&nbsp;of every elector,&nbsp;this is used for elections and can also be supplied to a limited number of government departments and credit reference agencies for a specific use that is laid down in the Representation of the People Regulations 2001. The Open Register is produced from the full register but&nbsp;omits the names and addresses of people who have asked for them to be excluded from that version of the register. The Open Register can be bought by anyone who asks for a copy, and&nbsp;may be&nbsp;used for any purpose.</P>
+<P>&nbsp;</P>
+<P>If you&nbsp;are not&nbsp;on the published register, you can register online at <A href="http://www.gov.uk/register-to-vote">www.gov.uk/register-to-vote</A>. </P>
+<P>&nbsp;</P>
+<P>You can check the full Electoral Register at&nbsp;our&nbsp;Customer Service Centre&nbsp;during office hours (appointments are advised). Libraries in the county have copies of the open register.</P>
+<P>&nbsp;</P>
+<P>When we receive your completed application, we will add you to our list of&nbsp;pending applications. Any elector&nbsp;is then able to&nbsp;object to your name being added to the register. If this happens we will write to you.</P>
+<P>&nbsp;</P>
+<P>If your application is not objected to, we will change your details on the first working day after the monthly claim period in which we received it (see list above). We will write to confirm that your application has been allowed.</P>
+<P>&nbsp;</P>
+<P>If you have provided details of a previous address we will also tell the&nbsp;Electoral Registration Officer for that address&nbsp;that you have moved, so that your name can be removed from that register. People who live at two homes (including students) are allowed to register at both. If you do not want to be removed from your other address please explain why on your application.</P>
+<P>&nbsp;</P>
+<P>There are special rules about names being added to the voters list during an election period. Because of these you may not be able to vote at that election if you are added during this time.</P>
+<P>You can see more information and <B>register Online</B> by visiting the websites <A href="http://www.gov.uk/yourvotematters">www.gov.uk/yourvotematters</A> <STRONG>and </STRONG><A href="http://www.gov.uk/register-to-vote">www.gov.uk/register-to-vote</A> or contact your local elections team on 01572 722577 and <A href="mailto:elections@rutland.gov.uk">elections@rutland.gov.uk</A>.</P>
+		</div>
+		</div>
+		<div class="aside">
+			<div class="panel ad">
+				
+<img alt="Image Alt Text" src="/templates/default/images/img8.jpg"> 
+			</div>
+			<div class="panel">
+				
+						<h3>News</h3>
+						<ul class="newsArticles">
+					
+						<li>
+							<a href="/council_and_democracy/council_news/cllr_begy_funeral_service.aspx" title="Funeral Service to be Held for Council Leader Roger Begy OBE">Funeral Service to be Held for Council Leader Roger Begy OBE</a>
+						</li>
+					
+						<li>
+							<a href="/council_and_democracy/council_news/councillor_roger_begy.aspx" title="Council Leader Roger Begy has passed away">Council Leader Roger Begy has passed away</a>
+						</li>
+					
+						<li>
+							<a href="/council_and_democracy/council_news/charging_consultation.aspx" title="Comment on possible changes to social care charging in Rutland">Comment on possible changes to social care charging in Rutland</a>
+						</li>
+					
+						<li>
+							<a href="/council_and_democracy/council_news/whissendine_by-election.aspx" title="Notice of Election for Whissendine Ward">Notice of Election for Whissendine Ward</a>
+						</li>
+						
+						</ul>
+					
+			</div>
+			<div class="panel">
+				<h3>Weather</h3>
+				
+						<ul class="rssFeed">
+					
+						<li>
+							<a href="http://www.bbc.co.uk/weather/2641128?day=0" title="http://www.bbc.co.uk/weather/2641128?day=0">Saturday: Light Rain, Minimum Temperature: 3&#176;C (37&#176;F)</a>
+						</li>
+					
+						<li>
+							<a href="http://www.bbc.co.uk/weather/2641128?day=1" title="http://www.bbc.co.uk/weather/2641128?day=1">Sunday: Light Rain Shower, Maximum Temperature: 7&#176;C (45&#176;F) Minimum Temperature: 4&#176;C (39&#176;F)</a>
+						</li>
+					
+						<li>
+							<a href="http://www.bbc.co.uk/weather/2641128?day=2" title="http://www.bbc.co.uk/weather/2641128?day=2">Monday: Heavy Rain, Maximum Temperature: 7&#176;C (45&#176;F) Minimum Temperature: 2&#176;C (36&#176;F)</a>
+						</li>
+					
+						</ul>
+					
+			</div>
+			<div class="panel">
+				<div class="inner">
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="infoNav">
+			<div class="inner">
+			<h2>Go straight to information about...</h2>
+			
+					<ul class="floatHolder">
+				<li><a href="/advice_and_benefits.aspx" title="Advice and benefits"><span>Advice and benefits</span></a></li>
+<li><a href="/business.aspx" title="Business"><span>Business</span></a></li>
+<li><a href="/community_and_living.aspx" title="Community and Living"><span>Community and Living</span></a></li>
+<li><a href="/council_and_democracy.aspx" title="Council and Democracy"><span>Council and Democracy</span></a></li>
+<li><a href="/council_meetings.aspx" title="Council Meetings"><span>Council Meetings</span></a></li>
+<li><a href="/education_and_learning.aspx" title="Education and learning"><span>Education and learning</span></a></li>
+<li><a href="/environment_and_planning.aspx" title="Environment and Planning"><span>Environment and Planning</span></a></li>
+<li><a href="/health_and_social_care.aspx" title="Health and Social Care"><span>Health and Social Care</span></a></li>
+<li><a href="/housing.aspx" title="Housing"><span>Housing</span></a></li>
+<li><a href="/jobs_and_careers.aspx" title="Jobs and Careers"><span>Jobs and Careers</span></a></li>
+<li><a href="/leisure_and_culture.aspx" title="Leisure and culture"><span>Leisure and culture</span></a></li>
+<li><a href="/transport_and_streets.aspx" title="Transport and streets"><span>Transport and streets</span></a></li>
+<li><a href="/rutland_together.aspx" title="Rutland Together"><span>Rutland Together</span></a></li>
+<li><a href="/development_control.aspx" title="Development Control"><span>Development Control</span></a></li>
+<li><a href="/local_plan.aspx" title="Local Plan"><span>Local Plan</span></a></li>
+<li><a href="/rutland_library_service.aspx" title="Rutland Library Service"><span>Rutland Library Service</span></a></li>
+<li><a href="/rutland_county_museum.aspx" title="Rutland County Museum"><span>Rutland County Museum</span></a></li>
+<li><a href="/licensing_information.aspx" title="Licensing Information"><span>Licensing Information</span></a></li>
+<li><a href="/oakham_castle.aspx" title="Oakham Castle"><span>Oakham Castle</span></a></li>
+<li><a href="/energy_conservation.aspx" title="Energy Conservation"><span>Energy Conservation</span></a></li>
+<li><a href="/digital_rutland.aspx" title="Digital Rutland"><span>Digital Rutland</span></a></li>
+<li><a href="/customer_services.aspx" title="Customer Services"><span>Customer Services</span></a></li>
+<li><a href="/waste_and_recycling.aspx" title="Waste and Recycling"><span>Waste and Recycling</span></a></li>
+<li><a href="/safer_rutland.aspx" title="Safer Rutland"><span>Safer Rutland</span></a></li>
+<li><a href="/people_first.aspx" title="People First"><span>People First</span></a></li>
+
+					</ul>
+				
+			</div>
+		</div>
+		<div class="floatHolder">
+			<div id="copyright">
+				
+<P>&#169; Copyright 2011 Rutland County Council, Catmose, Oakham, Rutland, LE15 6HP</P>
+			</div>
+			<div id="utilitylinks">
+				<ul>
+					<li><a href="/system_pages/utility_links/site_map.aspx">Site Map</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/terms__conditions.aspx">Terms &amp; Conditions</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/contractor_login.aspx">Contractor Login</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/privacy.aspx">Privacy</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/cookies.aspx">Cookies</a>
+&nbsp;|&nbsp;</li>
+					
+					<li><a href="/council_and_democracy/elections__electoral_registra/electoral_register.aspx?theme=textonly">Text Only</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	</form>
+	<!-- WebMetric snippet starts here -->
+		
+			<form action="https://www.govmetric.com/WebMetric/websatisfaction.aspx" method="post"><div class="ratePage">
+			<input type="hidden" name="organisationid" value="3" />
+
+			<!-- uncomment this to enable the sentence to replace the comments box -->
+			<!-- <input type="hidden" name="displaysentence" value="If you would like to leave additional comments, please follow the Feedback Form link on the homepage." />-->
+
+			<input type="image" src="http://www.govmetric.com/images/med-greenface.gif" alt="Rate as Good" name="metric1" value="1" />
+			<input type="image" src="http://www.govmetric.com/images/med-orangeface.gif" alt="Rate as Average" name="metric2" value="2" />
+
+			<input type="image" src="http://www.govmetric.com/images/med-redface.gif" alt="Rate as Poor" name="metric3" value="3" />
+
+				<p class="inst"><img src="/templates/default/images/rateThisPage.gif" alt="It's your Rutland. Please rate this page." /></p>
+</div>
+			<!-- WebMetric snippet ends here -->
+		
+
+			<script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+			<script type="text/javascript">
+			<!--
+				$j = jQuery.noConflict();
+				$j(document).ready(function() {
+					var sBlock = document.createElement('script');
+					sBlock.type = 'text/javascript';
+					sBlock.src = 'http://snippets.govmetric.com/webhit/index/3';
+					$j('#footer').append(sBlock);
+				});
+			-->
+			</script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+</form>		
+		
+		<div class="extLinks">
+			<div class="inner">
+				<a href="http://www.gov.uk/" rel="external" ><img src="/templates/default/images/gov logo.jpg" height="41" alt="gov" /></a>
+				<a href="http://www.browsealoud.com/downloads.asp?dl=bl" rel="external" ><img src="/templates/default/images/dlbl.gif" alt="download Browsealoud" /></a>
+			</div>
+		</div>
+<!-- Javascript at the bottom for fast page loading -->
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+		
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+	<script type="text/javascript" src="/templates/default/scripts/pluginCheck.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+	 
+	<script type="text/javascript" src="/templates/default/scripts/script.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8488195-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<noscript><div>Browser does not support script.</div></noscript>
+ 
+
+				
+</body>
+</html>

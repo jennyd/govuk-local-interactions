@@ -1,0 +1,160 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+	<HEAD>
+		<title>Christchurch Borough Council Planning Application Search</title>
+		<meta name="description" content="Search for Planning Applications registered with Christchurch Borough Council since 1974, make comments on current applications, view plans and documents etc">
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="Visual Basic .NET 7.1" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK href="../css/style_common.css" type="text/css" rel="stylesheet">
+		<LINK href="../css/formlayout.css" type="text/css" rel="stylesheet">
+		<LINK href="../css/planningapplication.css" type="text/css" rel="stylesheet">
+  		<PageMap>
+    			<DataObject type="thumbnail">
+      				<Attribute name="src" value="../images/cbc/logo_cbc.jpg"/>
+     				<Attribute name="width" value="100"/>
+      				<Attribute name="height" value="130"/>
+    			</DataObject>
+  		</PageMap>
+	</HEAD>
+	<body>
+		<form name="ApplicationSearch" method="post" action="ApplicationSearch.aspx" id="ApplicationSearch">
+<input type="hidden" name="__VIEWSTATE" value="dDwtMTYxNzE1NzAxNTt0PDtsPGk8MT47PjtsPHQ8O2w8aTwxMT47PjtsPHQ8O2w8aTw3Pjs+O2w8dDxAMDw7Ozs7Ozs7Ozs7Pjs7Pjs+Pjs+Pjs+Pjs+kuPJN/ysyLphbjZgPxXWJaG74ZY=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" value="79D47805" />
+
+			
+<table cellSpacing="0" cellPadding="0" width="100%" summary="This table displays the Organisation's logo">
+	<tr>
+		<td class="banner" vAlign="top" align="right">
+		</td>
+		<td align="right">
+			<div class="utilnav">&nbsp;
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td vAlign="middle" align="center"><A accessKey="1" href="http://www.dorsetforyou.com/index.jsp">&nbsp;&nbsp;<IMG title="This is the Dorset For You Logo: click here to return to the home page" style="BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none"
+					height="52" alt="This is the Dorset For You Logo" src="../images/common/logo.jpg" width="114"></A>
+		</td>
+		<td style="BACKGROUND-POSITION: right center; BACKGROUND-IMAGE: url(../images/cbc/banner_christchurch.jpeg); WIDTH: 90%; BACKGROUND-REPEAT: no-repeat"></td>
+	</tr>
+</table>
+<table cellSpacing="0" cellPadding="0" width="100%" summary="This table displays the top two levels of the site's navigation structure">
+	<tr>
+		<td style="VERTICAL-ALIGN: bottom; WIDTH: 8px; HEIGHT: 25px; BACKGROUND-COLOR: #66cccc"><IMG title="" height="25" alt="" src="../images/common/menu_end.gif" width="8"></td>
+		<td class="topnav"><span class="topnavpipe"></span></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td class="secnav"></td>
+	</tr>
+</table>
+
+			<div class="applicationsearch"><span class="searchpagetitle"><H1>Christchurch planning applications search</H1> </span><span class="searchpagetext">
+					<span id="Label_SearchPageText">Use the search options below to find planning applications and decisions for Christchurch Borough Council.<br> You can search for a specific application, applications received or decisions made 
+					in the last seven days, or against different areas. Please note that it is not currently possible to view tree work applications, but these may be inspected at the Civic Offices.</span></span></div>
+			
+<div class="applicationnumbersearch">
+	<span class="searchsectiontitle">
+		<span id="QuickSearchApplicationNumber_Label_SearchApplicationNumber">Search By</span>
+	</span><span class="searchpagetext"><a href="http://www.dorsetforyou.com/index.jsp?articleid=324787&amp;articleaction=1018"
+			title="Application references: this link will open in a new window" target="_blank">
+			<IMG style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px"
+				title="Application references: this link will open in a new window" height="14" alt="More information"
+				src="../images/common/info.gif" width="14"></a>&nbsp;The&nbsp;<A href="http://www.dorsetforyou.com/index.jsp?articleid=324787&amp;articleaction=1018"
+			title="Application references: this link will open in a new window" target="_blank">format 
+			of application references</A>&nbsp;can vary between different authorities.
+		<br>
+		<br>
+	</span><span class="quicksearchleftmostlabel">
+		<span id="QuickSearchApplicationNumber_Label_ApplicationNumber">Application Number</span>
+	</span><span class="quicksearchcriteria">
+		<input name="QuickSearchApplicationNumber:TextBox_ApplicationNumber" type="text" id="QuickSearchApplicationNumber_TextBox_ApplicationNumber" class="searchformcontrol" />
+	</span><span class="quicksearchbutton">
+		<input type="submit" name="QuickSearchApplicationNumber:Button_SearchApplicationNumber" value="Search" id="QuickSearchApplicationNumber_Button_SearchApplicationNumber" class="search" />
+	</span>
+</div>
+
+<div class="weeklysearch">
+	<span class="searchsectiontitle">
+		<span id="QuickSearchThisWeek_Label_SearchThisWeek">Search This Week's</span>
+	</span><span class="quicksearchleftmostlabel">
+		<span id="QuickSearchThisWeek_Label_PastWeek"> Applications or Decisions</span>
+	</span><span class="quicksearchcriteria">
+		<select name="QuickSearchThisWeek:DropDownList_PastWeek" id="QuickSearchThisWeek_DropDownList_PastWeek">
+	<option value="">Please Select...</option>
+	<option value="Applications Made This Week">Applications Made This Week</option>
+	<option value="Decisions Made This Week">Decisions Made This Week</option>
+
+</select>
+	</span><span class="quicksearchbutton">
+		<input type="submit" name="QuickSearchThisWeek:Button_WeeklySearch" value="Search" id="QuickSearchThisWeek_Button_WeeklySearch" class="search" />
+	</span>
+</div>
+
+<div class="detailedsearch"><span class="searchsectiontitle"><span id="DetailedSearch_Label_DetailedSearch">Detailed Search</span></span><span class="searchpagetext"><a title="Help on completing the form: this link will open in a new window" href="http://www.dorsetforyou.com/index.jsp?articleid=324789&amp;articleaction=1018"
+			target="_blank"><IMG title="Help on completing the form: this link will open in a new window" style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px"
+				height="14" alt="More information" src="../images/common/info.gif" width="14"></a>&nbsp;Enter 
+		your search criteria. It is not necessary to enter something in every section 
+		to&nbsp;<A title="Help on completing the form: this link will open in a new window" href="http://www.dorsetforyou.com/index.jsp?articleid=324789&amp;articleaction=1018"
+			target="_blank">complete the form</A>.
+		<br>
+		<br>
+	</span><span class="leftmostlabel">
+		<span id="DetailedSearch_Label_PropertyName">Property Name / Number</span></span><span class="detailedsearchcriteria"><input name="DetailedSearch:TextBox_PropertyNameNumber" type="text" id="DetailedSearch_TextBox_PropertyNameNumber" class="searchformcontrol" /></span><span class="leftmostlabel"><span id="DetailedSearch_Label_StreetName">Street Name</span></span><span class="detailedsearchcriteria"><input name="DetailedSearch:Textbox_StreetName" type="text" id="DetailedSearch_Textbox_StreetName" class="searchformcontrol" /></span><!-- APW seach on Town and Postcode not required... <span class="leftmostlabel">
+		
+	</span><span class="detailedsearchcriteria">
+		
+	</span><span class="leftmostlabel">
+		
+	</span><span class="detailedsearchcriteria">
+		</span> --><span class="leftmostlabel"><span id="DetailedSearch_Label_Parish">Current Ward (from Dec 2002)</span></span><span class="detailedsearchcriteria"><select name="DetailedSearch:DropDownList_Ward" id="DetailedSearch_DropDownList_Ward">
+	<option value="">Please Select...</option>
+	<option value="Burton &amp; Winkton">Burton &amp; Winkton</option>
+	<option value="Grange">Grange</option>
+	<option value="Highcliffe">Highcliffe</option>
+	<option value="Jumpers">Jumpers</option>
+	<option value="Mudeford &amp; Friars Cliff">Mudeford &amp; Friars Cliff</option>
+	<option value="North Highcliffe &amp; Walkford">North Highcliffe &amp; Walkford</option>
+	<option value="Portfield">Portfield</option>
+	<option value="Purewell &amp; Stanpit">Purewell &amp; Stanpit</option>
+	<option value="St Catherine's and Hurn">St Catherine's and Hurn</option>
+	<option value="Town Centre">Town Centre</option>
+	<option value="West Highcliffe">West Highcliffe</option>
+
+</select>
+		<!--<input name="DetailedSearch:Textbox_Parish" type="text" id="DetailedSearch_Textbox_Parish" class="searchformcontrol" />--></span><span class="leftmostlabel"><span id="DetailedSearch_Label_ApplicantSurname">Applicant's Surname</span></span><span class="detailedsearchcriteria"><input name="DetailedSearch:Textbox_ApplicantSurname" type="text" id="DetailedSearch_Textbox_ApplicantSurname" class="searchformcontrol" /></span><span class="leftmostlabel"><span id="DetailedSearch_Label_AgentName">Agent's Name</span></span><span class="detailedsearchcriteria"><input name="DetailedSearch:TextBox_AgentName" type="text" id="DetailedSearch_TextBox_AgentName" class="searchformcontrol" /></span></div>
+<div class="detailedsearchdates"><span class="leftdatelabel"><span id="DetailedSearch_Label_DateReceived">Date Raised</span></span><span class="fromdatelabel"><span id="DetailedSearch_Label_DateReceivedFrom">From&nbsp;</span></span><span class="fromdate"><input name="DetailedSearch:TextBox_DateRaisedFrom" type="text" value="dd/mm/yyyy" id="DetailedSearch_TextBox_DateRaisedFrom" class="searchformdatecontrol" /></span><span class="todatelabel"><span id="DetailedSearch_Label_DateReceivedTo">To&nbsp;</span></span><span class="todate"><input name="DetailedSearch:TextBox_DateRaisedTo" type="text" value="dd/mm/yyyy" id="DetailedSearch_TextBox_DateRaisedTo" class="searchformdatecontrol" /></span><span class="leftdatelabel"><span id="DetailedSearch_Label_DecisionNoticeDate">Decision Notice Date</span></span><span class="fromdatelabel"><span id="DetailedSearch_Label_DecsionFrom">From&nbsp;</span></span><span class="fromdate"><input name="DetailedSearch:TextBox_DecisionFrom" type="text" value="dd/mm/yyyy" id="DetailedSearch_TextBox_DecisionFrom" class="searchformdatecontrol" /></span><span class="todatelabel"><span id="DetailedSearch_Label_DecisionTo">To&nbsp;</span></span><span class="todate"><input name="DetailedSearch:TextBox_DecisionTo" type="text" value="dd/mm/yyyy" id="DetailedSearch_TextBox_DecisionTo" class="searchformdatecontrol" /></span></div>
+<div class="detailedbuttons"><span class="detailedclearbutton"><input type="submit" name="DetailedSearch:Button_DetailedClear" value="Clear" id="DetailedSearch_Button_DetailedClear" class="clear" /></span><span class="detailedsearchbutton">
+		<input type="submit" name="DetailedSearch:Button_DetailedSearch" value="Search" id="DetailedSearch_Button_DetailedSearch" class="search" /></span></div>
+
+			<div class="applicationsearch">
+				<br>
+				<span class="searchpagetext"><a href="http://jigsaw.w3.org/css-validator/"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px"
+							height="31" alt="Valid CSS!" src="../images/common/w3c_valid_css.gif" width="88">
+					</a><a href="http://validator.w3.org/check?uri=referer"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px"
+							height="31" alt="Valid HTML 4.01 Transitional" src="../images/common/w3c_valid_html.gif" width="88"></a>
+				</span>
+			</div>
+			<div class="d4ufooter">
+<table cellSpacing="0" cellPadding="0" width="100%" summary="Page footer">
+	<tr>
+		<td align="center">
+			<div class="hr">
+				<hr>
+			</div>
+			<A class="bottomlinks" accessKey="8" href="http://www.dorsetforyou.com/index.jsp?articleid=2262">
+				Terms and conditions</A> <span class="bottomlinks">&nbsp;|&nbsp;</span> <A class="bottomlinks" accessKey="" href="http://www.dorsetforyou.com/index.jsp?articleid=2263">
+				Privacy Policy</A> <span class="bottomlinks">&nbsp;|&nbsp;</span> <A class="bottomlinks" accessKey="0,0" href="http://www.dorsetforyou.com/index.jsp?articleid=2264">
+				Accessibility</A> <span class="bottomlinks">&nbsp;|&nbsp;</span> <a class="bottomlinks" title="Directgov: this link will open in a new window" onclick="window.open('http://www.direct.gov.uk/'); return false;"
+				href="http://www.direct.gov.uk/">Directgov</a>
+		</td>
+	</tr>
+</table>
+</div>
+			</form>
+	</body>
+</HTML>

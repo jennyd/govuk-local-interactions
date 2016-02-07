@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js">
+<head>
+<meta charset="utf-8" />
+
+  
+  
+  
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <meta name="keywords" content="Home" />
+    
+    <meta name="dcterms.available" content="2014-09-09T14:50:03Z" />
+    <meta name="dc.type" content="Citizen Home" />
+  
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="google-translate-customization" content="c891ed76c3b0235-832d37a42e0942b1-gafa62815664b2abd-11" />
+<title>Barnet Council - barnet.gov.uk</title>
+
+<!--
+TODO: shortcut icon needs setting. Don't re-enable with href="#" as it causes another GET request to be triggered by Chrome.
+<link rel="shortcut icon" type="image/ico" href="#" />
+-->
+
+<link rel="stylesheet" href="/docroot/css/leaflet.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/docroot/css/chosen.min.css" />
+<link rel="stylesheet" href="/docroot/css/jquery.mCustomScrollbar.min.css" />
+
+
+<link rel="stylesheet" href="/docroot/css/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="/docroot/js/jquery-1.11.0.min.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="/docroot/js/jquery-ui.js"></script>
+<script src="/docroot/js/date-picker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/styles.css" media="screen, print" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.date.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.time.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/print.css" media="print" />
+
+
+<script src="/docroot/js/plugins/rem.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+  <script src="/docroot/js/plugins/nwmatcher-1.2.5.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/selectivizr.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/docroot/css/ie8.css" />
+<![endif]-->
+
+<!--[if ! lte IE 6]><!-->
+
+
+<!-- #TODO CBSCH-261 Fixing Foundation Javascript error -->
+<style type="text/css">
+meta.foundation-data-attribute-namespace {
+    font-family: false;
+}
+</style>
+
+<script src="/docroot/js/leaflet.js"></script>
+<script src="/docroot/js/leaflet.markercluster-src.js"></script>
+<script src="/docroot/js/leaflet.markercluster.js"></script>
+
+<script src="/docroot/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/init-behaviour.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.placeholder.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.accordion.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.tab.js" type="text/javascript"></script>
+
+<script src="/docroot/js/scroll.js" type="text/javascript"></script>
+
+<script src="/docroot/js/classie.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery-truncate/jquery.truncate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/modernizr.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/fastclick.js" type="text/javascript"></script>
+
+<script src="/docroot/js/iframeResizer.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.reveal.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/additional-methods.min.js" type="text/javascript"></script>
+
+<script src="https://www.browsealoud.com/plus/scripts/ba.js" type="text/javascript"></script>
+
+<script src="/docroot/js/browse-aloud.js" type="text/javascript"></script>
+
+<script src="/docroot/js/citizenHomePage.js" type="text/javascript"></script>
+<script src="/docroot/js/news/news-carousel.js" type="text/javascript"></script>
+<script src="/docroot/js/plugins/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+<!--<![endif]-->
+<script>
+    /*<![CDATA[*/
+    (function (BCP) {
+        BCP.registerAjaxUrl = '/citizen-home/register/content/column1/singleton.html';
+        BCP.loginAjaxUrl = '/citizen-home/login/content/column1/singleton.html';
+    })(BCP);
+    /*]]>*/
+</script>
+
+<!-- Clickjacking prevention for legacy browsers that don't support X-Frame-Options header -->
+  
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+  
+
+<script>
+
+    /*<![CDATA[*/
+    jQuery(document).ready(function() {
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        var TP_GA = {
+            gaTrackerId : 'UA-60148629-1',
+            auth : false,
+            authDimensionName : 'dimension1'
+        }
+
+        ga('create', TP_GA.gaTrackerId, 'auto');
+        ga('set', 'forceSSL', true);
+
+        if (TP_GA.authDimensionName != '') {
+            ga('set', TP_GA.authDimensionName, TP_GA.auth.toString());
+        }
+
+        ga('send', 'pageview');
+    });
+    /*]]>*/
+</script>
+  
+ 
+
+</head>
+<body id="citizen-home-pg" class="home">
+      
+    <div class="header">
+        <header>
+            <div id="skiptocontent">
+                <a href="#contentskip">Skip to content</a>
+            </div>
+             <span class="barnet-logo column small-3">
+                <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                    Barnet</a>
+                <img class="print-only" src="/docroot/img/barnet-logo-green.png" />
+            </span> 
+             <form class="global-search search-controls service-search large-6 large-offset-1 column" method="GET" action="/citizen-home/search.html">
+                <div class="global-search-input">
+                    <input type="search" name="keywords" title="main-search" />
+                </div>
+                <div class="global-search-submit">
+                    <button type="submit" class="button expand">Search</button>
+                </div>
+            </form> 
+              
+            <div class="user-section">
+                 <div id="129fae96-207a-4482-963b-0578a901db3b">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/branding/user/singleton';
+        var target = '#' + '129fae96-207a-4482-963b-0578a901db3b';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                                {
+                                    pageLanguage : 'en',
+                                    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+                                },
+                                'google_translate_element');
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+            </div>
+              
+            <div class="mobile-nav">
+                <i class="iconfontello-search"></i>
+                <i class="iconfontello-menu"></i>
+            </div>
+        </header>
+    </div>
+      
+      
+      
+    
+      
+      
+      
+    <div class="content">
+        <div class="large-12 small-12 main-content">
+              
+            
+                  
+                  
+                <span class="skip-anchor" id="contentskip"></span>
+                 <main id="main" role="main">
+                    
+                  
+                  
+                 <div class="homepage-search">
+                    <div class="homepage-search-image"></div>
+                    <div class="row">
+                        <!--  *** home-home-salutation text set by script *** -->
+                        <div class="large-8 small-12 column home-salutation">
+                            <h2>Hi. How can we help?</h2>
+                            <form class="search-controls service-search clearfix" method="GET" action="/citizen-home/search.html">
+                                <div class="global-search-input">
+                                    <input id="search-terms" type="search" title="main-search" name="keywords" />
+                                </div>
+                                <div class="global-search-submit">
+                                    <button id="btn_search" type="submit" class="button expand">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                         <div id="popular_search" class="large-4 small-12 column popular">
+                            <h3>Popular searches</h3>
+                            <ul id="popular_search_list" class="popular-search-list no-bullet">
+                                <li class="medium-6 large-12 column">
+                                     <a href="https://www.barnet.gov.uk/citizen-home/parking-roads-and-pavements/parking/parking-permits.html">Parking permits </a> 
+                                </li>
+                                <li class="medium-6 large-12 column">
+                                     <a href="https://www.barnet.gov.uk/citizen-home/libraries/library-events/Barnet-Libraries-Festival-2016.html">Library Festival: 6-21 Feb 2016</a> 
+                                </li>
+                                <li class="medium-6 large-12 column">
+                                     <a href="https://ask.barnet.gov.uk/citizen/my-account/my-account-registration">Register for My Account</a> 
+                                </li>
+                                <li class="medium-6 large-12 column">
+                                     <a href="https://www.barnet.gov.uk/citizen-home/jobs-and-careers.html">Jobs and careers - working for Barnet</a> 
+                                </li>
+                                
+                                
+                                
+                            </ul>
+                        </div> 
+                    </div>
+                </div> 
+                <div class="row funnels-container">
+                      
+                    <div class="medium-3 small-12 column option">
+                        <a href="/citizen-home/council-and-democracy/pay-for-it-now.html"><h3 class="option-title">Payments</h3></a>
+                        <a href="/citizen-home/council-and-democracy/pay-for-it-now.html" class="option-icon" id="btn_payments"> <img height="60" width="60" src="/docroot/img/icon-payments.png" alt="option image" />
+                        </a>
+                        <p>
+                            Includes
+                               
+                             
+                            <a href="/citizen-home/parking-roads-and-pavements/parking/parking-tickets-pcn.html" class="internal-link">Pay for a parking ticket (PCN)</a>
+                            
+                            
+                            
+                             
+                            <span>,&nbsp;</span>
+                             
+                               
+                             
+                            <a href="/citizen-home/parking-roads-and-pavements/parking/parking-permits.html" class="internal-link">Apply for or renew a parking permit</a>
+                            
+                            
+                            
+                             
+                            <span>,&nbsp;</span>
+                             
+                               
+                             
+                            <a href="/citizen-home/council-tax-and-benefits/council-tax/pay-council-tax.html" class="internal-link">Pay your council tax</a>
+                            
+                            
+                            
+                             
+                            
+                              
+                               
+                            and
+                            <a href="/citizen-home/council-and-democracy/pay-for-it-now.html">more</a>...
+                              
+                        </p>
+                    </div>
+                      
+                      
+                    <div class="medium-3 small-12 column option">
+                        <a href="/citizen-home/council-and-democracy/report-it-now.html"><h3 class="option-title">Problems</h3></a>
+                        <a href="/citizen-home/council-and-democracy/report-it-now.html" class="option-icon" id="btn_problems"> <img height="60" width="60" src="/docroot/img/icon-problem.png" alt="option image" />
+                        </a>
+                        <p>
+                            Includes
+                               
+                             
+                            <a href="/citizen-home/rubbish-waste-and-recycling/forms/report-non-collection.html" class="internal-link">Missed bin collection</a>
+                            
+                            
+                            
+                             
+                            <span>,&nbsp;</span>
+                             
+                               
+                             
+                            <a href="/citizen-home/environmental-health/noise.html" class="internal-link">Report a noise nuisance</a>
+                            
+                            
+                            
+                             
+                            <span>,&nbsp;</span>
+                             
+                               
+                             
+                            <a href="/citizen-home/report-a-problem.html" class="internal-link">Report a problem</a>
+                            
+                            
+                            
+                             
+                            <span>,&nbsp;</span>
+                             
+                               
+                             
+                            <a href="/citizen-home/schools-and-education/school-admissions.html" class="internal-link">School admissions</a>
+                            
+                            
+                            
+                             
+                            
+                              
+                               
+                            and
+                            <a href="/citizen-home/council-and-democracy/report-it-now.html">more</a>...
+                              
+                        </p>
+                    </div>
+                      
+                      
+                    <div class="medium-3 small-12 column option">
+                        <a href="/citizen-home/council-and-democracy/apply-for-it-now.html"><h3 class="option-title">Requests</h3></a>
+                        <a href="/citizen-home/council-and-democracy/apply-for-it-now.html" class="option-icon" id="btn_requests"> <img height="60" width="60" src="/docroot/img/icon-requests.png" alt="option image" />
+                        </a>
+                        <p>
+                            Includes
+                               
+                             
+                            <a href="/citizen-home/planning-conservation-and-building-control/submit-a-planning-application/view-or-comment-on-a-planning-application.html" class="internal-link">Planning applications: view or comment</a>
+                            
+                            
+                            
+                             
+                            <span>,&nbsp;</span>
+                             
+                               
+                             
+                            <a href="/citizen-home/adult-social-care/advice-and-support/transport-options/blue-badge-parking-permits.html" class="internal-link">Blue Badge disabled parking</a>
+                            
+                            
+                            
+                             
+                            <span>,&nbsp;</span>
+                             
+                               
+                             
+                            <a href="/citizen-home/council-tax-and-benefits/council-tax/council-tax-banding-and-valuation.html" class="internal-link">Council tax bands</a>
+                            
+                            
+                            
+                             
+                            
+                              
+                               
+                            and
+                            <a href="/citizen-home/council-and-democracy/apply-for-it-now.html">more</a>...
+                              
+                        </p>
+                    </div>
+                      
+                      
+                    <div class="medium-3 small-12 column option">
+                        <a href="/citizen-home/council-and-democracy/General-information0.html"><h3 class="option-title">Information</h3></a>
+                        <a href="/citizen-home/council-and-democracy/General-information0.html" class="option-icon" id="btn_information"> <img height="60" width="60" src="/docroot/img/icon-information.png" alt="option image" />
+                        </a>
+                        <p>
+                            Includes
+                               
+                             
+                            <a href="/citizen-home/schools-and-education/schools-and-colleges/barnet-school-term-and-holiday-dates.html" class="internal-link">School term and holiday dates</a>
+                            
+                            
+                            
+                             
+                            <span>,&nbsp;</span>
+                             
+                               
+                             
+                            <a href="/citizen-home/children-young-people-and-families/childcare.html" class="internal-link">How to find childcare</a>
+                            
+                            
+                            
+                             
+                            <span>,&nbsp;</span>
+                             
+                               
+                             
+                            <a href="/citizen-home/libraries/library-opening-times.html" class="internal-link">Library opening times</a>
+                            
+                            
+                            
+                             
+                            <span>,&nbsp;</span>
+                             
+                               
+                             
+                            <a href="/citizen-home/rubbish-waste-and-recycling/household-recycling-and-waste/bin-collection-dates.html" class="internal-link">Bin collection dates</a>
+                            
+                            
+                            
+                             
+                            
+                              
+                               
+                            and
+                            <a href="/citizen-home/council-and-democracy/General-information0.html">more</a>...
+                              
+                        </p>
+                    </div>
+                      
+                </div>
+                 <section class="section section--news row">
+                    <div id="news-title" class="news-title"><h3>Stay up to date with the council&#39;s <a href="/citizen-home/news.html">news and features</a> and <a href="http://engage.barnet.gov.uk">consultations on local issues</a></h3></div>
+                    <div class="large-9 small-12 carousel-container column">
+                         <div id="news_carousel" class="carousel">
+                      
+                    <ul id="news_carousel_list" class="carousel--item-wrap">
+                        <li id="news_carousel_item_1" class="carousel--item is-active" data-image-src="/dam/jcr:d6fcd196-8505-4dfe-9830-534e6c1a8f42/Library%20books%20on%20shelves.jpg">
+                            <h3 class="carousel--item-title">
+                                <a href="/citizen-home/news/Barnet-Libraries-Festival-2016.html">Barnet Libraries Festival 2016</a>
+                            </h3>
+                            <div class="carousel--item-bd">
+                                <p>A packed fortnight of reading related fun will get underway this weekend with the start of the 2016 Barnet Libraries Festival.</p>
+                            </div>
+                        </li>
+                        <li id="news_carousel_item_2" class="carousel--item" data-image-src="/dam/jcr:8711d382-5dc9-491e-a193-29f767a651a7/Teaching%20Fair%2003.jpg">
+                            <h3 class="carousel--item-title">
+                                <a href="/citizen-home/news/Showcasing-teaching-in-Barnet.html">Showcasing teaching in Barnet</a>
+                            </h3>
+                            <div class="carousel--item-bd">
+                                <p>Barnet Council has hosted a fair showcasing teaching in the borough for Newly Qualified Teachers (NQTs) and people looking to pursue a career in the profession.</p>
+                            </div>
+                        </li>
+                        <li id="news_carousel_item_3" class="carousel--item last" data-image-src="/dam/jcr:3ed430f3-6fe4-4e21-ac17-20aafddde23c/pile%20of%20pound%20coins.jpg" data-image-caption="pile of gold pound coins">
+                            <h3 class="carousel--item-title">
+                                <a href="/citizen-home/news/Benefit-cheat-ordered-to-pay--90-000.html">Benefit cheat ordered to pay £90,000</a>
+                            </h3>
+                            <div class="carousel--item-bd">
+                                <p>A businessman jailed for illegally claiming thousands of pounds in benefits has been ordered by the courts to pay out £90,000 in confiscation and compensation payments...</p>
+                            </div>
+                        </li>
+                        
+                        
+                    </ul>
+                    <div id="carousel_img" class="carousel--img">
+                        <img id="news-bg-img" src="/dam/jcr:d6fcd196-8505-4dfe-9830-534e6c1a8f42/Library%20books%20on%20shelves.jpg" height="400" width="800" />
+                    </div>
+                      
+                      
+                </div> 
+                    </div>
+                     <div class="large-3 small-12 column consultations-container">
+                        <div class="consultations-content large-12 medium-8 columns">
+                            <p>Featured Consultation</p>
+                            <h4><a href="https://engage.barnet.gov.uk/commissioning-group/barnet-budget-consultation-2016-2017">General Budget Consultation 2016/17</a></h4>
+                            <div id="consultation-text" class="consultation-text"><p>Have your say on the council&rsquo;s Budget for 2016/17.</p>
+</div>
+                            <span class="consultation-ends">Ends on 12 February 2016</span>
+                            
+                            <hr />
+                        </div>
+
+                        <div class="consultations-more large-12 medium-4 columns">
+                            <a href="http://engage.barnet.gov.uk">All consultations</a>
+                            <a href="http://engage.barnet.gov.uk/we_asked_you_said">Recent responses</a>
+                        </div>
+                    </div> 
+                </section> 
+                <section class="section row">
+                     <div id="2d3fb348-299d-4323-96c3-5d25cef319c7">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/content/twitter/singleton';
+        var target = '#' + '2d3fb348-299d-4323-96c3-5d25cef319c7';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                </section>
+                 <div id="home_service" class="services">
+                    <div class="row service-a-z">
+                        <a href="" class="button left active" id="serviceAreaLink">Service areas</a>
+                        <nav id="popularServicesNav" class="a-z button right">
+                            <ul>
+                                <li><a id="popularServices" href="#">Popular services</a></li>
+                                  
+                                <li>
+                                    <a href="/citizen-home/popular/a" class="active">A</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/b">B</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/c">C</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/d">D</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/e">E</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/f">F</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/g">G</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/h">H</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/i">I</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/j">J</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/k">K</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/l">L</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/m">M</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/n">N</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/o">O</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/p">P</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/q">Q</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/r">R</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/s">S</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/t">T</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/u">U</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/v">V</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/w">W</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/x">X</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/y">Y</a>
+                                </li> 
+                                <li>
+                                    <a href="/citizen-home/popular/z">Z</a>
+                                </li>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                  
+                            </ul>
+                        </nav>
+                    </div>
+                    <div id="serviceAreaLinks" class="row clear">
+                        <span class="service-title-mob">Service areas</span>
+                        <i class="iconfontello-minus right"></i>
+                          
+                        <ul class="large-3 small-12 column">
+                            <li>
+                                 
+                            <a href="/citizen-home/rubbish-waste-and-recycling.html" class="internal-link">Rubbish, waste and recycling</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            <li>
+                                 
+                            <a href="/citizen-home/planning-conservation-and-building-control.html" class="internal-link">Planning, conservation and building control</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            <li>
+                                 
+                            <a href="/citizen-home/schools-and-education.html" class="internal-link">Schools and education</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            <li>
+                                 
+                            <a href="/citizen-home/council-tax-and-benefits.html" class="internal-link">Council tax and benefits</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            
+                            
+                            
+                            
+                        </ul> 
+                        <ul class="large-3 small-12 column">
+                            <li>
+                                 
+                            <a href="/citizen-home/libraries.html" class="internal-link">Libraries</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            <li>
+                                 
+                            <a href="/citizen-home/children-young-people-and-families.html" class="internal-link">Children, young people and families</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            <li>
+                                 
+                            <a href="/citizen-home/parking-roads-and-pavements.html" class="internal-link">Parking, roads and pavements</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            <li>
+                                 
+                            <a href="/citizen-home/housing-and-community.html" class="internal-link">Housing and Community</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            
+                            
+                            
+                            
+                        </ul> 
+                        <ul class="large-3 small-12 column">
+                            <li>
+                                 
+                            <a href="/citizen-home/adult-social-care.html" class="internal-link">Adult social care</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            <li>
+                                 
+                            <a href="/citizen-home/council-and-democracy.html" class="internal-link">Council and democracy</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            <li>
+                                 
+                            <a href="/citizen-home/births-deaths-marriages-and-nationality.html" class="internal-link">Births, deaths, marriages and nationality</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            <li>
+                                 
+                            <a href="/citizen-home/parks-sport-and-leisure.html" class="internal-link">Parks, sport and leisure</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            
+                            
+                            
+                            
+                        </ul> 
+                        <ul class="large-3 small-12 column">
+                            <li>
+                                 
+                            <a href="/citizen-home/public-health.html" class="internal-link">Public health</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            <li>
+                                 
+                            <a href="/citizen-home/business.html" class="internal-link">Business</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            <li>
+                                 
+                            <a href="/citizen-home/regeneration.html" class="internal-link">Regeneration</a>
+                            
+                            
+                            
+                              
+                            </li>
+                            
+                            
+                            
+                            
+                            
+                        </ul>
+                        
+                        
+                        
+                          
+                    </div>
+                    <div id="azservices" class="row clear">
+                          
+                          
+                        <ul class="small-3 column">
+                            <li><a href="/citizen-home/parking-roads-and-pavements/abandoned-vehicles.html" class="internal-link">Abandoned vehicles</a></li>
+                            <li><a href="/citizen-home/adult-social-care/About-adult-social-care.html" class="internal-link">About adult social care </a></li>
+                            <li><a href="/citizen-home/parks-sport-and-leisure/activities-for-young-people.html" class="internal-link">Activities for young people</a></li>
+                            
+                            
+                            
+                            
+                        </ul> 
+                        <ul class="small-3 column">
+                            <li><a href="/citizen-home/adult-social-care.html" class="internal-link">Adult social care</a></li>
+                            <li><a href="/citizen-home/adult-social-care/advice-and-support.html" class="internal-link">Advice and support</a></li>
+                            <li><a href="/citizen-home/Downloads/application-to-reregister-a-childs-birth.html" class="internal-link">Application to Re-register a Child&#039;s Birth</a></li>
+                            
+                            
+                            
+                            
+                        </ul> 
+                        <ul class="small-3 column">
+                            <li><a href="/citizen-home/council-and-democracy/apply-for-it-now.html" class="internal-link">Apply for it now</a></li>
+                            <li><a href="/citizen-home/council-and-democracy/area-committee-budgets---guidance-on-applications.html" class="internal-link">Area Committee Budgets - Guidance on applications</a></li>
+                            <li><a href="/citizen-home/parks-sport-and-leisure/arts-and-entertainment.html" class="internal-link">Arts and entertainment</a></li>
+                            
+                            
+                            
+                            
+                        </ul> 
+                        <ul class="small-3 column">
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        </ul>
+                        
+                        
+                        
+                          
+                    </div>
+                </div> 
+              
+                </main> 
+                
+                  
+                
+            
+        </div>
+        
+          
+    </div>
+      
+      
+    <footer>
+          
+          
+        <div class="govmetric-footer">
+            <div class="gm-footer-container large-12 row">
+                <div class="medium-8 column">
+                      
+        <nav class="footer-nav clearfix row">
+            <ul class="footer-links left">
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html" class="internal-link">Contact us</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/copyright.html" class="internal-link">Copyright</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/privacy.html" class="internal-link">Privacy notice</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" class="internal-link">Accessibility</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Disclaimer.html" class="internal-link">Disclaimer</a>
+                            
+                            
+                            
+                             </li>
+                
+                
+                
+                
+                
+                
+            </ul>
+            <ul class="social-icons right">
+                <li><a href="https://www.gov.uk/"><img height="18" width="90" src="/docroot/img/gov-uk-logo.png" alt="gov uk logo" /></a></li>
+                <li><a href="https://www.flickr.com/photos/barnetcouncil"><i class="flaticon-flickr"></i></a></li>
+                <li><a href="https://twitter.com/barnetcouncil"><i class="flaticon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/BarnetCouncil"><i class="flaticon-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/user/Barnetcouncil1"><i class="flaticon-youtube"></i></a></li>
+                <li class="browse-aloud-icon"><a id="show-browsealoud" title="Listen with BrowseAloud"><img src="/docroot/img/browse-aloud-logo.png" alt="Listen with BrowseAloud" /></a></li>
+            </ul>
+        </nav>
+        <div class="site-footer">
+            <div class="row">
+                <span class="barnet-logo right">
+                    <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                        Barnet</a>
+                </span>
+            </div>
+        </div>
+          
+                </div>
+                
+                <div class="medium-4 column">
+                      
+                <section class="gm_sidebar row">
+                    <div class="gm-container">
+                        <div class="rate-page">
+                            <i class="iconfontello-thumbs-up"></i>
+                            <p>Rate this page</p>
+                        </div>
+                        <div class="rating-options">
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=3" target="_blank" title="rate this page as GOOD" rel="nofollow">
+                                <img src="/docroot/img/govmetric/smiling.png" alt="green smiley (good)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=2" target="_blank" title="rate this page as AVERAGE" rel="nofollow">
+                                <img src="/docroot/img/govmetric/indifferent.png" alt="orange smiley (average)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=4" target="_blank" title="rate this page as POOR" rel="nofollow">
+                                <img src="/docroot/img/govmetric/sad.png" alt="red smiley (poor)" />
+                            </a>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+                    <script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+                    <script type="text/javascript" src="//hitcounter.govmetric.com/982"></script>
+                </section>
+                  
+                </div>
+            </div>
+            <div class="site-footer">
+                <div class="row">
+                    <span class="barnet-logo right">
+                        <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                            Barnet</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+          
+    </footer>
+      
+    <script src="/docroot/js/plugins/retina.min.js" type="text/javascript"></script>
+    <script src="/docroot/js/plugins/chosen.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery("#ordering-download-form select").chosen();
+    jQuery(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+</body>
+</html>

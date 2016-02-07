@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+   <title>PCN Payments - Brighton &amp; Hove City Council</title>
+   <link rel="stylesheet" type="text/css" href="/css/global.css"/>
+   <link rel="stylesheet" href="/brightonandhove/brighton.css" type="text/css"/>
+   <link rel="stylesheet" href="/brightonandhove/main.css" type="text/css"/>
+   <link rel="stylesheet" href="/brightonandhove/brightonPrint.css" type="text/css" media="print"/>
+ 	<link rel="shortcut icon" href="/brightonandhove/favicon.ico"/>
+ 	
+ 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+	<script type="text/javascript" src="/brightonandhove/jqueryPageFooter.js"></script>
+				<style type="text/css">
+			body {font-size:12px;}	
+			#azNav{background:#DBEEFF url('/brightonandhove/bg-az.gif') no-repeat left top !important;}
+			</style>
+				<script type="text/javascript">
+	function setcookie(c_name,value,exdays){
+	var exdate=new Date();
+	exdate.setDate(exdate.getDate() + exdays);
+	var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+	document.cookie=c_name + "=" + c_value;
+	}
+	
+	$(document).ready(function(){
+		$('#textSizeNormal').click(function() {
+			$('body').css('font-size', '12px');
+			$('#searchBox').css('background', "#DBEEFF url('/brightonandhove/bg-search.gif') no-repeat left top");			
+			$('#azNav').css('background', "#DBEEFF url('/brightonandhove/bg-az.gif') no-repeat left top");			
+			setcookie('TxTSize','normal',365);
+			return false;
+		});
+		$('#textSizeLarge').click(function() {
+			$('body').css('font-size', '14px');
+			$('#searchBox').css('background', "#DBEEFF url('/brightonandhove/bg-search_large.gif') no-repeat left top");			
+			$('#azNav').css('background', "#DBEEFF url('/brightonandhove/bg-az_large.gif') no-repeat left top");
+			setcookie('TxTSize','large',365);
+			return false;
+		});	
+		$('#textSizeXL').click(function() {
+			$('body').css('font-size', '16px');
+			$('#searchBox').css('background', "#DBEEFF url('/brightonandhove/bg-search_large.gif') no-repeat left top");			
+			$('#azNav').css('background', "#DBEEFF url('/brightonandhove/bg-az_large.gif') no-repeat left top");
+			setcookie('TxTSize','XL',365);
+			return false;
+		});	
+	});
+	</script>
+	
+ </head>
+  <body>
+    <div id="header">     
+        
+        
+        
+        
+      <div id="menu-background">
+      <div id="banner-links"> 
+        <a href="#" id="textSizeNormal"><img src="/brightonandhove/textsize-normal.gif" alt="standard sized text" /></a>
+		<a href="#" id="textSizeLarge"><img src="/brightonandhove/textsize-large.gif" alt="large sized text" /></a>
+		<a href="#" id="textSizeXL"><img src="/brightonandhove/textsize-extralarge.gif" alt="extra-large sized text" /></a>
+     	</div>
+      </div>
+      <div id="banner">
+           <div class="branding-banner-container">
+        <h1 id="bannerImageTitle">Parking</h1>
+        </div>
+          
+      </div>
+      <div id="logo">
+        <a href="http://www.brighton-hove.gov.uk/">
+          <img src="/brightonandhove/squares_logo.png" alt="Brighton and Hove Council home page" />
+        </a>
+      </div>
+      <div id="main-menu">
+        <ul>
+          <li><a href="http://www.brighton-hove.gov.uk/">Home</a></li>
+          <li><a href="http://www.brighton-hove.gov.uk/a-z/all">Services A-Z</a></li>
+          <li><a href="http://www.brighton-hove.gov.uk/content/council-and-democracy/contact-brighton-hove-city-council">Contact us</a></li>
+          <li><a href="http://www.brighton-hove.gov.uk/content/environment/maps">Maps</a></li>
+          <li class="last-item"><a href="http://www.brighton-hove.gov.uk/content/about-website/help/accessibility">Accessibility</a></li>
+        </ul>
+         </div>
+         
+    </div>
+      
+      
+    <div id="page"><br></br>  
+        
+       
+        
+        <div id="leftColumn">
+		 <div id="leftColumnContainer"></div> 
+	</div>
+    <div id="rightColumn">
+		<div class="rightColumnContainer"></div>
+	</div>
+	<div id="centreColumn">
+		<div class="contentRow">
+		
+	<ul id="progress" style="margin-top: 0">
+		<li id="current"><strong>Welcome</strong></li>
+			<li>Enter Details</li>
+			<li>Confirmation</li>
+			<li>Checkout</li>
+			<li>Finish</li>
+	</ul><div class='clear'></div>
+<br class='tflclear'/>
+<h1 id="title">Pay your Penalty Charge Notice online </h1>
+		<div id="feedback">
+		</div>
+	<div id="help">
+			</div><!-- //help -->
+	
+		<div id="wrapper">
+			<div id="content">
+				<div id="body-wrapper">Welcome to the Brighton and Hove Councils Penalty Charge Notice payment system. 
+
+Before proceeding please ensure that you have:
+
+<ul><li>The notice number.  </li>
+<li>Your vehicle registration number.  </li>
+<li>A valid credit or debit card.      </li></ul>
+This service will accept Visa, Mastercard, Maestro, Electron and American Express.</div><div class="payment-methods" style="text-align:center"><br />
+<img src="/images/mastercard.gif" alt="Mastercard"/>
+<img src="/images/visa.gif" alt="Visa" />
+<img src="/images/electron.gif" alt="Electron" />
+<br><br><img src="/images/amex.gif" alt="American Express" />
+</div>
+
+<form  action="/brightonandhove" method="post" id="WebPayProduct">
+    <p><input name="fund" type="hidden" value="2009" /></p>
+	<div class="formbuttonrow">
+		<input class="button" name="_qf_WebPayProduct_next" value="Next &gt;" type="submit" />
+	</div>
+	<div id="required" class="required"></div>
+</form>	       <div class="horizontalRule">
+	      	  <hr></hr>
+		   </div>
+	     </div>
+	   </div>
+	 </div>
+   </div>
+  <div id="footer">  
+      <div id="footer-wrapper">
+        <div id="footer-inner">
+          <div class="footer-section">
+            <a href="http://www.brighton-hove.gov.uk/contact" id="contact-btn"><img src="/brightonandhove/arrow.png" alt="Contact us" />Contact us</a>
+          </div>
+          <div class="footer-section">
+            <span id="footer-address-title">Brighton &amp; Hove City Council</span><br />
+            Kings House<br />
+            Grand Avenue<br />
+            BN3 2LS<br />
+            Tel: (01273) 290000<br />
+            <a id="contact-email" href="mailto:info@brighton-hove.gov.uk">info@brighton-hove.gov.uk</a>
+          </div>
+          <div class="footer-section">
+            <a class="social-link" href="http://twitter.com/BrightonHovecc" title="Visit Brighton &amp; Hove City Council on Twitter"><img src="/brightonandhove/twitter.png" alt="Follow us on Twitter" /></a>
+            <a class="social-link" href="http://www.facebook.com/BrightonandHoveCityCouncil" title="Visit Brighton &amp; Hove City Council on Facebook"><img src="/brightonandhove/facebook.png" alt="Add us on Facebook" /></a>
+          </div>
+          <div class="footer-section">
+            <a class="social-link" href="http://www.flickr.com/photos/brightonhovecitycouncil" title="Visit Brighton &amp; Hove City Council on Flickr"><img src="/brightonandhove/flickr.png" alt="See us on Flickr" /></a>
+            <a class="social-link" href="http://www.youtube.com/user/BrightonandHoveGovUk?gl=GB&amp;hl=en-GB" title="Visit Brighton &amp; Hove City Council on Facebook"><img src="/brightonandhove/youtube.png" alt="Watch us on YouTube" /></a>
+          </div>
+        </div>
+      </div>
+      <div id="privacy-info">
+        <a href="http://www.brighton-hove.gov.uk/content/home/privacy-and-cookies">Cookies, privacy and legal information.</a>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

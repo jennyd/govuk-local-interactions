@@ -1,0 +1,738 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head id="ctl00_headTag"><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /><title>
+
+</title>
+
+    <script src="../../../assets/js/jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="../../../assets/js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+    
+    <script language="javascript" type="text/javascript">
+        
+            function SetValidators() 
+            {
+                var anonCheckbox = document.getElementById('ctl00_ContentPlaceHolder1_UserDetailsControl1_chkAnonymousReporting');
+
+                if (anonCheckbox.checked) 
+                {
+                    ValidatorEnable(document.getElementById('ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_emailRequiredValidator'), false);
+                    ValidatorEnable(document.getElementById('ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_phoneRequiredValidator'), false);
+                    ValidatorEnable(document.getElementById('ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_phoneRegexValidator'), false);
+                    ValidatorEnable(document.getElementById('ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_mobileRegexValidator'), false);
+                }
+            }
+
+    </script>
+
+
+
+    <script type="text/javascript">
+
+
+        //stops page scrolling to to due to presence of ValidationSummary
+        window.scrollTo = function() { } 
+
+        function MaxLength(txt,maxLen) {
+            // if length of textbox value is greater than maxlength then return false.
+            if(txt.value.length > (maxLen-1))
+                return false;
+        }
+        
+    </script>
+            
+    <link rel="stylesheet" type="text/css" href="../../../nsc/nsc.css" />
+ 
+    <link href="../../../assets/css/blitzer/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" /> 
+    
+<link href="../../../App_Themes/WebSelfServiceClassic/Stylesheet.css" type="text/css" rel="stylesheet" /><link href="../../../App_Themes/WebSelfServiceClassic/tab.css" type="text/css" rel="stylesheet" /></head>
+<body>
+
+    	<script type="text/javascript" src="/nsc/scripts/ffoxfix.js"></script> 
+
+	<div class="page-wrapper">
+
+		<!-- TOP BANNER -->
+    <div class="header">
+     <a href="http://www.n-somerset.gov.uk" class="homelink"></a>
+        <div id="toppanel">
+            <div id="toppanel-left">
+                <div class="extra-links">
+                    <a href="#maincontent" title="Skip navigation">Skip navigation</a>&nbsp;&nbsp;&nbsp;
+                    <a id="contactUsLink" href="http://www.n-somerset.gov.uk/Your_Council/Communication_and_Information/Pages/Website-accessibility.aspx">Accessibility</a>&nbsp;&nbsp;
+                    <a id="faqLink" href="http://www.n-somerset.gov.uk/Pages/FAQ.aspx">FAQs</a>&nbsp;&nbsp;Text size:
+                    <a id="fontInc" class="fontsize" onclick="javascript:resizeText(1);">A+</a> /
+                    <a id="fontDec" class="fontsize" onclick="javascript:resizeText(-1);">A-</a>&nbsp;&nbsp; 
+                </div>
+                <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    //<![CDATA[
+                        function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({
+                                pageLanguage: 'en',
+                                autoDisplay: false,
+                                gaTrack: true,
+                                layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+                            }, 'google_translate_element');
+                        }
+                    //]]>
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+                <div id="toppanel-right">
+                </div>
+            </div>
+        </div>
+
+		<div class="main">
+
+		<div class="main">
+			
+			<!-- CENTRE AND RIGHT COLUMN -->
+			<div class="leftandcentrecol">
+
+				<!-- LEFT COLUMN -->
+				<div>
+
+					<!-- CENTRE COLUMN -->
+					<div class="centrecol">
+						<div class="breadcrumb">
+						
+						</div>
+									
+						<a name="maincontent" id="maincontent"></a><form name="aspnetForm" method="post" action="HighwayMaintenanceForm.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1NTY3MjE3NTMPZBYCZg9kFgICBA9kFgICAw9kFgICAQ9kFgYCAQ9kFgQCBQ9kFgICAQ9kFgQCAQ8QD2QWAh4Hb25jbGljawUZbG9vcEFycmF5KHZhbGlkYXRvckFycmF5KWRkZAIDD2QWBAIBD2QWDgIDDxAPFgIeC18hRGF0YUJvdW5kZ2QQFQsQUGxlYXNlIHNlbGVjdC4uLgJNcgNNcnMETWlzcwJNcwJEcgNSZXYDU2lyBExhZHkETG9yZAREYW1lFQsCLTECTXIDTXJzBE1pc3MCTXMCRHIDUmV2A1NpcgRMYWR5BExvcmQERGFtZRQrAwtnZ2dnZ2dnZ2dnZ2RkAhsPDxYCHgxFcnJvck1lc3NhZ2UFRCogQ29udGFjdCBudW1iZXIgcmVxdWlyZWQgdG8gcHJvdmlkZSB0aGUgZmVlZGJhY2sgeW91IGhhdmUgcmVxdWVzdGVkZGQCHQ8PFgIfAgU9KiBQbGVhc2UgZW50ZXIgYSB2YWxpZCBtb2JpbGUgbnVtYmVyIHRvIHJlY2lldmUgdGV4dCBmZWVkYmFja2RkAh8PDxYCHgdFbmFibGVkaGRkAiEPDxYCHgdWaXNpYmxlaGRkAiMPDxYCHwRnZGQCJw8PFgQfAgVhKiBQbGVhc2UgYmUgYXdhcmUgdGhhdCB3aXRob3V0IGFuIGVtYWlsIGFkZHJlc3Mgd2UgY2Fubm90IHByb3ZpZGUgeW91IHdpdGggYW4gdXBkYXRlIG9uIHRoZSBpc3N1ZR8DZ2RkAgMPZBYGAgEPZBYGAgcPDxYCHg9WYWxpZGF0aW9uR3JvdXAFN01vZGFsQWRkcmVzc1NlYXJjaENvbnRyb2xNYWluMU1vZGFsUG9wVXBWYWxpZGF0aW9uR3JvdXBkZAINDw8WAh8FBTdNb2RhbEFkZHJlc3NTZWFyY2hDb250cm9sTWFpbjFNb2RhbFBvcFVwVmFsaWRhdGlvbkdyb3VwZGQCDw8PFgIfBQU3TW9kYWxBZGRyZXNzU2VhcmNoQ29udHJvbE1haW4xTW9kYWxQb3BVcFZhbGlkYXRpb25Hcm91cGRkAgMPFgQeCkJlaGF2aW9ySUQFI01vZGFsQWRkcmVzc1NlYXJjaENvbnRyb2xNYWluMXBvcHVwHwNoZAIFDw8WAh8EaGQWAgIBD2QWAgIBD2QWAgIDD2QWAgIDDxBkZBYAZAIHD2QWDgIDDxAPFgIfAWdkEBUGEFBsZWFzZSBzZWxlY3QuLi4QUmVwb3J0IGEgcG90aG9sZR5SZXBvcnQgYSBtYW5ob2xlIGNvdmVyIHByb2JsZW0jUmVwb3J0IGEgc3BpbGxhZ2UgLyBtdWQgb24gdGhlIHJvYWQlUmVwb3J0IG90aGVyIHJvYWQgb3IgcGF2ZW1lbnQgcHJvYmxlbRdSZXBvcnQgcm9hZCBkcmFpbiBpc3N1ZRUGAi0xEFJlcG9ydCBhIHBvdGhvbGUeUmVwb3J0IGEgbWFuaG9sZSBjb3ZlciBwcm9ibGVtI1JlcG9ydCBhIHNwaWxsYWdlIC8gbXVkIG9uIHRoZSByb2FkJVJlcG9ydCBvdGhlciByb2FkIG9yIHBhdmVtZW50IHByb2JsZW0XUmVwb3J0IHJvYWQgZHJhaW4gaXNzdWUUKwMGZ2dnZ2dnFgFmZAIJD2QWAgIBD2QWBAIBDw9kFgIeBXN0eWxlBQ1kaXNwbGF5Om5vbmU7ZAICDw9kFgIeBGhyZWYFASNkAgsPZBYGAgMPEA8WAh8BZ2QQFQMQUGxlYXNlIHNlbGVjdC4uLgRSb2FkCFBhdmVtZW50FQMCLTEEUm9hZAhQYXZlbWVudBQrAwNnZ2cWAWZkAgcPZBYGAgMPEA8WAh8BZ2QQFQQQUGxlYXNlIHNlbGVjdC4uLhdPbiB0aGUgZWRnZSBvZiB0aGUgcm9hZBlJbiB0aGUgY2VudHJlIG9mIHRoZSByb2FkE0luIHRoZSB3aGVlbCB0cmFja3MVBAItMRdPbiB0aGUgZWRnZSBvZiB0aGUgcm9hZBlJbiB0aGUgY2VudHJlIG9mIHRoZSByb2FkE0luIHRoZSB3aGVlbCB0cmFja3MUKwMEZ2dnZxYBZmQCDw8QDxYCHwFnZBAVBBBQbGVhc2Ugc2VsZWN0Li4uNU5vIGxhcmdlciB0aGFuIGEgZGlubmVyIHBsYXRlICh1cCB0byAzMGNtIC8gMTJpbmNoZXMpMU5vIGxhcmdlciB0aGFuIGEgY2FyIHR5cmUgKHVwIHRvIDYwY20gLyAyNGluY2hlcyktTGFyZ2VyIHRoYW4gYSBjYXIgdHlyZSAob3ZlciA2MGNtIC8gMjRpbmNoZXMpFQQCLTE1Tm8gbGFyZ2VyIHRoYW4gYSBkaW5uZXIgcGxhdGUgKHVwIHRvIDMwY20gLyAxMmluY2hlcykxTm8gbGFyZ2VyIHRoYW4gYSBjYXIgdHlyZSAodXAgdG8gNjBjbSAvIDI0aW5jaGVzKS1MYXJnZXIgdGhhbiBhIGNhciB0eXJlIChvdmVyIDYwY20gLyAyNGluY2hlcykUKwMEZ2dnZxYBZmQCFQ8QDxYCHwFnZBAVBBBQbGVhc2Ugc2VsZWN0Li4uMk5vIGRlZXBlciB0aGFuIGEgZ29sZiBiYWxsICh1cCB0byA0Y20gLyAxLjVpbmNoZXMpNk5vIGRlZXBlciB0aGFuIGEgdGVubmlzIGJhbGwgKHVwIHRvIDYuNWNtIC8gMi41aW5jaGVzKTdEZWVwZXIgdGhhbiBhIHRlbm5pcyBiYWxsIChtb3JlIHRoYW4gNi41Y20gLyAyLjVpbmNoZXMpFQQCLTEyTm8gZGVlcGVyIHRoYW4gYSBnb2xmIGJhbGwgKHVwIHRvIDRjbSAvIDEuNWluY2hlcyk2Tm8gZGVlcGVyIHRoYW4gYSB0ZW5uaXMgYmFsbCAodXAgdG8gNi41Y20gLyAyLjVpbmNoZXMpN0RlZXBlciB0aGFuIGEgdGVubmlzIGJhbGwgKG1vcmUgdGhhbiA2LjVjbSAvIDIuNWluY2hlcykUKwMEZ2dnZxYBZmQCCQ9kFgQCAw8QDxYCHwFnZBAVAxBQbGVhc2Ugc2VsZWN0Li4uLk5vIGxhcmdlciB0aGFuIGEgc2F1Y2VyICh1cCB0byAxNWNtIC8gNmluY2hlcykqTGFyZ2VyIHRoYW4gYSBzYXVjZXIgKG92ZXIgMTVjbSAvIDZpbmNoZXMpFQMCLTEuTm8gbGFyZ2VyIHRoYW4gYSBzYXVjZXIgKHVwIHRvIDE1Y20gLyA2aW5jaGVzKSpMYXJnZXIgdGhhbiBhIHNhdWNlciAob3ZlciAxNWNtIC8gNmluY2hlcykUKwMDZ2dnFgFmZAIJDxAPFgIfAWdkEBUEEFBsZWFzZSBzZWxlY3QuLi4xTm8gZGVlcGVyIHRoYW4gYSDCozEgY29pbiAodXAgdG8gMmNtIC8gMC44aW5jaGVzKTJObyBkZWVwZXIgdGhhbiBhIGdvbGYgYmFsbCAodXAgdG8gNGNtIC8gMS41aW5jaGVzKTNEZWVwZXIgdGhhbiBhIGdvbGYgYmFsbCAobW9yZSB0aGFuIDRjbSAvIDEuNWluY2hlcykVBAItMTFObyBkZWVwZXIgdGhhbiBhIMKjMSBjb2luICh1cCB0byAyY20gLyAwLjhpbmNoZXMpMk5vIGRlZXBlciB0aGFuIGEgZ29sZiBiYWxsICh1cCB0byA0Y20gLyAxLjVpbmNoZXMpM0RlZXBlciB0aGFuIGEgZ29sZiBiYWxsIChtb3JlIHRoYW4gNGNtIC8gMS41aW5jaGVzKRQrAwRnZ2dnFgFmZAIND2QWAgIDDxAPFgIfAWdkEBUDEFBsZWFzZSBzZWxlY3QuLi4QUmFpc2VkIG9yIFN1bmtlbhFCcm9rZW4gb3IgTWlzc2luZxUDAi0xEFJhaXNlZCBvciBTdW5rZW4RQnJva2VuIG9yIE1pc3NpbmcUKwMDZ2dnFgFmZAIPD2QWBAIDDxAPFgIfAWdkEBUGEFBsZWFzZSBzZWxlY3QuLi4DTXVkA09pbAVQYWludAlDaGVtaWNhbHMFT3RoZXIVBgItMQNNdWQDT2lsBVBhaW50CUNoZW1pY2FscwVPdGhlchQrAwZnZ2dnZ2cWAWZkAgkPEA8WAh8BZ2QQFQUQUGxlYXNlIHNlbGVjdC4uLiJBY3Jvc3MgdGhlIHdob2xlIHdpZHRoIG9mIHRoZSByb2FkGUluIHRoZSBtaWRkbGUgb2YgdGhlIHJvYWQLT24gdGhlIGtlcmITSW4gdGhlIHdoZWVsIHRyYWNrcxUFAi0xIkFjcm9zcyB0aGUgd2hvbGUgd2lkdGggb2YgdGhlIHJvYWQZSW4gdGhlIG1pZGRsZSBvZiB0aGUgcm9hZAtPbiB0aGUga2VyYhNJbiB0aGUgd2hlZWwgdHJhY2tzFCsDBWdnZ2dnFgFmZAIRD2QWAgIDDxAPFgIfAWdkEBULEFBsZWFzZSBzZWxlY3QuLi4kRGFtYWdlZCByb2FkIHN1cmZhY2UgKG5vdCBhIHBvdGhvbGUpD0xvb3NlIGNoaXBwaW5ncxxMb29zZSBvciByb2NraW5nIHBhdmluZyBzbGFiGlByb2JsZW0gd2l0aCByb2FkIG1hcmtpbmdzF0RhbWFnZWQgZm9vdHdheSBzdXJmYWNlFERhbWFnZWQgaGlnaHdheSBzaWduF092ZXJncm93biBoaWdod2F5IHZlcmdlH1ZlZ2V0YXRpb24gb2JzdHJ1Y3RpbmcgcGF2ZW1lbnQgVmVnZXRhdGlvbiBvYnN0cnVjdGluZyByb2FkIHNpZ24wVmVnZXRhdGlvbiBhZmZlY3RpbmcgdmlzaWJpbGl0eSBhdCByb2FkIGp1bmN0aW9uFQsCLTEkRGFtYWdlZCByb2FkIHN1cmZhY2UgKG5vdCBhIHBvdGhvbGUpD0xvb3NlIGNoaXBwaW5ncxxMb29zZSBvciByb2NraW5nIHBhdmluZyBzbGFiGlByb2JsZW0gd2l0aCByb2FkIG1hcmtpbmdzF0RhbWFnZWQgZm9vdHdheSBzdXJmYWNlFERhbWFnZWQgaGlnaHdheSBzaWduF092ZXJncm93biBoaWdod2F5IHZlcmdlH1ZlZ2V0YXRpb24gb2JzdHJ1Y3RpbmcgcGF2ZW1lbnQgVmVnZXRhdGlvbiBvYnN0cnVjdGluZyByb2FkIHNpZ24wVmVnZXRhdGlvbiBhZmZlY3RpbmcgdmlzaWJpbGl0eSBhdCByb2FkIGp1bmN0aW9uFCsDC2dnZ2dnZ2dnZ2dnFgFmZAITD2QWBgIDDxAPFgIfAWdkEBUDEFBsZWFzZSBzZWxlY3QuLi4LRHJhaW4gQ292ZXIFRHJhaW4VAwItMQtEcmFpbiBDb3ZlcgVEcmFpbhQrAwNnZ2cWAWZkAgcPZBYEAgMPEA8WAh8BZ2QQFQQQUGxlYXNlIHNlbGVjdC4uLhFNaXNzaW5nIG9yIGJyb2tlbhREaXNsb2RnZWQgb3Igcm9ja2luZxBSYWlzZWQgb3Igc3Vua2VuFQQCLTERTWlzc2luZyBvciBicm9rZW4URGlzbG9kZ2VkIG9yIHJvY2tpbmcQUmFpc2VkIG9yIHN1bmtlbhQrAwRnZ2dnFgFmZAIND2QWAgIDDxAPFgIfAWdkEBUDEFBsZWFzZSBzZWxlY3QuLi42TW9yZSB0aGFuIHRoZSBkZXB0aCBvZiBnb2xmIGJhbGwgKG92ZXIgNGNtIC8gMS41aW5jaGVzPE1vcmUgdGhhbiB0aGUgZGVwdGggb2YgYSB0ZW5uaXMgYmFsbCAob3ZlciA2LjVjbSAvIDIuNWluY2hlcxUDAi0xNk1vcmUgdGhhbiB0aGUgZGVwdGggb2YgZ29sZiBiYWxsIChvdmVyIDRjbSAvIDEuNWluY2hlczxNb3JlIHRoYW4gdGhlIGRlcHRoIG9mIGEgdGVubmlzIGJhbGwgKG92ZXIgNi41Y20gLyAyLjVpbmNoZXMUKwMDZ2dnFgFmZAIJD2QWCAIFDxBkZBYAZAILDxBkZBYAZAIRDxBkZBYAZAIXDxBkZBYAZAIDD2QWAgIBD2QWAgIBDxYCHwYFI01vZGFsSGlnaHdheU1haW50ZW5hbmNlQ29udHJvbHBvcHVwZAIJD2QWAmYPD2QWAh8IBWBodHRwOi8vd3d3Lm4tc29tZXJzZXQuZ292LnVrL1lvdXJfQ291bmNpbC9Db21tdW5pY2F0aW9uX2FuZF9JbmZvcm1hdGlvbi9QYWdlcy9XZWJzaXRlLXRlcm1zLmFzcHhkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYFBWBjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFVzZXJEZXRhaWxzQ29udHJvbDEkTW9kYWxBZGRyZXNzU2VhcmNoQ29udHJvbE1haW4xJEltZ0J0bkFkZHJlc3NTZWFyY2gFMmN0bDAwJENvbnRlbnRQbGFjZUhvbGRlcjEkQXVyb3JhTWFwQ29udHJvbCRNYXBMaW5rBT5jdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFNNU0NvbmZpcm1hdGlvbkNvbnRyb2wxJGNiRW1haWxBZ3JlZQU8Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRTTVNDb25maXJtYXRpb25Db250cm9sMSRjYlNNU0FncmVlBTdjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJERhdGFQcm90ZWN0aW9uQ29udHJvbCRjYkFncmVlfMkd7p6wfysiLOximeHxiGAYFmk=" />
+
+<script language='javascript' type='text/javascript'>var validatorArray = ['ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_txtForenameRequiredFieldValidator','ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_txtSurnameRequiredFieldValidator','ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_mobileRegexValidator','ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_phoneRegexValidator','ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_phoneRequiredValidator','ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_emailRequiredValidator','ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_ddlTitleRequiredFieldValidator','ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_hdnAddressSearchedRequiredFieldValidator1'];</script><script language='javascript' type='text/javascript'>function validatePage(source, args){var txtFlatNo;txtFlatNo = document.getElementById('ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_txtAddressLineFlatNumber');var txtBuildingNo;txtBuildingNo = document.getElementById('ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_txtAddressLineBuildingNumber');if (txtFlatNo.value == '' && txtBuildingNo.value == '') {args.IsValid = false;source.errormessage = 'Flat Number or Building Number must be entered';}}popupctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_AddressSearchResults = document.getElementById('ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_AddressSearchResults');if (popupctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_AddressSearchResults) {popupctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_AddressSearchResults.style.display = 'none';}</script><script language='javascript' type='text/javascript'>function ShowPopup(){var _popup;_popup = $find('ModalHighwayMaintenanceControlpopup');_popup.show();}</script>
+<script src="/webselfservice/ScriptResource.axd?d=vpU1QpiQFbTnwZKzpkf4sbpBOqDzvYka2aRbRpt6g2T2PEUomZlvTrXwNF-LOJT3KAiPRorzYdgjGXOEsQDY17pWk8ETJisecdXfkkvkM6QmuK7ZZnDVALb06FSX1qXMPeb-9A2&amp;t=635284073354917715" type="text/javascript"></script>
+<script src="/webselfservice/ScriptResource.axd?d=lSqvsl-7nBDJOzpfUNNHWNedszBKbpuZJqirWgU4idF31GIdIsPv-hhsVKnXVvL3LksH5LiEjUK0Rxm0eynxtEydZi4uU1P7DbrdtDCMN7XDpVAEG67hlqdT1WM-Y3buFM1RBejasvpJKfdDpkLOu5uaQac1&amp;t=635284073352207444" type="text/javascript"></script>
+<script src="/webselfservice/ScriptResource.axd?d=DrngF6BuFXyveTr5QOOG1ISJvqZq9Jr4qQt6VZ3RoZqQB85B1OowwHYMVp3pUXXBNqcUxdMeXy9H0fLrbGZmHTNmveBZzcoubJ-nhWbj2lQZax6iu5YvcyPpbpSJljTwIYbNIes4gY2owbQ6_jgHV54lQL01&amp;t=635284073352207444" type="text/javascript"></script>
+<script src="/webselfservice/ScriptResource.axd?d=Jyky-fo69R2-R2bIWWKaR7yevLoqClJ-uhOJ4G3jo11vfJng6nOZzVAvzeN8j3QW_OPPyRunutny5qHb21cofKD5mdD4aHB1894YqSa0_mdwVB1kd8YGupK_llb_7CC2QYEUwv0Y7XXJRDZa-rTxS66AJsQ1&amp;t=635284073352207444" type="text/javascript"></script>
+<script src="/webselfservice/ScriptResource.axd?d=vpP9wUAyS-2PBm4edlOEfgJ5iq2e6k69qNjS1JntKrNaYhmnV4oC0CvHae5oXZALB6r-MtVPaXmI8K-Q6XptDzjhPr5vqmoIvqBT__PG-sa_k-782QRIyn2dCcTpiYNgUSMh8d-tcC-2tdsxWWv_nzkGDr01&amp;t=635284073352207444" type="text/javascript"></script>
+<script src="/webselfservice/ScriptResource.axd?d=D3FIjtGhN5D8fqBqVrJhI3U-qIMo2p75YOdtniG7_RCjouncJATmwwWLTMBTsU3OvKcJw08hlseK9_jfu2yJGBTc5REC4T3cufo66CrLGww614id1rvI8JCsSNT2rAds3vHmdOIw3CsU9XwrZM5lCB4yh3XVFqnlO30-JLLuUTMeCKwL0&amp;t=635284073352207444" type="text/javascript"></script>
+<script src="/webselfservice/ScriptResource.axd?d=N-S4jB0u1Ojr6AMJNZUdQw6A1zaDTjz2kb_IvOtMsx1GC7uWY9sBWwCXFghPy68bMa_FOHH9IjTMHCRaUXvGb5PoQEMrPWKV9qkyPGkuVdn6pW06grZi3sihv32JiApbWjsKAur1kSkGSAy59jmH-OGXaM8DFwJ7880_jYGs02FW_N-P0&amp;t=635284073352207444" type="text/javascript"></script>
+<script src="/webselfservice/ScriptResource.axd?d=nFzFZ4fwiTYzzo_5lWf4ofpjCKAW6c9WBgcoqnyMotmV1M-cPK1YmKR9NhBthFIp6Badz3p2vuTzYCQ0TCod-DDda1juCPKrU8yMhuw-0_-g6NZuM2pJH296Bo1lL-xRAJBIGbyKBXzmQj_M_ADTsFyZk-KTSzRsch_JkjjwTzTHmXey0&amp;t=635284073352207444" type="text/javascript"></script>
+<script src="/webselfservice/ScriptResource.axd?d=4PDja4DsdCPpguEjc4P8CvjrF4BZ-w6atXsq6YKkcggbFF7GA_0AkHIfHxYfPQgp8_I-u_0fmjETaDCpmJTwOLu4Ga4J4niw7YmdzMfI4YpgDWPA_rmybUzwBZN-mIuUqVwxKQwHgswlfGOWH9Epfcwa-a5i1qcA_WvNOIRKg1vISD4R0&amp;t=635284073352207444" type="text/javascript"></script>
+<script src="/webselfservice/ScriptResource.axd?d=T2I_uOcS2eKQcPlgpBfjBm3b6UIvUn_QjoKzEGAtQRlngoNV0i-8oc-7sHXyQtivn8lsbo72aR1mKBVWVrIiXwRO0xuBbYCwcokWLMm48TTa4dV2qwTahpFZ8ZIj5eABOoTs1CBIqa7Ia_syc-bB4iE0Ing6-TvgzL5PoCuItDfkv4uB0&amp;t=635284073352207444" type="text/javascript"></script>
+<script src="/webselfservice/ScriptResource.axd?d=7dVkBeQpC1YYJD_SHPSGKyVj0PqhfcA681jf-zggVIiDqz4DjxE3agoWzLmrswbakrLsQhYKAevyig78eK2C7inrdZj9eyYarXaEgVWriIayLd50Kze47zNfItPCH_KQ4hQr75ZC4p_gzsqNJvLQr2fXeoY1&amp;t=635284073352207444" type="text/javascript"></script>
+<script src="/webselfservice/ScriptResource.axd?d=0TK10rTa2PYpZRlBLMjgXV6N3ThgdbHuiA9ismBVjXpFKOnHdNNN5iy6Xlg1dJ3f37PYxXkbdo4h8ANKroNKggFhAtsfJYnBZ35wc1RzTiEPN1OVo_vi7bZRVdQWbtQVTipn8DL91lDtvzLYgwhWRgvoNcOb7gXF-e0eprhL7p2xEKlq0&amp;t=635284073352207444" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2016B135" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWJgKf982WCgLImM7cDgL0jK/mAwKUjKvkAwL5/qMnAvn+m7kIApSMl+QDAquMq+QDAp27vuACAorQ+ZwKAq36vKEEAoPQgYQGAuLavZYPAq2AmeMEAv2I8pEHAr7w084KAsaNpOYOAuKfqrcKAvPP7PoOAtXvgLkIAqCMjJ0JArPFupYBAs2ZsucCApT/rPcGArLwra0MAuTX3dkNAuLwwdICAujG4rgIArmZkvwHAv23j5QOApzK+PkKAtHqwfMOAuWWnWAChrTO/wMC+7rQxQcCtILu0QUC/4Kb7QkC6LbwoAumd5mrVOhlVMM8u/DJO/xMnZpi+Q==" />
+    
+
+    
+    
+    <div id="ctl00_pageContent" class="pageHeader">
+	
+
+    <div>
+        
+
+<div id="ctl00_ContentPlaceHolder1_Panel3" class="p1">
+		
+    <input type="submit" name="ctl00$ContentPlaceHolder1$btnBackToMainMenu" value="Back to Main Menu" id="ctl00_ContentPlaceHolder1_btnBackToMainMenu" class="ButtonWithBack" HorizontalAlign="Right" border="1" style="padding-right: 10px; text-align: right;" />
+    
+    <span id="ctl00_ContentPlaceHolder1_Label1" class="h3">Report a road problem</span>
+    
+    <div id="ctl00_ContentPlaceHolder1_UserDetailsControlPanel1" class="p2">
+			
+           
+
+<script type="text/javascript" language="javascript">
+function CollapsePanel(sender,ev) 
+{
+//alsert(Page_Validators.length);
+//for(i=0;i< Page_Validators.length;i++)
+//{
+//ValidatorEnable(Page_Validators[i], false)
+//}
+
+//var i;  
+//for (i=0; i<modaladdress33.childNodes.length; i++)
+//{
+//alert(modaladdress33.childNodes(i));
+//}
+
+        
+//var cpe = $find("cpe1");if (cpe.get_Collapsed()){ 
+//cpe._doOpen();
+//} else { 
+//cpe._doClose();
+//}
+
+}
+
+function loopArray(validatorArray)
+{
+    var enableFlag;
+    var cpe = $find("cpe1");
+    if (cpe.get_Collapsed()){ 
+        cpe._doOpen();
+        enableFlag = true;
+    }else{ 
+        cpe._doClose();
+        enableFlag = false;
+    }
+
+    for (i=0;i<validatorArray.length;i++)
+        enableValidator(validatorArray[i], enableFlag);
+
+    if (typeof SetValidators == 'function') {
+        SetValidators();
+    }
+      
+}
+
+function enableValidator(validatorId, enable)
+{   
+   var validator = document.getElementById(validatorId);
+   validator.enabled = enable;
+   ValidatorUpdateDisplay(validator);
+}
+
+
+
+</script> 
+
+  
+<div id="ctl00_ContentPlaceHolder1_UserDetailsControl1_AddressDetails" class="p2">
+				
+   
+
+<div>
+    <span id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_lblTitle" class="mandatoryField">Title</span>
+    <select name="ctl00$ContentPlaceHolder1$UserDetailsControl1$UserDetails1$ddlTitle" id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_ddlTitle">
+					<option value="-1">Please select...</option>
+					<option value="Mr">Mr</option>
+					<option value="Mrs">Mrs</option>
+					<option value="Miss">Miss</option>
+					<option value="Ms">Ms</option>
+					<option value="Dr">Dr</option>
+					<option value="Rev">Rev</option>
+					<option value="Sir">Sir</option>
+					<option value="Lady">Lady</option>
+					<option value="Lord">Lord</option>
+					<option value="Dame">Dame</option>
+
+				</select>
+    
+</div>
+<div>
+    <span id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_lblForename" class="mandatoryField">First name</span>
+    <input name="ctl00$ContentPlaceHolder1$UserDetailsControl1$UserDetails1$txtForename" type="text" id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_txtForename" />
+    
+</div>
+<div>
+    <span id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_lblSurname" class="mandatoryField">Last name</span>
+    <input name="ctl00$ContentPlaceHolder1$UserDetailsControl1$UserDetails1$txtSurname" type="text" id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_txtSurname" />
+    
+</div>
+<div>
+    <table style="margin: 5px 0px;"><tr>
+        <td width="200px">
+        <span id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_lbDummy" class="l1"></span>
+        </td><td>
+        <span id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_Label3" class="l1Message" style="display:inline-block;"><font color="#003399">Please provide us with your contact number or email address in case we need to contact you for more information about the problem you're reporting</font></span>
+        </td>
+    </tr></table>
+    
+    <span id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_lblPhone" class="l1">Preferred contact number</span>
+    <input name="ctl00$ContentPlaceHolder1$UserDetailsControl1$UserDetails1$txtPhone" type="text" id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_txtPhone" />    
+    
+    
+    
+</div>
+
+<div>    
+    
+    <span id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_lblEmailMandatory" class="mandatoryField">Email address</span>
+    <input name="ctl00$ContentPlaceHolder1$UserDetailsControl1$UserDetails1$txtEmail" type="text" id="ctl00_ContentPlaceHolder1_UserDetailsControl1_UserDetails1_txtEmail" class="TextBoxWideEmail" /> 
+        
+       
+</div>
+
+
+
+<script type="text/javascript">
+
+   function selectAddress() {
+   
+   }
+        
+</script>
+
+<div id="ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_PnlPostcode" class="p2">
+					
+
+    
+    
+    <div>
+    <span id="ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_lblPostcode" class="mandatoryField">Postcode</span>
+    <input name="ctl00$ContentPlaceHolder1$UserDetailsControl1$ModalAddressSearchControlMain1$txtPostcode" type="text" maxlength="8" id="ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_txtPostcode" />
+    <input type="image" name="ctl00$ContentPlaceHolder1$UserDetailsControl1$ModalAddressSearchControlMain1$ImgBtnAddressSearch" id="ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_ImgBtnAddressSearch" title="search for address based on postcode" src="../../../App_Themes/WebSelfServiceClassic/Graphics/magnify.jpg" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$UserDetailsControl1$ModalAddressSearchControlMain1$ImgBtnAddressSearch&quot;, &quot;&quot;, true, &quot;ModalAddressSearchControlMain1ModalPopUpValidationGroup&quot;, &quot;&quot;, false, false))" border="0" />
+    <span id="ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_Label3" class="l1Message" style="display:inline-block;"><font color="#003399">look up address</font></span>
+    <a id="ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_hdn_Preview" class="HyperLink" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$UserDetailsControl1$ModalAddressSearchControlMain1$hdn_Preview','')" style="display: none"></a>
+      
+      
+      
+      
+            
+       
+        
+       
+         
+        <input name="ctl00$ContentPlaceHolder1$UserDetailsControl1$ModalAddressSearchControlMain1$hdnAddressSearched" type="text" id="ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_hdnAddressSearched" disabled="disabled" class="TextBoxHidden" border="0" />
+    </div>
+    <div style="padding-left: 205px; margin-top: 5px;">
+        <span id="ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_Label4" class="l1Message" style="display:inline-block;"><font color="#003399">Insert your postcode and then click on the symbol to look up your address (e.g. BS23 1UJ)</font></span>
+    </div>
+    <div>
+
+   </div>
+   
+  
+      
+				</div>
+
+ 
+
+
+
+
+   
+
+
+
+			</div>
+
+    <input type="hidden" name="ctl00$ContentPlaceHolder1$UserDetailsControl1$CollapsiblePanelExtender1_ClientState" id="ctl00_ContentPlaceHolder1_UserDetailsControl1_CollapsiblePanelExtender1_ClientState" />
+
+    
+		</div>
+   
+    <div id="ctl00_ContentPlaceHolder1_pnlCommon" class="p1">
+			
+      
+    <div>
+        <span id="ctl00_ContentPlaceHolder1_lblHighwayProblem" class="l2WithPaddingMandatory">Please select one category for this problem:</span>
+        <select name="ctl00$ContentPlaceHolder1$ddlHighwayProblem" id="ctl00_ContentPlaceHolder1_ddlHighwayProblem">
+				<option selected="selected" value="-1">Please select...</option>
+				<option value="Report a pothole">Report a pothole</option>
+				<option value="Report a manhole cover problem">Report a manhole cover problem</option>
+				<option value="Report a spillage / mud on the road">Report a spillage / mud on the road</option>
+				<option value="Report other road or pavement problem">Report other road or pavement problem</option>
+				<option value="Report road drain issue">Report road drain issue</option>
+
+			</select>
+        <span id="ctl00_ContentPlaceHolder1_lblCategoryAdvice" class="l1Message" style="display:inline-block;"><font color="#003399">To help us deal with your report quickly, please select the correct category for the problem you're reporting. If you don't see it here, go back to the <a id="ctl00_ContentPlaceHolder1_HyperLink1" class="HyperLink" href="/connect">main menu</a></font></span>
+        <br style="clear:both"/>
+        &nbsp;
+        <br style="clear:both"/> 
+    </div>
+    <div>
+        <div id="ctl00_ContentPlaceHolder1_LocationDetailsControlPanel1" class="p2">
+				
+            <span id="ctl00_ContentPlaceHolder1_AuroraMapControl_lblLocationLookup" class="l2WithPaddingMandatory">Location look up</span>
+<span id="ctl00_ContentPlaceHolder1_AuroraMapControl_LocationSelectedLabel" class="fieldLocation" style="display:none;">Selected!</span>                       
+<input type="image" name="ctl00$ContentPlaceHolder1$AuroraMapControl$MapLink" id="ctl00_ContentPlaceHolder1_AuroraMapControl_MapLink" title="search for the Location of Incident" href="#" src="../../../App_Themes/WebSelfServiceClassic/Graphics/magnify.jpg" border="0" />
+       
+
+    
+<div id="ctl00_ContentPlaceHolder1_AuroraMapControl_MapPopup" style="overflow: hidden;"></div>
+<input type="hidden" name="ctl00$ContentPlaceHolder1$AuroraMapControl$MapReturnData" id="ctl00_ContentPlaceHolder1_AuroraMapControl_MapReturnData" />
+
+<script type="text/javascript">
+
+
+    $(function() {
+
+        var mapLinkID = '#ctl00_ContentPlaceHolder1_AuroraMapControl_MapLink';
+        var mapPopupID = '#ctl00_ContentPlaceHolder1_AuroraMapControl_MapPopup';
+        var addressXID = '#ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_hdnAddressX';
+        var addressYID = '#ctl00_ContentPlaceHolder1_UserDetailsControl1_ModalAddressSearchControlMain1_hdnAddressY';
+        var mapDataField = '#ctl00_ContentPlaceHolder1_AuroraMapControl_MapReturnData';
+        var locationSelected = '#ctl00_ContentPlaceHolder1_AuroraMapControl_LocationSelectedLabel';
+        var locationValidator = '#ctl00_ContentPlaceHolder1_AuroraMapControl_CustomLocationValidator';
+        var mapOpen = false;
+        var oldIE = $.browser.msie && parseInt($.browser.version) <= 7;
+
+
+        SetMapReturnData = function(data) {
+
+            $(mapDataField).val(data);
+            $(mapPopupID).dialog("close");
+            $(locationSelected).show();
+            $(locationValidator).hide();
+
+        };
+
+        ValidateLocationSelectedClient = function(sender, args) {
+
+            args.IsValid = false;
+
+            if ($(mapDataField).val() != null && $(mapDataField).val() != '') {
+                args.IsValid = true;
+            }
+
+        }
+
+        // create url to launch map
+        function GetMapURL() {
+
+            var theURL = 'http://map.n-somerset.gov.uk/map/Aurora.svc/run?script=%5CAurora%5CCRM%5CSelfService.AuroraScript%24&resize=always&workflow_id=LOCATE&margin_bottom=10&nocache=' + (new Date).getTime();
+
+            var mapScale = 0;
+
+            if ($(window).width() < $(window).height()) {
+
+                mapScale = (1 / $(window).width()) * 130000000;
+
+            }
+            else {
+
+                mapScale = (1 / $(window).height()) * 125000000;
+
+            }
+
+            var startX = 344165;
+            var startY = 166910;
+            var haveStartLocation = false;
+
+            if ($(mapDataField).val() != null && $(mapDataField).val() != '') {
+
+                var xmlMapData = $.parseXML(decodeURIComponent($(mapDataField).val()));
+                startX = $(xmlMapData).find("easting").text();
+                startY = $(xmlMapData).find("northing").text();
+                haveStartLocation = true;
+
+            }
+            else if ($(addressXID).val() > 0 && $(addressYID).val() > 0) {
+
+                startX = $(addressXID).val();
+                startY = $(addressYID).val();
+                haveStartLocation = true;
+
+            }
+
+            if (haveStartLocation) {
+                mapScale = mapScale / 30;
+            }
+
+            theURL += "&x=" + startX + "&y=" + startY;
+            theURL += "&scale=" + nextPow2(mapScale);
+
+            return theURL;
+
+        }
+
+        function ResizeMapToWindow() {
+
+            if (mapOpen) {
+
+                $(mapPopupID).dialog("option", "width", $(window).width() - 50);
+                $(mapPopupID).dialog("option", "height", $(window).height() - 50);
+                $(mapPopupID).dialog("option", "position", "center");
+                if (oldIE) {
+                    var newHeight = $(window).height() - 50 - $(mapPopupID).prev().outerHeight(true) - $(mapPopupID).next().outerHeight(true);
+                    if (newHeight < 100) newHeight = 100;
+                    $(mapPopupID).css("height", newHeight);
+                }
+
+            }
+
+        }
+
+        function nextPow2(aSize) {
+            return Math.pow(2, Math.ceil(Math.log(aSize) / Math.log(2)));
+        }
+
+        // configure map to auto resize with window.
+        $(window).resize(ResizeMapToWindow);
+
+        // map launcher
+        $(mapLinkID).click(function(event) {
+
+            event.preventDefault();
+
+            // ensure that there is not already a map loaded
+            $(mapPopupID).empty();
+
+            $(mapPopupID).dialog({
+                autoOpen: true,
+                title: 'Use the map to select the location of the problem',
+                modal: true,
+                draggable: false,
+                resizable: false,
+                width: $(window).width() - 50,
+                height: $(window).height() - 50,
+                position: { my: "center", at: "center", of: $(window) },
+                buttons: [
+			            {
+			                text: "Cancel",
+			                click: function() {
+			                    $(this).dialog("close");
+			                }
+			            }
+		             ],
+                open: function() {
+                    mapOpen = true;
+                    $("html, body").css("overflow", "hidden");
+                    ResizeMapToWindow();
+                },
+                close: function() {
+                    mapOpen = false;
+                    $(mapPopupID).empty();
+                    $("html, body").css("overflow", "auto");
+                }
+            }).append($('<iframe width="100%" height="100%" />').attr('src', GetMapURL()));
+
+        });
+
+    });
+
+</script>     
+        
+			</div>  
+    </div>
+    
+    
+    
+    
+    
+<br style="clear:both"/>
+
+		</div>
+
+	</div>
+    <div id="ctl00_ContentPlaceHolder1_pnlHighwayMaintenanceMsg">
+		
+        
+<script language="javascript" type="text/javascript">
+
+        //function ShowPopup()
+        //{ 
+        //   var _popup;
+        //    _popup = $find('popup');
+        //    _popup.show();
+        //}
+
+</script>
+
+ 
+<div id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_pnlMainMessage" class="modalpopup" style="display:none">
+			
+    <div id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_Message" class="modalcontainer">
+				
+        <div id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_PnlMessage">
+					
+        <div id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_MessagePanel2" class="modalheaderExtend">
+						
+            <span id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_lblCompleteMessageType" class="modalHeadmsg"></span>  
+        
+					</div> 
+         <div id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_PnlMessageDetail" class="modalbody">
+						
+            <div id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_Panel4" class="modalMultiHeadmsg">
+							 
+                <span id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_lblMessageDetail" class="modalBodyWarningmsg"></span>   
+           
+						</div>
+        <div id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_pnlContent1" class="modalMultiHeadmsg">
+							    
+            <span id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_lblMessageDetail1"></span> 
+      
+						</div>       
+       <div id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_Panel1" class="modalMultiHeadmsg">
+							  
+            <span id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_lblMessageDetail2"></span> 
+       
+						</div>
+       <div id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_Panel2" class="modalMultiHeadmsg">
+							  
+            <span id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_lblMessageDetail3"></span> 
+       
+						</div>
+       <div id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_Panel3" class="modalMultiHeadmsg">
+							  
+            <span id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_lblMessageDetail4"></span>   
+       
+						</div> 
+       
+         
+					</div> 
+         
+				</div> 
+        <div id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_MessagePanel4" class="modalfooter">
+					
+            <input type="submit" name="ctl00$ContentPlaceHolder1$ModalHighwayMaintenanceControl$btnContinue" value="Finish" id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_btnContinue" class="Button" />            
+        
+				</div>                                                
+        
+			</div> 
+  <a id="ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_hdn_Preview_message" class="HyperLink" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$ModalHighwayMaintenanceControl$hdn_Preview_message','')" style="display: none"></a> 
+   
+		</div>
+
+
+    
+	</div>
+    <div id="ctl00_ContentPlaceHolder1_pnlCompleteMsg">
+		
+         
+<div id="ctl00_ContentPlaceHolder1_CompleteMessageControl_CompleteMessage" class="modalpopup" style="display:none">
+			
+    <div id="ctl00_ContentPlaceHolder1_CompleteMessageControl_Message" class="modalcontainer">
+				
+        <div id="ctl00_ContentPlaceHolder1_CompleteMessageControl_MessagePanel2" class="modalheader">
+					
+            <span id="ctl00_ContentPlaceHolder1_CompleteMessageControl_lblCompleteMessageType" class="modalHeadmsg"></span>            
+        
+				</div>
+         <div id="ctl00_ContentPlaceHolder1_CompleteMessageControl_PnlMessageDetail" class="modalbody">
+					
+            <span id="ctl00_ContentPlaceHolder1_CompleteMessageControl_lblMessageDetail" class="modalBodyConfirmmsg"></span>
+        
+				</div>
+        <div id="ctl00_ContentPlaceHolder1_CompleteMessageControl_MessagePanel4" class="modalfooter">
+					
+            <input type="submit" name="ctl00$ContentPlaceHolder1$CompleteMessageControl$btnContinue" value="Continue" id="ctl00_ContentPlaceHolder1_CompleteMessageControl_btnContinue" class="Button" />            
+        
+				</div>                                                
+    
+			</div> 
+  <a id="ctl00_ContentPlaceHolder1_CompleteMessageControl_hdn_Preview" class="HyperLink" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$CompleteMessageControl$hdn_Preview','')" style="display: none"></a> 
+   
+		</div>
+    
+	</div>
+
+    
+
+<div class="p7">
+<div class="p9">
+<div><b>Communications</b></div>
+
+<div>When you give us your email address and / or mobile phone number, we’d really like to keep you up to date on council and local activities which we think might be of interest to you. There is no cost to you for this. If you would prefer not to receive these updates from us, please tick here:
+    <br />
+    <span font-weight="bolder" style="display:block;margin-left:10px;left:-4px;position:relative;"><font color="Black"><input id="ctl00_ContentPlaceHolder1_SMSConfirmationControl1_cbEmailAgree" type="checkbox" name="ctl00$ContentPlaceHolder1$SMSConfirmationControl1$cbEmailAgree" /><label for="ctl00_ContentPlaceHolder1_SMSConfirmationControl1_cbEmailAgree">Please don’t send me your e-bulletin</label></font></span>
+    <span font-weight="bolder" style="display:block;margin-left:10px;left:-4px;position:relative;"><font color="Black"><input id="ctl00_ContentPlaceHolder1_SMSConfirmationControl1_cbSMSAgree" type="checkbox" name="ctl00$ContentPlaceHolder1$SMSConfirmationControl1$cbSMSAgree" /><label for="ctl00_ContentPlaceHolder1_SMSConfirmationControl1_cbSMSAgree">Please don’t send me text messages</label></font></span>
+    <br />You will be able to opt out of these services at any time. We also guarantee we will never sell or pass your details on to a third party.     
+</div>
+</div>
+</div>
+    
+<script language="javascript" type="text/javascript">
+function btnSubmit_OnClick(o)              
+    {
+        var btnSubmit =  document.getElementById("ctl00_ContentPlaceHolder1_DataProtectionControl_btnSubmit");
+        if (btnSubmit == null)
+            return true;
+
+        var cbAgree = document.getElementById("ctl00_ContentPlaceHolder1_DataProtectionControl_cbAgree");
+        if (cbAgree == null)
+            return true;
+                
+        if (cbAgree.checked == true)
+            btnSubmit.disabled = false;
+        else
+            btnSubmit.disabled = true;    
+    }
+    
+function validate()
+{
+}
+    
+function validateCheckBox(Source, args)
+    {
+        var cbAgree = document.getElementById('ctl00_ContentPlaceHolder1_DataProtectionControl_cbAgree');
+      
+        if(cbAgree.checked == true){        
+            args.IsValid = true;;
+        }else{
+            args.IsValid = false
+        }
+     }
+
+</script>
+
+<div class="p8">
+<div class="p9">
+<div><b>Data Protection</b></div>
+
+The information you provide on this form will only be processed for the purpose that has been given and will not be used for additional purposes without your consent. All personal data is collected and processed in compliance with the eight data protection principles of the Data Protection Act 1998 and you have certain rights in respect of this information.
+<br />
+For a more detailed explanation refer to our <a id="ctl00_ContentPlaceHolder1_DataProtectionControl_dataProtectionGuideHyperLink" class="HyperLink" href="http://www.n-somerset.gov.uk/Your_Council/Communication_and_Information/Pages/Website-terms.aspx" target="_blank">Data Protection Guide</a>
+<br />
+I have read the "Your guide to data protection" notice and I agree for my information to be held and processed for the purpose(s) shown in the guide.
+<br />
+&nbsp;
+
+<span class="CheckboxFieldMandatory" font-weight="bolder" style="display:inline-block;display:block;margin-left:10px;left:-4px;position:relative;"><font color="Black"><input id="ctl00_ContentPlaceHolder1_DataProtectionControl_cbAgree" type="checkbox" name="ctl00$ContentPlaceHolder1$DataProtectionControl$cbAgree" /><label for="ctl00_ContentPlaceHolder1_DataProtectionControl_cbAgree">I agree</label></font></span>
+
+
+<input type="submit" name="ctl00$ContentPlaceHolder1$DataProtectionControl$btnSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$DataProtectionControl$btnSubmit&quot;, &quot;&quot;, true, &quot;OnSubmitValidationGroup&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_DataProtectionControl_btnSubmit" class="ButtonWithSubmit" HorizontalAlign="Right" border="1" style="padding-right: 10px; text-align: right;" />
+<br />
+</div>
+</div>
+
+
+
+    </div>
+    <div>
+        
+
+
+    </div>
+    
+    
+    
+</div>
+    
+    						<br style="clear: both;" />
+
+						<!-- FOOTER -->
+            <div id="footer">
+              <div class="Banner-strap">
+
+						  </div>
+						  <p class="terms"><a href="http://www.n-somerset.gov.uk/Your_Council/Communication_and_Information/Pages/Website-terms.aspx">Terms and conditions</a></p>
+            </div>
+
+						<div class="clear">&nbsp;</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.CollapsiblePanelBehavior, {"ClientStateFieldID":"ctl00_ContentPlaceHolder1_UserDetailsControl1_CollapsiblePanelExtender1_ClientState","CollapsedText":"(Reporting Anonymously)","ExpandedText":"(User Details:)","id":"cpe1"}, null, null, $get("ctl00_ContentPlaceHolder1_UserDetailsControl1_AddressDetails"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","DropShadow":true,"PopupControlID":"ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_pnlMainMessage","dynamicServicePath":"/webselfservice/forms/Services/HighwayMaintenanceService/HighwayMaintenanceForm.aspx","id":"ModalHighwayMaintenanceControlpopup"}, null, null, $get("ctl00_ContentPlaceHolder1_ModalHighwayMaintenanceControl_hdn_Preview_message"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","DropShadow":true,"PopupControlID":"ctl00_ContentPlaceHolder1_CompleteMessageControl_CompleteMessage","dynamicServicePath":"/webselfservice/forms/Services/HighwayMaintenanceService/HighwayMaintenanceForm.aspx","id":"ctl00_ContentPlaceHolder1_CompleteMessageControl_modalCompleteMessage"}, null, null, $get("ctl00_ContentPlaceHolder1_CompleteMessageControl_hdn_Preview"));
+});
+//]]>
+</script>
+</form>
+
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-745223-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+    
+    </body>
+
+</html>

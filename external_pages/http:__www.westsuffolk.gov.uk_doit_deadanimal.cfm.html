@@ -1,0 +1,278 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- JavaScript & DHTML Code Copyright &copy; 1998-2015, PaperThin, Inc. All Rights Reserved. -->		 
+<!-- Page generated 2016-02-07 00:36:08 by CommonSpot Build 9.0.3.119 (2015-08-14 15:00:01) (server: 1) -->
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Inactive Content</title><script type="text/javascript" src="/commonspot/javascript/browser-all.js"></script><link rel="stylesheet" href="/commonspot/commonspot.css" type="text/css" id="cs_maincss" />
+
+<!-- Style Sheets -->
+<link href="/commonspot/dashboard/css/default.css" rel="stylesheet" type="text/css" />
+<link href="/commonspot/dashboard/css/dialog.css" rel="stylesheet" type="text/css" id="dialogcss" />
+<link href="/commonspot/dashboard/css/pagelist.css" rel="stylesheet" type="text/css" />
+<link href="/commonspot/dashboard/css/formdialog.css" rel="stylesheet" type="text/css" />
+<link href="/commonspot/dashboard/css/util.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="/commonspot/javascript/lightbox/proxy_buttons.css"/>
+
+<script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script>
+<link href="/commonspot/dlgcontrols/legacy-dialog.css" rel="stylesheet" type="text/css" /><script type="text/javascript">
+<!--
+var lightboxStackPos = '';
+var gMenuControlID=0;
+var cdTailIsPresent=0;
+
+// these vars used by ResizeWindow() in Netscape, or if 'MainTable' is not defined
+var cdMainTableWidth = "450";
+var cdDlgHeight = 250;
+
+if (top.commonspot)
+	lightboxStackPos = top.commonspot.lightbox.stack.length - 1;
+
+var cdXOffset = 0;var cdYOffset = 0; 
+var restoringSize = 0;
+	
+var js_gvPageID = 0;
+var cd_scrollTop = 0;
+var cd_scrollLeft = 0;
+var ResizeWindowSafe = 0;			// flag to determine wher
+var ResizeWindowCalledCount = 0;
+// -->
+</script>
+
+
+<script type="text/javascript">
+<!--
+function DoHelp(id,strLoader,SiteID,SubSiteID)
+{
+	var strUrl=strLoader + '?csModule=help/openhelp&CSHelpID=' + id;
+	newWindow('help',strUrl,'toolbar=no,scrollbars=yes,resizable=yes,menubar=no,location=no');
+}
+var gvDialogError = 0;
+function DoFocus(wnd)
+{
+	if (parseInt(navigator.appVersion) >= 4)
+		wnd.focus(); // force to front
+	// don't set DoFocusDone here!!
+}
+
+function ResizeWindow()
+{
+	// + restoringSize + ' found cookie: '  + blnSizeCookieFound);
+
+	width = cdMainTableWidth;
+	height = cdDlgHeight;
+
+	// furniture is already accounted for by Netscape...
+	width += 50; // allowance for window furniture
+	height += 60;
+	scrnHeight = window.screen.availHeight;
+	if(!scrnHeight)
+		scrnHeight = window.screen.height;
+	scrnWidth = window.screen.availWidth;
+	if(!scrnWidth)
+		scrnWidth = window.screen.width;
+	if (height > scrnHeight - 150)
+		height = scrnHeight - 150;
+	if (width > scrnWidth - 30)
+		width = scrnWidth - 30;
+
+	x = (scrnWidth - width) / 2;
+	y = (scrnHeight - height) / 2;
+	
+	if(!hasLightbox()){
+		window.resizeTo(width, height);
+		window.moveTo(x, y);
+		doResizeFix(height-70);
+	}
+	DoFocus(window); // force to front
+	DoFocusDone=1;
+}
+
+function CloseWindow()
+{
+	DoFocusDone=1;	// not done, but we don't want the focus
+	var wnd = getOpener();		
+	if (wnd)
+	{
+		DoFocus(wnd);
+		window.close();
+	}
+}
+
+function DoSubmit()
+{
+	if (gvDialogError)
+		ResizeWindow();
+	else
+		RefreshAndCloseWindow();
+}
+
+function RefreshAndCloseWindow()
+{
+	var wnd = getOpener();	
+	if (wnd)
+	{
+		DoFocus(wnd);
+		wnd.location.reload();
+	}
+	setTimeout('window.close()', 500);
+	DoFocusDone=1;	// not done, but we don't want the focus
+}
+
+function RefreshParentWindow()
+{
+	var wnd = getOpener();	
+	if (wnd)
+	{
+		DoFocus(wnd);
+		wnd.location.reload();
+	}
+	DoFocus(self);
+	DoFocusDone=1;
+}
+
+	
+function doResizeFix(ht)
+{
+	var divNodes = document.getElementsByTagName('DIV');
+	var rootDiv = divNodes[0];
+	window.document.body.style.overflow = 'auto';
+
+}
+// -->
+</script>
+
+<script src="/commonspot/dlgcontrols/dlgcommon-validation.js" type="text/javascript"></script>
+<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script>
+
+<script type="text/javascript">
+<!--
+var DoFocusDone = 0;	 // set to block DoFocus() call in CommonDlgOnLoad()
+
+function CommonDlgOnLoad()
+{
+	// Make the dialog visible
+	var mainTable = document.getElementById('MainTable');
+	if(mainTable)
+	{
+		mainTable.style.visibility = 'visible';
+	}
+	if((self != top) && (typeof(top.commonspot.lightbox)!= "undefined") && 1)
+	{
+		top.commonspot.lightbox.initCurrentServerDialog();
+	}
+
+
+	  	if (cdTailIsPresent==1)
+	  	{
+	  		 
+	  	}
+		else
+		{
+			if(window.top && top.commonspot && top.commonspot.lightbox)
+				top.commonspot.lightbox.getCurrent().showCrash();
+			else
+				ResizeWindow();
+		}
+		
+}
+
+function cp__onUnload()
+{
+	
+}
+
+function rememberWindowSize()
+{
+	tbl = window.document.getElementById("MainTable");
+
+	if (tbl)
+	{
+		
+			width = window.outerWidth;
+			height = window.outerHeight;
+		
+
+		if (height > window.screen.height - 30)
+			height = window.screen.height - 30;
+
+		x = Math.max( (window.screen.width - width) / 2, 0);
+		y = Math.max( (window.screen.height - height) / 2, 0);
+
+		if (cdXOffset)
+			x = x + cdXOffset;
+		if (cdYOffset)
+			y = y + cdYOffset;
+
+	
+		cookiestr = "cp(not set)=" + x + "-" + y + "-" + tbl.offsetWidth + "-" + tbl.offsetHeight;
+	
+		
+		document.cookie = cookiestr;
+  }
+}
+// -->
+</script></head><body onUnload="cp__onUnload();" onload="CommonDlgOnLoad();" bgcolor="#FFFFFF"><div id="cs_commondlg" align="center">
+<link rel="stylesheet" type="text/css" href="/commonspot/javascript/lightbox/proxy_buttons.css"/>
+<link href="/commonspot/dashboard/css/dialog.css" rel="stylesheet" type="text/css" id="dialogcss" />
+<link href="/commonspot/dlgcontrols/legacy-dialog.css" rel="stylesheet" type="text/css" />
+<link href="/commonspot/dashboard/css/buttons.css" rel="stylesheet" type="text/css" id="buttons_css">
+<link href="/commonspot/dlgcontrols/login-styles.css" rel="stylesheet" type="text/css" id="logincss" />
+<link href="/commonspot/javascript/lightbox/onpage_lightbox_styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div align="center">
+
+<table border="0" cellpadding="4" cellspacing="4" width="400" summary="" id="MainTable" name="MainTable">
+  <tr>
+    <td class="cs_dlgTitle">Inactive Content</td>
+  </tr>
+  <tr>
+    <td class="cs_dlgNormalBold">This page is in the process of being created or has temporarily been inactivated. 
+	</td>
+  </tr>
+  <tr>
+    <td style="text-align:right">
+    <form method="get" action="">
+      <div align="center"><input class="clsPrevButton" name="B2" onclick="self.history.go(-1);" type="button" value="Back" /></div>
+    </form>
+    </td>
+  </tr>
+</table>
+</div>
+
+<script type="text/javascript">
+<!--
+	if (typeof parent.commonspot == 'undefined' || typeof parent.commonspot.lview == 'undefined')
+		loadNonDashboardFiles();
+	else if (parent.commonspot && typeof newWindow == 'undefined')
+	{
+		var arrFiles = 
+				[
+					{fileName: '/commonspot/javascript/lightbox/overrides.js', fileType: 'script', fileID: 'cs_overrides'},
+					{fileName: '/commonspot/javascript/lightbox/window_ref.js', fileType: 'script', fileID: 'cs_windowref'}
+				];
+		
+		loadDashboardFiles(arrFiles);
+	}	
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+	cdTailIsPresent=1;
+	ResizeWindowSafe = 1; 	
+	if( typeof ResizeWindowCalledCount != 'undefined' && ResizeWindowCalledCount > 0 )	
+		setTimeout( ResizeWindow_Meat, 500 );		
+	
+// -->
+</script> </div><div>
+	
+		<script type="text/javascript" src="/commonspot/javascript/lib/prototype.js"></script>
+		<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script>
+	</div>
+	</body></html> 

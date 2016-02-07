@@ -1,0 +1,182 @@
+ï»¿<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Report Damage to Council Property</title>
+    <meta content="Contact Us" name="description">
+    <meta content="Huntigdonshire District Council" name="author">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <link href="../hdcSmall.css" rel="stylesheet" type="text/css" />
+    <link href="../formElements.css" rel="stylesheet" type="text/css" />
+    <link type="text/css" href="Assets.css" rel="stylesheet" />
+    <link href="../images/favicon.ico" rel="shortcut icon" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/HDC.js" ></script>
+    <script type="text/javascript" src="Assets.js"></script>
+    <script type="text/javascript" src="../../js/jsValidation/validate.js"></script>
+    <script type="text/javascript" src="../../js/jsValidation/additional-methods.js"></script>
+    <script type="text/javascript" src="../../js/simpleModal.js" ></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-4719716-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    <!--[if lt IE 9]>
+    	<script src="../../js/html5.js">
+    	</script>
+    <![endif]-->
+    </head>
+    <body>
+    <div id="all">
+      <ul class="hide" id="skip">
+        <li> <a href="#content">Skip to main content</a> </li>
+        <li> <a href="#snav">Skip to navigation</a> </li>
+      </ul>
+      <div id="header">
+        <div id="logo"> <a href="http://www.huntingdonshire.gov.uk"><img alt="Huntingdonshire District Council" src="../images/HDC_Logo_Colour_65mm_A4.jpg"></a> </div>
+      </div>
+      <div id="breadcrumb">
+        <h2>You are in:</h2>
+        <ul>
+          <li>Report Damage to Council Property</li>
+        </ul>
+      </div>
+      <div id="con">
+        <div id="con2">
+          <div id="rColumn"> &nbsp; </div>
+          <div id="posCon" >
+            <div id="content" >
+              <form id="HDC-form" method="POST" action="../../Applications/FormProcessornew/afp.aspx?formid=59" name="Contact us">
+               <p style="float: right">Required Field<span class="required">*</span></p>
+               <br />
+                <label for="asset">What is damaged?<span class="required">*</span></label>
+                <select placeholder="Please select" name="Type of Asset" id="asset">
+                  <option value="blank" selected >Please select</option>
+                  <option value="Bench" >Bench</option>
+                  <option value="Bollard" >Bollard</option>
+                  <option value="Bus Shelter" >Bus Shelter</option>
+                  <option value="Car Park" >Car Park</option>
+                  <option value="CCTV Camera" >CCTV Camera</option>
+                  <option value="Cycle Rack or Shelter">Cycle rack or shelter</option>
+                  <option value="Footbridge">Footbridge</option>
+                  <option value="Life Buoy or Ring">Life buoy or ring</option>
+                  <option value="Litter Bin">Litter bin</option>
+                  <option value="Mini recycling centre">Mini recycling centre</option>
+                  <option value="Park/ Play Equipment">Park/ Play Equipment</option>
+                  <option value="Pavilion">Pavilion</option>
+                  <option value="Pay and display machine">Pay and display machine</option>
+                  <option value="Planter">Planter</option>
+                  <option value="Seat">Seat</option>
+                  <option value="Skate park">Skate park</option>
+                  <option value="Street name plate">Street name plate</option>
+                  <option value="Toilet">Toilet</option>
+                  <option value="Watercourse">Watercourse</option>
+                  <option value="Other">Other</option>
+                </select>
+                  <div id="otherInfo"
+                      <label for="otherDetails" class="floatClear">
+                          Please specify 'Other' Details
+                          <textarea name="Other Information" placeholder="Please enter details" id="otherDetails"></textarea>
+                  </div>
+                  <label for="locationHome">Is the damaged item next to your home address?<span class="required">*</span></label>
+                  <select placeholder="Please select" name="location at home" id="locationHome" required>
+                      <option value="" selected>Please Select</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No</option>
+                  </select>
+                  <div id="locationAddress">
+                  <label for="addressLocation" class="floatClear">
+                      Location Address<span class="required">*</span>
+                  </label>
+                  <textarea id="addressLocation" name="location" placeholder="If exact address not known please enter street name etc."></textarea>
+                  </div>
+
+                  <label for="location" class="floatClear">
+                      Details of Location<span class="required">*</span>
+                  </label>
+                  <textarea id="location" name="location" placeholder="This needs to be as specific as possible e.g. conifer tree leaning against back fence of 3 High St, Riverside Car Park"></textarea>
+                <label for="problem" class="floatClear" >What is the problem? Please tell us briefly what is damaged and how (if known).<span class="required">*</span></label>
+                <textarea name="Problem" placeholder="Please enter problem" id="problem"></textarea>
+                 <h3>Contact Details</h3>
+                  <p>Please supply your contact details incase we need to contact you for further information.</p>
+                   <label for="title">Title</label>
+                  <select placeholder="Please select" name="Title" id="title">
+                      <option value="blank" selected>Please select</option>
+                      <option value="blank">Mr</option>
+                      <option value="blank">Mrs</option>
+                      <option value="blank">Ms</option>
+                      <option value="blank">Miss</option>
+                      <option value="blank">Prof</option>
+                      <option value="blank">Dr</option>
+                  </select>
+                  <label for="firstName"> First Name<span class="required">*</span> </label>
+                  <input name="First Name" placeholder="Enter your first name" type="text" id="firstName" class="txtinput" data-msg-required="Enter first name" required />
+                  <label for="surname"> Surname<span class="required">*</span> </label>
+                  <input name="Surname" placeholder="Enter your surname" type="text" id="surname" class="txtinput" data-msg-required="Enter surname" required />
+                  <div class="addressPicker">
+                       <label>
+                           What is the applicant address?
+                        </label>
+                        <p>Please enter your postcode below, then click search and select the addresss.</p>
+                        <input placeholder="Your Postcode" type="text" name="Applicant Postcode Search" id="applicantPostcodeSearch" class="txtinput inlineField postcodeField"/>
+                        <input type="button" class="inlineButton goSearch" value="Search for an address"/>
+                        <select id="applicantAddressResults" class="floatClear addressResults">
+                            <option selected>Please select your address</option>
+                        </select>
+                        <input type="hidden" name="applicant UPRN" class="hiddenUPRN" id="applicantUPRN">
+                        <label for="applicantAddress" class="floatClear" >
+                            Your Address
+                        </label>
+                        <textarea name="Applicant Address" class="address" id="applicantAddress" placeholder="Your Address" required></textarea>
+                    </div>
+
+                  <label for="email">Email<span class="required">*</span></label>
+                  <input name="Email" placeholder="Please supply your email address" type="email" id="email" class="txtinput" required />
+                  <label for="confirmEmail">Confirm Email<span class="required">*</span></label>
+                  <input name="confirm Email" placeholder="Please confirm your email address" type="email" id="confirmEmail" class="txtinput" required />
+                  <label for="phoneHome">Contact Telephone Number<span class="required">*</span></label>
+                  <input name="Phone" placeholder="Please supply a phone number" type="tel" id="phoneHome" class="txtinput" required />
+                  <input type="submit" id="submit" name="Submit" value="Submit request" class="HDCbutton"/>
+              </form>
+            </div>
+          </div>
+          <div class="cleaner"> &nbsp; </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="footerContent">
+          <div>
+            <h2 class="hide">Site information</h2>
+            <p>&copy; Huntingdonshire District Council</p>
+            <ul>
+                    <li>
+                        <a href="http://www.huntingdonshire.gov.uk/council-democracy/our-website/" target="_blank">Our website content</a>
+                    </li>
+                    <li>
+                        <a href="http://www.huntingdonshire.gov.uk/council-democracy/council-open-data-and-information/data-protection/" target="_blank">Data protection</a>
+                    </li>
+                    <li>
+                        <a href="http://www.huntingdonshire.gov.uk/council-democracy/council-open-data-and-information/data-matching/" target="_blank">Data matching</a>
+                    </li>
+                    <li>
+                        <a href="http://www.huntingdonshire.gov.uk/council-democracy/have-your-say/complaints-and-feedback/" target="_blank">Complaints</a>
+                    </li>
+                    <li>
+                        <a href="http://www.huntingdonshire.gov.uk/council-democracy/our-website/accessibility" target="_blank">Accessibility</a>
+                    </li>
+                    <li class="last">
+                        <a href="http://www.huntingdonshire.gov.uk/contact-us/" target="_blank">Contact us</a>
+                    </li>
+                </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

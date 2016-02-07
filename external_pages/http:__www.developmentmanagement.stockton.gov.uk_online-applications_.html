@@ -1,0 +1,448 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	
+	<!-- #BeginEditable "doctitle" -->
+<title>Simple Search</title>
+<!-- #EndEditable -->
+    <!-- #BeginEditable "metatags" --><!-- #EndEditable -->
+	
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<!-- Customer metatags -->
+	<meta name="eGMS.accessibility" scheme="WCAG" content="A" /><meta name="eGMS.Accessibility" scheme="ICRA" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "ICRAonline EN v2.0" l gen true for "http://www.stockton.gov.uk" r (nz 1 vz 1 lz 1 oz 1 cz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "http://www.stockton.gov.uk" r (n 0 s 0 v 0 l 0))' /><meta http-equiv="pics-label" content='(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "ICRAonline EN v2.0" l gen true for "" r (nz 1 vz 1 lz 1 oz 1 cz 1) "http://www.rsac.org/ratingsv01.html" l gen true for "" r (n 0 s 0 v 0 l 0))' /><meta name="DCTERMS.audience" scheme="eGMSAES" content="" /><meta name="author" content="Stockton-on-Tees Borough Council" /><meta name="DC.coverage" content="Stockton-on-Tees, England, UK" /><meta name="DC.creator" content="Stockton-on-Tees Borough Council, content.sbcinternet@stockton.gov.uk" /><meta name="DC.description" content="Home Page of Stockton-on-Tees Borough Council Web site - providing e-Government to the residents of Stockton" /><meta name="description" content="Home Page of Stockton-on-Tees Borough Council Web site - providing e-Government to the residents of Stockton" /><meta name="DC.format" scheme="DCTERMS.IMT" content="text/html" /><meta name="DC.identifier.systemId" content="184" /><meta name="eGMS.systemID" content="184" /><meta name="DC.language" scheme="DCTERMS.ISO639-2" content="eng" /><meta name="DC.publisher" content="Stockton-on-Tees Borough Council, Municipal Buildings, PO Box 11, Church Road, Stockton-on-Tees TS18 1LD, (+44)1642 393939, webmaster@stockton.gov.uk" /><meta name="DC.rights.copyright" content="Copyright Stockton-on-Tees Borough Council. All rights reserved" /><meta name="eGMS.status" content="Version 1.2143" /><meta name="DC.subject" scheme="eGMS.IPSV" content="" /><meta name="eGMS.subject.category" scheme="GCL" content="Government, politics and public administration" /><meta name="DC.subject" scheme="eGMS.GCL" content="Government, politics and public administration" /><meta name="DC.subject" scheme="eGMS.LGSL" content="" /><meta name="DC.title" content="Home" /><meta name="keywords" content="Home Page, Stockton, Stockton-on-Tees Borough Council, Thornaby, Eaglescliffe, Ingleby Barwick, Billingham, Yarm, Norton, Government, politics and public administration, Council, government and democracy" />
+	
+	<link rel="shortcut icon" href="http://www.developmentmanagement.stockton.gov.uk/online-applications-skin/images/stockton/favicon.ico" type="image/x-icon" />
+	
+    <link rel="stylesheet" href="http://www.developmentmanagement.stockton.gov.uk/online-applications-skin/styles/screen.css" type="text/css" media="screen,projection" />
+    <link rel="stylesheet" href="http://www.developmentmanagement.stockton.gov.uk/online-applications-skin/styles/theme1.css" type="text/css"/>
+	
+    <link rel="stylesheet" href="http://www.developmentmanagement.stockton.gov.uk/online-applications-skin/styles/print.css" type="text/css" media="print" />
+	
+	<script type="text/javascript" src="http://www.developmentmanagement.stockton.gov.uk/online-applications-skin/scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="http://www.developmentmanagement.stockton.gov.uk/online-applications-skin/scripts/jquery.toolbar.idox.min.js"></script>
+    <script type="text/javascript" src="http://www.developmentmanagement.stockton.gov.uk/online-applications-skin/scripts/common.js"></script>
+    
+	<!-- Customer Analytics Script -->
+	<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-10062602-1"); pageTracker._trackPageview();} catch(err) {}</script>
+	
+    <script type="text/javascript">
+	$('html').addClass('js');
+    </script>
+    
+    <!-- #BeginEditable "mobile" --><!-- #EndEditable -->
+    <!-- #BeginEditable "head" --><!-- #EndEditable -->
+    <!-- #BeginEditable "webapp" -->
+        <script type="text/javascript">
+            $(document).ready( function() {
+                onSearchTypeChange();
+                $("input[name='searchType']").click(function() {
+                    onSearchTypeChange();
+                });
+            });
+
+            function onSearchTypeChange() {
+                if ($("input[name='searchType']:checked").val() == 'Application') {
+                    $(".row1.status").removeClass("hide");
+                } else {
+                    $(".row1.status").addClass("hide");
+                }
+            }
+        </script>
+    <!-- #EndEditable -->
+	
+	
+</head>
+<body>
+
+    <!-- IDOX PA START -->
+    <div id="idox">
+        <div id="pa">
+			<div id="header">
+				<div class="container">
+					<a href="http://www.stockton.gov.uk" title="Stockton council home page"><div id="logo"></div></a>
+					<div id="headertitle"></div>
+					<div class="clear"></div>
+				</div>	
+			</div>
+			<div id="breadcrumbs" class="container">
+				<ul>
+					<li><a href="http://www.stockton.gov.uk">Home</a></li>
+					<li>Applications search</li>
+				</ul>
+			</div>
+            <div class="container">
+       			<div id="toolbar" class="nojs">
+                    <ul>	
+                       <li id="search" class="main"><span>Search</span>
+   							<ul>	
+								<!-- #BeginLibraryItem "/Library/searchModulesNavItems.lbi" -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            <li id="planLinks">
+                <a href="/online-applications/search.do?action=simple&amp;searchType=Application" >
+                    <span>Planning</span>
+                </a>
+                <ul>
+                    <li id="planBasicSearch">
+                        <a href="/online-applications/search.do?action=simple&amp;searchType=Application">
+                            Simple Search
+                        </a>
+                    </li>
+
+                    <li id="planAdvancedSearch">
+                        <a href="/online-applications/search.do?action=advanced&amp;searchType=Application">
+                            Advanced
+                        </a>
+                    </li>
+                    <li id="planListSearch">
+                        <a href="/online-applications/search.do?action=weeklyList&amp;searchType=Application">
+                            Weekly/Monthly Lists
+                        </a>
+                    </li>
+                    <li id="planPropertySearch">
+                        <a href="/online-applications/search.do?action=property&amp;type=custom">
+                            Property Search
+                        </a>
+                    </li>
+					
+                    
+                        <li id="planMapsearch">
+                            <a href="/online-applications/spatialDisplay.do?action=display&amp;searchType=Application">
+                                Map Search
+                            </a>
+                        </li>
+                    
+					
+                </ul>
+            </li>
+        
+
+        
+
+        
+
+        <!-- #EndLibraryItem -->
+                        	</ul>
+						</li>
+                        <!-- #BeginEditable "applicationForms" -->
+
+
+
+
+
+   
+<!-- #EndEditable -->   				
+                        <li id="myprofile" class="main"><span>My Profile</span>
+                            <ul>
+                              <!-- #BeginLibraryItem "/Library/consulteeInTrayNavItem.lbi" -->
+
+
+
+
+
+
+    <!-- #EndLibraryItem -->
+                                <li><a href="http://www.developmentmanagement.stockton.gov.uk/online-applications/registered/displayUserDetails.do">Profile Details</a></li>
+                                <li><a href="http://www.developmentmanagement.stockton.gov.uk/online-applications/registered/savedSearch.do?action=display">Saved Searches</a></li>
+                                <li><a href="http://www.developmentmanagement.stockton.gov.uk/online-applications/registered/userAdmin.do?action=showNotifiedApplications">Notified Applications</a></li>
+                                <li><a href="http://www.developmentmanagement.stockton.gov.uk/online-applications/registered/trackedApplication.do?action=display">Tracked Applications</a></li>
+                                <!-- #BeginEditable "formSubmissions" -->
+
+
+
+
+
+
+
+
+<!-- #EndEditable -->    	
+                            </ul>
+                        </li>
+                        <li id="loginLink" class="main"><!-- #BeginEditable "loginlogout" -->
+
+
+
+
+
+
+
+
+
+
+	<a href="/online-applications/registered/userAdmin.do">Login</a>
+<!-- #EndEditable --></li>
+                        <!-- #BeginEditable "register" -->
+
+
+
+
+
+
+
+
+   
+
+
+	<li id="register">
+        <a href="/online-applications/registrationWizard.do?action=start">Register</a>
+	</li>
+
+<!-- #EndEditable -->
+                    </ul>
+    			</div>
+
+    			<!-- #BeginEditable "headlinenews" -->
+    
+        
+            <div class="messagebox announcement">
+                <h2><strong>Public Access Notice&nbsp;</strong></h2>
+
+<p>On Monday 08/02/2016 and Tuesday 09/02/2016 this site will not be functioning due&nbsp;to system upgrades taking place.&nbsp;&nbsp; It should be operational on Wednesday 10/02/2016.&nbsp;&nbsp; We apologise for any inconvenience caused.</p>
+
+<p>If you need to view any planning&nbsp;information during this period, please contact our planning customer services via telephone on 01642) 526022 or E mail <a href="mailto:developmentservices@stockton.gov.uk">developmentservices@stockton.gov.uk</a></p>
+            </div>
+        
+    
+<!-- #EndEditable -->
+                 
+                <div id="pageheading">
+                    <h2><strong>Planning</strong> &raquo; <!-- #BeginEditable "pageheading" -->Simple Search <!-- #EndEditable --></h2>
+                    <!-- #BeginEditable "helplink" --><!-- #EndEditable -->
+                </div>
+                
+                <!-- START WAM CONTENT -->
+                <div class="content">
+                    <!-- #BeginEditable "errormsg" -->
+  
+    
+    
+
+    
+    
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "pagehead" -->
+    <p>
+    
+    
+        Search for Planning Applications, Appeals and Enforcements by keyword, application reference, postcode or by a single line of an address. </p><p>PLEASE BE AWARE TO ENSURE A FULL PROPERTY HISTORY OF ONLINE PLANNING AND BUILDING REGULATION APPLICATIONS THE PROPERTY SEARCH FACILITY MUST BE USED.
+    
+    </p>
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "tabs" -->
+    
+        
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<ul class="tabs">
+
+    
+    <li>
+        <a href="/online-applications/search.do?action=simple" class="active"><span>Simple</span></a>
+    </li>
+
+    
+    <li>
+        <a href="/online-applications/search.do?action=advanced" class=""><span> Advanced</span></a>
+        
+    </li>
+
+    
+        
+        <li>
+            <a href="/online-applications/search.do?action=weeklyList" class=""><span>Weekly / Monthly Lists</span></a>
+            
+        </li>
+    
+
+    
+    <li>
+        <a href="/online-applications/search.do?action=property&amp;type=custom" class=""><span> Property</span></a>
+        
+    </li>
+
+    
+    
+        <li>
+            
+            <a href="/online-applications/spatialDisplay.do?action=display&amp;searchType=Application" class=""><span>Map</span></a>
+        </li>
+    
+
+</ul>
+
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "tabsubnav" --><!-- #EndEditable -->
+                    <!-- #BeginEditable "pagebody" -->
+
+<div class="tabcontainer toplevel" id="simpleSearch">
+
+    <form name="searchCriteriaForm" method="post" action="/online-applications/simpleSearchResults.do?action=firstPage" id="simpleSearchForm">
+
+    <div class="row1">
+        <span id="searchfor">
+            Search for:
+        </span>
+
+        
+        
+            <label for="Application">
+                <input type="radio" name="searchType" value="Application" checked="checked" id="Application" />
+                Applications
+                
+                
+            </label>
+        
+            <label for="Appeal">
+                <input type="radio" name="searchType" value="Appeal" id="Appeal" />
+                Appeals
+                
+                
+            </label>
+        
+            <label for="Enforcement">
+                <input type="radio" name="searchType" value="Enforcement" id="Enforcement" />
+                Enforcements
+                
+                
+            </label>
+        
+    </div>
+    <div class="row1 status">
+        <label for="searchTypeStatus">
+            Status:
+        </label>
+        <select name="searchCriteria.caseStatus" id="searchTypeStatus"><option value="All">All</option>
+            <option value="Current">Current</option>
+            <option value="Decided">Decided</option></select>
+    </div>
+
+    
+    <div class="row2">
+        <label for="simpleSearchString">
+                Enter a <strong>keyword</strong>, <strong>reference number</strong>, <strong>postcode</strong> or <strong>single line of an address</strong>.
+        </label>
+    </div>
+    
+
+    <div class="row3">
+
+        
+        <span class="fieldhelp">
+            
+                <a href="http://www.developmentmanagement.stockton.gov.uk/online-applications-skin/help/fieldhelp/simpleSearchString.htm" target="_blank" rel="external">
+                    <img src="http://www.developmentmanagement.stockton.gov.uk/online-applications-skin/images/help.gif" alt="Help with Simple Search (opens in a new window)" title="Help with Simple Search (opens in a new window)" width="16" height="16" class="helpicon" />
+                </a>
+            
+            
+        </span>
+        
+        <input type="text" name="searchCriteria.simpleSearchString" maxlength="255" value="" onblur="javascript:this.value=this.value.replace(/^\s+|\s+$/g,'')" onfocus="javascript:this.value=this.value.replace(/^\s+|\s+$/g,'')" class="text" id="simpleSearchString" />
+
+        <input type="hidden" name="searchCriteria.simpleSearch" value="true" />
+        <input type="submit" value="Search" class="button primary" />
+
+    </div>
+
+    </form>
+</div>
+
+<!-- #EndEditable -->
+                    <!-- #BeginEditable "pagefoot" --><!-- #EndEditable -->
+                </div>
+                <!-- END WAM CONTENT -->
+                
+                <p id="poweredBy">
+                    <a target="_blank" href="http://www.idoxgroup.com/">
+                        <img alt="an idox solution (opens in a new window)" title="Go to the Idox website (opens in a new window)" src="http://www.developmentmanagement.stockton.gov.uk/online-applications-skin/images/idox.gif"/>
+                    </a>
+                </p>
+            </div>	
+			<div id="footer">
+				<div class="container">
+					<div id="footercontent"><ul><li class="address"><i class="fa fa-map-marker"></i><br><p>Stockton-on-Tees Borough Council,<br> Municipal Buildings,<br> Church Road,<br> Stockton-on-Tees,<br> TS18 1LD</p></li><li class="addresstel"><i class="fa fa-compass"></i><p><span class="smallgrey">SATNAV</span><br>TS19 1UE</p><i class="fa fa-phone"></i><p><span style="margin-left:0;">01642 393939</span></p></li></ul></div>
+					<div id="links">
+						<ul>
+							<li><p><i class="fa fa-envelope"></i> <a href="mailto:customer.comments@stockton.gov.uk">customer.comments@stockton.gov.uk</a></p></li>
+							<li><p class="blue"><br><span style="margin-right:20px"><a href="https://www.stockton.gov.uk/disclaimer">Disclaimer</a></span> &copy; 2015 Stockton Council</p></li>
+							<li></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>	
+			</div>
+        </div>    
+    </div>  
+    <!-- IDOX PA END -->           
+	
+</body>
+</html>
+

@@ -1,0 +1,668 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="Content-Style-Type" content="text/css" /><link href="/WebResource.axd?d=1ABG6gqGWoouXn-dwpmRGaQMiDMUOOzMDjIHqmN5zh19zmVZAPy0x8ZHXSGYp38GkXh58SEQvmJBuOhnQsIYGyo6Msv8K63bMrHzY4OgCvqjyTxiTwpjUIC3UZxbVraE8Vle0q71akhnbg8rPcgg41_YWY81&amp;t=635058696783408359" type="text/css" rel="stylesheet" /><meta http-equiv="Content-Script-Type" content="text/javascript" /><title>
+	Roads - Closures and Diversions
+</title><link href="../../templates/default/style/style.css" type="text/css" rel="stylesheet" />
+<!--[if IE 6]>
+	<link rel="stylesheet" href="../../templates/default/style/ie6.css" type="text/css" />
+<![endif]-->
+<!--[if IE 7]>
+	<link rel="stylesheet" href="../../templates/default/style/ie7.css" type="text/css" />
+<![endif]-->
+<link href="../../templates/default/style/print.css" type="text/css" rel="stylesheet" media="print" /><link href="../../templates/default/css/default.css" type="text/css" rel="stylesheet" /><meta name="GENERATOR" content="Immediacy .NET CMS - Licensed To : Auros Limited" /><meta name="keywords" content="closures,diversion,roads" /><meta name="description" content="Information about Road Closures and Diversions" /></head>
+<body>
+<form name="aspnetForm" method="post" action="roads_-_closures_and_diversion.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWBAIBD2QWAgIMDxYCHgRocmVmBSN+L3RlbXBsYXRlcy9kZWZhdWx0L2Nzcy9kZWZhdWx0LmNzc2QCAw9kFgYCBw9kFgJmD2QWAgIBD2QWAmYPZBYGAgEPZBYCZg8PFgQeCkNvbHVtblNwYW4CAh4EVGV4dAX0BjxQPjxTVFJPTkc+U0VDVElPTiAxNkEgT0YgVEhFIFJPQUQgVFJBRkZJQyBSRUdVTEFUSU9OIEFDVCAxOTg0IEFQUExJQ0FUSU9OIEZPUiBST0FEIENMT1NVUkUgLSBDb25kaXRpb25zOi08L1NUUk9ORz48L1A+DQo8T0w+DQo8TEk+VGhlIG9yZ2FuaXNhdGlvbiBzaGFsbCBub21pbmF0ZSBzdGV3YXJkcyB3aG8gd2lsbCBiZSByZXNwb25zaWJsZSBmb3IgbWFraW5nIHN1aXRhYmxlIHByb3Zpc2lvbiBmb3IgdGhlIHNhZmV0eSBvZiBwZXJzb25zIGF0dGVuZGluZyB0aGUgZXZlbnQgYW5kIGZvciBlbnN1cmluZyB0aGF0IGFkZXF1YXRlIGFjY2VzcyBpcyBhdmFpbGFibGUgYXQgYWxsIHRpbWVzIGZvciBmaXJlIGVuZ2luZXMsIGFtYnVsYW5jZXMsIHBvbGljZSBjYXJzIG9yIG90aGVyIHZlaGljbGVzIHRoYXQgbWF5IGJlIHJlcXVpcmVkIGluIGFuIGVtZXJnZW5jeS48L0xJPg0KPExJPklmIHJlcXVpcmVkIHRvIGRvIHNvIGJ5IHRoZSBEaXZpc2lvbmFsIFN1cnZleW9yLCB0aGUgb3JnYW5pc2VycyBzaGFsbCBlbnN1cmUgdGhhdCBzaWducyBhcmUgaW4gcG9zaXRpb24gdG8gaW5kaWNhdGUgdG8gZHJpdmVycyB0aGF0IHRoZSByb2FkIGlzIGNsb3NlZDwvTEk+DQo8TEk+VGhlIG9yZ2FuaXNlcnMgc2hhbGwgcGF5IGFueSBjaGFyZ2VzIGltcG9zZWQgdG8gY292ZXIgY29zdHMgaW5jdXJyZWQgYnkgdGhlIENvdW50eSBDb3VuY2lsLiAoQ2hhcmdlcyBtYXkgYmUgaW1wb3NlZCB1bmxlc3MgdGhlIGV2ZW50IGhhcyBhIHR1cm5vdmVyIG9mIGxlc3MgdGhhbiDCozUsMDAwIGFuZCB0aGUgQ291bnR5IENvdW5jaWwgaXMgbm90aWZpZWQgYnkgdGhlIGVuZCBvZiBOb3ZlbWJlciBvZiBldmVudHMgZm9yIHRoZSBmb2xsb3dpbmcgY2FsZW5kYXIgeWVhcik8L0xJPjwvT0w+ZGQCCw9kFgICAQ9kFgJmDw9kFgIeCm9ua2V5cHJlc3MFRmlmICh0eXBlb2YoUGFnZV9DbGllbnRWYWxpZGF0ZSkgPT0gJ2Z1bmN0aW9uJykgUGFnZV9DbGllbnRWYWxpZGF0ZSgpOyBkAgwPZBYCZg8PFgQfAQICHwIF0wM8YnIvPjxwPlRoZSBjb250ZW50cyBvZiB0aGlzIGZvcm0gd2lsbCBiZSBlbWFpbGVkIHRvIFJ1dGxhbmQgQ291bnR5IENvdW5jaWwuPC9wPg0KPHA+UGxlYXNlIHJlZmVyIHRvIHRoZSBDb3VuY2lsJ3MgUHJpdmFjeSBQb2xpY3kuIDwvcD4NCjxwPlBlcnNvbmFsIGRhdGEgc3VwcGxpZWQgb24gdGhpcyBmb3JtIHdpbGwgYmUgaGVsZCBvbiBjb21wdXRlciBhbmQgd2lsbCBiZSB1c2VkIGluIGFjY29yZGFuY2Ugd2l0aCB0aGUgRGF0YSBQcm90ZWN0aW9uIEFjdCAxOTk4IGZvciBzdGF0aXN0aWNhbCBhbmFseXNpcywgbWFuYWdlbWVudCwgcGxhbm5pbmcgYW5kIGluIHRoZSBwcm92aXNpb24gb2Ygc2VydmljZXMgYnkgUnV0bGFuZCBDb3VudHkgQ291bmNpbCBhbmQgaXRzIHBhcnRuZXJzLjwvcD4NCjxwPlJ1dGxhbmQgQ291bnR5IENvdW5jaWwgd2lsbCB0cmVhdCBhbGwgaW5mb3JtYXRpb24gYXMgY29uZmlkZW50aWFsPC9wPmRkAgkPFgIeCWN1clBhZ2VObwIBFggCAQ9kFgJmDxUDDElMSU5LfDg1NTksfDxGdW5lcmFsIFNlcnZpY2UgdG8gYmUgSGVsZCBmb3IgQ291bmNpbCBMZWFkZXIgUm9nZXIgQmVneSBPQkU8RnVuZXJhbCBTZXJ2aWNlIHRvIGJlIEhlbGQgZm9yIENvdW5jaWwgTGVhZGVyIFJvZ2VyIEJlZ3kgT0JFZAICD2QWAmYPFQMMSUxJTkt8ODU1NSx8KUNvdW5jaWwgTGVhZGVyIFJvZ2VyIEJlZ3kgaGFzIHBhc3NlZCBhd2F5KUNvdW5jaWwgTGVhZGVyIFJvZ2VyIEJlZ3kgaGFzIHBhc3NlZCBhd2F5ZAIDD2QWAmYPFQMMSUxJTkt8ODU1Nyx8PkNvbW1lbnQgb24gcG9zc2libGUgY2hhbmdlcyB0byBzb2NpYWwgY2FyZSBjaGFyZ2luZyBpbiBSdXRsYW5kPkNvbW1lbnQgb24gcG9zc2libGUgY2hhbmdlcyB0byBzb2NpYWwgY2FyZSBjaGFyZ2luZyBpbiBSdXRsYW5kZAIED2QWAmYPFQMMSUxJTkt8ODU1Mix8J05vdGljZSBvZiBFbGVjdGlvbiBmb3IgV2hpc3NlbmRpbmUgV2FyZCdOb3RpY2Ugb2YgRWxlY3Rpb24gZm9yIFdoaXNzZW5kaW5lIFdhcmRkAgoPFgIfBAIBFgYCAQ9kFgJmDxUDKmh0dHA6Ly93d3cuYmJjLmNvLnVrL3dlYXRoZXIvMjY0MTEyOD9kYXk9MCpodHRwOi8vd3d3LmJiYy5jby51ay93ZWF0aGVyLzI2NDExMjg/ZGF5PTA/U2F0dXJkYXk6IExpZ2h0IFJhaW4sIE1pbmltdW0gVGVtcGVyYXR1cmU6IDMmIzE3NjtDICgzNyYjMTc2O0YpZAICD2QWAmYPFQMqaHR0cDovL3d3dy5iYmMuY28udWsvd2VhdGhlci8yNjQxMTI4P2RheT0xKmh0dHA6Ly93d3cuYmJjLmNvLnVrL3dlYXRoZXIvMjY0MTEyOD9kYXk9MWdTdW5kYXk6IExpZ2h0IFJhaW4sIE1heGltdW0gVGVtcGVyYXR1cmU6IDcmIzE3NjtDICg0NSYjMTc2O0YpIE1pbmltdW0gVGVtcGVyYXR1cmU6IDQmIzE3NjtDICgzOSYjMTc2O0YpZAIDD2QWAmYPFQMqaHR0cDovL3d3dy5iYmMuY28udWsvd2VhdGhlci8yNjQxMTI4P2RheT0yKmh0dHA6Ly93d3cuYmJjLmNvLnVrL3dlYXRoZXIvMjY0MTEyOD9kYXk9MmdNb25kYXk6IEhlYXZ5IFJhaW4sIE1heGltdW0gVGVtcGVyYXR1cmU6IDcmIzE3NjtDICg0NSYjMTc2O0YpIE1pbmltdW0gVGVtcGVyYXR1cmU6IDImIzE3NjtDICgzNiYjMTc2O0YpZGRIwnsgOdIcFKheqWnx7k2akZ6uXQ==" />
+
+
+<script src="/WebResource.axd?d=CukPLKNoS5iMIPa2qaiO75NFq53POAamgS20TSxHMqBwnh-tV3xBMmFNywxA6Nty3_t-d-dbKKJB2pcvZJrBuZoxCYcbbu-_geeMOG8fp8YOX9llvGJ1svZnHgGvPh-y3ZZFew2&amp;t=635058696779508159" type="text/javascript"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDwLb576hBQLm45qtAQLGqoiFBQLw0oS6DgLMl5fMCwKks6WLDwLQ94v4BgKaj/2OAQLn/aX+DwKq6puVAgKtyafBBgLF4LtSAqzL7/EMApXdtJgKApaXoOYIYcaGtOR+odm9L5fppJcuw10pV4I=" />
+
+
+
+<div><a name="top"></a></div>
+<div id="skip"><a href="mainContent">Skip to main content</a></div>
+
+
+<div id="cookieLink">
+
+	
+<H2>Cookies on the website</H2>
+<P>We use cookies to ensure that we give you the best experience on our website. If you continue without changing your settings, we'll assume that you are happy to receive all cookies on the website. However, if you would like to, you can disable cookies in your browser. <a href="/system_pages/utility_links/cookies.aspx">See more about cookies</A></P>
+	
+	<script type="text/javascript">
+	    var cookieURL = '/system_pages/cookiebannerpage.aspx';
+	    var cookieElement = 'mainContent';
+	    var closeText = 'Close this panel'; // Use PageUtil.GetPageTitle if/when installed
+
+	    // Hide if not already toggling a js class
+	    document.getElementById('cookieLink').style.display = 'none';
+	</script>
+
+	<noscript></noscript>
+</div>
+
+<div id="everything" >
+	<div id="header">
+	<div class="inner floatHolder">
+		
+		<h1>
+		<a href="/default.aspx?page=0">
+		
+			<img src="/templates/default/images/h1.jpg" alt="My Rutland" />
+		
+		
+		</a></h1>
+		<div id="logo"><a href="/default.aspx?page=0"><img src="/templates/default/images/logo.jpg" alt="Rutland County Council" /></a></div>
+	</div>		
+	<div class="navWrapper floatHolder">
+		
+	<div id="dropNav">
+		
+				<ul><li class="home"><a title="Home" href="/default.aspx">Home</a></li>
+			<li class="first">
+			<a href="/system_pages/top_navigation/find_council_services.aspx" title="Find Council Services" class="drop">Find Council Services<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_a-z.aspx" title="Search by A-Z" >Search by A-Z</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_most_popular.aspx" title="Search by Most Popular" >Search by Most Popular</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_council_department.aspx" title="Search by Council Department" >Search by Council Department</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/find_council_services/search_by_key_life_events.aspx" title="Search by Key Life Events" >Search by Key Life Events</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			<li class="">
+			<a href="/system_pages/top_navigation/do_it_online.aspx" title="Do it Online" class="drop">Do it Online<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="/system_pages/top_navigation/do_it_online/make_a_payment.aspx" title="Make a Payment" >Make a Payment</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/missed_bin_collection.aspx" title="Missed Bin Collection" >Missed Bin Collection</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/pay_parking_fine.aspx" title="Pay Parking Fine" >Pay Parking Fine</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/request_ca_site_permit.aspx" title="Request CA Site Permit" >Request CA Site Permit</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/do_it_online/view_planning_applications.aspx" title="View Planning Applications" >View Planning Applications</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			<li class="">
+			<a href="/system_pages/top_navigation/your_councillor.aspx" title="Your Councillor" >Your Councillor</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us.aspx" title="Contact Us" class="drop">Contact Us<!--[if gte IE 7]><!--></a><!--<![endif]--><!--[if lte IE 6]><table><tr><td><![endif]-->
+
+				<ul>
+			<li class="first">
+			<a href="/system_pages/top_navigation/contact_us/customer_services.aspx" title="Customer Services" >Customer Services</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/online_contact_form.aspx" title="Online Contact Form" >Online Contact Form</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/visitor_parking.aspx" title="Visitor Parking" >Visitor Parking</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/map_and_directions.aspx" title="Map and Directions" >Map and Directions</a></li>
+<li class="">
+			<a href="/system_pages/top_navigation/contact_us/customer_care_standards.aspx" title="Customer Care Standards" >Customer Care Standards</a></li>
+
+				</ul>
+				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			
+				</ul>
+			
+
+		<div id="search">
+			<div id="searchBox">
+	<label for="Template_topNav_searchBox_quickSearch" accesskey="s">Search </label><input name="Template$topNav$searchBox$quickSearch" type="text" value="Search" id="Template_topNav_searchBox_quickSearch" onfocus="clearText('Template_topNav_searchBox_quickSearch','Search');" onkeypress="return clickOnEnterMultiBrowser(event, 'Template_topNav_searchBoxdosearch');" /><img src="../../images/1.gif" alt="" title="" width="0" height="0" /><a class="Button" href="javascript:__doPostBack('Template$topNav$searchBox','goSearch')" title="Search"><img id="Template_topNav_searchBoxdosearch" src="/templates/default/images/go.gif" alt="Search" /></a>
+</div>
+		</div>
+	</div>
+
+<div class="gm_sidebar gm_sidebar_rh"> 
+      <a 
+            href="//websurveys.govmetric.com/theme/gm/1534" 
+            target="_blank" 
+            class="gm_sidebar_anchor" 
+            title="please rate this page" 
+            rel="nofollow"> 
+            <img src="//wsstatic.govmetric.com/imgs/triggers/rh.png" alt="rating button" /> 
+      </a> 
+</div> 
+<link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar_rh.css" /> 
+<script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+ 
+<script type="text/javascript" src="//hitcounter.govmetric.com/1343"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+ 
+
+	</div>
+	<div class="navInstructions"><div class="inner">
+<P>Use the links above to reach key areas of our site.</P></div></div>
+	</div>
+	<div id="main" class="floatHolder col3">
+		<div id="subNav">
+			
+					<div class="heading" >Transport and streets</div>
+					
+				
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+					<ul>
+				
+					<li ><a href="/transport_and_streets/abandoned_vehicles.aspx" title="Abandoned vehicles"><span>Abandoned vehicles</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/community_transport_services.aspx" title="Community transport services"><span>Community transport services</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/local_sustainable_transport_f.aspx" title="Local Sustainable Transport Fund"><span>Local Sustainable Transport Fund</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/local_transport_plan.aspx" title="Local Transport Plan"><span>Local Transport Plan</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/parking.aspx" title="Parking"><span>Parking</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/public_transport.aspx" title="Public transport"><span>Public transport</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/public_rights_of_way.aspx" title="Public Rights of Way"><span>Public Rights of Way</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/road_safety.aspx" title="Road safety"><span>Road safety</span></a></li>
+				
+
+					<li  class='expanded'><a href="/transport_and_streets/roads,_highways_and_pavements.aspx" title="Roads, Highways and Pavements"><span>Roads, Highways and Pavements</span></a>
+				
+
+					<ul>
+				
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/abnormal_loads.aspx" title="Abnormal Loads"><span>Abnormal Loads</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/cycle_lanes_and_routes_-_road.aspx" title="Cycle Lanes and Routes - Road Markings and Signage"><span>Cycle Lanes and Routes - Road Markings and Signage</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/demonstrations_and_parades.aspx" title="Demonstrations and Parades"><span>Demonstrations and Parades</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/dropped_kerbs_crossover.aspx" title="Dropped Kerbs Crossover"><span>Dropped Kerbs Crossover</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/flooding.aspx" title="Flooding"><span>Flooding</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/gritting.aspx" title="Gritting"><span>Gritting</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/licence_-_highway_projection.aspx" title="Licence - Section 50 &amp;Highway Projection"><span>Licence - Section 50 &amp;Highway Projection</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/licence_-_street_trading.aspx" title="Licence - Street Trading"><span>Licence - Street Trading</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/lighting_-_street_lights.aspx" title="Lighting - Street Lights"><span>Lighting - Street Lights</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/lighting_-_traffic_lights.aspx" title="Lighting - Traffic Lights"><span>Lighting - Traffic Lights</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/parking_information.aspx" title="Parking Information"><span>Parking Information</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/pavements_obstructions.aspx" title="Pavement Obstructions"><span>Pavement Obstructions</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/pavement_maintenance.aspx" title="Pavement Maintenance"><span>Pavement Maintenance</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/pavements_-_stolen_slabs.aspx" title="Pavements - Stolen Slabs"><span>Pavements - Stolen Slabs</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/ragwort_advice.aspx" title="Ragwort Advice"><span>Ragwort Advice</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_adoption_agreements.aspx" title="Roads - Adoption Agreements"><span>Roads - Adoption Agreements</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/road_safety_information.aspx" title="Road Safety Information"><span>Road Safety Information</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/road_signs.aspx" title="Road Signs"><span>Road Signs</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_approved_schemes.aspx" title="Roads - Approved Schemes"><span>Roads - Approved Schemes</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_bridges_general_infor.aspx" title="Roads - Bridges (General Information)"><span>Roads - Bridges (General Information)</span></a></li>
+				
+
+					<li class="selected"><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_closures_and_diversion.aspx" title="Roads - Closures and Diversions"><span>Roads - Closures and Diversions</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_enforcement.aspx" title="Roads - Enforcement"><span>Roads - Enforcement</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_flooding_-_drains_and.aspx" title="Roads - Flooding - Drains and Gullies"><span>Roads - Flooding - Drains and Gullies</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_maintenance_-_structur.aspx" title="Roads - Maintenance - Structural Surveys"><span>Roads - Maintenance - Structural Surveys</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_obstructions.aspx" title="Roads - Obstructions"><span>Roads - Obstructions</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_speed_limits.aspx" title="Roads - Speed Limits"><span>Roads - Speed Limits</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_weight_limits.aspx" title="Roads - Weight Limits"><span>Roads - Weight Limits</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_roadworks.aspx" title="Roads - Roadworks"><span>Roads - Roadworks</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_roadwork_summary.aspx" title="Roads - Roadwork Summary"><span>Roads - Roadwork Summary</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_snow_clearance.aspx" title="Roads - Snow Clearance"><span>Roads - Snow Clearance</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_speed_humps.aspx" title="Roads - Speed Humps"><span>Roads - Speed Humps</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_additional_funding.aspx" title="Roads - Additional Funding"><span>Roads - Additional Funding</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/street_furniture_-_provision_a.aspx" title="Street Furniture - Provision and Maintenance"><span>Street Furniture - Provision and Maintenance</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/street_name_plates.aspx" title="Street Name Plates"><span>Street Name Plates</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/street_trading_-_illegal.aspx" title="Street Trading - Illegal"><span>Street Trading - Illegal</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/taxi_rank_provision.aspx" title="Taxi Rank Provision"><span>Taxi Rank Provision</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/tourist_signs.aspx" title="Tourist Signs"><span>Tourist Signs</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/verge_maintenance.aspx" title="Verge Maintenance"><span>Verge Maintenance</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/wall_maintenance.aspx" title="Wall Maintenance"><span>Wall Maintenance</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/yellow_lines.aspx" title="Yellow Lines"><span>Yellow Lines</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/pavements_parking.aspx" title="Pavements (Parking)"><span>Pavements (Parking)</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/street_naming_and_numbering_-.aspx" title="Street naming and numbering - Statutory register"><span>Street naming and numbering - Statutory register</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/potholes.aspx" title="Potholes"><span>Potholes</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_skip_permits.aspx" title="Skip Permits"><span>Skip Permits</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_scaffold_permits.aspx" title="Scaffold Permits"><span>Scaffold Permits</span></a></li>
+				
+
+					</ul></li>
+				
+					<li ><a href="/transport_and_streets/street_care_and_cleaning.aspx" title="Street care and cleaning"><span>Street care and cleaning</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/taxis_and_minicabs.aspx" title="Taxis and minicabs"><span>Taxis and minicabs</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/travel_planning.aspx" title="Travel Planning"><span>Travel Planning</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/walking_and_cycling.aspx" title="Walking and Cycling"><span>Walking and Cycling</span></a></li>
+				
+
+					<li ><a href="/transport_and_streets/winter_services.aspx" title="Winter Services"><span>Winter Services</span></a></li>
+				
+
+					</ul>
+				
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+				
+
+					
+				
+		</div>
+		<div class="mainWrapper">
+		<div id="crumbtrail">
+			
+					
+				
+					<a href="/default.aspx">Home</a> &gt;
+				
+
+					<a href="/transport_and_streets.aspx">Transport and streets</a> &gt;
+				
+
+					<a href="/transport_and_streets/roads,_highways_and_pavements.aspx">Roads, Highways and Pavements</a> &gt;
+				
+
+						Roads - Closures and Diversion
+				
+
+					
+				
+		</div>
+		<div id="mainContent">
+			
+<H2>Roads and highways - closures and diversions </H2>
+<P>Sometimes works on the highway, or some large deliveries, require a road to be closed temporarily to general traffic. Such closures require a traffic regulation order issued by the highway authority. 
+<P>All costs involved for both the closure and diversion signing will have to be met by the person requesting the closure. 
+<UL>
+<LI><a title="Why do roads have to be closed" href="/transport_and_streets/roads,_highways_and_pavements/roads_-_closures_and_diversion.aspx#why_close"><STRONG>Why do roads have to be closed?</STRONG></A> 
+<LI><STRONG><a title="Who can close a road?" href="/transport_and_streets/roads,_highways_and_pavements/roads_-_closures_and_diversion.aspx#who">Who can close a road?</A></STRONG> 
+<LI><STRONG><a title="How long can a road be closed for? " href="/transport_and_streets/roads,_highways_and_pavements/roads_-_closures_and_diversion.aspx#how_long">How long can a road be closed for?</A></STRONG> 
+<LI><STRONG><a title="How can I apply for a road closure?" href="/transport_and_streets/roads,_highways_and_pavements/roads_-_closures_and_diversion.aspx#apply">How can I apply for a road closure?</A></STRONG></LI></UL>
+<P><BR><A title="Bookmark Target" name=why_close></A><STRONG>Why do roads have to be closed?</STRONG></P>
+<P>Roads are closed only when absolutely necessary. This will either allow the physical construction of works on the highway, or safeguard workers or pedestrians. The reasons for closure may be for example:</P>
+<P>resurfacing of the carriageway. </P>
+<P>laying pipes and cables. </P>
+<P>providing pedestrian refuges in the middle of the road where it would be unsafe to allow vehicles to squeeze past workers on the carriageway. </P>
+<P>special events, such as Air Shows or Christmas Markets, where large numbers of pedestrians may spill over onto the carriageway. </P><A title="Bookmark Target" name=who></A>
+<P>street parties in quiet residential streets. <BR><STRONG>Who can close a road?</STRONG></P>
+<P>Roads can only be closed by the Council by the use of a legal Traffic Regulation Order. This has to be prepared by us, and advertised in the local papers. The advert will give details of the dates when the road will be closed, and the reasons why it has to be closed. It will also give details of any diversion routes to avoid the closure.<BR><A title="Bookmark Target" name=how_long></A><STRONG>How long can a road be closed for?</STRONG></P>
+<P>The maximum length a road can be closed is 18 months, but every effort is made to keep road closures to an absolute minimum. <BR><A title="Bookmark Target" name=apply></A><STRONG>How can I apply for a road closure?</STRONG></P>
+<P>In general, applications for road closures will be made to the Highways Maintenance Team by Statutory Undertakers, such as Severn Trent Water or East Midlands Electricity. Private individuals, can however, also apply if they wish to hold events for street parties. These will only be allowed if the emergency services (Fire, Ambulance &amp; Police) support the application, and if the location of the closure does not unduly affect surrounding roads. If deemed acceptable, a charge will be levied to cover advertising costs and staff time. This cost will be borne by the organisers of the event. </P>
+<P>The organisers will also be responsible for providing all necessary traffic diversion signs, cones and barriers. Guidance on the diversion routes and necessary signing can be provided &#8211; the time taken to provide this will be charged to the organisers, as outlined above.</P>
+<P>A minimum of seven weeks notice is required to carry out the necessary legal processes.<BR><STRONG>Next steps</STRONG></P>
+<P>Please either complete the online Road Closure Application form below. <BR>or<BR>Download the <STRONG><a href="/pdf/Road%20Closure%20Application%20Form3.pdf">printable Road Closure Application form</A></STRONG>. (pdf file)</P>
+<P>Your completed form should be&nbsp;posted to us.</P>
+<P>If you have any queries when completing either form, please contact us using the details above.</P>
+<HR style="WIDTH: 100%; HEIGHT: 3px">
+<table class="tbform" cellspacing="2" cellpadding="2" summary=" " border="0">
+	<tr>
+		<td colspan="2"></td>
+	</tr><tr valign="top">
+		<td id="Template_ctl11_ctl00_fb_Road_closure_request_paragraph_Legal" class="caption" colspan="2"><P><STRONG>SECTION 16A OF THE ROAD TRAFFIC REGULATION ACT 1984 APPLICATION FOR ROAD CLOSURE - Conditions:-</STRONG></P>
+<OL>
+<LI>The organisation shall nominate stewards who will be responsible for making suitable provision for the safety of persons attending the event and for ensuring that adequate access is available at all times for fire engines, ambulances, police cars or other vehicles that may be required in an emergency.</LI>
+<LI>If required to do so by the Divisional Surveyor, the organisers shall ensure that signs are in position to indicate to drivers that the road is closed</LI>
+<LI>The organisers shall pay any charges imposed to cover costs incurred by the County Council. (Charges may be imposed unless the event has a turnover of less than £5,000 and the County Council is notified by the end of November of events for the following calendar year)</LI></OL></td>
+	</tr><tr valign="top">
+		<td class="caption"><label for="Template_ctl11_ctl00_Event">Proposed Event</label>*</td><td><textarea name="Template$ctl11$ctl00$Event" rows="4" cols="20" id="Template_ctl11_ctl00_Event"></textarea></td>
+	</tr><tr valign="top">
+		<td class="caption"><label for="Template_ctl11_ctl00_date">Date of Event</label>*</td><td><input name="Template$ctl11$ctl00$date" type="text" id="Template_ctl11_ctl00_date" /></td>
+	</tr><tr valign="top">
+		<td class="caption"><label for="Template_ctl11_ctl00_Organiser">Organiser</label>*</td><td><input name="Template$ctl11$ctl00$Organiser" type="text" id="Template_ctl11_ctl00_Organiser" /></td>
+	</tr><tr valign="top">
+		<td class="caption"><label for="Template_ctl11_ctl00_Phone">Contact Phone number</label>*</td><td><input name="Template$ctl11$ctl00$Phone" type="text" id="Template_ctl11_ctl00_Phone" /></td>
+	</tr><tr valign="top">
+		<td class="caption"><label for="Template_ctl11_ctl00_email">email</label></td><td><input name="Template$ctl11$ctl00$email" type="text" id="Template_ctl11_ctl00_email" /></td>
+	</tr><tr valign="top">
+		<td class="caption"><label for="Template_ctl11_ctl00_reasons">Can you please give the reasons why it is necessary for the event to be held on a road </label>*</td><td><textarea name="Template$ctl11$ctl00$reasons" rows="4" cols="20" id="Template_ctl11_ctl00_reasons"></textarea></td>
+	</tr><tr valign="top">
+		<td class="caption"><label for="Template_ctl11_ctl00_insurance">Has public liability or third party insurance been obtained for the event (if applicable)</label>*</td><td><span id="Template_ctl11_ctl00_insurance" summary=" "><input id="Template_ctl11_ctl00_insurance_0" type="radio" name="Template$ctl11$ctl00$insurance" value="Yes" checked="checked" /><label for="Template_ctl11_ctl00_insurance_0">Yes</label><br /><input id="Template_ctl11_ctl00_insurance_1" type="radio" name="Template$ctl11$ctl00$insurance" value=" No " /><label for="Template_ctl11_ctl00_insurance_1"> No </label><br /><input id="Template_ctl11_ctl00_insurance_2" type="radio" name="Template$ctl11$ctl00$insurance" value=" Not Applicable" /><label for="Template_ctl11_ctl00_insurance_2"> Not Applicable</label></span></td>
+	</tr><tr valign="top">
+		<td class="caption"><label for="Template_ctl11_ctl00_responsibletraffic">Please confirm who is to take responsibility for traffic management for the event</label>*</td><td><textarea name="Template$ctl11$ctl00$responsibletraffic" rows="4" cols="20" id="Template_ctl11_ctl00_responsibletraffic"></textarea></td>
+	</tr><tr valign="top">
+		<td class="caption"><label for="Template_ctl11_ctl00_emergencyservices">Please confirm that arrangements are being made to ensure that access will be available for emergency services at all times</label>*</td><td><textarea name="Template$ctl11$ctl00$emergencyservices" rows="4" cols="20" id="Template_ctl11_ctl00_emergencyservices"></textarea></td>
+	</tr><tr valign="top">
+		<td class="caption"><label for="Template_ctl11_ctl00_Submit"></label></td><td><input type="submit" name="Template$ctl11$ctl00$Submit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;Template$ctl11$ctl00$Submit&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="Template_ctl11_ctl00_Submit" onkeypress="if (typeof(Page_ClientValidate) == 'function') Page_ClientValidate(); " /></td>
+	</tr><tr valign="top">
+		<td id="Template_ctl11_ctl00_fb_Road_closure_request_paragraph_disclaimer" class="caption" colspan="2"><br/><p>The contents of this form will be emailed to Rutland County Council.</p>
+<p>Please refer to the Council's Privacy Policy. </p>
+<p>Personal data supplied on this form will be held on computer and will be used in accordance with the Data Protection Act 1998 for statistical analysis, management, planning and in the provision of services by Rutland County Council and its partners.</p>
+<p>Rutland County Council will treat all information as confidential</p></td>
+	</tr>
+</table>
+		</div>
+		</div>
+		<div class="aside">
+			<div class="panel ad">
+				
+<img alt="Image Alt Text" src="/templates/default/images/img8.jpg"> 
+			</div>
+			<div class="panel">
+				
+						<h3>News</h3>
+						<ul class="newsArticles">
+					
+						<li>
+							<a href="/council_and_democracy/council_news/cllr_begy_funeral_service.aspx" title="Funeral Service to be Held for Council Leader Roger Begy OBE">Funeral Service to be Held for Council Leader Roger Begy OBE</a>
+						</li>
+					
+						<li>
+							<a href="/council_and_democracy/council_news/councillor_roger_begy.aspx" title="Council Leader Roger Begy has passed away">Council Leader Roger Begy has passed away</a>
+						</li>
+					
+						<li>
+							<a href="/council_and_democracy/council_news/charging_consultation.aspx" title="Comment on possible changes to social care charging in Rutland">Comment on possible changes to social care charging in Rutland</a>
+						</li>
+					
+						<li>
+							<a href="/council_and_democracy/council_news/whissendine_by-election.aspx" title="Notice of Election for Whissendine Ward">Notice of Election for Whissendine Ward</a>
+						</li>
+						
+						</ul>
+					
+			</div>
+			<div class="panel">
+				<h3>Weather</h3>
+				
+						<ul class="rssFeed">
+					
+						<li>
+							<a href="http://www.bbc.co.uk/weather/2641128?day=0" title="http://www.bbc.co.uk/weather/2641128?day=0">Saturday: Light Rain, Minimum Temperature: 3&#176;C (37&#176;F)</a>
+						</li>
+					
+						<li>
+							<a href="http://www.bbc.co.uk/weather/2641128?day=1" title="http://www.bbc.co.uk/weather/2641128?day=1">Sunday: Light Rain, Maximum Temperature: 7&#176;C (45&#176;F) Minimum Temperature: 4&#176;C (39&#176;F)</a>
+						</li>
+					
+						<li>
+							<a href="http://www.bbc.co.uk/weather/2641128?day=2" title="http://www.bbc.co.uk/weather/2641128?day=2">Monday: Heavy Rain, Maximum Temperature: 7&#176;C (45&#176;F) Minimum Temperature: 2&#176;C (36&#176;F)</a>
+						</li>
+					
+						</ul>
+					
+			</div>
+			<div class="panel">
+				<div class="inner">
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="infoNav">
+			<div class="inner">
+			<h2>Go straight to information about...</h2>
+			
+					<ul class="floatHolder">
+				<li><a href="/advice_and_benefits.aspx" title="Advice and benefits"><span>Advice and benefits</span></a></li>
+<li><a href="/business.aspx" title="Business"><span>Business</span></a></li>
+<li><a href="/community_and_living.aspx" title="Community and Living"><span>Community and Living</span></a></li>
+<li><a href="/council_and_democracy.aspx" title="Council and Democracy"><span>Council and Democracy</span></a></li>
+<li><a href="/council_meetings.aspx" title="Council Meetings"><span>Council Meetings</span></a></li>
+<li><a href="/education_and_learning.aspx" title="Education and learning"><span>Education and learning</span></a></li>
+<li><a href="/environment_and_planning.aspx" title="Environment and Planning"><span>Environment and Planning</span></a></li>
+<li><a href="/health_and_social_care.aspx" title="Health and Social Care"><span>Health and Social Care</span></a></li>
+<li><a href="/housing.aspx" title="Housing"><span>Housing</span></a></li>
+<li><a href="/jobs_and_careers.aspx" title="Jobs and Careers"><span>Jobs and Careers</span></a></li>
+<li><a href="/leisure_and_culture.aspx" title="Leisure and culture"><span>Leisure and culture</span></a></li>
+<li><a href="/transport_and_streets.aspx" title="Transport and streets"><span>Transport and streets</span></a></li>
+<li><a href="/rutland_together.aspx" title="Rutland Together"><span>Rutland Together</span></a></li>
+<li><a href="/development_control.aspx" title="Development Control"><span>Development Control</span></a></li>
+<li><a href="/local_plan.aspx" title="Local Plan"><span>Local Plan</span></a></li>
+<li><a href="/rutland_library_service.aspx" title="Rutland Library Service"><span>Rutland Library Service</span></a></li>
+<li><a href="/rutland_county_museum.aspx" title="Rutland County Museum"><span>Rutland County Museum</span></a></li>
+<li><a href="/licensing_information.aspx" title="Licensing Information"><span>Licensing Information</span></a></li>
+<li><a href="/oakham_castle.aspx" title="Oakham Castle"><span>Oakham Castle</span></a></li>
+<li><a href="/energy_conservation.aspx" title="Energy Conservation"><span>Energy Conservation</span></a></li>
+<li><a href="/digital_rutland.aspx" title="Digital Rutland"><span>Digital Rutland</span></a></li>
+<li><a href="/customer_services.aspx" title="Customer Services"><span>Customer Services</span></a></li>
+<li><a href="/waste_and_recycling.aspx" title="Waste and Recycling"><span>Waste and Recycling</span></a></li>
+<li><a href="/safer_rutland.aspx" title="Safer Rutland"><span>Safer Rutland</span></a></li>
+<li><a href="/people_first.aspx" title="People First"><span>People First</span></a></li>
+
+					</ul>
+				
+			</div>
+		</div>
+		<div class="floatHolder">
+			<div id="copyright">
+				
+<P>&#169; Copyright 2011 Rutland County Council, Catmose, Oakham, Rutland, LE15 6HP</P>
+			</div>
+			<div id="utilitylinks">
+				<ul>
+					<li><a href="/system_pages/utility_links/site_map.aspx">Site Map</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/terms__conditions.aspx">Terms &amp; Conditions</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/contractor_login.aspx">Contractor Login</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/privacy.aspx">Privacy</a>
+&nbsp;|&nbsp;</li><li><a href="/system_pages/utility_links/cookies.aspx">Cookies</a>
+&nbsp;|&nbsp;</li>
+					
+					<li><a href="/transport_and_streets/roads,_highways_and_pavements/roads_-_closures_and_diversion.aspx?theme=textonly">Text Only</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+	
+	</form>
+	<!-- WebMetric snippet starts here -->
+		
+			<form action="https://www.govmetric.com/WebMetric/websatisfaction.aspx" method="post"><div class="ratePage">
+			<input type="hidden" name="organisationid" value="3" />
+
+			<!-- uncomment this to enable the sentence to replace the comments box -->
+			<!-- <input type="hidden" name="displaysentence" value="If you would like to leave additional comments, please follow the Feedback Form link on the homepage." />-->
+
+			<input type="image" src="http://www.govmetric.com/images/med-greenface.gif" alt="Rate as Good" name="metric1" value="1" />
+			<input type="image" src="http://www.govmetric.com/images/med-orangeface.gif" alt="Rate as Average" name="metric2" value="2" />
+
+			<input type="image" src="http://www.govmetric.com/images/med-redface.gif" alt="Rate as Poor" name="metric3" value="3" />
+
+				<p class="inst"><img src="/templates/default/images/rateThisPage.gif" alt="It's your Rutland. Please rate this page." /></p>
+</div>
+			<!-- WebMetric snippet ends here -->
+		
+
+			<script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+			<script type="text/javascript">
+			<!--
+				$j = jQuery.noConflict();
+				$j(document).ready(function() {
+					var sBlock = document.createElement('script');
+					sBlock.type = 'text/javascript';
+					sBlock.src = 'http://snippets.govmetric.com/webhit/index/3';
+					$j('#footer').append(sBlock);
+				});
+			-->
+			</script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+</form>		
+		
+		<div class="extLinks">
+			<div class="inner">
+				<a href="http://www.gov.uk/" rel="external" ><img src="/templates/default/images/gov logo.jpg" height="41" alt="gov" /></a>
+				<a href="http://www.browsealoud.com/downloads.asp?dl=bl" rel="external" ><img src="/templates/default/images/dlbl.gif" alt="download Browsealoud" /></a>
+			</div>
+		</div>
+<!-- Javascript at the bottom for fast page loading -->
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+		
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+	<script type="text/javascript" src="/templates/default/scripts/pluginCheck.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+	 
+	<script type="text/javascript" src="/templates/default/scripts/script.js"></script>
+<noscript><div>Browser does not support script.</div></noscript>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8488195-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<noscript><div>Browser does not support script.</div></noscript>
+ 
+
+				
+</body>
+</html>

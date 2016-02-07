@@ -1,0 +1,289 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Home Connections Form Builder - Untitled Page
+</title>
+
+    <style type="text/css">
+        
+      .uibutton {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #EEEEEE;
+    background-image: linear-gradient(#F5F6F6, #E4E4E3);
+    border-color: #999999 #999999 #888888;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 0 #FFFFFF inset;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font: bold 11px 'lucida grande',tahoma,verdana,arial,sans-serif;
+    margin: 0;
+    overflow: visible;
+    padding: 0.3em 0.6em 0.375em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    z-index: 1;
+}  
+        
+        
+    .uibutton.confirm {
+    background-color: #5B74A8;
+    background-image: linear-gradient(#637BAD, #5872A7);
+    border-color: #29447E #29447E #1A356E;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 1px 0 #8A9CC2 inset;
+    color: #FFFFFF;
+}
+    
+    </style>
+
+  
+   
+  
+
+
+
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/Facebook.js" type="text/javascript"></script>
+
+
+    
+
+<style type="text/css">
+.user-input{border: 1px solid #CCCCCC; width: 150px !important;}
+.user-select{border: 1px solid #CCCCCC;}
+</style>
+    <script language="javascript" type="text/javascript">
+
+        function CheckBlankEntry(firstname, surname, dob) {
+            if (document.getElementById(firstname).value == "") {
+                alert('Enter Your First Name');
+                document.getElementById(firstname).focus();
+                return false;
+            }
+            if (document.getElementById(surname).value == "") {
+                alert('Enter Your Sur Name');
+                document.getElementById(surname).focus();
+                return false;
+            }
+            if (document.getElementById(dob).value == "") {
+                alert('Enter Your Date Of Birth like 24-Feb-1983');
+                document.getElementById(dob).focus();
+                return false;
+            }
+        }
+        function CheckBlankEmailVal(txtemail) {
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            var email = document.getElementById(txtemail).value;
+            if (email == "") {
+                alert("Please Enter Your Email ID");
+                document.getElementById(txtemail).focus();
+                return false;
+            }
+        if (reg.test(email) == false) {
+
+            alert('Invalid Email Address');
+            document.getElementById(txtemail).focus();
+            return false;
+        }
+        }
+        function navigate_start(qid) {
+            document.getElementById('ctl00_CM_btnStart').click();          
+            //location.href = "QuestionnaireStart.aspx?qid=" + qid;
+        }
+
+       
+
+        function show_login(qid) {
+            document.getElementById("ctl00_CM_login_form").style.display = "block";
+            //show_modal;
+            //location.href = "QuestionnaireStart.aspx?qid=" + qid;
+        }
+//        function OpenDivForgetPassword(emailid) {
+
+//            $("#" + emailid).toggle('fast');
+//            return false;
+//        }             
+    </script>
+
+
+<meta name="description" content="NEBA Work Experience System, for Work Experience, the best place for information about work experience for students, employers and academics in the nottingham area." />
+<meta name="keywords" content="WEX, work experience, placements, school work placement, Dipolma, opportunities, qualification" />
+    <!--[if IE]>
+		<script>
+		  var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+		    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+		    "progress,section,time,video").split(',');
+		  for (var i = 0; i < e.length; i++) {
+		    document.createElement(e[i]);
+		  }
+		</script>
+		<![endif]-->
+<link type="text/css" href="/Devon/Merge.css" rel="stylesheet" media="all"></link><link type="text/css" href="/themes/base/Styles/reset.css" rel="stylesheet" media="all"></link><link type="text/css" href="/themes/hcnx/Styles/Preview.css" rel="stylesheet" media="all"></link><link type="text/css" href="/Includes/jquery-ui.css" rel="stylesheet" media="all"></link></head>
+<body id="ctl00_Body">
+    <form name="aspnetForm" method="post" action="./Welcome.aspx?pid=73" id="aspnetForm">
+<input type="hidden" name="pid" id="pid" value="73" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTI4ODEzMDI2NQ9kFgJmD2QWAgIDD2QWBgIBD2QWBgIBDxYCHglpbm5lcmh0bWwFEURldm9uIEhvbWUgQ2hvaWNlZAIDD2QWAgIDD2QWAmYPZBYEAgEPFgIeBFRleHQFigQ8cD5Gb3IgbmV3IGFwcGxpY2F0aW9ucyBwbGVhc2Ugc2VsZWN0IHRoZSAnU3RhcnQgaGVyZScgYnV0dG9uPC9wPg0KPHA+PGltZyBzdHlsZT0iYm9yZGVyLXdpZHRoOiAwcHg7IiBvbmNsaWNrPSJuYXZpZ2F0ZV9zdGFydCgpIiBzcmM9InRoZW1lcy9iYXNlL2ltYWdlcy9CdXR0b25zL3N0YXJ0LmdpZiIgYWx0PSJOZXh0IiAvPjwvcD4NCjxwPlRvIGZpbmlzaCBhbiBpbmNvbXBsZXRlIGFwcGxpY2F0aW9uIHBsZWFzZSBzZWxlY3QgdGhlICdMb2cgSW4nIGJ1dHRvbjwvcD4NCjxwPlBsZWFzZSBub3RlOiBJbmNvbXBsZXRlIGFwcGxpY2F0aW9ucyB3aWxsIG9ubHkgcmVtYWluIG9uIHRoZSBzeXN0ZW0gZm9yIDEwIGRheXM8L3A+DQo8cD48YSBjbGFzcz0ibG9naW5fbGluayIgaHJlZj0iI3JlZ2Zvcm1saW5rcyI+PGltZyBzdHlsZT0iYm9yZGVyLXdpZHRoOiAwcHg7IiBvbmNsaWNrPSJzaG93X2xvZ2luKCkiIHNyYz0idGhlbWVzL2Jhc2UvaW1hZ2VzL0J1dHRvbnMvbG9naW4uZ2lmIiBhbHQ9Ik5leHQiIC8+PC9hPjwvcD5kAgMPZBYOAgMPD2QWAh4MYXV0b2NvbXBsZXRlBQNvZmZkAgkPD2QWAh8CBQNvZmZkAg8QEGRkFgFmZGQCEw9kFgICAw8PZBYCHwIFA29mZmQCFQ9kFgICAw8PZBYCHwIFA29mZmQCFw9kFgICAw8PZBYCHwIFA29mZmQCGQ9kFgICAw8PZBYCHwIFA29mZmQCBw8WAh8ABT1Db3B5cmlnaHQgJmNvcHk7IDIwMTYgRGV2b24gSG9tZSBDaG9pY2UuIEFsbCByaWdodHMgcmVzZXJ2ZWQuZAIJD2QWBGYPFgIfAQVTIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii9hcHBjb250cm9scy9Ub29sdGlwL2pxdWVyeS5xdGlwLmpzIj48L3NjcmlwdD5kAgIPFgIfAQVdIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0IiBzcmM9Ii9hcHBjb250cm9scy9Ub29sdGlwL2pxdWVyeS5xdGlwLmZ1bmN0aW9ucy5qcyI+PC9zY3JpcHQ+ZAIND2QWAmYPDxYCHgdWaXNpYmxlaGRkZLWo9oFtCRK2931eQ6/Ryuu2Zk7nwJuocGtWTqYruZmD" />
+
+
+<script src="/includes/jquery.js" type="text/javascript"></script>
+<script src="/includes/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/includes/utils.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var imageFolder='/themes/hcnx/images';var serverName='https://forms.devonhomechoice.com:443/';//]]>
+</script>
+<!--[if IE]>
+		                            <script>
+		                              var e = ('abbr,article,aside,audio,canvas,datalist,details,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video').split(',');
+		                              for (var i = 0; i < e.length; i++) {
+		                                document.createElement(e[i]);
+		                              }
+		                            </script>
+		                            <![endif]--> 
+                                    <!--[if lte IE 6]>
+			                            <script type='text/javascript' src='https://forms.devonhomechoice.com:443/includes/ddpngfix.js'></script>
+                                        <script type='text/javascript' src='https://forms.devonhomechoice.com:443/includes/ddpngfixfunctions.js'></script>			                                                                    
+                                        
+		                            <![endif]-->
+<script src="/ScriptResource.axd?d=hXA6oWZ00jzowwQmjaWIQ1MJf4_yKfp7Z7SY9skoWAdAAn87WAdci3aOEQc1TEFRJbFSVji1N5NvEwAWvv5vl0HmNNT2eiOCLD3WtCwoMvla9-ZJj3-L-N-k6LJaJ13V1edBxGAw6wtSBLnamECD7EqOerCvb3LSMf9WMoZTN6E1&amp;t=5f9d5645" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4B9E2203" />
+    <div class="MainContainer" style="background: #fff; width: 960px; margin: auto;">
+        <div style="padding: 20px; position: relative;">
+            <div class="Header">
+                <h1 id="ctl00_litHeading">Devon Home Choice</h1>
+                <span class="logo"></span>
+            </div>
+            <div class="Clearfix">
+                <!--div style="width:400px;float:left;"-->
+                
+
+   
+   <div id="ctl00_CM_upd1">
+	 
+   <div class="FormTitle">                        
+        <p>For new applications please select the 'Start here' button</p>
+<p><img style="border-width: 0px;" onclick="navigate_start()" src="themes/base/images/Buttons/start.gif" alt="Next" /></p>
+<p>To finish an incomplete application please select the 'Log In' button</p>
+<p>Please note: Incomplete applications will only remain on the system for 10 days</p>
+<p><a class="login_link" href="#regformlinks"><img style="border-width: 0px;" onclick="show_login()" src="themes/base/images/Buttons/login.gif" alt="Next" /></a></p>    
+        <div id="ctl00_CM_login_form" style="padding:10px;border:1px solid #ccc;display:none;">
+           <table cellpadding="0" cellspacing="0" border="0">
+                                    <tr>
+                                        <td valign="top" width="261" height="25">
+                                            <label for="ctl00_CM_txtApplicationId" id="ctl00_CM_lblApplicationId">User ID</label>&nbsp;<span style="color: red;">#</span>
+                                        </td>
+                                        <td valign="top">
+                                            <input name="ctl00$CM$txtApplicationId" type="text" id="ctl00_CM_txtApplicationId" class="Text user-input" autocomplete="off" />
+                                             
+                                        </td>                                       
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" height="25">
+                                            <label for="ctl00_CM_txtPassword" id="ctl00_CM_lblPwd">Password</label>&nbsp;<span style="color: red;">#</span>                                              
+                                        </td>
+                                        <td valign="top">
+                                            <input name="ctl00$CM$txtPassword" type="text" id="ctl00_CM_txtPassword" class="Text user-input" autocomplete="off" />
+                                            
+                                        </td>
+                                      
+                                    </tr>
+                                </table>
+                          <div id="securityQuestion">
+                                <table cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td valign="top" align="left" style="width:260px;" height="30">
+                                            <label for="ctl00_CM_ddselectsecurity" id="ctl00_CM_lblsecurity">Please select your security question</label>&nbsp;<span style="color: red;">#</span>
+                                        </td>
+                                        <td valign="top" align="left">
+                                            <select name="ctl00$CM$ddselectsecurity" id="ctl00_CM_ddselectsecurity" class="user-select">
+		<option value="-1" selected="selected">--Please Select--</option>
+		<option value="126562">Mother&#39;s maiden name</option>
+		<option value="126563">Your place of birth</option>
+		<option value="126564">Favourite food</option>
+		<option value="126565">Memorable year</option>
+
+	</select>
+                                            
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            
+                            
+                                
+            <input type="submit" name="ctl00$CM$btnLogin" value="Login" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$CM$btnLogin&quot;, &quot;&quot;, true, &quot;welclogin&quot;, &quot;&quot;, false, false))" id="ctl00_CM_btnLogin" />
+        </div>
+         <input type="submit" name="ctl00$CM$btnStart" value="FacebookLogin" id="ctl00_CM_btnStart" style="display:none" />   
+        <br />
+        <div style="color:#f00;margin:8px 0;font-size:14px;"></div>
+
+        <div id="ctl00_CM_no_reg_forms" class="Summary">
+           <style>
+                #regformlinks {
+                    overflow: auto;
+	                width: 560px;
+	                height: 210px;
+	                background-color: #FDFDFD;
+                }
+
+                #ctl00_CM_no_reg_forms #modalhold #regformlinks {
+	                display: none;
+                }
+            </style>
+            
+           <div id="modalhold"> 
+            <div id="regformlinks">
+                
+                                
+                
+                
+                
+            </div> 
+           </div>                   
+       </div>        
+    </div>
+   
+</div>    
+    
+                <!--/div-->
+                <!--div style="width:400px;float:right;"-->
+                
+                
+                <!--/div-->
+            </div>
+            <!--//clearfix-->
+            <div class="Footer" style="clear: both;">
+                <p id="ctl00_litFooter">Copyright &copy; 2016 Devon Home Choice. All rights reserved.</p>
+            </div>
+        </div>
+        <!--//padding-->
+    </div>
+    <!--//MainContainer-->
+    
+
+    
+
+    </form>
+    
+
+    
+    
+
+     <script type="text/javascript" src="/appcontrols/Tooltip/jquery.qtip.js"></script>
+ <script type="text/javascript" src="/appcontrols/Tooltip/jquery.qtip.functions.js"></script>
+    
+
+
+    
+    
+</body>
+</html>

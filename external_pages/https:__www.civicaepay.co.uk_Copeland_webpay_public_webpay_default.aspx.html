@@ -1,0 +1,625 @@
+
+
+<!DOCTyPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="html_tag" xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="EN">
+<head id="Head1"><title>
+	Council Tax Payment - Civica AuthorityICON
+</title><meta http-equiv="Expires" content="Tue, 20 Aug 1996 14:25:27 GMT" /><meta http-equiv="Cache-Control" content="no-cache" /><meta http-equiv="Pragma" content="no-cache" /><meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR" /><meta content="Visual Basic .NET 7.1" name="CODE_LANGUAGE" /><meta content="JavaScript" name="vs_defaultClientScript" /><meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema" /><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /><link href="Accessible-styles.css" type="text/css" rel="stylesheet" /><link href="Styles.css" type="text/css" rel="stylesheet" /><link href="core-styles.css" type="text/css" rel="stylesheet" /><link id="AdditionalAccessiblestyles" rel="stylesheet" type="text/css" /><link id="Additionalstyles" rel="stylesheet" type="text/css" /><link id="rtlstyles" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {
+            display: block;
+        }
+    </style>
+
+    <!-- Printable receipt page script -->
+    <script type="text/javascript">
+        function DisableHelpTab() {
+            var ModeLabel = document.getElementById('webpaymode')
+            if (ModeLabel.value == 'public') {
+                var PayPalLogo1 = document.getElementById('lnkPayPal');
+                PayPalLogo1.href = '';
+                PayPalLogo1.target = '';
+                var PayPalLogo2 = document.getElementById('lnkPayPal2');
+                PayPalLogo2.href = '';
+                PayPalLogo2.target = '';
+            }
+        }
+
+        function GetFormObject() {
+            var theform;
+            if (window.navigator.appName.toLowerCase().indexOf("microsoft") > -1) {
+
+                theform = document.forms["WebpayForm"];
+            }
+            else {
+                theform = document.forms.WebpayForm;
+            }
+            return theform;
+        }
+
+        function ActiveXError() {
+            var theform;
+            theForm = GetFormObject();
+            theForm.submit();
+        }
+
+        function HandleError() {
+            return true;
+        }
+
+        function PrintableReportPage() {
+            window.showModalDialog('PrintableReportPage.aspx', '', 'dialogHeight:700px; dialogWidth:1000px; resizeable:yes;scroll:yes; help:no;edge:sunken;');
+        }
+
+        function PrinterDefaultsPage() {
+            window.showModalDialog('PrinterDefaults.aspx', '', 'dialogHeight:170px; dialogWidth:315px; status:no;');
+        }
+
+        function GetCookieValue(tagName) {
+            var strCook = document.cookie;
+            if (strCook.indexOf(tagName) != -1) {
+                var intS = strCook.indexOf(tagName);
+                var intE = strCook.indexOf("~!");
+                return strCook.substring(intS + (tagName.length + 3), intE);
+            }
+            else {
+                return 0;
+            }
+        }
+
+
+        function resetScrollPos(tagName) {
+            if (document.getElementById(tagName) != null) {
+                document.getElementById(tagName).scrollTop = GetCookieValue(tagName);
+            }
+        }
+
+        function SetDivPosition(tagName) {
+            var inty = document.getElementById(tagName).scrollTop;
+            document.cookie = tagName + "=!~" + inty + "~!";
+        }
+
+        function ResetDivPosition(tagName) {
+            if (document.getElementById(tagName) != null) {
+                document.cookie = tagName + "=!~" + 0 + "~!";
+            }
+        }
+
+        function unlockChild(parentObj, action) {
+            var allowClick = confirm(action);
+            window.event.returnValue = allowClick;
+            return allowClick;
+        }
+        window.onload = function () {
+            resetScrollPos("copywithscroll");
+            resetScrollPos("failurewithscroll");
+            resetScrollPos("paymentwithscroll");
+            resetScrollPos("refundfailurewithscroll");
+            resetScrollPos("refundwithscroll");
+            resetScrollPos("receiptwithscroll");
+            resetScrollPos("trackerWithScroll");
+            resetScrollPos("VATwithscroll");
+        }
+
+    </script>
+
+    <!-- Load up a few javascript files -->
+    <script src="Scripts/json2.js"></script>
+    <script src="Scripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="Scripts/knockout-3.1.0.js" type="text/javascript"></script>
+    <script src="Scripts/knockout.mapping-latest.js" type="text/javascript"></script>
+    <script src="Scripts/jQueryExtensions.js" type="text/javascript"></script>
+    <script src="Scripts/Pages/icon.webpay.core.js" type="text/javascript"></script>
+  
+</head>
+<body onload="DisableHelpTab();" data-loading-img="images/loading.gif">
+    <script type="text/javascript">
+
+        function showinframe() {
+            var Frame = 'False';
+              if (Frame == 'True' || self == top) {
+                  var theBody = document.getElementsByTagName('body')[0];
+                  theBody.style.display = "block";
+              }
+          }
+    </script>
+    <!-- This is to expire the page immediately -->
+    <div id="divTest" class="mainForm">
+        <div class="Alignleft" id="TopOfPage"></div>
+
+        <div id="iconheader">
+            </div> <!-- close iconheader -->
+
+<div id="header-navigation">
+	<ul class="accessibility-links">
+		&nbsp; 
+	</ul>
+	<div class="bottom"><div class="lc"></div><div class="rc"></div> <div class="clear"></div></div>
+</div>
+
+<div id="CBC_header">
+	<a href="http://www.copeland.gov.uk" target="_rbc" title="Copeland Borough Council Home">
+		<img src="images/customers/header-logo-foreground.png" border="0">
+	</a>
+	<br class="float-control"/>
+</div>
+
+<div id="header-banner"></div>
+
+<div id="a-to-z-links">
+	<div class="a-to-z-title">&nbsp;</div>
+	<ul> 
+		&nbsp;
+	</ul>
+	<div class="bottom">
+		<div class="lc"></div>
+		<div class="rc"></div> 
+		<div class="clear"></div>
+	</div>
+</div>
+
+<div id="CBC_mainarea">
+<div id="dummy"> <!-- cancel out iconcontent -->
+
+        </div>
+
+        <div id="iconcontent">
+            
+            
+            <form method="post" action="./default.aspx" id="WebpayForm" class="WebpayForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNzI2MDU3Nzg1DxYUHhB2aXJUaW1lb3V0MUhvdmVyZR4LdmlyVGltZW91dDIFFW1pbnV0ZXMgb2YgaW5hY3Rpdml0eR4KVHJhbnNsYXRlZGceEHZpclRpbWVvdXQySG92ZXJlHg52aXJQYXltZW50VHlwZQUMUGF5bWVudCBUeXBlHhF2aXJNYW5kYXRvcnlIb3ZlcmUeDHZpck1hbmRhdG9yeQUPTWFuZGF0b3J5IEZpZWxkHhRVc2VyTWVzc2FnZUhhc2hUYWJsZRcBBQVXUDIzNwUaUGxlYXNlIGNoZWNrIHRoZSBmb2xsb3dpbmceE3ZpclBheW1lbnRUeXBlSG92ZXJlHgt2aXJUaW1lb3V0MQU6UGxlYXNlIG5vdGUgLSBpbmZvcm1hdGlvbiBvbiB0aGlzIHBhZ2Ugd2lsbCB0aW1lLW91dCBhZnRlchYCAgEPFgQeA2RpcgUDbHRyHgRsYW5nBQJFThYCAgEPZBYEAgEPDxYCHgdWaXNpYmxlaGRkAgIPZBYIAhsPDxYCHwxoZBYCAgMPDxYCHgRUZXh0ZWRkAh0PZBYCAgEPZBYMAgEPDxYEHghDc3NDbGFzcwUSTUFJTk1FTlVURVhUSElMSVRFHgRfIVNCAgJkZAIDDw8WBB8OBQ5NQUlOTUVOVU9QVElPTh8PAgJkZAIFDw8WBB8OBQ5NQUlOTUVOVU9QVElPTh8PAgJkZAIHDw8WBB8OBQ5NQUlOTUVOVU9QVElPTh8PAgJkZAIJDw8WBB8OBQ5NQUlOTUVOVU9QVElPTh8PAgJkZAILDw8WBB8OBQ5NQUlOTUVOVU9QVElPTh8PAgJkZAIfDxYCHgVjbGFzcwULRGV0YWlsUGFuZWwWBAIBD2QWAmYPDxZIHhFJbWFnZWJ1dHRvblNlbGVjdAUGU2VsZWN0Hg52aXJSZXZpZXdIb3ZlcmUeEmJsbkNvdW50eU1hbmRhdG9yeWgeB1N0YXJyZWRnHhF2aXJTaG9ydGN1dHNIb3ZlcmUeFkltYWdlYnV0dG9uU2VsZWN0SG92ZXJlHhBibG5BcmVhTWFuZGF0b3J5aB4WYnRuQWNjb3VudERldGFpbHNIb3ZlcgUUU2hvdyBBY2NvdW50IERldGFpbHMeFWJsbkhvdXNlTmFtZU1hbmRhdG9yeWgeEmJsblN0cmVldE1hbmRhdG9yeWgeEUltYWdlYnV0dG9uTG9va3VwBQdMb29rIFVwHhB2aXJQYXltZW50U3VmZml4BQdQYXltZW50HhFidG5BY2NvdW50RGV0YWlscwUPQWNjb3VudCBEZXRhaWxzHhdibG5Ib3VzZU51bWJlck1hbmRhdG9yeWgeFGJsblBvc3Rjb2RlTWFuZGF0b3J5aB4PdmlyQWRkcmVzc0hvdmVyZR4TYmxuVmFsaWRhdGVQb3N0Y29kZWgeDGltZ0JhY2tUb1RvcAULQmFjayB0byBUb3AfAmceFmJsbkZvdW5kQWRkcmVzc0RldGFpbHNoHwcXGgUFV1AxODkFe1BsZWFzZSBkbyBub3QgY2xvc2UgdGhlIGJyb3dzZXIgb3IgcHJlc3MgdGhlIGJhY2sgYnV0dG9uLiBZb3Ugd2lsbCBiZSB0YWtlbiB0byB0aGUgbmV4dCBzdGFnZSBvZiB0aGUgcGF5bWVudCBhdXRvbWF0aWNhbGx5LgUFV1AyMTIFElRyYW5zYWN0aW9uIERhdGUgKgUFV1AxNzYFFkEgdG93biBtdXN0IGJlIGVudGVyZWQFBVdQMTc3BRpBIHBvc3Rjb2RlIG11c3QgYmUgZW50ZXJlZAUFV1AxNzQFFkEgTmFtZSBtdXN0IGJlIGVudGVyZWQFBVdQMTc1BRhBIHN0cmVldCBtdXN0IGJlIGVudGVyZWQFBVdQMTkzBTRJbnZhbGlkIEFtb3VudCAtIEdyZWF0ZXIgdGhhbiBtYXhpbXVtIGFtb3VudCBhbGxvd2VkBQVXUDE3MwUjQSBob3VzZSBuYW1lL251bWJlciBtdXN0IGJlIGVudGVyZWQFBVdQMTM3BUJVbmFibGUgdG8gcmV0cmlldmUgdGhlIFZBVCBjb2RlIGZvciB0aGlzIGZ1bmQsIGNoZWNrIHRoZSBldmVudCBsb2cFBVdQMTM0BRZJbnZhbGlkIHJlZmVyZW5jZSBmb3IgBQVXUDEzNQVCVW5hYmxlIHRvIHJldHJpZXZlIHRoZSBWQVQgY29kZSBmb3IgdGhpcyBmdW5kLCBjaGVjayB0aGUgZXZlbnQgbG9nBQVXUDEzMgU3VW5hYmxlIHRvIHJldHJpZXZlIHRoZSBhY2NvdW50IGRldGFpbHMgZm9yIGFjY291bnQgdHlwZQUFV1AxMjYFJVlvdSBoYXZlIGFscmVhZHkgZW50ZXJlZCB0aGF0IHBheW1lbnQFBVdQMjI0BRhBIGNvdW50eSBtdXN0IGJlIGVudGVyZWQFBVdQMTk5BUlQbGVhc2UgY29uZmlybSB0aGUgUkQgQ2hlcXVlIGZvciB0aGUgaXRlbXMgbGlzdGVkIGFib3ZlIGZvciBjaGVxdWUgWFhYWFhYBQVXUDIyMgUcQSBob3VzZSBuYW1lIG11c3QgYmUgZW50ZXJlZAUFV1AyMjMFF0FuIGFyZWEgbXVzdCBiZSBlbnRlcmVkBQVXUDIyMQUeQSBob3VzZSBudW1iZXIgbXVzdCBiZSBlbnRlcmVkBQVXUDE4NgUMVG90YWwgQW1vdW50BQVXUDE4OAUsWW91IHdpbGwgYmUgcmVkaXJlY3RlZCB0byB0aGUgcGF5bWVudCBzeXN0ZW0FBVdQMTQ1BUhBbW91bnQgcmVzdHJpY3Rpb24gb24gYWNjb3VudCB0eXBlLCBzeXN0ZW0gcHJvdmlkZWQgYW1vdW50IG5vdCBzcGVjaWZpZWQFBVdQMTk0BTFJbnZhbGlkIEFtb3VudCAtIExlc3MgdGhhbiBtaW5pbXVtIGFtb3VudCBhbGxvd2VkBQVXUDEyNQUbVGhhdCBhY2NvdW50IGRvZXMgbm90IGV4aXN0BQVXUDEyMgU/UGxlYXNlIGVudGVyIGEgdmFsaWQgYW1vdW50LCBlLmcuIMKjNTAgbXVzdCBiZSBlbnRlcmVkIGFzIDUwLjAwBQVXUDEyMwUeUGxlYXNlIGVudGVyIGEgcG9zaXRpdmUgYW1vdW50BQVXUDEyMQUYUGxlYXNlIGVudGVyIGEgcmVmZXJlbmNlHg52aXJVcGRhdGVIb3ZlcmUeCUJhY2tUb1RvcAULQmFjayBUbyBUb3AeFXZpclBheW1lbnRTdWZmaXhIb3ZlcmUeGmJsbk5hbWVvZk9jY3VwYW50TWFuZGF0b3J5aB4JdmlyVXBkYXRlBQZVcGRhdGUeDXZpckVudHJ5SG92ZXJlHhFpbWdCYWNrVG9Ub3BIb3ZlcmUeFkltYWdlYnV0dG9uTG9va3VwSG92ZXJlHg5CYWNrVG9Ub3BIb3ZlcmUeCnZpckFkZHJlc3MFDlNlbGVjdCBBZGRyZXNzHhFibG5Qb3N0Y29kZUxvb2t1cGgeCXZpclJldmlldwUOUGF5bWVudCBSZXZpZXceEGJsblRvd25NYW5kYXRvcnloHgh2aXJFbnRyeQUNUGF5bWVudCBFbnRyeR4MdmlyU2hvcnRjdXRzBQ5QYWdlIHNob3J0Y3V0c2QWHAIBDw8WAh8NBQ1QYXltZW50IEVudHJ5ZGQCAw8PFgIfDGhkFgQCAQ8PFgIfDQUSVHJhbnNhY3Rpb24gRGF0ZSAqZGQCBQ8PFgIfDQUKMDcvMDIvMjAxNmRkAgUPFgIfDGgWAgIFDxBkDxYGZgIBAgICAwIEAgUWBhAFEDA4IC0gQ291bmNpbCBUYXgFEDA4IC0gQ291bmNpbCBUYXhnEAUZMDMgLSBCZW5lZml0IE92ZXJwYXltZW50cwUZMDMgLSBCZW5lZml0IE92ZXJwYXltZW50c2cQBRcwNiAtIE5vbiBEb21lc3RpYyBSYXRlcwUXMDYgLSBOb24gRG9tZXN0aWMgUmF0ZXNnEAURMDkgLSBMYW5kIENoYXJnZXMFETA5IC0gTGFuZCBDaGFyZ2VzZxAFFTA1IC0gSW52b2ljZSBQYXltZW50cwUVMDUgLSBJbnZvaWNlIFBheW1lbnRzZxAFETE0IC0gTm90aWNlIEZpbmVzBRExNCAtIE5vdGljZSBGaW5lc2cWAWZkAgcPDxYGHw4FDWhpZGRlbkNvbnRyb2wfDWUfDwICZGQCCQ8PFgIfDQU5UGxlYXNlIGVudGVyIHRoZSByZWZlcmVuY2Ugb2YgdGhlIGFjY291bnQgeW91IHdpc2ggdG8gcGF5ZGQCCw8PFgIfDQULUmVmZXJlbmNlICpkZAIVD2QWAgIBDw8WBh8NBQtHZXQgQWNjb3VudB4HVG9vbFRpcAULR2V0IEFjY291bnQfDGdkZAIXDw8WAh8NBQ1BbW91bnQgKMKjKSAqZGQCIQ9kFgICAQ8PFgIfDGhkZAIjD2QWBAIBDw8WAh8MaGRkAgMPEA8WAh4HRW5hYmxlZGhkEBUKAAswNCAtIDE1LjAwJQowMiAtIDUuMDAlCzA1IC0gMTcuNTAlCjA2IC0gMC4wMCUKMDcgLSAwLjAwJQowOCAtIDAuMDAlCjIyIC0gNS4wMCULNTUgLSAxNy41MCULMDkgLSAyMC4wMCUVCgACMDQCMDICMDUCMDYCMDcCMDgCMjICNTUCMDkUKwMKZ2dnZ2dnZ2dnZxYBZmQCKw9kFhgCAQ8PFgQfDQVWU2VsZWN0IGFkZHJlc3MgZnJvbSBsaXN0LCBhbmQgY2xpY2sgJ1NlbGVjdCcgYnV0dG9uLiAgT3IgZW50ZXIgZGV0YWlscyBtYW51YWxseSBiZWxvdy4fDGhkZAIDD2QWAmYPEA8WAh8MaGQQFQAVABQrAwAWAGQCBQ8PFgYfDQUGU2VsZWN0HzMFEVNlbGVjdCBhbiBhZGRyZXNzHwxoZGQCBw9kFgQCAQ8PFgIfDQVPRW50ZXIgcG9zdGNvZGUgYW5kIGxvb2sgdXAgbWF0Y2hpbmcgYWRkcmVzc2VzLCBvciBtYW51YWxseSBlbnRlciBkZXRhaWxzIGJlbG93LmRkAgUPDxYEHw0FBkxvb2t1cB8zBQ9Qb3N0Y29kZSBMb29rdXBkZAIJDw8WAh8NBQROYW1lZGQCDw8PFgIfDQUISG91c2UgTm9kZAIRDw8WAh8NBQ1PUiBIb3VzZSBOYW1lZGQCGQ8PFgIfDQUGU3RyZWV0ZGQCHw8PFgIfDQUEQXJlYWRkAiUPDxYCHw0FBFRvd25kZAIrDw8WAh8NBQZDb3VudHlkZAIxDw8WAh8NBQhQb3N0Y29kZWRkAi0PDxYEHw0FC0FkZCB0byBMaXN0HzMFIUFkZHMgdGhlIGl0ZW0gdG8gdGhlIHBheW1lbnQgbGlzdGRkAi8PDxYEHw0FBkNhbmNlbB8zBRNDYW5jZWxzIHRoZSBwYXltZW50ZGQCMQ8PFgYfDQUFTm90ZXMfMwUJQWRkIG5vdGVzHwxoZGQCAw9kFgJmDw8WLB4TbGJsVG90YWxBbW91bnRIb3ZlcmUfKmUeCWNvbEFtb3VudAULQW1vdW50ICjCoykeDmJ0bk1vZGlmeUhvdmVyZR8CZx4OY29sQW1vdW50SG92ZXJlHgZjb2xSZWYFCVJlZmVyZW5jZR4HY29sRGVzYwULRGVzY3JpcHRpb24eCWJ0bk1vZGlmeQUGTW9kaWZ5Hg9jb2xBY3RUeXBlSG92ZXJlHglidG5EZWxldGUFBkRlbGV0ZR4KY29sQWN0VHlwZQUMQWNjb3VudCBUeXBlHg5idG5EZWxldGVIb3ZlcmUeDmxibFRvdGFsQW1vdW50BQxUb3RhbCBBbW91bnQeBmNvbFZhdAUDVkFUHwcXAgUFV1AxOTYFOVRoaXMgd2lsbCBkZWxldGUgYWxsIHlvdXIgZW50ZXJlZCBwYXltZW50cywgYXJlIHlvdSBzdXJlPwUFV1AxODYFDFRvdGFsIEFtb3VudB8iBQtCYWNrIHRvIFRvcB4MY29sRGVzY0hvdmVyZR8sZR4LY29sVmF0SG92ZXJlHyUFC0JhY2sgVG8gVG9wHgtjb2xSZWZIb3ZlcmVkFg4CAQ8PFgQfDQURQ2hlcXVlIEVuY2FzaG1lbnQfMwUYTWFrZSBhIENoZXF1ZSBFbmNhc2htZW50ZGQCAw8PFgQfDQUFTm90ZXMfMwUJQWRkIE5vdGVzZGQCBQ9kFggCAQ8PFgIfDQUOUGF5bWVudCBSZXZpZXdkZAIDDw8WAh8NBSpUbyBtb2RpZnkgYSBwYXltZW50IGNsaWNrIHRoZSBNb2RpZnkgbGluay5kZAIFDw8WAh8NBSlUbyByZW1vdmUgYSBwYXltZW50IGNsaWNrIHRoZSBEZWxldGUgbGlua2RkAgcPDxYCHw0FqwFUbyBtYWtlIGEgcGF5bWVudCwgY2xpY2sgUGF5LiAgWW91IHdpbGwgYmUgcmVkaXJlY3RlZCB0byBhIGhvbGRpbmcgcGFnZSB3aGlsZSB5b3VyIHJlcXVlc3QgaXMgcHJvY2Vzc2VkLiAgWW91IHdpbGwgdGhlbiBiZSBkaXJlY3RlZCB0byB0aGUgbmV4dCBzdGVwIGluIHRoZSBwYXltZW50IHByb2Nlc3NkZAIHDzwrAAsCAA8WCB4IRGF0YUtleXMWAB4LXyFJdGVtQ291bnRmHglQYWdlQ291bnQCAR4VXyFEYXRhU291cmNlSXRlbUNvdW50ZmQBFCsACDwrAAQBABYEHgpIZWFkZXJUZXh0BQxBY2NvdW50IFR5cGUeCkZvb3RlclRleHQFDFRvdGFsIEFtb3VudDwrAAQBABYEH0kFC0Ftb3VudCAowqMpH0oFBsKjMC4wMDwrAAQBABYCH0kFC0Rlc2NyaXB0aW9uPCsABAEAFgIfSQUJUmVmZXJlbmNlPCsABAEAFgIfSQUDVkFUPCsABAEAFgIfDQUGTW9kaWZ5PCsABAEAFgIfDQUGRGVsZXRlZGQCCQ8PFgYfDQUKRGVsZXRlIEFsbB8zBSZSZW1vdmUgYWxsIGl0ZW1zIGZyb20gdGhlIHBheW1lbnQgbGlzdB8MaBYCHgdvbmNsaWNrBRlyZXR1cm4gc2V0RGVsZXRlTWVzc2FnZSgpZAILD2QWDgIBDw8WAh8MaGRkAgMPDxYEHw0FA1BheR8zBQNQYXkWAh9LBRBIaWRlUGF5QnV0dG9ucygpZAIFDw8WBh8NBQNDTlAfMwUaUGF5IENhcmRob2xkZXIgTm90IFByZXNlbnQfDGgWAh9LBRBIaWRlUGF5QnV0dG9ucygpZAIHDw8WBh8NBQNDSFAfMwUWUGF5IENhcmRob2xkZXIgUHJlc2VudB8MaBYCH0sFEEhpZGVQYXlCdXR0b25zKClkAgkPDxYGHw0FBENhc2gfMwUIUGF5IENhc2gfDGgWAh9LBRBIaWRlUGF5QnV0dG9ucygpZAILDw8WBh8NBQZDaGVxdWUfMwUKUGF5IENoZXF1ZR8MaBYCH0sFEEhpZGVQYXlCdXR0b25zKClkAg0PDxYGHw0FDU1peGVkIFBheW1lbnQfMwURUGF5IE1peGVkIFBheW1lbnQfDGhkZAINDw8WBh8OBQ1oaWRkZW5Db250cm9sHw1lHw8CAmRkAiEPZBYIAgEPFgQeBGhyZWYFEWhlbHAvUGF5bWVudC5hc3B4Hglpbm5lcmh0bWwFHkhlbHBbbGluayBvcGVucyBpbiBuZXcgd2luZG93XWQCAw8WAh9NBR9BYm91dFtsaW5rIG9wZW5zIGluIG5ldyB3aW5kb3ddZAIJDw8WAh8NBQFcZGQCEQ8PFgQfDQUMUmVsZWFzZSAxNC4yHwxoZGRkoOMo2JQcxjmnaf5MZdmWbGbBj38w+9/xCDAZq5meVus=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B1222440" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACEtbwHil1hXoxmjm2vzWlQ88GMVZBzNZuEyYsjpMomkgtQiiz0vcTKXQ+/N9GnxSvBEuk6c84+JHwBYCle64zatheOgZszlupIW3oWkCOOPXFybB3ebCXqLvI5fWLeXED9lJNck1zyGCaZUYjR/dHgiM4DU72q/t8rENibrQ+9TMIfo0dnQpDevq1YbSAAV68mhH+s5x8ooraJWr6TsPEMyQ1tMVAwZvJMx+LrzgLJxqIHV1Yz/WGkwBm5qHBcLWLFBXLAK31/xd3/xCiOdEdqP8QuH+iV+tzowDTZVTpLF0Z0MVC1xiHBcfrhBs1PNy/UxWu+Fi3g4PUkbsuG6jKnY33rmVPIeq+M6gsMC2VehttJyy7oY/J0h+xuZIn/xGsZWsv9wANQCQ2gVVbDQdqybZuosPdWqBDYrl1rsLuoPTJwbCzX3zmvjHwHiBHKAeRaXkl2YXzBzIxkwCL8SjhdVDlQjrmj/RoRitzzzOUkDJsPqOZ6yXy5i0B2fpWDctzn7ODWW9z65b1OXXVwhaiBQNboxSeRTKdEeMbyX9T3zzD5ulEqbwP2Yd7+xCIduzqbSsofWz9bJzGGVNMZ5iw1D8b/uYlDqJu84Ojo8rsE2EmAcgS1CkdNNcJ5/XUL0SQNjnEI6jTswzOge8oToh/VDgYzKrNeINNqZW26GStd3Cdx0iGAMph10NJX6ql+kkkMrLtgr87Ae/ZG5jmWgNdpOP8mp5NFFKg3kZHbExUNAuQ==" />
+</div>
+
+                <input name="ComputerName" type="hidden" id="ComputerName" />
+                <input name="PrinterNames" type="hidden" id="PrinterNames" />
+                <input name="WindowsPrinter" type="hidden" id="WindowsPrinter" />
+                <input name="hidTimeoutValue" type="hidden" id="hidTimeoutValue" value="30" />
+                <input name="hidSingleSignOn" type="hidden" id="hidSingleSignOn" value="0" />
+                <input name="hidTimeoutUsed" type="hidden" id="hidTimeoutUsed" value="false" />
+                <input name="hidDownloadResult" type="hidden" id="hidDownloadResult" />
+                <input name="hidJavascriptCheck" type="hidden" id="hidJavascriptCheck" />
+                <input name="PageTimedOut" type="hidden" id="PageTimedOut" />
+                <input name="webpaymode" type="hidden" id="webpaymode" value="public" />
+
+                <div id="LinkPanel">
+	<h2 class="ShortCuts">Page shortcuts</h2><a tabindex="1" class="skip" href="#UserAreaPanel">Payment Entry</a><a tabindex="2" class="skip" href="#PaymentAreaPanel">Payment Review</a>
+</div>
+                <div id="HeaderPanel">
+	<h1 class="MainHeader">Council Tax Payment</h1><span class="Normal">Please note - information on this page will time-out after 15 minutes of inactivity</span><div></div><label class="NORMAL">* = Mandatory Field</label>
+</div>
+                <div id="ErrorMessagePanel">
+
+</div>
+                
+                <div class="DivMenuDetailWrapper" id="DivMenuDetailWrapper">
+                    <div id="DivMenuScroller" class="DivMenuScrollerNormal">
+                        <div id="MainMenuPanel" class="MainMenuPanelNormal">
+	<h2 class="MAINMENUHEADER">Payment Type</h2><input type="submit" name="wpctrl2" value="Council Tax" id="wpctrl2" tabindex="21" class="MAINMENUTEXTHILITE" /><br/><input type="submit" name="wpctrl4" value="Benefit Overpayments" id="wpctrl4" tabindex="22" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl6" value="Non Domestic Rates" id="wpctrl6" tabindex="23" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl8" value="Land Charges" id="wpctrl8" tabindex="24" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl10" value="Invoice Payments" id="wpctrl10" tabindex="25" class="MAINMENUOPTION" /><br/><input type="submit" name="wpctrl12" value="Notice Fines" id="wpctrl12" tabindex="26" class="MAINMENUOPTION" /><br/>
+</div>
+                        <div id="ActionMenuPanel" class="ActionMenuPanel">
+
+</div>
+                    </div>
+                    <div id="DetailPanel" class="DetailPanel">
+                        <div id="UserAreaPanel" class="UserAreaPanel">
+	
+<!-- Add this to link in with the style sheet -->
+<div id="div_WEBPAY_STD_PAY_CtlWrapper" class="LeftTopAlign">
+    <h2 class="DividerAccessible">
+        <span id="lblPaymentEntry" class="HEADER">Payment Entry</span></h2>
+    <!-- FIRST PAYMENT AREA-->
+    
+    
+    <div id="div_WEBPAY_STD_PAY_CtlGroup5" class="LabelControlGroupAccessible">
+        <span id="lblHeaderText" class="hiddenControl"></span>
+    </div>
+    <div id="div_WEBPAY_STD_PAY_CtlGroup6" class="LabelControlGroupAccessible">
+        <div id="div_WEBPAY_STD_PAY_CtlGroup7" class="FieldLabelAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG7C1" class="ErrorImageCol">
+            </div>
+            <span id="lblPlease" class="NORMAL">Please enter the reference of the account you wish to pay</span>
+        </div>
+    </div>
+    <div id="div_WEBPAY_STD_PAY_CtlGroup8" class="LabelControlGroupAccessible">
+        <div id="div_WEBPAY_STD_PAY_CtlGroup9" class="FieldLabelAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG9C1" class="ErrorImageCol">
+            </div>
+            <label for="txtReference" id="lblReference" class="NORMAL">Reference *</label>
+        </div>
+        <div id="div_WEBPAY_STD_PAY_CtlGroup10" class="ControlAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG10C1" class="ErrorImageCol">
+                
+            </div>
+            <input name="WEBPAY/STANDARDPAYMENT_ASCX$txtReference" type="text" maxlength="30" id="txtReference" tabindex="103" class="StandardField NORMALENTRY" />
+            &nbsp;
+            
+        </div>
+    </div>
+    
+</div>
+<div id="div_WEBPAY_STD_PAY_CtlGroup12" class="LabelControlGroupAccessible">
+    <div id="div_WEBPAY_STD_PAY_CtlGroup13" class="FieldLabelAccessible80">
+        <div id="div_WEBPAY_STD_PAY_CG13C1" class="ErrorImageCol80">
+        </div>
+        <div id="div_WEBPAY_STD_PAY_CG13C2" class="FieldLabelAccessible35">
+            <label for="txtAmount" id="lblAmount" class="NORMAL">Amount (£) *</label>
+        </div>
+        <div id="div_WEBPAY_STD_PAY_CG13C3" class="FieldLabelAccessible35">
+            
+            <span id="lblBalance" class="NORMALENTRY"></span>
+        </div>
+    </div>
+    &nbsp;
+    <div id="div_WEBPAY_STD_PAY_CtlGroup14" class="ControlAccessible">
+        <div id="div_WEBPAY_STD_PAY_CG14C1" class="ErrorImageCol">
+            
+        </div>
+        <input name="WEBPAY/STANDARDPAYMENT_ASCX$txtAmount" type="text" maxlength="20" id="txtAmount" tabindex="107" class="NORMALENTRY" />
+    </div>
+</div>
+
+
+
+
+
+<div id="MyAddressPannel" class="WhiteSpace">
+		
+    <div id="div_WEBPAY_STD_PAY_Note1" class="insideContentHead">
+        
+    </div>
+    <div id="div_WEBPAY_STD_PAY_CtlGroup29" class="LabelControlGroupAccessible">
+        <div id="div_WEBPAY_STD_PAY_CtlGroup30" class="ControlAccessibleLarge">
+            <div id="div_WEBPAY_STD_PAY_CG30C1" class="ErrorImageColDropDown">
+            </div>
+            
+            </div>
+    </div>
+    
+    <div id="div_WEBPAY_STD_PAY_CtlGroup34" class="LabelControlGroupAccessible">
+        <div id="div_WEBPAY_STD_PAY_CtlGroup35" class="FieldLabelAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG35C1" class="ErrorImageCol">
+            </div>
+            <label for="txtName" id="lblName" class="NORMAL">Name</label>
+        </div>
+        <div id="div_WEBPAY_STD_PAY_CtlGroup36" class="ControlAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG36C1" class="ErrorImageCol">
+                
+            </div>
+            <input name="WEBPAY/STANDARDPAYMENT_ASCX$txtName" type="text" maxlength="100" id="txtName" tabindex="114" class="LargeField NORMALENTRY" />
+        </div>
+    </div>
+    <div id="div_WEBPAY_STD_PAY_CtlGroup37" class="LabelControlGroupAccessible">
+        <div id="div_WEBPAY_STD_PAY_CtlGroup38" class="ControlAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG38C1" class="ErrorImageColHouse">
+            </div>
+            <div id="div_WEBPAY_STD_PAY_CG38C2" class="WidthPlainFloatSmall">
+                <label for="txtHouseNo" id="lblHouseNo" class="NORMAL">House No</label></div>
+            <div id="div_WEBPAY_STD_PAY_CG38C3" class="WidthPlainFloatSmall">
+                <label for="txtHouseName" id="lblHouseName" class="NORMAL">OR House Name</label></div>
+            &nbsp;
+        </div>
+        <div id="div_WEBPAY_STD_PAY_CtlGroup39" class="ControlAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG39C1" class="ErrorImageColHouse">
+            </div>
+            <div id="div_WEBPAY_STD_PAY_CG39C2" class="WidthPlainFloatSmall">
+                <input name="WEBPAY/STANDARDPAYMENT_ASCX$txtHouseNo" type="text" maxlength="50" id="txtHouseNo" tabindex="115" class="SmallField NORMALENTRY" />
+            </div>
+            <div id="div_WEBPAY_STD_PAY_CG39C3" class="WidthPlainFloatSmall">
+                <input name="WEBPAY/STANDARDPAYMENT_ASCX$txtHouseName" type="text" maxlength="100" id="txtHouseName" tabindex="116" class="SmallField NORMALENTRY" />
+            </div>
+        </div>
+			<div class="ControlAccessible">
+				<div class="ErrorImageColHouse">
+					</div>
+			</div>
+    </div>
+    <div id="div_WEBPAY_STD_PAY_CtlGroup40" class="LabelControlGroupAccessible">
+        <div id="div_WEBPAY_STD_PAY_CtlGroup41" class="FieldLabelAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG41C1" class="ErrorImageCol">
+            </div>
+            <label for="txtStreet" id="lblStreet" class="NORMAL">Street</label>
+        </div>
+        <div id="div_WEBPAY_STD_PAY_CtlGroup42" class="ControlAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG42C1" class="ErrorImageCol">
+                
+            </div>
+            <input name="WEBPAY/STANDARDPAYMENT_ASCX$txtStreet" type="text" maxlength="50" id="txtStreet" tabindex="117" class="LargeField NORMALENTRY" />
+        </div>
+    </div>
+    <div id="div_WEBPAY_STD_PAY_CtlGroup43" class="LabelControlGroupAccessible">
+        <div id="div_WEBPAY_STD_PAY_CtlGroup44" class="FieldLabelAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG44C1" class="ErrorImageCol">
+            </div>
+            <label for="txtArea" id="lblArea" class="NORMAL">Area</label>
+        </div>
+        <div id="div_WEBPAY_STD_PAY_CtlGroup45" class="ControlAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG45C1" class="ErrorImageCol">
+                
+            </div>
+            <input name="WEBPAY/STANDARDPAYMENT_ASCX$txtArea" type="text" maxlength="50" id="txtArea" tabindex="118" class="LargeField NORMALENTRY" />
+        </div>
+    </div>
+    <div id="div_WEBPAY_STD_PAY_CtlGroup46" class="LabelControlGroupAccessible">
+        <div id="div_WEBPAY_STD_PAY_CtlGroup47" class="FieldLabelAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG47C1" class="ErrorImageCol">
+            </div>
+            <label for="txtTown" id="lblTown" class="NORMAL">Town</label>
+        </div>
+        <div id="div_WEBPAY_STD_PAY_CtlGroup48" class="ControlAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG48C1" class="ErrorImageCol">
+                
+            </div>
+            <input name="WEBPAY/STANDARDPAYMENT_ASCX$txtTown" type="text" maxlength="50" id="txtTown" tabindex="119" class="LargeField NORMALENTRY" />
+        </div>
+    </div>
+    <div id="div_WEBPAY_STD_PAY_CtlGroup49" class="LabelControlGroupAccessible">
+        <div id="div_WEBPAY_STD_PAY_CtlGroup50" class="FieldLabelAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG50C1" class="ErrorImageCol">
+            </div>
+            <label for="txtCounty" id="lblCounty" class="NORMAL">County</label>
+        </div>
+        <div id="div_WEBPAY_STD_PAY_CtlGroup51" class="ControlAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG51C1" class="ErrorImageCol">
+                
+            </div>
+            <input name="WEBPAY/STANDARDPAYMENT_ASCX$txtCounty" type="text" maxlength="50" id="txtCounty" tabindex="120" class="LargeField NORMALENTRY" />
+        </div>
+    </div>
+    <div id="div_WEBPAY_STD_PAY_CtlGroup52" class="LabelControlGroupAccessible">
+        <div id="div_WEBPAY_STD_PAY_CtlGroup53" class="FieldLabelAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG53C1" class="ErrorImageCol">
+            </div>
+            <label for="txtPostCode" id="lblPostCode" class="NORMAL">Postcode</label>
+        </div>
+        <div id="div_WEBPAY_STD_PAY_CtlGroup54" class="ControlAccessible">
+            <div id="div_WEBPAY_STD_PAY_CG54C1" class="ErrorImageCol">
+                
+            </div>
+            <input name="WEBPAY/STANDARDPAYMENT_ASCX$txtPostCode" type="text" maxlength="10" id="txtPostCode" tabindex="121" class="NORMALENTRY" /><!-- ADDED -->
+        </div>
+    </div>
+
+	</div>
+<!-- END ADDRESS AREA-->
+<div id="div_WEBPAY_STD_PAY_CtlGroup55" class="FullWidthPlain2">
+    &nbsp;
+    <div class="LabelControlGroupAccessible" id="buttons">
+        <div id="divASPbuttons">
+            <div id="div_WEBPAY_STD_PAY_BtnAdd" class="ButtonFloat">
+                <input type="submit" name="WEBPAY/STANDARDPAYMENT_ASCX$btnAdd" value="Add to List" id="btnAdd" tabindex="122" title="Adds the item to the payment list" class="MENUBUTTON" />
+            </div>
+            <div id="div_WEBPAY_STD_PAY_BtnCancel" class="ButtonFloat">
+                <input type="submit" name="WEBPAY/STANDARDPAYMENT_ASCX$btnCancel" value="Cancel" id="btnCancel" tabindex="123" title="Cancels the payment" class="MENUBUTTON" />
+            </div>
+            <div id="div_WEBPAY_STD_PAY_BtnNotes" class="ButtonFloat">
+                
+            </div>
+            <div id="div_WEBPAY_STD_PAY_BackToTop">
+                <a class="BACKTOTOP" tabindex="125" href="#TopOfPage">Back To Top</a>
+            </div>
+        </div>
+        <input name="WEBPAY/STANDARDPAYMENT_ASCX$hidUnalteredRef" type="hidden" id="hidUnalteredRef" size="5" />
+        <input name="WEBPAY/STANDARDPAYMENT_ASCX$hidAlternativeRef" type="hidden" id="hidAlternativeRef" size="5" />
+        <input name="WEBPAY/STANDARDPAYMENT_ASCX$hidStopMessage" type="hidden" id="hidStopMessage" size="5" />
+    </div>
+</div>
+
+</div>
+                        <div id="PaymentAreaPanel" class="PaymentAreaPanel">
+	
+<!-- Add this to link in with the style sheet -->
+<div id="div_WEBPAY_STD_PAYL_CtlWrapper" class="listControl">
+	<div id="div_WEBPAY_STD_PAYL_Content">
+		&nbsp;&nbsp;
+		
+		<div id="pnlPaymentReview">
+		
+			<div id="div_WEBPAY_STD_PAYL_CtlGroup1">
+				<h2>
+					<span id="lblHeading" class="SectionHeadings">Payment Review</span></h2>
+				<div id="div_WEBPAY_STD_PAYL_CG1C1">
+					<span id="lblModifyPayment" class="NORMAL">To modify a payment click the Modify link.</span>
+					<span id="lblRemovePayment" class="NORMAL">To remove a payment click the Delete link</span>
+                </div>
+				<div id="div_WEBPAY_STD_PAYL_CG1C2">
+					<span id="lblMakePayment" class="NORMAL">To make a payment, click Pay.  You will be redirected to a holding page while your request is processed.  You will then be directed to the next step in the payment process</span></div>
+			</div>
+		
+	</div>
+        <br />
+		<div class="DataGridAccessible" id="paymentwithscroll">
+			<table class="FullWidthGrid" cellspacing="0" rules="all" border="1" id="dgPayments" style="border-collapse:collapse;">
+		<tr class="DATAHEADER DataGridLeftAlign">
+			<th class="DataGridLeftAlign" scope="col">Account Type</th><th class="DataGridRightAlign" scope="col">Amount (£)</th><th class="DataGridLeftAlign" scope="col">Description</th><th class="DataGridLeftAlign" scope="col">Reference</th><th class="DataGridLeftAlign" scope="col">VAT</th><th scope="col">&nbsp;</th><th scope="col">&nbsp;</th>
+		</tr>
+	</table>
+		</div>
+		<div id="div_WEBPAY_STD_PAYL_CtlGroup2" class="FullWidthGridDiv">
+			<div id="div_WEBPAY_STD_PAYL_CtlGroup3" class="FullWidthGridDiv1">
+				<div id="div_WEBPAY_STD_PAYL_CtlGroup4" class="FullWidthGridDiv3">
+				</div>
+			</div>
+			<div id="div_WEBPAY_STD_PAYL_CtlGroup5" class="FullWidthGridDiv4">&nbsp; <!--Add a blank space here so firefox will recognise this area and display it -->
+				<div id="div_WEBPAY_STD_PAYL_CtlGroup6" class="FullWidthGridDiv3">
+				</div>
+			</div>
+			<div id="div_WEBPAY_STD_PAYL_CtlGroup7" class="FullWidthGridDiv2">
+				<div id="div_WEBPAY_STD_PAYL_CtlGroup8" class="FullWidthGridDiv3">
+					
+				</div>
+			</div>
+		</div>
+		<div id="pnlButtons">
+		
+                
+			<div id="div_WEBPAY_STD_PAYL_CtlGroup9" class="paymentlistgrid">
+                <div id="div_WEBPAY_STD_PAYL_BtnPay" class="ButtonFloat">
+                    <input type="submit" name="webpay/StandardPaymentList_ascx$btnPay" value="Pay" onclick="HidePayButtons();" id="btnPay" tabindex="212" title="Pay" class="CONFIRMBUTTON" />
+                </div>
+                <div id="div_WEBPAY_STD_PAYL_BtnPayCNP" class="ButtonFloat">
+                    
+                </div>
+                <div id="div_WEBPAY_STD_PAYL_BtnCHP" class="ButtonFloat">
+				    
+                </div>
+                <div id="div_WEBPAY_STD_PAYL_BtnCash" class="ButtonFloat">
+				    
+                </div>
+                <div id="div_WEBPAY_STD_PAYL_BtnCheque" class="ButtonFloat">
+                    
+                </div>
+                <div id="div_WEBPAY_STD_PAYL_BtnMixed" class="ButtonFloat">
+                    
+                </div>
+                <div id="div_WEBPAY_STD_PAYL_BackToTop">
+                    <a class="BACKTOTOP" tabindex="218" href="#TopOfPage">Back To Top</a>
+                </div>
+             </div>
+	    
+	</div>
+		<div>
+			<div id="paybuttons"></div>
+		</div>
+		<br/>
+		&nbsp;
+		<div id="div_WEBPAY_STD_PAYL_FooterText">
+			<span id="lblFooterText" class="hiddenControl"></span>
+		</div>
+	</div>
+</div>
+
+</div>
+                    </div>
+                </div>
+                <div id="divCtlGroup1" class="AboutPannelDefaultPage">
+                    <div id="Panel1">
+	
+                        <div id="divCG1C1" class="AboutPannelLeft">
+                            <a href="help/Payment.aspx" id="lnkHelp" class="MENUTEXTABOUT" target="_blank" tabindex="1000">Help[link opens in new window]</a>
+                            <!-- This was asp linkbutton "lnAbout" -->
+                            <a href="about.aspx" id="lnkAbout" class="MENUTEXTABOUT" target="_blank" tabindex="1001">About[link opens in new window]</a>
+                            <img class="noborder" alt="" src="images\point.gif" />
+                            
+                        </div>
+                        <div id="divCG1C2" class="AboutPannelRight">
+                            
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                    
+</div>
+                </div>
+                <script type="text/javascript">
+                    var txtbox = document.getElementById('payment:txtReference');
+                    setTimeout(function () { if (txtbox != null) { txtbox.focus(); } }, 1000);
+
+                    function HideButton() {
+                        document.getElementById("btnPay").style.visibility = "hidden";
+                    }
+
+                    function ShowButton() {
+                        document.getElementById("btnPay").style.visibility = "visible";
+                    }
+
+                    function ShowHelpPopup() {
+                        window.open("https://www.paypal.com/uk/cgi-bin/webscr?cmd=xpt/cps/popup/OLCWhatIsPayPal-outside", "Help", "height=380,width=800,left=400,top=100");
+                    }
+
+                </script>
+            
+
+<script type="text/javascript">
+//<![CDATA[
+showinframe();//]]>
+</script>
+
+
+<script type="text/javascript">
+<!--
+var myForm;
+myForm=GetFormObject();
+myForm.hidJavascriptCheck.value = 'on';
+myForm.submit();
+// -->
+</script>
+<script type="text/javascript" > function HidePayButtons() { paybuttons.style.visibility = 'hidden'; }</script><script type="text/javascript" > function setDeleteMessage() { return confirm('This will delete all your entered payments, are you sure?'); }</script><script type="text/javascript" > function setDeleteOneLineMessage() { return confirm('This will delete the payment, are you sure?'); }</script></form>
+        </div>
+
+        <div id="iconfooter">
+            <br />
+            <br />
+            <div class="footer">
+                	</div> <!-- close footer -->
+
+	</div>
+</div><div class="footer">
+
+<div id="footerbox">
+        <p>Some documents on this website require Adobe Reader &copy; installed before they can be viewed. If you do not have Adobe Reader &copy; installed or are experiencing difficulties viewing PDF files, you can <a href="http://get.adobe.com/uk/reader" target="_rbc" title="Download Adobe Reader &copy;">download the latest version from the Adobe website</a>.</p>
+        <p><a href="http://www.copeland.gov.uk/default.aspx?page=288" target="_rbc">Data protection</a>&nbsp;|&nbsp;<a href="http://www.copeland.gov.uk/default.aspx?page=1260" target="_rbc">Disclaimer</a>&nbsp;|&nbsp;<a href="http://www.copeland.gov.uk/default.aspx?page=1189" target="_rbc">Contact us form</a></p>
+        <p>&copy 2009 Copeland Borough Council. All rights reserved.</p>
+        <p>Address: The Copeland Centre, Catherine Street, Whitehaven Cumbria CA28 7SJ</p>
+</div>
+
+<div class="CivicaFooter">
+		
+			<p class="photolink"><a href="http://www.civica.co.uk" target="_tcbc">Provided by Civica UK Limited</a></p>
+			<div class="sys_footer_row2_Bold">Data Protection Act 1998</div>
+			<div class="sys_footer_row2">
+				<span>Please note that your personal details supplied on this form will be held and/or computerised by Copeland Borough Council for the purposes of processing your payment. Some personal details will be disclosed to banks and other financial institutions in order to process the payment. Your personal details will be safeguarded and will not be divulged to any other individuals or organisations for any other 
+				purposes.</span>
+			
+		</div>
+		
+	</div>
+
+
+</div>
+
+<!-- Start of Civica standard footer DO NOT INCLUDE ANY CODE BLOCKS OR ERROR MESSAGES WINDOW WILL FAIL TO FUNCTION - footer.inc -->
+<script type="text/javascript">
+    function showWC3(url) {
+        var new_window;
+        new_window = window.open(url);
+        new_window.focus();
+    }
+</script>
+
+<p class="PaddingLeft NORMAL">Copyright &copy 2013 Civica UK Ltd. All Rights Reserved.</p>
+
+<!-- End of Civica standard footer - footer.inc -->
+
+<div id="dummy2"> <!-- cancel out iconfooter -->
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="clear"></div>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            if (jsicon === undefined || !jsicon) {
+                jsicon = new icon();
+                jsicon.init();
+            }
+            $(document).trigger("iconinit");
+        });
+
+    </script>
+</body>
+</html>

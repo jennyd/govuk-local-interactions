@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js">
+<head>
+<meta charset="utf-8" />
+
+  
+  
+  
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <meta name="keywords" content="Primary school admissions in Barnet" />
+    
+    <meta name="dcterms.available" content="2015-03-03T14:42:47Z" />
+    <meta name="dc.type" content="Content Page" />
+  
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="google-translate-customization" content="c891ed76c3b0235-832d37a42e0942b1-gafa62815664b2abd-11" />
+<title>Primary school admissions in Barnet - barnet.gov.uk</title>
+
+<!--
+TODO: shortcut icon needs setting. Don't re-enable with href="#" as it causes another GET request to be triggered by Chrome.
+<link rel="shortcut icon" type="image/ico" href="#" />
+-->
+
+<link rel="stylesheet" href="/docroot/css/leaflet.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/docroot/css/chosen.min.css" />
+<link rel="stylesheet" href="/docroot/css/jquery.mCustomScrollbar.min.css" />
+
+
+<link rel="stylesheet" href="/docroot/css/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="/docroot/js/jquery-1.11.0.min.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="/docroot/js/jquery-ui.js"></script>
+<script src="/docroot/js/date-picker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/styles.css" media="screen, print" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.date.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.time.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/print.css" media="print" />
+
+
+<script src="/docroot/js/plugins/rem.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+  <script src="/docroot/js/plugins/nwmatcher-1.2.5.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/selectivizr.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/docroot/css/ie8.css" />
+<![endif]-->
+
+<!--[if ! lte IE 6]><!-->
+
+
+<!-- #TODO CBSCH-261 Fixing Foundation Javascript error -->
+<style type="text/css">
+meta.foundation-data-attribute-namespace {
+    font-family: false;
+}
+</style>
+
+<script src="/docroot/js/leaflet.js"></script>
+<script src="/docroot/js/leaflet.markercluster-src.js"></script>
+<script src="/docroot/js/leaflet.markercluster.js"></script>
+
+<script src="/docroot/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/init-behaviour.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.placeholder.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.accordion.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.tab.js" type="text/javascript"></script>
+
+<script src="/docroot/js/scroll.js" type="text/javascript"></script>
+
+<script src="/docroot/js/classie.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery-truncate/jquery.truncate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/modernizr.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/fastclick.js" type="text/javascript"></script>
+
+<script src="/docroot/js/iframeResizer.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.reveal.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/additional-methods.min.js" type="text/javascript"></script>
+
+<script src="https://www.browsealoud.com/plus/scripts/ba.js" type="text/javascript"></script>
+
+<script src="/docroot/js/browse-aloud.js" type="text/javascript"></script>
+
+
+<!--<![endif]-->
+<script>
+    /*<![CDATA[*/
+    (function (BCP) {
+        BCP.registerAjaxUrl = '/citizen-home/register/content/column1/singleton.html';
+        BCP.loginAjaxUrl = '/citizen-home/login/content/column1/singleton.html';
+    })(BCP);
+    /*]]>*/
+</script>
+
+<!-- Clickjacking prevention for legacy browsers that don't support X-Frame-Options header -->
+  
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+  
+
+<script>
+
+    /*<![CDATA[*/
+    jQuery(document).ready(function() {
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        var TP_GA = {
+            gaTrackerId : 'UA-60148629-1',
+            auth : false,
+            authDimensionName : 'dimension1'
+        }
+
+        ga('create', TP_GA.gaTrackerId, 'auto');
+        ga('set', 'forceSSL', true);
+
+        if (TP_GA.authDimensionName != '') {
+            ga('set', TP_GA.authDimensionName, TP_GA.auth.toString());
+        }
+
+        ga('send', 'pageview');
+    });
+    /*]]>*/
+</script>
+  
+ 
+
+</head>
+<body id="citizen-content-pg" class="nav-col">
+      
+    <div class="header">
+        <header>
+            <div id="skiptocontent">
+                <a href="#contentskip">Skip to content</a>
+            </div>
+             <span class="barnet-logo column small-3">
+                <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                    Barnet</a>
+                <img class="print-only" src="/docroot/img/barnet-logo-green.png" />
+            </span> 
+             <form class="global-search search-controls service-search large-6 large-offset-1 column" method="GET" action="/citizen-home/search.html">
+                <div class="global-search-input">
+                    <input type="search" name="keywords" title="main-search" />
+                </div>
+                <div class="global-search-submit">
+                    <button type="submit" class="button expand">Search</button>
+                </div>
+            </form> 
+              
+            <div class="user-section">
+                 <div id="129fae96-207a-4482-963b-0578a901db3b">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/branding/user/singleton';
+        var target = '#' + '129fae96-207a-4482-963b-0578a901db3b';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                                {
+                                    pageLanguage : 'en',
+                                    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+                                },
+                                'google_translate_element');
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+            </div>
+              
+            <div class="mobile-nav">
+                <i class="iconfontello-search"></i>
+                <i class="iconfontello-menu"></i>
+            </div>
+        </header>
+    </div>
+      
+      
+      
+    
+      
+      
+      
+    <div class="content">
+        
+              
+<nav id="nav" class="side-nav side-nav-off medium-4 large-3 column">
+    <!-- TODO: Why do we need a LI wrapping the nav? This means our level has to start at 2! -->
+    <ul class="nav-level-1" style="display: block">
+        <li class="open">
+              
+            <ul class="nav-level-2" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/schools-and-education.html">
+                        <i></i>
+                        <span class="menu-item">Schools and education</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/schools-and-education/school-admissions.html">
+                        <i></i>
+                        <span class="menu-item">School admissions</span>
+                    </a>
+                      
+            <ul class="nav-level-4" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/school-admissions/choice-adviser.html">
+                        <i></i>
+                        <span class="menu-item">Choice adviser</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/school-admissions/admissions-appeals.html">
+                        <i class="iconfontello-plus"></i>
+                        <span class="menu-item">Admissions appeals</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li class="open active">
+                    <a href="/citizen-home/schools-and-education/school-admissions/primary-school-admissions.html">
+                        <i></i>
+                        <span class="menu-item">Primary school admissions in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/school-admissions/junior-school-admissions-in-Barnet.html">
+                        <i></i>
+                        <span class="menu-item">Junior school admissions in Barnet</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/school-admissions/secondary-school-admissions.html">
+                        <i></i>
+                        <span class="menu-item">Secondary school admissions</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/school-admissions/in-year-school-admissions.html">
+                        <i></i>
+                        <span class="menu-item">In-year school admissions</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/school-admissions/determined-admission-arrangements.html">
+                        <i></i>
+                        <span class="menu-item">Determined Admission Arrangements</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/schools-and-education/school-admissions/sen-secondary-school-admissions.html">
+                        <i></i>
+                        <span class="menu-item">SEN Secondary School Admissions</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+        </li>
+    </ul>
+</nav>
+  
+            <div class="large-9 medium-8 small-12 column main-content">
+                 <nav id="breadcrumb-nav">
+        <div id="breadcrumb" class="breadcrumb-panel">
+            <ul class="breadcrumbs">
+                  
+                
+                <li>
+                    <a href="/citizen-home.html">Home</a>
+                </li>
+                 
+                  
+                <li class="service-nav">
+                    <select onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="Our services">Our services</option>
+                        <option value="/citizen-home/business.html">Business Support in Barnet</option>
+                        <option value="/citizen-home/environmental-health.html">Environmental Health and Trading Standards</option>
+                        <option value="/citizen-home/libraries.html">Libraries</option>
+                        <option value="/citizen-home/regeneration.html">Regeneration</option>
+                        <option value="/citizen-home/public-health.html">Public Health </option>
+                        <option value="/citizen-home/adult-social-care.html">Adult social care</option>
+                        <option value="/citizen-home/council-and-democracy.html">Council and democracy</option>
+                        <option value="/citizen-home/housing-and-community.html">Housing and community</option>
+                        <option value="/citizen-home/schools-and-education.html">Schools and education</option>
+                        <option value="/citizen-home/parks-sport-and-leisure.html">Parks, sport and leisure</option>
+                        <option value="/citizen-home/council-tax-and-benefits.html">Council Tax and Benefits</option>
+                        <option value="/citizen-home/parking-roads-and-pavements.html">Parking, roads and pavements</option>
+                        <option value="/citizen-home/rubbish-waste-and-recycling.html">Rubbish, waste and recycling</option>
+                        <option value="/citizen-home/children-young-people-and-families.html">Children, young people and families</option>
+                        <option value="/citizen-home/births-deaths-marriages-and-nationality.html">Births, deaths, marriages and nationality</option>
+                        <option value="/citizen-home/planning-conservation-and-building-control.html">Planning, Conservation and Building Control</option>
+                        <option value="/citizen-home/news.html">News and features</option>
+                        <option value="/citizen-home/directories.html">Directories</option>
+                        <option value="/citizen-home/events.html">Events List</option>
+                        <option value="/citizen-home/pledgebank.html">Pledges</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="/citizen-home/schools-and-education.html">Schools and education</a>
+                </li>
+                 
+                  
+                
+                <li>
+                    <a href="/citizen-home/schools-and-education/school-admissions.html">School admissions</a>
+                </li>
+                 
+                  
+                
+                
+                  
+            </ul>
+        </div>
+    </nav> 
+                  
+                <span class="skip-anchor" id="contentskip"></span>
+                 <main id="main" role="main">
+                    
+                  
+                <div id="intro" class="content-page-intro">
+
+                      
+                    <div class="small-6 columns left flush-left">
+                    
+                        <h1>Primary school admissions in Barnet</h1>
+                          
+                        <ul>
+                            <li>
+                                
+                                    <small>Schools and education</small>
+                                
+                            </li>
+                        </ul>
+                        
+                       
+                          
+                          
+                       
+                    </div>
+
+                    <div class="small-6 columns right featured-image">
+                        <img src="/dam/jcr:fb5b8c42-738c-4e8d-9b71-6c212a6e4000/78184084_1.2015-02-26-11-44-34.jpg" alt="children in a classroom" />
+                        <p class="content-image-description"></p>
+                    </div>
+                    
+                    
+                    
+                      
+                     
+                </div>
+                  
+                 
+            <div class="row">
+                 
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <p>To find a Primary School in your area, please see the <a href="http://www.barnet.gov.uk/citizen-home/directories/Directories?_pecid=373ac375-9115-4d18-8a58-ce6098691e0a&amp;directoryId=54e3852a84ae7c28725849d1&amp;list=true">Schools directory.</a></p>
+
+<p>To see the catchment areas for our community schools, please see our <a href="/citizen-home/schools-and-education/schools-and-colleges/school-priority-maps.html">school priority maps. </a></p>
+
+<h2>Starting school in Barnet</h2>
+
+<p>Starting school is an exciting time for both parents and children. You should be thinking about your child starting&nbsp;reception class in the September following their third birthday.</p>
+
+<p>Full details of the application process can be found in our&nbsp;<strong><a href="/dam/jcr:4dfe87c8-e298-434e-ada7-3f0f51780d29/(2016)%20Primary%20Admissions%20Guide.pdf">Primary School Admissions Guide 2016</a></strong>. The guide includes:</p>
+
+<ul>
+	<li>school admission arrangements</li>
+	<li>how to choose a school</li>
+	<li>the application timetable</li>
+	<li>contact details for&nbsp;Barnet primary schools.</li>
+</ul>
+
+<h3>Admissions for entry into school in September 2016</h3>
+
+<p>If your child was born between <strong>1 September 2011</strong> and <strong>31 August 2012 </strong>you will need to apply to your home council for a place in a primary school for the 2016/2017 academic year.</p>
+
+<ul>
+	<li>you should submit your application online using the <a href="http://www.eadmissions.org.uk/" target="_blank" title="eAdmissions online school admissions">eAdmissions</a> website</li>
+	<li>the online application process opened on <strong>1 September 2015</strong></li>
+	<li>the closing date for applications is <strong>15 January 2016</strong></li>
+	<li><a href="http://www.eadmissions.org.uk/" target="_blank" title="eAdmissions online school admissions">online results</a> will be available in the evening of <strong>18 April 2016</strong></li>
+	<li>you&nbsp;must not apply using this process if your child has <strong><a href="https://www.barnet.gov.uk/citizen-home/children-young-people-and-families/the-local-offer-and-special-educational-needs.html" title="Special educational links">special educational needs</a> </strong>(SEN), with an <strong>Education Health Care Plan (EHCP)</strong>.</li>
+</ul>
+
+<h3>Making your application &ndash; important points to remember</h3>
+
+<ul>
+	<li>you can list a maximum of six schools in the order you prefer them; there is no advantage in listing only one school</li>
+	<li>you are advised to include at least one local community school as one of your preferences to ensure that your child has a better chance of&nbsp;securing a school place for 2016/17</li>
+	<li>you can select schools within and outside your home borough</li>
+	<li>make sensible choices to improve your chances of securing a place at a&nbsp;selected school</li>
+	<li>&nbsp;if your first choice school cannot be offered, you will&nbsp;receive&nbsp;information&nbsp;on how places were allocated,&nbsp;the waiting list procedure&nbsp;and how to <a href="https://www.barnet.gov.uk/citizen-home/schools-and-education/school-admissions/admissions-appeals.html" title="Appeal advice">appeal</a> against the decision not to offer your child a place at&nbsp;your chosen&nbsp;school(s)</li>
+	<li>we&nbsp;will retain waiting lists for the oversubscribed schools and make a second round of offers from the waiting lists at the end of May 2016 (please remember that only a small number of places are expected to become available at oversubscribed schools, after 18 April 2016)</li>
+	<li>after May 2016, further offers will be made from school waiting lists as and when places become available</li>
+	<li>if&nbsp;your child&nbsp;has not been offered a place at&nbsp;any of your&nbsp;preferred schools and you do not wish to accept a place at&nbsp;the&nbsp;alternative school&nbsp;offered, you will become responsible for securing suitable education for your child.</li>
+</ul>
+
+<h3>Neighbouring council school admissions</h3>
+
+<table summary="Contacts of school admissions teams in the neighbouring boroughs">
+	<caption>&nbsp;</caption>
+	<tbody>
+		<tr>
+			<th>
+			<p>Local Authority</p>
+			</th>
+			<th>
+			<p>Telephone</p>
+			</th>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="http://brent.gov.uk/services-for-residents/family-and-schools/schools/" target="_blank">Brent</a></p>
+			</td>
+			<td>
+			<p>020 8937 3110</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="http://www.camden.gov.uk/ccm/navigation/education/camden-schools/schools-admissions/" target="_blank" title="Camden admissions">Camden</a></p>
+			</td>
+			<td>
+			<p>020 7974 1625</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="http://www.enfield.gov.uk/admissions" target="_blank" title="Enfield admissions">Enfield</a></p>
+			</td>
+			<td>
+			<p>020 8379 5501</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="http://www.haringey.gov.uk/children-and-families/schools-and-education/school-admissions" target="_blank">Haringey</a></p>
+			</td>
+			<td>
+			<p>020 8489 1000</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="http://www.harrow.gov.uk/info/200129/admissions" target="_blank" title="Harrow admissions">Harrow</a></p>
+			</td>
+			<td>
+			<p>020 8901 2620</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p><a href="http://www.hertsdirect.org/services/edlearn/admissions/" target="_blank" title="Hertfordshire admissions">Hertfordshire</a></p>
+			</td>
+			<td>
+			<p>0300 123 4043</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+</div>
+<section class="contacts-widget widget">
+                    <h2>Contacts</h2>
+                      
+                    <div class="contacts-widget-wrapper clearfix">
+                          
+                        <div>
+                            <ul class="contact-info">
+                                <li class="text-strong">School admissions</li>
+                                <li>Building 2<br/>North London Business Park<br/>Oakleigh Road South<br/>N11 1NP</li>
+                                <li>&nbsp;</li>
+                                
+                                <li>
+                                    <span class="text-strong">Tel: </span>
+                                    <span>020 8359 7651</span>
+                                </li>
+                                <li>
+                                    <span class="text-strong">FAX: </span>
+                                    <span>0870 889 6799</span>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="hours">
+                            <ul>
+                                <li class="text-strong">Opening hours</li>
+                                <li>Enquiries: <a href="/citizen-home/children-young-people-and-families/forms/School-admissions-general-enquiries">Contact us online</a></li>
+                            </ul>
+                        </div>
+                          
+                    </div>
+                    
+                    
+                      
+                </section> 
+    <section class="documents-widget widget">
+        <h2>Download documents</h2>
+        <div class="documents-widget-wrapper clearfix">
+             <div class="document-link">
+                                <i class="iconfontello-file"></i>
+                                <a href="/citizen-home/schools-and-education/school-admissions/primary-school-admissions/barnet-primary-school-admissions-guides.html" class="internal-link">Barnet Primary School Admissions Guides</a>
+                            </div> 
+
+            <div class="document-link">
+
+                  
+                <i class="iconfontello-file-pdf"></i>
+                <a href="/dam/jcr:98745b8a-1ab4-4db2-a79e-135573ac0237/Oversubscription%20Criteria%20for%20Admission%20to%20Barnet%20Community%20Infant%20and%20Primary%20Reception%20Class%202016.pdf">Oversubscription Criteria for Community Infant and Primary School Reception Class 2016</a>
+                <span>0.16 MB</span>
+                  
+
+                  
+            </div>
+
+              
+        </div>
+    </section>
+      
+            </div>
+         
+                </main> 
+                
+                 <div class="row">
+                    <div class="panel">
+                          
+                <section class="gm_sidebar row">
+                    <div class="gm-container">
+                        <div class="rate-page">
+                            <i class="iconfontello-thumbs-up"></i>
+                            <p>Rate this page</p>
+                        </div>
+                        <div class="rating-options">
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=3" target="_blank" title="rate this page as GOOD" rel="nofollow">
+                                <img src="/docroot/img/govmetric/smiling.png" alt="green smiley (good)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=2" target="_blank" title="rate this page as AVERAGE" rel="nofollow">
+                                <img src="/docroot/img/govmetric/indifferent.png" alt="orange smiley (average)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=4" target="_blank" title="rate this page as POOR" rel="nofollow">
+                                <img src="/docroot/img/govmetric/sad.png" alt="red smiley (poor)" />
+                            </a>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+                    <script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+                    <script type="text/javascript" src="//hitcounter.govmetric.com/982"></script>
+                </section>
+                  
+                    </div>
+                </div> 
+                
+            </div>
+        
+        
+          
+    </div>
+      
+      
+    <footer>
+          
+          
+        <nav class="footer-nav clearfix row">
+            <ul class="footer-links left">
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html" class="internal-link">Contact us</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/copyright.html" class="internal-link">Copyright</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/privacy.html" class="internal-link">Privacy notice</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" class="internal-link">Accessibility</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Disclaimer.html" class="internal-link">Disclaimer</a>
+                            
+                            
+                            
+                             </li>
+                
+                
+                
+                
+                
+                
+            </ul>
+            <ul class="social-icons right">
+                <li><a href="https://www.gov.uk/"><img height="18" width="90" src="/docroot/img/gov-uk-logo.png" alt="gov uk logo" /></a></li>
+                <li><a href="https://www.flickr.com/photos/barnetcouncil"><i class="flaticon-flickr"></i></a></li>
+                <li><a href="https://twitter.com/barnetcouncil"><i class="flaticon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/BarnetCouncil"><i class="flaticon-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/user/Barnetcouncil1"><i class="flaticon-youtube"></i></a></li>
+                <li class="browse-aloud-icon"><a id="show-browsealoud" title="Listen with BrowseAloud"><img src="/docroot/img/browse-aloud-logo.png" alt="Listen with BrowseAloud" /></a></li>
+            </ul>
+        </nav>
+        <div class="site-footer">
+            <div class="row">
+                <span class="barnet-logo right">
+                    <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                        Barnet</a>
+                </span>
+            </div>
+        </div>
+          
+    </footer>
+      
+    <script src="/docroot/js/plugins/retina.min.js" type="text/javascript"></script>
+    <script src="/docroot/js/plugins/chosen.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery("#ordering-download-form select").chosen();
+    jQuery(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,526 @@
+
+    <!DOCTYPE html>
+    <html lang="en-GB">
+        <head>
+	
+            <title>Eastleigh Borough Council</title>
+            <meta name="Copyright" content="Copyright 2014 Eastleigh Borough Council" />
+            <meta name="Author"    content="Eastleigh Borough Council - CSICT Development Team" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta charset="UTF-8" />
+            <meta name="description" content='ParkWorks - Parks and Play areas'>
+            <meta name="keywords" content='ParkWorks - Parks and Play areas'>
+            <meta name="author" content="Eastleigh Borough Council">
+
+                <!-- Styles -->
+            <link href="/css/master.less.css"    rel="stylesheet" type="text/css" />
+            		    <style type="text/css">
+    	    #wrapper {background: #BCB;}
+
+    	     @media( min-width: 1061px)
+    	     {
+    	         #wrapper 
+    	         {
+					background: #eaebec;
+    	            background: linear-gradient( rgba(200, 200, 200, 0.8), rgba(200, 200, 200, 0.8) ),url('/media/63536/Netley-Chapel-in-Royal-Victoria-Hospital-ref-99.jpg');
+    	            background-size: cover;
+    	         }
+    	     }
+    	</style>
+      
+
+			<!--Start of Google Analytics-->
+            <script type="text/javascript">
+                !function (e, a, t, n, c, o, s) { e.GoogleAnalyticsObject = c, e[c] = e[c] || function () { (e[c].q = e[c].q || []).push(arguments) }, e[c].l = 1 * new Date, o = a.createElement(t), s = a.getElementsByTagName(t)[0], o.async = 1, o.src = n, s.parentNode.insertBefore(o, s) } (window, document, "script", "//www.google-analytics.com/analytics.js", "ga"), ga("create", "UA-20264814-1", "auto"), ga("send", "pageview");
+            </script>
+			
+			<script>
+			/**
+			* Function that tracks a click on an outbound link in Google Analytics.
+			* This function takes a valid URL string as an argument, and uses that URL string
+			* as the event label.
+			*/
+			var trackOutboundLink = function(url) {
+			   ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+				 function () {
+				 document.location = url;
+				 }
+			   });
+			}
+			</script> 
+            <!--End of Google Analytics-->
+
+            <script type="text/javascript" src="/Scripts/jquery-1.11.0.min.js"></script>
+            <script async src="/Scripts/less-1.3.3.min.js" type="text/javascript"></script>
+        </head>
+
+        <body>
+    
+            <form method="post" action="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas.aspx" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ9kFgJmD2QWAmYPZBYCZg9kFgJmD2QWAgIHEGRkFgICCQ9kFgJmD2QWAmYPZBYKAgEPDxYCHgRUZXh0ZWRkAgMPDxYEHgtOYXZpZ2F0ZVVybAU2aHR0cHM6Ly9teS5lYXN0bGVpZ2guZ292LnVrL215LWFjY291bnQvbXktZGV0YWlscy5hc3B4HgdWaXNpYmxlaGRkAgUPDxYCHwEFOmh0dHBzOi8vbXkuZWFzdGxlaWdoLmdvdi51ay9NZW1iZXItUmVnaXN0cmF0aW9uL2xvZ2luLmFzcHhkZAIHDw8WAh8CaGRkAgkPDxYCHwEFNGh0dHBzOi8vbXkuZWFzdGxlaWdoLmdvdi51ay9NZW1iZXItUmVnaXN0cmF0aW9uLmFzcHhkZGTTCAP/MRhNf2H52r0wSOKvhQeutw==" />
+</div>
+
+                <div id="header" class="body">
+                    <h1>
+                        <a href="/">
+                            <img src="/media/core/eastleigh-logo.gif" alt="Eastleigh Borough Council" />
+                        </a>
+                    </h1>
+                    
+        <ul class="toolbar">
+
+				<li class=""><a href="/tools/cookies.aspx">Cookies</a></li>
+				<li class=""><a href="/tools/accessibility.aspx">Accessibility</a></li>
+				<li class=""><a href="/tools/contact-us.aspx">Contact Us</a></li>
+				<li class=""><a href="/tools/site-map.aspx">Site Map</a></li>
+				<li class=""><a href="/tools/a-to-z.aspx">A to Z</a></li>
+				<li class="last"><a href="/tools/help.aspx">Help</a></li>
+		</ul>
+
+
+                    <script type="text/javascript">
+    function doSearch() { var a = $("#searchstring").val(); return "" != a && (window.location = "/tools/search.aspx?searchtext=" + a), !1 }
+</script>
+
+<div id="search">
+    <label for="searchstring" class="hidden">site search</label>
+    <input type="text" id="searchstring" name="searchstring" class="formField" placeholder="Search..." title="Search" maxlength="50" autocomplete="Off" />
+    
+    <label for="searchBtn" class="hidden">search</label>       
+    <button type="button" class="searchBtn" id="searchBtn" name="searchBtn" onclick="doSearch();"></button>
+    
+    <div id="searchresults" class="search-results mecontent">
+    </div>
+</div>
+           
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+        var content = $('#searchstring').val();
+        $('#searchstring').keyup(function (e) {
+
+            if ($('#searchstring').val() != content) {
+                content = $('#searchstring').val();
+                $.ajax({
+                    type: "POST",
+                    url: "/searchresults",
+                    data: "searchstring=" + content,
+                    success: function(msg){
+                        $('#searchresults').html(msg);
+                    }
+                });
+            }
+
+            if (e.keyCode == 13) {
+                var searchText = $("#searchstring").val();
+                //alert(searchText);
+
+                window.location = "https://www.eastleigh.gov.uk/tools/search.aspx?searchtext=" + searchText;
+                //window.location.replace("/tools/search.aspx?searchtext=" + searchText);
+            }
+        });
+    });
+
+</script>
+
+                </div>
+
+                <dl class="breadcrumbs clearFix">
+                    <dt class="hidden">You are here</dt>
+                    <dd class="body">
+
+                        
+
+<ul class="breadcrumb">
+	
+	        <li class="normalpagelink"><a href="/">Home</a></li>
+	        <li class="normalpagelink"><a href="/sport,-countryside,-parks-culture.aspx">Sport, Countryside, Parks &amp; Culture</a></li>
+	    <li class="active">ParkWorks - Parks and Play areas</li>
+    
+</ul>
+                        <div class="logindetails">
+                            <div id="ContentPlaceHolderDefault_UserDetails_5_divLoginDetails">
+    <span id="ContentPlaceHolderDefault_UserDetails_5_lblUserInfo"></span>
+    
+    
+    <a id="ContentPlaceHolderDefault_UserDetails_5_HypLogon" class="linkbutton" href="https://my.eastleigh.gov.uk/Member-Registration/login.aspx">Log In</a>
+    |
+    
+    <a id="ContentPlaceHolderDefault_UserDetails_5_HypRegister" class="linkbutton" href="https://my.eastleigh.gov.uk/Member-Registration.aspx">Create Account</a>
+</div> 
+                        </div>
+                    </dd>
+                </dl>
+
+                <div id="wrapper">
+        
+                    
+        <div id="content" class="body clearFix">
+            <div id="leftCol">
+				
+
+<div class="box MainMenu widget">
+    <a id="MainMenuHeader" class="MenuHead widget-head" href="#">
+        <h2>
+            Main Menu
+            <span></span>
+        </h2>
+    </a>
+    
+
+
+    <div class="box-content widget-content">
+
+
+		<nav id="MainMenu" class="nodisplay"> 
+                <ul>
+            <li class="level-2"> <!--id="My Eastleigh"-->
+                <a href="https://my.eastleigh.gov.uk/">My Eastleigh</a>
+            </li>
+            <li class="level-2"> <!--id="The Council"-->
+                <a href="/the-council.aspx">The Council</a>
+            </li>
+            <li class="level-2"> <!--id="Planning &amp; Building"-->
+                <a href="/planning-building.aspx">Planning &amp; Building</a>
+            </li>
+            <li class="level-2"> <!--id="Council Tax, Benefits &amp; Business Rates"-->
+                <a href="/council-tax,-benefits-business-rates.aspx">Council Tax, Benefits &amp; Business Rates</a>
+            </li>
+            <li class="level-2"> <!--id="Housing"-->
+                <a href="/housing.aspx">Housing</a>
+            </li>
+            <li class="level-2"> <!--id="Waste, Recycling &amp; Environment"-->
+                <a href="/waste,-recycling-environment.aspx">Waste, Recycling &amp; Environment</a>
+            </li>
+            <li class="level-2"> <!--id="Energy &amp; Climate Change"-->
+                <a href="/energy-climate-change.aspx">Energy &amp; Climate Change</a>
+            </li>
+            <li class="level-2"> <!--id="Parking, Travel &amp; Roads"-->
+                <a href="/parking,-travel-roads.aspx">Parking, Travel &amp; Roads</a>
+            </li>
+            <li class="level-2"> <!--id="Sport, Countryside, Parks &amp; Culture"-->
+                <a href="/sport,-countryside,-parks-culture.aspx">Sport, Countryside, Parks &amp; Culture</a>
+            </li>
+            <li class="level-2"> <!--id="Licensing"-->
+                <a href="/licensing.aspx">Licensing</a>
+            </li>
+            <li class="level-2"> <!--id="Business"-->
+                <a href="/business.aspx">Business</a>
+            </li>
+            <li class="level-2"> <!--id="Our Community"-->
+                <a href="/our-community.aspx">Our Community</a>
+            </li>
+    </ul>
+
+        </nav>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        $(function () { var n = $("#MainMenuHeader"), e = $("#MainMenu"); $(n).on("click", function (n) { n.preventDefault(), e.slideToggle() }) });
+    </script>
+
+
+
+
+				
+
+
+
+
+
+<div class="box sectionNav widget">
+    <div class="box-content">
+        
+        <a id="SectionMenuHead" class="MenuHead widget-head" href="#">
+            <h2>
+                Sport, Countryside, Parks &amp; Culture
+                <span></span>
+            </h2>
+        </a>
+
+            <nav id="sectionNav">
+                <ul>
+
+                        <li  class="parent">
+                                <a href="/sport,-countryside,-parks-culture/sport-and-active-lifestyles.aspx">Sport and Active Lifestyles</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/sport,-countryside,-parks-culture/countryside.aspx">Countryside</a>
+                        </li>
+                        <li  class="parent">
+                                <a href="/sport,-countryside,-parks-culture/arts,-culture-and-creative-industries.aspx">Arts, Culture and Creative Industries</a>
+                        </li>
+                        <li  class="parent">
+                                <a class="parent active" href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas.aspx">ParkWorks - Parks and Play areas</a>
+                                    <ul>
+                                        
+                                            <li>
+
+                                                <a class="" href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/play-areas-in-the-borough-of-eastleigh.aspx">Play Areas in the Borough of Eastleigh</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/paddling-pools-in-the-borough-of-eastleigh.aspx">Paddling Pools in the Borough of Eastleigh</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/monks-way-play-area-development.aspx">Monks Way Play Area Development</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/youth-areas-in-the-borough-of-eastleigh.aspx">Youth Areas in the Borough of Eastleigh</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/wheeled-sports-facilities.aspx">Wheeled Sports Facilities</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/play-faqs.aspx">Play FAQs</a>
+                                            </li>
+                                            <li>
+
+                                                <a class="" href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/outdoor-gyms.aspx">Outdoor Gyms</a>
+                                            </li>
+                                    </ul>
+                        </li>
+                        <li  class="parent">
+                                <a href="/sport,-countryside,-parks-culture/tree-services.aspx">Tree Services </a>
+                        </li>
+                        <li  class="">
+                                <a href="/sport,-countryside,-parks-culture/things-to-do.aspx">Things to do</a>
+                        </li>
+                        <li  class="">
+                                <a href="/sport,-countryside,-parks-culture/youth-centres.aspx">Youth Centres</a>
+                        </li>
+    
+                </ul>
+            </nav>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () { var e = $("#SectionMenuHead"), n = $("#sectionNav"); $(e).on("click", function (e) { e.preventDefault(), n.slideToggle() }) });
+</script>
+			</div>
+
+	        <div id="main" class="clearfix" >
+                <div class="main-head">
+                    <h2>
+                        ParkWorks - Parks Play Areas & Paddling Pools
+
+                    </h2>
+                    <div class="whoson">
+    <!-- Embedded WhosOn: Insert the script below at the point on your page where you want the Click To Chat link to appear -->
+        <script type='text/javascript' src='https://chat.eastleigh.gov.uk:443/include.js?domain=my.eastleigh.gov.uk'></script>
+        <script type='text/javascript' >
+        if (sWOTrackPage) sWOTrackPage();
+    </script>
+    <!-- End of embedded WhosOn -->
+</div>
+
+                </div>
+				<div class="main-intro">
+                    <p>
+                        
+                    </p>
+                </div>
+                
+                    
+				
+					<div id="main-content" class="clearFix">
+					    <p class="modifiedDate">
+					        Page last updated at 14 August 2015 at 14:06
+                        </p>
+						<h2 class="ImmTextAlign_Left">ParkWorks  <img width="400" height="218" src="/media/60705/Squared-Logo.JPG" alt="ParkWorks" style="float: right;"/></h2>
+<p class="ImmTextAlign_Left">ParkWorks are instrumental in providing the land and facilities for sport and play. Through the planning process, they look to secure land and developers contributions to provide new and improved public open space areas for our communities working with key local agencies and partners.</p>
+<p class="ImmTextAlign_Left"> </p>
+<h2>Play and Youth Areas</h2>
+<p>Welcome to the Play areas page of Eastleigh Borough Councils ParkWorks. Here you will find a link to a list of the many children’s equipped play areas within the borough. For your assistance we have arranged the list into: Borough, Town and Parish managed and maintained play areas plus Hampshire County Council and Forestry Commission.</p>
+<p><img width="191"  height="128" src="/media/134308/Website-Left_191x128.jpg" alt="Website Left" style="width: 191px; height: 133px;"/><img width="188"  height="125" src="/media/134310/Website-Middle_188x125.jpg" alt="Website Middle"/><img width="177"  height="113" src="/media/134318/Stoke-Park-woods-BIGFC-001_177x113.jpg" alt="Stoke Park Woods BIGFC 001" style="width: 182px; height: 136px;"/><img width="200"  height="133" src="/media/134313/Website-5_200x133.jpg" alt="Website 5" style="width: 200px; height: 136px; float: left;"/></p>
+<p> </p>
+<p><strong>Why play is important</strong></p>
+<p>Play is fundamental to children’s happy, healthy development. The main benefits to individual children from being able to play freely is in how satisfying it is and how much it meets the needs of the child at the time. Play and free time activities are important to children: they are seen as different from school and other organised activities and serve a different purpose. Children who feel secure in their play can spend many hours occupied in investigating and learning about themselves and the world around them.</p>
+<p>There are many benefits for children and young people when they are given the space and time to play such as: being active, develop their body strength and coordination, learn new skills and build on existing skills, increased confidence and self-esteem, learn social skills, meeting new friends and learning to ‘play’ with other children, out in the fresh air and importantly they learn to assess risk which we all do throughout life on a daily basis such as crossing a road.</p>
+<p> </p>
+<p><strong>Managing Risk in Play Provision, Play Safety Forum 2002 states:</strong></p>
+<p><em>Children need and want to take risks when they play. Play provision aims to respond to these needs and wishes by offering children stimulating, challenging environments for exploring and developing their abilities. In doing this, play provision aims to manage the level of risk so that children are not exposed to unacceptable risks of death or serious injury.</em></p>
+<p>We encourage parents and carers to interact and play with their children in our play areas. Children develop at different stages and no child is the same so what a 4 year can’t  do a 3 year old may be able to do, so by playing and encouraging your child they will soon be able to master that challenge before quickly finding new ones!  </p>
+<p> </p>
+<p><strong>Management and maintenance</strong></p>
+<p>The play areas are regularly inspected and maintained according to the manufacturers guidelines and also dependant on location and usage. In addition to these inspections each play area has an Annual Independent Inspection from a Play Inspector qualified to Annual Inspector status on the Register of Play Inspectors International. Any issues identified are addressed depending on the priority given.</p>
+<p>Occasionally through general wear and tear or unfortunately misuse / vandalism issues occur, if you notice an issue and wish to report it, please either phone or email the play area operator for that play area clearly stating which play area and the issue / problem you have identified.</p>
+<p>Any vandalism, or anti-social behaviour in any of the play areas is a Police matter and depending on the severity you should either call them on 999 or for less severe cases please use 101</p>
+<p>“Enjoy the area - Have a safe play”</p>
+
+
+    <ul class="linkList">            
+        
+            <li>
+                <a href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/monks-way-play-area-development.aspx">
+                    Monks Way Play Area Development
+                    <img src="/media/Core/greater_than_green.png" alt="Go to Monks Way Play Area Development" class="gobutton" />
+                </a>
+            </li>
+            <li>
+                <a href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/outdoor-gyms.aspx">
+                    Outdoor Gyms
+                    <img src="/media/Core/greater_than_green.png" alt="Go to Outdoor Gyms" class="gobutton" />
+                </a>
+            </li>
+            <li>
+                <a href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/paddling-pools-in-the-borough-of-eastleigh.aspx">
+                    Paddling Pools in the Borough of Eastleigh
+                    <img src="/media/Core/greater_than_green.png" alt="Go to Paddling Pools in the Borough of Eastleigh" class="gobutton" />
+                </a>
+            </li>
+            <li>
+                <a href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/play-areas-in-the-borough-of-eastleigh.aspx">
+                    Play Areas in the Borough of Eastleigh
+                    <img src="/media/Core/greater_than_green.png" alt="Go to Play Areas in the Borough of Eastleigh" class="gobutton" />
+                </a>
+            </li>
+            <li>
+                <a href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/play-faqs.aspx">
+                    Play FAQs
+                    <img src="/media/Core/greater_than_green.png" alt="Go to Play FAQs" class="gobutton" />
+                </a>
+            </li>
+            <li>
+                <a href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/wheeled-sports-facilities.aspx">
+                    Wheeled Sports Facilities
+                    <img src="/media/Core/greater_than_green.png" alt="Go to Wheeled Sports Facilities" class="gobutton" />
+                </a>
+            </li>
+            <li>
+                <a href="/sport,-countryside,-parks-culture/parkworks-parks-and-play-areas/youth-areas-in-the-borough-of-eastleigh.aspx">
+                    Youth Areas in the Borough of Eastleigh
+                    <img src="/media/Core/greater_than_green.png" alt="Go to Youth Areas in the Borough of Eastleigh" class="gobutton" />
+                </a>
+            </li>
+    </ul>
+
+                    </div>
+				
+
+                
+                <div id="main-footer">
+                    <p>
+                        
+                    </p>
+                    
+                </div>
+            </div>
+	    </div>
+        
+	
+                </div>
+
+                <div id="footer">
+                    <div class="body">
+                        <address>
+                            <strong>Eastleigh Borough Council, Eastleigh House, Upper Market Street, Eastleigh, SO50 9YN.</strong><br />
+                            Telephone: 023 8068 8068, Fax: 023 8064 3952, Text: 07797 877001
+                        </address>
+
+                        
+        <ul class="toolbar">
+
+				<li class=""><a href="/legal/use-of-cookies.aspx">Use of Cookies</a></li>
+				<li class=""><a href="/legal/legal-disclaimer.aspx">Legal Disclaimer</a></li>
+				<li class=""><a href="/legal/site-feedback.aspx">Site Feedback</a></li>
+				<li class=""><a href="/legal/privacy-statement.aspx">Privacy Statement</a></li>
+				<li class="last"><a href="/legal/social-media-policy.aspx">Social Media Policy</a></li>
+		</ul>
+
+
+
+                        <p class="smallprint">
+                            &copy; Copyright 2014 Eastleigh Borough Council. Designed and developed by Merchant Marketing Group
+                        </p>
+                        <a href="https://www.gov.uk/" class="externalLink directGov">
+                            <img src="/media/core/govuk.png"  alt="Link to Gov.Uk - public services all in one place" />
+                        </a>
+                    </div>
+                </div>
+                <!-- end #footer -->
+                
+                
+
+
+<div class="sitemap"> 
+        <div class="buttonstrip GreenAndBlacks">
+        <ul class="body">
+            <li>
+                <a href="https://www.eastleigh.gov.uk">
+<img src="/media/1776/home.png" alt="Home" height="25px" width="25px" />
+
+                    <span>Home</span>
+                </a>
+            </li>
+
+
+                <li id="button_1">
+                    <a href="https://my.eastleigh.gov.uk/pay.aspx">
+
+                        <img src="/media/1760/pay.png" alt="Pay" height="25" width="25" />
+                        <span>Pay</span>
+                    </a>
+                </li>
+                <li id="button_2">
+                    <a href="https://my.eastleigh.gov.uk/report.aspx">
+
+                        <img src="/media/1769/report.png" alt="Report" height="25" width="25" />
+                        <span>Report</span>
+                    </a>
+                </li>
+                <li id="button_3">
+                    <a href="https://my.eastleigh.gov.uk/apply.aspx">
+
+                        <img src="/media/1772/apply.png" alt="Apply" height="25" width="25" />
+                        <span>Apply</span>
+                    </a>
+                </li>
+                <li id="button_4">
+                    <a href="https://my.eastleigh.gov.uk/book.aspx">
+
+                        <img src="/media/1773/book.png" alt="Book" height="25" width="25" />
+                        <span>Book</span>
+                    </a>
+                </li>
+                <li id="button_5">
+                    <a href="https://my.eastleigh.gov.uk/find-out.aspx">
+
+                        <img src="/media/1774/find.png" alt="Find Out" height="25" width="25" />
+                        <span>Find Out</span>
+                    </a>
+                </li>
+                <li id="button_6">
+                    <a href="https://my.eastleigh.gov.uk/have-your-say.aspx">
+
+                        <img src="/media/1770/say.png" alt="Have your say" height="25" width="25" />
+                        <span>Have your say</span>
+                    </a>
+                </li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+                <script async src="/Scripts/EBC.js" type="text/javascript"></script>
+            
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div></form>
+        </body>
+
+    </html>

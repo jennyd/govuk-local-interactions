@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+
+<html xml:lang="en" lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" class="no-js">
+<head>
+<meta charset="utf-8" />
+
+  
+  
+  
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+  
+
+  
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  
+    <meta name="keywords" content="Contact Barnet Council" />
+    
+    <meta name="dcterms.available" content="2015-02-27T14:51:04Z" />
+    <meta name="dc.type" content="Content Page" />
+  
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="google-translate-customization" content="c891ed76c3b0235-832d37a42e0942b1-gafa62815664b2abd-11" />
+<title>Contact Barnet Council - barnet.gov.uk</title>
+
+<!--
+TODO: shortcut icon needs setting. Don't re-enable with href="#" as it causes another GET request to be triggered by Chrome.
+<link rel="shortcut icon" type="image/ico" href="#" />
+-->
+
+<link rel="stylesheet" href="/docroot/css/leaflet.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.css" />
+<link rel="stylesheet" href="/docroot/css/MarkerCluster.Default.css" />
+<link rel="stylesheet" href="/docroot/css/chosen.min.css" />
+<link rel="stylesheet" href="/docroot/css/jquery.mCustomScrollbar.min.css" />
+
+
+<link rel="stylesheet" href="/docroot/css/jquery-ui.css" />
+<!-- Load jQuery JS -->
+<script src="/docroot/js/jquery-1.11.0.min.js"></script>
+<!-- Load jQuery UI Main JS  -->
+<script src="/docroot/js/jquery-ui.js"></script>
+<script src="/docroot/js/date-picker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/styles.css" media="screen, print" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.date.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/pickadate.js/pickadate.js-3.3.2/compressed/themes/default.time.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="/docroot/css/print.css" media="print" />
+
+
+<script src="/docroot/js/plugins/rem.min.js" type="text/javascript"></script>
+
+<!--[if lt IE 9]>
+  <script src="/docroot/js/plugins/nwmatcher-1.2.5.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/selectivizr.js" type="text/javascript"></script>
+  <script src="/docroot/js/plugins/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="/docroot/css/ie8.css" />
+<![endif]-->
+
+<!--[if ! lte IE 6]><!-->
+
+
+<!-- #TODO CBSCH-261 Fixing Foundation Javascript error -->
+<style type="text/css">
+meta.foundation-data-attribute-namespace {
+    font-family: false;
+}
+</style>
+
+<script src="/docroot/js/leaflet.js"></script>
+<script src="/docroot/js/leaflet.markercluster-src.js"></script>
+<script src="/docroot/js/leaflet.markercluster.js"></script>
+
+<script src="/docroot/js/jquery-1.11.0.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/init-behaviour.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.placeholder.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.colorbox-min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.bxslider.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.accordion.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.tab.js" type="text/javascript"></script>
+
+<script src="/docroot/js/scroll.js" type="text/javascript"></script>
+
+<script src="/docroot/js/classie.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery-truncate/jquery.truncate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/modernizr.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/fastclick.js" type="text/javascript"></script>
+
+<script src="/docroot/js/iframeResizer.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+
+<script src="/docroot/js/foundation/foundation.reveal.js" type="text/javascript"></script>
+
+<script src="/docroot/js/plugins/additional-methods.min.js" type="text/javascript"></script>
+
+<script src="https://www.browsealoud.com/plus/scripts/ba.js" type="text/javascript"></script>
+
+<script src="/docroot/js/browse-aloud.js" type="text/javascript"></script>
+
+
+<!--<![endif]-->
+<script>
+    /*<![CDATA[*/
+    (function (BCP) {
+        BCP.registerAjaxUrl = '/citizen-home/register/content/column1/singleton.html';
+        BCP.loginAjaxUrl = '/citizen-home/login/content/column1/singleton.html';
+    })(BCP);
+    /*]]>*/
+</script>
+
+<!-- Clickjacking prevention for legacy browsers that don't support X-Frame-Options header -->
+  
+<style id="antiClickjack">body{display:none !important;}</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+  
+
+<script>
+
+    /*<![CDATA[*/
+    jQuery(document).ready(function() {
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        var TP_GA = {
+            gaTrackerId : 'UA-60148629-1',
+            auth : false,
+            authDimensionName : 'dimension1'
+        }
+
+        ga('create', TP_GA.gaTrackerId, 'auto');
+        ga('set', 'forceSSL', true);
+
+        if (TP_GA.authDimensionName != '') {
+            ga('set', TP_GA.authDimensionName, TP_GA.auth.toString());
+        }
+
+        ga('send', 'pageview');
+    });
+    /*]]>*/
+</script>
+  
+ 
+
+</head>
+<body id="citizen-content-pg" class="nav-col">
+      
+    <div class="header">
+        <header>
+            <div id="skiptocontent">
+                <a href="#contentskip">Skip to content</a>
+            </div>
+             <span class="barnet-logo column small-3">
+                <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                    Barnet</a>
+                <img class="print-only" src="/docroot/img/barnet-logo-green.png" />
+            </span> 
+             <form class="global-search search-controls service-search large-6 large-offset-1 column" method="GET" action="/citizen-home/search.html">
+                <div class="global-search-input">
+                    <input type="search" name="keywords" title="main-search" />
+                </div>
+                <div class="global-search-submit">
+                    <button type="submit" class="button expand">Search</button>
+                </div>
+            </form> 
+              
+            <div class="user-section">
+                 <div id="129fae96-207a-4482-963b-0578a901db3b">
+    Loading, please wait
+</div>
+
+<script>
+    /*<![CDATA[*/
+    
+    jQuery(document).ready(function() {
+        var path = '/citizen-home/branding/user/singleton';
+        var target = '#' + '129fae96-207a-4482-963b-0578a901db3b';
+        BCP.replaceHtmlFromAjax(path, target);
+    });
+    
+    /*]]>*/
+</script> 
+                <div class="translate-container">
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                                {
+                                    pageLanguage : 'en',
+                                    layout : google.translate.TranslateElement.InlineLayout.SIMPLE
+                                },
+                                'google_translate_element');
+                    }
+                    </script>
+                    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+            </div>
+              
+            <div class="mobile-nav">
+                <i class="iconfontello-search"></i>
+                <i class="iconfontello-menu"></i>
+            </div>
+        </header>
+    </div>
+      
+      
+      
+    
+      
+      
+      
+    <div class="content">
+        
+              
+<nav id="nav" class="side-nav side-nav-off medium-4 large-3 column">
+    <!-- TODO: Why do we need a LI wrapping the nav? This means our level has to start at 2! -->
+    <ul class="nav-level-1" style="display: block">
+        <li class="open">
+              
+            <ul class="nav-level-2" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/council-and-democracy.html">
+                        <i></i>
+                        <span class="menu-item">Council and democracy</span>
+                    </a>
+                      
+            <ul class="nav-level-3" style="display: block">
+                  
+                <li class="open">
+                    <a href="/citizen-home/council-and-democracy/council-and-community.html">
+                        <i></i>
+                        <span class="menu-item">Council and community</span>
+                    </a>
+                      
+            <ul class="nav-level-4" style="display: block">
+                  
+                <li class="open active">
+                    <a href="/citizen-home/council-and-democracy/council-and-community/contact-details-for-customer-facing-departments.html">
+                        <i></i>
+                        <span class="menu-item">Contact Barnet Council</span>
+                    </a>
+                      
+            <ul class="nav-level-5" style="display: block">
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/council-and-community/contact-details-for-customer-facing-departments/barnet-house.html">
+                        <i></i>
+                        <span class="menu-item">Barnet House</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/council-and-community/contact-details-for-customer-facing-departments/hendon-town-hall.html">
+                        <i></i>
+                        <span class="menu-item">Hendon Town Hall</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/council-and-community/contact-details-for-customer-facing-departments/mill-hill-depot.html">
+                        <i></i>
+                        <span class="menu-item">Mill Hill depot</span>
+                    </a>
+                      
+            
+              
+                </li>
+                 
+                  
+                <li>
+                    <a href="/citizen-home/council-and-democracy/council-and-community/contact-details-for-customer-facing-departments/north-london-business-park-nlbp.html">
+                        <i></i>
+                        <span class="menu-item">North London Business Park (NLBP)</span>
+                    </a>
+                      
+            
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+                </li>
+                  
+            </ul>
+              
+        </li>
+    </ul>
+</nav>
+  
+            <div class="large-9 medium-8 small-12 column main-content">
+                 <nav id="breadcrumb-nav">
+        <div id="breadcrumb" class="breadcrumb-panel">
+            <ul class="breadcrumbs">
+                  
+                
+                <li>
+                    <a href="/citizen-home.html">Home</a>
+                </li>
+                 
+                  
+                <li class="service-nav">
+                    <select onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="Our services">Our services</option>
+                        <option value="/citizen-home/business.html">Business Support in Barnet</option>
+                        <option value="/citizen-home/environmental-health.html">Environmental Health and Trading Standards</option>
+                        <option value="/citizen-home/libraries.html">Libraries</option>
+                        <option value="/citizen-home/regeneration.html">Regeneration</option>
+                        <option value="/citizen-home/public-health.html">Public Health </option>
+                        <option value="/citizen-home/adult-social-care.html">Adult social care</option>
+                        <option value="/citizen-home/council-and-democracy.html">Council and democracy</option>
+                        <option value="/citizen-home/housing-and-community.html">Housing and community</option>
+                        <option value="/citizen-home/schools-and-education.html">Schools and education</option>
+                        <option value="/citizen-home/parks-sport-and-leisure.html">Parks, sport and leisure</option>
+                        <option value="/citizen-home/council-tax-and-benefits.html">Council Tax and Benefits</option>
+                        <option value="/citizen-home/parking-roads-and-pavements.html">Parking, roads and pavements</option>
+                        <option value="/citizen-home/rubbish-waste-and-recycling.html">Rubbish, waste and recycling</option>
+                        <option value="/citizen-home/children-young-people-and-families.html">Children, young people and families</option>
+                        <option value="/citizen-home/births-deaths-marriages-and-nationality.html">Births, deaths, marriages and nationality</option>
+                        <option value="/citizen-home/planning-conservation-and-building-control.html">Planning, Conservation and Building Control</option>
+                        <option value="/citizen-home/news.html">News and features</option>
+                        <option value="/citizen-home/directories.html">Directories</option>
+                        <option value="/citizen-home/events.html">Events List</option>
+                        <option value="/citizen-home/pledgebank.html">Pledges</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="/citizen-home/council-and-democracy.html">Council and democracy</a>
+                </li>
+                 
+                  
+                
+                <li>
+                    <a href="/citizen-home/council-and-democracy/council-and-community.html">Council and community</a>
+                </li>
+                 
+                  
+                
+                
+                  
+            </ul>
+        </div>
+    </nav> 
+                  
+                <span class="skip-anchor" id="contentskip"></span>
+                 <main id="main" role="main">
+                    
+                  
+                <div id="intro" class="content-page-intro">
+
+                      
+                    <div class="small-12 columns left flush-left">
+                    
+                        <h1>Contact Barnet Council</h1>
+                          
+                        <ul>
+                            <li>
+                                
+                                    <small>Council and democracy</small>
+                                
+                            </li>
+                        </ul>
+                        
+                       
+                          
+                          
+                       
+                    </div>
+
+                    
+                    
+                    
+                    
+                      
+                     
+                </div>
+                  
+                 
+            <div class="row">
+                 
+
+
+
+
+
+<div class="text-section">
+    
+
+
+        <h2>General enquiries</h2>
+
+<ul>
+	<li><strong>Tel</strong>: 020 8359 2000</li>
+	<li><strong>Email</strong>: <a href="mailto:first.contact@barnet.gov.uk" style="line-height: 1.6em;" title="First contact email link">first.contact@barnet.gov.uk</a></li>
+	<li><strong>Fax</strong>: 020 8359 4156</li>
+	<li><strong>Hours: </strong>Monday &ndash; Thursday: 9am &ndash; 5:15pm,<strong>&nbsp;</strong>Friday: 9am &ndash; 5pm</li>
+	<li><a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html">Contact us by webform</a></li>
+</ul>
+
+<p>North London Business Park (NLBP)<br />
+Oakleigh Road South<br />
+London<br />
+N11 1NP</p>
+
+<h2>Contact details for council departments</h2>
+
+<h3>Environmental Health</h3>
+
+<p>Including noise complaints, pests, and anti-social behaviour</p>
+
+<ul>
+	<li><strong>Tel:</strong>&nbsp;020 8359 7995 during normal office hours</li>
+	<li><strong>Tel: </strong>020 8359 2000 outside normal office hours</li>
+</ul>
+
+<h3>Street-based services</h3>
+
+<p>Including rubbish collection,&nbsp;potholes or&nbsp;graffiti</p>
+
+<ul>
+	<li><strong>Tel</strong>: 020 8359 4600</li>
+	<li><strong>Email</strong>: <a href="mailto:sbs@barnet.gov.uk">sbs@barnet.gov.uk</a></li>
+	<li><strong>Fax</strong>: 020 8359 4156</li>
+</ul>
+
+<h3>Parking enquiries</h3>
+
+<p>Queries on a parking or bus lane <a href="/citizen-home/parking-roads-and-pavements/parking/parking-tickets-pcn.html">penalty charge notice</a> (PCN or parking ticket):</p>
+
+<ul>
+	<li><strong>Email</strong>: <a href="mailto:barnet@nslservices.co.uk">barnet@nslservices.co.uk</a></li>
+	<li><strong>Post</strong>: Barnet Parking Service, PO Box 197, Lowton Way, Hellaby, Sheffield, S98 1LW</li>
+</ul>
+
+<p>All other parking queries:</p>
+
+<ul>
+	<li><strong>Tel</strong>: 020 8359 7446</li>
+	<li><strong>Email</strong>: <a href="mailto:parking.permits@barnet.gov.uk">parking.permits@barnet.gov.uk</a></li>
+</ul>
+
+<p>Abandoned vehicle queries:</p>
+
+<ul>
+	<li><strong>Tel</strong>: 020 3375 4242</li>
+</ul>
+
+<h3>Planning advice</h3>
+
+<p>Advice on how to make a planning application,&nbsp;questions regarding charges or&nbsp;to follow up an existing application.</p>
+
+<ul>
+	<li><strong>Tel</strong>: 020 8359 3000</li>
+	<li><strong>Fax</strong>: 020 8359 4156</li>
+	<li><strong>Email</strong>: <a href="mailto:first.contact@barnet.gov.uk" title="First contact email">first.contact@barnet.gov.uk</a></li>
+</ul>
+
+<h3>Licences, Permits and Registrations</h3>
+
+<ul>
+	<li>Tel:&nbsp;020 8359 7443</li>
+	<li>Email:&nbsp;<a href="licensingadmin@barnet.gov.uk">licensingadmin@barnet.gov.uk</a></li>
+</ul>
+
+<h3>Children&rsquo;s Services</h3>
+
+<p>FYI (Families &amp; Young People&rsquo;s Information Service)</p>
+
+<ul>
+	<li><strong>Tel</strong>: 020 8359 7998</li>
+	<li><strong>Email</strong>: <a href="mailto:fyi@barnet.gov.uk%20" title="Fyi email link">fyi@barnet.gov.uk</a></li>
+</ul>
+
+<p>School Admissions</p>
+
+<ul>
+	<li><strong>Tel</strong>: 020 8359 7651&nbsp;</li>
+	<li><strong>Email</strong>: <a href="mailto:school.admissions@barnet.gov.uk" title="School admissions email link">school.admissions@barnet.gov.uk </a></li>
+</ul>
+
+<h3>Adult Social Care &ndash; Social Care Direct</h3>
+
+<p>For adults with social care needs and their carers, advice and information about adult social care services and safeguarding alerts.</p>
+
+<ul>
+	<li><strong>Tel:</strong> 020 8359 5000</li>
+	<li><strong>Email:</strong> <a href="mailto:socialcaredirect@barnet.gov.uk" style="line-height: 1.6em;">socialcaredirect@barnet.gov.uk</a></li>
+</ul>
+
+<h3>Assisted Travel, Blue Badges</h3>
+
+<p>For general enquiries regarding applications for Blue Badges, Freedom Passes and Taxi Vouchers.</p>
+
+<ul>
+	<li><strong>Tel</strong>: 020 8359 4131</li>
+	<li><strong>Email</strong>: <a href="mailto:assisted.travel@barnet.gov.uk" title="Assisted travel email link">assisted.travel@barnet.gov.uk</a></li>
+</ul>
+
+<h3>Out of hours emergencies</h3>
+
+<ul>
+	<li><strong>Tel</strong>: 020 8359 2000</li>
+	<li><strong>Hours:</strong> Mon - Thurs after 5:15pm &ndash; 9am,&nbsp;Friday 5pm - Monday 9am and all bank holidays</li>
+</ul>
+
+<h3>Transparency and Open Data</h3>
+
+<p>Please let us know if you have any data requests which are not met by this site already, and we will consider how we can best meet these.</p>
+
+<ul>
+	<li><strong>Email</strong>: <a href="mailto:Open.Data@barnet.gov.uk">open.data@barnet.gov.uk</a></li>
+</ul>
+
+<h3>Complaints</h3>
+
+<p>To make a complaint:</p>
+
+<ul>
+	<li><strong>Tel</strong>: 020 8359 2000</li>
+	<li><strong>Email</strong>: <a href="mailto:first.contact@barnet.gov.uk" title="First contact email link">first.contact@barnet.gov.uk</a></li>
+	<li><strong>Fax</strong>: 020 8359 4156</li>
+	<li><a href="/citizen-home/council-and-democracy/forms/Comments--compliments-and-complaints.html">Comments, compliments and complaints e-form&nbsp;</a></li>
+</ul>
+
+<p><strong>How long will my complaint take to resolve? </strong></p>
+
+<p>There are three stages within the council&#39;s Corporate Complaints Policy. Each stage has a different response time:</p>
+
+<ul>
+	<li>At Stage 1, your complaint will be responded to within 10 working days.</li>
+	<li>At Stage 2, your complaint will be responded to within 20 working days.</li>
+	<li>At Stage 3, your complaint will be responded to within 20 working days.</li>
+</ul>
+
+<p>Please see <a href="/dam/jcr:54e395d4-10b2-41c8-b7bd-7ff8c3e312ea/Corporate%20Complaints%20Policy%20(11.2015).pdf">Corporate Complaints Policy</a> for further details.</p>
+
+</div>
+<section class="contacts-widget widget">
+                    <h2>Contacts</h2>
+                      
+                    <div class="contacts-widget-wrapper clearfix">
+                          
+                        <div>
+                            <ul class="contact-info">
+                                <li class="text-strong">First Contact</li>
+                                <li>North London Business Park (NLBP), Oakleigh Road South, London N11 1NP</li>
+                                <li>&nbsp;</li>
+                                
+                                <li>
+                                    <span class="text-strong">Tel: </span>
+                                    <span>020 8359 2000</span>
+                                </li>
+                                <li>
+                                    <span class="text-strong">FAX: </span>
+                                    <span>0870 889 7458 </span>
+                                </li>
+                                <li>
+                                    <span class="text-strong">Email: </span>
+                                    <span>first.contact@barnet.gov.uk</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                          
+                    </div>
+                    
+                    
+                      
+                </section><section class="links-widget widget">
+            <h2>What do you want to do next?</h2>
+            <div>
+                <ul class="links-list">
+                      
+                    <li>
+                         
+                    <a class="button" href="/citizen-home/council-and-democracy/council-and-community/comments-compliments-and-complaints.html">Comments, compliments and complaints</a>
+                     
+                    </li>
+                    
+                    
+                    
+                    
+                      
+                </ul>
+            </div>
+        </section> 
+            </div>
+         
+                </main> 
+                
+                 <div class="row">
+                    <div class="panel">
+                          
+                <section class="gm_sidebar row">
+                    <div class="gm-container">
+                        <div class="rate-page">
+                            <i class="iconfontello-thumbs-up"></i>
+                            <p>Rate this page</p>
+                        </div>
+                        <div class="rating-options">
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=3" target="_blank" title="rate this page as GOOD" rel="nofollow">
+                                <img src="/docroot/img/govmetric/smiling.png" alt="green smiley (good)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=2" target="_blank" title="rate this page as AVERAGE" rel="nofollow">
+                                <img src="/docroot/img/govmetric/indifferent.png" alt="orange smiley (average)" />
+                            </a>
+                            <a class="gm_sidebar_anchor" href="//websurveys.govmetric.com/theme/gm/1511?Q_RATINGID=4" target="_blank" title="rate this page as POOR" rel="nofollow">
+                                <img src="/docroot/img/govmetric/sad.png" alt="red smiley (poor)" />
+                            </a>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" type="text/css" href="//wsstatic.govmetric.com/css/client/gm_sidebar.css" />
+                    <script type="text/javascript" src="//wsstatic.govmetric.com/js/client/gm_sidebar.js"></script>
+                    <script type="text/javascript" src="//hitcounter.govmetric.com/982"></script>
+                </section>
+                  
+                    </div>
+                </div> 
+                
+            </div>
+        
+        
+          
+    </div>
+      
+      
+    <footer>
+          
+          
+        <nav class="footer-nav clearfix row">
+            <ul class="footer-links left">
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/forms/Contact-the-council.html" class="internal-link">Contact us</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/copyright.html" class="internal-link">Copyright</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/privacy.html" class="internal-link">Privacy notice</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Accessibility-.html" class="internal-link">Accessibility</a>
+                            
+                            
+                            
+                             </li>
+                <li> 
+                            <a href="/citizen-home/council-and-democracy/policy-and-performance/website-policies/Disclaimer.html" class="internal-link">Disclaimer</a>
+                            
+                            
+                            
+                             </li>
+                
+                
+                
+                
+                
+                
+            </ul>
+            <ul class="social-icons right">
+                <li><a href="https://www.gov.uk/"><img height="18" width="90" src="/docroot/img/gov-uk-logo.png" alt="gov uk logo" /></a></li>
+                <li><a href="https://www.flickr.com/photos/barnetcouncil"><i class="flaticon-flickr"></i></a></li>
+                <li><a href="https://twitter.com/barnetcouncil"><i class="flaticon-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/BarnetCouncil"><i class="flaticon-facebook"></i></a></li>
+                <li><a href="http://www.youtube.com/user/Barnetcouncil1"><i class="flaticon-youtube"></i></a></li>
+                <li class="browse-aloud-icon"><a id="show-browsealoud" title="Listen with BrowseAloud"><img src="/docroot/img/browse-aloud-logo.png" alt="Listen with BrowseAloud" /></a></li>
+            </ul>
+        </nav>
+        <div class="site-footer">
+            <div class="row">
+                <span class="barnet-logo right">
+                    <a href="http://www.barnet.gov.uk" title="London Borough of Barnet">London Borough of
+                        Barnet</a>
+                </span>
+            </div>
+        </div>
+          
+    </footer>
+      
+    <script src="/docroot/js/plugins/retina.min.js" type="text/javascript"></script>
+    <script src="/docroot/js/plugins/chosen.jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    jQuery("#ordering-download-form select").chosen();
+    jQuery(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+</body>
+</html>

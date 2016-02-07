@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html  >
+<head id="head"><title>
+	Northumberland County Council - Homefinder
+</title><meta name="description" content="Homefinder is a partnership between the council and housing providers in the county. You can use this to search and apply for a home." /> 
+<meta charset="UTF-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link href="/CMSPages/GetResource.ashx?stylesheetname=NCCNormalise" type="text/css" rel="stylesheet"/>
+<link href="/CMSPages/GetResource.ashx?stylesheetname=JQueryBXSlider" type="text/css" rel="stylesheet"/>
+
+<link href="/CMSPages/GetResource.ashx?stylesheetname=NCCResponsiveTabs" type="text/css" rel="stylesheet"/>
+<link href="/CMSPages/GetResource.ashx?stylesheetname=NCCMainCSS" type="text/css" rel="stylesheet"/>
+<link href="/CMSPages/GetResource.ashx?stylesheetname=NCCSlickNav" type="text/css" rel="stylesheet"/>
+<link href="/CMSPages/GetResource.ashx?stylesheetname=NCCResponsive" type="text/css" rel="stylesheet"/>
+<link href="/CMSPages/GetResource.ashx?stylesheetname=NCCIcons" type="text/css" rel="stylesheet"/>
+<link href="/CMSPages/GetResource.ashx?stylesheetname=NCCCustom" type="text/css" rel="stylesheet"/>
+<link href="/CMSPages/GetResource.ashx?stylesheetname=NCCPrint" type="text/css" rel="stylesheet" media="print"/>
+                <!--[if lt IE 9]>
+                  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                <![endif]-->
+<script src="/CMSPages/GetResource.ashx?scriptfile=/App_Themes/NCCJavascript/jquery-1.11.3.min.js"></script>
+<script src="/CMSPages/GetResource.ashx?scriptfile=/App_Themes/NCCJavascript/jquery-ui.min.js"></script>
+<script src="/CMSPages/GetResource.ashx?scriptfile=/App_Themes/NCCJavascript/respond.min.js"></script>
+<script src="/CMSPages/GetResource.ashx?scriptfile=/App_Themes/NCCJavascript/jquery.bxslider.min.js"></script>	
+<script src="/CMSPages/GetResource.ashx?scriptfile=/App_Themes/NCCJavascript/jquery.slicknav.min.js"></script>
+<script src="/CMSPages/GetResource.ashx?scriptfile=/App_Themes/NCCJavascript/jquery.responsiveTabs.min.js"></script>
+
+<script src="/CMSPages/GetResource.ashx?scriptfile=/App_Themes/NCCJavascript/ncc.js"></script> 
+<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"/> 
+<link href="/favicon.ico" type="image/x-icon" rel="icon"/> 
+<link href="/CMSPages/GetResource.ashx?_webparts=1595" type="text/css" rel="stylesheet"/> 
+</head>
+<body class="LTR ENGB ContentBody" >
+    <form method="post" action="/Housing/Homefinder.aspx?nccredirect=1" id="form">
+<div class="aspNetHidden">
+<input type="hidden" name="manScript_HiddenField" id="manScript_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyMTY0MTExOTEPFgIeE1ZhbGlkYXRlUmVxdWVzdE1vZGUCARYCAgEPFgIeBmFjdGlvbgUmL0hvdXNpbmcvSG9tZWZpbmRlci5hc3B4P25jY3JlZGlyZWN0PTEWAgIFD2QWAmYPDxYEHghDc3NDbGFzcwUPUGFnZVBsYWNlaG9sZGVyHgRfIVNCAgJkFgJmD2QWBAIBD2QWAmYPZBYCAgIPZBYCZg8PFgQfAgUPUGFnZVBsYWNlaG9sZGVyHwMCAmQWAmYPZBYIAgEPZBYCZg9kFgICAg8WFB4MWmVyb1Jvd3NUZXh0BQ1ObyBkYXRhIGZvdW5kHg5EYXRhU291cmNlTmFtZWUeDEVuYWJsZVBhZ2luZ2geEE5lc3RlZENvbnRyb2xzSURlHhBTaG93RGVsZXRlQnV0dG9uaB4dQWx0ZXJuYXRpbmdUcmFuc2Zvcm1hdGlvbk5hbWVlHg5TaG93RWRpdEJ1dHRvbmgeC18hSXRlbUNvdW50AgEeElRyYW5zZm9ybWF0aW9uTmFtZQUnY3VzdG9tLk5DQ0NvcmUuTkNDSGVhZGVySW1hZ2VUaXRsZUludHJvHhZIaWRlQ29udHJvbEZvclplcm9Sb3dzZxYCZg9kFgJmD2QWAmYPFQJtPGltZyBzcmM9In4vTm9ydGh1bWJlcmxhbmRDb3VudHlDb3VuY2lsL21lZGlhL0hvdXNpbmctbWVkaWEvSG91c2luZzItaGVhZGVyLmpwZz9leHQ9LmpwZyIgYWx0PSJIb21lZmluZGVyIiAvProBPGRpdiBjbGFzcz0iY2FwdGlvbiI+PGgxPkhvbWVmaW5kZXI8L2gxPjxwPkhvbWVmaW5kZXIgaXMgYSBwYXJ0bmVyc2hpcCBiZXR3ZWVuIHRoZSBjb3VuY2lsIGFuZCBob3VzaW5nIHByb3ZpZGVycyBpbiB0aGUgY291bnR5LiBZb3UgY2FuIHVzZSB0aGlzIHRvIHNlYXJjaCBhbmQgYXBwbHkgZm9yIGEgaG9tZS48L3A+PC9kaXY+ZAIDD2QWBGYPZBYCZg8WAh4EVGV4dAV3PGEgY2xhc3M9IkNNU0JyZWFkQ3J1bWJzTGluayIgaHJlZj0iLyIgdGl0bGU9Ik5vcnRodW1iZXJsYW5kIENvdW50eSBDb3VuY2lsIj5Ob3J0aHVtYmVybGFuZCBDb3VudHkgQ291bmNpbDwvYT48L2xpPjxsaT5kAgEPZBYCZg9kFgJmD2QWBGYPDxYCHgdWaXNpYmxlaGRkAgEPDxYCHw9oZGQCBQ9kFgJmD2QWAgICDw8WMB8MZR4NUGFnZXJQb3NpdGlvbgspcUNNUy5Db250cm9scy5QYWdpbmdQbGFjZVR5cGVFbnVtLCBDTVMuQ29udHJvbHMsIFZlcnNpb249OC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj04MzRiMTJhMjU4ZjIxM2Y5AB8FZR4bU2VwYXJhdG9yVHJhbnNmb3JtYXRpb25OYW1lZR8IaB4JSXRlbUNvdW50AgkeF1VzZUhpZXJhcmNoaWNhbE9yZGVyaW5nZx4YSGVhZGVyVHJhbnNmb3JtYXRpb25OYW1lZR8HZR4eSGllcmFyY2hpY2FsVHJhbnNmb3JtYXRpb25OYW1lBS5jdXN0b20uTkNDU2VydmljZUdyb3VwLk5DQ1NlcnZpY0dyb3VwYW5kU3ViQ2F0HiRTZWxlY3RlZEhlYWRlckl0ZW1UcmFuc2Zvcm1hdGlvbk5hbWVlHwQFDU5vIGRhdGEgZm91bmQfCWUfCmgeFExvYWRIaWVyYXJjaGljYWxEYXRhZx8LAgkfDWceI1NlbGVjdGVkRm9vdGVydGVtVHJhbnNmb3JtYXRpb25OYW1lZR4LXyFEYXRhQm91bmRnHhhGb290ZXJUcmFuc2Zvcm1hdGlvbk5hbWVlHhdGaXJzdFRyYW5zZm9ybWF0aW9uTmFtZWUeGFNpbmdsZVRyYW5zZm9ybWF0aW9uTmFtZWUeFkxhc3RUcmFuc2Zvcm1hdGlvbk5hbWVlHg5EZWxheWVkTG9hZGluZ2hkFgRmDw8WDh4IUGFnZVNpemUCCh4OUXVlcnlTdHJpbmdLZXkFBFBhZ2UeCVBhZ2VyTW9kZQspakNNUy5Db250cm9scy5VbmlQYWdlck1vZGUsIENNUy5Db250cm9scywgVmVyc2lvbj04LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTgzNGIxMmEyNThmMjEzZjkAHglHcm91cFNpemUCCh4dRGlzcGxheUZpcnN0TGFzdEF1dG9tYXRpY2FsbHloHiBEaXNwbGF5UHJldmlvdXNOZXh0QXV0b21hdGljYWxseWgeB0VuYWJsZWRoZGQCAQ9kFgJmD2QWAgIBD2QWAmYPZBYMAgEPZBYCZg9kFgJmDxUC8gE8aDU+PHNwYW4gY2xhc3M9Imljb24iPjxzcGFuIGNsYXNzPSJuY2MtUExVU2ljb24iPjxzcGFuIGNsYXNzPSJwYXRoMSI+PC9zcGFuPjxzcGFuIGNsYXNzPSJwYXRoMiI+PC9zcGFuPjwvc3Bhbj48c3BhbiBjbGFzcz0ibmNjLU1JTlVTaWNvbiI+PHNwYW4gY2xhc3M9InBhdGgxIj48L3NwYW4+PHNwYW4gY2xhc3M9InBhdGgyIj48L3NwYW4+PC9zcGFuPjwvc3Bhbj5Ib3cgdG8gcmVnaXN0ZXIgZm9yIEhvbWVmaW5kZXI8L2g1Pq8UPGRpdj48cD5UbyBiZSBjb25zaWRlcmVkIGZvciBhIHByb3BlcnR5LCB5b3UgbXVzdCBhcHBseSB0byBqb2luIHRoZSBob3VzaW5nIHJlZ2lzdGVyLjwvcD4NCg0KPHVsPg0KCTxsaT48YSBocmVmPSJodHRwczovL3d3dy5ub3J0aHVtYmVybGFuZGhvbWVmaW5kZXIub3JnLnVrL0RhdGEvQVNQUGFnZXMvMS8xOTkuYXNweCI+WW91IGNhbiBhcHBseSBvbmxpbmUgaGVyZS48L2E+PC9saT4NCjwvdWw+DQpBbHRlcm5hdGl2ZWx5LCB5b3UgY2FuIGRvd25sb2FkIGFuZCBjb21wbGV0ZSB0aGUgYXBwbGljYXRpb24gZm9ybSwgb3IgcGljayB1cCBhIGNvcHkgZnJvbSBhbnkgb2Ygb3VyIGN1c3RvbWVyIGluZm9ybWF0aW9uIGNlbnRyZXMuPGJyIC8+DQo8YnIgLz4NCldlIHdpbGwgdXNlIHlvdXIgYXBwbGljYXRpb24gdG8gYXNzZXNzIHlvdXIgaG91c2luZyBuZWVkLiBJZiB3ZSBhY2NlcHQsIHdlIHdpbGwgcHJvdmlkZSB5b3Ugd2l0aCBhIGhvdXNpbmcgcmVnaXN0ZXIgbnVtYmVyIGFuZCBhIHBpbiwgd2hpY2ggeW91IHdpbGwgbmVlZCB0byBhcHBseSBmb3IgcHJvcGVydGllcy4gT25jZSB5b3UgYXJlIHJlZ2lzdGVyZWQsIHlvdSBjYW4gc2VhcmNoIGFuZCBiaWQgZm9yIGF2YWlsYWJsZSBwcm9wZXJ0aWVzLjxiciAvPg0KPGJyIC8+DQo8c3Ryb25nPk1ha2luZyBhbiBhcHBsaWNhdGlvbjwvc3Ryb25nPjxiciAvPg0KVXBvbiBzdWJtaXNzaW9uLCB3ZSBtYXkgYXNrIHlvdSB0byBwcm92aWRlIGV4dHJhIGluZm9ybWF0aW9uIHNvIHdlIGNhbiB2ZXJpZnkgeW91ciBlbGlnaWJpbGl0eSBhbmQgYXNzZXNzIHlvdXIgYXBwbGljYXRpb24uPGJyIC8+DQo8YnIgLz4NClRoaXMgY291bGQgaW5jbHVkZToNCjx1bD4NCgk8bGk+cHJvb2Ygb2YgaWRlbnRpdHkgZm9yIGFsbCBob3VzZWhvbGQgbWVtYmVyczwvbGk+DQoJPGxpPnByb29mIG9mIGN1cnJlbnQgYWRkcmVzczwvbGk+DQoJPGxpPmV2aWRlbmNlIG9mIHlvdXIgcmlnaHQgdG8gcmVzaWRlIGluIHRoZSBVSyAoaWYgeW91IGFyZSBub3QgYSBCcml0aXNoIGNpdGl6ZW4pPC9saT4NCgk8bGk+cHJvb2Ygb2YgcHJlZ25hbmN5PC9saT4NCgk8bGk+4oCLcmVmZXJlbmNlcyBmcm9tIHlvdXIgZXhpc3Rpbmcgb3IgcHJldmlvdXMgbGFuZGxvcmQ8L2xpPg0KPC91bD4NCldlIGluZm9ybSB5b3Ugd2hhdCBkb2N1bWVudHMgdG8gcHJvdmlkZSBhbmQgd2hlbi4gQWxsIGRvY3VtZW50cyBwcm92aWRlZCBtdXN0IGJlIG9yaWdpbmFscywgdXAgdG8gZGF0ZSBhbmQgdmFsaWQuIElmIHRoZSByZXF1aXJlZCBkb2N1bWVudHMgYXJlbiZyc3F1bzt0IHByb3ZpZGVkIGJ1dCB0aGUgZm9ybSBoYXMgYmVlbiBwcm9wZXJseSBjb21wbGV0ZWQsIHdlIGNhbiBhY2NlcHQgeW91ciBhcHBsaWNhdGlvbi4gSG93ZXZlciwgd2UgbWF5IG5vdCBiZSBhYmxlIHRvIGFzc2VzcyBpdCBwcm9wZXJseS4gVGhpcyBjb3VsZCByZXN1bHQgaW4geW91IG5vdCBiZWluZyBhd2FyZGVkIHRoZSBjb3JyZWN0IHByaW9yaXR5LjxiciAvPg0KPGJyIC8+DQo8c3Ryb25nPlJlbmV3aW5nIHlvdXIgYXBwbGljYXRpb248L3N0cm9uZz48YnIgLz4NCkFwcGxpY2F0aW9ucyBhcmUgcmVuZXdlZCBhbm51YWxseSwgdXN1YWxseSBvbiB0aGUgZGF0ZSB5b3VyIGFwcGxpY2F0aW9uIHdhcyBhY2NlcHRlZC4gWW91IHdpbGwgYmUgc2VudCBhIHJldmlldyBmb3JtLCB3aGljaCB5b3UgbXVzdCBjb21wbGV0ZSBhbmQgcmV0dXJuIHdpdGhpbiAyOCBkYXlzLiBJZiB5b3UgZmFpbCB0byByZXR1cm4gdGhlIGZvcm0sIHlvdXIgYXBwbGljYXRpb24gd2lsbCBiZSBjYW5jZWxsZWQuPGJyIC8+DQo8YnIgLz4NCjxzdHJvbmc+RWxpZ2liaWxpdHkgZm9yIHRoZSBob3VzaW5nIHJlZ2lzdGVyPC9zdHJvbmc+PGJyIC8+DQpUaGVyZSBhcmUgc29tZSBwZW9wbGUgd2hvIGFyZSBub3QgZWxpZ2libGUgdG8gYmUgaW5jbHVkZWQgb24gdGhlIGhvdXNpbmcgcmVnaXN0ZXIuPGJyIC8+DQpUaGVzZSBhcmU6DQo8dWw+DQoJPGxpPnBlb3BsZSB3aG8gYXJlIHN1YmplY3QgdG8gaW1taWdyYXRpb24gY29udHJvbCB1bmRlciB0aGUgMTk5NiBBc3lsdW0gYW5kIEltbWlncmF0aW9uIEFjdDwvbGk+DQoJPGxpPnBlb3BsZSBmcm9tIGFicm9hZCB3aG8gYXJlIG5vdCBzdWJqZWN0IHRvIGltbWlncmF0aW9uIGNvbnRyb2wsIGJ1dCB3aG8gYXJlIG5vdCBoYWJpdHVhbCByZXNpZGVudHMgaW4gdGhlIFVLLCB0aGUgQ2hhbm5lbCBJc2xhbmRzLCB0aGUgSXNsZSBvZiBNYW4sIG9yIHRoZSBSZXB1YmxpYyBvZiBJcmVsYW5kPC9saT4NCgk8bGk+cGVvcGxlIChpbmNsdWRpbmcgbWVtYmVycyBvZiB0aGVpciBob3VzZWhvbGQpIHdobyBoYXZlIGJlZW4gZ3VpbHR5IG9mIHVuYWNjZXB0YWJsZSBiZWhhdmlvdXIsIG1ha2luZyB0aGVtIHVuc3VpdGFibGUgdGVuYW50czwvbGk+DQo8L3VsPg0KDQo8cD5GdXJ0aGVyIGluZm9ybWF0aW9uIGlzIGF2YWlsYWJsZSBmcm9tIE5vcnRodW1iZXJsYW5kJnJzcXVvO3MmbmJzcDs8YSBocmVmPSJ+L05vcnRodW1iZXJsYW5kQ291bnR5Q291bmNpbC9tZWRpYS9Ib3VzaW5nLzk4NS1Db21tb24tQWxsb2NhdGlvbi1Qb2xpY3ktSXNzdWUtNS5wZGYiPmNvbW1vbiBhbGxvY2F0aW9uIHBvbGljeTwvYT4uPC9wPg0KPC9kaXY+ZAICD2QWAmYPZBYCZg8VAvcBPGg1PjxzcGFuIGNsYXNzPSJpY29uIj48c3BhbiBjbGFzcz0ibmNjLVBMVVNpY29uIj48c3BhbiBjbGFzcz0icGF0aDEiPjwvc3Bhbj48c3BhbiBjbGFzcz0icGF0aDIiPjwvc3Bhbj48L3NwYW4+PHNwYW4gY2xhc3M9Im5jYy1NSU5VU2ljb24iPjxzcGFuIGNsYXNzPSJwYXRoMSI+PC9zcGFuPjxzcGFuIGNsYXNzPSJwYXRoMiI+PC9zcGFuPjwvc3Bhbj48L3NwYW4+RmluZCBvdXQgYWJvdXQgYXZhaWxhYmxlIHByb3BlcnRpZXM8L2g1PqwGPGRpdj5BcyBzb29uIGFzIHdlIGFyZSBnaXZlbiBmb3JtYWwgbm90aWNlIHJlZ2FyZGluZyBhIHByb3BlcnR5IGJlY29taW5nIHZhY2FudCwgd2Ugd2lsbCBhZHZlcnRpc2UgaXQuPGJyIC8+DQo8YnIgLz4NClByb3BlcnRpZXMgYXZhaWxhYmxlIHRvIHJlbnQgYXJlIGFkdmVydGlzZWQgd2Vla2x5LiBXZSBhZHZlcnRpc2UgYWxsIG9mIHRoZSBwcm9wZXJ0aWVzIHdlIGhhdmUgYXZhaWxhYmxlLg0KPHVsPg0KCTxsaT48YSBocmVmPSJ+L05vcnRodW1iZXJsYW5kQ291bnR5Q291bmNpbC9tZWRpYS9Ib3VzaW5nL0hvbWVmaW5kZXIvU29jaWFsLTR0aC1GZWJydWFyeS0yMDE2LnBkZiIgdGFyZ2V0PSJfYmxhbmsiPlZpZXcgdGhlIHNvY2lhbCByZW50ZWQgaG9tZXMgdGhhdCBhcmUgYXZhaWxhYmxlIHRoaXMgd2Vlay48L2E+PC9saT4NCgk8bGk+PGEgaHJlZj0ifi9Ob3J0aHVtYmVybGFuZENvdW50eUNvdW5jaWwvbWVkaWEvSG91c2luZy9Ib21lZmluZGVyL1ByaXZhdGUtNHRoLUZlYnJ1YXJ5LTIwMTYucGRmIiB0YXJnZXQ9Il9ibGFuayI+VmlldyB0aGUgcHJpdmF0ZSByZW50ZWQgaG9tZXMgdGhhdCBhcmUgYXZhaWxhYmxlIHRoaXMgd2Vlay48L2E+PC9saT4NCjwvdWw+DQpBdmFpbGFibGUgcHJvcGVydGllcyBhcmUgYWR2ZXJ0aXNlZCBmcm9tIDEyOjAxYW0gVGh1cnNkYXksIHVudGlsIDExOjU5cG0gdGhlIGZvbGxvd2luZyBNb25kYXkuPGJyIC8+DQpJZiB5b3UgaGF2ZSBhbnkgcXVlcmllcyByZWdhcmRpbmcgeW91ciBhcHBsaWNhdGlvbiwgb3IgdGhlIHNlcnZpY2UsIGNvbnRhY3QgdXMgb24gMDM0NSA2MDAgNjQwMC48L2Rpdj5kAgMPZBYCZg9kFgJmDxUC7wE8aDU+PHNwYW4gY2xhc3M9Imljb24iPjxzcGFuIGNsYXNzPSJuY2MtUExVU2ljb24iPjxzcGFuIGNsYXNzPSJwYXRoMSI+PC9zcGFuPjxzcGFuIGNsYXNzPSJwYXRoMiI+PC9zcGFuPjwvc3Bhbj48c3BhbiBjbGFzcz0ibmNjLU1JTlVTaWNvbiI+PHNwYW4gY2xhc3M9InBhdGgxIj48L3NwYW4+PHNwYW4gY2xhc3M9InBhdGgyIj48L3NwYW4+PC9zcGFuPjwvc3Bhbj5CaWRkaW5nIGZvciBhdmFpbGFibGUgaG9tZXM8L2g1PtEPPGRpdj48cD5UbyBiaWQgZm9yIGEgcHJvcGVydHksIHlvdSBuZWVkIHRvIGJlIHJlZ2lzdGVyZWQgd2l0aCBvdXIgc2VydmljZS48YnIgLz4NCjxiciAvPg0KQXZhaWxhYmxlIHByb3BlcnRpZXMgYXJlIGFkdmVydGlzZWQgZnJvbSAxMjowMWFtIFRodXJzZGF5LCB1bnRpbCAxMTo1OXBtIHRoZSBmb2xsb3dpbmcgTW9uZGF5LjxiciAvPg0KPGJyIC8+DQpZb3UgY2FuIGFsc28gZmluZCBvdXQgYWJvdXQgdGhlIHByb3BlcnRpZXMgYXZhaWxhYmxlIGluIHRoZSBmb2xsb3dpbmcgd2F5czo8L3A+DQoNCjx1bD4NCgk8bGk+PHN0cm9uZz5PbmxpbmU6Jm5ic3A7PC9zdHJvbmc+PGEgaHJlZj0iaHR0cDovL3d3dy5ub3J0aHVtYmVybGFuZGhvbWVmaW5kZXIub3JnLnVrL0RhdGEvQVNQUGFnZXMvMS8zMC5hc3B4Ij52aXNpdCB0aGUgSG9tZWZpbmRlciB3ZWJzaXRlIGhlcmU8L2E+LjwvbGk+DQoJPGxpPjxzdHJvbmc+VGVsZXBob25lOiZuYnNwOzwvc3Ryb25nPjAzNDU2IDA2NjU0NiAoYXV0b21hdGVkKTwvbGk+DQoJPGxpPjxzdHJvbmc+SW4gcGVyc29uOiZuYnNwOzwvc3Ryb25nPmFueSBvZiBvdXImbmJzcDs8YSBocmVmPSJ+L0Fib3V0L0NvbnRhY3QvY29udGFjdHMuYXNweCNjb250YWN0dXMiPmN1c3RvbWVyIGluZm9ybWF0aW9uIGNlbnRyZXM8L2E+LCBsaWJyYXJpZXMgYW5kIENpdGl6ZW5zIEFkdmljZS48L2xpPg0KPC91bD4NCg0KPHA+SWYgeW91IHNlZSBhIHByb3BlcnR5IHlvdSB3b3VsZCBsaWtlIHRvIGJlIGNvbnNpZGVyZWQgZm9yLCB5b3Ugd2lsbCBuZWVkIHRvIGJpZCB2aWEgdGhlIEhvbWVmaW5kZXIgd2Vic2l0ZSwgb3IgYW55IG9mIHRoZSBhYm92ZSBsb2NhdGlvbnMuIEJpZHMgY2FuIG9ubHkgYmUgcGxhY2VkIGZyb20gMTI6MDFhbSBUaHVyc2RheSB1bnRpbCAxMTo1OXBtIHRoZSBmb2xsb3dpbmcgTW9uZGF5LiBZb3UgY2FuIGFsc28gcGxhY2UgYSBiaWQgYnkgY2FsbGluZyAwMzQ1IDI3MCAxOTk3LjxiciAvPg0KPGJyIC8+DQo8c3Ryb25nPkZyZXF1ZW50bHkgYXNrZWQgcXVlc3Rpb25zIGFib3V0IGJpZGRpbmc8L3N0cm9uZz48YnIgLz4NCjxiciAvPg0KPHN0cm9uZz5DYW4gSSBiaWQgZm9yIHByb3BlcnRpZXMgaW4gYW55IGFyZWEgb2YgTm9ydGh1bWJlcmxhbmQ/PC9zdHJvbmc+PGJyIC8+DQpZb3UgY2FuIGJpZCBmb3IgYW55IHByb3BlcnRpZXMgeW91IGFyZSBlbGlnaWJsZSBmb3IsIHJlZ2FyZGxlc3Mgb2YgdGhlaXIgbG9jYXRpb24gaW4gTm9ydGh1bWJlcmxhbmQuIFNvbWUgcHJvcGVydGllcyBtYXkgYmUgc3ViamVjdCB0byBjZXJ0YWluIGNvbmRpdGlvbnMsIGJ1dCBpZiB0aGlzIGlzIHRoZSBjYXNlLCB3ZSB3aWxsIGNsZWFybHkgc3RhdGUgdGhlIGNvbmRpdGlvbnMgaW4gdGhlIGFkdmVydGlzZW1lbnQuPGJyIC8+DQo8YnIgLz4NCjxzdHJvbmc+SG93IGxvbmcgd2lsbCBJIGhhdmUgdG8gYmlkIGZvciBhIHByb3BlcnR5Pzwvc3Ryb25nPjxiciAvPg0KQmlkcyBjYW4gb25seSBiZSBwbGFjZWQgZHVyaW5nIHRoZSBhZHZlcnRpc2luZyBjeWNsZS4gVGhpcyBpcyBiZXR3ZWVuIDEyOjAxYW0gVGh1cnNkYXkgYW5kIDExOjU5cG0gdGhlIGZvbGxvd2luZyBNb25kYXkuPGJyIC8+DQo8YnIgLz4NCjxzdHJvbmc+V2lsbCBJIGtub3cgaG93IG1hbnkgb3RoZXIgcGVvcGxlIGFyZSBpbnRlcmVzdGVkIGluIHRoZSBzYW1lIHByb3BlcnR5Pzwvc3Ryb25nPjxiciAvPg0KWWVzLCB3aGVuIHlvdSBiaWQgZm9yIGEgcHJvcGVydHksIHlvdSB3aWxsIGJlIGFibGUgdG8gc2VlIHlvdXIgcG9zaXRpb24gaW4gdGhlIHF1ZXVlLiBUaGlzIGlzIGxpa2VseSB0byBjaGFuZ2UgZnJlcXVlbnRseSwgZHVlIHRvIG90aGVycyBiaWRkaW5nIGZvciB0aGUgc2FtZSBwcm9wZXJ0eS48YnIgLz4NCjxiciAvPg0KPHN0cm9uZz5DYW4gSSB3aXRoZHJhdyBteSBiaWQgb25jZSBpdCBoYXMgYmVlbiBhY2NlcHRlZD88L3N0cm9uZz48YnIgLz4NCllvdSBjYW4gd2l0aGRyYXcgeW91ciBiaWQgYXQgYW55IHRpbWUuPC9wPg0KPC9kaXY+ZAIED2QWAmYPZBYCZg8VAuwBPGg1PjxzcGFuIGNsYXNzPSJpY29uIj48c3BhbiBjbGFzcz0ibmNjLVBMVVNpY29uIj48c3BhbiBjbGFzcz0icGF0aDEiPjwvc3Bhbj48c3BhbiBjbGFzcz0icGF0aDIiPjwvc3Bhbj48L3NwYW4+PHNwYW4gY2xhc3M9Im5jYy1NSU5VU2ljb24iPjxzcGFuIGNsYXNzPSJwYXRoMSI+PC9zcGFuPjxzcGFuIGNsYXNzPSJwYXRoMiI+PC9zcGFuPjwvc3Bhbj48L3NwYW4+QmVpbmcgb2ZmZXJlZCBhIHByb3BlcnR5PC9oNT6qCzxkaXY+PHA+PHN0cm9uZz5Ib3cgZG8geW91IGRlY2lkZSB3aG8gaXMgb2ZmZXJlZCBhIHByb3BlcnR5Pzwvc3Ryb25nPjxiciAvPg0KT25jZSB0aGUgY2xvc2luZyBkYXRlIGZvciBiaWRzIGhhcyBwYXNzZWQsIGEgc2hvcnRsaXN0IGlzIGRyYXduIHVwLiBUaGlzIGlzIGluIG9yZGVyIG9mIGVsaWdpYmlsaXR5IGFjY29yZGluZyB0byB0aGUgY3JpdGVyaWEgYWR2ZXJ0aXNlZCBhbmQgdGhlIHByaW9yaXR5IGJhbmQgYW5kIGhvdXNpbmcgcmVnaXN0ZXIgcmVnaXN0cmF0aW9uIGRhdGUgb2YgdGhlIGFwcGxpY2FudC4gVGhlIGFwcGxpY2FudCBhdCB0aGUgdG9wIG9mIHRoZSBsaXN0LCB3aWxsIG5vcm1hbGx5IGJlIG9mZmVyZWQgdGhlIHByb3BlcnR5LjxiciAvPg0KPGJyIC8+DQo8c3Ryb25nPklmIG15IGJpZCBpcyBzdWNjZXNzZnVsLCB3aWxsIEkgZGVmaW5pdGVseSBiZSBtYWRlIGFuIG9mZmVyPzwvc3Ryb25nPjxiciAvPg0KWW91IG1heSBub3QgYmUgaW52aXRlZCB0byB2aWV3IHRoZSBwcm9wZXJ0eSBmb3IgdGhlIGZvbGxvd2luZyByZWFzb25zOjwvcD4NCg0KPHVsPg0KCTxsaT5Zb3Ugb3dlIHJlbnQsIG9yIGhhdmUgb3RoZXIgaG91c2luZy1yZWxhdGVkIGRlYnRzLjwvbGk+DQoJPGxpPllvdSBoYXZlIGJlZW4gaW52b2x2ZWQgaW4gYW50aS1zb2NpYWwgYmVoYXZpb3VyLjwvbGk+DQoJPGxpPllvdSBoYXZlIHN1ZmZpY2llbnQgcmVzb3VyY2VzIHRvIHNvbHZlIHlvdXIgb3duIGhvdXNpbmcgcHJvYmxlbXMuPC9saT4NCgk8bGk+WW91ciBjaXJjdW1zdGFuY2VzIGhhdmUgY2hhbmdlZCwgcmVzdWx0aW5nIGluIGEgcmVkdWN0aW9uIGluIHlvdXIgbGV2ZWwgb2YgcHJpb3JpdHkuPC9saT4NCgk8bGk+4oCLWW91IGRvIG5vdCBtZWV0IHRoZSBzcGVjaWZpYyByZXF1aXJlbWVudHMgYWR2ZXJ0aXNlZCB3aXRoIHRoZSBwcm9wZXJ0eS48L2xpPg0KPC91bD4NCg0KPHA+PHN0cm9uZz5JZiBJIGFtIG9mZmVyZWQgYSBwcm9wZXJ0eSwgd2lsbCBJIGJlIGFibGUgdG8gdmlldyBpdCBiZWZvcmUgbWFraW5nIHVwIG15IG1pbmQ/PC9zdHJvbmc+PGJyIC8+DQpZZXMsIHlvdSB3aWxsIGJlIGdpdmVuIGFuIG9wcG9ydHVuaXR5IHRvIHZpZXcgdGhlIHByb3BlcnR5IGJlZm9yZSBkZWNpZGluZyB3aGV0aGVyIHlvdSB3b3VsZCBsaWtlIHRvIGFjY2VwdC48YnIgLz4NCjxiciAvPg0KPHN0cm9uZz5XaGF0IGlmIEkgZG9uJnJzcXVvO3QgbGlrZSB0aGUgcHJvcGVydHkgd2hlbiBJIGhhdmUgc2VlbiBpdD88L3N0cm9uZz48YnIgLz4NCklmIHlvdSByZWZ1c2UgdGhyZWUgb3IgbW9yZSByZWFzb25hYmxlIG9mZmVycywgeW91ciBhcHBsaWNhdGlvbiB3aWxsIGJlIHJldmlld2VkLiBUaGUgbGFuZGxvcmQgd2lsbCB0ZWxsIHlvdSBhdCB0aGUgdGltZSB3aGV0aGVyIHRoZXkgY29uc2lkZXIgdGhlIG9mZmVyIHRvIGJlIHJlYXNvbmFibGUgYW5kIHdoeS48L3A+DQo8L2Rpdj5kAgUPZBYCZg9kFgJmDxUC/wE8aDU+PHNwYW4gY2xhc3M9Imljb24iPjxzcGFuIGNsYXNzPSJuY2MtUExVU2ljb24iPjxzcGFuIGNsYXNzPSJwYXRoMSI+PC9zcGFuPjxzcGFuIGNsYXNzPSJwYXRoMiI+PC9zcGFuPjwvc3Bhbj48c3BhbiBjbGFzcz0ibmNjLU1JTlVTaWNvbiI+PHNwYW4gY2xhc3M9InBhdGgxIj48L3NwYW4+PHNwYW4gY2xhc3M9InBhdGgyIj48L3NwYW4+PC9zcGFuPjwvc3Bhbj5Ob3J0aHVtYmVybGFuZOKAmXMgY29tbW9uIGFsbG9jYXRpb24gcG9saWN5PC9oNT6xAjxkaXY+VGhlIGNvdW5jaWwgYW5kIGl0cyBwYXJ0bmVycyBoYXZlIGFncmVlZCBhIGNvbW1vbiBhbGxvY2F0aW9uIHBvbGljeSwgbWVhbmluZyB0aGUgd2F5IHRoYXQgaG91c2VzIGFyZSBhbGxvY2F0ZWQsIHdpbGwgYmUgdGhlIHNhbWUgdGhyb3VnaG91dCBOb3J0aHVtYmVybGFuZC48YnIgLz4NCjxiciAvPg0KQW4gdXBkYXRlZCBwb2xpY3kgd2FzIHB1Ymxpc2hlZCBpbiAyMDEzIGFuZCBhbGwgYXBwbGljYXRpb25zIGFyZSBhc3Nlc3NlZCB1c2luZyBpc3N1ZSBmaXZlIG9mIHRoZSBjb21tb24gYWxsb2NhdGlvbiBwb2xpY3kuPC9kaXY+ZAIGD2QWAmYPZBYCZg8VAuABPGg1PjxzcGFuIGNsYXNzPSJpY29uIj48c3BhbiBjbGFzcz0ibmNjLVBMVVNpY29uIj48c3BhbiBjbGFzcz0icGF0aDEiPjwvc3Bhbj48c3BhbiBjbGFzcz0icGF0aDIiPjwvc3Bhbj48L3NwYW4+PHNwYW4gY2xhc3M9Im5jYy1NSU5VU2ljb24iPjxzcGFuIGNsYXNzPSJwYXRoMSI+PC9zcGFuPjxzcGFuIGNsYXNzPSJwYXRoMiI+PC9zcGFuPjwvc3Bhbj48L3NwYW4+VXNlZnVsIGxpbmtzPC9oNT6FAzxkaXY+PHVsPg0KCTxsaT5Ib21lbGVzc25lc3MgLSA8YSBocmVmPSJ+L0hvdXNpbmcvQWR2aWNlLmFzcHgjaG9tZWxlc3NuZXNzaG91c2luZ29wdGlvbnMiPmlmIHlvdSBhcmUgaG9tZWxlc3Mgb3IgdGhyZWF0ZW5lZCB3aXRoIGhvbWVsZXNzbmVzcywgZmluZCBtb3JlIGluZm9ybWF0aW9uIGFuZCBhZHZpY2UgaGVyZS48L2E+PC9saT4NCgk8bGk+R3lwc3kgYW5kIFRyYXZlbGxlcnMgJm5kYXNoOyA8YSBocmVmPSJ+L0hvdXNpbmcvVHJhdmVsbGVycy5hc3B4I3Blcm1hbmVudGd5cHN5dHJhdmVsbGVyc2l0ZXMiPmZpbmQgbW9yZSBpbmZvcm1hdGlvbiBvbiBvdXIgdHdvIHBlcm1hbmVudCBneXBzeSBhbmQgdHJhdmVsbGVyIHNpdGVzIGhlcmU8L2E+LjwvbGk+DQo8L3VsPg0KPC9kaXY+ZAIHD2QWAmYPZBYCZg8PDxYIHghGb3JtTmFtZQUSV2FzVGhpc1BhZ2VIZWxwZnVsHghTaXRlTmFtZWUeBE1vZGULKXpDTVMuRXh0ZW5kZWRDb250cm9scy5Gb3JtTW9kZUVudW0sIENNUy5FeHRlbmRlZENvbnRyb2xzLCBWZXJzaW9uPTguMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49ODM0YjEyYTI1OGYyMTNmOQAeC0lzRmlyc3RMb2FkZ2RkFgICAQ8PFgQfAgUJRm9ybVBhbmVsHwMCAmQWDgIDDw9kZBYCAgEPZBYCZg9kFgJmDxAPFgYfAgUZcmFkaW8gcmFkaW8tbGlzdC12ZXJ0aWNhbB4HVG9vbFRpcGUfAwICZA8WAmYCARYCBQNZZXMFAk5vFgBkAgcPD2RkFgICAQ9kFgJmD2QWAmYPEA8WBh8CBRlyYWRpbyByYWRpby1saXN0LXZlcnRpY2FsHyplHwMCAmQPFgRmAgECAgIDFgQFHUl0IHdhcyBxdWljayB0byBmaW5kL2NvbXBsZXRlBRhJdCB3YXMgZXhwbGFpbmVkIGNsZWFybHkFIEl0IGFuc3dlcmVkIG15IHF1ZXN0aW9ucy9lbnF1aXJ5BRpJJ20gaGFwcHkgYWJvdXQgYSBkZWNpc2lvbhYAZAILDw9kZBYCAgEPZBYCZg9kFgJmDw8WBh4JTWF4TGVuZ3RoZh8oCyolU3lzdGVtLldlYi5VSS5XZWJDb250cm9scy5UZXh0Qm94TW9kZQEeBFdyYXBnZGQCDw8PZGQWAgIBD2QWAmYPZBYCZg8QDxYGHwIFGXJhZGlvIHJhZGlvLWxpc3QtdmVydGljYWwfKmUfAwICZA8WBGYCAQICAgMWBAUhSXQgdG9vayB0b28gbG9uZyB0byBmaW5kL2NvbXBsZXRlBRtJdCB3YXNuJ3QgZXhwbGFpbmVkIGNsZWFybHkFJUl0IGRpZG4ndCBhbnN3ZXIgbXkgcXVlc3Rpb25zL2VucXVpcnkFHEknbSB1bmhhcHB5IGFib3V0IGEgZGVjaXNpb24WAGQCEw8PZGQWAgIBD2QWAmYPZBYCZg8PFgYfK2YfKAsrBwEfLGdkZAIXDw9kZBYCAgEPZBYCZg9kFgJmDw8WAh8rAoAEZGQCGQ8PZGQWAgIBD2QWAmYPZBYCZg8PFgQfKwL0Ax8OZGRkAgIPZBYCAgEPZBYCZg9kFgJmD2QWAgICD2QWAmYPDxYCHgtOYXZpZ2F0ZVVybAWHAWh0dHA6Ly90cmFuc2xhdGUuZ29vZ2xlLmNvbS90cmFuc2xhdGU/aGw9ZW4mc2w9ZW4mdGw9cGwmYW5ubz0xJnU9aHR0cDovL3d3dy5ub3J0aHVtYmVybGFuZC5nb3YudWsvSG91c2luZy9Ib21lZmluZGVyLmFzcHg/bmNjcmVkaXJlY3Q9MWQWAmYPDxYCHw4FDlRyYW5zbGF0ZSBQYWdlZGRk6NJh4RjhAMmzH3PE4YBGYB9ANcN3U2NX3evyh3QMatQ=" />
+</div>
+
+<input type="hidden" name="lng" id="lng" value="en-GB" />
+<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fWebServiceCall.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//<![CDATA[
+
+function PM_Postback(param) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); } if(window.CMSContentManager) { CMSContentManager.allowSubmit = true; }; __doPostBack('m$am',param); }
+function PM_Callback(param, callback, ctx) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); }if (window.CMSContentManager) { CMSContentManager.storeContentChangedStatus(); };WebForm_DoCallback('m$am',param,callback,ctx,null,true); }
+//]]>
+</script>
+<script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fjquery%2fjquery-core.js" type="text/javascript"></script>
+<script src="/CMSPages/GetResource.ashx?scriptfile=%2fCMSScripts%2fCustom%2fPredictiveSearch.js" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=bm7J7T0YwXY3PWsK5Fs00Npyce5YOGZOzwvWmt2gdZFBuYOVZuLeujVOk1NGnGcVOwC6o1X1QBOQiY8auHwB0QhQXpxbMVYYXao2oQJYdZHxKTaSDTiqs0tMLlagvgTp0&amp;t=7c776dc1" type="text/javascript"></script>
+<script src="/CMSPages/PortalTemplate.aspx?_TSM_HiddenField_=manScript_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.60919.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-GB%3aee051b62-9cd6-49a5-87bb-93c07bc43d63%3a475a4ef5%3aeffe2a26%3a7e63a579" type="text/javascript"></script>
+<script type="text/javascript">
+	//<![CDATA[
+
+var CMS = CMS || {};
+CMS.Application = {
+  "isRTL": "false",
+  "applicationUrl": "/",
+  "imagesUrl": "/CMSPages/GetResource.ashx?image=%5bImages.zip%5d%2f",
+  "isDialog": false
+};
+
+//]]>
+</script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A5343185" />
+</div>
+    
+    <div id="ctxM">
+
+</div>
+    
+<div class="container ">
+	<header><nav>
+  <ul class="menu top-menu">
+  <li>
+  <a id="p_lt_ctl00_WebPartZone3_WebPartZone3_zone_Link_Button11_btnElem_hyperLink" href="/SelfService/Pay.aspx"><span id="p_lt_ctl00_WebPartZone3_WebPartZone3_zone_Link_Button11_btnElem_lblText">Pay</span></a>
+
+</li><li>
+  <a id="p_lt_ctl00_WebPartZone3_WebPartZone3_zone_Link_Button12_btnElem_hyperLink" href="/SelfService/Apply.aspx"><span id="p_lt_ctl00_WebPartZone3_WebPartZone3_zone_Link_Button12_btnElem_lblText">Apply</span></a>
+
+</li><li>
+  <a id="p_lt_ctl00_WebPartZone3_WebPartZone3_zone_Link_Button13_btnElem_hyperLink" href="/SelfService/Report.aspx"><span id="p_lt_ctl00_WebPartZone3_WebPartZone3_zone_Link_Button13_btnElem_lblText">Report</span></a>
+
+</li>
+</ul>
+</nav><article class="logo">
+  <a id="p_lt_ctl00_Link_Button_btnElem_hyperLink" href="/"><img id="p_lt_ctl00_Link_Button_btnElem_image" title="Northumberland County Council Logo" src="/NorthumberlandCountyCouncil/media/Images/ncc_logo.png?ext=.png" alt="Northumberland County Council Logo" /><span id="p_lt_ctl00_Link_Button_btnElem_lblText"></span></a>
+
+</article><article class="search">
+  <div align="left">
+<div id="p_lt_ctl00_NCCSmartSearchBox_pnlSearch" class="searchBox">
+	
+    <label for="p_lt_ctl00_NCCSmartSearchBox_txtWord" id="p_lt_ctl00_NCCSmartSearchBox_lblSearch" style="display:none;">Search for:</label>
+    <input type="hidden" name="p$lt$ctl00$NCCSmartSearchBox$txtWord_exWatermark_ClientState" id="p_lt_ctl00_NCCSmartSearchBox_txtWord_exWatermark_ClientState" /><input name="p$lt$ctl00$NCCSmartSearchBox$txtWord" type="text" maxlength="1000" id="p_lt_ctl00_NCCSmartSearchBox_txtWord" class="form-control" />
+    <input type="submit" name="p$lt$ctl00$NCCSmartSearchBox$btnSearch" value="Search" id="p_lt_ctl00_NCCSmartSearchBox_btnSearch" class="btn btn-default" />
+    
+    <div id="p_lt_ctl00_NCCSmartSearchBox_pnlPredictiveResultsHolder" class="predictiveSearchHolder">
+
+	</div>
+
+</div></div>
+</article><nav>
+  <ul class="menu main-menu">
+  <li>
+  <a id="p_lt_ctl00_WebPartZone4_WebPartZone4_zone_Link_Button14_btnElem_hyperLink" href="/Waste.aspx"><span id="p_lt_ctl00_WebPartZone4_WebPartZone4_zone_Link_Button14_btnElem_lblText">Bins &amp; waste</span></a>
+
+</li><li>
+  <a id="p_lt_ctl00_WebPartZone4_WebPartZone4_zone_Link_Button15_btnElem_hyperLink" href="/Education.aspx"><span id="p_lt_ctl00_WebPartZone4_WebPartZone4_zone_Link_Button15_btnElem_lblText">Education</span></a>
+
+</li><li>
+  <a id="p_lt_ctl00_WebPartZone4_WebPartZone4_zone_Link_Button16_btnElem_hyperLink" href="/Planning.aspx"><span id="p_lt_ctl00_WebPartZone4_WebPartZone4_zone_Link_Button16_btnElem_lblText">Planning</span></a>
+
+</li><li>
+  <a id="p_lt_ctl00_WebPartZone4_WebPartZone4_zone_Link_Button17_btnElem_hyperLink" href="/Tax.aspx"><span id="p_lt_ctl00_WebPartZone4_WebPartZone4_zone_Link_Button17_btnElem_lblText">Council tax</span></a>
+
+</li><li>
+  <a id="p_lt_ctl00_WebPartZone4_WebPartZone4_zone_Link_Button18_btnElem_hyperLink" href="/SiteMap.aspx"><span id="p_lt_ctl00_WebPartZone4_WebPartZone4_zone_Link_Button18_btnElem_lblText">ALL SERVICES</span></a>
+
+</li>
+</ul>
+</nav></header>
+      
+
+<section class="page-content">
+<header>
+<div class="header-image">
+  <img src="/NorthumberlandCountyCouncil/media/Housing-media/Housing2-header.jpg?ext=.jpg" alt="Homefinder" />
+  <div class="caption"><h1>Homefinder</h1><p>Homefinder is a partnership between the council and housing providers in the county. You can use this to search and apply for a home.</p></div>
+</div>
+
+
+
+
+
+</header>
+<section class="page-top"><ul class="breadcrumb"><li>
+  <a class="CMSBreadCrumbsLink" href="/" title="Northumberland County Council">Northumberland County Council</a></li><li>
+<a href="/Housing.aspx" class="CMSBreadCrumbsLink">Housing</a> </li><li> <span  class="CMSBreadCrumbsCurrentItem">Homefinder</span>
+</li></ul><div class="header-panel">
+  
+<div class="clear"></div>
+</div></section>
+<section class="content-boxes">
+<a name="applyforahome"></a>
+<article class="content-item grey">
+<h3>Apply for a home</h3>
+  
+
+				<div class="content-item-copy">
+
+					<p>To apply for a new home, you can join Homefinder – our housing allocation service. Once you have joined, you can use this to search and bid for properties.</p>
+                    
+                    <p><ul>
+	<li><a href="http://www.northumberlandhomefinder.org.uk/Data/ASPPages/1/30.aspx">Go to the Homefinder website here</a>.</li>
+	<li><a href="https://www.northumberlandhomefinder.org.uk/Data/ASPPages/1/199.aspx">Register with Homefinder here</a>.</li>
+</ul>
+The Homefinder website contains useful information about how to use the service. You can also have a look at&nbsp;<a href="http://ncc-live.northumberland.gov.uk/NorthumberlandCountyCouncil/media/Housing/985-001-Homefinder-Letting-Guide-v-8-June-2013.pdf">our guide to Homefinder</a>, as well as frequently asked questions.<br />
+<br />
+Homefinder is delivered in partnership with&nbsp;<a href="http://hfn.uk.com/">Homes for Northumberland</a>,&nbsp;<a href="http://www.bernicia.com/home">Bernicia</a>,&nbsp;<a href="http://www.isoshousing.co.uk/">Isos Housing</a>&nbsp;and&nbsp;<a href="http://www.fourhousing.co.uk/home">Four Housing</a>.
+
+<ul>
+	<li><a href="http://ncc-live.northumberland.gov.uk/NorthumberlandCountyCouncil/media/Housing/Homefinder/985-Registered-Providers-in-Northumberland.pdf" target="_blank">View other registered providers of housing in Northumberland here.</a></li>
+</ul>
+&nbsp;</p>
+                  
+                      
+
+
+					<div class="content-accordion"><h5><span class="icon"><span class="ncc-PLUSicon"><span class="path1"></span><span class="path2"></span></span><span class="ncc-MINUSicon"><span class="path1"></span><span class="path2"></span></span></span>How to register for Homefinder</h5>
+<div><p>To be considered for a property, you must apply to join the housing register.</p>
+
+<ul>
+	<li><a href="https://www.northumberlandhomefinder.org.uk/Data/ASPPages/1/199.aspx">You can apply online here.</a></li>
+</ul>
+Alternatively, you can download and complete the application form, or pick up a copy from any of our customer information centres.<br />
+<br />
+We will use your application to assess your housing need. If we accept, we will provide you with a housing register number and a pin, which you will need to apply for properties. Once you are registered, you can search and bid for available properties.<br />
+<br />
+<strong>Making an application</strong><br />
+Upon submission, we may ask you to provide extra information so we can verify your eligibility and assess your application.<br />
+<br />
+This could include:
+<ul>
+	<li>proof of identity for all household members</li>
+	<li>proof of current address</li>
+	<li>evidence of your right to reside in the UK (if you are not a British citizen)</li>
+	<li>proof of pregnancy</li>
+	<li>​references from your existing or previous landlord</li>
+</ul>
+We inform you what documents to provide and when. All documents provided must be originals, up to date and valid. If the required documents aren&rsquo;t provided but the form has been properly completed, we can accept your application. However, we may not be able to assess it properly. This could result in you not being awarded the correct priority.<br />
+<br />
+<strong>Renewing your application</strong><br />
+Applications are renewed annually, usually on the date your application was accepted. You will be sent a review form, which you must complete and return within 28 days. If you fail to return the form, your application will be cancelled.<br />
+<br />
+<strong>Eligibility for the housing register</strong><br />
+There are some people who are not eligible to be included on the housing register.<br />
+These are:
+<ul>
+	<li>people who are subject to immigration control under the 1996 Asylum and Immigration Act</li>
+	<li>people from abroad who are not subject to immigration control, but who are not habitual residents in the UK, the Channel Islands, the Isle of Man, or the Republic of Ireland</li>
+	<li>people (including members of their household) who have been guilty of unacceptable behaviour, making them unsuitable tenants</li>
+</ul>
+
+<p>Further information is available from Northumberland&rsquo;s&nbsp;<a href="/NorthumberlandCountyCouncil/media/Housing/985-Common-Allocation-Policy-Issue-5.pdf">common allocation policy</a>.</p>
+</div>
+
+<h5><span class="icon"><span class="ncc-PLUSicon"><span class="path1"></span><span class="path2"></span></span><span class="ncc-MINUSicon"><span class="path1"></span><span class="path2"></span></span></span>Find out about available properties</h5>
+<div>As soon as we are given formal notice regarding a property becoming vacant, we will advertise it.<br />
+<br />
+Properties available to rent are advertised weekly. We advertise all of the properties we have available.
+<ul>
+	<li><a href="/NorthumberlandCountyCouncil/media/Housing/Homefinder/Social-4th-February-2016.pdf" target="_blank">View the social rented homes that are available this week.</a></li>
+	<li><a href="/NorthumberlandCountyCouncil/media/Housing/Homefinder/Private-4th-February-2016.pdf" target="_blank">View the private rented homes that are available this week.</a></li>
+</ul>
+Available properties are advertised from 12:01am Thursday, until 11:59pm the following Monday.<br />
+If you have any queries regarding your application, or the service, contact us on 0345 600 6400.</div>
+
+<h5><span class="icon"><span class="ncc-PLUSicon"><span class="path1"></span><span class="path2"></span></span><span class="ncc-MINUSicon"><span class="path1"></span><span class="path2"></span></span></span>Bidding for available homes</h5>
+<div><p>To bid for a property, you need to be registered with our service.<br />
+<br />
+Available properties are advertised from 12:01am Thursday, until 11:59pm the following Monday.<br />
+<br />
+You can also find out about the properties available in the following ways:</p>
+
+<ul>
+	<li><strong>Online:&nbsp;</strong><a href="http://www.northumberlandhomefinder.org.uk/Data/ASPPages/1/30.aspx">visit the Homefinder website here</a>.</li>
+	<li><strong>Telephone:&nbsp;</strong>03456 066546 (automated)</li>
+	<li><strong>In person:&nbsp;</strong>any of our&nbsp;<a href="/About/Contact/contacts.aspx#contactus">customer information centres</a>, libraries and Citizens Advice.</li>
+</ul>
+
+<p>If you see a property you would like to be considered for, you will need to bid via the Homefinder website, or any of the above locations. Bids can only be placed from 12:01am Thursday until 11:59pm the following Monday. You can also place a bid by calling 0345 270 1997.<br />
+<br />
+<strong>Frequently asked questions about bidding</strong><br />
+<br />
+<strong>Can I bid for properties in any area of Northumberland?</strong><br />
+You can bid for any properties you are eligible for, regardless of their location in Northumberland. Some properties may be subject to certain conditions, but if this is the case, we will clearly state the conditions in the advertisement.<br />
+<br />
+<strong>How long will I have to bid for a property?</strong><br />
+Bids can only be placed during the advertising cycle. This is between 12:01am Thursday and 11:59pm the following Monday.<br />
+<br />
+<strong>Will I know how many other people are interested in the same property?</strong><br />
+Yes, when you bid for a property, you will be able to see your position in the queue. This is likely to change frequently, due to others bidding for the same property.<br />
+<br />
+<strong>Can I withdraw my bid once it has been accepted?</strong><br />
+You can withdraw your bid at any time.</p>
+</div>
+
+<h5><span class="icon"><span class="ncc-PLUSicon"><span class="path1"></span><span class="path2"></span></span><span class="ncc-MINUSicon"><span class="path1"></span><span class="path2"></span></span></span>Being offered a property</h5>
+<div><p><strong>How do you decide who is offered a property?</strong><br />
+Once the closing date for bids has passed, a shortlist is drawn up. This is in order of eligibility according to the criteria advertised and the priority band and housing register registration date of the applicant. The applicant at the top of the list, will normally be offered the property.<br />
+<br />
+<strong>If my bid is successful, will I definitely be made an offer?</strong><br />
+You may not be invited to view the property for the following reasons:</p>
+
+<ul>
+	<li>You owe rent, or have other housing-related debts.</li>
+	<li>You have been involved in anti-social behaviour.</li>
+	<li>You have sufficient resources to solve your own housing problems.</li>
+	<li>Your circumstances have changed, resulting in a reduction in your level of priority.</li>
+	<li>​You do not meet the specific requirements advertised with the property.</li>
+</ul>
+
+<p><strong>If I am offered a property, will I be able to view it before making up my mind?</strong><br />
+Yes, you will be given an opportunity to view the property before deciding whether you would like to accept.<br />
+<br />
+<strong>What if I don&rsquo;t like the property when I have seen it?</strong><br />
+If you refuse three or more reasonable offers, your application will be reviewed. The landlord will tell you at the time whether they consider the offer to be reasonable and why.</p>
+</div>
+
+<h5><span class="icon"><span class="ncc-PLUSicon"><span class="path1"></span><span class="path2"></span></span><span class="ncc-MINUSicon"><span class="path1"></span><span class="path2"></span></span></span>Northumberland’s common allocation policy</h5>
+<div>The council and its partners have agreed a common allocation policy, meaning the way that houses are allocated, will be the same throughout Northumberland.<br />
+<br />
+An updated policy was published in 2013 and all applications are assessed using issue five of the common allocation policy.</div>
+
+<h5><span class="icon"><span class="ncc-PLUSicon"><span class="path1"></span><span class="path2"></span></span><span class="ncc-MINUSicon"><span class="path1"></span><span class="path2"></span></span></span>Useful links</h5>
+<div><ul>
+	<li>Homelessness - <a href="/Housing/Advice.aspx#homelessnesshousingoptions">if you are homeless or threatened with homelessness, find more information and advice here.</a></li>
+	<li>Gypsy and Travellers &ndash; <a href="/Housing/Travellers.aspx#permanentgypsytravellersites">find more information on our two permanent gypsy and traveller sites here</a>.</li>
+</ul>
+</div>
+
+</div>
+					
+				</div>
+
+				<div class="clear"></div>
+			</article>
+
+
+</section>
+<footer class="content-footer"><section class="feedback-help">
+  <h3>Was this page helpful?</h3>
+  <div id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz">
+	<div id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_pM_pMP">
+
+	</div><div id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_pnlForm" class="FormPanel">
+		<div class="feedback-copy">
+<h5><label id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_lb" class="EditingFormLabel" for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_list">Did you find the content of this page helpful?</label></h5>
+<div id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_ncpradiobuttonscontrol" class="EditingFormControlNestedControl editing-form-control-nested-control">
+			<span id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_list" class="radio radio-list-vertical"><input id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_list_0" type="radio" name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$RadioButtonsControl$list" value="Yes" /><label for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_list_0">Yes</label><br /><input id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_list_1" type="radio" name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$RadioButtonsControl$list" value="No" /><label for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_list_1">No</label></span>
+
+		</div>
+
+<div class="feedback-panel panel-1">
+<div class="row">
+<p><label id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_1_lb" class="EditingFormLabel" for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_1_list">Please tell us the main reason why you feel the page/service is good.</label></p>
+</div>
+
+<div class="row"><div id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_ncpradiobuttonscontrol_1" class="EditingFormControlNestedControl editing-form-control-nested-control">
+			<span id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_1_list" class="radio radio-list-vertical"><input id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_1_list_0" type="radio" name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$RadioButtonsControl_1$list" value="It was quick to find/complete" /><label for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_1_list_0">It was quick to find/complete</label><br /><input id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_1_list_1" type="radio" name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$RadioButtonsControl_1$list" value="It was explained clearly" /><label for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_1_list_1">It was explained clearly</label><br /><input id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_1_list_2" type="radio" name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$RadioButtonsControl_1$list" value="It answered my questions/enquiry" /><label for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_1_list_2">It answered my questions/enquiry</label><br /><input id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_1_list_3" type="radio" name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$RadioButtonsControl_1$list" value="I&#39;m happy about a decision" /><label for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_1_list_3">I'm happy about a decision</label></span>
+
+		</div></div>
+
+<div class="row">
+<p><label id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_TextAreaControl_lb" class="EditingFormLabel" for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_TextAreaControl_txtText">If you would like to leave additional comments, please use the box below. Please note that we are not able to respond personally.</label></p>
+</div>
+
+<div class="row"><div id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_ncptextareacontrol" class="EditingFormControlNestedControl editing-form-control-nested-control">
+			<textarea name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$TextAreaControl$txtText" rows="2" cols="20" id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_TextAreaControl_txtText" class="form-control">
+</textarea>
+
+		</div></div>
+</div>
+
+<div class="feedback-panel panel-2">
+<div class="row">
+<p><label id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_2_lb" class="EditingFormLabel" for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_2_list">Please tell us the main reason why you feel the page/service is not good.</label></p>
+</div>
+
+<div class="row"><div id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_ncpradiobuttonscontrol_2" class="EditingFormControlNestedControl editing-form-control-nested-control">
+			<span id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_2_list" class="radio radio-list-vertical"><input id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_2_list_0" type="radio" name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$RadioButtonsControl_2$list" value="It took too long to find/complete" /><label for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_2_list_0">It took too long to find/complete</label><br /><input id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_2_list_1" type="radio" name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$RadioButtonsControl_2$list" value="It wasn&#39;t explained clearly" /><label for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_2_list_1">It wasn't explained clearly</label><br /><input id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_2_list_2" type="radio" name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$RadioButtonsControl_2$list" value="It didn&#39;t answer my questions/enquiry" /><label for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_2_list_2">It didn't answer my questions/enquiry</label><br /><input id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_2_list_3" type="radio" name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$RadioButtonsControl_2$list" value="I&#39;m unhappy about a decision" /><label for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_RadioButtonsControl_2_list_3">I'm unhappy about a decision</label></span>
+
+		</div></div>
+
+<div class="row">
+<p><label id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_TextAreaControl_1_lb" class="EditingFormLabel" for="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_TextAreaControl_1_txtText">If you would like to leave additional comments, please use the box below. Please note that we are not able to respond personally.</label></p>
+</div>
+
+<div class="row"><div id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_ncptextareacontrol_1" class="EditingFormControlNestedControl editing-form-control-nested-control">
+			<textarea name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$TextAreaControl_1$txtText" rows="2" cols="20" id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_TextAreaControl_1_txtText" class="form-control">
+</textarea>
+
+		</div></div>
+</div>
+
+<div class="row"><input type="submit" name="p$lt$ctl01$pageplaceholder$p$lt$ctl03$On_lineForm$viewBiz$btnOK" value="Submit" id="p_lt_ctl01_pageplaceholder_p_lt_ctl03_On_lineForm_viewBiz_btnOK" class="FormButton btn btn-primary" /></div>
+</div>
+
+	</div>
+</div>
+</section><div class="clear"></div></footer>
+</section>
+    <footer><section class="social-media-links">
+  <ul class="">
+  <li>
+  <a id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button1_btnElem_hyperLink" href="/About/Contact/social.aspx"><img id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button1_btnElem_image" title="Facebook" src="/NorthumberlandCountyCouncil/media/Images/Facebook.png?ext=.png" alt="Facebook" /><span id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button1_btnElem_lblText"></span></a>
+
+</li><li>
+  <a id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button2_btnElem_hyperLink" href="/About/Contact/social.aspx"><img id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button2_btnElem_image" title="Twitter" src="/NorthumberlandCountyCouncil/media/Images/Twitter.png?ext=.png" alt="Twitter" /><span id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button2_btnElem_lblText"></span></a>
+
+</li><li>
+  <a id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button3_btnElem_hyperLink" href="/About/Contact/social.aspx"><img id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button3_btnElem_image" title="Instagram" src="/NorthumberlandCountyCouncil/media/Images/Instagram.png?ext=.png" alt="Instagram" /><span id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button3_btnElem_lblText"></span></a>
+
+</li><li>
+  <a id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button4_btnElem_hyperLink" href="/About/Contact/social.aspx"><img id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button4_btnElem_image" title="YouTube" src="/NorthumberlandCountyCouncil/media/Images/Youtube.png?ext=.png" alt="YouTube" /><span id="p_lt_ctl02_WebPartZone_WebPartZone_zone_Link_Button4_btnElem_lblText"></span></a>
+
+</li>
+</ul>
+</section><nav>
+  <ul class="accessibility-options">
+  <li>
+  <a id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_Link_Button20_btnElem_hyperLink" href="/About/Contact/contacts.aspx"><span id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_Link_Button20_btnElem_lblText">Contact us</span></a>
+
+</li><li>
+  Text size <span class="minustext" onclick="resizeText(-1)" title="Decrease text size">A</span> <span class="resettext" onclick="resetText()" title="Reset text size">A</span> <span class="plustext" onclick="resizeText(1)" title="Increase text size">A</span>
+
+
+
+
+</li><li>
+  <a id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_TranslationPageLink_lnkTranslate" href="http://translate.google.com/translate?hl=en&amp;sl=en&amp;tl=pl&amp;anno=1&amp;u=http://www.northumberland.gov.uk/Housing/Homefinder.aspx?nccredirect=1"><span id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_TranslationPageLink_labLinkText">Translate Page</span></a>
+</li><li>
+  <a id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_Link_Button10_btnElem_hyperLink" href="/About/Equality/Accessibility.aspx"><span id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_Link_Button10_btnElem_lblText">Accessibility</span></a>
+
+</li><li>
+  <a id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_Link_Button19_btnElem_hyperLink" href="/About/Staff.aspx"><span id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_Link_Button19_btnElem_lblText">Staff resources</span></a>
+
+</li><li>
+  <a id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_Link_Button9_btnElem_hyperLink" href="/Councillors/Info.aspx"><span id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_Link_Button9_btnElem_lblText">Councillor resources</span></a>
+
+</li><li>
+  <a id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_Link_Button5_btnElem_hyperLink" href="/"><span id="p_lt_ctl02_WebPartZone1_WebPartZone1_zone_Link_Button5_btnElem_lblText">&copy; Northumberland County Council</span></a>
+
+</li>
+</ul>
+</nav><section class="partners">
+  <ul class="">
+  <li>
+  <a id="p_lt_ctl02_WebPartZone2_WebPartZone2_zone_Link_Button6_btnElem_hyperLink" href="/About/Partners/Homes-For-Northumberland.aspx"><img id="p_lt_ctl02_WebPartZone2_WebPartZone2_zone_Link_Button6_btnElem_image" src="/NorthumberlandCountyCouncil/media/Images/nhomes.png?ext=.png" /><span id="p_lt_ctl02_WebPartZone2_WebPartZone2_zone_Link_Button6_btnElem_lblText"></span></a>
+
+</li><li>
+  <a id="p_lt_ctl02_WebPartZone2_WebPartZone2_zone_Link_Button7_btnElem_hyperLink" href="/About/Partners/Arch.aspx"><img id="p_lt_ctl02_WebPartZone2_WebPartZone2_zone_Link_Button7_btnElem_image" src="/NorthumberlandCountyCouncil/media/Images/arch.png?ext=.png" /><span id="p_lt_ctl02_WebPartZone2_WebPartZone2_zone_Link_Button7_btnElem_lblText"></span></a>
+
+</li><li>
+  <a id="p_lt_ctl02_WebPartZone2_WebPartZone2_zone_Link_Button8_btnElem_hyperLink" href="/About/Partners/Active-Northumberland.aspx"><img id="p_lt_ctl02_WebPartZone2_WebPartZone2_zone_Link_Button8_btnElem_image" src="/NorthumberlandCountyCouncil/media/Images/active.png?ext=.png" /><span id="p_lt_ctl02_WebPartZone2_WebPartZone2_zone_Link_Button8_btnElem_lblText"></span></a>
+
+</li>
+</ul>
+</section></footer>
+</div>
+
+
+
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("manScript_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+
+<script type="text/javascript">
+	//<![CDATA[
+WebServiceCall('/CMSPages/WebAnalyticsService.asmx', 'LogHits', '{"parameters":{"pageGUID":"35e48e17-163b-4d6b-bcf0-661721acb303","pagesiteId":"2","referrer":""}}')
+//]]>
+</script>
+<script type="text/javascript">
+	//<![CDATA[
+var predictiveSearchObject_p_lt_ctl00_NCCSmartSearchBox = new PredictiveSearchExtender('p_lt_ctl00_NCCSmartSearchBox', 'p_lt_ctl00_NCCSmartSearchBox_txtWord', 'p_lt_ctl00_NCCSmartSearchBox_pnlPredictiveResultsHolder', 1, true, 'selectedResult', 'predictiveSearchResults');
+predictiveSearchObject_p_lt_ctl00_NCCSmartSearchBox.CallPredictiveSearch = function(arg, context) { WebForm_DoCallback('p$lt$ctl00$NCCSmartSearchBox',arg,predictiveSearchObject_p_lt_ctl00_NCCSmartSearchBox.RecieveSearchResults,context,null,false); }
+
+//]]>
+</script>
+<script type="text/javascript">
+	//<![CDATA[
+	$(function(){
+		if($('#menu').length > 0) {$('#menu').slicknav({
+			label: ""
+		});}
+	});
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"p_lt_ctl00_NCCSmartSearchBox_txtWord_exWatermark_ClientState","WatermarkText":"Search for our services here","id":"p_lt_ctl00_NCCSmartSearchBox_txtWord_exWatermark"}, null, null, $get("p_lt_ctl00_NCCSmartSearchBox_txtWord"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

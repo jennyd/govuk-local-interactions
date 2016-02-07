@@ -1,0 +1,284 @@
+
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><title>
+	School Closures :: Bradford Metropolitan District Council
+</title><meta name='viewport' content='width=device-width,initial-scale=1' />
+<meta name='author' content='City of Bradford Metropolitan District Council' />
+<meta name='DC.creator' content='City of Bradford Metropolitan District Council (+44 (0) 1274 431000, council.contact@bradford.gov.uk)'>
+<meta name='DC.publisher' content='City of Bradford Metropolitan District Council (+44 (0) 1274 431000, council.contact@bradford.gov.uk)'>
+<meta name='eGMS.accessibility' scheme='eGMS.WCAG10' content='Double-A'>
+<meta name='DC.subject' scheme='eGMS.IPSV' content='Schools'>
+<meta name='DC.date' scheme='W3CDTF' content='2016-02-07T0:52:26'>
+<meta name='DC.title' content='Emergency School Closures'>
+<meta name='DC.identifer' content='449A5E92-40FB-4FE9-A387-5E7D510E5C98'>
+<link rel="stylesheet" href="/App_Themes/CouncilTheme2011Public/css/style.css?v=1" />
+
+    <!-- fav icons -->
+    <link id="Link1" rel="shortcut icon" href="/App_Themes/CouncilTheme2011Public/assets/favicon.ico" type="image/x-icon" /><link id="Link2" rel="icon" href="/App_Themes/CouncilTheme2011Public/assets/favicon.icoo" type="image/ico" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+    <script src="/App_Themes/CouncilTheme2011Public/js/libs/modernizr-2.0.6.min.js" type="text/javascript"></script>
+
+
+    <link href="/App_Themes/BSOBootstrap/css/jquery-ui/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+
+    <!-- jquery js includes -->
+    <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.8.22.custom.min.js"></script>
+
+    
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var today = new Date();
+            today.setTime(today.getTime() - 86400000); // it doesn't quite matter about daylight savings, as long as it's before or on 00:00:00
+
+            var holidaysOnDate = {};
+            //
+
+            $('#tbxDate').datepicker({
+                dateFormat: 'dd/mm/yy', firstDay: 1, beforeShowDay: function (date) {
+                    // ignore weekends
+                    if (date.getDay() == 0 || date.getDay() == 6 || date < today)
+                        return [false, '', ''];
+
+                    var highlightDate = holidaysOnDate[date];
+
+                    if (highlightDate) {
+                        return [true, 'holidaysOnDate' + (highlightDate.count > 50 ? ' holidaysMany showTooltip' : ''), highlightDate.count.toString() + ' closed'];
+                    }
+
+                    return [true, '', ''];
+                }
+            });
+
+            //$("#tbxDate").change(function () {
+            //    alert("Ref:128764376aaa");
+            //    $("#btnDate").click();
+            //});
+
+        });
+
+
+    </script>
+
+    <style type="text/css">
+        .twoColHybLtHdr #ctl00_sidebar2 {
+            float: right;
+            width: 200px;
+            display: block;
+        }
+
+        .twoColHybLtHdr #mainContent {
+            margin: 0 230px 0 230px; /* the right margin can be given in percentages or pixels. It creates the space down the right side of the page. */
+        }
+
+        .ptsStatusContainer {
+            margin: 15px;
+        }
+
+        .ptsStatus {
+            display: block;
+            padding: 9px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+
+        .wyts_status {
+            cursor: pointer;
+        }
+
+        #bbcNewsFeed .newsItem {
+            padding: 10px!important;
+        }
+
+        #metWeatherWarnings {
+            margin-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <form method="post" action="./schoolclosures.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTE3NDM1MTc3NA9kFgJmD2QWBAIBD2QWBAIDDxYCHgRUZXh0BbcEPG1ldGEgbmFtZT0ndmlld3BvcnQnIGNvbnRlbnQ9J3dpZHRoPWRldmljZS13aWR0aCxpbml0aWFsLXNjYWxlPTEnIC8+DQo8bWV0YSBuYW1lPSdhdXRob3InIGNvbnRlbnQ9J0NpdHkgb2YgQnJhZGZvcmQgTWV0cm9wb2xpdGFuIERpc3RyaWN0IENvdW5jaWwnIC8+DQo8bWV0YSBuYW1lPSdEQy5jcmVhdG9yJyBjb250ZW50PSdDaXR5IG9mIEJyYWRmb3JkIE1ldHJvcG9saXRhbiBEaXN0cmljdCBDb3VuY2lsICgrNDQgKDApIDEyNzQgNDMxMDAwLCBjb3VuY2lsLmNvbnRhY3RAYnJhZGZvcmQuZ292LnVrKSc+DQo8bWV0YSBuYW1lPSdEQy5wdWJsaXNoZXInIGNvbnRlbnQ9J0NpdHkgb2YgQnJhZGZvcmQgTWV0cm9wb2xpdGFuIERpc3RyaWN0IENvdW5jaWwgKCs0NCAoMCkgMTI3NCA0MzEwMDAsIGNvdW5jaWwuY29udGFjdEBicmFkZm9yZC5nb3YudWspJz4NCjxtZXRhIG5hbWU9J2VHTVMuYWNjZXNzaWJpbGl0eScgc2NoZW1lPSdlR01TLldDQUcxMCcgY29udGVudD0nRG91YmxlLUEnPg0KPG1ldGEgbmFtZT0nREMuc3ViamVjdCcgc2NoZW1lPSdlR01TLklQU1YnIGNvbnRlbnQ9J1NjaG9vbHMnPg0KZAIEDxYCHwAFywE8bWV0YSBuYW1lPSdEQy5kYXRlJyBzY2hlbWU9J1czQ0RURicgY29udGVudD0nMjAxNi0wMi0wN1QwOjUyOjI2Jz4NCjxtZXRhIG5hbWU9J0RDLnRpdGxlJyBjb250ZW50PSdFbWVyZ2VuY3kgU2Nob29sIENsb3N1cmVzJz4NCjxtZXRhIG5hbWU9J0RDLmlkZW50aWZlcicgY29udGVudD0nNDQ5QTVFOTItNDBGQi00RkU5LUEzODctNUU3RDUxMEU1Qzk4Jz4NCmQCAw9kFgQCAQ8PFgIeB1Zpc2libGVnZGQCAg9kFggCAw8WAh8ABeMDPHVsIGNsYXNzPSdtLWJyZWFkY3J1bWInPjxsaSBjbGFzcz0nZmlyc3QnPllvdSBhcmUgaW46PHNwYW4gY2xhc3M9J2RpdmlkZXInPjwvc3Bhbj48L2xpPjxsaT48YSBocmVmPSdodHRwOi8vd3d3LmJyYWRmb3JkLmdvdi51ay9ibWRjL2VkdWNhdGlvbl9hbmRfc2tpbGxzJz5lZHVjYXRpb24gYW5kIGxlYXJuaW5nPC9hPiA8c3BhbiBjbGFzcz0nZGl2aWRlcic+Pjwvc3Bhbj48L2xpPjxsaT48YSBocmVmPSdodHRwOi8vd3d3LmJyYWRmb3JkLmdvdi51ay9ibWRjL2VkdWNhdGlvbl9hbmRfc2tpbGxzL3NjaG9vbHMnPnNjaG9vbHMsIGNvbGxlZ2VzICYgYWNhZGVtaWVzPC9hPiA8c3BhbiBjbGFzcz0nZGl2aWRlcic+Pjwvc3Bhbj48L2xpPjxsaSBjbGFzcz0nYWN0aXZlJz48YSBocmVmPSdodHRwczovL2Jzby5icmFkZm9yZC5nb3YudWsvY291bmNpbC9zY2hvb2xzL3NjaG9vbGNsb3N1cmVzLmFzcHgnPnNjaG9vbCBjbG9zdXJlczwvYT48L2xpPjwvdWw+ZAINDxYCHgtfIUl0ZW1Db3VudAL/////D2QCDw9kFgICAQ8WAh8ABQowNy8wMi8yMDE2ZAIRDxYCHwAF5QE8c3BhbiBjbGFzcz0ncHRzU3RhdHVzJyBzdHlsZT0nYmFja2dyb3VuZC1jb2xvcjojMDA4ODAwOyBjb2xvcjojZmZmZmZmJz48aW1nIHN0eWxlPSdwYWRkaW5nLXJpZ2h0OjVweCcgc3JjPScvQXBwX1RoZW1lcy9CU09Cb290c3RyYXAvaW1nL2ljb25zL2ljb24tYnVzLnBuZycgLz5QVFMgc2VydmljZXMgYXJlIGN1cnJlbnRseSBmdWxseSBvcGVyYXRpb25hbCB0b2RheSAoMDcvMDIvMjAxNik8L3NwYW4+ZGSngzow2dmEyRs8a6fwiqAfNf0+E8en11lI300tJiwcrg==" />
+
+
+<script src="/ScriptResource.axd?d=2E0_IlP49ckSQ5k4khh_phd6mkd1f65GI-EAt5UtZvsNrRWyTigG44sMrDVLYLKB7zufQStuLL2WP_DwjFMRgJBqTPf6kQhEcnNZl1IvBqmqPr2BBOEAJApFNaZoASFC0&amp;t=ffffffffdc32f924" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5B25A929" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAU2ca2haFk1AzR+eYRAnPRiBkatjbAf30dBjWHxm5CK2FV6RkAfufrqJa6LpqnGFgsASM7VvG4vo3blbz2FJ+rZ3X0lBMni3VdCUGZ3l2u6lhR1wynGQjGPMN6Dk5K3lSnviwbnCHSPGY93BadPifot" />
+        
+
+        <div id="header-container" class="h-header">
+            <header class="h-banner wrapper clearfix">
+                <a id="top" class="h-logo ir" href="http://www.bradford.gov.uk/">Bradford Metropolitan District Council</a>
+            </header>
+            <br />
+
+            <div id="pnlDisplaySearchBox">
+	
+                <section class="form wrapper clearfix align-right">
+                    <h2 class="visuallyhidden">Search</h2>
+                    <input name="ctl00$tbxSearch" type="text" id="tbxSearch" class="form-textbox" />&nbsp;<input type="submit" name="ctl00$btnSearch" value="Search" id="btnSearch" class="form-button" />
+                </section>
+            
+</div>
+
+        </div>
+
+        <div id="main-container">
+            <div id="main" role="main" class="wrapper clearfix">
+                
+
+    <article class="m-article right">
+
+        <header>
+            <h1>
+                <a id="maincontent" href="#">School Closures</a></h1>
+            <ul class='m-breadcrumb'><li class='first'>You are in:<span class='divider'></span></li><li><a href='http://www.bradford.gov.uk/bmdc/education_and_skills'>education and learning</a> <span class='divider'>></span></li><li><a href='http://www.bradford.gov.uk/bmdc/education_and_skills/schools'>schools, colleges & academies</a> <span class='divider'>></span></li><li class='active'><a href='https://bso.bradford.gov.uk/council/schools/schoolclosures.aspx'>school closures</a></li></ul>
+            <span id="ContentPlaceHolder1_lblMessage"></span>
+
+            <a href="#mainnavigation" class="visuallyhidden">Skip to navigation</a>
+            <p>The schools listed below have advised that they are closed today due to unforeseen circumstances. </p>
+
+            <div class="m-section form-box">
+                <label for="tbxDate" id="ContentPlaceHolder1_lblDate">Select a date to view closures on that day:</label>
+
+                <input name="ctl00$ContentPlaceHolder1$tbxDate" type="text" value="07/02/2016" id="tbxDate" />
+                <input type="submit" name="ctl00$ContentPlaceHolder1$btnDate" value="Find" id="ContentPlaceHolder1_btnDate" class="form-button" />
+
+            </div>
+
+            
+
+            <div id="ContentPlaceHolder1_pnlNoClosures">
+	
+                <section class="m-section">
+                    <h2>Closures</h2>
+                    <blockquote>
+                        <p><strong>No emergency school closures have been reported for 07/02/2016</strong></p>
+                    </blockquote>
+                </section>
+            
+</div>
+
+            <p>Other schools may have a scheduled closure, for further information about these please use <a href="/council/schools/schoolfinder.aspx?mid=2089">School Finder</a>.</p>
+
+            <p><b>Colleges: </b>For information on college closures please search for the contact details on <a href="/council/schools/schoolfinder.aspx">school finder</a></p>
+
+            <p>You can also subscribe to <a href="alerts/">email alerts</a>. This allows you to receive email updates for upcoming school holidays and emergency closures.</p>
+
+            <div class="m-section form-box">
+                <a href="/Schools/SchoolClosure_RSS.aspx">Subscribe to the closures RSS feed</a>
+            </div>
+        </header>
+
+        <section class="m-section">
+            <headertemplate>
+                <h2>Passenger Transport Services (PTS)</h2>
+            </headertemplate>
+
+            <p class="ptsStatusContainer">
+                <blockquote>
+                    <span class='ptsStatus' style='background-color:#008800; color:#ffffff'><img style='padding-right:5px' src='/App_Themes/BSOBootstrap/img/icons/icon-bus.png' />PTS services are currently fully operational today (07/02/2016)</span>
+                </blockquote>
+            </p>
+
+            <p>                
+                <strong>IMPORTANT NOTE:</strong> This announcement does not include mainstream school large
+                bus and Mybus (yellow bus) services operated by West Yorkshire Combined Authority, for further information <em>T:</em>
+                01133 481122 <em>W:</em> <a href="http://www.generationM.co.uk/">www.generationM.co.uk</a>
+            </p>
+
+        </section>
+
+    </article>
+
+                <aside class="m-menu left noprint">
+                    <div class="m-menu-sub rounded-bottom">
+                        <div class="m-menu-sub-header rounded-top">
+                            <h2><a id="mainnavigation" href="http://www.bradford.gov.uk/">Home Page</a></h2>
+                            <a href="#content" class="visuallyhidden">Skip to content</a>
+                        </div>
+                        <nav class="m-menu-nav">
+
+
+                            <ul>
+                                <li><a title="Education and learning" href="http://www.bradford.gov.uk/bmdc/education_and_skills" target="_top">Education and learning</a>
+                                    <ul>
+                                        <li><a title="Adult, further and higher education" href="http://www.bradford.gov.uk/bmdc/education_and_skills/adult_further_and_higher_education" target="_top">Adult, further and higher education</a></li>
+                                        <li><a title="Childcare and early education" href="http://www.bradford.gov.uk/bmdc/education_and_skills/childcare_early_education" target="_top">Childcare and early education</a></li>
+                                        <li><a title="Grants and parental support" href="http://www.bradford.gov.uk/bmdc/education_and_skills/parental_support" target="_top">Grants and parental support</a></li>
+                                        <li><a title="Libraries" href="http://www.bradford.gov.uk/bmdc/leisure_and_culture/library_and_information_services/" target="_top">Libraries</a></li>
+                                        <li><a title="Planning Education Provision" href="http://www.bradford.gov.uk/bmdc/education_and_skills/planning_education_provision" target="_top">Planning Education Provision</a></li>
+                                        <li><a class="active" title="Schools, colleges and academies" href="http://www.bradford.gov.uk/bmdc/education_and_skills/schools" target="_top">Schools, colleges and academies</a><ul id="MainControl_LeftNav1_ChannelItemHyperLinkList1_ctl13">
+                                            <li><a title="Further education and sixth form colleges" href="http://www.bradford.gov.uk/bmdc/education_and_skills/schools/further_education_sixth_form_colleges" target="_top">Further education and sixth form colleges</a></li>
+                                            <li><a title="Governors" href="http://www.bradford.gov.uk/bmdc/education_and_skills/schools/governors" target="_top">Governors</a></li>
+                                            <li><a title="Public Forum for Education" href="http://www.bradford.gov.uk/bmdc/education_and_skills/schools/public_forum_for_education" target="_top">Public Forum for Education</a></li>
+                                            <li><a title="Raising the Participation Age" href="http://www.bradford.gov.uk/bmdc/education_and_skills/schools/raising_the_participation_age" target="_top">Raising the Participation Age</a></li>
+                                            <li><a title="School Admissions" href="http://www.bradford.gov.uk/bmdc/education_and_skills/schools/school_admissions" target="_top">School Admissions</a></li>
+                                            <li><a title="School Buildings" href="http://www.bradford.gov.uk/bmdc/education_and_skills/schools/school_buildings" target="_top">School Buildings</a></li>
+                                            <li><a title="School Closures" onclick="pageTracker._trackPageview('/external/bso.bradford.gov.uk/council/schools/schoolclosures.aspx');" href="http://bso.bradford.gov.uk/council/schools/schoolclosures.aspx" target="_top">School Closures</a></li>
+                                            <li><a title="School Holidays" onclick="pageTracker._trackPageview('/external/bso.bradford.gov.uk/council/schools/schoolfinder.aspx');" href="http://bso.bradford.gov.uk/council/schools/schoolfinder.aspx" target="_top">School Holidays</a></li>
+                                            <li><a title="School Support Services" href="http://www.bradford.gov.uk/bmdc/education_and_skills/schools/school_support_services" target="_top">School Support Services</a></li>
+                                            <li><a title="School Transport" href="http://www.bradford.gov.uk/bmdc/education_and_skills/schools/school_transport" target="_top">School Transport</a></li>
+                                        </ul>
+                                        </li>
+                                        <li><a title="Special Educational Needs" href="http://www.bradford.gov.uk/bmdc/education_and_skills/special_educational_needs" target="_top">Special Educational Needs</a></li>
+                                        <li><a title="Training and Development" href="http://www.bradford.gov.uk/bmdc/education_and_skills/training_and_development" target="_top">Training and Development</a></li>
+                                        <li><a title="Youth Service" href="http://www.bradford.gov.uk/bmdc/education_and_skills/youth_services" target="_top">Youth Service</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </nav>
+                    </div>
+
+                    
+                </aside>
+            </div>
+        </div>
+
+        <div id="footer-container">
+            <footer class="f-footer wrapper clearfix">
+                <div class="f-footerlinks noprint">
+                    <ul>
+                        <li><a href="http://www.bradford.gov.uk/bmdc">Home</a></li>
+                        <li><a href="http://www.bradford.gov.uk/bmdc/accessibility">Accessibility</a></li>
+                        <li><a href="http://www.bradford.gov.uk/bmdc/help">Help</a></li>
+                        <li><a href="http://www.bradford.gov.uk/bmdc/atoz">A - Z</a></li>
+                        <li><a href="http://www.bradford.gov.uk/bmdc/sitemap">Site Map</a></li>
+                        <li><a href="http://www.bradford.gov.uk/bmdc/contact_us">Contact Us</a></li>
+                        <li><a href="http://www.bradford.gov.uk/bmdc/whats_new">What's New</a></li>
+                    </ul>
+                </div>
+
+                <p class="f-copyright">&copy;2016 Bradford Metropolitan District Council</p>
+                <a href="#top">Back to top</a>
+            </footer>
+        </div>
+
+        <script defer src="/App_Themes/CouncilTheme2011Public/js/plugins.js"></script>
+        <script defer src="/App_Themes/CouncilTheme2011Public/js/script.js"></script>
+
+        <!--[if lt IE 7 ]>
+        <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+        <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+    <![endif]-->
+
+    </form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,421 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- PageID 14571 - published by Open Text Web Solutions 10 - 10.0.1.51 - 29448 -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="Title" content="Blaenau Gwent County Borough Council - How to apply" />
+    <meta name="Description" content="Blaenau Gwent County Borough Council" />
+    <meta name="Author" content="Blaenau Gwent County Borough Council" />
+    <meta name="DC.Title" content="Blaenau Gwent County Borough Council: - How to apply" />
+    <meta name="DC.Coverage" content="Blaenau Gwent, South Wales, UK" lang="ENG" xml:lang="ENG" />
+    <meta name="DC.Identifier" scheme="URI" content="/health/14571.asp" />
+    <meta name="DC.Date.Created" scheme="W3CDTF" content="04/11/2010" />
+    <meta name="DC.Date.Issued" scheme="W3CDTF" content="18/05/2015 12:34:57" />
+    <meta name="DC.Date.Modified" scheme="W3CDTF" content="04 November 2010" />
+    <meta name="DC.Format" content="text/html" />
+    <meta name="DC.Creator" content="Blaenau Gwent County Borough Council: Joanne Welsh" />
+    <meta name="DC.publisher" content="Blaenau Gwent County Borough Council, Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB, Tel (01495) 350555, http://www.blaenau-gwent.gov.uk" />
+    <meta name="DC.Contributor" content="Resources" />
+    <meta name="DC.Language" scheme="ISO 639-2" content="ENG" />
+    <meta name="DC.Subject" scheme="IPSV" content="" />
+    <meta name="DC.Rights" content="http://www.blaenau-gwent.gov.uk/copyright" />
+    <meta name="eGMS.accessibility" content="Double-A" scheme="WCAG" />
+    <meta name="eGMS.subject.category.identifier" scheme="LNGL" content="" />
+    <meta name="eGMS.subject.category" scheme="IPSV" content="" />
+    <meta name="keywords" content="" />
+    <title>
+      Blaenau Gwent County Borough Council - How to apply
+    </title>
+    <link href="/css/site.css" rel="stylesheet" type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" media="print" />
+    <script type="text/javascript" src="/scripts/jquery-1.3.2.min.js">
+</script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image1 .desc").show(); //Show Banner
+            $(".main_image1 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb1 ul li:first").addClass('active');
+            $(".image_thumb1 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image1").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image1 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image1 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image1 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb1 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse1").click(function () {
+                $(".main_image1 .block").slideToggle();
+                $("a.collapse1").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        $(document).ready(function () {
+
+            //Show Banner
+            $(".main_image2 .desc").show(); //Show Banner
+            $(".main_image2 .block").animate({ opacity: 0.85 }, 0); //Set Opacity
+
+            //Click and Hover events for thumbnail list
+            $(".image_thumb2 ul li:first").addClass('active');
+            $(".image_thumb2 ul li").click(function () {
+                //Set Variables
+                var imgAlt = $(this).find('img').attr("alt"); //Get Alt Tag of Image
+                var imgTitle = $(this).find('a').attr("href"); //Get Main Image URL
+                var imgDesc = $(this).find('.block').html();     //Get HTML of block
+                var imgDescHeight = $(".main_image2").find('.block').height(); //Calculate height of block    
+
+                if ($(this).is(".active")) {  //If it's already active, then...
+                    return false; // Don't click through
+                } else {
+                    //Animate the Teaser                
+                    $(".main_image2 .block").animate({ opacity: 0, marginBottom: -imgDescHeight }, 250, function () {
+                        $(".main_image2 .block").html(imgDesc).animate({ opacity: 0.85, marginBottom: "0" }, 250);
+                        $(".main_image2 img").attr({ src: imgTitle, alt: imgAlt });
+                    });
+                }
+
+                $(".image_thumb2 ul li").removeClass('active'); //Remove class of 'active' on all lists
+                $(this).addClass('active');  //add class of 'active' on this list only
+                return true;
+
+            }).hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            //Toggle Teaser
+            $("a.collapse2").click(function () {
+                $(".main_image2 .block").slideToggle();
+                $("a.collapse2").toggleClass("show");
+            });
+
+        });    //Close Function
+    //]]>
+    </script>
+    <script type="text/javascript">
+//<![CDATA[
+        function f(n) {
+            document.getElementById('body').style.fontSize = n
+        }
+    //]]>
+    </script><!-- IE6 STYLE OVERRIDES --><!--[if lte IE 6]>
+        <link href="" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- IE7 STYLE OVERRIDES -->
+    <!--[if IE 7]>
+           <link href=""  rel="stylesheet" type="text/css" />
+    <![endif]-->
+  </head>
+  <body id="body">
+    <a name="Top" id="Top"></a> <!-- HEADER -->
+     <!-- ************************************** -->
+     <!-- HEADER  (grey bar, white bar, red bar) -->
+     <!-- ************************************** -->
+    <div id="header">
+      <!-- HEADER TOP BAR( grey ) -->
+      <div id="header-toplinks-outer">
+        <div id="header-toplinks-inner">
+          <!-- SEARCH BOX -->
+          <div id="header-search">
+            
+              <form name="kbs" method="get" action="http://search3.openobjects.com/kb5/gwent/search/en/results.page" id="kbs">
+                <input name="qt" class="searchbox" type="text" maxlength="50" value="Search" onfocus="this.value=''" id="query" /> <input class="searchbutton" type="submit" value="" />
+              </form>
+            </form>
+          </div><!-- TOP HEADER LINKS -->
+          <div id="header-toplinks">
+            <ul>
+              <li class="first">
+                 <a href="/CYM/health/14571.asp" title="Cymraeg" accesskey="l">Cymraeg</a> 
+              </li>
+              <li>
+                <a href="/council/69.asp" title="Accessibility" accesskey="a">Accessibility</a>
+              </li>
+              <li>
+                <a href="/help.asp" title="Help" accesskey="h">Help</a>
+              </li>
+              <li>
+                <a href="/ContactUs.asp" title="Contact Us" accesskey="c">Contact Us</a>
+              </li>
+              <li>
+                <a href="/council/1838.asp" title="News Centre" accesskey="m">News Centre</a>
+              </li>
+              <li>
+                <a href="http://www.blaenau-gwent.gov.uk/19002.asp" title="Cookies" accesskey="v">Cookies</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- HEADER COUNCIL LOGO ( tag line set in css )-->
+      <div id="header-mast-outer">
+        <!-- Begin Logo -->
+        <div id="logo">
+          <a href="/index.asp"><img src="/images/logo.jpg" alt="Blaenau Gwent County Borough Council - Cyngor Bwrdeisdref Sirol Blaenau Gwent" /></a>
+        </div><!-- End Logo --><!-- Begin Hour -->
+        <div id="hour-ENG"></div><!-- End Hour -->
+        <!-- Begin Tagline -->
+        <div id="tagline"></div><!-- End Tagline -->
+      </div><!-- HEADER BOTTOM BAR ( red ) -->
+      <div id="header-bottomlinks-outer">
+        <div id="header-bottomlinks-inner">
+          <!-- LINKS LIST -->
+          <div id="header-bottomlinks">
+            <ul>
+              <li class="first">
+                <a href="/index.asp" title="Home" accesskey="h">Home</a>
+              </li>
+              <li>
+                <a href="/jobs/262.asp" title="Jobs" accesskey="j">Jobs</a>
+              </li>
+              <li>
+                <a href="/onlineServices/forms.asp" title="Online Forms" accesskey="o">Online Forms</a>
+              </li>
+              <li>
+                <a href="/faqs/faq.asp" title="FAQ's" accesskey="5">FAQ's</a>
+              </li>
+              <li>
+                <a href="/sitemap.asp" title="Sitemap" accesskey="3">Sitemap</a>
+              </li>
+              <li>
+                <a href="/A-Z.asp" title="A-Z" accesskey="z">A-Z</a>
+              </li>
+              <li>
+                <a href="/news/2487.asp" title="News" accesskey="n">News</a>
+              </li>
+              <li>
+                <a href="/whatsOn/6775.asp" title="What's On" accesskey="w">What's On</a>
+              </li>
+            </ul>
+          </div><!-- TEXT SIZE CHOOSER -->
+          <div id="header-textsize">
+            <span>Enlarge Screen Text Here:</span> <span class="small-text"><a href="javascript:f('0.6em');">A</a></span> <span class="medium-text"><a href="javascript:f('0.8em');">A</a></span> <span class="large-text"><a href="javascript:f('1.2em');">A</a></span>
+          </div><!-- CLEAR DIV ( alloew red background to extend with text size ) -->
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div><!-- SPACER ( few pixels light blue spacer ) -->
+    <div id="header-spacer"></div><!-- // HEADER -->
+    <!-- PAGE CONTENT -->
+    <div id="main-content-body-outer">
+      <div id="main-content-valley">
+        <!-- MAIN PAGE CONTENT - WHITE BOX -->
+        <div class="white-box-top"></div>
+        <div class="white-box-body body-content">
+          <div style="text-align: center; height: 100px; position: relative; left: 13%;">
+            <script type="text/javascript">
+//<![CDATA[
+            document.write('\x3Cscript type="text/javascript" src="//can.capacitygrid.com/code/blaenaugwentcbc/leaderboard/public">\x3C/script>');
+            //]]>
+            </script>
+          </div>
+          <div id="left-column">
+            <!-- Begin Online Services -->
+            <div id="online-services">
+              <span>What would you like to do?</span> <a href="/onlineServices/15981.asp" id="payforit" name="payforit">Pay for it</a> <a href="/onlineServices/15980.asp" id="reportit" name="reportit">Report it</a> <a href="/onlineServices/15979.asp" id="requestit" name="requestit">Request it</a> <a href="/onlineServices/15978.asp" id="sayit" name="sayit">Say It</a> <a href="/onlineServices/15982.asp" id="findit" name="findit">Find It</a>
+            </div><!-- LEFT NAVIGATION -->
+            <div class="side-box-container no-border">
+              <h2 class="red-heading">
+                Browse by Service:
+              </h2>
+              <ul class="navigation-list">
+                
+                <li class="level-0">
+                  <a href="/index.asp">Home</a>
+                </li>
+                <li class="level-0 up">
+                  <a href="/health.asp" title="Health &amp; Social Care">Health &amp; Social Care</a>
+                </li>
+                <li class="level-2">
+                  <a href="/health/228.asp" title="Fostering, Adopting &amp; Looked After Children">Fostering, Adopting &amp; Looked After Children</a>
+                </li>
+                <li class="level-3 up">
+                  <a href="/health/3122.asp" title="The South East Wales Adoption Service">The South East Wales Adoption Service</a>
+                </li>
+                <li class="level-3">
+                  <a href="/health/14571.asp" title="How to apply">How to apply</a>
+                </li>
+              </ul>
+            </div><!-- // LEFT NAVIGATION -->
+          </div><!-- CONTENT MIDDLE COLUMN -->
+          
+            <div id="three-column-middle">
+              
+              <h1 class="green-heading" style="display: ;">
+                How to apply
+              </h1>
+              <div class="no-border page-content">
+                <p>
+                  <a href="#Step_1_-_make_the_initial_enquiry">Step 1 - make the initial enquiry</a><br />
+                  <a href="#Step_2_-_the_initial_visit">Step 2 - the initial visit</a><br />
+                  <a href="#Step_3_-_the_counselling_stage">Step 3 - the counselling stage</a><br />
+                  <a href="#Step_4_-_attend_a_preparation_course">Step 4 - attend a preparation course</a><br />
+                  <a href="#Step_5_-_making_an_application">Step 5 - making an application</a><br />
+                  <a href="#Step_6_-_preparation_and_assessment">Step 6 - preparation and assessment</a><br />
+                  <a href="#Step_7_-_the_end_of_the_assessment_process">Step 7 - the end of the assessment process</a><br />
+                  <a href="#Step_8_-_the_adoption_panel">Step 8 - the adoption panel</a><br />
+                  <a href="#Step_9_-_matching_you_to_a_child">Step 9 - matching you to a child</a><br />
+                  <a href="#Step_10_-_placement_of_a_child">Step 10 - placement of a child</a><br />
+                  <a href="#Step_11_-_the_adoption_order">Step 11 - the adoption order</a>
+                </p>
+                <p>
+                  <strong><strong><strong><strong><a name="Step_1_-_make_the_initial_enquiry" id="Step_1_-_make_the_initial_enquiry"><strong><strong><strong><strong>Step 1 - make the initial enquiry</strong><br /></strong></strong></strong></a></strong></strong></strong></strong>Firstly contact your local authority adoption agency, in Blaenau Gwent this is the:<br />
+                  <br />
+                  The South East Wales Adoption Service<br />
+                  North Wing<br />
+                  2nd Floor, Block B<br />
+                  Mamhilad House<br />
+                  Mamhilad Park Estate<br />
+                  Pontypool<br />
+                  Torfaen<br />
+                  NP4 0HZ<br />
+                  Tel: (01495) 355753 or 355764<br />
+                  Email: <a href="mailto:adoption@blaenau-gwent.gov.uk">adoption@blaenau-gwent.gov.uk</a><br />
+                  <br />
+                  You can ask to speak to an adoption worker for an informal chat or just request an information pack.&nbsp; If available at the time you can speak to an adoption social worker about your interest or someone can phone you back later.&nbsp; An information pack will be sent to you.<br />
+                  <br />
+                  <strong><strong><a name="Step_2_-_the_initial_visit" id="Step_2_-_the_initial_visit"><strong><strong>Step 2 - the initial visit</strong></strong></a></strong><br /></strong>After you have read and considered the information pack and you would like to talk more about the possibility of adoption, please contact us here at the Blaenau Gwent Adoption Team and if you agree, a social worker from our adoption team will contact you following your enquiry and offer to arrange to visit with you.&nbsp; This visit gives you an opportunity to find out a lot more about adoption and the process and what will happen if you decide to go ahead.<br />
+                  <br />
+                  <strong><a name="Step_3_-_the_counselling_stage" id="Step_3_-_the_counselling_stage"><strong>Step 3 - the counselling stage</strong></a></strong><br />
+                  If after hearing more about adoption from the social worker you are interested in proceeding further as you think adoption might be right for you then the adoption social worker will undertake a counselling visit with you.&nbsp; Sometimes this will be one or two visits but sometimes may require a few more.&nbsp; The counselling visits give you the opportunity to discuss with the social worker what you want out of adoption and what you feel you can offer a child and help you to be sure that it is right for you. It will allow you and the social worker to consider adoption issues in greater depth and in specific relation to your own circumstances.<br />
+                  <br />
+                  The social worker will then write a counselling report and discuss this with the adoption team manager, based upon the counselling report and initial information; the team manager will then make a decision as to whether the agency will invite your application.&nbsp; Some-times a decision may be made to seek further information before proceeding, for example to undertake an early health check, obtain references or to seek information from other agencies.<br />
+                  <br />
+                  <strong><a name="Step_4_-_attend_a_preparation_course" id="Step_4_-_attend_a_preparation_course"><strong>Step 4 - attend a preparation course</strong></a></strong><br />
+                  All potential adoptive applicants should be provided the opportunity to attend a preparing to adopt training course.&nbsp; It is a general expectation that all prospective adopters attend this training.&nbsp; The training courses are available at various times throughout the year and consist of 3 full day sessions usually Friday to Sunday.&nbsp; The sessions are attended by others who are considering becoming adoptive parents.&nbsp; The training goes into detail of the types of children who require adoptive homes and the challenges that they and their adoptive families face.<br />
+                  <br />
+                  <strong><a name="Step_5_-_making_an_application" id="Step_5_-_making_an_application"><strong>Step 5 - making an application</strong><br /></a></strong>If the agency decides it is appropriate and you would like to proceed then you will be invited to apply to be assessed as a prospective adoptive parent.&nbsp; Your social worker will complete an application form with you and this will be the start of the assessment process. If you decide to go ahead you will be asked to give permission for checks to be made by the police and local authority.&nbsp; Having checks made on you may sound daunting.&nbsp; But it&rsquo;s worth remembering that agencies have to carry out these checks to rule out anyone who has committed a serious crime, such as violence or offences against children.<br />
+                  <br />
+                  You will also be asked to have a medical with your own GP.<br />
+                  <br />
+                  <strong><a name="Step_6_-_preparation_and_assessment" id="Step_6_-_preparation_and_assessment"><strong>Step 6 - preparation and assessment</strong><br /></a></strong>If your application is accepted, you will begin a longer period of preparation and assessment, working in partnership with your social worker.&nbsp; Preparation is a time when you can find out about adoption in a lot more detail, and do some very important thinking about making a lifetime commitment to a child.&nbsp; Part of the agency&rsquo;s job is to give you a lot of information about adoption, including the sorts of children available in your area.<br />
+                  <br />
+                  You have a crucial role to play at this time.&nbsp; These weeks are a chance for you to take a very honest look at what you want out of adoption and what you can offer a child waiting for adoption (many of whom may be quite demanding).&nbsp; You will have time to think about all the important issues.&nbsp; What are the needs of an adopted child?&nbsp; What are your strengths and weaknesses as an adoptive parent likely to be?&nbsp; Can you make the sort of commitment that will really make a difference to a child&rsquo;s life?<br />
+                  <br />
+                  While you are learning about adoption from the agency, the agency will begin to assess your suitability to adopt by building up a thorough profile of you.&nbsp; This is known as the assessment or &lsquo;Form F&rsquo;.&nbsp; A social worker from the agency will make several visits to your home and ask you detailed questions about your own family background, your childhood and your present circumstances.&nbsp; If you are applying as a couple, the social worker will want to see you together and individually. You will also have to have a full medical examination with your own GP, and you will be asked to provide a minimum of three personal referees.<br />
+                  <br />
+                  The assessment process is demanding, it can feel intrusive and it will take several months to complete.&nbsp; But there are good reasons why everything is explored in depth with you.&nbsp; Adoption is for life, and the agency must be sure you are right for the role.&nbsp; Just as importantly, you must be certain you can make a success of it.<br />
+                  <br />
+                  <strong><a name="Step_7_-_the_end_of_the_assessment_process" id="Step_7_-_the_end_of_the_assessment_process"><strong>Step 7 - the end of the assessment process</strong></a></strong><br />
+                  At the end of the assessment process, you and the social worker will have worked together to produce a &lsquo;Form F&rsquo; assessment report.&nbsp; The report includes a detailed assessment of you as a potential adoptive parent, along with the results of the medical, police and local authority checks and your personal referees.&nbsp; A key part of the report is for you to decide the sort of child or children you feel you could adopt.&nbsp; Could you, for example, look after a child with a physical or learning difficulty?&nbsp; What age range would you consider?&nbsp; And how many children would you take?<br />
+                  <br />
+                  You are entitled to see most of the assessment report (except the references and health report) and will have the opportunity to comment on what is written.<br />
+                  <br />
+                  <strong><a name="Step_8_-_the_adoption_panel" id="Step_8_-_the_adoption_panel"><strong>Step 8 - the adoption panel</strong><br /></a></strong>Once it is completed and your comments have been added, the assessment report goes forward to an adoption panel - a group of social workers, other professionals and independent people including past adoptive parents and adopted adults.&nbsp; Your social worker will attend the panel to answer any questions from panel members.&nbsp; You will be invited to go along to meet the panel but the choice is yours.&nbsp; Once they have considered the report, the panel will recommend whether or not you should be approved as an adoptive parent.&nbsp; You will usually be notified of the adoption panel&rsquo;s recommendation on the same day.&nbsp; Based on the panel&rsquo;s recommendation, the agency will then decide whether or not to approve you within about a week of the panel meeting.<br />
+                  <br />
+                  <strong><a name="Step_9_-_matching_you_to_a_child" id="Step_9_-_matching_you_to_a_child"><strong>Step 9 - matching you to a child</strong></a></strong><br />
+                  Once you are approved, the agency will begin to consider whether there are children waiting for adoption locally who might be a suitable match for you.&nbsp; In some cases the agency may already have children in mind for you and this process would start more quickly (but not until you&rsquo;ve been approved).&nbsp; Your agency will begin the matching process by looking at the profiles of children you have been approved to adopt by the adoption panel.<br />
+                  <br />
+                  In Blaenau Gwent we are a member of an adoption consortium; this is a partnership of other local authority adoption agencies and includes Torfaen and Monmouthshire.&nbsp; This means that once approved, the process of searching for a suitable match will take place both locally and within the partner authority areas.&nbsp; If after three months a suitable match has not been identified then you will have the option of being placed on the National Adoption Register which will begin to consider possible matches throughout the UK.<br />
+                  <br />
+                  <strong><a name="Step_10_-_placement_of_a_child" id="Step_10_-_placement_of_a_child"><strong>Step 10 - placement of a child</strong></a><br /></strong>Once a child or children have been identified as possibly suitable for you, you will be given full information about their background and, if you want to proceed, you will meet the child or children.&nbsp; If you all agree, and after a gradual period of introduction, your adoptive child or children will come to live with you and become part of your new family.&nbsp; Remember, you are not on your own now - your social worker will be able to offer you support and advice after placement, and will be responsible for keeping in touch with you all until the adoption is finalised.&nbsp; You should talk to your social worker about what adoption support services are available in your area.&nbsp; Your child may also need to keep links with their birth family, and this will be fully discussed with you before you decide to go ahead.<br />
+                  <br />
+                  <strong><a name="Step_11_-_the_adoption_order" id="Step_11_-_the_adoption_order"><strong>Step 11 - the adoption order<br /></strong></a></strong>When your adoptive child has successfully settled down in your family, you will be able to apply to the court for an adoption order to be made.&nbsp; Once the order is made, all rights and responsibilities originally held by the birth parents transfer to you.
+                </p>
+                <div class="Top" style="display:">
+                  <a href="/health/14571.asp#Top" title="Return to top of page">Top <img src="/images/RedTriangleUP.jpg" width="8" height="8" alt="Return to top of page" /></a>
+                  <div style="clear:both;"></div>
+                </div>
+              </div><!-- // CONTENT MIDDLE COLUMN -->
+              
+            </div><!-- RIGHT COLUMN -->
+            <div id="right-column">
+              <span class="hide"><a name="rightcol" id="rightcol">Right Content Area</a></span>  <!-- UTILITY LINKS RIGHT -->
+              <div class="side-box-container">
+                <form name="PageFeedback" method="post" action="/5431.asp" target="_self" id="PageFeedback">
+                  <input type="hidden" name="PageID" value="14571" /> <input type="hidden" name="Headline" value="How to apply" /> <input type="hidden" name="PageURL" value="/health/14571.asp" />
+                  <ul class="utility-list">
+                    <li class="printer-friendly">
+                      <a href="JavaScript:window.print()">Print friendly<br />
+                      version</a>
+                    </li>
+                    <li class="page-feedback">
+                      <a href="JavaScript:document.PageFeedback.submit();">Feedback<br />
+                      on this page</a>
+                    </li>
+                  </ul>
+                </form>
+                <div class="clear"></div>
+              </div><!-- //UTILITY LINKS RIGHT -->
+              
+            </div><!-- //RIGHT COLUMN --><!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div><!-- FOOTER -->
+          <!-- PAGE FOOTER - WHITE BOX -->
+          <div class="white-box-top"></div>
+          <div class="white-box-body footer-content">
+            <!-- start of footer content -->
+            <a href="/about/5639.asp"><img src="/images/find-us.jpg" alt="Find Us" /></a> <a href="/council/5413.asp"><img src="/images/service-buddy.jpg" alt="Children's Complaints Service" /></a> <a href="/5515.asp"><img src="/images/connect-to-bg.jpg" alt="C2BG" /></a> <!-- <a href="http://www.direct.gov.uk"><img src="/images/directgov.jpg" alt="Direct Gov" /></a> -->
+             <a href="https://www.gov.uk/"><img src="/images/directgov.jpg" alt="GOV UK" /></a> <!-- clear content to ensure body matches with rounded bottom -->
+            <div class="clear"></div>
+          </div>
+          <div class="white-box-bottom"></div>
+          <div id="footer-contact">
+            <address>
+              Municipal Offices, Civic Centre, Ebbw Vale, NP23 6XB Tel: 01495 311556 E-mail:&nbsp;<a href="mailto:info@blaenau-gwent.gov.uk">info@blaenau-gwent.gov.uk</a>
+            </address>
+          </div><!--RDExecute=ASP-->
+          <script type="text/javascript">
+//<![CDATA[
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-17447558-1', 'blaenau-gwent.gov.uk');
+          ga('require', 'displayfeatures'); 
+          ga('send', 'pageview');
+          //]]>
+          </script> <script type="text/javascript">
+//<![CDATA[
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-17447558-1']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+          //]]>
+          </script> <!-- // FOOTER -->
+        </div>
+      </div><!-- iBar Code -->
+      <script type="text/javascript">
+//<![CDATA[
+      document.write('\x3Cscript type="text/javascript" src="//can.capacitygrid.com/code/blaenaugwentcbc/ibar/public">\x3C/script>');
+      //]]>
+      </script> 
+    </div>
+  </body>
+</html>

@@ -1,0 +1,587 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en-GB">
+  <!-- wfe:1 -->
+  <head>
+    <title>Residential registration - Voting and elections - City of London</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta name="description" content="Residential Registration information" />
+    <link rel="Stylesheet" type="text/css" href="/_layouts/CityOfLondon.SharePoint/css/screen.css" media="screen" />
+    <link rel="Stylesheet" type="text/css" href="/_layouts/CityOfLondon.SharePoint/css/print.css" media="print" />
+    <link rel="shortcut icon" type="image/x-icon" href="/_layouts/CityOfLondon.SharePoint/images/favicon.ico" />
+    <script type="text/javascript" src="/_layouts/CityOfLondon.SharePoint/javascript/jquery-1.6.2.min.js"></script>
+    <!--[if IE 8]><link rel="Stylesheet" type="text/css" href="/_layouts/CityOfLondon.SharePoint/css/fixes-ie8.css" media="screen" /><script type="text/javascript">/*<![CDATA[*/ var _IEver=8; /*]]>*/</script><![endif]-->
+    <script type="text/javascript" src="/_layouts/CityOfLondon.SharePoint/javascript/browser.js"></script>
+    <script type="text/javascript" src="/_layouts/CityOfLondon.SharePoint/javascript/concertina.js"></script>
+    <link rel="Stylesheet" type="text/css" href="/_layouts/CityOfLondon.SharePoint/css/col.css" />
+    <script type="text/javascript" src="/_layouts/CityOfLondon.SharePoint/javascript/RatingsWebPart.js"></script>
+  </head>
+  <body id="ctl00_colBody" class="no-js generic-one-column-page cluster-about">
+    <form name="aspnetForm" method="post" action="residential-registration.aspx" id="aspnetForm">
+      <input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+      <input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+      <input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+      <input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+      <input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+      <input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+      <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+      <input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x3389B1C2C31C9D6EAC6335441715864891ED7AE33307B5426DE60B3F415009A9995336AF0EE87D576489871332B9587B1A1A4578BCC542490976386BD7272A9B,07 Feb 2016 01:18:27 -0000" />
+      <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+      <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
+      <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+      <input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+      <input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+      <input type="hidden" name="_wpSelected" id="_wpSelected" value="" />
+      <input type="hidden" name="_wzSelected" id="_wzSelected" value="" />
+      <input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+      <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+      <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
+      <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTIzNDM1NzgzMGQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgUFSWN0bDAwJHNwV2ViUGFydE1hbmFnZXIkZ19hMTM3ZDJhNV8yOWFhXzQ3NDZfYTAzNF8wYzM0NmM3ZmM1ODYkY3RsMDAkc3RhcjEFSWN0bDAwJHNwV2ViUGFydE1hbmFnZXIkZ19hMTM3ZDJhNV8yOWFhXzQ3NDZfYTAzNF8wYzM0NmM3ZmM1ODYkY3RsMDAkc3RhcjIFSWN0bDAwJHNwV2ViUGFydE1hbmFnZXIkZ19hMTM3ZDJhNV8yOWFhXzQ3NDZfYTAzNF8wYzM0NmM3ZmM1ODYkY3RsMDAkc3RhcjMFSWN0bDAwJHNwV2ViUGFydE1hbmFnZXIkZ19hMTM3ZDJhNV8yOWFhXzQ3NDZfYTAzNF8wYzM0NmM3ZmM1ODYkY3RsMDAkc3RhcjQFSWN0bDAwJHNwV2ViUGFydE1hbmFnZXIkZ19hMTM3ZDJhNV8yOWFhXzQ3NDZfYTAzNF8wYzM0NmM3ZmM1ODYkY3RsMDAkc3RhcjV+k+ip3nRN33KwjtZOzCYoQUmvNA==" />
+      <script type="text/javascript">
+//<![CDATA[
+var _spWebPartComponents = new Object();//]]></script>
+      <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="84C94772" />
+      <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDwK+nIbIDwK0t5mlCwK0kYPvBQKxkYPvBQKykYPvBQK3kYPvBQK4kYPvBQLt2v7jBAK/scXpAQLFl5apCwKJh7zJCwLT/8uIBALgstrODQL13uXCDAK4n5ChCvG/u4NNIwlOKnq5A9x3/cOwYj8+" />
+      <div id="s4-workspace" class="s4-nosetwidth">
+        <!-- Top of page access links -->
+        <a href="#maincontent" class="access-text">Skip to main content</a>
+        <a id="PAGETOP" class="hide">&nbsp;</a>
+        <!-- START BANNER -->
+        <div class="container-banner cluster-bar">
+          <div class="container-banner-elements noindex">
+            <div class="banner-logo noindex">
+              <strong>
+                <a href="/Pages/default.aspx" class="logo-col">
+                  <img class="logo" src="/_layouts/CityOfLondon.SharePoint/images/interface/logo-city-of-london.png" alt="City of London logo" width="84" height="116" />
+                </a>
+              </strong>
+            </div>
+            <dl class="nav-utilities">
+              <dt>
+                <strong>Utilities menu</strong>
+              </dt>
+              <dd class="border-left-right">
+                <a href="/report-pay-apply/Pages/report-pay-apply.aspx" class="icon-do-it-online">Report, Pay, Apply</a>
+              </dd>
+              <dd class="border-left margin-left">
+                <a href="/search/Pages/a-to-z.aspx">A-Z</a>
+              </dd>
+              <dd>
+                <a href="/_layouts/col/shop.aspx">Shop</a>
+              </dd>
+              <dd class="utility-basket">
+                <a class="icon-basket" href="/_layouts/col/basket.aspx">Basket</a>
+              </dd>
+              <dd>
+                <a href="/events/Pages/default.aspx">Events</a>
+              </dd>
+              <dd>
+                <a href="/jobs/Pages/default.aspx">Jobs</a>
+              </dd>
+              <dd>
+                <a href="http://news.cityoflondon.gov.uk/">Media</a>
+              </dd>
+              <dd class="border-right margin-right">
+                <a href="/contact-us/Pages/default.aspx">Contact us</a>
+              </dd>
+              <dd class="border-left-right utility-my-col">
+                <a href="/_layouts/col/my-dashboard.aspx" id="ctl00_cphBanner_colspucBanner_myCityTopMenu_loginRegisterHref">
+                  <span class="text-my-city">My City&nbsp;</span>Login/Register</a>
+              </dd>
+            </dl>
+            <dl class="nav-primary">
+              <dt class="access-text">
+                <strong>Main menu</strong>
+              </dt>
+              <dd class="nav-primary-about">
+                <a href="/about-the-city/Pages/default.aspx">
+                  <strong>About the City</strong>
+                  <span class="access-text"> - </span>
+                  <span>Who we are, what we do</span>
+                </a>
+              </dd>
+              <dd class="nav-primary-services">
+                <a href="/services/Pages/default.aspx">
+                  <strong>Services</strong>
+                  <span class="access-text"> - </span>
+                  <span>Local and national</span>
+                </a>
+              </dd>
+              <dd class="nav-primary-business">
+                <a href="/business/Pages/default.aspx">
+                  <strong>Business</strong>
+                  <span class="access-text"> - </span>
+                  <span>Local, national and global</span>
+                </a>
+              </dd>
+              <dd class="nav-primary-things">
+                <a href="/things-to-do/Pages/default.aspx">
+                  <strong>Things to do</strong>
+                  <span class="access-text"> - </span>
+                  <span>Culture, green spaces and leisure</span>
+                </a>
+              </dd>
+            </dl>
+            <div class="container-find-it noindex">
+              <fieldset>
+                <legend>
+                  <label for="find-it-textfield" title="Search the entire City of London website.">Find it!</label>
+                </legend>
+                <input type="text" name="find-it-textfield" id="find-it-textfield" maxlength="50" class="find-it-textfield" />
+                <input type="submit" name="ctl00$cphBanner$colspucBanner$cmdSearchSubmit" value="Go" id="ctl00_cphBanner_colspucBanner_cmdSearchSubmit" class="find-it-button" />
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <!-- END BANNER -->
+        <div class="container-backdrop" style="background-image:url('/about-the-city/PublishingImages/backdrop-image.jpg');background-repeat:no-repeat;background-position:center">&nbsp;</div>
+        <div class="backdrop-mask">&nbsp;</div>
+        <!-- START PAGE CONTENT -->
+        <div id="s4-bodyContainer" class="container-content">
+          <!-- Left navigation bar -->
+          <div class="container-column-left">
+            <div class="container-nav-secondary noindex">
+              <!-- Secondary navigation -->
+              <dl class="nav-secondary">
+                <dt class="access-text mobile">
+                  <strong>You are in the section</strong>
+                </dt>
+                <dd>
+                  <a href="/about-the-city/Pages/default.aspx" class="cluster">About the City</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/default.aspx" class="section">Voting and elections</a>
+                </dd>
+                <dt class="access-text mobile">
+                  <strong>In this section</strong>
+                </dt>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/elections.aspx" class="first">Contact the Electoral Services Office</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/residential-registration.aspx" class="selected">Residential registration</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/worker-registration.aspx">Worker registration</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/residents-annual-canvass.aspx">Residents annual canvass</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/becoming-a-councillor.aspx">Becoming a councillor</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/forthcoming-elections.aspx">Forthcoming elections</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/election.aspx">Election results</a>
+                </dd>
+                <dd>
+                  <a href="http://democracy.cityoflondon.gov.uk/mgFindMember.aspx">Find my councillor (Member)</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/elections-postal-votes.aspx">Postal votes</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/elections-proxy-votes.aspx">Proxy votes</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/review-of-polling-districts-and-polling-places.aspx">Polling districts and polling places review</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/wards/Pages/default.aspx">Wards</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/Annual-Wardmotes.aspx">Annual Wardmotes</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/elections-and-wards/Pages/regional-national-and-european-representation.aspx">Regional, National and European representation</a>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <!-- Main content -->
+          <hr class="hide" />
+          <a id="maincontent">&nbsp;</a>
+          <div class="container-column-right">
+            <div class="header-page-content">
+              <h1>Residential registration</h1>
+              <div id="ctl00_spWebPartManager_g_fd2a9c4f_2306_4a01_b463_c2381bd0ee30">
+                <dl class="share">
+                  <dt>
+        Share
+    </dt>
+                  <dd>
+                    <a class="twitter" href="https://twitter.com/intent/tweet?url=http%3a%2f%2fwww.cityoflondon.gov.uk%2fabout-the-city%2felections-and-wards%2fPages%2fresidential-registration.aspx&amp;via=cityoflondon" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;">
+                      <strong class="access-text">Share this page on twitter</strong>
+                    </a>
+                  </dd>
+                  <dd>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fwww.cityoflondon.gov.uk%2fabout-the-city%2felections-and-wards%2fPages%2fresidential-registration.aspx&amp;t=City+of+London+-+Voting+and+elections+-+Residential+registration" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600');return false;">
+                      <strong class="access-text">Share this page on facebook</strong>
+                    </a>
+                  </dd>
+                  <dd>
+                    <a class="email" href="mailto:?subject=Interesting%20link%20from%20the%20City%20of%20London%20website&amp;body=I%20thought%20you%20may%20find%20this%20link%20from%20the%20City%20of%20London%20website%20interesting%3a%0d%0a%0d%0aCity%20of%20London%20-%20Voting%20and%20elections%20-%20Residential%20registration%3a%20%0d%0ahttp%3a%2f%2fwww.cityoflondon.gov.uk%2fabout-the-city%2felections-and-wards%2fPages%2fresidential-registration.aspx">
+                      <strong class="access-text">Share this page via email</strong>
+                    </a>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="container-padding">
+              <div class="container-image-large"></div>
+              <div class="left-column">
+                <p>
+                  <strong>The City of London Corporation maintains two lists of voters for its residents – the Ward List and the Electoral Register. </strong>
+                </p>
+                <p>The Ward List is the list of people able to vote in Ward elections for their local Alderman and Common Councilman. The Electoral Register is the list of people able to vote in national and European elections and referendums. This includes the London Mayor and Greater London Assembly (GLA).</p>
+                <p>Registration for the Ward Lists is done during the annual canvass which takes place each autumn. During the canvass the Electoral Registration Officer reviews and updates the information contained in both the Ward Lists and the Electoral Register and to do this, forms are sent to each residential address.</p>
+                <p>More information regarding the annual canvass and registering on the Ward List can be found on the<a href="/about-the-city/elections-and-wards/Pages/residents-annual-canvass.aspx"> residents annual canvass page</a>. More information on registering on the Electoral Register can be found below, but please <a href="/about-the-city/elections-and-wards/Pages/elections.aspx">contact the Electoral Services Office</a> if you can't find the information you need.</p>
+                <div class="container-concertina">
+                  <h2>
+                    <a class="on">How do I register on the Electoral Register? </a>
+                  </h2>
+                  <div class="concertina-content">
+                    <p>Individuals can apply to be added to the Electoral Register at any time by completing an <a href="https://www.gov.uk/register-to-vote" target="_blank">online form</a>. If you do not wish to complete the online form please <a href="/about-the-city/elections-and-wards/Pages/elections.aspx">contact electoral services</a> who can provide you with a form and return envelope.</p>
+                    <p>Individuals who are wishing to register must note that in order to complete the new registration form you will need to provide your National Insurance Number. Your National Insurance Number can be found on your P60 given to you by your employer, a payslip, a copy of your annual Self Assessment tax return or any other official correspondence from HM Revenue &amp; Customs.</p>
+                    <p>You can <a href="https://www.gov.uk/lost-national-insurance-number" target="_blank">find out your National Insurance Number</a> or <a href="https://www.gov.uk/apply-national-insurance-number" target="_blank">obtain one if you don't have one</a></p>
+                    <p>New electors will be asked if they want to be included on the Open Register (previously the Edited register). This is the register that can be brought by any person, company or organisation. More information on the Open Register can be found below.</p>
+                  </div>
+                  <h2>
+                    <a class="on">Who can register?</a>
+                  </h2>
+                  <div class="concertina-content">
+                    <p>All residents who live in the City of London who are citizens of Britain, the Republic of Ireland, the Commonwealth or European Union (EU) and are over the age of 16 are entitled to register. Commonwealth citizens must have the right of abode or have leave to enter/remain in the UK. Citizens of the EU (other than the UK, Ireland, Malta and Cyprus) may only vote in local government elections and in European Parliamentary elections if they complete an additional form. 16 and 17 year olds may register but can only vote when they become 18.</p>
+                    <p>Students living away from home may register to vote at both their term time and at their home address.</p>
+                    <p>
+                      <a href="/about-the-city/elections-and-wards/Documents/list-of-eligible-countries2.pdf" target="_blank">Download the Commonwealth British Overseas Territories and EU member states</a> (42kb)<br /><br />For residents with learning disabilities visit <a href="http://www.promotethevote.co.uk/" target="_blank">Promote The Vote</a>, which provides information about how to register to vote and the process of voting.</p>
+                  </div>
+                  <h2>
+                    <a class="on">Why should I register?</a>
+                  </h2>
+                  <div class="concertina-content">
+                    <p>Being able to vote gives you a say on important issues that affect you and your community - everything from roads and recycling, to education and climate change. You must be registered first to vote in elections, which can be called at short notice, so there may not be time to register later.</p>
+                    <p>Your elected representatives make decisions that affect you. You can get in touch with your elected City of London Members – Aldermen and Common Councilmen - as well as your London, National and European representatives.</p>
+                    <p>Being on the Electoral Register is also useful if you are applying for credit. Credit reference agencies use the Register as evidence of a person's address.</p>
+                    <p>In addition, the law requires residents to register and failure to register when you have been sent an Invitation to Register form could result in a fine of £80.</p>
+                  </div>
+                  <h2>
+                    <a class="on">Removals and Amendments of your information</a>
+                  </h2>
+                  <div class="concertina-content">
+                    <p>Electors can no longer be deleted from the Register simply as a result of their details being crossed through on a household form, or from a written request to remove them.</p>
+                    <p>The law now requires for the Electoral Registration Officer to verify any requests to remove an elector. This will be achieved by checking against Council Tax records. If this does not verify that the elector has moved then a letter will be sent to the elector at their registered address advising them that unless they confirm they are still there then they will be removed from the register – this could mean that letters will be sent to an elector at their address even if the occupiers have advised us that the person has moved out.</p>
+                    <p>In cases where an elector has passed away then this should be advised in writing accompanied by a copy of the death certificate.</p>
+                    <p>If someone re-registers at their new address their new local authority will pass this information directly to us and the elector will automatically be deleted from the Register.</p>
+                    <p>In order to make an amendment to a name on the Register the Electoral Registration Officer must receive a <a href="/about-the-city/elections-and-wards/Documents/Name-Change-Application.pdf" target="_blank">change of name form</a> (155kb) accompanied by evidence which can be in the form of a copy of a marriage or civil partnership certificate, deed poll or amended birth certificate.</p>
+                    <p>Alternatively, electors can <a href="https://www.gov.uk/register-to-vote" target="_blank">re-register online</a>.​</p>
+                  </div>
+                  <h2>
+                    <a class="on">The Full and Open registers</a>
+                  </h2>
+                  <div class="concertina-content">
+                    <h3>There are two registers. Why?</h3>
+                    <p>Using information received from the public, registration officers keep two registers – the full electoral register and the open register (also known as the edited register).</p>
+                    <p>
+                      <strong>The electoral register </strong>lists the names and addresses of everyone who is registered to vote in public elections.</p>
+                    <p>The register is used for electoral purposes – such as making sure only eligible people can vote – and for other limited purposes specified in law. The personal data in the register must always be processed in line with Data Protection legislation.</p>
+                    <h3>Who uses the full electoral register?</h3>
+                    <p>Election staff, political parties, candidates and holders of elected office use the register for electoral purposes.</p>
+                    <p>The City of London Corporation and the British Library hold copies that anyone can look at under supervision. A copy is also held by the Electoral Commission, the Boundary Commissions (which set constituency boundaries for most elections) and the Office for National Statistics. </p>
+                    <p>The City of London Corporation can use the register for its statutory duties relating to security, enforcing the law and preventing crime. There is more information on the City of London’s fair data processing policy under <a href="http://www.audit-commission.gov.uk/national-fraud-initiative/" target="_blank">National Fraud initiative</a>.</p>
+                    <p>The police and the security services can also use it for law enforcement.</p>
+                    <p>The register is used to call people for jury service.</p>
+                    <p>Government departments may buy the register from local registration officers and use it to help prevent and detect crime. They can also use it to safeguard national security by checking the background of job applicants and employees.</p>
+                    <p>Credit-reference agencies can buy the register to help them check the names and addresses of people applying for credit. They also use it to carry out identity checks when trying to prevent and detect money laundering.</p>
+                    <p>It is a criminal offence for anyone to supply or use the register for anything else. </p>
+                    <p>
+                      <strong>The open register</strong> is an extract of the full electoral register, but is not used for elections. It can be bought by any person, company or organisation. It is mainly used by businesses and charities to confirm name and address details. The personal data in the register must always be processed in line with Data Protection legislation.</p>
+                    <p>Your name and address will be included in the open access register unless you ask for them to be removed. Removing your details from the edited register would not affect your right to vote. The form that you complete to apply to register, and the annual registration form sent to your address, asks whether you wish to opt-out of the edited register.</p>
+                    <h3>Who uses the open register?</h3>
+                    <p>Users of the open register include:</p>
+                    <ul>
+                      <li>businesses checking the identity and address details of people who apply for their services such as insurance, goods hire and property rental, as well as when they shop online</li>
+                      <li>businesses selling age-restricted goods or services, such as alcohol and gambling online, to meet the rules on verifying the age of their customers</li>
+                      <li>charities and voluntary agencies, for example to help maintain contact information for those who have chosen to donate bone marrow and to help people separated by adoption to find each other</li>
+                      <li>charities, to help with fundraising and contacting people who have made donations</li>
+                      <li>debt-collection agencies when tracing people who have changed address without telling their creditors</li>
+                      <li>landlords and letting agents when checking the identity of potential tenants</li>
+                      <li>local councils when identifying and contacting residents, for example when issuing residents parking permits and other local services which require evidence of residency</li>
+                      <li>online directory firms to help users of the websites to find people, such as when reuniting friends and families</li>
+                      <li>organisations tracing and identifying beneficiaries of wills, pensions and insurance policies</li>
+                      <li>private-sector firms to verify details of job applicants</li>
+                    </ul>
+                  </div>
+                  <h2>
+                    <a class="on">&nbsp;Overseas electors</a>
+                  </h2>
+                  <div class="concertina-content">
+                    <p>​People who have moved abroad within the last 15 years but used to be registered as a resident in the City of London, may register to vote as an overseas elector. They will be entitled to vote in UK and European Parliamentary elections, but not at local elections. Registration must be renewed annually, but can be cancelled at any time.</p>
+                    <p>Forms to register as an overseas elector are available from <a href="/about-the-city/elections-and-wards/Pages/elections.aspx">Electoral Services</a> or <a href="http://www.aboutmyvote.co.uk/">About My Vote</a>.</p>
+                  </div>
+                  <h2>
+                    <a class="on">Service and Crown Servant voters</a>
+                  </h2>
+                  <div class="concertina-content">
+                    <p>Crown Servants or British Council employees working outside of the UK, or the spouse/civil partner of one, may register by completing the appropriate form. This must be renewed every year but may be cancelled at any time.</p>
+                    <p>Forms to register as a Service or Crown Servant voter are available from <a href="/about-the-city/elections-and-wards/Pages/elections.aspx">Electoral Services</a> or <a href="http://www.aboutmyvote.co.uk/" target="_blank">About My Vote</a>.​</p>
+                  </div>
+                  <h2>
+                    <a class="on">Declaration of Local Connection</a>
+                  </h2>
+                  <div class="concertina-content">
+                    <p>​Homeless people may register to vote by completing the form. They should register at the address of a place where they spend a substantial part of their time, whether by day or night (or the address nearest that place).</p>
+                    <p>Patients in mental hospitals may register by completing the form. Voluntary or detained patients (but not those detained for criminal activity) may register at the institution they are currently resident, or at the address at which they would be living or have previously lived.</p>
+                    <p>Remand prisoners may register by completing the form. Remand (but not convicted) prisoners may register at the institution at which they are currently resident, or the address at which they would be living, or have previously lived.</p>
+                    <p>All declarations of local connection must be renewed annually but may be cancelled at any time.</p>
+                    <p>To request a Declaration of Local Connection form please <a href="/about-the-city/elections-and-wards/Pages/elections.aspx">contact Electoral Services</a>.</p>
+                  </div>
+                  <h2>
+                    <a class="on">Jury service </a>
+                  </h2>
+                  <div class="concertina-content">
+                    <p>​If a person is over the age of 70 they are no longer eligible for jury service. On the voter registration form there is a box to be ticked informing us that you are over 70.</p>
+                  </div>
+                </div>
+              </div>
+              <div id="ctl00_spWebPartManager_g_a137d2a5_29aa_4746_a034_0c346c7fc586">
+                <div id="ctl00_spWebPartManager_g_a137d2a5_29aa_4746_a034_0c346c7fc586_ctl00_rating" class="container-rating">
+                  <input type="image" name="ctl00$spWebPartManager$g_a137d2a5_29aa_4746_a034_0c346c7fc586$ctl00$star1" id="ctl00_spWebPartManager_g_a137d2a5_29aa_4746_a034_0c346c7fc586_ctl00_star1" title="Rate this page 1 out of 5" src="/_layouts/CityOfLondon.SharePoint/images/interface/rating-off.png" alt="1 out of 5" border="0" />
+                  <span class="hide"> | </span>
+                  <input type="image" name="ctl00$spWebPartManager$g_a137d2a5_29aa_4746_a034_0c346c7fc586$ctl00$star2" id="ctl00_spWebPartManager_g_a137d2a5_29aa_4746_a034_0c346c7fc586_ctl00_star2" title="Rate this page 2 out of 5" src="/_layouts/CityOfLondon.SharePoint/images/interface/rating-off.png" alt="2 out of 5" border="0" />
+                  <span class="hide"> | </span>
+                  <input type="image" name="ctl00$spWebPartManager$g_a137d2a5_29aa_4746_a034_0c346c7fc586$ctl00$star3" id="ctl00_spWebPartManager_g_a137d2a5_29aa_4746_a034_0c346c7fc586_ctl00_star3" title="Rate this page 3 out of 5" src="/_layouts/CityOfLondon.SharePoint/images/interface/rating-off.png" alt="3 out of 5" border="0" />
+                  <span class="hide"> | </span>
+                  <input type="image" name="ctl00$spWebPartManager$g_a137d2a5_29aa_4746_a034_0c346c7fc586$ctl00$star4" id="ctl00_spWebPartManager_g_a137d2a5_29aa_4746_a034_0c346c7fc586_ctl00_star4" title="Rate this page 4 out of 5" src="/_layouts/CityOfLondon.SharePoint/images/interface/rating-off.png" alt="4 out of 5" border="0" />
+                  <span class="hide"> | </span>
+                  <input type="image" name="ctl00$spWebPartManager$g_a137d2a5_29aa_4746_a034_0c346c7fc586$ctl00$star5" id="ctl00_spWebPartManager_g_a137d2a5_29aa_4746_a034_0c346c7fc586_ctl00_star5" title="Rate this page 5 out of 5" src="/_layouts/CityOfLondon.SharePoint/images/interface/rating-off.png" alt="5 out of 5" border="0" />
+                  <span class="total-rating">
+        Currently rated <span class="current-rating">0</span> out of 5 (<span class="votes-number">0</span> votes)
+    </span>
+                </div>
+                <div id="pageId">
+                  <input type="hidden" name="ctl00$spWebPartManager$g_a137d2a5_29aa_4746_a034_0c346c7fc586$ctl00$PageId" id="ctl00_spWebPartManager_g_a137d2a5_29aa_4746_a034_0c346c7fc586_ctl00_PageId" value="0a17389c-5554-404d-9137-531e00fe4b7c" />
+                </div>
+                <div id="serviceUrl">
+                  <input type="hidden" name="ctl00$spWebPartManager$g_a137d2a5_29aa_4746_a034_0c346c7fc586$ctl00$ServiceUrl" id="ctl00_spWebPartManager_g_a137d2a5_29aa_4746_a034_0c346c7fc586_ctl00_ServiceUrl" value="http://www.cityoflondon.gov.uk" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-sub-content"></div>
+          <!-- Peripheral content -->
+        </div>
+        <!-- /container-content -->
+        <!-- Secondary content -->
+        <div class="container-bar-explore-the-site">
+          <div class="container-explore-the-site noindex">
+            <h2>Explore the site</h2>
+            <ul class="explore-the-site">
+              <li>
+                <a href="/about-the-city/about-us/Pages/default.aspx">
+                  <img src="/about-the-city/PublishingImages/explore-this-site-1.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">About us</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/how-we-make-decisions/Pages/default.aspx">
+                  <img src="/about-the-city/about-us/PublishingImages/explore.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">How we make decisions</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/the-lord-mayor/Pages/default.aspx">
+                  <img src="/about-the-city/the-lord-mayor/PublishingImages/jeffrey-evans-130x86.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">Lord Mayor Alderman the Lord Mountevans</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/about-us/Pages/key-facts.aspx">
+                  <img src="/about-the-city/about-us/PublishingImages/key-stats-small.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">Key facts</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/the-lord-mayor/mansion-house/Pages/default.aspx">
+                  <img src="/about-the-city/PublishingImages/explore-this-site-5.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">Mansion House</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/elections-and-wards/Pages/default.aspx">
+                  <img src="/about-the-city/elections-and-wards/PublishingImages/ballot-box-ets.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">Voting and elections</span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-the-city/about-us/Pages/how-to-find-us.aspx">
+                  <img src="/about-the-city/PublishingImages/explore-this-site-7.jpg" alt="" width="130" height="86" />
+                  <span class="label border-box">How to find us</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END PAGE CONTENT -->
+        <hr class="hide" />
+        <!-- START FOOTER -->
+        <div class="container-footer-breadcrumb">
+          <div class="container-breadcrumb noindex">
+            <dl class="breadcrumb">
+              <dt>
+        You are here:
+      </dt>
+              <dd>
+                <a href="/Pages/default.aspx">Home</a> &gt; </dd>
+              <dd>
+                <a href="/about-the-city/Pages/default.aspx">About the City</a> &gt; </dd>
+              <dd>
+                <a href="/about-the-city/elections-and-wards/Pages/default.aspx">Voting and elections</a>
+              </dd>
+              <dd> &gt; Residential registration</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="container-footer-services-contact">
+          <div class="container-services-contact">
+            <div class="container-services noindex">
+              <dl class="services">
+                <dt>Services and contacts</dt>
+                <dd>
+                  <a href="http://email.cityoflondon.gov.uk/linkapp/cmasubs.aspx?LinkID=pageid986790jkkzhq@f@f@n9qh@z@f@n9qh@f@f" class="icon-eshot">Sign up for eShot</a>
+                </dd>
+                <dd>
+                  <a href="http://www.facebook.com/CityofLondonCorp" class="icon-facebook">Like us on Facebook</a>
+                </dd>
+                <dd>
+                  <a href="/about-our-website/Pages/mobile.aspx" class="icon-mobile">Mobile</a>
+                </dd>
+                <dd>
+                  <a href="/report-pay-apply/Pages/report-pay-apply.aspx" class="icon-online">Report, Pay, Apply</a>
+                </dd>
+                <dd>
+                  <a href="https://twitter.com/#!/cityoflondon" class="icon-twitter">Follow us on Twitter</a>
+                </dd>
+                <dd>
+                  <a href="/maps/Pages/default.aspx" class="icon-maps">Maps</a>
+                </dd>
+                <dd>
+                  <a href="/contact-us/Pages/default.aspx" class="icon-contact">Contact us</a>
+                </dd>
+                <dd>
+                  <a href="https://www.youtube.com/user/CityofLondonvideos/videos" class="icon-you-tube">Watch on YouTube</a>
+                </dd>
+                <dd>
+                  <a href="/about-the-city/about-us/Pages/social-media.aspx" class="icon-social">Social media</a>
+                </dd>
+              </dl>
+            </div>
+            <div class="container-contact noindex">
+              <dl class="contact border-box">
+                <dt>Get in touch</dt>
+                <dd>
+                  <span class="access-text">Address: </span>City of London, Guildhall, PO Box 270, London, EC2P 2EJ</dd>
+                <dd>
+                  <span class="access-text">Telephone: </span>
+                  <strong>020 7606 3030</strong>
+                </dd>
+                <dd>
+                  <span class="access-text">Email: </span>
+                  <a href="mailto:pro@cityoflondon.gov.uk">pro@cityoflondon.gov.uk</a>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="container-footer-global-links">
+          <div class="container-global-links noindex">
+            <strong>&copy; City of London 2016</strong>
+            <dl class="global-links">
+              <dt>Global links</dt>
+              <dd>
+                <a href="/about-our-website/Pages/accessibility.aspx">Accessibility</a>
+              </dd>
+              <dd>
+                <a href="/about-our-website/Pages/legal-notices.aspx">Legal notices</a>
+              </dd>
+              <dd>
+                <a href="/about-our-website/Pages/legal-notices.aspx#privacy">Privacy statement</a>
+              </dd>
+              <dd>
+                <a href="/about-our-website/Pages/legal-notices.aspx#socialmedia">Social media policy</a>
+              </dd>
+              <dd>
+                <a href="/about-our-website/Pages/Cookies.aspx">Cookie policy</a>
+              </dd>
+              <dd>
+                <a href="/about-our-website/sitemap.aspx">Sitemap</a>
+              </dd>
+            </dl>
+            <fieldset class="our-other-sites">
+              <legend class="access-text">
+                <label for="ctl00_cphFooter_colspucFooter_ddlOtherSites" id="ctl00_cphFooter_colspucFooter_lblOtherSites">Select one of our other sites:</label>
+              </legend>
+              <select name="ctl00$cphFooter$colspucFooter$ddlOtherSites" id="ctl00_cphFooter_colspucFooter_ddlOtherSites">
+                <option value="">Our other sites</option>
+                <option value="http://www.barbican.org.uk/">Barbican</option>
+                <option value="http://www.citybridgetrust.org.uk/">City Bridge Trust</option>
+                <option value="http://www.cityoflondon.police.uk/">City of London Police</option>
+                <option value="http://www.towerbridge.org.uk/">Tower Bridge Exhibition</option>
+              </select>
+              <input type="submit" name="ctl00$cphFooter$colspucFooter$cmdOtherSites" value="Go" id="ctl00_cphFooter_colspucFooter_cmdOtherSites" />
+            </fieldset>
+            <div class="access-text mobile">
+              <a href="#PAGETOP">Back to top</a>
+            </div>
+          </div>
+        </div>
+        <!-- END FOOTER -->
+        <!-- START COOKIE BANNER -->
+        <div class="container-floating-notifications">
+          <div class="container-notifications noindex">
+            <h2 class="access-text">Notifications</h2>
+            <ul>
+              <li>The City of London website uses cookies. For details on how we use cookies <a href="/about-our-website/Pages/cookies.aspx">please read our policy on cookies</a>. <a id="btnHideCookieBanner" href="#">Hide this banner</a> (this requires a cookie).</li>
+            </ul>
+          </div>
+        </div>
+        <!-- END COOKIE BANNER -->
+      </div>
+      <!-- /s4-nosetwidth colPageWrapper -->
+    </form>
+    <script type="text/javascript">/*<![CDATA[*/
+// survey
+var surveyPanel = document.getElementById("ColSiteSurvey");
+var surveyCookie = getCookie('CoLSurveyClose');
+if (surveyCookie != null && surveyPanel != undefined) { surveyPanel.style.display = "none"; }
+function hideSurvey() { setCookie('CoLSurveyClose', 'true', 1); surveyPanel.style.display = "none"; }
+function changeMargin() { surveyPanel.style.marginRight != "-5px" ? surveyPanel.style.marginRight = "-5px" : surveyPanel.style.marginRight = "-250px"; }
+// analytics
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m.nextSibling) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-21582611-1');
+ga('send', 'pageview');
+var aLinks = document.getElementsByTagName("A");
+for (c=0; c<=aLinks.length; c++) {
+    if (aLinks[c] && aLinks[c].attributes["href"] && aLinks[c].attributes["href"].value.indexOf(".pdf") != -1) {
+        addListener(aLinks[c], "click", function(e) {
+            ga('send', 'event', 'PDF', 'Download', getNearestAnchor(e.target ? e.target : e.srcElement).attributes["href"].value, {'nonInteraction': 1});
+        });
+    }
+    if (aLinks[c] && aLinks[c].attributes["href"] && aLinks[c].attributes["href"].value.indexOf(".xls") != -1) {
+        addListener(aLinks[c], "click", function(e) {
+            ga('send', 'event', 'XLS', 'Download', getNearestAnchor(e.target ? e.target : e.srcElement).attributes["href"].value, {'nonInteraction': 1});
+        });
+    }
+}
+// utilities
+function getNearestAnchor(element) { while (element.tagName != "A") { element = element.parentElement; } return element; }
+function addListener(element, type, callback) { if (element.addEventListener) element.addEventListener(type, callback); else if (element.attachEvent) element.attachEvent('on' + type, callback); }
+function getCookie(name){var nameEQ=name+"=";var ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1,c.length);if(c.indexOf(nameEQ)==0)return c.substring(nameEQ.length,c.length);}return null; }
+function setCookie(name,value,days){if(days){var date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));var expires="; expires="+date.toGMTString();}else var expires="";document.cookie=name+"="+value+expires+"; path=/"; }
+/*]]>*/</script>
+  </body>
+</html>
+<!-- Rendered using cache profile:Public Internet (Purely Anonymous) at: 2016-02-07T01:18:29 -->

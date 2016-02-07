@@ -1,0 +1,523 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+	<!-- #BeginEditable "doctitle" -->
+<title>Simple Search</title>
+<!-- #EndEditable -->
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" /><meta name="Generator" content="Goss iCM - Intelligent Content Management" />
+    <meta name="eGMS.subject.keyword" scheme="LGCL1.02" content="Planning;development planning;Planning Applications;Planning Permission" />
+    <meta name="eGMS.Subject.category" scheme="GCL" content="Planning (town and country)" />
+    <meta name="eGMS.Subject.category" scheme="IPSV1.0" content="Planning (town and country);Water supply;Change of use (land or buildings);Waste disposal;Planning applications" />
+    <meta name="eGMS.Subject.category" scheme="LGCL1.02" content="Planning" />
+    <meta name="partner" content="" />
+    <meta name="WT.cg_n" content="Home; Environment and planning; Planning; Planning applications" />
+    <meta name="DCSext.category" content="Living - Building/planning" />
+    <meta name="DCSext.publisher" content="Dorset For You" />
+    <meta name="description" content="General guidance about the kinds of work for which you need to apply for planning permission and those that you do not. " />
+    <link href="http://planning.eastdorsetdc.gov.uk/online-applications-skin/styles/eastdorset/editor.css" rel="STYLESHEET" type="text/css" media="all" />
+    <link href="http://planning.eastdorsetdc.gov.uk/online-applications-skin/styles/eastdorset/style.css" rel="STYLESHEET" type="text/css" media="all" />
+    <link href="http://planning.eastdorsetdc.gov.uk/online-applications-skin/styles/eastdorset/styleprint.css" rel="STYLESHEET" type="text/css" media="print" />
+    <link href="http://planning.eastdorsetdc.gov.uk/online-applications-skin/styles/eastdorset/style3.css" rel="STYLESHEET" type="text/css" media="all" />
+
+    <link href="http://planning.eastdorsetdc.gov.uk/online-applications-skin/Templates/favicon.ico" rel="shortcut icon" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="http://cf.kampyle.com/k_button.css" />
+
+
+
+	<!-- IDOX PA -->
+    <link rel="stylesheet" href="http://planning.eastdorsetdc.gov.uk/online-applications-skin/styles/screen.css" type="text/css" media="screen,projection" />
+    <!--[if lte IE 7]><link href="http://planning.eastdorsetdc.gov.uk/online-applications-skin/styles/ie.css" rel="stylesheet" type="text/css" media="screen, projection" /><![endif]-->
+    
+    <script type="text/javascript" src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/scripts/jquery.js"></script>
+    <script type="text/javascript" src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/scripts/jquery.clickmenu.pack.js"></script>
+    
+    <script type="text/javascript">$(document).ready(function()
+    {
+        $('#list').clickMenu();
+    });
+    </script>
+    
+    <!-- #BeginEditable "head" -->
+<script type="text/javascript">
+    $(document).ready( function() {
+
+    $('A[rel="external"]').click( function() {
+        var tools = "resizable,toolbar=no,location=no,scrollbars=yes,menubar=no,width=730,height=580,top=0,left=0";
+        var newWindow = window.open( $(this).attr('href'),'newWin',tools );
+        newWindow.focus();
+        return false;
+    });
+
+});
+</script>
+<!-- #EndEditable -->
+
+</head>
+<body>
+
+	<div id="main-box">
+		<a class="hidelink" href="http://www.dorsetforyou.com/160186#skipnavigation" accesskey="s" title="Jump to the main content">Skip Navigation</a>
+		<div id="site-wrap">
+			<div id="header" style="">
+                <a href="http://www.dorsetforyou.com/" title="dorsetforyou.com home" accesskey="1">
+                    <img src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/images/eastdorset/logo.gif" alt="dorsetforyou.com home" />
+                </a>
+                <span id="topofpage" class="noprint"></span>
+                
+                <div class="top-utilities-bar noprint">
+					<div class="topNavBox">
+                        <ul>
+                            <li class="last"><a href="http://www.dorsetforyou.com/atoz" title="Read more about A-Z index">A-Z index</a></li>
+                            <li class="notlast"><a href="http://www.dorsetforyou.com/findyournearest" title="Read more about Find your nearest (redirect)">Find your nearest</a></li>
+                            <li class="notlast"><a href="http://www.dorsetforyou.com/sitemap" accesskey="3" title="Read more about Site map">Site map</a></li>
+                            <li class="notlast"><a href="http://www.dorsetforyou.com/news" accesskey="2" title="Read more about News">News</a></li>
+                            <li class="notlast"><a href="http://www.dorsetforyou.com/accessibility" accesskey="0" title="Read more about Accessibility statement">Accessibility</a></li>
+                            <li class="notlast"><a href="http://www.dorsetforyou.com/388590" accesskey="7" title="Read more about Contact us">Contact us</a></li>
+                        </ul>
+                	</div>
+			
+            		<div class="search-box">
+						<form method="get" action="http://search.dorsetforyou.com/cgi-bin/semaphoreserver.exe" onsubmit="if(QUERY00.value=='enter keyword') QUERY00.value='';">
+							<fieldset>
+                                <input type="hidden" name="DB" value="new_d4u" />
+                                <input type="hidden" name="HIDECONCEPT" value="1" />
+                                <input type="hidden" name="ORGANISE_CODED" value=":F9" />
+                                <input type="hidden" name="B" value="F2Dorset For You" />
+                                <input type="hidden" name="B" value="THTML" />
+                                <input type="hidden" name="STYPE" value="SIMPLE" />
+                                <input type="hidden" name="QUERY07" value="MUSCOPYCGI:QUERY00" />
+                                <input type="hidden" name="PROP07" value="t=p,z=on,p=I9,s=none" />
+                                <input type="hidden" name="THRESHOLD" value="50" />
+                                <label for="keyword">Enter keyword:</label>
+                                <input type="text" id="keyword" name="QUERY00" class="text" accesskey="4" />
+                                <input class="btn" type="image" name="CMD=search.run" src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/images/eastdorset/btn-search.gif" title="Search" alt="Search" />
+
+							</fieldset>
+						</form>
+					</div>
+				</div>	
+		 	</div>
+			
+            <div class="breadcrumbs">
+				<span>You are here:</span>
+				
+                <ul class="noprint">
+					<li class="not_lastone"><a href="http://www.dorsetforyou.com/" title="Go back to Home">Home</a></li>
+                    <li class="not_lastone"><a href="http://www.dorsetforyou.com/384613" title="Go back to Environment and planning">Environment and planning</a></li>
+                    <li class="not_lastone"><a href="http://www.dorsetforyou.com/planning" title="Go back to Planning">Planning</a></li>
+                    <li class="lastone">Planning applications</li>
+				</ul>
+				
+                <span class="printonly">http://www.dorsetforyou.com/160186</span>
+			</div>
+			
+            <div id="container">
+				<div class="left-column noprint">
+					<div class="nav">
+						<h1 id="hidden_nav">Navigation</h1>
+						
+                        <h2>Browse our services</h2>
+						
+                        <ul>
+							<li class="normal"><a href="http://www.dorsetforyou.com/" title="Go to Home Page">Home</a></li>
+							<li class="normal"><a href="http://www.dorsetforyou.com/384613" title="Read more about Environment and planning">Environment and planning</a></li>
+							<li class="normal"><a href="http://www.dorsetforyou.com/planning" title="Read more about Planning">Planning</a>
+								<ul>
+									<li class="normal"><a href="http://www.dorsetforyou.com/planningapplications">Planning application search</a></li>
+									<li class="active">Planning applications
+										<ul>
+											<li class="normal"><a href="http://www.dorsetforyou.com/388714">Planning application search</a></li>
+											<li class="normal"><a href="http://www.dorsetforyou.com/332236">Application forms</a></li>
+											<li class="normal"><a href="http://www.dorsetforyou.com/327045" title="">Applying for planning permission </a></li>
+											<li class="normal"><a href="http://www.dorsetforyou.com/160187">Do I need planning permission?</a></li>
+											<li class="normal"><a href="http://www.dorsetforyou.com/363371">Planning constraints</a></li>
+											<li class="normal"><a href="http://www.dorsetforyou.com/341440" title="">Planning fees</a></li>
+										</ul>
+									</li>
+									<li class="normal"><a href="http://www.dorsetforyou.com/384707">Planning advice and guidance</a></li>
+                                    <li class="normal"><a href="http://www.dorsetforyou.com/384700">Coastline - protection</a></li>
+                                    <li class="normal"><a href="http://www.dorsetforyou.com/385847">Listed buildings register</a></li>
+                                    <li class="normal"><a href="http://www.dorsetforyou.com/384711">Planning - high hedges</a></li>
+                                    <li class="normal"><a href="http://www.dorsetforyou.com/386412">Local Transport Plan</a></li>
+                                    <li class="normal"><a href="http://www.dorsetforyou.com/planningappeals" title="">Planning appeals</a></li>
+                                    <li class="normal"><a href="http://www.dorsetforyou.com/384704">Planning enforcement</a></li>
+                                    <li class="normal"><a href="http://www.dorsetforyou.com/localplans">Planning policy</a></li>
+                                    <li class="normal"><a href="http://www.dorsetforyou.com/393463">Planning committees</a></li>
+                                    <li class="normal"><a href="http://www.dorsetforyou.com/384769">Planning - environmental policies</a></li>
+                                    <li class="normal"><a href="http://www.dorsetforyou.com/395972">Highway and Transport Development Control</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+					
+			 	<div class="right-column noprint"></div>
+
+				<div class="center-column" id="skipnavigation">
+					<div id="content">
+
+                        <!-- IDOX PA START -->
+                        
+                        <div id="idox">
+                            <div id="pa">
+                                <div class="container">
+                                    <ul id="list">	
+                                        <li id="search"><a href="#"><span>Search</span></a>
+                                            <ul>
+                                                <li id="planBasicSearch"><a href="http://planning.eastdorsetdc.gov.uk/online-applications/search.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=simple&amp;searchType=Application">Simple Search</a></li>
+                                                <li id="planAdvancedSearch"><a href="http://planning.eastdorsetdc.gov.uk/online-applications/search.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=advanced&amp;searchType=Application">Advanced Search</a></li>
+                                                <li id="planListSearch"><a href="http://planning.eastdorsetdc.gov.uk/online-applications/search.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=weeklyList&amp;searchType=Application">Weekly/Monthly Lists</a></li>
+                                                <li id="planPropertySearch"><a href="http://planning.eastdorsetdc.gov.uk/online-applications/search.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=property&amp;type=custom">Property Search</a></li>
+                                                <!-- #BeginLibraryItem "/Library/mapPlanningNavItem.lbi" -->
+
+
+
+
+
+
+
+    <li id="planMapsearch">
+        
+        <a href="/online-applications/spatialDisplay.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=display&amp;searchType=Application">Map Search</a>
+    </li>
+<!-- #EndLibraryItem -->
+                                            </ul>
+                                        </li>				  
+                                        <!-- #BeginEditable "applicationForms" -->
+
+
+
+
+
+   
+<!-- #EndEditable -->
+                                        <li id="myprofile"><a href="http://planning.eastdorsetdc.gov.uk/online-applications/registered/displayUserDetails.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76"><span>My Profile</span></a>
+                                            <ul>
+                                                <!-- #BeginLibraryItem "/Library/consulteeInTrayNavItem.lbi" -->
+
+
+
+
+
+
+    <!-- #EndLibraryItem -->
+                                                <li><a href="http://planning.eastdorsetdc.gov.uk/online-applications/registered/displayUserDetails.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76">Profile Details</a></li>
+                                                <li><a href="http://planning.eastdorsetdc.gov.uk/online-applications/registered/savedSearch.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=display">Saved Searches</a></li>
+                                                <li><a href="http://planning.eastdorsetdc.gov.uk/online-applications/registered/userAdmin.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=showNotifiedApplications">Notified Applications</a></li>
+                                                <li><a href="http://planning.eastdorsetdc.gov.uk/online-applications/registered/trackedApplication.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=display">Tracked Applications</a></li>
+                                                <!-- #BeginEditable "formSubmissions" -->
+
+
+
+
+
+
+
+
+<!-- #EndEditable -->    							
+                                            </ul>
+                                        </li>
+                                        <li id="loginLink"><!-- #BeginEditable "loginlogout" -->
+
+
+
+
+
+
+
+
+
+
+	<a href="/online-applications/registered/userAdmin.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76">Login</a>
+<!-- #EndEditable --></li>
+                                        <!-- #BeginEditable "register" -->
+
+
+
+
+
+
+
+
+   
+
+
+	<li id="register">
+        <a href="/online-applications/registrationWizard.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=start">Register</a>
+	</li>
+
+<!-- #EndEditable -->
+                                    </ul>
+                                    
+                                    <div id="pageheading">
+                                        <h2><strong>Planning</strong> &raquo; <!-- #BeginEditable "pageheading" -->Simple Search <!-- #EndEditable --></h2>
+                                        <!-- #BeginEditable "helplink" --><!-- #EndEditable -->
+                                    </div>
+                                
+                                    <!-- START WAM CONTENT -->
+                                    <div class="content">
+                                        <!-- #BeginEditable "errormsg" -->
+  
+    
+    
+
+    
+    
+<!-- #EndEditable -->
+                                        <!-- #BeginEditable "pagehead" -->
+    <p>
+        Search for Planning Applications, Appeals and Enforcements by keyword, application reference, postcode or by a single line of an address.
+    </p>
+<!-- #EndEditable -->
+                                        <!-- #BeginEditable "tabs" -->
+<ul class="tabs">
+<li><a href="http://planning.eastdorsetdc.gov.uk/online-applications/search.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=simple" class="active">Simple</a></li>
+<li><a href="http://planning.eastdorsetdc.gov.uk/online-applications/search.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=advanced">Advanced</a></li>
+<li><a href="http://planning.eastdorsetdc.gov.uk/online-applications/search.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=weeklyList">Weekly/Monthly Lists</a></li>
+<li><a href="http://planning.eastdorsetdc.gov.uk/online-applications/search.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=property&amp;type=custom">Property</a></li>
+<!-- #BeginLibraryItem "/Library/mapTabItem.lbi" -->
+
+
+
+
+
+
+
+    <li>
+        
+        <a href="/online-applications/spatialDisplay.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=display&amp;searchType=Application">Map</a>
+    </li>
+<!-- #EndLibraryItem -->
+</ul><!-- #EndEditable -->
+                                        <!-- #BeginEditable "tabsubnav" --><!-- #EndEditable -->
+                                        <!-- #BeginEditable "pagebody" -->
+<div class="tabcontainer toplevel" id="simpleSearch">
+    <form name="searchCriteriaForm" method="post" action="/online-applications/simpleSearchResults.do;jsessionid=15E6E8E57542B18A3DCEB1A3908BAA76?action=firstPage" id="simpleSearchForm">
+
+<div class="row1">
+    <span id="searchfor">
+        Search for:
+    </span>
+
+    
+    
+        <label for="Application">
+            <input type="radio" name="searchType" value="Application" checked="checked" id="Application" />
+            Applications
+        </label>
+    
+        <label for="Appeal">
+            <input type="radio" name="searchType" value="Appeal" id="Appeal" />
+            Appeals
+        </label>
+    
+        <label for="Enforcement">
+            <input type="radio" name="searchType" value="Enforcement" id="Enforcement" />
+            Enforcements
+        </label>
+    
+	
+</div>
+
+<div class="row2">
+    <label for="simpleSearchString">
+        
+            Enter a <strong>keyword</strong>, <strong>reference number</strong>, <strong>postcode</strong> or <strong>single line of an address</strong>.
+        
+        
+    </label>
+</div>
+
+<div class="row3">
+    <span class="fieldhelp">
+        
+            <a href="http://planning.eastdorsetdc.gov.uk/online-applications-skin/help/fieldhelp/simpleSearchString.htm" target="_blank" rel="external">
+                <img src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/images/help.gif" alt="Help with Simple Search (opens in a new window)" title="Help with Simple Search (opens in a new window)" width="16" height="16" class="helpicon" />
+            </a>
+        
+        
+    </span>
+    <input type="text" name="searchCriteria.simpleSearchString" maxlength="255" value="" onblur="javascript:this.value=this.value.replace(/^\s+|\s+$/g,'')" onfocus="javascript:this.value=this.value.replace(/^\s+|\s+$/g,'')" class="text" id="simpleSearchString" />
+
+    <input type="hidden" name="searchCriteria.simpleSearch" value="true" />
+    <input type="submit" value="Search" class="button primary" />
+		
+    </div>
+
+    </form>
+</div>
+<!-- #EndEditable -->
+                                        <!-- #BeginEditable "pagefoot" --><!-- #EndEditable -->
+                                    </div>
+                                    <!-- END WAM CONTENT -->
+                                    
+                                    <p id="poweredBy">
+                                        <a target="_blank" href="http://www.idoxgroup.com/">
+                                            <img alt="Powered by IDOX (opens in a new window)" title="Go to the IDOX Website (opens in a new window)" src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/images/idox.gif"/>              	
+                                        </a>          	
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- IDOX PA END -->
+					
+                    	<div class="clear"></div>
+				 	</div>
+				</div>
+		 	</div>	
+            <div id="footer">
+			<div id="socialGroup">
+			 	<div id="socialRight">
+					<h3>Do more with this site</h3>
+					<ul>
+						<li>
+							<a href="http://www.flickr.com/photos/dorsetforyou" onclick="window.open('http://www.flickr.com/photos/dorsetforyou'); return false;">
+								<img src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/images/eastdorset/flickr.jpg" title="dorsetforyou.com photo library (opens in a new window)" alt="dorsetforyou.com photo library" />					</a>						
+                      	</li>
+						<li>
+							<a href="http://www.dorsetforyou.com/blogs" onclick="window.open('http://www.dorsetforyou.com/blogs'); return false;">
+								<img src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/images/eastdorset/wordpress-logo.jpg" title="dorsetforyou.com blogs (opens in a new window)" alt="dorsetforyou.com blogs" />
+                         	</a>				
+                      	</li>
+						<li>
+							<a href="http://www.youtube.com/dorsetforyou" onclick="window.open('http://www.youtube.com/dorsetforyou'); return false;">
+								<img src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/images/eastdorset/youtube.jpg" title="dorsetforyou.com videos (opens in a new window)" alt="dorsetforyou.com videos" />
+                        	</a>						
+                     	</li>
+						<li>
+							<a href="http://www.dorsetforyou.com/onlineservices">
+								<img src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/images/eastdorset/onlineserviceslogo.jpg" title="dorsetforyou.com online services" alt="dorsetforyou.com online services" />
+                           	</a>
+						</li>
+						<li>
+							<a href="http://www.dorsetforyou.com/onlinecommunities">
+								<img src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/images/eastdorset/Online_communities_logo.jpg" title="dorsetforyou.com online communities" alt="dorsetforyou.com online communities" />
+                          	</a>
+						</li>
+						<li>
+							<a href="http://www.twitter.com/dorsetforyou" onclick="window.open('http://www.twitter.com/dorsetforyou'); return false;">
+								<img src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/images/eastdorset/twitter.jpg" title="dorsetforyou.com twitter (opens in a new window)" alt="dorsetforyou.com twitter" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div id="socialToolbar">
+				<div id="footer_atoz">
+					<ul>
+						<li id="atozindex">A-Z index</li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/387942" title="Read more about A">A</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/387944" title="Read more about B">B</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/387947" title="Read more about C">C</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/387949" title="Read more about D">D</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388152" title="Read more about E">E</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388178" title="Read more about F">F</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388208" title="Read more about G">G</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388223" title="Read more about H">H</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388278" title="Read more about I">I</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388289" title="Read more about J">J</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388293" title="Read more about K">K</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388296" title="Read more about L">L</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388329" title="Read more about M">M</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388370" title="Read more about N">N</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388379" title="Read more about O">O</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388385" title="Read more about P">P</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388431" title="Read more about R">R</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388477" title="Read more about S">S</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388527" title="Read more about T">T</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388551" title="Read more about V">V</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388561" title="Read more about W">W</a></li>
+                        <li class="notlast"><a href="http://www.dorsetforyou.com/388576" title="Read more about Y">Y</a></li>
+                        <li class="last"><a href="http://www.dorsetforyou.com/388583" title="Read more about Z">Z</a></li>
+					</ul>
+				</div>
+				<div id="footer_utils">
+					<ul>
+						<li class="notlast"><a href="http://www.dorsetforyou.com/privacypolicy" title="Read more about Privacy policy">Privacy policy</a></li>
+						<li class="notlast"><a href="http://www.dorsetforyou.com/termsandconditions" accesskey="8" title="Read more about Terms and conditions">Terms and conditions</a></li>
+						<li class="last"><a href="http://www.dorsetforyou.com/websitestatistics" title="Read more about Website statistics">Website statistics</a></li>
+						<li>
+							<div class="directgovlogo">
+								<a href="http://www.direct.gov.uk/en/index.htm" title="Go to DirectGov: straight through to public services (opens in a new window)" onclick="window.open('http://www.direct.gov.uk/en/index.htm'); return false;">
+									<img src="http://planning.eastdorsetdc.gov.uk/online-applications-skin/images/eastdorset/directgov.gif" alt="DirectGov : straight through to public services : www.direct.gov.uk (opens in a new window)" />					</a>						
+                         	</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+		</div>
+		
+	</div>
+		<script type="text/javascript"><!--
+
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		
+//--></script>
+		<script type="text/javascript"><!--
+
+			try {
+			var paramsToAdd = '';
+			if(document.URL.indexOf('?') != -1){
+				var sep = false;
+				var strParams = document.URL.substr(document.URL.indexOf('?')+1);
+				var params = strParams.split('&');
+				for(var i=0; i < params.length; i++){
+					if(params[i].indexOf('articleid') == -1){
+						paramsToAdd += sep ? '&' : '?';
+						paramsToAdd += params[i];
+					}
+				}
+			}
+			var pageTracker = _gat._getTracker("UA-9661972-1");
+			pageTracker._setDomainName(".dorsetforyou.com");
+			pageTracker._trackPageview("/Home/Environment and planning/Planning/Planning applications" + paramsToAdd);
+			} catch(err) {}
+		
+//--></script>
+
+	
+	
+	
+	
+
+
+
+
+
+
+
+</body>
+</html>
+

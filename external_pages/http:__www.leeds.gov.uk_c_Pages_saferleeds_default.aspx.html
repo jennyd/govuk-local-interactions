@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html id="ctl00_html_tag" xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" dir="ltr">
+<head><meta http-equiv="X-UA-Compatible" content="IE=8" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" />
+    <!-- Mobile Specific Metas
+       ================================================== -->
+    
+
+<script src='//code.jquery.com/jquery-1.7.2.min.js' type='text/javascript'></script>
+
+
+<script type="text/javascript">
+    function Custom_AddListMenuItems(m, ctx) {
+        AddECBMenuItems(m, ctx);  
+    }
+
+    function Custom_AddDocLibMenuItems(m, ctx) {
+        AddECBMenuItems(m, ctx);
+    }
+
+    function AddECBMenuItems(m, ctx) {
+        var pageUrl = ctx.HttpRoot + "/_layouts/NY.ExportVersionHistory/ExportVersionHistory.aspx?ID=" + currentItemID + "&amp;List=" + ctx.listName;
+        if (ctx.verEnabled) {
+            CAMOpt(m, "Export Version History", "window.open('" + pageUrl + "');", "/_layouts/images/NY.ExportVersionHistory/Excel_Small.png");
+            CAMSep(m);
+        }
+    }
+</script>
+<meta name="description" content="Welcome to Safer Leeds, a community safety partnership involving Leeds City Council, West Yorkshire Police and partners. The partnership works from different locations across the city, but are focused on 2 Great George Street in the City Centre. 
+
+" /><meta name="keywords" content="safer leeds, crime, internet safety, begging, anti social behaviour, noise nuisance" /><script src='//code.jquery.com/jquery-1.7.2.min.js' type='text/javascript'></script>
+<script src='/_layouts/LCC.SharePoint.JQuery/CookieBanner.js' type='text/javascript'></script>
+<!-- Web chat tracking code provided by connection point. START -->
+<script src="http://static.atgsvcs.com/js/atgsvcs.js"></script>
+<script type="text/javascript">
+    ATGSvcs.setUOID("200106307565");
+    (function() {
+         var l = "leedscitycouncil.custhelp.com" ,d=document,ss='script',s=d.getElementsByTagName(ss)[0],rn=d.createElement(ss),rn2=d.createElement(ss);
+         rn.type=rn2.type='text/javascript';
+         rn.defer=rn2.defer=rn.async=rn2.async=!0;
+         rn.src=rn2.src=('https:'==d.location.protocol?'https://':'http://')+l;
+         rn.src+='/rnt/rnw/javascript/vs/1/vsapi.js';
+         rn2.src+='vs/1/vsopts.js';
+         s.parentNode.insertBefore(rn,s);
+         s.parentNode.insertBefore(rn2,s);
+    })();
+</script>
+<!-- Web chat tracking code provided by connection point. END -->
+<title>
+	
+	default
+
+</title>
+    <script type="text/javascript">
+        var _fV4UI = true;
+    </script>
+
+    
+
+    <!-- Custom CSS  -->
+    
+
+    <!-- Custom Scripts -->
+    <script src="/Style%20Library/Scripts/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery.noConflict();
+    </script>
+    <script src="/Style%20Library/Scripts/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+    <script src="/Style%20Library/Scripts/ImageSlideShow/galleria-1.3.min.js" type="text/javascript"></script>
+    <script src="/Style%20Library/Scripts/TextZoom.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Style%20Library/Scripts/customLcc.js?rev=4.2.2.7"></script>
+    <script src="/Style%20Library/Scripts/jquery.pajinate.js" type="text/javascript"></script>
+
+    <!-- load SharePoint javascript -->
+    <script type="text/javascript">
+// <![CDATA[
+document.write('<script type="text/javascript" src="/_layouts/1033/init.js?rev=mnhGGwFP5YmS9WIiyvdiYQ%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/ny.exportversionhistory/exportversionhistory.js"></' + 'script>');
+document.write('<script type="text/javascript" src="/ScriptResource.axd?d=KGc4p_OHnOVr16gsAiwcVaCThFdiLzSVdHC5Sdc1UaGGHwpjgJeIjvWG6KfljT-ps6UxzJD1xatCqx35MwHMMQB8M3WKmJ6E1iBjXbLWFno2oI4Awlk8JYFJruVFDDXSUJ54yobtrB_0cus8ZvFcHBhaPOo1&amp;t=e4ad9b3"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D"></' + 'script>');
+// ]]>
+</script>
+
+<script type="text/javascript">
+    // <![CDATA[
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    if (window.location.href.indexOf("-sde-its") > -1) {
+        // this is for Integration enviornment (for test purpose)
+        ga('create', 'UA-51569622-1', 'leeds.gov.uk');
+    }
+    else {
+        ga('create', 'UA-39638056-1', 'leeds.gov.uk');
+    }
+    ga('send', 'pageview');
+
+
+    // ]]> 
+</script>
+<script type="text/javascript">
+    /**
+    * Function that tracks a click on an outbound link in universal Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label.
+    */
+    var trackOutboundLink = function (eventAction, eventLabel, url) {
+        ga('send', 'event', eventAction, eventLabel, url, {
+            'hitCallback':
+              function () {
+                  document.location = url;
+              }
+        });
+    }
+</script>
+
+
+<script type="text/javascript">
+    if (typeof jQuery != 'undefined') {
+        jQuery(document).ready(function ($) {
+            var filetypes = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3|mp4)$/i;
+            var baseHref = '';
+            if (jQuery('base').attr('href') != undefined)
+                baseHref = jQuery('base').attr('href');
+            jQuery('a').each(function () {
+                var href = jQuery(this).attr('href');
+                var isExternal = new RegExp('^https?://');
+                if (href && (!href.match(document.domain) && isExternal.test(href)) && !href.match('#')) {
+                    jQuery(this).click(function () {
+                        if (ga.q) {
+                            document.location = url;
+
+                        } else {
+                            trackOutboundLink('outbound', 'click', href);
+                        }
+                        return false;
+                    });
+                }
+                else if (href && href.match(filetypes)) {
+                    jQuery(this).click(function () {
+                        var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+                        var filePath = href;
+                        if (ga.q) {
+                            document.location = url;
+                        } else {
+                            trackOutboundLink('download', 'click-' + extension, filePath);
+                        }
+                        return false;
+                    });
+                }
+            });
+        });
+    }
+</script>
+
+
+    <script type="text/javascript">
+        function KeepLastFont() {
+            var font = ReadCookie('cookieFontSize')
+            //alert("Initial Load Cookie value is :: " + font);
+            if ((font != null) && (font != 14)) {
+                document.getElementById('txtFont').value = font;
+                var fontSize = font.toString() + "px";
+                FontSizeChange_SetAllDocumentFontSize(fontSize);
+            }
+        }
+    </script>
+
+<link rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Themable/Core%20Styles/controls.css"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/corev4.css?rev=p63%2BuzTeSJc22nVGNZ5zwg%3D%3D"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/CampaignBrand/campaignStructure.css"/>
+<link rel="stylesheet" type="text/css" href="/c/Style/saferleeds.css"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/WirpBrand/LayoutApps.css"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/WIRPBrand/RTEStyleOptions.css"/>
+</head>
+
+<body onload="if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper(); KeepLastFont();">
+    
+    
+        
+    <!-- Start lccBodyContainer -->
+    <div class="lccBodyContainer">
+        <!-- Start Utility Bar -->
+        <div class="utilityBar s4-notdlg ">
+            <div class="pageControl">
+
+                <div class="lccLogoContainer"><a href="/pages/default.aspx">Leeds city council</a></div>
+                <div class="utilityNavigation noindex">
+                    <ul>
+                        
+                                <!-- <style type="text/css">
+                             .mainContent
+                             {
+                             overflow-x: hidden !important;
+                             }
+                             </style>-->
+                                <!-- Display the Login link only when anonymous call from with the Intranet -->
+                                
+                                <!--[if lte IE 7]>  
+                              <style type="text/css"> 
+                               html { overflow: auto !important; overflow-x: hidden; } 
+                                body { overflow: auto !important; } 
+                                 </style> 
+                                  <![endif]-->
+                            
+                        <!--             <li><a href="/pages/AtoZ.aspx">A to Z</a></li>
+                    <li><a href="/pages/contactus.aspx">Contact us</a></li> -->
+                        <li><a href="/pages/TermsAndConditions.aspx">Terms and conditions</a></li>
+                        <li><a href="/pages/PrivacyStatement.aspx">Privacy statement</a></li>
+                        <li><a href="/Pages/Accessibility.aspx">Accessibility</a></li>
+                        <li><a title="Decrease Text Size" class="sizeOne" href="javascript:FontSizeChange_Decrease();">A-</a>
+                            <a title="Increase Text Size" class="sizeTwo" href="javascript:FontSizeChange_Increase();">A+</a></li>
+                    </ul>
+                    <input id="txtFont" value="14" type="hidden" />
+                </div>
+
+            </div>
+            <div class="clear">
+                <!-- -->
+            </div>
+        </div>
+        <!-- End Utility Bar -->
+
+        <div class="pageControl">
+
+            <!-- Start Body Container -->
+            <div class="bodyContainer">
+
+                <form name="aspnetForm" method="post" action="default.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+<input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+<input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+<input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+<input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+<input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+<input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0xC129EA0B41F918A018CAD770213CE4B41BA59D0967F93B799B31564A5214660C60FA2696E0D715690D96D50D6C2B95ED21C4F8229E1433EDC63E5DCA2D537C00,07 Feb 2016 04:49:22 -0000" />
+<input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
+<input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+<input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+<input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+<input type="hidden" name="_wpSelected" id="_wpSelected" value="" />
+<input type="hidden" name="_wzSelected" id="_wzSelected" value="" />
+<input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+<input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTczMDMzMzU0EGRkFgJmD2QWAgIBD2QWBAIBD2QWAgIJD2QWAmYPZBYCAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAgkPZBYIAgMPZBYGBSZnXzI3ODRkYjJlX2RkOGRfNGVmMl85NTRkX2U5ZjkxOWRhMjA2NRAPFgYeC1BhcmFtVmFsdWVzMssHAAEAAAD/////AQAAAAAAAAAMAgAAAFhNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljBQEAAAA9TWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViUGFydFBhZ2VzLlBhcmFtZXRlck5hbWVWYWx1ZUhhc2h0YWJsZQEAAAAFX2NvbGwDHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUCAAAACQMAAAAEAwAAABxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlBwAAAApMb2FkRmFjdG9yB1ZlcnNpb24IQ29tcGFyZXIQSGFzaENvZGVQcm92aWRlcghIYXNoU2l6ZQRLZXlzBlZhbHVlcwAAAwMABQULCBxTeXN0ZW0uQ29sbGVjdGlvbnMuSUNvbXBhcmVyJFN5c3RlbS5Db2xsZWN0aW9ucy5JSGFzaENvZGVQcm92aWRlcgjsUTg/CwAAAAoKFwAAAAkEAAAACQUAAAAQBAAAAAoAAAAGBgAAABNzZWxlY3RfZGVzZWxlY3RfYWxsBgcAAAAPTm9Bbm5vdW5jZW1lbnRzBggAAAAJb3Blbl9tZW51BgkAAAANaWRQcmVzRW5hYmxlZAYKAAAAClNlbGVjdGVkSUQGCwAAABFkdnRfc3RhcnRwb3NpdGlvbgYMAAAACkZpbHRlckxpbmsGDQAAABROb0Fubm91bmNlbWVudHNIb3dUbwYOAAAAEGR2dF9wcmV2cGFnZWRhdGEGDwAAABVPcGVuTWVudUtleUFjY2Vzc2libGUQBQAAAAoAAAAGEAAAABxTZWxlY3Qgb3IgZGVzZWxlY3QgYWxsIGl0ZW1zBhEAAABGVGhlcmUgYXJlIG5vIGl0ZW1zIHRvIHNob3cgaW4gdGhpcyB2aWV3IG9mIHRoZSAiQ2FtcGFpZ25CeWxpbmVzIiBsaXN0LgYSAAAACU9wZW4gTWVudQYTAAAAIFByZXNlbmNlIGVuYWJsZWQgZm9yIHRoaXMgY29sdW1uBhQAAAACLTEGFQAAAAAGFgAAAAE/BhcAAAAfVG8gYWRkIGEgbmV3IGl0ZW0sIGNsaWNrICJOZXciLgYYAAAAIFBhZ2VkPVRSVUUmUGFnZWRQcmV2PVRSVUUmcF9JRD0xBhkAAAAuVXNlIFNISUZUK0VOVEVSIHRvIG9wZW4gdGhlIG1lbnUgKG5ldyB3aW5kb3cpLgseEEZpbHRlck9wZXJhdGlvbnMyjQUAAQAAAP////8BAAAAAAAAAAQBAAAAkwJTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5EaWN0aW9uYXJ5YDJbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV0sW01pY3Jvc29mdC5TaGFyZVBvaW50LldlYlBhcnRQYWdlcy5GaWx0ZXJPcGVyYXRpb24sIE1pY3Jvc29mdC5TaGFyZVBvaW50LCBWZXJzaW9uPTE0LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTcxZTliY2UxMTFlOTQyOWNdXQMAAAAHVmVyc2lvbghDb21wYXJlcghIYXNoU2l6ZQADAAiSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dCAAAAAAJAgAAAAAAAAAEAgAAAJIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuR2VuZXJpY0VxdWFsaXR5Q29tcGFyZXJgMVtbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249Mi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0AAAAACx4MX3ZpZXdDb3VudGVyAhZkZGQFJmdfMjMxY2JlMDFfYmJjNV80MTQ0X2E2YmNfMjRlNTI5NDkxMDIwEA8WBh8BMssHAAEAAAD/////AQAAAAAAAAAMAgAAAFhNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljBQEAAAA9TWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViUGFydFBhZ2VzLlBhcmFtZXRlck5hbWVWYWx1ZUhhc2h0YWJsZQEAAAAFX2NvbGwDHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUCAAAACQMAAAAEAwAAABxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlBwAAAApMb2FkRmFjdG9yB1ZlcnNpb24IQ29tcGFyZXIQSGFzaENvZGVQcm92aWRlcghIYXNoU2l6ZQRLZXlzBlZhbHVlcwAAAwMABQULCBxTeXN0ZW0uQ29sbGVjdGlvbnMuSUNvbXBhcmVyJFN5c3RlbS5Db2xsZWN0aW9ucy5JSGFzaENvZGVQcm92aWRlcgjsUTg/CwAAAAoKFwAAAAkEAAAACQUAAAAQBAAAAAoAAAAGBgAAABNzZWxlY3RfZGVzZWxlY3RfYWxsBgcAAAAPTm9Bbm5vdW5jZW1lbnRzBggAAAAJb3Blbl9tZW51BgkAAAANaWRQcmVzRW5hYmxlZAYKAAAAClNlbGVjdGVkSUQGCwAAABFkdnRfc3RhcnRwb3NpdGlvbgYMAAAACkZpbHRlckxpbmsGDQAAABROb0Fubm91bmNlbWVudHNIb3dUbwYOAAAAEGR2dF9wcmV2cGFnZWRhdGEGDwAAABVPcGVuTWVudUtleUFjY2Vzc2libGUQBQAAAAoAAAAGEAAAABxTZWxlY3Qgb3IgZGVzZWxlY3QgYWxsIGl0ZW1zBhEAAABGVGhlcmUgYXJlIG5vIGl0ZW1zIHRvIHNob3cgaW4gdGhpcyB2aWV3IG9mIHRoZSAiQ2FtcGFpZ25TaWRlQmFyIiBsaXN0LgYSAAAACU9wZW4gTWVudQYTAAAAIFByZXNlbmNlIGVuYWJsZWQgZm9yIHRoaXMgY29sdW1uBhQAAAACLTEGFQAAAAAGFgAAAAE/BhcAAAAfVG8gYWRkIGEgbmV3IGl0ZW0sIGNsaWNrICJOZXciLgYYAAAAIFBhZ2VkPVRSVUUmUGFnZWRQcmV2PVRSVUUmcF9JRD01BhkAAAAuVXNlIFNISUZUK0VOVEVSIHRvIG9wZW4gdGhlIG1lbnUgKG5ldyB3aW5kb3cpLgsfAjKNBQABAAAA/////wEAAAAAAAAABAEAAACTAlN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkRpY3Rpb25hcnlgMltbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249Mi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViUGFydFBhZ2VzLkZpbHRlck9wZXJhdGlvbiwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5Y11dAwAAAAdWZXJzaW9uCENvbXBhcmVyCEhhc2hTaXplAAMACJIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuR2VuZXJpY0VxdWFsaXR5Q29tcGFyZXJgMVtbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249Mi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0IAAAAAAkCAAAAAAAAAAQCAAAAkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQAAAAALHwMCF2RkZAUmZ180MDNjYzY2ZF8yNmVkXzRkYWZfYWVmMF84OWU0MzE1OTZmNjAQDxYGHwEyywcAAQAAAP////8BAAAAAAAAAAwCAAAAWE1pY3Jvc29mdC5TaGFyZVBvaW50LCBWZXJzaW9uPTE0LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTcxZTliY2UxMTFlOTQyOWMFAQAAAD1NaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuUGFyYW1ldGVyTmFtZVZhbHVlSGFzaHRhYmxlAQAAAAVfY29sbAMcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQIAAAAJAwAAAAQDAAAAHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUHAAAACkxvYWRGYWN0b3IHVmVyc2lvbghDb21wYXJlchBIYXNoQ29kZVByb3ZpZGVyCEhhc2hTaXplBEtleXMGVmFsdWVzAAADAwAFBQsIHFN5c3RlbS5Db2xsZWN0aW9ucy5JQ29tcGFyZXIkU3lzdGVtLkNvbGxlY3Rpb25zLklIYXNoQ29kZVByb3ZpZGVyCOxROD8LAAAACgoXAAAACQQAAAAJBQAAABAEAAAACgAAAAYGAAAAE3NlbGVjdF9kZXNlbGVjdF9hbGwGBwAAAA9Ob0Fubm91bmNlbWVudHMGCAAAAAlvcGVuX21lbnUGCQAAAA1pZFByZXNFbmFibGVkBgoAAAAKU2VsZWN0ZWRJRAYLAAAAEWR2dF9zdGFydHBvc2l0aW9uBgwAAAAKRmlsdGVyTGluawYNAAAAFE5vQW5ub3VuY2VtZW50c0hvd1RvBg4AAAAQZHZ0X3ByZXZwYWdlZGF0YQYPAAAAFU9wZW5NZW51S2V5QWNjZXNzaWJsZRAFAAAACgAAAAYQAAAAHFNlbGVjdCBvciBkZXNlbGVjdCBhbGwgaXRlbXMGEQAAAEZUaGVyZSBhcmUgbm8gaXRlbXMgdG8gc2hvdyBpbiB0aGlzIHZpZXcgb2YgdGhlICJDYW1wYWlnblNpZGVCYXIiIGxpc3QuBhIAAAAJT3BlbiBNZW51BhMAAAAgUHJlc2VuY2UgZW5hYmxlZCBmb3IgdGhpcyBjb2x1bW4GFAAAAAItMQYVAAAAAAYWAAAAAT8GFwAAAB9UbyBhZGQgYSBuZXcgaXRlbSwgY2xpY2sgIk5ldyIuBhgAAAAgUGFnZWQ9VFJVRSZQYWdlZFByZXY9VFJVRSZwX0lEPTUGGQAAAC5Vc2UgU0hJRlQrRU5URVIgdG8gb3BlbiB0aGUgbWVudSAobmV3IHdpbmRvdykuCx8CMo0FAAEAAAD/////AQAAAAAAAAAEAQAAAJMCU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuRmlsdGVyT3BlcmF0aW9uLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljXV0DAAAAB1ZlcnNpb24IQ29tcGFyZXIISGFzaFNpemUAAwAIkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQgAAAAACQIAAAAAAAAABAIAAACSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAAAAAAsfAwIYZGRkAg0PZBYCAgMPZBYEZg9kFgICAQ8WAh4HVmlzaWJsZWgWAmYPZBYEAgIPZBYGAgEPFgIfBGhkAgMPFggeE0NsaWVudE9uQ2xpY2tTY3JpcHQFcmphdmFTY3JpcHQ6Q29yZUludm9rZSgnVGFrZU9mZmxpbmVUb0NsaWVudFJlYWwnLDEsIDUzLCAnaHR0cDpcdTAwMmZcdTAwMmZ3d3cubGVlZHMuZ292LnVrXHUwMDJmYycsIC0xLCAtMSwgJycsICcnKR4YQ2xpZW50T25DbGlja05hdmlnYXRlVXJsZB4oQ2xpZW50T25DbGlja1NjcmlwdENvbnRhaW5pbmdQcmVmaXhlZFVybGQeDEhpZGRlblNjcmlwdAUiVGFrZU9mZmxpbmVEaXNhYmxlZCgxLCA1MywgLTEsIC0xKWQCBQ8WAh8EaGQCAw8PFgoeCUFjY2Vzc0tleQUBLx4PQXJyb3dJbWFnZVdpZHRoAgUeEEFycm93SW1hZ2VIZWlnaHQCAx4RQXJyb3dJbWFnZU9mZnNldFhmHhFBcnJvd0ltYWdlT2Zmc2V0WQLrA2RkAgEPZBYEAgUPZBYCAgEPEBYCHwRoZBQrAQBkAgcPZBYCZg9kFgJmDxQrAANkZGRkAhcPZBYCAgQPZBYCAg0PFgIfAAsrBAFkAhsPZBYCAgEPZBYCAgEPZBYCZg9kFgICAQ8PZBYGHgVjbGFzcwUibXMtc2J0YWJsZSBtcy1zYnRhYmxlLWV4IHM0LXNlYXJjaB4LY2VsbHBhZGRpbmcFATAeC2NlbGxzcGFjaW5nBQEwZGR2YrPcsZ+K2nQ/sB94/Bbmbwy9qw==" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var MSOWebPartPageFormName = 'aspnetForm';
+var g_presenceEnabled = true;
+var g_wsaEnabled = false;
+var g_wsaLCID = 1033;
+var g_wsaSiteTemplateId = 'BLANKINTERNET#2';
+var g_wsaListTemplateId = 850;
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fc", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{86eaa955-581c-410a-9249-b1127ef3c150}",pageItemId:303, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};
+if (typeof(_spBodyOnLoadFunctionNames) != "undefined") {
+if (_spBodyOnLoadFunctionNames != null) {
+_spBodyOnLoadFunctionNames.push("ExpDataViewGroupOnPageLoad");
+}
+}
+g_ExpGroupSeparateQueuesGlobal = true;
+_spWebPartComponents["WebPartWPQ2"] = new Object();_spWebPartComponents["WebPartWPQ2"].firstTabId = "Ribbon.ListItem";_spWebPartComponents["WebPartWPQ2"].contextualGroupCommands = ["ListContextualGroup"];_spWebPartComponents["WebPartWPQ2"].hasNonPromotedContextualGroups = true;_spWebPartComponents["WebPartWPQ2"].isDefaultWebPart = false;_spWebPartComponents["WebPartWPQ2"].pageComponentId = "WebPartWPQ2";_spWebPartComponents["WebPartWPQ2"].storageId="9cf5d32e-0df2-44cf-a3f1-4e8798642f06";_spWebPartComponents["WebPartWPQ3"] = new Object();_spWebPartComponents["WebPartWPQ3"].firstTabId = "Ribbon.ListItem";_spWebPartComponents["WebPartWPQ3"].contextualGroupCommands = ["ListContextualGroup"];_spWebPartComponents["WebPartWPQ3"].hasNonPromotedContextualGroups = true;_spWebPartComponents["WebPartWPQ3"].isDefaultWebPart = false;_spWebPartComponents["WebPartWPQ3"].pageComponentId = "WebPartWPQ3";_spWebPartComponents["WebPartWPQ3"].storageId="3685dd0c-ca97-4e51-9738-f829be4e8462";_spWebPartComponents["WebPartWPQ4"] = new Object();_spWebPartComponents["WebPartWPQ4"].firstTabId = "Ribbon.ListItem";_spWebPartComponents["WebPartWPQ4"].contextualGroupCommands = ["ListContextualGroup"];_spWebPartComponents["WebPartWPQ4"].hasNonPromotedContextualGroups = true;_spWebPartComponents["WebPartWPQ4"].isDefaultWebPart = false;_spWebPartComponents["WebPartWPQ4"].pageComponentId = "WebPartWPQ4";_spWebPartComponents["WebPartWPQ4"].storageId="37f3b645-8b8a-44c9-960d-b3e14b7b8276";//]]>
+</script>
+
+<script src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();//]]>
+</script>
+
+
+                    <!-- Handles SharePoint Scripts -->
+                    
+
+                    <!-- Controls the WebParts and Zones -->
+                    
+
+                    <!-- Accessibility -->
+                    <noscript><div class='noindex'>You may be trying to access this site from a secured browser on the server. Please enable scripts and reload this page.</div></noscript>
+                    <div id="TurnOffAccessibility" style="display: none" class="s4-notdlg noindex">
+                        <a id="linkTurnOffAcc" href="#" class="ms-TurnOffAcc" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
+                            Turn off more accessible mode
+                        </a>
+                    </div>
+                    <div class="s4-notdlg s4-skipribbonshortcut noindex">
+                        <a href="javascript:;" onclick="javascript:this.href='#startNavigation';" class="ms-SkiptoNavigation" accesskey="Y">
+                            Skip Ribbon Commands
+                        </a>
+                    </div>
+                    <div class="s4-notdlg noindex">
+                        <a href="javascript:;" onclick="javascript:this.href='#mainContent';" class="ms-SkiptoMainContent" accesskey="X">
+                            Skip to main content
+                        </a>
+                    </div>
+                    <!-- End Accessibility -->
+                    <!-- Start Hide Ribbon for Anonymous Users -->
+                    
+                    <!-- End Hide Ribbon for Anonymous Users -->
+                    <!-- Start Scrolling Body Area -->
+
+                    <!-- Stick it to the Ribbon -->
+                    <div id="s4-workspace-Disabled" class="mainWorkspace">
+
+                        <!-- Start header -->
+                        <div id="s4-titlerow" class="header s4-notdlg ">
+
+                            <div class="branding">
+                                <a href=''></a>
+                            </div>
+
+                            <div class="clear"></div>
+                            <!-- Page Title - Disabled -->
+                            <div style="display: none;">
+                                
+                            </div>
+
+                            <!-- Pages description -->
+                            
+                            
+                            <!-- Start Page Editing Status Bar -->
+                            <div id="s4-statusbarcontainer">
+                                <div id="pageStatusBar" class="s4-status-s1"></div>
+                            </div>
+                            <!-- End Page Editing Status Bar -->
+
+                            <!-- Start Left Nav -->
+                            <div id="s4-leftpanel" class="leftNav s4-notdlg"></div>
+                            <!-- End Left Nav -->
+                        </div>
+                        <!-- End Header -->
+                        <!-- Start Main Content Area -->
+                        <div id="s4-bodyContainer">
+
+                            <div id="s4-mainarea">
+                                
+                                        
+
+                                    
+
+                                <div class='s4-ba'>
+                                    <div class='ms-bodyareacell'>
+                                        <div id="ctl00_MSO_ContentDiv">
+                                            <a id="mainContent"></a>
+                                            <!-- Emergency Message -->
+                                            
+
+                                            	
+ 
+
+<!--begin page control -->
+
+
+<div class="pageControl"> 
+
+<div class="header">
+						<div class="columnFour gutter"><div class="userControl"><div class="logoContainer" style="&#xA;            background-image:url(/c/PublishingImages/saferleeds/saferLeedsLogo.png)&#xA;          "><div class="logo"><a href="http://www.leeds.gov.uk/c/Pages/saferleeds/default.aspx">/c/PublishingImages/saferleeds/saferLeedsLogo.jpg</a></div><div class="inner"><p class="highLight">A community safety partnership</p><p>Working in partnership to keep communities safe</p></div></div></div></div><div class="columnEight"><div class="columnTwo gutter gutterBottom"><div class="userControl"><div class="contentPod" style="&#xA;                  background-image:url(/c/PublishingImages/saferleeds/icon-Begging.png)&#xA;                "><div class="inner "><h3><a href="http://www.leeds.gov.uk/c/Pages/saferleeds/Street-Begging.aspx">Street Begging</a></h3></div></div></div></div><div class="columnTwo gutter gutterBottom"><div class="userControl"><div class="contentPod" style="&#xA;                  background-image:url(/c/PublishingImages/saferleeds/icon-ReportHate.png)&#xA;                "><div class="inner "><h3><a href="http://www.leeds.gov.uk/c/Pages/saferleeds/Report-a-Hate-Incident-.aspx">Report a Hate Incident</a></h3></div></div></div></div><div class="columnTwo gutter gutterBottom"><div class="userControl"><div class="contentPod" style="&#xA;                  background-image:url(/c/PublishingImages/saferleeds/icon-InternetSafety.png)&#xA;                "><div class="inner "><h3><a href="http://www.leeds.gov.uk/c/Pages/saferleeds/Internet-Safety.aspx">Internet Safety #thebrief</a></h3></div></div></div></div><div class="columnTwo gutterBottom"><div class="userControl"><div class="contentPod" style="&#xA;                  background-image:url(/c/PublishingImages/saferleeds/icon-CCTV.png)&#xA;                "><div class="inner "><h3><a href="http://www.leeds.gov.uk/c/Pages/saferleeds/Closed-Circuit-Television CCTV.aspx">Closed Circuit Television CCTV</a></h3></div></div></div></div><div class="columnTwo gutter"><div class="userControl"><div class="contentPod" style="&#xA;                  background-image:url(/c/PublishingImages/saferleeds/icon-Families.png)&#xA;                "><div class="inner "><h3><a href="http://www.leeds.gov.uk/c/Pages/saferleeds/Domestic-violence-team.aspx">Domestic violence team</a></h3></div></div></div></div><div class="columnTwo gutter"><div class="userControl"><div class="contentPod" style="&#xA;                  background-image:url(/c/PublishingImages/saferleeds/icon-CrimePrevention.png)&#xA;                "><div class="inner "><h3><a href="http://www.leeds.gov.uk/c/Pages/saferleeds/Crime-Prevention-Initiatives.aspx">Crime Prevention Initiatives</a></h3></div></div></div></div><div class="columnTwo gutter"><div class="userControl"><div class="contentPod" style="&#xA;                  background-image:url(/c/PublishingImages/saferleeds/icon-ReportNoise.png)&#xA;                "><div class="inner "><h3><a href="http://www.leeds.gov.uk/c/Pages/saferleeds/Report-Anti-social-Behaviour-and-Noise.aspx">Report Anti-social Behaviour and Noise Nuisance</a></h3></div></div></div></div><div class="columnTwo"><div class="userControl"><div class="contentPod" style="&#xA;                  background-image:url(/c/PublishingImages/saferleeds/icon-Families.png)&#xA;                "><div class="inner "><h3><a href="http://www.leeds.gov.uk/c/Pages/saferleeds/Families-First-.aspx">Families First</a></h3></div></div></div></div></div>
+ </div>
+
+
+<div class="mainContainer">
+
+<div class="columnFour gutter">
+
+<div class="userControl">
+<div class="socialBookmarks">
+  
+</div>
+</div>
+
+<div id="ctl00_m_g_01afb695_0c98_4fbc_b654_2582ee5ef5ec">
+	<div class="userControl"><h2>Follow us on Twitter</h2><div class="inner"><p><div class="ExternalClassF23DFAF9493A45AB99849EE7B42C6D26"><p><a href="https://twitter.com/SaferLeeds">https://twitter.com/SaferLeeds</a></p></div></p></div></div>
+</div>
+
+
+<div class='userControl'><h3>Related Documents</h3><ul class="relatedDocs"><li><a href="http://www.leeds.gov.uk/c/Release Documents/A-Z of Safer Leeds services.pdf"><img class="RelatedDocIcons" alt="PDF" src="/_layouts/IMAGES/pdficon_small.gif" />A-Z of Safer Leeds Services</a><span><!-- --></span></li><li><a href="http://www.leeds.gov.uk/c/Release Documents/Safer Leeds Plan 2015 to 2016.pdf"><img class="RelatedDocIcons" alt="PDF" src="/_layouts/IMAGES/pdficon_small.gif" />Safer Leeds Plan 2015 to 2016</a><span><!-- --></span></li></ul><p>
+        To view documents in PDF format you will require the free
+        <a href="http://www.adobe.com/products/acrobat/readstep2.html"><img alt="Download Adobe Reader" src="/_layouts/IMAGES/WIRPBrand/iconPDF.gif" />
+          Adobe Acrobat Reader
+        </a></p><div class="clear"><!-- --></div></div>
+
+
+
+
+</div>
+
+<div class="columnEight">
+<div class="strapline">
+Safer Leeds
+ </div>
+<div class="article">
+
+<div id="ctl00_PlaceHolderMain_ctl00_label" style='display:none'>Main Body Text</div><div id="ctl00_PlaceHolderMain_ctl00__ControlWrapper_LimitedHTMLFieldControl" class="ms-rtestate-field" style="display:inline" ><div>Welcome to Safer Leeds, a community safety partnership involving Leeds City Council, West Yorkshire Police and partners. The partnership works from different locations across the city, but are focused on 2 Great George Street in the City Centre. </div>
+<div>&#160;</div>
+<div>Our aim is to reduce crime and disorder, and to help people feel safe in their communities. We concentrate on Anti Social Behaviour, Safeguarding, Localities Working, Partnership Arrangements and Intelligence. For a full list of our services please see the<strong> </strong><a title="Link to PDF which is an A to Z of services in Leeds" href="/c/Release%20Documents/A-Z%20of%20Safer%20Leeds%20Services.pdf"><strong>A - Z of safer Leeds services</strong></a>&#160;(Opens as a PDF).&#160;You can get in contact with us by email and phone, and you can keep up-to-date with the latest news by following us on Twitter.</div>
+<div><br/><div><strong>Email:</strong> &#160;<a title="community.safety@leeds.gov.uk" href="mailto:community.safety@leeds.gov.uk"><strong>community.safety@leeds.gov.uk</strong></a></div>
+<div><strong>Tel:</strong> 0113 3950830. &#160;Contact details for each of our services are listed on the relevant page for that service.&#160;</div>
+<div><br/></div>
+<br/><br/></div>
+<div><strong>Our priorities for 2015 to 2016<br/></strong></div>
+<p>For the next year, we will work to achieve the following three shared priorities: </p>
+<ul><li>Promoting community tolerance and respect</li>
+<li>Keeping people safe from harm</li>
+<li>Protecting property and the rights of citizens <br/></li></ul>
+<p>Within each of the 3 priorities we will focus on 3 key elements and deploy innovation programmes to help achieve the outcomes. Please see the Safer Leeds Plan 2015-16 in <strong>Related Documents </strong>for full details. <br/><strong><br/>Who do we work with?</strong><span style="font-size: 8pt">&#160;</span></p>
+<div>We recognise that working in partnership will help to achieve these priorities, our partners include:</div>
+<div>&#160;</div>
+<div>Responsible Authorities:</div>
+<div><ul><li>Executive Member<br/></li>
+<li>Leeds City Council<br/></li>
+<li>Leeds Clinical Commissioning Groups<br/></li>
+<li>West Yorkshire Police<br/></li>
+<li>West Yorkshire Fire and Rescue Service<br/></li>
+<li>West Yorkshire Probation trust<br/></li>
+<li>Office of the Police and Crime Commissioner<br/></li></ul></div>
+<div>&#160;</div>
+<div>Cooperating Bodies:</div>
+<div><ul><li>Leeds Children&#39;s Trust Board<br/></li>
+<li>Leeds Safeguarding Children&#39;s Board<br/></li>
+<li>Youth Offending Service<br/></li>
+<li>Adult Social Care<br/></li>
+<li>Leeds Housing<br/></li>
+<li>HM Prison Service Leeds<br/></li>
+<li>Third Sector Partnerships</li></ul></div>
+​​​​​​​​​​​​​</div>
+	
+
+
+</div>
+
+
+</div>
+
+             
+</div>
+		   				
+ 
+  <div class="clear"></div>
+
+
+                    <div class="footer s4-notdlg noindex">     
+                        
+              	    		 
+                                
+                                <p class="copyRight">&copy; LCC Leeds City Council | 2012</p>    
+                   </div>   
+  <!--end page control --> 
+
+
+
+  </div>
+</div>
+
+
+    	<div class="lccMandatoryFields">
+    	    
+	    </div>
+   
+    
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End Main Content Area -->
+
+
+                        <!-- The form digest security control used to for security validation on forms -->
+                        
+                            
+                        
+
+
+
+                        <!-- =====  Hidden Placeholders ============================================================ -->
+                        
+
+                        <!-- Handle Search "Enter" Key and Back Button -->
+                        <div style="display: none;">
+                            <label for="__spText1">__spText1</label>
+                            <input type="text" name="__spText1" id="__spText1" style="display: none;" size="1" />
+                            <label for="__spText2">__spText2</label>
+                            <input type="text" name="__spText2" id="__spText2" style="display: none;" size="1" />
+                        </div>
+                <div id="ctl00_panelZone">
+	<div style='display:none' id='hidZone'></div>
+</div><div><input type='hidden' id='_wpcmWpid' name='_wpcmWpid' value='' /></div><div><input type='hidden' id='wpcmVal' name='wpcmVal' value=''/></div>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A477E6DF" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var _spFormDigestRefreshInterval = 1440000;window.g_updateFormDigestPageLoaded = new Date(); window.g_updateFormDigestPageLoaded.setDate(window.g_updateFormDigestPageLoaded.getDate() -5);
+function EnsureScripts(scriptInfoList, finalFunction)
+{
+if (scriptInfoList.length == 0)
+{
+finalFunction();
+}
+else
+{
+var scriptInfo = scriptInfoList.shift();
+var rest = function () { EnsureScripts(scriptInfoList, finalFunction); };
+var defd;
+try
+{
+eval('defd = typeof(' + scriptInfo[1] + ');');
+}
+catch (e)
+{
+defd = 'undefined';
+}
+if (scriptInfo[2])
+{
+EnsureScript(scriptInfo[0], defd, null);
+ExecuteOrDelayUntilScriptLoaded(rest, scriptInfo[0]);
+}
+else
+{
+EnsureScript(scriptInfo[0], defd, rest);
+}
+}
+}
+function PublishingRibbonUpdateRibbon()
+{
+var pageManager = SP.Ribbon.PageManager.get_instance();
+if (pageManager)
+{
+pageManager.get_commandDispatcher().executeCommand('appstatechanged', null);
+}
+}var _fV4UI = true;
+function _RegisterWebPartPageCUI()
+{
+    var initInfo = {editable: false,isEditMode: false,allowWebPartAdder: false,listId: "{86eaa955-581c-410a-9249-b1127ef3c150}",itemId: 303,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: true,forceCheckout: true,rootFolderUrl: "\u002fc\u002fPages",itemPermissions:{High:16,Low:196673}};
+    SP.Ribbon.WebPartComponent.registerWithPageManager(initInfo);
+    var wpcomp = SP.Ribbon.WebPartComponent.get_instance();
+    var hid;
+    hid = document.getElementById("_wpSelected");
+    if (hid != null)
+    {
+        var wpid = hid.value;
+        if (wpid.length > 0)
+        {
+            var zc = document.getElementById(wpid);
+            if (zc != null)
+                wpcomp.selectWebPart(zc, false);
+        }
+    }
+    hid = document.getElementById("_wzSelected");
+    if (hid != null)
+    {
+        var wzid = hid.value;
+        if (wzid.length > 0)
+        {
+            wpcomp.selectWebPartZone(null, wzid);
+        }
+    }
+}
+ExecuteOrDelayUntilScriptLoaded(_RegisterWebPartPageCUI, "sp.ribbon.js"); var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';var databaseBtnText = '';var databaseBtnDesc = '';var fDBInstalled = false;var ExpDatabase = GetDataBaseInstalled();
+try{ 
+databaseBtnText = ExpDatabase.MenuTitle;databaseBtnDesc = ExpDatabase.MenuDescription;fDBInstalled = true;
+} catch(e){}//]]>
+</script>
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type="text/javascript">RegisterSod("sp.core.js", "\u002f_layouts\u002fsp.core.js?rev=7ByNlH\u00252BvcgRJg\u00252BRCctdC0w\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=b6\u00252FcRx1a6orhAQ\u00252FcF\u00252B0ytQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002fsp.ui.dialog.js?rev=Tpcmo1\u00252FSu6R0yewHowDl5g\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.core.js");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f1033\u002fcore.js?rev=Emb5hNX1RZMNXk9oS82yvA\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.runtime.js", "\u002f_layouts\u002fsp.runtime.js?rev=IGffcZfunndj0247nOxKVg\u00253D\u00253D");RegisterSodDep("sp.runtime.js", "sp.core.js");RegisterSodDep("sp.runtime.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002fsp.js?rev=\u00252B4ZEyA892P3T0504qi0paw\u00253D\u00253D");RegisterSodDep("sp.js", "sp.core.js");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("cui.js", "\u002f_layouts\u002fcui.js?rev=OOyJv78CADNBeet\u00252FvTvniQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002finplview.js?rev=WB6Gy8a027aeNCq7koVCUg\u00253D\u00253D");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
+<script type="text/javascript">RegisterSod("ribbon", "\u002f_layouts\u002fsp.ribbon.js?rev=F\u00252BUEJ66rbXzSvpf7nN69wQ\u00253D\u00253D");RegisterSodDep("ribbon", "core.js");RegisterSodDep("ribbon", "sp.core.js");RegisterSodDep("ribbon", "sp.js");RegisterSodDep("ribbon", "cui.js");RegisterSodDep("ribbon", "sp.res.resx");RegisterSodDep("ribbon", "sp.runtime.js");RegisterSodDep("ribbon", "inplview");</script>
+<script type="text/javascript">RegisterSod("sp.publishing.resources.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252EPublishing\u00252EResources\u0026rev=q6nxzZIVVXE5X1SPZIMD3A\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.pub.ribbon.js", "\u002f_layouts\u002fsp.ui.pub.ribbon.js?rev=RGQSBI9Dm0E345iq\u00252FxUpHg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("msstring.js", "\u002f_layouts\u002f1033\u002fmsstring.js?rev=QtiIcPH3HV7LgVSO7vONFg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f1033\u002fnon_ie.js?rev=EVTj1bu32\u00252FMla6SDN\u00252FsNTA\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSodDep("browserScript", "msstring.js");</script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+
+            </div>
+            <!-- End Body Container -->
+            <!-- Start Developer Dashboard -->
+            
+            <!-- End Developer Dashboard -->
+
+            <!-- Additional Form instances -->
+            
+
+            <!-- Old browsers warning -->
+            
+
+
+
+
+
+        </div>
+    </div>
+    <!-- end lccBodyContainer -->
+</body>
+</html>
+<!-- Rendered using cache profile:Public Internet (Purely Anonymous) at: 2016-02-07T04:49:23 -->

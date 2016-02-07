@@ -1,0 +1,799 @@
+
+<!DOCTYPE html>
+<!-- TEMPLATE FILE: opac-main.tt -->
+<html lang="en" class="no-js">
+<head>
+<title>
+
+Cheshire Libraries catalog
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Koha 3.1803000" /> <!-- leave this for stats -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="shortcut icon" href="/opac-tmpl/bootstrap/images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" type="text/css" href="/opac-tmpl/bootstrap/lib/bootstrap/css/bootstrap.min.css" />
+
+
+
+    <link rel="stylesheet" type="text/css" href="/opac-tmpl/bootstrap/lib/jquery/jquery-ui.css" />
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="/opac-tmpl/bootstrap/css/opac.css" />
+
+
+
+<link rel="stylesheet" type="text/css" media="print" href="/opac-tmpl/bootstrap/css/print.css" />
+
+
+<style type="text/css">#header_img_right {
+float: right;
+}
+
+#header_img_left {
+float: left;
+}
+</style>
+<link rel="unapi-server" type="application/xml" title="unAPI" href="https://cheslive.koha-ptfs.co.uk/cgi-bin/koha/unapi" />
+
+<!-- Respond.js brings responsive layout behavior to IE < v.9 -->
+<!--[if lt IE 9]>
+    <script src="/opac-tmpl/bootstrap/lib/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+    function _(s) { return s } // dummy function for gettext
+</script>
+<script type="text/javascript" src="/opac-tmpl/bootstrap/lib/modernizr.min.js"></script>
+
+
+</head>
+
+
+    
+
+
+
+
+
+    
+
+<body ID="opac-main" class="branch-default" >
+
+
+<div id="wrap">
+    <div id="header-region">
+        <div class="navbar navbar-inverse navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <h1 id="logo">
+                        <a class="brand" href="/cgi-bin/koha/opac-main.pl">
+                            
+                                Cheshire Libraries
+                            
+                        </a>
+                    </h1>
+                    
+                        <div id="cartDetails" class="cart-message">Your cart is empty.</div>
+                    
+                    <ul class="nav">
+                        
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" id="cartmenulink" data-toggle="dropdown" role="button">
+                                    <i id="carticon" class="icon-shopping-cart icon-white"></i> <span class="cartlabel">Cart</span> <span id="basketcount"></span>
+                                </a>
+                                <ul aria-labelledby="cartmenulink" role="menu" class="dropdown-menu">
+                                    <li role="presentation">
+                                        <a href="#" id="cartmenuitem" class="cart-message" tabindex="-1" role="menuitem">Your cart is empty.</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        
+                        
+                            <li class="divider-vertical"></li>
+                        
+                        
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" id="listsmenu" data-toggle="dropdown" role="button"><i class="icon-list icon-white"></i> <span class="listslabel">Lists</span> <b class="caret"></b></a>
+                                <ul aria-labelledby="listsmenu" role="menu" class="dropdown-menu">
+                                    
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?display=publicshelves" tabindex="-1" role="menuitem"><strong>Public lists</strong></a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=1313&amp;sortfield=" tabindex="-1" role="menuitem">New Books Coming Soon - published March 2016</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=1276&amp;sortfield=" tabindex="-1" role="menuitem">New Talking Books - April-September 2015</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=1273&amp;sortfield=" tabindex="-1" role="menuitem">New Talking Books - October - December 2015</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=1254&amp;sortfield=" tabindex="-1" role="menuitem">New Books Coming Soon - published January &amp; February 2016</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=1155&amp;sortfield=" tabindex="-1" role="menuitem">Mood Boosting Books:Chosen by people affected by cancer</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=1154&amp;sortfield=" tabindex="-1" role="menuitem">Mood Boosting Books:Chosen by Older People</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=1153&amp;sortfield=" tabindex="-1" role="menuitem">Mood Boosting Books: Chosen by Reading Groups</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=993&amp;sortfield=" tabindex="-1" role="menuitem">New Books Coming Soon - published November &amp; December 2015</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=578&amp;sortfield=" tabindex="-1" role="menuitem">Books on prescription:dementia 2015</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?viewshelf=843&amp;sortfield=" tabindex="-1" role="menuitem">New Books Coming Soon - published October 2015</a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?display=publicshelves" tabindex="-1" role="menuitem" class="listmenulink">View All</a></li>
+                                    
+                                    <li class="divider" role="presentation"></li>
+                                    
+                                        <li role="presentation"><a href="/cgi-bin/koha/opac-shelves.pl?display=privateshelves" tabindex="-1" role="menuitem"><strong>Your lists</strong></a></li>
+                                        
+                                            <li role="presentation"><a href="/cgi-bin/koha/opac-user.pl" tabindex="-1" class="menu-inactive loginModal-trigger" role="menuitem">Log in to create your own lists</a></li>
+                                        
+                                    
+                                </ul> <!-- / .dropdown-menu -->
+                            </li> <!-- / .dropdown -->
+                        
+                    </ul> <!-- / .nav -->
+                    <div id="listsDetails"></div>
+                    
+                        <a id="user-menu-trigger" class="pull-right" href="#"><i class="icon-user"></i> <span class="caret"></span></a>
+                        <div id="members">
+                            <ul class="nav pull-right">
+                                
+                                    
+                                        
+                                            <li><a href="/cgi-bin/koha/opac-user.pl" class="loginModal-trigger" role="button" data-toggle="modal">Log in to your account</a></li>
+                                        
+                                    
+                                    
+                                
+                                
+                                
+                                    
+                                
+                            </ul>
+                        </div> <!-- /members -->
+                    
+                </div> <!-- /container-fluid -->
+            </div> <!-- /navbar-inner -->
+        </div> <!-- /navbar -->
+
+        
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div id="opacheader">
+                        <div id="header_img_left"><a href="https://cheslive.koha-ptfs.co.uk/"><img src="https://cheslive.koha-ptfs.co.uk/custom/images/west.jpg"  width="189px" height ="52px"  alt="Cheshire West and Chester" title="Cheshire West and Chester"></a></div>
+
+
+<div id="header_img_right"><a href="https://cheslive.koha-ptfs.co.uk/"><img src="https://cheslive.koha-ptfs.co.uk/custom/images/east.jpg"  width="189px" height ="90px"  alt="Cheshire East" title="Cheshire East"></a></div>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  window.addEventListener('load', function() {
+    var u="//piwik.koha-ptfs.co.uk/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 20]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  });
+</script>
+<noscript><p><img src="//piwik.koha-ptfs.co.uk/piwik.php?idsite=20" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+
+                    </div>
+                </div>
+            </div>
+        
+    </div> <!-- / header-region -->
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div id="opac-main-search">
+    <!--             <div class="span2">
+        
+            <h1 id="libraryname">
+        
+            <a href="/cgi-bin/koha/opac-main.pl">Cheshire Libraries</a></h1>
+    </div> /.span2 -->
+            <div class="span12">
+                
+                    
+                        
+                            <div class="mastheadsearch librarypulldown">
+                        
+                        
+                            <form name="searchform" method="get" action="/cgi-bin/koha/opac-search.pl" id="searchform" class="form-inline">
+                                <label for="masthead_search"> Search
+                                    
+                                </label>
+
+                                <select name="idx" id="masthead_search">
+                                
+                                    <option value="">Library catalog</option>
+                                
+                                
+                                    <option value="ti">Title</option>
+                                
+                                
+                                    <option value="au">Author</option>
+                                
+                                
+                                    <option value="su">Subject</option>
+                                
+                                
+                                    <option value="nb">ISBN</option>
+                                
+                                
+                                    <option value="se">Series</option>
+                                
+                                
+                                    
+                                        <option value="callnum">Call number</option>
+                                    
+                                
+                                </select>
+
+                                
+                                
+                                    <input type="text" title="Type search term" class="transl1" id = "translControl1" name="q" /><span id="translControl"></span>
+                                
+
+                                
+
+                                
+                                    <div class="input-append">
+                                        <select name="branch_group_limit" id="select_library">
+                                            <option value="">All libraries</option>
+                                            <optgroup label="Libraries">
+                                                
+                                                    <option value="branch:ALD">Alderley Edge Library</option>
+                                                
+                                                    <option value="branch:ALS">Alsager Library</option>
+                                                
+                                                    <option value="branch:BAR">Barnton Library</option>
+                                                
+                                                    <option value="branch:BS">Bibliographical Services</option>
+                                                
+                                                    <option value="branch:BSE">Bibliographical Services East</option>
+                                                
+                                                    <option value="branch:BHL">Bishops High Library</option>
+                                                
+                                                    <option value="branch:BLA">Blacon Library</option>
+                                                
+                                                    <option value="branch:BOL">Bollington Library</option>
+                                                
+                                                    <option value="branch:BMA">Bulk Orders East - Bib Services</option>
+                                                
+                                                    <option value="branch:BEL">Bulk Orders West - Bib Services</option>
+                                                
+                                                    <option value="branch:CPT">CallPoint</option>
+                                                
+                                                    <option value="branch:BOO">Central Book Store</option>
+                                                
+                                                    <option value="branch:CEM">Cheshire East Mobile</option>
+                                                
+                                                    <option value="branch:CRO">Cheshire Record office</option>
+                                                
+                                                    <option value="branch:CWM">Cheshire West Mobile</option>
+                                                
+                                                    <option value="branch:CHE">Chester Library</option>
+                                                
+                                                    <option value="branch:CON">Congleton Library</option>
+                                                
+                                                    <option value="branch:CRW">Crewe Library</option>
+                                                
+                                                    <option value="branch:DIS">Disley Library</option>
+                                                
+                                                    <option value="branch:ELLM">Ellesmere Port EPH Mobile Library</option>
+                                                
+                                                    <option value="branch:ELL">Ellesmere Port Library</option>
+                                                
+                                                    <option value="branch:ELT">Elton Library Centre</option>
+                                                
+                                                    <option value="branch:FRO">Frodsham Library</option>
+                                                
+                                                    <option value="branch:GBO">Great Boughton Library</option>
+                                                
+                                                    <option value="branch:HAN">Handforth Library</option>
+                                                
+                                                    <option value="branch:HEL">Helsby Library</option>
+                                                
+                                                    <option value="branch:HOM">Holmes Chapel Library</option>
+                                                
+                                                    <option value="branch:HOO">Hoole Library</option>
+                                                
+                                                    <option value="branch:HOP">Hope Farm Library</option>
+                                                
+                                                    <option value="branch:HUR">Hurdsfield Library</option>
+                                                
+                                                    <option value="branch:ILU">Interlending</option>
+                                                
+                                                    <option value="branch:KNU">Knutsford Library</option>
+                                                
+                                                    <option value="branch:LAC">Lache Library</option>
+                                                
+                                                    <option value="branch:LNO">Library Notifications</option>
+                                                
+                                                    <option value="branch:LIT">Little Sutton Library</option>
+                                                
+                                                    <option value="branch:MAC">Macclesfield Library</option>
+                                                
+                                                    <option value="branch:MAL">Malpas Library</option>
+                                                
+                                                    <option value="branch:MID">Middlewich Library</option>
+                                                
+                                                    <option value="branch:NAN">Nantwich Library</option>
+                                                
+                                                    <option value="branch:NES">Neston Library</option>
+                                                
+                                                    <option value="branch:NOR">Northwich Library</option>
+                                                
+                                                    <option value="branch:POY">Poynton Library</option>
+                                                
+                                                    <option value="branch:PRE">Prestbury Library</option>
+                                                
+                                                    <option value="branch:REA">Reaseheath</option>
+                                                
+                                                    <option value="branch:SAN">Sandbach Library</option>
+                                                
+                                                    <option value="branch:SAY">Sandiway Library</option>
+                                                
+                                                    <option value="branch:STY">Styal Prison</option>
+                                                
+                                                    <option value="branch:TAR">Tarporley Library</option>
+                                                
+                                                    <option value="branch:TAV">Tarvin Library Centre</option>
+                                                
+                                                    <option value="branch:TAT">Tattenhall Library Centre</option>
+                                                
+                                                    <option value="branch:UPT">Upton Library</option>
+                                                
+                                                    <option value="branch:UPTM">Upton Mobile</option>
+                                                
+                                                    <option value="branch:WEA">Weaverham Library</option>
+                                                
+                                                    <option value="branch:WEBEAST">Web Access (CHS East)</option>
+                                                
+                                                    <option value="branch:WEB">Web access (CHS West)</option>
+                                                
+                                                    <option value="branch:WHA">Wharton Library</option>
+                                                
+                                                    <option value="branch:WSN">Willaston Library Centre</option>
+                                                
+                                                    <option value="branch:WIL">Wilmslow Library</option>
+                                                
+                                                    <option value="branch:WIN">Winsford Library</option>
+                                                
+                                                    <option value="branch:TES">Z - Notification Test Library</option>
+                                                
+                                            
+                                                </optgroup>
+                                                <optgroup label="Groups">
+                                                    
+                                                        
+                                                            <option value="multibranchlimit-BIB">Bibliographic Services</option>
+                                                        
+                                                    
+                                                        
+                                                            <option value="multibranchlimit-EAST">East Cheshire</option>
+                                                        
+                                                    
+                                                        
+                                                            <option value="multibranchlimit-WEST">West Cheshire</option>
+                                                        
+                                                    
+                                                </optgroup>
+                                            
+                                        </select>
+                                        <button type="submit" id="searchsubmit" class="btn btn-primary">Go</button>
+                                    </div>
+                                
+
+                            </form>
+                        
+                        </div> <!-- / .mastheadsearch -->
+                    
+
+                    <div class="row-fluid">
+                            <div id="moresearches">
+                                <ul>
+                                    <li><a href="/cgi-bin/koha/opac-search.pl">Advanced search</a></li>
+                                    
+                                    <li><a href="/cgi-bin/koha/opac-browser.pl">Browse by hierarchy</a></li>
+                                    
+                                    
+                                    <li><a href="/cgi-bin/koha/opac-tags.pl">Tag cloud</a></li>
+                                    
+                                    
+                                    
+                                </ul>
+                            </div> <!-- /#moresearches -->
+                    </div> <!-- /.row-fluid -->
+
+                
+            </div> <!-- /.span10 -->
+            </div> <!-- /.opac-main-search -->
+        </div> <!-- / .row-fluid -->
+    </div> <!-- /.container-fluid -->
+
+    <!-- Login form hidden by default, used for modal window -->
+    <div id="loginModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="closebtn" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="modalLoginLabel">Log in to your account</h3>
+        </div>
+        <form action="/cgi-bin/koha/opac-user.pl" method="post" name="auth" id="modalAuth">
+            <div class="modal-body">
+                    
+                    <input type="hidden" name="koha_login_context" value="opac" />
+                    <fieldset class="brief">
+                        <label for="muserid">Login:</label><input type="text" id="muserid" name="userid" />
+                        <label for="mpassword">Password:</label><input type="password" id="mpassword" name="password" />
+                    
+                        <div id="nologininstructions-modal">
+                            <p><b>If you already have a library card</b> you do <b>not</b> need to register your account online just log in with your library card number and password</p>
+
+<p>Please note that you should ignore all spaces when entering your library card number into the login box.</p>
+
+<p><b>If you don't know your Password</b> ask us via the live chat box, or contact us via <a href="mailto:libraries@cheshiresharedservices.gov.uk">email</a>, please include your library card number, and confirm your address or date of birth.</p>
+                        </div>
+                    
+                        <div id="mpatronregistration"><p>Don't have an account? <a href="/cgi-bin/koha/opac-memberentry.pl">Register here.</a></p></div>
+                    </fieldset>
+            </div>
+            <div class="modal-footer">
+                <input type="submit" class="btn btn-primary" value="Log in" />
+                <a href="#" data-dismiss="modal" aria-hidden="true" class="cancel">Cancel</a>
+            </div>
+        </form> <!-- /#auth -->
+    </div>  <!-- /#modalAuth  -->
+
+
+<div class="main">
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+    </ul>
+
+    
+        
+            <div id="notloggedin" class="container-fluid">
+        
+    
+
+    <div class="row-fluid">
+    
+        <div class="span2">
+            <div id="navigation">
+                <div id="opacnav"><a href="http://www.cheshireeast.gov.uk/libraries/libraries_opening_hours.aspx"target="_blank">Cheshire East Libraries Opening Times</a><br><br>
+<a href="http://www.cheshirewestandchester.gov.uk/residents/libraries/opening_hours.aspx"target="_blank">Cheshire West and Chester Libraries Opening Times</a><br><br>
+<a href="http://www.cheshireeast.gov.uk/libraries/eresources.aspx"target="_blank">Cheshire East Libraries eResources</a><br><br>
+<a href="http://www.cheshirewestandchester.gov.uk/residents/libraries/virtual_reference_library.aspx"target="_blank">Cheshire West and Chester Libraries eResources</a><br><br>
+<a href="https://cheslive.koha-ptfs.co.uk/cgi-bin/koha/opac-shelves.pl?display=publicshelves"target="_blank">Book Lists</a><br><br>
+<a href="http://cheshire.lib.overdrive.com/"target="_blank">Cheshire eBooks</a><br><br>
+<a href="https://cheshirecounty.oneclickdigital.eu/"target="_blank">Cheshire eAudiobooks</a><br><br>
+<a href="mailto:libraries@cheshiresharedservices.gov.uk">Contact Us</a><br></br></div>
+
+<div id="opacnavbottom"><h2>Got a question? Chat to us below!</h2><div style="HEIGHT: 300px"><!-- if using qwidget size "fill", make sure that the minimum height for the parent element of qwidget container on this page is 230 px.--><!-- Beginning of QuestionPoint qwidget code. --><div id="qpchatwidget" style="margin: auto"><script id="qp.bootstrap" type="text/javascript" src="https://www.questionpoint.org/crs/js/qwidget/qp.bootstrap.js?langcode=1&amp;instid=10966&amp;skin=blue&amp;size=fill" charset="utf-8">
+            //<noscript>Please enable javascript to chat with librarians online</noscript></script></div></div></div>
+
+            </div>
+        </div>
+    
+
+    
+        <div class="span7">
+    
+
+        
+            <div id="news" class="newscontainer">
+                
+                    <div class="newsitem">
+                        <h4 class="newsheader">Sandbach Library Refurbishment</h4>
+                        <div class="newsbody"><p>Sandbach Library will be re-opening with a limited service on Monday 8th February. &nbsp;</p>
+<p>We expect to be able to accept books at the door, but issuing stock may not be possible. &nbsp;We apologise for any inconvenience. &nbsp;</p></div>
+                        <div class="newsfooter">(published on 22/01/2016)</div>
+                    </div>
+                
+                    <div class="newsitem">
+                        <h4 class="newsheader">Crewe Library Reduced Service</h4>
+                        <div class="newsbody"><p style="margin: 0.5em 0px; padding: 0px; font-family: arial, verdana, helvetica, sans-serif; line-height: 15.8599996566772px;">Due to necessary work as part of the Lifestyle Centre move, Crewe Library will be operating as a<span style="line-height: 15.8599996566772px;" data-mce-mark="1">&nbsp;reduced service from Monday 7th December, 2015. &nbsp;</span></p>
+<p style="margin: 0.5em 0px; padding: 0px; font-family: arial, verdana, helvetica, sans-serif; line-height: 15.8599996566772px;">Until further notice, Crewe Library's stock will <strong>not</strong> be visible via the online catalogue, although a selection of stock will be available in branch. &nbsp;To enquire about the stock available at Crewe Library during the reduced service period, please speak to <a href="http://www.cheshireeast.gov.uk/libraries/nearest_library/crewe_library.aspx" target="_blank">Crewe Library</a>&nbsp;directly.</p>
+<p style="margin: 0.5em 0px; padding: 0px; font-family: arial, verdana, helvetica, sans-serif; line-height: 15.8599996566772px;">Customers will still be able to place holds on stock available at other libraries and collect their holds from Crewe Library as usual. &nbsp;We remind all customers that Cheshire East and Cheshire West and Chester library cards are valid in all of our libraries across the two authorities, and all stock can be borrowed and returned at all branches.&nbsp;</p></div>
+                        <div class="newsfooter">(published on 02/12/2015)</div>
+                    </div>
+                
+            </div>
+        
+
+        
+
+        <div id="opacmainuserblock"><h2><b>Welcome to the Cheshire Libraries Catalogue</h2></b><br>This is the shared catalogue for <a href="http://www.cheshirewestandchester.gov.uk/default.aspx?page=356"target="_blank">Cheshire West and Chester</a> and <a href="http://www.cheshireeast.gov.uk/libraries.aspx"target="_blank">Cheshire East Council</a> library services.
+Access your Personal Record to renew your loans, check your reservations and update your personal details.
+<br></br>
+<b>New Books</b>
+<br>
+The book list for <a href="https://cheslive.koha-ptfs.co.uk/cgi-bin/koha/opac-shelves.pl?viewshelf=1313&sortfield=" target="_blank">March</a> publications is now available, and <a href="https://cheslive.koha-ptfs.co.uk/cgi-bin/koha/opac-shelves.pl?viewshelf=1254&sortfield=" target="_blank">January and February's</a> books are listed too.
+<br>See something you like?  Placing a hold online is quick and easy - if you're unsure, check out our <a href="https://cheslive.koha-ptfs.co.uk/custom/documents/How_to_Place_a_Hold.pdf" target="_blank">user guide</a> which will walk you through the process.  
+<br></br>
+<b>The 24 Hour Telephone Service</b> is available for renewals phone 0845 148 0148 enter the number from your library card, ignoring any letters.
+<br></br>
+<b>Keep up to date!</b> Did you know you can receive email notifications from us to remind you your loans are due, and when Holds are ready for pick up from the library? Log in to your account and add your email address to Your personal details.<br></br>
+<p><h2>How to guides...</h2></p>
+<p><a href="https://cheslive.koha-ptfs.co.uk/custom/documents/Your_Account.pdf" target=_blank> Your Account</a></p>
+<p><a href="https://cheslive.koha-ptfs.co.uk/custom/documents/How_to_Place_a_Hold.pdf" target=_blank>How to place a hold</a></p>
+<p><a href="https://cheslive.koha-ptfs.co.uk/custom/documents/How_to_create_carts_and_lists.pdf" target=_blank>How to create carts and lists</a></p>
+
+<hr>
+<table>
+<tr><td>
+<a href="http://cheshire.lib.overdrive.com/"><img alt="Ebooks" src="https://cheslive.koha-ptfs.co.uk/custom/images/eBooks.jpg" align="left" style="margin:0px 5px" /></a><h2>Ebooks</h2>
+        Ebooks are now available through Cheshire Libraries. Choose from a range of over 2,000 <a href="http://cheshire.lib.overdrive.com/"><b>free ebooks</b></a> to download. Titles never go overdue and there are no late charges!
+        Note: members who join online should visit a library to upgrade their membership to access this service.<br /><br><br><br /><br></br></td></tr><tr><td><a href="https://cheshirecounty.oneclickdigital.eu/"><img alt="OneClick Digital eaudiobooks" src="https://cheslive.koha-ptfs.co.uk/custom/images/OCD_square.jpg" align="left" style="margin:5px" /></a><h2>Eaudiobooks</h2>
+        Choose from a range of over 1,000 <a href="https://cheshirecounty.oneclickdigital.eu/"><b>free eaudiobooks</b></a> to download to listen to on your PC, Mac, MP3 player or smartphone. Titles never go overdue and there are no late charges!<br /><b>Note:</b> members who join online should visit a library to upgrade their membership to access this service.<br /></td></tr></table></div>
+        </div> <!-- / .span 7/9 -->
+
+        
+            <div class="span3">
+                
+                    
+                        
+                            <div id="login">
+                                <form action="/cgi-bin/koha/opac-user.pl" method="post" name="auth" id="auth">
+                                    <input type="hidden" name="koha_login_context" value="opac" />
+                                    <fieldset class="brief">
+                                        <legend>Log in to your account:</legend>
+                                        <label for="userid">Login:</label><input type="text" id="userid" name="userid" />
+                                        <label for="password">Password:</label><input type="password" id="password" name="password" />
+                                    <fieldset class="action">
+                                        <input type="submit" value="Log in" class="btn" />
+                                    </fieldset>
+                                    <div id="patronregistration"><p>If you are not already a member of the library you can <a href="/cgi-bin/koha/opac-memberentry.pl">join online.</a></p></div>
+                                    </fieldset>
+                                
+                                    <div id="nologininstructions-main">
+                                        <p><b>If you already have a library card</b> you do <b>not</b> need to register your account online just log in with your library card number and password</p>
+
+<p>Please note that you should ignore all spaces when entering your library card number into the login box.</p>
+
+<p><b>If you don't know your Password</b> ask us via the live chat box, or contact us via <a href="mailto:libraries@cheshiresharedservices.gov.uk">email</a>, please include your library card number, and confirm your address or date of birth.</p>
+                                    </div>
+                                
+                                </form>
+                            </div> <!-- /#login -->
+                        
+                        
+                    
+                
+                
+            </div> <!-- / .span3 -->
+        
+
+        </div> <!-- /.container-fluid -->
+    </div> <!-- /.row-fluid -->
+</div> <!-- /.main -->
+
+
+    
+
+    
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div id="koha_url" class="clearfix">
+                        <p>Powered by
+                        
+                            <a class="koha_url" href="http://koha-community.org">Koha</a>
+                        
+                        , Supported by
+                        
+                            <a class="ptfs_url" href="http://ptfs-europe.com">PTFS-Europe</a>
+                        
+			</p>
+                    </div>
+                </div> <!-- /.span12 -->
+            </div> <!-- /.row-fluid -->
+        </div> <!-- /.container-fluid -->
+    
+
+</div> <!-- / #wrap in masthead.inc -->
+
+    
+
+
+
+<!-- JavaScript includes -->
+<script type="text/javascript" src="/opac-tmpl/bootstrap/lib/jquery/jquery.js"></script>
+<script type="text/javascript" src="/opac-tmpl/bootstrap/lib/jquery/jquery-ui.js"></script>
+<script type="text/javascript">
+// Resolve name collision between jQuery UI and Twitter Bootstrap
+$.widget.bridge('uitooltip', $.ui.tooltip);
+</script>
+<script type="text/javascript" src="/opac-tmpl/bootstrap/lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/opac-tmpl/bootstrap/js/global.js"></script>
+<script type="text/javascript">
+    Modernizr.load([
+        // Test need for polyfill
+        {
+            test: window.matchMedia,
+            nope: "/opac-tmpl/bootstrap/lib/media.match.min.js"
+        },
+        // and then load enquire
+        "/opac-tmpl/bootstrap/lib/enquire.min.js",
+        "/opac-tmpl/bootstrap/js/script.js"
+    ]);
+</script>
+
+
+<script type="text/javascript">
+    //<![CDATA[
+    var MSG_CONFIRM_AGAIN = _("Warning: Cannot be undone. Please confirm once again")
+    var MSG_DELETE_SEARCH_HISTORY = _("Are you sure you want to delete your search history?");
+    var MSG_NO_SUGGESTION_SELECTED = _("No suggestion was selected");
+    
+        var MSG_BASKET_EMPTY = _("Your cart is currently empty");
+        var MSG_RECORD_IN_BASKET = _("The item is already in your cart");
+        var MSG_RECORD_ADDED = _("The item has been added to your cart");
+        var MSG_RECORD_REMOVED = _("The item has been removed from your cart");
+        var MSG_NRECORDS_ADDED = _(" item(s) added to your cart");
+        var MSG_NRECORDS_IN_BASKET = _("already in your cart");
+        var MSG_NO_RECORD_SELECTED = _("No item was selected");
+        var MSG_NO_RECORD_ADDED = _("No item was added to your cart");
+        var MSG_CONFIRM_DEL_BASKET = _("Are you sure you want to empty your cart?");
+        var MSG_CONFIRM_DEL_RECORDS = _("Are you sure you want to remove the selected items?");
+        var MSG_ITEM_IN_CART = _("In your cart");
+        var MSG_IN_YOUR_CART = _("Items in your cart: ");
+        var MSG_ITEM_NOT_IN_CART = _("Add to your cart");
+        var MSG_NO_RECORD_SELECTED = _("No item was selected");
+    
+    
+        var MSG_TAGS_DISABLED = _("Sorry, tags are not enabled on this system.");
+        var MSG_TAG_ALL_BAD = _("Error! Your tag was entirely markup code.  It was NOT added.  Please try again with plain text.");
+        var MSG_ILLEGAL_PARAMETER = _("Error! Illegal parameter");
+        var MSG_TAG_SCRUBBED = _("Note: your tag contained markup code that was removed. The tag was added as ");
+        var MSG_ADD_TAG_FAILED = _("Error! The add_tag operation failed on");
+        var MSG_ADD_TAG_FAILED_NOTE = _("Note: you can only tag an item with a given term once.  Check 'My Tags' to see your current tags.");
+        var MSG_DELETE_TAG_FAILED = _("Error! You cannot delete the tag");
+        var MSG_DELETE_TAG_FAILED_NOTE = _("Note: you can only delete your own tags.")
+        var MSG_LOGIN_REQUIRED = _("You must be logged in to add tags.");
+        var MSG_TAGS_ADDED = _("Tags added: ");
+        var MSG_TAGS_DELETED = _("Tags added: ");
+        var MSG_TAGS_ERRORS = _("Errors: ");
+        var MSG_MULTI_ADD_TAG_FAILED = _("Unable to add one or more tags.");
+        var MSG_NO_TAG_SPECIFIED = _("No tag was specified.");
+    
+    
+    //]]>
+</script>
+
+
+    <script type="text/javascript" src="/opac-tmpl/bootstrap/js/basket.js"></script>
+
+
+<script type="text/javascript" src="/opac-tmpl/bootstrap/js/tags.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        //<![CDATA[
+        $(document).ready(function () {
+
+// Change catalog to catalogue in search dropdown select
+$("#masthead_search :contains('Library catalog')").html("Library catalogue");
+
+$(document.title = 'Cheshire Libraries Catalogue');
+
+//Hide library from search library list
+$("#select_library option[value='branch:BS']").remove();
+$("#select_library option[value='branch:BSE']").remove();
+$("#select_library option[value='branch:BMA']").remove();
+$("#select_library option[value='branch:BEL']").remove();
+$("#select_library option[value='branch:CPT']").remove();
+$("#select_library option[value='branch:CRO']").remove();
+$("#select_library option[value='branch:CRW']").remove();
+$("#select_library option[value='branch:ELLM']").remove();
+$("#select_library option[value='branch:ELT']").remove();
+$("#select_library option[value='branch:HUR']").remove();
+$("#select_library option[value='branch:ILU']").remove();
+$("#select_library option[value='branch:LNO']").remove();
+$("#select_library option[value='branch:REA']").remove();
+$("#select_library option[value='branch:WEBEAST']").remove();
+$("#select_library option[value='branch:WEB']").remove();
+$("#select_library option[value='branch:WSN']").remove();
+
+//Hide library from self-registration list
+$("#memberentry_library option[value='BS']").remove();
+$("#memberentry_library option[value='BOO']").remove();
+$("#memberentry_library option[value='BSE']").remove();
+$("#memberentry_library option[value='BMA']").remove();
+$("#memberentry_library option[value='BEL']").remove();
+$("#memberentry_library option[value='CPT']").remove();
+$("#memberentry_library option[value='CRO']").remove();
+$("#memberentry_library option[value='ELLM']").remove();
+$("#memberentry_library option[value='ELT']").remove();
+$("#memberentry_library option[value='HUR']").remove();
+$("#memberentry_library option[value='ILU']").remove();
+$("#memberentry_library option[value='LNO']").remove();
+$("#memberentry_library option[value='REA']").remove();
+$("#memberentry_library option[value='STY']").remove();
+$("#memberentry_library option[value='WEBEAST']").remove();
+$("#memberentry_library option[value='WEB']").remove();
+$("#memberentry_library option[value='WSN']").remove();
+
+// Hide libraries from hold pickup list
+
+$("[id^=branch] option[value='BS']").remove();
+$("[id^=branch] option[value='BOO']").remove();
+$("[id^=branch] option[value='BSE']").remove();
+$("[id^=branch] option[value='BMA']").remove();
+$("[id^=branch] option[value='BEL']").remove();
+$("[id^=branch] option[value='CPT']").remove();
+$("[id^=branch] option[value='CRO']").remove();
+$("[id^=branch] option[value='ELLM']").remove();
+$("[id^=branch] option[value='ELT']").remove();
+$("[id^=branch] option[value='HOO']").remove();
+$("[id^=branch] option[value='HUR']").remove();
+$("[id^=branch] option[value='ILU']").remove();
+$("[id^=branch] option[value='LNO']").remove();
+$("[id^=branch] option[value='REA']").remove();
+$("[id^=branch] option[value='STY']").remove();
+$("[id^=branch] option[value='WEBEAST']").remove();
+$("[id^=branch] option[value='WEB']").remove();
+$("[id^=branch] option[value='WSN']").remove();
+
+//suppress MARC and ISBD views
+$("#views a:contains('MARC view')").hide();
+$("#views a:contains('ISBD view')").hide();
+//$("span#overdrive-results:contains('Found')").html(' in eBook collection');
+//$("span:contains('Searching OverDrive')").html('Searching eBooks');
+$("#usersuggestions label[for='isbn']").html('ISBN:');
+$("#usersuggestions label[for='branch']").addClass("required");
+
+// Change Login to Library card number on login box
+$("#modalAuth label[for='muserid']").html("Library Card Number:");
+$("#login label[for='userid']").html("Library Card Number:");
+//Move patronregistration block to after nologinstructions block
+$("#patronregistration").appendTo("#nologininstructions-main");
+
+//Change Lists to Reading Lists
+$("span.listslabel:contains('Lists')").html('Reading Lists');
+
+// Change wording of Fines to Charges in patron account
+
+$("#menu ul > li > a:contains('your fines')").html('your charges');
+$("#opac-user-views th:contains('Fines')").html('Charges');
+$("#useraccount th:contains('Fine amount')").html("Fine and charges amount");
+$("#opac-user-views ul > li >a:contains('Fines')").text(function () {
+    return $(this).text().replace("Fines", "Charges");
+  });
+
+//Hide 'Your Messaging'
+$("#usermenu ul > li:contains('your messaging')").hide();
+
+// Hide Cardnumber on joining form
+$("#memberentry_alternateaddress").hide();
+$("#memberentry_alternatecontact").hide();
+
+//Self registration
+//$("select#borrower_branchcode").prepend('<option value="" selected>**Please select correct library**</option>');
+$("fieldset#memberentry_library > ol > li > label:contains('Card number')").html('Office use:');
+$("label[for='borrower_branchcode']").html('Please select correct home library:');
+
+});
+        //]]>
+    </script>
+
+</body>
+</html>
+
+

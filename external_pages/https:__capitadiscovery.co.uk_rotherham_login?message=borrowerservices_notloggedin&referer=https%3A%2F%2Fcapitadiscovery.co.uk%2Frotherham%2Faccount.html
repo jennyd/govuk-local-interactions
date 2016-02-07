@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+<head>
+	<title>Login</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+			<base href="https://capitadiscovery.co.uk/rotherham/"><!--[if IE]></base><![endif]-->
+		<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+	<link rel="stylesheet" type="text/css" href="assets/8288b75294d6ab1bfd3775e82c408537ba5da7fd/merged.css"/>
+		<link rel="icon" href="//capitadiscovery.co.uk/favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="//capitadiscovery.co.uk/favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="//capitadiscovery.co.uk/favicon.ico" type="image/vnd.microsoft.icon"/>
+			<link rel="apple-touch-icon" href="/images/start_icon.png"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		</head>
+<!--[if lt IE 7 ]>
+<body id="login" class="ie6 oldie en-gb live">
+<![endif]-->
+<!--[if IE 7 ]>
+<body id="login" class="ie7 oldie en-gb live">
+<![endif]-->
+<!--[if IE 8 ]>
+<body id="login" class="ie8 en-gb live">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<body id="login" class="en-gb live">
+<!--<![endif]-->
+<div id="page" class="showgrid">
+	<span id="skiplink" class="visuallyHidden focusable">
+		<a href="#pageContent" title="Skip to Content">Skip to Content</a>
+	</span>
+
+	<div id="pageContainer">
+		<div id="headerFragment"><!-- Header Links Content -->
+<!-- This webpart is appended to the .accessibilityLinks ul -->
+
+<div id="globalHeader">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a style="text-decoration: none" href="http://capitadiscovery.co.uk/rotherham/home"><img src="assets/-/images/default-theme/logo_sm.png" alt="Catalogue home"></a>
+
+
+<ul>
+<li></li>
+<li></li>
+<li><a href="home" title="Home">Catalogue Home</a></li>
+<li><a href="http://www.rotherham.gov.uk">Rotherham Home</a></li>
+<li><a href="feedback">Feedback</a></li>
+<li><a href="accessibility" title="Accessibility help">Accessibility</a></li>
+<li class="lastitem"><a href="searchhelp.php" title="Search Help">Help</a></li>
+</ul>
+</div>
+ <div id="header"></div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+		<div id="headerLinks">
+			<ul class="accessibilityLinks appLinks posAbs navList">
+				<!-- Header Content -->
+<!-- This webpart is appended to the #pageContainer div -->				<li class="last">
+					<a href="searchhelp">Help</a>
+				</li>
+			</ul>
+			<ul class="userLinks posAbs navList">
+									<li><a href="https://capitadiscovery.co.uk/rotherham/join" id="join-link">Join</a></li>								<li><a href="https://capitadiscovery.co.uk/rotherham/account" id="account-link">My Library Account</a></li>
+
+								<li><a href="lists" id="lists-link">My Lists </a></li>
+
+							</ul>
+		</div>
+		<div id="pageHeader">
+			<h1 id="appTitle" class="hidden"><a href="http://capitadiscovery.co.uk/rotherham/" title="Rotherham Library Catalogue">Rotherham Library Catalogue</a></h1>
+						<div id="searchBox">
+						<form id="searchform" action="items" method="get" autocomplete="off">
+			<div class="formElement">
+				<label id="jslabel" for="s" class="visuallyHidden">Search the library catalogue</label>
+
+				<input type="text" id="s" name="query" maxlength="1000" value="" placeholder="Search the library catalogue" class="search-input" autocomplete="off"/>
+
+				<select id="target" name="target" >
+<option value="catalogue" selected="selected"  >Local catalogue</option>
+<option value="content" >Content</option>
+</select>
+
+				<input type="submit" id="searchsubmit" value="Search"/>
+
+				<a href="advancedsearch" class="visuallyHidden" id="advancedSearchFallback">More search options</a>
+				<a href="advancedsearch" id="advanced-search-link">Build Search</a>
+			</div>
+		</form>
+					</div>
+		</div>
+
+		
+		<div id="pageContent" >
+				<h1 class="title">Log in to My Library Account</h1>
+
+
+
+
+<form id="borrowerServices" action="https://capitadiscovery.co.uk/rotherham/sessions" method="post" class="genericForm loginForm uiDeskHalf posLeft uiDeskPushOne">
+	<div id="barcodeEntry">
+		<p class="login-p">Please enter your borrower number. This can be found on the back of your library ticket, please remember to include the M at the beginning.</p>
+
+		<div class="formElement singleLine">
+			<label class="login-label" for="borrowerBarcodeTextBox">Borrower Number</label>
+			<input id="borrowerBarcodeTextBox" type="text" name="barcode" value=""/>
+		</div>
+	</div>
+
+	<div id="institutionIdEntry" class="hidden ">
+		<p class="login-p">Enter your id</p>
+
+		<div class="formElement singleLine">
+			<label class="login-label" for="institutionIdTextBox">Institution ID</label>
+			<input id="institutionIdTextBox" type="text" name="institutionId" value=""/>
+		</div>
+	</div>
+
+			<p class="login-p">Enter your PIN</p>
+		<div class="formElement singleLine">
+			<label class="login-label" for="pinTextBox">PIN</label>
+			<input id="pinTextBox" type="password" name="pin" value="" autocomplete="off"/>
+		</div>
+
+		<div class="formElement singleLine">
+			<label class="fogottenpin-label" for="ResetPinLink">Forgotten your PIN?</label>
+			<a href="login?auth_reset=true" id="ResetPinLink" title="ResetPin">Reset your PIN.</a>
+		</div>
+	
+	<div class="formELement singleLine confirm">
+		<input type="submit" name="borrowerLoginButton" value="Login"/>
+		<input id="pageAfterLogin" type="hidden" name="referer" value="https://capitadiscovery.co.uk/rotherham/account"/>
+	</div>
+</form>		</div>
+
+		<div id="pageFooter">
+			<!-- footer -->
+
+
+<!-- footer container -->	
+
+
+<table width="100%" align="center" cellpadding="10">
+
+<td bgcolor="#6A297B" width="8%"></td>
+<td bgcolor="#6A297B" width="15%"><a style="text-decoration:none" href="http://www.rotherham.gov.uk/"><font face="arial" color="#FFFFFF"><b>Council Website</a></td>
+<td bgcolor="#6A297B" width="8%"><font face="arial" color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> | </td>
+<td bgcolor="#6A297B" width="15%"><a style="text-decoration:none" href="http://www.rotherham.gov.uk/libraries/"><font face="arial" color="#FFFFFF"><b>Other Library Information</a></td>
+<td bgcolor="#6A297B" width="8%"><font face="arial" color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> | </td>
+<td bgcolor="#6A297B" width="15%"><a style="text-decoration:none" href="http://www.rotherham.gov.uk/info/200062/libraries/762/school_loans_service"><font face="arial" color="#FFFFFF"><b>Services to Schools</a></td>
+<td bgcolor="#6A297B" width="8%"><font face="arial" color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> | </td>
+<td bgcolor="#6A297B" width="15%"><a style="text-decoration:none" href="https://www.facebook.com/rotherhamlibraries/"><font face="arial" color="#FFFFFF"><b>Follow us on Facebook</a></td>
+<td bgcolor="#6A297B" width="8%"></td></td>
+</table>
+
+  <!-- Warning! - Do not remove following three script elements enabling Juice and Google Analytics -->
+	<script type="text/javascript" src="assets/-/js/jquery-1.4.4.js"></script>
+	<script type="text/javascript" src="assets/-/js/juice.js"></script>
+	<script type="text/javascript" src="assets/-/js/extend_rotherham_prism.js"></script>
+
+  <script type="text/javascript" src="assets/-/js/script.js"></script>
+
+
+
+
+
+  <!-- Google Analytics for Talis -->
+  <script type="text/javascript">
+      /* <![CDATA[ */
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-15277170-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+        })();
+      /* ]]> */
+  </script>
+  
+  		</div>
+
+		<div id="pageFooterMobile" class="mobile">
+			<ul class="menu">
+				<li><a href="advancedsearch">More search options</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- end pageContainer -->
+</div>
+<!-- End #page -->
+<div id="responsiveMarker"></div>
+<script type="text/javascript">
+	var tr = {
+		'expandall': "Expand All",
+		'collapseall': "Collapse All",
+		'lists_saving': "Saving...",
+		'lists_done': "Done!",
+		'lists_error': "An error occured. Please try again.",
+		'close_dialog': "Close dialog",
+		'show_facets': "Show facets",
+		'next': "Next >",
+		'previous': "< Prev",
+		'rating_saving': "Saving your rating...",
+		'rating_save_error': "Could not save rating at this time.",
+		'rating_saved_by': "from {{users}} users",
+		'rated_by_one': "from 1 user",
+		'rating_saved': "Your rating was saved!",
+		'search_term_needed': "Please enter a term in the search box.",
+		'account_renewaction': "Renew",
+		'account_renewaction_renewing': "Renewing...",
+		'account_renewaction_successful': "Renewed!",
+		'account_renewaction_failed': "Renewal Failed",
+		'account_renewaction_error': "An error has occured. Please try again.",
+		'account_error_connect': "Could not connect to library system due to a temporary issue.",
+		'account_error_loan_title': "Could not renew {title}",
+		'account_success_loan_title': "Successfully renewed {title}",
+		'account_renew_all': "Renew all",
+		'item_enrichments_expand': "Expand",
+		'item_enrichments_collapse': "Collapse",
+		'more_tags': "More Tags",
+		'less_tags': "Less Tags",
+		'recently_added': "Recently added tags",
+		'tag_moderated': "These may be moderated",
+		'tag_saving': "Saving...",
+		'tag_success': "Successfully added the tags:",
+		'edit_tag_button': "Change your tags",
+		'autocomplete_author': "Author",
+		'autocomplete_subject': "Subject",
+		'autocomplete_title': "Title",
+		'autocomplete_nature': "Nature",
+		'autocomplete_genre': "Genre",
+		'content_found_title': "Found alternative content"
+	};
+
+	var PRISM = {
+		'base_url': 'https://capitadiscovery.co.uk/rotherham/',
+		'cache_duration_search': 1200,
+		'account_message_delay': 60000,
+		'fade_messages': true,
+		'displayRecommendations': 3,
+		'actions': ['searchDefault', 'alternateScript', 'advancedSearch', 'searchBuffer', 'setUp', 'checkSize'],
+		'initial_query':"",
+		'initial_terms': {},
+		'use_new_format_facet': true,
+		'page': 'login',
+		'locale': 'en-gb',
+		'search_builder_shift': -40,
+		'ip': '86.15.33.80',
+		'reviews_max_length':500,
+		'bib_id': null,
+		'target': 'catalogue',
+		'config': {
+			'mobile': true,
+			'html5': true,
+			'ratings': true,
+			'tags': 'false',
+			'enhanced_lists':true,
+			'auth':false,
+			'multiple_langs':false,
+			'requires_pin': true,
+			'locale': 'en-gb',
+			'moderation': 'true',
+			'suggestion_desktop': '5',
+			'suggestion_mobile': '1',
+			'suggestion_max': '7'
+		},
+		'borrower_barcode': null,
+		'borrower_type': null	};
+		PRISM.actions.push('suggest');
+											</script>
+<script id="tmpl-lists-dialog" type="text/x-prism-template">
+	<div class="dialog listdialog modal uiShadow" role="dialog" tabindex="-1" aria-labeledby="ldtitle{{id}}">
+		<h2 id="ldtitle{{id}}">Save</h2>
+
+		<h3>Add {{title}} to list</h3>
+
+		<form>
+			<div class="formElement" {{hidelist}}>
+				<label for="list-id-{{id}}">Existing list:</label>
+				<select id="list-id-{{id}}" name="list_id">{{lists}}</select>
+			</div>
+			<div class="formElement">
+				<label for="list-title-{{id}}">New list</label>
+				<input type="text" name="list_title" id="list-title-{{id}}" value=""/>
+			</div>
+			<div>
+				<input type="submit" name="add" value="Save" id="list-save-{{id}}" class="save"/>
+				<input type="hidden" name="action" value="add"/><input type="hidden" name="bib_id" value="{{bib_id}}"/>
+			</div>
+		</form>
+		<h3 class="export">Export</h3>
+
+		<div class="citationExport uiBox uiBorder uiIconPre">
+			<ul>
+				<li><a href="https://www.myendnoteweb.com/EndNoteWeb.html?func=directExport&amp;partnerName=Prism&amp;dataIdentifier=1&amp;dataRequestUrl={{url}}.ris">Endnote Web</a></li>
+				<li><a href="{{url}}.enw">Endnote Desktop</a></li>
+				<li><a href="http://www.refworks.com/express/expressimport.asp?vendor=Talis+Prism+3&amp;filter=RefWorks+Tagged+Format&amp;url={{url}}.refworks">Refworks</a></li>
+				<li><a href="{{url}}.ris">RIS</a></li>
+			</ul>
+		</div>
+		<a href="#" class="close"><img alt="Close dialog" src="/images/remove.png"></a>
+	</div>
+</script>
+
+<script id="tmpl-search-dd" type="text/x-prism-template">
+	<div class="dropMenu" id="advanced" aria-live="polite" aria-relevant="additions removals" tabindex="0" aria-role="dialog" aria-labelledby="advanced_header" aria-describedby="advancedSearchForm">
+		<h2 id="advanced_header">Build Search</h2>
+
+		<form class="genericForm" action="items" id="advancedSearchForm">
+			<div class="formElement buildSearch" role="group" tabindex="0">
+				<label for="adv_s2">Search for:</label>
+
+				<div class="search-input uiBorder" id="adv_s" tabindex="0" role="textbox"><span class="search-builder"><span class="last">{{query}}</span></span></div>
+				<input class="search-input uiBorder" id="adv_s2" name="query" value="{{query}}" type="text" style="display:none" placeholder="Add a term"/><input
+					type="submit" value="Search" aria-label="Search" class="submit"/>
+			</div>
+		</form>
+		<p class="note de-em">You can access the <a href="advancedsearch?target=catalogue">old advanced search</a>.</p>
+		<a href="#" class="close"><img alt="Close dialog" src="/images/remove.png"></a>
+	</div>
+</script>
+
+<script type="text/x-prism-template" id="tmpl-search-group">
+	<div class="runOn formElement groupPin" role="group" id="qb-grp-{{id}}" aria-label="search group" tabindex="0">
+		<select class="connector" aria-label="connector">
+			<option value="AND">AND</option>
+			<option value="OR">OR</option>
+			<option value="AND NOT">NOT</option>
+		</select>
+		<label for="qb-dd-{{id}}">with</label>
+		<select id="qb-dd-{{id}}" class="choose">{{select}}</select>
+		<input id="qb-txt-{{id}}" type="text" name="author"/>
+		<label class="visuallyHidden" for="qb-txt-{{id}}">{{label}}</label>
+		<input class="smallButton remove" type="button" value="-" aria-label="Remove"/>
+		<input class="smallButton add" type="button" value="+" aria-label="Add" aria-controls="qb-grp-{{id}}"/>
+		<label class="helpText" for="qb-txt-{{id}}">{{help}}</label>
+	</div>
+</script>
+
+<script type="text/javascript" src="/js/prism.37.min.js"></script>
+<script type="text/javascript" src="options/js/en-gb"></script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+ $(function () {
+	$("#renderitem h1.title").after('<div class="fb-like" data-send="false" data-width="450" data-show-faces="false"></div>');
+});
+</script>
+
+<script>
+
+$(function () {
+	document.getElementsByClassName("formElement singleLine")[17].style.display = "none";
+	document.getElementsByClassName("formElement singleLine")[7].style.display = "none";
+	document.getElementsByClassName("formElement singleLine")[8].style.display = "none";
+	document.getElementsByClassName("formElement singleLine")[15].style.display = "none";
+	
+	$("#frmmobile").after('<div id"mobilePhoneDiv" class="mobilePhoneDiv"><p>Please note that if you do not provide us with either a mobile telephone number or email address we will be unable to inform you when your requests are ready for collection</p></div>');
+	$("#frmlocal_library").after('<div id="homeSiteDiv" class="homeSiteDiv"><p>Please choose the library closest to your home address or if you live outside the Rotherham borough, please choose Riverside Library</p></div>');
+	
+		$(".uiSpacedWell")[2].className="notice uiDeskPushMid uiRounded uiSpacedWell";
+	
+	document.getElementsByClassName("formElement singleLine")[14].children[0].innerHTML = " Mobile Phone Number";
+	
+	var locationList = ["BRI, CLS, DIN, GRE, KIM, KIP, KIV, MAL, MOW, RAW, SWI, THU, THY, WAT, WIC"];
+	var locationSelect = document.getElementById("frmlocal_library");
+	for (var i = 0; i < locationSelect.length; i++) {
+		if (locationList.indexOf(locationSelect.options[i].value) == -1) {
+			locationSelect.removeChild(locationSelect.options[i]);
+			i--;
+		}
+	}
+	
+	
+});
+
+</script>
+</body>
+</html>

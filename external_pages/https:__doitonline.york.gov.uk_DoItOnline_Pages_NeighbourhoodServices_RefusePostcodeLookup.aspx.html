@@ -1,0 +1,983 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=11" />
+    <meta name="description" content="Do it online: access and pay for City of York Council services online" />
+    <title>
+    City of York Council - Do It Online (Unavailable)
+ - City of York Council</title>
+    <link rel="Stylesheet" href="/Assets/Stylesheets/doitonline.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/assets/stylesheets/template.css" type="text/css" media="screen" />
+    <link rel="Stylesheet" href="/assets/stylesheets/jquery-ui-cyc.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/stylesheets/validationEngine.jquery.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+    <link rel="stylesheet" href="/assets/stylesheets/overlay.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="/assets/stylesheets/wizard.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="/assets/script/fancybox/jquery.fancybox-1.3.4.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/stylesheets/qunit.css" type="text/css" />
+    <link href="/assets/stylesheets/orbit.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/images/ios_favicon.png"/>
+    <script src="/assets/script/jquery.min.js" type="text/javascript"></script>
+    <script src="/assets/script/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/assets/script/jquery.ui.datepicker-en-GB.js" type="text/javascript"></script>
+    <script src="/assets/script/jquery.tools.min.js" type="text/javascript"></script>
+    <script src="/assets/script/jquery.blockUI.js" type="text/javascript"></script>
+    <script src="/assets/script/common.js" type="text/javascript"></script>
+    <script src="/assets/script/jquery.validationEngine-en.js" type="text/javascript"></script>
+    <script src="/assets/script/jquery.validationEngine.js" type="text/javascript"></script>
+    <script src="/assets/script/json2.js" type="text/javascript"></script>
+    <script src="/assets/script/fancybox/jquery.fancybox-1.3.4.js" type="text/javascript"></script>
+    <script src="/assets/script/jquery.corner.js" type="text/javascript"></script>
+    <script src="/assets/script/qunit.js" type="text/javascript"></script>
+    
+    <!--  <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js">
+    <script type='text/javascript' src='/assets/script/dd_belated_png.js'></script>
+        <script>DD_belatedPNG.fix('.ie6fix');</script></script> -->
+    <!--[if IE 6]>
+		
+        <style>#footer .box ul li a, #sidebar .box ul a {zoom:1;}</style>
+	<![endif]-->
+
+    <script type="text/javascript">
+
+        jQuery(document).ready(function () {
+
+            $.blockUI.defaults.message = '<div style="z-index:9999;width:300px;height:150px;padding:10px;position:absolute;top:10%;left:25%;text-align:center;background-color: #FFFFFF;font-size:0.9em;"><table style="height: 100px; width: 300px;"><tr><td valign="middle" align="center"><img src="/assets/images/background/loadinglarge.gif" border="0" style="z-index:99999;"/><br /><p class="LoadingMessage">Loading...</p><p>(Please do not refresh your browser)</p></td></tr></table></div>';
+            $.blockUI.defaults.css.backgroundColor = 'Transparent';
+            $.blockUI.defaults.css.border = '0';
+            $.blockUI.defaults.overlayCSS.opacity = 0.3;
+
+            k_menu(); // controls the dropdown menu    
+
+            // Apply corner styles to all elements with a CSS class of corner_rect
+            $(".corner_rect").corner("10px");
+
+            // convert any boggy buttons to a jquery style button
+            $(".ui-button").each(function () {
+                $(this).button();
+            });
+            
+            // Ensure correct top level menu item is highlighted
+            if (location.pathname.indexOf("MyRequests.aspx") >= 0) {
+                $("#nav li:nth-child(3)").addClass("current");
+            }
+            else if (location.pathname.indexOf("ViewCase.aspx") >= 0) {
+                $("#nav li:nth-child(3)").addClass("current");
+            }
+            else if (location.pathname.indexOf("MyAccount.aspx") >= 0) {
+                $("#nav li:nth-child(4)").addClass("current");
+            }
+            else {
+                $("#nav li:nth-child(2)").addClass("current");
+            }
+
+        });
+
+        function pageLoad(sender, args) {
+            if (args.get_isPartialLoad()) {
+                // convert any boggy buttons to a jquery style button
+                $('.ui-button').each(function () {
+                    $(this).button();
+                });
+            }
+        } 
+
+        function k_menu() {
+
+            $("#nav a, .subnav a").removeAttr('title');
+            $("#nav ul").css({ display: "none" }); // Opera Fix
+
+            $("#nav li").each(function () {
+
+                // "this" is the first list item in the structure, e.g. A-Z, Apply For It, Book It... etc.
+                // $sublist is the first subcategory
+         
+                var $sublist = $(this).find('ul:first');
+                // Add functions to show and hide sublist on hover over the parent category
+                $(this).hover(function () {
+                    $sublist.stop().css({ overflow: "hidden", height: "auto", display: "none" }).slideDown(400, function () {
+                        $(this).css({ overflow: "visible", height: "auto" });
+                    });
+                }, function () {
+                    $sublist.stop().slideUp(400, function () {
+                        $(this).css({ overflow: "hidden", display: "none" });
+                    });
+                });
+
+            });
+        }
+
+    </script>
+    
+    
+    <style type="text/css">
+        
+        .largeLeft { vertical-align: middle; float: left; }
+        .unavailableText { padding: 20px; text-align: left; }
+        .downtimeTable { margin: auto; }
+                
+        #unavailableContent { border: solid 3px #666; text-align: center; }
+        
+    </style>
+
+</head>
+<body id="ctl00_frontpage" class="subpage">
+    <form name="aspnetForm" method="post" action="SystemUnavailable.aspx" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE2OTIxNTE2NzEPZBYCZg9kFgICBw8WAh4FY2xhc3MFB3N1YnBhZ2UWAgIBD2QWBmYPZBYCAggPDxYCHgRUZXh0BRFMb2cgSW4gfCBSZWdpc3RlcmRkAgEPDxYCHgtOYXZpZ2F0ZVVybAUWaHR0cDovL3d3dy55b3JrLmdvdi51a2RkAgIPZBYCAgEPFgIeCWlubmVyaHRtbGVkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBR1jdGwwMCRMb2dpbkNvbnRyb2wkcmVtZW1iZXJtZcBZzlN3xifhcpyNAuxHr+nNRnC9" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="7C98117A" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgKRi7XVAwKh8/5YAqy315sMAveghdEOAvTB/9ILAtH7ndEDIu2Ks4lgDak3aQoiF6Kni9+4lR0=" />
+    <input id="hdnChromeResult" value="" style="display:none;"/>
+    <div id="dialog-modal" title="An error has occured" style="z-index: 99;display:none;">
+    </div>
+    <div style="z-index:99;">
+        
+<div id="toppanel" class="ui-helper-hidden">
+    <div id="panel">
+        <div class="content clearfix">
+            <div class="left" id="leftPane">
+                <div class="loggedOut">
+                    <h1>
+                        City of York Council - Do it online</h1>
+                    <p>
+                        Log in or create an account to access a variety of features within Do it online.
+                        Once you've signed up you will receive your council tax bills electronically and be able to manage your details online.
+                        Find out more about the <a class="fancyboxlink" target="_blank" href="SecureContentHandler.ashx?ContentUrl=http://cmslivenlb.york.gov.uk:8080/content/684311/benefitsofanonlineaccount?view=YCC">
+                            benefits of registering an account</a>.
+                    </p>
+                </div>
+                <div class="loggedIn">
+                    <h1>
+                        About You</h1>
+                    <div>
+                        <p>
+                            <span class="ui-icon ui-icon-person" style="margin: 0 2px 0 2px; float: left;"></span>
+                            <span id="ctl00_LoginControl_lblUserFullName"></span>
+                        </p>
+                        <p>
+                            <span class="ui-icon ui-icon-home" style="margin: 0 2px 0 2px; float: left;"></span>
+                            <span id="ctl00_LoginControl_lblUserAddress"></span>
+                        </p>
+                        <p>
+                            <span class="ui-icon ui-icon-contact" style="margin: 0 2px 0 2px; float: left;">Addr:</span>
+                            <span id="ctl00_LoginControl_lblUserTelephone"></span>
+                        </p>
+                        <p>
+                            <span class="ui-icon ui-icon-mail-open" style="margin: 0 2px 0 2px; float: left;">Addr:</span>
+                            <span id="ctl00_LoginControl_lblUserEmail"></span>
+                        </p>
+                        <p style="padding-top: 5px;">
+                            <a href="/DoItOnline/Pages/MyAccount.aspx">Change your details</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="left">
+                <div class="loggedOut">
+                    <h1>
+                        Already registered?</h1>
+                    <div id="ctl00_LoginControl_pnlLoginControlGroup">
+	
+                        <label class="grey" for="txtUserName">
+                            Email Address:</label>
+                        <input name="ctl00$LoginControl$txtUserName" type="text" id="ctl00_LoginControl_txtUserName" class="validate[required,custom[email]] text-input field" />
+                        <label class="grey" for="txtPassword">
+                            Password:</label>
+                        <input name="ctl00$LoginControl$txtPassword" type="password" id="ctl00_LoginControl_txtPassword" class="validate[required] field" />
+                        <label>
+                            <input name="ctl00$LoginControl$rememberme" type="checkbox" id="ctl00_LoginControl_rememberme" value="forever" />&nbsp;Remember
+                            me on this computer</label>
+                        <div class="clear">
+                        </div>
+                        <p>
+                            <a id="ctl00_LoginControl_btnLogin" class="bt_login ui-button" href="javascript:__doPostBack('ctl00$LoginControl$btnLogin','')">Login</a>&nbsp;
+                            <a class="ui-button" href="/Authentication/ForgottenPassword.aspx">Forgotten your password?</a>
+                        </p>
+                    
+</div>
+                </div>
+                <div class="loggedIn">
+                    
+<style type="text/css">
+    
+    /* Unverified Account Styles */
+    .account_verification_panel
+    {
+        background-color: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        padding: 5px 5px 5px 5px;
+        margin-bottom: 20px;
+        font-size: 1.0em !important;
+    }
+    
+    .account_verification_panel a
+    {   
+        text-decoration: none;
+        border-bottom: none;
+    }
+    
+    .account_verification_panel a:hover
+    {
+        text-decoration: underline;
+        border-bottom: none;
+    }
+    
+    .account_verification_panel ul
+    {   
+        list-style-position: inside;
+    }
+    
+</style>
+
+
+
+
+
+
+
+                    
+                </div>
+            </div>
+            <div class="left right">
+                <div class="loggedOut">
+                    <h1>
+                        Not registered?</h1>
+                    <p>
+                        Please take a moment to provide a few details so we can continue with your request.
+                        This will save you entering your details the next time you use one of our online
+                        services. Find out more about the <a class="fancyboxlink" target="_blank" href="SecureContentHandler.ashx?ContentUrl=http://cmslivenlb.york.gov.uk:8080/content/684311/benefitsofanonlineaccount?view=YCC">
+                            benefits of registration</a>.
+                    </p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                        <a class="ui-button" href="/Authentication/Register.aspx">Register Now!</a>
+                    </p>
+                </div>
+                <div class="loggedIn">
+                    <h1>
+                        Account security</h1>
+                    <p class="grey">
+                        We recommend that you <a href="/Authentication/PasswordChange.aspx">change your password</a>
+                        frequently to ensure the continued security of your account.</p>
+                    <p class="grey">
+                        <input type="submit" name="ctl00$LoginControl$btnLogOut" value="Logout" id="ctl00_LoginControl_btnLogOut" class="bt_logout ui-button" /></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /login -->
+    <!-- The tab on top -->
+    <div class="tab">
+        <ul class="login">
+            <li class="left">&nbsp;</li>
+            <li id="toggle"><a id="open" class="open" href="javascript:void(0);">
+                <span id="ctl00_LoginControl_lblUserName">Log In | Register</span></a>
+                <a id="close" style="display: none;" class="close" href="#">Close Panel</a>
+            </li>
+            <li class="right">&nbsp;</li>
+        </ul>
+    </div>
+    <!-- / top -->
+</div>
+<!-- Top Panel -->
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('.ui-button').button();
+
+        GetUsernameFromPersistence();
+        authenticated = UserLoggedIn();
+
+        if (authenticated == true) {
+            $('#ctl00_LoginControl_btnLogin').attr('disabled', 'disabled');
+            $('.loggedOut').addClass('ui-helper-hidden');
+            $('.loggedIn').removeClass('ui-helper-hidden');
+        }
+        else {
+            $('#ctl00_LoginControl_btnLogin').attr('disabled', '');
+            $('.loggedOut').removeClass('ui-helper-hidden');
+            $('.loggedIn').addClass('ui-helper-hidden');
+        }
+
+        /* Validate before logging in */
+        $('#ctl00_LoginControl_btnLogin').click(function () {
+            $(this).blur();
+            if (IsValidLogin()) {
+                Login();
+            }
+            return false;
+        });
+
+        /* Log the user out */
+        $('#ctl00_LoginControl_btnLogOut').click(function () {
+            $(this).blur();
+            Logout();
+            return false;
+        });
+
+        // Expand Panel
+        $("#open").click(function () {
+            $("div#panel").slideDown("slow");
+        });
+
+        // Collapse Panel
+        $("#close").click(function () {
+            $.validationEngine.closePrompt('.formError', true);
+            $("div#panel").slideUp("slow");
+        });
+
+        // Switch buttons from "Log In | Register" to "Close Panel" on click
+        $("#toggle a").click(function () {
+            $("#toggle a").toggle();
+        });
+
+        $('#toppanel').removeClass('ui-helper-hidden');
+
+        $('a.fancyboxlink').fancybox({
+            'autoScale': true,
+            'transitionIn': 'none',
+            'transitionOut': 'none',
+            'scrolling': 'yes',
+            'overlayOpacity': 0.7,
+            'overlayColor': '#000',
+            'type': 'iframe'
+        });
+    });
+
+    //**************************************************************************
+    // Validates the form to make sure user has entered credentials.
+    //**************************************************************************
+    function IsValidLogin() {
+
+        $.validationEngine.loadValidation("#ctl00_LoginControl_txtUserName");
+        $.validationEngine.loadValidation("#ctl00_LoginControl_txtPassword");
+        return $('form').validationEngine({ returnIsValid: true });
+    }
+
+    //**************************************************************************
+    // Checks to see if the current user is logged in
+    //**************************************************************************
+    function UserLoggedIn() {
+
+        var authenticated
+
+        $.ajax({
+            url: '/authentication/ajaxauthentication.svc/UserAuthenticated',
+            data: ({}),
+            cache: false,
+            async: false,
+            type: 'POST',
+            dataType: 'json',
+            dataFilter: function (raw) {
+                // This boils the response string down
+                // into a proper JavaScript Object().
+                var msg = eval('(' + raw + ')');
+                // If the response has a ".d" top-level property,
+                // return what's below that instead.
+                if (msg.hasOwnProperty('d'))
+                    return msg.d;
+                else
+                    return msg;
+            },
+            success: function (data) {
+                authenticated = data;
+            },
+            error: function showError(xhr, status, exc) {
+                var msg = xhr.responseText;
+                if (msg == '') {
+                    msg = 'There may be a meta-data mismatch between client and server -can you recompile the application?';
+                    msg = xhr.statusText;
+                }
+                ShowModalMessage('#dialog-modal',
+                        'Error Checking Authentication',
+                        'The following error occurred:<br/><br/>' + msg,
+                        'error');
+            }
+        });
+
+        return authenticated;
+    }
+
+    ///*****************************************************************
+    // Gets the current user name from a persistence cookie
+    ///****************************************************************
+    function GetUsernameFromPersistence() {
+
+        $.ajax({
+            url: '/authentication/ajaxauthentication.svc/GetUserFromPersistenceCookie',
+            data: ({}),
+            cache: false,
+            async: true,
+            type: 'POST',
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
+            dataFilter: function (raw) {
+                // This boils the response string down
+                // into a proper JavaScript Object().
+                var msg = eval('(' + raw + ')');
+                // If the response has a ".d" top-level property,
+                // return what's below that instead.
+                return msg;
+            },
+            success: function (data) {
+                $("[id$='txtUserName']").val(data.d.replace("null", ""));
+            },
+            error: function showError(xhr, status, exc) {
+                alert(xhr.responseText);
+            }
+        });
+    }
+
+    //**************************************************************************
+    // Logs the current user in.
+    //**************************************************************************
+    function Login() {
+
+        var user = $('#ctl00_LoginControl_txtUserName').val();
+        var pass = $('#ctl00_LoginControl_txtPassword').val();
+        var cookie = ($('#ctl00_LoginControl_rememberme').attr('checked') == true);
+
+        var data = '{"userName":"' + user + '","password":"' + pass + '","cookie":"' + cookie + '" }';
+
+        $.ajax({
+            url: '/authentication/ajaxauthentication.svc/UserLogin',
+            data: data,
+            cache: false,
+            async: false,
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            processdata: false,
+            dataFilter: function (raw) {
+                // This boils the response string down
+                // into a proper JavaScript Object().
+                var msg = eval('(' + raw + ')');
+                // If the response has a ".d" top-level property,
+                // return what's below that instead.
+                if (msg.hasOwnProperty('d'))
+                    return msg.d;
+                else
+                    return msg;
+            },
+            success: function (data) {
+                if (data.Success == true) {
+                    $('#ctl00_LoginControl_lblUserName').html(user);
+                    $('#ctl00_LoginControl_btnLogin').attr('disabled', 'disabled');
+                    $("div#panel").slideUp("slow");
+                    $("#toggle a").toggle();
+                    //if (data.ReturnUrl) {
+                    //    window.location = data.ReturnUrl;
+                    //}
+
+                    // Isn't it better to keep them on the same page?
+                    location.reload();
+                } else {
+                    ShowModalMessage('#dialog-modal',
+                        'Login Error',
+                        'Unable to log in ' + user + ' , the error was:<br/><br/>' + data.Message,
+                        'error');
+                }
+            },
+            error: function showError(xhr, status, exc) {
+                ShowModalMessage('#dialog-modal',
+                        'Login Error',
+                        'The following error occurred: ' + xhr.responseText,
+                        'error');
+            }
+        });
+    }
+
+    //**************************************************************************
+    // Logs the current user out.
+    //**************************************************************************
+    function Logout() {
+        $.ajax({
+            url: '/authentication/ajaxauthentication.svc/UserLogout',
+            data: '{}',
+            cache: false,
+            async: false,
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8',
+            processdata: false,
+            dataFilter: function (raw) {
+                // This boils the response string down
+                // into a proper JavaScript Object().
+                var msg = eval('(' + raw + ')');
+                // If the response has a ".d" top-level property,
+                // return what's below that instead.
+                if (msg.hasOwnProperty('d'))
+                    return msg.d;
+                else
+                    return msg;
+            },
+            success: function (data) {
+                $('#ctl00_LoginControl_lblUserName').html('Hello Guest!');
+                $('#ctl00_LoginControl_btnLogin').attr('disabled', '');
+                $("div#panel").slideUp("slow");
+                $("#toggle a").toggle();
+                window.location.reload();
+            },
+            error: function showError(xhr, status, exc) {
+
+                $("#dialog-modal").attr('title', 'SOMETHING HAS GONE WRONG!!');
+                $("#dialog-modal").append(xhr.responseText)
+                $("#dialog-modal").dialog({
+                    height: auto,
+                    modal: true,
+                    zIndex: 9999
+                });
+            }
+        });
+    }
+
+</script>
+<style type="text/css">
+    /***** clearfix *****/
+    .clear
+    {
+        clear: both;
+        height: 0;
+        line-height: 0;
+    }
+    .clearfix:after
+    {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .clearfix
+    {
+        display: inline-block;
+    }
+    /* Hides from IE-mac \*/
+    * html .clearfix
+    {
+        height: 1%;
+    }
+    .clearfix
+    {
+        display: block;
+    }
+    /* End hide from IE-mac */
+    .clearfix
+    {
+        height: 1%;
+    }
+    .clearfix
+    {
+        display: block;
+    }
+    
+    /* Panel Tab/button */
+    .tab
+    {
+        background: transparent url(/assets/images/red_tab_b.png) repeat-x 0 0;
+        height: 8px;
+        position: relative;
+        top: 0;
+        z-index: 999;
+    }
+    
+    .tab ul.login
+    {
+        display: block;
+        position: relative;
+        float: right;
+        clear: right;
+        height: 42px;
+        width: auto;
+        font-weight: bold;
+        line-height: 42px;
+        margin: 0;
+        color: white;
+        font-size: 80%;
+        text-align: center;
+    }
+    
+    .tab ul.login li.left
+    {
+        background: url(/assets/images/red_tab_l.png) no-repeat left 0;
+        height: 42px;
+        width: 30px;
+        padding: 0;
+        margin: 0;
+        display: block;
+        float: left;
+    }
+    
+    .tab ul.login li.right
+    {
+        background: url(/assets/images/red_tab_r.png) no-repeat left 0;
+        height: 42px;
+        width: 30px;
+        padding: 0;
+        margin: 0;
+        display: block;
+        float: left;
+    }
+    
+    .tab ul.login li
+    {
+        text-align: left;
+        padding: 0 2px;
+        display: block;
+        float: left;
+        height: 42px;
+        background: url(/assets/images/red_tab_m.png) repeat-x 0 0;
+    }
+    
+    .tab ul.login li a
+    {
+        color: #FFF;
+    }
+    
+    .tab ul.login li a:hover
+    {
+        color: white;
+    }
+    
+    .tab .sep
+    {
+        color: #414141;
+    }
+    
+    .tab a.open, .tab a.close
+    {
+        height: 20px;
+        line-height: 20px !important;
+        padding-left: 30px !important;
+        cursor: pointer;
+        display: block;
+        width: auto; /* IE6 only: */
+        _width: 100px;
+        position: relative;
+        top: 11px;
+    }
+    
+    .tab a.open
+    {
+        background: url(/assets/images/bt_open.png) no-repeat left 0;
+    }
+    .tab a.close
+    {
+        background: url(/assets/images/bt_close.png) no-repeat left 0;
+    }
+    .tab a:hover.open
+    {
+        background: url(/assets/images/bt_open.png) no-repeat left -19px;
+    }
+    .tab a:hover.close
+    {
+        background: url(/assets/images/bt_close.png) no-repeat left -19px;
+    }
+    
+    /* sliding panel */
+    #toppanel
+    {
+        position: absolute; /*Panel will overlap  content */ /*position: relative;*/ /*Panel will "push" the content down */
+        top: 0;
+        width: 100%;
+        height: 8px;
+        z-index: 999;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #panel
+    {
+        width: 100%; /*	height: 270px; */
+        color: #999999;
+        background: #2D2E2B;
+        overflow: hidden;
+        position: relative;
+        z-index: 3;
+        display: none;
+    }
+    
+    #panel h1
+    {
+        font-size: 1.3em;
+        padding: 5px 0 10px;
+        margin: 0;
+        color: white;
+        background: none;
+    }
+    
+    #panel h2
+    {
+        font-size: 1.2em;
+        padding: 10px 0 5px;
+        margin: 0;
+        color: white;
+    }
+    
+    #panel p
+    {
+        margin: 5px 0;
+        padding: 0;
+        color: #CCC;
+    }
+    
+    #panel a
+    {
+        text-decoration: underline;
+        color: white;
+    }
+    
+    #panel a:hover
+    {
+        color: white;
+    }
+    
+    #panel a-lost-pwd
+    {
+        display: block;
+        float: left;
+    }
+    
+    #panel .content
+    {
+        width: 960px;
+        margin: 0 auto;
+        padding-top: 15px;
+        text-align: left;
+        font-size: 0.85em;
+    }
+    
+    #panel .content .left
+    {
+        width: 280px;
+        float: left;
+        padding: 0 15px;
+        border-left: 1px solid #CCC;
+    }
+    
+    #panel .content .right
+    {
+        border-right: 1px solid #333;
+    }
+    
+    #panel .content form
+    {
+        margin: 0 0 10px 0;
+    }
+    
+    #panel .content label
+    {
+        float: left;
+        clear: both;
+        width: 280px;
+        display: block;
+    }
+    
+    #panel .content input.field
+    {
+        border: 1px #1A1A1A solid;
+        background: #fff;
+        margin-right: 5px;
+        margin-top: 4px;
+        width: 200px;
+        color: #000;
+        font-size: 1em;
+        padding: 4px;
+    }
+    
+    #panel .content input:focus.field
+    {
+        background: #dcdcdc;
+    }
+    
+    input:focus
+    {
+        background: #FFF;
+    }
+    
+    /* BUTTONS */
+    /* Login and Register buttons */
+    /*#panel .content input.bt_login, #panel .content input.bt_logout
+    {
+        display: block;
+        float: left;
+        clear: left;
+        height: 24px;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+        font-weight: bold;
+        margin: 10px 0;
+    }*/
+    
+    #panel .lost-pwd
+    {
+        display: block;
+        float: left;
+        clear: right;
+        padding: 15px 5px 0;
+        font-size: 0.95em;
+        text-decoration: underline;
+    }
+    .individual
+    {
+        background-image: url('/Assets/Images/Background/individual24.png');
+        line-height: 1.em;
+        background-repeat: no-repeat;
+        height: 24px;
+        width: 24px;
+        float: left;
+        margin: 0 10px 0 2px;
+    }
+    #toggle
+    {
+        width: auto;
+    }
+</style>
+
+    </div> 
+    <div class='wrapper'>
+        <div class="plannedDowntime" style="display: none;">
+                
+        </div>
+        <div id="top">
+            <div id="pagehead">
+              <div class="logo">
+	                <a class="logo__link" href="http://www.york.gov.uk/">
+                        <span class="logo__image icon-coyc-logo-mono">
+                            <span class="visuallyhidden">City of York Council</span>
+                        </span>
+	                </a>
+	            </div>
+                <ul id="nav">
+                    <li style="z-index: 9999999;"><a id="ctl00_lnkHome" accesskey="H" href="http://www.york.gov.uk">Home<span>Return to the main City of York Council website</span></a></li>
+                    <li style="z-index: 9999999;"><a href="/DoItOnline/Pages/Default.aspx">Do it online<span>Online transactions with City of York Council</span></a>
+
+
+<!-- Control Content  -->
+<ul id="ctl00_dioTopMenu_ulDoItOnlineTopMenu"><li class="category"><a href="/DoItOnline/Pages/AToZ.aspx">A-Z of services »</a></li><li class="category"><a href="./Category.aspx?Type=Apply for it">Apply for it »</a><ul class="subCategory"><li><a href="./Category.aspx?Type=Apply for it#Benefits"><span class="subSectionPrepend">Apply for it: </span>Benefits</a></li><li><a href="./Category.aspx?Type=Apply for it#Careers_&amp;_jobs"><span class="subSectionPrepend">Apply for it: </span>Careers &amp; jobs</a></li><li><a href="./Category.aspx?Type=Apply for it#Council_tax"><span class="subSectionPrepend">Apply for it: </span>Council tax</a></li><li><a href="./Category.aspx?Type=Apply for it#Education,_schools_&amp;_learning"><span class="subSectionPrepend">Apply for it: </span>Education, schools &amp; learning</a></li><li><a href="./Category.aspx?Type=Apply for it#Health_&amp;_social_care"><span class="subSectionPrepend">Apply for it: </span>Health &amp; social care</a></li><li><a href="./Category.aspx?Type=Apply for it#Libraries_and_Archives_Online"><span class="subSectionPrepend">Apply for it: </span>Libraries and Archives Online</a></li><li><a href="./Category.aspx?Type=Apply for it#Parking"><span class="subSectionPrepend">Apply for it: </span>Parking</a></li><li><a href="./Category.aspx?Type=Apply for it#Planning_&amp;_building_control"><span class="subSectionPrepend">Apply for it: </span>Planning &amp; building control</a></li><li><a href="./Category.aspx?Type=Apply for it#Recycling,_rubbish_&amp;_waste"><span class="subSectionPrepend">Apply for it: </span>Recycling, rubbish &amp; waste</a></li></ul></li><li class="category"><a href="./Category.aspx?Type=Book it">Book it »</a><ul class="subCategory"><li><a href="./Category.aspx?Type=Book it#Education,_schools_&amp;_learning"><span class="subSectionPrepend">Book it: </span>Education, schools &amp; learning</a></li><li><a href="./Category.aspx?Type=Book it#Libraries_and_Archives_Online"><span class="subSectionPrepend">Book it: </span>Libraries and Archives Online</a></li><li><a href="./Category.aspx?Type=Book it#Streets,_roads_&amp;_pavements"><span class="subSectionPrepend">Book it: </span>Streets, roads &amp; pavements</a></li></ul></li><li class="category"><a href="./Category.aspx?Type=Find it">Find it »</a><ul class="subCategory"><li><a href="./Category.aspx?Type=Find it#Benefits"><span class="subSectionPrepend">Find it: </span>Benefits</a></li><li><a href="./Category.aspx?Type=Find it#Careers_&amp;_jobs"><span class="subSectionPrepend">Find it: </span>Careers &amp; jobs</a></li><li><a href="./Category.aspx?Type=Find it#Recycling,_rubbish_&amp;_waste"><span class="subSectionPrepend">Find it: </span>Recycling, rubbish &amp; waste</a></li><li><a href="./Category.aspx?Type=Find it#Council_And_democracy"><span class="subSectionPrepend">Find it: </span>Council And democracy</a></li><li><a href="./Category.aspx?Type=Find it#Elicensing_Register_"><span class="subSectionPrepend">Find it: </span>Elicensing Register </a></li><li><a href="./Category.aspx?Type=Find it#Community_&amp;_leisure"><span class="subSectionPrepend">Find it: </span>Community &amp; leisure</a></li><li><a href="./Category.aspx?Type=Find it#Education,_schools_&amp;_learning"><span class="subSectionPrepend">Find it: </span>Education, schools &amp; learning</a></li><li><a href="./Category.aspx?Type=Find it#Planning_&amp;_building_control"><span class="subSectionPrepend">Find it: </span>Planning &amp; building control</a></li><li><a href="./Category.aspx?Type=Find it#Transport"><span class="subSectionPrepend">Find it: </span>Transport</a></li><li><a href="./Category.aspx?Type=Find it#Winter_maintenance"><span class="subSectionPrepend">Find it: </span>Winter maintenance</a></li></ul></li><li class="category"><a href="./Category.aspx?Type=Have your say">Have your say »</a><ul class="subCategory"><li><a href="./Category.aspx?Type=Have your say#Council_And_democracy"><span class="subSectionPrepend">Have your say: </span>Council And democracy</a></li><li><a href="./Category.aspx?Type=Have your say#Libraries_and_Archives_Online"><span class="subSectionPrepend">Have your say: </span>Libraries and Archives Online</a></li><li><a href="./Category.aspx?Type=Have your say#Planning_&amp;_building_control"><span class="subSectionPrepend">Have your say: </span>Planning &amp; building control</a></li></ul></li><li class="category"><a href="./Category.aspx?Type=Pay for it">Pay for it »</a><ul class="subCategory"><li><a href="./Category.aspx?Type=Pay for it#Benefits"><span class="subSectionPrepend">Pay for it: </span>Benefits</a></li><li><a href="./Category.aspx?Type=Pay for it#Business_&amp;_economy"><span class="subSectionPrepend">Pay for it: </span>Business &amp; economy</a></li><li><a href="./Category.aspx?Type=Pay for it#Council_tax"><span class="subSectionPrepend">Pay for it: </span>Council tax</a></li><li><a href="./Category.aspx?Type=Pay for it#Community_And_leisure"><span class="subSectionPrepend">Pay for it: </span>Community And leisure</a></li><li><a href="./Category.aspx?Type=Pay for it#Health_&amp;_social_care"><span class="subSectionPrepend">Pay for it: </span>Health &amp; social care</a></li><li><a href="./Category.aspx?Type=Pay for it#Housing"><span class="subSectionPrepend">Pay for it: </span>Housing</a></li><li><a href="./Category.aspx?Type=Pay for it#Parking"><span class="subSectionPrepend">Pay for it: </span>Parking</a></li><li><a href="./Category.aspx?Type=Pay for it#Traffic_Enforcement"><span class="subSectionPrepend">Pay for it: </span>Traffic Enforcement</a></li><li><a href="./Category.aspx?Type=Pay for it#Recycling,_rubbish_&amp;_waste"><span class="subSectionPrepend">Pay for it: </span>Recycling, rubbish &amp; waste</a></li></ul></li><li class="category"><a href="./Category.aspx?Type=Report it">Report it »</a><ul class="subCategory"><li><a href="./Category.aspx?Type=Report it#Council_tax"><span class="subSectionPrepend">Report it: </span>Council tax</a></li><li><a href="./Category.aspx?Type=Report it#Environment"><span class="subSectionPrepend">Report it: </span>Environment</a></li><li><a href="./Category.aspx?Type=Report it#Planning_&amp;_building_control"><span class="subSectionPrepend">Report it: </span>Planning &amp; building control</a></li><li><a href="./Category.aspx?Type=Report it#Recycling,_rubbish_and_waste"><span class="subSectionPrepend">Report it: </span>Recycling, rubbish and waste</a></li><li><a href="./Category.aspx?Type=Report it#Streets,_roads_&amp;_pavements"><span class="subSectionPrepend">Report it: </span>Streets, roads &amp; pavements</a></li><li><a href="./Category.aspx?Type=Report it#Winter_Maintenance"><span class="subSectionPrepend">Report it: </span>Winter Maintenance</a></li></ul></li></ul>
+<!-- End Control Content -->
+
+                    </li>
+                    <li style="z-index: 9999999;"><a href="/DoItOnline/Pages/MyRequests.aspx" accesskey="M">My requests<span>Check the progress of your request(s) with City of York Council</span></a></li>
+                    <li style="z-index: 9999999;"><a href="/DoItOnline/Pages/MyAccount.aspx" accesskey="A">My account<span>Manage your personal details and view your accounts online</span></a>
+                        <ul>
+                            <li><a href="/DoItOnline/Pages/MyAccount.aspx?Tab=AboutMe">About me</a></li>
+                            <li><a href="/DoItOnline/Pages/MyAccount.aspx?Tab=AccountSecurity">Account security</a></li>
+                            <li><a href="/DoItOnline/Pages/MyAccount.aspx?Tab=ContactPrefs">Contact preferences</a></li>
+                            <li><a href="/DoItOnline/Pages/MyAccount.aspx?Tab=MyServices">My services</a></li>
+                            <li><a href="/DoItOnline/Pages/VerifyAccount.aspx">Get verified</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- end #head -->
+            
+            <div id="main">
+                <!--div id="contentpane"-->
+                    
+    <div id="unavailableContent" class="corner_rect">
+        <h2>
+            System Unavailable For Planned Maintenance</h2>
+        <div>
+            <img class="largeLeft" src="/Assets/Images/Background/UnderConstructionLarge.png" />
+            <p class="unavailableText">
+                Sorry, we are currently undertaking essential maintenance work on our web-site.
+                We aim to be back up online as soon as possible, please see below for details of the work being carried.
+            </p>
+            <table class="downtimeTable ui-widget">
+                <thead class="ui-widget-header">
+                    <tr>
+                        <th>Description Of Planned Maintenance</th>
+                        <th>To Be Started On</th>
+                        <th>To Be Completed On</th>
+                    </tr>
+                </thead>
+                <tbody class="ui-widget-content">
+                    <tr>
+                        <td>Planned Systems Maintenance</td>
+                        <td>06 February 2016 06:00</td>
+                        <td>07 February 2016 18:00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+
+                <!--/div-->
+            </div>
+            <!--end main-->
+        </div>
+        <!-- end #top -->
+    </div>
+    <!-- end #wrapper -->
+   <div>
+   <div class="widget-row">
+               <div class="wrapper wrapper__services-social">
+                 <div class="container">
+                    <div class="widget-width">
+        			    <div class="widget widget__custom-services-social">
+                            <ul class="social-icons">
+                                <li><a href="http://www.facebook.com/cityofyork"><i class="icon-facebook"><span class="visuallyhidden">Facebook</span></i></a></li>
+                                <li><a href="http://www.youtube.com/cityofyorkcouncil"><i class="icon-youtube-play"><span class="visuallyhidden">You Tube</span></i></a></li>
+                                <li><a href="http://twitter.com/cityofyork"><i class="icon-twitter"><span class="visuallyhidden">Twitter</span></i></a></li>
+                                <li><a href="http://flickr.com/photos/yorkcouncil"><i class="icon-flickr"><span class="visuallyhidden">Flickr</span></i></a></li>
+                            </ul>
+                        </div>
+        			</div>
+    			</div>
+			</div>
+		</div>
+
+   </div>
+    <div class="wrapper">
+        <div id="footer"> 
+                <footer class="footer__main">
+			        <div class="container">
+				        <div class="left column">
+					        <ul>
+						        <li>
+							        <a href="http://www.york.gov.uk/site/scripts/terms.php">Terms</a>
+						        </li>
+						        <li>
+							        <a href="http://www.york.gov.uk/privacy">Privacy</a>
+						        </li>
+						        <li>
+							        <a href="http://www.york.gov.uk/site/scripts/site_map.php">Sitemap</a>
+						        </li>
+						        <li>
+							        <a href="http://www.york.gov.uk/admin">Admin</a>
+						        </li>
+						        <li>
+							        <a href="http://www.york.gov.uk/site/scripts/contact.php">Contact</a>
+						        </li>
+					        </ul>
+					        <p>© City of York Council: West Offices, Station Rise, York, YO1 6GA</p>
+					        <p>T: <a class="tel" href="tel:01904551550">01904 551550</a>, E: <a href="mailto:ycc@york.gov.uk">ycc@york.gov.uk</a></p>
+                
+				        </div>
+				        <div class="right column">
+	                        <a class="logo" href="http://www.york.gov.uk/">
+	                            <span class="visuallyhidden">City of York Council</span>
+	                        </a>
+	                    </div>
+			        </div>
+            </footer>
+
+        </div>
+        
+	    <div class="feedback">
+	        <a class="button button--secondary" href="http://www.york.gov.uk/site/scripts/feedback.php">Feedback</a>
+        </div>
+	    <div class="back-top">
+		    <a href="#main"><span class="visuallyhidden">Back to the top of the page</span></a>
+	    </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+<head>
+  <title>
+    Harborough site - Property Search
+  </title>
+  
+  <meta name="description" content="Harborough site - Choice Based Lettings">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  
+    <link href="/Data/Pub/Stylesheets/PropertyShopCore.css" rel="stylesheet" type="text/css">
+  
+  <link href="/Data/Pub/Stylesheets/2.css" rel="stylesheet" type="text/css">
+  
+  <link href="/Data/Pub/Stylesheets/HousingOptionsColour.css" rel="stylesheet" type="text/css">
+  <link href="/Data/Pub/Stylesheets/HousingOptionsLayout.css" rel="stylesheet" type="text/css">
+  
+
+</head>
+
+<body class="PropertyShopBody ">
+
+  <div id="PropertyShopDiv">
+    <div id="PropertyShopHeader">
+      <div id="PropertyShopLogo1"></div>
+      <div id="PropertyShopLogo2"></div>
+      <h1>
+        Harborough site
+      </h1>
+    </div>
+    <div id="PropertyShopTopMenu">
+      
+<ul class="level1">
+  <li><a href="30.aspx" target="_top" title='Home'>Home</a></li>
+  <li><a href="37.aspx" target="_top" title='Click here to search for properties' class="selected">Property Search</a></li>
+  <li><a href="38.aspx" target="_top" title='Click here to login, apply for properties and view your bid status'>Login/My Account</a></li>
+  <li><a href="56.aspx" target="_top" title='Click here for recent lets'>Recent Lets</a></li>
+  <li><a href="52.aspx" target="_top" title=''>Contact Form</a></li>
+</ul>
+
+    </div>
+    <div id="PropertyShopTopBar">
+      Sunday, 07-Feb-2016
+    </div>
+    <div id="PropertyShopDelimiter">
+      <div id="PropertyShopleftMenu">
+        <div id="LeftMenuComponents">
+  <a id="PropertyShopSwitchStyle" href="/Data/ASPPages/1/37.aspx?viewstyle=textonly">Text Only View</a>
+  <a id="PropertyShopSiteMap" href="55.aspx">Site Map</a>
+
+  <div id="PropertyShopChangeFontSize">
+  Text size: <a id="PropertyShopChangeFontSize1" href="/Data/ASPPages/1/37.aspx?&changesize=1" title="Change font size to normal">A</a> <a id="PropertyShopChangeFontSize2" href="/Data/ASPPages/1/37.aspx?&changesize=2" title="Change font size to large">A</a> <a id="PropertyShopChangeFontSize3" href="/Data/ASPPages/1/37.aspx?&changesize=3" title="Change font size to extra large">A</a>
+  </div>
+        </div>
+        &nbsp;
+        <div id="BrowseAloudLogoContainer"><a href="http://www.browsealoud.com/page.asp?pg_id=80004" target="_blank"><img src="/Allocations/Images/logo_download-browsealoud.GIF" border="0" alt="Click here to download the browsealoud software"></a></div><div id="GoogleTranslate"><script src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/translatemypage.xml&amp;up_source_language=en&amp;w=160&amp;h=60&amp;title=&amp;border=&amp;output=js"><!--//--></script></div>
+        </div>
+      <div id="PropertyShopContentContainer">
+        <span id="PropertyShopBreadcrumb">
+          <span class='BreadcrumbPlain'>Property Search</span>
+        </span>
+
+        <div id="PropertyShopContentHeader">
+          <h2>
+            Property Search
+          </h2>
+        </div>
+
+        <div id="PropertyShopContent">
+          <p><form method="POST" action="43.aspx" ID="frmPropertySearchAll">
+<fieldset class="PropertySearchFieldset">
+<legend>Show all available properties</legend>
+<div class="FormFieldButton" ID="ShowAll"><input type="submit" name="cmdShowAll" id="cmdShowAll" value="Show all" class="submitButton">
+<label for="cmdShowAll">Click here to show all the currently advertised properties</label>
+</div><div class="FormFieldButton" ID="ShowAllAS555"><input type="submit" name="cmdShowAllAS555" id="cmdShowAllAS555" value="Local homes to rent" class="submitButton">
+<label for="cmdShowAllAS555">Click here to show all the 'Local homes to rent' properties</label>
+</div><div class="FormFieldButton" ID="ShowAllAS554"><input type="submit" name="cmdShowAllAS554" id="cmdShowAllAS554" value="Leicestershire homes to rent" class="submitButton">
+<label for="cmdShowAllAS554">Click here to show homes available across Leicestershire</label>
+</div><div class="FormFieldButton" ID="ShowAllAS502"><input type="submit" name="cmdShowAllAS502" id="cmdShowAllAS502" value="Homes to Buy (Shared Ownership)" class="submitButton">
+<label for="cmdShowAllAS502">Click here to show all the 'Homes to Buy (Shared Ownership)' properties</label>
+</div><div class="FormFieldButton" ID="ShowAllAS504"><input type="submit" name="cmdShowAllAS504" id="cmdShowAllAS504" value="Other homes to rent" class="submitButton">
+<label for="cmdShowAllAS504">Click here to show all the 'Other homes to rent' properties</label>
+</div><div class="FormFieldButton" ID="ShowAllAS501"><input type="submit" name="cmdShowAllAS501" id="cmdShowAllAS501" value="Mutual Exchange" class="submitButton">
+<label for="cmdShowAllAS501">Click here to show all the 'Mutual Exchange' properties</label>
+</div></fieldset>
+</form>
+<form method="POST" action="43.aspx" ID="frmPropertySearchElig">
+<fieldset class="PropertySearchFieldset">
+<legend>Show all the properties that I am eligible for</legend>
+<div class="FormFieldButton"><a href="38.aspx">You need to log in to find out which properties you are eligible for, click here to log in</a></div>
+</fieldset>
+</form>
+<fieldset class="PropertySearchFieldset">
+<legend>Search for a property</legend>
+<form method="POST" action="43.aspx" ID="frmPropertySearch">
+<div class="ImageDiv"></div><div  class="AdvertTypeTable" ><label for="AdvertTypeID" >Advert type</label><span class="FormField">
+<div ><span class="FormGridCell"><div class="HangingIndent"><span class="CBLStyle_HO_Background" ><img src="/Allocations/Images/CBLIcon.gif" border=0 alt="Local homes to rent image"><span  class="CBLStyle_HO_Background" ><input type="checkbox"name="AdvertTypeID" id="AdvertTypeID-1" value="1"  ></span><span  class="CBLStyle_HO_Background" ><label for="AdvertTypeID-1" id="AdvertTypeID-1-label">Local homes to rent</label></span></div></span>
+<span class="FormGridCell"><div class="HangingIndent"><span class="CBLSubRStyle_HO_Background" ><img src="/Allocations/Images/CBLIcon.gif" border=0 alt="Leicestershire homes to rent image"><span  class="CBLSubRStyle_HO_Background" ><input type="checkbox"name="AdvertTypeID" id="AdvertTypeID-8" value="8"  ></span><span  class="CBLSubRStyle_HO_Background" ><label for="AdvertTypeID-8" id="AdvertTypeID-8-label">Leicestershire homes to rent</label></span></div></span>
+<span class="FormGridCell"><div class="HangingIndent"><span class="PRStyle_HO_Background" ><img src="/Allocations/Images/PRIcon.gif" border=0 alt="Private Rented Property image"><span  class="PRStyle_HO_Background" ><input type="checkbox"name="AdvertTypeID" id="AdvertTypeID-5" value="5"  ></span><span  class="PRStyle_HO_Background" ><label for="AdvertTypeID-5" id="AdvertTypeID-5-label">Private Rented Property</label></span></div></span>
+<span class="FormGridCell"><div class="HangingIndent"><span class="SOStyle_HO_Background" ><img src="/Allocations/Images/SOIcon.gif" border=0 alt="Shared Ownership Property image"><span  class="SOStyle_HO_Background" ><input type="checkbox"name="AdvertTypeID" id="AdvertTypeID-3" value="3"  ></span><span  class="SOStyle_HO_Background" ><label for="AdvertTypeID-3" id="AdvertTypeID-3-label">Shared Ownership Property</label></span></div></span>
+<span class="FormGridCell"><div class="HangingIndent"><span class="MXStyle_HO_Background" ><img src="/Allocations/Images/MXIcon.gif" border=0 alt="Mutual Exchange Property image"><span  class="MXStyle_HO_Background" ><input type="checkbox"name="AdvertTypeID" id="AdvertTypeID-2" value="2"  ></span><span  class="MXStyle_HO_Background" ><label for="AdvertTypeID-2" id="AdvertTypeID-2-label">Mutual Exchange Property</label></span></div></span>
+</div>
+<input type="hidden" value="5" name="AdvertTypeViewCountAdvertTypeID"><input type="hidden" value="1,8,5,3,2" name="AdvertTypeViewIDListAdvertTypeID"></span></div>
+<div  class="FormProperty" ><label for="PropertyID" >Property Reference:</label><span class="FormField"><input type="text" name="PropertyID" size="20" maxlength="20" style="text-align:LEFT" value="" ID="PropertyID" class="TextField" /></span></div>
+<div  class="FormProperty" ><label for="AreaID" >Lettings Area</label><span class="FormField"><select  size="0" name="AreaID" ID="AreaID" class="SelectField"><option value="0">**Please Choose**</option>
+<optgroup label="Blaby - Blaby"><option value = "116"> Aston Flamville</option>
+<option value = "110"> Blaby Village</option>
+<option value = "106"> Braunstone Town</option>
+<option value = "111"> Cosby</option>
+<option value = "109"> Countesthorpe </option>
+<option value = "112"> Croft*</option>
+<option value = "117"> Elmesthorpe*</option>
+<option value = "123"> Enderby</option>
+<option value = "107"> Glen Parva </option>
+<option value = "104"> Glenfield</option>
+<option value = "127"> Huncote</option>
+<option value = "108"> Kilby</option>
+<option value = "122"> Kirby Muxloe</option>
+<option value = "105"> Leicester Forest East </option>
+<option value = "120"> Leicester Forest West</option>
+<option value = "125"> Littlethorpe</option>
+<option value = "121"> Lubbesthorpe</option>
+<option value = "124"> Narborough</option>
+<option value = "119"> Potters Marston</option>
+<option value = "113"> Sapcote*</option>
+<option value = "118"> Sharnford</option>
+<option value = "114"> Stoney Stanton*</option>
+<option value = "126"> Thurlaston*</option>
+<option value = "128"> Whetstone</option>
+<option value = "115"> Wigston Parva</option>
+</optgroup><optgroup label="Charnwood - Charnwood Villages"><option value = "218"> Anstey</option>
+<option value = "219"> Barkby</option>
+<option value = "220"> Barrow</option>
+<option value = "221"> Beeby</option>
+<option value = "222"> Birstall</option>
+<option value = "223"> Burton on the Wolds</option>
+<option value = "224"> Cossington</option>
+<option value = "225"> Cotes</option>
+<option value = "226"> Cropston</option>
+<option value = "227"> East Goscote</option>
+<option value = "228"> Hathern</option>
+<option value = "229"> Hoton*</option>
+<option value = "230"> Mountsorrel</option>
+<option value = "231"> Newtown Linford</option>
+<option value = "232"> Queniborough</option>
+<option value = "233"> Quorn*</option>
+<option value = "234"> Rearsby*</option>
+<option value = "235"> Rothley</option>
+<option value = "236"> Seagrave</option>
+<option value = "237"> Shepshed</option>
+<option value = "238"> Sileby</option>
+<option value = "239"> South Croxton</option>
+<option value = "240"> Swithland</option>
+<option value = "241"> Syston</option>
+<option value = "242"> Thrussington</option>
+<option value = "243"> Thurcaston*</option>
+<option value = "244"> Thurmaston</option>
+<option value = "245"> Walton on the Wolds</option>
+<option value = "246"> Wanlip</option>
+<option value = "247"> Woodhouse Eaves*</option>
+<option value = "248"> Wymeswold</option>
+</optgroup><optgroup label="Charnwood - Loughborough"><option value = "206"> Ashby Road estate</option>
+<option value = "214"> Derby Road area</option>
+<option value = "217"> Forest Road</option>
+<option value = "208"> Knightthorpe</option>
+<option value = "213"> Leicester Road area (Loughborough)</option>
+<option value = "210"> Nottingham Road area</option>
+<option value = "212"> Shelthorpe</option>
+<option value = "211"> Shelthorpe Road</option>
+<option value = "209"> Thorpe Acre</option>
+<option value = "215"> Town centre (Loughborough)</option>
+<option value = "216"> Town centre Ashby Road</option>
+<option value = "207"> Warwick</option>
+</optgroup><optgroup label="Harborough - Broughton Astley & villages"><option value = "31"> Broughton Astley</option>
+<option value = "33"> Dunton Bassett*</option>
+<option value = "32"> Frolesworth</option>
+<option value = "34"> Leire</option>
+</optgroup><optgroup label="Harborough - Fleckney villages"><option value = "53"> Arnesby</option>
+<option value = "50"> Fleckney</option>
+<option value = "51"> Saddington</option>
+<option value = "52"> Shearsby</option>
+<option value = "96"> Smeeton Westerby</option>
+</optgroup><optgroup label="Harborough - Great Glen & Kibworth villages"><option value = "44"> Burton Overy</option>
+<option value = "42"> Carlton Curlieu</option>
+<option value = "39"> Church Langton</option>
+<option value = "40"> East Langton</option>
+<option value = "35"> Great Glen</option>
+<option value = "98"> Kibworth</option>
+<option value = "37"> Kibworth Beauchamp</option>
+<option value = "36"> Kibworth Harcourt</option>
+<option value = "47"> Kings Norton</option>
+<option value = "46"> Little Stretton</option>
+<option value = "45"> Newton Harcourt</option>
+<option value = "103"> Oadby</option>
+<option value = "43"> Shangton</option>
+<option value = "48"> Stonton Wyville</option>
+<option value = "41"> Thorpe Langton</option>
+<option value = "38"> Tur Langton</option>
+<option value = "357"> West Langton</option>
+<option value = "49"> Wistow</option>
+</optgroup><optgroup label="Harborough - Harborough rural east"><option value = "70"> Allexton</option>
+<option value = "78"> Billesdon*</option>
+<option value = "64"> Blaston</option>
+<option value = "337"> Caldecott</option>
+<option value = "86"> Cold Newton</option>
+<option value = "91"> Drayton</option>
+<option value = "69"> East Norton</option>
+<option value = "75"> Gaulby</option>
+<option value = "67"> Glooston</option>
+<option value = "71"> Goadby</option>
+<option value = "97"> Great Easton</option>
+<option value = "94"> Hallaton</option>
+<option value = "339"> Hallaton Drayton</option>
+<option value = "79"> Halstead*</option>
+<option value = "66"> Horninghold</option>
+<option value = "73"> Houghton on the Hill</option>
+<option value = "85"> Hungerton</option>
+<option value = "74"> Illston on the Hill</option>
+<option value = "80"> Launde</option>
+<option value = "81"> Loddington</option>
+<option value = "84"> Lowesby</option>
+<option value = "83"> Marefield</option>
+<option value = "61"> Medbourne</option>
+<option value = "63"> Nevill Holt</option>
+<option value = "358"> Noseley</option>
+<option value = "82"> Owston</option>
+<option value = "359"> Rolleston</option>
+<option value = "76"> Skeffington</option>
+<option value = "65"> Slawston</option>
+<option value = "68"> Stockerston</option>
+<option value = "72"> Tilton on the Hill*</option>
+<option value = "77"> Tugby</option>
+<option value = "60"> Welham</option>
+</optgroup><optgroup label="Harborough - Husbands Bosworth villages"><option value = "59"> Foxton</option>
+<option value = "58"> Gumley</option>
+<option value = "54"> Husbands Bosworth*</option>
+<option value = "56"> Laughton</option>
+<option value = "57"> Mowsley</option>
+<option value = "55"> Theddingworth</option>
+</optgroup><optgroup label="Harborough - Lutterworth & villages"><option value = "99"> Ashby Magna</option>
+<option value = "26"> Ashby Parva</option>
+<option value = "22"> Bitteswell</option>
+<option value = "28"> Bruntingthorpe</option>
+<option value = "102"> Catthorpe</option>
+<option value = "24"> Claybrooke Magna</option>
+<option value = "25"> Claybrooke Parva</option>
+<option value = "15"> Cotesbach</option>
+<option value = "27"> Gilmorton*</option>
+<option value = "101"> Kimcote</option>
+<option value = "14"> Lutterworth</option>
+<option value = "353"> Misterton</option>
+<option value = "19"> North Kilworth*</option>
+<option value = "29"> Peatling Magna</option>
+<option value = "95"> Peatling Parva</option>
+<option value = "17"> Shawell</option>
+<option value = "18"> South Kilworth</option>
+<option value = "20"> Swinford</option>
+<option value = "23"> Ullesthorpe*</option>
+<option value = "16"> Walcote</option>
+<option value = "21"> Walton</option>
+<option value = "30"> Willoughby Waterleys</option>
+</optgroup><optgroup label="Harborough - Market Harborough & villages"><option value = "100"> Gartree</option>
+<option value = "12"> Great Bowden</option>
+<option value = "92"> Little Bowden</option>
+<option value = "13"> Lubenham</option>
+<option value = "11"> Market Harborough</option>
+</optgroup><optgroup label="Harborough - Thurnby villages"><option value = "93"> Bushby</option>
+<option value = "90"> Keyham</option>
+<option value = "89"> Scraptoft</option>
+<option value = "88"> Stoughton</option>
+<option value = "87"> Thurnby</option>
+</optgroup><optgroup label="Hinckley and Bosworth - Barwell"><option value = "341"> Barwell</option>
+</optgroup><optgroup label="Hinckley and Bosworth - Burbage"><option value = "342"> Burbage</option>
+</optgroup><optgroup label="Hinckley and Bosworth - Earl Shilton"><option value = "343"> Earl Shilton</option>
+</optgroup><optgroup label="Hinckley and Bosworth - Hinckley"><option value = "340"> Hinckley</option>
+</optgroup><optgroup label="Hinckley and Bosworth - Hinckley & Bosworth Villages"><option value = "249"> Bagworth*</option>
+<option value = "250"> Barlestone*</option>
+<option value = "251"> Barton in the Beans*</option>
+<option value = "354"> Cadeby</option>
+<option value = "352"> Carlton</option>
+<option value = "252"> Congerstone*</option>
+<option value = "253"> Dadlington*</option>
+<option value = "254"> Desford*</option>
+<option value = "255"> Fenny Drayton*</option>
+<option value = "256"> Groby*</option>
+<option value = "257"> Higham on the Hill*</option>
+<option value = "258"> Kirkby Mallory*</option>
+<option value = "259"> Market Bosworth*</option>
+<option value = "260"> Markfield*</option>
+<option value = "338"> Nailstone*</option>
+<option value = "261"> Newbold Verdon*</option>
+<option value = "262"> Odstone*</option>
+<option value = "263"> Osbaston*</option>
+<option value = "264"> Peckleton*</option>
+<option value = "265"> Ratby*</option>
+<option value = "266"> Ratcliffe Culey*</option>
+<option value = "267"> Shackerstone*</option>
+<option value = "268"> Sheepy Magna*</option>
+<option value = "269"> Sibson*</option>
+<option value = "270"> Stanton Under Bardon*</option>
+<option value = "271"> Stapleton*</option>
+<option value = "272"> Stoke Golding*</option>
+<option value = "273"> Sutton Cheney*</option>
+<option value = "274"> Thornton*</option>
+<option value = "275"> Twycross*</option>
+<option value = "276"> Witherley*</option>
+</optgroup><optgroup label="Melton - Melton Mowbray"><option value = "277"> Beckmill Court</option>
+<option value = "287"> Bennett Drive</option>
+<option value = "278"> Burton Street</option>
+<option value = "288"> Copley Close</option>
+<option value = "279"> Edendale</option>
+<option value = "289"> Fairmead</option>
+<option value = "280"> Grange Drive</option>
+<option value = "290"> Lake Terrace</option>
+<option value = "281"> Morley Close</option>
+<option value = "291"> New Street/ Chapel Street</option>
+<option value = "282"> Nottingham Road</option>
+<option value = "292"> Nottingham Road Estate</option>
+<option value = "283"> Oxbow Close</option>
+<option value = "293"> Queensway Estate</option>
+<option value = "284"> Salisbury Avenue</option>
+<option value = "294"> Shepherds Croft</option>
+<option value = "285"> Springfield Street Area</option>
+<option value = "295"> Town Centre (Melton Mowbray)</option>
+<option value = "286"> Yew Tree Crescent</option>
+</optgroup><optgroup label="Melton - Melton Villages"><option value = "307"> Ab Kettleby*</option>
+<option value = "296"> Asfordby*</option>
+<option value = "297"> Ashby Folville</option>
+<option value = "308"> Barkestone</option>
+<option value = "298"> Barsby</option>
+<option value = "309"> Bottesford*</option>
+<option value = "299"> Burrough</option>
+<option value = "310"> Croxton Kerrial</option>
+<option value = "300"> Eastwell</option>
+<option value = "311"> Eaton</option>
+<option value = "301"> Frisby</option>
+<option value = "312"> Gaddesby</option>
+<option value = "302"> Garthorpe</option>
+<option value = "313"> Great Dalby</option>
+<option value = "303"> Grimston</option>
+<option value = "314"> Harby*</option>
+<option value = "304"> Holwell</option>
+<option value = "315"> Hose*</option>
+<option value = "305"> Kirby Bellars</option>
+<option value = "316"> Knipton</option>
+<option value = "306"> Knossington</option>
+<option value = "317"> Long Clawson*</option>
+<option value = "318"> Muston</option>
+<option value = "326"> Nether Broughton</option>
+<option value = "319"> Old Dalby</option>
+<option value = "327"> Pickwell</option>
+<option value = "320"> Plungar</option>
+<option value = "328"> Redmile</option>
+<option value = "321"> Saltby</option>
+<option value = "329"> Scalford</option>
+<option value = "322"> Sewstern</option>
+<option value = "330"> Somerby*</option>
+<option value = "323"> Sproxton</option>
+<option value = "331"> Stathern</option>
+<option value = "324"> Stonesby</option>
+<option value = "332"> Twyford</option>
+<option value = "325"> Waltham</option>
+<option value = "333"> Wymondham*</option>
+</optgroup><optgroup label="North West Leicestershire - Ashby–de-la-Zouch"><option value = "344"> Ashby–de-la-Zouch</option>
+<option value = "130"> Marlborough Way</option>
+<option value = "131"> Northfields area</option>
+<option value = "132"> Pithiviers/Wilfred Place</option>
+<option value = "129"> Town centre (Ashby–de-la-Zouch)</option>
+<option value = "134"> Westfields estate</option>
+<option value = "133"> Willesley estate</option>
+</optgroup><optgroup label="North West Leicestershire - Castle Donington"><option value = "135"> Bosworth Road estate</option>
+<option value = "345"> Castle Donington</option>
+<option value = "136"> Moira Dale area</option>
+<option value = "138"> Other</option>
+<option value = "137"> Windmill estate</option>
+</optgroup><optgroup label="North West Leicestershire - Coalville"><option value = "140"> Agar Nook</option>
+<option value = "141"> Avenue Road area</option>
+<option value = "346"> Coalville</option>
+<option value = "142"> Greenhill</option>
+<option value = "143"> Linford &amp; Verdon Crescent</option>
+<option value = "144"> Meadow Lane/Sharpley Avenue</option>
+<option value = "145"> Ravenstone Road area</option>
+<option value = "139"> Town centre (Coalville)</option>
+</optgroup><optgroup label="North West Leicestershire - Ibstock"><option value = "147"> Central Avenue area</option>
+<option value = "148"> Church View area</option>
+<option value = "149"> Deepdale area</option>
+<option value = "347"> Ibstock</option>
+<option value = "150"> Leicester Road area (Ibstock)</option>
+<option value = "146"> Town centre (Ibstock)</option>
+</optgroup><optgroup label="North West Leicestershire - Kegworth"><option value = "152"> Jeffares Close area</option>
+<option value = "348"> Kegworth</option>
+<option value = "153"> Mill Lane estate</option>
+<option value = "154"> Thomas Road estate</option>
+<option value = "151"> Town centre (Kegworth)</option>
+</optgroup><optgroup label="North West Leicestershire - Measham"><option value = "156"> Atherstone Road estate</option>
+<option value = "157"> Dysons Close area</option>
+<option value = "349"> Measham</option>
+<option value = "158"> New Street area</option>
+<option value = "155"> Town centre (Measham)</option>
+<option value = "159"> Wilkes Avenue area</option>
+</optgroup><optgroup label="North West Leicestershire - Moira"><option value = "160"> Ashfield Drive area</option>
+<option value = "350"> Moira</option>
+<option value = "161"> Norris Hill area</option>
+<option value = "162"> Sweet Hill area</option>
+</optgroup><optgroup label="North West Leicestershire - North West Leicestershire Villages"><option value = "168"> Acresford</option>
+<option value = "169"> Albert Village</option>
+<option value = "170"> Appleby Magna*</option>
+<option value = "171"> Bardon</option>
+<option value = "172"> Battram</option>
+<option value = "173"> Belton*</option>
+<option value = "174"> Blackfordby</option>
+<option value = "175"> Breedon*</option>
+<option value = "176"> Chilcote</option>
+<option value = "177"> Coleorton</option>
+<option value = "178"> Diseworth*</option>
+<option value = "179"> Donisthorpe</option>
+<option value = "180"> Ellistown</option>
+<option value = "181"> Griffydam</option>
+<option value = "182"> Heather*</option>
+<option value = "183"> Hemington</option>
+<option value = "184"> Hugglescote</option>
+<option value = "185"> Isley Walton</option>
+<option value = "186"> Lockington</option>
+<option value = "187"> Long Whatton*</option>
+<option value = "188"> Lount</option>
+<option value = "189"> Newbold Coleorton</option>
+<option value = "190"> Newton Burgoland</option>
+<option value = "191"> Normanton Le Heath</option>
+<option value = "192"> Oakthorpe</option>
+<option value = "193"> Osgathorpe</option>
+<option value = "194"> Overseal</option>
+<option value = "195"> Packington</option>
+<option value = "196"> Peggs Green</option>
+<option value = "197"> Ravenstone*</option>
+<option value = "198"> Snarestone</option>
+<option value = "199"> Staunton Harold</option>
+<option value = "200"> Swannington*</option>
+<option value = "201"> Swepstone</option>
+<option value = "202"> Thringstone</option>
+<option value = "203"> Tonge</option>
+<option value = "204"> Wilson</option>
+<option value = "205"> Worthington</option>
+</optgroup><optgroup label="North West Leicestershire - Whitwick"><option value = "164"> Brooks Lane area</option>
+<option value = "165"> Hall Lane area</option>
+<option value = "166"> Hermitage Road area</option>
+<option value = "167"> Leicester Road area (Whitwick)</option>
+<option value = "163"> Village centre</option>
+<option value = "351"> Whitwick</option>
+</optgroup><optgroup label="Oadby and Wigston - Oadby and Wigston"><option value = "334"> Oadby</option>
+<option value = "336"> South Wigston</option>
+<option value = "335"> Wigston</option>
+</optgroup></select></span></div>
+<div  class="FormProperty" ><label for="PropertyTypeID" >Property type</label><span class="FormField"><select  size="0" name="PropertyTypeID" ID="PropertyTypeID" class="SelectField" multiple ><option value = "118620"> 1 Bed Bungalow</option>
+<option value = "118618"> 1 Bed Flat</option>
+<option value = "118619"> 1 Bed House</option>
+<option value = "118669"> 1 Bed Maisonette</option>
+<option value = "118623"> 2 Bed Bungalow</option>
+<option value = "118621"> 2 Bed Flat</option>
+<option value = "118622"> 2 Bed House</option>
+<option value = "118670"> 2 Bed Maisonette</option>
+<option value = "118671"> 3 Bed Bungalow</option>
+<option value = "118625"> 3 Bed Flat</option>
+<option value = "118624"> 3 Bed House</option>
+<option value = "121336"> 3 Bed Maisonette</option>
+<option value = "118626"> 3 Bed Parlour House</option>
+<option value = "120937"> 4 bed bungalow</option>
+<option value = "120938"> 4 bed flat</option>
+<option value = "120939"> 4 Bed House</option>
+<option value = "121335"> 4 bed parlour House</option>
+<option value = "120940"> 5 Bed House</option>
+<option value = "118617"> Studio Flat</option>
+</select></span></div>
+<div  class="MobilityStandardTable" ><label for="FacilitiesMobilityStandardID" >Mobility standard</label><span class="FormField">
+<div ><span class="FormGridCell"><div class="HangingIndent"><span><img src="/MarketHarboroughInstallation/icons/SearchMobilityA.JPG" border=0 alt="Property suitable for a wheelchair user both inside and out image"><span ><input type="checkbox"name="FacilitiesMobilityStandardID" id="FacilitiesMobilityStandardID-118366" value="118366"  ></span><span ><label for="FacilitiesMobilityStandardID-118366" id="FacilitiesMobilityStandardID-118366-label">Property suitable for a wheelchair user both inside and out</label></span></div></span>
+<span class="FormGridCell"><div class="HangingIndent"><span><img src="/MarketHarboroughInstallation/icons/SearchMobilityB.JPG" border=0 alt="Wheelchair accessible property with no steps or stairs image"><span ><input type="checkbox"name="FacilitiesMobilityStandardID" id="FacilitiesMobilityStandardID-118367" value="118367"  ></span><span ><label for="FacilitiesMobilityStandardID-118367" id="FacilitiesMobilityStandardID-118367-label">Wheelchair accessible property with no steps or stairs</label></span></div></span>
+<span class="FormGridCell"><div class="HangingIndent"><span><img src="/MarketHarboroughInstallation/icons/SearchMobilityC.JPG" border=0 alt="A property with level access from the street to the floor of the property with no internal steps or stairs image"><span ><input type="checkbox"name="FacilitiesMobilityStandardID" id="FacilitiesMobilityStandardID-118368" value="118368"  ></span><span ><label for="FacilitiesMobilityStandardID-118368" id="FacilitiesMobilityStandardID-118368-label">A property with level access from the street to the floor of the property with no internal steps or stairs</label></span></div></span>
+<span class="FormGridCell"><div class="HangingIndent"><span><img src="/MarketHarboroughInstallation/icons/SearchMobilityD.JPG" border=0 alt="A property with no stairs but which has 1 or 2 steps image"><span ><input type="checkbox"name="FacilitiesMobilityStandardID" id="FacilitiesMobilityStandardID-118369" value="118369"  ></span><span ><label for="FacilitiesMobilityStandardID-118369" id="FacilitiesMobilityStandardID-118369-label">A property with no stairs but which has 1 or 2 steps</label></span></div></span>
+<span class="FormGridCell"><div class="HangingIndent"><span><img src="/MarketHarboroughInstallation/icons/SearchMobilityE.JPG" border=0 alt="A property with a downstairs toilet but which has steps and stairs image"><span ><input type="checkbox"name="FacilitiesMobilityStandardID" id="FacilitiesMobilityStandardID-118370" value="118370"  ></span><span ><label for="FacilitiesMobilityStandardID-118370" id="FacilitiesMobilityStandardID-118370-label">A property with a downstairs toilet but which has steps and stairs</label></span></div></span>
+<span class="FormGridCell"><div class="HangingIndent"><span><img src="/MarketHarboroughInstallation/icons/SearchMobilityF.JPG" border=0 alt="A property that is suitable for a disabled person who needs extra space (e.g. additional downstairs room image"><span ><input type="checkbox"name="FacilitiesMobilityStandardID" id="FacilitiesMobilityStandardID-118371" value="118371"  ></span><span ><label for="FacilitiesMobilityStandardID-118371" id="FacilitiesMobilityStandardID-118371-label">A property that is suitable for a disabled person who needs extra space (e.g. additional downstairs room</label></span></div></span>
+</div>
+<input type="hidden" value="6" name="LookupCountFacilitiesMobilityStandardID"><input type="hidden" value="118366,118367,118368,118369,118370,118371" name="LookupIDListFacilitiesMobilityStandardID"></span></div>
+<div  class="FormProperty" ><label for="ShelteredSupported" >Sheltered/Supported</label><span class="FormField"><select  size="0" name="ShelteredSupported" ID="ShelteredSupported" class="SelectField" multiple ><option value = "118560"> Extra Care Sheltered</option>
+<option value = "118559"> Sheltered</option>
+<option value = "118561"> Supported</option>
+</select></span></div>
+<div class="FormFieldButton"><input type="submit" name="cmdSubmit" id="cmdSubmit" value="Search" class="submitButton">
+<label for="cmdSubmit">Click here to search for any properties matching your above criteria</label>
+</div><div class="FormFieldButton"><input type="reset" value="Reset" name="cmdReset" id="cmdReset" alt="Reset this form" class="submitButton">
+<label for="cmdReset">Click here to reset the above selections to their default values</label>
+</div></form>
+<form method="POST" ID="frmPropertySearch">
+<div class="FormFieldButton"><input type="submit" value="New search" name="cmdNewSearch" id="cmdNewSearch" class="submitButton">
+<label for="cmdNewSearch">Click here to clear all the above selections</label>
+</div></form>
+<div class="FormHintHeading">Search hints</div>
+<div class="FormHint">If you do not select any items from a drop down lists then this search criteria will be ignored (e.g. all property types will be displayed)</div>
+<div class="FormHint">To select more than one item from a list hold down the CTRL key (or Apple key on a Mac) on your keyboard&#160;whilst clicking on the items required with your mouse.<br />
+To deselect an item hold down the CTRL key (or Apple key on a Mac) on your keyboard whilst clicking on the item no longer required with your mouse</div>
+</fieldset>
+</p>
+
+<p>&#160;</p>
+
+        </div>
+        <span class="PropertyShopFooter">
+          Site powered by <a href="http://www.abritas.co.uk">Abritas</a>
+          &nbsp;|&nbsp;
+	      <span id="CookiesLinkSpan">
+          <a href="Cookies_2.aspx">Cookie policy</a>
+	      </span>
+		</span>
+      </div>
+    </div>
+    <div class="PropertyShopSpareDiv1"></div>
+    <div class="PropertyShopSpareDiv2"></div>
+    <div class="PropertyShopSpareDiv3"></div>
+    <div class="PropertyShopSpareDiv4"></div>
+    <div class="PropertyShopSpareDiv5"></div>
+</div>
+</body>
+</html>
+

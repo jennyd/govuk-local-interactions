@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head id="ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta charset="utf-8" /><title>
+	Highways and Construction 
+</title><meta name="description" content="#" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/refresh/modernizr.custom.84336.js"></script>
+    <link href="/templates/default/css/system/refresh/customfonts.css" rel="stylesheet" type="text/css" /><link href="/templates/default/css/system/refresh/global.css" rel="stylesheet" media="all" /><link href="/templates/default/css/refresh.css" rel="stylesheet" media="all" /><link href="/contactsdirectory/css/contactdirectory.css" rel="stylesheet" media="all" /></head>
+<!--[if IE 7]>		   <body class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>		   <body class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<body onload="LoadGoogleMap()">
+    <!--<![endif]-->
+    <div class="outerWrapper">
+        <div class="betaBanner ">
+            <div class="innerPadded">
+                <p class="floatLeft">
+                    This is our Beta website - <span class="beta-feedback">we're keen to have <a href="https://www.eforms.rbkc.gov.uk/default.aspx/RenderForm/?F.Name=s1doma5TEed">
+                        your feedback</a></span>
+                </p>
+            </div>
+            <!-- end innerPadded -->
+        </div>
+        <!-- end betaBanner -->
+        <div class="headerGlobal" role="banner">
+            <div class="innerPadded">
+                <div class="innerPadded logo">
+                    <a href="http://www.rbkc.gov.uk" title="The Royal Borough of Kensington and Chelsea">
+                        The Royal Borough of Kensington and Chelsea</a>
+                </div>
+                <!-- end logo -->
+                <button class="openMenu" type="button">
+                    <span class="element-invisible">Open menu below: Services, MyRBKC, Council, Maps</span>
+                </button>
+                <button class="openSearch" type="button">
+                    <span class="element-invisible">Open search box below</span>
+                </button>
+                <nav role="navigation">
+						<ul class="menu hide">
+							<li class="hide800"><a href="https://www.rbkc.gov.uk/services.aspx" title="Council Services">Services</a></li>
+							<li class="show800 openServiceMenu">
+								<button type="button">Services<span class="element-invisible">Open a full list of services below</span></button>
+							</li>
+							<li><a href="https://www.rbkc.gov.uk/myrbkc/login.aspx" title="MyRBKC">MyRBKC</a></li>
+							<li><a href="https://www.rbkc.gov.uk/councilanddemocracy.aspx" title="Council">Council</a></li>
+							<li><a href="https://www.rbkc.gov.uk/leisureandlibraries/popularlocalmaps.aspx" title="Maps">Maps</a></li>
+						</ul><!-- end menu -->
+					</nav>
+                <div class="search hide">
+                    <form action="/contactsdirectorysearch" method="post" id="google-appliance-block-form" accept-charset="UTF-8">
+                    <p>
+                        <label for="q" class="rm">
+                            Enter search text:</label>
+                        <div class="search_full_text">
+                            <input id="edit-search-keys" name="search_keys" placeholder="Enter search terms..." onfocus="clearField(this)"
+                                type="text" />
+                        </div>
+                        <input name="submit" id="edit-submit" class="submit" value="Search" type="submit" />
+                            <input type="hidden" name="form_build_id" value="form-contactsdirectorysearch" />
+                            <input type="hidden" name="form_id" value="google_appliance_block_form" />
+                    </p>
+                    </form>
+                </div>
+                <!-- end search -->
+            </div>
+            <!-- end innerPadded -->
+        </div>
+        <!-- end headerGlobal -->
+        <div class="serviceMenu hide" role="navigation">
+            <div class="innerPadded">
+                <nav role="navigation">
+						<ul>
+							<li><a href="https://www.rbkc.gov.uk/environmentandtransport/parking.aspx" title="Parking, transport and streets">Parking, transport and streets</a></li>
+							<li><a href="https://www.rbkc.gov.uk/binsandrecycling.aspx" title="Bins and recycling">Bins and recycling</a></li>
+							<li><a href="https://www.rbkc.gov.uk/planningandbuildingcontrol.aspx" title="Planning">Planning</a></li>
+							<li><a href="https://www.rbkc.gov.uk/leisureandlibraries/libraries.aspx" title="Libraries">Libraries</a></li>
+							<li><a href="https://www.rbkc.gov.uk/councilanddemocracy/counciltax.aspx" title="Council tax">Council tax</a></li>
+							<li><a href="https://www.rbkc.gov.uk/communityandlocallife/registrarsservices.aspx" title="Births, deaths and marriages">Births, deaths and marriages</a></li>
+						</ul>
+						<ul>
+							<li><a href="https://www.rbkc.gov.uk/educationandlearning.aspx" title="Children and education">Children and education</a></li>
+							<li><a href="https://www.rbkc.gov.uk/leisureandlibraries.aspx" title="Leisure and culture">Leisure and culture</a></li>
+							<li><a href="https://www.rbkc.gov.uk/leisureandlibraries/parksandgardens.aspx" title="Parks and ecology">Parks and ecology</a></li>
+							<li><a href="https://www.rbkc.gov.uk/housing.aspx" title="Housing">Housing</a></li>
+							<li><a href="https://www.rbkc.gov.uk/jobs.aspx" title="Jobs">Jobs</a></li>
+							<li><a href="https://www.rbkc.gov.uk/healthandsocialcare.aspx" title="Health and social care">Health and social care</a></li>
+						</ul>
+						<ul>
+							<li><a href="https://www.rbkc.gov.uk/environmentandtransport/licensing.aspx" title="Licensing">Licensing</a></li>
+							<li><a href="https://www.rbkc.gov.uk/businessandenterprise.aspx" title="Business and enterprise">Business and enterprise</a></li>
+							<li><a href="https://www.rbkc.gov.uk/environmentandtransport.aspx" title="Environment">Environment</a></li>
+							<li><a href="https://www.rbkc.gov.uk/adviceandbenefits.aspx" title="Jobs">Advice and benefits</a></li>
+							<li><a href="https://www.rbkc.gov.uk/communityandlocallife.aspx" title="Community and local life">Community and local life</a></li>
+							<li><a href="https://www.rbkc.gov.uk/newsroom.aspx" title="Newsroom">Newsroom</a></li>
+						</ul>
+					</nav>
+                <div class="serviceMenu-close">
+                    <p>
+                        <button type="button">
+                            Close menu</button>
+                    </p>
+                </div>
+            </div>
+            <!-- end innerPadded -->
+        </div>
+        <!-- end serviceMenu -->
+        <div class="backgroundRibbon">
+            <main role="main">
+
+					<div class="innerNoPadding">
+						<h1>Highways and Construction </h1>
+					</div>
+		
+					<div class="middle">
+					   <div class="middle-inner innerPadded">
+							<div class="row">
+	<form name="aspnetForm" method="post" action="az.aspx?OrgId=1825" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTkzMzU0NTU4Mg9kFgJmD2QWBmYPZBYCAgIPZBYCZg8WAh4EVGV4dAUaSGlnaHdheXMgYW5kIENvbnN0cnVjdGlvbiBkAgEPFgIfAAUaSGlnaHdheXMgYW5kIENvbnN0cnVjdGlvbiBkAgIPZBYCAgEPZBYKZg8WAh4HVmlzaWJsZWgWBAIBDw8WBB8ABR9TaG93IG9yZ2FuaXNhdGlvbiBhY2Nlc3NpYmlsaXR5HgtOYXZpZ2F0ZVVybAUhYXouYXNweD9vcmdpZD0xODI1Jm9hPXNob3cjb3JnYWNjZGQCAw8PFgQfAAUbU2hvdyBidWlsZGluZyBhY2Nlc3NpYmlsaXR5HwIFJ2F6LmFzcHg/b3JnaWQ9MTgyNSYmYmE9c2hvdyNCdWlsZGluZ2FjY2RkAgEPFgIfAAXHFTx0cj4NCgkJCQkJCQkJPHRkPjxzdHJvbmc+QWx0ZXJuYXRpdmUgTmFtZTwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJCTx0ZD5IaWdod2F5cyA8L3RkPgkJCQkJCQkJCQkJCQkJDQoJCQkJCQkJPC90cj48dHI+DQoJCQkJCQkJCTx0ZD48c3Ryb25nPkRlc2NyaXB0aW9uPC9zdHJvbmc+PC90ZD4NCgkJCQkJCQkJPHRkPkEgZGl2aXNpb24gb2YgdGhlIERpcmVjdG9yYXRlIG9mIFRyYW5zcG9ydGF0aW9uIGFuZCBIaWdod2F5cyB0aGF0IGRlYWxzIHdpdGggdGhlIG1haW50ZW5hbmNlIG9mIHRoZSBCb3JvdWdoJ3MgY2FycmlhZ2V3YXlzLCBmb290d2F5cyBhbmQgc3RyZWV0IGZ1cm5pdHVyZTwvdGQ+CQkJCQkJCQkJCQkJCQkNCgkJCQkJCQk8L3RyPjx0cj4NCgkJCQkJCQkJPHRkPjxzdHJvbmc+QWRkcmVzczwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJCTx0ZD5Db3VuY2lsIE9mZmljZXMNCjM3IFBlbWJyb2tlIFJvYWQNCg0KPGJyIC8+TE9ORE9OPGJyIC8+VzggNlBXPC90ZD4JCQkJCQkJCQkJCQkJCQ0KCQkJCQkJCTwvdHI+PHRyPg0KCQkJCQkJCQk8dGQ+PHN0cm9uZz5UZWxlcGhvbmU8L3N0cm9uZz48L3RkPg0KCQkJCQkJCQk8dGQ+MDIwIDczNjEgMzAwMSAtIFN0cmVldGxpbmU8YnIvPlN0cmVldGxpbmU6IDAyMCA3MzYxIDMwMDEgKE51bWJlciByZWRpcmVjdHMgdG8gb3V0IG9mIGhvdXJzIHNlcnZpY2UgYWZ0ZXIgNS4zMHBtKTxici8+MDIwIDczNDEgNTI4NSAoUm9hZCByZXBhaXJzIG9yIGRlZmVjdHMpPGJyLz4wMjAgNzM0MSA1MjU4IChTdHJlZXQgbGlnaHRpbmcgZGVmZWN0cyk8YnIvPjwvdGQ+CQkJCQkJCQkJCQkJCQkNCgkJCQkJCQk8L3RyPjx0cj4NCgkJCQkJCQkJPHRkPjxzdHJvbmc+RW1haWw8L3N0cm9uZz48L3RkPg0KCQkJCQkJCQk8dGQ+PGEgaHJlZj0nbWFpbHRvOnN0cmVldGxpbmVAcmJrYy5nb3YudWsnPnN0cmVldGxpbmVAcmJrYy5nb3YudWsgLSBTdHJlZXRsaW5lPC9hPjxici8+PGEgaHJlZj0nbWFpbHRvOnN0cmVldGxpbmVAcmJrYy5nb3YudWsnPnN0cmVldGxpbmVAcmJrYy5nb3YudWs8L2E+PGJyLz48L3RkPgkJCQkJCQkJCQkJCQkJDQoJCQkJCQkJPC90cj48dHI+DQoJCQkJCQkJCTx0ZD48c3Ryb25nPkhvdXJzPC9zdHJvbmc+PC90ZD4NCgkJCQkJCQkJPHRkPk1vbmRheSB0byBGcmlkYXkgODowMGFtIC0gNTowMHBtPC90ZD4JCQkJCQkJCQkJCQkJCQ0KCQkJCQkJCTwvdHI+PHRyPg0KCQkJCQkJCQk8dGQ+PHN0cm9uZz5TZXJ2aWNlczwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJCTx0ZD5TZWUgTm90ZXM8L3RkPgkJCQkJCQkJCQkJCQkJDQoJCQkJCQkJPC90cj48dHI+DQoJCQkJCQkJCTx0ZD48c3Ryb25nPlRyYW5zcG9ydDwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJCTx0ZD5UdWJlOiBFYXJscyBDb3VydCAoUGljY2FkaWxseSAmYW1wOyBEaXN0cmljdCkNPGJyIC8+QnVzZXM6IDMyOCwgQzEsIEMzPC90ZD4JCQkJCQkJCQkJCQkJCQ0KCQkJCQkJCTwvdHI+PHRyPg0KCQkJCQkJCQk8dGQ+PHN0cm9uZz5Ob3Rlczwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJCTx0ZD5UaGlzIERpdmlzaW9uIGlzIHJlc3BvbnNpYmxlIGZvciB0aGUgbWFpbnRlbmFuY2UgYW5kIGltcHJvdmVtZW50IG9mIHRoZSBwdWJsaWMgaGlnaHdheSBpbmNsdWRpbmcgdGhlIGltcGxlbWVudGF0aW9uIG9mIHRyYWZmaWMgc2FmZXR5IHNjaGVtZXMuIEhpZ2ggcXVhbGl0eSBtYXRlcmlhbHMgYXJlIHVzZWQgZm9yIGFsbCBlbGVtZW50cyBvZiB0aGUgc3RydWN0dXJlIGkuZS4gZm9vdHdheXMsIGNhcnJpYWdld2F5cywgc3RyZWV0IGxpZ2h0aW5nLCBzaWducywgYmVuY2hlcyBldGMuDTxiciAvPg08YnIgLz5QdWJsaWMgbGlnaHRpbmcvc2lnbmFnZSAtIGluc3RhbGxhdGlvbiBhbmQgbWFpbnRlbmFuY2Ugb2YgYWxsIHB1YmxpYyBsaWdodGluZywgaWxsdW1pbmF0ZWQgYm9sbGFyZHMgYW5kIHNpZ25zIGluY2x1ZGluZyBhbGwgbGFtcHMgb24gQWxiZXJ0IGFuZCBDaGVsc2VhIEJyaWRnZXMuDTxiciAvPg08YnIgLz5EcmFpbmFnZSAtIGluc3RhbGxhdGlvbiBhbmQgcmVwYWlyIG9mIGhpZ2h3YXkgZ3VsbGllcywgYW5kIGNvbnN0cnVjdGlvbiBvZiBuZXcgc2V3ZXIgY29ubmVjdGlvbnMuDTxiciAvPg08YnIgLz5Db25zdHJ1Y3Rpb24gLSBwcm9qZWN0IG1hbmFnZW1lbnQgb2YgYnJpZGdlIHJlY29uc3RydWN0aW9uL21haW50ZW5hbmNlIGFuZCBtYWpvciBjaXZpbCBlbmdpbmVlcmluZyBzY2hlbWVzLiBJbXBsZW1lbnRhdGlvbiBvZiB0cmFmZmljIG1hbmFnZW1lbnQgYW5kIGhpZ2h3YXkgaW1wcm92ZW1lbnQgd29ya3MuIFN0cnVjdHVyYWwgYWR2aWNlIG9uIGRlZmVjdGl2ZSB2YXVsdHMgYW5kIGNlbGxhcnMuDTxiciAvPg08YnIgLz4NPGJyIC8+QSBzbWFsbCB0ZWFtIGxpYWlzZXMgd2l0aCB1dGlsaXR5IGNvbXBhbmllcyB0byBtaW5pbWlzZSBpbmNvbnZlbmllbmNlIGR1cmluZyBtYWpvciB3b3JrcyBieSBCcml0aXNoIEdhcywgQlQgZXRjLiBBIHByb3BvcnRpb24gb2YgdXRpbGl0aWVzIHdvcmtzIGFyZSBpbnNwZWN0ZWQgYW5kIHRlc3RlZCBmb3IgY29tcGxpYW5jZSB3aXRoIHNhZmV0eSBhbmQgcmVpbnN0YXRlbWVudCBzcGVjaWZpY2F0aW9ucy4NPGJyIC8+DTxiciAvPg08YnIgLz5BbGJlcnQgQnJpZGdlIGFuZCBDaGVsc2VhIEJyaWRnZSBhcmUgcmVndWxhcmx5IGluc3BlY3RlZCB3aXRoIG1ham9yIHJlZnVyYmlzaG1lbnQgYW5kIHJlbGlnaHRpbmcgcHJvamVjdHMgY2FycmllZCBvdXQgYXBwcm94aW1hdGVseSBldmVyeSBlaWdodCB5ZWFycy48L3RkPg0KCQkJCQkJCTwvdHI+ZAIDDxYCHwAFDzA2IE9jdG9iZXIgMjAxNWQCBA8PFgIfAWhkFgICAQ8WAh8ABfUIDQogICAgICAgICAgICAgICAgICAgICAgICA8dHI+DQoJCQkJCQkJPHRkPklzIHRoZXJlIHNvbWVvbmUgZXNwZWNpYWxseSByZXNwb25zaWJsZSBmb3IgYXJyYW5nZW1lbnRzIHRvIG1lZXQgdGhlIG5lZWRzIG9mIHBlb3BsZSB3aXRoIGRpc2FiaWxpdGllcz8gLSA8c3Ryb25nPlllcyAtIE5hbWUgOiBKZW5ueSBMdWNhcwlQb3N0OiBSaXNrIE1hbmFnZW1lbnQgYW5kIEVxdWFsaXRpZXMgUHJvZ3JhbW1lIE9mZmljZXI8L3N0cm9uZz48L3RkPg0KCQkJCQkJCQ0KCQkJCQkJPC90cj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0cj4NCgkJCQkJCQk8dGQ+SXMgdGhlcmUgYW55b25lIG9uIHRoZSBzaXRlIHdobyBjYW4gdXNlIEJyaXRpc2ggU2lnbiBMYW5ndWFnZT8gLSA8c3Ryb25nPk5vPC9zdHJvbmc+PC90ZD4NCgkJCQkJCQkNCgkJCQkJCTwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dHI+DQoJCQkJCQkJPHRkPklzIGluZm9ybWF0aW9uIGFib3V0IGFjdGl2aXRpZXMgYW5kIGZhY2lsaXRpZXMgYXZhaWxhYmxlIG9uIGZsb3BweSBkaXNrLCBlLW1haWwgb3IgaW50ZXJuZXQ/IC0gPHN0cm9uZz5ZZXMgLSBJbnRlcm5ldCBhbmQgRS1tYWlsPC9zdHJvbmc+PC90ZD4NCgkJCQkJCQkNCgkJCQkJCTwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dHI+DQoJCQkJCQkJPHRkPklzIGluZm9ybWF0aW9uIGFib3V0IGFjdGl2aXRpZXMgYW5kIGZhY2lsaXRpZXMgYXZhaWxhYmxlIG9uIGNhc3NldHRlPyAtIDxzdHJvbmc+Tm88L3N0cm9uZz48L3RkPg0KCQkJCQkJCQ0KCQkJCQkJPC90cj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0cj4NCgkJCQkJCQk8dGQ+SXMgaW5mb3JtYXRpb24gYWJvdXQgYWN0aXZpdGllcyBhbmQgZmFjaWxpdGllcyBhdmFpbGFibGUgaW4gbGFyZ2UgcHJpbnQgYW5kIGJyYWlsbGU/IC0gPHN0cm9uZz5Obzwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJDQoJCQkJCQk8L3RyPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRyPg0KCQkJCQkJCTx0ZD5JcyBpbmZvcm1hdGlvbiBhYm91dCBhY3Rpdml0aWVzIGFuZCBmYWNpbGl0aWVzIGF2YWlsYWJsZSB2aWEgbWluaWNvbS90ZXh0cGhvbmU/IC0gPHN0cm9uZz5Obzwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJDQoJCQkJCQk8L3RyPmQCBQ8PFgIfAWhkFgICAQ8WAh8ABcMVDQogICAgICAgICAgICAgICAgICAgICAgICA8dHI+DQoJCQkJCQkJPHRkPkFyZSB0aGVyZSBwcmlvcml0eSBwYXJraW5nIHBsYWNlcyBvbi1zaXRlIGZvciBwZW9wbGUgd2l0aCBkaXNhYmlsaXRpZXM/IC0gPHN0cm9uZz5Obzwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJDQoJCQkJCQk8L3RyPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRyPg0KCQkJCQkJCTx0ZD5BcmUgdGhlcmUgb24tc3RyZWV0LCBkaXNhYmxlZCBiYWRnZSBwYXJraW5nIHBsYWNlcyBuZWFyYnkgKGxlc3MgdGhhbiBhYm91dCAxMDAgbWV0cmVzL3lhcmRzIGF3YXk/KSAtIDxzdHJvbmc+Tm88L3N0cm9uZz48L3RkPg0KCQkJCQkJCQ0KCQkJCQkJPC90cj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0cj4NCgkJCQkJCQk8dGQ+SXMgdGhlcmUgYSBzZXQgZG93biBwb2ludCBmb3IgZWFzeSBhY2Nlc3MgdG8gdGhlIGJ1aWxkaW5nIG5lYXJieSAobGVzcyB0aGFuIDEwMCBtZXRyZXMveWFyZHMgYXdheT8pIC0gPHN0cm9uZz5Obzwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJDQoJCQkJCQk8L3RyPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRyPg0KCQkJCQkJCTx0ZD5JcyB0aGVyZSBhIHRyYWluL3VuZGVyZ3JvdW5kIHN0YXRpb24gbmVhcmJ5KGxlc3MgdGhhbiAxMDAgbWV0cmVzL3lhcmRzIGF3YXk/KSAtIDxzdHJvbmc+WWVzIC0gRWFybHMgQ291cnQgVHViZSBTdGF0aW9uPC9zdHJvbmc+PC90ZD4NCgkJCQkJCQkNCgkJCQkJCTwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dHI+DQoJCQkJCQkJPHRkPkZyb20gdGhlIG5lYXJlc3QgdHJhaW4vdW5kZXJncm91bmQgc3RhdGlvbiwgd2lsbCBwZW9wbGUgZW5jb3VudGVyIG9ic3RhY2xlcz8gLSA8c3Ryb25nPlllcyAtIFN0ZXBzLSBBdCB0aGUgc3RhdGlvbiBmcm9tIHBsYXRmb3JtcyAobm8gbGlmdHMgZnJvbSBkaXN0cmljdCBsaW5lIC4gIFRoZXJlIGFyZSBhbHNvIG1hbnkgc3RlcHMgb24gd2Fsa3dheSBhdCBDb3VuY2lsIE9mZmljZSBZYXJkLg0KUm9hZHMgLSBUaGVyZSBhcmUgdHdvIHJvdXRlcy4gT25lIGhhcyB0byBjcm9zcyByb2FkcyAzIHRpbWVzLiAgPC9zdHJvbmc+PC90ZD4NCgkJCQkJCQkNCgkJCQkJCTwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dHI+DQoJCQkJCQkJPHRkPklzIHRoZXJlIGEgYnVzIHN0b3AgbGVzcyB0aGFuIDEwMCBtZXRyZXMgYXdheT8gLSA8c3Ryb25nPlllcyAtIDMyOCwgQzEgYW5kIEMzPC9zdHJvbmc+PC90ZD4NCgkJCQkJCQkNCgkJCQkJCTwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dHI+DQoJCQkJCQkJPHRkPkZyb20gdGhlIG5lYXJlc3QgYnVzIHN0b3AsIHdpbGwgcGVvcGxlIGVuY291bnRlciBvYnN0YWNsZXM/IC0gPHN0cm9uZz5ZZXMgLSBTdGVwIGF0IGVudHJhbmNlIHRvIENvdW5jaWwgT2ZmaWNlcyBhbmQgYWxvbmcgd2Fsa3dheSBpbiB5YXJkSGF2ZSB0byBjcm9zcyBXYXJ3aWNrIFJvYWQgLSBhdCBwZWRlc3RyaWFuIGNyb3NzaW5nPC9zdHJvbmc+PC90ZD4NCgkJCQkJCQkNCgkJCQkJCTwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dHI+DQoJCQkJCQkJPHRkPkFyZSB0aGUgYnVpbGRpbmcgZG9vcnMgYXV0b21hdGljPyAtIDxzdHJvbmc+Tm8gLSBSZWNlcHRpb24gZG9vciBwcmVzc3VyZSBtZWFzdXJlZCBhbmQgT0suPC9zdHJvbmc+PC90ZD4NCgkJCQkJCQkNCgkJCQkJCTwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dHI+DQoJCQkJCQkJPHRkPklzIHRoZSBidWlsZGluZyBmdWxseSB3aGVlbGNoYWlyIGFjY2Vzc2libGU/IC0gPHN0cm9uZz5ObyAtIFdhbGt3YXkgYXQgYmFjayBpcyBtaXh0dXJlIG9mIHNsb3Blcywgc3RlcHMgYW5kIGZsYXQgc3VyZmFjZXM8L3N0cm9uZz48L3RkPg0KCQkJCQkJCQ0KCQkJCQkJPC90cj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0cj4NCgkJCQkJCQk8dGQ+QXJlIHRoZSB0b2lsZXRzIGFjY2Vzc2libGU/IC0gPHN0cm9uZz5Obzwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJDQoJCQkJCQk8L3RyPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRyPg0KCQkJCQkJCTx0ZD5JcyBmcmVlIGFjY2VzcyB0byBhIHBsdWcgcG9pbnQgZm9yIGNoYXJnaW5nIGVsZWN0cmljIHdoZWVsY2hhaXJzIGF2YWlsYWJsZT8gLSA8c3Ryb25nPk5vPC9zdHJvbmc+PC90ZD4NCgkJCQkJCQkNCgkJCQkJCTwvdHI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dHI+DQoJCQkJCQkJPHRkPkFyZSBndWlkZSBkb2dzIGFuZCBoZWFyaW5nIGRvZ3Mgd2VsY29tZT8gLSA8c3Ryb25nPlllczwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJDQoJCQkJCQk8L3RyPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRyPg0KCQkJCQkJCTx0ZD5JcyB0aGVyZSBhIGxvb3Agc3lzdGVtIGZvciBwZW9wbGUgd2l0aCBoZWFyaW5nIGxvc3M/IC0gPHN0cm9uZz5Obzwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJDQoJCQkJCQk8L3RyPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRyPg0KCQkJCQkJCTx0ZD5BcmUgdGhlcmUgcGxhbnMgZm9yIGVtZXJnZW5jeSBldmFjdWF0aW9uIHdoaWNoIGNvdmVyIHBlb3BsZSB3aXRoIGRpc2FiaWxpdGllcz8gLSA8c3Ryb25nPlllcyAtIFRoZXJlIGFyZSAiRXZhYyBDaGFpcnMiIG9uIGVhY2ggZmxpZ2h0IG9mIHN0YWlycywgdGhvdWdoIHZlcnkgZmV3IHBlb3BsZSBoYXZlIHJlY2VpdmVkIHNwZWNpYWxpc3QgdHJhaW5pbmcgaW4gdGhlaXIgdXNlLjwvc3Ryb25nPjwvdGQ+DQoJCQkJCQkJDQoJCQkJCQk8L3RyPmRkqZId4Z8wndpJSLlTLNNR0uROP0o=" />
+
+
+     
+    <!-- dev script
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;key=AIzaSyA2BvhW4MJIPVtNq5B62LUhjzwipl_uAGE"
+        type="text/javascript"></script> -->
+    <!-- live script -->
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;client=gme-theroyalboroughof"
+        type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+
+        var mypoint;
+        var geocoder;
+        var map;
+
+
+        function LoadGoogleMap() {
+            //geocoder = new google.maps.Geocoder();
+
+            var homeLat = "51.493645";
+            var homeLong = "-0.201066";
+
+
+
+
+            if (homeLat === "empty") {
+                GetLatLngFromGeocode()
+                return true;
+            }
+            else {
+
+                mypoint = new google.maps.LatLng(homeLat, homeLong);
+                var mapOptions = {
+                    center: mypoint,
+                    zoom: 15,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+                var Mymarker = new google.maps.Marker({
+                    position: mypoint,
+                    map: map
+                })
+            }
+        }
+
+        function GetLatLngFromGeocode() {
+            var returnValue;
+            var postcode = "W8 6PW";
+            geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'address': postcode }, function (results, status) {
+
+                if (status == google.maps.GeocoderStatus.OK) {
+                    mypoint = results[0].geometry.location;
+                }
+                else {
+                    //alert("Geocoder request failed: " + status);
+                    return;
+                }
+                var mapOptions = {
+                    center: mypoint,
+                    zoom: 15,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+
+                map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+                var Mymarker = new google.maps.Marker({
+                    position: mypoint,
+                    map: map
+                })
+
+            });
+
+        }
+
+    </script>
+    
+    <div class="organisation">
+        <p>
+            View the <a href="records.asp?searchletter=">contact directory &raquo;</a></p>
+        <table class="organisationDetails">
+            <tr>
+								<td><strong>Alternative Name</strong></td>
+								<td>Highways </td>														
+							</tr><tr>
+								<td><strong>Description</strong></td>
+								<td>A division of the Directorate of Transportation and Highways that deals with the maintenance of the Borough's carriageways, footways and street furniture</td>														
+							</tr><tr>
+								<td><strong>Address</strong></td>
+								<td>Council Offices
+37 Pembroke Road
+
+<br />LONDON<br />W8 6PW</td>														
+							</tr><tr>
+								<td><strong>Telephone</strong></td>
+								<td>020 7361 3001 - Streetline<br/>Streetline: 020 7361 3001 (Number redirects to out of hours service after 5.30pm)<br/>020 7341 5285 (Road repairs or defects)<br/>020 7341 5258 (Street lighting defects)<br/></td>														
+							</tr><tr>
+								<td><strong>Email</strong></td>
+								<td><a href='mailto:streetline@rbkc.gov.uk'>streetline@rbkc.gov.uk - Streetline</a><br/><a href='mailto:streetline@rbkc.gov.uk'>streetline@rbkc.gov.uk</a><br/></td>														
+							</tr><tr>
+								<td><strong>Hours</strong></td>
+								<td>Monday to Friday 8:00am - 5:00pm</td>														
+							</tr><tr>
+								<td><strong>Services</strong></td>
+								<td>See Notes</td>														
+							</tr><tr>
+								<td><strong>Transport</strong></td>
+								<td>Tube: Earls Court (Piccadilly &amp; District)<br />Buses: 328, C1, C3</td>														
+							</tr><tr>
+								<td><strong>Notes</strong></td>
+								<td>This Division is responsible for the maintenance and improvement of the public highway including the implementation of traffic safety schemes. High quality materials are used for all elements of the structure i.e. footways, carriageways, street lighting, signs, benches etc.<br /><br />Public lighting/signage - installation and maintenance of all public lighting, illuminated bollards and signs including all lamps on Albert and Chelsea Bridges.<br /><br />Drainage - installation and repair of highway gullies, and construction of new sewer connections.<br /><br />Construction - project management of bridge reconstruction/maintenance and major civil engineering schemes. Implementation of traffic management and highway improvement works. Structural advice on defective vaults and cellars.<br /><br /><br />A small team liaises with utility companies to minimise inconvenience during major works by British Gas, BT etc. A proportion of utilities works are inspected and tested for compliance with safety and reinstatement specifications.<br /><br /><br />Albert Bridge and Chelsea Bridge are regularly inspected with major refurbishment and relighting projects carried out approximately every eight years.</td>
+							</tr>
+            <div id="ctl00_ContentPlaceHolder1_pnlGmap">
+	
+                <tr>
+                    <td class="tablecell01a">
+                        <strong>Map</strong>
+                    </td>
+                    <td class="tablecell01a">
+                        
+                        <noscript>
+                            JavaScript must be enabled in order for you to view Maps.
+                        </noscript>
+                        <div id="map" style="width: 250px; height: 250px; border: 1px solid rgb(207,224,245);">
+                        </div>
+                        
+                    </td>
+                </tr>
+            
+</div>
+            <tr>
+                <td class="tablecell01a">
+                    <strong>Last Updated</strong>
+                </td>
+                <td class="tablecell01a">
+                    06 October 2015
+                </td>
+            </tr>
+        </table>
+        <a name="orgacc"></a>
+        
+        <a name="Buildingacc"></a>
+        
+        <p>
+            The <a href="records.asp?searchletter=">contact directory</a> is maintained
+            by the Royal Borough's Libraries. Please <a href="#disclaimer">read the disclaimer</a>.</p>
+    </div>
+    <!-- Begin Sitestat4 code -->
+    <script type="text/javascript">
+	<!--
+        function sitestat(ns_l) {
+            ns_l += '&amp;ns__t=' + (new Date()).getTime();
+            var ns_pixelUrl = ns_l;
+            var ns_0 = document.referrer;
+            ns_0 = (ns_0.lastIndexOf('/') == ns_0.length - 1) ? ns_0.substring(ns_0.lastIndexOf('/'), 0) : ns_0;
+            if (ns_0.length > 0) ns_l += '&amp;ns_referrer=' + escape(ns_0);
+            if (document.images) { var ns_1 = new Image(); ns_1.src = ns_l; } else
+                document.write('<img src="' + ns_l + '" width="1" height="1" alt="" />');
+        }
+        sitestat("https://uk.sitestat.com/rbkc/rbkc/s?AZ.AZDetail.app");
+	//-->
+    </script>
+    <noscript>
+        <img src="https://uk.sitestat.com/rbkc/rbkc/s?AZ.AZDetail.app" width="1" height="1"
+            alt="" /></noscript>
+    <!-- Begin Sitestat4 Loadingtime2 code -->
+    <script type="text/javascript">
+        var ns_loadingtime2 = (new Date()).getTime()
+
+        function changeButtonLabel(myButton) {
+            myButton.value = "Loading..";
+
+        }
+		
+    </script>
+    <!-- End Sitestat4 Loadingtime2 code -->
+
+	</form>
+
+							</div><!-- end row -->
+						</div><!-- end middle-inner innerPadded -->
+					</div><!-- end middle  -->
+				</main>
+        </div>
+        <!-- end backgroundRibbon -->
+        <!-- NEW -->
+        <div class="footerGlobal" role="contentinfo">
+            <div class="innerPadded footer-contents">
+                <p class="address">
+                    Town Hall, Hornton Street, W8 7NX
+                </p>
+                <p>
+                    <span class="contactphone">Call on <a href="tel://020-7361-3000">020 7361 3000</a></span><span><a
+                        href="https://www.eforms.rbkc.gov.uk/default.aspx/RenderForm/?F.Name=FoXT6rvnp4J">Email
+                        us</a></span>
+                </p>
+                <ul class="footerLinks">
+                    <li><a href="/footerlinks/cookiesandyourprivacy.aspx" title="Cookies and your privacy">
+                        Cookies and your privacy</a></li>
+                    <li><a href="/footerlinks/contactus.aspx" title="Contact us">Contact us</a></li>
+                    <li><a href="/footerlinks/termsofuse.aspx" title="Terms of use">Terms of use</a></li>
+                </ul>
+                <ul class="socialMedia">
+                    <li><a href="https://uk.sitestat.com/rbkc/rbkc/s?Twitter&amp;ns_type=clickout" class="socialMedia-Twitter"
+                        title="Twitter">Twitter</a></li>
+                    <li><a href="https://uk.sitestat.com/rbkc/rbkc/s?Facebook&amp;ns_type=clickout" class="socialMedia-Facebook"
+                        title="Facebook">Facebook</a></li>
+                    <li><a href="https://uk.sitestat.com/rbkc/rbkc/s?Youtube&amp;ns_type=clickout" class="socialMedia-YouTube"
+                        title="YouTube">YouTube</a></li>
+                </ul>
+                <p>
+                    &copy;
+                    <time>1998-2016</time>
+                    The Royal Borough of Kensington and Chelsea</p>
+            </div>
+            <!-- end footer-contents -->
+        </div>
+        <!-- end footerGlobal -->
+        <!--rbkc:sitestatdynamic runa="server" homepage="0" /-->
+        <script type="text/javascript" src="/js/refresh/jquery1.11.min.js"></script>
+        <script type="text/javascript" src="/js/refresh/rf-main.js"></script>
+        <script type="text/javascript" src="/js/jquery/jquery-ui.js"></script>
+    </div>
+    <!-- end outerWrapper -->
+    <script type="text/javascript">
+        var m3_u = "http://rbkc.logo-net.co.uk/Delivery/DBURL.php";
+        var strPURL = parent.document.URL;
+        strPURL = strPURL.replace(/&/g, "^");
+        strPURL = strPURL.toLowerCase();
+        strPURL = strPURL.replace(/script/g, "HACK");
+        strPURL = strPURL.replace(/</g, "HACKONE");
+        strPURL = strPURL.replace(/>/g, "HACKTWO");
+        strPURL = strPURL.replace(/%3c/g, "HACKONE");
+        strPURL = strPURL.replace(/%3e/g, "HACKTWO");
+        var T = new Date();
+        var cMS = T.getTime();
+        document.write("<scr" + "ipt type='text/javascript' src='" + m3_u);
+        document.write("?SDTID=167");
+        document.write('&PURL=' + strPURL);
+        document.write('&CMS=' + cMS);
+        document.write("'></scr" + "ipt>");
+    </script>
+</body>
+</html>

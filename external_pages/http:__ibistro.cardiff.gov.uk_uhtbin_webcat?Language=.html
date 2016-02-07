@@ -1,0 +1,1722 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- Copyright (c) 2000 - 2008, SirsiDynix - Defines the head  body of each page. -->
+
+<!-- environment: WEBSERVER, station's ENVN policy number: 8 -->
+<!-- Server version: 3.4.1.5.GA -->
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <title>e-Library OPAC iBistro at Cardiff County Council</title>
+
+
+<!-- Set the expiration date to the past so the page will always be reloaded -->
+
+  <!-- Not the login page -->
+
+
+<style type="text/css">
+
+a:link, a:active {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	font-weight: normal;
+	text-decoration: none;
+	color: #00727d;
+}
+
+a:visited {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	font-weight: normal;
+	text-decoration: none;
+	color: #00727d;
+}
+
+a:hover {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	font-weight: normal;
+	text-decoration: underline;
+	color: #FF0000;
+	background-color: #FFFFCC;
+}
+
+body {
+	margin:-10px 0px 0px -10px;
+	background-color: #FFFFFF;
+	color: #000000;	
+}
+
+html body {
+	margin: 10px 10px 10px 10px;
+	background-color: #FFFFFF;
+	color: #000000;	
+}
+
+p, td {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+th {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	text-align: left;
+	vertical-align: top;
+}
+
+label {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+legend {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+fieldset {
+	border-style: none;
+	border-width: 0px;
+}
+
+form {
+	margin: 0px 0px 0px 0px;
+}
+
+ul {
+	margin-left: 0px;
+}
+
+.bibinfo {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: x-small;
+	background-color: #FFFFFF;
+	color: #000000;
+	border-width: 0px;
+	border-style: none;
+	margin: 5px 5px 5px 5px;
+	text-align: left;
+	width: 100%;
+}
+
+.bibinfo2 {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: x-small;	
+	background-color: #FFFFFF;
+	color: #000000;
+	margin: 10px 30px 10px 30px;
+}
+
+.summary {
+	background-color: #FFFFFF;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: xx-small;
+	color: #000000;
+	border-width: 1px;
+	border-style: solid;
+	padding: 5px 5px 5px 5px;
+	margin: 10px 5px 5px 10px;
+}
+
+.rootbarcell {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #00727d;
+	letter-spacing: 0px;
+	margin: 5px 5px 5px 5px;
+}
+
+
+ /* Use this declaration for NS4.x*/
+.rootbarcell a:link, .rootbarcell a:visited, rootbarcell a:active {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: x-small;
+	font-weight: normal;
+	color: #FFFFFF;
+	background-color: #00727d;
+}
+
+a.blastoff {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	font-weight: bold; 
+	color: #FFFF99;
+	background-color: #00727d;
+	text-decoration: underline;
+}
+
+.defaultstyle {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	background-color: #FFFFFF;
+	color: #000000;
+	vertical-align: top;
+}
+th.defaultstyle {
+	white-space: nowrap;
+	text-align: right;
+}
+
+
+.enrichheader, .enrichheader a {
+	background-color: #FFFFFF; 
+	color: #996600; 
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	font-weight: bold;
+	letter-spacing: 2px;
+	padding: 5px 0px 0px 0px;
+}
+
+.enrichsubheader {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.enrichcontent {
+	background-color: #FFFFFF; 
+	color: #000000; 
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	vertical-align: top;
+	padding: 0px 0px 5px 5px;
+} 
+
+.enrichmentservices {
+	background-color: #FFFFFF;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: xx-small;
+	color: #000000;
+	border-width: 1px;
+	border-style: solid;
+	text-align: left;
+}
+
+.enrichtagline {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: xx-small;
+	font-weight: normal;
+	background-color: #FFFFFF;
+	color: #888888;
+}
+
+.footer {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	font-weight: normal; 
+}
+
+.gatewaystyle, .gatewaystyle a:link, .gatewaystyle a:visited, .gatewaystyle a:active, .gatewaystyle a:hover {
+	background-color: #00727d;
+	color: #FFFFFF;
+	margin: 0px 0px 0px 0px;
+}
+
+.header {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	font-weight: bold;
+	letter-spacing: 2px; 
+	background-color: #00727d;
+	color: #FFFFFF;
+}
+
+.headerCCC {
+        font-family: Verdana, Helvetica, Arial, sans-serif;
+        font-size: xx-small;
+        font-weight: bold;
+        letter-spacing: 2px;
+        background-color: #00727d;
+        color: #FFFFFF;
+background-image: url("/WebCat_Images/English/Search_icons/Bistro/backdrop1a.jpg");
+background-repeat:no-repeat;
+}
+
+
+div.header {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	font-weight: bold;
+	letter-spacing: 2px; 
+	background-color: #00727d;
+	color: #FFFFFF;
+	padding: 3px 3px 3px 3px;
+}
+
+.holdingsheader {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	font-weight: bold;
+	background-color: #FFFFFF;
+	color: #00727d;
+}
+
+.holdingslist {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+th.holdingslist {
+	white-space: nowrap;
+	text-align: right;
+	vertical-align: top;
+}
+
+.indented {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	background-color: #FFFFFF;
+	color: #000000;
+	margin-left: 10px;
+	vertical-align: top;
+}
+
+.itemlisting, label.itemlisting {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	background-color: #FFFFFF;
+	color: #000000;
+	vertical-align: top;
+	font-weight: normal;
+}
+
+.itemlisting2, label.itemlisting2 {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	background-color: #EFEFEF;
+	color: #000000;
+	vertical-align: top;
+	font-weight: normal;
+}
+
+input.itemdetails {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	background-color: #00727d;
+	color: #FFFFFF;
+	width: 75px;
+	margin: 5px 0px 5px 0px;
+	display: block;
+}
+
+input.itemdetails2 {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	background-color: #00727d;
+	color: #FFFFFF;
+	width: 75px;
+	margin: 5px 0px 5px 0px;
+	display: block;
+}
+
+td.itemservices {
+	background-color: #FFFFFF;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: xx-small;
+	color: #000000;
+}
+
+div.itemservices {
+	background-color: #FFFFFF;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: xx-small;
+	color: #000000;
+	text-align: left;
+	border-width: 1px;
+	border-style: solid;
+	padding: 7px 7px 7px 7px;
+	margin: 0px 0px 0px 0px;
+}
+
+div.itemservices a:link, div.itemservices a:visited, div.itemservices a:active {
+	display: block;
+	margin: 3px 0px 3px 0px;
+}
+
+div.itemservices a:hover {
+	background-color: #FFFFCC;
+	color: #FF0000;
+	display: block;
+	margin: 3px 0px 3px 0px;
+}
+
+.langicon {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: xx-small;
+	text-align: center;
+	background-color: #FFFFFF;
+	letter-spacing: 0px; 
+	padding: 0px 0px 3px 0px;
+}
+
+a.holdicon:link { 
+	color: #FFFFFF;
+	border-style: outset;
+	border-color: #EEEEEE;;
+	background-color: #00727d;
+	text-align: center;
+	width: 70px;
+	display: block;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+a.holdicon:hover {
+	color: #00727d;
+	border-style: outset;
+	border-color: #EEEEEE;;
+	background-color: #FFFFCC;
+	text-align: center;
+	width: 70px;
+	display: block;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+div.options {
+	background-color: #FFFFFF;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: xx-small;
+	color: #000000;
+	border-width: 1px;
+	border-style: solid;
+	padding: 5px 5px 5px 5px;
+	margin: 10px 5px 5px 10px;
+}
+
+.overdue, .error {
+	color: #CC0000;
+}
+
+.pagecontainer {
+	background-color: #FFFFFF;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: x-small;
+	color: #000000;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.pagecontainer3pg {
+	background-color: #FFFFFF;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: x-small;
+	color: #000000;
+	border-width: 1px;
+	border-style: solid;
+	
+}
+
+.rsvholdings {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	background-color: #FFFFCC;
+	color: #000000;
+}
+
+.searchheader {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	font-weight: bold;
+	letter-spacing: 2px; 
+	background-color: #00727d;
+	color: #FFFFFF;
+	padding: 3px 3px 3px 3px;
+	width: 100%;
+}
+
+.searchcontent {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	background-color: #EEEEEE;
+	color: #000000;
+	padding: 3px 3px 3px 3px;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+table.searchcontent {
+	width: 99%;
+}
+
+th.searchcontent {
+	text-align: right;
+	width: 30%;
+}
+
+
+.searchservices {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	background-color: #EEEEEE;
+	color: #000000;
+	border-width: 1px;
+	border-style: solid;
+}
+
+input.searchbutton {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	font-weight: bold;
+	background-color: #00727d;
+	color: #FFFFFF;
+	vertical-align: middle;
+	margin: 5px;
+}
+
+a:link.searchlinks, a:active.searchlinks, a:visited.searchlinks {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #EEEEEE;
+	color: #00727d;
+}
+
+a:hover.searchlinks {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	font-weight: bold;
+	text-decoration: underline;
+	background-color: #EEEEEE;
+	color: #CC0000;
+}
+
+.subheader {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	background-color: #EEEEEE;
+	color: #000000;
+	margin-left: 2px;
+}
+
+.searchsum {
+	color: #000000;
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+.small {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	font-weight: normal; 
+}
+
+.titlebar {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: medium;
+	font-weight: bold;
+	letter-spacing: 3px;
+	background-color: #00727d;
+	color: #FFFFFF;
+	vertical-align: top;
+	padding: 3px;
+}
+
+.vreference {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	text-decoration: none;
+	font-weight: normal;
+	letter-spacing: 0px;
+	background-color: #00727d;
+	color: #FFFFFF;
+}
+
+.vreference input {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	text-decoration: none;
+	font-weight: normal;
+	letter-spacing: 0px;
+	background-color: #FFFFFF;
+	color: #00727d;
+	margin: 3px 3px 3px 3px;
+}
+
+.vreference textarea {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	text-decoration: none;
+	font-weight: normal;
+	letter-spacing: 0px;
+	background-color: #FFFFFF;
+	color: #00727d;
+	width: 125px;
+	height: 50px;
+	margin: 3px 3px 3px 3px;
+}
+
+.unformatted {
+	font-family: "Courier New", Courier, monospace; 
+	font-size: x-small;
+	font-weight: normal; 
+	vertical-align: top;
+}
+
+.viewmarcheader, .viewmarcheader a {
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: x-small;
+	font-weight: bold;
+	letter-spacing: 2px;
+	background-color: #FFFFFF;
+	color: #996600;
+}
+
+.viewmarctags {
+	vertical-align: top;
+	font-family: Verdana, Helvetica, Arial, sans-serif; 
+	font-size: xx-small;
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+th.viewmarctags {
+	white-space: nowrap;
+	text-align: right;
+	vertical-align: top;
+}
+
+.virtualreference {
+	border-style: none;
+	border-width: 0px;
+	padding: 1px 5px 1px 5px;
+}
+
+</style>
+</head>
+<!-- Start the body of the document.  WARNING:  No comments are allowed inside of the body element's definition. - assign CSS Class of 'body_style' to tag -  If this is a download search results state (14, 62), then load the results in a new browser window to facilitate printing. -  If this is an Archive image view state (911), then open a new window to display the image in new window. -  To help prevent premature selection of a toolbar button (i.e., before the new toolbar is loaded), clear it when the page is unloaded. -->
+<body onLoad="">
+
+<noscript>
+Your browser does not support JavaScript and this application utilizes JavaScript to build content and provide links to additional information. You should either enable JavaScript in your browser settings or use a browser that supports JavaScript in order to take full advantage of this application.
+</noscript>
+<!--  Copyright (c) 2000 - 2005, Sirsi Corporation - Unicorn Search Page; State #3 -->
+<!--  Copyright (c) 1996 - 2008, SirsiDynix. Form for starting a new session in a new window. -->
+
+<!-- By setting the "document.new_session.action" property to the URL for logging into a new session at the particular  page you want, a new window will be opened and a new WebCat session will be started automatically. Remember that many WebCat states are dependent on previous states, so only certain "cgi types" can be opened.
+
+Also, by setting the "document.new_session.new_gateway_db.value" property to a gateway database name, the new session will use that gateway instead of the user's default gateway. Note that the use of Javascript is required to submit this form. -->
+
+<form name="new_session" method="post" action="/uhtbin/cgisirsi/?ps=51QVrFSrL4/CENTRAL/0/57/49" target="new_session">
+  <input type="hidden" name="new_gateway_db" value="">
+</form>
+
+
+<a href="#skipnav"><img src="/WebCat_Images/English/Other/Miscib/clear.gif" height="1" width="1" border="0" alt="Skip navigation" title="Skip navigation"></a>  <a name="top"></a>
+<div class="pagecontainer3pg"> <!-- Controls Page Border -->
+<center >
+
+<div class="gatewaystyle">
+
+<a href="http://www.cardiff.gov.uk">Cardiff Council  </a> | 
+<a href="http://www.cardiff.gov.uk/libraries">Cardiff Libraries</a> |
+<a href="http://www.cardiff.gov.uk/ENG/resident/Libraries-and-archives/Find-a-library/Pages/default.aspx">Opening Hours</a> | 
+<a href="http://netloan.cardiff.gov.uk">Book a PC</a> | 
+<a href="http://ibistro.cardiff.gov.uk/cc_my_account.html">How to setup your user account</a> |
+<a href="/uhtbin/cgisirsi/?ps=biCYroS8XI/CENTRAL/93470023/111/WELSH">Cymraeg</a> |
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%"> <!-- title bar -->
+ <tr>
+  <td class="rootbarcell">
+ 
+<td class="titlebar">
+<img src="/WebCat_Images/English/Gateway_icons/Photo/banner-left.gif"  
+  align="left" >
+<img src="/WebCat_Images/English/Gateway_icons/Photo/banner-left.gif"  
+  align="right" >
+
+	
+<!--  Copyright (c) 1996 - 2003, Sirsi Corporation - Gateway Root Bar. -->
+
+
+
+    <!-- display text with CSS instead -->
+
+<center>
+
+
+
+
+<a href="http://www.childcareincardiff.info/fis"><img src="/WebCat_Images/English/Search_icons/Bistro/fislogo.jpg" border="0" width = "138px" height="75px" alt="" ></a>
+<a href="http://www.thesprout.co.uk"><img src="/WebCat_Images/English/Search_icons/Bistro/sp75.jpg" border="0" alt="" ></a>
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+<table cellspacing="0" cellpadding="0" align="center" > 
+
+
+	
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='Start Searching'
+onClick='window.location="/uhtbin/cgisirsi/?ps=09Xtdbwerx/CENTRAL/93470023/38/1/X"'>
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=09Xtdbwerx/CENTRAL/93470023/38/1/X/BLASTOFF" class="blastoff">
+        
+       
+
+<!--       Start Searching</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='e-Reference'
+onClick='window.location="/uhtbin/cgisirsi/?ps=vW4SzhLSSe/CENTRAL/93470023/1/1384/X"'>
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=vW4SzhLSSe/CENTRAL/93470023/1/1384/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       e-Reference</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='Find It Fast!'
+onClick='window.location="/uhtbin/cgisirsi/?ps=2UoBw4YKLc/CENTRAL/93470023/1/26/X"'>
+</td>
+
+
+
+<tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=2UoBw4YKLc/CENTRAL/93470023/1/26/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       Find It Fast!</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='My Account'
+onClick='window.location="/uhtbin/cgisirsi/?ps=IXJCHbU074/CENTRAL/93470023/1/1166/X"'>
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=IXJCHbU074/CENTRAL/93470023/1/1166/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       My Account</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='I Need Material'
+onClick='window.location="/uhtbin/cgisirsi/?ps=dYRPIT2cPe/CENTRAL/93470023/1/1095/X"'>
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=dYRPIT2cPe/CENTRAL/93470023/1/1095/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       I Need Material</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='Contact Us'
+onClick='window.location="/uhtbin/cgisirsi/?ps=4fqQsrv4b1/CENTRAL/93470023/63/1171/X"'>
+</td>
+
+
+
+
+
+<tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=4fqQsrv4b1/CENTRAL/93470023/63/1171/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       Contact Us</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='Just in'
+onClick='window.location="/uhtbin/cgisirsi/?ps=eCBbCy37qE/CENTRAL/93470023/1/1393/X"'>
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=eCBbCy37qE/CENTRAL/93470023/1/1393/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       Just in</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='Popular'
+onClick='window.location="/uhtbin/cgisirsi/?ps=zgD2pbPNEk/CENTRAL/93470023/1/1417/X"'>
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=zgD2pbPNEk/CENTRAL/93470023/1/1417/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       Popular</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='Hot sites'
+onClick='window.location="/uhtbin/cgisirsi/?ps=7FEs2eatVQ/CENTRAL/93470023/1/1402/X"'>
+</td>
+
+
+
+
+
+
+
+</table>
+<table cellspacing="0" cellpadding="0" align="center"> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=7FEs2eatVQ/CENTRAL/93470023/1/1402/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       Hot sites</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='Books to Download'
+onClick='window.location="/uhtbin/cgisirsi/?ps=PoEVibfb3C/CENTRAL/93470023/1/1505/X"'>
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=PoEVibfb3C/CENTRAL/93470023/1/1505/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       Books to Download</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='Local Studies'
+onClick='window.location="/uhtbin/cgisirsi/?ps=9llgiJdLjz/CENTRAL/93470023/1/1439/X"'>
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=9llgiJdLjz/CENTRAL/93470023/1/1439/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       Local Studies</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='Music Library'
+onClick='window.location="/uhtbin/cgisirsi/?ps=bMez7jISrd/CENTRAL/93470023/1/1251/X"'>
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=bMez7jISrd/CENTRAL/93470023/1/1251/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       Music Library</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='Kids'
+onClick='window.location="/uhtbin/cgisirsi/?ps=UahatAi6WC/CENTRAL/93470023/1/774/X"'>
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=UahatAi6WC/CENTRAL/93470023/1/774/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       Kids</a> -->
+</a>
+
+
+
+      
+
+
+
+<td>
+<INPUT type="button" 
+style="width:125px;background-color: #003f4c;color: #FFFFFF;"
+value='Clubs & Societies'
+onClick='window.location="/uhtbin/cgisirsi/?ps=hNDdU4UByN/CENTRAL/93470023/1/1252/X"'>
+</td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=hNDdU4UByN/CENTRAL/93470023/1/1252/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       Clubs & Societies</a> -->
+</a>
+
+
+
+      
+
+
+
+
+
+
+
+
+
+       
+        
+          <a href="/uhtbin/cgisirsi/?ps=b1E3HNmfya/CENTRAL/93470023/60/1180/X/BLASTOFF" class="rootbar">
+        
+       
+
+<!--       </a> -->
+</a>
+
+
+
+      
+
+</table>
+
+
+  
+
+</td>
+  </td>
+ </tr>
+</table>
+
+
+ 
+     <td valign="top" class="header">
+     <form name="loginform" method=POST
+        action="/uhtbin/cgisirsi/?ps=GrkgD2bSYI/CENTRAL/0/57/49">
+<!--  Copyright (c) 2004, Sirsi Corporation - myProfile login or view myFavorites -->
+<!--  Copyright (c) 1998 - 2003, Sirsi Corporation - Sets the default values for USER_ID, ALT_ID, and PIN prompts. - The USER_ID, ALT_ID, and PIN page variables will be returned. -->
+
+<!-- If the user has not logged in, first try to default to the ID based on the IP address - the $UO and $Uf will be set.  If that fails, then default to the IDs in the config file. If the user has already logged in, default to the logged in user's IDs, unless the user is a shared login. -->
+
+
+
+
+
+
+
+<CENTER>
+
+
+
+</CENTER>
+
+
+
+	<table class="headerCCC" border="0" cellspacing="0" cellpadding="2">
+           <!-- only user ID is used if both on -->
+	  <td align="right" valign="middle"><label for="user_id">User ID:</label></td>
+	  <td align="left" valign="middle"><input type="text" name="user_id" id="user_id" size="8" maxlength="20" value=""></td>
+	 
+
+	  
+
+	  <td align="right" valign="middle"><label for="password">PIN *:</label></td>
+	  <td align="left" valign="middle"><input type="password" name="password" id="password" size="8" maxlength="20" value=""></td>  
+
+	 
+
+	  <td colspan="2" align="center"><input type="submit" value="Login" class="searchbutton"></td>
+	  
+	</table>
+
+     </form>
+
+     </td>
+ <!-- login form-->
+
+
+
+</DIV>
+</center>
+
+
+
+
+
+
+
+
+<table border="0" cellpadding="3" cellspacing="0" width="100%"> <!-- title bar -->
+ <tr>
+ 
+   <td class="titlebar" align="left">
+
+	
+   </td>
+
+
+
+  
+
+  <td class="titlebar" align="center">
+
+
+
+
+
+
+
+
+
+
+    <!-- present language choices -->
+     <div align="center" class="footer">
+<!-- Add the Language options -->
+
+  <!-- Suppress an option for the current language -->
+  
+
+  <!-- Suppress an option for the current language -->
+  
+<!--    <a href="/uhtbin/cgisirsi/?ps=ys6uFumQ6R/CENTRAL/93470023/111/WELSH" title="Cymraeg" target="_top"><img src="/WebCat_Images/English/Other/Miscib/WELSH.gif" border=0 class="langicon" alt="&nbsp;Cymraeg&nbsp;" title="Cymraeg" align=center></a>-->
+  
+
+     </div>
+   
+  </td>
+    <!-- no VIRTUAL_REF form -->
+     
+     <td valign="top" class="header">
+    
+     </td>
+     <!-- login form-->
+  
+  
+ </tr>
+
+
+
+</table>
+
+
+
+<!--  Copyright (c) 2000 - 2008, SirsiDynix - Buttons for Catalog Access page, state #3. -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="gatewaystyle">
+ <tr>
+  <td class="gatewaystyle">
+
+   <!-- Go back button -->
+   <a href="/uhtbin/cgisirsi/?ps=vDz7C1cWVs/CENTRAL/93470023/2/5" title="Go Back"><img src="/WebCat_Images/English/Buttons/Bistro/GOBACK.gif" border="0" alt="Go Back" title="Go Back"></a>
+
+<!-- Help button -->
+		  <!-- use context HTML help -->
+  <script language="JavaScript" type="text/javascript">
+    put_help_button('English','Help','ibistro_overview');
+  </script>
+
+  <!-- gateway's custom buttons -->
+
+
+
+   <a href="/uhtbin/cgisirsi/?ps=0QsVAptv7D/CENTRAL/93470023/58" title="Logout" target="_top"><img src="/WebCat_Images/English/Buttons/Bistro/EXITCAT.gif" border="0" alt="Logout" title="Logout"></a>
+
+  </td>
+ </tr>
+</table>
+<a name="skipnav"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</center>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table border="0" align="center" cellspacing="20" cellpadding="0"> <!-- container table -->
+ <tr> 
+  <td valign="top" class="defaultstyle"> <!-- container cell -->
+<!-- Some complication is added here because of the "more searches" button having to be inside of the "icon search" form.  So, if this is an "icon search, start the form here. -->
+ <div class="searchservices">
+  <div class="searchheader">
+   <!-- Print element's description if present, else print the heading -->
+  </div>
+  <!-- Catalog Access destinations may either be of type Search, Browse, or Term Search -->
+<!-- Copyright (c) 1996 - 2003, Sirsi Corporation - Catalog Access - Search form (for state #3). -->
+     <!-- Single Labelled field -->
+   <form name="searchform" method="post" action="/uhtbin/cgisirsi/?ps=U5C4eAws2b/CENTRAL/93470023/123">
+<!--  Copyright (c) 2001 - 2008, SirsiDynix -- "Single-label" search form (for state #3). -->
+
+  <!-- The search input field and library selection -->
+  <table border="0" align="center" cellpadding="5" cellspacing="0" class="searchcontent">
+   <tr>
+    <td align="center" class="searchcontent" colspan="2">
+  <!-- If there was a previous search before this one, then use that search's terms and operators.  Match type of field using the entry num. -->
+   <label for="searchdata1"><input type="text" name="searchdata1" id="searchdata1" maxlength="255" size="30" style="width: 300px;"
+     value=""
+	></label>
+	
+   <label for="srchfield1">
+   <select name="srchfield1" id="srchfield1">
+	<option value="GENERAL^SUBJECT^GENERAL^^words or phrase">words or phrase</option>
+	<option value="AU^AUTHOR^AUTHORS^Author Processing^author">author</option>
+	<option value="TI^TITLE^SERIES^Title Processing^title">title</option>
+	<option value="SU^SUBJECT^SUBJECTS^^subject">subject</option>
+	<option value="SER^SERIES^SERIES^Title Processing^series">series</option>
+	<option value="PER^PERTITLE^SERIES^Title Processing^periodical title">periodical title</option>
+   </select></label>
+     <input type="submit" value="Search" class="searchbutton">
+    </td>
+   </tr>
+   <tr>
+    <th class="searchcontent" align="right">
+      <!-- Define the policy type list based on whether to use the "library list" policies in addition to the singular library policies. -->
+      <label for="library">library:</label>
+    </th>
+    <td class="searchcontent" align="left">
+        <select name="library" id="library" >
+<option selected value="ALL">ALL</option>
+<option value="BUTETOWN">Butetown Library</option>
+<option value="CANTON">Canton Library</option>
+<option value="CENTRAL">Cardiff Central Library</option>
+<option value="CRI">Cardiff Royal Infirmary</option>
+<option value="CATHAYS">Cathays Library</option>
+<option value="CLMOBILE">Central Library Mobile Library</option>
+<option value="ELY">Ely Library</option>
+<option value="FAIRWATER">Fairwater Library (temporarily closed)</option>
+<option value="GRANGETOWN">Grangetown Library</option>
+<option value="LLANDAFF_N">Llandaff North Library</option>
+<option value="LLANEDEYRN">Llanedeyrn Library</option>
+<option value="LLANISHEN">Llanishen Library</option>
+<option value="LLANRUMNEY">Llanrumney Library</option>
+<option value="LOCAL">Local Studies Library</option>
+<option value="MAINDY">Maindy Library (temporarily closed)</option>
+<option value="MARLAND">Marland House Temporary Library</option>
+<option value="OUTREACH">Mobile Library Service</option>
+<option value="PENYLAN">Penylan Library</option>
+<option value="PRISON">Prison Library Service</option>
+<option value="RADYR">Radyr Library</option>
+<option value="RHIWBINA">Rhiwbina Library</option>
+<option value="RHYDYPENNA">Rhydypennau Library</option>
+<option value="ROATH">Roath Library (temporarily closed)</option>
+<option value="RUMNEY">Rumney Library</option>
+<option value="SPLOTT">Splott Library</option>
+<option value="STMELLONS">St. Mellons Library</option>
+<option value="STACKS">Stacks Library</option>
+<option value="STSU">Stock Support</option>
+<option value="TONGWYNLAI">Tongwynlais Library</option>
+<option value="WHITCHURCH">Whitchurch Library</option>
+</select>
+    </td>
+   </tr>
+  <!-- CFG_EBOOKS -->
+     <!-- End Search History -->
+    <!-- display link to powersearch only if front page -->
+   <tr>
+     <td class="searchcontent" align="center" colspan="2">
+       <a href="/uhtbin/cgisirsi/?ps=aLQGUbXxyQ/CENTRAL/93470023/38/0/POWER_SEARCH" class="searchlinks">Power Search</a>
+     </td>
+   </tr>
+  </table>
+
+  <!-- Any default search options configured for use -->
+        <input type="hidden" name="sort_by" value="ANY">
+   </form>
+   <!-- This form is used only to send the "Reset Query" request using the Javascript button above. -->
+   <form name="reset_query_form" method="post" action="/uhtbin/cgisirsi/?ps=92qutkGMpO/CENTRAL/93470023/4>">
+    <input type="hidden" name="reset_dummy_field" value="">
+   </form>
+
+ </div>
+
+  </td> <!-- container cell -->
+  <!-- checking to see if we need the cell -->
+  
+    
+  
+      <!-- if an icon search -->
+    <!-- if any special search resource is on -->
+  
+       
+     
+         <!-- if an icon search -->
+       <!-- if any special search resource is on -->
+  
+ </tr>
+</table>
+
+ <!-- display only if front page -->
+ <!-- show this table only if content is active -->
+<table border="0" cellspacing="20" cellpadding="0" align="center"> <!-- container table -->
+  <tr>      
+ 
+
+<!-- SEARCHSINGLE / RESOLVER / OTHER  -->
+  <!-- if any special search resource is on -->
+</tr>
+</table> <!-- container table -->
+
+
+<table border="0" cellspacing="20" cellpadding="0" align="center"> <!-- container table -->
+  <tr>
+
+  <!-- LIBRARY INFORMATION -->
+  
+
+  
+  <!-- myProfile login or show myFavorites -->
+  
+    <td valign="top">
+<!--  Copyright (c) 1996 - 2008, SirsiDynix - Personal login or Favorites -->
+<!--  Copyright (c) 1998 - 2003, Sirsi Corporation - Sets the default values for USER_ID, ALT_ID, and PIN prompts. - The USER_ID, ALT_ID, and PIN page variables will be returned. -->
+
+<!-- If the user has not logged in, first try to default to the ID based on the IP address - the $UO and $Uf will be set.  If that fails, then default to the IDs in the config file. If the user has already logged in, default to the logged in user's IDs, unless the user is a shared login. -->
+
+
+
+
+
+
+
+<CENTER>
+
+
+
+</CENTER>
+
+
+
+
+    </td>
+  
+ 
+</tr>
+</table>
+ <!-- content -->
+
+<!-- display date change options if allowed -->
+
+
+<table>
+ <tr>
+  <td>
+<!--  Copyright (c) 1996 - 2003, Sirsi Corporation - Gateway Element Bottom-of-page (for all gateway groups and destinations). -->
+<!-- Print paragraph file GATEWWWPGCD if GATESUSEPARCD says to print at bottom - of page (i.e., its value is 2).-->
+<!-- Print footer file GATEWWWFOOTERCD if GATEWWWUSEFTCD is 1. -->
+  </td>
+ </tr>
+ <tr>
+  <td>
+  <form name="url_form" action=""><input type="hidden" name="url" value=""></form>
+  </td>
+ </tr>
+</table> 
+
+<!--<SIRSI_Include File="buttons3.h">-->
+
+<br>
+
+<!--  Copyright (c) 2000 - 2003, Sirsi Corporation - LC Category hidden search form for javascript to work. -->
+<form name="lc_search_form" method="post" action="/uhtbin/cgisirsi/?ps=q199pTOwi6/CENTRAL/93470023/5/5//1">
+  <input type="hidden" name="searchdata1" value="">
+  <input type="hidden" name="search_disp_data1" value="">
+</form>
+
+<form name="lc_return_form" method="post" action="/uhtbin/cgisirsi/?ps=pM3CuBjsRo/CENTRAL/93470023/5/0//0">
+  <input type="hidden" name="searchdata1" value="">
+  <input type="hidden" name="sort_by" value="ANY">
+</form>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1718131-10");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<!--  Copyright (c) 1996 - 2007, SirsiDynix - Copyright statement -->
+<table border="0" cellpadding="3" cellspacing="0" width="100%" class="footer">
+ <tr>
+  <td align="center" valign="bottom" width="15%" class="footer">
+    
+      <img src="/WebCat_Images/English/Other/Miscib/sirsi_button.gif" alt="Powered by: Sirsi Corporation" border="0">
+     
+  </td>
+  <td align="center" class="footer"><!-- Display the description -->
+
+   iBistro at Cardiff Council Culture, Leisure & Parks<br> 
+   Your Electronic Library on the Web<br>
+   Copyright &#169; 2000 - 2005, SirsiDynix
+
+  </td>
+  <td align="center" width="15%" class="footer"><a name="bottom" href="#top">Top</a></td>
+ </tr>
+</table>
+</div> <!-- Controls Page Border -->
+</body>
+</html>
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<HTML>
+	<HEAD>
+		<META name="ROBOTS" content="NOINDEX">
+		<TITLE>The page cannot be displayed</TITLE>
+		<META http-equiv="Content-Type" content="text-html; charset=Windows-1252">
+		
+		<!--DC/eGMS METADATA BEGINS-->
+		<META name="DC.date" content="2006-05-01" scheme="W3CDTF" />
+		<META name="DC.creator" content="South Staffordshire Council" />
+		<META name="DC.Coverage.Spatial" content="41UF" scheme="ONS SNAC" />
+		<META name="DC.Identifier" content="http://www.sstaffs.gov.uk/error.htm" scheme="URI" />
+		<META name="DC.language" content="eng" scheme="ISO 639-2/T" />
+		<META name="DC.title" content="The page cannot be displayed" />
+		
+		<META name="eGMS.Accessibility" content="Double-A" scheme="WCAG" />
+		<META name="eGMS.Subject.Category" content="Error" />
+		<!--DC/eGMS METADATA ENDS-->
+		
+	    <LINK href="error.css" rel="stylesheet" type="text/css">
+	</HEAD>
+	<SCRIPT> 
+function Homepage(){
+<!--
+	DocURL=document.URL;
+	protocolIndex=DocURL.indexOf("://",4);
+	serverIndex=DocURL.indexOf("/",protocolIndex + 3);
+	BeginURL=DocURL.indexOf("#",1) + 1;
+	urlresult=DocURL.substring(BeginURL,serverIndex);
+	displayresult=DocURL.substring(protocolIndex + 3 ,serverIndex);
+	InsertElementAnchor(urlresult, displayresult);
+}
+
+function HtmlEncode(text)
+{
+    return text.replace(/&/g, '&amp').replace(/'/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function TagAttrib(name, value)
+{
+    return ' '+name+'="'+HtmlEncode(value)+'"';
+}
+
+function PrintTag(tagName, needCloseTag, attrib, inner){
+    document.write( '<' + tagName + attrib + '>' + HtmlEncode(inner) );
+    if (needCloseTag) document.write( '</' + tagName +'>' );
+}
+
+function URI(href)
+{
+    IEVer = window.navigator.appVersion;
+    IEVer = IEVer.substr( IEVer.indexOf('MSIE') + 5, 3 );
+
+    return (IEVer.charAt(1)=='.' && IEVer >= '5.5') ?
+        encodeURI(href) :
+        escape(href).replace(/%3A/g, ':').replace(/%3B/g, ';');
+}
+
+function InsertElementAnchor(href, text)
+{
+    PrintTag('A', true, TagAttrib('HREF', URI(href)), text);
+}
+
+//-->
+	</SCRIPT>
+	<BODY>
+		<TABLE id="ErrorTable">
+			<TR>
+			  <TD id="ImageCell"><IMG src="images/LogoText.gif" alt="Providing greater access to South Staffordshire Council" width="370" height="39"></TD>
+		  </TR>
+			<TR>
+				<TD id="HeaderCell">
+					<H1><!--Problem--> The page cannot be 
+						displayed</H1>
+				</TD>
+			</TR>
+			<TR>
+				<TD id="MainCell" colspan="2">
+					<P>There is a problem with the page 
+						you are trying to reach and it cannot be displayed.</P></TD>
+			</TR>
+			<TR>
+				<TD id="MainCell" colspan="2">
+						<HR>
+						<P>Please try the following:</P>
+						<UL>
+							<LI>
+								Open the
+								<SCRIPT>
+	  <!--
+	  if (!((window.navigator.userAgent.indexOf("MSIE") > 0) && (window.navigator.appVersion.charAt(0) == "2")))
+	  {
+	  	 Homepage();
+	  }
+	  //-->
+								</SCRIPT>
+								<A href="http://www.sstaffs.gov.uk">home page</A>, and then look for links to the information you want.</LI>
+							<LI>
+								Click the <A href="javascript:location.reload()">Refresh</A> button, or try 
+						  again later.</LI>
+			            </UL>
+					<P>We have been made aware of this problem and will attempt to rectify it as soon as possible.</P>
+					<H2>South Staffordshire Council<BR />
+					  Immediacy has detected an error.<BR />
+						Immediacy Content Management</H2>
+				</TD>
+			</TR>
+		</TABLE>
+	</BODY>
+</HTML>
