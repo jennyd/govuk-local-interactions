@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+ 
+<html lang="cy">
+<head>
+<meta charset="utf-8">
+<title>
+	Trigolion
+</title><meta name="GENERATOR" content="Contensis CMS Version 8.1" /><link href="/SiteElements/Stylesheets/000-scaffolding.css" rel="stylesheet" type="text/css" />
+<link href="/SiteElements/Stylesheets/001-style.css" rel="stylesheet" type="text/css" />
+<link href="/SiteElements/Stylesheets/011-top-tasks.css" rel="stylesheet" type="text/css" />
+<link href="/SiteElements/Stylesheets/012-whats-happening.css" rel="stylesheet" type="text/css" />
+<link href="/SiteElements/Stylesheets/020-icons.css" rel="stylesheet" type="text/css" />
+<link href="/SiteElements/Stylesheets/100-residents.css" rel="stylesheet" type="text/css" />
+		<script  type="text/javascript" src="/WebResource.axd?d=YfZszJ1JhvqntuxjaL9jn9LPrEICPgBAx2A-hnqGXTYlru_g_pxxJdSdaraAEAoyFYtn2lUBY851OfdnSt5ZrYcr2F1glS7rSLKRFC6dmtTM_07J5dfB-8KEUzn_l_Q40&amp;t=635900333625759711&amp;build=8112720"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+if (typeof(window.$j) == 'undefined') { window.$j = $; }
+window.$j.register = function(name) {if (!this._components){this._components = {};} this._components[name] = true;};
+window.$j.isRegistered = function(name) { if (!this._components) { return false; } return !!(this._components[name]); };
+window.$j.requires = function(name) { if (!this.isRegistered(name)) { alert('JQuery Extension " ' + name + '" not registered'); }};
+if (typeof(jQuery.fn.setArray) == 'undefined') { jQuery.fn.setArray = function( elems ) { this.length = 0; jQuery.fn.push.apply(this, elems); return this; }};
+//]]>
+</script>
+		<script  type="text/javascript" src="/WebResource.axd?d=I9oTA7nXxInTRUXIm5_TuQ0AkH9eYGtPSMcQF572G27kU_16kb2USLYZzUYviqL5vvcfhenxvgKMChQIDdQzb_Hct95a24ZeAvyqzZiDa164hN5q7yPTxdSCt1k40LW9lmrOezh3cPGH6S5YHgoq5Q2&amp;t=635900333625759711&amp;build=8112720"></script>
+		<script  type="text/javascript" src="/SiteElements/Scripts/modernizr.js?build=8112720"></script>
+		<script  type="text/javascript" src="/SiteElements/Scripts/gwynedd-ui.js?build=8112720"></script>
+		<script  type="text/javascript" src="/SiteElements/Scripts/cycle2.js?build=8112720"></script>
+		<script  type="text/javascript" src="/SiteElements/Scripts/killcycle.js?build=8112720"></script>
+		<script  type="text/javascript" src="/SiteElements/Scripts/easyResponsiveTabs.js?build=8112720"></script>
+		<script  type="text/javascript" src="/SiteElements/Scripts/negesCwcis.js?build=8112720"></script>
+		<script  type="text/javascript" src="/SiteElements/Scripts/socitmSurvey.js?build=8112720"></script>
+		<script  type="text/javascript" src="/SiteElements/Scripts/jquery.cookie.js?build=8112720"></script>
+		<script  type="text/javascript" src="/SiteElements/Scripts/holiadur.js?build=8112720"></script>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" />
+<!--[if lt IE 8]><link href="/SiteElements/stylesheets/020-iconsie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if lt IE 9]><link href="/SiteElements/stylesheets/020-iconsie8.css" rel="stylesheet" type="text/css" /> <script src="/SiteElements/Scripts/respondmin.js" type="text/javascript"> </script><![endif]-->
+</head>
+<body>
+    <form method="post" action="/cy/Trigolion/Trigolion.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="ScriptManager_HiddenField" id="ScriptManager_HiddenField" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTIyNjczMzY1Nw9kFgQCAQ9kFgICBg8WAh4EVGV4dAX+BDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJpbml0aWFsLXNjYWxlPTEsIG1heGltdW0tc2NhbGU9MSI+DQo8IS0tW2lmIElFXT48bWV0YSBodHRwLWVxdWl2PSJYLVVBLUNvbXBhdGlibGUiIGNvbnRlbnQ9IklFPWVkZ2UiPjwhW2VuZGlmXS0tPg0KPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgaHJlZj0iLy9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PU9wZW4rU2FuczozMDBpdGFsaWMsMzAwLDQwMGl0YWxpYyw0MDAsNjAwaXRhbGljLDYwMCw3MDBpdGFsaWMsNzAwLDgwMGl0YWxpYyw4MDAiIC8+DQo8IS0tW2lmIGx0IElFIDhdPjxsaW5rIGhyZWY9Ii9TaXRlRWxlbWVudHMvc3R5bGVzaGVldHMvMDIwLWljb25zaWU3LmNzcyIgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyIgLz48IVtlbmRpZl0tLT4NCjwhLS1baWYgbHQgSUUgOV0+PGxpbmsgaHJlZj0iL1NpdGVFbGVtZW50cy9zdHlsZXNoZWV0cy8wMjAtaWNvbnNpZTguY3NzIiByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiAvPiA8c2NyaXB0IHNyYz0iL1NpdGVFbGVtZW50cy9TY3JpcHRzL3Jlc3BvbmRtaW4uanMiIHR5cGU9InRleHQvamF2YXNjcmlwdCI+IDwvc2NyaXB0PjwhW2VuZGlmXS0tPg0KZAIDEGRkFiwCAxBkZBYCZg8WAh8ABZIBPGEgaHJlZj0iaHR0cHM6Ly9kaW9nZWwuY3luZ29yLmd3eW5lZGQuZ292LnVrL3Vmcy91ZnNtYWluP2Zvcm1pZD1HQUxfQ0FSVFJFRiZMQU5HVUFHRT1DWSIgdGFyZ2V0PSJfYmxhbmsiPkZ5IE5naHlmcmlmOiBNZXduZ29mbm9kaSAvIENvZnJlc3RydTwvYT5kAgUPDxYEHgtOYXZpZ2F0ZVVybAU6aHR0cHM6Ly93d3cuZ3d5bmVkZC5sbHl3LmN5bXJ1L2VuL1Jlc2lkZW50cy9SZXNpZGVudHMuYXNweB8ABQdFbmdsaXNoZGQCBxBkZBYCZg8WAh8ABawBPGEgdGl0bGU9IlRyaWdvbGlvbiIgaHJlZj0iL2N5L1RyaWdvbGlvbi9Ucmlnb2xpb24uYXNweCI+PGltZyBzcmM9Ii9TaXRlRWxlbWVudHMvSW1hZ2VzL0hlYWRlci1sb2dvLWNvbG91ci5qcGciIGFsdD0iIiB3aWR0aD0iMzciIGhlaWdodD0iNTAiIGJvcmRlcj0iMCIvPkN5bmdvciBHd3luZWRkPC9hPmQCCRBkZBYCZhBkZBYEZg8PFgIfAAUIQ2h3aWxpbzpkZAICDw8WBB8ABQdDaHdpbGlvHgdUb29sVGlwBQdDaHdpbGlvZGQCCxBkZBYCZg8WAh8ABWY8YSBjbGFzcz0icmVzaWRlbnRzIiBhY2Nlc3NrZXk9InQiIHRpdGxlPSJUcmlnb2xpb24iIGhyZWY9Ii9jeS9Ucmlnb2xpb24vVHJpZ29saW9uLmFzcHgiPlRyaWdvbGlvbjwvYT5kAg0QZGQWAmYPFgIfAAVhPGEgY2xhc3M9ImJ1c2luZXNzIiBhY2Nlc3NrZXk9ImIiIHRpdGxlPSJCdXNuZXNhdSIgaHJlZj0iL2N5L0J1c25lc2F1L0J1c25lc2F1LmFzcHgiPkJ1c25lc2F1PC9hPmQCDxBkZBYCZg8WAh8ABV08YSBjbGFzcz0iY291bmNpbCIgYWNjZXNza2V5PSJjIiB0aXRsZT0iQ3luZ29yIiBocmVmPSIvY3kvQ3luZ29yL1lDeW5nb3IuYXNweCI+DQpZIEN5bmdvcjwvYT5kAhEQZGQWAmYPFgIfAAVjPGEgY2xhc3M9InZpc2l0b3JzIiBhY2Nlc3NrZXk9InYiIHRpdGxlPSJZbXdlbHd5ciIgaHJlZj0iL2N5L1ltd2Vsd3lyL1ltd2Vsd3lyLmFzcHgiPg0KWW13ZWx3eXI8L2E+ZAIXEBYCHgdWaXNpYmxlaGRkAhkQFgIfA2hkZAIdD2QWHAIBD2QWAgIBDw8WAh8ABQ1MbGUgZHdpJ24gYnl3ZGQCAg9kFgICAQ8PFgIfAAUHSGFtZGRlbmRkAgMPZBYCAgEPDxYCHwAFCUN5bmxsdW5pb2RkAgQPZBYCAgEPDxYCHwAFDkFkcm9kZCBwcm9ibGVtZGQCBQ9kFgICAQ8PFgIfAAUMVHJldGggQ3luZ29yZGQCBw9kFgICAQ9kFgICAQ9kFgICARBkZBYCZhBkZBYEZg8PFgIfAGVkZAICDw8WAh8ABQdDaHdpbGlvZGQCCA9kFgICAQ9kFgJmD2QWAmYQZGQWAmYPZBYEZg8PFgIeE0Fzc29jaWF0ZWRDb250cm9sSUQFIFJlc2lkZW50c1F1aWNrTGlua3NNZW51X0Ryb3BEb3duZGQCAQ8QZGQWAWZkAgkPZBYCAgEPZBYCAgEPZBYCAgEQZGQWAmYQZGQWBGYPDxYCHwBlZGQCAg8PFgIfAAUHQ2h3aWxpb2RkAgsPZBYCAgEPZBYCZg9kFgICARBkZBYCZhBkZBYEZg8PFgIfAGVkZAICDw8WAh8ABQdDaHdpbGlvZGQCDQ9kFgwCAQ9kFgICAQ8PFgIfAAWgATxhIGNsYXNzPSJpY29uLWJ1cyIgdGl0bGU9IlBhcmNpbywgZmZ5cmRkIGEgdGhlaXRoaW8iIGhyZWY9Ii9jeS9Ucmlnb2xpb24vUGFyY2lvLWZmeXJkZC1hLXRoZWl0aGlvL1BhcmNpbywtZmZ5cmRkLWEtdGhlaXRoaW8uYXNweCI+UGFyY2lvLCBmZnlyZGQgYSB0aGVpdGhpbzwvYT5kZAIDD2QWAgIBDw8WAh8ABbgBPGEgY2xhc3M9Imljb24tdHJlZSIgdGl0bGU9IkhhbWRkZW4sIHBhcmNpYXUgYSBkaWd3eWRkaWFkYXUiIGhyZWY9Ii9jeS9Ucmlnb2xpb24vSGFtZGRlbi1QYXJjaWF1LURpZ3d5ZGRpYWRhdS9IYW1kZGVuLC1wYXJjaWF1LWEtZGlnd3lkZGlhZGF1LmFzcHgiPkhhbWRkZW4sIHBhcmNpYXUgYSBkaWd3eWRkaWFkYXU8L2E+IGRkAgUPZBYCAgEPDxYCHwAFvQE8YSBjbGFzcz0iaWNvbi1ob3VzZS1jaGVjayIgdGl0bGU9IkN5bmxsdW5pbyBhIHJoZW9sYWV0aCBhZGVpbGFkdSIgaHJlZj0iL2N5L1RyaWdvbGlvbi9DeW5sbHVuaW8tYS1yaGVvbGFldGgtYWRlaWxhZHUvQ3lubGx1bmlvLWEtcmhlb2xhZXRoLWFkZWlsYWR1LmFzcHgiPkN5bmxsdW5pbyBhIHJoZW9sYWV0aCBhZGVpbGFkdTwvYT5kZAIHD2QWAgIBDw8WAh8ABYkBPGEgY2xhc3M9Imljb24tYmluIiB0aXRsZT0iQmluaWF1IGFjIGFpbGd5bGNodSIgaHJlZj0iL2N5L1RyaWdvbGlvbi9CaW5pYXUtYWMtYWlsZ3lsY2h1L0JpbmlhdS1hYy1haWxneWxjaHUuYXNweCI+QmluaWF1IGFjIGFpbGd5bGNodTwvYT5kZAIJD2QWAgIBDw8WAh8ABXQ8YSBjbGFzcz0iaWNvbi1waWdneS1iYW5rIiB0aXRsZT0iVHJldGggQ3luZ29yIiBocmVmPSIvY3kvVHJpZ29saW9uL1RyZXRoLUN5bmdvci9UcmV0aC1DeW5nb3IuYXNweCI+VHJldGggQ3luZ29yPC9hPmRkAgsPZBYCAgEPDxYCHwAFfTxhIGNsYXNzPSJpY29uLWFiYyIgdGl0bGU9IllzZ29saW9uIGEgZHlzZ3UiIGhyZWY9Ii9jeS9Ucmlnb2xpb24vWXNnb2xpb24tYS1keXNndS9Zc2dvbGlvbi1hLWR5c2d1LmFzcHgiPllzZ29saW9uIGEgZHlzZ3U8L2E+ZGQCDw9kFgQCARBkZBYCZg8WAh8ABRRNd3kgbyB3YXNhbmFldGhhdeKApmQCAw8PFgIfAAW9Dgo8dWw+CjxsaT48YSB0aXRsZT0iU2FtcGxlIFNlY3Rpb24gUGFnZSIgaHJlZj0iL2N5L1RyaWdvbGlvbi9MbHlmcmdlbGxvZWRkLWFjLWFyY2hpZmF1L0xseWZyZ2VsbG9lZGQtYWMtYXJjaGlmYXUuYXNweCIgY2xhc3M9InN5c18wIHN5c190NjAiPkxseWZyZ2VsbG9lZGQgYWMgYXJjaGlmYXU8L2E+PC9saT4KPGxpPjxhIHRpdGxlPSJTYW1wbGUgU2VjdGlvbiBQYWdlIiBocmVmPSIvY3kvVHJpZ29saW9uL0J1ZGQtZGFsaWFkYXUtYS1ncmFudGlhdS9CdWRkLWRhbGlhZGF1LWEtZ3JhbnRpYXUuYXNweCIgY2xhc3M9InN5c18wIHN5c190NjAiPkJ1ZGQtZGFsaWFkYXUgYSBncmFudGlhdTwvYT48L2xpPgo8bGk+PGEgdGl0bGU9IlNhbXBsZSBTZWN0aW9uIFBhZ2UiIGhyZWY9Ii9jeS9Ucmlnb2xpb24vSWVjaHlkLWEtZ29mYWwtY3ltZGVpdGhhc29sL0llY2h5ZC1hLWdvZmFsLWN5bWRlaXRoYXNvbC5hc3B4IiBjbGFzcz0ic3lzXzAgc3lzX3Q2MCI+SWVjaHlkIGEgZ29mYWwgY3ltZGVpdGhhc29sPC9hPjwvbGk+CjxsaT48YSB0aXRsZT0iQyYjMzczO24gYSBpZWNoeWQgeXIgYW1neWxjaGVkZCIgaHJlZj0iL2N5L1RyaWdvbGlvbi9DJiMzNzM7bi1hLWllY2h5ZC15ci1hbWd5bGNoZWRkL0MmIzM3MztuLWEtaWVjaHlkLXlyLWFtZ3lsY2hlZGQuYXNweCIgY2xhc3M9InN5c18wIHN5c190NjAiPkMmIzM3MztuIGEgaWVjaHlkIHlyIGFtZ3lsY2hlZGQ8L2E+PC9saT4KPGxpPjxhIHRpdGxlPSJTYW1wbGUgU2VjdGlvbiBQYWdlIiBocmVmPSIvY3kvVHJpZ29saW9uL0dlbmVkaWdhZXRoYXUsLXByaW9kYXNhdS1hLW1hcndvbGFldGhhdS9HZW5lZGlnYWV0aGF1LC1wcmlvZGFzYXUtYS1tYXJ3b2xhZXRoYXUuYXNweCIgY2xhc3M9InN5c18wIHN5c190NjAiPkdlbmVkaWdhZXRoYXUsIHByaW9kYXNhdSBhIG1hcndvbGFldGhhdTwvYT48L2xpPgo8bGk+PGEgdGl0bGU9IlNhbXBsZSBTZWN0aW9uIFBhZ2UiIGhyZWY9Ii9jeS9Ucmlnb2xpb24vVGFpL1RhaS5hc3B4IiBjbGFzcz0ic3lzXzAgc3lzX3Q2MCI+VGFpPC9hPjwvbGk+CjxsaT48YSB0aXRsZT0iRGlvZ2Vsd2NoIGN5bXVuZWRvbCIgaHJlZj0iL2N5L1RyaWdvbGlvbi9EaW9nZWx3Y2hjeW11bmVkb2wuYXNweCIgY2xhc3M9InN5c18wIHN5c190NDIiPkRpb2dlbHdjaCBjeW11bmVkb2w8L2E+PC9saT4KPGxpPjxhIHRpdGxlPSJEd2V1ZCBlaWNoIGR3ZXVkIiBocmVmPSIvY3kvQ3luZ29yL0R3ZXVkLWVpY2gtZHdldWQvRHdldWQtZWljaC1kd2V1ZC5hc3B4IiBjbGFzcz0ic3lzXzAgc3lzX3Q2MCI+RHdldWQgZWljaCBkd2V1ZDwvYT48L2xpPgo8bGk+PGEgaHJlZj0iaHR0cHM6Ly9pcC5lLXBheWNhcGl0YS5jb20vQUlQL2l0ZW1TZWxlY3Rpb25QYWdlLmRvP2xpbms9c2hvd0l0ZW1TZWxlY3Rpb25QYWdlJmFtcDtzaXRlSWQ9MjUmYW1wO2xhbmd1YWdlQ29kZT1DWSZhbXA7c291cmNlPUFJUCIgY2xhc3M9InN5c18xNiI+VGFsdSBhci1sZWluPC9hPjwvbGk+CjxsaT48YSB0aXRsZT0iQ3lzeWxsdHUgJmFjaXJjOyBuaSIgaHJlZj0iL2N5L0N5bmdvci9DeXN5bGx0dS0mYWNpcmM7LW5pL0N5c3lsbHR1LSZhY2lyYzstbmkuYXNweCIgY2xhc3M9InN5c18wIHN5c190NjAiPkN5c3lsbHR1ICZhY2lyYzsgbmk8L2E+PC9saT4KPGxpPjxhIHRpdGxlPSJTYW1wbGUgU2VjdGlvbiBQYWdlIiBocmVmPSIvY3kvVHJpZ29saW9uL0FyZ3lmd25nL0FyZ3lmd25nLmFzcHgiIGNsYXNzPSJzeXNfMCBzeXNfdDYwIj5Bcmd5ZnduZzwvYT48L2xpPgo8bGk+PGEgdGl0bGU9IlN3eWRkaSIgaHJlZj0iL2N5L0N5bmdvci9Td3lkZGkvU3d5ZGRpLmFzcHgiIGNsYXNzPSJzeXNfMCBzeXNfdDYwIj5Td3lkZGk8L2E+PC9saT4KPC91bD4KZGQCEA8WAh8DaGQCEhBkZBYCZg8WAh8ABRhOZXd5ZGRpb24gYSBkaWd3eWRkaWFkYXVkAhQPZBYCZg8WAh8ABfsDIA0KPGRpdiBjbGFzcz0ic3lzX25ld3NzbGlkZSI+IA0KICA8YSBocmVmPSIvY3kvVHJpZ29saW9uL0hhbWRkZW4tUGFyY2lhdS1EaWd3eWRkaWFkYXUvRGlnd3lkZGlhZGF1L0Nod2lsaW8tYW0tZGRpZ3d5ZGRpYWQvQ2h3aWxpby1hbS1kZGlnd3lkZGlhZC5hc3B4Ij48aW1nIHNyYz0iL1NpdGVFbGVtZW50cy9JbWFnZXMvR3d5bFJoaWY2RmVzdGl2YWxOdW1iZXI2LmpwZyIgYWx0PSJHd2VsZCBkaWd3eWRkaWFkYXUgc3kmIzM5O24gY2FlbCBldSBjeW5uYWwgeW5nIE5nd3luZWRkIi8+PC9hPiANCiAgPGEgY2xhc3M9Imljb24gaWNvbi1uZXdzcGFwZXIiIGhyZWY9Ii9jeS9Ucmlnb2xpb24vSGFtZGRlbi1QYXJjaWF1LURpZ3d5ZGRpYWRhdS9EaWd3eWRkaWFkYXUvQ2h3aWxpby1hbS1kZGlnd3lkZGlhZC9DaHdpbGlvLWFtLWRkaWd3eWRkaWFkLmFzcHgiPkd3ZWxkIGRpZ3d5ZGRpYWRhdSBzeSYjMzk7biBjYWVsIGV1IGN5bm5hbCB5bmcgTmd3eW5lZGQ8L2E+IA0KPC9kaXY+IA0KIA0KIA0KZAIfEGRkFgJmDxYCHwAFsAE8ZGl2IGNsYXNzPSJzeXNfY29udGFpbmVyIj4NCgk8YSBjbGFzcz0iYnV0dG9uLWhvbGlhZHVyQm9kbG9ucnd5ZGQiIGhyZWY9Imh0dHBzOi8vYXJvbHdnLmd3eW5lZGQuZ292LnVrL2luZGV4LnBocD9zaWQ9MzI1OTgmbGFuZz1jeSI+SGVscHdjaCBuaSBpIHdlbGxhIGVpbiBnd2VmYW4gPjwvYT4NCjwvZGl2PmQCIRBkZBYCZg8WAh8ABYYCPGEgY2xhc3M9InNvY2lhbC1pY29ucy1ib3R0b20iIGhyZWY9Imh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9DeW5nb3JHd3luZWRkQ291bmNpbCIgdGl0bGU9IkRvZCBvIGh5ZCBpIEd5bmdvciBHd3luZWRkIGFyIEZhY2Vib29rIiB0YXJnZXQ9Il9ibGFuayI+DQogIDxpbWcgYWx0PSJEb2QgbyBoeWQgaSBHeW5nb3IgR3d5bmVkZCBhciBGYWNlYm9vayIgc3JjPSIvcmVzb3VyY2UvaWNvbnNzb2NpYWxuZXR3b3Jrcy9mYWNlYm9vay01OHg1OC5wbmciPg0KPC9hPmQCIhBkZBYCZg8WAh8ABfEBPGEgY2xhc3M9InNvY2lhbC1pY29ucy1ib3R0b20iIGhyZWY9Imh0dHBzOi8vdHdpdHRlci5jb20vQ3luZ29yR3d5bmVkZCIgdGl0bGU9IkRpbHlud2NoIEN5bmdvciBHd3luZWRkIGFyIFR3aXR0ZXIiIHRhcmdldD0iX2JsYW5rIj4NCiAgPGltZyBhbHQ9IkRpbHlud2NoIEN5bmdvciBHd3luZWRkIGFyIFR3aXR0ZXIiIHNyYz0iL3Jlc291cmNlL2ljb25zc29jaWFsbmV0d29ya3MvdHdpdHRlci01OHg1OC5wbmciPg0KPC9hPmQCJBBkZBYCZg8WAh8ABZ0BPGEgaHJlZj0iL2N5L0N5bmdvci9DeXN5bGx0dS3Doi1uaS9DeXN5bGx0dS3Doi1uaS5hc3B4IiB0aXRsZT0iQ3lzeWxsdHUgw6IgQ3luZ29yIEd3eW5lZGQiIHRhYmluZGV4PSIxMDAiIGFjY2Vzc2tleT0iZyIgIHRhcmdldD0iX2JsYW5rIiA+Q3lzeWxsdHUgw6IgbmkgPC9hPmQCJhBkZBYCZg8WAh8ABaMBPGEgaHJlZj0iL2N5L0N5bmdvci9Hd3lib2RhZXRoL1RlbGVyYXUtYWMtQW1vZGF1LmFzcHgiIHRpdGxlPSJUZWxlcmF1IGFjIGFtb2RhdSIgdGFiaW5kZXg9IjEwMCIgdGFyZ2V0PSJfYmxhbmsiYWNjZXNza2V5PSJhIiB0YXJnZXQ9Il9ibGFuayI+VGVsZXJhdSBhYyBhbW9kYXUgPC9hPmQCKBBkZBYCZg8WAh8ABZ8BPGEgaHJlZj0iL2N5L0N5bmdvci9Hd3lib2RhZXRoL1ByZWlmYXRyd3lkZC1hLUNod2Npcy5hc3B4IiB0aXRsZT0iUHJlaWZhdHJ3eWRkIGEgY2h3Y2lzIiB0YWJpbmRleD0iMTAwIiBhY2Nlc3NrZXk9InAiIHRhcmdldD0iX2JsYW5rIj5QcmVpZmF0cnd5ZGQgYSBjaHdjaXM8L2E+ZAIqEGRkFgJmDxYCHwAFfjxhIGhyZWY9Ii9jeS9DeW5nb3IvR3d5Ym9kYWV0aC9IeWd5cmNoZWRkLmFzcHgiIHRpdGxlPSJIeWd5cmNoZWRkIiB0YWJpbmRleD0iMTAwIiBhY2Nlc3NrZXk9ImgiIHRhcmdldD0iX2JsYW5rIj5IeWd5cmNoZWRkPC9hPmQCLBBkZBYCZg8WAh8ABYcBPGEgaHJlZj0iL2N5L0N5bmdvci9Hd3lib2RhZXRoL01hcC1vci1zYWZsZS5hc3B4IiB0aXRsZT0iTWFwIG8nciBzYWZsZSIgdGFiaW5kZXg9IjEwMCIgYWNjZXNza2V5PSJtIiB0YXJnZXQ9Il9ibGFuayIgPk1hcCBvJ3Igc2FmbGU8L2E+ZAIuEGRkFgJmDxYCHwAFKzxzcGFuIGNsYXNzPSJpY29uLWNvcHlyaWdodC13ZWxzaCI+IDwvc3Bhbj5kAi8PFgIfAAUEMjAxNmQCMBBkZBYCZg8WAh8ABQ5DeW5nb3IgR3d5bmVkZGRkX5nOQom8wLyGrGuCU9fQvNbNisiMlzaC0P1Bt0l29a0=" />
+</div>
+
+
+<script src="/ScriptResource.axd?d=SdT2Mqh9im8xu0saWlXxI0EWkYsJVAcx7pzu_ukxqnRTtVTLGdy8RX-XVhpKg5O9hEUhXlvFA4yatbR9qJIfL0XOjsK0-gLYGCq6ozWUCd7Az6A-R2p8XiX89Y-sgAxmzh5sxbM9FDcACFNQQO9eYrgjV_Hu4KqnyJkw21X5zTw1&amp;t=1c6ae475" type="text/javascript"></script>
+        <div class="sys_wrapper"><header>
+<div class="sys_container">
+<div class="settings sys_clearfix">
+<div class="login"><a href="https://diogel.cyngor.gwynedd.gov.uk/ufs/ufsmain?formid=GAL_CARTREF&LANGUAGE=CY" target="_blank">Fy Nghyfrif: Mewngofnodi / Cofrestru</a></div>
+<div class="language"><a id="LanguageToggleHyperlink" class="sys_toggleLanguage" href="https://www.gwynedd.llyw.cymru/en/Residents/Residents.aspx">English</a></div>
+</div>
+<div class="logowrap sys_clearfix"><a title="Trigolion" href="/cy/Trigolion/Trigolion.aspx"><img src="/SiteElements/Images/Header-logo-colour.jpg" alt="" width="37" height="50" border="0"/>Cyngor Gwynedd</a></div>
+<!--SEARCH-->
+<div class="sys_search-query-control">
+	<label for="SiteSearch_SearchTextBox" class="sys_search-label">Chwilio:</label><input name="SiteSearch_SearchTextBox" type="text" value="Chwilio" id="SiteSearch_SearchTextBox" class="sys_searchbox" onkeypress="ContensisSubmitFromTextbox(event,&#39;SiteSearch_SearchButton&#39;)" /><input type="submit" name="SiteSearch_SearchButton" value="Chwilio" id="SiteSearch_SearchButton" title="Chwilio" class="sys_button sys_searchbutton sys_search-button" />
+</div>
+<!--SEARCH ENDS--><nav class="sys_clearfix">
+<div class="sys_nav-tab"><a class="residents" accesskey="t" title="Trigolion" href="/cy/Trigolion/Trigolion.aspx">Trigolion</a></div>
+<div class="sys_nav-tab"><a class="business" accesskey="b" title="Busnesau" href="/cy/Busnesau/Busnesau.aspx">Busnesau</a></div>
+<div class="sys_nav-tab"><a class="council" accesskey="c" title="Cyngor" href="/cy/Cyngor/YCyngor.aspx">
+Y Cyngor</a></div>
+<div class="sys_nav-tab"><a class="visitors" accesskey="v" title="Ymwelwyr" href="/cy/Ymwelwyr/Ymwelwyr.aspx">
+Ymwelwyr</a></div>
+</nav></div>
+</header>
+ 
+ 
+<div class="sys_container"> 
+	<div class="emergencyNewsContainer" id="emergencyNewsBox"> 
+               
+       
+	</div> 
+</div> 
+ 
+
+<div class="sys_container">
+ 
+ 
+ 
+
+</div>
+
+<div class="sys_container sys_content"><!-- BREADCRUMB-->
+<div class="sys_breadcrumb">
+
+</div>
+<div class="sys_breadcrumb">
+
+</div>
+<!-- BREADCRUMB ENDS-->
+
+
+<div class="sys_eight-column sys_whereilive"><!--vertical Tabs-->
+<div id="verticalTab">
+<ul class="resp-tabs-list">
+<li id="tab1">
+Lle dwi'n byw
+</li><li id="tab2">
+Hamdden
+</li><li id="tab3">
+Cynllunio
+</li><li id="tab4">
+Adrodd problem
+</li><li id="tab5">
+Treth Cyngor
+</li>
+</ul>
+<div class="resp-tabs-container">
+<div id="tabcontent1">
+
+<p>Dewch o hyd i'ch diwrnod casglu gwastraff nesaf, ceisiadau cynllunio lleol, eich band treth cyngor, a nifer o wasanaethau eraill:</p>
+<div class="sys_textBoxWithRedirect">
+	<input name="TextboxWithRedirectLleDwinByw_redirectTextBox" type="text" value="Côd post" id="TextboxWithRedirectLleDwinByw_redirectTextBox" onkeypress="ContensisSubmitFromTextbox(event,&#39;TextboxWithRedirectLleDwinByw_redirectButton&#39;)" /><input type="submit" name="TextboxWithRedirectLleDwinByw_redirectButton" value="Chwilio" id="TextboxWithRedirectLleDwinByw_redirectButton" />
+</div>
+</div><div id="tabcontent2">
+<label for="ResidentsQuickLinksMenu_DropDown">Eich canolfan hamdden leol...</label><select name="ResidentsQuickLinksMenu_DropDown" id="ResidentsQuickLinksMenu_DropDown">
+	<option selected="selected" value="Dewis canolfan...">Dewis canolfan...</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Canolfan-Hamdden-a-Tenis-Arfon,-Caernarfon.aspx">Canolfan Hamdden a Tenis Arfon, Caernarfon</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Canolfan-Hamdden-Bro-Dysynni,-Tywyn.aspx">Canolfan Hamdden Bro Dysynni, Tywyn</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Canolfan-Hamdden-Dwyfor,-Pwllheli.aspx">Canolfan Hamdden Dwyfor, Pwllheli</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Canolfan-Hamdden-Glan-Wnion,-Dolgellau.aspx">Canolfan Hamdden Glan Wnion, Dolgellau</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Canolfan-Hamdden-Glaslyn,-Porthmadog.aspx">Canolfan Hamdden Glaslyn, Porthmadog</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Canolfan-Hamdden-Penllyn,-Y-Bala.aspx">Canolfan Hamdden Penllyn, Y Bala</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Canolfan-Hamdden-Plas-Ffrancon,-Bethesda.aspx">Canolfan Hamdden Plas Ffrancon, Bethesda</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Canolfan-Hamdden-Plas-Silyn,-Penygroes.aspx">Canolfan Hamdden Plas Silyn, Penygroes</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Canolfan-Hamdden-Y-Pafiliwn,-Abermaw.aspx">Canolfan Hamdden Y Pafiliwn, Abermaw</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Neuadd-Chwaraeon-Bro-Ffestiniog.aspx">Neuadd Chwaraeon Bro Ffestiniog</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/CanolfanBywnIachaGweithgareddauD%c5%b5rBangor.aspx">Canolfan Byw&#39;n Iach a Gweithgareddau Dŵr Bangor</option>
+	<option value="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Pwll-Nofio-Bro-Ffestiniog.aspx">Pwll Nofio Bro Ffestiniog</option>
+
+</select><input type="submit" name="ctl17" value="Ewch" />
+<div>Dewch o hyd i oriau agor a gweithgareddau yn eich canolfan hamdden leol</div>
+
+</div><div id="tabcontent3">
+
+<p>Gweld ceisiadau cynllunio lleol i chi....</p>
+<div class="sys_textBoxWithRedirect">
+	<input name="TextboxWithRedirectCynllunio_redirectTextBox" type="text" value="Côd post" id="TextboxWithRedirectCynllunio_redirectTextBox" onkeypress="ContensisSubmitFromTextbox(event,&#39;TextboxWithRedirectCynllunio_redirectButton&#39;)" /><input type="submit" name="TextboxWithRedirectCynllunio_redirectButton" value="Chwilio" id="TextboxWithRedirectCynllunio_redirectButton" />
+</div>
+<div>
+<a class="icon-house-check" title="Sample General Content" href="https://diogel.cyngor.gwynedd.gov.uk/swiftlg/apas/run/wchvarylogin.display?langid=2">Chwilio am gais</a><a class="icon-write" title="Cyflwyno cais cynllunio arlein" href="http://www.planningportal.gov.uk/planning/applications/" target="_blank">Cyflwyno cais ar-lein</a><a class="icon-house-check" title="Cwynion: torri rheolau cynllunio" href="/cy/Trigolion/Cynllunio-a-rheolaeth-adeiladu/Cynllunio/Cwynion-torri-rheolau-cynllunio.aspx">Cwynion</a>
+</div>
+
+</div><div id="tabcontent4">
+
+<div>
+<a class="icon-important-bin" title="Gwastraff ac ailgylchu" href="https://diogel.cyngor.gwynedd.gov.uk/ufs/ufsmain?formid=CYNLLUNIO_AC_AMGYLCHEDD&amp;LANGUAGE=CY&amp;MATH_YMHOLIAD=GWASTRAFF_AILGYLCHU" target="_blank">Bin heb ei gasglu</a><a class="icon-armchair-dump" title="Tipio anghyfreithlon" href="https://diogel.cyngor.gwynedd.gov.uk/ufs/ufsmain?LANGUAGE=CY&amp;formid=FFURFLEN_SIEBEL&amp;MATH_YMHOLIAD=TIPIO" target="_blank">Tipio ang-<br />hyfreithlon</a><a class="icon-dog-head" title="Baw c&#373;n" href="https://diogel.cyngor.gwynedd.gov.uk/ufs/ufsmain?LANGUAGE=CY&amp;formid=FFURFLEN_SIEBEL&amp;MATH_YMHOLIAD=BAWCWN" target="_blank">Baw ci</a>
+</div>
+<div>
+<a class="icon-streetlight" title="Golau stryd" href="https://diogel.cyngor.gwynedd.gov.uk/ufs/ufsmain?LANGUAGE=CY&amp;formid=FFURFLEN_SIEBEL&amp;MATH_YMHOLIAD=GOLAUSTRYD" target="_blank">Golau stryd wedi torri</a><a class="icon-speedbumps" title="Twll yn y ffordd" href="https://diogel.cyngor.gwynedd.gov.uk/ufs/ufsmain?LANGUAGE=CY&amp;formid=FFURFLEN_SIEBEL&amp;MATH_YMHOLIAD=TWLLFFORDD" target="_blank">Twll yn y ffordd</a><a class="icon-warning-exclamation" title="Problemau eraill" href="/cy/Trigolion/Problemaueraill.aspx">Adrodd problemau eraill</a>
+</div>
+
+</div><div id="tabcontent5">
+
+<div>Gweld band treth cyngor eich t&#375;....<br /><br /></div>
+<div class="sys_textBoxWithRedirect">
+	<input name="TextboxWithRedirectTrethCyngor_redirectTextBox" type="text" value="Côd post" id="TextboxWithRedirectTrethCyngor_redirectTextBox" onkeypress="ContensisSubmitFromTextbox(event,&#39;TextboxWithRedirectTrethCyngor_redirectButton&#39;)" /><input type="submit" name="TextboxWithRedirectTrethCyngor_redirectButton" value="Chwilio" id="TextboxWithRedirectTrethCyngor_redirectButton" />
+</div>
+<div>
+<a class="icon-mouse" title="Sut mae talu?" href="/cy/Trigolion/Treth-Cyngor/Sut-mae-talu.aspx">Talu</a><a class="icon-house" title="Newid cyfeiriad" href="https://diogel.cyngor.gwynedd.gov.uk/ufs/ufsmain?formid=CYNGOR_A_DEMOCRATIAETH&amp;LANGUAGE=CY&amp;MATH_YMHOLIAD=TRETH_NEWID_CYFEIRIAD" target="_blank">Newid cyfeiriad</a><a class="icon-piggy-bank" title="Gostyngiadau ac eithriadau" href="/cy/Trigolion/Treth-Cyngor/Gostyngiadau-ac-eithriadau.aspx">Gostyngiadau ac eithriadau</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<section><br />
+
+<div class="sys_flexwrap"><!--STRAIGHT To Block-->
+<div class="sys_flex">
+<div class="sys_straight-to">
+<h3><a class="icon-bus" title="Parcio, ffyrdd a theithio" href="/cy/Trigolion/Parcio-ffyrdd-a-theithio/Parcio,-ffyrdd-a-theithio.aspx">Parcio, ffyrdd a theithio</a></h3>
+
+<div>
+<ul>
+<li><a title="Amserlenni gwasanaethau bws lleol" href="/cy/Trigolion/Parcio-ffyrdd-a-theithio/Amserlenni-bws/Amserlenni-bws.aspx" class="sys_0 sys_t42">Amserlenni bws</a></li>
+<li><a title="Tocynnau teithio" href="/cy/Trigolion/Parcio-ffyrdd-a-theithio/Tocynnau-teithio/Tocynnau-teithio.aspx" class="sys_0 sys_t60">Tocynnau teithio</a></li>
+<li>&nbsp;<a title="Parcio a thocynnau parcio" href="/cy/Trigolion/Parcio-ffyrdd-a-theithio/Parcio-a-thocynnau-parcio/Parcio-a-thocynnau-parcio.aspx" class="sys_0 sys_t60">Parcio a thocynnau parcio</a></li>
+<li><a title="Cynnal a chadw ffyrdd" href="/cy/Trigolion/Parcio-ffyrdd-a-theithio/Gwaith-ffyrdd.aspx" class="sys_0 sys_t42">Cynnal a chadw ffyrdd</a></li>
+<li><a title="Parcio, ffyrdd a theithio" href="/cy/Trigolion/Parcio-ffyrdd-a-theithio/Parcio,-ffyrdd-a-theithio.aspx" class="sys_0 sys_t60">Gweld y cyfan</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+<!--STRAIGHT To Block Ends--> <!--STRAIGHT To Block-->
+<div class="sys_flex">
+<div class="sys_straight-to">
+<h3><a class="icon-tree" title="Hamdden, parciau a digwyddiadau" href="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Hamdden,-parciau-a-digwyddiadau.aspx">Hamdden, parciau a digwyddiadau</a> </h3>
+
+<div>
+<ul>
+<li><a title="Canolfannau hamdden" href="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Canolfannau-hamdden/Canolfannau-hamdden.aspx" class="sys_0 sys_t60">Canolfannau hamdden</a></li>
+<li><a title="Parciau a mannau gwyrdd" href="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Parciau-a-mannau-gwyrdd/Parciau,llwybrauamannaugwyrdd.aspx" class="sys_0 sys_t60">Parciau, llwybrau a mannau gwyrdd</a></li>
+<li><a title="Gwegamer&acirc;u" href="/cy/Ymwelwyr/Gwegamer&acirc;u/Gwegamer&acirc;u.aspx" class="sys_0 sys_t42">Gwegamer&acirc;u</a></li>
+<li><a title="Hamdden, parciau a digwyddiadau" href="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Hamdden,-parciau-a-digwyddiadau.aspx" class="sys_0 sys_t60">Gweld&nbsp;y cyfan</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+<!--STRAIGHT To Block Ends--> <!--STRAIGHT To Block-->
+<div class="sys_flex">
+<div class="sys_straight-to">
+<h3><a class="icon-house-check" title="Cynllunio a rheolaeth adeiladu" href="/cy/Trigolion/Cynllunio-a-rheolaeth-adeiladu/Cynllunio-a-rheolaeth-adeiladu.aspx">Cynllunio a rheolaeth adeiladu</a></h3>
+
+<div>
+<ul>
+<li><a title="Cynllunio" href="/cy/Trigolion/Cynllunio-a-rheolaeth-adeiladu/Cynllunio/Cynllunio.aspx" class="sys_0 sys_t42">Cynllunio</a></li>
+<li><a title="Rheolaeth Adeiladu" href="/cy/Trigolion/Cynllunio-a-rheolaeth-adeiladu/Rheolaeth-Adeiladu.aspx" class="sys_0 sys_t42">Rheolaeth adeiladu</a></li>
+<li><a title="Dilyn a darganfod" href="https://diogel.cyngor.gwynedd.gov.uk/swiftlg/apas/run/wchvarylogin.display?langid=2" class="sys_16">Ceisiadau cynllunio wedi eu cyflwyno</a></li>
+<li><a title="Cynllunio a rheolaeth adeiladu" href="/cy/Trigolion/Cynllunio-a-rheolaeth-adeiladu/Cynllunio-a-rheolaeth-adeiladu.aspx" class="sys_0 sys_t60">Gweld&nbsp;y cyfan</a></li>
+</ul>
+</div>
+
+</div>
+<!--STRAIGHT To Block Ends--></div>
+</div>
+<div class="sys_flexwrap"><!--STRAIGHT To Block-->
+<div class="sys_flex">
+<div class="sys_straight-to">
+<h3><a class="icon-bin" title="Biniau ac ailgylchu" href="/cy/Trigolion/Biniau-ac-ailgylchu/Biniau-ac-ailgylchu.aspx">Biniau ac ailgylchu</a></h3>
+
+<div>
+<ul>
+<li><a title="Beth sy&#39;n mynd i pa fin?" href="/cy/Trigolion/Biniau-ac-ailgylchu/Beth-syn-mynd-i-pa-fin/Beth-syn-mynd-i-pa-fin.aspx" class="sys_0 sys_t42">Beth sy'n mynd i ba fin?</a></li>
+<li><a title="Pryd mae&#39;r gwastraff yn cael ei gasglu?" href="/cy/Trigolion/Biniau-ac-ailgylchu/Pryd-maer-gwastraff-yn-cael-ei-gasglu.aspx" class="sys_0 sys_t42">Pryd mae'r gwastraff yn cael ei gasglu</a></li>
+<li><a title="Casgliad gwastraff swmpus" href="/cy/Trigolion/Biniau-ac-ailgylchu/Casgliad-gwastraff-swmpus.aspx" class="sys_0 sys_t42">Casgliad gwastraff swmpus</a></li>
+<li><a title="Biniau ac ailgylchu" href="/cy/Trigolion/Biniau-ac-ailgylchu/Biniau-ac-ailgylchu.aspx" class="sys_0 sys_t60">Gweld y cyfan</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+<!--STRAIGHT To Block Ends--> <!--STRAIGHT To Block-->
+<div class="sys_flex">
+<div class="sys_straight-to">
+<h3><a class="icon-piggy-bank" title="Treth Cyngor" href="/cy/Trigolion/Treth-Cyngor/Treth-Cyngor.aspx">Treth Cyngor</a></h3>
+
+<div>
+<ul>
+<li><a title="Sut mae talu?" href="/cy/Trigolion/Treth-Cyngor/Sut-mae-talu.aspx" class="sys_0 sys_t42">Sut mae talu?</a></li>
+<li><a title="Faint ydi&#39;r bil?" href="/cy/Trigolion/Treth-Cyngor/Faint-ydir-bil.aspx" class="sys_0 sys_t42">Faint ydi'r bil?</a></li>
+<li><a title="Bilio electronig" href="/cy/Trigolion/Treth-Cyngor/Bilio-electronig.aspx" class="sys_0 sys_t42">Bilio electronig</a></li>
+<li><a title="Gostyngiadau ac eithriadau" href="/cy/Trigolion/Treth-Cyngor/Gostyngiadau-ac-eithriadau.aspx" class="sys_0 sys_t42">Gostyngiadau ac eithriadau</a></li>
+<li><a title="Treth Cyngor" href="/cy/Trigolion/Treth-Cyngor/Treth-Cyngor.aspx" class="sys_0 sys_t60">Gweld&nbsp;y cyfan</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+<!--STRAIGHT To Block Ends--> <!--STRAIGHT To Block-->
+<div class="sys_flex">
+<div class="sys_straight-to">
+<h3><a class="icon-abc" title="Ysgolion a dysgu" href="/cy/Trigolion/Ysgolion-a-dysgu/Ysgolion-a-dysgu.aspx">Ysgolion a dysgu</a></h3>
+
+<div>
+<ul>
+<li><a title="Canfod eich ysgol" href="/cy/Trigolion/Ysgolion-a-dysgu/Canfod-eich-ysgol.aspx" class="sys_0 sys_t42">Canfod eich ysgol</a></li>
+<li><a title="Dyddiadau tymor / gwyliau" href="/cy/Trigolion/Ysgolion-a-dysgu/Dyddiadau-tymor--gwyliau.aspx" class="sys_0 sys_t42">Dyddiadau tymor / gwyliau</a></li>
+<li><a title="Teithio i&#39;r ysgol" href="/cy/Trigolion/Ysgolion-a-dysgu/Teithio-ir-ysgol/Teithio-ir-ysgol.aspx" class="sys_0 sys_t60">Teithio i'r ysgol</a></li>
+<li><a title="Ysgolion a dysgu" href="/cy/Trigolion/Ysgolion-a-dysgu/Ysgolion-a-dysgu.aspx" class="sys_0 sys_t60">Gweld&nbsp;y cyfan</a></li>
+</ul>
+</div>
+
+</div>
+<!--STRAIGHT To Block Ends--></div>
+</div>
+
+</section>
+<section class="sys_more_home">
+<h2 class="hometitle">Mwy o wasanaethau…</h2>
+<div class="sys_more">
+
+<ul>
+<li><a title="Sample Section Page" href="/cy/Trigolion/Llyfrgelloedd-ac-archifau/Llyfrgelloedd-ac-archifau.aspx" class="sys_0 sys_t60">Llyfrgelloedd ac archifau</a></li>
+<li><a title="Sample Section Page" href="/cy/Trigolion/Budd-daliadau-a-grantiau/Budd-daliadau-a-grantiau.aspx" class="sys_0 sys_t60">Budd-daliadau a grantiau</a></li>
+<li><a title="Sample Section Page" href="/cy/Trigolion/Iechyd-a-gofal-cymdeithasol/Iechyd-a-gofal-cymdeithasol.aspx" class="sys_0 sys_t60">Iechyd a gofal cymdeithasol</a></li>
+<li><a title="C&#373;n a iechyd yr amgylchedd" href="/cy/Trigolion/C&#373;n-a-iechyd-yr-amgylchedd/C&#373;n-a-iechyd-yr-amgylchedd.aspx" class="sys_0 sys_t60">C&#373;n a iechyd yr amgylchedd</a></li>
+<li><a title="Sample Section Page" href="/cy/Trigolion/Genedigaethau,-priodasau-a-marwolaethau/Genedigaethau,-priodasau-a-marwolaethau.aspx" class="sys_0 sys_t60">Genedigaethau, priodasau a marwolaethau</a></li>
+<li><a title="Sample Section Page" href="/cy/Trigolion/Tai/Tai.aspx" class="sys_0 sys_t60">Tai</a></li>
+<li><a title="Diogelwch cymunedol" href="/cy/Trigolion/Diogelwchcymunedol.aspx" class="sys_0 sys_t42">Diogelwch cymunedol</a></li>
+<li><a title="Dweud eich dweud" href="/cy/Cyngor/Dweud-eich-dweud/Dweud-eich-dweud.aspx" class="sys_0 sys_t60">Dweud eich dweud</a></li>
+<li><a href="https://ip.e-paycapita.com/AIP/itemSelectionPage.do?link=showItemSelectionPage&amp;siteId=25&amp;languageCode=CY&amp;source=AIP" class="sys_16">Talu ar-lein</a></li>
+<li><a title="Cysylltu &acirc; ni" href="/cy/Cyngor/Cysylltu-&acirc;-ni/Cysylltu-&acirc;-ni.aspx" class="sys_0 sys_t60">Cysylltu &acirc; ni</a></li>
+<li><a title="Sample Section Page" href="/cy/Trigolion/Argyfwng/Argyfwng.aspx" class="sys_0 sys_t60">Argyfwng</a></li>
+<li><a title="Swyddi" href="/cy/Cyngor/Swyddi/Swyddi.aspx" class="sys_0 sys_t60">Swyddi</a></li>
+</ul>
+
+</div>
+</section>
+<br />
+<div class="sys_four-column sys_newscarousel">
+<h4>Newyddion a digwyddiadau</h4>
+<div id="outside"><!-- prev/next links -->
+<div class="sys_prev" id="prev"></div>
+<!-- slideshow -->
+<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="3000" data-cycle-swipe="true" data-cycle-slides="&gt; div" data-cycle-prev="#prev" data-cycle-next="#next" data-cycle-pager=".sys_pager" data-cycle-pause-on-hover="true">
+ 
+<div class="sys_newsslide"> 
+  <a href="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Digwyddiadau/Chwilio-am-ddigwyddiad/Chwilio-am-ddigwyddiad.aspx"><img src="/SiteElements/Images/GwylRhif6FestivalNumber6.jpg" alt="Gweld digwyddiadau sy&#39;n cael eu cynnal yng Ngwynedd"/></a> 
+  <a class="icon icon-newspaper" href="/cy/Trigolion/Hamdden-Parciau-Digwyddiadau/Digwyddiadau/Chwilio-am-ddigwyddiad/Chwilio-am-ddigwyddiad.aspx">Gweld digwyddiadau sy&#39;n cael eu cynnal yng Ngwynedd</a> 
+</div> 
+ 
+ 
+
+</div>
+<div class="sys_pager"></div>
+<div class="sys_next" id="next"></div>
+</div>
+</div>
+
+</div>
+<div class="sys_push"></div>
+</div>
+<div class="sys_container">
+	<a class="button-holiadurBodlonrwydd" href="https://arolwg.gwynedd.gov.uk/index.php?sid=32598&lang=cy">Helpwch ni i wella ein gwefan ></a>
+</div><footer>
+<div class="sys_container"><a class="social-icons-bottom" href="https://www.facebook.com/CyngorGwyneddCouncil" title="Dod o hyd i Gyngor Gwynedd ar Facebook" target="_blank">
+  <img alt="Dod o hyd i Gyngor Gwynedd ar Facebook" src="/resource/iconssocialnetworks/facebook-58x58.png">
+</a><a class="social-icons-bottom" href="https://twitter.com/CyngorGwynedd" title="Dilynwch Cyngor Gwynedd ar Twitter" target="_blank">
+  <img alt="Dilynwch Cyngor Gwynedd ar Twitter" src="/resource/iconssocialnetworks/twitter-58x58.png">
+</a>
+<ul>
+<li><a href="/cy/Cyngor/Cysylltu-â-ni/Cysylltu-â-ni.aspx" title="Cysylltu â Cyngor Gwynedd" tabindex="100" accesskey="g"  target="_blank" >Cysylltu â ni </a></li>
+<li><a href="/cy/Cyngor/Gwybodaeth/Telerau-ac-Amodau.aspx" title="Telerau ac amodau" tabindex="100" target="_blank"accesskey="a" target="_blank">Telerau ac amodau </a></li>
+<li><a href="/cy/Cyngor/Gwybodaeth/Preifatrwydd-a-Chwcis.aspx" title="Preifatrwydd a chwcis" tabindex="100" accesskey="p" target="_blank">Preifatrwydd a chwcis</a></li>
+<li><a href="/cy/Cyngor/Gwybodaeth/Hygyrchedd.aspx" title="Hygyrchedd" tabindex="100" accesskey="h" target="_blank">Hygyrchedd</a></li>
+<li><a href="/cy/Cyngor/Gwybodaeth/Map-or-safle.aspx" title="Map o'r safle" tabindex="100" accesskey="m" target="_blank" >Map o'r safle</a></li>
+</ul>
+<div class="sys_copyright"><span class="icon-copyright-welsh"> </span>2016Cyngor Gwynedd</div>
+</div>
+</footer>
+<div id="fb-root"></div>
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3DA099AE" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWFwL08pe7CwL05p6rDQLJr4KUDQK9pIHbCwLGtuPEBAKQzu25CQLE6dCCAwKHto/eDAKZp9o8ArLz8KUEAsS/098PAqH+xKcPAu2G8LcFApzp02IC8YyY1Q0CjtHS8Q0CxNyquQwC9aCVwQwCpMD1sQICzpvMwAQCuYX8+AICkemlkAsCgOXx7wsEfuVctWlIuPbIxLqKqt0yG5XYEKIsqc+n0/K/IH39Og==" />
+</div>
+		<script  type="text/javascript" src="/SiteElements/Scripts/empty.js?build=8112720"></script>
+		<script  type="text/javascript" src="/SiteElements/Scripts/easyResponsiveTabsInit.js?build=8112720"></script>
+		<script  type="text/javascript" src="/SiteElements/Scripts/siteImprove.js?build=8112720"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+		     registerClearDefaultItem('SiteSearch_SearchTextBox','Chwilio');
+		     registerClearDefaultItem('TextboxWithRedirectLleDwinByw_redirectTextBox','Côd post');
+		     registerClearDefaultItem('TextboxWithRedirectCynllunio_redirectTextBox','Côd post');
+		     registerClearDefaultItem('TextboxWithRedirectTrethCyngor_redirectTextBox','Côd post');
+
+//]]>
+</script></form>
+</body>
+</html>

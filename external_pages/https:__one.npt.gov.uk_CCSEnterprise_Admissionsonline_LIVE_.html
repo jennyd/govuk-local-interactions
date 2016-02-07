@@ -1,0 +1,186 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB"> 
+<head id="ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/jquery.validate.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/jquery.corner.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/MicrosoftMvcValidation.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/MicrosoftMvcAjax.js" type="text/javascript"></script>
+    <script src="/CCSEnterprise_Admissionsonline_LIVE/Scripts/site.js" type="text/javascript"></script>
+
+    <title>
+	
+Welcome To Admissions and Transfers
+
+</title>
+    <link href="/CCSEnterprise_Admissionsonline_LIVE/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link title="Smaller" href="/CCSEnterprise_Admissionsonline_LIVE/Content/Smaller.css" type="text/css" rel="Alternate stylesheet" />
+    <link title="Standard" href="/CCSEnterprise_Admissionsonline_LIVE/Content/Standard.css" type="text/css" rel="Alternate stylesheet" />
+    <link title="Larger" href="/CCSEnterprise_Admissionsonline_LIVE/Content/Larger.css" type="text/css" rel="Alternate stylesheet" />
+    <link title="Largest" href=" /CCSEnterprise_Admissionsonline_LIVE/Content/Largest.css" type="text/css"  rel="Alternate stylesheet"/> 
+    <style type="text/css"> .jsonly { display: none } </style>
+</head>
+
+<body  style="background-color:#FFFFFF">
+    <input id="sessionFont" name="FontSize" type="hidden" value="Smaller" />
+    <input id="SetFontSizeUrl" name="SetFontSizeUrl" type="hidden" value="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/SetFontSize" />
+    <input id="sessionCulture" name="Culture" type="hidden" value="en-GB" />
+    
+    <div id="mainContainer">
+    <ul id="shortcuts" style="z-index:-1">
+	<li><a href="#mainContentDiv">Skip to Content</a></li>
+    </ul>
+    <div id="showOnlyWhenJsEnabled" class="jsonly">
+    <div id="divProcessScreen" class="hiddenForProcess" >
+        <table border='0' style="height:100%; width:100%;" >
+          <tr align="center" valign="middle">
+            <td style="font-size:300%; font-weight:bold;  opacity: 1; filter: alpha(opacity=100);">Please Wait...<img alt="Banner" src="/CCSEnterprise_Admissionsonline_LIVE/Content/Images/PleaseWait.png" /> </td>
+        </tr>
+        </table>
+    </div>
+    </div>
+       <script type="text/javascript">
+           document.getElementById('showOnlyWhenJsEnabled').className = "";
+    </script>
+
+        <div id="header" style="padding:3pt; border-bottom: 2px solid rgb(92, 135, 178);">
+            <div id="title">
+                <img class="banner" height="88" alt="Banner" src="/CCSEnterprise_Admissionsonline_LIVE/Content/Images/banner.png" />                
+            </div>
+
+    <div id="global_links"  style="float:right;margin-top:-90px">
+
+    <div id="culture">
+        [
+            <a href="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/SetCulture/cy-GB" title="Switch to the Welsh language version of this website">Newid i Gymraeg</a>
+             
+        ]
+    </div>    
+                 
+ 
+
+
+
+<div id="fsize">
+    <ul id="mycontrol">
+        <li></li>
+    </ul>
+</div> 
+
+<span id="main_help">
+    <a href="/CCSEnterprise_Admissionsonline_LIVE/NetHelp/default.htm" title="Select to show Help in a new window" target="_blank"><img alt="Select to show Help in a new window" src="/CCSEnterprise_Admissionsonline_LIVE/Content/Images/MainHelp.png" /></a>
+</span>
+         
+    </div>             
+            
+
+        </div>
+        <div id="contentHeader">
+        
+                <div id="welcomMessage">
+                    
+	<h1 class="welcome_message" style="margin:1%">Welcome to School Admissions Online</h1> 
+    
+                </div>
+           
+        
+
+
+
+        </div>
+        <div id="mainContentDiv">
+            
+            <div class="tabcontent" id="mainContent">
+                 
+
+<div id="co4" style="margin-left:0;">
+
+        <div class="login_form">
+        <form action="/CCSEnterprise_Admissionsonline_LIVE/Account.mvc/RegisterWelcome" id="form0" method="post">
+                <h2 class="SubHeadingSmall">I am new to this service.</h2>
+                <span style="float:left;margin-top:5px;">Help me register.</span> 
+                <input type="submit" name="button" value="Register" style="float:right"/>
+            </form><script type="text/javascript">
+//<![CDATA[
+if (!window.mvcClientValidationMetadata) { window.mvcClientValidationMetadata = []; }
+window.mvcClientValidationMetadata.push({"Fields":[],"FormId":"form0","ReplaceValidationSummary":false});
+//]]>
+</script>
+            <div style="float:left; width:100%;">           
+                <h2 class="SubHeadingSmall" style="border-top:solid 1px #99f;margin-top:5%; padding-top: 5%;">I am already registered and want to log in.</h2>
+                               
+
+                                
+                <form action="/CCSEnterprise_Admissionsonline_LIVE/Account.mvc" id="form1" method="post">        
+                <span style="float:left"><label for="Username">Email Address</label></span>
+                <br />
+                <input autocomplete="off" id="Username" name="Username" style="width:230px" title="Enter your Email Address" type="text" value="" />
+                <span class="field-validation-valid" id="Username_validationMessage"></span>
+
+                <br />
+                
+                <span style="float:left"><label for="Password">Password</label></span>
+                <br />
+                <input autocomplete="off" id="Password" name="Password" title="Enter your Password" type="password" />
+                <span class="field-validation-valid" id="Password_validationMessage"></span>
+                <div >
+                    <a href="/CCSEnterprise_Admissionsonline_LIVE/Account.mvc/ForgotPassword" style="float:left; margin-top:5px;">Forgotten your password?</a>
+                    <input type="submit" name="button" value="Login" style="float:right"/>
+                </div>
+                </form><script type="text/javascript">
+//<![CDATA[
+if (!window.mvcClientValidationMetadata) { window.mvcClientValidationMetadata = []; }
+window.mvcClientValidationMetadata.push({"Fields":[{"FieldName":"Username","ReplaceValidationMessageContents":true,"ValidationMessageId":"Username_validationMessage","ValidationRules":[{"ErrorMessage":"You must specify Email Address.","ValidationParameters":{},"ValidationType":"required"}]},{"FieldName":"Password","ReplaceValidationMessageContents":true,"ValidationMessageId":"Password_validationMessage","ValidationRules":[{"ErrorMessage":"You must specify Password.","ValidationParameters":{},"ValidationType":"required"}]}],"FormId":"form1","ReplaceValidationSummary":false});
+//]]>
+</script>
+
+            </div>
+            <div style="float:left; width:100%;">
+                <div>
+                    <h2 class="SubHeadingSmall" style="border-top:solid 1px #99f;margin-top:5%; padding-top: 5%;">Before you begin...you will need:</h2>
+                        <ul>
+                            <li>Any information you have been given about applying for a school place</li>
+                            <li>Your child’s full address (including postcode)</li>
+                            <li>Your child’s date of birth</li>
+                            <li>Approx 15-20 minutes to complete the application (but you can save and come back to it later)</li>
+                            <li>For security, the website will timeout if you login and do not use it</li>
+                            <li>Do not use the Browser's Back button; use the Back button on each page</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+
+  <div class="login_help" >
+        <p><span style="font-style: Normal;font-weight: normal;;">Welcome to Neath Port Talbot County Borough Council on-line application process for School Admissions. The following screens allow you to make an electronic application for a school place for </span><span style="font-style: Normal;font-weight: bold;;">September 2016</span><span style="font-style: Normal;font-weight: normal;;">. </span><span style="font-style: Normal;font-weight: bold;text-decoration: underline;;">Please not that the on-line application process will open on 9th October 2015.</span></p><p><span style="font-style: Normal;font-weight: bold;;">Please note the on-line facility is only available for admission to reception class (Infant / Primary), transfer from Infants to Junior School (Year 3) and admission to Secondary School (Year 7), including St Joseph's RC School and 6th Form.</span></p><p><span style="font-style: Normal;font-weight: bold;;">For admission to Alderman Davies CIW Primary School, Bryncoch CIW Primary School, St  Joseph's Catholic Infant School, St Joseph's Catholic Junior School , St Joseph's Primary School ansd St Therese's Catholic Primary School please contact the  relevant school direct.</span></p><p><span style="font-style: Normal;font-weight: normal;;">For information relating to nursery admission or in year transfer please click on the </span><a href="http://www.npt.gov.uk/default.aspx?page=6546&lang=en-gb" target="_blank"><span style="font-style: Normal;font-weight: bold;color: #0000FF;;">Education Websites</span></a><span style="font-style: Normal;font-weight: normal;;"> link below. The screens explain the information needed by you at each stage. Please read the narratives carefully in each section before entering your details. Further information about the admissions process is available via our website please click on the link below.</span></p><p><span style="font-style: Normal;font-weight: normal;;">                                 </span><span style="font-style: Normal;font-weight: normal;;">The closing date for applications is</span></p><p><span style="font-style: Normal;font-weight: bold;color: #000000;;">                        Midnight on the 27th November 2015</span></p><p><span style="font-style: Normal;font-weight: normal;;">Please click on Register or if you have already registered enter your email address and password in the boxes opposite.</span></p><p><span style="font-style: Normal;font-weight: normal;;">Your application will be secure. The system has a series of security features that will prevent others from seeing your information.</span></p><p><span style="font-style: Normal;font-weight: normal;;">You can make changes to this form at any time until the closing date. If you make changes to your application you must ensure that you re-submit the application.</span></p><p><span style="font-style: Normal;font-weight: normal;;">Please note: by making an online application you are choosing to accept communication from us by email. You should be aware that the automated emails produced by our admissions software will include the child's name and date of birth. You should consider taking appropriate measures to ensure the location from which you access your email information is secure. If you have spam filters set up on your email account please make sure you change your settings to allow emails from </span><a href="mailto:admissions@npt.gov.uk" target="_blank"><span style="font-style: Normal;font-weight: bold;color: #0000FF;;">admissions@npt.gov.uk</span></a><span style="font-style: Normal;font-weight: normal;;">. Please refer to your email providers help instructions for information on how to do this.</span></p>
+        
+  </div>        
+  
+</div>
+        
+
+            </div>
+            <div>
+                
+            </div>
+        </div>
+        <div id="footer">
+        
+            <a href="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/ContactUs" target="_blank" title="Click here to open a new window with advice on how you can Contact Us">Contact us</a>  <span class="pipe">|</span>
+            <a href="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/DataProtection" target="_blank" title="Click here to open a new window to see our Data Protection Statement">Data Protection Statement</a>  <span class="pipe">|</span>
+             
+              
+                <a href="http://www.npt.gov.uk/default.aspx?page=7389&amp;lang=en-gb" target="_blank" title="Click here to open a new window for a Blank Application Form that you can print, fill in and post to us">Blank Application Forms</a>  <span class="pipe">|</span>
+                
+             
+                <a href="http://www.npt.gov.uk/default.aspx?page=6546&amp;lang=en-gb" target="_blank" title="Click here to open a new window to see Education Website">Education Websites</a>  <span class="pipe">|</span>
+            <a href="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/TermsAndConditions" target="_blank" title="Click here to open a new window to see our Terms and Conditions">Terms &amp; Conditions</a>  <span class="pipe">|</span>
+
+            <a href="/CCSEnterprise_Admissionsonline_LIVE/Home.mvc/PrivacyPolicy" target="_blank" title="Click here to open a new window to see our Privacy Policy">Privacy Policy</a>
+            
+       </div>
+    </div>
+</body>
+</html>

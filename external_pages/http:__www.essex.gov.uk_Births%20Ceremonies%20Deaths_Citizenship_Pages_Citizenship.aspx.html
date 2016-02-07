@@ -82,7 +82,7 @@ document.write('<script type="text/javascript" src="/_layouts/blank.js?rev=QGOYA
 <input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
 <input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x50ADD13FB57D60245201E55A2FE349A1360D2E0CCDC20CFC5C3686CBFDDEDEABB64038E94AEDD67DBDF5328D3B8C683A7381450E2F26EF9F7F7DA15DA872488E,07 Feb 2016 03:55:07 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x02CE6923EA8A1DD0DD68685F8321075D0CC79CE5B4400882B9E6E56D99F63CE8D0EEB21A90DED30DC2EB841D5034EF2E24CBCA530B54CFAB3409304633F23C7A,07 Feb 2016 18:52:43 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -439,7 +439,11 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
    <input type="text" name="__spText1" title="text" style="display:none;" />
    <input type="text" name="__spText2" title="text" style="display:none;" />
   <div id="ctl00_panelZone">
-	<div style='display:none' id='hidZone'></div>
+	<div style='display:none' id='hidZone'><menu class="ms-SrvMenuUI">
+		<ie:menuitem id="MSOMenu_Help" iconsrc="/_layouts/images/HelpIcon.gif" onmenuclick="MSOWebPartPage_SetNewWindowLocation(MenuWebPart.getAttribute('helpLink'), MenuWebPart.getAttribute('helpMode'))" text="Help" type="option" style="display:none">
+
+		</ie:menuitem>
+	</menu></div>
 </div><input type='hidden' id='_wpcmWpid' name='_wpcmWpid' value='' /><input type='hidden' id='wpcmVal' name='wpcmVal' value=''/>
 
 <script type="text/javascript">

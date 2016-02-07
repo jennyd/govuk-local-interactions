@@ -3,12 +3,14 @@
 <head>
     <meta charset="iso-8859-1">
     <title>Fly Tipping Reporting Form &bull; Winchester City Council</title>
-  	<meta name="robots" content="none">
     <meta name="viewport" content="width=1024">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 	
 	<link rel="shortcut icon" href="/graphics/favicon.ico">
+    <link rel="apple-touch-icon" media="screen and (resolution: 163dpi)" href="/graphics/icon57x57.png">
+    <link rel="apple-touch-icon" media="screen and (resolution: 326dpi)" href="/graphics/icon114x114.png">
+    <link rel="shortcut icon" href="/graphics/icon57x57.png">
     <link href="/styles/sizeSmall.css" rel="stylesheet" />
 	<link rel="stylesheet" href="/styles/default.css">
 
@@ -34,18 +36,19 @@
 
     <!-- scripts concatenated and minified -->
     <script type="text/javascript" src="/js/plugins.js"></script>
-    <script type="text/javascript" src="/js/script.js"></script>
-    <script type="text/javascript" src="/js/custom.js"></script>
+    <script type="text/javascript" src="/js/script.js?v=2"></script>
+    <script type="text/javascript" src="/js/custom.js?v=2"></script>
     <!-- end scripts-->
-
-    <link rel="stylesheet" href="/styles/custom.css">
+    
+    <script src="http://f1.eu.readspeaker.com/script/6896/ReadSpeaker.js?pids=embhl" type="text/javascript"></script>
+    <link rel="stylesheet" href="/styles/custom.css?v=2">
 
     
     <script type="text/javascript" src="/js/formMaster.js"></script>
 
 </head>
 
-<body class="scene" style="background-image:url(/graphics/bg_Mayv1.jpg)">
+<body class="scene" style="background-image:url(/assets/images/~/23955/Background-Abbey-Gardens2015.jpg)">
     <!-- container -->
     <div id="container">
   
@@ -66,7 +69,26 @@
     <li class="dark"><a href="?displaypref=2" title="Dark colours with the default layout">dark</a></li>
     <li class="relaxed-dark"><a href="?displaypref=3" title="Dark colours with the relaxed layout">relaxed dark</a></li>
 </ul>
-                <p class="liveHelp"><a href="/n/live-help"><span class="text">Live help</span><span class="message"></span></a></p>
+                           
+    <p class="liveHelp" id="liveHelpWrapper" style="display: none"><a id="whoson_chat_link" href="https://hosted8.whoson.com/chat/chatstart.htm?domain=www.winchester.gov.uk" onclick="window.open(this.href, '_blank','width=500,height=500,scrollbars=1'); return false;"><span class="text">Live help</span><span class="message"></span></a></p>
+    <div style="display: none" id="whoson_live_help">
+    <script type="text/javascript" src="//gateway8.whoson.com/include.js?domain=www.winchester.gov.uk"></script>
+    <script type="text/javascript" >
+        //sWOResponse = '';
+
+        function overrideLoad() {
+            if (sWOImage.width != 1) {
+                document.getElementById('liveHelpWrapper').style.display = 'block';
+            }
+        }
+
+        sWOImageLoaded = overrideLoad;
+        
+        if (typeof sWOTrackPage == 'function') sWOTrackPage();
+
+    </script>
+    </div>
+
 
                 <!-- Social -->
 					<ul id="social">
@@ -80,6 +102,7 @@
             <div class="banner" role="banner">
 	            <a href="/" title="back to the home page"></a>
             </div>
+
 
         </div>
               
@@ -188,6 +211,7 @@
     <div class="wrapper">  
 
         
+
 
 <div id="content" class="page noLeftBar fullWidth">
     

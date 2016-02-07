@@ -48,6 +48,7 @@
 <link href="./mendip/css/ie7.css" rel="stylesheet" type="text/css" media="all" />
  <![endif]-->
 <link href="./mendip/css/styleprint.css" rel="stylesheet" type="text/css" media="print" />
+<link href="./mendip/template/form/css/form.css" rel="stylesheet" type="text/css" media="all" />
 
 				
 				
@@ -112,7 +113,7 @@
 				<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 			</div>			<ul>
 				<li class="even first">
-					<a accesskey="s" href="http://www.mendip.gov.uk/streetclean#centrecolumn">Skip Navigation</a>
+					<a accesskey="s" href="http://www.mendip.gov.uk/streetclean?formid=10982#centrecolumn">Skip Navigation</a>
 				</li>
 				<li class="odd">
 					<a href="http://www.mendip.gov.uk/home" title="Mendip District Council">Home</a>
@@ -2388,7 +2389,21 @@ onclick="return FLYTIPPINGNEWForm.validateFormClient(document.getElementById('FL
 				
 
 
-				
+				<script type="text/javascript" src="./iCMRender.4.0.8.10020/iCMRender.Resources.Javascript.iCM.js.axd"></script><noscript><div></div></noscript><script type="text/javascript">
+//<![CDATA[
+
+MagicSearchRPC = function() {
+  return {
+GetSearchResults: function(avalue, acollections, aokcallback, afailcallback, atarget) {
+    iCM.MakePostRPCCall({"method": "magicsearch_com$gossinteractive$community$magicsearch$MagicSearch_GetSearchResults", "id": "null", "version": "1.1", "url": "ajax.ashx", "params": {"value": avalue,"collections": acollections}},aokcallback, afailcallback, atarget  );
+}
+  }
+}();
+
+iCM.RPC.MagicSearch = MagicSearchRPC;
+
+//]]>
+</script>
 				<div class="footerscripts">
 					
 				</div>

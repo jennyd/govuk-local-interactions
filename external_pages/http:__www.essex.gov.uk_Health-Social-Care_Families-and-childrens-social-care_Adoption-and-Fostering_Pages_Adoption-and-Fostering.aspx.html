@@ -82,7 +82,7 @@ document.write('<script type="text/javascript" src="/_layouts/blank.js?rev=QGOYA
 <input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
 <input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
-<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x71F235572CA8AEB6D9394870DFB052B7718CC560A35CC6D293B1CEF62C375DDE3735C6EE83F71F28008F788CA12DE1D3CE6DB4489B2706DEF07EF28EFEB8C117,07 Feb 2016 03:45:29 -0000" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x92B9B7E527DB1265B104FE5EEDB86E6F680E8B16B98871C83BA2806340F820655C79D5C21154A3C4BC715C73B3E9A253383C540722F27D7845B007D9177953C8,07 Feb 2016 18:55:12 -0000" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
 <input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
@@ -564,153 +564,11 @@ function redirectToUrl(url)
    <input type="text" name="__spText1" title="text" style="display:none;" />
    <input type="text" name="__spText2" title="text" style="display:none;" />
   <div id="ctl00_panelZone">
-	<div style='display:none' id='hidZone'><script>
-	var redirectProtocol = "http://"; // https or http
-
-	var redirectAddress = "www.essexadoptionandfostering.co.uk/"; // don't include the protocol
-		
-	// optionally display a pop up message
-
-	var displayRedirectMessage = true;
-
-	var redirectMessageText = "";
-
-	var displayRedirectMessageForSeconds = 0; // seconds	
-</script>
-
-<!--#################################################################################################################-->
-
-<style>
-#redirect-message 
-{
-     visibility: hidden;
-     position: absolute;
-     left: 0px;
-     top: 100px;
-     width:100%;
-     height:100%;
-     text-align:center;
-     z-index: 1000;
-}
-
-#redirect-message  div 
-{
-     width:300px;
-     margin: 0 auto;
-     background-color: #fff;
-     border:1px solid #000;
-     padding:15px;
-     text-align:center;
-}
-
-#redirect-message-timer
-{
-	font-weight:bold;
-}
-
-
-</style>
-
-<div class="redirect-message" id="redirect-message">
-     <div>
-	 <h3 id="redirect-message-body">The page you are viewing has been moved to a new location</h3>	 
-	 <p>You will be redirected automatically in <span id="redirect-message-timer">&nbsp;</span> second(s)</p> 
-	 <p>Alternatively click the following link to visit the page now:</p>
-	 <p><a id="redirect-message-link"></a></p></div>
-</div>
-
-<!--#################################################################################################################-->
-
-<script>
-// disable redirect by default - set to true if in browse mode
-var redirectPage = false;
-var inDesignMode = 0;
-var redirectUrl = redirectProtocol + redirectAddress;
-
-// check page status - edit / browse mode
-if(document.forms[MSOWebPartPageFormName].MSOLayout_InDesignMode !== undefined)
-{
-	inDesignMode = document.forms[MSOWebPartPageFormName].MSOLayout_InDesignMode.value;
-}
-
-// set redirect to true if page is in browse mode
-if (inDesignMode != "1")
-{
-	if(redirectAddress!="")
-	{
-		redirectPage = true;
-	}	
-}
-
-// reset the timeout in browse mode for the CMS
-var currentUrl = window.location.href;
-if (currentUrl.indexOf("http://cms") > -1)
-{
-	redirectMessageText = redirectMessageText + "<p>** CMS detected - timeout has been overidden to allow page editing **</p>";
-	redirectMessageText = redirectMessageText + "<p>" + document.getElementById("redirect-message-body").innerHTML + "</p>"
-	displayRedirectMessageForSeconds = 20;
-	displayRedirectMessage = true;
-}
-
-if(redirectPage)
-{
-	if(displayRedirectMessage)
-	{	
-		displayRedirectMessagePopUp(redirectUrl);
-	}
-	else
-	{	
-		redirectToUrl(redirectUrl);
-	}
-}
-
-function displayRedirectMessagePopUp(url)
-{
-	if(url != "")
-	{
-		if (displayRedirectMessageForSeconds > 0) 
-		{					
-			var redirectMessageContainer = document.getElementById("redirect-message");	
-			
-			if(redirectMessageText!="")
-			{
-				var redirectMessageInnerContainer = document.getElementById("redirect-message-body");
-				redirectMessageInnerContainer.innerHTML=redirectMessageText;
-			}					
-			var redirectMessageContainerTimer = document.getElementById("redirect-message-timer");
-			
-			var redirectMessageLink = document.getElementById("redirect-message-link");
-			redirectMessageLink.href = url;
-			redirectMessageLink.innerHTML = url;			
-			
-			redirectMessageContainer.style.visibility = (redirectMessageContainer.style.visibility == "visible") ? "hidden" : "visible";
-		
-			redirectMessageInterval = setInterval(function() {							
-				if (displayRedirectMessageForSeconds == 0)
-				{									
-					clearInterval(redirectMessageInterval);
-					redirectToUrl(redirectUrl);
-				}
-				else
-				{
-					redirectMessageContainerTimer.innerHTML = displayRedirectMessageForSeconds;
-				}
-				displayRedirectMessageForSeconds--;
-			}, 1000);
-		}
-		else 
-		{
-			redirectToUrl(redirectUrl);
-		}	
-	}	
-}
-
-function redirectToUrl(url)
-{
-	document.location.href = url;
-}
-
-</script></div>
+	<div style='display:none' id='hidZone'><table width="100%" cellpadding="0" cellspacing="0" border="0">
+		<tr>
+			<td id="MSOZoneCell_WebPartWPQ2" valign="top" class="s4-wpcell-plain"></td>
+		</tr>
+	</table></div>
 </div><input type='hidden' id='_wpcmWpid' name='_wpcmWpid' value='' /><input type='hidden' id='wpcmVal' name='wpcmVal' value=''/>
 
 <script type="text/javascript">

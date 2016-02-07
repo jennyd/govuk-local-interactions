@@ -27,7 +27,7 @@ ControlID:Ctrl078b77f458034b5e9d26196e333a2b53 of type CMS_API.WebUI.WebControls
 ControlID:Ctrl8f03be0b3083467bb0f1d442fd76fdbb of type CMS_API.WebUI.WebControls.RazorView has set the maximum duration to 1800 seconds
 ControlID:__Page of type ASP.en_libraries_libraries_aspx has set the maximum duration to 1800 seconds
 Cache Enabled using rule ControlID:Ctrl078b77f458034b5e9d26196e333a2b53 of type CMS_API.WebUI.WebControls.RazorView has set the maximum duration to 1800 seconds
-Cache Page Render Time 07/02/2016 00:59:57
+Cache Page Render Time 07/02/2016 14:34:18
 Cache Host Z-TORFAEN-WEB1
 
 -->
@@ -51,11 +51,38 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     <form method="post" action="/en/Libraries/Libraries.aspx" id="form1">
 <div class="aspNetHidden">
 <input type="hidden" name="ScriptManager_HiddenField" id="ScriptManager_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
 <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUINDkzNDU5NTRkZOUZqwGJMHmiGTd77/Xza79FUVJIKVIMxIpYGOHAV1RC" />
 </div>
 
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=S29hGkxh5ISahtj-j5Bux0QZSzXQKGzpC4pYjcH1YO29iDkJofGMgHnnHyGjCNGl6r7bq92lURzpzk3fhgfjzcrY_BGZ6fWj4_a5Qr5rBjc1&amp;t=635586452020000000" type="text/javascript"></script>
+
 
 <script src="/ScriptResource.axd?d=jDskRZEQ6xD0zNqIPnyygv1IyHxBj2pqV9xMyAue7FyYz6jTpsop-uOa5yQpuyafBbdiNA-uTlXGG1YqNn8ngZ_xGOwyB8kuXxRqE8iDhgmBSb_aAC9izKVQ2HR6DSGLS35Zzi93qOJDRKJnI742_0JTlVewJRdhaMhotgRH_gw1&amp;t=7b689585" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=59q3LuqDaxA8hgw9iLJiYSVvFnyFgsJ9VhegcQK_Y_oieHVArEmjhM-Mjo80kw1yLhTQrrWshz7HZhjl0sS8ltjT_AQdkG1DyvOU7YHJbLUZTneHlcCD6vnDcw2k56fdtip4SEEQ33sRLDKtmRh0nQooJEmoTvNRHWt4kprv5GdrfSOKYidE4FvCUPnKQaUJ0&amp;t=7b689585" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+
         <div class="advert-placeholder section group"><script type="text/javascript">
   document.write('\x3Cscript type="text/javascript" src="//can.capacitygrid.com/code/torfaencbc/leaderboard/public">\x3C/script>');
 </script></div>

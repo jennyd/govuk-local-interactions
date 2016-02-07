@@ -110,7 +110,7 @@ _gaq.push(['_trackPageview','index']);
 //<![CDATA[
 var interval_id;
 var hottopics = [["0 is image SRC URL", "1 is h2ptext", "2 is link URL", "3 is headtext"],["home-kck.jpg", "<h2><a href='begging'>Your kindness could kill</a></h2><p>The money you give to those who beg may actually keep them on the streets. &nbsp;In most cases, you will be helping them to buy drugs that could kill them. &nbsp;Give responsibly, support local charities instead.</p>", "begging", "Your kindness could kill"],["ht-areyouok.jpg", "<h2><a href='http://www.areyouok.co.uk'>Are you ok?</a></h2><p>For information on Domestic Abuse and Sexual Violence, including support services available, visit www.areyouok.co.uk. The website has been developed by Safer Communities Torbay with the support of Torbayâs Domestic Abuse Steering Group and is funded by the Devon, Cornwall and Isles of Scilly Police and Crime Commissioner.</p>", "http://www.areyouok.co.uk", "Are you ok?"],["ht-cosydevon.png", "<h2><a href='http://www.torbay.gov.uk/index/cosydevon.htm'>Cosy Devon</a></h2><p>Is an energy saving scheme being offered by Torbay Council and delivered in partnership with E.ON. The scheme offers free or subsidised insulation and heating measures for those who qualify.</p>", "http://www.torbay.gov.uk/index/cosydevon.htm", "Cosy Devon"],["ht-tnhw.png", "<h2><a href='nhw'>Everybody needs good neighbours</a></h2><p>Neighbourhood Watch schemes are a great way to get to know your neighbours and tackle crime.</p>", "nhw", "Everybody needs good neighbours"]];
-var current_topic = 3;
+var current_topic = 1;
 function hotTopics(increment)
 {
   current_topic += increment;
@@ -134,9 +134,9 @@ function allHotTopics()
 interval_id = setInterval("hotTopics(1)", 8000);
 //]]>
 </script>
-<a href="http://www.torbay.gov.uk/index/cosydevon.htm" id="hottopiclink">
-<img src="ht-cosydevon.png" alt="Cosy Devon" id="hottopicpic" width="986" height="225" /></a>
-<div id="hottopictext"><h2><a href='http://www.torbay.gov.uk/index/cosydevon.htm'>Cosy Devon</a></h2><p>Is an energy saving scheme being offered by Torbay Council and delivered in partnership with E.ON. The scheme offers free or subsidised insulation and heating measures for those who qualify.</p>
+<a href="begging" id="hottopiclink">
+<img src="home-kck.jpg" alt="Your kindness could kill" id="hottopicpic" width="986" height="225" /></a>
+<div id="hottopictext"><h2><a href='begging'>Your kindness could kill</a></h2><p>The money you give to those who beg may actually keep them on the streets. &nbsp;In most cases, you will be helping them to buy drugs that could kill them. &nbsp;Give responsibly, support local charities instead.</p>
 </div>
 <script type="text/javascript">
 //<![CDATA[
@@ -146,8 +146,8 @@ document.write('<a href="javascript:clearInterval(interval_id);">Pause</a> | ');
 document.write('<a href="javascript:hotTopics(1); clearInterval(interval_id);">Next &gt;</a></div>');
 //]]>
 </script>
-<noscript><div id="HotTopicFooter"><ul style="list-style-type: none; margin-left: -10px;"><li><a href="begging">Your kindness could kill</a></li>
-<li><a href="http://www.areyouok.co.uk">Are you ok?</a></li>
+<noscript><div id="HotTopicFooter"><ul style="list-style-type: none; margin-left: -10px;"><li><a href="http://www.areyouok.co.uk">Are you ok?</a></li>
+<li><a href="http://www.torbay.gov.uk/index/cosydevon.htm">Cosy Devon</a></li>
 <li><a href="nhw">Everybody needs good neighbours</a></li>
 </ul></div></noscript></div><!-- div#HotTopicImage ends -->
 
