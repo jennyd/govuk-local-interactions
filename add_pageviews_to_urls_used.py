@@ -1,9 +1,6 @@
 #!/usr/env/python3
 
-from collections import Counter
 from csv import DictReader, DictWriter
-
-from fetch_results_pages import get_html_filename, RESULTS_DIRECTORY
 
 
 # Add unique pageview data into a CSV of URLs used for local transactions.
@@ -17,7 +14,7 @@ with open('unique-pageviews-top-15000-local-transaction-pages.csv', 'r') as f:
     }
 
 
-with open('urls-used-for-local-transactions-with-statuses.csv', 'r', encoding='utf8') as f:
+with open('urls-used-for-local-transactions-with-statuses-and-jumbled-urls.csv', 'r', encoding='utf8') as f:
     urls_used_csv = DictReader(f)
     urls_used = [row for row in urls_used_csv]
 
@@ -40,7 +37,7 @@ for row in urls_used_with_pageviews:
 
 
 def write_output():
-    with open('urls-used-for-local-transactions-with-statuses-and-pageviews.csv', 'w', encoding='utf8') as output:
+    with open('urls-used-for-local-transactions-with-statuses-and-jumbled-urls-and-pageviews.csv', 'w', encoding='utf8') as output:
         writer = DictWriter(output, fields)
         writer.writeheader()
         writer.writerows(urls_used_with_pageviews)
