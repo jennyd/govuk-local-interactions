@@ -58,9 +58,6 @@ sorts by that value and writes the list to [`urls-used-for-local-transactions-wi
 
 # What's left to do?
 
-- check that the original list of local transactions includes all of the
-now-published ones
-
 - detect from the saved responses whether or not the page is actually useful,
 even if it was a 200.
 
