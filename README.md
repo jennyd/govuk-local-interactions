@@ -17,6 +17,7 @@ The starting data files are:
 - [`authorities.json`](https://github.com/jennyd/govuk-local-interactions/blob/master/authorities.json)
 - [`local_authority_service_details.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/local_authority_service_details.csv)
 - [`govuk-local-transactions.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/govuk-local-transactions.csv)
+- [`unique-pageviews-top-15000-local-transaction-pages.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/unique-pageviews-top-15000-local-transaction-pages.csv)
 
 [`update_authorities_json.py`](https://github.com/jennyd/govuk-local-interactions/blob/master/update_authorities_json.py)
 generates [`authorities-with-tiers.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/authorities-with-tiers.json)
@@ -50,14 +51,15 @@ then adds the status codes and exceptions from those requests into the full
 list of all URLs used for local transactions and writes that to
 [`urls-used-for-local-transactions-with-statuses.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/urls-used-for-local-transactions-with-statuses.csv).
 
+[`add-pageviews-to-urls-used.py`](https://github.com/jennyd/govuk-local-interactions/blob/master/add-pageviews-to-urls-used.py)
+adds unique pageview data to the list of all URLs used for local transactions,
+sorts by that value and writes the list to [`urls-used-for-local-transactions-with-statuses-and-pageviews.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/urls-used-for-local-transactions-with-statuses-and-pageviews.csv).
+
 
 # What's left to do?
 
 - check that the original list of local transactions includes all of the
 now-published ones
-
-- add pageview data to the list of all local transactions, so that we can see how
-many people are presented with a URL that works
 
 - detect from the saved responses whether or not the page is actually useful,
 even if it was a 200.
