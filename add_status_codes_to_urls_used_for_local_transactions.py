@@ -40,20 +40,7 @@ with open('urls-used-for-local-transactions.csv', 'r', encoding='utf8') as f:
     urls_used_for_local_transactions = [row for row in urls_used_for_local_transactions_csv]
 
 
-fields = [
-    'govuk_url',
-    'govuk_title',
-    'snac',
-    'lgsl',
-    'lgil_override',
-    'interaction_found',
-    'interaction_lgil_used',
-    'interaction_url_used',
-    'status_code',
-    'redirected',
-    'exception',
-]
-
+fields = urls_used_for_local_transactions_csv.fieldnames + ['status_code', 'redirected', 'exception']
 
 def generate_row_with_status_details(row):
     url = row['interaction_url_used']

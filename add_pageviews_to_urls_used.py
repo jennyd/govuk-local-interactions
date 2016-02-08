@@ -22,21 +22,7 @@ with open('urls-used-for-local-transactions-with-statuses.csv', 'r', encoding='u
     urls_used = [row for row in urls_used_csv]
 
 
-fields = [
-    'unique_pageviews',
-    'govuk_url',
-    'govuk_title',
-    'snac',
-    'lgsl',
-    'lgil_override',
-    'interaction_found',
-    'interaction_lgil_used',
-    'interaction_url_used',
-    'status_code',
-    'redirected',
-    'exception',
-]
-
+fields = ['unique_pageviews'] + urls_used_csv.fieldnames
 
 def generate_row_with_pageviews(row):
     govuk_url = row['govuk_url']
