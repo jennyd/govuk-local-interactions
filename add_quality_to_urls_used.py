@@ -50,6 +50,8 @@ def generate_row_with_quality(row):
     quality = 'unknown'
     if row['interaction_found'] == 'False':
         quality = 'no_interaction'
+    elif row['exception'].startswith('[SSL: CERTIFICATE_VERIFY_FAILED]'):
+        quality = 'ssl_error'
     elif row['exception']:
         quality = 'exception'
     elif row['status_code'] != '200':
