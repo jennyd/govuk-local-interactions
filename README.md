@@ -56,10 +56,4 @@ adds unique pageview data to the list of all URLs used for local transactions,
 sorts by that value and writes the list to [`urls-used-for-local-transactions-with-statuses-and-pageviews.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/urls-used-for-local-transactions-with-statuses-and-pageviews.csv).
 
 
-# What's left to do?
-
-- detect from the saved responses whether or not the page is actually useful,
-even if it was a 200.
-
-
 I used Python 3.4.3 when working on this.
