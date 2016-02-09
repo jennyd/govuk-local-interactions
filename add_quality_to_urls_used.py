@@ -62,7 +62,7 @@ def generate_row_with_quality(row):
     elif looks_like_404(row):
         quality = 'looks_like_404'
     else:
-        quality = 'doesnt_look_like_404'
+        quality = 'probably_good'
 
     row['quality'] = quality
     return row
