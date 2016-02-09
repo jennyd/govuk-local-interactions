@@ -61,3 +61,25 @@ for quality, url_count in counts_of_urls:
             round(percentage(url_count, total_interaction_urls), 2)
         )
     )
+
+
+print('\n\n')
+
+
+link_quality_by_govuk_urls = {row['govuk_url']: row['quality'] for row in quality_data}
+
+counter = Counter(list(link_quality_by_govuk_urls.values()))
+counts_of_govuk_urls = list(counter.items())
+counts_of_govuk_urls.sort(key=lambda t: t[1], reverse=True)
+
+total_govuk_urls = sum(t[1] for t in counts_of_govuk_urls)
+
+print('Link quality categories with counts of GOV.UK pages:')
+for quality, url_count in counts_of_govuk_urls:
+    print(
+        '{} links on pages: {} ({}%)'.format(
+            quality,
+            url_count,
+            round(percentage(url_count, total_govuk_urls), 2)
+        )
+    )
