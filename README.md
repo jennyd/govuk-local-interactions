@@ -72,4 +72,9 @@ quality of each local transaction page's link and adds that field to the full li
 [`look-like-404-matches`](https://github.com/jennyd/govuk-local-interactions/blob/master/look-like-404-matches) contains the matched strings
 for the pages which looked like 404s.
 
+[`calculate_quality_stats.py`](https://github.com/jennyd/govuk-local-interactions/blob/master/calculate_quality_stats.py)
+prints basic statistics about the quality of interaction links, as percentages
+of pageviews and counts of interaction URLs.
+
+
 I used Python 3.4.3 when working on this.
