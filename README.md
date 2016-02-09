@@ -51,9 +51,25 @@ then adds the status codes and exceptions from those requests into the full
 list of all URLs used for local transactions and writes that to
 [`urls-used-for-local-transactions-with-statuses.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/urls-used-for-local-transactions-with-statuses.csv).
 
-[`add-pageviews-to-urls-used.py`](https://github.com/jennyd/govuk-local-interactions/blob/master/add-pageviews-to-urls-used.py)
-adds unique pageview data to the list of all URLs used for local transactions,
-sorts by that value and writes the list to [`urls-used-for-local-transactions-with-statuses-and-pageviews.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/urls-used-for-local-transactions-with-statuses-and-pageviews.csv).
+[`urls-used-for-local-transactions-with-statuses-and-jumbled-urls.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/urls-used-for-local-transactions-with-statuses-and-jumbled-urls.csv)
+includes 4 extra fields with data exported from @daibach's local services explorer.
+They're the results of getting a slightly jumbled version of the interaction URL
+to see if that section of the site is capable of returning a 404 status code,
+which indicates whether a 200 response is trustworthy.
 
+[`clean_jumbled_urls_csv.py`](https://github.com/jennyd/govuk-local-interactions/blob/master/clean_jumbled_urls_csv.py) cleans that file in place; it was exported from a
+database and had some inconsistencies with the other CSVs which needed sorting out.
+
+[`add-pageviews-to-urls-used.py`](https://github.com/jennyd/govuk-local-interactions/blob/master/add-pageviews-to-urls-used.py)
+adds unique pageview data to the list of all URLs used for local transactions
+including the jumbled URL fields, sorts by pageview and writes the list to
+[`urls-used-for-local-transactions-with-statuses-and-jumbled-urls-and-pageviews.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/urls-used-for-local-transactions-with-statuses-and-jumbled-urls-and-pageviews.csv).
+
+[`add_quality_to_urls_used.py`](https://github.com/jennyd/govuk-local-interactions/blob/master/add_quality_to_urls_used.py)
+uses the accumulated data, including the saved HTML page content, to assess the
+quality of each local transaction page's link and adds that field to the full list in
+[`urls-used-for-local-transactions-with-statuses-and-jumbled-urls-and-pageviews-and-quality.csv`](https://github.com/jennyd/govuk-local-interactions/blob/master/urls-used-for-local-transactions-with-statuses-and-jumbled-urls-and-pageviews-and-quality.csv).
+[`look-like-404-matches`](https://github.com/jennyd/govuk-local-interactions/blob/master/look-like-404-matches) contains the matched strings
+for the pages which looked like 404s.
 
 I used Python 3.4.3 when working on this.
