@@ -6,9 +6,9 @@ GOV.UK local transactions, and how many of them are broken.
 @daibach's [local services explorer](http://govuklocal.dafyddvaughan.co.uk/)
 shows data about the full list of all URLs in the Local Directgov dataset, but
 we only use some of these on GOV.UK. This repo matches data about the quality of
-those links to the pages which display them on GOV.UK, and will also include
-pageview data so that we can see the proportion of users who are presented with
-a working link on a local transaction page.
+those links to the pages which display them on GOV.UK, and to pageview data for
+those pages so that we can see the proportion of users who are presented with
+a working deep link on a local transaction page.
 
 # How does it work?
 
